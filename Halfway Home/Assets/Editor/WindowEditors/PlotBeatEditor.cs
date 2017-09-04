@@ -22,7 +22,7 @@ public class PlotBeatEditor : EditorWindow
     private ReorderableList List;
     private ReorderableList PlotList;
 
-    [MenuItem("Window/a-0/PlotBeatEditor")]
+    [MenuItem("Window/Halfway Home/PlotBeatEditor")]
 
     public static void ShowWindow()
     {

@@ -18,7 +18,7 @@ public class ConversationEditor : BaseNodeEditor
     StartNode StartPoint;
 
 
-    [MenuItem("Window/a-0/Conversation Editor")]
+    [MenuItem("Window/Halfway Home/Conversation Editor")]
     private static void OpenWindow()
     {
         ConversationEditor window = GetWindow<ConversationEditor>();

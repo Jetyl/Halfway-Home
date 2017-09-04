@@ -18,7 +18,7 @@ public class ProgressionEditor : BaseNodeEditor
     StartNode StartPoint;
 
 
-    [MenuItem("Window/a-0/Multi-Progress Editor")]
+    [MenuItem("Window/Halfway Home/Multi-Progress Editor")]
     private static void OpenWindow()
     {
         ProgressionEditor window = GetWindow<ProgressionEditor>();

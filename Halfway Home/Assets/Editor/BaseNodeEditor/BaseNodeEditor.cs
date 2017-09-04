@@ -24,7 +24,7 @@ public class BaseNodeEditor : EditorWindow
     protected Rect _zoomArea = new Rect(0, 0, Screen.width * 2.5f, Screen.height * 2);
     protected Rect ZoomedArea;
 
-    [MenuItem("Window/a-0/Base Editor")]
+    [MenuItem("Window/Halfway Home/Base Editor")]
     private static void OpenWindow()
     {
         BaseNodeEditor window = GetWindow<BaseNodeEditor>();
