@@ -24,7 +24,7 @@ Any line opened with an asterisk becomes a choice. There are several ways to for
 This text is the same as if you had picked the other choice, but it doeesn't have to be.
 * [This is a sub-choice]
 * [This is also a sub-choice]
-- -> DescribeChoices
+- -> DescribeChoicesB
 
 === DescribeChoicesB ===
 Subchoices are supported infinitely, but each time a subchoice is given it requires an additional asterisk.
