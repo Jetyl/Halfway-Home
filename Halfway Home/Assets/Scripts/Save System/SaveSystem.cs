@@ -13,20 +13,13 @@ public static class SaveSystem
     private static void SaveStep1(int GameNumber)
     {
 
-        Game.current.Dreams.AssessMind();
-
-        Game.current.Sleeping = true;
-
         SaveLoad.SaveAt(GameNumber);
     }
 
     //first step of save process. is always called when saving occurs
     private static void SaveStep1()
     {
-
-        Game.current.Dreams.AssessMind();
-
-        Game.current.Sleeping = true;
+        
 
         SaveLoad.Save();
     }
@@ -34,8 +27,7 @@ public static class SaveSystem
     //second step of saving process. called when continuing, or starting up the game.
     private static void SaveStep2()
     {
-
-        Game.current.Sleeping = false;
+        
         Game.current.NewDay();
 
         SaveLoad.Save();
@@ -85,7 +77,6 @@ public static class SaveSystem
     public static void SkipSaving()
     {
         //ConfirmSkip.SetBool("IsUp", false);
-        Game.current.Dreams.AssessMind();
         Game.current.NewDay();
         
 

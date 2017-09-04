@@ -171,7 +171,7 @@ public class DescriptionDisplay : MonoBehaviour
     void UpdateDescription(DescriptionEvent eventdata)
     {
 
-        Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
+        //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         
         //dynamically edit the lines so they adhere to certain parameters
         Lines = TextParser.DynamicEdit(eventdata.Lines);
@@ -204,7 +204,7 @@ public class DescriptionDisplay : MonoBehaviour
     void CloseDisplay (DefaultEvent eventdata)
     {
 
-        Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
+        //Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
         anime.SetBool("IsUp", false);
         Active = false;
         Pace = -1;
@@ -276,23 +276,7 @@ public class DescriptionDisplay : MonoBehaviour
         if (DenyPlayerInput)
             return false;
         
-        if(ConversationDisplay.ConversationModeOn)
-        {
-            //if more than the description and conversation display's are open, deny input
-            if (UIControl.ScreensOpen() >= 3)
-            {
-                //unless the player is examining something
-                if(InventoryDisplay.State != InventoryState.Examine)
-                return false;
-            }
-        }
-        //if more than the description display is open, deny input
-        else if (UIControl.ScreensOpen() >= 2)
-        {
-            //unless the player is examining something
-            if (InventoryDisplay.State != InventoryState.Examine)
-                return false;
-        }
+        
 
 
         if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())

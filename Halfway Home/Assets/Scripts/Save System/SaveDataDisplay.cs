@@ -45,10 +45,7 @@ public class SaveDataDisplay : MonoBehaviour
 
             description.text += "Day " + (gameData.Day + 1) + " - ";
 
-            if (gameData.Room == SceneList.Apartment)
-            {
-                description.text += "Your Apartment";
-            }
+           
 
         }
 

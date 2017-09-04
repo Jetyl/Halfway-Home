@@ -89,23 +89,7 @@ public static class SaveLoad
         return true;
     }
 
-    public static Game AutoPlay()
-    {
-
-        for (int i = 0; i < savedGames.Count; ++i)
-        {
-
-            if (savedGames[i] != null)
-            {
-                if (savedGames[i].AutoOpen)
-                    return savedGames[i];
-            }
-
-        }
-
-
-        return null;
-    }
+    
 
     public static Game GetSave(int pos)
     {

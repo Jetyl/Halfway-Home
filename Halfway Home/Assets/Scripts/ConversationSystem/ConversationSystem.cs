@@ -17,11 +17,7 @@ public enum NodeTypes
     AnimateNode = 7,
     ImageNode = 8,
     SoundNode = 9,
-    ThoughtNode = 10,
-    InteruptNode = 11,
-    CarryOnNode = 12,
-    FailNode = 13,
-    MultiProgressNode = 14
+    MultiProgressNode = 10
 }
 
 
@@ -92,18 +88,6 @@ public class ConversationSystem
                     break;
                 case NodeTypes.SoundNode:
                     Nodes.Add(new ConvSound(conversation[i]));
-                    break;
-                case NodeTypes.ThoughtNode:
-                    //Nodes.Add(new ConvThought(conversation[i]));
-                    break;
-                case NodeTypes.InteruptNode:
-                    //Nodes.Add(new ConvCounter(conversation[i]));
-                    break;
-                case NodeTypes.CarryOnNode:
-                    //Nodes.Add(new ConvCarryOn(conversation[i]));
-                    break;
-                case NodeTypes.FailNode:
-                    //Nodes.Add(new ConvFail(conversation[i]));
                     break;
                 case NodeTypes.MultiProgressNode:
                     //Nodes.Add(new ConvMultiProgress(conversation[i]));

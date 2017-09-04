@@ -99,48 +99,19 @@ public class CheckProgress : MonoBehaviour
                     Fail();
 
                 break;
-            case ProgressType.Inventory:
-
-                
-                break;
-            case ProgressType.MoodAmount:
-                
-                break;
-            case ProgressType.MoodPercent:
-                
-                break;
-            case ProgressType.PrimaryMood:
-                
-                break;
-            case ProgressType.Lucky:
-                
-                break;
-            case ProgressType.PhoneData:
-                if (CheckPhoneData())
-                    Pass();
-                else
-                    Fail();
-                break;
+            
             case ProgressType.PlotBeat:
                 if (Game.current.Progress.CheckBeatState(BeatName, beatState))
                     Pass();
                 else
                     Fail();
                 break;
-            case ProgressType.Scene:
-                if (CheckScene())
-                    Pass();
-                else
-                    Fail();
-                break;
+            
             case ProgressType.Date:
                 if (Game.current.Date == date)
                     Pass();
                 else
                     Fail();
-                break;
-            case ProgressType.Dream:
-                
                 break;
             default:
                 Debug.LogError("Unrecognized Option");
@@ -167,18 +138,7 @@ public class CheckProgress : MonoBehaviour
             Space.DispatchEvent(SayOnFail);
     }
 
-
-    public bool CheckPhoneData()
-    {
-        
-        return false;
-    }
-
-    bool CheckScene()
-    {
-        return false;
-        
-    }
+    
 
     public bool CompareValues(float a, float b)
     {
@@ -214,16 +174,8 @@ public enum ProgressType
 {
     None,
     ProgressPoint,
-    Inventory,
-    MoodAmount,
-    MoodPercent,
-    PrimaryMood,
-    Lucky,
-    PhoneData,
     PlotBeat,
-    Scene,
-    Date,
-    Dream
+    Date
 }
 
 

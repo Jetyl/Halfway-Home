@@ -145,18 +145,6 @@ public class ConversationEditor : BaseNodeEditor
             case NodeTypes.SoundNode:
                 nodes.Add(new SoundNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
                 break;
-            case NodeTypes.ThoughtNode:
-                nodes.Add(new ThoughtNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.InteruptNode:
-                nodes.Add(new InteruptNode(mousePosition, 300, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.CarryOnNode:
-                nodes.Add(new CarryOnNode(mousePosition, 300, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.FailNode:
-                nodes.Add(new FailNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
             case NodeTypes.MultiProgressNode:
                 nodes.Add(new ChainNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
                 break;
@@ -197,12 +185,7 @@ public class ConversationEditor : BaseNodeEditor
                 case NodeTypes.ChoiceNode:
                     ((ChoiceNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, selectedInPoint.node.ID);
                     break;
-                case NodeTypes.InteruptNode:
-                    ((InteruptNode)selectedOutPoint.node).ConnectNode((InteruptConnectionPoint)selectedOutPoint, selectedInPoint.node.ID);
-                    break;
-                case NodeTypes.FailNode:
-                    ((FailNode)selectedOutPoint.node).FailID = selectedInPoint.node.ID;
-                    break;
+                
                 case NodeTypes.MultiProgressNode:
                     ((ChainNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, selectedInPoint.node.ID);
                     break;
@@ -248,13 +231,7 @@ public class ConversationEditor : BaseNodeEditor
                         ((ChoiceNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, -1);
 
                     break;
-                case NodeTypes.InteruptNode:
-                    if (selectedOutPoint != null)
-                        ((InteruptNode)selectedOutPoint.node).ConnectNode((InteruptConnectionPoint)selectedOutPoint, -1);
-                    break;
-                case NodeTypes.FailNode:
-                    ((FailNode)connection.outPoint.node).FailID = -1;
-                    break;
+                
                 case NodeTypes.MultiProgressNode:
                     if (selectedOutPoint != null)
                         ((ChainNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, -1);
@@ -306,13 +283,9 @@ public class ConversationEditor : BaseNodeEditor
             genericMenu.AddItem(new GUIContent("Action/Add Animate node"), false, () => OnClickAddNode(mousePosition, NodeTypes.AnimateNode));
             genericMenu.AddItem(new GUIContent("Action/Add Image node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ImageNode));
             genericMenu.AddItem(new GUIContent("Action/Add Sound node"), false, () => OnClickAddNode(mousePosition, NodeTypes.SoundNode));
-            genericMenu.AddItem(new GUIContent("Action/Add Thought node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ThoughtNode));
             genericMenu.AddItem(new GUIContent("Progress/Add Progress node"), false, () => OnClickAddNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Progress/Add Change node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ChangeNode));
             genericMenu.AddItem(new GUIContent("Progress/Add Multi-Progress node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MultiProgressNode));
-            genericMenu.AddItem(new GUIContent("Interuption/Add Interupt node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InteruptNode));
-            genericMenu.AddItem(new GUIContent("Interuption/Add Carry On Node"), false, () => OnClickAddNode(mousePosition, NodeTypes.CarryOnNode));
-            genericMenu.AddItem(new GUIContent("Interuption/Add Interupt Fail Node"), false, () => OnClickAddNode(mousePosition, NodeTypes.FailNode));
         }
 
         genericMenu.ShowAsContext();
@@ -388,18 +361,7 @@ public class ConversationEditor : BaseNodeEditor
                 case NodeTypes.SoundNode:
                     nodes.Add(new SoundNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
-                case NodeTypes.ThoughtNode:
-                    nodes.Add(new ThoughtNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.InteruptNode:
-                    nodes.Add(new InteruptNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.CarryOnNode:
-                    nodes.Add(new CarryOnNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.FailNode:
-                    nodes.Add(new FailNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
+                
                 case NodeTypes.MultiProgressNode:
                     nodes.Add(new ChainNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
@@ -467,51 +429,7 @@ public class ConversationEditor : BaseNodeEditor
                     }
                     
                     break;
-                case NodeTypes.InteruptNode:
-                    for (int k = 0; k < ((InteruptNode)nodes[i]).NumOfInterupts; ++k)
-                    {
-                        for (int j = 0; j < nodes.Count; ++j)
-                        {
-
-                            if (nodes[j].ID == ((InteruptNode)nodes[i]).Interupts[k].DestinationID)
-                            {
-                                connections.Add(new Connection(nodes[j].inPoint, ((InteruptNode)nodes[i]).InteruptPoints[k], OnClickRemoveConnection));
-                            }
-                        }
-                    }
-
-                    for (int k = 0; k < nodes.Count; ++k)
-                    {
-                        if ((nodes[k]).ID == (nodes[i]).NextID)
-                        {
-                            connections.Add(new Connection(nodes[k].inPoint, (nodes[i]).outPoint, OnClickRemoveConnection));
-                        }
-                    }
-
-                    break;
-                case NodeTypes.FailNode:
-                    if (nodes[i].NextID != -1)
-                    {
-                        for (int j = 0; j < nodes.Count; ++j)
-                        {
-                            if ((nodes[j]).ID == nodes[i].NextID)
-                            {
-                                connections.Add(new Connection(nodes[j].inPoint, nodes[i].outPoint, OnClickRemoveConnection));
-                            }
-                        }
-                    }
-
-                    if (((FailNode)nodes[i]).FailID != -1)
-                    {
-                        for (int k = 0; k < nodes.Count; ++k)
-                        {
-                            if ((nodes[k]).ID == ((FailNode)nodes[i]).FailID)
-                            {
-                                connections.Add(new Connection(nodes[k].inPoint, ((FailNode)nodes[i]).BranchOutPoint, OnClickRemoveConnection));
-                            }
-                        }
-                    }
-                    break;
+               
                 case NodeTypes.MultiProgressNode:
                     for (int k = 0; k < ((ChainNode)nodes[i]).EndingLength; ++k)
                     {
@@ -640,81 +558,7 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                        case ProgressType.Inventory:
-                            Jwriter.WritePropertyName("Slug");
-                            if (((ProgressNode)node).InventoryMatch != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ProgressNode)node).InventoryMatch);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-                            Jwriter.WritePropertyName("Current");
-                            Jwriter.Write(((ProgressNode)node).Current);
-
-                            break;
-                        case ProgressType.MoodAmount:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ProgressNode)node).MoodValueToMatch);
-                            Jwriter.WritePropertyName("Comparison");
-                            Jwriter.Write((int)((ProgressNode)node).Compare);
-                            break;
-                        case ProgressType.MoodPercent:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ProgressNode)node).MoodValueToMatch);
-                            Jwriter.WritePropertyName("Comparison");
-                            Jwriter.Write((int)((ProgressNode)node).Compare);
-                            break;
-                        case ProgressType.PrimaryMood:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            break;
-                        case ProgressType.Lucky:
-                            Jwriter.WritePropertyName("LuckRange");
-                            Jwriter.Write(((ProgressNode)node).LuckRange);
-                            Jwriter.WritePropertyName("PercentFailure");
-                            Jwriter.Write(((ProgressNode)node).LuckPercentToFail);
-                            Jwriter.WritePropertyName("AffectLuck");
-                            Jwriter.Write(((ProgressNode)node).AffectLuck);
-                            break;
-                        case ProgressType.PhoneData:
-                            Jwriter.WritePropertyName("PhoneDataType");
-                            Jwriter.Write((int)((ProgressNode)node).PhoneData);
-                            Jwriter.WritePropertyName("NoteTitle");
-                            Jwriter.Write(((ProgressNode)node).NoteTitle);
-
-                            Jwriter.WritePropertyName("PhoneImageSlug");
-                            if (((ProgressNode)node).Image != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ProgressNode)node).Image);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-
-                            Jwriter.WritePropertyName("TaskNumber");
-                            Jwriter.Write(((ProgressNode)node).TaskNumber);
-                            Jwriter.WritePropertyName("TaskState");
-                            Jwriter.Write((int)((ProgressNode)node).NewTaskState);
-                            Jwriter.WritePropertyName("Battery");
-                            Jwriter.Write(((ProgressNode)node).Battery);
-                            Jwriter.WritePropertyName("Drain");
-                            Jwriter.Write(((ProgressNode)node).Drain);
-                            break;
+                       
                         case ProgressType.PlotBeat:
 
                             Jwriter.WritePropertyName("Beat");
@@ -724,24 +568,13 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.Write(((ProgressNode)node).BeatName);
 
                             break;
-                        case ProgressType.Scene:
-                            Jwriter.WritePropertyName("Scene");
-                            Jwriter.Write(((ProgressNode)node).SceneToCheck.SceneName);
-
-                            Jwriter.WritePropertyName("Previous");
-                            Jwriter.Write(((ProgressNode)node).PreviousScene);
-
-                            break;
+                        
                         case ProgressType.Date:
 
                             Jwriter.WritePropertyName("Date");
                             Jwriter.Write((int)((ProgressNode)node).Date);
                             break;
-                        case ProgressType.Dream:
-                            Jwriter.WritePropertyName("Dream");
-                            Jwriter.Write(((ProgressNode)node).DreamName);
-
-                            break;
+                        
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
@@ -799,49 +632,7 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                        case ProgressType.Inventory:
-                            Jwriter.WritePropertyName("InventoryItem");
-                            Jwriter.Write(((ChangeNode)node).InventoryItemName);
-                            break;
-                        case ProgressType.MoodAmount:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ChangeNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ChangeNode)node).MoodValueToMatch);
-                            break;
-                        case ProgressType.PhoneData:
-                            Jwriter.WritePropertyName("PhoneDataType");
-                            Jwriter.Write((int)((ChangeNode)node).PhoneData);
-                            Jwriter.WritePropertyName("NoteTitle");
-                            Jwriter.Write(((ChangeNode)node).NoteTitle);
-
-                            Jwriter.WritePropertyName("PhoneImageSlug");
-                            if (((ChangeNode)node).Image != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ChangeNode)node).Image);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-
-                            Jwriter.WritePropertyName("TaskNumber");
-                            Jwriter.Write(((ChangeNode)node).TaskNumber);
-                            Jwriter.WritePropertyName("TaskState");
-                            Jwriter.Write((int)((ChangeNode)node).NewTaskState);
-
-                            Jwriter.WritePropertyName("Battery");
-                            Jwriter.Write(((ChangeNode)node).Battery);
-                            Jwriter.WritePropertyName("Drain");
-                            Jwriter.Write(((ChangeNode)node).Drain);
-
-                            Jwriter.WritePropertyName("Notify");
-                            Jwriter.Write(((ChangeNode)node).SendNoification);
-                            break;
+                        
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
@@ -973,123 +764,7 @@ public class ConversationEditor : BaseNodeEditor
                     Jwriter.WritePropertyName("music");
                     Jwriter.Write(((SoundNode)node).Music);
                     break;
-                case NodeTypes.ThoughtNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((ThoughtNode)node).NextID);
-
-                    Jwriter.WritePropertyName("IdeaID");
-                    Jwriter.Write(((ThoughtNode)node).IdeaID);
-
-                    Jwriter.WritePropertyName("Description");
-                    Jwriter.Write(((ThoughtNode)node).Description);
-
-                    Jwriter.WritePropertyName("FurtherDetails");
-                    Jwriter.Write(((ThoughtNode)node).FurtherDetails);
-
-
-                    Jwriter.WritePropertyName("PlacedManually");
-                    Jwriter.Write(((ThoughtNode)node).PlacedManually);
-
-
-                    Jwriter.WritePropertyName("Position");
-                    Jwriter.WriteArrayStart();
-
-                    //Jwriter.WritePropertyName("X");
-                    Jwriter.Write(((ThoughtNode)node).Position.x);
-                    //Jwriter.WritePropertyName("Y");
-                    Jwriter.Write(((ThoughtNode)node).Position.y);
-                    //Jwriter.WritePropertyName("Z");
-                    Jwriter.Write(((ThoughtNode)node).Position.z);
-
-                    Jwriter.WriteArrayEnd();
-
-
-                    break;
-                case NodeTypes.InteruptNode:
-
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((InteruptNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Interupts");
-                    Jwriter.WriteArrayStart();
-                    for (int i = 0; i < ((InteruptNode)node).NumOfInterupts; ++i)
-                    {
-                        Jwriter.WriteObjectStart();
-
-                        Jwriter.WritePropertyName("Idea");
-                        Jwriter.Write(((InteruptNode)node).Interupts[i].idea);
-
-                        Jwriter.WritePropertyName("Slug");
-                        if (((InteruptNode)node).Interupts[i].item != null)
-                        {
-                            string txt = AssetDatabase.GetAssetPath(((InteruptNode)node).Interupts[i].item);
-                            txt = txt.Replace("Assets/Resources/Sprites/", "");
-                            //removes the file extention off the string
-                            txt = txt.Remove(txt.Length - 4);
-                            Jwriter.Write(txt);
-                        }
-                        else
-                        {
-                            Jwriter.Write(null);
-                        }
-
-                        Jwriter.WritePropertyName("Destinations");
-                        Jwriter.Write(((InteruptNode)node).Interupts[i].DestinationID);
-
-                        Jwriter.WritePropertyName("InteruptType");
-                        Jwriter.Write((int)((InteruptNode)node).Interupts[i].type);
-
-                        Jwriter.WriteObjectEnd();
-                    }
-                    Jwriter.WriteArrayEnd();
-
-                    break;
-                case NodeTypes.CarryOnNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((CarryOnNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Interupts");
-                    Jwriter.WriteArrayStart();
-                    for (int i = 0; i < ((CarryOnNode)node).NumOfInterupts; ++i)
-                    {
-                        Jwriter.WriteObjectStart();
-
-                        Jwriter.WritePropertyName("Idea");
-                        Jwriter.Write(((CarryOnNode)node).Interupts[i].idea);
-
-                        Jwriter.WritePropertyName("Slug");
-                        if (((CarryOnNode)node).Interupts[i].item != null)
-                        {
-                            string txt = AssetDatabase.GetAssetPath(((CarryOnNode)node).Interupts[i].item);
-                            txt = txt.Replace("Assets/Resources/Sprites/", "");
-                            //removes the file extention off the string
-                            txt = txt.Remove(txt.Length - 4);
-                            Jwriter.Write(txt);
-                        }
-                        else
-                        {
-                            Jwriter.Write(null);
-                        }
-
-                        Jwriter.WritePropertyName("Destinations");
-                        Jwriter.Write(((CarryOnNode)node).Interupts[i].DestinationID);
-
-                        Jwriter.WritePropertyName("InteruptType");
-                        Jwriter.Write((int)((CarryOnNode)node).Interupts[i].type);
-
-                        Jwriter.WriteObjectEnd();
-                    }
-                    Jwriter.WriteArrayEnd();
-
-                    break;
-
-                case NodeTypes.FailNode:
-
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((FailNode)node).NextID);
-                    Jwriter.WritePropertyName("FailID");
-                    Jwriter.Write(((FailNode)node).FailID);
-                    break;
+                
                 case NodeTypes.MultiProgressNode:
                     Jwriter.WritePropertyName("Progress");
                     if (((ChainNode)node).Chain != null)

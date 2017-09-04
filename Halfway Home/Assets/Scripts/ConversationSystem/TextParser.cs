@@ -232,75 +232,7 @@ public static class TextParser
                     NextID = (int)data["FailID"];
 
                 break;
-            case ProgressType.Inventory:
-
-                Sprite InventoryMatch = null;
-                if (data["Slug"] != null)
-                    InventoryMatch = Resources.Load<Sprite>("Sprites/" + (string)data["Slug"]) as Sprite;
-
-                bool current = (bool)data["Current"];
-
-
-                if (InventorySystem.CollectedItem(InventoryMatch, current))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.MoodAmount:
-
-                int feel = (int)data["MoodToMatch"];
-                Feelings MoodToMatch = (Feelings)feel;
-                int com = (int)data["Comparison"];
-                ValueCompare Compare = (ValueCompare)com;
-                float MoodValueToMatch = (float)((double)data["MoodValue"]);
-
-                if (CompareValues(Compare, Game.current.Mind.getMood(MoodToMatch), MoodValueToMatch))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.MoodPercent:
-
-                int feeler = (int)data["MoodToMatch"];
-                Feelings MoodToMatchs = (Feelings)feeler;
-                int comp = (int)data["Comparison"];
-                ValueCompare Comparin = (ValueCompare)comp;
-                float MoodValueToMatchs = (float)((double)data["MoodValue"]);
-
-                if (CompareValues(Comparin, Game.current.Mind.MoodPercentage(MoodToMatchs), MoodValueToMatchs))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.PrimaryMood:
-
-                int feelin = (int)data["MoodToMatch"];
-                Feelings MoodToMatchi = (Feelings)feelin;
-
-                if (Game.current.Mind.PrimaryEmotion() == MoodToMatchi)
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.Lucky:
-
-                int LuckRange = (int)data["LuckRange"];
-                float LuckPercentToFail = (float)((double)data["PercentFailure"]);
-                bool AffectLuck = (bool)data["AffectLuck"];
-
-                if (Game.current.Mind.Lucky((uint)LuckRange, LuckPercentToFail, AffectLuck))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.PhoneData:
-
-                if (CheckPhoneData(data))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-
-                break;
+            
             case ProgressType.PlotBeat:
 
                 string BeatName = (string)data["BeatName"];
@@ -312,27 +244,12 @@ public static class TextParser
                 else
                     NextID = (int)data["FailID"];
                 break;
-            case ProgressType.Scene:
-                string scene = (string)data["Scene"];
-                bool prev = (bool)data["Previous"];
-                if (CheckScene(prev, scene))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
+            
             case ProgressType.Date:
 
                 int day = (int)data["Beat"];
                 DayOfWeek date =(DayOfWeek)day;
                 if (Game.current.Date == date)
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            case ProgressType.Dream:
-
-                string DreamName = (string)data["Dream"];
-                if (Game.current.Dreams.SeenDream(DreamName))
                     NextID = (int)data["PassID"];
                 else
                     NextID = (int)data["FailID"];
@@ -364,63 +281,7 @@ public static class TextParser
 
     }
 
-    public static bool CheckScene(bool prev, string Scene)
-    {
-        var scener = Space.Instance.GetComponent<EnterScene>();
-
-        if (prev)
-            return scener.GetOldScene().SceneName == Scene;
-        else
-            return scener.GetCurrentScene().SceneName == Scene;
-
-    }
-
-    public static bool CheckPhoneData(JsonData data)
-    {
-
-        int ty = (int)data["PhoneDataType"];
-
-        PhoneDataTypes type = (PhoneDataTypes)ty;
-
-        switch (type)
-        {
-            case PhoneDataTypes.None:
-                break;
-            case PhoneDataTypes.Note:
-                string NoteTitle = (string)data["NoteTitle"];
-                return Game.current.Phone.IsNoteUnlocked(NoteTitle);
-            case PhoneDataTypes.Pic:
-                Sprite Image = null;
-                if (data["PhoneImageSlug"] != null)
-                {
-                    Image = Resources.Load<Sprite>("Sprites/" + (string)data["PhoneImageSlug"]);
-
-                    return Game.current.Phone.IsImageUnlocked(Image);
-                }
-                break;
-            case PhoneDataTypes.Task:
-                int num = (int)data["TaskNumber"];
-                int state = (int)data["TaskState"];
-                Task.TaskState NewTaskState = (Task.TaskState)state;
-                return Game.current.Phone.doesTaskSatusMatch(num, NewTaskState);
-            case PhoneDataTypes.Battery:
-                int comp = (int)data["Comparison"];
-                ValueCompare Comparin = (ValueCompare)comp;
-                int bat = (int)data["Battery"];
-                return CompareValues(Comparin, bat, PhoneAppData.GetBatteryLife());
-            case PhoneDataTypes.Drain:
-                int compa = (int)data["Comparison"];
-                ValueCompare Compare = (ValueCompare)compa;
-                int dr = (int)data["Drain"];
-                return CompareValues(Compare, dr, PhoneAppData.GetDrainSpeed());
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
-
-        return false;
-    }
-
+    
 
     public static int MakeProgress(JsonData data)
     {
@@ -442,51 +303,7 @@ public static class TextParser
                 Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
                 NextID = (int)data["NextID"];
                 break;
-            case ProgressType.Inventory:
-
-                var item = InventorySystem.GetItemFromList((string)data["InventoryItem"]);
-
-                if (item != null)
-                    InventorySystem.AddItem(item);
-
-                NextID = (int)data["NextID"];
-                break;
-            case ProgressType.MoodAmount:
-
-                int feel = (int)data["MoodToMatch"];
-                Feelings MoodToMatch = (Feelings)feel;
-
-                int MoodValueToMatch = (int)((double)data["MoodValue"]);
-
-                Game.current.Mind.MoodSwing(MoodToMatch, MoodValueToMatch);
-
-                NextID = (int)data["NextID"];
-                break;
-            case ProgressType.MoodPercent:
-
-                //should not be able to get here, but still, if do, don't break
-                NextID = (int)data["NextID"];
-
-                break;
-            case ProgressType.PrimaryMood:
-
-                //should not be able to get here, but still, if do, don't break
-                NextID = (int)data["NextID"];
-                break;
-            case ProgressType.Lucky:
-
-                //should not be able to get here, but still, if do, don't break
-                NextID = (int)data["NextID"];
-                break;
-            case ProgressType.PhoneData:
-
-
-                ChangePhoneData(data);
-
-                //should not be able to get here, but still, if do, don't break
-                NextID = (int)data["NextID"];
-
-                break;
+            
             default:
                 Debug.LogError("Unrecognized Option");
                 break;
@@ -497,43 +314,7 @@ public static class TextParser
     }
 
 
-    public static void ChangePhoneData(JsonData data)
-    {
-
-        int ty = (int)data["PhoneDataType"];
-
-        PhoneDataTypes type = (PhoneDataTypes)ty;
-
-        switch (type)
-        {
-            case PhoneDataTypes.None:
-                break;
-            case PhoneDataTypes.Note:
-                string NoteTitle = (string)data["NoteTitle"];
-                Game.current.Phone.UnlockNote(NoteTitle);
-                break;
-            case PhoneDataTypes.Pic:
-                Sprite Image = null;
-                if (data["PhoneImageSlug"] != null)
-                {
-                    Image = Resources.Load<Sprite>("Sprites/" + (string)data["PhoneImageSlug"]);
-
-                    Game.current.Phone.UnlockImage(Image);
-                }
-                break;
-            case PhoneDataTypes.Task:
-                int num = (int)data["TaskNumber"];
-                int state = (int)data["TaskState"];
-                Task.TaskState NewTaskState = (Task.TaskState)state;
-                Game.current.Phone.UpdateTask(num, NewTaskState);
-                break;
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
-
-
-    }
+   
 
 
 }

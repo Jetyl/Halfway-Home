@@ -98,21 +98,10 @@ public class GameStartUp : MonoBehaviour
         {
             
             Game.current = new Game();
-            DebugMindReader();
         }
     }
 
 
-    void DebugMindReader()
-    {
-        print(Feelings.Hollow + " " + Game.current.Mind.getMood(Feelings.Hollow));
-        print(Feelings.Melancholy + " " + Game.current.Mind.getMood(Feelings.Melancholy));
-        print(Feelings.Frustration + " " + Game.current.Mind.getMood(Feelings.Frustration));
-        print(Feelings.Anxiety + " " + Game.current.Mind.getMood(Feelings.Anxiety));
-        print(Feelings.Desire + " " + Game.current.Mind.getMood(Feelings.Desire));
-        print(Feelings.Comfort + " " + Game.current.Mind.getMood(Feelings.Comfort));
-        print(Feelings.Affection + " " + Game.current.Mind.getMood(Feelings.Affection));
-        print("Total Mood " + Game.current.Mind.MoodTotal());
-    }
+  
 
 }

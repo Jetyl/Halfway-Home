@@ -14,11 +14,7 @@ public class ChangeNode : BaseNode
 
     public ProgressType TypeOfProgress;
 
-    public Feelings MoodToMatch;
-
-    public float MoodValueToMatch;
-
-    public PhoneDataTypes PhoneData;
+    
     public bool SendNoification;
 
     public string NoteTitle;
@@ -40,10 +36,7 @@ public class ChangeNode : BaseNode
         NextID = -1;
         TypeID = NodeTypes.ChangeNode;
         CheckPoint = new ProgressPoint();
-        MoodToMatch = Feelings.Hollow;
-        MoodValueToMatch = 0;
-        InventoryItemName = "";
-        PhoneData = PhoneDataTypes.None;
+        
         NoteTitle = "";
         Image = null;
         TaskNumber = 0;
@@ -70,27 +63,10 @@ public class ChangeNode : BaseNode
         else
             CheckPoint = new ProgressPoint();
 
-        if (data.Keys.Contains("MoodToMatch"))
-        {
-            int feel = (int)data["MoodToMatch"];
-            MoodToMatch = (Feelings)feel;
-        }
-        else
-            MoodToMatch = Feelings.Hollow;
-
-        if (data.Keys.Contains("MoodValue"))
-            MoodValueToMatch = (float)((double)data["MoodValue"]);
-        else
-            MoodValueToMatch = 0;
+        
         
 
-        if (data.Keys.Contains("PhoneDataType"))
-        {
-            int dat = (int)data["PhoneDataType"];
-            PhoneData = (PhoneDataTypes)dat;
-        }
-        else
-            PhoneData = PhoneDataTypes.None;
+        
 
 
         if (data.Keys.Contains("NoteTitle"))
@@ -177,41 +153,15 @@ public class ChangeNode : BaseNode
                 CheckPoint.TypeID = (PointTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), CheckPoint.TypeID);
                 ProgressPointDisplay();
                 break;
-            case ProgressType.Inventory:
-                rect.size = new Vector2(200, 125);
-                InventoryItemName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), InventoryItemName);
-                break;
-            case ProgressType.MoodAmount:
-                rect.size = new Vector2(200, 155);
-                MoodToMatch = (Feelings)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), MoodToMatch);
-                MoodValueToMatch = EditorGUI.FloatField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), MoodValueToMatch);
-                break;
-            case ProgressType.MoodPercent:
-                TypeOfProgress = ProgressType.MoodAmount;
-                break;
-            case ProgressType.PrimaryMood:
-                TypeOfProgress = ProgressType.MoodAmount;
-                break;
-            case ProgressType.Lucky:
-                TypeOfProgress = ProgressType.None;
-                break;
-            case ProgressType.PhoneData:
-                rect.size = new Vector2(200, 125);
-                PhoneData = (PhoneDataTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), PhoneData);
-                PhoneDataDisplay();
-                break;
+            
             case ProgressType.PlotBeat:
                 TypeOfProgress = ProgressType.None;
                 break;
-            case ProgressType.Scene:
-                TypeOfProgress = ProgressType.None;
-                break;
+            
             case ProgressType.Date:
                 TypeOfProgress = ProgressType.None;
                 break;
-            case ProgressType.Dream:
-                TypeOfProgress = ProgressType.None;
-                break;
+            
             default:
                 Debug.LogError("Unrecognized Option");
                 break;
@@ -246,44 +196,7 @@ public class ChangeNode : BaseNode
         }
     }
 
-
-    void PhoneDataDisplay()
-    {
-        switch (PhoneData)
-        {
-            case PhoneDataTypes.None:
-                break;
-            case PhoneDataTypes.Note:
-                rect.size = new Vector2(200, 170);
-                NoteTitle = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), NoteTitle);
-                SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 140), new Vector2(150, 15)), "Send Notification Event", SendNoification);
-                break;
-            case PhoneDataTypes.Pic:
-                rect.size = new Vector2(200, 200);
-                Image = EditorGUI.ObjectField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 50)), Image, typeof(Sprite), allowSceneObjects: true) as Sprite;
-                SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 170), new Vector2(150, 15)), "Send Notification Event", SendNoification);
-                break;
-            case PhoneDataTypes.Task:
-                rect.size = new Vector2(200, 190);
-                TaskNumber = EditorGUI.IntField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), TaskNumber);
-                NewTaskState = (Task.TaskState)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 140), new Vector2(150, 20)), NewTaskState);
-                SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 160), new Vector2(150, 15)), "Send Notification Event", SendNoification);
-                break;
-            case PhoneDataTypes.Battery:
-                rect.size = new Vector2(200, 170);
-                Battery = EditorGUI.Slider(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), Battery, -1, 1);
-                SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 160), new Vector2(150, 15)), "Send Notification Event", SendNoification);
-                break;
-            case PhoneDataTypes.Drain:
-                rect.size = new Vector2(200, 170);
-                Drain = EditorGUI.FloatField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), Drain);
-                SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 160), new Vector2(150, 15)), "Send Notification Event", SendNoification);
-                break;
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
-    }
+    
 
 
 }

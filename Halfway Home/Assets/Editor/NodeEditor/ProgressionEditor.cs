@@ -442,80 +442,7 @@ public class ProgressionEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                        case ProgressType.Inventory:
-                            Jwriter.WritePropertyName("Slug");
-                            if (((ProgressNode)node).InventoryMatch != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ProgressNode)node).InventoryMatch);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-                            Jwriter.WritePropertyName("Current");
-                            Jwriter.Write(((ProgressNode)node).Current);
-                            break;
-                        case ProgressType.MoodAmount:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ProgressNode)node).MoodValueToMatch);
-                            Jwriter.WritePropertyName("Comparison");
-                            Jwriter.Write((int)((ProgressNode)node).Compare);
-                            break;
-                        case ProgressType.MoodPercent:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ProgressNode)node).MoodValueToMatch);
-                            Jwriter.WritePropertyName("Comparison");
-                            Jwriter.Write((int)((ProgressNode)node).Compare);
-                            break;
-                        case ProgressType.PrimaryMood:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ProgressNode)node).MoodToMatch);
-                            break;
-                        case ProgressType.Lucky:
-                            Jwriter.WritePropertyName("LuckRange");
-                            Jwriter.Write(((ProgressNode)node).LuckRange);
-                            Jwriter.WritePropertyName("PercentFailure");
-                            Jwriter.Write(((ProgressNode)node).LuckPercentToFail);
-                            Jwriter.WritePropertyName("AffectLuck");
-                            Jwriter.Write(((ProgressNode)node).AffectLuck);
-                            break;
-                        case ProgressType.PhoneData:
-                            Jwriter.WritePropertyName("PhoneDataType");
-                            Jwriter.Write((int)((ProgressNode)node).PhoneData);
-                            Jwriter.WritePropertyName("NoteTitle");
-                            Jwriter.Write(((ProgressNode)node).NoteTitle);
-
-                            Jwriter.WritePropertyName("PhoneImageSlug");
-                            if (((ProgressNode)node).Image != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ProgressNode)node).Image);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-
-                            Jwriter.WritePropertyName("TaskNumber");
-                            Jwriter.Write(((ProgressNode)node).TaskNumber);
-                            Jwriter.WritePropertyName("TaskState");
-                            Jwriter.Write((int)((ProgressNode)node).NewTaskState);
-                            Jwriter.WritePropertyName("Battery");
-                            Jwriter.Write(((ProgressNode)node).Battery);
-                            Jwriter.WritePropertyName("Drain");
-                            Jwriter.Write(((ProgressNode)node).Drain);
-                            break;
+                       
                         case ProgressType.PlotBeat:
 
                             Jwriter.WritePropertyName("Beat");
@@ -525,24 +452,13 @@ public class ProgressionEditor : BaseNodeEditor
                             Jwriter.Write(((ProgressNode)node).BeatName);
                             
                             break;
-                        case ProgressType.Scene:
-                            Jwriter.WritePropertyName("Scene");
-                            Jwriter.Write(((ProgressNode)node).SceneToCheck.SceneName);
-
-                            Jwriter.WritePropertyName("Previous");
-                            Jwriter.Write(((ProgressNode)node).PreviousScene);
-
-                            break;
+                        
                         case ProgressType.Date:
 
                             Jwriter.WritePropertyName("Date");
                             Jwriter.Write((int)((ProgressNode)node).Date);
                             break;
-                        case ProgressType.Dream:
-                            Jwriter.WritePropertyName("Dream");
-                            Jwriter.Write(((ProgressNode)node).DreamName);
-
-                            break;
+                       
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
@@ -600,49 +516,7 @@ public class ProgressionEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                        case ProgressType.Inventory:
-                            Jwriter.WritePropertyName("InventoryItem");
-                            Jwriter.Write(((ChangeNode)node).InventoryItemName);
-                            break;
-                        case ProgressType.MoodAmount:
-                            Jwriter.WritePropertyName("MoodToMatch");
-                            Jwriter.Write((int)((ChangeNode)node).MoodToMatch);
-                            Jwriter.WritePropertyName("MoodValue");
-                            Jwriter.Write(((ChangeNode)node).MoodValueToMatch);
-                            break;
-                        case ProgressType.PhoneData:
-                            Jwriter.WritePropertyName("PhoneDataType");
-                            Jwriter.Write((int)((ChangeNode)node).PhoneData);
-                            Jwriter.WritePropertyName("NoteTitle");
-                            Jwriter.Write(((ChangeNode)node).NoteTitle);
-
-                            Jwriter.WritePropertyName("PhoneImageSlug");
-                            if (((ChangeNode)node).Image != null)
-                            {
-                                string txt = AssetDatabase.GetAssetPath(((ChangeNode)node).Image);
-                                txt = txt.Replace("Assets/Resources/Sprites/", "");
-                                //removes the file extention off the string
-                                txt = txt.Remove(txt.Length - 4);
-                                Jwriter.Write(txt);
-                            }
-                            else
-                            {
-                                Jwriter.Write(null);
-                            }
-
-                            Jwriter.WritePropertyName("TaskNumber");
-                            Jwriter.Write(((ChangeNode)node).TaskNumber);
-                            Jwriter.WritePropertyName("TaskState");
-                            Jwriter.Write((int)((ChangeNode)node).NewTaskState);
-
-                            Jwriter.WritePropertyName("Battery");
-                            Jwriter.Write(((ChangeNode)node).Battery);
-                            Jwriter.WritePropertyName("Drain");
-                            Jwriter.Write(((ChangeNode)node).Drain);
-
-                            Jwriter.WritePropertyName("Notify");
-                            Jwriter.Write(((ChangeNode)node).SendNoification);
-                            break;
+                        
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
