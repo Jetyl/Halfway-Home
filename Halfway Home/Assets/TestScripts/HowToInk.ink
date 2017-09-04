@@ -1,0 +1,22 @@
+-> This_Is_A_Knot
+=== This_Is_A_Knot ===
+This is a knot. Knots are the basic building blocks of an ink narrative. They operate like co-routine driven functions and allow for easy separation of story segments.
+Writing in a knot requires no special formatting to appear before the player and can be easily read by the ink compiler.
+If you want to introduce choice, record decisions, trigger game events, or other interactive options formatting is required.
+*This is a choice
+	Choices lead to different lines. It's best to indent choice lines to show how they flow!
+	Any line opened with an asterisk becomes a choice. There are several ways to format choices based on what choice text you want to show the player.
+	This text is the same as if you had picked the other choice, but it doeesn't have to be.
+	** This is a sub-choice
+	Subchoices are supported infinitely, but each time a subchoice is given it requires an additional asterisk.
+	** This is also a sub-choice
+*This is another choice
+	Choices lead to different lines. It's best to indent choice lines to show how they flow!
+	Any line opened with an asterisk becomes a choice. There are several ways to format choices based on what choice text you want to show the player.
+	This text is the same as if you had picked the other choice, but it doeesn't have to be.
+	** This is a sub-choice
+	Subchoices are supported infinitely, but each time a subchoice is given it requires an additional asterisk.
+	** This is also a sub-choice
+	Subchoices are supported infinitely, but each time a subchoice is given it requires an additional asterisk.
+- This is a gather. It pulls the flow to a single point, regardless of previous choices.
+-> END
