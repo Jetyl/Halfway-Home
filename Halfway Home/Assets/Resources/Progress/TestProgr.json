@@ -1,0 +1,48 @@
+
+[
+ {
+  "title" : "",
+  "ID"    : 10000,
+  "TypeID" : 1,
+  "NodePositionX" : 300.0,
+  "NodePositionY" : 176.0,
+  "width"         : 200.0,
+  "height"        : 180.0,
+  "PassID"        : 10002,
+  "FailID"        : 10001,
+  "TypeOfProgress" : 6,
+  "LuckRange"      : 2,
+  "PercentFailure" : 0.5,
+  "AffectLuck"     : true
+ },
+ {
+  "title" : "Test",
+  "ID"    : 0,
+  "TypeID" : 0,
+  "NodePositionX" : 25.0,
+  "NodePositionY" : 181.0,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "NextID"        : 10000
+ },
+ {
+  "title" : "",
+  "ID"    : 10001,
+  "TypeID" : -1,
+  "NodePositionX" : 620.0,
+  "NodePositionY" : 314.0,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "EndID"         : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10002,
+  "TypeID" : -1,
+  "NodePositionX" : 623.0,
+  "NodePositionY" : 113.0,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "EndID"         : 1
+ }
+]
