@@ -6,7 +6,7 @@ public class MakeProgress : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events ChangeOn = Events.Inspect;
+    public Events ChangeOn = Events.Null;
 
 
     public ProgressPoint Progress;

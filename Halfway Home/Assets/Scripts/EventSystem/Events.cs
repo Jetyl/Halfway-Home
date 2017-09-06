@@ -53,29 +53,14 @@ public class Events
     public static readonly String QuitGame = "QuitGameEvent";
 
 
-    //chris's events 
-    public static readonly String TrackingCameraMove_Event = "TrackingCameraMove_Event";
-    public static readonly String ImportantObjectAdd_Event = "ImportantObjectAdd_Event";
-    public static readonly String ImportantObjectRemove_Event = "ImportantObjectRemove_Event";
 
-    public static readonly String DisableCamera = "DisableCameraEvent";
-    public static readonly String EnableCamera = "EnableCameraEvent";
+    //Halfway-Home Custom Events
 
-    public static readonly String ZoomCamera = "ZoomCameraEvent";
-    public static readonly String ResetZoomCamera = "ResetZoomCameraEvent";
-
-    //a-0 custom events 
-
-    //ovement related
-    public static readonly String Walk = "WalkEvent";
-    public static readonly String DisableMove = "DisableMoveEvent";
-    public static readonly String EnableMove = "EnableMoveEvent";
-    public static readonly String StopWalking = "StopWalkingEvent";
-
-    //notice/inspect related
-    public static readonly String Notice = "NoticeEvent";
-    public static readonly String UnNoticed = "UnNoticeEvent";
-    public static readonly String Inspect = "InspectEvent";
+    public static readonly String StartGame = "StartGameEvent";
+    public static readonly String EndGame = "EndGameEvent";
+    public static readonly String MapChoiceMade = "MapChoiceMadeEvent";
+    public static readonly String ReturnToMap = "ReturnToMapEvent";
+    public static readonly String NewStory = "NewStoryEvent";
 
     //description system
     public static readonly String AutoType = "AutoTypeEvent";
@@ -90,34 +75,7 @@ public class Events
     public static readonly String Choice = "ChoiceEvent";
     public static readonly String ChoiceMade = "ChoiceMadeEvent";
 
-    //room relevant
-    public static readonly String MoveRoom = "MoveRoomEvent";
-    public static readonly String FinishedMoveRoom = "FinishedMoveRoomEvent";
-    public static readonly String DetectRoom = "DetectRoomEvent";
-
-    //inventory system
-    public static readonly String OpenInventory = "OpenInventoryEvent";
-    public static readonly String CloseInventory = "CloseInventoryEvent";
-    public static readonly String SetItem = "SetItemEvent";
-    public static readonly String SelectItem = "SelectItemEvent";
-    public static readonly String UseItem = "UseItemEvent";
-    public static readonly String ExamineItem = "ExamineItemEvent";
-    public static readonly String NameItem = "NameItemEvent";
-    public static readonly String NameCombine = "NameCombineEvent";
-    public static readonly String NewItem = "NewItemEvent";
-    public static readonly String PuzzleSolved = "PuzzleSolvedEvent";
-
-    //shought system
-    public static readonly String UseIdea = "UseIdeaEvent";
-    public static readonly String AddIdea = "AddIdeaEvent";
-    public static readonly String ExamineIdea = "ExamineIdeaEvent";
-    public static readonly String BeCreative = "CreativeEvent";
-    public static readonly String CreativityLost = "UnCreativeEvent";
-    public static readonly String OpenThoughts = "OpenThoughtsEvent";
-    public static readonly String CloseThoughts = "CloseThoughtsEvent";
-    public static readonly String ThoughtsOn = "ThoughtsOnEvent";
-    public static readonly String ThoughtsOff = "ThoughtsOffEvent";
-
+    
     
     //conversation system
     public static readonly String StartConversation = "StartConversationEvent";
@@ -129,12 +87,7 @@ public class Events
     public static readonly String Interupt = "AttemptedInteruptionEvent";
     public static readonly String InteruptLost = "LostSequeEvent";
 
-    //phone system
-    public static readonly String TakeOutPhone = "TakeOutPhoneEvent";
-    public static readonly String PutAwayPhone = "PutAwayPhoneEvent";
-    public static readonly String PhoneOn = "PhoneOnEvent";
-    public static readonly String PhoneOff = "PhoneOffEvent";
-    public static readonly String Notification = "NotificationEvent";
+   
 
     //other ui events
     public static readonly String OpenUI = "OpenUIEvent";
@@ -146,33 +99,7 @@ public class Events
     public static readonly String CloseImage = "CloseImageEvent";
     public static readonly String ScreenTint = "ScreenTintEvent";
 
-    //other general events
-    public static readonly String SpriteChange = "SpriteChangeEvent";
-    public static readonly String Dream = "DreamEvent";
-    public static readonly String NewDay = "NewDayEvent";
-    public static readonly String Naming = "NameEvent";
-    public static readonly String Animate = "AnimateEvent";
-    public static readonly String Jukebox = "JukeboxEvent";
-
-    //linking events
-    public static readonly String Link1 = "Link1Event";
-    public static readonly String Link2 = "Link2Event";
-    public static readonly String Link3 = "Link3Event";
-    public static readonly String Link4 = "Link4Event";
-    public static readonly String Link5 = "Link5Event";
-    public static readonly String Link6 = "Link6Event";
-    public static readonly String Link7 = "Link7Event";
-    public static readonly String Link8 = "Link8Event";
-    public static readonly String Link9 = "Link9Event";
-    public static readonly String Link10 = "Link10Event";
-    public static readonly String Link11 = "Link11Event";
-    public static readonly String Link12 = "Link12Event";
-    public static readonly String Link13 = "Link13Event";
-    public static readonly String Link14 = "Link14Event";
-    public static readonly String Link15 = "Link15Event";
-    public static readonly String Link16 = "Link16Event";
-    public static readonly String Link17 = "Link17Event";
-
+    
     //a null event. no one should listen to this
     public static readonly String Null = "NullEvent";
 

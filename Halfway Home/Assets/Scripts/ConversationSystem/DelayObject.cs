@@ -6,11 +6,11 @@ public class DelayObject : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events DelayOn = Events.Inspect;
+    public Events DelayOn = Events.Null;
 
     public EventListener TalkTo = EventListener.Space;
 
-    public Events WhatToDoOnFinish = Events.Link1;
+    public Events WhatToDoOnFinish = Events.Null;
 
     public float DelayTime = 1f;
 

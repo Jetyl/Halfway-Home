@@ -6,7 +6,7 @@ public class SaveObject : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events SaveOn = Events.Inspect;
+    public Events SaveOn = Events.Null;
 
 
     public Choices[] SaveOptions = new Choices[3];
@@ -26,7 +26,7 @@ public class SaveObject : MonoBehaviour
             choice.OwnerRef = gameObject;
         }
 
-        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.Dream, SaveAndContinue);
+        //EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.Dream, SaveAndContinue);
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.ReturnToMainMenu, SaveAndMenu);
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.QuitGame, SaveAndQuit);
 
@@ -56,7 +56,7 @@ public class SaveObject : MonoBehaviour
         SaveSystem.SaveGame();
 
 
-        Space.DispatchEvent(Events.Dream);
+        //Space.DispatchEvent(Events.Dream);
 
     }
 

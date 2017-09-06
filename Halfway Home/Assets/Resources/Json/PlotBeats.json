@@ -1,10 +1,61 @@
 
 [
  {
-  "PlotName" : "test",
+  "PlotName" : "Player Data",
   "BeatNumber" : 0,
-  "BeatName"   : "Test",
+  "BeatName"   : "Player Data",
   "Point"      : [
+   {
+    "Name" : "Delusion",
+    "Type" : 2
+   },
+   {
+    "Name" : "Doubt",
+    "Type" : 2
+   },
+   {
+    "Name" : "Stress",
+    "Type" : 2
+   },
+   {
+    "Name" : "Fatigue",
+    "Type" : 2
+   },
+   {
+    "Name" : "Grace",
+    "Type" : 2
+   },
+   {
+    "Name" : "Expression",
+    "Type" : 2
+   },
+   {
+    "Name" : "Self-Awareness",
+    "Type" : 2
+   }
+  ]
+ },
+ {
+  "PlotName" : "System Data",
+  "BeatNumber" : -1,
+  "BeatName"   : "System Data",
+  "Point"      : [
+   {
+    "Name" : "MasterVolume",
+    "Type" : 3
+   },
+   {
+    "Name" : "BackgroundVolume",
+    "Type" : 3
+   },
+   {
+    "Name" : "SFXVolume",
+    "Type" : 3
+   },
+   {
+    "Name" : "TextSpeed",
+    "Type" : 3
+   }
   ]
  }
 ]

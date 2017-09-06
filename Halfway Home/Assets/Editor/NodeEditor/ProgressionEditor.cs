@@ -453,11 +453,6 @@ public class ProgressionEditor : BaseNodeEditor
                             
                             break;
                         
-                        case ProgressType.Date:
-
-                            Jwriter.WritePropertyName("Date");
-                            Jwriter.Write((int)((ProgressNode)node).Date);
-                            break;
                        
                         default:
                             Debug.LogError("Unrecognized Option");

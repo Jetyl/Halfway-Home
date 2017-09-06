@@ -6,7 +6,7 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 
-public class ConversationEditor : BaseNodeEditor
+public class TimelineEditor : BaseNodeEditor
 {
     [SerializeField]
     public JsonData ConversationData;
@@ -18,11 +18,11 @@ public class ConversationEditor : BaseNodeEditor
     StartNode StartPoint;
 
 
-    [MenuItem("Window/Halfway Home/Conversation Editor")]
+    [MenuItem("Window/Halfway Home/Timeline Editor")]
     private static void OpenWindow()
     {
-        ConversationEditor window = GetWindow<ConversationEditor>();
-        window.titleContent = new GUIContent("Conversation Editor");
+        TimelineEditor window = GetWindow<TimelineEditor>();
+        window.titleContent = new GUIContent("Timeline Editor");
     }
 
 
@@ -48,10 +48,10 @@ public class ConversationEditor : BaseNodeEditor
 
         ProcessEvents(Event.current);
 
-        ConversationName = EditorGUILayout.TextField("Conversation Name", ConversationName);
+        ConversationName = EditorGUILayout.TextField("Timeline Name", ConversationName);
 
         //expands the json data with another dream slot
-        if (GUILayout.Button("New Conversation"))
+        if (GUILayout.Button("New Timeline"))
         {
             //clar all nodes
             if (nodes != null)
@@ -63,7 +63,7 @@ public class ConversationEditor : BaseNodeEditor
             ConversationName = "";
         }
 
-        TextAsset LoadConversation = EditorGUILayout.ObjectField(Resources.Load("Assets/Resources/Conversations/" + ConversationName), typeof(TextAsset), allowSceneObjects: true) as TextAsset;
+        TextAsset LoadConversation = EditorGUILayout.ObjectField(Resources.Load("Assets/Resources/Timeline/" + ConversationName), typeof(TextAsset), allowSceneObjects: true) as TextAsset;
 
         if (LoadConversation != null)
         {
@@ -79,7 +79,7 @@ public class ConversationEditor : BaseNodeEditor
         }
 
         //expands the json data with another dream slot
-        if (GUILayout.Button("Save Conversation"))
+        if (GUILayout.Button("Save Timeline"))
         {
             if (ConversationName != "")
                 SaveItemInfo();
@@ -109,7 +109,7 @@ public class ConversationEditor : BaseNodeEditor
             nodes = new List<BaseNode>();
         }
 
-        switch(type)
+        switch (type)
         {
             case NodeTypes.StartNode:
                 StartPoint = new StartNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
@@ -124,29 +124,17 @@ public class ConversationEditor : BaseNodeEditor
             case NodeTypes.ChangeNode:
                 nodes.Add(new ChangeNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
                 break;
-            case NodeTypes.LineNode:
-                nodes.Add(new LineNode(mousePosition, 400, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.ChoiceNode:
-                nodes.Add(new ChoiceNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.DelayNode:
-                nodes.Add(new DelayNode(mousePosition, 120, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.EventNode:
-                nodes.Add(new EventNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.AnimateNode:
-                nodes.Add(new AnimateNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.ImageNode:
-                nodes.Add(new ImageNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
-            case NodeTypes.SoundNode:
-                nodes.Add(new SoundNode(mousePosition, 200, 160, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
-                break;
             case NodeTypes.MultiProgressNode:
                 nodes.Add(new ChainNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                break;
+            case NodeTypes.MapNode:
+                nodes.Add(new MapNode(mousePosition, 350, 200, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                break;
+            case NodeTypes.ToMapNode:
+                nodes.Add(new ToMapNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                break;
+            case NodeTypes.InkNode:
+                nodes.Add(new InkNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
                 break;
             default:
                 break;
@@ -154,7 +142,7 @@ public class ConversationEditor : BaseNodeEditor
 
         NewID += 1;
     }
-    
+
     protected override void OnClickRemoveNode(BaseNode node)
     {
         base.OnClickRemoveNode(node);
@@ -174,18 +162,14 @@ public class ConversationEditor : BaseNodeEditor
 
         if (selectedOutPoint.type == ConnectionPointType.Branch)
         {
-            
+
             switch (selectedOutPoint.node.TypeID)
             {
-                
+
                 case NodeTypes.ProgressNode:
                     ((ProgressNode)selectedOutPoint.node).FailID = selectedInPoint.node.ID;
                     break;
-
-                case NodeTypes.ChoiceNode:
-                    ((ChoiceNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, selectedInPoint.node.ID);
-                    break;
-                
+                    
                 case NodeTypes.MultiProgressNode:
                     ((ChainNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, selectedInPoint.node.ID);
                     break;
@@ -209,7 +193,7 @@ public class ConversationEditor : BaseNodeEditor
                     selectedOutPoint.node.NextID = selectedInPoint.node.ID;
                     break;
             }
-            
+
         }
 
 
@@ -219,19 +203,13 @@ public class ConversationEditor : BaseNodeEditor
     {
         if (connection.outPoint.type == ConnectionPointType.Branch)
         {
-            
+
             switch (connection.outPoint.node.TypeID)
             {
                 case NodeTypes.ProgressNode:
                     ((ProgressNode)connection.outPoint.node).FailID = -1;
                     break;
-
-                case NodeTypes.ChoiceNode:
-                    if(selectedOutPoint != null)
-                        ((ChoiceNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, -1);
-
-                    break;
-                
+                    
                 case NodeTypes.MultiProgressNode:
                     if (selectedOutPoint != null)
                         ((ChainNode)selectedOutPoint.node).ConnectNode((ChoiceConnectionPoint)selectedOutPoint, -1);
@@ -259,13 +237,13 @@ public class ConversationEditor : BaseNodeEditor
                     break;
             }
 
-            
+
 
         }
 
         connections.Remove(connection);
     }
-    
+
     protected override void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
@@ -276,13 +254,11 @@ public class ConversationEditor : BaseNodeEditor
         else
         {
             genericMenu.AddItem(new GUIContent("Add End node"), false, () => OnClickAddNode(mousePosition, NodeTypes.EndingNode));
-            genericMenu.AddItem(new GUIContent("Add Line node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LineNode));
-            genericMenu.AddItem(new GUIContent("Add Choice node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ChoiceNode));
-            genericMenu.AddItem(new GUIContent("Add Delay node"), false, () => OnClickAddNode(mousePosition, NodeTypes.DelayNode));
-            genericMenu.AddItem(new GUIContent("Action/Add Call node"), false, () => OnClickAddNode(mousePosition, NodeTypes.EventNode));
-            genericMenu.AddItem(new GUIContent("Action/Add Animate node"), false, () => OnClickAddNode(mousePosition, NodeTypes.AnimateNode));
-            genericMenu.AddItem(new GUIContent("Action/Add Image node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ImageNode));
-            genericMenu.AddItem(new GUIContent("Action/Add Sound node"), false, () => OnClickAddNode(mousePosition, NodeTypes.SoundNode));
+            genericMenu.AddItem(new GUIContent("Add Map node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MapNode));
+            genericMenu.AddItem(new GUIContent("Add Return node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ToMapNode));
+            genericMenu.AddItem(new GUIContent("Add Ink node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InkNode));
+
+
             genericMenu.AddItem(new GUIContent("Progress/Add Progress node"), false, () => OnClickAddNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Progress/Add Change node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ChangeNode));
             genericMenu.AddItem(new GUIContent("Progress/Add Multi-Progress node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MultiProgressNode));
@@ -334,41 +310,19 @@ public class ConversationEditor : BaseNodeEditor
                 case NodeTypes.EndingNode:
                     nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ConversationData[i]["ID"], (int)ConversationData[i]["EndID"], (string)ConversationData[i]["title"], (bool)ConversationData[i]["Enable"]));
                     break;
-                case NodeTypes.LineNode:
-                    nodes.Add(new LineNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
                 case NodeTypes.ProgressNode:
                     nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
                 case NodeTypes.ChangeNode:
                     nodes.Add(new ChangeNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
-                case NodeTypes.ChoiceNode:
-                    nodes.Add(new ChoiceNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.DelayNode:
-                    nodes.Add(new DelayNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.EventNode:
-                    nodes.Add(new EventNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.AnimateNode:
-                    nodes.Add(new AnimateNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.ImageNode:
-                    nodes.Add(new ImageNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                case NodeTypes.SoundNode:
-                    nodes.Add(new SoundNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
-                    break;
-                
                 case NodeTypes.MultiProgressNode:
                     nodes.Add(new ChainNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
                 default:
                     break;
             }
-            
+
             if (NewID < (int)ConversationData[i]["ID"])
                 NewID = (int)ConversationData[i]["ID"];
 
@@ -416,20 +370,8 @@ public class ConversationEditor : BaseNodeEditor
                         }
                     }
                     break;
-                case NodeTypes.ChoiceNode:
-                    for (int k = 0; k < ((ChoiceNode)nodes[i]).NumOfChoices; ++k)
-                    {
-                        for (int j = 0; j < nodes.Count; ++j)
-                        {
-                            if ((nodes[j]).ID == ((ChoiceNode)nodes[i]).ChoiceIDs[k])
-                            {
-                                connections.Add(new Connection(nodes[j].inPoint, ((ChoiceNode)nodes[i]).ChoicePoints[k], OnClickRemoveConnection));
-                            }
-                        }
-                    }
-                    
-                    break;
-               
+                
+
                 case NodeTypes.MultiProgressNode:
                     for (int k = 0; k < ((ChainNode)nodes[i]).EndingLength; ++k)
                     {
@@ -449,12 +391,12 @@ public class ConversationEditor : BaseNodeEditor
                         if ((nodes[k]).ID == (nodes[i]).NextID)
                         {
                             connections.Add(new Connection(nodes[k].inPoint, (nodes[i]).outPoint, OnClickRemoveConnection));
-                            
+
                         }
                     }
                     break;
             }
-            
+
         }
     }
 
@@ -492,7 +434,7 @@ public class ConversationEditor : BaseNodeEditor
             Jwriter.WritePropertyName("height");
             Jwriter.Write((node).rect.height);
 
-            switch(node.TypeID)
+            switch (node.TypeID)
             {
                 case NodeTypes.StartNode:
                     Jwriter.WritePropertyName("NextID");
@@ -558,7 +500,7 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                       
+
                         case ProgressType.PlotBeat:
 
                             Jwriter.WritePropertyName("Beat");
@@ -568,7 +510,7 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.Write(((ProgressNode)node).BeatName);
 
                             break;
-                        
+                            
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
@@ -626,139 +568,13 @@ public class ConversationEditor : BaseNodeEditor
                             Jwriter.WriteObjectEnd();
                             Jwriter.WriteArrayEnd();
                             break;
-                        
+
                         default:
                             Debug.LogError("Unrecognized Option");
                             break;
                     }
 
                     break;
-                case NodeTypes.LineNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((LineNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Lines");
-                    Jwriter.WriteArrayStart();
-                    for(int i = 0; i < ((LineNode)node).NumOfLines; ++i)
-                    {
-                        Jwriter.WriteObjectStart();
-
-                        Jwriter.WritePropertyName("Speaker");
-                        if (((LineNode)node).Lines[i].Speaker != null)
-                            Jwriter.Write(((LineNode)node).Lines[i].Speaker);
-                        else
-                            Jwriter.Write(null);
-                        Jwriter.WritePropertyName("Line");
-                        Jwriter.Write(((LineNode)node).Lines[i].Dialog);
-                        Jwriter.WritePropertyName("Pace");
-                        Jwriter.Write(((LineNode)node).Lines[i].Pace);
-
-                        Jwriter.WriteObjectEnd();
-                    }
-                    Jwriter.WriteArrayEnd();
-
-                    Jwriter.WritePropertyName("ImmediateNext");
-                    Jwriter.Write(((LineNode)node).CallNextNodeImmediately);
-                    Jwriter.WritePropertyName("DenyInput");
-                    Jwriter.Write(((LineNode)node).DenyPlayerInput);
-                    break;
-                case NodeTypes.ChoiceNode:
-                    
-                    Jwriter.WritePropertyName("Choices");
-                    Jwriter.WriteArrayStart();
-                    for (int i = 0; i < ((ChoiceNode)node).NumOfChoices; ++i)
-                    {
-                        Jwriter.Write(((ChoiceNode)node).ChoiceData[i]);
-                    }
-                    Jwriter.WriteArrayEnd();
-
-                    Jwriter.WritePropertyName("Destinations");
-                    Jwriter.WriteArrayStart();
-                    for (int i = 0; i < ((ChoiceNode)node).NumOfChoices; ++i)
-                    {
-                        Jwriter.Write(((ChoiceNode)node).ChoiceIDs[i]);
-                    }
-                    Jwriter.WriteArrayEnd();
-
-                    break;
-                case NodeTypes.DelayNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((DelayNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Delay");
-                    Jwriter.Write(((DelayNode)node).TimeToDelay);
-                    break;
-                case NodeTypes.EventNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((EventNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Event");
-                    Jwriter.Write(((EventNode)node).eventdata);
-
-                    Jwriter.WritePropertyName("Target");
-                    Jwriter.Write(((EventNode)node).TargetID);
-                    break;
-                case NodeTypes.AnimateNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((AnimateNode)node).NextID);
-
-                    Jwriter.WritePropertyName("key");
-                    Jwriter.Write(((AnimateNode)node).animationKey);
-
-                    Jwriter.WritePropertyName("Name");
-                    Jwriter.Write(((AnimateNode)node).ObjectName);
-
-                    Jwriter.WritePropertyName("bool");
-                    Jwriter.Write(((AnimateNode)node).BoolState);
-                    break;
-                case NodeTypes.ImageNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((ImageNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Slug");
-                    if (((ImageNode)node).ImageToDisplay != null)
-                    {
-                        string txt = AssetDatabase.GetAssetPath(((ImageNode)node).ImageToDisplay);
-                        txt = txt.Replace("Assets/Resources/Sprites/", "");
-                        //removes the file extention off the string
-                        txt = txt.Remove(txt.Length - 4);
-                        Jwriter.Write(txt);
-                    }
-                    else
-                    {
-                        Jwriter.Write(null);
-                    }
-
-
-                    Jwriter.WritePropertyName("bool");
-                    Jwriter.Write(((ImageNode)node).BoolState);
-                    break;
-                case NodeTypes.SoundNode:
-                    Jwriter.WritePropertyName("NextID");
-                    Jwriter.Write(((SoundNode)node).NextID);
-
-                    Jwriter.WritePropertyName("Slug");
-                    if (((SoundNode)node).sfx != null)
-                    {
-                        string txt = AssetDatabase.GetAssetPath(((SoundNode)node).sfx);
-                        txt = txt.Replace("Assets/Resources/Sounds/", "");
-                        //removes the file extention off the string
-                        txt = txt.Remove(txt.Length - 4);
-                        Jwriter.Write(txt);
-                    }
-                    else
-                    {
-                        Jwriter.Write(null);
-                    }
-
-                    Jwriter.WritePropertyName("bool");
-                    Jwriter.Write(((SoundNode)node).loop);
-                    Jwriter.WritePropertyName("stop");
-                    Jwriter.Write(((SoundNode)node).Remove);
-                    Jwriter.WritePropertyName("music");
-                    Jwriter.Write(((SoundNode)node).Music);
-                    break;
-                
                 case NodeTypes.MultiProgressNode:
                     Jwriter.WritePropertyName("Progress");
                     if (((ChainNode)node).Chain != null)
@@ -788,8 +604,8 @@ public class ConversationEditor : BaseNodeEditor
             }
 
 
-            
-            
+
+
 
 
 

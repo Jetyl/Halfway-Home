@@ -7,7 +7,7 @@ public class ChoiceObject : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events ChoiceOn = Events.Inspect;
+    public Events ChoiceOn = Events.Null;
 
 
     public Choices[] choices;

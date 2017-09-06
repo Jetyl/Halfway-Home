@@ -8,7 +8,7 @@ public class CheckProgressChain : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events CheckOn = Events.Inspect;
+    public Events CheckOn = Events.Null;
 
     public TextAsset ProgressChain;
 

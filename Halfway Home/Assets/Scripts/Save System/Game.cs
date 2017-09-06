@@ -11,12 +11,13 @@ public class Game
     public string PlayerName;
 
     public int Day;
-    
+
+    public int Hour;
     
 
     public ProgressSystem Progress;
     
-    public DayOfWeek Date;
+   
 
     public Game()
     {
@@ -25,7 +26,7 @@ public class Game
         PlayerName = "";
         Progress = new ProgressSystem();
        
-        Date = DateTime.Now.DayOfWeek;
+
         Progress.UpdateProgress("MasterVolume", 1.0f);
         Progress.UpdateProgress("BackgroundVolume", 1.0f);
         Progress.UpdateProgress("SFXVolume", 1.0f);
@@ -42,7 +43,7 @@ public class Game
         PlayerName = copy_.PlayerName;
         Progress = copy_.Progress;
         
-        Date = copy_.Date;
+
     }
 
 
@@ -98,24 +99,29 @@ public class Game
         point.IntValue = Day;
 
         Progress.UpdateProgress("Day", point);
-
-        //check the bedroom value, and make sure it is correct
-        var room = new ProgressPoint("Bedroom", PointTypes.String);
         
        
-
-        if (Date == DayOfWeek.Sunday)
-            Date = DayOfWeek.Monday;
-        else
-            Date += 1;
 
         
         //checks if any special conditions have occured, to change rooms or anything.
             // prolly do this in scene checks, not here
 
         //cast new day event
-        Space.DispatchEvent(Events.NewDay);
+        //Space.DispatchEvent(Events.NewDay);
 
     }
 
+}
+
+public enum Room
+{
+    None,
+    YourRoom,
+    Commons,
+    FrontDesk,
+    Kitchen,
+    Gardens,
+    Study,
+    ArtRoom,
+    Store
 }

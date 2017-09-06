@@ -62,14 +62,14 @@ public class ConversationDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         Converse = eventdata.conversation;
         //interuptFlags = new List<ConvInteruprt>();
-        InteruptFailNode = 0;
-        PhoneInterupt = false;
-        ExaminedItem = false;
-        ExamineInterupt = false;
-        ItemExamined = null;
+        //InteruptFailNode = 0;
+       // PhoneInterupt = false;
+        //ExaminedItem = false;
+        //ExamineInterupt = false;
+        //ItemExamined = null;
 
         NextNode(0);
-        print("on");
+        //print("on");
     }
 
 

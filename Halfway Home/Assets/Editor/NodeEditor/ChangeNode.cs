@@ -158,9 +158,6 @@ public class ChangeNode : BaseNode
                 TypeOfProgress = ProgressType.None;
                 break;
             
-            case ProgressType.Date:
-                TypeOfProgress = ProgressType.None;
-                break;
             
             default:
                 Debug.LogError("Unrecognized Option");

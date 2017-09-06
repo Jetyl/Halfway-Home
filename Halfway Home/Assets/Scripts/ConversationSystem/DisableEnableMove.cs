@@ -6,7 +6,7 @@ public class DisableEnableMove : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events ActOn = Events.Inspect;
+    public Events ActOn = Events.Null;
 
 
     public bool Enable = false;
@@ -32,11 +32,11 @@ public class DisableEnableMove : MonoBehaviour
 
         if (Enable)
         {
-            Space.DispatchEvent(Events.EnableMove);
+            //Space.DispatchEvent(Events.EnableMove);
         }
         else
         {
-            Space.DispatchEvent(Events.DisableMove);
+            //Space.DispatchEvent(Events.DisableMove);
         }
 
     }

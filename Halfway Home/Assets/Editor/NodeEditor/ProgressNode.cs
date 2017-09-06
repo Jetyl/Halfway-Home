@@ -225,9 +225,6 @@ public class ProgressNode : BaseNode
                 BeatState = (Beat.BeatState)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 110), new Vector2(150, 20)), BeatState);
                 break;
             
-            case ProgressType.Date:
-                Date = (DayOfWeek)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 110), new Vector2(150, 20)), Date);
-                break;
             
             default:
                 Debug.LogError("Unrecognized Option");

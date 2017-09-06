@@ -6,7 +6,7 @@ public class ConversationStarter : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events ConverseOn = Events.Inspect;
+    public Events ConverseOn = Events.Null;
 
     public TextAsset Conversation;
 

@@ -245,15 +245,6 @@ public static class TextParser
                     NextID = (int)data["FailID"];
                 break;
             
-            case ProgressType.Date:
-
-                int day = (int)data["Beat"];
-                DayOfWeek date =(DayOfWeek)day;
-                if (Game.current.Date == date)
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
             default:
                 Debug.LogError("Unrecognized Option");
                 break;

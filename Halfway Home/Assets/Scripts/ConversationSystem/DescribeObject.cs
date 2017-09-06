@@ -8,7 +8,7 @@ public class DescribeObject : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events DecribeOn = Events.Inspect;
+    public Events DecribeOn = Events.Null;
 
     public EventListener TalkTo = EventListener.Space;
 

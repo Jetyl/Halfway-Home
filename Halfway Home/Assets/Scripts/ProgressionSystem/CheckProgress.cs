@@ -9,15 +9,15 @@ public class CheckProgress : MonoBehaviour
 
     public EventListener ListeningOn = EventListener.Owner;
 
-    public Events CheckOn = Events.Inspect;
+    public Events CheckOn = Events.Null;
 
     public EventListener CallOnPass = EventListener.Owner;
 
-    public Events SayOnPass = Events.Inspect;
+    public Events SayOnPass = Events.Null;
 
     public EventListener CallOnFail = EventListener.Owner;
 
-    public Events SayOnFail = Events.Inspect;
+    public Events SayOnFail = Events.Null;
 
     public ProgressPoint CheckToMatch;
 
@@ -107,12 +107,6 @@ public class CheckProgress : MonoBehaviour
                     Fail();
                 break;
             
-            case ProgressType.Date:
-                if (Game.current.Date == date)
-                    Pass();
-                else
-                    Fail();
-                break;
             default:
                 Debug.LogError("Unrecognized Option");
                 break;
@@ -174,8 +168,7 @@ public enum ProgressType
 {
     None,
     ProgressPoint,
-    PlotBeat,
-    Date
+    PlotBeat
 }
 
 

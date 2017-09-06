@@ -17,7 +17,10 @@ public enum NodeTypes
     AnimateNode = 7,
     ImageNode = 8,
     SoundNode = 9,
-    MultiProgressNode = 10
+    MultiProgressNode = 10,
+    InkNode = 11,
+    MapNode = 12,
+    ToMapNode = 13
 }
 
 
@@ -90,7 +93,10 @@ public class ConversationSystem
                     Nodes.Add(new ConvSound(conversation[i]));
                     break;
                 case NodeTypes.MultiProgressNode:
-                    //Nodes.Add(new ConvMultiProgress(conversation[i]));
+                    Nodes.Add(new ConvMultiProgress(conversation[i]));
+                    break;
+                case NodeTypes.MapNode:
+
                     break;
                 default:
                     break;
@@ -154,6 +160,11 @@ public class ConversationSystem
 
         //node.Options.Add(opt);
 
+    }
+
+    public List<ConvNode> GetAllNodes()
+    {
+        return Nodes;
     }
 
 
@@ -451,6 +462,131 @@ public class ConvMultiProgress : ConvNode
        
 
         Destination = CallOnFinish[EndID];
+    }
+
+}
+
+
+/**
+    * CLASS NAME: ConvMap
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvMap : ConvNode
+{
+
+    int Day;
+    int Hour;
+    int Length;
+    public Room RoomLocation;
+
+    public ConvMap(JsonData start)
+    {
+        ID = (int)start["ID"];
+        Destination = (int)start["NextID"];
+
+        Day = (int)start["Day"];
+        Hour = (int)start["Hour"];
+        Length = (int)start["Length"];
+        RoomLocation = (Room)(int)start["Room"];
+    }
+
+
+    public override void CallAction()
+    {
+        
+
+    }
+
+    public bool AvalibleNow(int day, int hour)
+    {
+        //if this time is before this day
+        if (day < Day)
+            return false;
+
+        //if its after, it is most likely false, but there is one edge case to check
+        if(day > Day)
+        {
+            if(Day + 1 == day)
+            {
+                if(Hour + Length > 24)
+                {
+                    if (hour + Length - 24 > hour)
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        //is on the same date
+
+        //if this time is before this hour
+        if (hour < Hour)
+            return false;
+
+        //if it is this hour, we good
+        if (hour == Hour)
+            return true;
+
+        //if this hour is within the length given, we good
+        if (hour <= Hour + Length)
+            return true;
+
+        return false;
+    }
+
+}
+
+/**
+    * CLASS NAME: ConvReturn
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvReturn : ConvNode
+{
+
+    
+
+    public ConvReturn(JsonData start)
+    {
+        ID = (int)start["ID"];
+        Destination = (int)start["NextID"];
+    }
+
+
+    public override void CallAction()
+    {
+        //send event to return to the map setup
+        Space.DispatchEvent(Events.ReturnToMap);
+    }
+
+}
+
+
+/**
+    * CLASS NAME: ConvReturn
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvInk : ConvNode
+{
+
+    TextAsset InkData;
+
+    public ConvInk(JsonData key)
+    {
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+        if (key["Story"] != null)
+        {
+            InkData = Resources.Load((string)key["Story"]) as TextAsset;
+        }
+    }
+
+
+    public override void CallAction()
+    {
+
+        Space.DispatchEvent(Events.NewStory, new StoryEvent(InkData));
+
     }
 
 }
