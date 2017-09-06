@@ -13,7 +13,8 @@ public class Game
     public int Day;
 
     public int Hour;
-    
+
+    public int CurrentTimeBlock;
 
     public ProgressSystem Progress;
     
@@ -80,6 +81,20 @@ public class Game
         
         Day = 0;
         Progress = new ProgressSystem();
+
+    }
+
+    public void AlterTime(int Amount)
+    {
+        Hour += Amount;
+
+        if(Hour >= 24)
+        {
+            Hour -= 24;
+            Day += 1;
+        }
+
+        Amount = CurrentTimeBlock;
 
     }
 

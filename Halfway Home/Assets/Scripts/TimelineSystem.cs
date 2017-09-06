@@ -23,7 +23,7 @@ public class TimelineSystem : MonoBehaviour
         Space.Connect<ConversationEvent>(Events.StartGame, OnStart);
 
         //Space.Connect<DefaultEvent>(Events.FinishedDescription, NextNode);
-        Space.Connect<DestinationNodeEvent>(Events.MapChoiceMade, NextNode);
+        Space.Connect<DestinationNodeEvent>(Events.LeaveMap, NextNode);
 
         //Space.Connect<ChoiceEvent>(Events.ConversationChoice, NextNode);
 
@@ -124,7 +124,7 @@ public class DestinationNodeEvent : DefaultEvent
 {
     public int NodeID;
 
-    DestinationNodeEvent(int ID)
+    public DestinationNodeEvent(int ID)
     {
         NodeID = ID;
     }
