@@ -2,7 +2,7 @@
 [
  {
   "PlotName" : "Player Data",
-  "BeatNumber" : 0,
+  "BeatNumber" : -1,
   "BeatName"   : "Player Data",
   "Point"      : [
    {
@@ -55,6 +55,17 @@
    {
     "Name" : "TextSpeed",
     "Type" : 3
+   }
+  ]
+ },
+ {
+  "PlotName" : "Game Data",
+  "BeatNumber" : -1,
+  "BeatName"   : "Game Data",
+  "Point"      : [
+   {
+    "Name" : "In a Scene",
+    "Type" : 1
    }
   ]
  }

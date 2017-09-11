@@ -143,8 +143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.9, y: 45.7}
-  m_SizeDelta: {x: 190.1, y: 52.6}
+  m_AnchoredPosition: {x: -359, y: 98}
+  m_SizeDelta: {x: 223.7, y: 94.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205088883
 MonoBehaviour:
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.3
+  m_fontSize: 41.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -814,7 +814,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1420,6 +1420,7 @@ GameObject:
   - component: {fileID: 1760996074}
   - component: {fileID: 1760996073}
   - component: {fileID: 1760996072}
+  - component: {fileID: 1760996076}
   m_Layer: 5
   m_Name: Test Map
   m_TagString: Untagged
@@ -1506,6 +1507,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1760996076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760996071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185893efedc58c741b2915008b6040f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultActions: {fileID: 0}
+  Debug: 1
 --- !u!1 &1813122369
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,61 @@
+
+[
+ {
+  "title" : "basci test timeline",
+  "ID"    : 0,
+  "TypeID" : 0,
+  "NodePositionX" : -135.555587768555,
+  "NodePositionY" : 300.000122070313,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "NextID"        : 10003,
+  "Disable"       : false
+ },
+ {
+  "title" : "if the player was in a scene when they last saved",
+  "ID"    : 10003,
+  "TypeID" : 1,
+  "NodePositionX" : 111.11116027832,
+  "NodePositionY" : 298.889007568359,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "PassID"        : 10005,
+  "FailID"        : 10004,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "In a Scene",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "back to map gameplay",
+  "ID"    : 10004,
+  "TypeID" : 13,
+  "NodePositionX" : 421.111206054688,
+  "NodePositionY" : 382.222412109375,
+  "width"         : 200.0,
+  "height"        : 100.0
+ },
+ {
+  "title" : "example test ink node",
+  "ID"    : 10005,
+  "TypeID" : 11,
+  "NodePositionX" : 414.444519042969,
+  "NodePositionY" : 234.444458007813,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "Story"         : null
+ },
+ {
+  "title" : "note, will prolly need a special node for this case",
+  "ID"    : 10006,
+  "TypeID" : 13,
+  "NodePositionX" : 673.333374023438,
+  "NodePositionY" : 233.333343505859,
+  "width"         : 200.0,
+  "height"        : 100.0
+ }
+]

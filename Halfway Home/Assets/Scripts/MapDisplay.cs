@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class MapDisplay : MonoBehaviour
 {
+
+    public TextAsset DefaultActions;
+
     //script for handling the map logic of the game.
     List<ConvMap> ChoicesAvalible;
+
+    public bool Debug;
 
 	// Use this for initialization
 	void Start ()
@@ -13,6 +18,10 @@ public class MapDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
 
         Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
+
+        if (!Debug)
+            gameObject.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -23,6 +32,8 @@ public class MapDisplay : MonoBehaviour
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
+        gameObject.SetActive(true);
+
         ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
     }
 
@@ -35,6 +46,7 @@ public class MapDisplay : MonoBehaviour
             {
                 Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(option.ID));
 
+                gameObject.SetActive(false);
                 Game.current.AlterTime(eventdata.Length);
                 return;
             }
@@ -42,6 +54,7 @@ public class MapDisplay : MonoBehaviour
 
         //if gets here, no scene was there. send a default sorta dealie
 
+        gameObject.SetActive(false);
         Game.current.AlterTime(eventdata.Length);
     }
     

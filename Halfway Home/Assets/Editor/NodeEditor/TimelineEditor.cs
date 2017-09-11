@@ -406,7 +406,7 @@ public class TimelineEditor : BaseNodeEditor
         string path = null;
 
 #if UNITY_EDITOR
-        path = "Assets/Resources/Conversations/" + ConversationName + ".json";
+        path = "Assets/Resources/Timeline/" + ConversationName + ".json";
 #endif
 
         StringBuilder sb = new StringBuilder();
@@ -599,6 +599,39 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.WriteArrayEnd();
 
                     break;
+                case NodeTypes.MapNode:
+
+                    Jwriter.WritePropertyName("Day");
+                    Jwriter.Write(((MapNode)node).Day);
+                    Jwriter.WritePropertyName("Hour");
+                    Jwriter.Write(((MapNode)node).Hour);
+                    Jwriter.WritePropertyName("Length");
+                    Jwriter.Write(((MapNode)node).Length);
+
+                    Jwriter.WritePropertyName("Room");
+                    Jwriter.Write((int)((MapNode)node).Locale);
+
+                    break;
+                case NodeTypes.ToMapNode:
+
+                    break;
+                case NodeTypes.InkNode:
+
+                    Jwriter.WritePropertyName("Story");
+                    if (((InkNode)node).InkFile != null)
+                    {
+                        string txt = AssetDatabase.GetAssetPath(((InkNode)node).InkFile);
+                        txt = txt.Replace("Assets/Resources/InkScenes/", "");
+                        //removes the file extention off the string
+                        txt = txt.Remove(txt.Length - 4);
+                        Jwriter.Write(txt);
+                    }
+                    else
+                    {
+                        Jwriter.Write(null);
+                    }
+                    break;
+
                 default:
                     break;
             }
