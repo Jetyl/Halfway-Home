@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 1147292869}
   - component: {fileID: 1147292868}
   - component: {fileID: 1147292867}
+  - component: {fileID: 1147292870}
   m_Layer: 0
   m_Name: Space
   m_TagString: Untagged
@@ -1108,6 +1109,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1147292870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147292866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1e5f49f3f3ffc489184b8bfcd6000c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListeningOn: 0
+  DecribeOn:
+    EventName: StartGameEvent
+  TalkTo: 1
+  WhatToDoOnFinish:
+    EventName: ReturnToMapEvent
+  DynamicText: {fileID: 0}
+  DefaultText: []
+  CallFinishImmediately: 0
+  DenyPlayerInput: 0
+  DisableUI: 0
+  ReenableUIWhenDone: 0
 --- !u!1 &1174770646
 GameObject:
   m_ObjectHideFlags: 0
