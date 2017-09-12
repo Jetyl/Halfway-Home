@@ -29,6 +29,13 @@ public class MapNode : BaseNode
         ID = (int)data["ID"];
         NextID = (int)data["NextID"]; 
         TypeID = NodeTypes.MapNode;
+
+        Day = (int)data["Day"];
+        Hour = (int)data["Hour"];
+        Length = (int)data["Length"];
+
+        Locale = (Room)(int)data["Room"];
+
     }
 
 

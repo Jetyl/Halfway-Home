@@ -24,6 +24,7 @@ public class Game
     {
        
         Day = 0;
+        Hour = 1;
         PlayerName = "";
         Progress = new ProgressSystem();
        

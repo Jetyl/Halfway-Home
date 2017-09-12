@@ -43,10 +43,21 @@ public class GameStartUp : MonoBehaviour
         {
             
             Game.current = new Game();
+            Game.current.Day = 1;
+            StartCoroutine(DebugStart());
         }
     }
 
 
-  
+    IEnumerator DebugStart()
+    {
+
+
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
+    }
+
 
 }

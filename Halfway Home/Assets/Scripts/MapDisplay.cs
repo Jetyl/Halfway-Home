@@ -33,26 +33,28 @@ public class MapDisplay : MonoBehaviour
     void TurnMapOn(DefaultEvent Eventdata)
     {
         gameObject.SetActive(true);
-
         ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
     }
 
     void MapChoice(MapEvent eventdata)
     {
 
-        foreach(var option in ChoicesAvalible)
+        for(int i = 0; i < ChoicesAvalible.Count; ++i)
         {
-            if(option.RoomLocation == eventdata.Destination)
+            if(ChoicesAvalible[i].RoomLocation == eventdata.Destination)
             {
-                Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(option.ID));
 
                 gameObject.SetActive(false);
+                Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
+
                 Game.current.AlterTime(eventdata.Length);
                 return;
             }
         }
 
         //if gets here, no scene was there. send a default sorta dealie
+
+
 
         gameObject.SetActive(false);
         Game.current.AlterTime(eventdata.Length);

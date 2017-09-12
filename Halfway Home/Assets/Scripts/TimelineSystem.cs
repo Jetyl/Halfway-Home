@@ -14,7 +14,21 @@ public class TimelineSystem : MonoBehaviour
     int NodeIndex;
 
     ConvNode CurrentNode;
-    
+
+
+    private void Awake()
+    {
+
+        if (Current != null && Current != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Current = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     // Use this for initialization
     void Start()
@@ -48,14 +62,14 @@ public class TimelineSystem : MonoBehaviour
 
     public void NextNode(DestinationNodeEvent eventdata)
     {
-        
+
         NextNode(eventdata.NodeID);
 
     }
 
     public void NextAction()
     {
-        
+
         CurrentNode.CallAction();
 
 
@@ -69,7 +83,6 @@ public class TimelineSystem : MonoBehaviour
 
     public void NextNode(int index)
     {
-        
 
         if (index == -1)
         {

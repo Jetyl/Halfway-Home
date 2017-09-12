@@ -26,8 +26,7 @@ public class InkNode : BaseNode
     {
 
         TypeID = NodeTypes.InkNode;
-
-        int ty = (int)data["TypeOfProgress"];
+        
         
         ID = (int)data["ID"];
 
@@ -35,7 +34,10 @@ public class InkNode : BaseNode
 
         title = (string)data["title"];
 
-        
+        if (data["Story"] != null)
+        {
+            InkFile = Resources.Load("InkScenes/" + (string)data["Story"]) as TextAsset;
+        }
 
 
 

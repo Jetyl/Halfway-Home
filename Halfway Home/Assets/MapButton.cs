@@ -23,7 +23,8 @@ public class MapButton : MonoBehaviour
 
         Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
 
-	}
+        Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -51,6 +52,11 @@ public class MapButton : MonoBehaviour
         }
 
         Body.colors = bloc;
+    }
+
+    void Reset(DefaultEvent eventdata)
+    {
+        Body.colors = DefaultColors;
     }
 
 }

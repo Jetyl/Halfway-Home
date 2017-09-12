@@ -96,7 +96,13 @@ public class ConversationSystem
                     Nodes.Add(new ConvMultiProgress(conversation[i]));
                     break;
                 case NodeTypes.MapNode:
-
+                    Nodes.Add(new ConvMap(conversation[i]));
+                    break;
+                case NodeTypes.ToMapNode:
+                    Nodes.Add(new ConvReturn(conversation[i]));
+                    break;
+                case NodeTypes.InkNode:
+                    Nodes.Add(new ConvInk(conversation[i]));
                     break;
                 default:
                     break;
@@ -112,9 +118,10 @@ public class ConversationSystem
     public ConvNode GetNode(int Index)
     {
 
-
-        foreach(ConvNode node in Nodes)
+        
+        foreach (ConvNode node in Nodes)
         {
+
             if (node.ID == Index)
                 return node;
         }
@@ -499,6 +506,7 @@ public class ConvMap : ConvNode
 
     public bool AvalibleNow(int day, int hour)
     {
+
         //if this time is before this day
         if (day < Day)
             return false;

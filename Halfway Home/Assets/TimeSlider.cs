@@ -17,6 +17,7 @@ public class TimeSlider : MonoBehaviour
 	void Start ()
     {
         Space.Connect<MapEvent>(Events.MapChoiceMade, GotToRoom);
+        gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame

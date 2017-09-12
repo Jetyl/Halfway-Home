@@ -319,6 +319,15 @@ public class TimelineEditor : BaseNodeEditor
                 case NodeTypes.MultiProgressNode:
                     nodes.Add(new ChainNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
+                case NodeTypes.MapNode:
+                    nodes.Add(new MapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    break;
+                case NodeTypes.ToMapNode:
+                    nodes.Add(new ToMapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    break;
+                case NodeTypes.InkNode:
+                    nodes.Add(new InkNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    break;
                 default:
                     break;
             }
@@ -611,12 +620,19 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.WritePropertyName("Room");
                     Jwriter.Write((int)((MapNode)node).Locale);
 
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((MapNode)node).NextID);
+
                     break;
                 case NodeTypes.ToMapNode:
 
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((ToMapNode)node).NextID);
                     break;
                 case NodeTypes.InkNode:
 
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((InkNode)node).NextID);
                     Jwriter.WritePropertyName("Story");
                     if (((InkNode)node).InkFile != null)
                     {
