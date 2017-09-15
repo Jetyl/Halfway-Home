@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fbf99dd83fea14bb6f7f3843fa4ba1, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}'
+    m_lastTimePsrt1: -460863970
+    m_lastTimePart2: -1999307680
+    List:
+    - Name: Play_SoftDing
+      Path: Default Work Unit\Play_SoftDing
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_SoftDing
+        ObjectType: 3
+      ID: 1722154426
+      Guid: 7a7f1194f6769e4b9f6645533cf78d4c
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{AA9C14D5-853F-485A-902F-A2D39E023B6E}'
+    m_lastTimePsrt1: -62350928
+    m_lastTimePart2: -1999307685
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{3BE9BB4D-5495-494C-B4D2-AE65A91ADEAE}'
+    m_lastTimePsrt1: -61940072
+    m_lastTimePart2: -1999307685
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{4B81A632-566A-419F-BBE7-2DF74A6D2233}'
+    m_lastTimePsrt1: -62451187
+    m_lastTimePart2: -1999307685
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{08803852-EFB9-457C-A9FC-656576CA87CA}'
+    m_lastTimePsrt1: -460688563
+    m_lastTimePart2: -1999307680
+    List:
+    - Name: Test_Bank
+      Path: Default Work Unit\Test_Bank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Test_Bank
+        ObjectType: 7
+      ID: -1980499434
+      Guid: b2130bc08f745745ab1430723456f0d1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{839A792F-C388-4D1E-A383-0AA0DD42597E}'
+    m_lastTimePsrt1: -62491337
+    m_lastTimePart2: -1999307685
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{C7C8F630-C59B-4D2B-9BAE-4B6B06CB3665}'
+    m_lastTimePsrt1: -62531345
+    m_lastTimePart2: -1999307685
+    List: []
+  ExpandedItems:
+  - /Halfway Home_WwiseProject
+  - /Halfway Home_WwiseProject/Events
+  - /Halfway Home_WwiseProject/Events/Default Work Unit
+  - /Halfway Home_WwiseProject/SoundBanks
+  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}" SchemaVersion="80">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="SoftDing" ID="{037A00CA-C397-4A0B-9520-8ED4406FB42A}" ShortID="1067330366">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AB78D83C-08E1-4EE7-999B-CE521F639FF2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AA9C14D5-853F-485A-902F-A2D39E023B6E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="SoftDing" ID="{1C9E48A6-C4D2-4405-A650-10B7A4C5B37A}" ShortID="1030430291">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AA9C14D5-853F-485A-902F-A2D39E023B6E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SoftDing" ID="{6222160D-938C-4C35-A527-A39431DFB0AD}" ShortID="360830936">
+									<Language>SFX</Language>
+									<AudioFile>SoftDing.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{22CC676E-0300-4A56-83C8-3B1FC240A5F2}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{C11BDD3C-6E2D-48D7-ADF4-23DE623AE646}">
+									<ClipList>
+										<MusicClip Name="SoftDing" ID="{1924BF68-B3FC-4024-9D04-BE16F6E56A2B}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="384.081632653061"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="SoftDing" ID="{6222160D-938C-4C35-A527-A39431DFB0AD}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{612E3210-78F5-43ED-B3B7-E122388E3868}"/>
+						<MusicCue Name="Exit Cue" ID="{B7019277-292E-483A-9C93-322B1F303192}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="1000"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
