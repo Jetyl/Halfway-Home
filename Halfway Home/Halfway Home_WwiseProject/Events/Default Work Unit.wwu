@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_SoftDing" ID="{94117F7A-76F6-4B9E-9F66-45533CF78D4C}">
+					<ChildrenList>
+						<Action Name="" ID="{769F2C6F-75CF-4B8A-9506-51654BA0B567}" ShortID="449754473">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoftDing" ID="{037A00CA-C397-4A0B-9520-8ED4406FB42A}" WorkUnitID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
