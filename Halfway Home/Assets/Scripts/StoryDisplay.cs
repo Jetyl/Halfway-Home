@@ -24,7 +24,15 @@ public class StoryDisplay : MonoBehaviour
     void OnNewStory(StoryEvent eventdata)
     {
         InkStory = new Story(eventdata.Script.text);
+
+        //add the reading part
     }
+
+    void StoryFinished()
+    {
+        Space.DispatchEvent(Events.FinishedStory);
+    }
+
 
 }
 

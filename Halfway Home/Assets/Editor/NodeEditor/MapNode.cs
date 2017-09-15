@@ -49,13 +49,36 @@ public class MapNode : BaseNode
         GUI.Label(new Rect(rect.position + new Vector2(25, 60), new Vector2(150, 20)), "ID: " + ID);
 
         Locale = (Room)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 80), new Vector2(300, 20)), new GUIContent("Room Location"), Locale);
-        Day = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 105), new Vector2(300, 20)), new GUIContent("Day of the Week"), Day, 1, 7);
-        Hour = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 130), new Vector2(300, 20)), new GUIContent("Hour of the Day"), Hour, 1, 24);
+        Day = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 105), new Vector2(300, 20)), new GUIContent("Day of the Week"), Day, 0, 7);
+        Hour = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 130), new Vector2(300, 20)), new GUIContent("Hour of the Day"), Hour, 0, 23);
         Length = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 155), new Vector2(300, 20)), new GUIContent("Length of time Availble"), Length, 1, 24);
 
+        EditorGUI.LabelField(new Rect(rect.position + new Vector2(25, 170), new Vector2(300, 20)), "Avalible from " + GetTime(Hour) + " to " + GetTime(Hour + Length));
 
 
     }
 
+    string GetTime(int time)
+    {
+        string Txt = time + ":00";
+
+        if (time > 24)
+            time -= 24;
+
+
+        if (time < 12)
+        {
+            if (time == 0)
+                Txt = "12:00 AM";
+            else
+                Txt = time + ":00 AM";
+
+        }
+        else
+            Txt = (time - 12) + ":00 PM";
+
+        return Txt;
+
+    }
 
 }

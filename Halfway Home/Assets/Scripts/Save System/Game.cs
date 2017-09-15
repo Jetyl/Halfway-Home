@@ -24,7 +24,7 @@ public class Game
     {
        
         Day = 0;
-        Hour = 1;
+        Hour = 0;
         PlayerName = "";
         Progress = new ProgressSystem();
        
@@ -139,5 +139,8 @@ public enum Room
     Gardens,
     Study,
     ArtRoom,
-    Store
+    Store,
+    CharlottesRoom,
+    EduardosRoom,
+    Sleeping
 }

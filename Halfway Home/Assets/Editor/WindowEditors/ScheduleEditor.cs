@@ -182,7 +182,7 @@ public class ScheduleEditor : EditorWindow
 
             Jwriter.WritePropertyName("Schedule");
             Jwriter.WriteArrayStart();
-            for (int i = 0; i < 7; ++i)
+            for (int i = 0; i <= 7; ++i)
             {
                 Jwriter.WriteArrayStart();
                 for (int j = 0; j < 24; ++j)

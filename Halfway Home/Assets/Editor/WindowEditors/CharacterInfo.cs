@@ -21,10 +21,10 @@ public class CharacterInfo
         MapIcon = null;
         Schedule = new List<List<Room>>();
 
-        for(int i = 1; i <= 7; ++i)
+        for(int i = 0; i <= 7; ++i)
         {
             var hours = new List<Room>();
-            for(int j = 1; j <= 24; ++j)
+            for(int j = 0; j < 24; ++j)
             {
                 hours.Add(Room.None);
             }
@@ -53,7 +53,9 @@ public class CharacterInfo
 
         if (data["Schedule"] != null)
         {
-            for (int i = 0; i < 7; ++i)
+            
+
+            for (int i = 0; i <= 7; ++i)
             {
                 var hours = new List<Room>();
                 for (int j = 0; j < 24; ++j)
@@ -64,14 +66,15 @@ public class CharacterInfo
 
                 Schedule.Add(hours);
             }
+            
         }
         else
         {
 
-            for (int i = 1; i <= 7; ++i)
+            for (int i = 0; i <= 7; ++i)
             {
                 var hours = new List<Room>();
-                for (int j = 1; j <= 24; ++j)
+                for (int j = 0; j < 24; ++j)
                 {
                     hours.Add(Room.None);
                 }
@@ -93,16 +96,27 @@ public class CharacterInfo
 
         EditorGUILayout.LabelField("Day");
         Day = EditorGUILayout.IntSlider(Day, 0, 7);
-
-        if (Day == 0)
-            return;
+        
 
 
         EditorGUILayout.LabelField("Schedule for day " + Day);
-        int truDay = Day - 1;
+        
         for (int j = 0; j < 24; ++j)
         {
-            Schedule[truDay][j] = (Room)EditorGUILayout.EnumPopup("Hour " + (j + 1), Schedule[truDay][j]);
+            string Txt = j + ":00";
+
+            if (j < 12)
+            {
+                if (j == 0)
+                    Txt = "12:00 AM";
+                else
+                    Txt = j + ":00 AM";
+                
+            }
+            else
+                Txt = (j - 12) + ":00 PM";
+
+            Schedule[Day][j] = (Room)EditorGUILayout.EnumPopup(Txt, Schedule[Day][j]);
         }
 
 

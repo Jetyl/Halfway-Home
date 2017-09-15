@@ -36,7 +36,7 @@ public class TimelineSystem : MonoBehaviour
 
         Space.Connect<ConversationEvent>(Events.StartGame, OnStart);
 
-        //Space.Connect<DefaultEvent>(Events.FinishedDescription, NextNode);
+        Space.Connect<DefaultEvent>(Events.FinishedStory, StoryOver);
         Space.Connect<DestinationNodeEvent>(Events.LeaveMap, NextNode);
 
         //Space.Connect<ChoiceEvent>(Events.ConversationChoice, NextNode);
@@ -64,6 +64,12 @@ public class TimelineSystem : MonoBehaviour
     {
 
         NextNode(eventdata.NodeID);
+
+    }
+
+    public void StoryOver(DefaultEvent eventdata)
+    {
+        NextNode(CurrentNode.Destination);
 
     }
 
