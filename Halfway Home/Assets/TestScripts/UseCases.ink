@@ -11,7 +11,7 @@ VAR doubt = 0
 EXTERNAL PlayMusic(string)
 EXTERNAL GetStat(string)
 EXTERNAL GetPlayerInfo(string)
-// Might be able to do this with a variable watcher instead, but I'm not sure how
+// Might be able to do this with a variable watcher instead, but I'm not sure how. Current implementation requires 2 lines :/
 EXTERNAL ModifyStat(string, int)
 
 -> GetInfo
@@ -32,12 +32,16 @@ doubt = {GetStat("doubt")}
 
 
 === Knot1 ===
-<Christian>"Make me an Ink file that shows what you need."
-<Player>"Okay." # relaxed
+// Brackets denote a speaker. Any line with quotation marks is applied to the last speaker.
+[Christian]"Make me an Ink file that shows what you need."
+// The # denotes an Ink tag. Not something you need to worry about adding, but you do need to listen for it.
+[Player]"Okay." # relaxed
 
+// local increment
 ~stress += 1
+// global increment
 ~ModifyStat("stress", 1)
-
-<>Christian leaves.
-<Player>Better get to it! ~PlayMusic("work_music")
+// Any line without quotations uses no speaker and is narration.
+Christian leaves.
+<Player>"Better get to it!" ~PlayMusic("work_music")
 -> END
