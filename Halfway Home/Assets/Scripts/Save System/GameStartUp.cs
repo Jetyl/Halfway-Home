@@ -10,6 +10,11 @@ public class GameStartUp : MonoBehaviour
 
     public bool DebugMode;
 
+    [Range(0,7)]
+    public int DebugDay;
+    [Range(0, 23)]
+    public int DebugHour;
+
     // Use this for initialization
     void Start ()
     {
@@ -43,7 +48,8 @@ public class GameStartUp : MonoBehaviour
         {
             
             Game.current = new Game();
-            Game.current.Day = 1;
+            Game.current.Day = DebugDay;
+            Game.current.Hour = DebugHour;
             StartCoroutine(DebugStart());
         }
     }

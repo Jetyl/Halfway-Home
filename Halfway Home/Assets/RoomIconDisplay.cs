@@ -7,6 +7,7 @@ public class RoomIconDisplay : MonoBehaviour
 {
 
     public Room Location;
+    
 
     List<Image> IconSpots;
 

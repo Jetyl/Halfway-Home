@@ -114,7 +114,12 @@ public class CharacterInfo
                 
             }
             else
-                Txt = (j - 12) + ":00 PM";
+            {
+                if (j == 12)
+                    Txt = "12:00 PM";
+                else
+                    Txt = (j - 12) + ":00 PM";
+            }
 
             Schedule[Day][j] = (Room)EditorGUILayout.EnumPopup(Txt, Schedule[Day][j]);
         }

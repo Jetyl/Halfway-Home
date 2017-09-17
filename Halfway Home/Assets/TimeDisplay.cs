@@ -30,7 +30,26 @@ public class TimeDisplay : MonoBehaviour
     void UpdateDisplay(DefaultEvent eventdata)
     {
         if (Hour)
-            txt.text = Game.current.Hour + "";
+        {
+            string Txt = Game.current.Hour + ":00";
+
+            if (Game.current.Hour < 12)
+            {
+                if (Game.current.Hour == 0)
+                    Txt = "12:00 AM";
+                else
+                    Txt = Game.current.Hour + ":00 AM";
+
+            }
+            else
+            {
+                if (Game.current.Hour == 12)
+                    Txt = "12:00 PM";
+                else
+                    Txt = (Game.current.Hour - 12) + ":00 PM";
+            }
+            txt.text = Txt;
+        }
         else if (Day)
             txt.text = Game.current.Day + "";
     }

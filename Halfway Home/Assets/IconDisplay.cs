@@ -9,6 +9,7 @@ public class IconDisplay : MonoBehaviour
 
     JsonData schedules;
 
+    public Sprite UnknownPersonSprite;
 
 	// Use this for initialization
 	void Start ()
@@ -48,7 +49,11 @@ public class IconDisplay : MonoBehaviour
                         Space.DispatchEvent(Events.AwakeIcon, new CharacterEvent((string)character["Name"]));
 
                         Sprite icon = null;
-                        if (character["slug"] != null)
+                        if(Game.current.KnowsWhereAbouts((string)character["Name"]) == false)
+                        {
+                            icon = UnknownPersonSprite;
+                        }
+                        else if (character["slug"] != null)
                         {
                             var slug = (string)character["slug"];
                             icon = Resources.Load<Sprite>("Sprites/" + slug);
