@@ -1,0 +1,1 @@
+﻿{"inkVersion":16,"root":[{"->":"Knot1"},"done",{"Knot1":["^[Christian]\"Make me an Ink file that shows what you need.\"","\n","^[Player]\"Okay.\" ",{"#":"relaxed"},"\n","ev",10,"/ev",{"temp=":"cats","re":true},"end",{"#f":3}],"global decl":["ev",5,{"VAR=":"cats"},"/ev","end",null],"#f":3}],"listDefs":{}}
