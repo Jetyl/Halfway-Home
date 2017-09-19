@@ -139,6 +139,17 @@ namespace Stratus
       }
 
       /// <summary>
+      /// Signals that a story has been loaded
+      /// </summary>
+      public class LoadedEvent : Stratus.Event
+      {
+        /// <summary>
+        /// A reference to the story that has just been loaded
+        /// </summary>
+        public Ink.Runtime.Story story;
+      }
+
+      /// <summary>
       /// Signals that a story has started
       /// </summary>
       public class StartedEvent : Stratus.Event

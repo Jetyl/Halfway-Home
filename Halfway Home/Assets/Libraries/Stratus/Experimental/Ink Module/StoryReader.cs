@@ -58,8 +58,8 @@ namespace Stratus
       protected override void OnAwake()
       {
         // Construct the ink story data structure from the text file
-        ConstructStory();
-        
+        LoadStory();
+
         // Bind external functions to it
         OnBindExternalFunctions(story);
 
@@ -87,11 +87,11 @@ namespace Stratus
           }
           else
           {
-          if (logging)
-            Trace.Script("The story '" + storyFile.name + "' is over!", this);
+            if (logging)
+              Trace.Script("The story '" + storyFile.name + "' is over!", this);
             return;
           }
-          
+
         }
 
         this.StartStory();
@@ -131,7 +131,7 @@ namespace Stratus
       }
 
       void OnSetVariableValueEvent(Story.SetVariableValueEvent e)
-      {        
+      {
         switch (e.variable.type)
         {
           case Story.Types.Integer:
@@ -160,18 +160,42 @@ namespace Stratus
       {
         story.ObserveVariables(e.variableNames, e.variableObserver);
       }
-      
+
+      //------------------------------------------------------------------------------------------/
+      // Methods: Public
+      //------------------------------------------------------------------------------------------/
+      /// <summary>
+      /// Sets the value of a variable from the current story
+      /// </summary>
+      /// <param name="name"></param>
+      /// <param name="value"></param>
+      public void SetVariableValue(string name, object value)
+      {
+        story.variablesState[name] = value;
+      }
+
+      /// <summary>
+      /// Returns the value of a variable from the current story
+      /// </summary>
+      /// <param name="name"></param>
+      /// <returns></returns>
+      public object GetVariableValue(string name)
+      {
+        return story.variablesState[name];
+      }
+
       //------------------------------------------------------------------------------------------/
       // Methods: Parsing
       //------------------------------------------------------------------------------------------/
       /// <summary>
       /// Constructs the ink story runtime object
       /// </summary>
-      void ConstructStory()
+      void LoadStory()
       {
         story = new Ink.Runtime.Story(storyFile.text);
         if (!story)
-          Trace.Error("Failed to construct the story", this, true);
+          Trace.Error("Failed to load the story", this, true);
+        this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
       }
 
       /// <summary>
@@ -193,7 +217,7 @@ namespace Stratus
         startedEvent.readerObject = this.gameObject;
         this.gameObject.Dispatch<Story.StartedEvent>(startedEvent);
         Scene.Dispatch<Story.StartedEvent>(startedEvent);
-        
+
         // Update the first line of dialog
         this.ContinueStory();
       }
@@ -210,7 +234,7 @@ namespace Stratus
         {
           var line = story.Continue();
           UpdateCurrentLine(line);
-        }        
+        }
         // If we are given a choice
         else if (story.currentChoices.Count > 0)
         {
@@ -326,7 +350,7 @@ namespace Stratus
       /// </summary>
       /// <param name="s"></param>
       /// <returns></returns>
-      public bool ConsistsOfWhiteSpace(string s)
+      bool ConsistsOfWhiteSpace(string s)
       {
         foreach (char c in s)
         {
