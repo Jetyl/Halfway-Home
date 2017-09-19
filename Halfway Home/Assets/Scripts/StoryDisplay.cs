@@ -25,6 +25,10 @@ public class StoryDisplay : MonoBehaviour
     {
         InkStory = new Story(eventdata.Script.text);
 
+        Game.current.Progress.GetFloatValue("Delusion");
+        Game.current.Progress.SetValue<int>("Delusion", 10);
+        //this function still needs finishing
+
         //add the reading part
     }
 

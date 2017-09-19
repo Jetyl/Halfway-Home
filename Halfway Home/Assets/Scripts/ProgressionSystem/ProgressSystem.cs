@@ -66,7 +66,16 @@ public class ProgressSystem
 
     }
 
-    public void UpdateProgress(string _key, bool change)
+    public void SetValue<T>(string key, T value)
+    {
+        Type type = typeof(T);
+        if (type == typeof(int))
+        {
+            //ProgressBook[key].IntValue = value;
+        }
+    }
+
+    public void SetValue(string _key, bool change)
     {
 
         if (!ProgressBook.ContainsKey(_key))
@@ -83,7 +92,7 @@ public class ProgressSystem
         UpdatePlotLines();
 
     }
-    public void UpdateProgress(string _key, int change)
+    public void SetValue(string _key, int change)
     {
 
         if (!ProgressBook.ContainsKey(_key))
@@ -101,7 +110,7 @@ public class ProgressSystem
 
     }
 
-    public void UpdateProgress(string _key, float change)
+    public void SetValue(string _key, float change)
     {
 
         if (!ProgressBook.ContainsKey(_key))
@@ -120,7 +129,7 @@ public class ProgressSystem
 
     }
 
-    public void UpdateProgress(string _key, string change)
+    public void SetValue(string _key, string change)
     {
 
         if (!ProgressBook.ContainsKey(_key))
