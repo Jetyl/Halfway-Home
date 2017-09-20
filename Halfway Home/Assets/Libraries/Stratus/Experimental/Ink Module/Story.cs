@@ -184,7 +184,7 @@ namespace Stratus
       /// </summary>
       public class SelectChoiceEvent : Stratus.Event
       {
-        public int Choice;
+        public Choice choice;
       }
 
       /// <summary>

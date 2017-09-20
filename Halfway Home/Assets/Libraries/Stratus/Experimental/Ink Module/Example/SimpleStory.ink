@@ -1,6 +1,3 @@
-EXTERNAL PlayMusic(string)
-
-~PlayMusic("Beep boop")
 - I looked at Monsieur John 
 *   ... and I could contain myself no longer.    
     'What is the purpose of our journey, Monsieur?'

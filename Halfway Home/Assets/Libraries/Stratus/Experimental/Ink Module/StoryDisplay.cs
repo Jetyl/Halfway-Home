@@ -72,22 +72,38 @@ namespace Stratus
       {
         OnPresentChoices(e.Choices);
       }
-      
+
       //------------------------------------------------------------------------------------------/
       // Methods
       //------------------------------------------------------------------------------------------/
+
+      //public void SelectChoice(int choice)
+      //{
+      //  // Convert to 0-based indexing
+      //  choice -= 1;
+      //
+      //  Trace.Script(choice + " was selected!");
+      //  
+      //  // Inform the current conversation of the choice
+      //  var choiceEvent = new Story.SelectChoiceEvent();
+      //  choiceEvent.choice = choice;
+      //  readerObject.gameObject.Dispatch<Story.SelectChoiceEvent>(choiceEvent);
+      //
+      //  // Now do any extra stuff
+      //  OnChoiceSelected();
+      //}
+
       /// <summary>
       /// Called upon when a particular choice has been selected
       /// </summary>
       /// <param name="choice"></param>
-      public void SelectChoice(int choice)
+      public void SelectChoice(Choice choice)
       {
-        // Convert to 0-based indexing
-        choice -= 1;
-        
+        Trace.Script(choice + " was selected");
+
         // Inform the current conversation of the choice
         var choiceEvent = new Story.SelectChoiceEvent();
-        choiceEvent.Choice = choice;
+        choiceEvent.choice = choice;
         readerObject.gameObject.Dispatch<Story.SelectChoiceEvent>(choiceEvent);
 
         // Now do any extra stuff

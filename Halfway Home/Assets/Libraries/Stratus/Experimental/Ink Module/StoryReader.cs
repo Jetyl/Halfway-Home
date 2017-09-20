@@ -49,7 +49,8 @@ namespace Stratus
       //------------------------------------------------------------------------------------------/
       // Virtual Functions
       //------------------------------------------------------------------------------------------/
-      protected abstract void OnSetParsingPatterns(Story.ParsePatterns categories);
+      protected virtual void OnStoryLoaded(Ink.Runtime.Story story) {}
+      protected abstract void OnSetParsingPatterns(Story.ParsePatterns patterns);
       protected abstract void OnBindExternalFunctions(Ink.Runtime.Story story);
 
       //------------------------------------------------------------------------------------------/
@@ -107,7 +108,7 @@ namespace Stratus
 
       void OnSelectChoiceEvent(Story.SelectChoiceEvent e)
       {
-        this.SelectChoice(e.Choice);
+        this.SelectChoice(e.choice);
         this.ContinueStory();
       }
 
@@ -196,6 +197,7 @@ namespace Stratus
         if (!story)
           Trace.Error("Failed to load the story", this, true);
         this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
+        OnStoryLoaded(story);
       }
 
       /// <summary>
@@ -320,6 +322,16 @@ namespace Stratus
       void SelectChoice(int choice)
       {
         this.story.ChooseChoiceIndex(choice);
+      }
+
+
+      /// <summary>
+      /// Selects a choice for the current conversation.
+      /// </summary>
+      /// <param name="choice">A 0-indexed choice.</param>
+      void SelectChoice(Choice choice)
+      {
+        this.story.ChooseChoiceIndex(choice.index);
       }
 
       /// <summary>

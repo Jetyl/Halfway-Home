@@ -60,7 +60,6 @@ namespace Stratus
       {
         display = true;
         displayChoices = false;
-        RemoveChoices();
       }
 
       protected override void OnStoryEnded()
@@ -89,10 +88,12 @@ namespace Stratus
         // For each given choice,
         for (int i = 0; i < choices.Count; ++i)
         {
-          Button choice = CreateChoiceView(choices[i].text.Trim());
-          choice.onClick.AddListener(delegate
+          Choice choice = choices[i];
+          Button button = CreateChoiceView(choices[i].text.Trim());
+          button.onClick.AddListener(delegate
           {
-            SelectChoice(i);
+            SelectChoice(choice);
+            //SelectChoice(i);
           });
         }
       }
@@ -100,6 +101,7 @@ namespace Stratus
       protected override void OnChoiceSelected()
       {
         displayChoices = false;
+        RemoveChoices();
       }
 
       Button CreateChoiceView(string text)

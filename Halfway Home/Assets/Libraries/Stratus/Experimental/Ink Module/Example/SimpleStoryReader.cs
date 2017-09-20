@@ -8,7 +8,7 @@ namespace Stratus
 {
   namespace InkModule
   {
-    public class SimpleStoryReader : StoryReader 
+    public class SimpleStoryReader : StoryReader  
     {
       //------------------------------------------------------------------------------------------/
       // Messages
@@ -30,7 +30,7 @@ namespace Stratus
       {
         Trace.Script("Playing music track '" + trackName + "'");
       }
-
+      
     }
   }
 
