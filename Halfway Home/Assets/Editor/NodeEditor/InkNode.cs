@@ -36,7 +36,7 @@ public class InkNode : BaseNode
 
         if (data["Story"] != null)
         {
-            InkFile = Resources.Load("InkScenes/" + (string)data["Story"]) as TextAsset;
+            InkFile = Resources.Load("StoryFiles/" + (string)data["Story"]) as TextAsset;
         }
 
 
