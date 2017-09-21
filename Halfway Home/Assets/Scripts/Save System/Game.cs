@@ -36,10 +36,10 @@ public class Game
         PlayerName = "";
         Progress = new ProgressSystem();
         
-        Progress.UpdateProgress("MasterVolume", 1.0f);
-        Progress.UpdateProgress("BackgroundVolume", 1.0f);
-        Progress.UpdateProgress("SFXVolume", 1.0f);
-        Progress.UpdateProgress("TextSpeed", 1.0f);
+        Progress.SetValue("MasterVolume", 1.0f);
+        Progress.SetValue("BackgroundVolume", 1.0f);
+        Progress.SetValue("SFXVolume", 1.0f);
+        Progress.SetValue("TextSpeed", 1.0f);
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
         ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();
