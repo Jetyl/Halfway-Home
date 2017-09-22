@@ -637,9 +637,11 @@ public class TimelineEditor : BaseNodeEditor
                     if (((InkNode)node).InkFile != null)
                     {
                         string txt = AssetDatabase.GetAssetPath(((InkNode)node).InkFile);
-                        txt = txt.Replace("Assets/Resources/InkScenes/", "");
+                        
+                        txt = Path.GetFileNameWithoutExtension(txt);
+                        txt = txt.Replace("Assets/Resources/", "");
                         //removes the file extention off the string
-                        txt = txt.Remove(txt.Length - 4);
+                        //txt = txt.Remove(txt.Length - 5);
                         Jwriter.Write(txt);
                     }
                     else

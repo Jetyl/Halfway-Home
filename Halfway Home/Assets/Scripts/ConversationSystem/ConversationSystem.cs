@@ -592,7 +592,7 @@ public class ConvInk : ConvNode
 
     public override void CallAction()
     {
-
+    Debug.Log("on");
         Space.DispatchEvent(Events.NewStory, new StoryEvent(InkData));
 
     }

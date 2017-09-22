@@ -11,7 +11,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     Animator anime;
     AutoType Decription;
-    GameObject Speaker;
+    public GameObject Speaker;
 
     public Animator NextLine;
 
@@ -52,7 +52,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         anime = gameObject.GetComponent<Animator>();
         Decription = gameObject.GetComponentInChildren<AutoType>();
-        Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
+        //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
 
         PD = GetComponentInChildren<PaceDisplay>();
         PD.Start();

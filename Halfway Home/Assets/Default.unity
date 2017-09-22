@@ -3503,13 +3503,14 @@ GameObject:
   - component: {fileID: 837956586}
   - component: {fileID: 837956585}
   - component: {fileID: 837956584}
+  - component: {fileID: 837956590}
   m_Layer: 5
   m_Name: Test Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &837956584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,6 +3522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce051a77f25904442b505ce4e5d20af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speaker: {fileID: 1096627647}
   NextLine: {fileID: 140469663}
 --- !u!114 &837956585
 MonoBehaviour:
@@ -3533,6 +3535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce550ff18a713d4cbbbc9cab755ed5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reader: {fileID: 837956590}
 --- !u!114 &837956586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3609,6 +3612,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &837956590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837956583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18159b5dceb0fa24fa518af3daf41bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logging: 0
+  Delay: 0
+  storyFile: {fileID: 0}
+  knot: 
+  allowRestart: 0
 --- !u!1 &847886189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,11 +4939,11 @@ MonoBehaviour:
     lineCount: 3
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5261,7 +5280,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24.1
+  m_fontSize: 25.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5309,11 +5328,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -8622,7 +8641,7 @@ GameObject:
   - component: {fileID: 1513539560}
   - component: {fileID: 1513539559}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
