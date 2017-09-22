@@ -20,14 +20,8 @@ public class ConversationDisplay : MonoBehaviour
     //interuption related stuff
     //List<ConvInteruprt> interuptFlags;
 
-    int InteruptFailNode = 0;
 
-    //does opening/closing the phone count as an interupt rn
-    bool PhoneInterupt = false;
-
-    bool ExaminedItem = false;
-    Sprite ItemExamined;
-    bool ExamineInterupt = false;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -78,9 +72,7 @@ public class ConversationDisplay : MonoBehaviour
 
         if (!ConversationModeOn)
             return;
-
-        if (ExaminedItem)
-            return;
+        
 
 
         NextNode(CurrentNode.Destination);

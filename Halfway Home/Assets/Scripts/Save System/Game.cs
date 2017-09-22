@@ -28,6 +28,13 @@ public class Game
 
     private Dictionary<Room, List<List<SceneSeen>>> WatchList;
 
+    public bool InCurrentStory;
+
+    public TextAsset CurrentStory;
+
+    public int CurrentNode;
+
+
     public Game()
     {
        

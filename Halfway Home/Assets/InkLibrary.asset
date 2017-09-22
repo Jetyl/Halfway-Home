@@ -29,13 +29,13 @@ MonoBehaviour:
     jsonAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 78447c5488f59014b8407981bb454ab0, type: 3}
-    jsonAsset: {fileID: 4900000, guid: 70a49d294f213d84aae4792b2cbdf60d, type: 3}
+    jsonAsset: {fileID: 0}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: f1f5cc76f85972c42b64c03095efc244, type: 3}
-    jsonAsset: {fileID: 4900000, guid: 660959c702d4685408d4da977ecaa0c6, type: 3}
+    inkAsset: {fileID: 102900000, guid: b931de3c3cecc7c4a913497a320bcbad, type: 3}
+    jsonAsset: {fileID: 0}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 2e4f2fcb4e260424ba248289a3d46119, type: 3}
     jsonAsset: {fileID: 0}

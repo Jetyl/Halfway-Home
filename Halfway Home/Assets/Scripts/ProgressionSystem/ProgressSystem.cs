@@ -68,10 +68,32 @@ public class ProgressSystem
 
     public void SetValue<T>(string key, T value)
     {
+
+        if (!ProgressBook.ContainsKey(key))
+            return;
+
+        
+
         Type type = typeof(T);
         if (type == typeof(int))
         {
-            //ProgressBook[key].IntValue = value;
+            if (ProgressBook[key].TypeID == PointTypes.Integer)
+                ProgressBook[key].IntValue = Convert.ToInt32(value);
+        }
+        if(type == typeof(bool))
+        {
+            if (ProgressBook[key].TypeID == PointTypes.Flag)
+                ProgressBook[key].BoolValue = Convert.ToBoolean(value);
+        }
+        if (type == typeof(float))
+        {
+            if (ProgressBook[key].TypeID == PointTypes.Float)
+                ProgressBook[key].FloatValue = (float)Convert.ToDouble(value);
+        }
+        if (type == typeof(string))
+        {
+            if (ProgressBook[key].TypeID == PointTypes.String)
+                ProgressBook[key].StringValue = Convert.ToString(value);
         }
     }
 
