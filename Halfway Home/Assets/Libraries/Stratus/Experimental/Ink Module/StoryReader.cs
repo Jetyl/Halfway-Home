@@ -58,15 +58,6 @@ namespace Stratus
       //------------------------------------------------------------------------------------------/
       protected override void OnAwake()
       {
-        // Construct the ink story data structure from the text file
-        LoadStory();
-
-        // Bind external functions to it
-        OnBindExternalFunctions(story);
-
-        // Set parsing patterns
-        OnSetParsingPatterns(parsePatterns);
-
         // Connect to common events
         this.gameObject.Connect<Story.ContinueEvent>(this.OnContinueEvent);
         this.gameObject.Connect<Story.SelectChoiceEvent>(this.OnSelectChoiceEvent);
@@ -78,6 +69,8 @@ namespace Stratus
 
       protected override void OnTrigger()
       {
+        SetUpStory();
+
         if (!story.canContinue)
         {
           if (allowRestart)
@@ -96,6 +89,18 @@ namespace Stratus
         }
 
         this.StartStory();
+      }
+
+      void SetUpStory()
+      {
+        // Construct the ink story data structure from the text file
+        LoadStory();
+
+        // Bind external functions to it
+        OnBindExternalFunctions(story);
+
+        // Set parsing patterns
+        OnSetParsingPatterns(parsePatterns);
       }
 
       //------------------------------------------------------------------------------------------/

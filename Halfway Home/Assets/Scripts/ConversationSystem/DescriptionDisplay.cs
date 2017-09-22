@@ -22,13 +22,7 @@ public class DescriptionDisplay : MonoBehaviour
     int aCounter = 0;
     
     List<Line> Lines;
-
-    float PaceCounter;
-
-    float Pace = -1;
-
-    PaceDisplay PD;
-
+  
     bool AutoOnLast;
 
     bool DenyPlayerInput;
@@ -53,10 +47,7 @@ public class DescriptionDisplay : MonoBehaviour
         anime = gameObject.GetComponent<Animator>();
         Decription = gameObject.GetComponentInChildren<AutoType>();
         //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
-
-        PD = GetComponentInChildren<PaceDisplay>();
-        PD.Start();
-        PD.StopPace();
+        
 
         Speaker.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
@@ -98,28 +89,8 @@ public class DescriptionDisplay : MonoBehaviour
 
         if (!isFinished)
             return;
-
-        //if the description has a pace
-        if(Pace > 0)
-        {
-
-            if(PaceCounter == 0)
-            {
-                if(!DenyPlayerInput)
-                PD.StartPace(Pace);
-            }
-
-            if (PaceCounter >= Pace)
-            {
-                PaceCounter = 0;
-                Finished();
-            }
-            else
-                PaceCounter += Time.deltaTime;
-
-
-        }
-        else if(DenyPlayerInput)
+        
+         if(DenyPlayerInput)
         {
             //if player cannot provide input, and no pace is set, next line
             Finished();
@@ -136,7 +107,6 @@ public class DescriptionDisplay : MonoBehaviour
 
     public void Finished()
     {
-        PD.StopPace();
         isFinished = false;
         ++aCounter;
 
@@ -151,7 +121,6 @@ public class DescriptionDisplay : MonoBehaviour
         {
 
             UpdateSpeaker(aCounter);
-            Pace = Lines[aCounter].Pace;
             Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[aCounter].Dialog));
             
             
@@ -196,7 +165,6 @@ public class DescriptionDisplay : MonoBehaviour
         UpdateSpeaker(0);
         Active = true;
         aCounter = 0;
-        Pace = Lines[0].Pace;
         Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[0].Dialog));
         isFinished = false;
     }
@@ -207,7 +175,6 @@ public class DescriptionDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
         anime.SetBool("IsUp", false);
         Active = false;
-        Pace = -1;
         Decription.Clear();
         StartCoroutine(WaitTilClosed());
     }
@@ -256,7 +223,6 @@ public class DescriptionDisplay : MonoBehaviour
         UpdateSpeaker(0);
         Active = true;
         aCounter = 0;
-        Pace = Lines[0].Pace;
         Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[0].Dialog));
         isFinished = false;
     }
