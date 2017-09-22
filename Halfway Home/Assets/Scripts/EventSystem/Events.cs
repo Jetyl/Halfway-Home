@@ -67,6 +67,10 @@ public class Events
     public static readonly String MapIcon = "MapIconEvent";
     public static readonly String SleepIcon = "SleepIconEvent";
     public static readonly String AwakeIcon = "AwakeIconEvent";
+    public static readonly String CharacterCall = "CharacterCallEvent";
+    public static readonly String Backdrop = "BackdropEvent";
+    public static readonly String MoveCharacter = "MoveCharacterEvent";
+
 
     //description system
     public static readonly String AutoType = "AutoTypeEvent";

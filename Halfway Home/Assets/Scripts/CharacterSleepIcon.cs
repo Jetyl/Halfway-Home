@@ -66,6 +66,7 @@ public class CharacterEvent:DefaultEvent
 public class CharacterList
 {
     public string Character;
+    public GameObject Actor;
 }
 
 
