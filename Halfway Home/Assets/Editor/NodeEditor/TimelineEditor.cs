@@ -638,10 +638,11 @@ public class TimelineEditor : BaseNodeEditor
                     {
                         string txt = AssetDatabase.GetAssetPath(((InkNode)node).InkFile);
                         
-                        txt = Path.GetFileNameWithoutExtension(txt);
+                        //txt = Path.GetFileNameWithoutExtension(txt);
                         txt = txt.Replace("Assets/Resources/", "");
                         //removes the file extention off the string
                         //txt = txt.Remove(txt.Length - 5);
+                        txt = txt.Substring(0, txt.LastIndexOf('.'));
                         Jwriter.Write(txt);
                     }
                     else
