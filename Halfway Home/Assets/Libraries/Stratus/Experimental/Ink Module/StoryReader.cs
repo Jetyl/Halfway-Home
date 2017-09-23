@@ -17,6 +17,7 @@ namespace Stratus
       //------------------------------------------------------------------------------------------/
       // Public Fields
       //------------------------------------------------------------------------------------------/
+      [Header("Story")]
       [Tooltip("Select an .ink file here!")]
       public TextAsset storyFile;
       [Tooltip("What knot in the conversation to start on")]
@@ -69,7 +70,7 @@ namespace Stratus
 
       protected override void OnTrigger()
       {
-        SetUpStory();
+        this.LoadStory();
 
         if (!story.canContinue)
         {
@@ -91,16 +92,23 @@ namespace Stratus
         this.StartStory();
       }
 
-      void SetUpStory()
+      /// <summary>
+      /// Once a story has been set, loads it
+      /// </summary>
+      void LoadStory()
       {
         // Construct the ink story data structure from the text file
-        LoadStory();
+        ConstructStory();
 
         // Bind external functions to it
         OnBindExternalFunctions(story);
 
         // Set parsing patterns
         OnSetParsingPatterns(parsePatterns);
+
+        // Announce it
+        this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
+        OnStoryLoaded(story);
       }
 
       //------------------------------------------------------------------------------------------/
@@ -196,13 +204,12 @@ namespace Stratus
       /// <summary>
       /// Constructs the ink story runtime object
       /// </summary>
-      void LoadStory()
+      void ConstructStory()
       {
         story = new Ink.Runtime.Story(storyFile.text);
         if (!story)
           Trace.Error("Failed to load the story", this, true);
-        this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
-        OnStoryLoaded(story);
+        
       }
 
       /// <summary>
@@ -211,7 +218,7 @@ namespace Stratus
       void StartStory()
       {
         if (logging)
-          Trace.Script("Dialog started!");
+          Trace.Script($"The story {storyFile.name} has started!");
 
         // If a knot has been selected...
         if (this.knot.Length > 0)
@@ -260,7 +267,7 @@ namespace Stratus
       void EndStory()
       {
         if (logging)
-          Trace.Script("Ending dialog!");
+          Trace.Script("Ending story!");
 
         // Dispatch the ended event
         var storyEnded = new Story.EndedEvent();
@@ -277,7 +284,7 @@ namespace Stratus
       protected virtual void UpdateCurrentLine(string line)
       {
         if (logging)
-          Trace.Script("Updating conversation!");
+          Trace.Script($"\"{line}\" ");
 
         var updateEvent = new Story.UpdateLineEvent
         {
@@ -300,7 +307,8 @@ namespace Stratus
         {
           Regex speaker = new Regex(parse.pattern, RegexOptions.IgnoreCase);
           Match m = speaker.Match(line);
-          parses[parse.name] = m.Value;
+          if (m.Success)
+            parses[parse.name] = m.Value;
         }
 
         var parsedLine = new Story.ParsedLine(parses, line);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using UnityEngine.UI;
 
 namespace Stratus
 {
@@ -12,6 +13,8 @@ namespace Stratus
     /// </summary>
     public abstract class StoryDisplay : MonoBehaviour 
     {
+      public bool logging = false;
+
       protected abstract void OnStart();
       protected abstract void OnStoryStarted();
       protected abstract void OnStoryEnded();
@@ -76,22 +79,23 @@ namespace Stratus
       //------------------------------------------------------------------------------------------/
       // Methods
       //------------------------------------------------------------------------------------------/
+      /// <summary>
+      /// Creates a choice button based on a prefab. It parents it to a layout group automatically as well.
+      /// </summary>
+      /// <param name="choicePrefab"></param>
+      /// <param name="choicesPanel"></param>
+      /// <param name="text"></param>
+      /// <returns></returns>
+      protected Button CreateChoiceView(Button choicePrefab, LayoutGroup choicesPanel, string text)
+      {
+        Button choice = Instantiate(choicePrefab) as Button;
+        choice.transform.SetParent(choicesPanel.transform, false);
 
-      //public void SelectChoice(int choice)
-      //{
-      //  // Convert to 0-based indexing
-      //  choice -= 1;
-      //
-      //  Trace.Script(choice + " was selected!");
-      //  
-      //  // Inform the current conversation of the choice
-      //  var choiceEvent = new Story.SelectChoiceEvent();
-      //  choiceEvent.choice = choice;
-      //  readerObject.gameObject.Dispatch<Story.SelectChoiceEvent>(choiceEvent);
-      //
-      //  // Now do any extra stuff
-      //  OnChoiceSelected();
-      //}
+        Text choiceText = choice.GetComponentInChildren<Text>();
+        choiceText.text = text;
+
+        return choice;
+      }
 
       /// <summary>
       /// Called upon when a particular choice has been selected

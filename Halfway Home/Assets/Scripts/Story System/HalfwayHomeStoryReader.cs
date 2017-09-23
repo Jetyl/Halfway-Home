@@ -18,7 +18,7 @@ namespace HalfwayHome
     {
       patterns.Add("Speaker", patterns.insideSquareBrackets);
       patterns.Add("Message", patterns.insideDoubleQuotes);
-    }
+    }    
 
     public void PlayMusic(string name)
     {

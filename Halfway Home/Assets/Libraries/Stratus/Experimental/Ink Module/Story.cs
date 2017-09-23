@@ -126,9 +126,27 @@ namespace Stratus
         public string line { get; private set; }
 
         /// <summary>
-        /// Whether this line has any parses
+        /// Whether this line has any valid parses
         /// </summary>
         public bool isParsed => parses.Count > 0;
+
+        /// <summary>
+        /// Whether this line has any valid parses
+        /// </summary>
+        public bool hasValidParses
+        {
+          get
+          {
+            int validParses = parses.Values.Count;
+            foreach (var parse in parses)
+            {
+              if (parse.Value.Length == 0)
+                validParses--;
+            }
+            // If there's at least 1 valid parse, consider the line parsed
+            return validParses > 0 ? true : false;
+          }
+        }
 
         /// <summary>
         /// Retrieves a specific parse from this line

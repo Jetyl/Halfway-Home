@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Stratus;
 using Stratus.InkModule;
+using System;
 
 /// <summary>
 /// Signals that a new story file should be read
@@ -10,7 +11,6 @@ using Stratus.InkModule;
 public class StoryEvent : DefaultEvent
 {
   public TextAsset storyFile;
-
   public StoryEvent(TextAsset file)
   {
     storyFile = file;
@@ -19,7 +19,7 @@ public class StoryEvent : DefaultEvent
 
 namespace HalfwayHome
 {
-  public class StoryDisplay : MonoBehaviour
+  public class HalfwayHomeStoryDriver : MonoBehaviour
   {
     private class StatAccess
     {
@@ -28,7 +28,9 @@ namespace HalfwayHome
       public float Get() => Game.current.Progress.GetFloatValue(name);
     }
 
+    [Header("Story")]
     public HalfwayHomeStoryReader reader;
+
     private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion", "doubt" };
     private Dictionary<string, StatAccess> stats = new Dictionary<string, StatAccess>();
 
@@ -109,10 +111,6 @@ namespace HalfwayHome
       Trace.Script($"Updating {variableName} to {value}", this);
       stats[variableName].Set((float)value);
     }
-
-
-
   }
-
 
 }

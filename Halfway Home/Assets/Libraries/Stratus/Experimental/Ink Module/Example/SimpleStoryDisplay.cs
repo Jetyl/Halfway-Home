@@ -89,7 +89,8 @@ namespace Stratus
         for (int i = 0; i < choices.Count; ++i)
         {
           Choice choice = choices[i];
-          Button button = CreateChoiceView(choices[i].text.Trim());
+          Button button = CreateChoiceView(choicePrefab, choicesPanel, choices[i].text.Trim());
+          //Button button = CreateChoiceView(choices[i].text.Trim());
           button.onClick.AddListener(delegate
           {
             SelectChoice(choice);
@@ -104,16 +105,16 @@ namespace Stratus
         RemoveChoices();
       }
 
-      Button CreateChoiceView(string text)
-      {
-        Button choice = Instantiate(choicePrefab) as Button;
-        choice.transform.SetParent(choicesPanel.transform, false);
-
-        Text choiceText = choice.GetComponentInChildren<Text>();
-        choiceText.text = text;
-
-        return choice;
-      }
+      //Button CreateChoiceView(string text)
+      //{
+      //  Button choice = Instantiate(choicePrefab) as Button;
+      //  choice.transform.SetParent(choicesPanel.transform, false);
+      //
+      //  Text choiceText = choice.GetComponentInChildren<Text>();
+      //  choiceText.text = text;
+      //
+      //  return choice;
+      //}
 
       void RemoveChoices()
       {
