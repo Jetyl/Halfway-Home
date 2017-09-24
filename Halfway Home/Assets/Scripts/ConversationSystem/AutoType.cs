@@ -6,9 +6,11 @@ using System.Collections.Generic;
 
 public class AutoType : MonoBehaviour
 {
-
-    public float DefaultPauseSpeed = 0.2f;
+    // 1/(pause speed + player pref) = # of characters added to the screen per second.
+    public float DefaultPauseSpeed = 0.2f; 
     public AudioClip sound;
+
+    public List<AutoDelays> ExtraDelays;
 
     float letterPause;
 
@@ -118,14 +120,17 @@ public class AutoType : MonoBehaviour
             if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
             {
                 letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
-
+                
                 //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
             }
+
+            var charaPause = DelayContains(message[Text.maxVisibleCharacters], letterPause);
+            
 
 
             Text.maxVisibleCharacters += 1;
 
-            yield return new WaitForSeconds(letterPause);
+            yield return new WaitForSeconds(charaPause);
         }
 
         Text.maxVisibleCharacters = message.Length;
@@ -172,6 +177,23 @@ public class AutoType : MonoBehaviour
         }
         */
     }
+
+
+    float DelayContains(char character, float value)
+    {
+        foreach(var del in ExtraDelays)
+        {
+            if(del.chracter == character)
+            {
+                return value * del.DelayMultiplier;
+            }
+
+        }
+
+        return value;
+    }
+
+
 }
 
 
@@ -188,4 +210,11 @@ public class AutoTypeEvent : EventData
         text = textToType;
     }
 
+}
+
+[System.Serializable]
+public struct AutoDelays
+{
+    public char chracter;
+    public float DelayMultiplier;
 }
