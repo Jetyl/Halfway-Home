@@ -35,7 +35,7 @@ public class CharacterDisplay : MonoBehaviour
     {
         Start(); // just incase this gets called before start, somehow;
         visual.sprite = GetPose(pose);
-        gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
+        //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
         
 
     }
@@ -48,7 +48,7 @@ public class CharacterDisplay : MonoBehaviour
         //visual.sprite = Poses[pose];
         var awhite = Color.white;
         awhite.a = 0;
-        gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 2));
+        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 2));
 
         if(Direction == StagePosition.Left)
         {

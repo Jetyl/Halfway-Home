@@ -12,6 +12,8 @@ namespace HalfwayHome
     protected override void OnBindExternalFunctions(Ink.Runtime.Story story)
     {
       story.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
+      story.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter));
+      story.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit));
     }
 
     protected override void OnSetParsingPatterns(Stratus.InkModule.Story.ParsePatterns patterns)
@@ -23,9 +25,19 @@ namespace HalfwayHome
     public void PlayMusic(string name)
     {
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
-    }   
+    }
 
-    
+    public void CharEnter(string name, string _pose)
+    {
+      //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
+      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, false));
+    }
+
+    public void CharExit(string name)
+    {
+      //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
+      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, "Test", true));
+    }
 
   }
 }

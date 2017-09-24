@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4333190198929324}
   - component: {fileID: 212427123477562210}
+  - component: {fileID: 114559324231784268}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -90,6 +91,21 @@ MonoBehaviour:
   - Name: OtherTest
     Visual: {fileID: 21300000, guid: a1ed7d9a67694094bad9f45c4444caf0, type: 3}
   Direction: 0
+--- !u!114 &114559324231784268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767029052550566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 1
+  InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
+  InitializeFadeTime: 2
+  IsFading: 0
 --- !u!212 &212427123477562210
 SpriteRenderer:
   m_ObjectHideFlags: 1

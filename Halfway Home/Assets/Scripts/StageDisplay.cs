@@ -25,7 +25,7 @@ public class StageDisplay : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-
+    Actors = new List<CharacterDisplay>();
         SpotLights = new Dictionary<StagePosition, int>();
         for (var i = 0; i < Enum.GetValues(typeof(StagePosition)).Length; ++i)
         {

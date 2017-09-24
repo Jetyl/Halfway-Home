@@ -25,6 +25,12 @@ public class PlayMusicEvent : Stratus.Event
   public string track;
 }
 
+public class CharacterChangeEvent : Stratus.Event
+{
+  public string character;
+  public bool entering;
+}
+
 namespace HalfwayHome
 {
   public class HalfwayHomeStoryDriver : MonoBehaviour
