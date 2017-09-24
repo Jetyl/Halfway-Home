@@ -22,7 +22,7 @@ namespace HalfwayHome
 
     public void PlayMusic(string name)
     {
-      Trace.Script($"Playing {name}", this);
+      Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }   
 
     

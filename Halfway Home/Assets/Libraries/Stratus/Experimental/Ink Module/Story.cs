@@ -88,7 +88,8 @@ namespace Stratus
         /// <summary>
         /// [Meowth]
         /// </summary>
-        public string insideSquareBrackets => @"\[([a-zA-Z0-9-\s]+)\]";
+        public string insideSquareBrackets => @"\[(.*?)\]";
+        //public string insideSquareBrackets => @"\[([a-zA-Z0-9-\s]+)\]";
 
         /// <summary>
         /// All categories set for parsing
@@ -104,6 +105,13 @@ namespace Stratus
         {
           categories.Add(new Category() { name = name, pattern = pattern });
         }
+
+        /// <summary>
+        /// Composes a regex that captures everything inside the escaped characters (brackets, quotes, etc)
+        /// </summary>
+        /// <param name="escapedCharacter"></param>
+        /// <returns></returns>
+        public static string EverythingWithinEnclosure(char escapedCharacter) => escapedCharacter + "(.*?)" + escapedCharacter;
       }
 
       /// <summary>

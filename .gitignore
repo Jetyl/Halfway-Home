@@ -42,3 +42,4 @@ sysinfo.txt
 *.unitypackage
 *.ide
 Halfway Home/ProjectSettings/EditorBuildSettings.asset
+Halfway Home/ProjectSettings/QualitySettings.asset
