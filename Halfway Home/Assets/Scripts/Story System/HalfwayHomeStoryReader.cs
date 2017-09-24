@@ -27,22 +27,16 @@ namespace HalfwayHome
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
 
-    public void CharChange(string name, string _pose, int stagePos, bool entering)
-    {
-      //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, (StagePosition)stagePos, !entering));
-    }
-
     public void CharEnter(string name, string _pose, int stagePos)
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, (StagePosition)stagePos, false));
+      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, false));
     }
 
     public void CharExit(string name)
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, "Test", StagePosition.None, true));
+      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, "Test", true));
     }
 
   }

@@ -9,7 +9,7 @@ VAR delusion = 0
 VAR doubt = 0
 
 EXTERNAL PlayMusic(trackName)
-EXTERNAL CharEnter(nameString, poseString, stageInt)
+EXTERNAL CharEnter(nameString, poseString)
 EXTERNAL CharExit(nameString)
 
 -> Start
@@ -22,9 +22,10 @@ They whisper to me that I will never escape.
 That I don't deserve to.
 I had another of those dreams last night. That I was back in that sickly white room.
 Alone.
-~CharEnter("Timothy", "Test", 0)
+~CharEnter("Timothy", "Test")
 But when I open my eyes, I can see the light streaming through the skinny window of my room.
 The whispers fade into the chitter of birdsong.
+~CharExit("Timothy")
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
 ~player_name = "test"
 //~GetPlayerData()
