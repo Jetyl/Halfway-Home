@@ -11428,6 +11428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 3
+    starttime: 14
+    endTime: 20
   LimitedDailyAccess: 0
   AccessPoint: 
   TimesCanVisit: 0

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class MapAccessTime : MonoBehaviour
 {
 
+
+    public List<AccessLocker> ClosedTimeContainer;
     public List<List<bool>> TimeClosed;
     
 
@@ -20,6 +22,9 @@ public class MapAccessTime : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+
+        TimeClosed = new List<List<bool>>();
+
         self = GetComponent<Button>();
         Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
     }
@@ -58,4 +63,12 @@ public class MapAccessTime : MonoBehaviour
         }
 
     }
+}
+
+[System.Serializable]
+public class AccessLocker
+{
+    public int Day;
+    public int starttime;
+    public int endTime;
 }
