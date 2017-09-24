@@ -33,6 +33,7 @@ public class StageDisplay : MonoBehaviour
         }
 
         Space.Connect<StageDirectionEvent>(Events.CharacterCall, CharacterChanges);
+        Space.Connect<StageDirectionEvent>(Events.CharacterExit, CharacterChanges);
         Space.Connect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
         Space.Connect<StageDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
@@ -57,13 +58,8 @@ public class StageDisplay : MonoBehaviour
 
             if(Roll.Character.Character == eventdata.character)
             {
-                if (eventdata.Remove)
-                {
-                    Roll.ExitStage();
-                    Actors.Remove(Roll);
-                }
-                else
-                    Roll.ChangePose(eventdata.Pose);
+               
+                Roll.ChangePose(eventdata.Pose);
 
                 return;
             }
@@ -92,6 +88,27 @@ public class StageDisplay : MonoBehaviour
         
 
     }
+
+    void CharacterExit(StageDirectionEvent eventdata)
+    {
+        foreach (var Roll in Actors)
+        {
+
+            if (Roll == null)
+            {
+                Actors.Remove(Roll);
+            }
+
+            if (Roll.Character.Character == eventdata.character)
+            {
+                Roll.ExitStage();
+                Actors.Remove(Roll);
+                
+                return;
+            }
+        }
+    }
+
 
 
     void MoveCharacter(StageDirectionEvent eventdata)
@@ -204,16 +221,16 @@ public class StageDirectionEvent : DefaultEvent
     public string character;
     public string Pose;
     public Vector3 Position;
-    public bool Remove;
+    //public bool Remove;
     public Sprite Backdrop;
     public StagePosition Direction;
 
 
-    public StageDirectionEvent(string person, string pose, bool exit = false)
+    public StageDirectionEvent(string person, string pose)
     {
         character = person;
         Pose = pose;
-        Remove = exit;
+        //Remove = exit;
         Direction = StagePosition.Center;
     }
 

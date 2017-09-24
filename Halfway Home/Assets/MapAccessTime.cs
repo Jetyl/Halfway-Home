@@ -25,6 +25,27 @@ public class MapAccessTime : MonoBehaviour
 
         TimeClosed = new List<List<bool>>();
 
+        for (int i = 0; i <= 7; ++i)
+        {
+            var hours = new List<bool>();
+            for (int j = 0; j < 24; ++j)
+            {
+                hours.Add(false);
+            }
+
+            TimeClosed.Add(hours);
+        }
+
+        foreach(var point in ClosedTimeContainer)
+        {
+            for(int i = point.starttime; i <=  point.endTime; ++i)
+            {
+                TimeClosed[point.Day][i] = true;
+            }
+        }
+
+
+
         self = GetComponent<Button>();
         Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
     }

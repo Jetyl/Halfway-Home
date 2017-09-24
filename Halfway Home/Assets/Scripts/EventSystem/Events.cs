@@ -68,6 +68,7 @@ public class Events
     public static readonly String SleepIcon = "SleepIconEvent";
     public static readonly String AwakeIcon = "AwakeIconEvent";
     public static readonly String CharacterCall = "CharacterCallEvent";
+    public static readonly String CharacterExit = "CharacterExitEvent";
     public static readonly String Backdrop = "BackdropEvent";
     public static readonly String MoveCharacter = "MoveCharacterEvent";
 
