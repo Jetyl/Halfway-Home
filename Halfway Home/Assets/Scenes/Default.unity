@@ -5042,6 +5042,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultPauseSpeed: 20
   sound: {fileID: 0}
+  ExtraDelays:
+  - chracter: 46
+    DelayMultiplier: 1.75
+  - chracter: 44
+    DelayMultiplier: 1.3
+  - chracter: 63
+    DelayMultiplier: 1.5
+  - chracter: 33
+    DelayMultiplier: 0.95
 --- !u!114 &998843490
 MonoBehaviour:
   m_ObjectHideFlags: 0

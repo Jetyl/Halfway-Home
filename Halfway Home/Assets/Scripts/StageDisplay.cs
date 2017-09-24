@@ -209,12 +209,12 @@ public class StageDirectionEvent : DefaultEvent
     public StagePosition Direction;
 
 
-    public StageDirectionEvent(string person, string pose, StagePosition dir = StagePosition.None, bool exit = false)
+    public StageDirectionEvent(string person, string pose, bool exit = false)
     {
         character = person;
         Pose = pose;
         Remove = exit;
-        Direction = dir;
+        Direction = StagePosition.Center;
     }
 
     public StageDirectionEvent(Sprite scenery)
