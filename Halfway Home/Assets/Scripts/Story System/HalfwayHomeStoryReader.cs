@@ -31,6 +31,7 @@ namespace HalfwayHome
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
       Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, false));
+      Trace.Script("called char enter");
     }
 
     public void CharExit(string name)
