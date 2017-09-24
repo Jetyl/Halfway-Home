@@ -10,8 +10,6 @@ namespace HalfwayHome
     public TextAsset storyFile;
     public RuntimeMethodField testing;
 
-    private StoryEvent storyEvent;
-
     void Start()
     {
       testing = new RuntimeMethodField(DispatchStoryEvent);

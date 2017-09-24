@@ -17,6 +17,14 @@ public class StoryEvent : DefaultEvent
   }
 }
 
+/// <summary>
+/// Signals that a music track should be played
+/// </summary>
+public class PlayMusicEvent : Stratus.Event
+{
+  public string track;
+}
+
 namespace HalfwayHome
 {
   public class HalfwayHomeStoryDriver : MonoBehaviour

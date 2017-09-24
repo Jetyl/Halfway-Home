@@ -8,11 +8,12 @@ VAR stress = 0
 VAR delusion = 0
 VAR doubt = 0
 
-//EXTERNAL GetPlayerData()
+EXTERNAL PlayMusic(trackName)
 
 -> Start
 
 === Start ===
+~player_name = "John Myres, First of his Name (lol), Vampire Hunter"
 In my dreams I can still hear their voices.
 I can see the faces my mind invented from shadow.
 They whisper to me that I will never escape.
@@ -30,4 +31,6 @@ My stomach growled lazily as I looked at the small white clock on the desk.
 Should be time to shower before lunch, though.
 // Some kind of transition here, probably
 // Statement before map pops up
+~PlayMusic("RoadHazard")
+{player_name} walks into the sunset while something explodes behind him...
 -> END
