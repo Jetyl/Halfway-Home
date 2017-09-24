@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Default.unity
+- path: Assets/Scenes/Halfway Home Story Demo.unity
   isLoaded: 1
   isActive: 1
