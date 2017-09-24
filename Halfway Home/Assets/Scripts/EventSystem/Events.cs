@@ -122,13 +122,14 @@ public class Events
         EventName = eventName;
     }
 
+
     public static implicit operator string(Events value)
     {
 
         return value.EventName;
     }
-    
-    public static implicit operator Events (string value)
+
+    public static implicit operator Events(string value)
     {
         return new Events(value);
     }
@@ -143,6 +144,27 @@ public class Events
     {
         if (x.EventName != y.EventName) return true;
         return false;
+    }
+
+    public override bool Equals(System.Object obj)
+    {
+        if (obj == null)
+            return false;
+        Events c = obj as Events;
+        if ((System.Object)c == null)
+            return false;
+        return EventName == c.EventName;
+    }
+    public bool Equals(Events c)
+    {
+        if ((object)c == null)
+            return false;
+        return c.EventName == EventName;
+    }
+
+    public override int GetHashCode()
+    {
+        return this.EventName.GetHashCode();
     }
 
 }

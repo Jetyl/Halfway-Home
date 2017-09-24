@@ -586,13 +586,15 @@ public class ConvInk : ConvNode
         if (key["Story"] != null)
         {
             InkData = Resources.Load((string)key["Story"]) as TextAsset;
+
+
         }
     }
 
 
     public override void CallAction()
     {
-    Debug.Log("on");
+        
         Space.DispatchEvent(Events.NewStory, new StoryEvent(InkData));
 
     }
@@ -699,7 +701,7 @@ public class ConvLine : ConvNode
 
     public override void CallAction()
     {
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(Lines, autoLast, denyPlayerInput));
+        //Space.DispatchEvent(Events.Description, new DescriptionEvent(Lines, autoLast, denyPlayerInput));
         //send a timer event here
     }
 
@@ -874,7 +876,7 @@ public class ConvImage : ConvNode
     public override void CallAction()
     {
         //call description to say when image is closed
-        var gameObject = GameObject.Find("Description");
+        //var gameObject = GameObject.Find("Description");
 
         //Space.DispatchEvent(Events.OpenImage, new ImageEvent(ImageToDisplay, gameObject, ClickToRemove));
     }

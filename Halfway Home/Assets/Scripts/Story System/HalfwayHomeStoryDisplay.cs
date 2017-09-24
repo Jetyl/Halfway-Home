@@ -5,6 +5,7 @@ using Stratus.InkModule;
 using Ink.Runtime;
 using UnityEngine.UI;
 using Stratus;
+using TMPro;
 
 namespace HalfwayHome
 {
@@ -14,8 +15,8 @@ namespace HalfwayHome
     // Fields
     //------------------------------------------------------------------------------------------/
     [Header("Dialog")]
-    public Text speakerText;
-    public Text messageText;
+    public TextMeshProUGUI speakerText;
+    public TextMeshProUGUI messageText;
 
     [Header("Choices")]
     [SerializeField]
@@ -50,9 +51,14 @@ namespace HalfwayHome
     protected override void OnStart()
     {
       display = false;
+        Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
+    }
+    void OnFinishedDescription(DefaultEvent eventdata)
+    {
+        ContinueStory();
     }
 
-    protected override void OnStoryStarted()
+        protected override void OnStoryStarted()
     {
       display = true;
       displayChoices = false;
@@ -71,12 +77,17 @@ namespace HalfwayHome
       if (!parse.isParsed)
       {
         speakerText.text = "";
-        messageText.text = parse.line;
+        //messageText.text = parse.line;
+
+        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line));
+
       }
       else
       {
         speakerText.text = parse.Find("Speaker");
-        messageText.text = parse.Find("Message");
+        //messageText.text = parse.Find("Message");
+
+        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.Find("Message")));
       }
     }
 
@@ -113,5 +124,5 @@ namespace HalfwayHome
 
 
   }
-
+    
 }

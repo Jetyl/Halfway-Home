@@ -18,14 +18,11 @@ public class DescriptionDisplay : MonoBehaviour
     bool Active = false;
 
     bool isFinished = false;
-
-    int aCounter = 0;
-    
-    List<Line> Lines;
+        
+    string Line;
   
     bool AutoOnLast;
-
-    bool DenyPlayerInput;
+    
 
     private void Awake()
     {
@@ -65,41 +62,27 @@ public class DescriptionDisplay : MonoBehaviour
         if (Input.GetMouseButtonDown(0) == true)
         {
 
-            if(canPress())
+            
+            if (!isFinished)
             {
-                if (!isFinished)
-                {
-                    Decription.gameObject.DispatchEvent(Events.SkipTyping);
+                Decription.gameObject.DispatchEvent(Events.SkipTyping);
 
-                    if (!DenyPlayerInput)
-                        NextLine.SetBool("Play", true);
+                //turn this back on when the animation is working again
+                //NextLine.SetBool("Play", true);
 
 
                     
-                    return;
-                }
-
-                Finished();
+                return;
             }
+
+            Finished();
+            
 
 
             
 
         }
-
-        if (!isFinished)
-            return;
         
-         if(DenyPlayerInput)
-        {
-            //if player cannot provide input, and no pace is set, next line
-            Finished();
-        }
-
-        if(AutoOnLast && aCounter + 1 == Lines.Count)
-        {
-            Finished();
-        }
 
     }
 
@@ -108,31 +91,18 @@ public class DescriptionDisplay : MonoBehaviour
     public void Finished()
     {
         isFinished = false;
-        ++aCounter;
+        //turn these on when next line animation is working again
+        // NextLine.SetBool("Play", false);
+         // NextLine.Play("LinePlaying");
+        
 
-        if (!DenyPlayerInput)
-        {
-            NextLine.SetBool("Play", false);
-            NextLine.Play("LinePlaying");
-        }
-
-
-        if (aCounter < Lines.Count)
-        {
-
-            UpdateSpeaker(aCounter);
-            Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[aCounter].Dialog));
+        
+        Active = false;
             
-            
-        }
-        else
-        {
-            Active = false;
-            if(DenyPlayerInput)
-                Decription.Clear();
 
-            Space.DispatchEvent(Events.FinishedDescription);
-        }
+
+        Space.DispatchEvent(Events.FinishedDescription);
+        
 
     }
 
@@ -143,29 +113,21 @@ public class DescriptionDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         
         //dynamically edit the lines so they adhere to certain parameters
-        Lines = TextParser.DynamicEdit(eventdata.Lines);
+        Line = TextParser.DynamicEdit(eventdata.Line);
 
         AutoOnLast = eventdata.AutoFinish;
-        DenyPlayerInput = eventdata.DenyInput;
-
-        if (Lines[0].Speaker == null || Lines[0].Speaker == "")
-        {
-            Speaker.gameObject.SetActive(false);
-        }
         
-        
-
+        /*
         if(!anime.GetBool("IsUp"))
         {
             anime.SetBool("IsUp", true);
             StartCoroutine(WaitTilOpened());
             return;
-        }
+        }*/
 
-        UpdateSpeaker(0);
+        //UpdateSpeaker(0);
         Active = true;
-        aCounter = 0;
-        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[0].Dialog));
+        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
     }
 
@@ -179,28 +141,7 @@ public class DescriptionDisplay : MonoBehaviour
         StartCoroutine(WaitTilClosed());
     }
 
-    void UpdateSpeaker(int count)
-    {
-
-        //if the speaker is null, thus has not changed
-        if (Lines[count].Speaker == null)
-            return;
-        
-        
-        if (Lines[count].Speaker == " " || Lines[count].Speaker == "")
-        {
-            Speaker.gameObject.SetActive(false);
-            
-        }
-        else
-        {
-            Speaker.gameObject.SetActive(true);
-
-            Speaker.GetComponentInChildren<TextMeshProUGUI>().text = Lines[count].Speaker;
-
-        }
-
-    }
+    
 
 
     IEnumerator WaitTilClosed()
@@ -219,41 +160,21 @@ public class DescriptionDisplay : MonoBehaviour
 
 
         yield return new WaitForSeconds(1.5f);
-
-        UpdateSpeaker(0);
+        
         Active = true;
-        aCounter = 0;
-        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Lines[0].Dialog));
+        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
     }
 
     void OnFinishedTyping(DefaultEvent eventdata)
     {
         isFinished = true;
-
-        if (!DenyPlayerInput)
-            NextLine.SetBool("Play", true);
+        
+            //NextLine.SetBool("Play", true);
     }
 
 
-    bool canPress()
-    {
-
-        if (DenyPlayerInput)
-            return false;
-        
-        
-
-
-        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
-            return true;
-
-        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() && 
-            UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject == null)
-            return true;
-
-        return false;
-    }
+    
 
 }
 
@@ -262,15 +183,13 @@ public class DescriptionEvent : DefaultEvent
 {
     
     public bool AutoFinish;
-    public bool DenyInput;
-    public List<Line> Lines;
-
+    //public List<Line> Lines;
+    public string Line;
    
-    public DescriptionEvent(List<Line> _lines, bool autoFinish_ = false, bool denyInput_ = false)
+    public DescriptionEvent(string _lines, bool autoFinish_ = false)
     {
-        Lines = _lines;
+        Line = _lines;
         AutoFinish = autoFinish_;
-        DenyInput = denyInput_;
     }
 
 }

@@ -83,7 +83,7 @@ public class DescribeObject : MonoBehaviour
 
     void Decribe(DefaultEvent eventdata)
     {
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(DefaultText, CallFinishImmediately, DenyPlayerInput));
+        //Space.DispatchEvent(Events.Description, new DescriptionEvent(DefaultText, CallFinishImmediately));
         StartCoroutine(FrameDelay());
 
         if (DisableUI)

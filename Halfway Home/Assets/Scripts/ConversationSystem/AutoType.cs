@@ -70,7 +70,7 @@ public class AutoType : MonoBehaviour
     {
         Text.maxVisibleCharacters = 0;
         Text.text = message;
-        bool AudioOff = false;
+        int Skip = 0;
         int length = message.Length;
         while (Text.maxVisibleCharacters < message.Length)
         {
@@ -84,6 +84,7 @@ public class AutoType : MonoBehaviour
                 }
                 i -= Text.maxVisibleCharacters;
                 length -= i;
+                Skip = i;
 
             }
 
@@ -91,28 +92,30 @@ public class AutoType : MonoBehaviour
             //skip rich text stuff
             if (Text.text[Text.maxVisibleCharacters] == '<')
             {
-                AudioOff = true;
+                //AudioOff = true;
             }
             if (Text.text[Text.maxVisibleCharacters] == '>')
             {
-               AudioOff = false;
+                //AudioOff = false;
             }
 
 
             if (!audios.isPlaying)
             {
-                if (Text.maxVisibleCharacters < length)
+                if (Text.maxVisibleCharacters < length && Skip == 0)
                 {
-                    audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume") 
+                    audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
                         * Game.current.Progress.GetFloatValue("MasterVolume");
                     audios.PlayOneShot(sound);
                 }
-                //if (AudioOff)
-                    //print(Text.text[Text.maxVisibleCharacters]);
+                else
+                {
+                    Skip -= 1;
+                }
 
             }
 
-            if(UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
+            if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
             {
                 letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
 
