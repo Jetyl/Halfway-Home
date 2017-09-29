@@ -14,6 +14,8 @@ namespace HalfwayHome
       story.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter));
       story.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit));
+      story.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
+      story.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName);});
     }
 
     protected override void OnSetParsingPatterns(Stratus.InkModule.Story.ParsePatterns patterns)
@@ -30,14 +32,24 @@ namespace HalfwayHome
     public void CharEnter(string name, string _pose)
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose, false));
+      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose));
       Trace.Script("called char enter");
     }
 
     public void CharExit(string name)
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, "Test", true));
+      Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Test"));
+    }
+
+    public void SetValue(string ValueName, bool newValue)
+    {
+        Game.current.Progress.SetValue(ValueName, newValue);
+    }
+
+    public bool GetValue(string ValueName)
+    {
+        return Game.current.Progress.GetBoolValue(ValueName);
     }
 
   }

@@ -68,5 +68,24 @@
     "Type" : 1
    }
   ]
+ },
+ {
+  "PlotName" : "Week 1",
+  "BeatNumber" : 1,
+  "BeatName"   : "Introductions",
+  "Point"      : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1
+   },
+   {
+    "Name" : "Met Charlotte",
+    "Type" : 1
+   },
+   {
+    "Name" : "Met Eduardo",
+    "Type" : 0
+   }
+  ]
  }
 ]
