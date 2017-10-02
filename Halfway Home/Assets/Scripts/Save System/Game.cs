@@ -19,6 +19,7 @@ public class Game
 
     public ProgressSystem Progress;
 
+    public Personality Self;
 
     //character name, day of week, the location that hour
     private Dictionary<string, List<List<Room>>> Schedule;
@@ -42,7 +43,8 @@ public class Game
         Hour = 0;
         PlayerName = "";
         Progress = new ProgressSystem();
-        
+        Self = new Personality();
+
         Progress.SetValue("MasterVolume", 1.0f);
         Progress.SetValue("BackgroundVolume", 1.0f);
         Progress.SetValue("SFXVolume", 1.0f);
@@ -107,7 +109,7 @@ public class Game
         Day = copy_.Day;
         PlayerName = copy_.PlayerName;
         Progress = copy_.Progress;
-        
+        Self = copy_.Self;
 
     }
 
@@ -159,6 +161,8 @@ public class Game
         }
 
         Amount = CurrentTimeBlock;
+
+        Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 6 * Amount);
 
     }
 

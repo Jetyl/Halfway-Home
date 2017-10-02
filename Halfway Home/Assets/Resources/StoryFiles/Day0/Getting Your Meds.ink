@@ -7,7 +7,7 @@ VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
 VAR delusion = 0
-VAR doubt = 0
+VAR week = 0
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)

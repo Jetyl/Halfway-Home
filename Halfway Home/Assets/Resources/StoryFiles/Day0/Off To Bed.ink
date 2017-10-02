@@ -7,8 +7,7 @@ VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
 VAR delusion = 0
-VAR doubt = 0
-VAR Week = 1
+VAR week = 1
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -24,7 +23,7 @@ I Walk into my room, to go to bed.
 I hope into the shower real quick, and by the time I come out, Timothy is already curled up in his bed.
 //if first week
 { 
-	- Week == 1:
+	- week == 1:
 		->ContemplateWeek1
 	- else:
 		->ContemplateWeek1
@@ -78,7 +77,7 @@ eh, its only for one week
 [Timothy] "Good night {player_name}"
 [{player_name}] "Good night Timothy"
 {
-	- expression > 10:
+	- expression >= 1:
 		"It was nice meeting you."
 }
 I start to drift off from there. My thoughts slow and hazy.

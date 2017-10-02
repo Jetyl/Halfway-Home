@@ -6,31 +6,31 @@
   "BeatName"   : "Player Data",
   "Point"      : [
    {
-    "Name" : "Delusion",
+    "Name" : "delusion",
     "Type" : 2
    },
    {
-    "Name" : "Doubt",
+    "Name" : "stress",
     "Type" : 2
    },
    {
-    "Name" : "Stress",
+    "Name" : "fatigue",
     "Type" : 2
    },
    {
-    "Name" : "Fatigue",
+    "Name" : "grace",
     "Type" : 2
    },
    {
-    "Name" : "Grace",
+    "Name" : "expression",
     "Type" : 2
    },
    {
-    "Name" : "Expression",
+    "Name" : "awareness",
     "Type" : 2
    },
    {
-    "Name" : "Self-Awareness",
+    "Name" : "week",
     "Type" : 2
    }
   ]
