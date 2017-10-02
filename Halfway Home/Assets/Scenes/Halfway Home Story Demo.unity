@@ -814,10 +814,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logging: 1
-  Delay: 0
+  listeningToScene: 0
+  allowRestart: 0
   storyFile: {fileID: 0}
   knot: 
-  allowRestart: 0
 --- !u!114 &811847118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Modify the display to fit your UI needs
-  drawMode: 0
+  drawMode: 1
   color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   offset: {x: 0, y: -0.84, z: 0}
   fontStyle: 0
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   text: 'Doesn''t get to work since your timeline is firing off the story event?
 
 '
-  drawMode: 0
+  drawMode: 1
   color: {r: 0.5929685, g: 0.9338235, b: 0.52870893, a: 1}
   offset: {x: 0, y: 0, z: 0}
   fontStyle: 0
@@ -1610,7 +1610,7 @@ MonoBehaviour:
   text: 'Choices are automatically generated and added here
 
 '
-  drawMode: 0
+  drawMode: 1
   color: {r: 0.9558824, g: 0.6325692, b: 0.7329077, a: 1}
   offset: {x: 0, y: 0, z: 0}
   fontStyle: 0
@@ -1991,7 +1991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1995782808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,7 +2071,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

@@ -51,12 +51,6 @@ namespace Stratus
       EditorWindow.GetWindow(typeof(SceneBrowser), false, Title);
     }
 
-    //private void OnEnable()
-    //{
-    //  SerializedObject so = new SerializedObject(this);
-    //  sceneToAddProp = so.FindProperty("sceneToAdd");
-    //}
-
     private void OnGUI()
     {
       EditorGUILayout.BeginVertical();
@@ -124,7 +118,7 @@ namespace Stratus
               () =>
               {
                 //Trace.Script("Removing " + scene.name);
-                RemoveScene(scene);
+                RemoveBookmarkedScene(scene);
               }
               );
             menu.ShowAsContext();
@@ -135,35 +129,11 @@ namespace Stratus
 
     }
 
-    void RemoveScene(SceneAsset scene)
-    {
-      BookmarkedScenes.Remove(scene);
-      Preferences.Save();
-      Repaint();
-    }
-
-    //------------------------------------------------------------------------/
-    // Methods
-    //------------------------------------------------------------------------/   
-    //[MenuItem("Assets/Bookmark")]
-    //public static void BookmarkScene()
-    //{
-    //  var obj = Selection.activeObject;
-    //  var scene = obj as SceneAsset;
-    //  if (scene)
-    //  {
-    //    BookmarkedScenes.Add(scene);
-    //    Preferences.Save();
-    //    Trace.Script(scene.name + " has been bookmarked!");
-    //  }
-    //}
-
     void AddBookmarkedScene()
     {
-      //EditorGUILayout.PropertyField(sceneToAddProp);
       EditorGUILayout.BeginHorizontal();
       sceneToAdd = EditorGUILayout.ObjectField(sceneToAdd, typeof(SceneAsset), false) as SceneAsset;
-      if (GUILayout.Button("Add", EditorStyles.miniButtonRight) && !BookmarkedScenes.Contains(sceneToAdd))
+      if (GUILayout.Button("Add", EditorStyles.miniButtonRight) && sceneToAdd != null && !BookmarkedScenes.Contains(sceneToAdd))
       {
         BookmarkedScenes.Add(sceneToAdd);
         Preferences.Save();
@@ -174,6 +144,12 @@ namespace Stratus
 
     }
 
+    void RemoveBookmarkedScene(SceneAsset scene)
+    {
+      BookmarkedScenes.Remove(scene);
+      Preferences.Save();
+      Repaint();
+    }
 
 
   }

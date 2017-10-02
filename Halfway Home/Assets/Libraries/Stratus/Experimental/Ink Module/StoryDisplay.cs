@@ -13,8 +13,14 @@ namespace Stratus
     /// </summary>
     public abstract class StoryDisplay : MonoBehaviour 
     {
+      //------------------------------------------------------------------------------------------/
+      // Fields
+      //------------------------------------------------------------------------------------------/
       public bool logging = false;
 
+      //------------------------------------------------------------------------------------------/
+      // Events
+      //------------------------------------------------------------------------------------------/
       protected abstract void OnStart();
       protected abstract void OnStoryStarted();
       protected abstract void OnStoryEnded();
@@ -28,7 +34,7 @@ namespace Stratus
       /// Initializes the script
       /// </summary>
       void Start()
-      {
+      {        
         Scene.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
         Scene.Connect<Story.EndedEvent>(this.OnStoryEndedEvent);
         Scene.Connect<Story.UpdateLineEvent>(this.OnStoryUpdateEvent);
@@ -98,6 +104,42 @@ namespace Stratus
       }
 
       /// <summary>
+      /// Presents choices based on a specified prefab containing a button and a horizontal/vertical layout group
+      /// </summary>
+      /// <param name="choices"></param>
+      /// <param name="buttonPrefab"></param>
+      /// <param name="panel"></param>
+      protected Button[] AddChoices(List<Choice> choices, Button choicePrefab, LayoutGroup choicesPanel)
+      {
+        Button[] buttons = new Button[choices.Count];
+
+        // For each given choice,
+        for (int i = 0; i < choices.Count; ++i)
+        {
+          Choice choice = choices[i];
+          Button button = CreateChoiceView(choicePrefab, choicesPanel, choices[i].text.Trim());
+          button.onClick.AddListener(delegate
+          {
+            SelectChoice(choice);
+          });
+          buttons[i] = button;
+        }
+        return buttons;
+      }
+
+      /// <summary>
+      /// Removes choices from a given choices panel
+      /// </summary>
+      protected void RemoveChoices(LayoutGroup choicesPanel)
+      {
+        var choiceButtons = choicesPanel.GetComponentsInChildren<Button>();
+        foreach (var choiceButton in choiceButtons)
+        {
+          Destroy(choiceButton.gameObject);
+        }
+      }
+
+      /// <summary>
       /// Called upon when a particular choice has been selected
       /// </summary>
       /// <param name="choice"></param>
@@ -121,6 +163,8 @@ namespace Stratus
       {
         readerObject.Dispatch<Story.ContinueEvent>(new Story.ContinueEvent());
       }
+
+
 
     } 
   }

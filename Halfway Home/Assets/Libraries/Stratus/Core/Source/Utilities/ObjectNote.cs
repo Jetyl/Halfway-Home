@@ -8,6 +8,7 @@ using UnityEditor;
 
 namespace Stratus
 {
+  [DisallowMultipleComponent]
   public class ObjectNote : MonoBehaviour
   {
     /// <summary>
@@ -21,7 +22,7 @@ namespace Stratus
     }
 
     [TextArea]
-    public string text;
+    public string text = "Note";
     [Header("Settings")]
     public DrawMode drawMode = DrawMode.Always;
     public Color color = Color.yellow;
@@ -29,7 +30,7 @@ namespace Stratus
     [Header("Text")]
     public FontStyle fontStyle = FontStyle.Normal;
     public int fontSize = 10;
-    public TextAnchor alignment = TextAnchor.MiddleCenter;
+    public TextAnchor alignment = TextAnchor.UpperLeft;
     
     [HideInInspector]
     public GUIStyle style;
@@ -38,9 +39,9 @@ namespace Stratus
 
     public bool hasStyle { get; set; }
 
-    void Start()
+    private void OnEnable()
     {
-      hideFlags = HideFlags.DontSaveInBuild;      
+      Hide();
     }
 
     private void OnValidate()
@@ -48,6 +49,12 @@ namespace Stratus
       hasStyle = false;
       //ConstructStyle();
     }
+
+    void Hide()
+    {
+      hideFlags = HideFlags.DontSaveInBuild | HideFlags.HideInHierarchy;
+    }
+      
 
     public void ConstructStyle()
     {

@@ -12,18 +12,25 @@ namespace Stratus
     /// <summary>
     /// An abstract interface for reading an ink story file in an event-driven way
     /// </summary>
-    public abstract class StoryReader : Triggerable
+    public abstract class StoryReader : MonoBehaviour
     {
       //------------------------------------------------------------------------------------------/
       // Public Fields
       //------------------------------------------------------------------------------------------/
+      [Tooltip("Whether to log to the console")]
+      public bool logging = false;
+
+      [Header("Options")]
+      [Tooltip("Whether this reader will react to scene-wide story events")]
+      public bool listeningToScene = false;
+      [Tooltip("Allow the story to be restarted if it has ended already when triggered")]
+      public bool allowRestart = false;
+
       [Header("Story")]
       [Tooltip("Select an .ink file here!")]
       public TextAsset storyFile;
       [Tooltip("What knot in the conversation to start on")]
       public string knot;
-      [Tooltip("Allow the story to be restarted if it has ended already when triggered")]
-      public bool allowRestart = false;
 
       //------------------------------------------------------------------------------------------/
       // Private Fields
@@ -57,39 +64,12 @@ namespace Stratus
       //------------------------------------------------------------------------------------------/
       // Messages
       //------------------------------------------------------------------------------------------/
-      protected override void OnAwake()
+      /// <summary>
+      /// Subscribe to common events
+      /// </summary>
+      private void Awake()
       {
-        // Connect to common events
-        this.gameObject.Connect<Story.ContinueEvent>(this.OnContinueEvent);
-        this.gameObject.Connect<Story.SelectChoiceEvent>(this.OnSelectChoiceEvent);
-        this.gameObject.Connect<Story.RetrieveVariableValueEvent>(this.OnRetrieveVariableValueEvent);
-        this.gameObject.Connect<Story.SetVariableValueEvent>(this.OnSetVariableValueEvent);
-        this.gameObject.Connect<Story.ObserveVariableEvent>(this.OnObserveVariableEvent);
-        this.gameObject.Connect<Story.ObserveVariablesEvent>(this.OnObserveVariablesEvent);
-      }
-
-      protected override void OnTrigger()
-      {
-        this.LoadStory();
-
-        if (!story.canContinue)
-        {
-          if (allowRestart)
-          {
-            if (logging)
-              Trace.Script("Restarting the story '" + storyFile.name + "'!", this);
-            story.ResetState();
-          }
-          else
-          {
-            if (logging)
-              Trace.Script("The story '" + storyFile.name + "' is over!", this);
-            return;
-          }
-
-        }
-
-        this.StartStory();
+        Subscribe();
       }
 
       /// <summary>
@@ -109,11 +89,70 @@ namespace Stratus
         // Announce it
         this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
         OnStoryLoaded(story);
+
+        // If the story can't be continued, check if it should be restarted
+        if (!story.canContinue)
+          TryRestart();
+
+        // Now start the story
+        this.StartStory();
+      }
+
+      /// <summary>
+      /// Assigns the story, then loads it
+      /// </summary>
+      void LoadStory(TextAsset storyFile)
+      {
+        // Assign it
+        this.storyFile = storyFile;
+        // Now load it
+        LoadStory();
+      }
+
+      /// <summary>
+      /// Attempt to restart the stry
+      /// </summary>
+      void TryRestart()
+      {
+        if (allowRestart)
+        {
+          if (logging)
+            Trace.Script("Restarting the story '" + storyFile.name + "'!", this);
+          story.ResetState();
+        }
+        else
+        {
+          if (logging)
+            Trace.Script("The story '" + storyFile.name + "' is over!", this);
+          return;
+        }
       }
 
       //------------------------------------------------------------------------------------------/
       // Events
       //------------------------------------------------------------------------------------------/ 
+      /// <summary>
+      /// Connect to common events
+      /// </summary>
+      void Subscribe()
+      {
+        this.gameObject.Connect<Story.LoadEvent>(this.OnLoadEvent);
+        if (listeningToScene)
+          Scene.Connect<Story.LoadEvent>(this.OnLoadEvent);
+
+        this.gameObject.Connect<Story.ContinueEvent>(this.OnContinueEvent);
+        this.gameObject.Connect<Story.SelectChoiceEvent>(this.OnSelectChoiceEvent);
+        this.gameObject.Connect<Story.RetrieveVariableValueEvent>(this.OnRetrieveVariableValueEvent);
+        this.gameObject.Connect<Story.SetVariableValueEvent>(this.OnSetVariableValueEvent);
+        this.gameObject.Connect<Story.ObserveVariableEvent>(this.OnObserveVariableEvent);
+        this.gameObject.Connect<Story.ObserveVariablesEvent>(this.OnObserveVariablesEvent);
+      }
+
+      void OnLoadEvent(Story.LoadEvent e)
+      {
+        this.LoadStory(e.storyFile);
+      }
+
       void OnContinueEvent(Story.ContinueEvent e)
       {
         this.ContinueStory();
@@ -311,7 +350,7 @@ namespace Stratus
             parses[parse.name] = m.Value;
         }
 
-        var parsedLine = new Story.ParsedLine(parses, line);
+        var parsedLine = new Story.ParsedLine(parses, story.currentTags, line);        
         return parsedLine;
       }
 

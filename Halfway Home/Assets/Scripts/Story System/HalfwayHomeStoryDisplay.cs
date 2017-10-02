@@ -51,14 +51,14 @@ namespace HalfwayHome
     protected override void OnStart()
     {
       display = false;
-        Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
+      Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
     }
     void OnFinishedDescription(DefaultEvent eventdata)
     {
-        ContinueStory();
+      ContinueStory();
     }
 
-        protected override void OnStoryStarted()
+    protected override void OnStoryStarted()
     {
       display = true;
       displayChoices = false;
@@ -68,11 +68,11 @@ namespace HalfwayHome
     {
       display = false;
     }
-    
+
     protected override void OnStoryUpdate(Stratus.InkModule.Story.ParsedLine parse)
     {
-      if (logging)
-        Trace.Script("Reading " + parse);
+      //if (logging)
+      //  Trace.Script("Reading " + parse.line);
 
       if (!parse.isParsed)
       {
@@ -124,5 +124,5 @@ namespace HalfwayHome
 
 
   }
-    
+
 }

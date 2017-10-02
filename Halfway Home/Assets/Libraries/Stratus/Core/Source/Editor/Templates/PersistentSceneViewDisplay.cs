@@ -93,6 +93,16 @@ namespace Stratus
       }
     }
 
+    //public static Vector3 mousePosition
+    //{
+    //  get
+    //  {
+    //    Vector3 mousePos = UnityEngine.Event.current.mousePosition;
+    //    Camera camera = SceneView.currentDrawingSceneView.camera;
+    //
+    //  }
+    //}
+
   }
 
 }

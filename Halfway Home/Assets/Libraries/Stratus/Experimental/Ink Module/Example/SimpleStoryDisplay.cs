@@ -84,46 +84,15 @@ namespace Stratus
       protected override void OnPresentChoices(List<Choice> choices)
       {
         displayChoices = true;
-
-        // For each given choice,
-        for (int i = 0; i < choices.Count; ++i)
-        {
-          Choice choice = choices[i];
-          Button button = CreateChoiceView(choicePrefab, choicesPanel, choices[i].text.Trim());
-          //Button button = CreateChoiceView(choices[i].text.Trim());
-          button.onClick.AddListener(delegate
-          {
-            SelectChoice(choice);
-            //SelectChoice(i);
-          });
-        }
+        AddChoices(choices, choicePrefab, choicesPanel);
       }
 
       protected override void OnChoiceSelected()
       {
         displayChoices = false;
-        RemoveChoices();
+        RemoveChoices(choicesPanel);
       }
-
-      //Button CreateChoiceView(string text)
-      //{
-      //  Button choice = Instantiate(choicePrefab) as Button;
-      //  choice.transform.SetParent(choicesPanel.transform, false);
-      //
-      //  Text choiceText = choice.GetComponentInChildren<Text>();
-      //  choiceText.text = text;
-      //
-      //  return choice;
-      //}
-
-      void RemoveChoices()
-      {
-        var choiceButtons = choicesPanel.GetComponentsInChildren<Button>();
-        foreach (var choiceButton in choiceButtons)
-        {
-          Destroy(choiceButton.gameObject);
-        }
-      }
+      
 
 
     }
