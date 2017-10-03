@@ -86,10 +86,18 @@ MonoBehaviour:
     Character: Max
     Actor: {fileID: 0}
   Poses:
-  - Name: Test
+  - Name: Calm
     Visual: {fileID: 21300000, guid: fea4ed06531b37642b1bb92ea339cbc9, type: 3}
-  - Name: OtherTest
-    Visual: {fileID: 21300000, guid: a1ed7d9a67694094bad9f45c4444caf0, type: 3}
+  - Name: Angry
+    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+  - Name: Happy
+    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+  - Name: Sad
+    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+  - Name: Afraid
+    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+  - Name: Suprised
+    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
   Direction: 0
 --- !u!114 &114559324231784268
 MonoBehaviour:

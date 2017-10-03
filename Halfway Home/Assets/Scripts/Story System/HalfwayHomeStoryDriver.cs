@@ -45,7 +45,7 @@ namespace HalfwayHome
     [Header("Story")]
     public HalfwayHomeStoryReader reader;
 
-    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion", "doubt" };
+    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion", "week" };
     private Dictionary<string, StatAccess> stats = new Dictionary<string, StatAccess>();
 
     void Start()
@@ -67,8 +67,7 @@ namespace HalfwayHome
     void OnNewStory(StoryEvent eventdata)
     {
       Trace.Script("Reading " + eventdata.storyFile.name, this);
-      reader.storyFile = eventdata.storyFile;
-      reader.Trigger();
+      reader.gameObject.Dispatch<Story.LoadEvent>(new Story.LoadEvent() { storyFile = eventdata.storyFile });
     }
 
     /// <summary>

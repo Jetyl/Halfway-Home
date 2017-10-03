@@ -9,19 +9,27 @@ namespace Stratus
 {
   public class ObjectNoteDisplay : BehaviourSceneViewDisplay<ObjectNote>, IHierarchyWindowItemOnGUI
   {
-    protected override bool isValid => (EditorApplication.isPlaying == false);    
+    protected override bool isValid => (EditorApplication.isPlaying == false);
 
     public Texture2D icon;
     private const string iconName = "NoteIcon.png";
     private const float iconWidth = 15f;
 
     private const string path = "/Core/Utilities/";
+    public bool isAddingNote => ObjectNotesWindow.isAddingNoteOnSceneView;
 
     protected override void OnInitialize()
     {
       base.OnInitialize();
-      var stratusPath  = Assets.GetFolderPath("Stratus");
+      var stratusPath = Assets.GetFolderPath("Stratus");
       icon = AssetDatabase.LoadAssetAtPath(stratusPath + path + iconName, typeof(Texture2D)) as Texture2D;
+    }
+
+    protected override void OnSceneGUI(SceneView view)
+    {
+      base.OnSceneGUI(view);
+      OnAddingNote(view);
+      //ProcessEvents(UnityEngine.Event.current);
     }
 
     public void OnHierarchyWindowItemOnGUI(int instanceID, Rect selectionRect)
@@ -37,9 +45,8 @@ namespace Stratus
       if (note.text == null)
         return;
 
-      //DrawIcon(note, selectionRect);
       DrawTooltip(note, selectionRect);
-    }    
+    }
 
     protected override void OnInspect(ObjectNote note)
     {
@@ -75,6 +82,11 @@ namespace Stratus
       Handles.Label(transform.position + offset, note.text, note.style);
     }
 
+    private void OnAddingNote(SceneView view)
+    {
+      //EditorGUIUtility.AddCursorRect(view.position, MouseCursor.Link);
+    }
+
     private void DrawIcon(ObjectNote note, Rect selectionRect)
     {
       EditorGUIUtility.SetIconSize(new Vector2(iconWidth, iconWidth));
@@ -96,13 +108,16 @@ namespace Stratus
 
     private void DrawTooltip(ObjectNote note, Rect selectionRect)
     {
+      if (!note.hasStyle)
+        return;
+
       Vector2 size = note.style.CalcSize(new GUIContent(note.text));
-      float width = size.x;
+      //float width = size.x;
       //width = CalculateLengthOfMessage(note.style, note.text);
       //note.style.CalcMinMaxWidth(new GUIContent(note.text), out minWidth, out maxWidth);
       //float modifier = size.x * 0.20f;
       selectionRect.x = selectionRect.xMax - size.x;
-      GUI.backgroundColor = note.color;      
+      GUI.backgroundColor = note.color;
       EditorGUI.HelpBox(selectionRect, note.text, MessageType.None);
       //GUI.Box(selectionRect, note.text);
       GUI.backgroundColor = Color.white;
@@ -123,9 +138,26 @@ namespace Stratus
         Trace.Script("Clicked on " + note.name);
         e.Use();
       }
-      
+
     }
-    
+
+    private void ProcessEvents(UnityEngine.Event e)
+    {
+      switch (e.type)
+      {
+        case EventType.MouseDown:
+          if (e.button == 0)
+            Trace.Script("Left mouse down");
+          break;
+
+        case EventType.MouseUp:
+          if (e.button == 0)
+            Trace.Script("Left mouse up!");
+          break;
+      }
+    }
+
+
 
   }
 

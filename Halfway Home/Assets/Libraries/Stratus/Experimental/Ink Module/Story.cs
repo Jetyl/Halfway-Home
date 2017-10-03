@@ -88,8 +88,7 @@ namespace Stratus
         /// <summary>
         /// [Meowth]
         /// </summary>
-        public string insideSquareBrackets => @"\[(.*?)\]";
-        //public string insideSquareBrackets => @"\[([a-zA-Z0-9-\s]+)\]";
+        public string insideSquareBrackets => @"\[([a-zA-Z0-9-\s]+)\]";
 
         /// <summary>
         /// All categories set for parsing
@@ -105,13 +104,6 @@ namespace Stratus
         {
           categories.Add(new Category() { name = name, pattern = pattern });
         }
-
-        /// <summary>
-        /// Composes a regex that captures everything inside the escaped characters (brackets, quotes, etc)
-        /// </summary>
-        /// <param name="escapedCharacter"></param>
-        /// <returns></returns>
-        public static string EverythingWithinEnclosure(char escapedCharacter) => escapedCharacter + "(.*?)" + escapedCharacter;
       }
 
       /// <summary>
@@ -120,18 +112,24 @@ namespace Stratus
       /// </summary>
       public struct ParsedLine
       {
-        private Dictionary<string, string> parses; // = new Dictionary<string, string>();
+        private Dictionary<string, string> parses;
 
-        public ParsedLine(Dictionary<string, string> parses, string line)
+        public ParsedLine(Dictionary<string, string> parses, List<string> tags, string line)
         {
           this.parses = parses;
           this.line = line;
+          this.tags = tags;
         }
 
         /// <summary>
         /// The unparsed line
         /// </summary>
         public string line { get; private set; }
+
+        /// <summary>
+        /// A list of all tags associated with this line
+        /// </summary>
+        public List<string> tags { get; private set; }
 
         /// <summary>
         /// Whether this line has any valid parses
@@ -162,6 +160,21 @@ namespace Stratus
         /// <param name="parseCategory"></param>
         /// <returns></returns>
         public string Find(string parseCategory) => parses[parseCategory];
+      }
+
+      /// <summary>
+      /// Signals that a story should be loaded
+      /// </summary>
+      public class LoadEvent : Stratus.Event
+      {
+        /// <summary>
+        /// The ink compiled JSON file
+        /// </summary>
+        public TextAsset storyFile;
+        /// <summary>
+        /// What knot in the conversation to start on
+        /// </summary>
+        public string knot;
       }
 
       /// <summary>
