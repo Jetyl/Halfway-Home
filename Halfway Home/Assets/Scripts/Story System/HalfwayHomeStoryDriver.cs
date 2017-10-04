@@ -38,8 +38,8 @@ namespace HalfwayHome
     private class StatAccess
     {
       public string name;
-      public void Set(float value) => Game.current.Progress.SetValue(name, value);
-      public float Get() => Game.current.Progress.GetFloatValue(name);
+      public void Set(int value) => Game.current.Progress.SetValue(name, value);
+      public int Get() => Game.current.Progress.GetIntValue(name);
     }
 
     [Header("Story")]
@@ -122,7 +122,7 @@ namespace HalfwayHome
     void ObserveVariable(string variableName, object value)
     {
       Trace.Script($"Updating {variableName} to {value}", this);
-      stats[variableName].Set((float)value);
+      stats[variableName].Set((int)value);
     }
 
     // Set the values back
