@@ -191,6 +191,7 @@ public class DescriptionEvent : DefaultEvent
     {
         Line = _lines;
         AutoFinish = autoFinish_;
+        Speaker = _speaker;
     }
 
 }

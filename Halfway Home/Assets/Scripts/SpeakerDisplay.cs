@@ -38,9 +38,13 @@ public class SpeakerDisplay : MonoBehaviour
 
     void OnNewLine(DescriptionEvent eventdata)
     {
-
+        
+        
         if (eventdata.Speaker == "")
             txt.text = "";
+
+        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
+        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
 
         if (Characters.Contains(eventdata.Speaker))
         {
