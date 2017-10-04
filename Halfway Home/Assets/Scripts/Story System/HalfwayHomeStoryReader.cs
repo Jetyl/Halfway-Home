@@ -16,6 +16,7 @@ namespace HalfwayHome
       story.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit));
       story.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
+      story.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
     }
 
     protected override void OnSetParsingPatterns(Stratus.InkModule.Story.ParsePatterns patterns)
@@ -39,7 +40,7 @@ namespace HalfwayHome
     public void CharExit(string name)
     {
       //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
-      Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Test"));
+      Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Calm"));
     }
 
     public void SetValue(string ValueName, bool newValue)
@@ -50,6 +51,11 @@ namespace HalfwayHome
     public bool GetValue(string ValueName)
     {
       return Game.current.Progress.GetBoolValue(ValueName);
+    }
+
+    public string GetStringValue(string ValueName)
+    {
+      return Game.current.Progress.GetStringValue(ValueName);
     }
 
   }

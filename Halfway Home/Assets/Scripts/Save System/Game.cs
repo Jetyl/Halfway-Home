@@ -41,7 +41,7 @@ public class Game
        
         Day = 0;
         Hour = 0;
-        PlayerName = "";
+        PlayerName = "temp";
         Progress = new ProgressSystem();
         Self = new Personality();
 
@@ -49,6 +49,7 @@ public class Game
         Progress.SetValue("BackgroundVolume", 1.0f);
         Progress.SetValue("SFXVolume", 1.0f);
         Progress.SetValue("TextSpeed", 1.0f);
+        Progress.SetValue("week", 1);
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
         ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();
