@@ -32,16 +32,6 @@ namespace HalfwayHome
       set
       {
         choicesPanel.gameObject.SetActive(value);
-        dialogPanel.gameObject.SetActive(!value);
-      }
-    }
-
-    public bool display
-    {
-      set
-      {
-        dialogPanel.gameObject.SetActive(value);
-        choicesPanel.gameObject.SetActive(value);
       }
     }
 
@@ -50,7 +40,6 @@ namespace HalfwayHome
     //------------------------------------------------------------------------------------------/
     protected override void OnStart()
     {
-      display = false;
       Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
     }
     void OnFinishedDescription(DefaultEvent eventdata)
@@ -60,15 +49,12 @@ namespace HalfwayHome
 
     protected override void OnStoryStarted()
     {
-      display = true;
-      displayChoices = false;
-      Trace.Script("start story");
+      
     }
 
     protected override void OnStoryEnded()
     {
-      display = false;
-      Trace.Script("stop story");
+      
     }
 
     protected override void OnStoryUpdate(Stratus.InkModule.Story.ParsedLine parse)
