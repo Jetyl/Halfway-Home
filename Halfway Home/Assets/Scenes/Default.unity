@@ -3568,7 +3568,7 @@ MonoBehaviour:
   - Character: Timothy
     Actor: {fileID: 1084522956037128, guid: 8f2b7af634d0a7747b3d7e4d2cdfabe7, type: 2}
   - Character: Charlotte
-    Actor: {fileID: 0}
+    Actor: {fileID: 1084522956037128, guid: 6bb840f0a95122c4c9afa8c0b5d6815f, type: 2}
   - Character: Eduardo
     Actor: {fileID: 1241828928622914, guid: 4f2b51899cd9f8241a2ca7209e12a8d4, type: 2}
   - Character: Max
@@ -3576,13 +3576,13 @@ MonoBehaviour:
   - Character: Issac
     Actor: {fileID: 0}
   - Character: Trissa
-    Actor: {fileID: 0}
+    Actor: {fileID: 1084522956037128, guid: fd736ba1e38741042aac431366108868, type: 2}
   Backdrop: {fileID: 0}
   FrontCurtain: {fileID: 2006069810}
   BackCuratin: {fileID: 206367696}
   LeftSpot: {fileID: 1463426191}
   RightSpot: {fileID: 517490444}
-  Varience: 1.2
+  Varience: 2
 --- !u!1 &867757257
 GameObject:
   m_ObjectHideFlags: 0

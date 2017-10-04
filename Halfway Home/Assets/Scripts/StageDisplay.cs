@@ -19,7 +19,7 @@ public class StageDisplay : MonoBehaviour
 
     List<CharacterDisplay> Actors;
 
-    Dictionary<StagePosition, int> SpotLights;
+    Dictionary<StagePosition, int> SpotLights; //number of people in spot
 
 
 	// Use this for initialization
@@ -79,6 +79,9 @@ public class StageDisplay : MonoBehaviour
                 {
                     directions.EnterStage(eventdata.Pose);
                     Actors.Add(directions);
+                    directions.Direction = eventdata.Direction;
+                    SpotLights[eventdata.Direction] += 1;
+                    UpdateStagePositions(eventdata.Direction);
 
                 }
             }
@@ -101,9 +104,11 @@ public class StageDisplay : MonoBehaviour
 
             if (Roll.Character.Character == eventdata.character)
             {
+
+                SpotLights[Roll.Direction] -= 1;
+                UpdateStagePositions(Roll.Direction);
                 Roll.ExitStage();
                 Actors.Remove(Roll);
-                
                 return;
             }
         }
@@ -123,12 +128,12 @@ public class StageDisplay : MonoBehaviour
         actor.Direction = eventdata.Direction;
         SpotLights[eventdata.Direction] += 1;
 
-        MoveCharacters(eventdata.Direction);
+        UpdateStagePositions(eventdata.Direction);
         
     }
 
 
-    void MoveCharacters(StagePosition pos)
+    void UpdateStagePositions(StagePosition pos)
     {
         int i = 0;
         bool Add = false;
@@ -153,10 +158,12 @@ public class StageDisplay : MonoBehaviour
                     default:
                         break;
                 }
+                j.z = Roll.transform.localPosition.z;
+                print("Varience: " + Varience * 2 + " number: " + i + " Position: " + SpotLights[pos]);
                 if (Add)
-                    j.x -= (Varience * 2) * (i / SpotLights[pos]);
+                    j.x -= (Varience * 2) * ((float)i / (float)SpotLights[pos]);
                 else
-                    j.x += (Varience * 2) * (i / SpotLights[pos]);
+                    j.x += (Varience * 2) * ((float)i / (float)SpotLights[pos]);
                 iTween.MoveTo(Roll.gameObject, j, 2);
                 i += 1;
                 Add = !Add;
