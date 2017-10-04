@@ -18,6 +18,7 @@ EXTERNAL GetPlayerData()
 
 === Start ===
 ~week += 1
+~player_name = "Player"
 In my dreams I can still hear their voices.
 They whisper to me that I will never escape.
 That I don't deserve to.
@@ -36,7 +37,7 @@ The whispers fade into the chitter of birdsong.
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
 // GetPlayerData here
 //[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
-[Player] "Ok, {player_name}, that's enough of that. Only one more week."
+[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
 I lay awake, concentrating on the warm sensation of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK
