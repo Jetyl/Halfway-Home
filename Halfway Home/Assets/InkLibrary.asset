@@ -19,7 +19,7 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: e3b02de8090d72b41ac682ae0106489b, type: 3}
     jsonAsset: {fileID: 4900000, guid: c1208e87599faad43af8e1f82e1978e8, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 893f748fb27e62746b3c0f1b5fe5dbaf, type: 3}
+    inkAsset: {fileID: 102900000, guid: b6131b5de3eb21542b746fbf262f556f, type: 3}
     jsonAsset: {fileID: 4900000, guid: ae57396b37480db4abdce8433cf9b4e2, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 6f2312eea6177f64988a297f21aef59c, type: 3}
@@ -37,8 +37,8 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: da0c05f9d585be048bfe4a30a48300e1, type: 3}
     jsonAsset: {fileID: 4900000, guid: 735a098bae5308e41a5dbd9113cf2905, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 735c82a31d4631e48a7b59af9bca4353, type: 3}
-    jsonAsset: {fileID: 0}
+    inkAsset: {fileID: 102900000, guid: 0dc85c3d1c5194b40928539fee0b5b71, type: 3}
+    jsonAsset: {fileID: 4900000, guid: ed2dbdb02897795499d09287019cbfbb, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: dd4451066a938c0468f5130bf4d2c3bb, type: 3}
     jsonAsset: {fileID: 4900000, guid: 7b25ff39e30851545ab0c2f478075293, type: 3}
@@ -52,9 +52,9 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
     jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 7110e0ecec3bc44489549674d680a466, type: 3}
+    inkAsset: {fileID: 102900000, guid: 6b6064ac68c24294697b54333f287941, type: 3}
     jsonAsset: {fileID: 4900000, guid: 70a49d294f213d84aae4792b2cbdf60d, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 9e2eabeae3c21fa49bb3a54f539e0df6, type: 3}
+    inkAsset: {fileID: 102900000, guid: 69c383a2fff4eab4eaaf8115ea264fe7, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
   compilationStack: []

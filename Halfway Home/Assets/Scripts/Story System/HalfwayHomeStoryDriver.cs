@@ -124,6 +124,8 @@ namespace HalfwayHome
       Trace.Script($"Updating {variableName} to {value}", this);
       stats[variableName].Set((float)value);
     }
+
+    // Set the values back
   }
 
 }

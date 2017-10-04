@@ -58,7 +58,7 @@ namespace Stratus
       // Virtual Functions
       //------------------------------------------------------------------------------------------/
       protected virtual void OnStoryLoaded(Ink.Runtime.Story story) {}
-      protected abstract void OnSetParsingPatterns(Story.ParsePatterns patterns);
+      protected abstract void OnSetLineParsing(Story.ParsePatterns patterns);
       protected abstract void OnBindExternalFunctions(Ink.Runtime.Story story);
 
       //------------------------------------------------------------------------------------------/
@@ -84,7 +84,7 @@ namespace Stratus
         OnBindExternalFunctions(story);
 
         // Set parsing patterns
-        OnSetParsingPatterns(parsePatterns);
+        OnSetLineParsing(parsePatterns);
 
         // Announce it
         this.gameObject.Dispatch<Story.LoadedEvent>(new Story.LoadedEvent() { story = this.story });
@@ -101,7 +101,7 @@ namespace Stratus
       /// <summary>
       /// Assigns the story, then loads it
       /// </summary>
-      void LoadStory(TextAsset storyFile)
+      public void LoadStory(TextAsset storyFile)
       {
         // Assign it
         this.storyFile = storyFile;
@@ -284,9 +284,8 @@ namespace Stratus
       {
         // If there is more dialog
         if (story.canContinue)
-        {
-          var line = story.Continue();
-          UpdateCurrentLine(line);
+        {  
+          UpdateCurrentLine();
         }
         // If we are given a choice
         else if (story.currentChoices.Count > 0)
@@ -320,14 +319,17 @@ namespace Stratus
       /// <summary>
       /// Updates the current line of the story
       /// </summary>
-      protected virtual void UpdateCurrentLine(string line)
+      protected virtual void UpdateCurrentLine()
       {
+        var line = story.Continue();
+        var tags = story.currentTags;
+
         if (logging)
           Trace.Script($"\"{line}\" ");
 
         var updateEvent = new Story.UpdateLineEvent
-        {
-          parse = Parse(line)
+        {          
+          parse = Parse(line, tags)
         };
         Scene.Dispatch<Story.UpdateLineEvent>(updateEvent);
       }
@@ -337,17 +339,30 @@ namespace Stratus
       /// </summary>
       /// <param name="line"></param>
       /// <returns></returns>
-      protected virtual Story.ParsedLine Parse(string line)
+      protected virtual Story.ParsedLine Parse(string line, List<string> tags)
       {
         Dictionary<string, string> parses = new Dictionary<string, string>();
 
         // Try every parse
         foreach (var parse in parsePatterns.all)
         {
-          Regex speaker = new Regex(parse.pattern, RegexOptions.IgnoreCase);
-          Match m = speaker.Match(line);
-          if (m.Success)
-            parses[parse.name] = m.Value;
+          if (parse.target == Story.ParsePatterns.Target.Line)
+          {
+            Regex pattern = new Regex(parse.pattern, RegexOptions.IgnoreCase);
+            Match m = pattern.Match(line);
+            if (m.Success)
+              parses[parse.name] = m.Value;
+          }            
+          else if (parse.target == Story.ParsePatterns.Target.Tag)
+          {
+            foreach(var tag in tags)
+            {
+              Regex pattern = new Regex(parse.pattern, RegexOptions.IgnoreCase);
+              Match m = pattern.Match(tag);
+              if (m.Success)
+                parses[parse.name] = m.Value;
+            }
+          } 
         }
 
         var parsedLine = new Story.ParsedLine(parses, story.currentTags, line);        

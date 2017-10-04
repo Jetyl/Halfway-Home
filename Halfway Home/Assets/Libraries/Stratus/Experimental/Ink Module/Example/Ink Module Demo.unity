@@ -431,10 +431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logging: 0
-  Delay: 0
+  listeningToScene: 0
+  allowRestart: 1
   storyFile: {fileID: 4900000, guid: fb8d816e9d8d9a04bb364e44927997fa, type: 3}
   knot: 
-  allowRestart: 1
 --- !u!114 &758722972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,11 +475,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 758722971}
-        m_MethodName: Trigger
-        m_Mode: 1
+        m_MethodName: LoadStory
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4900000, guid: fb8d816e9d8d9a04bb364e44927997fa,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -918,7 +919,6 @@ GameObject:
   - component: {fileID: 1315170101}
   - component: {fileID: 1315170100}
   - component: {fileID: 1315170099}
-  - component: {fileID: 1315170098}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -926,18 +926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1315170098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1315170097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a202bb449c1c7a4c80ef0f743a20643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listenerId: 0
 --- !u!124 &1315170099
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1335,11 +1323,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1950568627}
-        m_MethodName: Trigger
-        m_Mode: 1
+        m_MethodName: LoadStory
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4900000, guid: 44296f1b3be2c8243a822aca4f32e20f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1392,10 +1381,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logging: 1
-  Delay: 0
+  listeningToScene: 0
+  allowRestart: 1
   storyFile: {fileID: 4900000, guid: 44296f1b3be2c8243a822aca4f32e20f, type: 3}
   knot: 
-  allowRestart: 1
 --- !u!114 &1950568628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,7 +1540,7 @@ MonoBehaviour:
   recursive: 0
   persistent: 1
   reader: {fileID: 758722971}
-  type: 0
+  storyEvent: 0
   variable:
     type: 0
     name: 

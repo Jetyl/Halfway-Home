@@ -18,9 +18,9 @@ namespace Stratus
         story.BindExternalFunction("PlayMusic", new Action<string>(PlayMusic));
       }
       
-      protected override void OnSetParsingPatterns(Story.ParsePatterns patterns)
+      protected override void OnSetLineParsing(Story.ParsePatterns patterns)
       {
-
+        
       }
 
       //------------------------------------------------------------------------------------------/

@@ -63,6 +63,15 @@ namespace Stratus
       public class ParsePatterns
       {
         /// <summary>
+        /// What part of the input is being targeted by this parse pattern
+        /// </summary>
+        public enum Target
+        {
+          Line,
+          Tag
+        }
+
+        /// <summary>
         /// A single category for a parse type
         /// </summary>
         public class Category
@@ -76,6 +85,11 @@ namespace Stratus
           /// The regular expression pattern that will be used for this parse
           /// </summary>
           public string pattern;
+
+          /// <summary>
+          /// Whether this parse applies to a line or to a tag
+          /// </summary>
+          public Target target;
         }
 
         private List<Category> categories = new List<Category>();
@@ -100,9 +114,9 @@ namespace Stratus
         /// </summary>
         /// <param name="name">The name of the category</param>
         /// <param name="pattern">A regular expression pattern</param>
-        public void Add(string name, string pattern)
+        public void Add(string name, string pattern, Target target = Target.Line)
         {
-          categories.Add(new Category() { name = name, pattern = pattern });
+          categories.Add(new Category() { name = name, pattern = pattern, target = target });
         }
       }
 

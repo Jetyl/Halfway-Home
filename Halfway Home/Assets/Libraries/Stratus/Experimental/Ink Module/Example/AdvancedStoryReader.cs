@@ -15,7 +15,7 @@ namespace Stratus
         
       }
 
-      protected override void OnSetParsingPatterns(Story.ParsePatterns patterns)
+      protected override void OnSetLineParsing(Story.ParsePatterns patterns)
       {
         // [Speaker] =  \[([a-zA-Z0-9-\s]+)\]
         string speakerPattern = @"\[([a-zA-Z0-9-\s]+)\]";

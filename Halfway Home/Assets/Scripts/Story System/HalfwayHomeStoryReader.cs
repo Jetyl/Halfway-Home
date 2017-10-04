@@ -18,10 +18,11 @@ namespace HalfwayHome
       story.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
     }
 
-    protected override void OnSetParsingPatterns(Stratus.InkModule.Story.ParsePatterns patterns)
+    protected override void OnSetLineParsing(Stratus.InkModule.Story.ParsePatterns patterns)
     {
       patterns.Add("Speaker", patterns.insideSquareBrackets);
       patterns.Add("Message", patterns.insideDoubleQuotes);
+      //patterns.Add("Pose", "");
     }
 
     public void PlayMusic(string name)
