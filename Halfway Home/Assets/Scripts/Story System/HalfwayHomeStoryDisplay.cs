@@ -62,11 +62,13 @@ namespace HalfwayHome
     {
       display = true;
       displayChoices = false;
+      Trace.Script("start story");
     }
 
     protected override void OnStoryEnded()
     {
       display = false;
+      Trace.Script("stop story");
     }
 
     protected override void OnStoryUpdate(Stratus.InkModule.Story.ParsedLine parse)

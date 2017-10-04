@@ -53,7 +53,7 @@ public class AutoTypeEditor : Editor
             element.FindPropertyRelative("chracter"), GUIContent.none);
         element.FindPropertyRelative("DelayMultiplier").floatValue = EditorGUI.Slider(
             new Rect(rect.x + 180, rect.y, rect.width - 180, EditorGUIUtility.singleLineHeight),
-            GUIContent.none, element.FindPropertyRelative("DelayMultiplier").floatValue, 0.5f, 2);
+            GUIContent.none, element.FindPropertyRelative("DelayMultiplier").floatValue, 0.5f, 10);
     };
 
 
