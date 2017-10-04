@@ -201,8 +201,9 @@ public static class TextParser
         if (text == null)
             return text;
 
+
         text = text.Replace("#PlayerName", Game.current.PlayerName);
-        text = text.Replace("#Desire", Game.current.Progress.GetStringValue("Desired Most"));
+        text = text.Replace("@", Environment.NewLine);
 
         return text;
     }
