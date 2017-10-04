@@ -22,7 +22,7 @@ In my dreams I can still hear their voices.
 They whisper to me that I will never escape.
 That I don't deserve to.
 <i>I'm better now!</i>  I scream.
-But the whispers just get louder the more I try and drown them out.
+But the whispers just get louder@ the more I try and@ drown them out.
 I had another of those dreams last night...<Delay=2> That I was back in that sickly white room.
 Alone.
 Alone when the doctors arrive with their sterile smiles.

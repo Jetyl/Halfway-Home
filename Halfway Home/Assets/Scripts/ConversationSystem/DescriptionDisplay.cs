@@ -185,8 +185,9 @@ public class DescriptionEvent : DefaultEvent
     public bool AutoFinish;
     //public List<Line> Lines;
     public string Line;
+    public string Speaker;
    
-    public DescriptionEvent(string _lines, bool autoFinish_ = false)
+    public DescriptionEvent(string _lines, string _speaker, bool autoFinish_ = false)
     {
         Line = _lines;
         AutoFinish = autoFinish_;

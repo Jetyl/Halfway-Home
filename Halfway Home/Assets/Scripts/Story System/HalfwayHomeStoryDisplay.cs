@@ -78,18 +78,18 @@ namespace HalfwayHome
 
       if (!parse.isParsed)
       {
-        speakerText.text = "";
+        //speakerText.text = "";
         //messageText.text = parse.line;
 
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line));
+        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line, ""));
 
       }
       else
       {
-        speakerText.text = parse.Find("Speaker");
+        //speakerText.text = parse.Find("Speaker");
         //messageText.text = parse.Find("Message");
 
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.Find("Message")));
+        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.Find("Message"), parse.Find("Speaker")));
       }
     }
 
