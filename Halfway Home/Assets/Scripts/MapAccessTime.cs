@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class MapAccessTime : MonoBehaviour
 {
 
+    public bool ProgressChained;
+    public MapAccessTime NextChain;
 
     public List<AccessLocker> ClosedTimeContainer;
     public List<List<bool>> TimeClosed;
     
+    public bool ProgressLocked;//locks out only if key is true
+
+    public string ProgressKey;//lockout key
 
     public bool LimitedDailyAccess;
 
@@ -43,11 +48,13 @@ public class MapAccessTime : MonoBehaviour
                 TimeClosed[point.Day][i] = true;
             }
         }
-
-
-
+        
         self = GetComponent<Button>();
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
+
+        if (!ProgressChained || (ProgressChained && !ProgressLocked))
+            Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
+        else
+            EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.ReturnToMap, CheckAccess);
     }
 	
 	// Update is called once per frame
@@ -56,10 +63,28 @@ public class MapAccessTime : MonoBehaviour
 		
 	}
 
+    void ManualLock()
+    {
+        self.interactable = false;
+    }
 
+    void ManualUnlock()
+    {
+        self.interactable = true;
+    }
 
     void CheckAccess(DefaultEvent Eventdata)
     {
+        if(ProgressLocked)
+        {
+            if (!Game.current.Progress.GetBoolValue(ProgressKey))
+            {
+                Next();
+                return;
+            }
+                
+        }
+
 
         if(LimitedDailyAccess)
         {
@@ -70,6 +95,7 @@ public class MapAccessTime : MonoBehaviour
             else
             {
                 self.interactable = false;
+                Next();
                 return;
             }
         }
@@ -83,7 +109,18 @@ public class MapAccessTime : MonoBehaviour
             self.interactable = true;
         }
 
+        Next();
+
     }
+
+    void Next()
+    {
+        if (ProgressChained && NextChain != null)
+        {
+            NextChain.gameObject.DispatchEvent(Events.ReturnToMap);
+        }
+    }
+
 }
 
 [System.Serializable]

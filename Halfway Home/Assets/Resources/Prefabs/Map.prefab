@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114180934050372376}
   - component: {fileID: 114058340833925914}
   - component: {fileID: 114268167193504798}
+  - component: {fileID: 114119285773620122}
   - component: {fileID: 114565989238259766}
   m_Layer: 5
   m_Name: Button (2)
@@ -2774,6 +2775,25 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114119285773620122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005857463985252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProgressChained: 1
+  NextChain: {fileID: 114565989238259766}
+  ClosedTimeContainer: []
+  ProgressLocked: 0
+  ProgressKey: 
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
 --- !u!114 &114144324779592698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5058,10 +5078,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProgressChained: 1
+  NextChain: {fileID: 0}
   ClosedTimeContainer:
-  - Day: 3
-    starttime: 14
-    endTime: 20
+  - Day: 1
+    starttime: 0
+    endTime: 8
+  ProgressLocked: 1
+  ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   TimesCanVisit: 0
