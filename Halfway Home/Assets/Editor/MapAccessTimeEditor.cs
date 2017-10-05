@@ -27,9 +27,28 @@ public class MapAccessTimeEditor : Editor
         SerializedProperty LimitedDailyAccess = serializedObject.FindProperty("LimitedDailyAccess");
         SerializedProperty AccessPoint = serializedObject.FindProperty("AccessPoint");
         SerializedProperty TimesCanVisit = serializedObject.FindProperty("TimesCanVisit");
-        
+
+        SerializedProperty ProgressLocked = serializedObject.FindProperty("ProgressLocked");
+        SerializedProperty ProgressKey = serializedObject.FindProperty("ProgressKey");
+
+
+        SerializedProperty ProgressChained = serializedObject.FindProperty("ProgressChained");
+        SerializedProperty NextChain = serializedObject.FindProperty("NextChain");
 
         EditorGUILayout.Space();
+
+        EditorGUILayout.PropertyField(ProgressChained, new GUIContent("Chained Time Access?"), true);
+        if (ProgressChained.boolValue == true)
+        {
+            EditorGUILayout.PropertyField(NextChain, new GUIContent("Next Chain"), true);
+            EditorGUILayout.PropertyField(ProgressLocked, new GUIContent("Close on Spesific Condition?"), true);
+            if (ProgressLocked.boolValue == true)
+            {
+                EditorGUILayout.PropertyField(ProgressKey, new GUIContent("Progress Key"), true);
+            }
+        }
+
+        
 
         EditorGUILayout.PropertyField(LimitedDailyAccess, new GUIContent("Limited Daily Access?"), true);
         if(LimitedDailyAccess.boolValue == true)
