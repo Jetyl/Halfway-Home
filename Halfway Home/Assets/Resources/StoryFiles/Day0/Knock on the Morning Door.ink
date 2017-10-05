@@ -144,7 +144,7 @@ I go over and grab my watch of the desk beside my bed. 8:54. close enough for my
 Hmm, how to explain this...
 [{player_name}] "More, there would be entire hours where I just am not home, up here"
 [{player_name}] "Hours, maybe days, that I couldn't account for. couldn't remember."
-[{player_name}] "It's a type of dissasiociation."
+[{player_name}] "It's a type of disassociation."
 [{player_name}] "Because of that, one of the stratagies is I count and keep track of the hours of the day very closely."
 [{player_name}] "I regiment what I do in a very hourly basis."
 I flash Timothy the time on my watch, showing its almost 9.
