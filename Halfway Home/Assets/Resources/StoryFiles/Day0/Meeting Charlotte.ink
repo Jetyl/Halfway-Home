@@ -19,7 +19,7 @@ EXTERNAL GetPlayerData()
 === Start ===
 {CharEnter("Charlotte", "Calm")}
 [{player_name}] "Oh, hi Charlotte."
-[Charlotte] "Ah, yes. X. How do you do?"
+[Charlotte] "Ah, yes. {player_name}. How do you do?"
 *[Great (genuine)]
 	[{player_name}] "Great. I've been feeling better recently."
 	[Charlotte]	"I am glad to hear it. I’ve heard it rumored that you are to seek your fortunes outside the House soon." # charlotte=happy {CharEnter("Charlotte", "Happy")}
