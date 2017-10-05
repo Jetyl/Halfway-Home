@@ -41,7 +41,7 @@ public class Game
        
         Day = 0;
         Hour = 0;
-        PlayerName = "temp";
+        PlayerName = "Player";
         Progress = new ProgressSystem();
         Self = new Personality();
 
