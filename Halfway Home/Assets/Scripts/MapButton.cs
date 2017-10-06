@@ -14,6 +14,9 @@ public class MapButton : MonoBehaviour
 
     Button Body;
 
+    [Range(1, 8)]
+    public int TimeSpending = 1;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -34,7 +37,7 @@ public class MapButton : MonoBehaviour
 
     public void SelectRoom()
     {
-        Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, 1));
+        Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, TimeSpending));
     }
 
     void OnSelectedRoom(MapEvent eventdata)

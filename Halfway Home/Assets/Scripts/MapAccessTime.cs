@@ -5,22 +5,17 @@ using UnityEngine.UI;
 
 public class MapAccessTime : MonoBehaviour
 {
-
-    public bool ProgressChained;
-    public MapAccessTime NextChain;
-
+    
     public List<AccessLocker> ClosedTimeContainer;
     public List<List<bool>> TimeClosed;
     
-    public bool ProgressLocked;//locks out only if key is true
-
-    public string ProgressKey;//lockout key
-
     public bool LimitedDailyAccess;
 
     public string AccessPoint;
 
     public int TimesCanVisit;
+
+    public string ManualAccess;
 
     Button self;
 
@@ -50,11 +45,9 @@ public class MapAccessTime : MonoBehaviour
         }
         
         self = GetComponent<Button>();
-
-        if (!ProgressChained || (ProgressChained && !ProgressLocked))
-            Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
-        else
-            EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.ReturnToMap, CheckAccess);
+        
+        Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
+        
     }
 	
 	// Update is called once per frame
@@ -62,31 +55,18 @@ public class MapAccessTime : MonoBehaviour
     {
 		
 	}
-
-    void ManualLock()
-    {
-        self.interactable = false;
-    }
-
-    void ManualUnlock()
-    {
-        self.interactable = true;
-    }
+    
 
     void CheckAccess(DefaultEvent Eventdata)
     {
-        if(ProgressLocked)
+        self.interactable = true;
+
+        if(Game.current.Progress.GetBoolValue(ManualAccess) == true)
         {
-            if (!Game.current.Progress.GetBoolValue(ProgressKey))
-            {
-                Next();
-                return;
-            }
-                
+            self.interactable = false;
         }
 
-
-        if(LimitedDailyAccess)
+        if (LimitedDailyAccess)
         {
             if(Game.current.Progress.GetIntValue(AccessPoint) < TimesCanVisit)
             {
@@ -95,7 +75,6 @@ public class MapAccessTime : MonoBehaviour
             else
             {
                 self.interactable = false;
-                Next();
                 return;
             }
         }
@@ -104,22 +83,12 @@ public class MapAccessTime : MonoBehaviour
         {
             self.interactable = false;
         }
-        else
-        {
-            self.interactable = true;
-        }
-
-        Next();
+        
+        
 
     }
 
-    void Next()
-    {
-        if (ProgressChained && NextChain != null)
-        {
-            NextChain.gameObject.DispatchEvent(Events.ReturnToMap);
-        }
-    }
+    
 
 }
 
@@ -129,4 +98,27 @@ public class AccessLocker
     public int Day;
     public int starttime;
     public int endTime;
+    public bool ProgressLocked;
+    public string ProgressKey = "";
+
+    bool IsClosed(int day, int hour)
+    {
+
+        if(ProgressLocked)
+        {
+            if (!Game.current.Progress.GetBoolValue(ProgressKey))
+                return false;
+        }
+        if (Day != day)
+            return false;
+
+        for (int i = starttime; i <= endTime; ++i)
+        {
+            if (i == hour)
+                return true;
+        }
+
+        return false;
+    }
+
 }

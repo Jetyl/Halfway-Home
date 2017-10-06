@@ -24,32 +24,16 @@ public class MapAccessTimeEditor : Editor
     {
         serializedObject.Update();
 
+        SerializedProperty ManualAccess = serializedObject.FindProperty("ManualAccess");
         SerializedProperty LimitedDailyAccess = serializedObject.FindProperty("LimitedDailyAccess");
         SerializedProperty AccessPoint = serializedObject.FindProperty("AccessPoint");
         SerializedProperty TimesCanVisit = serializedObject.FindProperty("TimesCanVisit");
-
-        SerializedProperty ProgressLocked = serializedObject.FindProperty("ProgressLocked");
-        SerializedProperty ProgressKey = serializedObject.FindProperty("ProgressKey");
-
-
-        SerializedProperty ProgressChained = serializedObject.FindProperty("ProgressChained");
-        SerializedProperty NextChain = serializedObject.FindProperty("NextChain");
+        
 
         EditorGUILayout.Space();
 
-        EditorGUILayout.PropertyField(ProgressChained, new GUIContent("Chained Time Access?"), true);
-        if (ProgressChained.boolValue == true)
-        {
-            EditorGUILayout.PropertyField(NextChain, new GUIContent("Next Chain"), true);
-            EditorGUILayout.PropertyField(ProgressLocked, new GUIContent("Close on Spesific Condition?"), true);
-            if (ProgressLocked.boolValue == true)
-            {
-                EditorGUILayout.PropertyField(ProgressKey, new GUIContent("Progress Key"), true);
-            }
-        }
 
-        
-
+        EditorGUILayout.PropertyField(ManualAccess, new GUIContent("Manual Turn Off Flag"), true);
         EditorGUILayout.PropertyField(LimitedDailyAccess, new GUIContent("Limited Daily Access?"), true);
         if(LimitedDailyAccess.boolValue == true)
         {
@@ -85,12 +69,22 @@ public class MapAccessTimeEditor : Editor
             "Day: " + element.FindPropertyRelative("Day").intValue
             + " from: " + element.FindPropertyRelative("starttime").intValue + 
             " to: " + element.FindPropertyRelative("endTime").intValue);
+        element.FindPropertyRelative("ProgressLocked").boolValue = EditorGUI.ToggleLeft(new Rect(rect.x + 250, rect.y, rect.width - 250, EditorGUIUtility.singleLineHeight), "Progress Locked",
+            element.FindPropertyRelative("ProgressLocked").boolValue);
         element.FindPropertyRelative("Day").intValue = EditorGUI.IntSlider(new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight + 2, rect.width, EditorGUIUtility.singleLineHeight), "Day",
             element.FindPropertyRelative("Day").intValue, 0, 7);
         element.FindPropertyRelative("starttime").intValue = EditorGUI.IntSlider(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight *2) + 4, rect.width, EditorGUIUtility.singleLineHeight), "Start",
             element.FindPropertyRelative("starttime").intValue, 0, 23);
         element.FindPropertyRelative("endTime").intValue = EditorGUI.IntSlider(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 3) + 6, rect.width, EditorGUIUtility.singleLineHeight), "End",
             element.FindPropertyRelative("endTime").intValue, element.FindPropertyRelative("starttime").intValue, 23);
+        
+        if(element.FindPropertyRelative("ProgressLocked").boolValue == true)
+        {
+            rect.height += EditorGUIUtility.singleLineHeight * 6;
+            list.elementHeight = EditorGUIUtility.singleLineHeight * 6;
+            element.FindPropertyRelative("ProgressKey").stringValue = EditorGUI.TextField(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 4) + 8, rect.width, EditorGUIUtility.singleLineHeight), "Progress Flag",
+                element.FindPropertyRelative("ProgressKey").stringValue);
+        }
         rect = new Rect(rect.x, rect.y, rect.width, rect.height);
     };
 

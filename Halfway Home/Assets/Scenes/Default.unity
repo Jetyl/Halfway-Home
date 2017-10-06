@@ -922,6 +922,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1371098736}
     m_Modifications:
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224650573938374482, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1172,9 +1177,96 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: LimitedDailyAccess
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[0].ProgressLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[1].Day
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[1].endTime
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[1].ProgressLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[0].endTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[0].ProgressKey
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[1].ProgressKey
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[1].starttime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574675606025574, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: TimeSpending
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479571954442096, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: SelectedColors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479571954442096, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: TimeSpending
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114119285773620122, guid: b54e8f6ced474b645bb017d8276ef11e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b54e8f6ced474b645bb017d8276ef11e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1876354667 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1707122515837974, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &1876354668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876354667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 21
+    endTime: 21
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: 
 --- !u!224 &1940529237 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224204972705063978, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,

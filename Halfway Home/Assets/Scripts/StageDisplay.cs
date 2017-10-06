@@ -33,7 +33,7 @@ public class StageDisplay : MonoBehaviour
         }
 
         Space.Connect<StageDirectionEvent>(Events.CharacterCall, CharacterChanges);
-        Space.Connect<StageDirectionEvent>(Events.CharacterExit, CharacterChanges);
+        Space.Connect<StageDirectionEvent>(Events.CharacterExit, CharacterExit);
         Space.Connect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
         Space.Connect<StageDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
