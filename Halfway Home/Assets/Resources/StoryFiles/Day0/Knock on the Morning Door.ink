@@ -143,7 +143,7 @@ I go over and grab my watch of the desk beside my bed. 8:54. Close enough for my
 [{player_name}] "There would be entire hours where I just am not home, up here:"
 [{player_name}] "Hours, maybe days, that I couldn't account for. couldn't remember."
 [{player_name}] "It's a type of dissociation."
-[{player_name}] "When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were.
+[{player_name}] "When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were."
 [{player_name}] "But ever since I count and keep track of the hours of the day very closely."
 [{player_name}] "I regiment what I do in a very hourly basis."
 I flash Timothy the time on my watch, almost 9.

@@ -6,7 +6,11 @@ public class GameStartUp : MonoBehaviour
 {
 
     public TextAsset Timeline;
-    
+
+    [Range(0, 7)]
+    public int StartDay;
+    [Range(0, 23)]
+    public int StartHour;
 
     public bool DebugMode;
 
@@ -30,17 +34,18 @@ public class GameStartUp : MonoBehaviour
             TestingAndDebugging();
         }
 
-        
+        if (Game.current == null)
+        {
 
-        Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
+          Game.current = new Game();
+          Game.current.Day = StartDay;
+          Game.current.Hour = StartHour;
+          StartCoroutine(DebugStart());
+        }
+
+    Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
 
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	}
 
     void TestingAndDebugging()
     {
@@ -50,16 +55,13 @@ public class GameStartUp : MonoBehaviour
             Game.current = new Game();
             Game.current.Day = DebugDay;
             Game.current.Hour = DebugHour;
-            StartCoroutine(DebugStart());
+            
         }
     }
 
 
     IEnumerator DebugStart()
     {
-
-
-
         yield return new WaitForSeconds(Time.deltaTime);
 
         Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));

@@ -84,7 +84,23 @@
    },
    {
     "Name" : "Met Eduardo",
-    "Type" : 0
+    "Type" : 1
+   },
+   {
+    "Name" : "Been to Library",
+    "Type" : 1
+   },
+   {
+    "Name" : "Been to Garden",
+    "Type" : 1
+   },
+   {
+    "Name" : "Been to Art",
+    "Type" : 1
+   },
+   {
+    "Name" : "Been to Commons",
+    "Type" : 1
    }
   ]
  }
