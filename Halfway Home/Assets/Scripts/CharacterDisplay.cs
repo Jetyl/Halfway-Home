@@ -48,17 +48,18 @@ public class CharacterDisplay : MonoBehaviour
         //visual.sprite = Poses[pose];
         var awhite = Color.white;
         awhite.a = 0;
-        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 2));
+        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
+        var pos = transform.position;
 
         if(Direction == StagePosition.Left)
         {
-            iTween.MoveBy(gameObject, new Vector3(-5, 0, 0), 2);
+            pos.x -= 2.5f;
         }
         else
         {
-            iTween.MoveBy(gameObject, new Vector3(5, 0, 0), 2);
+            pos.x += 2.5f;
         }
-
+        iTween.MoveTo(gameObject, pos, 2);
         Destroy(gameObject, 5);
     }
 

@@ -102,7 +102,7 @@ public class AccessLocker
 
     public bool IsClosed(int day, int hour)
     {
-        Debug.Log("Day: " + day + "Hour: " + hour);
+
         if (ProgressLocked)
         {
             if (!Game.current.Progress.GetBoolValue(ProgressKey))

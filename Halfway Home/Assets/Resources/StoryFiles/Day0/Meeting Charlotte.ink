@@ -28,10 +28,10 @@ EXTERNAL GetPlayerData()
 	Charlotte glances at Timothy.
 	[Charlotte] "Where are my manners? You must properly introduce this new face." # charlotte=surprised {CharEnter("Charlotte", "Surprised")}
 *[Great (sarcastic)]
-	[{player_name}] Great. I'm still in one piece, at least.
-	[Charlotte] I see. Perhaps the rumors were a fabrication.
-	[Charlotte] I heard that you are due to be released at week’s end… and yet your language lacks the tone of aplomb I have come to expect from those moving on to greener pastures.
-	[{player_name}] No, it's true. I am super "due". Guess I'm just still coming to terms with it.
+	[{player_name}] "Great. I'm still in one piece, at least."
+	[Charlotte] "I see. Perhaps the rumors were a fabrication."
+	[Charlotte] "I heard that you are due to be released at week’s end… and yet your language lacks the tone of aplomb I have come to expect from those moving on to greener pastures."
+	[{player_name}] "No, it's true. I am super "due". Guess I'm just still coming to terms with it."
 	[Charlotte] "Not to worry, {player_name}. I am certain you will find your confidence by the time you leave us."
 	Charlotte glances at Timothy.
 	[Charlotte] "Where are my manners? You must properly introduce this new face." # charlotte=surprised {CharEnter("Charlotte", "Surprised")}
@@ -56,19 +56,28 @@ EXTERNAL GetPlayerData()
 === Introduce_Timothy ===
 [{player_name}] "What? Oh! Yeah, sorry."
 [{player_name}] "Charlotte, this is Timothy, my new roommate. Timothy, this is Charlotte. She's... uh, she lives here, too."
-[Timothy] "Uh... hi." # timothy=afraid {CharEnter ("Timothy", "Afraid")}
+[Timothy] "Uh... hi." {CharEnter ("Timothy", "Afraid")}
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # charlotte=happy {CharEnter("Charlotte", "Happy")}
 [Timothy] "Th-<delay=1>thanks." # timothy=happy {CharEnter ("Timothy", "Happy")}
 [Charlotte] "My roommate is here, too. Trissa, dear, come and meet the new arrival!"
-[Trissa] "Hiya! What's goin on, Lotty? You say something about a new arrival?" # trissa=calm {CharEnter("Trissa", "Calm")}
+[Trissa] "Hiya! What's goin on, Lotty? You say something about a new arrival?" {CharEnter("Trissa", "Calm")}
 [Charlotte] "I did indeed. This is Timothy, {player_name}'s new roommate." # charlotte=calm {CharEnter("Charlotte", "Calm")}
 [Trissa] "Who?"
 [{player_name}] "Me. {player_name}?"
-[Trissa] "Oh, right! I remember now. You're the { -player_gender == "M": guy-player_gender == "F": girl-else: one} who's leaving this week." # trissa=happy {CharEnter("Trissa", "Happy")}
+[Trissa] "Oh, right! I remember now. You're the <>
+{
+	-player_gender == "M": 
+		guy 
+	-player_gender == "F": 
+		girl
+	-else: 
+		one
+} 
+<> who's leaving this week." # trissa=happy {CharEnter("Trissa", "Happy")}
 [Trissa] "When Max introduced you, you were wearing that shirt with the polar bear on it."
 I hate that shirt.
 [Trissa] "Then you must be the new guy! My name's Trissa!"
-[Timothy] "Hi. I'm... Timothy."
+[Timothy] "Hi. I'm... Timothy." {CharExit("Charlotte")} {CharExit("Trissa")} {CharExit("Timothy")}
 // WIP
 -> END
 

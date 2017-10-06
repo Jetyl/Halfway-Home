@@ -136,37 +136,37 @@ public class StageDisplay : MonoBehaviour
     void UpdateStagePositions(StagePosition pos)
     {
         int i = 0;
-        bool Add = false;
+        var spot = new Vector3();
+        switch(pos)
+        {
+            case StagePosition.Center:
+                spot = gameObject.transform.position;
+                break;
+            case StagePosition.Left:
+                spot = LeftSpot.transform.position;
+                break;
+            case StagePosition.Right:
+                spot = RightSpot.transform.position;
+                break;
+            default:
+                break;
+        }
+
+
+        if (SpotLights[pos] != 1)
+            spot.x -= (Varience/2) * (SpotLights[pos] - 1);
+
         foreach (var Roll in Actors)
         {
             
 
             if(Roll.Direction == pos)
             {
-                var j = new Vector3(0, 0, 0);
-                switch(pos)
-                {
-                    case StagePosition.Center:
-                        j = gameObject.transform.position;
-                        break;
-                    case StagePosition.Left:
-                        j = LeftSpot.transform.position;
-                        break;
-                    case StagePosition.Right:
-                        j = RightSpot.transform.position;
-                        break;
-                    default:
-                        break;
-                }
-                j.z = Roll.transform.localPosition.z;
-                print("Varience: " + Varience * 2 + " number: " + i + " Position: " + SpotLights[pos]);
-                if (Add)
-                    j.x -= (Varience * 2) * ((float)i / (float)SpotLights[pos]);
-                else
-                    j.x += (Varience * 2) * ((float)i / (float)SpotLights[pos]);
-                iTween.MoveTo(Roll.gameObject, j, 2);
+                spot.z = Roll.transform.localPosition.z;
+                
+                iTween.MoveTo(Roll.gameObject, spot, 2);
+                spot.x += Varience;
                 i += 1;
-                Add = !Add;
                 if (i >= SpotLights[pos])
                     return;
 

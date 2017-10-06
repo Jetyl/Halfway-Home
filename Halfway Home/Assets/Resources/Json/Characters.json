@@ -2,7 +2,7 @@
 [
  {
   "Name" : "Timothy",
-  "slug" : "crits",
+  "slug" : null,
   "Schedule" : [
    [
     0,
@@ -216,7 +216,7 @@
  },
  {
   "Name" : "Charlotte",
-  "slug" : "flurrnce",
+  "slug" : null,
   "Schedule" : [
    [
     0,
@@ -430,7 +430,7 @@
  },
  {
   "Name" : "Eduardo",
-  "slug" : "redboi",
+  "slug" : null,
   "Schedule" : [
    [
     0,
@@ -644,7 +644,7 @@
  },
  {
   "Name" : "Max",
-  "slug" : "crusade",
+  "slug" : null,
   "Schedule" : [
    [
     0,
@@ -857,8 +857,8 @@
   ]
  },
  {
-  "Name" : "Issac",
-  "slug" : "shed",
+  "Name" : "Isaac",
+  "slug" : null,
   "Schedule" : [
    [
     0,
@@ -1072,7 +1072,7 @@
  },
  {
   "Name" : "Trissa",
-  "slug" : "berurephone",
+  "slug" : null,
   "Schedule" : [
    [
     0,

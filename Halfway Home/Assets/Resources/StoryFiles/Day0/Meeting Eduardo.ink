@@ -1,4 +1,4 @@
-﻿
+
 VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
@@ -17,8 +17,10 @@ EXTERNAL CharExit(nameString)
 
 === Start ===
 //prolly have the "room to talk about part first, then this"
-[Timothy] "So, who are they?"
+[Timothy] "So, who are they?" {CharEnter("Timothy", "Calm")}
 //show eduardo and Isaac
+{CharEnter("Eduardo", "Calm")} 
+{CharEnter("Isaac", "Calm")}
 [{player_name}] "Oh, that's Eduardo and Isaac."
 [{player_name}] "HEY!"
 [Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, how's it hangin'?"
@@ -55,6 +57,8 @@ That would be Eduardo, who's quite preoccupied cuddling Isaac.
 
 === Leaving ===
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
+[Eduardo] "later!"
+{CharExit("Eduardo")}{CharExit("Isaac")} {CharExit("Timothy")}
 -> END
 
 === HeyEddy ===

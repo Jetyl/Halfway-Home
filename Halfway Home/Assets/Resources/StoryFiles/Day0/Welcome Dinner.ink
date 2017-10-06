@@ -51,21 +51,30 @@ I decide to...
 {CharEnter("Max", "Calm")}
 [Max] "Can I get everyone's attention!"
 the whole cafe quites a little, as Max speaks up.
-"Thanks eveybody for showing yerselfs"
-"Today we're welcoming our newest family member, Timothy Miyrui."
-"Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
-"He just got out Blackwell Hospital, for those who need the context for that,"
+[Max] "Thanks eveybody for showing yerselfs"
+[Max] "Today we're welcoming our newest family member, Timothy Miyrui."
+[Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
+[Max] "He just got out Blackwell Hospital, for those who need the context for that,"
 [Jesse] "Thanks Fam!"
-"And he said he's not really up to this kinda group speaking, which we all can understand."
-"But we all want to wish him the best of luck"
-"And to welcome him to our home."
+[Max] "And he said he's not really up to this kinda group speaking, which we all can understand."
+[Max] "But we all want to wish him the best of luck"
+[Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
 {CharExit("Max")} Max sits back down near Timothy, and the usual chatter of the room resumes.
 {
 	- ByTimothy == false:
 		I get up and move closer to them and Timothy, given Trissa seems to have up and moved.
 }
-[Max] "Eeeh, {player_name}, just the {-player_gender == "M": man -player_gender == "F": gal -else: person }I was lookin' fer."
+[Max] "Eeeh, {player_name}, just the <>
+{
+	-player_gender == "M": 
+		man 
+	-player_gender == "F": 
+		gal
+	-else: 
+		person
+} 
+<>I was lookin' fer."
 {
 	-GetValue("Tutorial"):
 		->TutorialTalk
@@ -98,6 +107,7 @@ You have no idea.
 
 ===TalkingToTimothy===
 [{player_name}] "Hey, Timothy. how's the dinner?"
+scene end. {CharExit("Timothy")} {CharExit("Isaac")} {CharExit("Eduardo")} {CharExit("Charlotte")} {CharExit("Trissa")} {CharExit("Max")}
 
 
 -> END
