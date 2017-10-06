@@ -109,7 +109,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     void UpdateDescription(DescriptionEvent eventdata)
     {
-
+        gameObject.SetActive(true);
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         
         //dynamically edit the lines so they adhere to certain parameters

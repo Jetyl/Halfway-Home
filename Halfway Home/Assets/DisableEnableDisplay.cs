@@ -11,7 +11,7 @@ public class DisableEnableDisplay : MonoBehaviour
 	void Start ()
     {
         Space.Connect<DefaultEvent>(Events.ReturnToMap, Disable);
-        Space.Connect<DefaultEvent>(Events.NewStory, Enable);
+        Space.Connect<DefaultEvent>(Events.Description, Enable);
     }
 	
 	// Update is called once per frame
@@ -32,7 +32,7 @@ public class DisableEnableDisplay : MonoBehaviour
 
     void Enable(DefaultEvent eventdata)
     {
-        gameObject.SetActive(true);
+        //gameObject.SetActive(true);
     }
 
 }

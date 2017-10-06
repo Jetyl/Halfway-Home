@@ -899,7 +899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
-  DebugMode: 1
+  StartDay: 1
+  StartHour: 9
+  DebugMode: 0
   DebugDay: 0
   DebugHour: 11
 --- !u!4 &1513539560

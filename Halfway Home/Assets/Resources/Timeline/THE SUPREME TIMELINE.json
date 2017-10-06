@@ -4,8 +4,8 @@
   "title" : "Main timeline start",
   "ID"    : 0,
   "TypeID" : 0,
-  "NodePositionX" : -1089.72729492188,
-  "NodePositionY" : 346.340454101563,
+  "NodePositionX" : -898.169616699219,
+  "NodePositionY" : 115.529922485352,
   "width"         : 200.0,
   "height"        : 100.0,
   "NextID"        : 10003,
@@ -15,8 +15,8 @@
   "title" : "Must go to Kitchen",
   "ID"    : 10000,
   "TypeID" : 12,
-  "NodePositionX" : -184.72802734375,
-  "NodePositionY" : 305.340454101563,
+  "NodePositionX" : 6.8341064453125,
+  "NodePositionY" : 74.5301666259766,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -29,8 +29,8 @@
   "title" : "Tutorial Choices",
   "ID"    : 10002,
   "TypeID" : 13,
-  "NodePositionX" : 485.390380859375,
-  "NodePositionY" : 346.173461914063,
+  "NodePositionX" : 676.949523925781,
+  "NodePositionY" : 115.362930297852,
   "width"         : 200.0,
   "height"        : 100.0,
   "NextID"        : -1
@@ -39,8 +39,8 @@
   "title" : "Opening Scene",
   "ID"    : 10003,
   "TypeID" : 11,
-  "NodePositionX" : -861.476623535156,
-  "NodePositionY" : 336.090454101563,
+  "NodePositionX" : -669.910339355469,
+  "NodePositionY" : 105.279418945313,
   "width"         : 200.0,
   "height"        : 120.0,
   "NextID"        : 10006,
@@ -50,8 +50,8 @@
   "title" : "Must go to kitchen",
   "ID"    : 10004,
   "TypeID" : 13,
-  "NodePositionX" : -411.72216796875,
-  "NodePositionY" : 345.840454101563,
+  "NodePositionX" : -220.15983581543,
+  "NodePositionY" : 115.029922485352,
   "width"         : 200.0,
   "height"        : 100.0,
   "NextID"        : -1
@@ -60,8 +60,8 @@
   "title" : "Knock knock knock",
   "ID"    : 10006,
   "TypeID" : 11,
-  "NodePositionX" : -630.690002441406,
-  "NodePositionY" : 334.392211914063,
+  "NodePositionX" : -439.126892089844,
+  "NodePositionY" : 103.581665039063,
   "width"         : 200.0,
   "height"        : 120.0,
   "NextID"        : 10004,
@@ -71,19 +71,19 @@
   "title" : "Kitchen Tutorial",
   "ID"    : 10007,
   "TypeID" : 11,
-  "NodePositionX" : 226.267333984375,
-  "NodePositionY" : 343.155517578125,
+  "NodePositionX" : 417.828857421875,
+  "NodePositionY" : 112.344848632813,
   "width"         : 200.0,
   "height"        : 120.0,
   "NextID"        : 10002,
-  "Story"         : "StoryFiles/Day0/Room Function - Kitchen"
+  "Story"         : "StoryFiles/Day0/RF - Kitchen"
  },
  {
   "title" : "Commons Tutorial",
   "ID"    : 10008,
   "TypeID" : 12,
-  "NodePositionX" : 732.013427734375,
-  "NodePositionY" : 72.5103759765625,
+  "NodePositionX" : 931.242370605469,
+  "NodePositionY" : 268.367340087891,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -96,8 +96,8 @@
   "title" : "Front Desk Tutorial",
   "ID"    : 10009,
   "TypeID" : 12,
-  "NodePositionX" : 733.372802734375,
-  "NodePositionY" : 283.296264648438,
+  "NodePositionX" : 939.220886230469,
+  "NodePositionY" : 44.3914642333984,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -110,8 +110,8 @@
   "title" : "Garden Tutorial",
   "ID"    : 10010,
   "TypeID" : 12,
-  "NodePositionX" : 733.694091796875,
-  "NodePositionY" : 492.61767578125,
+  "NodePositionX" : 941.256042480469,
+  "NodePositionY" : -157.050170898438,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -124,8 +124,8 @@
   "title" : "Library Tutorial",
   "ID"    : 10011,
   "TypeID" : 12,
-  "NodePositionX" : 734.364990234375,
-  "NodePositionY" : -138.190063476563,
+  "NodePositionX" : 925.926940917969,
+  "NodePositionY" : -368.998931884766,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -138,8 +138,8 @@
   "title" : "Art Room Tutorial",
   "ID"    : 10012,
   "TypeID" : 12,
-  "NodePositionX" : 739.468505859375,
-  "NodePositionY" : 701.373229980469,
+  "NodePositionX" : 931.030456542969,
+  "NodePositionY" : 470.562225341797,
   "width"         : 350.0,
   "height"        : 200.0,
   "Day"           : 1,
@@ -152,8 +152,8 @@
   "title" : "Front Desk Tutorial",
   "ID"    : 10014,
   "TypeID" : 11,
-  "NodePositionX" : 1191.92883300781,
-  "NodePositionY" : 316.095825195313,
+  "NodePositionX" : 1378.24877929688,
+  "NodePositionY" : 87.9053955078125,
   "width"         : 200.0,
   "height"        : 120.0,
   "NextID"        : 10021,
@@ -163,8 +163,8 @@
   "title" : "Been to Library?",
   "ID"    : 10015,
   "TypeID" : 1,
-  "NodePositionX" : 1488.65087890625,
-  "NodePositionY" : 506.957275390625,
+  "NodePositionX" : 1915.92358398438,
+  "NodePositionY" : -126.710823059082,
   "width"         : 200.0,
   "height"        : 170.0,
   "PassID"        : 10020,
@@ -172,9 +172,9 @@
   "TypeOfProgress" : 1,
   "CheckToMatch"   : [
    {
-    "Name" : "",
+    "Name" : "Been to Library",
     "Type" : 1,
-    "MatchValue" : false
+    "MatchValue" : true
    }
   ]
  },
@@ -182,52 +182,52 @@
   "title" : "Garden Tutorial",
   "ID"    : 10016,
   "TypeID" : 11,
-  "NodePositionX" : 1189.09436035156,
-  "NodePositionY" : 532.401611328125,
+  "NodePositionX" : 1380.65307617188,
+  "NodePositionY" : -119.837905883789,
   "width"         : 200.0,
   "height"        : 120.0,
-  "NextID"        : 10015,
-  "Story"         : null
+  "NextID"        : 10024,
+  "Story"         : "StoryFiles/Day0/RF - Garden"
  },
  {
   "title" : "Art Room Tutorial",
   "ID"    : 10017,
   "TypeID" : 11,
-  "NodePositionX" : 1198.45910644531,
-  "NodePositionY" : 733.670959472656,
+  "NodePositionX" : 1373.01733398438,
+  "NodePositionY" : 506.861022949219,
   "width"         : 200.0,
   "height"        : 120.0,
-  "NextID"        : -1,
-  "Story"         : null
+  "NextID"        : 10027,
+  "Story"         : "StoryFiles/Day0/RF - Art Room"
  },
  {
   "title" : "Commons Tutorial",
   "ID"    : 10018,
   "TypeID" : 11,
-  "NodePositionX" : 1199.09533691406,
-  "NodePositionY" : 105.734252929688,
+  "NodePositionX" : 1376.12963867188,
+  "NodePositionY" : 324.924224853516,
   "width"         : 200.0,
   "height"        : 120.0,
-  "NextID"        : -1,
-  "Story"         : null
+  "NextID"        : 10025,
+  "Story"         : "StoryFiles/Day0/RF - Commons"
  },
  {
   "title" : "Library Tutorial",
   "ID"    : 10019,
   "TypeID" : 11,
-  "NodePositionX" : 1197.98400878906,
-  "NodePositionY" : -104.265747070313,
+  "NodePositionX" : 1389.54272460938,
+  "NodePositionY" : -335.074493408203,
   "width"         : 200.0,
   "height"        : 120.0,
-  "NextID"        : -1,
-  "Story"         : null
+  "NextID"        : 10022,
+  "Story"         : "StoryFiles/Day0/RF - Library"
  },
  {
   "title" : "Charlotte + Trissa",
   "ID"    : 10020,
   "TypeID" : 11,
-  "NodePositionX" : 1830.72265625,
-  "NodePositionY" : 520.138916015625,
+  "NodePositionX" : 2249.07641601563,
+  "NodePositionY" : -221.686889648438,
   "width"         : 200.0,
   "height"        : 120.0,
   "NextID"        : 10021,
@@ -237,10 +237,197 @@
   "title" : "",
   "ID"    : 10021,
   "TypeID" : 13,
-  "NodePositionX" : 2049.650390625,
-  "NodePositionY" : 312.877075195313,
+  "NodePositionX" : 2456.06713867188,
+  "NodePositionY" : 91.4952392578125,
   "width"         : 200.0,
   "height"        : 100.0,
   "NextID"        : -1
+ },
+ {
+  "title" : "Been to Library = True",
+  "ID"    : 10022,
+  "TypeID" : 2,
+  "NodePositionX" : 1647.93505859375,
+  "NodePositionY" : -357.933929443359,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "NextID"        : 10023,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Library",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Garden?",
+  "ID"    : 10023,
+  "TypeID" : 1,
+  "NodePositionX" : 1911.30834960938,
+  "NodePositionY" : -353.618377685547,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "PassID"        : 10020,
+  "FailID"        : 10021,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Garden",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Garden = True",
+  "ID"    : 10024,
+  "TypeID" : 2,
+  "NodePositionX" : 1646.11572265625,
+  "NodePositionY" : -137.249877929688,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "NextID"        : 10015,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Garden",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Commons = True",
+  "ID"    : 10025,
+  "TypeID" : 2,
+  "NodePositionX" : 1652.29833984375,
+  "NodePositionY" : 302.265380859375,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "NextID"        : 10026,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Commons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Art?",
+  "ID"    : 10026,
+  "TypeID" : 1,
+  "NodePositionX" : 1921.96362304688,
+  "NodePositionY" : 306.265380859375,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "PassID"        : 10030,
+  "FailID"        : 10021,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Art",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Art = True",
+  "ID"    : 10027,
+  "TypeID" : 2,
+  "NodePositionX" : 1651.96533203125,
+  "NodePositionY" : 487.265319824219,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "NextID"        : 10028,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Art",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Been to Commons?",
+  "ID"    : 10028,
+  "TypeID" : 1,
+  "NodePositionX" : 1922.29760742188,
+  "NodePositionY" : 489.765319824219,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "PassID"        : 10030,
+  "FailID"        : 10021,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Been to Commons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "Eduardo + Isaac",
+  "ID"    : 10030,
+  "TypeID" : 11,
+  "NodePositionX" : 2258.13012695313,
+  "NodePositionY" : 418.765808105469,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "NextID"        : 10021,
+  "Story"         : "StoryFiles/Day0/Meeting Eduardo"
+ },
+ {
+  "title" : "Welcome Dinner, After Tutorials",
+  "ID"    : 10031,
+  "TypeID" : 12,
+  "NodePositionX" : 2657.34887695313,
+  "NodePositionY" : 34.5435638427734,
+  "width"         : 350.0,
+  "height"        : 200.0,
+  "Day"           : 1,
+  "Hour"          : 19,
+  "Length"        : 1,
+  "Room"          : 4,
+  "NextID"        : 10032
+ },
+ {
+  "title" : "Welcome Dinner",
+  "ID"    : 10032,
+  "TypeID" : 11,
+  "NodePositionX" : 3090.52270507813,
+  "NodePositionY" : 63.4881744384766,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "NextID"        : 10034,
+  "Story"         : "StoryFiles/Day0/Welcome Dinner"
+ },
+ {
+  "title" : "END OF DAY 1",
+  "ID"    : 10033,
+  "TypeID" : -1,
+  "NodePositionX" : 3579.5244140625,
+  "NodePositionY" : 62.4881744384766,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "EndID"         : 0,
+  "Enable"        : false
+ },
+ {
+  "title" : "Off to Bed",
+  "ID"    : 10034,
+  "TypeID" : 11,
+  "NodePositionX" : 3337.52319335938,
+  "NodePositionY" : 64.4881591796875,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "NextID"        : 10033,
+  "Story"         : "StoryFiles/Day0/Off To Bed"
  }
 ]
