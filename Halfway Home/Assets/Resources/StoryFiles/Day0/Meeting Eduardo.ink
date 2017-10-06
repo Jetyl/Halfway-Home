@@ -30,22 +30,22 @@ EXTERNAL CharExit(nameString)
 [Eduardo] "Nice to meet you little man, I'm Eduardo Medina."
 [Eduardo] "... And this tub o'love is Isaac."
 //change to visual change, and a {player_name} comment
-[Isaac] "(Oh man, you are like, designed to embarass me...)"
+[Isaac] "(Oh man, you are like, designed to embarass me...)" //change later to isacc just blushing
 [Timothy] "Hello<delay=3>, I-I'm Timothy Myuri..."
 [Eduardo] "Anyways Timmy, what are you in for?"
-[Timothy] "<size=20%> I'd prefer Timothy..."
+[Timothy] "<size=50%> I'd prefer Timothy...<size=100%>"
 [Eduardo] "Quiet guy ain't he. I didn't catch that."
-[Timothy] "<size=10%> I said my name is Timothy..."
+[Timothy] "<size=30%> I said my name is Timothy...<size=100%>"
 [Eduardo] "Yo. Tim, I can't hear you when you're-"
 [Eduardo] "Oof!"
 Isaac jabs him in the stomach
-[Isaac] "Sorry about that. Eddy can be kinda insensitive when he's super manic"
+[Isaac] "Sorry. Eddy's super manic right now. kinda a jerk."
 [Eduardo] "...Eddy?" //I'm picturing eduardo with like, a puppydog sad face
-[Isaac] "Some people don't like nicknames just shoved on them."
+[Isaac] "Some people don't like nicknames."
 [Eduardo] "Isssaaaaaaccc!"
 Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.
 Isaac looks off to another part of the room.
-[Isaac] "Took him forever to not get up in other people's personal space."
+[Isaac] "Took him forever to not get up in other people's personal space." //love this line, might need to cut
 [Timothy] "O-Okay."
 [Isaac] "Isaac. Isaac Avidan."
 [Timothy] "huh?"
@@ -57,8 +57,7 @@ That would be Eduardo, who's quite preoccupied cuddling Isaac.
 
 === Leaving ===
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
-[Eduardo] "later!"
-{CharExit("Eduardo")}{CharExit("Isaac")} {CharExit("Timothy")}
+[Eduardo] "later!" {CharExit("Eduardo")} {CharExit("Isaac")} {CharExit("Timothy")}
 -> END
 
 === HeyEddy ===

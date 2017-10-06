@@ -340,6 +340,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114242713055659194, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: Characters.Array.data[5]
+      value: Isaac
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_IsPrefabParent: 0
@@ -898,9 +903,18 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 10
-  DebugMode: 0
+  DebugMode: 1
   DebugDay: 1
   DebugHour: 10
+  DebugWeek: 1
+  DebugValues:
+  - ProgressName: Tutorial
+    TypeID: 1
+    BoolValue: 1
+    IntValue: 0
+    FloatValue: 0
+    StringValue: 
+    compare: 0
 --- !u!4 &1513539560
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,6 +1307,11 @@ Prefab:
     - target: {fileID: 114266106066853840, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
       propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237007987076208, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: Debug
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

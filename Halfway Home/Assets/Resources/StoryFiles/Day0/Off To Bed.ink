@@ -89,7 +89,6 @@ Slumberland becons me back to it, but I should be getting up about now.
 *[Get Up]
 	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. In no time, I'm ready to head out.
 *[Stay in Bed]
-	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again.
-	 {SetValue("SleptIn", true)}
+	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("SleptIn", true)}
 
 - -> END

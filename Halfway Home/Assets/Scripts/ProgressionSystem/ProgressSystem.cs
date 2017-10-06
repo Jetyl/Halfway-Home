@@ -44,13 +44,13 @@ public class ProgressSystem
                 break;
             case PointTypes.Float:
                 if (change.FloatValue != 0)
-                    ProgressBook[_key].FloatValue += change.FloatValue;
+                    ProgressBook[_key].FloatValue = change.FloatValue;
                 else
                     ProgressBook[_key].FloatValue = 0;
                 break;
             case PointTypes.Integer:
                 if (change.IntValue != 0)
-                    ProgressBook[_key].IntValue += change.IntValue;
+                    ProgressBook[_key].IntValue = change.IntValue;
                 else
                     ProgressBook[_key].IntValue = 0;
                 break;
@@ -123,10 +123,9 @@ public class ProgressSystem
         if (ProgressBook[_key].TypeID != PointTypes.Integer)
             return;
 
-        if (change != 0)
-            ProgressBook[_key].IntValue += change;
-        else
-            ProgressBook[_key].IntValue = 0;
+        
+        ProgressBook[_key].IntValue = change;
+        
 
         UpdatePlotLines();
 
@@ -141,10 +140,9 @@ public class ProgressSystem
         if (ProgressBook[_key].TypeID != PointTypes.Float)
             return;
 
-        if (change != 0)
-            ProgressBook[_key].FloatValue += change;
-        else
-            ProgressBook[_key].FloatValue = 0;
+        
+        ProgressBook[_key].FloatValue += change;
+        
 
 
         UpdatePlotLines();

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using LitJson;
+using System.Collections.Generic;
 
 public class GameStartUp : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class GameStartUp : MonoBehaviour
     public int DebugDay;
     [Range(0, 23)]
     public int DebugHour;
+    [Range(1, 4)]
+    public int DebugWeek;
+
+    public List<ProgressPoint> DebugValues;
 
     // Use this for initialization
     void Start ()
@@ -41,10 +46,10 @@ public class GameStartUp : MonoBehaviour
           Game.current.Day = StartDay;
           Game.current.Hour = StartHour;
             //Game.current.Progress.SetValue<bool>("Tutorial", true);
-          StartCoroutine(DebugStart());
+          StartCoroutine(DelayStart(1));
         }
 
-    Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
+    //Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
 
     }
 
@@ -56,14 +61,21 @@ public class GameStartUp : MonoBehaviour
             Game.current = new Game();
             Game.current.Day = DebugDay;
             Game.current.Hour = DebugHour;
-            
+            Game.current.Progress.SetValue("Week", DebugWeek);
+            Game.current.Progress.SetValue("Debug Mode", true);
+            foreach(var point in DebugValues)
+            {
+                Game.current.Progress.UpdateProgress(point.ProgressName, point);
+            }
+            StartCoroutine(DelayStart(2));
+
         }
     }
 
 
-    IEnumerator DebugStart()
+    IEnumerator DelayStart(int frames)
     {
-        yield return new WaitForSeconds(Time.deltaTime);
+        yield return new WaitForSeconds(Time.deltaTime * frames);
 
         Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
     }
