@@ -150,6 +150,7 @@ I flash Timothy the time on my watch, almost 9.
 [{player_name}] "C'mon, I'll show you."
 //show map.
 I am really starting to get hungry, so first stop: I should show Timothy the Cafe area.
+~SetValue("Tutorial", true)
 -> END
 
 ===Day1Alone===

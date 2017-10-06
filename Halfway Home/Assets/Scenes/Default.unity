@@ -444,6 +444,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeTime: 0.2
+--- !u!1 &676063811 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1736725880908536, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &676063812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 676063811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 0
+    endTime: 11
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: Been to Art
 --- !u!1 &849746597
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +774,73 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!1 &1176024514 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1162153340861110, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &1176024515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176024514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 0
+    endTime: 10
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 11
+    endTime: 18
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: 
+--- !u!1 &1265386258 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1623114923772448, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &1265386259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265386258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 0
+    endTime: 11
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: Been to Garden
 --- !u!1 &1371098728
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
-  StartHour: 9
+  StartHour: 10
   DebugMode: 0
   DebugDay: 0
   DebugHour: 11
@@ -917,6 +1015,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1596662319 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1785062795448794, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &1596662320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596662319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 0
+    endTime: 11
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: Been to Library
 --- !u!1001 &1876354666
 Prefab:
   m_ObjectHideFlags: 0
@@ -1207,7 +1336,7 @@ Prefab:
     - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
       propertyPath: ClosedTimeContainer.Array.data[0].endTime
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
@@ -1222,7 +1351,7 @@ Prefab:
     - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
       propertyPath: ClosedTimeContainer.Array.data[1].starttime
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 114574675606025574, guid: b54e8f6ced474b645bb017d8276ef11e,
         type: 2}
@@ -1238,6 +1367,34 @@ Prefab:
         type: 2}
       propertyPath: TimeSpending
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565989238259766, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: ManualAccess
+      value: Been to FD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149926572724394, guid: b54e8f6ced474b645bb017d8276ef11e, type: 2}
+      propertyPath: m_Name
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710549406830762, guid: b54e8f6ced474b645bb017d8276ef11e, type: 2}
+      propertyPath: m_Name
+      value: Library Icon Field
+      objectReference: {fileID: 0}
+    - target: {fileID: 114266106066853840, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: m_text
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 114266106066853840, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114266106066853840, guid: b54e8f6ced474b645bb017d8276ef11e,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114119285773620122, guid: b54e8f6ced474b645bb017d8276ef11e, type: 2}
@@ -1361,3 +1518,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!1 &2112213050 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1475341328812502, guid: b54e8f6ced474b645bb017d8276ef11e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876354666}
+--- !u!114 &2112213051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112213050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf58770e048df047b661b3001c05cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedTimeContainer:
+  - Day: 1
+    starttime: 0
+    endTime: 11
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+  LimitedDailyAccess: 0
+  AccessPoint: 
+  TimesCanVisit: 0
+  ManualAccess: Been to Commons
