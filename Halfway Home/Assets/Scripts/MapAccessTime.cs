@@ -79,12 +79,15 @@ public class MapAccessTime : MonoBehaviour
             }
         }
 
-        if(TimeClosed[Game.current.Day][Game.current.Hour])
+        
+        foreach (var point in ClosedTimeContainer)
         {
-            self.interactable = false;
+            if (point.IsClosed(Game.current.Day,Game.current.Hour))
+            {
+                self.interactable = false;
+            }
+
         }
-        
-        
 
     }
 
@@ -101,7 +104,7 @@ public class AccessLocker
     public bool ProgressLocked;
     public string ProgressKey = "";
 
-    bool IsClosed(int day, int hour)
+    public bool IsClosed(int day, int hour)
     {
 
         if(ProgressLocked)
