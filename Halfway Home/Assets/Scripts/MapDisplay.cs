@@ -20,7 +20,7 @@ public class MapDisplay : MonoBehaviour
         Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
         if (!Debug)
-            gameObject.SetActive(false);
+            StartCoroutine(DelayStart());
 
     }
 	
@@ -29,6 +29,14 @@ public class MapDisplay : MonoBehaviour
     {
 		
 	}
+
+
+    IEnumerator DelayStart()
+    {
+        yield return new WaitForSeconds(Time.deltaTime);
+        gameObject.SetActive(false);
+    }
+
 
     void TurnMapOn(DefaultEvent Eventdata)
     {

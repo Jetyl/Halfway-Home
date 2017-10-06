@@ -45,7 +45,6 @@ public class MapAccessTime : MonoBehaviour
         }
         
         self = GetComponent<Button>();
-        
         Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
         
     }
@@ -60,12 +59,10 @@ public class MapAccessTime : MonoBehaviour
     void CheckAccess(DefaultEvent Eventdata)
     {
         self.interactable = true;
-
         if(Game.current.Progress.GetBoolValue(ManualAccess) == true)
         {
             self.interactable = false;
         }
-
         if (LimitedDailyAccess)
         {
             if(Game.current.Progress.GetIntValue(AccessPoint) < TimesCanVisit)
@@ -78,7 +75,6 @@ public class MapAccessTime : MonoBehaviour
                 return;
             }
         }
-
         
         foreach (var point in ClosedTimeContainer)
         {
@@ -106,12 +102,13 @@ public class AccessLocker
 
     public bool IsClosed(int day, int hour)
     {
-
-        if(ProgressLocked)
+        Debug.Log("Day: " + day + "Hour: " + hour);
+        if (ProgressLocked)
         {
             if (!Game.current.Progress.GetBoolValue(ProgressKey))
                 return false;
         }
+        
         if (Day != day)
             return false;
 

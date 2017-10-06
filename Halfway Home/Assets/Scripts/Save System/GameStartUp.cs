@@ -40,6 +40,7 @@ public class GameStartUp : MonoBehaviour
           Game.current = new Game();
           Game.current.Day = StartDay;
           Game.current.Hour = StartHour;
+            //Game.current.Progress.SetValue<bool>("Tutorial", true);
           StartCoroutine(DebugStart());
         }
 

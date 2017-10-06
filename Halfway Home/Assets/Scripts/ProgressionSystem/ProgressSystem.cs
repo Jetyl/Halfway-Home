@@ -68,7 +68,7 @@ public class ProgressSystem
 
     public void SetValue<T>(string key, T value)
     {
-
+        
         if (!ProgressBook.ContainsKey(key))
             return;
 
