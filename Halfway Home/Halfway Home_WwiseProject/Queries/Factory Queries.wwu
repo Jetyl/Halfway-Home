@@ -635,7 +635,11 @@
 				</Query>
 				<Query Name="Platform Excluded Objects" ID="{8E0F649F-7443-401D-A23F-A55AEA4AE5BC}">
 					<ChildrenList>
-						<SearchCriteria Name="GeneralPlatform Inclusion" ID="{361BBA96-A1DF-420E-A614-FFE411556F1E}" SearchOperationID="{76702F0A-B29D-4D2E-8E16-425DA225844E}"/>
+						<SearchCriteria Name="GeneralPlatform Inclusion" ID="{361BBA96-A1DF-420E-A614-FFE411556F1E}" SearchOperationID="{76702F0A-B29D-4D2E-8E16-425DA225844E}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
+						</SearchCriteria>
 					</ChildrenList>
 				</Query>
 			</ChildrenList>

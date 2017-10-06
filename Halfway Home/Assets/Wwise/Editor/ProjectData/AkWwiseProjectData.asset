@@ -15,77 +15,92 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}'
-    m_lastTimePsrt1: 1223081750
-    m_lastTimePart2: -1999307434
+    Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
+    m_lastTimePsrt1: 1264781615
+    m_lastTimePart2: -1999303451
     List:
-    - Name: Play_SoftDing
-      Path: Default Work Unit\Play_SoftDing
+    - Name: Play
+      Path: Default Work Unit\Play
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_SoftDing
+      - ElementName: Play
         ObjectType: 3
-      ID: 1722154426
-      Guid: 7a7f1194f6769e4b9f6645533cf78d4c
+      ID: 1256202815
+      Guid: 7182bd9502cbd9489288190159e2cf51
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main
+      Path: Default Work Unit\Play_music_placeholder_main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main
+        ObjectType: 3
+      ID: 1259498987
+      Guid: 0151b7227d452146b772f73362c102e9
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{AA9C14D5-853F-485A-902F-A2D39E023B6E}'
-    m_lastTimePsrt1: 1223537977
-    m_lastTimePart2: -1999307434
+    Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{3BE9BB4D-5495-494C-B4D2-AE65A91ADEAE}'
-    m_lastTimePsrt1: 1223753564
-    m_lastTimePart2: -1999307434
+    Guid: '{87EF8878-8D9C-449E-98BF-2062B69FCA69}'
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{4B81A632-566A-419F-BBE7-2DF74A6D2233}'
-    m_lastTimePsrt1: 1223763590
-    m_lastTimePart2: -1999307434
+    Guid: '{A075AAEE-FD9A-42AA-809E-0B0B6F3D99CC}'
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{08803852-EFB9-457C-A9FC-656576CA87CA}'
-    m_lastTimePsrt1: 1223713455
-    m_lastTimePart2: -1999307434
+    Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
+    m_lastTimePsrt1: 1538053328
+    m_lastTimePart2: -1999303451
     List:
-    - Name: Test_Bank
-      Path: Default Work Unit\Test_Bank
+    - Name: New_SoundBank
+      Path: Default Work Unit\New_SoundBank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Test_Bank
+      - ElementName: New_SoundBank
         ObjectType: 7
-      ID: -1980499434
-      Guid: b2130bc08f745745ab1430723456f0d1
+      ID: -222937841
+      Guid: ddfd17346b0a9f4d8ae27ee68e28303b
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{839A792F-C388-4D1E-A383-0AA0DD42597E}'
-    m_lastTimePsrt1: 1223101803
-    m_lastTimePart2: -1999307434
-    List: []
+    Guid: '{E125663B-4CD8-424B-A59F-7E4C38191419}'
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
+    List:
+    - Name: New_Game_Parameter
+      Path: Default Work Unit\New_Game_Parameter
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_Game_Parameter
+        ObjectType: 13
+      ID: -623829214
+      Guid: 3a7a0096abecc14294134765b955c0dd
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{C7C8F630-C59B-4D2B-9BAE-4B6B06CB3665}'
-    m_lastTimePsrt1: 1223783643
-    m_lastTimePart2: -1999307434
+    Guid: '{38FC77CD-C91C-4611-8DCA-5B97A45D06E2}'
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject
-  - /Halfway Home_WwiseProject/Events
-  - /Halfway Home_WwiseProject/Events/Default Work Unit
-  - /Halfway Home_WwiseProject/SoundBanks
-  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

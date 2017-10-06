@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{2F0A07D2-4E66-4CD0-976D-F579F02DBABC}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_SoftDing" ID="{94117F7A-76F6-4B9E-9F66-45533CF78D4C}">
+				<Event Name="Play" ID="{95BD8271-CB02-48D9-9288-190159E2CF51}">
 					<ChildrenList>
-						<Action Name="" ID="{769F2C6F-75CF-4B8A-9506-51654BA0B567}" ShortID="449754473">
+						<Action Name="" ID="{E75049D2-249A-4BE6-9B9E-E61322204744}" ShortID="837021389">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_music_placeholder_main" ID="{22B75101-457D-4621-B772-F73362C102E9}">
+					<ChildrenList>
+						<Action Name="" ID="{44FAF4C0-3476-439D-B933-938619419884}" ShortID="231895110">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SoftDing" ID="{037A00CA-C397-4A0B-9520-8ED4406FB42A}" WorkUnitID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}"/>
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

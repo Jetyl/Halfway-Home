@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Menu SFX" ID="{976EAE6E-51C2-45AF-87DB-845286CFDE03}" ShortID="789135667">
+					<ChildrenList>
+						<ActorMixer Name="Menu SFX" ID="{62CF1D35-094F-499D-8EBF-522A106F5097}" ShortID="916262948">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{892FA019-5463-492E-A8AA-9295791C2672}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_menu_button_click_normal" ID="{6A4708F9-E7F1-4387-8465-BED1122A935F}" ShortID="839400427" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" ShortID="118499955" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_menu_button_mouseover" ID="{89CBAEA8-F346-4DD0-878C-2E3A192709D4}" ShortID="950120731">
+											<Language>SFX</Language>
+											<AudioFile>sfx_menu_button_mouseover.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_menu_button_mouseover" ID="{89CBAEA8-F346-4DD0-878C-2E3A192709D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" ShortID="744289837" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_menu_chime_pausegame" ID="{32864A87-D59A-438F-A15E-9341B2A8BB02}" ShortID="11926160">
+											<Language>SFX</Language>
+											<AudioFile>sfx_menu_chime_pausegame.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_menu_chime_pausegame" ID="{32864A87-D59A-438F-A15E-9341B2A8BB02}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_menu_chime_exitgame" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" ShortID="583293960" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_menu_chime_exitgame" ID="{88438FDF-EB7E-4FD3-8779-BDB6229B6DBC}" ShortID="302959056">
+											<Language>SFX</Language>
+											<AudioFile>sfx_menu_chime_exitgame.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_menu_chime_exitgame" ID="{88438FDF-EB7E-4FD3-8779-BDB6229B6DBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" ShortID="249208614" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_menu_chime_unpausegame" ID="{A7BBC937-8086-468D-B85B-A96B21CB82CC}" ShortID="558653419">
+											<Language>SFX</Language>
+											<AudioFile>sfx_menu_chime_unpausegame.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_menu_chime_unpausegame" ID="{A7BBC937-8086-468D-B85B-A96B21CB82CC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Human SFX" ID="{F9188948-F84A-4CD1-A733-6C53AA99B53A}" ShortID="423999651">
+					<ChildrenList>
+						<ActorMixer Name="Human SFX" ID="{C34856DB-B6A5-4EB7-AC72-3519D56FDBA6}" ShortID="62421968">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="sfx_human_footsteps_approaching" ID="{209CC912-AFBB-4732-BBFE-253B4062549E}" ShortID="622943428">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{134C7E62-3A4A-490A-8B96-612DFF8789EA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="76"/>
+															<Property Name="Min" Type="Real64" Value="-152"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{43FA8CB2-9007-4FFA-B5FB-EFFAD20FC718}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="FootstepsMarble 6017_66_3" ID="{45988331-0AD6-4AC1-938C-0EB25954BC1D}" ShortID="490047262" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FootstepsMarble 6017_66_3" ID="{422D09CA-E40D-40DF-A1F1-010715C4B1F3}" ShortID="721652562">
+													<Language>SFX</Language>
+													<AudioFile>FootstepsMarble 6017_66_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FootstepsMarble 6017_66_3" ID="{422D09CA-E40D-40DF-A1F1-010715C4B1F3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FootstepsMarble 6017_66_4" ID="{3EB9F9BC-9DB3-4174-B44C-413396871DC5}" ShortID="119835774" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FootstepsMarble 6017_66_4" ID="{5BCE2069-95E2-41EE-BDAA-C5DCB8663359}" ShortID="439185111">
+													<Language>SFX</Language>
+													<AudioFile>FootstepsMarble 6017_66_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FootstepsMarble 6017_66_4" ID="{5BCE2069-95E2-41EE-BDAA-C5DCB8663359}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Object SFX" ID="{DA885551-50AE-47A9-BA96-D8CFD5F481E4}" ShortID="1043712290">
+					<ChildrenList>
+						<ActorMixer Name="New Actor-Mixer" ID="{4E1EBA6D-4ACE-48C8-B9A2-6C69AD6A561C}" ShortID="785731107">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

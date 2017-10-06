@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3654346875" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="3653965861" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="3653835507" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="3255518475" DateHigh="30617161"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="3653880931" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="3653921038" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3653990940" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Effects\Default Work Unit.wwu" DateLow="3654051096" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Effects\Factory Effects.wwu" DateLow="3654111248" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\Default Work Unit.wwu" DateLow="3255879198" DateHigh="30617161"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="3654251831" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Halfway Home_WwiseProject.wproj" DateLow="3653595112" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3255713750" DateHigh="30617161"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3654392240" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="3654477217" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="3654437415" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Presets\Default Work Unit.wwu" DateLow="3654542402" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Queries\Default Work Unit.wwu" DateLow="3654627629" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Queries\Factory Queries.wwu" DateLow="3654587783" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="3256054605" DateHigh="30617161"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3654672745" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\States\Default Work Unit.wwu" DateLow="3654803096" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Switches\Default Work Unit.wwu" DateLow="3654291981" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="3654211823" DateHigh="30617156"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="3654853229" DateHigh="30617156"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3593700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="2722832586" DateHigh="30621389"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2722938166" DateHigh="30621389"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Effects\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Effects\Factory Effects.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Halfway Home_WwiseProject.Jalor.wsettings" DateLow="2746702490" DateHigh="30621389"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Halfway Home_WwiseProject.wproj" DateLow="108275712" DateHigh="30621278"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3758733568" DateHigh="30621292"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Presets\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Queries\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Queries\Factory Queries.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\States\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Switches\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="2993700864" DateHigh="30621291"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="108275712" DateHigh="30621278"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home_WwiseIntegrationTemp\Halfway Home_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3311019919" DateHigh="30617156"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home_WwiseIntegrationTemp\Halfway Home_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="3311490935" DateHigh="30617156"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home_WwiseIntegrationTemp\Halfway Home_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="3312224667" DateHigh="30617156"/>

@@ -1,64 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}" SchemaVersion="80">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{BBA627CF-57EA-46B6-BAF8-1AC763DF28E3}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSegment Name="SoftDing" ID="{037A00CA-C397-4A0B-9520-8ED4406FB42A}" ShortID="1067330366">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AB78D83C-08E1-4EE7-999B-CE521F639FF2}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AA9C14D5-853F-485A-902F-A2D39E023B6E}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Game Music" ID="{4AC07592-9FC8-4133-96BB-059944BB5C4F}" ShortID="610622355">
 					<ChildrenList>
-						<MusicTrack Name="SoftDing" ID="{1C9E48A6-C4D2-4405-A650-10B7A4C5B37A}" ShortID="1030430291">
+						<MusicSegment Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" ShortID="812395610">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="53498.7528344671"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}"/>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AA9C14D5-853F-485A-902F-A2D39E023B6E}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SoftDing" ID="{6222160D-938C-4C35-A527-A39431DFB0AD}" ShortID="360830936">
-									<Language>SFX</Language>
-									<AudioFile>SoftDing.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{22CC676E-0300-4A56-83C8-3B1FC240A5F2}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<SequenceList>
-								<MusicTrackSequence Name="" ID="{C11BDD3C-6E2D-48D7-ADF4-23DE623AE646}">
-									<ClipList>
-										<MusicClip Name="SoftDing" ID="{1924BF68-B3FC-4024-9D04-BE16F6E56A2B}">
+								<MusicTrack Name="barble bapkins 1_6" ID="{23668C7E-2D95-49A5-B181-15A6FB6D7766}" ShortID="313146851">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="barble bapkins 1_6" ID="{99090980-A428-4EEB-AC67-0E4A317E0FC7}" ShortID="235618933">
+											<Language>SFX</Language>
+											<AudioFile>barble bapkins 1.6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{12DC6EC7-DDAD-4ED8-8602-74BD09BE237D}">
 											<PropertyList>
-												<Property Name="EndTrimOffset" Type="Real64" Value="384.081632653061"/>
-												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<AudioSourceRef Name="SoftDing" ID="{6222160D-938C-4C35-A527-A39431DFB0AD}"/>
-										</MusicClip>
-									</ClipList>
-								</MusicTrackSequence>
-							</SequenceList>
-						</MusicTrack>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{B40DDB45-3CD2-4483-BC2A-12651F898F77}">
+											<ClipList>
+												<MusicClip Name="barble bapkins 1_6" ID="{8C1F4AD1-CC3A-4E99-BB3A-594FC94DF048}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="53498.7528344671"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="barble bapkins 1_6" ID="{99090980-A428-4EEB-AC67-0E4A317E0FC7}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{4E7AECDE-25CC-40ED-AEE6-3BA080DD288F}"/>
+								<MusicCue Name="Exit Cue" ID="{A9FBD49A-D070-400B-AFB8-808C95B53542}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="1000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
 					</ChildrenList>
-					<CueList>
-						<MusicCue Name="Entry Cue" ID="{612E3210-78F5-43ED-B3B7-E122388E3868}"/>
-						<MusicCue Name="Exit Cue" ID="{B7019277-292E-483A-9C93-322B1F303192}">
-							<PropertyList>
-								<Property Name="CueType" Type="int16" Value="1"/>
-								<Property Name="TimeMs" Type="Real64" Value="1000"/>
-							</PropertyList>
-						</MusicCue>
-					</CueList>
-				</MusicSegment>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>
