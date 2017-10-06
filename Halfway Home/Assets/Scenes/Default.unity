@@ -340,6 +340,26 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114242713055659194, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: Characters.Array.data[5]
+      value: Isaac
+      objectReference: {fileID: 0}
+    - target: {fileID: 114242713055659194, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: Colors.Array.data[6].g
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 114242713055659194, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: Colors.Array.data[6].r
+      value: 0.8235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114242713055659194, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: Colors.Array.data[6].b
+      value: 0.3803922
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_IsPrefabParent: 0
