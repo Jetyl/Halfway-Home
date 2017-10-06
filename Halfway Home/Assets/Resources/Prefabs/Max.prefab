@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767029052550566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.23, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 4006207730118236}
   m_RootOrder: 0
@@ -87,17 +87,17 @@ MonoBehaviour:
     Actor: {fileID: 0}
   Poses:
   - Name: Calm
-    Visual: {fileID: 21300000, guid: fea4ed06531b37642b1bb92ea339cbc9, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Angry
-    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Happy
-    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Sad
-    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Afraid
-    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Suprised
-    Visual: {fileID: 21300000, guid: 679fbab460aa405428b7d56a9bf27699, type: 3}
+    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   Direction: 0
 --- !u!114 &114559324231784268
 MonoBehaviour:
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fea4ed06531b37642b1bb92ea339cbc9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
