@@ -320,16 +320,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114101114676672664, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -340,110 +330,19 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1899849581712536, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224579414170640272, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224579414170640272, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224579414170640272, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_fontSize
-      value: 62.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_margin.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_margin.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_margin.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244377852327148, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-        type: 2}
-      propertyPath: m_margin.w
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &614983246 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1938197008440296, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-    type: 2}
-  m_PrefabInternal: {fileID: 614983245}
---- !u!1 &614983247 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1135373316652456, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-    type: 2}
-  m_PrefabInternal: {fileID: 614983245}
---- !u!1 &614983248 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1899849581712536, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
-    type: 2}
-  m_PrefabInternal: {fileID: 614983245}
---- !u!114 &614983249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614983246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeOnInitialize: 0
-  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
-  InitializeFadeTime: 1
-  IsFading: 0
---- !u!114 &614983250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614983247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeOnInitialize: 0
-  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
-  InitializeFadeTime: 1
-  IsFading: 0
---- !u!114 &614983251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614983248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa84cfd94fa63746930950e103920c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeTime: 0.2
 --- !u!1 &676063811 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1736725880908536, guid: b54e8f6ced474b645bb017d8276ef11e,
@@ -528,8 +427,8 @@ MonoBehaviour:
     Actor: {fileID: 1241828928622914, guid: 4f2b51899cd9f8241a2ca7209e12a8d4, type: 2}
   - Character: Max
     Actor: {fileID: 1435825661436478, guid: 34f01b2dd26bd084a8ea0179f22e39c6, type: 2}
-  - Character: Issac
-    Actor: {fileID: 0}
+  - Character: Isaac
+    Actor: {fileID: 1241828928622914, guid: fa8398f3fd73c1641945e36d77c1eef8, type: 2}
   - Character: Trissa
     Actor: {fileID: 1084522956037128, guid: fd736ba1e38741042aac431366108868, type: 2}
   Backdrop: {fileID: 0}
@@ -537,7 +436,7 @@ MonoBehaviour:
   BackCuratin: {fileID: 206367696}
   LeftSpot: {fileID: 1463426191}
   RightSpot: {fileID: 517490444}
-  Varience: 2
+  Varience: 4
 --- !u!1 &993484430
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,11 +697,11 @@ MonoBehaviour:
     ProgressKey: Tutorial
   - Day: 1
     starttime: 11
-    endTime: 18
+    endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 19
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
@@ -1000,8 +899,8 @@ MonoBehaviour:
   StartDay: 1
   StartHour: 10
   DebugMode: 0
-  DebugDay: 0
-  DebugHour: 11
+  DebugDay: 1
+  DebugHour: 10
 --- !u!4 &1513539560
 Transform:
   m_ObjectHideFlags: 0

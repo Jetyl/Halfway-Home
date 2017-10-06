@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character:
-    Character: Issac
+    Character: Isaac
     Actor: {fileID: 0}
   Poses:
   - Name: Calm

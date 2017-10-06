@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 224435577250594746}
   - component: {fileID: 222773738437629966}
   - component: {fileID: 114111832692247982}
+  - component: {fileID: 114196843435445006}
   m_Layer: 5
   m_Name: TextBackground
   m_TagString: Untagged
@@ -95,6 +96,7 @@ GameObject:
   - component: {fileID: 114669869248492528}
   - component: {fileID: 114418569517816338}
   - component: {fileID: 114922278165599382}
+  - component: {fileID: 114426433380654148}
   m_Layer: 5
   m_Name: Dialog Display
   m_TagString: Untagged
@@ -112,6 +114,7 @@ GameObject:
   - component: {fileID: 224956322941855450}
   - component: {fileID: 222483551264220770}
   - component: {fileID: 114337947473162468}
+  - component: {fileID: 114275635123253902}
   m_Layer: 5
   m_Name: SpeakerBox
   m_TagString: Untagged
@@ -343,6 +346,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114196843435445006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135373316652456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 0
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
+  IsFading: 0
 --- !u!114 &114242713055659194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,12 +382,12 @@ MonoBehaviour:
   - Trissa
   Colors:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 0.7352941, b: 0.9707909, a: 1}
-  - {r: 0.6691177, g: 0.90415823, b: 1, a: 1}
-  - {r: 1, g: 0.3897059, b: 0.9326572, a: 1}
+  - {r: 0.7352941, g: 0.81379306, b: 1, a: 1}
+  - {r: 0.79559696, g: 0.41079152, b: 0.9632353, a: 1}
+  - {r: 1, g: 0.3897059, b: 0.68012166, a: 1}
   - {r: 0.72678685, g: 1.0367647, b: 0.70134085, a: 1}
-  - {r: 0.60294116, g: 0.7042596, b: 1, a: 1}
-  - {r: 1, g: 0.825, b: 0.753, a: 1}
+  - {r: 0.50605536, g: 0.8602941, b: 0.7723452, a: 1}
+  - {r: 1, g: 0.7134734, b: 0.5955882, a: 1}
 --- !u!114 &114244377852327148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +435,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 58.85
+  m_fontSize: 62.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -454,7 +472,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 1.1194575, z: 0, w: 0}
+  m_margin: {x: 10, y: 10, z: 10, w: 0}
   m_textInfo:
     textComponent: {fileID: 114244377852327148}
     characterCount: 7
@@ -483,6 +501,21 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114275635123253902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938197008440296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 0
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
+  IsFading: 0
 --- !u!114 &114337947473162468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,6 +561,18 @@ MonoBehaviour:
     type: 2}
   dialogPanel: {fileID: 222773738437629966}
   choicesPanel: {fileID: 114676572700530558}
+--- !u!114 &114426433380654148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899849581712536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa84cfd94fa63746930950e103920c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeTime: 0.2
 --- !u!114 &114506898603397514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -760,7 +805,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.8575194}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
