@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Stratus
 {
@@ -97,7 +98,7 @@ namespace Stratus
         Button choice = Instantiate(choicePrefab) as Button;
         choice.transform.SetParent(choicesPanel.transform, false);
 
-        Text choiceText = choice.GetComponentInChildren<Text>();
+        TextMeshProUGUI choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
         choiceText.text = text;
 
         return choice;

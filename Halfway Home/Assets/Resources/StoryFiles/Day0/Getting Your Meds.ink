@@ -64,5 +64,5 @@ this is why I take my meds
 //explain the pill mechanics here
 [{player_name}] "Okay, you good"
 [Timothy] "I think so."
-[{player_name}] "well, lets head out, and let me show you how I do it."
+[{player_name}] "well, lets head out, and let me show you how I do it." {CharExit("Timothy")}
 -> END

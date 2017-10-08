@@ -16,19 +16,9 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 1042032503
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -279895988
+    m_lastTimePart2: -1999303029
     List:
-    - Name: Play
-      Path: Default Work Unit\Play
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play
-        ObjectType: 3
-      ID: 1256202815
-      Guid: 7182bd9502cbd9489288190159e2cf51
-      maxAttenuation: 0
     - Name: Play_music_placeholder_main
       Path: Default Work Unit\Play_music_placeholder_main
       PathAndIcons:
@@ -43,45 +33,45 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1045017992
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{87EF8878-8D9C-449E-98BF-2062B69FCA69}'
-    m_lastTimePsrt1: 1049704296
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A075AAEE-FD9A-42AA-809E-0B0B6F3D99CC}'
-    m_lastTimePsrt1: 1049714374
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1049689260
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -169374765
+    m_lastTimePart2: -1999303027
     List:
-    - Name: New_SoundBank
-      Path: Default Work Unit\New_SoundBank
+    - Name: HalfwaySoundbank
+      Path: Default Work Unit\HalfwaySoundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: New_SoundBank
+      - ElementName: HalfwaySoundbank
         ObjectType: 7
-      ID: -222937841
+      ID: -636833750
       Guid: ddfd17346b0a9f4d8ae27ee68e28303b
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E125663B-4CD8-424B-A59F-7E4C38191419}'
-    m_lastTimePsrt1: 1042037520
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List:
     - Name: New_Game_Parameter
       Path: Default Work Unit\New_Game_Parameter
@@ -96,11 +86,13 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{38FC77CD-C91C-4611-8DCA-5B97A45D06E2}'
-    m_lastTimePsrt1: 1049724365
-    m_lastTimePart2: -1999303030
+    m_lastTimePsrt1: -723042304
+    m_lastTimePart2: -1999303550
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject
+  - /Halfway Home_WwiseProject/Events
+  - /Halfway Home_WwiseProject/Events/Default Work Unit
   - /Halfway Home_WwiseProject/SoundBanks
   - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
