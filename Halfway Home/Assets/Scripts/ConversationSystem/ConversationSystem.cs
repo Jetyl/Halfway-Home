@@ -565,7 +565,7 @@ public class ConvReturn : ConvNode
     {
         //send event to return to the map setup
         Space.DispatchEvent(Events.ReturnToMap);
-        Debug.Log("hello");
+
     }
 
 }
