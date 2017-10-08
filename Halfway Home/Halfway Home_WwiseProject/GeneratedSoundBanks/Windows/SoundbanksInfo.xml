@@ -16,10 +16,10 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
-			<ShortName>New_SoundBank</ShortName>
-			<Path>New_SoundBank.bnk</Path>
+		<SoundBank Id="3658133546" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\HalfwaySoundbank</ObjectPath>
+			<ShortName>HalfwaySoundbank</ShortName>
+			<Path>HalfwaySoundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\Default Work Unit\Play_music_placeholder_main"/>
 			</IncludedEvents>

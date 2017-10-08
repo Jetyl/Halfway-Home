@@ -3,16 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play" ID="{95BD8271-CB02-48D9-9288-190159E2CF51}">
-					<ChildrenList>
-						<Action Name="" ID="{E75049D2-249A-4BE6-9B9E-E61322204744}" ShortID="837021389">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList/>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_music_placeholder_main" ID="{22B75101-457D-4621-B772-F73362C102E9}">
 					<ChildrenList>
 						<Action Name="" ID="{44FAF4C0-3476-439D-B933-938619419884}" ShortID="231895110">

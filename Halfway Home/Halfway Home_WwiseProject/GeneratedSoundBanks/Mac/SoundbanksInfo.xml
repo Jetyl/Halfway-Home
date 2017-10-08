@@ -16,17 +16,17 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2314467862" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Test_Bank</ObjectPath>
-			<ShortName>Test_Bank</ShortName>
-			<Path>Test_Bank.bnk</Path>
+		<SoundBank Id="3658133546" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\HalfwaySoundbank</ObjectPath>
+			<ShortName>HalfwaySoundbank</ShortName>
+			<Path>HalfwaySoundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1722154426" Name="Play_SoftDing" ObjectPath="\Events\Default Work Unit\Play_SoftDing"/>
+				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\Default Work Unit\Play_music_placeholder_main"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="360830936" Language="SFX">
-					<ShortName>SoftDing.wav</ShortName>
-					<Path>SFX\SoftDing_F17FB28C.wem</Path>
+				<File Id="235618933" Language="SFX">
+					<ShortName>barble bapkins 1.6.wav</ShortName>
+					<Path>SFX\barble bapkins 1.6_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
