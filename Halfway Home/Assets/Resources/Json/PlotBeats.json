@@ -66,6 +66,10 @@
    {
     "Name" : "In a Scene",
     "Type" : 1
+   },
+   {
+    "Name" : "Debug Mode",
+    "Type" : 1
    }
   ]
  },

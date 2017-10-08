@@ -9,8 +9,7 @@ public class MapDisplay : MonoBehaviour
 
     //script for handling the map logic of the game.
     List<ConvMap> ChoicesAvalible;
-
-    public bool Debug;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -18,9 +17,8 @@ public class MapDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
 
         Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
-
-        if (!Debug)
-            StartCoroutine(DelayStart());
+        
+        StartCoroutine(DelayStart());
 
     }
 	
