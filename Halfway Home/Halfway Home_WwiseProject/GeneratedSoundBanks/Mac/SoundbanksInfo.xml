@@ -11,6 +11,20 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="576110586" Language="SFX">
+			<ObjectPath>\SoundBanks\TestBanks\Test1</ObjectPath>
+			<ShortName>Test1</ShortName>
+			<Path>Test1.bnk</Path>
+			<IncludedEvents>
+				<Event Id="952529443" Name="Play_City_of_Tears" ObjectPath="\Events\TestEvents\Play_City_of_Tears"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="501377540" Language="SFX">
+					<ShortName>City of Tears.wav</ShortName>
+					<Path>SFX\City of Tears_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>

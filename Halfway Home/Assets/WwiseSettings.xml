@@ -2,8 +2,8 @@
 <WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <WwiseProjectPath>../Halfway Home_WwiseProject/Halfway Home_WwiseProject.wproj</WwiseProjectPath>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-  <CreateWwiseGlobal>false</CreateWwiseGlobal>
-  <CreateWwiseListener>false</CreateWwiseListener>
+  <CreateWwiseGlobal>true</CreateWwiseGlobal>
+  <CreateWwiseListener>true</CreateWwiseListener>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2017.1.1.6340</WwiseInstallationPathWindows>
   <WwiseInstallationPathMac>null</WwiseInstallationPathMac>

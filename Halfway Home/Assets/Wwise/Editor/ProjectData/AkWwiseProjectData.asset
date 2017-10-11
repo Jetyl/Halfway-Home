@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99fbf99dd83fea14bb6f7f3843fa4ba1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c3e4db0df54bc645bbfb87a53f2e8c4, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -279895988
-    m_lastTimePart2: -1999303029
+    m_lastTimePsrt1: -486104612
+    m_lastTimePart2: -1999302416
     List:
     - Name: Play_music_placeholder_main
       Path: Default Work Unit\Play_music_placeholder_main
@@ -29,33 +29,49 @@ MonoBehaviour:
       ID: 1259498987
       Guid: 0151b7227d452146b772f73362c102e9
       maxAttenuation: 0
+  - PhysicalPath: Events\TestEvents.wwu
+    ParentPhysicalPath: 
+    Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
+    m_lastTimePsrt1: -1323350784
+    m_lastTimePart2: -1999302795
+    List:
+    - Name: Play_City_of_Tears
+      Path: TestEvents\Play_City_of_Tears
+      PathAndIcons:
+      - ElementName: TestEvents
+        ObjectType: 12
+      - ElementName: Play_City_of_Tears
+        ObjectType: 3
+      ID: 952529443
+      Guid: 96d8f07f006c5d4c99302effe7fc6a4c
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -723042304
-    m_lastTimePart2: -1999303550
+    Guid: '{2DB1F089-B2E5-4384-962F-9B2240237EDA}'
+    m_lastTimePsrt1: 542381063
+    m_lastTimePart2: -1999302418
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{87EF8878-8D9C-449E-98BF-2062B69FCA69}'
-    m_lastTimePsrt1: -723042304
-    m_lastTimePart2: -1999303550
+    Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
+    m_lastTimePsrt1: 543502613
+    m_lastTimePart2: -1999302418
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{A075AAEE-FD9A-42AA-809E-0B0B6F3D99CC}'
-    m_lastTimePsrt1: -723042304
-    m_lastTimePart2: -1999303550
+    Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
+    m_lastTimePsrt1: 543011305
+    m_lastTimePart2: -1999302418
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -169374765
-    m_lastTimePart2: -1999303027
+    m_lastTimePsrt1: -1727497609
+    m_lastTimePart2: -1999302416
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -66,35 +82,40 @@ MonoBehaviour:
         ObjectType: 7
       ID: -636833750
       Guid: ddfd17346b0a9f4d8ae27ee68e28303b
+  - PhysicalPath: SoundBanks\TestBanks.wwu
+    ParentPhysicalPath: 
+    Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
+    m_lastTimePsrt1: -803350784
+    m_lastTimePart2: -1999302795
+    List:
+    - Name: Test1
+      Path: TestBanks\Test1
+      PathAndIcons:
+      - ElementName: TestBanks
+        ObjectType: 12
+      - ElementName: Test1
+        ObjectType: 7
+      ID: 576110586
+      Guid: 6dec1f5404fe8549a3e4e1b2d39c4ba7
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{E125663B-4CD8-424B-A59F-7E4C38191419}'
-    m_lastTimePsrt1: -723042304
-    m_lastTimePart2: -1999303550
-    List:
-    - Name: New_Game_Parameter
-      Path: Default Work Unit\New_Game_Parameter
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: New_Game_Parameter
-        ObjectType: 13
-      ID: -623829214
-      Guid: 3a7a0096abecc14294134765b955c0dd
+    Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
+    m_lastTimePsrt1: 542916356
+    m_lastTimePart2: -1999302418
+    List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{38FC77CD-C91C-4611-8DCA-5B97A45D06E2}'
-    m_lastTimePsrt1: -723042304
-    m_lastTimePart2: -1999303550
+    Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
+    m_lastTimePsrt1: 542966181
+    m_lastTimePart2: -1999302418
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject
   - /Halfway Home_WwiseProject/Events
   - /Halfway Home_WwiseProject/Events/Default Work Unit
-  - /Halfway Home_WwiseProject/SoundBanks
-  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
+  - /Halfway Home_WwiseProject/Events/TestEvents
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

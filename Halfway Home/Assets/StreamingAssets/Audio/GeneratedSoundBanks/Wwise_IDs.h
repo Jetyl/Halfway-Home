@@ -13,18 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_CITY_OF_TEARS = 952529443U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
     } // namespace EVENTS
-
-    namespace GAME_PARAMETERS
-    {
-        static const AkUniqueID NEW_GAME_PARAMETER = 3671138082U;
-    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID HALFWAYSOUNDBANK = 3658133546U;
+        static const AkUniqueID TEST1 = 576110586U;
     } // namespace BANKS
 
     namespace BUSSES

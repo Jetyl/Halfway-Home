@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{84803C70-BD23-4240-A802-2302A6DAD0A3}" SchemaVersion="80">
 	<Conversions>
-		<WorkUnit Name="Default Work Unit" ID="{AD9E6323-7E49-446F-8CD9-A0266885C50C}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{84803C70-BD23-4240-A802-2302A6DAD0A3}" PersistMode="Standalone">
 			<ChildrenList>
 				<Conversion Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}">
 					<PropertyList>
@@ -38,10 +38,10 @@
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{8B86C11D-0E78-4A44-96A0-C665ECA92C74}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{60869D76-C28B-4EEF-A3E3-1BE619FAD6D6}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{6547A705-F69A-418F-901F-9F1079B91976}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{250D31B1-A46E-44A8-9C53-B2CFA22859E1}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

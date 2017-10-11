@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="Project" SchemaVersion="80" WwiseVersion="v2017.1.1" WwiseBuild="6340">
 	<ProjectInfo>
-		<Project Name="Halfway Home_WwiseProject" ID="{313D35A6-D94F-417E-943B-FF906B326F31}">
+		<Project Name="Halfway Home_WwiseProject" ID="{DB9E7F1A-47E5-4CBB-94C7-2F0AA57273EC}">
 			<Platforms>
-				<Platform Name="Mac" ReferencePlatform="Mac" ID="{9F9BE587-4446-4008-89CF-2ABF522E2D8D}" />
-				<Platform Name="Windows" ReferencePlatform="Windows" ID="{A478A2DE-0336-48EB-B1C3-6621DA301D33}" />
+				<Platform Name="Mac" ReferencePlatform="Mac" ID="{4ACCCFD1-9CF7-441F-ABC3-CEC0DAAD0441}" />
+				<Platform Name="Windows" ReferencePlatform="Windows" ID="{B5FD0CE7-D49D-4DF5-9D4F-E1E460C9235A}" />
 			</Platforms>
 			<LanguageList>
-				<Language Name="English(US)" ID="{4AD9C877-891D-403F-8A43-31C7B0A49D80}" />
-				<Language Name="External" ID="{336CBB82-8DEB-4013-8C75-2979FA6F4222}" />
-				<Language Name="Mixed" ID="{73567E41-E108-4197-B340-5CA4584FF8F3}" />
-				<Language Name="SFX" ID="{2831A988-8A10-4811-BFED-BADA6E2438F2}" />
+				<Language Name="English(US)" ID="{36940F9A-43D7-451A-AD43-1ABC6511B404}" />
+				<Language Name="External" ID="{EBFDF73E-2461-4727-BCB5-94C9A6BF49B7}" />
+				<Language Name="Mixed" ID="{28CA73B9-4B73-4256-AB9A-B28BFB1DE402}" />
+				<Language Name="SFX" ID="{E6722657-1744-4DE5-B1D1-EE2F3FBD5CF3}" />
 			</LanguageList>
 			<PropertyList>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -9648,7 +9648,7 @@
 					<Comment></Comment>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{B78BB593-6159-49CB-A3F0-28B4B8DC6194}">
+							<Curve Name="" ID="{15CDFFA0-A613-438A-B1AF-D1FCA57DA406}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3" />
 								</PropertyList>
@@ -9669,7 +9669,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{A8309C25-2EEE-427D-B271-5A39D70B72B6}">
+							<Curve Name="" ID="{DEF2FC62-ABC2-45C0-B20D-D43CB5730F3F}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9690,7 +9690,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{0A1AA32D-DFD9-4C2C-8DA0-D1A2E9312613}">
+							<Curve Name="" ID="{020E870D-CFED-4762-B564-02EC667C7ACE}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9711,7 +9711,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{51E7B4F2-ED44-4B38-BF6C-DACD5E8B140A}">
+							<Curve Name="" ID="{01352FBA-00B0-4CDD-BB1C-36DEE4A4C1D1}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3" />
 								</PropertyList>
@@ -9732,7 +9732,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{10DD6E12-2C18-416A-B864-ACF12A068AB3}">
+							<Curve Name="" ID="{4CE6C5C5-B980-4036-AC61-64050ACCF23F}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9753,7 +9753,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{B400279A-515C-4757-BEA3-4675AB58693D}">
+							<Curve Name="" ID="{073D06BB-B61D-4FF4-8ED1-8828C90FFABE}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
