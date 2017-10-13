@@ -91,4 +91,5 @@ Slumberland becons me back to it, but I should be getting up about now.
 *[Stay in Bed]
 	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("SleptIn", true)}
 
-- -> END
+- Thanks for playing! This is the end of the build. We have no quit function, so please hit alt+F4 to close.
+-> END

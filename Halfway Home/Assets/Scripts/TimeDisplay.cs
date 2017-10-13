@@ -18,6 +18,8 @@ public class TimeDisplay : MonoBehaviour
 
         Space.Connect<DefaultEvent>(Events.ReturnToMap, UpdateDisplay);
 
+    UpdateDisplay(new DefaultEvent());
+
 	}
 	
 	// Update is called once per frame
