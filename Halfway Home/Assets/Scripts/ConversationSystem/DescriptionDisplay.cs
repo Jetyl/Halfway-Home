@@ -22,6 +22,7 @@ public class DescriptionDisplay : MonoBehaviour
     string Line;
   
     bool AutoOnLast;
+    bool Paused = false;
     
 
     private void Awake()
@@ -51,12 +52,18 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DescriptionEvent>(Events.Description, UpdateDescription);
         Space.Connect<DefaultEvent>(Events.FinishedAutoType, OnFinishedTyping);
         Space.Connect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
+        Space.Connect<DefaultEvent>(Events.Pause, OnPause);
+        Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
+
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         if (!Active)
+            return;
+
+        if (Paused)
             return;
 
         if (Input.GetMouseButtonDown(0) == true)
@@ -173,8 +180,14 @@ public class DescriptionDisplay : MonoBehaviour
             //NextLine.SetBool("Play", true);
     }
 
-
-    
+    void OnPause(DefaultEvent eventdata)
+    {
+        Paused = true;
+    }
+    void OnUnPause(DefaultEvent eventdata)
+    {
+        Paused = false;
+    }
 
 }
 

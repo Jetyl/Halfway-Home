@@ -37,7 +37,11 @@ public class AutoType : MonoBehaviour
         EventSystem.ConnectEvent<AutoTypeEvent>(gameObject, Events.AutoType, TypingText);
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.SkipTyping, SkipTyping);
         DefaultVolume = audios.volume;
-           
+
+        Space.Connect<DefaultEvent>(Events.Pause, OnPause);
+        Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
+
+
     }
 
 
@@ -49,6 +53,15 @@ public class AutoType : MonoBehaviour
         Text.text = "";
     }
 
+    void OnPause(DefaultEvent eventdata)
+    {
+        StopCoroutine(typing);
+    }
+
+    void OnUnPause(DefaultEvent eventdata)
+    {
+        typing = StartCoroutine(TypeText(Text.maxVisibleCharacters));
+    }
 
     public void TypingText(AutoTypeEvent eventdata)
     {
@@ -57,7 +70,7 @@ public class AutoType : MonoBehaviour
         PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");
         letterPause = 1 / (DefaultPauseSpeed * PauseSpeedMultiplier);
         UpdateSpeed = TextParser.ExtractTextSpeed(ref message);
-        typing = StartCoroutine(TypeText());
+        typing = StartCoroutine(TypeText(0));
     }
 
     public void SkipTyping(DefaultEvent eventdata)
@@ -68,9 +81,9 @@ public class AutoType : MonoBehaviour
         Space.DispatchEvent(Events.FinishedAutoType);
     }
 
-    IEnumerator TypeText()
+    IEnumerator TypeText(int visible)
     {
-        Text.maxVisibleCharacters = 0;
+        Text.maxVisibleCharacters = visible;
         Text.text = message;
         int Skip = 0;
         int length = message.Length;
@@ -137,45 +150,7 @@ public class AutoType : MonoBehaviour
 
         audios.Stop();
         Space.DispatchEvent(Events.FinishedAutoType);
-
-        /*
-        char[] letters = message.ToCharArray();
-
-        for (int i = 0; i < letters.Length; ++ i)
-        {
-            //if the
-            if (letters[i] == '<')
-            {
-                
-
-                int end = TextParser.SkipRichText(letters, i);
-
-                for (int j = i; j <= end; ++j)
-                {
-                    Text.text += letters[j];
-                }
-                i = end;
-                continue;
-            }
-
-            Text.text += letters[i];
-
-            if(!audios.isPlaying)
-            {
-                audios.PlayOneShot(sound);
-                
-            }
-            
-
-            if (Text.text == message)
-            {
-                //dispatch the autype finish event here
-                Space.DispatchEvent(Events.FinishedAutoType);
-            }
-
-            yield return new WaitForSeconds(letterPause);
-        }
-        */
+        
     }
 
 

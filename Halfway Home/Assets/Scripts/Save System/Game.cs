@@ -164,7 +164,7 @@ public class Game
         Amount = CurrentTimeBlock;
 
         Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 6 * Amount);
-
+        Space.DispatchEvent(Events.StatChange);
     }
 
     public bool KnowsWhereAbouts(string character)
