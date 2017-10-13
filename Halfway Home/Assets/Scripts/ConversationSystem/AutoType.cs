@@ -55,7 +55,8 @@ public class AutoType : MonoBehaviour
 
     void OnPause(DefaultEvent eventdata)
     {
-        StopCoroutine(typing);
+        if (typing != null)
+            StopCoroutine(typing);
     }
 
     void OnUnPause(DefaultEvent eventdata)

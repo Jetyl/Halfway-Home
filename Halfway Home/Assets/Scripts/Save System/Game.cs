@@ -31,7 +31,7 @@ public class Game
 
     public bool InCurrentStory;
 
-    public TextAsset CurrentStory;
+    //public TextAsset CurrentStory;
 
     public int CurrentNode;
 

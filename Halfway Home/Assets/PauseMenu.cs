@@ -8,8 +8,10 @@ public class PauseMenu : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
-	}
+        gameObject.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -22,12 +24,12 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    void Continue()
+    public void Continue()
     {
         Space.DispatchEvent(Events.UnPause);
     }
 
-    void Quit()
+    public void Quit()
     {
         SaveLoad.Save();
         Application.Quit();
