@@ -30,7 +30,7 @@ public class Personality
     int DelusionValue = 1;
 
     int FatigueValue = 0;
-
+    
     int StressValue = 1;
     int StressThreshold1 = 20; //value of stress, where it will begin decrimetting social stats by 1
     int StressThreshold2 = 50; //value of stress, where it will begin decrimetting social stats by 2
@@ -39,6 +39,7 @@ public class Personality
 
     int SocialThreshold = 50;
     int MaxSocialGrowth = 3; //maximum number of tiers the player can get normally (not counting character growths)
+    int MaxBonusTiers = 2;
 
     int MaxWellbeingValue = 100;
 
@@ -78,11 +79,11 @@ public class Personality
         switch (stat)
         {
             case Social.Awareness:
-                return AwarenessTier;
+                return AwarenessTier + (AwarenessValue / SocialThreshold);
             case Social.Expression:
-                return ExpressionTier;
+                return ExpressionTier + (ExpressionValue / SocialThreshold);
             case Social.Grace:
-                return GraceTier;
+                return GraceTier + (GraceValue / SocialThreshold);
             default:
                 return 0;
         }
@@ -96,13 +97,13 @@ public class Personality
         switch (stat)
         {
             case Social.Awareness:
-                socialstat = AwarenessTier - stressReduction;
+                socialstat = AwarenessTier + (AwarenessValue/SocialThreshold) - stressReduction;
                 break;
             case Social.Expression:
-                socialstat = ExpressionTier - stressReduction;
+                socialstat = ExpressionTier + (GraceValue / SocialThreshold) - stressReduction;
                 break;
             case Social.Grace:
-                socialstat = GraceTier - stressReduction;
+                socialstat = GraceTier + (GraceValue / SocialThreshold) - stressReduction;
                 break;
             default:
                 return 0;
@@ -114,6 +115,57 @@ public class Personality
         return socialstat;
     }
 
+    public void SetSocialStat(Social stat, int Value)
+    {
+        switch (stat)
+        {
+            case Social.Awareness:
+
+                //AwarenessValue = Value;
+                if(Value <= MaxBonusTiers)
+                AwarenessTier = Value;// / SocialThreshold;
+                else
+                {
+                    AwarenessTier = MaxBonusTiers;
+                    AwarenessValue = (Value - MaxBonusTiers) * SocialThreshold;
+                }
+                
+                break;
+            case Social.Expression:
+
+
+                //ExpressionTier = Value;
+                if (Value <= MaxBonusTiers)
+                    ExpressionTier = Value;// / SocialThreshold;
+                else
+                {
+                    ExpressionTier = MaxBonusTiers;
+                    ExpressionValue = (Value - MaxBonusTiers) * SocialThreshold;
+
+                }
+                //ExpressionTier = Value / SocialThreshold;
+
+                break;
+            case Social.Grace:
+
+                //GraceTier = Value;
+                if (Value <= MaxBonusTiers)
+                    GraceTier = Value;// / SocialThreshold;
+                else
+                {
+                    GraceTier = MaxBonusTiers;
+                    GraceValue = (Value - MaxBonusTiers) * SocialThreshold;
+
+                }
+                //GraceTier = Value / SocialThreshold;
+
+                break;
+            default:
+                break;
+        }
+
+    }
+
     public void IncrementSocialStat(Social stat, int addition)
     {
         if (addition < 0)
@@ -122,35 +174,26 @@ public class Personality
         switch (stat)
         {
             case Social.Awareness:
-                if (AwarenessTier >= MaxSocialGrowth)
+                if ((AwarenessValue/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
                 AwarenessValue += addition;
-                if(AwarenessValue >= SocialThreshold)
-                {
-                    AwarenessValue = 0;
-                    IncrementSocialTier(stat);
-                }
+                
                 break;
             case Social.Expression:
-                if (ExpressionTier >= MaxSocialGrowth)
+                if ((ExpressionTier/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
                 ExpressionValue += addition;
-                if (ExpressionValue >= SocialThreshold)
-                {
-                    ExpressionValue = 0;
-                    IncrementSocialTier(stat);
-                }
+                
                 break;
             case Social.Grace:
-                if (GraceTier >= MaxSocialGrowth)
+                if ((GraceTier/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
                 GraceValue += addition;
-                if (GraceValue >= SocialThreshold)
+                if (GraceValue >= SocialThreshold * GraceTier)
                 {
-                    GraceValue = 0;
                     IncrementSocialTier(stat);
                 }
                 break;
@@ -167,18 +210,18 @@ public class Personality
         {
             case Social.Awareness:
                 AwarenessTier += 1;
-                if (AwarenessTier > 5)
-                    AwarenessTier = 5;
+                if (AwarenessTier > MaxBonusTiers)
+                    AwarenessTier = MaxBonusTiers;
                 break;
             case Social.Expression:
                 ExpressionTier += 1;
-                if (ExpressionTier > 5)
-                    ExpressionTier = 5;
+                if (ExpressionTier > MaxBonusTiers)
+                    ExpressionTier = MaxBonusTiers;
                 break;
             case Social.Grace:
                 GraceTier += 1;
-                if (GraceTier > 5)
-                    GraceTier = 5;
+                if (GraceTier > MaxBonusTiers)
+                    GraceTier = MaxBonusTiers;
                 break;
             default:
                 break;
@@ -210,6 +253,30 @@ public class Personality
                 return StressValue;
             default:
                 return 0;
+        }
+    }
+
+    public void SetWellbeingStat(Wellbeing stat, int value)
+    {
+
+        if (value < 0)
+            value = 0;
+        if (value > MaxWellbeingValue)
+            value = MaxWellbeingValue;
+
+        switch (stat)
+        {
+            case Wellbeing.Delusion:
+                DelusionValue = value;
+                break;
+            case Wellbeing.Fatigue:
+                FatigueValue = value;
+                break;
+            case Wellbeing.Stress:
+                StressValue = value;
+                break;
+            default:
+                break;
         }
     }
 

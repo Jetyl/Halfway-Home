@@ -15,12 +15,21 @@ public class GameStartUp : MonoBehaviour
 
     public bool DebugMode;
 
+    public int StartDelusion;
+    public int StartStress;
+    public int StartFatigue;
+
+
     [Range(0,7)]
     public int DebugDay;
     [Range(0, 23)]
     public int DebugHour;
     [Range(1, 4)]
     public int DebugWeek;
+
+    public int DebugExpression;
+    public int DebugGrace;
+    public int DebugAwareness;
 
     public List<ProgressPoint> DebugValues;
 
@@ -42,11 +51,10 @@ public class GameStartUp : MonoBehaviour
         if (Game.current == null)
         {
 
-          Game.current = new Game();
-          Game.current.Day = StartDay;
-          Game.current.Hour = StartHour;
+            Game.current = new Game();
+            SetStartValues();
             //Game.current.Progress.SetValue<bool>("Tutorial", true);
-          StartCoroutine(DelayStart(1));
+            StartCoroutine(DelayStart(1));
         }
 
     //Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
@@ -59,10 +67,9 @@ public class GameStartUp : MonoBehaviour
         {
             
             Game.current = new Game();
-            Game.current.Day = DebugDay;
-            Game.current.Hour = DebugHour;
-            Game.current.Progress.SetValue("Week", DebugWeek);
-            Game.current.Progress.SetValue("Debug Mode", true);
+            
+            SetStartValues();
+            SetDebugValues();
             foreach(var point in DebugValues)
             {
                 Game.current.Progress.UpdateProgress(point.ProgressName, point);
@@ -70,6 +77,26 @@ public class GameStartUp : MonoBehaviour
             StartCoroutine(DelayStart(2));
 
         }
+    }
+
+    void SetStartValues()
+    {
+        Game.current.Day = StartDay;
+        Game.current.Hour = StartHour;
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Delusion, StartDelusion);
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Fatigue, StartFatigue);
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Stress, StartStress);
+    }
+
+    void SetDebugValues()
+    {
+        Game.current.Day = DebugDay;
+        Game.current.Hour = DebugHour;
+        Game.current.Progress.SetValue("Week", DebugWeek);
+        Game.current.Progress.SetValue("Debug Mode", true);
+        Game.current.Self.SetSocialStat(Personality.Social.Awareness, DebugAwareness);
+        Game.current.Self.SetSocialStat(Personality.Social.Grace, DebugGrace);
+        Game.current.Self.SetSocialStat(Personality.Social.Expression, DebugExpression);
     }
 
 

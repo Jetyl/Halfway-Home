@@ -110,6 +110,8 @@ public class Events
     public static readonly String CloseImage = "CloseImageEvent";
     public static readonly String ScreenTint = "ScreenTintEvent";
     public static readonly String Tooltip = "TooltipEvent";
+    public static readonly String AddStat = "AddStatEvent";
+    public static readonly String StatChange = "StatChangeEvent";
     
     //a null event. no one should listen to this
     public static readonly String Null = "NullEvent";

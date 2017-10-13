@@ -16,8 +16,8 @@ public class WellbeingStatDisplay : MonoBehaviour
     void Start ()
     {
 
-
-        UpdateStats();
+        Space.Connect<DefaultEvent>(Events.StatChange, UpdateStats);
+        UpdateStats(new DefaultEvent());
 	}
 	
 	// Update is called once per frame
@@ -26,7 +26,7 @@ public class WellbeingStatDisplay : MonoBehaviour
 		
 	}
 
-    void UpdateStats()
+    void UpdateStats(DefaultEvent eventdata)
     {
         int stat = Game.current.Self.GetWellbingStat(WellnessStat);
         float percent = (float)stat / 100f;

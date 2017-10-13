@@ -19,6 +19,10 @@ public class SocialStatDisplay : MonoBehaviour
     {
         text = GetComponent<TextMeshProUGUI>();
         NormalColor = text.color;
+        UpdateStats(new DefaultEvent());
+
+        Space.Connect<DefaultEvent>(Events.StatChange, UpdateStats);
+
 	}
 	
 	// Update is called once per frame
@@ -26,8 +30,9 @@ public class SocialStatDisplay : MonoBehaviour
     {
 		
 	}
+    
 
-    void UpdateStats()
+    void UpdateStats(DefaultEvent eventdata)
     {
         int stat = Game.current.Self.GetModifiedSocialStat(SocialStat);
         text.text = SocialTierVerbs[stat];
