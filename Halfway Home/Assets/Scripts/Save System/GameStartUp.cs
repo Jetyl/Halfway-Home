@@ -53,7 +53,7 @@ public class GameStartUp : MonoBehaviour
 
             Game.current = new Game();
             SetStartValues();
-            //Game.current.Progress.SetValue<bool>("Tutorial", true);
+            Game.current.Progress.SetValue<bool>("Tutorial", true);
             StartCoroutine(DelayStart(1));
         }
 

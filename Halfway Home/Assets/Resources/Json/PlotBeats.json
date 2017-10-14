@@ -70,6 +70,10 @@
    {
     "Name" : "Debug Mode",
     "Type" : 1
+   },
+   {
+    "Name" : "LoadSavedGame",
+    "Type" : 1
    }
   ]
  },

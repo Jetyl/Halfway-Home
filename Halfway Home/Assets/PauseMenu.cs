@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
 	void Update ()
     {
 		
-	  }
+	}
 
     public void Continue()
     {

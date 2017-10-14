@@ -61,7 +61,8 @@ public class AutoType : MonoBehaviour
 
     void OnUnPause(DefaultEvent eventdata)
     {
-        typing = StartCoroutine(TypeText(Text.maxVisibleCharacters));
+        if(Text.IsActive())
+            typing = StartCoroutine(TypeText(Text.maxVisibleCharacters));
     }
 
     public void TypingText(AutoTypeEvent eventdata)
