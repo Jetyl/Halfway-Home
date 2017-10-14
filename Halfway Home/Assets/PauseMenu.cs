@@ -8,8 +8,6 @@ public class PauseMenu : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        
-        Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         gameObject.SetActive(false);
     }
 	
@@ -17,12 +15,7 @@ public class PauseMenu : MonoBehaviour
 	void Update ()
     {
 		
-	}
-
-    void OnPause(DefaultEvent eventdata)
-    {
-        gameObject.SetActive(true);
-    }
+	  }
 
     public void Continue()
     {
