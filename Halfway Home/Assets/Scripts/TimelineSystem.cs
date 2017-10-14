@@ -69,6 +69,7 @@ public class TimelineSystem : MonoBehaviour
 
     public void StoryOver(DefaultEvent eventdata)
     {
+        Game.current.InCurrentStory = false;
         NextNode(CurrentNode.Destination);
 
     }

@@ -136,6 +136,9 @@ public class TimelineEditor : BaseNodeEditor
             case NodeTypes.InkNode:
                 nodes.Add(new InkNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
                 break;
+            case NodeTypes.LoadNode:
+                nodes.Add(new LoadNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                break;
             default:
                 break;
         }
@@ -257,6 +260,7 @@ public class TimelineEditor : BaseNodeEditor
             genericMenu.AddItem(new GUIContent("Add Map node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MapNode));
             genericMenu.AddItem(new GUIContent("Add Return node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ToMapNode));
             genericMenu.AddItem(new GUIContent("Add Ink node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InkNode));
+            genericMenu.AddItem(new GUIContent("Add Load node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LoadNode));
 
 
             genericMenu.AddItem(new GUIContent("Progress/Add Progress node"), false, () => OnClickAddNode(mousePosition));
@@ -327,6 +331,9 @@ public class TimelineEditor : BaseNodeEditor
                     break;
                 case NodeTypes.InkNode:
                     nodes.Add(new InkNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    break;
+                case NodeTypes.LoadNode:
+                    nodes.Add(new LoadNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
                     break;
                 default:
                     break;
@@ -651,6 +658,11 @@ public class TimelineEditor : BaseNodeEditor
                     }
                     break;
 
+                case NodeTypes.LoadNode:
+
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((LoadNode)node).NextID);
+                    break;
                 default:
                     break;
             }

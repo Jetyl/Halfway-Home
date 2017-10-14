@@ -20,7 +20,8 @@ public enum NodeTypes
     MultiProgressNode = 10,
     InkNode = 11,
     MapNode = 12,
-    ToMapNode = 13
+    ToMapNode = 13,
+    LoadNode = 14
 }
 
 
@@ -103,6 +104,9 @@ public class ConversationSystem
                     break;
                 case NodeTypes.InkNode:
                     Nodes.Add(new ConvInk(conversation[i]));
+                    break;
+                case NodeTypes.LoadNode:
+                    Nodes.Add(new ConvLoad(conversation[i]));
                     break;
                 default:
                     break;
@@ -579,14 +583,17 @@ public class ConvInk : ConvNode
 {
 
     TextAsset InkData;
+    string story;
 
     public ConvInk(JsonData key)
     {
         ID = (int)key["ID"];
         Destination = (int)key["NextID"];
+        
         if (key["Story"] != null)
         {
-            InkData = Resources.Load((string)key["Story"]) as TextAsset;
+            story = (string)key["Story"];
+            InkData = Resources.Load(story) as TextAsset;
 
 
         }
@@ -595,14 +602,42 @@ public class ConvInk : ConvNode
 
     public override void CallAction()
     {
-        
+        Game.current.InCurrentStory = true;
+        Game.current.CurrentStory = story;
+        Game.current.CurrentNode = Destination;
         Space.DispatchEvent(Events.NewStory, new StoryEvent(InkData));
 
     }
 
 }
 
+public class ConvLoad : ConvNode
+{
 
+    
+    public ConvLoad(JsonData data)
+    {
+        ID = (int)data["ID"];
+
+    }
+
+    public override void CallAction()
+    {
+        
+        if(Game.current.InCurrentStory)
+        {
+            Destination = Game.current.CurrentNode;
+            var InkData = Resources.Load(Game.current.CurrentStory) as TextAsset;
+            Space.DispatchEvent(Events.NewStory, new StoryEvent(InkData));
+        }
+        else
+        {
+            Space.DispatchEvent(Events.ReturnToMap);
+        }
+
+    }
+
+}
 
 
 /**

@@ -38,14 +38,14 @@ namespace HalfwayHome
     private class StatAccess
     {
       public string name;
-      public void Set(int value) => Game.current.Progress.SetValue(name, value);
-      public int Get() => Game.current.Progress.GetIntValue(name);
+      public void Set(int value) => Game.current.Self.SetStat(name, value);
+      public int Get() => Game.current.Self.GetStat(name);
     }
 
     [Header("Story")]
     public HalfwayHomeStoryReader reader;
 
-    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion", "week" };
+    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion" };
     private Dictionary<string, StatAccess> stats = new Dictionary<string, StatAccess>();
 
     void Start()

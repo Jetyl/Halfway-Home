@@ -74,6 +74,28 @@ public class Personality
 
     }
 
+    public void SetStat(string statName, int value)
+    {
+        for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Wellbeing), (Wellbeing)i) == statName)
+            {
+                SetWellbeingStat((Wellbeing)i, value);
+            }
+
+        }
+
+        for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Social), (Social)i) == statName)
+            {
+                 SetSocialStat((Social)i, value);
+            }
+
+        }
+        
+    }
+
 
     public int GetTrueSocialStat(Social stat)
     {

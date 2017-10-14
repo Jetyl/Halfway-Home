@@ -31,7 +31,7 @@ public class Game
 
     public bool InCurrentStory;
 
-    //public TextAsset CurrentStory;
+    public string CurrentStory;
 
     public int CurrentNode;
 
@@ -117,6 +117,11 @@ public class Game
 
     public void SaveGame()
     {
+        if(InCurrentStory)
+        {
+
+        }
+
 
     }
 

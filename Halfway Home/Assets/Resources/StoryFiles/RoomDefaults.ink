@@ -47,6 +47,10 @@ EXTERNAL SetValue(name, values)
 === Commons ===
 // Reduce Delusion
 // Ground yourself in the cozy heart of the House.
+~AlterWellbeing("Delusion", -1)
+~AddSocialPoint("Grace", "Minor")
+~AddSocialTier("Grace")
+
 -> END
 
 === FrontDesk ===
