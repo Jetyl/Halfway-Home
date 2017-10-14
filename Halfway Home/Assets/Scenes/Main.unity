@@ -3274,7 +3274,7 @@ Prefab:
     - target: {fileID: 114732694127020138, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224863705517381778, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3399,12 +3399,12 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 288
+      value: 324.42627
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -227.00269
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3414,7 +3414,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3429,12 +3429,12 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 288
+      value: 324.42627
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -377.0027
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3444,7 +3444,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1925219769184150, guid: ed9a2b18bdf776741ab96361c8c5b2fc, type: 2}
       propertyPath: m_IsActive
@@ -3489,6 +3489,26 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732694127020138, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732694127020138, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1172190899}
+    - target: {fileID: 114732694127020138, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732694127020138, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed9a2b18bdf776741ab96361c8c5b2fc, type: 2}
@@ -6576,7 +6596,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993484430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -9646,10 +9666,10 @@ MonoBehaviour:
   valueGuid: 0151b7227d452146b772f73362c102e9
   eventID: 1259498987
   soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
+  enableActionOnEvent: 1
+  actionOnEventType: 1
   curveInterpolation: 4
-  transitionDuration: 0
+  transitionDuration: 3.6
   m_callbackData: {fileID: 0}
   playingId: 0
   multiPositionTypeLabel: 0
@@ -9760,6 +9780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a408ee497204da4ea933c2180c5fe44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuObject: {fileID: 1172190899}
+  HackySoundThing: {fileID: 1471211860}
 --- !u!1 &1527779405
 GameObject:
   m_ObjectHideFlags: 0
