@@ -112,6 +112,8 @@ public class TimelineSystem : MonoBehaviour
             return false;
         if (CurrentNode is ConvInk)
             return false;
+        if (CurrentNode is ConvLoad)
+            return false;
         return true;
     }
 

@@ -7,7 +7,7 @@ using System;
 
 public class DescriptionDisplay : MonoBehaviour
 {
-    private static DescriptionDisplay _instance;
+    
 
     Animator anime;
     AutoType Decription;
@@ -23,21 +23,8 @@ public class DescriptionDisplay : MonoBehaviour
   
     bool AutoOnLast;
     bool Paused = false;
-    
 
-    private void Awake()
-    {
-
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+    bool Skipping = false;
 
     // Use this for initialization
     void Start ()
@@ -66,7 +53,18 @@ public class DescriptionDisplay : MonoBehaviour
         if (Paused)
             return;
 
-        if (Input.GetMouseButtonDown(0) == true)
+        if(Input.GetButtonDown("Skip"))
+        {
+            Skipping = !Skipping;
+            Decription.Skipping = Skipping;
+        }
+
+        if(Skipping)
+        {
+            if (isFinished)
+                Finished();
+        }
+        else if (Input.GetMouseButtonDown(0) == true)
         {
 
             
@@ -84,10 +82,6 @@ public class DescriptionDisplay : MonoBehaviour
 
             Finished();
             
-
-
-            
-
         }
         
 
@@ -118,7 +112,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         gameObject.SetActive(true);
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
-        
+
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
 
@@ -140,7 +134,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     void CloseDisplay (DefaultEvent eventdata)
     {
-
+        print("off");
         //Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
         anime.SetBool("IsUp", false);
         Active = false;

@@ -23,7 +23,7 @@ public class DisableEnableDisplay : MonoBehaviour
     void Disable(DefaultEvent eventdata)
     {
         gameObject.SetActive(false);
-
+        
         //for(int i = 0; i < transform.childCount; ++i)
         //{
             //transform.GetChild(i).gameObject.DispatchEvent(Events.Fade, new FadeEvent( , FadeTime));

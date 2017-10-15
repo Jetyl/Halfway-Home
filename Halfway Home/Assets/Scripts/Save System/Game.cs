@@ -117,10 +117,6 @@ public class Game
 
     public void SaveGame()
     {
-        if(InCurrentStory)
-        {
-
-        }
 
 
     }
@@ -169,6 +165,7 @@ public class Game
         Amount = CurrentTimeBlock;
 
         Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 6 * Amount);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.Delusion, 2 * Amount);
         Space.DispatchEvent(Events.StatChange);
     }
 

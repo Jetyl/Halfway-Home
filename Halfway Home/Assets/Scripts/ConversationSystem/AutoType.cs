@@ -28,6 +28,9 @@ public class AutoType : MonoBehaviour
 
     float DefaultVolume;
 
+    [HideInInspector]
+    public bool Skipping;
+
     // Use this for initialization
     void Start()
     {
@@ -89,64 +92,74 @@ public class AutoType : MonoBehaviour
         Text.text = message;
         int Skip = 0;
         int length = message.Length;
-        while (Text.maxVisibleCharacters < message.Length)
+        if(!Skipping)
         {
-
-            if (Text.text[Text.maxVisibleCharacters] == '<')
+            while (Text.maxVisibleCharacters < message.Length)
             {
-                int i = Text.maxVisibleCharacters;
-                while (Text.text[i] != '>')
+
+                if (Text.text[Text.maxVisibleCharacters] == '<')
                 {
-                    i += 1;
-                }
-                i -= Text.maxVisibleCharacters;
-                length -= i;
-                Skip = i;
+                    int i = Text.maxVisibleCharacters;
+                    while (Text.text[i] != '>')
+                    {
+                        i += 1;
+                    }
+                    i -= Text.maxVisibleCharacters;
+                    length -= i;
+                    Skip = i;
 
-            }
-
-
-            //skip rich text stuff
-            if (Text.text[Text.maxVisibleCharacters] == '<')
-            {
-                //AudioOff = true;
-            }
-            if (Text.text[Text.maxVisibleCharacters] == '>')
-            {
-                //AudioOff = false;
-            }
-
-
-            if (!audios.isPlaying)
-            {
-                if (Text.maxVisibleCharacters < length && Skip == 0)
-                {
-                    audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
-                        * Game.current.Progress.GetFloatValue("MasterVolume");
-                    audios.PlayOneShot(sound);
-                }
-                else
-                {
-                    Skip -= 1;
                 }
 
+
+                //skip rich text stuff
+                if (Text.text[Text.maxVisibleCharacters] == '<')
+                {
+                    //AudioOff = true;
+                }
+                if (Text.text[Text.maxVisibleCharacters] == '>')
+                {
+                    //AudioOff = false;
+                }
+
+
+                if (!audios.isPlaying)
+                {
+                    if (Text.maxVisibleCharacters < length && Skip == 0)
+                    {
+                        audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
+                            * Game.current.Progress.GetFloatValue("MasterVolume");
+                        audios.PlayOneShot(sound);
+                    }
+                    else
+                    {
+                        Skip -= 1;
+                    }
+
+                }
+
+                if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
+                {
+                    letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
+
+                    //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                }
+
+                var charaPause = DelayContains(message[Text.maxVisibleCharacters], letterPause);
+
+
+
+                Text.maxVisibleCharacters += 1;
+
+                yield return new WaitForSeconds(charaPause);
             }
-
-            if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
-            {
-                letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
-                
-                //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
-            }
-
-            var charaPause = DelayContains(message[Text.maxVisibleCharacters], letterPause);
-            
-
-
-            Text.maxVisibleCharacters += 1;
-
-            yield return new WaitForSeconds(charaPause);
         }
+        else
+        {
+            Text.maxVisibleCharacters = message.Length;
+            yield return new WaitForSeconds(letterPause);
+        }
+
+        
 
         Text.maxVisibleCharacters = message.Length;
 

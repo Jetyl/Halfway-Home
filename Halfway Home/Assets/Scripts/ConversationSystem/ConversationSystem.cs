@@ -623,7 +623,7 @@ public class ConvLoad : ConvNode
 
     public override void CallAction()
     {
-        Debug.Log("ON");
+        //Debug.Log(Game.current.InCurrentStory);
         if(Game.current.InCurrentStory)
         {
             Destination = Game.current.CurrentNode;

@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         SaveLoad.Save();
+        print("on");
         Application.Quit();
     }
 

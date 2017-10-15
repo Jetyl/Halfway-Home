@@ -41,19 +41,25 @@ public class GameStartUp : MonoBehaviour
             SaveLoad.Delete();
 
         SaveLoad.Load();
-        
+
+        if (SaveLoad.GetSave(0) != null)
+            Game.current = SaveLoad.GetSave(0);
        
         if (DebugMode)
         {
             TestingAndDebugging();
         }
 
-        if (Game.current == null)
+        else if (Game.current == null)
         {
 
             Game.current = new Game();
             SetStartValues();
             Game.current.Progress.SetValue<bool>("Tutorial", true);
+            StartCoroutine(DelayStart(1));
+        }
+        else
+        {
             StartCoroutine(DelayStart(1));
         }
 

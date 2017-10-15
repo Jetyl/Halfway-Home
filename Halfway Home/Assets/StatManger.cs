@@ -12,7 +12,7 @@ public class StatManger : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
+        Space.Connect<ChangeStatEvent>(Events.AddStat, OnAddValue);
 	}
 	
 	// Update is called once per frame

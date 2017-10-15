@@ -291,7 +291,7 @@ public static class TextParser
             case ProgressType.ProgressPoint:
 
                 ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
-
+                
                 Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
                 NextID = (int)data["NextID"];
                 break;

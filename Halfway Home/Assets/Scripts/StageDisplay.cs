@@ -228,7 +228,6 @@ public class StageDirectionEvent : DefaultEvent
     public string character;
     public string Pose;
     public Vector3 Position;
-    //public bool Remove;
     public Sprite Backdrop;
     public StagePosition Direction;
 
@@ -237,7 +236,6 @@ public class StageDirectionEvent : DefaultEvent
     {
         character = person;
         Pose = pose;
-        //Remove = exit;
         Direction = StagePosition.Center;
     }
 

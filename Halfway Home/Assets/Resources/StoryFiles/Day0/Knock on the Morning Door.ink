@@ -39,7 +39,7 @@ EXTERNAL SetValue(name, values)
 	 	~possesive = "them"
 }
 //~player_name = "Player"
-//~week += 1
+~week = 1
 //play knocking sound effect
 [{player_name}] "Uuugh..."
 The persistant knocking drags me out of my dreary haze.
