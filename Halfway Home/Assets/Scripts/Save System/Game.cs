@@ -11,6 +11,8 @@ public class Game
 
     public string PlayerName;
 
+    public string CurrentRoom;
+
     public int Day;
 
     public int Hour;
@@ -42,6 +44,7 @@ public class Game
         Day = 0;
         Hour = 0;
         PlayerName = "Player";
+        CurrentRoom = "unset";
         Progress = new ProgressSystem();
         Self = new Personality();
 

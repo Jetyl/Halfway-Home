@@ -6,6 +6,10 @@
   "BeatName"   : "Player Data",
   "Point"      : [
    {
+    "Name" : "PlayerName",
+    "Type" : 4
+   },
+   {
     "Name" : "delusion",
     "Type" : 2
    },
@@ -32,6 +36,10 @@
    {
     "Name" : "week",
     "Type" : 2
+   },
+   {
+    "Name" : "CurrentRoom",
+    "Type" : 4
    }
   ]
  },

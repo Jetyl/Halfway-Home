@@ -1,4 +1,3 @@
-
 VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
@@ -8,6 +7,7 @@ VAR fatigue = 0
 VAR stress = 0
 VAR delusion = 0
 VAR week = 0
+VAR current_room = "unset"
 
 VAR ByTimothy = false
 

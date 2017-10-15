@@ -7,7 +7,6 @@ VAR fatigue = 0
 VAR stress = 0
 VAR delusion = 0
 VAR week = 1
-
 VAR current_room = "unset"
 
 EXTERNAL GetStringValue(name)
@@ -19,7 +18,6 @@ EXTERNAL AddSocialTier(name)
 -> CheckRoom
 
 === CheckRoom ===
-~current_room = GetStringValue("CurrentRoom")
 {
 	- current_room == "YourRoom":
 		-> YourRoom
@@ -96,7 +94,7 @@ Library text placeholder.
 // Increase Fatigue, Increase Expression
 // Create something.
 The Art Room is {~practically empty|occupied by a few of its regulars|bustling}.
-I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami "How-To" books} from the supply.
+I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
 Time to make something.
 ~AlterWellbeing("Fatigue", 10)
 ~AddSocialPoints("Expression", "Minor")
