@@ -59,6 +59,9 @@ public class MapDisplay : MonoBehaviour
         }
 
         //if gets here, no scene was there. send a default sorta dealie
+        Game.current.InCurrentStory = false;
+        //Game.current.CurrentStory = DefaultActions;
+        //Game.current.CurrentNode = Destination;
         Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
         Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
 

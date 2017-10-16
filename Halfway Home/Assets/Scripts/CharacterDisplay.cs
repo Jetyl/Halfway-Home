@@ -9,9 +9,15 @@ public class CharacterDisplay : MonoBehaviour
 
     public List<Poses> Poses;
 
+    public List<Distances> Distances;
+
     public StagePosition Direction;
 
+    public StageDistance Distance;
+
     SpriteRenderer visual;
+
+    public bool FlipOnLeft;
 
 	// Use this for initialization
 	void Start ()
@@ -31,10 +37,11 @@ public class CharacterDisplay : MonoBehaviour
 		
 	}
 
-    public void EnterStage(string pose)
+    public void EnterStage(string pose, StageDistance distance)
     {
         Start(); // just incase this gets called before start, somehow;
         visual.sprite = GetPose(pose);
+        ChangeDistance(distance);
         //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
         
 
@@ -42,6 +49,36 @@ public class CharacterDisplay : MonoBehaviour
     public void ChangePose(string pose)
     {
         visual.sprite = GetPose(pose);
+    }
+
+    public void ChangePosition(StagePosition pos)
+    {
+        Direction = pos;
+
+        if (FlipOnLeft)
+        {
+            if (Direction == StagePosition.Left)
+                visual.flipX = true;
+            else
+                visual.flipX = false;
+        }
+        else
+        {
+            if (Direction == StagePosition.Right)
+                visual.flipX = true;
+            else
+                visual.flipX = false;
+        }
+
+
+    }
+
+    public void ChangeDistance(StageDistance distance)
+    {
+        Distance = distance;
+        float scale = Distances[(int)distance].Scale;
+        transform.localScale = new Vector3(scale, scale, scale);
+        transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.x);
     }
     public void ExitStage()
     {
@@ -86,4 +123,11 @@ public class Poses
     //because unity hates dictionaries
     public string Name;
     public Sprite Visual;
+}
+
+[System.Serializable]
+public class Distances
+{
+    public float Scale;
+    public float Offset;
 }

@@ -561,7 +561,7 @@ public class ConvReturn : ConvNode
     public ConvReturn(JsonData start)
     {
         ID = (int)start["ID"];
-        Destination = (int)start["NextID"];
+        Destination = ID;
     }
 
 
