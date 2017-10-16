@@ -1,4 +1,4 @@
-VAR player_name = "tbd"
+﻿VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
 VAR expression = 0
@@ -8,6 +8,7 @@ VAR stress = 0
 VAR delusion = 0
 VAR doubt = 0
 VAR week = 0
+VAR current_room = "unset"
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -36,7 +37,7 @@ The whispers fade into the chitter of birdsong.
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
 // GetPlayerData here
 //[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
-[Player] "Ok, {player_name}, that's enough of that. Only one more week."
+[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
 I lay awake, concentrating on the warm sensation of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK

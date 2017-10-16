@@ -8,6 +8,7 @@ VAR stress = 0
 VAR delusion = 0
 VAR doubt = 0
 VAR week = 0
+VAR current_room = "unset"
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
