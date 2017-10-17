@@ -218,6 +218,14 @@ namespace Stratus
       }
 
       /// <summary>
+      /// Signals that a story has been saved
+      /// </summary>
+      public class SavedEvent : Stratus.Event
+      {
+        public string file;
+      }
+
+      /// <summary>
       /// Signals that the story should continue onto the next node
       /// </summary>
       public class ContinueEvent : Stratus.Event

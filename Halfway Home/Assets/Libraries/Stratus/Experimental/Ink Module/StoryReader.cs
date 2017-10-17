@@ -110,7 +110,7 @@ namespace Stratus
       }
 
       /// <summary>
-      /// Attempt to restart the stry
+      /// Attempt to restart the story
       /// </summary>
       void TryRestart()
       {
@@ -311,6 +311,14 @@ namespace Stratus
         var storyEnded = new Story.EndedEvent();
         this.gameObject.Dispatch<Story.EndedEvent>(storyEnded);
         Scene.Dispatch<Story.EndedEvent>(storyEnded);
+      }
+
+      void SaveStory()
+      {
+        // Dispath the save event containing the saved file
+        var saveEvent = new Story.SavedEvent();
+        saveEvent.file = story.state.ToJson();
+        Scene.Dispatch<Story.SavedEvent>(saveEvent);
       }
 
       //------------------------------------------------------------------------------------------/

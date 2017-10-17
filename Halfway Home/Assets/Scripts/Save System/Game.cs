@@ -37,6 +37,8 @@ public class Game
 
     public int CurrentNode;
 
+    public string SavedInk;
+
 
     public Game()
     {
@@ -120,6 +122,10 @@ public class Game
 
     public void SaveGame()
     {
+        if(InCurrentStory)
+        {
+            //SavedInk = 
+        }
 
 
     }

@@ -31,6 +31,11 @@ public class CharacterChangeEvent : Stratus.Event
   public bool entering;
 }
 
+// Signals that the player needs to save data
+public class RequestSaveEvent : Stratus.Event
+{
+}
+
 namespace HalfwayHome
 {
   public class HalfwayHomeStoryDriver : MonoBehaviour
@@ -55,6 +60,7 @@ namespace HalfwayHome
         stats.Add(stat, new StatAccess() { name = stat });
 
       Space.Connect<StoryEvent>(Events.NewStory, OnNewStory);
+      Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
       reader.gameObject.Connect<Story.LoadedEvent>(this.OnStoryLoadedEvent);
       reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
       reader.gameObject.Connect<Story.EndedEvent>(this.OnStoryEndedEvent);
@@ -114,6 +120,11 @@ namespace HalfwayHome
     void OnStoryEndedEvent(Stratus.InkModule.Story.EndedEvent e)
     {
       Space.DispatchEvent(Events.FinishedStory);
+    }
+
+    void OnStorySavedEvent(Stratus.InkModule.Story.SavedEvent e)
+    {
+      Game.current.SavedInk = e.file;
     }
 
     /// <summary>
