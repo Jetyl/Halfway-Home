@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditorInternal;
 using UnityEditor;
+using System;
 
 [CustomEditor(typeof(CharacterDisplay))]
 public class CharacterDisplayEditor : Editor
 {
     private ReorderableList list;
+
+    bool showDistance;
 
     private void OnEnable()
     {
@@ -22,6 +25,8 @@ public class CharacterDisplayEditor : Editor
         serializedObject.Update();
 
         SerializedProperty Character = serializedObject.FindProperty("Character");
+        SerializedProperty Distances = serializedObject.FindProperty("Distances");
+        SerializedProperty FlipOnLeft = serializedObject.FindProperty("FlipOnLeft");
 
 
         EditorGUILayout.Space();
@@ -32,6 +37,24 @@ public class CharacterDisplayEditor : Editor
         
 
         list.DoLayoutList();
+
+        FlipOnLeft.boolValue = EditorGUILayout.ToggleLeft("Flip on Left side", FlipOnLeft.boolValue);
+
+        showDistance = EditorGUILayout.Foldout(showDistance, "Distances");
+
+        if (showDistance)
+        {
+            EditorGUILayout.LabelField((Distances == null) + ":");
+            Distances.arraySize = Enum.GetValues(typeof(StageDistance)).Length;
+            for (var i = 1; i < Enum.GetValues(typeof(StageDistance)).Length; ++i)
+            {
+                EditorGUILayout.LabelField((StageDistance)i + ":");
+                Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue = EditorGUILayout.FloatField("Scale",
+                    Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue);
+                Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Offset").floatValue = EditorGUILayout.FloatField("Offset",
+                    Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Offset").floatValue);
+            }
+        }
 
 
         serializedObject.ApplyModifiedProperties();

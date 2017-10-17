@@ -60,7 +60,7 @@ public class StageDisplay : MonoBehaviour
             {
                
                 Roll.ChangePose(eventdata.Pose);
-
+                Roll.ChangeDistance(eventdata.Distance);
                 return;
             }
         }
@@ -77,7 +77,7 @@ public class StageDisplay : MonoBehaviour
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
-                    directions.EnterStage(eventdata.Pose);
+                    directions.EnterStage(eventdata.Pose, eventdata.Distance);
                     Actors.Add(directions);
                     directions.Direction = eventdata.Direction;
                     SpotLights[eventdata.Direction] += 1;
@@ -163,6 +163,7 @@ public class StageDisplay : MonoBehaviour
             if(Roll.Direction == pos)
             {
                 spot.z = Roll.transform.localPosition.z;
+                spot.y = Roll.transform.localPosition.y;
                 
                 iTween.MoveTo(Roll.gameObject, spot, 2);
                 spot.x += Varience;
@@ -230,13 +231,14 @@ public class StageDirectionEvent : DefaultEvent
     public Vector3 Position;
     public Sprite Backdrop;
     public StagePosition Direction;
+    public StageDistance Distance;
 
-
-    public StageDirectionEvent(string person, string pose)
+    public StageDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center)
     {
         character = person;
         Pose = pose;
-        Direction = StagePosition.Center;
+        Direction = Pos;
+        Distance = Dis;
     }
 
     public StageDirectionEvent(Sprite scenery)
@@ -244,12 +246,18 @@ public class StageDirectionEvent : DefaultEvent
         Backdrop = scenery;
     }
 
+    //changing someone's position
     public StageDirectionEvent(string person, StagePosition Dir)
     {
         character = person;
         Direction = Dir;
     }
 
+    public StageDirectionEvent(string person, StageDistance Dis)
+    {
+        character = person;
+        Distance = Dis;
+    }
 
 }
 
@@ -259,4 +267,11 @@ public enum StagePosition
     Center,
     Left,
     Right
+}
+public enum StageDistance
+{
+    None,
+    Close,
+    Center,
+    Far
 }

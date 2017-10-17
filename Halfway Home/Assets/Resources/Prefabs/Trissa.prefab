@@ -98,7 +98,17 @@ MonoBehaviour:
     Visual: {fileID: 21300000, guid: 815c2b3efbf76b4439dbb02830da838b, type: 3}
   - Name: Suprised
     Visual: {fileID: 21300000, guid: 815c2b3efbf76b4439dbb02830da838b, type: 3}
+  Distances:
+  - Scale: 0
+    Offset: 0
+  - Scale: 2
+    Offset: -5
+  - Scale: 0
+    Offset: 0
+  - Scale: 0
+    Offset: 0
   Direction: 0
+  Distance: 0
 --- !u!114 &114861325213738950
 MonoBehaviour:
   m_ObjectHideFlags: 1
