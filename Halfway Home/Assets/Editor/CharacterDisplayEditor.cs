@@ -28,13 +28,19 @@ public class CharacterDisplayEditor : Editor
         SerializedProperty Distances = serializedObject.FindProperty("Distances");
         SerializedProperty FlipOnLeft = serializedObject.FindProperty("FlipOnLeft");
 
+        SerializedProperty visual = serializedObject.FindProperty("visual");
+        SerializedProperty BackSprite = serializedObject.FindProperty("BackSprite");
+        SerializedProperty SpriteSwitchSpeed = serializedObject.FindProperty("SpriteSwitchSpeed");
 
         EditorGUILayout.Space();
 
         EditorGUILayout.PropertyField(Character, new GUIContent("Character"), true);
-        
+        EditorGUILayout.PropertyField(visual, new GUIContent("Main Sprite"), true);
+        EditorGUILayout.PropertyField(BackSprite, new GUIContent("Back Sprite"), true);
+        EditorGUILayout.PropertyField(SpriteSwitchSpeed, new GUIContent("Sprite Switch Speed"), true);
 
-        
+
+
 
         list.DoLayoutList();
 

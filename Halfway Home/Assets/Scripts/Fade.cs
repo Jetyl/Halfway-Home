@@ -75,18 +75,8 @@ public class Fade : MonoBehaviour
         {
             StopCoroutine(Fading);
         }
-        /*
-        if (sprite)
-            StopCoroutine(FadeToSprite(FadeColor, FadeTime));
-        else if (txt)
-            StopCoroutine(FadeToText(FadeColor, FadeTime));
-        else if (imgurd)
-            StopCoroutine(FadeToImage(FadeColor, FadeTime));
-        else if (pro)
-            StopCoroutine(FadeToTextMeshPro(FadeColor, FadeTime));
-        else if (progui)
-            StopCoroutine(FadeToTextMeshProUI(FadeColor, FadeTime));
-        */
+        
+
         FadeColor = eventdata.newColor;
         FadeTime = eventdata.time;
 
