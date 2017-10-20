@@ -91,7 +91,7 @@ MonoBehaviour:
   - Name: Angry
     Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
   - Name: Happy
-    Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
+    Visual: {fileID: 21300000, guid: b96b8c07afb44b24393c65c35149441e, type: 3}
   - Name: Sad
     Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
   - Name: Afraid
@@ -103,9 +103,9 @@ MonoBehaviour:
     Offset: 0
   - Scale: 2
     Offset: -5
-  - Scale: 0
+  - Scale: 1
     Offset: 0
-  - Scale: 0
+  - Scale: 0.75
     Offset: 0
   Direction: 0
   Distance: 0

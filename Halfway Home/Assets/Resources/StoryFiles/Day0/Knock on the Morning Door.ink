@@ -82,7 +82,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 Max looks dissapointed in me. It's a sadly common look.
 [Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 [Max] "Besides, it'll only be for one week."
-[Timothy] "Nice to meet you."
+[Timothy] "Nice to meet you." {CharEnter("Timothy", "Happy")}
 [Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week."
 [Timothy] "Okay."
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
