@@ -49,8 +49,8 @@ public class CharacterDisplayEditor : Editor
             for (var i = 1; i < Enum.GetValues(typeof(StageDistance)).Length; ++i)
             {
                 EditorGUILayout.LabelField((StageDistance)i + ":");
-                Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue = EditorGUILayout.FloatField("Scale",
-                    Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue);
+                Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue = EditorGUILayout.Slider("Scale",
+                    Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Scale").floatValue, 0.1f, 5);
                 Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Offset").floatValue = EditorGUILayout.FloatField("Offset",
                     Distances.GetArrayElementAtIndex(i).FindPropertyRelative("Offset").floatValue);
             }
