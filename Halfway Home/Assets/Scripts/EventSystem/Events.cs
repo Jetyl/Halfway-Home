@@ -77,6 +77,7 @@ public class Events
     public static readonly String AutoType = "AutoTypeEvent";
     public static readonly String FinishedAutoType = "FinishedAutoTypeEvent";
     public static readonly String SkipTyping = "SkipTypingEvent";
+    public static readonly String StopSkipTyping = "StopSkipTypingEvent";
     public static readonly String Description = "DescriptionEvent";
     public static readonly String FinishedDescription = "FinishedDescriptionEvent";
     public static readonly String CloseDescription = "CloseDescriptionEvent";
