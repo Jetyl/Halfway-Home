@@ -142,7 +142,7 @@ MonoBehaviour:
     Visual: {fileID: 21300000, guid: bdebe4585b123254887ac9665338da5e, type: 3}
   - Name: Afraid
     Visual: {fileID: 21300000, guid: bdebe4585b123254887ac9665338da5e, type: 3}
-  - Name: Suprised
+  - Name: Surprised
     Visual: {fileID: 21300000, guid: bdebe4585b123254887ac9665338da5e, type: 3}
   Distances:
   - Scale: 0

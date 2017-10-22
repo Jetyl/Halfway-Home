@@ -79,15 +79,15 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 [{player_name}] "Uh... yeah?"
 [Max] "You don't remember, do you?"
 [{player_name}] "... No."
-Max looks dissapointed in me. It's a sadly common look.
+Max looks dissapointed in me. It's a sadly common look. {CharEnter("Max", "Sad")}
 [Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 [Max] "Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." {CharEnter("Timothy", "Happy")}
-[Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week."
-[Timothy] "Okay."
+[Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." {CharEnter("Max", "Calm")}
+[Timothy] "Okay." {CharEnter("Timothy", "Calm")}
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
 Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
-[Max] "Oh crap."
+[Max] "Oh crap." {CharEnter("Max", "Surprised")}
 [{player_name}] "What?"
 [Max] "It would seem I have misplaced my keys."
 [{player_name}] "Uh-oh."
@@ -95,7 +95,7 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 Max's eyes start darting while they think of what their next action should be.
 [Max]"{player_name}, Imma need you to do me a solid."
 I don't like where this is going. //Oh, you don't like the sound of that.
-[Max] "Well... It's Timothy's first day, so someone's gotta show him the ropes."
+[Max] "Well... It's Timothy's first day, so someone's gotta show him the ropes." {CharEnter("Max", "Happy")}
 [Max] "But I can't have my keys unaccounted for here."
 [Max] "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
