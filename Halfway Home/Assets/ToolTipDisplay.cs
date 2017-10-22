@@ -54,7 +54,7 @@ public class ToolTipDisplay : MonoBehaviour
         {
             if (Game.current.Self.GetModifiedSocialStat(SocialStat) != Game.current.Self.GetTrueSocialStat(SocialStat))
             {
-                display.info += Environment.NewLine + ModifiedStatText;
+                display.info = display.info + Environment.NewLine + ModifiedStatText;
                 display.color = ModifedStatColor;
             }
         }
