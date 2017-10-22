@@ -15,7 +15,10 @@ public class CharacterDisplay : MonoBehaviour
 
     public StageDistance Distance;
 
-    SpriteRenderer visual;
+    public SpriteRenderer visual;
+    public SpriteRenderer BackSprite;
+
+    public float SpriteSwitchSpeed = 1;
 
     public bool FlipOnLeft;
 
@@ -23,11 +26,11 @@ public class CharacterDisplay : MonoBehaviour
 	void Start ()
     {
 
-        visual = GetComponentInChildren<SpriteRenderer>();
+        //visual = GetComponentInChildren<SpriteRenderer>();
         var awhite = Color.white;
         awhite.a = 0;
         visual.color = awhite;
-
+        BackSprite.color = awhite;
 
 	}
 	
@@ -48,7 +51,25 @@ public class CharacterDisplay : MonoBehaviour
     }
     public void ChangePose(string pose)
     {
-        visual.sprite = GetPose(pose);
+        //visual.sprite = GetPose(pose);
+        StartCoroutine(ChangeSprite(GetPose(pose)));
+    }
+
+    IEnumerator ChangeSprite(Sprite newSprite)
+    {
+
+        BackSprite.sprite = newSprite;
+        var Awhite = Color.white;
+        Awhite.a = 0;
+        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, SpriteSwitchSpeed));
+        BackSprite.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
+
+        yield return new WaitForSeconds(2);
+
+        visual.sprite = newSprite;
+        visual.color = Color.white;
+        BackSprite.color = Awhite;
+
     }
 
     public void ChangePosition(StagePosition pos)
@@ -78,7 +99,7 @@ public class CharacterDisplay : MonoBehaviour
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
         transform.localScale = new Vector3(scale, scale, scale);
-        transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.x);
+        transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
     }
     public void ExitStage()
     {
