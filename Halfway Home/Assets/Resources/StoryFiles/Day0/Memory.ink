@@ -19,6 +19,7 @@ EXTERNAL GetPlayerData()
 
 === Start ===
 //~week += 1
+Stats are F{fatigue}, S{stress}, D{delusion}.
 In my dreams I can still hear their voices.
 They whisper to me that I will never escape.
 That I don't deserve to.

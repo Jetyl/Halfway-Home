@@ -65,26 +65,26 @@ namespace HalfwayHome
 
     public void AlterWellbeing(string WellnessStat, int Value)
     {
-        var stat = Personality.Wellbeing.Delusion;
+        var stat = Personality.Wellbeing.delusion;
 
 
         if (WellnessStat == "Stress")
-            stat = Personality.Wellbeing.Stress;
+            stat = Personality.Wellbeing.stress;
         if (WellnessStat == "Fatigue")
-            stat = Personality.Wellbeing.Fatigue;
+            stat = Personality.Wellbeing.fatigue;
 
         Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
     }
 
         public void AddSocialPoints(string SocialStat, string Value)
     {
-            var stat = Personality.Social.Awareness;
+            var stat = Personality.Social.awareness;
 
 
             if (SocialStat == "Grace")
-                stat = Personality.Social.Grace;
+                stat = Personality.Social.grace;
             if (SocialStat == "Expression")
-                stat = Personality.Social.Expression;
+                stat = Personality.Social.expression;
 
             Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
     }
@@ -92,11 +92,11 @@ namespace HalfwayHome
     public void AddSocialTier(string SocialStat)
     {
         if (SocialStat == "Awareness")
-            Game.current.Self.IncrementSocialTier(Personality.Social.Awareness);
+            Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
         if (SocialStat == "Grace")
-            Game.current.Self.IncrementSocialTier(Personality.Social.Grace);
+            Game.current.Self.IncrementSocialTier(Personality.Social.grace);
         if (SocialStat == "Expression")
-            Game.current.Self.IncrementSocialTier(Personality.Social.Expression);
+            Game.current.Self.IncrementSocialTier(Personality.Social.expression);
 
 
         Space.DispatchEvent(Events.StatChange);

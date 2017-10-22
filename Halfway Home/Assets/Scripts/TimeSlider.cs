@@ -13,6 +13,8 @@ public class TimeSlider : MonoBehaviour
 
     public TextMeshProUGUI Txt;
 
+  public int Time;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -43,7 +45,7 @@ public class TimeSlider : MonoBehaviour
         }
 
         Location = EventData.Destination;
-        //TimeSpendingThere.value = EventData.Length;
+        Time = EventData.Length;
         AssignText(Location);
         //turn on visiblity
         gameObject.SetActive(true);
@@ -53,7 +55,7 @@ public class TimeSlider : MonoBehaviour
 
     public void ConfirmDestination()
     {
-        Space.DispatchEvent(Events.MapChoiceConfirmed, new MapEvent(Location, 1));
+        Space.DispatchEvent(Events.MapChoiceConfirmed, new MapEvent(Location, Time));
 
         gameObject.SetActive(false);
     }

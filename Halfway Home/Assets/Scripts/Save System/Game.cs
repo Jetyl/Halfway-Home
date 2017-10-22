@@ -163,8 +163,9 @@ public class Game
 
     public void AlterTime(int Amount)
     {
+    
         Hour += Amount;
-
+    Debug.Log(Amount);
         if(Hour >= 24)
         {
             Hour -= 24;
@@ -173,8 +174,8 @@ public class Game
 
         Amount = CurrentTimeBlock;
 
-        Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 6 * Amount);
-        Self.IncrementWellbeingStat(Personality.Wellbeing.Delusion, 2 * Amount);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.fatigue, 6 * Amount);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.delusion, 2 * Amount);
         Space.DispatchEvent(Events.StatChange);
     }
 

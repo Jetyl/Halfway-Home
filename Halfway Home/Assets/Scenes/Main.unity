@@ -1387,6 +1387,60 @@ Prefab:
       propertyPath: m_text
       value: Cave Dweller
       objectReference: {fileID: 0}
+    - target: {fileID: 1261941976595622, guid: 8a480afc885ffe04ebf6f07a12b480bd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifiedStatText
+      value: Grace lowered due to high stress
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifiedStatText
+      value: Awareness lowered due to high Delusion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: ModifedStatColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a480afc885ffe04ebf6f07a12b480bd, type: 2}
   m_IsPrefabParent: 0
@@ -3399,7 +3453,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 321.6884
+      value: 287.9582
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3429,7 +3483,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 321.6884
+      value: 287.9582
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4866,6 +4920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeSpendingThere: {fileID: 3551284}
   Txt: {fileID: 1719441961}
+  Time: 0
 --- !u!114 &707623624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6576,7 +6631,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 236, y: -305.3}
-  m_SizeDelta: {x: 1600, y: 900}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &993484430
 GameObject:
@@ -9973,10 +10028,10 @@ RectTransform:
   m_Father: {fileID: 993178234}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 268.80005, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583586917
 MonoBehaviour:

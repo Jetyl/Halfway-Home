@@ -9,16 +9,16 @@ public class Personality
 
     public enum Wellbeing
     {
-        Fatigue,
-        Stress,
-        Delusion
+        fatigue,
+        stress,
+        delusion
     }
 
     public enum Social
     {
-        Awareness,
-        Grace,
-        Expression
+        awareness,
+        grace,
+        expression
     }
 
     int GraceTier = 0;
@@ -101,11 +101,11 @@ public class Personality
     {
         switch (stat)
         {
-            case Social.Awareness:
+            case Social.awareness:
                 return AwarenessTier + (AwarenessValue / SocialThreshold);
-            case Social.Expression:
+            case Social.expression:
                 return ExpressionTier + (ExpressionValue / SocialThreshold);
-            case Social.Grace:
+            case Social.grace:
                 return GraceTier + (GraceValue / SocialThreshold);
             default:
                 return 0;
@@ -119,13 +119,13 @@ public class Personality
 
         switch (stat)
         {
-            case Social.Awareness:
+            case Social.awareness:
                 socialstat = AwarenessTier + (AwarenessValue/SocialThreshold) - stressReduction;
                 break;
-            case Social.Expression:
+            case Social.expression:
                 socialstat = ExpressionTier + (GraceValue / SocialThreshold) - stressReduction;
                 break;
-            case Social.Grace:
+            case Social.grace:
                 socialstat = GraceTier + (GraceValue / SocialThreshold) - stressReduction;
                 break;
             default:
@@ -142,7 +142,7 @@ public class Personality
     {
         switch (stat)
         {
-            case Social.Awareness:
+            case Social.awareness:
 
                 //AwarenessValue = Value;
                 if(Value <= MaxBonusTiers)
@@ -154,7 +154,7 @@ public class Personality
                 }
                 
                 break;
-            case Social.Expression:
+            case Social.expression:
 
 
                 //ExpressionTier = Value;
@@ -169,7 +169,7 @@ public class Personality
                 //ExpressionTier = Value / SocialThreshold;
 
                 break;
-            case Social.Grace:
+            case Social.grace:
 
                 //GraceTier = Value;
                 if (Value <= MaxBonusTiers)
@@ -196,21 +196,21 @@ public class Personality
 
         switch (stat)
         {
-            case Social.Awareness:
+            case Social.awareness:
                 if ((AwarenessValue/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
                 AwarenessValue += addition;
                 
                 break;
-            case Social.Expression:
+            case Social.expression:
                 if ((ExpressionTier/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
                 ExpressionValue += addition;
                 
                 break;
-            case Social.Grace:
+            case Social.grace:
                 if ((GraceTier/SocialThreshold) >= MaxSocialGrowth)
                     break;
 
@@ -231,17 +231,17 @@ public class Personality
     {
         switch (stat)
         {
-            case Social.Awareness:
+            case Social.awareness:
                 AwarenessTier += 1;
                 if (AwarenessTier > MaxBonusTiers)
                     AwarenessTier = MaxBonusTiers;
                 break;
-            case Social.Expression:
+            case Social.expression:
                 ExpressionTier += 1;
                 if (ExpressionTier > MaxBonusTiers)
                     ExpressionTier = MaxBonusTiers;
                 break;
-            case Social.Grace:
+            case Social.grace:
                 GraceTier += 1;
                 if (GraceTier > MaxBonusTiers)
                     GraceTier = MaxBonusTiers;
@@ -268,11 +268,11 @@ public class Personality
     {
         switch (stat)
         {
-            case Wellbeing.Delusion:
+            case Wellbeing.delusion:
                 return DelusionValue;
-            case Wellbeing.Fatigue:
+            case Wellbeing.fatigue:
                 return FatigueValue;
-            case Wellbeing.Stress:
+            case Wellbeing.stress:
                 return StressValue;
             default:
                 return 0;
@@ -289,13 +289,13 @@ public class Personality
 
         switch (stat)
         {
-            case Wellbeing.Delusion:
+            case Wellbeing.delusion:
                 DelusionValue = value;
                 break;
-            case Wellbeing.Fatigue:
+            case Wellbeing.fatigue:
                 FatigueValue = value;
                 break;
-            case Wellbeing.Stress:
+            case Wellbeing.stress:
                 StressValue = value;
                 break;
             default:
@@ -307,21 +307,21 @@ public class Personality
     {
         switch (stat)
         {
-            case Wellbeing.Delusion:
+            case Wellbeing.delusion:
                 DelusionValue += value;
                 if (DelusionValue > MaxWellbeingValue)
                     DelusionValue = MaxWellbeingValue;
                 if (DelusionValue < 0)
                     DelusionValue = 0;
                 break;
-            case Wellbeing.Fatigue:
+            case Wellbeing.fatigue:
                 FatigueValue += value;
                 if (FatigueValue > MaxWellbeingValue)
                     FatigueValue = MaxWellbeingValue;
                 if (FatigueValue < 0)
                     FatigueValue = 0;
                 break;
-            case Wellbeing.Stress:
+            case Wellbeing.stress:
                 StressValue += value;
                 if (StressValue > MaxWellbeingValue)
                     StressValue = MaxWellbeingValue;

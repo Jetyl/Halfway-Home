@@ -11,6 +11,7 @@ VAR current_room = "unset"
 
 EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
+EXTERNAL GetValue(name)
 EXTERNAL AlterWellbeing(name, int)
 EXTERNAL AddSocialPoints(name, string)
 EXTERNAL AddSocialTier(name)
@@ -43,7 +44,22 @@ EXTERNAL AddSocialTier(name)
 === YourRoom ===
 // Reduce Stress, Remove Fatigue, Increase Delusion
 // Recover for the next day. The isolation reminds you of a darker time.
-Your room text placeholder.
+{
+	- fatigue > 70:
+		I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
+		I feel myself begin to drift off almost immediately.
+
+	- fatigue < 50: 
+		I'm not very tired, {stress > 50:but I need some time to unwind.|but I just don't feel like doing anything.}
+		I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
+		I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
+		After a timeless eternity, sleep finally takes me.
+	- else:
+		I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
+		I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
+		I feel hopeful as I surrender myself to sleep.
+}
+
 ~AlterWellbeing("Stress", -10)
 ~AlterWellbeing("Fatigue", -100)
 ~AlterWellbeing("Delusion", 10)
