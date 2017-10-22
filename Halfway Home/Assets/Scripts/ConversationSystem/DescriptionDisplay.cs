@@ -41,6 +41,7 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
+        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
 
     }
 	
@@ -180,6 +181,12 @@ public class DescriptionDisplay : MonoBehaviour
     void OnUnPause(DefaultEvent eventdata)
     {
         Paused = false;
+    }
+
+    void OnStopSkipping(DefaultEvent eventdata)
+    {
+        Skipping = false;
+        Decription.Skipping = false;
     }
 
 }
