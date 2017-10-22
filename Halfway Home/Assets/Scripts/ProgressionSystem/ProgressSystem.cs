@@ -376,7 +376,7 @@ public class ProgressSystem
         foreach (var beat in PlotLines)
         {
             //reset the daily grind
-            if (beat.BeatName == "Daily Grind")
+            if (beat.BeatName == "Daily")
             {
                 beat.ResetBeat();
                 return;

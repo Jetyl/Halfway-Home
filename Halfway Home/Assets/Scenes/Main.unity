@@ -404,12 +404,14 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 17
+    endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
 --- !u!114 &60859187
 MonoBehaviour:
@@ -432,6 +434,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 8
+  DrainFatigue: 0
 --- !u!114 &60859188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +2991,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &399842703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,7 +3099,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
 --- !u!1 &407708974
 GameObject:
@@ -3453,12 +3459,12 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9582
+      value: 288
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -265.2
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3468,7 +3474,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3483,12 +3489,12 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9582
+      value: 288
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -415.2
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -3498,7 +3504,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1925219769184150, guid: ed9a2b18bdf776741ab96361c8c5b2fc, type: 2}
       propertyPath: m_IsActive
@@ -5180,7 +5186,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Garden
 --- !u!114 &746152807
 MonoBehaviour:
@@ -5203,6 +5211,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &746152808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9134,6 +9143,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &1414101612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9241,7 +9251,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
 --- !u!1 &1432593200
 GameObject:
@@ -9798,7 +9810,7 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 10
-  DebugMode: 0
+  DebugMode: 1
   StartDelusion: 10
   StartStress: 45
   StartFatigue: 65
@@ -9811,7 +9823,7 @@ MonoBehaviour:
   DebugValues:
   - ProgressName: Tutorial
     TypeID: 1
-    BoolValue: 1
+    BoolValue: 0
     IntValue: 0
     FloatValue: 0
     StringValue: 
@@ -10386,6 +10398,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 2
+  DrainFatigue: 1
 --- !u!114 &1638529364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10493,7 +10506,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
 --- !u!1 &1646935482
 GameObject:
@@ -10561,7 +10576,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Library
 --- !u!114 &1646935485
 MonoBehaviour:
@@ -10584,6 +10601,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &1646935486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11306,7 +11324,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to FD
 --- !u!114 &1724040575
 MonoBehaviour:
@@ -11329,6 +11349,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &1724040576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11643,7 +11664,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Art
 --- !u!114 &1757642543
 MonoBehaviour:
@@ -11666,6 +11689,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &1757642544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11981,9 +12005,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
-  LimitedDailyAccess: 0
-  AccessPoint: 
-  TimesCanVisit: 0
+  LimitedDailyAccess: 1
+  AccessPoint: KitchenVisists
+  VisitMulitplier: 3
+  HourVisited: Hour Kitchen Visited
+  DayVisited: Day Kitchen Visisted
   ManualAccess: 
 --- !u!114 &1893308693
 MonoBehaviour:
@@ -12006,6 +12032,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 0
 --- !u!114 &1893308694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12904,7 +12931,9 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Commons
 --- !u!114 &2091294872
 MonoBehaviour:
@@ -12927,6 +12956,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &2091294873
 MonoBehaviour:
   m_ObjectHideFlags: 0

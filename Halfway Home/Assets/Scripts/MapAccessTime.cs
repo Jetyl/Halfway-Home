@@ -13,7 +13,10 @@ public class MapAccessTime : MonoBehaviour
 
     public string AccessPoint;
 
-    public int TimesCanVisit;
+    public int VisitMulitplier;
+
+    public string HourVisited;
+    public string DayVisited;
 
     public string ManualAccess;
 
@@ -46,7 +49,8 @@ public class MapAccessTime : MonoBehaviour
         
         self = GetComponent<Button>();
         Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
-        
+        Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
+
     }
 	
 	// Update is called once per frame
@@ -65,11 +69,11 @@ public class MapAccessTime : MonoBehaviour
         }
         if (LimitedDailyAccess)
         {
-            if(Game.current.Progress.GetIntValue(AccessPoint) < TimesCanVisit)
-            {
-                Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
-            }
-            else
+            int hour = Game.current.Progress.GetIntValue(HourVisited);
+            int day = Game.current.Progress.GetIntValue(DayVisited); 
+            int length = Game.current.Progress.GetIntValue(AccessPoint) * VisitMulitplier;
+            //if last time visited, plus times visited (times multiplier) is greater that current time
+            if (Game.current.WithinTimeDifference(hour, day, length))
             {
                 self.interactable = false;
                 return;
@@ -87,7 +91,21 @@ public class MapAccessTime : MonoBehaviour
 
     }
 
-    
+
+    void MapChoice(MapEvent eventdata)
+    {
+        if(LimitedDailyAccess)
+        {
+            if(eventdata.Destination == gameObject.GetComponent<MapButton>().Location)
+            {
+                Game.current.Progress.SetValue<int>(HourVisited, Game.current.Hour);
+                Game.current.Progress.SetValue<int>(DayVisited, Game.current.Day);
+                Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
+            }
+        }
+    }
+
+
 
 }
 

@@ -123,5 +123,35 @@
     "Type" : 1
    }
   ]
+ },
+ {
+  "PlotName" : "Daily",
+  "BeatNumber" : 0,
+  "BeatName"   : "Daily",
+  "Point"      : [
+   {
+    "Name" : "KitchenVisists",
+    "Type" : 2
+   }
+  ]
+ },
+ {
+  "PlotName" : "Map",
+  "BeatNumber" : 0,
+  "BeatName"   : "MapDetails",
+  "Point"      : [
+   {
+    "Name" : "Hour Kitchen Visited",
+    "Type" : 2
+   },
+   {
+    "Name" : "Day Kitchen Visisted",
+    "Type" : 2
+   },
+   {
+    "Name" : "Manuel Kitchen Turn Off",
+    "Type" : 1
+   }
+  ]
  }
 ]

@@ -17,7 +17,8 @@ public class Game
 
     public int Hour;
 
-    public int CurrentTimeBlock;
+    private int CurrentTimeBlock;
+    private bool DrainEnergy;
 
     public ProgressSystem Progress;
 
@@ -161,22 +162,37 @@ public class Game
 
     }
 
-    public void AlterTime(int Amount)
+    public void AlterTime()
     {
-    
-        Hour += Amount;
-    Debug.Log(Amount);
+        //Debug.Log(CurrentTimeBlock);
+        
+        Hour += CurrentTimeBlock;
         if(Hour >= 24)
         {
             Hour -= 24;
-            Day += 1;
+            NewDay();
         }
+        Space.DispatchEvent(Events.TimeChange);
 
-        Amount = CurrentTimeBlock;
-
-        Self.IncrementWellbeingStat(Personality.Wellbeing.fatigue, 6 * Amount);
-        Self.IncrementWellbeingStat(Personality.Wellbeing.delusion, 2 * Amount);
+        if(DrainEnergy)
+            Self.IncrementWellbeingStat(Personality.Wellbeing.fatigue, 10 * CurrentTimeBlock);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.delusion, 2 * CurrentTimeBlock);
         Space.DispatchEvent(Events.StatChange);
+
+        DrainEnergy = false;
+        CurrentTimeBlock = 0;
+    }
+
+    public void SetTimeBlock(int Amount)
+    {
+        CurrentTimeBlock = Amount;
+        DrainEnergy = true;
+    }
+
+    public void SetTimeBlock(int Amount, bool DrainFatigue)
+    {
+        CurrentTimeBlock = Amount;
+        DrainEnergy = DrainFatigue;
     }
 
     public bool KnowsWhereAbouts(string character)
@@ -245,30 +261,44 @@ public class Game
 
     public void NewDay()
     {
-
-       
-
+        
         Day += 1;
-
-        //reset the daily varibles
-        Progress.ResetDaily();
-
         //update the day in the progression system
         var point = new ProgressPoint("Day", PointTypes.Integer);
         point.IntValue = Day;
 
         Progress.UpdateProgress("Day", point);
         
-       
-
-        
         //checks if any special conditions have occured, to change rooms or anything.
             // prolly do this in scene checks, not here
 
         //cast new day event
-        //Space.DispatchEvent(Events.NewDay);
+        Space.DispatchEvent(Events.NewDay);
 
     }
+
+    public void Slept()
+    {
+        Progress.ResetDaily();
+    }
+
+    public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)
+    {
+        if(Date == Day)
+        {
+            if (Hour - HourToCheck <= LengthOfTime)
+                return true;
+        }
+        else
+        {
+            if ((Hour * (24 * (Day - Date))) - HourToCheck <= LengthOfTime)
+                return true;
+        }
+
+
+        return false;
+    }
+
 
 }
 

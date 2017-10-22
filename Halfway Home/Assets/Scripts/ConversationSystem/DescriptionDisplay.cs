@@ -42,6 +42,7 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
+        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnStopSkipping);
 
     }
 	

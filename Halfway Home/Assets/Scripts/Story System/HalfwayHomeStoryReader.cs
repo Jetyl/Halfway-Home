@@ -21,6 +21,8 @@ namespace HalfwayHome
       story.BindExternalFunction(nameof(AddSocialTier), new System.Action<string>(AddSocialTier));
       story.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
       story.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
+      story.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
+      story.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
     }
 
     protected override void OnSetLineParsing(Stratus.InkModule.Story.ParsePatterns patterns)
@@ -102,5 +104,15 @@ namespace HalfwayHome
         Space.DispatchEvent(Events.StatChange);
     }
 
+    public void SetTimeBlock(int time)
+    {
+        Game.current.SetTimeBlock(time);
+    }
+    
+    public void CallSleep()
+    {
+        Game.current.Slept();
+    }
+    
   }
 }

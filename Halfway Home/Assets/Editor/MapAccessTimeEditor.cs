@@ -27,8 +27,10 @@ public class MapAccessTimeEditor : Editor
         SerializedProperty ManualAccess = serializedObject.FindProperty("ManualAccess");
         SerializedProperty LimitedDailyAccess = serializedObject.FindProperty("LimitedDailyAccess");
         SerializedProperty AccessPoint = serializedObject.FindProperty("AccessPoint");
-        SerializedProperty TimesCanVisit = serializedObject.FindProperty("TimesCanVisit");
-        
+        SerializedProperty TimesCanVisit = serializedObject.FindProperty("VisitMulitplier");
+        SerializedProperty HourVisited = serializedObject.FindProperty("HourVisited");
+        SerializedProperty DayVisited = serializedObject.FindProperty("DayVisited");
+
 
         EditorGUILayout.Space();
 
@@ -37,8 +39,11 @@ public class MapAccessTimeEditor : Editor
         EditorGUILayout.PropertyField(LimitedDailyAccess, new GUIContent("Limited Daily Access?"), true);
         if(LimitedDailyAccess.boolValue == true)
         {
-            EditorGUILayout.PropertyField(AccessPoint, new GUIContent("Access Point"), true);
             EditorGUILayout.PropertyField(TimesCanVisit, new GUIContent("Times Can Visit"), true);
+
+            EditorGUILayout.PropertyField(AccessPoint, new GUIContent("Progress: Times visisted"), true);
+            EditorGUILayout.PropertyField(HourVisited, new GUIContent("Progress: hour last visisted"), true);
+            EditorGUILayout.PropertyField(DayVisited, new GUIContent("Progress: day lasr visisted"), true);
         }
 
         ShowTimesClosed = EditorGUILayout.Foldout(ShowTimesClosed, "Show times Closed");

@@ -16,7 +16,7 @@ public class TimeDisplay : MonoBehaviour
     {
         txt = GetComponent<TextMeshProUGUI>();
 
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, UpdateDisplay);
+        Space.Connect<DefaultEvent>(Events.TimeChange, UpdateDisplay);
 
     UpdateDisplay(new DefaultEvent());
 

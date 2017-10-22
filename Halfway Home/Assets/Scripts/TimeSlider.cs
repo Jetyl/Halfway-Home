@@ -15,6 +15,8 @@ public class TimeSlider : MonoBehaviour
 
   public int Time;
 
+    bool DrainEnergy;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -46,6 +48,7 @@ public class TimeSlider : MonoBehaviour
 
         Location = EventData.Destination;
         Time = EventData.Length;
+        DrainEnergy = EventData.DrainEnergy;
         AssignText(Location);
         //turn on visiblity
         gameObject.SetActive(true);
@@ -55,7 +58,7 @@ public class TimeSlider : MonoBehaviour
 
     public void ConfirmDestination()
     {
-        Space.DispatchEvent(Events.MapChoiceConfirmed, new MapEvent(Location, Time));
+        Space.DispatchEvent(Events.MapChoiceConfirmed, new MapEvent(Location, Time, DrainEnergy));
 
         gameObject.SetActive(false);
     }

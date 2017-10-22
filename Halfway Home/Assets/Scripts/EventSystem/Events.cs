@@ -71,7 +71,7 @@ public class Events
     public static readonly String CharacterExit = "CharacterExitEvent";
     public static readonly String Backdrop = "BackdropEvent";
     public static readonly String MoveCharacter = "MoveCharacterEvent";
-
+    public static readonly String NewDay = "NewDayEvent";
 
     //description system
     public static readonly String AutoType = "AutoTypeEvent";
@@ -113,7 +113,8 @@ public class Events
     public static readonly String Tooltip = "TooltipEvent";
     public static readonly String AddStat = "AddStatEvent";
     public static readonly String StatChange = "StatChangeEvent";
-    
+    public static readonly String TimeChange = "TimeChangeEvent";
+
     //a null event. no one should listen to this
     public static readonly String Null = "NullEvent";
 

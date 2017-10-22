@@ -39,7 +39,9 @@ public class MapDisplay : MonoBehaviour
     void TurnMapOn(DefaultEvent Eventdata)
     {
         gameObject.SetActive(true);
+        Game.current.AlterTime();
         ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
+        
     }
 
     void MapChoice(MapEvent eventdata)
@@ -53,7 +55,7 @@ public class MapDisplay : MonoBehaviour
                 gameObject.SetActive(false);
                 Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
 
-                Game.current.AlterTime(eventdata.Length);
+                Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
                 return;
             }
         }
@@ -66,7 +68,7 @@ public class MapDisplay : MonoBehaviour
         Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
 
         gameObject.SetActive(false);
-        Game.current.AlterTime(eventdata.Length);
+        Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
     }
     
 
@@ -79,11 +81,13 @@ public class MapEvent: DefaultEvent
 
     public Room Destination;
     public int Length;
+    public bool DrainEnergy;
 
-    public MapEvent(Room spot, int timeThere)
+    public MapEvent(Room spot, int timeThere, bool fatigue)
     {
         Destination = spot;
         Length = timeThere;
+        DrainEnergy = fatigue;
     }
 
 }
