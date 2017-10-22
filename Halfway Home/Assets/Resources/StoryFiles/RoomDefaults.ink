@@ -15,6 +15,8 @@ EXTERNAL GetValue(name)
 EXTERNAL AlterWellbeing(name, int)
 EXTERNAL AddSocialPoints(name, string)
 EXTERNAL AddSocialTier(name)
+EXTERNAL SetTimeBlock(int)
+EXTERNAL CallSleep()
 
 -> CheckRoom
 
@@ -61,6 +63,7 @@ EXTERNAL AddSocialTier(name)
 		I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
 		I feel hopeful as I surrender myself to sleep.
 	}
+	~CallSleep()
 	I wake up feeling <>
 	{shuffle:
 		-completely reinvograted.
@@ -70,7 +73,7 @@ EXTERNAL AddSocialTier(name)
 		~new_fatigue -= 20
 	}
 -else:
-	I'm not tired enough to sleep, so I just relax for a bit. 
+	I'm not tired enough to sleep, so I just relax for a bit. {SetTimeBlock(1)}
 	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
 }
 

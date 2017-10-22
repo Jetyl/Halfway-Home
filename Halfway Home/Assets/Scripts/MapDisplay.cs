@@ -53,9 +53,10 @@ public class MapDisplay : MonoBehaviour
             {
 
                 gameObject.SetActive(false);
+                Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
                 Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
 
-                Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
+                
                 return;
             }
         }
@@ -64,11 +65,11 @@ public class MapDisplay : MonoBehaviour
     
         //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
         Game.current.CurrentRoom = eventdata.Destination.ToString();
-    
-        Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
-
         gameObject.SetActive(false);
         Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
+        Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
+
+       
     }
     
 

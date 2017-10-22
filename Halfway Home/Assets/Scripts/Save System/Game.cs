@@ -164,7 +164,7 @@ public class Game
 
     public void AlterTime()
     {
-        //Debug.Log(CurrentTimeBlock);
+        Debug.Log(CurrentTimeBlock);
         
         Hour += CurrentTimeBlock;
         if(Hour >= 24)
@@ -185,13 +185,15 @@ public class Game
 
     public void SetTimeBlock(int Amount)
     {
+        Debug.Log(CurrentTimeBlock);
         CurrentTimeBlock = Amount;
-        DrainEnergy = true;
+        DrainEnergy = true; 
     }
 
     public void SetTimeBlock(int Amount, bool DrainFatigue)
     {
-        CurrentTimeBlock = Amount;
+    Debug.Log(CurrentTimeBlock);
+    CurrentTimeBlock = Amount;
         DrainEnergy = DrainFatigue;
     }
 

@@ -107,6 +107,7 @@ namespace HalfwayHome
     public void SetTimeBlock(int time)
     {
         Game.current.SetTimeBlock(time);
+      
     }
     
     public void CallSleep()
