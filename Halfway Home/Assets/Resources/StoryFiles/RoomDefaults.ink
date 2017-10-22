@@ -44,25 +44,53 @@ EXTERNAL AddSocialTier(name)
 === YourRoom ===
 // Reduce Stress, Remove Fatigue, Increase Delusion
 // Recover for the next day. The isolation reminds you of a darker time.
-{
-	- fatigue > 70:
+~ temp new_fatigue = fatigue
+{fatigue > 40:
+	{
+	- fatigue > 80:
 		I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
 		I feel myself begin to drift off almost immediately.
 
-	- fatigue < 50: 
-		I'm not very tired, {stress > 50:but I need some time to unwind.|but I just don't feel like doing anything.}
+	- fatigue < 70: 
+		I don't feel tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
 		I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
 		I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
-		After a timeless eternity, sleep finally takes me.
+		After what seems timeless eternity, sleep finally takes me.
 	- else:
 		I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
 		I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
 		I feel hopeful as I surrender myself to sleep.
+	}
+	I wake up feeling <>
+	{shuffle:
+		-completely reinvograted.
+		-groggy.
+		~new_fatigue -= 40
+		-reasonably rested.
+		~new_fatigue -= 20
+	}
+-else:
+	I'm not tired enough to sleep, so I just relax for a bit. 
+	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
 }
 
-~AlterWellbeing("Stress", -10)
-~AlterWellbeing("Fatigue", -100)
-~AlterWellbeing("Delusion", 10)
+// external function to bring up stats summary
+Wellbeing stats updated.
+Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)}
+{
+	-fatigue > 50:
+		<>@Sleep <>
+		{
+			- new_fatigue == fatigue:
+				removed all Fatigue! 
+			- new_fatigue == fatigue - 40:
+				reduced Fatigue.
+			- new_fatigue == fatigue - 20:
+				reduced Fatigue significantly.
+		}
+		{AlterWellbeing("Fatigue", -new_fatigue)}
+}
+<>@Solitude increased Delusion slightly.{AlterWellbeing("Delusion", 10)}
 -> END
 
 === Commons ===
@@ -86,7 +114,7 @@ Front Desk text placeholder.
 === Kitchen ===
 // Reduce Fatigue
 // Have a meal to keep up your strength.
-Kitchen text placeholder.
+I head to the small cafeteria to get some breakfast/lunch/dinner 
 ~AlterWellbeing("Fatigue", -10)
 -> END
 
@@ -111,9 +139,14 @@ Library text placeholder.
 // Create something.
 The Art Room is {~practically empty|occupied by a few of its regulars|bustling}.
 I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
-Time to make something.
-~AlterWellbeing("Fatigue", 10)
-~AddSocialPoints("Expression", "Minor")
+Time to make something!
+After about an hour, I finish. My arms are starting to ache, but something about channeling intention into physical form makes me feel more capable.
+// Call external for wellbeing
+Wellbeing stats have updated.
+Creative exertion increased Fatigue slightly. {AlterWellbeing("Fatigue", 10)}
+// Call external for social
+Social stats have improved!
+Creativity has increased Expression slightly. {AddSocialPoints("Expression", "Minor")}
 -> END
 
 === Store ===
