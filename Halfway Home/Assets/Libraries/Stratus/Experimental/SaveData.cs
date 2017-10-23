@@ -124,9 +124,9 @@ namespace Stratus
     public static string relativePath => Application.persistentDataPath;
 
     /// <summary>
-    /// The path to the directory being used by this save data
+    /// The path to the directory being used by this save data, as specified by the [SaveData] attribute
     /// </summary>
-    public static string path
+    public static string defaultPath
     {
       get
       {
@@ -169,12 +169,12 @@ namespace Stratus
       get
       {
         // If the directory does not exist yet..
-        if (!Directory.Exists(path))
+        if (!Directory.Exists(defaultPath))
           return null;
 
         // Look at the files matching the extension in the given folder
         var saves = new List<string>();
-        var files = Directory.GetFiles(path);
+        var files = Directory.GetFiles(defaultPath);
         foreach (var file in files)
         {
           string fileExtension = Path.GetExtension(file);
@@ -192,22 +192,164 @@ namespace Stratus
 
     //--------------------------------------------------------------------------------------------/
     // Methods
-    //--------------------------------------------------------------------------------------------/
+    //--------------------------------------------------------------------------------------------/    
+    /// <summary>
+    /// Saves the data to the default path in the application's persistent path
+    /// using the default naming convention
+    /// </summary>
+    public static void Save(SaveData<T> saveData)
+    {
+      Save(saveData, ComposeName(suffix));
+    }
+    
+    /// <summary>
+    /// Saves the data to the default path in the application's persistent path
+    /// using the specified filename
+    /// </summary>
+    public static void Save(SaveData<T> saveData, string name)
+    {
+      // Compose the path
+      var fileName = name + extension;
+      var fullPath = defaultPath + fileName;
+
+      // Create the directory if missing
+      if (!Directory.Exists(defaultPath))
+        Directory.CreateDirectory(defaultPath);
+
+      Serialize(saveData, fullPath);
+    }
+
     /// <summary>
     /// Saves the data to the specified folder in the application's persistent path
     /// using the specified filename
     /// </summary>
-    public void Save(string name)
+    public static void Save(SaveData<T> saveData, string name, string folderName)
+    {
+      // Compose the path
+      var fileName = name + extension;
+      var path = relativePath + DirectorySeparatorChar + folderName + DirectorySeparatorChar;
+      var fullPath = path + fileName;
+
+      // Create the directory if missing
+      if (!Directory.Exists(path))
+        Directory.CreateDirectory(path);
+
+      Serialize(saveData, fullPath);
+    }
+
+    /// <summary>
+    /// Loads a save data file from the default folder and returns it
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static T Load(string name)
+    {
+      var fileName = name + extension;
+      var fullPath = defaultPath + fileName;
+
+      return Deserialize(fullPath);
+    }
+
+    /// <summary>
+    /// Loads a save data file from the given folder and returns it
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static T Load(string name, string folderName)
+    {
+      var fullPath = ComposePath(name, folderName);
+      return Deserialize(fullPath);
+    }
+
+    /// <summary>
+    /// Deletes the save file at the specified folder
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="folderName"></param>
+    public static void Delete(string name, string folderName)
+    {
+      var fullPath = ComposePath(name, folderName);
+      File.Delete(fullPath);
+    }
+
+    /// <summary>
+    /// Deletes the save file at the default folder
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="folderName"></param>
+    public static void Delete(string name)
+    {
+      var fileName = name + extension;
+      var fullPath = defaultPath + fileName;
+      File.Delete(fullPath);
+    }
+
+    /// <summary>
+    /// Checks whether the specified file exists in the specified folder
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static bool Exists(string name, string folder)
+    {
+      var fullPath = ComposePath(name, folder);
+      return File.Exists(fullPath);
+    }
+
+    /// <summary>
+    /// Checks whether the specified file exists in the default folder
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static bool Exists(string name)
+    {
+      var fileName = name + extension;
+      var fullPath = defaultPath + fileName;
+      return File.Exists(fullPath);
+    }
+
+    /// <summary>
+    /// Performs the serialization operation
+    /// </summary>
+    /// <param name="saveData"></param>
+    /// <param name="fullPath"></param>
+    private static void Serialize(SaveData<T> saveData, string fullPath)
     {
       // Update the time to save at
-      this.time = DateTime.Now.ToString();
-      // Now write to the file
-      var fileName = name + extension;
-      var fullPath = path + fileName;
-      Trace.Script("Saving to " + fullPath);
-      File.WriteAllText(fullPath, json);
+      saveData.time = DateTime.Now.ToString();
+      // Write to disk
+      File.WriteAllText(fullPath, saveData.json);
       // Note that it has been saved
-      isSaved = true;
+      saveData.isSaved = true;
+    }
+
+    /// <summary>
+    /// Performs the deserialization operation
+    /// </summary>
+    /// <param name="fullPath"></param>
+    /// <returns></returns>
+
+    public static T Deserialize(string fullPath)
+    {
+      if (!File.Exists(fullPath))
+        throw new FileNotFoundException("The file was not found!");
+
+      string data = File.ReadAllText(fullPath);
+      T saveData = JsonUtility.FromJson<T>(data);
+      return saveData;
+    }
+
+    /// <summary>
+    /// Composes a valid path given the name of a file and the folder it's on
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="folderName"></param>
+    /// <returns></returns>
+    private static string ComposePath(string name, string folderName)
+    {
+      var fileName = name + extension;
+      var path = relativePath + DirectorySeparatorChar + folderName + DirectorySeparatorChar;
+      var fullPath = path + fileName;
+      return fullPath;
     }
 
     /// <summary>
@@ -228,51 +370,6 @@ namespace Stratus
       }
       return name;
     }
-
-    /// <summary>
-    /// Saves the data to the specified folder in the application's persistent path
-    /// using the default naming convention
-    /// </summary>
-    public static void Save(SaveData<T> saveData)
-    {
-      Save(saveData, ComposeName(suffix));
-    }
-
-
-    /// <summary>
-    /// Saves the data to the specified folder in the application's persistent path
-    /// using the specified filename
-    /// </summary>
-    public static void Save(SaveData<T> saveData, string name)
-    {
-      // Update the time to save at
-      saveData.time = DateTime.Now.ToString();
-      // Now write to the file
-      var fileName = name + extension;
-      var fullPath = path + fileName;
-      Trace.Script("Saving to " + fullPath);
-      File.WriteAllText(fullPath, saveData.json);
-      // Note that it has been saved
-      saveData.isSaved = true;
-    }
-
-    /// <summary>
-    /// Loads a save data file from the specified path
-    /// </summary>
-    /// <param name="path"></param>
-    /// <returns></returns>
-    public static T Load(string name)
-    {
-      var fileName = name + extension;
-      var fullPath = path + fileName;
-      if (!File.Exists(fullPath))
-        throw new FileNotFoundException("The file was not found!");
-
-      string data = File.ReadAllText(fullPath);
-      T saveData = JsonUtility.FromJson<T>(data);
-      return saveData;
-    }
-
 
 
 

@@ -94,7 +94,6 @@ namespace Stratus
       {
         GUILayout.BeginVertical();
         GUILayout.Label(title);
-        //GUILayout.
         GUILayout.EndVertical();
       }
 

@@ -9,6 +9,16 @@ namespace Stratus
   [Serializable]
   public class InputAxisField
   {
+    /// <summary>
+    /// The current state of the input
+    /// </summary>
+    public enum State
+    {
+      Pressed,
+      Down,
+      Up
+    }
+
     #pragma warning disable 414
     [SerializeField]
     private string axis;

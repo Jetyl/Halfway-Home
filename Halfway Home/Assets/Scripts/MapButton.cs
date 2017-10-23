@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MapButton : MonoBehaviour
+namespace HalfwayHome
 {
 
+  public class MapButton : MonoBehaviour
+  {
+
     public Room Location;
-    
+
     public ColorBlock SelectedColors;
 
     ColorBlock DefaultColors;
@@ -19,49 +22,51 @@ public class MapButton : MonoBehaviour
 
     public bool DrainFatigue = true;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
 
-        Body = GetComponent<Button>();
-        DefaultColors = Body.colors;
+      Body = GetComponent<Button>();
+      DefaultColors = Body.colors;
 
-        Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
+      Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
 
-        Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
+      Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-		
-	}
+
+    }
 
     public void SelectRoom()
     {
-        Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, TimeSpending, DrainFatigue));
+      Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, TimeSpending, DrainFatigue));
     }
 
     void OnSelectedRoom(MapEvent eventdata)
     {
-        var bloc = Body.colors;
-        if(eventdata.Destination == Location && bloc != SelectedColors)
-        {
+      var bloc = Body.colors;
+      if (eventdata.Destination == Location && bloc != SelectedColors)
+      {
 
-            bloc = SelectedColors;
+        bloc = SelectedColors;
 
-        }
-        else
-        {
-            bloc = DefaultColors;
-        }
+      }
+      else
+      {
+        bloc = DefaultColors;
+      }
 
-        Body.colors = bloc;
+      Body.colors = bloc;
     }
 
     void Reset(DefaultEvent eventdata)
     {
-        Body.colors = DefaultColors;
+      Body.colors = DefaultColors;
     }
+
+  }
 
 }

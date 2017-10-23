@@ -18,7 +18,8 @@ namespace Stratus
     {
       Always,
       Selected,
-      Unselected
+      Unselected,
+      Never
     }
 
     [TextArea]

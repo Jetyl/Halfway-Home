@@ -16,8 +16,7 @@ namespace Stratus
   {
 
     /// <summary>
-    /// Copies a component, constructing a new one from the same type and
-    /// copying the values from the original wholesale.
+    /// Copies the values from another component of the same type
     /// </summary>
     /// <typeparam name="T">The component class</typeparam>
     /// <param name="component">The component to copy into.</param>
@@ -25,7 +24,7 @@ namespace Stratus
     /// <returns>A reference to the new component</returns>
     public static T Copy<T>(this Component component, T otherComponent) where T : Component
     {
-      Type componentType = component.GetType();
+      Type componentType = component.GetType().DeclaringType;
 
       // Check that they are matching types
       if (componentType != otherComponent.GetType())
@@ -73,6 +72,22 @@ namespace Stratus
         result = child.gameObject.AddComponent<T>();
       }
       return result;
+    }
+
+    // Gets the positions of all vertices of this collider in wolrd space
+    public static Vector3[] GetVertices(this BoxCollider b)
+    {
+      Vector3[] vertices = new Vector3[8];
+      vertices[0] = b.transform.TransformPoint(b.center + new Vector3(-b.size.x, -b.size.y, -b.size.z) * 0.5f);
+      vertices[1] = b.transform.TransformPoint(b.center + new Vector3(b.size.x, -b.size.y, -b.size.z) * 0.5f);
+      vertices[2] = b.transform.TransformPoint(b.center + new Vector3(b.size.x, -b.size.y, b.size.z) * 0.5f);
+      vertices[3] = b.transform.TransformPoint(b.center + new Vector3(-b.size.x, -b.size.y, b.size.z) * 0.5f);
+      vertices[4] = b.transform.TransformPoint(b.center + new Vector3(-b.size.x, b.size.y, -b.size.z) * 0.5f);
+      vertices[5] = b.transform.TransformPoint(b.center + new Vector3(b.size.x, b.size.y, -b.size.z) * 0.5f);
+      vertices[6] = b.transform.TransformPoint(b.center + new Vector3(b.size.x, b.size.y, b.size.z) * 0.5f);
+      vertices[7] = b.transform.TransformPoint(b.center + new Vector3(-b.size.x, b.size.y, b.size.z) * 0.5f);
+
+      return vertices;
     }
 
   }

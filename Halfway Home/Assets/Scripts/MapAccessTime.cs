@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MapAccessTime : MonoBehaviour
+namespace HalfwayHome
 {
-    
+
+  public class MapAccessTime : MonoBehaviour
+  {
+
     public List<AccessLocker> ClosedTimeContainer;
     public List<List<bool>> TimeClosed;
-    
+
     public bool LimitedDailyAccess;
 
     public string AccessPoint;
@@ -23,95 +26,95 @@ public class MapAccessTime : MonoBehaviour
     Button self;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
 
-        TimeClosed = new List<List<bool>>();
+      TimeClosed = new List<List<bool>>();
 
-        for (int i = 0; i <= 7; ++i)
+      for (int i = 0; i <= 7; ++i)
+      {
+        var hours = new List<bool>();
+        for (int j = 0; j < 24; ++j)
         {
-            var hours = new List<bool>();
-            for (int j = 0; j < 24; ++j)
-            {
-                hours.Add(false);
-            }
-
-            TimeClosed.Add(hours);
+          hours.Add(false);
         }
 
-        foreach(var point in ClosedTimeContainer)
+        TimeClosed.Add(hours);
+      }
+
+      foreach (var point in ClosedTimeContainer)
+      {
+        for (int i = point.starttime; i <= point.endTime; ++i)
         {
-            for(int i = point.starttime; i <=  point.endTime; ++i)
-            {
-                TimeClosed[point.Day][i] = true;
-            }
+          TimeClosed[point.Day][i] = true;
         }
-        
-        self = GetComponent<Button>();
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
-        Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
+      }
+
+      self = GetComponent<Button>();
+      Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
+      Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-		
-	}
-    
+
+    }
+
 
     void CheckAccess(DefaultEvent Eventdata)
     {
-        self.interactable = true;
-        if(Game.current.Progress.GetBoolValue(ManualAccess) == true)
+      self.interactable = true;
+      if (Game.current.Progress.GetBoolValue(ManualAccess) == true)
+      {
+        self.interactable = false;
+      }
+      if (LimitedDailyAccess)
+      {
+        int hour = Game.current.Progress.GetIntValue(HourVisited);
+        int day = Game.current.Progress.GetIntValue(DayVisited);
+        int length = Game.current.Progress.GetIntValue(AccessPoint) * VisitMulitplier;
+        //if last time visited, plus times visited (times multiplier) is greater that current time
+        if (Game.current.WithinTimeDifference(hour, day, length))
         {
-            self.interactable = false;
+          self.interactable = false;
+          return;
         }
-        if (LimitedDailyAccess)
-        {
-            int hour = Game.current.Progress.GetIntValue(HourVisited);
-            int day = Game.current.Progress.GetIntValue(DayVisited); 
-            int length = Game.current.Progress.GetIntValue(AccessPoint) * VisitMulitplier;
-            //if last time visited, plus times visited (times multiplier) is greater that current time
-            if (Game.current.WithinTimeDifference(hour, day, length))
-            {
-                self.interactable = false;
-                return;
-            }
-        }
-        
-        foreach (var point in ClosedTimeContainer)
-        {
-            if (point.IsClosed(Game.current.Day,Game.current.Hour))
-            {
-                self.interactable = false;
-            }
+      }
 
+      foreach (var point in ClosedTimeContainer)
+      {
+        if (point.IsClosed(Game.current.Day, Game.current.Hour))
+        {
+          self.interactable = false;
         }
+
+      }
 
     }
 
 
     void MapChoice(MapEvent eventdata)
     {
-        if(LimitedDailyAccess)
+      if (LimitedDailyAccess)
+      {
+        if (eventdata.Destination == gameObject.GetComponent<MapButton>().Location)
         {
-            if(eventdata.Destination == gameObject.GetComponent<MapButton>().Location)
-            {
-                Game.current.Progress.SetValue<int>(HourVisited, Game.current.Hour);
-                Game.current.Progress.SetValue<int>(DayVisited, Game.current.Day);
-                Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
-            }
+          Game.current.Progress.SetValue<int>(HourVisited, Game.current.Hour);
+          Game.current.Progress.SetValue<int>(DayVisited, Game.current.Day);
+          Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
         }
+      }
     }
 
 
 
-}
+  }
 
-[System.Serializable]
-public class AccessLocker
-{
+  [System.Serializable]
+  public class AccessLocker
+  {
     public int Day;
     public int starttime;
     public int endTime;
@@ -121,22 +124,23 @@ public class AccessLocker
     public bool IsClosed(int day, int hour)
     {
 
-        if (ProgressLocked)
-        {
-            if (!Game.current.Progress.GetBoolValue(ProgressKey))
-                return false;
-        }
-        
-        if (Day != day)
-            return false;
+      if (ProgressLocked)
+      {
+        if (!Game.current.Progress.GetBoolValue(ProgressKey))
+          return false;
+      }
 
-        for (int i = starttime; i < endTime; ++i)
-        {
-            if (i == hour)
-                return true;
-        }
-
+      if (Day != day)
         return false;
+
+      for (int i = starttime; i < endTime; ++i)
+      {
+        if (i == hour)
+          return true;
+      }
+
+      return false;
     }
 
+  } 
 }

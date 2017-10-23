@@ -46,10 +46,12 @@ namespace Stratus
 
       public enum DetectionMode
       {
-        [Tooltip("The target must be in range and within field of view")]
-        LineOfSight,
         [Tooltip("The target must be in range")]
-        Range
+        Range,
+        [Tooltip("The target must be in range and within field of view")]
+        FieldOfView,
+        [Tooltip("The target must be in range, within field of view and a valid raycast target")]
+        LineOfSight,
       }
       
       //------------------------------------------------------------------------/
@@ -181,6 +183,7 @@ namespace Stratus
           case DetectionMode.Range:
             DrawDetectionRange();
             break;
+          case DetectionMode.FieldOfView:
           case DetectionMode.LineOfSight:
             DrawFIeldOfView();
             break;
@@ -226,10 +229,12 @@ namespace Stratus
       {
         switch (this.Mode)
         {
-          case DetectionMode.LineOfSight:
-            return CheckFieldOfView(target);
           case DetectionMode.Range:
             return CheckDistance(target);
+          case DetectionMode.FieldOfView:
+            return CheckFieldOfView(target);
+          case DetectionMode.LineOfSight:
+            return CheckFieldOfView(target);
         }
         throw new System.NotImplementedException("Missing detection mode!");
       }
@@ -240,7 +245,7 @@ namespace Stratus
       /// <returns></returns>
       public bool CheckDistance(Transform target)
       {
-        return Library.CheckDistance(this.transform, target, this.range);
+        return Library.CheckRange(this.transform, target, this.range);
       }
 
       /// <summary>
@@ -249,38 +254,36 @@ namespace Stratus
       /// <returns></returns>
       public bool CheckFieldOfView(Transform target)
       {
-        // If the target is within range...
         if (CheckDistance(target))
           return Library.CheckFieldOfView(this.transform, target, fieldOfView);
         return false;
       }
 
+      /// <summary>
+      /// Checks line of sight with the given target
+      /// </summary>
+      /// <param name="target"></param>
+      /// <returns></returns>
+      public bool CheckLineOfSight(Transform target)
+      {
+        if (CheckFieldOfView(target))
+          return Library.CheckLineOfSight(transform, target, range);        
+        return false;
+      }
+
       void DrawInteractionSphere()
       {
-        #if UNITY_EDITOR
-        UnityEditor.Handles.color = interactionColor;
-        UnityEditor.Handles.DrawSolidDisc(this.scanPosition, Vector3.up, this.interactionRadius);
-        #endif
+        Library.DrawRange(transform, interactionRadius, interactionColor);
       }
 
       void DrawDetectionRange()
       {
-        #if UNITY_EDITOR
-        UnityEditor.Handles.color = detectionColor;
-        UnityEditor.Handles.DrawSolidDisc(this.transform.position, Vector3.up, this.range);
-        #endif
+        Library.DrawRange(transform, range, detectionColor);
       }
 
       void DrawFIeldOfView()
       {
-        Gizmos.color = idleColor;
-        //Gizmos.DrawFrustum(this.transform.position, this.FieldOfView, this.SightRange, 0f, 1f);
-        var dir = (transform.forward) * this.range;
-        var left = Quaternion.AngleAxis(-(this.fieldOfView / 2f), Vector3.up);
-        var right = Quaternion.AngleAxis((this.fieldOfView / 2f), Vector3.up);
-        Gizmos.DrawLine(transform.position, dir);
-        Gizmos.DrawLine(transform.position, left * dir);
-        Gizmos.DrawLine(transform.position, right * dir);
+        Library.DrawFieldOfView(transform, fieldOfView, range, detectionColor);
       }
 
       //------------------------------------------------------------------------/

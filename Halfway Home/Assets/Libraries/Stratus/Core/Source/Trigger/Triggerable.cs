@@ -117,7 +117,7 @@ namespace Stratus
     protected void RunTriggerSequence()
     {
       //if (Tracing) Trace.Script("Delay = '" + this.Delay + "'", this);
-      if (logging) Trace.Script("Triggering", this);
+      //if (logging) Trace.Script("Triggering", this);
       var seq = Actions.Sequence(this.gameObject.Actions());
       Actions.Delay(seq, this.Delay);
       Actions.Call(seq, this.OnTrigger);

@@ -77,12 +77,47 @@ namespace Stratus
       return children.ToArray();
     }
 
+    /// <summary>
+    /// Returns a container of all the children of this transform.
+    /// </summary>
+    /// <param name="transform"></param>
+    /// <returns>A container of all the children of this transform.</returns>    
+    public static Transform[] Children(this Transform transform, int depth)
+    {
+      var children = new List<Transform>();
+      ListChildren(transform, children, ref depth);
+      return children.ToArray();
+    }
+
+    //public static Transform[] ImmediateChildren(this Transform transform)
+    //{
+    //  var children = new List<Transform>();
+    //  foreach (Transform child in transform)
+    //  {
+    //    children.Add(child);
+    //  }
+    //  return children.ToArray();
+    //}
+
     static void ListChildren(Transform obj, List<Transform> children)
     {
       foreach (Transform child in obj.transform)
       {
         children.Add(child);
         ListChildren(child, children);
+      }
+    }
+
+    static void ListChildren(Transform obj, List<Transform> children, ref int depth)
+    {
+      foreach (Transform child in obj.transform)
+      {
+        children.Add(child);
+        if (depth > 0)
+        {
+          depth--;
+          ListChildren(child, children, ref depth);
+        }
       }
     }
 

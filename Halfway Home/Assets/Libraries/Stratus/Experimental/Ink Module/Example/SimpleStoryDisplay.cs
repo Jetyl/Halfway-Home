@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
+using Stratus.Modules.InkModule;
 
 namespace Stratus
 {
-  namespace InkModule
+  namespace Examples
   {
     /// <summary>
     /// A simple ink story display that displays one line at a time
@@ -67,17 +68,22 @@ namespace Stratus
         display = false;
       }
 
-      protected override void OnStoryUpdate(Story.ParsedLine parse)
+      protected override void OnStoryUpdate(ParsedLine line)
       {       
-        if (!parse.isParsed)
+        if (!line.isParsed)
         {
           speakerText.text = "";
-          messageText.text = parse.line;
+          messageText.text = line.line;
         }
         else
         {
-          speakerText.text = parse.Find("Speaker");
-          messageText.text = parse.Find("Message");
+          Parse speaker = line.Find("Speaker");
+          Parse message = line.Find("Message");
+          if (speaker != null && message != null)
+          {
+            speakerText.text = speaker.value;
+            messageText.text = message.value;
+          }
         }
       }
       

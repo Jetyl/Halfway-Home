@@ -6,32 +6,49 @@ using System;
 
 namespace Stratus
 {
-  namespace InkModule
+  namespace Modules
   {
-    public class SimpleStoryReader : StoryReader  
+    namespace InkModule
     {
-      //------------------------------------------------------------------------------------------/
-      // Messages
-      //------------------------------------------------------------------------------------------/
-      protected override void OnBindExternalFunctions(Ink.Runtime.Story story)
+      public class SimpleStoryReader : StoryReader<RegexParser> 
       {
-        story.BindExternalFunction("PlayMusic", new Action<string>(PlayMusic));
-      }
-      
-      protected override void OnSetLineParsing(Story.ParsePatterns patterns)
-      {
-        
-      }
+        //------------------------------------------------------------------------------------------/
+        // Messages
+        //------------------------------------------------------------------------------------------/
+        protected override void OnBindExternalFunctions(Story story)
+        {
+          story.runtime.BindExternalFunction("PlayMusic", new Action<string>(PlayMusic));
+        }
 
-      //------------------------------------------------------------------------------------------/
-      // External functions
-      //------------------------------------------------------------------------------------------/
-      public void PlayMusic(string trackName)
-      {
-        Trace.Script("Playing music track '" + trackName + "'");
+        protected override void OnConfigureParser(RegexParser parser)
+        {          
+        }
+
+        protected override void OnLoad(Dictionary<string, Story> stories)
+        { 
+          
+        }
+
+        protected override void OnSave(Dictionary<string, Story> stories)
+        {
+          
+        }
+
+        protected override void OnClear()
+        {
+          
+        }
+
+        //------------------------------------------------------------------------------------------/
+        // External functions
+        //------------------------------------------------------------------------------------------/
+        public void PlayMusic(string trackName)
+        {
+          Trace.Script("Playing music track '" + trackName + "'");
+        }
+
+
       }
-      
     }
   }
-
 }

@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Stratus.InkModule;
+using Stratus.Modules.InkModule;
 using Ink.Runtime;
 using UnityEngine.UI;
-using Stratus;
 using TMPro;
 
 namespace HalfwayHome
@@ -14,6 +13,7 @@ namespace HalfwayHome
     //------------------------------------------------------------------------------------------/
     // Fields
     //------------------------------------------------------------------------------------------/
+    //--- Public
     [Header("Dialog")]
     public TextMeshProUGUI speakerText;
     public TextMeshProUGUI messageText;
@@ -23,6 +23,9 @@ namespace HalfwayHome
     public Button choicePrefab;
     public CanvasRenderer dialogPanel;
     public VerticalLayoutGroup choicesPanel;
+
+    //--- Private
+    private string previousSpeaker;
 
     //------------------------------------------------------------------------------------------/
     // Properties
@@ -57,28 +60,22 @@ namespace HalfwayHome
       
     }
 
-    protected override void OnStoryUpdate(Stratus.InkModule.Story.ParsedLine parse)
+    protected override void OnStoryUpdate(ParsedLine parse)
     {
-      //if (logging)
-      //  Trace.Script("Reading " + parse.line);
-
+      // No valid parse? Just print the line.
       if (!parse.isParsed)
       {
-        //speakerText.text = "";
-        //messageText.text = parse.line;
-
         Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line, ""));
-
+        return;
       }
-      else
-      {
-        //speakerText.text = parse.Find("Speaker");
-        //messageText.text = parse.Find("Message");
 
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.Find("Message"), parse.Find("Speaker")));
-      }
+      string speaker = parse.Find("Speaker").value;
+      string message = parse.Find("Message").value;
+      Space.DispatchEvent(Events.Description, new DescriptionEvent(speaker, message));
+      // Record the previous speaker here?
+      previousSpeaker = speaker;
     }
-
+    
     protected override void OnPresentChoices(List<Choice> choices)
     {
       displayChoices = true;

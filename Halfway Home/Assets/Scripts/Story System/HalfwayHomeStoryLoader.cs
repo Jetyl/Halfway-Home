@@ -2,43 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Stratus;
-using Stratus.InkModule;
+using Stratus.Modules.InkModule;
 using System;
-
-/// <summary>
-/// Signals that a new story file should be read
-/// </summary>
-public class StoryEvent : DefaultEvent
-{
-  public TextAsset storyFile;
-  public StoryEvent(TextAsset file)
-  {
-    storyFile = file;
-  }
-}
-
-/// <summary>
-/// Signals that a music track should be played
-/// </summary>
-public class PlayMusicEvent : Stratus.Event
-{
-  public string track;
-}
-
-public class CharacterChangeEvent : Stratus.Event
-{
-  public string character;
-  public bool entering;
-}
-
-// Signals that the player needs to save data
-public class RequestSaveEvent : Stratus.Event
-{
-}
 
 namespace HalfwayHome
 {
-  public class HalfwayHomeStoryDriver : MonoBehaviour
+  
+  /// <summary>
+  /// Signals that a new story file should be read
+  /// </summary>
+  public class StoryEvent : DefaultEvent
+  {
+    public TextAsset storyFile;
+    public StoryEvent(TextAsset file)
+    {
+      storyFile = file;
+    }
+  }
+
+  /// <summary>
+  /// Signals that a music track should be played
+  /// </summary>
+  public class PlayMusicEvent : Stratus.Event
+  {
+    public string track;
+  }
+
+  public class CharacterChangeEvent : Stratus.Event
+  {
+    public string character;
+    public bool entering;
+  }
+
+  // Signals that the player needs to save data
+  public class RequestSaveEvent : Stratus.Event
+  {
+  }
+
+  public class HalfwayHomeStoryLoader : MonoBehaviour
   {
     private class StatAccess
     {
@@ -60,7 +61,7 @@ namespace HalfwayHome
         stats.Add(stat, new StatAccess() { name = stat });
 
       Space.Connect<StoryEvent>(Events.NewStory, OnNewStory);
-      Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
+      //Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
       reader.gameObject.Connect<Story.LoadedEvent>(this.OnStoryLoadedEvent);
       reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
       reader.gameObject.Connect<Story.EndedEvent>(this.OnStoryEndedEvent);
@@ -109,7 +110,6 @@ namespace HalfwayHome
     /// <param name="e"></param>
     void OnStoryStartedEvent(Story.StartedEvent e)
     {
-      // Do wutvz
     }
 
     /// <summary>
@@ -117,15 +117,15 @@ namespace HalfwayHome
     /// This will return control back to the main system
     /// </summary>
     /// <param name="e"></param>
-    void OnStoryEndedEvent(Stratus.InkModule.Story.EndedEvent e)
+    void OnStoryEndedEvent(Story.EndedEvent e)
     {
       Space.DispatchEvent(Events.FinishedStory);
     }
 
-    void OnStorySavedEvent(Stratus.InkModule.Story.SavedEvent e)
-    {
-      Game.current.SavedInk = e.file;
-    }
+    //void OnStorySavedEvent(Story.SavedEvent e)
+    //{
+    //  Game.current.SavedInk = e.file;
+    //}
 
     /// <summary>
     /// Whenever a stat changes, is invoked by ink

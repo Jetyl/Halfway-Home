@@ -80,6 +80,32 @@ namespace Stratus
         Fade(target, alpha, duration);
         yield return null;
       }
+
+      /// <summary>
+      /// Gets the visible boundaries of this transform
+      /// </summary>
+      /// <param name="source"></param>
+      /// <returns></returns>
+      public static Bounds GetVisibleBoundaries(Transform source)
+      {
+        var renderers = source.GetComponentsInChildren<Renderer>(true);
+        bool renderersPresent = renderers.Length != 0;
+
+        if (!renderersPresent)
+          return new Bounds();
+
+        Renderer firstRenderer = renderers[0];
+        Bounds totalBounds = firstRenderer.bounds;
+        for (var i = 1; i < renderers.Length; ++i)
+        {
+          var renderer = renderers[i];
+          var bounds = renderer.bounds;
+          totalBounds.Encapsulate(bounds);
+        }
+
+        return totalBounds;
+      }
+
     } 
   }
 

@@ -150,7 +150,7 @@ namespace Stratus
     /// </summary>
     void Reset()
     {
-      Windows.Watch = new Window("Watch", new Vector2(0.3f, 0.2f), Color.grey, Anchor.TopRight);
+      Windows.Watch = new Window("Watch", new Vector2(0.2f, 0.5f), Color.grey, Anchor.TopRight);
       Windows.Buttons = new Window("Buttons", new Vector2(0.3f, 0.4f), Color.grey, Anchor.BottomRight);
     }
 
@@ -181,8 +181,6 @@ namespace Stratus
 
     void DisplayFPS()
     {
-      //GUILayout.BeginArea()
-      //GUILayout.Label(new GUIContent(fpsCounter.averageFPSLabel));
     }
 
   }

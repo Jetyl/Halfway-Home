@@ -21,7 +21,23 @@ namespace Stratus
     private KeyCode key;
     [SerializeField]
     private MouseButton mouseButton;
-    
+
+    public InputField()
+    {
+    }
+
+    public InputField(KeyCode key)
+    {
+      this.key = key;
+      this.type = Type.Key;
+    }
+
+    public InputField(MouseButton button)
+    {
+      this.mouseButton = button;
+      this.type = Type.MouseButton;
+    }
+
     /// <summary>
     /// Returns true during the first frame the input is pressed down
     /// </summary>

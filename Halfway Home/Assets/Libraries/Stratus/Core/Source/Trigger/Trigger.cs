@@ -169,7 +169,7 @@ namespace Stratus
         }
 
         this.onActivate();
-        if (isDebug) Trace.Script("Triggering!", this);
+        //if (isDebug) Trace.Script("Triggering!", this);
       }
     }
 

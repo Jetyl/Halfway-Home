@@ -14,6 +14,7 @@ MonoBehaviour:
   bookmarkedScenes:
   - {fileID: 102900000, guid: b99aac2ff6c5c9845b4fea9440a2a09c, type: 3}
   - {fileID: 102900000, guid: 5311940562bbf064bb0a552d62d82096, type: 3}
+  - {fileID: 102900000, guid: 23a8ece9d7cf2b7419a715d56c9135ac, type: 3}
   tagColors:
     enabled: 1
     coloredTags:

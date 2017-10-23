@@ -99,7 +99,7 @@ namespace Stratus
       /// <returns></returns>
       bool IsWithinRange()
       {
-        return Library.CheckDistance(this.Agent.transform, this.TargetPosition, this.Range);
+        return Library.CheckRange(this.Agent.transform, this.TargetPosition, this.Range);
       }
 
       /// <summary>

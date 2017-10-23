@@ -7,6 +7,7 @@
 */
 /******************************************************************************/
 using System;
+using UnityEngine;
 
 namespace Stratus
 {
@@ -21,20 +22,72 @@ namespace Stratus
   /// <typeparam name="T"></typeparam>
   public class ArrayNavigate<T> : ArrayNavigate
   {
+    //------------------------------------------------------------------------/
+    // Properties
+    //------------------------------------------------------------------------/
+    /// <summary>
+    /// The array being used
+    /// </summary>
+    private T[] Array;
 
-    T[] Array;
-    int ElementCount { get { return Array.Length - 1; } }
-    int ElementIndex = 0;
+    /// <summary>
+    /// The amount of 0-indexed elements in the array
+    /// </summary>
+    private int indexSize { get { return Array.Length - 1; } }
 
+    /// <summary>
+    /// The current index
+    /// </summary>
+    private int currentIndex = 0;
+
+    /// <summary>
+    /// Retrieves the last element in the array.
+    /// </summary>
+    /// <returns></returns>
+    public T first => Array[0];
+
+    /// <summary>
+    /// Retrieves the last element in the array.
+    /// </summary>
+    /// <returns></returns>
+    public T current => Array[currentIndex];
+
+    /// <summary>
+    /// Retrieves the last element in the array.
+    /// </summary>
+    /// <returns></returns>
+    public T last => Array[indexSize];
+
+    /// <summary>
+    /// Retrieves a random element in the array.
+    /// </summary>
+    /// <returns></returns>
+    public T random
+    {
+      get
+      {
+        var randomIndex = UnityEngine.Random.Range(0, indexSize);
+        return Array[randomIndex];
+      }
+    }
+
+    /// <summary>
+    /// Function to invoke once the index of this array has changed
+    /// </summary>
+    public System.Action<T> onIndexChanged { get; set; }
+
+    //------------------------------------------------------------------------/
+    // Methods
+    //------------------------------------------------------------------------/
     public ArrayNavigate()
     {
-      ElementIndex = 0;
+      currentIndex = 0;
     }
 
     public ArrayNavigate(T[] array)
     {
       Array = array;
-      ElementIndex = 0;
+      currentIndex = 0;
     }
 
     /// <summary>
@@ -44,27 +97,9 @@ namespace Stratus
     public void Set(T[] array)
     {
       Array = array;
-      ElementIndex = 0;
+      currentIndex = 0;
     }
-
-    /// <summary>
-    /// Retrieves the first element in the array.
-    /// </summary>
-    /// <returns></returns>
-    public T First()
-    {
-      return Array[0];
-    }
-
-    /// <summary>
-    /// Retrieves the last element in the array.
-    /// </summary>
-    /// <returns></returns>
-    public T Last()
-    {
-      return Array[ElementCount];
-    }
-
+    
     /// <summary>
     /// Updates the current index to point at the given element
     /// </summary>
@@ -78,7 +113,7 @@ namespace Stratus
         // The element was found
         if (e.Equals(element))
         {
-          ElementIndex = index;
+          currentIndex = index;
           return true;
         }
         index++;
@@ -88,29 +123,30 @@ namespace Stratus
     }
 
     /// <summary>
-    /// Retrieves a random element in the array.
+    /// Navigates along the array in a given direction
     /// </summary>
+    /// <param name="dir"></param>
     /// <returns></returns>
-    public T Random()
-    {
-      var randomIndex = UnityEngine.Random.Range(0, ElementCount);
-      return Array[randomIndex];
-    }
-
     public T Navigate(Direction dir)
     {
-      if (dir == Direction.Left || dir == Direction.Up)
+      if (dir == Direction.Right || dir == Direction.Up)
       {
-        if (ElementIndex < ElementCount)
-          ElementIndex++;
+        if (currentIndex < indexSize)
+        {
+          currentIndex++;          
+          onIndexChanged?.Invoke(current);
+        }
       }
-      else if (dir == Direction.Right || dir == Direction.Down)
+      else if (dir == Direction.Left || dir == Direction.Down)
       {
-        if (ElementIndex != 0)
-          ElementIndex--;
+        if (currentIndex != 0)
+        {
+          currentIndex--;
+          onIndexChanged?.Invoke(current);
+        }
       }
 
-      return Array[ElementIndex];
+      return Array[currentIndex];
     }
   }
 
