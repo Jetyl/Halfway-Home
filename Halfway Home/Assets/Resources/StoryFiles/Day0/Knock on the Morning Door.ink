@@ -81,7 +81,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 [{player_name}] "... No."
 Max looks dissapointed in me. It's a sadly common look. {CharEnter("Max", "Sad")}
 [Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
-[Max] "Besides, it'll only be for one week."
+"Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." {CharEnter("Timothy", "Happy")}
 [Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." {CharEnter("Max", "Calm")}
 [Timothy] "Okay." {CharEnter("Timothy", "Calm")}

@@ -250,7 +250,7 @@ namespace Stratus
           /// <returns></returns>
           public static string ComposeAssignment(string variableLabel, string operandLabel, string op)
           {
-            return $"(?<{variableLabel}>\\w+)[ ]*{op}[ ]*(?<{operandLabel}>\\w+)";
+            return $"(?<{variableLabel}>\\w+)[ ]*[{op}][ ]*(?<{operandLabel}>\\w+)";
           }
 
           /// <summary>

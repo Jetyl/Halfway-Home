@@ -79,7 +79,7 @@ EXTERNAL CallSleep()
 
 // external function to bring up stats summary
 Wellbeing stats updated.
-Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)}
+Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)} # Stress -= 10
 {
 	-fatigue > 50:
 		<>@Sleep <>
@@ -91,9 +91,9 @@ Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)}
 			- new_fatigue == fatigue - 20:
 				reduced Fatigue significantly.
 		}
-		{AlterWellbeing("Fatigue", -new_fatigue)}
+		{AlterWellbeing("Fatigue", -new_fatigue)} # Grace+
 }
-<>@Solitude increased Delusion slightly.{AlterWellbeing("Delusion", 10)}
+<>@Solitude increased Delusion slightly.{AlterWellbeing("Delusion", 10)} # Delusion += 10
 -> END
 
 === Commons ===

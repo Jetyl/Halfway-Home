@@ -56,7 +56,7 @@ EXTERNAL GetPlayerData()
 
 === Introduce_Timothy ===
 [{player_name}] "What? Oh! Yeah, sorry."
-[{player_name}] "Charlotte, this is Timothy, my new roommate. Timothy, this is Charlotte. She's... uh, she lives here, too."
+"Charlotte, this is Timothy, my new roommate. Timothy, this is Charlotte. She's... uh, she lives here, too."
 [Timothy] "Uh... hi." {CharEnter ("Timothy", "Afraid")}
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # charlotte=happy {CharEnter("Charlotte", "Happy")}
 [Timothy] "Th-<delay=1>thanks." # timothy=happy {CharEnter ("Timothy", "Happy")}

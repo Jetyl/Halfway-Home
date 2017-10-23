@@ -25,7 +25,7 @@ namespace HalfwayHome
     public VerticalLayoutGroup choicesPanel;
 
     //--- Private
-    private string previousSpeaker;
+    private string currentSpeaker;
 
     //------------------------------------------------------------------------------------------/
     // Properties
@@ -62,18 +62,21 @@ namespace HalfwayHome
 
     protected override void OnStoryUpdate(ParsedLine parse)
     {
-      // No valid parse? Just print the line.
-      if (!parse.isParsed)
+      Parse dialog = parse.Find(HalfwayHomeStoryReader.dialogLabel);
+      // 1. Monologue
+      bool isMonologue = (dialog == null);
+      if (isMonologue)
       {
         Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line, ""));
         return;
       }
 
-      string speaker = parse.Find("Speaker").value;
-      string message = parse.Find("Message").value;
-      Space.DispatchEvent(Events.Description, new DescriptionEvent(speaker, message));
-      // Record the previous speaker here?
-      previousSpeaker = speaker;
+      // 2. Dialog: Update the current speaker
+      Parse speaker = parse.Find(HalfwayHomeStoryReader.speakerLabel);
+      if (speaker != null)
+        currentSpeaker = speaker.value;
+      
+      Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.value, currentSpeaker));
     }
     
     protected override void OnPresentChoices(List<Choice> choices)

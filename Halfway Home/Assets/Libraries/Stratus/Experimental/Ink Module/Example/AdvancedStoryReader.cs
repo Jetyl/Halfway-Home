@@ -24,8 +24,9 @@ namespace Stratus.Modules.InkModule
       parser.AddPattern("Assignment", RegexParser.Presets.assignment, RegexParser.Target.Tag,
        RegexParser.Scope.Group); //, (Parse parse) => { Trace.Script(parse.groupInformation); });
 
-      parser.AddPattern("Increment", RegexParser.Presets.incrementOperator, RegexParser.Target.Tag,
-        RegexParser.Scope.Group); //, (Parse parse) => { Trace.Script(parse.groupInformation); });
+      string incrementPattern = RegexParser.Presets.ComposeUnaryOperation("Stat", '+');
+      parser.AddPattern("Increment", incrementPattern, RegexParser.Target.Tag,
+       RegexParser.Scope.Group, (Parse parse) => { Trace.Script(parse.groupInformation); });
 
     }
 

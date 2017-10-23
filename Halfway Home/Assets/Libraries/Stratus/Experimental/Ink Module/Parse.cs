@@ -113,7 +113,8 @@ namespace Stratus
         {
           if (!parses.ContainsKey(label))
           {
-            throw new System.ArgumentOutOfRangeException($"The label '{label}' was not found among the parses in this line!");
+            //throw new System.ArgumentOutOfRangeException($"The label '{label}' was not found among the parses in this line!");
+            return null;
           }
           return parses[label];
         }

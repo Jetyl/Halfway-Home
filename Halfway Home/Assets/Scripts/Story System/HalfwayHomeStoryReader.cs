@@ -18,6 +18,13 @@ namespace HalfwayHome
     public string saveFile = "HalfwayHomeStoryStates";
     private StorySave save = new StorySave();
 
+    private string statLabel = "Stat";
+    private string countLabel = "1";
+    private string valueLabel = "Value";
+
+    public static string speakerLabel = "Speaker";
+    public static string dialogLabel = "Dialog";
+
     //------------------------------------------------------------------------/
     // Messages
     //------------------------------------------------------------------------/
@@ -75,25 +82,53 @@ namespace HalfwayHome
     protected override void OnConfigureParser(RegexParser parser)
     {
       // @TODO: Change these to use groups
-      parser.AddPattern("Speaker", RegexParser.Presets.insideSquareBrackets, RegexParser.Target.Line, RegexParser.Scope.Default);
-      parser.AddPattern("Message", RegexParser.Presets.insideDoubleQuotes, RegexParser.Target.Line, RegexParser.Scope.Default);
+      parser.AddPattern(speakerLabel, RegexParser.Presets.insideSquareBrackets, RegexParser.Target.Line, RegexParser.Scope.Default);
+      parser.AddPattern(dialogLabel, RegexParser.Presets.insideDoubleQuotes, RegexParser.Target.Line, RegexParser.Scope.Default);
       
       // Poses
       string posePattern = RegexParser.Presets.ComposeAssignment("Person", "Pose", "=");
       parser.AddPattern("Pose", posePattern, RegexParser.Target.Tag, RegexParser.Scope.Group);
 
-      // Stat increment
-      string incrementStatPattern = RegexParser.Presets.ComposeUnaryOperation("Stat", '+');
-      parser.AddPattern("StatUp", incrementStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group);
+      // Social Stat increment
+      string incrementStatPattern = RegexParser.Presets.ComposeUnaryOperation(statLabel, '+');
+      parser.AddPattern("StatUp", incrementStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSocialStatIncrement);
 
-      // Add your others here based using Compose...
+      // Wellbeing Stat increment
+      string incrementWStatUpPattern = RegexParser.Presets.ComposeAssignment(statLabel, valueLabel, "+=");
+      parser.AddPattern("WellbeingUp", incrementWStatUpPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatIncrement);
+
+      // Wellbeing Stat decrement
+      string incrementWStatDownPattern = RegexParser.Presets.ComposeAssignment(statLabel, valueLabel, "-=");
+      parser.AddPattern("WellbeingDown", incrementWStatDownPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatDecrement);
     }
 
     protected override void OnStoryLoaded(Story story)
     {
       
     }
+    
+    void OnSocialStatIncrement(Parse parse)
+    {
+      string stat = parse.Find(statLabel);
+      string count = parse.Find(countLabel);
+      Trace.Script($"{stat} = {count}");
 
+      // Do your internal stuff here
+    }
+
+    void OnWellbeingStatIncrement(Parse parse)
+    {
+      string stat = parse.Find(statLabel);
+      string value = parse.Find(valueLabel);
+      Trace.Script($"{stat} += {value}");
+    }
+
+    void OnWellbeingStatDecrement(Parse parse)
+    {
+      string stat = parse.Find(statLabel);
+      string value = parse.Find(valueLabel);
+      Trace.Script($"{stat} -= {value}");
+    }
     //------------------------------------------------------------------------/
     // Story
     //------------------------------------------------------------------------/
