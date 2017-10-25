@@ -10,25 +10,21 @@ VAR week = 0
 VAR current_room = "unset"
 
 EXTERNAL PlayMusic(trackName)
-EXTERNAL CharEnter(nameString, poseString)
-EXTERNAL CharExit(nameString)
 
 -> Start
 
 === Start ===
 //prolly have the "room to talk about part first, then this"
-[Timothy] "So, who are they?" {CharEnter("Timothy", "Calm")}
+[Timothy] "So, who are they?" # Timothy = Calm
 //show eduardo and Isaac
-{CharEnter("Eduardo", "Calm")} 
-{CharEnter("Isaac", "Calm")}
-[{player_name}] "Oh, that's Eduardo and Isaac."
-[{player_name}] "HEY!"
+[{player_name}] "Oh, that's Eduardo and Isaac." # Eduardo = Calm # Isaac = Calm
+"HEY!"
 [Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, how's it hangin'?"
 [{player_name}] "Oh, fine."
-[{player_name}] "Max asked me to show around the new kid."
+"Max asked me to show around the new kid."
 [Eduardo] "Oh, is that who that is?"
-[Eduardo] "Nice to meet you little man, I'm Eduardo Medina."
-[Eduardo] "... And this tub o'love is Isaac."
+"Nice to meet you little man, I'm Eduardo Medina."
+"... And this tub o'love is Isaac."
 //change to visual change, and a {player_name} comment
 [Isaac] "(Oh man, you are like, designed to embarass me...)" //change later to isacc just blushing
 [Timothy] "Hello<delay=3>, I-I'm Timothy Myuri..."
@@ -37,7 +33,7 @@ EXTERNAL CharExit(nameString)
 [Eduardo] "Quiet guy ain't he. I didn't catch that."
 [Timothy] "<size=30%> I said my name is Timothy...<size=100%>"
 [Eduardo] "Yo. Tim, I can't hear you when you're-"
-[Eduardo] "Oof!"
+"Oof!"
 Isaac jabs him in the stomach
 [Isaac] "Sorry. Eddy's super manic right now. kinda a jerk."
 [Eduardo] "...Eddy?" //I'm picturing eduardo with like, a puppydog sad face
@@ -57,7 +53,7 @@ That would be Eduardo, who's quite preoccupied cuddling Isaac.
 
 === Leaving ===
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
-[Eduardo] "later!" {CharExit("Eduardo")} {CharExit("Isaac")} {CharExit("Timothy")}
+[Eduardo] "later!" # Eduardo = Exit # Isaac = Exit # Timothy = Exit
 -> END
 
 === HeyEddy ===

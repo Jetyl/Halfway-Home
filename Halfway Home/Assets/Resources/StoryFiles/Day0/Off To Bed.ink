@@ -9,9 +9,6 @@ VAR delusion = 0
 VAR week = 1
 VAR current_room = "unset"
 
-EXTERNAL PlayMusic(trackName)
-EXTERNAL CharEnter(nameString, poseString)
-EXTERNAL CharExit(nameString)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
@@ -34,8 +31,8 @@ I hope into the shower real quick, and by the time I come out, Timothy is alread
 I plant myself in my own bed, and sqwirm under the sheets.
 I am beat.
 I sit there, wavering between consiousness, and unconsiousness, when I hear a voice.
-[Timothy] "hey,<delay=2> {player_name}?"
-[{player_name}] "yeah?"
+[Timothy] "Hey,<delay=2> {player_name}?"
+[{player_name}] "Yeah?"
 -> TalkWeek1
 //{
 //	- GetValue("Tutorial") == true:
@@ -45,26 +42,26 @@ I sit there, wavering between consiousness, and unconsiousness, when I hear a vo
 //}
 =Question
 [Timothy] "D-d-does it ever get easier?"
-[Timothy] "being here, I-I mean."
+"Being here, I-I mean."
 [{player_name}] "..."
 *[Yes] -> Comfort
 *[No] -> Cold
 
 
 === ContemplateWeek1 ===
-man, its going to be a bit weird, having a roommate
-eh, its only for one week
+Man, it's going to be a bit weird, having a roommate.
+Eh, its only for one week.
 -> Start.IntoBed
 
 === TalkWeek1 ==
 [Timothy] "th-th-thank you...<delay=2> for showing me around"
-[{player_name}] "oh"
-[{player_name}] "no problem."
+[{player_name}] "Oh"
+"No problem."
 ->Start.Question
 
 === Comfort ===
 [{player_name}] "yeah."
-[{player_name}] "Yeah.<delay=5> it does."
+"Yeah.<delay=5> it does."
 [Timothy] "th-thats good..."
 ->Sleep
 
@@ -78,7 +75,7 @@ eh, its only for one week
 [{player_name}] "Good night Timothy"
 {
 	- expression >= 1:
-		[{player_name}] "It was nice meeting you."
+		"It was nice meeting you."
 }
 I start to drift off from there. My thoughts slow and hazy.
 My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes.

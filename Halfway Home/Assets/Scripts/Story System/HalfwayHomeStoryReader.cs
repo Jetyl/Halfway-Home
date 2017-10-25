@@ -31,8 +31,8 @@ namespace HalfwayHome
     protected override void OnBindExternalFunctions(Story story)
     {
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
-      story.runtime.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter));
-      story.runtime.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit));
+      //story.runtime.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter)); DEPRECATED
+      //story.runtime.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit)); DEPRECATED
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.runtime.BindExternalFunction(nameof(AddSocialPoints), new System.Action<string, string>(AddSocialPoints));
       story.runtime.BindExternalFunction(nameof(AlterWellbeing), new System.Action<string, int>(AlterWellbeing));
@@ -87,7 +87,7 @@ namespace HalfwayHome
       
       // Poses
       string posePattern = RegexParser.Presets.ComposeAssignment("Person", "Pose", "=");
-      parser.AddPattern("Pose", posePattern, RegexParser.Target.Tag, RegexParser.Scope.Group);
+      parser.AddPattern("Pose", posePattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnPoseChange);
 
       // Social Stat increment
       string incrementStatPattern = RegexParser.Presets.ComposeUnaryOperation(statLabel, '+');
@@ -105,6 +105,18 @@ namespace HalfwayHome
     protected override void OnStoryLoaded(Story story)
     {
       
+    }
+
+    void OnPoseChange(Parse parse)
+    {
+      if(parse.Find("Pose") == "Exit")
+      {
+        Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
+      }
+      else
+      {
+        Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
+      }
     }
     
     void OnSocialStatIncrement(Parse parse)
@@ -142,18 +154,18 @@ namespace HalfwayHome
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
 
-    public void CharEnter(string name, string _pose)
-    {
-      //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
-      Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose));
-      Trace.Script("called char enter");
-    }
+    //public void CharEnter(string name, string _pose)
+    //{
+    //  //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
+    //  Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose));
+    //  Trace.Script("called char enter");
+    //}
 
-    public void CharExit(string name)
-    {
-      //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
-      Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Calm"));
-    }
+    //public void CharExit(string name)
+    //{
+    //  //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
+    //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Calm"));
+    //}
 
     public void SetValue(string ValueName, bool newValue)
     {
