@@ -21,6 +21,7 @@ EXTERNAL CallSleep()
 -> CheckRoom
 
 === CheckRoom ===
+hello?
 {
 	- current_room == "YourRoom":
 		-> YourRoom

@@ -40,39 +40,40 @@ namespace HalfwayHome
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
-      gameObject.SetActive(true);
-      Game.current.AlterTime();
-      ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
+            print("Off");
+            gameObject.SetActive(true);
+            Game.current.AlterTime();
+            ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
 
     }
 
     void MapChoice(MapEvent eventdata)
     {
 
-      for (int i = 0; i < ChoicesAvalible.Count; ++i)
-      {
-        if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
-        {
+          for (int i = 0; i < ChoicesAvalible.Count; ++i)
+          {
+            if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
+            {
 
-          gameObject.SetActive(false);
-          Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
-          Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
+                    gameObject.SetActive(false);
+                    Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
+                    Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
 
 
-          return;
+                    return;
+            }
+          }
+
+            //if gets here, no scene was there. send a default sorta dealie
+
+            //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
+            Game.current.CurrentRoom = eventdata.Destination.ToString();
+            gameObject.SetActive(false);
+            Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
+            Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
+            print("On");
+
         }
-      }
-
-      //if gets here, no scene was there. send a default sorta dealie
-
-      //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
-      Game.current.CurrentRoom = eventdata.Destination.ToString();
-      gameObject.SetActive(false);
-      Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
-      Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
-
-
-    }
 
 
 

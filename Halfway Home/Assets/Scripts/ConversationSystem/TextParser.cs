@@ -208,6 +208,7 @@ public static class TextParser
 
         //text = text.Replace("#PlayerName", Game.current.PlayerName);
         text = text.Replace("@", Environment.NewLine);
+        text = text.Replace("<color=", "<color=#");
 
         return text;
     }
