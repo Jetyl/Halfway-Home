@@ -138,6 +138,10 @@ public static class TextParser
         {
             if (text[i] == '<')
             {
+
+              if (i + 7 > text.Length)
+                break;
+
                 var check = text.Substring(i, 7);
                 if(check == "<speed=" || check == "<Speed=")
                 {
@@ -202,7 +206,7 @@ public static class TextParser
             return text;
 
 
-        text = text.Replace("#PlayerName", Game.current.PlayerName);
+        //text = text.Replace("#PlayerName", Game.current.PlayerName);
         text = text.Replace("@", Environment.NewLine);
 
         return text;

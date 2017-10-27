@@ -117,7 +117,7 @@ Front Desk text placeholder.
 === Kitchen ===
 // Reduce Fatigue
 // Have a meal to keep up your strength.
-I head to the small cafeteria to get some breakfast/lunch/dinner 
+I head to the small cafeteria to get some breakfast/lunch/dinner
 ~AlterWellbeing("Fatigue", -10)
 -> END
 
@@ -148,13 +148,18 @@ After about an hour, I finish. My arms are starting to ache, but something about
 Wellbeing stats have updated.
 Creative exertion increased Fatigue slightly. {AlterWellbeing("Fatigue", 10)}
 // Call external for social
-Social stats have improved!
+<color=green>Social stats have improved!</color>
 Creativity has increased Expression slightly. {AddSocialPoints("Expression", "Minor")}
 -> END
 
 === Store ===
 // All Stats Chance to Increase
 // Take a fleeting trip into the Real World.
+I think it's best if I get some time outside of the House for a bit.
+The store isn't far and there's only a few blocks of mostly vacant streets on the way, but it's a rare sojourn into the real world.
+The idea is slightly off-putting, but I figure it'll be good for me.
+The unpredictability of it is kind of exciting. I feel like anything could happen.
+After a brisk walk I reach my destination.
 = Delusion
 {~->StoreDelusion|->Store.Stress}
 = Stress
@@ -176,10 +181,12 @@ Creativity has increased Expression slightly. {AddSocialPoints("Expression", "Mi
 {~->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Large}
 
 = Small
-Delusion increases slightly.{AlterWellbeing("Delusion", 10)}
+For some reason, being out in public makes me feel more isolated. I feel myself shrink.
+Delusion increased slightly.{AlterWellbeing("Delusion", 10)}
 -> Store.Stress
-
 = Large
+The clerk is busy in the back of the store. 
+My darker thoughts come out as I'm left waiting for what feels like an eternity.
 Delusion increases significantly.{AlterWellbeing("Delusion", 20)}
 -> Store.Stress
 
@@ -187,10 +194,12 @@ Delusion increases significantly.{AlterWellbeing("Delusion", 20)}
 {~->StoreStress.Small|->StoreStress.Small|->StoreStress.Small|->StoreStress.Small|->StoreStress.Large}
 
 = Small
+The shop is packed. The process of gathering my items for checkout is uncomfortable.
 Stress increases slightly.{AlterWellbeing("Stress", 10)}
 -> Store.Fatigue
 
 = Large
+Some boisterous customers are talking loudly about how how Blackwell Psychiatric Hospital and the Halfway House are a blight on their community. I have rarely felt so unwelcome.
 Stress increases significantly.{AlterWellbeing("Stress", 20)}
 -> Store.Fatigue
 

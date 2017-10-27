@@ -70,6 +70,7 @@ public class AutoType : MonoBehaviour
 
     public void TypingText(AutoTypeEvent eventdata)
     {
+    
         message = eventdata.text;
         Text.text = "";
         PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");

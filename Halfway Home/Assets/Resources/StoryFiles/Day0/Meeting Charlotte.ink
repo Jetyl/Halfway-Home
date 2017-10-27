@@ -28,7 +28,7 @@ EXTERNAL GetPlayerData()
 	[{player_name}] "Great. I'm still in one piece, at least."
 	[Charlotte] "I see. Perhaps the rumors were a fabrication."
 	"I heard that you are due to be released at week’s end… and yet your language lacks the tone of aplomb I have come to expect from those moving on to greener pastures."
-	[{player_name}] "No, it's true. I am super "due". Guess I'm just still coming to terms with it."
+	[{player_name}] "No, it's true. I am super 'due'. Guess I'm just still coming to terms with it."
 	[Charlotte] "Not to worry, {player_name}. I am certain you will find your confidence by the time you leave us."
 	Charlotte glances at Timothy.
 	"Where are my manners? You must properly introduce this new face." # Charlotte = Surprised

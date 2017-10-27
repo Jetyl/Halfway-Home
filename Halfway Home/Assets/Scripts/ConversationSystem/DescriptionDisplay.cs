@@ -116,7 +116,7 @@ public class DescriptionDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
-
+        
         AutoOnLast = eventdata.AutoFinish;
         
         /*
