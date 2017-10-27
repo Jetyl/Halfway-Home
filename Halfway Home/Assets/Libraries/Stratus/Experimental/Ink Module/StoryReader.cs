@@ -29,18 +29,18 @@ namespace Stratus
         public bool allowRestart = false;
 
         [Header("States")]
-        [Tooltip("Whether the state of stories shoudl automatically be saved by default")]
+        [Tooltip("Whether the state of stories should automatically be saved by default")]
         public bool saveStates = true;
         [Tooltip("Whether to save story data when exiting playmode")]
         public bool saveOnExit = false;
-        
+
         //------------------------------------------------------------------------------------------/
         // Private Fields
         //------------------------------------------------------------------------------------------/
         /// <summary>
-        /// /The current knot (sub-section) of the story we are on
+        /// The current data for this reader
         /// </summary>
-        private string stitch { get; set; }
+        private StorySave storySave = new StorySave();
 
         //------------------------------------------------------------------------------------------/
         // Properties
@@ -56,6 +56,18 @@ namespace Stratus
         /// load from a previous state.
         /// </summary>
         private Dictionary<string, Story> stories { get; set; } = new Dictionary<string, Story>();
+        /// <summary>
+        /// /The current knot (sub-section) of the story we are on
+        /// </summary>
+        private string stitch { get; set; }
+        /// <summary>
+        /// The default name for the story data being serialized
+        /// </summary>
+        protected virtual string saveFileName => "StoryReaderData";
+        /// <summary>
+        /// The name of the folder to store the data of this reader at
+        /// </summary>
+        protected virtual string saveFolder => "Stratus Example";
 
         //------------------------------------------------------------------------------------------/
         // Virtual Functions
@@ -63,10 +75,7 @@ namespace Stratus
         protected abstract void OnAwake();
         protected virtual void OnStoryLoaded(Story story) {}
         protected abstract void OnBindExternalFunctions(Story story);
-        protected abstract void OnLoad(Dictionary<string, Story> stories);
-        protected abstract void OnSave(Dictionary<string, Story> stories);
-        protected abstract void OnClear();
-
+        
         //------------------------------------------------------------------------------------------/
         // Messages
         //------------------------------------------------------------------------------------------/
@@ -89,6 +98,9 @@ namespace Stratus
             Save();
         }
 
+        //------------------------------------------------------------------------------------------/
+        // Initialization
+        //------------------------------------------------------------------------------------------/
         /// <summary>
         /// Once a story has been set, loads it. If its's set to save,
         /// it will first look for the story among the specified save data
@@ -177,20 +189,6 @@ namespace Stratus
             return;
           }
         }
-
-        /// <summary>
-        /// Saves the state of the specified story
-        /// </summary>
-        /// <param name="story"></param>
-        private void SaveState(Story story)
-        {
-          if (!stories.ContainsKey(story.name))
-            stories.Add(story.name, story);
-
-          story.timesRead++;
-          stories[story.name].savedState = story.runtime.state.ToJson();
-          //Trace.Script($"Saving {story.name}");
-        }        
 
         //------------------------------------------------------------------------------------------/
         // Events
@@ -314,6 +312,12 @@ namespace Stratus
         {
           if (logging)
             Trace.Script("Saving...", this);
+
+          // Save the current story
+          if (saveStates)
+            SaveState(story);
+
+          storySave.currentStory = story;
           OnSave(stories);
         }
 
@@ -325,8 +329,91 @@ namespace Stratus
           if (logging)
             Trace.Script("Cleared!", this);
           stories.Clear();
+          storySave = new StorySave();
           OnClear();
         }
+
+        /// <summary>
+        /// Stops the current story
+        /// </summary>
+        public void Pause()
+        {
+          EndStory();
+        }
+
+        /// <summary>
+        /// Resumes the last story played
+        /// </summary>
+        public void Resume()
+        {
+          if (storySave.currentStory == null)
+          {
+            if (logging)
+              Trace.Script("No story to resume from!", this);
+            return;
+          }
+
+          story = storySave.currentStory;
+          story.LoadState();
+          StartStory(true);
+          Trace.Script($"Resuming {story.name}", this);
+        }
+
+        //------------------------------------------------------------------------------------------/
+        // Methods: Serialization
+        //------------------------------------------------------------------------------------------/
+        /// <summary>
+        /// Saves the state of the specified story
+        /// </summary>
+        /// <param name="story"></param>
+        private void SaveState(Story story)
+        {
+          if (!stories.ContainsKey(story.name))
+            stories.Add(story.name, story);
+
+          story.timesRead++;
+          stories[story.name].savedState = story.runtime.state.ToJson();          
+          //Trace.Script($"Saving {story.name}");
+        }
+
+        protected virtual void OnSave(Dictionary<string, Story> stories)
+        {
+          // From dictionary to list
+          List<Story> storyList = new List<Story>();
+          foreach (var story in stories)
+            storyList.Add(story.Value);
+          storySave.stories = storyList;
+
+          // Now save it
+          StorySave.Save(storySave, saveFileName, saveFolder);
+
+          if (logging)
+            Trace.Script("Saved!");
+        }
+
+        protected virtual void OnLoad(Dictionary<string, Story> stories)
+        {
+          if (StorySave.Exists(saveFileName, saveFolder))
+          {
+            storySave = StorySave.Load(saveFileName, saveFolder);
+
+            // From list to dictionary!
+            foreach (var story in storySave.stories)
+            {
+              if (logging)
+                Trace.Script($"Loaded {story.name}");
+              stories.Add(story.name, story);
+            }
+            if (logging)
+              Trace.Script("Loaded!");
+          }
+        }
+
+        protected virtual void OnClear()
+        {
+          StorySave.Delete(saveFileName, saveFolder);
+        }
+
 
         //------------------------------------------------------------------------------------------/
         // Methods: Parsing
@@ -334,7 +421,7 @@ namespace Stratus
         /// <summary>
         /// Starts the current dialog.
         /// </summary>
-        void StartStory()
+        void StartStory(bool resume = false)
         {
           if (logging)
             Trace.Script($"The story {story.name} has started!");
@@ -352,7 +439,7 @@ namespace Stratus
           Scene.Dispatch<Story.StartedEvent>(startedEvent);
 
           // Update the first line of dialog
-          this.ContinueStory();
+          this.ContinueStory(!resume);
         }
 
         /// <summary>
@@ -360,11 +447,13 @@ namespace Stratus
         /// be continued.If it can't ,it will then check if there are any choices
         /// to be made.If there aren't, it will end the dialog.
         /// </summary>
-        void ContinueStory()
+        void ContinueStory(bool forward = true)
         {
           // If there is more dialog
           if (story.runtime.canContinue)
           {
+            if (forward)
+              story.runtime.Continue();
             UpdateCurrentLine();
           }
           // If we are given a choice
@@ -392,10 +481,8 @@ namespace Stratus
           this.gameObject.Dispatch<Story.EndedEvent>(storyEnded);
           Scene.Dispatch<Story.EndedEvent>(storyEnded);
 
-          // If persistent, save it
-          if (saveStates)
-            SaveState(story);
-          
+          // Save the story
+          Save();          
         }
 
         //------------------------------------------------------------------------------------------/
@@ -490,8 +577,8 @@ namespace Stratus
         public string latestStitch { get; private set; }
 
         protected override void UpdateCurrentLine()
-        {
-          var line = story.runtime.Continue();
+        {          
+          var line = story.runtime.currentText;
           var tags = story.runtime.currentTags;
 
           // Check whether this line has been visited before

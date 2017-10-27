@@ -15,12 +15,11 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     // Fields
     //------------------------------------------------------------------------/
-    public string saveFile = "HalfwayHomeStoryStates";
-    private StorySave save = new StorySave();
+    protected override string saveFileName => "HalfwayHomeStoryReader";
 
     private string statLabel = "Stat";
-    private string countLabel = "1";
     private string valueLabel = "Value";
+    private string countLabel = "Count";
 
     public static string speakerLabel = "Speaker";
     public static string dialogLabel = "Dialog";
@@ -43,42 +42,6 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
     }
 
-    protected override void OnLoad(Dictionary<string, Story> stories)
-    {
-      if (StorySave.Exists(saveFile))
-      {
-        save = StorySave.Load(saveFile);
-
-        // From list to dictionary!
-        foreach (var story in save.stories)
-        {
-          Trace.Script($"Loaded {story.name}");
-          stories.Add(story.name, story);
-        }
-
-        Trace.Script("Loaded story states!");
-      }
-    }
-
-    protected override void OnSave(Dictionary<string, Story> stories)
-    {
-      // From dictionary to list
-      List<Story> storyList = new List<Story>();
-      foreach (var story in stories)
-        storyList.Add(story.Value);
-
-      // Now save it!
-      save.stories = storyList;
-      StorySave.Save(save, saveFile);
-
-      Trace.Script("Saved story states!");
-    }
-
-    protected override void OnClear()
-    {
-      StorySave.Delete(saveFile);
-    }
-
     protected override void OnConfigureParser(RegexParser parser)
     {
       // @TODO: Change these to use groups
@@ -86,19 +49,19 @@ namespace HalfwayHome
       parser.AddPattern(dialogLabel, RegexParser.Presets.insideDoubleQuotes, RegexParser.Target.Line, RegexParser.Scope.Default);
       
       // Poses
-      string posePattern = RegexParser.Presets.ComposeAssignment("Person", "Pose", "=");
+      string posePattern = RegexParser.Presets.ComposeBinaryOperation("Person", "Pose", "=");
       parser.AddPattern("Pose", posePattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnPoseChange);
 
       // Social Stat increment
-      string incrementStatPattern = RegexParser.Presets.ComposeUnaryOperation(statLabel, '+');
+      string incrementStatPattern = RegexParser.Presets.ComposeUnaryOperation(statLabel, countLabel, '+');
       parser.AddPattern("StatUp", incrementStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSocialStatIncrement);
 
       // Wellbeing Stat increment
-      string incrementWStatUpPattern = RegexParser.Presets.ComposeAssignment(statLabel, valueLabel, "+=");
+      string incrementWStatUpPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "+=");
       parser.AddPattern("WellbeingUp", incrementWStatUpPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatIncrement);
 
       // Wellbeing Stat decrement
-      string incrementWStatDownPattern = RegexParser.Presets.ComposeAssignment(statLabel, valueLabel, "-=");
+      string incrementWStatDownPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "-=");
       parser.AddPattern("WellbeingDown", incrementWStatDownPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatDecrement);
     }
 

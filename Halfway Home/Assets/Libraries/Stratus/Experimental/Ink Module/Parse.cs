@@ -67,11 +67,17 @@ namespace Stratus
             StringBuilder builder = new StringBuilder();
             foreach (var group in groups)
             {
-              builder.AppendLine($"{group.Key} = {group.Value}");
+              builder.Append($"[{group.Key},{group.Value}]");
             }
             return builder.ToString();
           }
         }
+
+        public override string ToString()
+        {
+          return $"{label}: {groupInformation}";
+        }
+
       }      
 
       /// <summary>

@@ -229,7 +229,7 @@ namespace Stratus
           /// <summary>
           /// Variable = Operand
           /// </summary>
-          public static string assignment => @"(?<Variable>\w+) = (?<Operand>\w+)";
+          public static string assignment => ComposeBinaryOperation("Variable", "Value", "=");
 
           /// <summary>
           /// Variable++
@@ -248,9 +248,10 @@ namespace Stratus
           /// <param name="variable"></param>
           /// <param name="value"></param>
           /// <returns></returns>
-          public static string ComposeAssignment(string variableLabel, string operandLabel, string op)
+          public static string ComposeBinaryOperation(string variableLabel, string operandLabel, string binaryOperator)
           {
-            return $"(?<{variableLabel}>\\w+)[ ]*[{op}][ ]*(?<{operandLabel}>\\w+)";
+            binaryOperator = Regex.Escape(binaryOperator);
+            return $"(?<{variableLabel}>\\w+)[ ]*{binaryOperator}[ ]*(?<{operandLabel}>\\w+)";
           }
 
           /// <summary>
@@ -260,9 +261,9 @@ namespace Stratus
           /// <param name="variableLabel"></param>
           /// <param name="unaryOperator"></param>
           /// <returns></returns>
-          public static string ComposeUnaryOperation(string variableLabel, char unaryOperator)
+          public static string ComposeUnaryOperation(string variableLabel, string operatorLabel, char unaryOperator)
           {
-            return $"(?<{variableLabel}>\\w+)[ ]*([{unaryOperator}]+)";
+            return $"(?<{variableLabel}>\\w+)[ ]*(?<{operatorLabel}>[{unaryOperator}]+$)";
           }
 
           /// <summary>

@@ -24,21 +24,6 @@ namespace Stratus
         {          
         }
 
-        protected override void OnLoad(Dictionary<string, Story> stories)
-        { 
-          
-        }
-
-        protected override void OnSave(Dictionary<string, Story> stories)
-        {
-          
-        }
-
-        protected override void OnClear()
-        {
-          
-        }
-
         //------------------------------------------------------------------------------------------/
         // External functions
         //------------------------------------------------------------------------------------------/

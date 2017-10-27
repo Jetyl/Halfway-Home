@@ -18,6 +18,11 @@ namespace Stratus
         /// The saved states of all stories that were loaded by a reader
         /// </summary>
         public List<Story> stories = new List<Story>();
+
+        /// <summary>
+        /// The story currently being read
+        /// </summary>
+        public Story currentStory;
       } 
 
     }
