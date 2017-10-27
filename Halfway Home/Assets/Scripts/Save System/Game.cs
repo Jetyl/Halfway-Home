@@ -125,7 +125,7 @@ public class Game
     {
         if(InCurrentStory)
         {
-            //SavedInk = 
+            
         }
 
 

@@ -18,9 +18,9 @@ EXTERNAL AddSocialTier(name)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL CallSleep()
 
--> CheckRoom
+-> Start
 
-=== CheckRoom ===
+=== Start ===
 {
 	- current_room == "YourRoom":
 		-> YourRoom
@@ -160,6 +160,7 @@ The store isn't far and there's only a few blocks of mostly vacant streets on th
 The idea is slightly off-putting, but I figure it'll be good for me.
 The unpredictability of it is kind of exciting. I feel like anything could happen.
 After a brisk walk I reach my destination.
+->Store.Delusion
 = Delusion
 {~->StoreDelusion|->Store.Stress}
 = Stress
@@ -204,6 +205,7 @@ Stress increases significantly.{AlterWellbeing("Stress", 20)}
 -> Store.Fatigue
 
 === StoreFatigue ===
+There
 {~->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Large}
 
 = Small

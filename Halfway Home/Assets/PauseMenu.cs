@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-
+  public HalfwayHome.HalfwayHomeStoryReader ReaderReference;
 	// Use this for initialization
 	void Start ()
     {
         gameObject.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     public void Continue()
     {
         Space.DispatchEvent(Events.UnPause);
     }
 
-    public void Quit()
+    public void Save()
     {
         SaveLoad.Save();
+        ReaderReference.Save();
+    }
+
+    public void Quit()
+    {
         print("on");
         Application.Quit();
     }
