@@ -118,6 +118,10 @@ namespace Stratus
           /// The story to be loaded
           /// </summary>
           public TextAsset storyFile;
+          /// <summary>
+          /// The knot to start at
+          /// </summary>
+          public string knot;
         }
 
         /// <summary>

@@ -7,16 +7,23 @@ using System;
 
 namespace HalfwayHome
 {
-  
   /// <summary>
   /// Signals that a new story file should be read
   /// </summary>
   public class StoryEvent : DefaultEvent
   {
     public TextAsset storyFile;
+    public string knot;
+    public StoryEvent(TextAsset file, string knotTitle)
+    {
+      storyFile = file;
+      knot = knotTitle;
+    }
+
     public StoryEvent(TextAsset file)
     {
       storyFile = file;
+      knot = "Start";
     }
   }
 
@@ -74,7 +81,10 @@ namespace HalfwayHome
     void OnNewStory(StoryEvent eventdata)
     {
       Trace.Script("Reading " + eventdata.storyFile.name, this);
-      reader.gameObject.Dispatch<Story.LoadEvent>(new Story.LoadEvent() { storyFile = eventdata.storyFile });
+      var e = new Story.LoadEvent();
+      e.storyFile = eventdata.storyFile;
+      e.knot = eventdata.knot;
+      reader.gameObject.Dispatch<Story.LoadEvent>(e);
     }
 
     /// <summary>

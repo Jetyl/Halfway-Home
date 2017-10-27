@@ -124,13 +124,14 @@ namespace Stratus
         /// Loads a story from file
         /// </summary>
         /// <param name="storyFile"></param>
-        public void LoadStory(TextAsset storyFile)
+        public void LoadStory(TextAsset storyFile, string knot = null)
         {
           Story newStory = null;
 
           // If this story has already been loaded,
           // use the previous state
-          if (stories.ContainsKey(storyFile.name))
+          bool previouslyLoaded = stories.ContainsKey(storyFile.name);
+          if (previouslyLoaded)
           {
             if (logging)
               Trace.Script($"{storyFile.name} has already been loaded! Using it!");
@@ -147,6 +148,13 @@ namespace Stratus
 
           // Assign the story
           story = newStory;
+
+          // If a knot was provided
+          if (knot != null)
+          {
+            Trace.Script($"Loading at knot {knot}");
+            JumpToKnot(knot);
+          }
 
           // Start it
           InitializeStory();
@@ -213,7 +221,7 @@ namespace Stratus
 
         void OnLoadEvent(Story.LoadEvent e)
         {
-          this.LoadStory(e.storyFile);
+          this.LoadStory(e.storyFile, e.knot);
         }
 
         void OnContinueEvent(Story.ContinueEvent e)

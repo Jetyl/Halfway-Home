@@ -40,9 +40,9 @@ public class GameStartUp : MonoBehaviour
         if (DebugMode)
             SaveLoad.Delete();
 
-        SaveLoad.Load();
+        SaveLoad.Load(); //loads the game file
 
-        if (SaveLoad.GetSave(0) != null)
+        if (SaveLoad.GetSave(0) != null) //if a save exists, set that to the main game
             Game.current = SaveLoad.GetSave(0);
        
         if (DebugMode)
@@ -50,7 +50,7 @@ public class GameStartUp : MonoBehaviour
             TestingAndDebugging();
         }
 
-        else if (Game.current == null)
+        else if (Game.current == null) //for new games
         {
 
             Game.current = new Game();
