@@ -33,9 +33,9 @@ namespace HalfwayHome
       //story.runtime.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter)); DEPRECATED
       //story.runtime.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit)); DEPRECATED
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
-      story.runtime.BindExternalFunction(nameof(AddSocialPoints), new System.Action<string, string>(AddSocialPoints));
-      story.runtime.BindExternalFunction(nameof(AlterWellbeing), new System.Action<string, int>(AlterWellbeing));
-      story.runtime.BindExternalFunction(nameof(AddSocialTier), new System.Action<string>(AddSocialTier));
+      //story.runtime.BindExternalFunction(nameof(AddSocialPoints), new System.Action<string, string>(AddSocialPoints)); DEPRECATED
+      //story.runtime.BindExternalFunction(nameof(AlterWellbeing), new System.Action<string, int>(AlterWellbeing)); DEPRECATED
+      //story.runtime.BindExternalFunction(nameof(AddSocialTier), new System.Action<string>(AddSocialTier)); DEPRECATED
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
@@ -84,25 +84,65 @@ namespace HalfwayHome
     
     void OnSocialStatIncrement(Parse parse)
     {
-      string stat = parse.Find(statLabel);
+      string stat = parse.Find(statLabel).ToLower();
       string count = parse.Find(countLabel);
       Trace.Script($"{stat} = {count}");
 
-      // Do your internal stuff here
+      var eventStat = Personality.Social.awareness;
+      if (stat == "grace")
+        eventStat = Personality.Social.grace;
+      if (stat == "expression")
+        eventStat = Personality.Social.expression;
+
+      if(count == "+")
+      {
+        Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("Minor", eventStat));
+      }
+      else if(count == "++")
+      {
+        Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("Major", eventStat));
+      }
+      else
+      {
+        if (stat == "awareness")
+          Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
+        if (stat == "grace")
+          Game.current.Self.IncrementSocialTier(Personality.Social.grace);
+        if (stat == "expression")
+          Game.current.Self.IncrementSocialTier(Personality.Social.expression);
+        Space.DispatchEvent(Events.StatChange);
+      }
     }
 
     void OnWellbeingStatIncrement(Parse parse)
     {
-      string stat = parse.Find(statLabel);
-      string value = parse.Find(valueLabel);
-      Trace.Script($"{stat} += {value}");
+      string stat = parse.Find(statLabel).ToLower();
+      int value = 0;
+      int.TryParse(parse.Find(valueLabel), out value);
+
+      OnWellbeingStatChange(stat, value);
+      Trace.Script($"{stat} increased by {value}");
     }
 
     void OnWellbeingStatDecrement(Parse parse)
     {
-      string stat = parse.Find(statLabel);
-      string value = parse.Find(valueLabel);
-      Trace.Script($"{stat} -= {value}");
+      string stat = parse.Find(statLabel).ToLower();
+      int value = 0;
+      int.TryParse(parse.Find(valueLabel), out value);
+
+      OnWellbeingStatChange(stat, -value);
+      Trace.Script($"{stat} decreased by {value}");
+    }
+
+    void OnWellbeingStatChange(string stat, int value)
+    {
+      var eventStat = Personality.Wellbeing.delusion;
+      if (stat == "stress")
+        eventStat = Personality.Wellbeing.stress;
+      if (stat == "fatigue")
+        eventStat = Personality.Wellbeing.fatigue;
+
+      Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat));
     }
     //------------------------------------------------------------------------/
     // Story
@@ -145,43 +185,43 @@ namespace HalfwayHome
       return Game.current.Progress.GetStringValue(ValueName);
     }
 
-    public void AlterWellbeing(string WellnessStat, int Value)
-    {
-      var stat = Personality.Wellbeing.delusion;
+    //public void AlterWellbeing(string WellnessStat, int Value)
+    //{
+    //  var stat = Personality.Wellbeing.delusion;
 
-      if (WellnessStat == "Stress")
-        stat = Personality.Wellbeing.stress;
-      if (WellnessStat == "Fatigue")
-        stat = Personality.Wellbeing.fatigue;
+    //  if (WellnessStat == "Stress")
+    //    stat = Personality.Wellbeing.stress;
+    //  if (WellnessStat == "Fatigue")
+    //    stat = Personality.Wellbeing.fatigue;
 
-      Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
-    }
+    //  Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
+    //}
 
-    public void AddSocialPoints(string SocialStat, string Value)
-    {
-      var stat = Personality.Social.awareness;
-
-
-      if (SocialStat == "Grace")
-        stat = Personality.Social.grace;
-      if (SocialStat == "Expression")
-        stat = Personality.Social.expression;
-
-      Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
-    }
-
-    public void AddSocialTier(string SocialStat)
-    {
-      if (SocialStat == "Awareness")
-        Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
-      if (SocialStat == "Grace")
-        Game.current.Self.IncrementSocialTier(Personality.Social.grace);
-      if (SocialStat == "Expression")
-        Game.current.Self.IncrementSocialTier(Personality.Social.expression);
+    //public void AddSocialPoints(string SocialStat, string Value)
+    //{
+    //  var stat = Personality.Social.awareness;
 
 
-      Space.DispatchEvent(Events.StatChange);
-    }
+    //  if (SocialStat == "Grace")
+    //    stat = Personality.Social.grace;
+    //  if (SocialStat == "Expression")
+    //    stat = Personality.Social.expression;
+
+    //  Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
+    //}
+
+    //public void AddSocialTier(string SocialStat)
+    //{
+    //  if (SocialStat == "Awareness")
+    //    Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
+    //  if (SocialStat == "Grace")
+    //    Game.current.Self.IncrementSocialTier(Personality.Social.grace);
+    //  if (SocialStat == "Expression")
+    //    Game.current.Self.IncrementSocialTier(Personality.Social.expression);
+
+
+    //  Space.DispatchEvent(Events.StatChange);
+    //}
 
     public void SetTimeBlock(int time)
     {

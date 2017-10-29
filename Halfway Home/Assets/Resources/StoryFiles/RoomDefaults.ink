@@ -12,9 +12,6 @@ VAR current_room = "unset"
 EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
-EXTERNAL AlterWellbeing(name, int)
-EXTERNAL AddSocialPoints(name, string)
-EXTERNAL AddSocialTier(name)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL CallSleep()
 
@@ -79,10 +76,10 @@ EXTERNAL CallSleep()
 
 // external function to bring up stats summary
 Wellbeing stats updated.
-Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)} # Stress -= 10
+Rest relieved a small amount of Stress. # Stress -= 10
 {
 	-fatigue > 50:
-		<>@Sleep <>
+		<>@Sleep <> # Fatigue -= new_fatigue
 		{
 			- new_fatigue == fatigue:
 				removed all Fatigue! 
@@ -91,16 +88,14 @@ Rest relieved a small amount of Stress. {AlterWellbeing("Stress", -10)} # Stress
 			- new_fatigue == fatigue - 20:
 				reduced Fatigue significantly.
 		}
-		{AlterWellbeing("Fatigue", -new_fatigue)} # Grace+
 }
-<>@Solitude increased Delusion slightly.{AlterWellbeing("Delusion", 10)} # Delusion += 10
+<>@Solitude increased Delusion slightly. # Delusion += 10
 -> END
 
 === Commons ===
 // Reduce Delusion
 // Ground yourself in the cozy heart of the House.
-Commons text placeholder.
-~AlterWellbeing("Delusion", -1)
+Commons text placeholder. # Delusion -= 20
 
 
 // Example, do not actually use here:
@@ -117,24 +112,19 @@ Front Desk text placeholder.
 === Kitchen ===
 // Reduce Fatigue
 // Have a meal to keep up your strength.
-I head to the small cafeteria to get some breakfast/lunch/dinner
-~AlterWellbeing("Fatigue", -10)
+I head to the small cafeteria to get some breakfast/lunch/dinner # Fatigue -= 20
 -> END
 
 === Garden ===
 // Increase Delusion, Increase Awareness
 // Contemplate your journey: the good and the bad.
-Garden text placeholder.
-~AlterWellbeing("Delusion", 10)
-~AddSocialPoints("Awareness", "Minor")
+Garden text placeholder. # Delusion += 10 # Awareness+
 -> END
 
 === Library ===
 // Increase Stress, Increase Grace
 // Study the world, its people, and its myths.
-Library text placeholder.
-~AlterWellbeing("Stress", 10)
-~AddSocialPoints("Grace", "Minor")
+Library text placeholder. # Stress += 10 # Grace+
 -> END
 
 === ArtRoom ===
@@ -146,10 +136,10 @@ Time to make something!
 After about an hour, I finish. My arms are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 // Call external for wellbeing
 Wellbeing stats have updated.
-Creative exertion increased Fatigue slightly. {AlterWellbeing("Fatigue", 10)}
+Creative exertion increased Fatigue slightly. # Fatigue += 10
 // Call external for social
 <color=green>Social stats have improved!</color>
-Creativity has increased Expression slightly. {AddSocialPoints("Expression", "Minor")}
+Creativity has increased Expression slightly. # Expression+
 -> END
 
 === Store ===
@@ -168,14 +158,20 @@ After a brisk walk I reach my destination.
 = Fatigue
 {~->StoreFatigue|->Store.Grace}
 = Grace
-{~{AddSocialPoints("Grace", "Minor")}|}
--> Store.Expression
+{shuffle:
+	- Something about Grace. -> Store.Expression # Grace+
+	- ->Store.Expression
+}
 = Expression
-{~{AddSocialPoints("Expression", "Minor")}|}
--> Store.Awareness
+{shuffle:
+	- Something about Expression. -> Store.Awareness # Expression+
+	- ->Store.Expression
+}
 = Awareness
-{~{AddSocialPoints("Awareness", "Minor")}|}
--> END
+{shuffle:
+	- Something about Awareness. -> END # Awareness+
+	- ->END
+}
 
 
 === StoreDelusion ===
@@ -183,12 +179,12 @@ After a brisk walk I reach my destination.
 
 = Small
 For some reason, being out in public makes me feel more isolated. I feel myself shrink.
-Delusion increased slightly.{AlterWellbeing("Delusion", 10)}
+Delusion increased slightly. # Delusion += 10
 -> Store.Stress
 = Large
 The clerk is busy in the back of the store. 
 My darker thoughts come out as I'm left waiting for what feels like an eternity.
-Delusion increases significantly.{AlterWellbeing("Delusion", 20)}
+Delusion increases significantly. # Delusion += 20
 -> Store.Stress
 
 === StoreStress ===
@@ -196,24 +192,23 @@ Delusion increases significantly.{AlterWellbeing("Delusion", 20)}
 
 = Small
 The shop is packed. The process of gathering my items for checkout is uncomfortable.
-Stress increases slightly.{AlterWellbeing("Stress", 10)}
+Stress increases slightly. # Stress += 10
 -> Store.Fatigue
 
 = Large
 Some boisterous customers are talking loudly about how how Blackwell Psychiatric Hospital and the Halfway House are a blight on their community. I have rarely felt so unwelcome.
-Stress increases significantly.{AlterWellbeing("Stress", 20)}
+Stress increases significantly. # Stress += 20
 -> Store.Fatigue
 
 === StoreFatigue ===
-There
 {~->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Large}
 
 = Small
-Fatigue increases slightly.{AlterWellbeing("Fatigue", 10)}
+Fatigue increases slightly. # Fatigue += 10
 -> Store.Grace
 
 = Large
-Fatigue increases significantly.{AlterWellbeing("Fatigue", 20)}
+Fatigue increases significantly. # Fatigue += 20
 -> Store.Grace
 
 === Warning ===

@@ -133,17 +133,17 @@ MonoBehaviour:
     Actor: {fileID: 0}
   Poses:
   - Name: Calm
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   - Name: Angry
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   - Name: Happy
-    Visual: {fileID: 21300000, guid: 2409f737229a82644b550d0eaeefb9dd, type: 3}
+    Visual: {fileID: 21300000, guid: 15c506573423ec346be41671dc1db4c3, type: 3}
   - Name: Sad
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   - Name: Afraid
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   - Name: Surprised
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   Distances:
   - Scale: 0
     Offset: 0
