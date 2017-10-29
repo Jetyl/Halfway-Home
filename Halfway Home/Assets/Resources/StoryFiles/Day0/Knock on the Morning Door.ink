@@ -63,7 +63,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 }
 
 ===Introductions===
-[Max] "Heya {player_name}. Don't tell me I woke ya up?" # Max = Calm
+[Max] "Heya {player_name}. Don't tell me I woke ya up?" # Keyless = Calm
 [{player_name}] "Yeah."
 [Max] "Hope you weren't planning on sleeping in. You know you should have your routine down by now."
 [{player_name}] "Yeah, yeah, I know."
@@ -75,15 +75,15 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 [{player_name}] "Uh... yeah?"
 [Max] "You don't remember, do you?"
 [{player_name}] "... No."
-Max looks dissapointed in me. It's a sadly common look. # Max = Sad
+Max looks dissapointed in me. It's a sadly common look. # Keyless = Sad
 [Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." # Timothy = Happy
-[Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Max = Calm
+[Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
 [Timothy] "Okay." # Timothy = Calm
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
 Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
-[Max] "Oh crap." # Max = Surprised
+[Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
 [Max] "It would seem I have misplaced my keys."
 [{player_name}] "Uh-oh."
@@ -91,11 +91,11 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, Imma need you to do me a solid."
 I don't like where this is going. //Oh, you don't like the sound of that.
-"Well... It's Timothy's first day, so someone's gotta show him the ropes." # Max = Happy
+"Well... It's Timothy's first day, so someone's gotta show him the ropes." # Keyless = Happy
 "But I can't have my keys unaccounted for here."
 "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
-[Max] "Thanks buddy." # Max = Exit
+[Max] "Thanks buddy." # Keyless = Exit
 And just like that, Max leaves you all alone with this new stranger.
 Timothy sighs dejectedly. Maybe he's used to this?
 [{player_name}] "Uh... hey."
