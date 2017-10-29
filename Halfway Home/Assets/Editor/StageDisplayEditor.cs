@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditorInternal;
 using UnityEditor;
+using System;
 
 [CustomEditor(typeof(StageDisplay))]
 public class StageDisplayEditor : Editor
 {
     private ReorderableList list;
+
+    bool showbackdrops;
 
     private void OnEnable()
     {
@@ -31,7 +34,24 @@ public class StageDisplayEditor : Editor
 
         EditorGUILayout.Space();
 
-        EditorGUILayout.PropertyField(Backdrop, new GUIContent("Backdrop"), true);
+        showbackdrops = EditorGUILayout.Foldout(showbackdrops, new GUIContent("Backdrops"));
+
+        if(showbackdrops)
+        {
+            Backdrop.arraySize = Enum.GetValues(typeof(Room)).Length;
+
+            for (var i = 0; i < Backdrop.arraySize; ++i)
+            {
+                Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("ID").enumValueIndex = i;
+
+                EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).
+                    FindPropertyRelative("Backdrop"), new GUIContent( (Room)i + " Backdrop"), true);
+            }
+
+            EditorGUILayout.Space();
+            //EditorGUILayout.PropertyField(Backdrop, new GUIContent("Backdrop"), true);
+        }
+        
 
         EditorGUILayout.PropertyField(FrontCurtain, new GUIContent("Front Curtain"), true);
         EditorGUILayout.PropertyField(BackCuratin, new GUIContent("BackCuratin"), true);

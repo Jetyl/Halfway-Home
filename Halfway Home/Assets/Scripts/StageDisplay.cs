@@ -9,7 +9,7 @@ public class StageDisplay : MonoBehaviour
 
     public List<CharacterList> CastList;
 
-    public Sprite Backdrop;
+    public List<RoomDetails> Backdrop;
 
     public SpriteRenderer FrontCurtain;
     public SpriteRenderer BackCuratin;
@@ -180,8 +180,20 @@ public class StageDisplay : MonoBehaviour
 
     void SceneryChange(StageDirectionEvent eventdata)
     {
+        foreach (var room in Backdrop)
+        {
 
-        StartCoroutine(BackdropChange(eventdata.Backdrop));
+
+            if (room.ID == eventdata.Backdrop)
+            {
+
+                StartCoroutine(BackdropChange(room.Backdrop));
+
+            }
+
+
+        }
+
 
     }
 
@@ -229,7 +241,7 @@ public class StageDirectionEvent : DefaultEvent
     public string character;
     public string Pose;
     public Vector3 Position;
-    public Sprite Backdrop;
+    public Room Backdrop;
     public StagePosition Direction;
     public StageDistance Distance;
 
@@ -241,7 +253,7 @@ public class StageDirectionEvent : DefaultEvent
         Distance = Dis;
     }
 
-    public StageDirectionEvent(Sprite scenery)
+    public StageDirectionEvent(Room scenery)
     {
         Backdrop = scenery;
     }
@@ -259,6 +271,13 @@ public class StageDirectionEvent : DefaultEvent
         Distance = Dis;
     }
 
+}
+
+[Serializable]
+public class RoomDetails
+{
+    public Room ID;
+    public Sprite Backdrop;
 }
 
 public enum StagePosition
