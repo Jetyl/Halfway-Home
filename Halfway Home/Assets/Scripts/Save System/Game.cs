@@ -164,7 +164,7 @@ public class Game
 
     public void AlterTime()
     {
-        Debug.Log(CurrentTimeBlock);
+        //Debug.Log(CurrentTimeBlock);
         
         Hour += CurrentTimeBlock;
         if(Hour >= 24)

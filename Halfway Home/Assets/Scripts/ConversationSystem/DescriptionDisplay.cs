@@ -118,7 +118,6 @@ public class DescriptionDisplay : MonoBehaviour
         Line = TextParser.DynamicEdit(eventdata.Line);
         
         AutoOnLast = eventdata.AutoFinish;
-        print(Line);
         /*
         if(!anime.GetBool("IsUp"))
         {

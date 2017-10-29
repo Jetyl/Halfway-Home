@@ -21,6 +21,7 @@ public class GameStartUpEditor : Editor
     {
         serializedObject.Update();
 
+        SerializedProperty ReaderReference = serializedObject.FindProperty("ReaderReference");
         SerializedProperty Timeline = serializedObject.FindProperty("Timeline");
         SerializedProperty StartDay = serializedObject.FindProperty("StartDay");
         SerializedProperty StartHour = serializedObject.FindProperty("StartHour");
@@ -43,9 +44,10 @@ public class GameStartUpEditor : Editor
 
         EditorGUILayout.Space();
 
+        EditorGUILayout.PropertyField(ReaderReference, new GUIContent("Reader"), true);
         EditorGUILayout.PropertyField(Timeline, new GUIContent("Timeline"), true);
         EditorGUILayout.IntSlider(StartDay, 1, 7, new GUIContent("Start Day"));
-        EditorGUILayout.IntSlider(StartHour, 1, 7, new GUIContent("Start Hour"));
+        EditorGUILayout.IntSlider(StartHour, 0, 23, new GUIContent("Start Hour"));
 
 
         EditorGUILayout.Space();
@@ -63,7 +65,7 @@ public class GameStartUpEditor : Editor
         {
 
             EditorGUILayout.IntSlider(DebugDay, 1, 7, new GUIContent("Debug Day"));
-            EditorGUILayout.IntSlider(DebugHour, 1, 7, new GUIContent("Debug Hour"));
+            EditorGUILayout.IntSlider(DebugHour, 0, 23, new GUIContent("Debug Hour"));
             EditorGUILayout.IntSlider(DebugWeek, 1, 7, new GUIContent("debug Week"));
 
             EditorGUILayout.Space();

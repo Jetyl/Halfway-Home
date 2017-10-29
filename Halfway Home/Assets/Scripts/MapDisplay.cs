@@ -40,7 +40,7 @@ namespace HalfwayHome
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
-            print("Off");
+
             gameObject.SetActive(true);
             Game.current.AlterTime();
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
@@ -71,7 +71,6 @@ namespace HalfwayHome
             gameObject.SetActive(false);
             Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
-            print("On");
 
         }
 

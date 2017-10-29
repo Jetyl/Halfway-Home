@@ -109,6 +109,9 @@ public class ConversationSystem
                 case NodeTypes.LoadNode:
                     Nodes.Add(new ConvLoad(conversation[i]));
                     break;
+                case NodeTypes.LoopNode:
+                    Nodes.Add(new ConvLoop(conversation[i]));
+                    break;
                 default:
                     break;
             }

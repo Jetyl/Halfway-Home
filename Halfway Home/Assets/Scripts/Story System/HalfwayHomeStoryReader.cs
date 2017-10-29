@@ -67,7 +67,7 @@ namespace HalfwayHome
 
     protected override void OnStoryLoaded(Story story)
     {
-            print("h-hello?");
+
     }
 
     void OnPoseChange(Parse parse)
