@@ -33,6 +33,10 @@ public class MainMenu : MonoBehaviour
         ConfirmationPanel.SetActive(true);
     }
 
+    public void Clear()
+    {
+        SaveLoad.Delete();
+    }
     public void Quit()
     {
         Application.Quit();

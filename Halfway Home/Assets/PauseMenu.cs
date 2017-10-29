@@ -22,6 +22,12 @@ public class PauseMenu : MonoBehaviour
         ReaderReference.Save();
     }
 
+    public void Clear()
+    {
+        //SaveLoad.Delete();
+        ReaderReference.Clear();
+    }
+
     public void Quit()
     {
         print("on");

@@ -21,7 +21,8 @@ public enum NodeTypes
     InkNode = 11,
     MapNode = 12,
     ToMapNode = 13,
-    LoadNode = 14
+    LoadNode = 14,
+    LoopNode = 15
 }
 
 
@@ -639,6 +640,34 @@ public class ConvLoad : ConvNode
 
 }
 
+
+/**
+    * CLASS NAME: ConvReturn
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvLoop : ConvNode
+{
+    int Hour;
+    int Day;
+
+    public ConvLoop(JsonData key)
+    {
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+        Day = (int)key["Day"];
+        Hour = (int)key["Hour"];
+    }
+
+
+    public override void CallAction()
+    {
+        Game.current.Day = Day;
+        Game.current.Hour = Hour;
+        Space.DispatchEvent(Events.TimeChange);
+    }
+
+}
 
 /**
     * CLASS NAME: ConvChoice

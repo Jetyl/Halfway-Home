@@ -10,6 +10,10 @@
     "Type" : 4
    },
    {
+    "Name" : "PlayerGender",
+    "Type" : 4
+   },
+   {
     "Name" : "delusion",
     "Type" : 2
    },
@@ -150,6 +154,17 @@
    },
    {
     "Name" : "Manuel Kitchen Turn Off",
+    "Type" : 1
+   }
+  ]
+ },
+ {
+  "PlotName" : "EndGame",
+  "BeatNumber" : 0,
+  "BeatName"   : "End Game",
+  "Point"      : [
+   {
+    "Name" : "Saved Timothy",
     "Type" : 1
    }
   ]

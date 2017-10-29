@@ -33,12 +33,17 @@ public class GameStartUp : MonoBehaviour
 
     public List<ProgressPoint> DebugValues;
 
+    public HalfwayHome.HalfwayHomeStoryReader ReaderReference;
+
     // Use this for initialization
     void Start ()
     {
 
         if (DebugMode)
+        {
             SaveLoad.Delete();
+            ReaderReference.Clear();
+        }
 
         SaveLoad.Load(); //loads the game file
 
