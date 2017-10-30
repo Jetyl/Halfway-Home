@@ -50,6 +50,8 @@ namespace HalfwayHome
     void MapChoice(MapEvent eventdata)
     {
 
+      Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(eventdata.Destination));
+
           for (int i = 0; i < ChoicesAvalible.Count; ++i)
           {
             if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)

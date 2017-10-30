@@ -199,7 +199,7 @@ public class StageDisplay : MonoBehaviour
 
     IEnumerator BackdropChange(Sprite newBackdrop)
     {
-
+    print(newBackdrop.name);
         BackCuratin.sprite = newBackdrop;
         var Awhite = Color.white;
         Awhite.a = 0;
