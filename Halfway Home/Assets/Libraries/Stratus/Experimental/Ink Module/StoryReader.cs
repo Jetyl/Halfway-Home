@@ -136,7 +136,7 @@ namespace Stratus
             if (logging)
               Trace.Script($"{storyFile.name} has already been loaded! Using it!");
             newStory = stories[storyFile.name];
-            newStory.LoadState();
+            LoadState(story);
           }
           // If the story hasn't been loaded yet
           else
@@ -362,9 +362,19 @@ namespace Stratus
           }
 
           story = storySave.currentStory;
-          story.LoadState();
+          LoadState(story);// story.LoadState();
           StartStory(true);
           Trace.Script($"Resuming {story.name}", this);
+        }
+
+        private void LoadState(Story story)
+        {
+          if (!story.runtime)
+          {
+            story.runtime = new Ink.Runtime.Story(story.file.text);
+          }
+
+          story.runtime.state.LoadJson(story.savedState);
         }
 
         //------------------------------------------------------------------------------------------/

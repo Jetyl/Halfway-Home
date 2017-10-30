@@ -49,15 +49,15 @@ namespace Stratus
         /// </summary>
         public Ink.Runtime.Story runtime { get; set; }
 
-        /// <summary>
-        /// Reloads the state of the story from the saved json
-        /// </summary>
-        public void LoadState()
-        {
-          if (!runtime)
-            runtime = new Ink.Runtime.Story(file.text);
-          runtime.state.LoadJson(savedState);
-        }
+        ///// <summary>
+        ///// Reloads the state of the story from the saved json
+        ///// </summary>
+        //public void LoadState()
+        //{
+        //  if (!runtime)
+        //    runtime = new Ink.Runtime.Story(file.text);
+        //  runtime.state.LoadJson(savedState);
+        //}
 
         //--------------------------------------------------------------------/
         // Definitions
