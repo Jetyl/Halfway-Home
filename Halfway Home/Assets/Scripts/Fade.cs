@@ -69,7 +69,7 @@ public class Fade : MonoBehaviour
 
     void OnFadeEvent (FadeEvent eventdata)
     {
-        //print("on");
+        print("on");
 
         if(Fading != null)
         {

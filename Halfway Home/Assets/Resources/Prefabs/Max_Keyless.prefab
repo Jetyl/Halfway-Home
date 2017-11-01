@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character:
-    Character: Max
+    Character: Keyless
     Actor: {fileID: 0}
   Poses:
   - Name: Calm

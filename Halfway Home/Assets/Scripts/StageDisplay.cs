@@ -199,16 +199,17 @@ public class StageDisplay : MonoBehaviour
 
     IEnumerator BackdropChange(Sprite newBackdrop)
     {
-    print(newBackdrop.name);
         BackCuratin.sprite = newBackdrop;
         var Awhite = Color.white;
         Awhite.a = 0;
-        FrontCurtain.DispatchEvent(Events.Fade, new FadeEvent(Awhite, 2));
-        
+        FrontCurtain.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, 2));
+        BackCuratin.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
+
         yield return new WaitForSeconds(2);
 
         FrontCurtain.sprite = newBackdrop;
         FrontCurtain.color = Color.white;
+        BackCuratin.color = Awhite;
 
     }
 

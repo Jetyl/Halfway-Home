@@ -23,7 +23,7 @@ namespace HalfwayHome
     public StoryEvent(TextAsset file)
     {
       storyFile = file;
-      knot = "Start";
+      knot = null;
     }
   }
 
