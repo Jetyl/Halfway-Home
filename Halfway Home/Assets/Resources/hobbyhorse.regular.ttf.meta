@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4133bb9d405bfb04e8c2e2c3e358b0d0
+timeCreated: 1509742178
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hobby Horse NF
+  fontNames:
+  - Hobby Horse NF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
