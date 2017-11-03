@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1259498987	Play_music_placeholder_main			\Default Work Unit\Play_music_placeholder_main	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	235618933	barble bapkins 1_6	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Mac\SFX\barble bapkins 1.6_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music\music_placeholder_main\barble bapkins 1_6		28311684
+	235618933	barble bapkins 1_6	C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Mac\SFX\barble bapkins 1.6_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music\music_placeholder_main\barble bapkins 1_6		28311684
 

@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="HalfwaySoundbank" ID="{3417FDDD-0A6B-4D9F-8AE2-7EE68E28303B}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_music_placeholder_main" ID="{22B75101-457D-4621-B772-F73362C102E9}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_music_placeholder_main" ID="{22B75101-457D-4621-B772-F73362C102E9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

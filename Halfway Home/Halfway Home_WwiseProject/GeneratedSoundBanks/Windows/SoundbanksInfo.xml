@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -35,7 +35,7 @@
 			<ShortName>HalfwaySoundbank</ShortName>
 			<Path>HalfwaySoundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\Default Work Unit\Play_music_placeholder_main"/>
+				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\PlayMusic\Play_music_placeholder_main"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="235618933" Language="SFX">

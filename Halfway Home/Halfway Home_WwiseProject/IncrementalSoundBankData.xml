@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="878078161">
+<IncrementalBankBuild Version="6" Flags="4259130660">
 	<Platform GUID="{4ACCCFD1-9CF7-441F-ABC3-CEC0DAAD0441}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="HalfwaySoundbank" Hash="2967362763" Timestamp="131522316410745160"/>
-				<File Name="Init" Hash="1876415378" Timestamp="131522314271013246"/>
+				<File Name="HalfwaySoundbank" Hash="4193718632" Timestamp="131541345520006433"/>
+				<File Name="Init" Hash="1876415378" Timestamp="131541345552548294"/>
 				<File Name="Test" Hash="756948723" Timestamp="131522307230930990"/>
-				<File Name="Test1" Hash="3855899043" Timestamp="131522314270882729"/>
+				<File Name="Test1" Hash="2418005219" Timestamp="131541345552198274"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2475680133" Timestamp="131522316410860483"/>
+				<File Name="" Hash="3755654427" Timestamp="131541345552698303"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{B5FD0CE7-D49D-4DF5-9D4F-E1E460C9235A}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="HalfwaySoundbank" Hash="2967362763" Timestamp="131522316411497868"/>
-				<File Name="Init" Hash="1964904968" Timestamp="131522314279956178"/>
+				<File Name="HalfwaySoundbank" Hash="3349408625" Timestamp="131541374517094972"/>
+				<File Name="Init" Hash="1964904968" Timestamp="131541346453989854"/>
 				<File Name="Test" Hash="756948723" Timestamp="131522307231918325"/>
-				<File Name="Test1" Hash="3855899043" Timestamp="131522314279717426"/>
+				<File Name="Test1" Hash="2418005219" Timestamp="131541346412277468"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3794876903" Timestamp="131522316411578161"/>
+				<File Name="" Hash="3568098294" Timestamp="131541375737074750"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
