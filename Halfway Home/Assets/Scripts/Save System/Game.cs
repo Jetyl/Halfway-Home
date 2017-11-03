@@ -11,7 +11,7 @@ public class Game
 
     public string PlayerName;
 
-    public string CurrentRoom;
+    public Room CurrentRoom;
 
     public int Day;
 
@@ -40,6 +40,7 @@ public class Game
 
     public string SavedInk;
 
+    public List<CharacterIntermission> CastCall;
 
     public Game()
     {
@@ -47,7 +48,7 @@ public class Game
         Day = 0;
         Hour = 0;
         PlayerName = "Player";
-        CurrentRoom = "unset";
+        CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();
 
@@ -59,6 +60,7 @@ public class Game
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
         ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();
+        CastCall = new List<CharacterIntermission>();
 
         var schedulefiller = TextParser.ToJson("Characters");
 

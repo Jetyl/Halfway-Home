@@ -522,7 +522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logging: 0
   listeningToScene: 0
-  allowRestart: 0
+  automaticRestart: 0
   saveStates: 1
   saveOnExit: 0
 --- !u!114 &60031325
@@ -5508,7 +5508,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 60.85
+  m_fontSize: 62.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

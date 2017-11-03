@@ -25,7 +25,7 @@ public class StageDisplay : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-    Actors = new List<CharacterDisplay>();
+        Actors = new List<CharacterDisplay>();
         SpotLights = new Dictionary<StagePosition, int>();
         for (var i = 0; i < Enum.GetValues(typeof(StagePosition)).Length; ++i)
         {
@@ -45,6 +45,45 @@ public class StageDisplay : MonoBehaviour
     {
 		
 	}
+
+
+    void OnSave()
+    {
+        foreach(var actor in Actors)
+        {
+            actor.OnSave();
+        }
+    }
+
+    void OnLoad()
+    {
+
+        foreach(var actor in Game.current.CastCall)
+        {
+            foreach (var person in CastList)
+            {
+                if (person.Character == actor.chara)
+                {
+                    var cast = Instantiate(person.Actor);
+
+                    var directions = cast.GetComponent<CharacterDisplay>();
+                    if (directions == null)
+                        Debug.LogError("character: " + actor.chara + "is missing at rollcall. See StageDisplay");
+                    else
+                    {
+                        directions.OnLoad(actor);
+                        Actors.Add(directions);
+                        SpotLights[actor.Dir] += 1;
+
+                    }
+                }
+
+            }
+        }
+        Game.current.CastCall = new List<CharacterIntermission>();
+
+        SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom));
+    }
 
     void CharacterChanges(StageDirectionEvent eventdata)
     {

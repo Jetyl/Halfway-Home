@@ -74,6 +74,7 @@ public class Events
     public static readonly String MoveCharacter = "MoveCharacterEvent";
     public static readonly String NewDay = "NewDayEvent";
     public static readonly String GetPlayerInfo = "PlayerInfoEvent";
+    public static readonly String GetPlayerInfoFinished = "FinishedPlayerInfoEvent";
 
     //description system
     public static readonly String AutoType = "AutoTypeEvent";

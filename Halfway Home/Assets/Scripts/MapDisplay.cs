@@ -56,7 +56,7 @@ namespace HalfwayHome
           {
             if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
             {
-
+                    Game.current.CurrentRoom = eventdata.Destination;
                     gameObject.SetActive(false);
                     Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
                     Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
@@ -67,9 +67,9 @@ namespace HalfwayHome
           }
 
             //if gets here, no scene was there. send a default sorta dealie
-            
+
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
-            Game.current.CurrentRoom = eventdata.Destination.ToString();
+            Game.current.CurrentRoom = eventdata.Destination;
             gameObject.SetActive(false);
             Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
