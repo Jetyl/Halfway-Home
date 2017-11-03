@@ -57,7 +57,7 @@ public class GameStartUp : MonoBehaviour
 
         else if (Game.current == null) //for new games
         {
-
+            ReaderReference.Clear();
             Game.current = new Game();
             SetStartValues();
             Game.current.Progress.SetValue<bool>("Tutorial", true);

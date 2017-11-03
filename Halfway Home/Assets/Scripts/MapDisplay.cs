@@ -40,7 +40,7 @@ namespace HalfwayHome
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
-
+            print("here");
             gameObject.SetActive(true);
             Game.current.AlterTime();
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
@@ -67,13 +67,13 @@ namespace HalfwayHome
           }
 
             //if gets here, no scene was there. send a default sorta dealie
-
+            
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
             Game.current.CurrentRoom = eventdata.Destination.ToString();
             gameObject.SetActive(false);
             Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
-
+            print(gameObject.activeSelf);
         }
 
 

@@ -23,7 +23,18 @@ public class MainMenu : MonoBehaviour
 		
 	}
 
-    public void LoadLevel()
+    public void NewGame()
+    {
+        SaveLoad.Delete();
+        LoadLevel();
+    }
+    public void ContinueGame()
+    {
+        LoadLevel();
+    }
+
+
+    void LoadLevel()
     {
         SceneManager.LoadScene(MainLevel);
     }
