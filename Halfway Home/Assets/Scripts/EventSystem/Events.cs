@@ -63,6 +63,7 @@ public class Events
     public static readonly String LeaveMap = "LeaveMapEvent";
     public static readonly String ReturnToMap = "ReturnToMapEvent";
     public static readonly String NewStory = "NewStoryEvent";
+    public static readonly String ResumeStory = "ResumeStoryEvent";
     public static readonly String FinishedStory = "FinishedStoryEvent";
     public static readonly String MapIcon = "MapIconEvent";
     public static readonly String SleepIcon = "SleepIconEvent";

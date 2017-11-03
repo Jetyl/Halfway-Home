@@ -632,7 +632,7 @@ public class ConvLoad : ConvNode
         {
             Destination = Game.current.CurrentNode;
             var InkData = Resources.Load(Game.current.CurrentStory) as TextAsset;
-            Space.DispatchEvent(Events.NewStory, new HalfwayHome.StoryEvent(InkData));
+            Space.DispatchEvent(Events.NewStory, new HalfwayHome.StoryEvent(InkData, false));
         }
         else
         {
