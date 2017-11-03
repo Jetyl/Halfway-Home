@@ -90,33 +90,12 @@ namespace HalfwayHome
     /// <param name="eventdata"></param>
     void OnNewStory(StoryEvent eventdata)
     {
-       //loading a story at this point will have 3 cases
-
-       //case 1
-       if(eventdata.knot != null)
-      {
-            //load from this knot
-      }
-      else
-      {
-            //case 2
-        if(eventdata.Restart)
-        {
-               //start from beginning
-          Trace.Script("Reading " + eventdata.storyFile.name, this);
-          var e = new Story.LoadEvent();
-          e.storyFile = eventdata.storyFile;
-          e.knot = eventdata.knot;
-          reader.gameObject.Dispatch<Story.LoadEvent>(e);
-        }
-        else //case 3
-        {
-            //resume reading from where left off
-            reader.Resume();
-        }
-      }
-
-      
+      Trace.Script("Reading " + eventdata.storyFile.name, this);
+      var e = new Story.LoadEvent();
+      e.storyFile = eventdata.storyFile;
+      e.knot = eventdata.knot;
+      e.restart = eventdata.Restart;
+      reader.gameObject.Dispatch<Story.LoadEvent>(e);
     }
 
 
