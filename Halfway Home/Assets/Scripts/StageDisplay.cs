@@ -25,7 +25,7 @@ public class StageDisplay : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-    Actors = new List<CharacterDisplay>();
+        Actors = new List<CharacterDisplay>();
         SpotLights = new Dictionary<StagePosition, int>();
         for (var i = 0; i < Enum.GetValues(typeof(StagePosition)).Length; ++i)
         {
@@ -45,6 +45,21 @@ public class StageDisplay : MonoBehaviour
     {
 		
 	}
+
+
+    void OnSave()
+    {
+        foreach(var actor in Actors)
+        {
+
+        }
+    }
+
+    void OnLoad()
+    {
+
+        SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom));
+    }
 
     void CharacterChanges(StageDirectionEvent eventdata)
     {

@@ -40,6 +40,11 @@ public class CharacterDisplay : MonoBehaviour
 		
 	}
 
+    public void OnSave()
+    {
+
+    }
+
     public void EnterStage(string pose, StageDistance distance)
     {
         Start(); // just incase this gets called before start, somehow;
@@ -151,4 +156,13 @@ public class Distances
 {
     public float Scale;
     public float Offset;
+}
+
+[System.Serializable]
+public class CharacterIntermission
+{
+    //class for if player saved mid scene.
+    public Distances Dis;
+    public Vector3 Pos;
+    public string Name;
 }

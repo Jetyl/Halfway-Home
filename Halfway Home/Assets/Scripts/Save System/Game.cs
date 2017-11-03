@@ -11,7 +11,7 @@ public class Game
 
     public string PlayerName;
 
-    public string CurrentRoom;
+    public Room CurrentRoom;
 
     public int Day;
 
@@ -39,7 +39,7 @@ public class Game
     public int CurrentNode;
 
     public string SavedInk;
-
+    
 
     public Game()
     {
@@ -47,7 +47,7 @@ public class Game
         Day = 0;
         Hour = 0;
         PlayerName = "Player";
-        CurrentRoom = "unset";
+        CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();
 
