@@ -9,21 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c3e4db0df54bc645bbfb87a53f2e8c4, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 3
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 1329440174
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: -964129763
+    m_lastTimePart2: -1999297833
     List: []
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: 1329460227
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: -962959763
+    m_lastTimePart2: -1999297833
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1329495320
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: -964119763
+    m_lastTimePart2: -1999297833
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -112,8 +112,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 1329490307
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: -964109763
+    m_lastTimePart2: -1999297833
     List:
     - Name: play_sfx_human_footsteps_approaching
       Path: PlaySFX\play_sfx_human_footsteps_approaching
@@ -145,8 +145,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1329756010
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: -924849763
+    m_lastTimePart2: -1999297833
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -166,8 +166,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 588848858
-    m_lastTimePart2: -1999297814
+    m_lastTimePsrt1: -911949763
+    m_lastTimePart2: -1999297833
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -207,12 +207,7 @@ MonoBehaviour:
     m_lastTimePsrt1: -911929763
     m_lastTimePart2: -1999297833
     List: []
-  ExpandedItems:
-  - /Halfway Home_WwiseProject
-  - /Halfway Home_WwiseProject/Events
-  - /Halfway Home_WwiseProject/Events/PlayMusic
-  - /Halfway Home_WwiseProject/Events/PlaySFX
-  - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_menu
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
