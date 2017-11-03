@@ -26,6 +26,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool Skipping = false;
 
+    bool Stop = false;
+
     // Use this for initialization
     void Start ()
     {
@@ -44,6 +46,10 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnStopSkipping);
 
+
+        Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
+        Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
+
     }
 	
 	// Update is called once per frame
@@ -53,6 +59,9 @@ public class DescriptionDisplay : MonoBehaviour
             return;
 
         if (Paused)
+            return;
+
+        if (Stop)
             return;
 
         if(Input.GetButtonDown("Skip"))
@@ -181,6 +190,15 @@ public class DescriptionDisplay : MonoBehaviour
     void OnUnPause(DefaultEvent eventdata)
     {
         Paused = false;
+    }
+
+    void OnStop(DefaultEvent eventdata)
+    {
+        Stop = true;
+    }
+    void OnNonStop(DefaultEvent eventdata)
+    {
+        Stop = false;
     }
 
     void OnStopSkipping(DefaultEvent eventdata)

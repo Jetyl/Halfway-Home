@@ -22,6 +22,8 @@ public class CharacterDisplay : MonoBehaviour
 
     public bool FlipOnLeft;
 
+    string Pose;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -42,13 +44,27 @@ public class CharacterDisplay : MonoBehaviour
 
     public void OnSave()
     {
+        var data = new CharacterIntermission();
+        data.chara = Character.Character;
+        data.Dis = Distance;
+        data.Pos = transform.position;
+        data.Name = Pose;
+        data.Dir = Direction;
+        Game.current.CastCall.Add(data);
+    }
 
+    public void OnLoad(CharacterIntermission chara)
+    {
+        visual.sprite = GetPose(chara.Name);
+        ChangeDistance(chara.Dis);
+        transform.position = chara.Pos;
     }
 
     public void EnterStage(string pose, StageDistance distance)
     {
         Start(); // just incase this gets called before start, somehow;
-        visual.sprite = GetPose(pose);
+        
+        visual.sprite = GetPose(Pose);
         ChangeDistance(distance);
         //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
         
@@ -133,6 +149,7 @@ public class CharacterDisplay : MonoBehaviour
         {
             if(Poses[i].Name == name)
             {
+                Pose = name;
                 return Poses[i].Visual;
             }
         }
@@ -162,7 +179,9 @@ public class Distances
 public class CharacterIntermission
 {
     //class for if player saved mid scene.
-    public Distances Dis;
+    public string chara;
+    public StagePosition Dir;
+    public StageDistance Dis;
     public Vector3 Pos;
     public string Name;
 }

@@ -39,7 +39,8 @@ public class Game
     public int CurrentNode;
 
     public string SavedInk;
-    
+
+    public List<CharacterIntermission> CastCall;
 
     public Game()
     {
@@ -59,6 +60,7 @@ public class Game
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
         ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();
+        CastCall = new List<CharacterIntermission>();
 
         var schedulefiller = TextParser.ToJson("Characters");
 

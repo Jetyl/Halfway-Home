@@ -30,6 +30,8 @@ public class AutoType : MonoBehaviour
 
     [HideInInspector]
     public bool Skipping;
+    
+
 
     // Use this for initialization
     void Start()
@@ -44,6 +46,8 @@ public class AutoType : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
 
+        Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnPause);
+        Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnUnPause);
 
     }
 
