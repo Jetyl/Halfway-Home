@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
         ReaderReference.Save();
     }
 
-    public void Clear()
+    public void Clear() //for debug purposes
     {
         //SaveLoad.Delete();
         ReaderReference.Clear();
