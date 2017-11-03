@@ -122,6 +122,10 @@ namespace Stratus
           /// The knot to start at
           /// </summary>
           public string knot;
+          /// <summary>
+          /// Whether to restart the story if already loaded
+          /// </summary>
+          public bool restart = false;
         }
 
         /// <summary>
