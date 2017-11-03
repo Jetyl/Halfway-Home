@@ -73,6 +73,7 @@ public class Events
     public static readonly String Backdrop = "BackdropEvent";
     public static readonly String MoveCharacter = "MoveCharacterEvent";
     public static readonly String NewDay = "NewDayEvent";
+    public static readonly String GetPlayerInfo = "PlayerInfoEvent";
 
     //description system
     public static readonly String AutoType = "AutoTypeEvent";

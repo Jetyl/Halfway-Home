@@ -25,8 +25,8 @@ namespace Stratus
         [Header("Options")]
         [Tooltip("Whether this reader will react to scene-wide story events")]
         public bool listeningToScene = false;
-        [Tooltip("Allow the story to be restarted if it has ended already when triggered")]
-        public bool allowRestart = false;
+        [Tooltip("Whether to automatically restart an ended story on load")]
+        public bool automaticRestart = false;
 
         [Header("States")]
         [Tooltip("Whether the state of stories should automatically be saved by default")]
@@ -121,10 +121,30 @@ namespace Stratus
         }
 
         /// <summary>
+        /// Loads a story from a story file, optionally restarting it from the beginning
+        /// </summary>
+        /// <param name="storyFile"></param>
+        /// <param name="restart"></param>
+        public void LoadStory(TextAsset storyFile, bool restart = false)
+        {
+          LoadStory(storyFile, restart, null);
+        }
+
+        /// <summary>
+        /// Loads a story from file, jumping to the specified knot
+        /// </summary>
+        /// <param name="storyFile"></param>
+        /// <param name="knot"></param>
+        public void LoadStory(TextAsset storyFile, string knot)
+        {
+          LoadStory(storyFile, false, knot);
+        }
+
+        /// <summary>
         /// Loads a story from file
         /// </summary>
         /// <param name="storyFile"></param>
-        public void LoadStory(TextAsset storyFile, string knot = null)
+        private void LoadStory(TextAsset storyFile, bool restart = false, string knot = null)
         {
           Story newStory = null;
 
@@ -151,15 +171,14 @@ namespace Stratus
 
           // If a knot was provided
           if (knot != null)
-          {
-            Trace.Script($"Loading at knot {knot}");
             JumpToKnot(knot);
-          }
+          else if (restart)          
+            TryRestart();
+          
 
           // Start it
           InitializeStory();
         }
-        
 
         /// <summary>
         /// Constructs the ink story runtime object from a given text asset file
@@ -183,7 +202,7 @@ namespace Stratus
         /// </summary>
         void TryRestart()
         {
-          if (allowRestart)
+          if (automaticRestart)
           {
            if (logging)
               Trace.Script("Restarting the story '" + story.name + "'!", this);
@@ -221,7 +240,7 @@ namespace Stratus
 
         void OnLoadEvent(Story.LoadEvent e)
         {
-          this.LoadStory(e.storyFile, e.knot);
+          this.LoadStory(e.storyFile, e.restart, e.knot);
         }
 
         void OnContinueEvent(Story.ContinueEvent e)
@@ -549,7 +568,8 @@ namespace Stratus
         /// <param name="knotName">The name of the knot.</param>
         void JumpToKnot(string knotName)
         {
-          //Trace.Script("Jumping to the knot '" + knotName + "'", this);
+          if (logging)
+            Trace.Script("Jumping to the knot '" + knotName + "'", this);
           this.story.runtime.ChoosePathString(knotName + this.stitch);
         }
         /// <summary>

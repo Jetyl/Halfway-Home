@@ -18,7 +18,10 @@ public class IdentityDisplay : MonoBehaviour
 
         //ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
-	}
+        
+        Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnGetPlayerInfo);
+        gameObject.SetActive(false);
+  }
 	
 	// Update is called once per frame
 	void Update ()
@@ -53,4 +56,9 @@ public class IdentityDisplay : MonoBehaviour
         ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
     }
+
+  public void OnGetPlayerInfo(DefaultEvent e)
+  {
+    gameObject.SetActive(true);
+  }
 }

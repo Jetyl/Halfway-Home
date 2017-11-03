@@ -128,8 +128,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: 917902232
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -962969763
+    m_lastTimePart2: -1999297833
     List:
     - Name: Play_City_of_Tears
       Path: TestEvents\Play_City_of_Tears
@@ -152,22 +152,22 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 922850440
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -911939763
+    m_lastTimePart2: -1999297833
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
-    m_lastTimePsrt1: 922900575
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -911929763
+    m_lastTimePart2: -1999297833
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1329916441
-    m_lastTimePart2: -1999297826
+    m_lastTimePsrt1: 588848858
+    m_lastTimePart2: -1999297814
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -181,8 +181,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: 922810336
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -911949763
+    m_lastTimePart2: -1999297833
     List:
     - Name: Test1
       Path: TestBanks\Test1
@@ -197,20 +197,22 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 917917272
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -962949763
+    m_lastTimePart2: -1999297833
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
-    m_lastTimePsrt1: 922900575
-    m_lastTimePart2: -1999300107
+    m_lastTimePsrt1: -911929763
+    m_lastTimePart2: -1999297833
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject
   - /Halfway Home_WwiseProject/Events
   - /Halfway Home_WwiseProject/Events/PlayMusic
+  - /Halfway Home_WwiseProject/Events/PlaySFX
+  - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_menu
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

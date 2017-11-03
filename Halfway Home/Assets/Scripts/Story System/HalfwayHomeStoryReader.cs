@@ -40,6 +40,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
+      story.runtime.BindExternalFunction(nameof(GetPlayerData), new System.Action(GetPlayerData));
     }
 
     protected override void OnConfigureParser(RegexParser parser)
@@ -232,6 +233,11 @@ namespace HalfwayHome
     public void CallSleep()
     {
       Game.current.Slept();
+    }
+
+    public void GetPlayerData()
+    {
+      Space.DispatchEvent(Events.GetPlayerInfo);
     }
 
   }
