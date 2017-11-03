@@ -84,38 +84,4 @@ MonoBehaviour:
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
-  compilationStack:
-  - state: 2
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: c9093b2d395476748beb254466931ced, type: 3}
-      jsonAsset: {fileID: 0}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Alone
-      in a dead man's room.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Alone
-      in a dead man's room.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
-  - state: 2
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: 30db819da650f1644ada3be0b4a78121, type: 3}
-      jsonAsset: {fileID: 0}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Farewell
-      Meal.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Farewell
-      Meal.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
-  - state: 1
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: 3d92962c4013cd049a95e34560c81465, type: 3}
-      jsonAsset: {fileID: 0}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/RecoverRestartRequired.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/RecoverRestartRequired.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
+  compilationStack: []

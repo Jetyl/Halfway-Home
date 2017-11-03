@@ -159,17 +159,23 @@ After a brisk walk I reach my destination.
 {~->StoreFatigue|->Store.Grace}
 = Grace
 {shuffle:
-	- Something about Grace. -> Store.Expression # Grace+
+	- Something about Grace. # Grace+
+		-> Store.Expression
+	- ->Store.Expression
 	- ->Store.Expression
 }
 = Expression
 {shuffle:
-	- Something about Expression. -> Store.Awareness # Expression+
-	- ->Store.Expression
+	- Something about Expression. # Expression+
+		-> Store.Awareness 
+	- ->Store.Awareness
+	- ->Store.Awareness
 }
 = Awareness
 {shuffle:
-	- Something about Awareness. -> END # Awareness+
+	- Something about Awareness. # Awareness+
+		-> END
+	- ->END
 	- ->END
 }
 
