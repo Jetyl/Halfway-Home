@@ -18,15 +18,15 @@
 	<Platform GUID="{B5FD0CE7-D49D-4DF5-9D4F-E1E460C9235A}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="HalfwaySoundbank" Hash="3349408625" Timestamp="131541374517094972"/>
-				<File Name="Init" Hash="1964904968" Timestamp="131541346453989854"/>
+				<File Name="HalfwaySoundbank" Hash="3284822663" Timestamp="131542079413902408"/>
+				<File Name="Init" Hash="1964904968" Timestamp="131542076405835394"/>
 				<File Name="Test" Hash="756948723" Timestamp="131522307231918325"/>
-				<File Name="Test1" Hash="2418005219" Timestamp="131541346412277468"/>
+				<File Name="Test1" Hash="3855899043" Timestamp="131542076405639874"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3568098294" Timestamp="131541375737074750"/>
+				<File Name="" Hash="1990723145" Timestamp="131542079414188160"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
