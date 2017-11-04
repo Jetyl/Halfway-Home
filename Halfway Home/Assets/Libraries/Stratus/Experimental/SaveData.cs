@@ -266,10 +266,14 @@ namespace Stratus
     /// </summary>
     /// <param name="name"></param>
     /// <param name="folderName"></param>
-    public static void Delete(string name, string folderName)
+    public static bool Delete(string name, string folderName)
     {
+      if (!Exists(name, folder))
+        return false;
+
       var fullPath = ComposePath(name, folderName);
       File.Delete(fullPath);
+      return true;
     }
 
     /// <summary>

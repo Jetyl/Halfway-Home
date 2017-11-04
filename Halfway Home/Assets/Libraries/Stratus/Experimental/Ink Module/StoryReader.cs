@@ -156,7 +156,7 @@ namespace Stratus
             if (logging)
               Trace.Script($"{storyFile.name} has already been loaded! Using it!");
             newStory = stories[storyFile.name];
-            LoadState(story);
+            LoadState(newStory);
           }
           // If the story hasn't been loaded yet
           else
