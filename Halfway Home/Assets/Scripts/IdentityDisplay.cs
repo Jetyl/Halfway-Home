@@ -62,6 +62,7 @@ public class IdentityDisplay : MonoBehaviour
 
   public void OnGetPlayerInfo(DefaultEvent e)
   {
+        print("Ooooon");
     gameObject.SetActive(true);
   }
 }

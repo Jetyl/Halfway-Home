@@ -31,7 +31,8 @@ The edges of the world fade away until it's so dark I can't see my hands in fron
 My mind begins playing tricks on me. Fleeting colors dart past and the voices grow louder.
 I feel myself lose hope.
 But when I open my eyes, I can see the light streaming through the skinny window of my room.
-The whispers fade into the chitter of birdsong. {GetPlayerData()}
+The whispers fade into the chitter of birdsong. 
+I think onto myself for a while... {GetPlayerData()} about who I am...
 ~player_name = GetStringValue("PlayerName")
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
 [{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
