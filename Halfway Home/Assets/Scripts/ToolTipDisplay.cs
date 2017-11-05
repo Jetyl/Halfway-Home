@@ -16,6 +16,8 @@ public class ToolTipDisplay : MonoBehaviour
     public string ModifiedStatText;
     public Color ModifedStatColor = Color.yellow;
 
+    public bool Debug;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -50,12 +52,28 @@ public class ToolTipDisplay : MonoBehaviour
 
         }
 
+        
+
         if(!Wellbeing)
         {
             if (Game.current.Self.GetModifiedSocialStat(SocialStat) != Game.current.Self.GetTrueSocialStat(SocialStat))
             {
                 display.info = display.info + Environment.NewLine + ModifiedStatText;
                 display.color = ModifedStatColor;
+            }
+
+            if (Debug)
+            {
+                display.info += " value: " + Game.current.Self.GetModifiedSocialStat(SocialStat);
+            }
+
+
+        }
+        else
+        {
+            if (Debug)
+            {
+                display.info += " value: " + Game.current.Self.GetWellbingStat(WellnessStat);
             }
         }
 

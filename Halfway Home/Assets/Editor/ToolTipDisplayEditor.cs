@@ -28,6 +28,7 @@ public class ToolTipDisplayEditor : Editor
         SerializedProperty SocialStat = serializedObject.FindProperty("SocialStat");
         SerializedProperty ModifiedStatText = serializedObject.FindProperty("ModifiedStatText");
         SerializedProperty ModifedStatColor = serializedObject.FindProperty("ModifedStatColor");
+        SerializedProperty Debug = serializedObject.FindProperty("Debug");
 
 
         EditorGUILayout.Space();
@@ -47,6 +48,8 @@ public class ToolTipDisplayEditor : Editor
 
         list.DoLayoutList();
 
+
+        EditorGUILayout.PropertyField(Debug, new GUIContent("Debug Stats?"), true);
 
         serializedObject.ApplyModifiedProperties();
     }
