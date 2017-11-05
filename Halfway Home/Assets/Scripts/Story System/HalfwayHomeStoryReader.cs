@@ -183,6 +183,8 @@ namespace HalfwayHome
 
     public string GetStringValue(string ValueName)
     {
+            print(ValueName);
+            print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
 
@@ -237,10 +239,12 @@ namespace HalfwayHome
 
     public void GetPlayerData()
     {
-            print("IIIIIIIF");
-      Space.DispatchEvent(Events.GetPlayerInfo);
+            //Space.DispatchEvent(Events.GetPlayerInfo);
+            StartCoroutine(TextParser.FrameDelay(Events.GetPlayerInfo));
     }
 
-  }
+        
+
+    }
 
 }

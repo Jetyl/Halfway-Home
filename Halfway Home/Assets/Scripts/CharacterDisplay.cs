@@ -64,7 +64,7 @@ public class CharacterDisplay : MonoBehaviour
     {
         Start(); // just incase this gets called before start, somehow;
         
-        visual.sprite = GetPose(Pose);
+        visual.sprite = GetPose(pose);
         ChangeDistance(distance);
         //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
         
@@ -154,7 +154,7 @@ public class CharacterDisplay : MonoBehaviour
             }
         }
 
-        Debug.LogError("Character: " + Character + "does not know pose " + name);
+        Debug.LogError("Character: " + Character.Character + " does not know pose " + name);
         return null;
     }
 

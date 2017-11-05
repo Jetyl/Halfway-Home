@@ -21,6 +21,8 @@ public class StageDisplay : MonoBehaviour
 
     Dictionary<StagePosition, int> SpotLights; //number of people in spot
 
+    public Room StartingRoom;
+    public float BackgroundFadeTime = 2;
 
 	// Use this for initialization
 	void Start ()
@@ -37,6 +39,7 @@ public class StageDisplay : MonoBehaviour
         Space.Connect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
         Space.Connect<StageDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
+        SceneryChange(new StageDirectionEvent(StartingRoom));
 
     }
 	
@@ -241,10 +244,10 @@ public class StageDisplay : MonoBehaviour
         BackCuratin.sprite = newBackdrop;
         var Awhite = Color.white;
         Awhite.a = 0;
-        FrontCurtain.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, 2));
-        BackCuratin.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
+        FrontCurtain.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, BackgroundFadeTime));
+        BackCuratin.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, BackgroundFadeTime));
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(BackgroundFadeTime);
 
         FrontCurtain.sprite = newBackdrop;
         FrontCurtain.color = Color.white;

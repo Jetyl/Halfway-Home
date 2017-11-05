@@ -11,6 +11,7 @@ public class IdentityDisplay : MonoBehaviour
     public TextMeshProUGUI Pronouns;
 
     string genderPicked = "N";
+    string namePicked = "Sam";
 
 	// Use this for initialization
 	void Start ()
@@ -41,6 +42,14 @@ public class IdentityDisplay : MonoBehaviour
             Pronouns.text = "She/Her";
     }
 
+    public void AssignName()
+    {
+        if (Name.text == "")
+            namePicked = "Sam";
+        else
+            namePicked = Name.text;
+    }
+
     public void ConfirmIdentity()
     {
         ConfirmBox.SetActive(true);
@@ -48,21 +57,23 @@ public class IdentityDisplay : MonoBehaviour
 
     public void SetIdentity()
     {
-
-        Game.current.PlayerName = Name.text;
+        print(namePicked);
+        Game.current.PlayerName = namePicked;
         Game.current.Progress.SetValue<string>("PlayerName", Game.current.PlayerName);
         Game.current.Progress.SetValue<string>("PlayerGender", genderPicked);
 
         ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
 
+        print("my name is " + Game.current.Progress.GetStringValue("PlayerName"));
         Space.DispatchEvent(Events.GetPlayerInfoFinished);
         gameObject.SetActive(false);
     }
 
-  public void OnGetPlayerInfo(DefaultEvent e)
-  {
+    public void OnGetPlayerInfo(DefaultEvent e)
+    {
         print("Ooooon");
-    gameObject.SetActive(true);
-  }
+        gameObject.SetActive(true);
+        ConfirmBox.SetActive(false);
+    }
 }
