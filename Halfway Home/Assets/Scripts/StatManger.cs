@@ -26,8 +26,8 @@ public class StatManger : MonoBehaviour
         
         if(eventdata.Wellbeing)
         {
-            Game.current.Self.IncrementWellbeingStat(eventdata.WellnessStat, eventdata.Value);
-            
+            if(eventdata.Assign) Game.current.Self.SetWellbeingStat(eventdata.WellnessStat, eventdata.Value);
+            else Game.current.Self.IncrementWellbeingStat(eventdata.WellnessStat, eventdata.Value);
         }
         else
         {
@@ -60,6 +60,7 @@ public class ChangeStatEvent : DefaultEvent
     public Personality.Wellbeing WellnessStat;
     public bool Wellbeing;
     public int Value;
+    public bool Assign;
 
     public ChangeStatEvent(string key, Personality.Social value)
     {
@@ -68,11 +69,12 @@ public class ChangeStatEvent : DefaultEvent
         Wellbeing = false;
     }
 
-    public ChangeStatEvent(int key, Personality.Wellbeing value)
+    public ChangeStatEvent(int key, Personality.Wellbeing value, bool assign = false)
     {
         Value = key;
         WellnessStat = value;
         Wellbeing = true;
+        Assign = assign;
     }
 
 

@@ -1756,6 +1756,66 @@ Prefab:
       propertyPath: ModifedStatColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114258511711581268, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727770863485898, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479263474116552, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091747355381168, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114330059377472702, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[1].color.b
+      value: 0.3398889
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[1].color.r
+      value: 0.97794116
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[1].color.g
+      value: 0.9028762
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[2].color.g
+      value: 0.035555176
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[2].color.b
+      value: 0.035555176
+      objectReference: {fileID: 0}
+    - target: {fileID: 114070439074311498, guid: 8a480afc885ffe04ebf6f07a12b480bd,
+        type: 2}
+      propertyPath: Tips.Array.data[2].color.r
+      value: 0.984
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a480afc885ffe04ebf6f07a12b480bd, type: 2}
   m_IsPrefabParent: 0
@@ -12312,7 +12372,7 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 10
-  DebugMode: 0
+  DebugMode: 1
   StartDelusion: 10
   StartStress: 45
   StartFatigue: 65
