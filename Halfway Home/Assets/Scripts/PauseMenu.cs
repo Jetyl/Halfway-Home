@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Save()
     {
+        Space.DispatchEvent(Events.Save);
         SaveLoad.Save();
         ReaderReference.Save();
     }
@@ -30,7 +31,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        print("on");
+        print("off");
         Application.Quit();
     }
 
