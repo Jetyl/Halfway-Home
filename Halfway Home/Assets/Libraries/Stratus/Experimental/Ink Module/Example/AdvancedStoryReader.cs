@@ -7,9 +7,13 @@ using System.Text.RegularExpressions;
 namespace Stratus.Modules.InkModule
 {
   public class AdvancedStoryReader : StoryReader<RegexParser>
-  { 
+  {
+    private Dictionary<string, int> integerValues = new Dictionary<string, int>();
+
     protected override void OnBindExternalFunctions(Story story)
     {
+      story.runtime.BindExternalFunction(nameof(SetIntegerVariable), new System.Action<string>(SetIntegerVariable));
+      integerValues.Add("cats", 5);
     }
 
     protected override void OnConfigureParser(RegexParser parser)
@@ -31,6 +35,13 @@ namespace Stratus.Modules.InkModule
     void OnParse(Parse parse)
     {
       Trace.Script(parse.ToString());
+    }
+
+    // Sets a variable in the story from the reader
+    void SetIntegerVariable(string name)
+    {
+      Trace.Script($"Setting variable {name}");
+      SetVariableValue(name, integerValues[name]);
     }
     
 

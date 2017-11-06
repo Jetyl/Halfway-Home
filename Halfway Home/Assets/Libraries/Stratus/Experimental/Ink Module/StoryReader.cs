@@ -121,6 +121,16 @@ namespace Stratus
         }
 
         /// <summary>
+        /// Loads a story from a story file, continuing from a previous one
+        /// </summary>
+        /// <param name="storyFile"></param>
+        /// <param name="restart"></param>
+        public void LoadStory(TextAsset storyFile)
+        {
+          LoadStory(storyFile, false, null);
+        }
+
+        /// <summary>
         /// Loads a story from a story file, optionally restarting it from the beginning
         /// </summary>
         /// <param name="storyFile"></param>

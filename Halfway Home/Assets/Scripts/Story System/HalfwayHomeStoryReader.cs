@@ -237,7 +237,7 @@ namespace HalfwayHome
 
     public void GetPlayerData()
     {
-            print("IIIIIIIF");
+      print("Getting player data...");
       Space.DispatchEvent(Events.GetPlayerInfo);
     }
 
