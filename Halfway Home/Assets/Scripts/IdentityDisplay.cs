@@ -56,6 +56,7 @@ public class IdentityDisplay : MonoBehaviour
         ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
 
+        Space.DispatchEvent(Events.SetPlayerIdentity);
         Space.DispatchEvent(Events.GetPlayerInfoFinished);
         gameObject.SetActive(false);
     }

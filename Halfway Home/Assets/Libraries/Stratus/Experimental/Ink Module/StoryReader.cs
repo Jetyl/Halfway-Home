@@ -285,6 +285,7 @@ namespace Stratus
               break;
             case Story.Types.String:
               Story.SetVariableValue<string>(story.runtime, e.variable.name, e.variable.stringValue);
+              Trace.Script($"Setting variable {e.variable.name} to {e.variable.stringValue}");
               break;
             case Story.Types.Float:
               Story.SetVariableValue<float>(story.runtime, e.variable.name, e.variable.floatValue);
