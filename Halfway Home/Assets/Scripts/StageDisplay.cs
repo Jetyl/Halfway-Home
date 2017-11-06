@@ -24,6 +24,8 @@ public class StageDisplay : MonoBehaviour
     public Room StartingRoom;
     public float BackgroundFadeTime = 2;
 
+    bool Load = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -39,7 +41,11 @@ public class StageDisplay : MonoBehaviour
         Space.Connect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
         Space.Connect<StageDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
-        SceneryChange(new StageDirectionEvent(StartingRoom));
+        Space.Connect<DefaultEvent>(Events.Save, OnSave);
+        Space.Connect<DefaultEvent>(Events.Load, OnLoad);
+
+        if (Load == false)
+            SceneryChange(new StageDirectionEvent(StartingRoom));
 
     }
 	
@@ -50,7 +56,7 @@ public class StageDisplay : MonoBehaviour
 	}
 
 
-    void OnSave()
+    void OnSave(DefaultEvent eventdata)
     {
         foreach(var actor in Actors)
         {
@@ -58,8 +64,9 @@ public class StageDisplay : MonoBehaviour
         }
     }
 
-    void OnLoad()
+    void OnLoad(DefaultEvent eventdata)
     {
+        Load = true;
 
         foreach(var actor in Game.current.CastCall)
         {

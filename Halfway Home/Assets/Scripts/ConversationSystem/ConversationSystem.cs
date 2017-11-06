@@ -627,6 +627,7 @@ public class ConvLoad : ConvNode
 
     public override void CallAction()
     {
+        Space.DispatchEvent(Events.Load);
         //Debug.Log(Game.current.InCurrentStory);
         if(Game.current.InCurrentStory)
         {

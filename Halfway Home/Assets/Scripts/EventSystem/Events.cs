@@ -52,6 +52,8 @@ public class Events
     public static readonly String ReturnToMainMenu = "ReturnToMainMenuEvent";
     public static readonly String QuitGame = "QuitGameEvent";
 
+    public static readonly String Save = "SaveEvent";
+    public static readonly String Load = "LoadEvent";
 
 
     //Halfway-Home Custom Events
