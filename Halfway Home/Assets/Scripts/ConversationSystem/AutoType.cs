@@ -59,7 +59,7 @@ public class AutoType : MonoBehaviour
 
         Text.text = "";
     }
-
+    
     void OnPause(DefaultEvent eventdata)
     {
         print(typing);

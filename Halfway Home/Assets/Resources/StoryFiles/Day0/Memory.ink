@@ -1,4 +1,4 @@
-﻿VAR player_name = "tbd"
+VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
 VAR expression = 0
@@ -34,7 +34,7 @@ But when I open my eyes, I can see the light streaming through the skinny window
 The whispers fade into the chitter of birdsong. 
 I think onto myself for a while... {GetPlayerData()} about who I am...
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
-[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
+//[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
 I lay awake, concentrating on the warm sensation of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK

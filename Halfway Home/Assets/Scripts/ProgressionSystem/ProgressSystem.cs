@@ -55,7 +55,10 @@ public class ProgressSystem
                     ProgressBook[_key].IntValue = 0;
                 break;
             case PointTypes.String:
-                ProgressBook[_key].StringValue = change.StringValue;
+                if (change.StringValue != null)
+                    ProgressBook[_key].StringValue = change.StringValue;
+                else
+                    ProgressBook[_key].StringValue = "";
                 break;
             default:
                 break;

@@ -32,6 +32,9 @@ public class StageDisplayEditor : Editor
         SerializedProperty RightSpot = serializedObject.FindProperty("RightSpot");
         SerializedProperty Varience = serializedObject.FindProperty("Varience");
 
+        SerializedProperty StartingRoom = serializedObject.FindProperty("StartingRoom");
+        SerializedProperty BackgroundFadeTime = serializedObject.FindProperty("BackgroundFadeTime");
+
         EditorGUILayout.Space();
 
         showbackdrops = EditorGUILayout.Foldout(showbackdrops, new GUIContent("Backdrops"));
@@ -51,7 +54,9 @@ public class StageDisplayEditor : Editor
             EditorGUILayout.Space();
             //EditorGUILayout.PropertyField(Backdrop, new GUIContent("Backdrop"), true);
         }
-        
+
+        EditorGUILayout.PropertyField(StartingRoom, new GUIContent("Starting Room"), true);
+        EditorGUILayout.PropertyField(BackgroundFadeTime, new GUIContent("Background Fade Time"), true);
 
         EditorGUILayout.PropertyField(FrontCurtain, new GUIContent("Front Curtain"), true);
         EditorGUILayout.PropertyField(BackCuratin, new GUIContent("BackCuratin"), true);
