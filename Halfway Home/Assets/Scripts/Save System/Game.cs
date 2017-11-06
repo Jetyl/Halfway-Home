@@ -305,7 +305,7 @@ public class Game
 
 
 }
-
+[Serializable]
 public enum Room
 {
     None,
@@ -321,7 +321,7 @@ public enum Room
     EduardosRoom,
     Sleeping
 }
-
+[Serializable]
 public enum SceneSeen
 {
     Unseen,
