@@ -57,7 +57,7 @@ public class IdentityDisplay : MonoBehaviour
 
     public void SetIdentity()
     {
-        print(namePicked);
+
         Game.current.PlayerName = namePicked;
         Game.current.Progress.SetValue<string>("PlayerName", Game.current.PlayerName);
         Game.current.Progress.SetValue<string>("PlayerGender", genderPicked);
@@ -72,7 +72,6 @@ public class IdentityDisplay : MonoBehaviour
 
     public void OnGetPlayerInfo(DefaultEvent e)
     {
-        print("Ooooon");
         gameObject.SetActive(true);
         ConfirmBox.SetActive(false);
     }
