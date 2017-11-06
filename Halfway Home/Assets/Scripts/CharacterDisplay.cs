@@ -47,7 +47,8 @@ public class CharacterDisplay : MonoBehaviour
         var data = new CharacterIntermission();
         data.chara = Character.Character;
         data.Dis = Distance;
-        data.Pos = transform.position;
+        data.PosX = transform.position.x;
+        data.PosY = transform.position.y;
         data.Name = Pose;
         data.Dir = Direction;
         Game.current.CastCall.Add(data);
@@ -57,7 +58,7 @@ public class CharacterDisplay : MonoBehaviour
     {
         visual.sprite = GetPose(chara.Name);
         ChangeDistance(chara.Dis);
-        transform.position = chara.Pos;
+        transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);
     }
 
     public void EnterStage(string pose, StageDistance distance)
@@ -182,6 +183,7 @@ public class CharacterIntermission
     public string chara;
     public StagePosition Dir;
     public StageDistance Dis;
-    public Vector3 Pos;
+    public float PosX;
+    public float PosY;
     public string Name;
 }
