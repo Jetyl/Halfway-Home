@@ -55,14 +55,14 @@ public class TimelineSystem : MonoBehaviour
     {
         
         TimeLine = eventdata.conversation;
-
+        print("wht");
         NextNode(0);
     }
 
 
     public void NextNode(DestinationNodeEvent eventdata)
     {
-
+        
         NextNode(eventdata.NodeID);
 
     }
@@ -90,7 +90,7 @@ public class TimelineSystem : MonoBehaviour
 
     public void NextNode(int index)
     {
-
+        print(index);
         if (index == -1)
         {
             //Game Over

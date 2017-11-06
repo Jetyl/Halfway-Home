@@ -12,30 +12,38 @@ namespace HalfwayHome
     //script for handling the map logic of the game.
     List<ConvMap> ChoicesAvalible;
 
+        bool LoadedToMap = false;
 
-    // Use this for initialization
-    void Start()
-    {
-      Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
+        // Use this for initialization
+        void Start()
+        {
+            Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
 
-      Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
+            Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
-      StartCoroutine(DelayStart());
+            Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 
-    }
+            StartCoroutine(DelayStart());
 
-    // Update is called once per frame
-    void Update()
-    {
+        }
+       
 
-    }
+        void OnLoad(DefaultEvent eventdata)
+        {
 
+            if (!Game.current.InCurrentStory)
+            {
+                LoadedToMap = true;
+            }
+        }
 
-    IEnumerator DelayStart()
-    {
-      yield return new WaitForSeconds(Time.deltaTime);
-      gameObject.SetActive(false);
-    }
+        IEnumerator DelayStart()
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+            if (!LoadedToMap)
+                gameObject.SetActive(false);
+            
+        }
 
 
     void TurnMapOn(DefaultEvent Eventdata)

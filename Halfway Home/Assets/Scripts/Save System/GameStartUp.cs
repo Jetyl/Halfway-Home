@@ -53,9 +53,18 @@ public class GameStartUp : MonoBehaviour
         if (DebugMode)
         {
             TestingAndDebugging();
+            return;
+        }
+        else
+        {
+            if(Game.current != null && Game.current.Progress.GetBoolValue("Debug Mode"))
+            {
+                Game.current = null;
+                SaveLoad.Delete();
+            }
         }
 
-        else if (Game.current == null) //for new games
+        if (Game.current == null) //for new games
         {
             ReaderReference.Clear();
             Game.current = new Game();
