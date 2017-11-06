@@ -48,4 +48,12 @@ public class ToolTipEvent:DefaultEvent
         color = Color.black;
         color.a = 0;
     }
+
+    public ToolTipEvent (ToolTipEvent copy)
+    {
+        info = copy.info;
+        color = copy.color;
+        Value = copy.Value;
+    }
+
 }

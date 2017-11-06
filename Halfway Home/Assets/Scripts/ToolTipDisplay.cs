@@ -42,12 +42,12 @@ public class ToolTipDisplay : MonoBehaviour
             if(Wellbeing)
             {
                 if (Game.current.Self.GetWellbingStat(WellnessStat) >= val.Value)
-                    display = val;
+                    display = new ToolTipEvent(val);
             }
             else
             {
                 if (Game.current.Self.GetModifiedSocialStat(SocialStat) >= val.Value)
-                    display = val;
+                    display = new ToolTipEvent(val);
             }
 
         }
