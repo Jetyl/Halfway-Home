@@ -79,6 +79,7 @@ namespace HalfwayHome
 
       Space.Connect<StoryEvent>(Events.NewStory, OnNewStory);
       //Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
+      Space.Connect<DefaultEvent>(Events.SetPlayerIdentity, OnSetPlayerIdentity);
       reader.gameObject.Connect<Story.LoadedEvent>(this.OnStoryLoadedEvent);
       reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
       reader.gameObject.Connect<Story.EndedEvent>(this.OnStoryEndedEvent);
@@ -161,6 +162,16 @@ namespace HalfwayHome
     }
 
     // Set the values back
+
+    void OnSetPlayerIdentity(DefaultEvent e)
+    {
+      Stratus.Modules.InkModule.Story.SetVariableValueEvent varChange = new Stratus.Modules.InkModule.Story.SetVariableValueEvent();
+      varChange.variable = new Stratus.Modules.InkModule.Story.Variable();
+      varChange.variable.name = "player_name";
+      varChange.variable.type = Stratus.Modules.InkModule.Story.Types.String;
+      varChange.variable.stringValue = Game.current.PlayerName;
+      reader.gameObject.Dispatch<Stratus.Modules.InkModule.Story.SetVariableValueEvent>(varChange);
+    }
   }
 
 }

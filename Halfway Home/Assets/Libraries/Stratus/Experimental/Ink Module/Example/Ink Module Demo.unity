@@ -814,7 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logging: 1
   listeningToScene: 0
-  allowRestart: 1
+  automaticRestart: 1
   saveStates: 1
   saveOnExit: 0
 --- !u!114 &758722972
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logging: 1
   listeningToScene: 0
-  allowRestart: 1
+  automaticRestart: 0
   saveStates: 1
   saveOnExit: 0
 --- !u!114 &1950568628

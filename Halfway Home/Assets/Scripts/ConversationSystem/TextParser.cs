@@ -4,6 +4,7 @@ using System.Linq;
 using System;
 using LitJson;
 using System.IO;
+using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -11,7 +12,16 @@ using UnityEditor;
 
 public static class TextParser
 {
-    
+
+    public static IEnumerator FrameDelay(Events tag)
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        Space.DispatchEvent(tag);
+
+    }
+
     //send the Lines Array json data
     public static List<Line> ParseLines(JsonData text)
     {

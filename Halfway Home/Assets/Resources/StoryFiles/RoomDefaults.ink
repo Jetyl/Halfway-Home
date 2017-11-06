@@ -43,7 +43,7 @@ EXTERNAL CallSleep()
 === YourRoom ===
 // Reduce Stress, Remove Fatigue, Increase Delusion
 // Recover for the next day. The isolation reminds you of a darker time.
-~ temp new_fatigue = fatigue
+~ temp new_fatigue = "none"
 {fatigue > 40:
 	{
 	- fatigue > 80:
@@ -51,7 +51,7 @@ EXTERNAL CallSleep()
 		I feel myself begin to drift off almost immediately.
 
 	- fatigue < 70: 
-		I don't feel tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
+		I don't feel quite tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
 		I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
 		I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
 		After what seems timeless eternity, sleep finally takes me.
@@ -65,9 +65,9 @@ EXTERNAL CallSleep()
 	{shuffle:
 		-completely reinvograted.
 		-groggy.
-		~new_fatigue -= 40
+		~new_fatigue = "low"
 		-reasonably rested.
-		~new_fatigue -= 20
+		~new_fatigue = "medium"
 	}
 -else:
 	I'm not tired enough to sleep, so I just relax for a bit. {SetTimeBlock(1)}
@@ -79,14 +79,14 @@ Wellbeing stats updated.
 Rest relieved a small amount of Stress. # Stress -= 10
 {
 	-fatigue > 50:
-		<>@Sleep <> # Fatigue -= new_fatigue
+		<>@Sleep <>
 		{
-			- new_fatigue == fatigue:
-				removed all Fatigue! 
-			- new_fatigue == fatigue - 40:
-				reduced Fatigue.
-			- new_fatigue == fatigue - 20:
-				reduced Fatigue significantly.
+			- new_fatigue == "none":
+				removed all Fatigue! # Fatigue => 0
+			- new_fatigue == "low":
+				reduced Fatigue. # Fatigue => 40
+			- new_fatigue == "medium":
+				reduced Fatigue significantly. # Fatigue => 20
 		}
 }
 <>@Solitude increased Delusion slightly. # Delusion += 10

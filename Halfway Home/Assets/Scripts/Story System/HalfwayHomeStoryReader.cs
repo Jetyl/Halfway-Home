@@ -58,12 +58,15 @@ namespace HalfwayHome
       parser.AddPattern("StatUp", incrementStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSocialStatIncrement);
 
       // Wellbeing Stat increment
-      string incrementWStatUpPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "+=");
-      parser.AddPattern("WellbeingUp", incrementWStatUpPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatIncrement);
+      string incrementWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "+=");
+      parser.AddPattern("WellbeingUp", incrementWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatIncrement);
 
       // Wellbeing Stat decrement
-      string incrementWStatDownPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "-=");
-      parser.AddPattern("WellbeingDown", incrementWStatDownPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatDecrement);
+      string decrementWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "-=");
+      parser.AddPattern("WellbeingDown", decrementWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatDecrement);
+
+      string setWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "=>");
+      parser.AddPattern("WellbeingSet", setWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatSet);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -135,7 +138,17 @@ namespace HalfwayHome
       Trace.Script($"{stat} decreased by {value}");
     }
 
-    void OnWellbeingStatChange(string stat, int value)
+    void OnWellbeingStatSet(Parse parse)
+    {
+      string stat = parse.Find(statLabel).ToLower();
+      int value = 0;
+      int.TryParse(parse.Find(valueLabel), out value);
+
+      OnWellbeingStatChange(stat, value, true);
+      Trace.Script($"{stat} set to {value}");
+    }
+
+    void OnWellbeingStatChange(string stat, int value, bool assign = false)
     {
       var eventStat = Personality.Wellbeing.delusion;
       if (stat == "stress")
@@ -143,7 +156,7 @@ namespace HalfwayHome
       if (stat == "fatigue")
         eventStat = Personality.Wellbeing.fatigue;
 
-      Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat));
+      Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
     }
     //------------------------------------------------------------------------/
     // Story
@@ -183,6 +196,8 @@ namespace HalfwayHome
 
     public string GetStringValue(string ValueName)
     {
+            print(ValueName);
+            print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
 
@@ -237,10 +252,12 @@ namespace HalfwayHome
 
     public void GetPlayerData()
     {
-      print("Getting player data...");
-      Space.DispatchEvent(Events.GetPlayerInfo);
+      //Space.DispatchEvent(Events.GetPlayerInfo);
+      StartCoroutine(TextParser.FrameDelay(Events.GetPlayerInfo));
     }
 
-  }
+        
+
+    }
 
 }

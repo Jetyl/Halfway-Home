@@ -40,7 +40,7 @@ namespace HalfwayHome
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
-            print("here");
+            //print("here");
             gameObject.SetActive(true);
             Game.current.AlterTime();
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);

@@ -59,17 +59,15 @@ public class AutoType : MonoBehaviour
 
         Text.text = "";
     }
-
+    
     void OnPause(DefaultEvent eventdata)
     {
-        print(typing);
         if (typing != null)
             StopCoroutine(typing);
     }
 
     void OnUnPause(DefaultEvent eventdata)
     {
-        print("OFFFF");
         if(Text.IsActive())
             typing = StartCoroutine(TypeText(Text.maxVisibleCharacters));
     }

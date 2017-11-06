@@ -113,21 +113,22 @@ namespace Stratus
           OnStoryLoaded(story);
 
           // If the story can't be continued, check if it should be restarted
-          if (!story.runtime.canContinue)
-            TryRestart();
+          //if (!story.runtime.canContinue && automaticRestart)
+          //  TryRestart();
 
           // Now start the story
           this.StartStory();
         }
 
         /// <summary>
-        /// Loads a story from a story file, continuing from a previous one
+        /// Loads a story from a story file, restarting depending on the default automatic setting
         /// </summary>
         /// <param name="storyFile"></param>
         /// <param name="restart"></param>
         public void LoadStory(TextAsset storyFile)
         {
-          LoadStory(storyFile, false, null);
+          //bool restart = !story.runtime.canContinue && automaticRestart;
+          LoadStory(storyFile, automaticRestart, null);
         }
 
         /// <summary>
@@ -211,20 +212,10 @@ namespace Stratus
         /// Attempt to restart the stry
         /// </summary>
         void TryRestart()
-        {
-          if (automaticRestart)
-          {
+        {         
            if (logging)
               Trace.Script("Restarting the story '" + story.name + "'!", this);
-
             story.runtime.state.GoToStart();
-          }
-          else
-          {
-            if (logging)
-              Trace.Script("The story '" + story.name + "' is over!", this);
-            return;
-          }
         }
 
         //------------------------------------------------------------------------------------------/
@@ -295,6 +286,7 @@ namespace Stratus
               break;
             case Story.Types.String:
               Story.SetVariableValue<string>(story.runtime, e.variable.name, e.variable.stringValue);
+              Trace.Script($"Setting variable {e.variable.name} to {e.variable.stringValue}");
               break;
             case Story.Types.Float:
               Story.SetVariableValue<float>(story.runtime, e.variable.name, e.variable.floatValue);
@@ -398,9 +390,11 @@ namespace Stratus
 
         private void LoadState(Story story)
         {
+          // If we are constructing the runtime
           if (!story.runtime)
           {
             story.runtime = new Ink.Runtime.Story(story.file.text);
+            OnBindExternalFunctions(story);
           }
 
           story.runtime.state.LoadJson(story.savedState);

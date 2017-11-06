@@ -64,7 +64,7 @@ public class ToolTipDisplay : MonoBehaviour
 
             if (Debug)
             {
-                display.info += " value: " + Game.current.Self.GetModifiedSocialStat(SocialStat);
+                display.info += display.info + Environment.NewLine + " value: " + Game.current.Self.GetModifiedSocialStat(SocialStat);
             }
 
 
@@ -73,7 +73,7 @@ public class ToolTipDisplay : MonoBehaviour
         {
             if (Debug)
             {
-                display.info += " value: " + Game.current.Self.GetWellbingStat(WellnessStat);
+                display.info += display.info + Environment.NewLine + " value: " + Game.current.Self.GetWellbingStat(WellnessStat);
             }
         }
 

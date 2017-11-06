@@ -75,7 +75,7 @@ public class Events
     public static readonly String NewDay = "NewDayEvent";
     public static readonly String GetPlayerInfo = "PlayerInfoEvent";
     public static readonly String GetPlayerInfoFinished = "FinishedPlayerInfoEvent";
-
+    public static readonly String SetPlayerIdentity = "PlayerIdentityEvent";
     //description system
     public static readonly String AutoType = "AutoTypeEvent";
     public static readonly String FinishedAutoType = "FinishedAutoTypeEvent";
