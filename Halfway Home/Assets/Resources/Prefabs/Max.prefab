@@ -139,7 +139,7 @@ MonoBehaviour:
   - Name: Happy
     Visual: {fileID: 21300000, guid: 2409f737229a82644b550d0eaeefb9dd, type: 3}
   - Name: Sad
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 7974b83b0b1096942938cb31ac668252, type: 3}
   - Name: Afraid
     Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Surprised
