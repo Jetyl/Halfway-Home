@@ -23,6 +23,8 @@ namespace HalfwayHome
 
     public string ManualAccess;
 
+    public int FatigueCloseLimit = 1;
+
     Button self;
 
     // Use this for initialization
@@ -82,6 +84,9 @@ namespace HalfwayHome
           return;
         }
       }
+
+            if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue) > FatigueCloseLimit)
+                self.interactable = false;
 
       foreach (var point in ClosedTimeContainer)
       {
