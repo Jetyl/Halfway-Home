@@ -604,6 +604,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 100
 --- !u!114 &60859187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3786,6 +3787,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 90
 --- !u!1 &407708974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6937,6 +6939,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: Been to Garden
+  FatigueCloseLimit: 90
 --- !u!114 &746152807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11755,6 +11758,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 90
 --- !u!1 &1432593200
 GameObject:
   m_ObjectHideFlags: 0
@@ -13394,6 +13398,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 75
 --- !u!1 &1646935482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,6 +13469,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: Been to Library
+  FatigueCloseLimit: 90
 --- !u!114 &1646935485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14212,6 +14218,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: Been to FD
+  FatigueCloseLimit: 95
 --- !u!114 &1724040575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14706,6 +14713,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: Been to Art
+  FatigueCloseLimit: 90
 --- !u!114 &1757642543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15171,6 +15179,7 @@ MonoBehaviour:
   HourVisited: Hour Kitchen Visited
   DayVisited: Day Kitchen Visisted
   ManualAccess: 
+  FatigueCloseLimit: 95
 --- !u!114 &1893308693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16233,6 +16242,7 @@ MonoBehaviour:
   HourVisited: 
   DayVisited: 
   ManualAccess: Been to Commons
+  FatigueCloseLimit: 80
 --- !u!114 &2091294872
 MonoBehaviour:
   m_ObjectHideFlags: 0
