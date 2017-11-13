@@ -95,11 +95,46 @@ Rest relieved a small amount of Stress. # Stress -= 10
 === Commons ===
 // Reduce Delusion
 // Ground yourself in the cozy heart of the House.
-Commons text placeholder. # Delusion -= 20
+{
+	- expression < 2:
+		In a rare moment of extroversion, I feel like spending some time around people. I head to the Commons.
+	- else:
+		I've gotten a lot more comfortable around people. I head to the Commons, which feels even more homey than usual.
+}
+{
+	- delusion > 50:
+		{
+			- delusion > 89:
+				[Voices] "<i>No one wants you around.<i>"
+				The voices in my head are drowning everything out.
+				[Voices] "<i>You deserve to be alone.<i>"
+				I ignore them. I have to fight them one step at a time.
+			- else:
+				[Voices] "<i>You might as well just go to your room.<i>"
+				It's difficult to see, but I know that I can change. And it starts here, in this cozy space.
+		}
+	- else:
+		{
+			- delusion > 29:
+				The Voices have left me alone for a while. 
+				I intend to keep it that way.
+			- else:
+				My dad used to tell me that if you want something to become a habit you have to do it even when it doesn't seem necessary.
+				I'm pretty sure he was talking about car maintenance, but I feel like it applies to socializing, too.
+		}
+}
+The room is {~suprisingly empty, with only a few people reading by the window|filled with the low murmur of conversation punctuated by bursts of laughter}.
+{
+	- expression < 2:
+		I plop down on a {~sofa|chair} next to a few other residents. We chat about {~the unusual weather|video games|last night's game|what we plan on doing when we leave}.
+	- else:
+		I sit to the side, basking in the warmth of human interaction like a campfire. I don't quite have the courage to approach any of the other residents.
+}
 
-
-// Example, do not actually use here:
-//~AddSocialTier("Grace")
+// Call external for wellbeing
+Wellbeing stats have updated.
+Social interaction lowered Delusion significantly. # Delusion -= 20
+However, it also increased Stress slighty. # Stress += 10
 
 -> END
 
