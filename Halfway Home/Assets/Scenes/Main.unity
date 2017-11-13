@@ -605,6 +605,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: 
   FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &60859187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3788,6 +3790,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: 
   FatigueCloseLimit: 90
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!1 &407708974
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,6 +5660,7 @@ MonoBehaviour:
   - Max
   - Isaac
   - Trissa
+  - Keyless
   Colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7352941, g: 0.81379306, b: 1, a: 1}
@@ -5663,6 +5668,7 @@ MonoBehaviour:
   - {r: 1, g: 0.3897059, b: 0.68012166, a: 1}
   - {r: 0.72678685, g: 1.0367647, b: 0.70134085, a: 1}
   - {r: 0.50605536, g: 0.8602941, b: 0.7723452, a: 1}
+  - {r: 0.8235295, g: 0.6627451, b: 0.3803922, a: 1}
   - {r: 0.8235295, g: 0.6627451, b: 0.3803922, a: 1}
 --- !u!222 &568080881
 CanvasRenderer:
@@ -6940,6 +6946,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: Been to Garden
   FatigueCloseLimit: 90
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &746152807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11759,6 +11767,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: 
   FatigueCloseLimit: 90
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!1 &1432593200
 GameObject:
   m_ObjectHideFlags: 0
@@ -12392,8 +12402,8 @@ MonoBehaviour:
   DebugMode: 0
   StartDelusion: 10
   StartStress: 45
-  StartFatigue: 65
-  DebugDay: 2
+  StartFatigue: 35
+  DebugDay: 1
   DebugHour: 10
   DebugWeek: 1
   DebugExpression: 0
@@ -13399,6 +13409,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: 
   FatigueCloseLimit: 75
+  StressCloseLimit: 50
+  DelusionCloseLimit: 100
 --- !u!1 &1646935482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13470,6 +13482,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: Been to Library
   FatigueCloseLimit: 90
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &1646935485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14219,6 +14233,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: Been to FD
   FatigueCloseLimit: 95
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &1724040575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14714,6 +14730,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: Been to Art
   FatigueCloseLimit: 90
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &1757642543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15180,6 +15198,8 @@ MonoBehaviour:
   DayVisited: Day Kitchen Visisted
   ManualAccess: 
   FatigueCloseLimit: 95
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &1893308693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16243,6 +16263,8 @@ MonoBehaviour:
   DayVisited: 
   ManualAccess: Been to Commons
   FatigueCloseLimit: 80
+  StressCloseLimit: 65
+  DelusionCloseLimit: 100
 --- !u!114 &2091294872
 MonoBehaviour:
   m_ObjectHideFlags: 0

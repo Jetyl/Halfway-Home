@@ -41,8 +41,8 @@ which, happens semi-often
 "Anyways, I'll catch you two later. I however, must continue the hunt." # Max = Exit
 //Max leaves
 Timothy doesn't look to good. Something's bugging him. should I..
-*[Ask him what's wrong] -> Okay
-*[Ignore it and move on] -> BrainHate
++[Ask him what's wrong] -> Okay
++[Ignore it and move on] -> BrainHate
 
 === BrainHate ===
 Wow, brain. Dick move.

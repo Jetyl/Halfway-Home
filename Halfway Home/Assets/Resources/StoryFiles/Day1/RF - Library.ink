@@ -19,5 +19,7 @@ EXTERNAL GetStringValue(value)
 -> LibraryFunction
 
 === LibraryFunction ===
-Library description TBD
+[{player_name}] "And here's the library" #Timothy = Calm
+"They have a whole stock of fiction and non-fiction stuff here, for yout needs"
+"There's also a book club, that meets a few times a week"
 -> END

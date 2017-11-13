@@ -23,7 +23,9 @@ namespace HalfwayHome
 
     public string ManualAccess;
 
-    public int FatigueCloseLimit = 1;
+    public int FatigueCloseLimit = 100;
+    public int StressCloseLimit = 100;
+    public int DelusionCloseLimit = 100;
 
     Button self;
 
@@ -85,8 +87,14 @@ namespace HalfwayHome
         }
       }
 
-            if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue) > FatigueCloseLimit)
-                self.interactable = false;
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue) > FatigueCloseLimit)
+        self.interactable = false;
+
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.stress) > StressCloseLimit)
+        self.interactable = false;
+
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion) > DelusionCloseLimit)
+        self.interactable = false;
 
       foreach (var point in ClosedTimeContainer)
       {

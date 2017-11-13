@@ -33,12 +33,20 @@ namespace HalfwayHome
       SerializedProperty TimesCanVisit = serializedObject.FindProperty("VisitMulitplier");
       SerializedProperty HourVisited = serializedObject.FindProperty("HourVisited");
       SerializedProperty DayVisited = serializedObject.FindProperty("DayVisited");
+
       SerializedProperty FatigueCloseLimit = serializedObject.FindProperty("FatigueCloseLimit");
+      SerializedProperty StressCloseLimit = serializedObject.FindProperty("StressCloseLimit");
+      SerializedProperty DelusionCloseLimit = serializedObject.FindProperty("DelusionCloseLimit");
 
 
       EditorGUILayout.Space();
 
       EditorGUILayout.IntSlider(FatigueCloseLimit, 0, 100, "Fatigue Percent Close");
+      EditorGUILayout.IntSlider(StressCloseLimit, 0, 100, "Stress Percent Close");
+      EditorGUILayout.IntSlider(DelusionCloseLimit, 0, 100, "Delusion Percent Close");
+            
+      EditorGUILayout.Space();
+
       EditorGUILayout.PropertyField(ManualAccess, new GUIContent("Manual Turn Off Flag"), true);
       EditorGUILayout.PropertyField(LimitedDailyAccess, new GUIContent("Limited Daily Access?"), true);
       if (LimitedDailyAccess.boolValue == true)

@@ -48,8 +48,8 @@ Isaac looks off to another part of the room.
 [Isaac] "My name. If it wasn't said already. Which is was. Never mind."
 A potent silence fills the room. Isaac's not much of a conversationalist, and frankly neither am I.
 That would be Eduardo, who's quite preoccupied cuddling Isaac.
-*[Get Eduardo's Attention] -> HeyEddy
-*[Leave] -> Leaving
++[Get Eduardo's Attention] -> HeyEddy
++[Leave] -> Leaving
 
 === Leaving ===
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
