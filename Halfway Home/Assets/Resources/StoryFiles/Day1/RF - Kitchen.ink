@@ -19,5 +19,19 @@ EXTERNAL GetStringValue(value)
 -> KitchenFunction
 
 === KitchenFunction ===
-Kitchen description TBD
+[{player_name}] "So this is the cafe." #Timothy = Calm
+"You can come here for breakfest, lunch, and dinner."
+"You can come really anytime your hungry. Eating will rejuvinate you and lower your <i>fatigue</i>"
+"You know, all pretty obvious stuff."
+"Oh!, uh, I mean."
+"Crap, you don't got an eating disorder or something do you?"
+[Timothy] "Um... no.."
+[{player_name}] "oh okay."
+"Sorry, was worried for a sec that I might've been insensitive."
+[Timothy] "I-It's O-Okay..."
+[{player_name}] "Uh... cool."
+"Well, uh, lets go see what they got today."
+"If I recall, today is pancake day?"
+I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit
+I feel refreshed by the delicous meal. #Fatigue -= 20
 -> END

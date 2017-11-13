@@ -19,5 +19,14 @@ EXTERNAL GetStringValue(value)
 -> ArtRoomFunction
 
 === ArtRoomFunction ===
-Art Room description TBD
+[{player_name}] "So this is the art room" #Timothy = Calm
+"The home puts up these art therapy sessions you can go for, if thats your jam or whatever."
+"In general, its always open to mess with stuff, if you want."
+[Timothy] "They've got a lot of um...."
+"stuff... in here."
+[{player_name}] "Yeah, they encourage people to get creative and <i>Express</i> themselves."
+It generally stress me out though. 
+"But yeah, you wanna try something out?"
+[Timothy] "N-Not R-R-Right now."
+"Th-Thanks though..."
 -> END
