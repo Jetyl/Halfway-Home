@@ -30,8 +30,8 @@ public class AutoType : MonoBehaviour
 
     [HideInInspector]
     public bool Skipping;
-    
 
+    bool Paused;
 
     // Use this for initialization
     void Start()
@@ -62,12 +62,14 @@ public class AutoType : MonoBehaviour
     
     void OnPause(DefaultEvent eventdata)
     {
+        Paused = true;
         if (typing != null)
             StopCoroutine(typing);
     }
 
     void OnUnPause(DefaultEvent eventdata)
     {
+        Paused = false;
         if(Text.IsActive())
             typing = StartCoroutine(TypeText(Text.maxVisibleCharacters));
     }
@@ -80,7 +82,10 @@ public class AutoType : MonoBehaviour
         PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");
         letterPause = 1 / (DefaultPauseSpeed * PauseSpeedMultiplier);
         UpdateSpeed = TextParser.ExtractTextSpeed(ref message);
-        typing = StartCoroutine(TypeText(0));
+        if (!Paused)
+            typing = StartCoroutine(TypeText(0));
+        else
+            Text.maxVisibleCharacters = 0;
     }
 
     public void SkipTyping(DefaultEvent eventdata)

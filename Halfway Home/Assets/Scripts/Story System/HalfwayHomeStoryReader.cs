@@ -252,8 +252,8 @@ namespace HalfwayHome
 
     public void GetPlayerData()
     {
-      //Space.DispatchEvent(Events.GetPlayerInfo);
-      StartCoroutine(TextParser.FrameDelay(Events.GetPlayerInfo));
+      Space.DispatchEvent(Events.GetPlayerInfo);
+      //StartCoroutine(TextParser.FrameDelay(Events.GetPlayerInfo));
     }
 
         
