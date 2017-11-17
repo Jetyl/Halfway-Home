@@ -10,7 +10,7 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 
-EXTERNAL GetPlayerData()
+EXTERNAL GetPlayerGender()
 EXTERNAL GetStringValue(name)
 
 -> Start
@@ -32,9 +32,9 @@ My mind begins playing tricks on me. Fleeting colors dart past and the voices gr
 I feel myself lose hope.
 But when I open my eyes, I can see the light streaming through the skinny window of my room.
 The whispers fade into the chitter of birdsong. 
-I think onto myself for a while... about who I am... {GetPlayerData()}
+I think onto myself for a while... about who I am... {GetPlayerGender()}
 I shudder at the thought of losing myself so deeply in my own mind. I often forget who I am in my dreams.
-[{player_name}] "Ok, {player_name}, that's enough of that. Only one more week."
+Just one more week.
 I lay awake, concentrating on the warm sensation of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK

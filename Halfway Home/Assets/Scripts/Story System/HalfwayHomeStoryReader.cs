@@ -40,7 +40,8 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
-      story.runtime.BindExternalFunction(nameof(GetPlayerData), new System.Action(GetPlayerData));
+      story.runtime.BindExternalFunction(nameof(GetPlayerGender), new System.Action(GetPlayerGender));
+      story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
     }
 
     protected override void OnConfigureParser(RegexParser parser)
@@ -250,14 +251,18 @@ namespace HalfwayHome
       Game.current.Slept();
     }
 
-    public void GetPlayerData()
+    public void GetPlayerGender()
     {
-      //Space.DispatchEvent(Events.GetPlayerInfo);
-      StartCoroutine(TextParser.FrameDelay(Events.GetPlayerInfo));
+      var genderInfo = new IdentityDisplay.PlayerGetInfoEvent(false);
+      Space.DispatchEvent(Events.GetPlayerInfo, genderInfo);
     }
 
-        
-
+    public void GetPlayerName()
+    {
+      var nameInfo = new IdentityDisplay.PlayerGetInfoEvent(true);
+      Space.DispatchEvent(Events.GetPlayerInfo, nameInfo);
     }
+
+  }
 
 }
