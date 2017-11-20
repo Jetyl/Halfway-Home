@@ -102,9 +102,21 @@ okay, some common consants are...
 [{player_name}] "what's so funny?"
 [Timothy] "oh, nothing... its just..."
 "Hangman is a good game..."
-"It teaches you that just by saying a few wrong things, you can end someone’s life."
-
-[Timothy] "have you ever felt like a patch of earth is just unnatrual?"
+"It teaches you that just by saying a few wrong things, you can end someone’s life..."
+//make this tutorial check instead
+{
+	-week = 1:
+		"S-Sorry f-for interupt-t-t-ting the t-tour.."
+		[{player_name}] "its okay."
+}
+{
+	-week >= 2:
+		hhhhhhhhrrrgghh
+		not this week timothy. noth this week.
+}
+[{player_name}] "so, what are you doing over here?"
+[Timothy] "I'm not sure..."
+"have you ever felt like a patch of earth is just unnatrual?"
 "That, you hold a connection to an otherwise pointless peice of land?"
 [{player_name}] "Do you like this spot?"
 [Timothy] "No."
@@ -113,6 +125,11 @@ okay, some common consants are...
 [Timothy] "I'm not sure I can."
 [{player_name}] "what?"
 [Timothy] "oh, uh, n-nothing. Its just a strange feeling I'm having."
-"I've been getting those a lot... lately.."
-
+"I've been getting those a lot... lately..."
+[{player_name}] "Well okay, if you say so."
+{
+	-week >= 2:
+		I spend the remainder of the hour showing timothy around the gardens, finding more relaxing, more natural feeling places.
+		my awareness of my surroundings goes up. #awareness += minor
+}
 -> END
