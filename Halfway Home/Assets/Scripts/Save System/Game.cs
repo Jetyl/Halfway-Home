@@ -47,7 +47,7 @@ public class Game
        
         Day = 0;
         Hour = 0;
-        PlayerName = "Player";
+        PlayerName = "Me";
         CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();

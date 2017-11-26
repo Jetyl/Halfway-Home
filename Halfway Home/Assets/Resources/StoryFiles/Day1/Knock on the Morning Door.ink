@@ -37,8 +37,7 @@ EXTERNAL SetValue(name, values)
 //~player_name = "Player"
 ~week = 1
 //play knocking sound effect
-[{player_name}] "Uuugh..."
-The persistant knocking drags me out of my dreary haze.
+A cheerful knock drags me out of my dreary haze.
 { 
 	- week == 1:
 		What do they want?
