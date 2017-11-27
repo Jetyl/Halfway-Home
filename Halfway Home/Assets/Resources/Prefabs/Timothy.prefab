@@ -135,7 +135,7 @@ MonoBehaviour:
   - Name: Calm
     Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
   - Name: Angry
-    Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
+    Visual: {fileID: 21300000, guid: 247f53db865c5054fb2e4bab57265dca, type: 3}
   - Name: Happy
     Visual: {fileID: 21300000, guid: b96b8c07afb44b24393c65c35149441e, type: 3}
   - Name: Sad
