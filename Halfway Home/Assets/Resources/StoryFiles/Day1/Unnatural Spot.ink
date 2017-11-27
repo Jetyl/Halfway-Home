@@ -105,7 +105,7 @@ okay, some common consants are...
 "It teaches you that just by saying a few wrong things, you can end someone’s life..."
 //make this tutorial check instead
 {
-	-week = 1:
+	-week == 1:
 		"S-Sorry f-for interupt-t-t-ting the t-tour.."
 		[{player_name}] "its okay."
 }
