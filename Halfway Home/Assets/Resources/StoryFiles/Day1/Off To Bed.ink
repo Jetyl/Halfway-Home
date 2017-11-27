@@ -33,13 +33,12 @@ I am beat.
 I sit there, wavering between consiousness, and unconsiousness, when I hear a voice.
 [Timothy] "Hey,<delay=2> {player_name}?"
 [{player_name}] "Yeah?"
--> TalkWeek1
-//{
-//	- GetValue("Tutorial") == true:
-//		-> TalkWeek1
-//	- else:
-//		-> Start.Question		
-//}
+{
+	- GetValue("Tutorial") == true:
+		-> TalkWeek1
+	- else:
+		-> Start.Question		
+}
 =Question
 [Timothy] "D-d-does it ever get easier?"
 "Being here, I-I mean."
@@ -83,10 +82,8 @@ I toss and turn, pained to be awake.
 I look over at my spare bed, and Timothy's still there.
 I guess its his bed now.
 Slumberland becons me back to it, but I should be getting up about now.
-*[Get Up]
++[Get Up]
 	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. In no time, I'm ready to head out.
-*[Stay in Bed]
++[Stay in Bed]
 	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("SleptIn", true)}
-
-- Thanks for playing! This is the end of the build. We have no quit function, so please hit alt+F4 to close.
 -> END

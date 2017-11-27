@@ -108,7 +108,9 @@ What in the...?
 What the HELL?!
 "Ya oughta. Pretty soon you won't have old Max to be there reminding ya"
 "uh, Yello? Earth to {player_name}. ya still there?"
-//show just timothy
+this doesn't feel real. Besides Max, I see... #Timothy=Calm
+[{player_name}] "Timothy!"
+[Timothy] "Meep!" #Timothy=Surprised
 -> Day1Alone
 
 ===Repeat===
@@ -149,5 +151,6 @@ I am really starting to get hungry, so first stop: I should show Timothy the Caf
 -> END
 
 ===Day1Alone===
+{SetValue("Tutorial", false)}
 
 ->END

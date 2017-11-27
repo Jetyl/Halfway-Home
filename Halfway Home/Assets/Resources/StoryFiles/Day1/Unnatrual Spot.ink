@@ -48,10 +48,8 @@ I get closer, and see that he's scribling something in the dirt.
 "lets see, lets start with..."
 +[Common consants] -> Constant
 +[Can I buy a vowel?] -> Vowel
-{
-	-GetValue("SolvedHangman") == true:
-	+[It's Hope] -> AlreadyKnow
-}
++{GetValue("SolvedHangman") == true}[It's Hope] -> AlreadyKnow
+
 
 
 === HangMan ===
