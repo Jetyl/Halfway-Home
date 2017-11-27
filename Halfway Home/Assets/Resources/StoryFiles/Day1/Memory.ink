@@ -18,8 +18,8 @@ EXTERNAL GetStringValue(name)
 === Start ===
 //~week += 1
 I often hear voices when I sleep. Sometimes when I'm awake, too.
-They whisper to me all the things I am afraid to hear.
-Back then they used to tell me that I would never escape.
+They whisper to me all the things I am afraid to hear. # Play: Sad //Example tag for music
+Back then they used to tell me that I would never escape. # SFX: Whispers // Example tag for sound effects
 That I didn't deserve to.
 I had another of those dreams last night... That I was back in that sickly white room.
 Alone.

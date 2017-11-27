@@ -66,8 +66,13 @@ namespace HalfwayHome
       string decrementWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "-=");
       parser.AddPattern("WellbeingDown", decrementWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatDecrement);
 
+      // Wellbeing Stat set
       string setWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "=>");
       parser.AddPattern("WellbeingSet", setWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatSet);
+
+      // Music
+      string playMusic = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
+      parser.AddPattern("MusicTrigger", playMusic, RegexParser.Target.Tag, RegexParser.Scope.Group, OnMusicTrigger);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -159,6 +164,18 @@ namespace HalfwayHome
 
       Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
     }
+
+    void OnMusicTrigger(Parse parse)
+    {
+      if(parse.Find("Mode").ToLower() == "play")
+      {
+        Trace.Script($"Play {parse.Find("Event")} music");
+      }
+      else if(parse.Find("Mode").ToLower() == "sfx")
+      {
+        Trace.Script($"Play {parse.Find("Event")} sound effect");
+      }
+    }
     //------------------------------------------------------------------------/
     // Story
     //------------------------------------------------------------------------/
@@ -171,19 +188,6 @@ namespace HalfwayHome
 
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
-
-    //public void CharEnter(string name, string _pose)
-    //{
-    //  //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = true });
-    //  Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(name, _pose));
-    //  Trace.Script("called char enter");
-    //}
-
-    //public void CharExit(string name)
-    //{
-    //  //Scene.Dispatch<CharacterChangeEvent>(new CharacterChangeEvent() { character = name, entering = false });
-    //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(name, "Calm"));
-    //}
 
     public void SetValue(string ValueName, bool newValue)
     {
@@ -201,44 +205,6 @@ namespace HalfwayHome
             print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
-
-    //public void AlterWellbeing(string WellnessStat, int Value)
-    //{
-    //  var stat = Personality.Wellbeing.delusion;
-
-    //  if (WellnessStat == "Stress")
-    //    stat = Personality.Wellbeing.stress;
-    //  if (WellnessStat == "Fatigue")
-    //    stat = Personality.Wellbeing.fatigue;
-
-    //  Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
-    //}
-
-    //public void AddSocialPoints(string SocialStat, string Value)
-    //{
-    //  var stat = Personality.Social.awareness;
-
-
-    //  if (SocialStat == "Grace")
-    //    stat = Personality.Social.grace;
-    //  if (SocialStat == "Expression")
-    //    stat = Personality.Social.expression;
-
-    //  Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(Value, stat));
-    //}
-
-    //public void AddSocialTier(string SocialStat)
-    //{
-    //  if (SocialStat == "Awareness")
-    //    Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
-    //  if (SocialStat == "Grace")
-    //    Game.current.Self.IncrementSocialTier(Personality.Social.grace);
-    //  if (SocialStat == "Expression")
-    //    Game.current.Self.IncrementSocialTier(Personality.Social.expression);
-
-
-    //  Space.DispatchEvent(Events.StatChange);
-    //}
 
     public void SetTimeBlock(int time)
     {
