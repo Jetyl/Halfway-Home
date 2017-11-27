@@ -128,7 +128,7 @@ The room is {~suprisingly empty, with only a few people reading by the window|fi
 	- expression < 2:
 		I plop down on a {~sofa|chair} next to a few other residents. We chat about {~the unusual weather|video games|last night's game|what we plan on doing when we leave}.
 	- else:
-		I sit to the side, basking in the warmth of human interaction like a campfire. I don't quite have the courage to approach any of the other residents.
+		I sit to the side, basking in the warmth of human interaction like a campfire. I don't quite have the courage to approach any of the other residents, but the environment does me good.
 }
 
 // Call external for wellbeing
@@ -147,19 +147,68 @@ Front Desk text placeholder.
 === Kitchen ===
 // Reduce Fatigue
 // Have a meal to keep up your strength.
-I head to the small cafeteria to get some breakfast/lunch/dinner # Fatigue -= 20
+// TODO: Get info on time of day and # of visits to Kitchen to make narrative more immersive.
+I head to the small cafeteria to get some grub.
+I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
+Wellbeing stats have updated.
+Fatigue has been reduced moderately. # Fatigue -= 20
 -> END
 
 === Garden ===
 // Increase Delusion, Increase Awareness
 // Contemplate your journey: the good and the bad.
-Garden text placeholder. # Delusion += 10 # Awareness+
+I decide that some time alone would be good for me, but rather than shutting myself in my room on such a nice day I head outside.
+The sweet smell of the garden envelops me as I step out into the crisp spring air.
+{shuffle:
+	- I spend a while meandering along the small gravel path. It's a short path and I end up looping it several times.
+	- I take a seat on the bench by the pond, watching the refracted sunlight dance above the multi-colored scales of the Koi fish.
+	- I lay down in a patch of grass and stare up at the shifting clouds. I've seen residents picnic in this spot on occasion.
+}
+My solitude gives me plenty of time to reflect.
+{shuffle:
+	- I wonder what my life will look like years from now.
+	- I think about the friends I used to have on the outside and where their lives may have taken them.
+	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
+}
+// Call external for wellbeing
+Wellbeing stats have updated.
+Your time in the sun has left you feeling tired, increasing Fatigue slightly. # Fatigue += 10
+Being alone has increased your Delusion slightly. # Delusion += 10
+{
+	- awareness > 3:
+		Your proficiency with introspection reduces Stress slightly. # Stress -= 10
+}
+// Call external for social
+Social stats have improved!
+Reflection has increased Awareness slightly. # Awareness+
 -> END
 
 === Library ===
 // Increase Stress, Increase Grace
 // Study the world, its people, and its myths.
-Library text placeholder. # Stress += 10 # Grace+
+{
+	- grace > 2:
+		Feeling in the mood for reading, I head to the library.
+	- else: I wander into the library, figuring that I should really catch up on all the knowledge I've missed out on in the last few years.
+}
+I peruse the shelves until a title catches my eye. 
+I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archaeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
+The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
+// Call external for wellbeing
+Wellbeing stats have updated.
+Focusing on the text has taken a toll on your concentration, increasing Fatigue slightly. # Fatigue += 10
+{
+	- grace > 3:
+		Competency with Grace has resulted in this activity relieving stress! # Stress -= 10
+	- grace > 2:
+		Experience with Grace has removed the Stress from this activity!
+	- else:
+		Engaging with the material was enlightening, but increased Stress slightly. # Stress += 10
+}
+
+// Call external for social
+Social stats have improved!
+New knowledge has increased Grace slightly. # Grace+
 -> END
 
 === ArtRoom ===
@@ -172,8 +221,17 @@ After about an hour, I finish. My arms are starting to ache, but something about
 // Call external for wellbeing
 Wellbeing stats have updated.
 Creative exertion increased Fatigue slightly. # Fatigue += 10
+{
+	- expression > 3:
+		Competency with Expression has resulted in this activity relieving stress! # Stress -= 10
+	- expression > 2:
+		Experience with Expression has removed the Stress from this activity!
+	- else:
+		The extended period of focus increased Stress slightly. # Stress += 10
+}
+
 // Call external for social
-<color=green>Social stats have improved!</color>
+Social stats have improved!
 Creativity has increased Expression slightly. # Expression+
 -> END
 
@@ -194,21 +252,27 @@ After a brisk walk I reach my destination.
 {~->StoreFatigue|->Store.Grace}
 = Grace
 {shuffle:
-	- Something about Grace. # Grace+
+	- I watch as an older {~man|woman} greets the clerk formally and I am impressed by their politeness.
+		The encounter proves educational, increasing Grace. # Grace+
 		-> Store.Expression
 	- ->Store.Expression
 	- ->Store.Expression
 }
 = Expression
 {shuffle:
-	- Something about Expression. # Expression+
+	- I spend a while looking for something and one of the other customers notices and helps me out.
+	We get to talking and I realize afterward that I didn't feel uncomfortable at all. 
+	The experience boosts confidence, increasing Expression. # Expression+
 		-> Store.Awareness 
 	- ->Store.Awareness
 	- ->Store.Awareness
 }
 = Awareness
 {shuffle:
-	- Something about Awareness. # Awareness+
+	- While I'm gathering my things, a blind man walks in tapping a white cane in front of himself. 
+	I am about to offer help when I notice him confidently pulling items off of the shelves. 
+	I watch him for a minute, moving from aisle to aisle with practiced precision.
+	His self-sufficiency inspires an increase in Awareness. # Awareness+
 		-> END
 	- ->END
 	- ->END
@@ -245,10 +309,13 @@ Stress increases significantly. # Stress += 20
 {~->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Small|->StoreFatigue.Large}
 
 = Small
-Fatigue increases slightly. # Fatigue += 10
+It was unusually hot out on my return trip, exacerbating the physical exertion of my walk.
+Fatigue increased slightly. # Fatigue += 10
 -> Store.Grace
 
 = Large
+I am distracted on the return trip and get turned around.
+I hurry and find my way back, but it takes a lot out of me.
 Fatigue increases significantly. # Fatigue += 20
 -> Store.Grace
 

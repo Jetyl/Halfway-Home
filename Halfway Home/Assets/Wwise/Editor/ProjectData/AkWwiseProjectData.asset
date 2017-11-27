@@ -145,8 +145,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1937202275
-    m_lastTimePart2: -1999297600
+    m_lastTimePsrt1: 1954157561
+    m_lastTimePart2: -1999294962
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -197,9 +197,36 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -962949763
-    m_lastTimePart2: -1999297833
-    List: []
+    m_lastTimePsrt1: 1954269703
+    m_lastTimePart2: -1999294962
+    List:
+    - Name: Effects_Slider
+      Path: Default Work Unit\Effects_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Effects_Slider
+        ObjectType: 13
+      ID: -1408592509
+      Guid: 4fd22bb2264af14b914c7f40bd24d5d9
+    - Name: Menu_Slider
+      Path: Default Work Unit\Menu_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu_Slider
+        ObjectType: 13
+      ID: -1392929572
+      Guid: 793ea6e9e4c4484c9091428a37d6d4df
+    - Name: Music_Slider
+      Path: Default Work Unit\Music_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Slider
+        ObjectType: 13
+      ID: 1127857866
+      Guid: 290b0f2bebb61c499ccbe466d41d28a7
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{97E54518-1B72-4813-96CB-8C08A386CD29}" SchemaVersion="80">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{97E54518-1B72-4813-96CB-8C08A386CD29}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{97E54518-1B72-4813-96CB-8C08A386CD29}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+				<GameParameter Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}"/>
+				<GameParameter Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
