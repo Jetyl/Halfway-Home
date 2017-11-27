@@ -111,17 +111,65 @@ What the HELL?!
 this doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
--> Day1Alone
+[{player_name}] "what are you doing back so soon?" #Timothy=Calm
+"We're you being sent back to Blackwell Hospital?" #Timothy=Scared
+[Max] "Uh, {player_name}, you still dreaming buddy?"
+"Timothy Myuri is the roommate I told you about"
+wait
+"You two will be sharing a room for the week, since we're kinda tight on space around here."
+wait
+[Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
+[Timothy] "Okay." # Timothy = Calm
+Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
+Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
+[Max] "Oh crap." # Keyless = Surprised
+[{player_name}] "What?"
+[Max] "It would seem I have misplaced my keys."
+[{player_name}] "Again?"
+[Max] "Ah! I'm not that forgetful!" #Keyless=Sad
+[{player_name}] "N-no, but, you lost them last week too, remember? they we're stuck in the couch cushions?"
+[Max] "Couch cushions? hm..." #Keyless=Calm
+"One sec. I'mma be right back." #Keyless=Exit
+And with that Max quickly runs off, leaving me and Timothy alone
+[{player_name}] "Timothy, are getting really weird deja vu today too?"
+Timothy is just kind of quietly staring at the corner where his bed is.
+"Yo, Timothy, can you hear me?"
+[Timothy] "<size=30%>I don't know you<size=100%>"
+[{player_name}] "what?"
+[Max] "okay, I'm back!" #Max=Calm
+"Anyways, where we're we Timothy?"
+[Timothy] "You we're showing me around I think..."
+[Max] "Ah, yes."
+"Well lets head off."
+"See you at the welcome dinner {player_name}!" #Max=Exit #Timothy=Exit
+wait
+"Thanks again for the tip on the keys!"
+and, they're gone...
+What is even going on?
+I'm left in my room, looking around. all of Timothy's stuff has been packed in the bags they brought in. 
+my bags, on the other hand, have been emptied, and put away, from where I left them last night...
+Last night....
+[{player_name}] "Aggh!"
+my head hurts, as if for a second I brain formed a spliting migrine, but I continue to follow the strangeness around me.
+Was last night... really last night?
+the knock on the door.@ Max inroducing Timothy as if we never met.@ Timothey even still being here!
+this can't all be just deja vu, can it?
+I think.... I think I'm back on the first day Timothy arrived here.@ But how? why?
+I sit there, alone with my thoughts, theroizing how or why this situation has come before me, before I realize the time.
+[{player_name}] "I-I should go looking for someone."
+-> END
 
 ===Repeat===
-
-->END
+same stuff as previously. to be expanded later.
+for now, do you tell max where their keys are, and thus take Timothy around the home?
++[Yes, tell max where the keys are] ->Day1Alone
++[No, withold that information] ->TakingTimothy
 
 ===RestartRequired===
 Nonononononononono.
 In a bolt, I'm out of bed, and sprint for the door.
 This can't be happening. this can't be happening.
--> END
+-> Repeat
 
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
@@ -152,5 +200,7 @@ I am really starting to get hungry, so first stop: I should show Timothy the Caf
 
 ===Day1Alone===
 {SetValue("Tutorial", false)}
+I've been left alone on this morning.
+I should actually go about my day...
 
 ->END
