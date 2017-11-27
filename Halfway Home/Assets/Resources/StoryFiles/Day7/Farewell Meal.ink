@@ -16,33 +16,31 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-#Trissa=Calm #Eduardo=Calm #Charlotte=Calm #Isaac=Calm #Max=Calm
 I'm called to the kitchen for my farewell meal.
-I'm leaving tomorrow morning bright an early, and need to be packing tonight, so they moved my meal to lunch time.
-I walk in seing everyone chatting, and having a good time.
+I walk in seeing everyone chatting, and having a good time.
 Acting like everything is okay.
-Eduardo and Isaac are off in their own little corner, giggling to themselves. Charlotte and Max are setting out more of the tableware and food.
-//add an if, for if timothy is present
 Trissa is chatting up Jesse and John at the center table.
 
 
-I decide to...
-*[Sit near Timothy] ->NearTimothy
-*[Sit near Eduardo] ->NearEduardo
-*[Help Charlotte layout the dishes] ->NearCharlotte
 
 
-===NearTimothy===
+===CharlottePositive===
+I see Charlotte, over in her usual chair,<delay=2> relaxing, of all things.
 
 ->Toast
 
-===NearEduardo===
-
+===CharlotteNagative===
+I see Charlotte assisting in the preperations of the farewell meal.
 
 ->Toast
 
-===NearCharlotte===
+===EduardoPositive===
+Eduardo and Isaac are in their usual corner, giggling
 
+->Toast
+
+===EduardoNagative===
+Eduardo and Isaac are suprisingly not sitting nearby each other, but on near oppostie ends of the room.
 
 ->Toast
 

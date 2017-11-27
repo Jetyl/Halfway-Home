@@ -19,7 +19,7 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-{CharEnter("Timothy", "Calm")}{CharEnter("Trissa", "Calm")}{CharEnter("Eduardo", "Calm")}{CharEnter("Charlotte", "Calm")}{CharEnter("Isaac", "Calm")}{CharEnter("Max", "Calm")}
+#Trissa=Calm #Eduardo=Calm #Charlotte=Calm #Isaac=Calm #Max=Calm #Timothy=Calm
 I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebatory Welcome Dinner.
 The Halfway Home has these big get together dinners, whenever we get someone new, or someone leaves.
 its supposed to be a big bonding moment. Or, somthing like that.
@@ -48,7 +48,7 @@ I decide to...
 ->Toast
 
 ===Toast===
-{CharEnter("Max", "Calm")}
+#Max=Calm
 [Max] "Can I get everyone's attention!"
 the whole cafe quites a little, as Max speaks up.
 [Max] "Thanks eveybody for showing yerselfs"
@@ -60,7 +60,7 @@ the whole cafe quites a little, as Max speaks up.
 [Max] "But we all want to wish him the best of luck"
 [Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
-{CharExit("Max")} Max sits back down near Timothy, and the usual chatter of the room resumes.
+#Max=Calm Max sits back down near Timothy, and the usual chatter of the room resumes.
 {
 	- ByTimothy == false:
 		I get up and move closer to them and Timothy, given Trissa seems to have up and moved.
@@ -107,7 +107,7 @@ You have no idea.
 
 ===TalkingToTimothy===
 [{player_name}] "Hey, Timothy. how's the dinner?"
-scene end. {CharExit("Timothy")} {CharExit("Isaac")} {CharExit("Eduardo")} {CharExit("Charlotte")} {CharExit("Trissa")} {CharExit("Max")}
+scene end. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
 
 
 -> END
