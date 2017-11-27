@@ -28,5 +28,5 @@ EXTERNAL GetStringValue(value)
 It generally stress me out though. 
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not R-R-Right now."
-"Th-Thanks though..."
+"Th-Thanks though..." #Timothy = Exit
 -> END
