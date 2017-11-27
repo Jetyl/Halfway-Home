@@ -7,7 +7,7 @@
 
 public class AkTriggerMouseEnter : AkTriggerBase
 {
-	void OnMouseEnter()
+	public void OnMouseEnter()
 	{
 		if(triggerDelegate != null) 
 		{
