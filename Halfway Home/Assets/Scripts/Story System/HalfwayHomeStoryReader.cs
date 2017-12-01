@@ -40,7 +40,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
-      story.runtime.BindExternalFunction(nameof(GetPlayerGender), new System.Action(GetPlayerGender));
+      story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
       story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
     }
 
@@ -217,10 +217,9 @@ namespace HalfwayHome
       Game.current.Slept();
     }
 
-    public void GetPlayerGender()
+    public void SetPlayerGender(string genderPicked)
     {
-      var genderInfo = new IdentityDisplay.PlayerGetInfoEvent(false);
-      Space.DispatchEvent(Events.GetPlayerInfo, genderInfo);
+      Game.current.Progress.SetValue<string>("PlayerGender", genderPicked);
     }
 
     public void GetPlayerName()

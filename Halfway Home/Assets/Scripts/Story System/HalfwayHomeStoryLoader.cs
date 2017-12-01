@@ -108,7 +108,7 @@ namespace HalfwayHome
     {
       // Set the name and gender
       var playerName = Game.current.PlayerName;
-      var playerGender = Game.current.Progress.GetStringValue("player_gender");
+      var playerGender = Game.current.Progress.GetStringValue("PlayerGender");
       var currentRoom = Game.current.CurrentRoom.ToString();
       reader.SetVariableValue("player_name", playerName);
       reader.SetVariableValue("player_gender", playerGender);
