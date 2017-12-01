@@ -46,6 +46,7 @@ namespace HalfwayHome
 
     protected override void OnConfigureParser(RegexParser parser)
     {
+
       // @TODO: Change these to use groups
       parser.AddPattern(speakerLabel, RegexParser.Presets.insideSquareBrackets, RegexParser.Target.Line, RegexParser.Scope.Default);
       parser.AddPattern(dialogLabel, RegexParser.Presets.insideDoubleQuotes, RegexParser.Target.Line, RegexParser.Scope.Default);

@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     public GameObject ConfirmationPanel;
     public GameObject ClearSavePanel;
 
+    public GameObject FadeScreeen;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -59,7 +61,21 @@ public class MainMenu : MonoBehaviour
 
     void LoadLevel()
     {
+        //iTween.CameraFadeAdd();
+        //SceneManager.LoadScene(MainLevel);
+        
+        StartCoroutine(LoadLevel(1));
+
+    }
+
+
+    IEnumerator LoadLevel(float aTime)
+    {
+        Instantiate(FadeScreeen, transform.parent);
+        yield return new WaitForSeconds(aTime);
+        
         SceneManager.LoadScene(MainLevel);
+
     }
 
     public void ConfirmQuit()

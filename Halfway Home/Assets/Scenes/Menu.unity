@@ -2157,6 +2157,8 @@ MonoBehaviour:
   ContinueButton: {fileID: 1639334184}
   ConfirmationPanel: {fileID: 890026187}
   ClearSavePanel: {fileID: 1320628150}
+  FadeScreeen: {fileID: 1813037000410612, guid: 540ac11ea7c3b904f93da5301ec6e5e2,
+    type: 2}
 --- !u!1 &1150420144
 GameObject:
   m_ObjectHideFlags: 0

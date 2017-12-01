@@ -70,11 +70,11 @@ public class GameStartUp : MonoBehaviour
             Game.current = new Game();
             SetStartValues();
             Game.current.Progress.SetValue<bool>("Tutorial", true);
-            StartCoroutine(DelayStart(1));
+            StartCoroutine(DelayStart(2));
         }
         else
         {
-            StartCoroutine(DelayStart(1));
+            StartCoroutine(DelayStart(2));
         }
 
     //Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
@@ -94,7 +94,7 @@ public class GameStartUp : MonoBehaviour
             {
                 Game.current.Progress.UpdateProgress(point.ProgressName, point);
             }
-            StartCoroutine(DelayStart(2));
+            StartCoroutine(DelayStart(3));
 
         }
     }

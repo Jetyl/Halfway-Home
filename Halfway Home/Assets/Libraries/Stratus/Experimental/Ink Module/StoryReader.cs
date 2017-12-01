@@ -85,8 +85,8 @@ namespace Stratus
         private void Awake()
         {
           Subscribe();
-          OnLoad(stories);
           OnAwake();
+          OnLoad(stories);
         }
 
         /// <summary>
@@ -437,7 +437,7 @@ namespace Stratus
           if (StorySave.Exists(saveFileName, saveFolder))
           {
             storySave = StorySave.Load(saveFileName, saveFolder);
-
+                        
             // From list to dictionary!
             foreach (var story in storySave.stories)
             {
@@ -611,8 +611,10 @@ namespace Stratus
 
         protected override void OnAwake()
         {
+
           parser = new ParserType();
           OnConfigureParser(parser);
+          
         }
 
         public string latestKnot { get; private set; }
