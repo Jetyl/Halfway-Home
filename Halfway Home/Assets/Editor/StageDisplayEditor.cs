@@ -11,6 +11,7 @@ public class StageDisplayEditor : Editor
     private ReorderableList list;
 
     bool showbackdrops;
+    bool showSPbackdrops;
 
     private void OnEnable()
     {
@@ -25,6 +26,7 @@ public class StageDisplayEditor : Editor
         serializedObject.Update();
 
         SerializedProperty Backdrop = serializedObject.FindProperty("Backdrop");
+        SerializedProperty SpecialBackdrop = serializedObject.FindProperty("SpecialBackdrops");
         SerializedProperty FrontCurtain = serializedObject.FindProperty("FrontCurtain");
         SerializedProperty BackCuratin = serializedObject.FindProperty("BackCuratin");
 
@@ -49,6 +51,25 @@ public class StageDisplayEditor : Editor
 
                 EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).
                     FindPropertyRelative("Backdrop"), new GUIContent( (Room)i + " Backdrop"), true);
+            }
+
+            EditorGUILayout.Space();
+            //EditorGUILayout.PropertyField(Backdrop, new GUIContent("Backdrop"), true);
+        }
+
+        showSPbackdrops = EditorGUILayout.Foldout(showSPbackdrops, new GUIContent("Special Backdrops"));
+
+        if (showSPbackdrops)
+        {
+            SpecialBackdrop.arraySize = EditorGUILayout.DelayedIntField("Amount", SpecialBackdrop.arraySize);
+
+            for (var i = 0; i < SpecialBackdrop.arraySize; ++i)
+            {
+                Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
+                    Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
+
+                EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).
+                    FindPropertyRelative("Backdrop"), new GUIContent(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
             }
 
             EditorGUILayout.Space();

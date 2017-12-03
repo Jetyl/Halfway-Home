@@ -11,6 +11,9 @@ public class StageDisplay : MonoBehaviour
 
     public List<RoomDetails> Backdrop;
 
+
+    public List<RoomDetails> SpecialBackdrops;
+
     public SpriteRenderer FrontCurtain;
     public SpriteRenderer BackCuratin;
     public GameObject LeftSpot;
@@ -229,21 +232,38 @@ public class StageDisplay : MonoBehaviour
 
     void SceneryChange(StageDirectionEvent eventdata)
     {
-        foreach (var room in Backdrop)
+        
+        if(eventdata.Backdrop == Room.None)
         {
-
-
-            if (room.ID == eventdata.Backdrop)
+            foreach (var room in SpecialBackdrops)
             {
 
-                StartCoroutine(BackdropChange(room.Backdrop));
+                if (room.Tag == eventdata.character)
+                {
+
+                    StartCoroutine(BackdropChange(room.Backdrop));
+
+                }
 
             }
+        }
+        else
+        {
+            foreach (var room in Backdrop)
+            {
 
+                if (room.ID == eventdata.Backdrop)
+                {
 
+                    StartCoroutine(BackdropChange(room.Backdrop));
+
+                }
+
+            }
         }
 
-
+        
+        
     }
 
     IEnumerator BackdropChange(Sprite newBackdrop)
@@ -303,9 +323,10 @@ public class StageDirectionEvent : DefaultEvent
         Distance = Dis;
     }
 
-    public StageDirectionEvent(Room scenery)
+    public StageDirectionEvent(Room scenery, string tag = "")
     {
         Backdrop = scenery;
+        character = tag;
     }
 
     //changing someone's position
@@ -327,6 +348,7 @@ public class StageDirectionEvent : DefaultEvent
 public class RoomDetails
 {
     public Room ID;
+    public string Tag;
     public Sprite Backdrop;
 }
 

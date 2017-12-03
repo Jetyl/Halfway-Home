@@ -81,6 +81,24 @@ namespace HalfwayHome
 
     }
 
+
+    void OnBackdropChange(Parse parse)
+    {
+            
+
+        for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
+        {
+               if(parse.Find("Backdrop") == ((Room)i).ToString())
+                {
+                    Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent((Room)i));
+                    return;
+                }
+        }
+
+        Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(Room.None, parse.Find("Backdrop")));
+      
+    }
+
     void OnPoseChange(Parse parse)
     {
       if(parse.Find("Pose") == "Exit")
