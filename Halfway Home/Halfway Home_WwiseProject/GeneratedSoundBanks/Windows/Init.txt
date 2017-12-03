@@ -1,5 +1,12 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1127857866	Music_Slider			\Default Work Unit\Music_Slider	
+	2886374787	Effects_Slider			\Default Work Unit\Effects_Slider	
+	2902037724	Menu_Slider			\Default Work Unit\Menu_Slider	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1604779591	Effects Bus			\Default Work Unit\Master Audio Bus\Effects Bus	
 	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3931159050	Menu Bus			\Default Work Unit\Master Audio Bus\Menu Bus	
 
