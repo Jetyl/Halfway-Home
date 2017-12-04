@@ -19,14 +19,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="HalfwaySoundbank" Hash="3284822663" Timestamp="131542079413902408"/>
-				<File Name="Init" Hash="1964904968" Timestamp="131542076405835394"/>
+				<File Name="Init" Hash="2971798797" Timestamp="131568098798779382"/>
 				<File Name="Test" Hash="756948723" Timestamp="131522307231918325"/>
 				<File Name="Test1" Hash="3855899043" Timestamp="131542076405639874"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1990723145" Timestamp="131542079414188160"/>
+				<File Name="" Hash="1990723145" Timestamp="131568098798899706"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

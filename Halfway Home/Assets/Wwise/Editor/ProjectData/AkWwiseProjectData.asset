@@ -239,6 +239,9 @@ MonoBehaviour:
   - /Halfway Home_WwiseProject/Events
   - /Halfway Home_WwiseProject/Events/PlaySFX
   - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_menu
+  - /Halfway Home_WwiseProject/SoundBanks
+  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
+  - /Halfway Home_WwiseProject/SoundBanks/TestBanks
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

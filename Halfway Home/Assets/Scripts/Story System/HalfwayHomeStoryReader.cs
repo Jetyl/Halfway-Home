@@ -30,12 +30,7 @@ namespace HalfwayHome
     protected override void OnBindExternalFunctions(Story story)
     {
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
-      //story.runtime.BindExternalFunction(nameof(CharEnter), new System.Action<string, string>(CharEnter)); DEPRECATED
-      //story.runtime.BindExternalFunction(nameof(CharExit), new System.Action<string>(CharExit)); DEPRECATED
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
-      //story.runtime.BindExternalFunction(nameof(AddSocialPoints), new System.Action<string, string>(AddSocialPoints)); DEPRECATED
-      //story.runtime.BindExternalFunction(nameof(AlterWellbeing), new System.Action<string, int>(AlterWellbeing)); DEPRECATED
-      //story.runtime.BindExternalFunction(nameof(AddSocialTier), new System.Action<string>(AddSocialTier)); DEPRECATED
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
@@ -74,6 +69,10 @@ namespace HalfwayHome
       // Music
       string playMusic = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
       parser.AddPattern("MusicTrigger", playMusic, RegexParser.Target.Tag, RegexParser.Scope.Group, OnMusicTrigger);
+
+      // Background Change
+      string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
+      parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -82,21 +81,18 @@ namespace HalfwayHome
     }
 
 
-    void OnBackdropChange(Parse parse)
+    void OnSetBackground(Parse parse)
     {
-            
-
+      if(parse.Find("Background").ToLower() == "background" || parse.Find("Background").ToLower() == "backdrop")
         for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
-               if(parse.Find("Backdrop") == ((Room)i).ToString())
+               if(parse.Find("Image").ToLower() == ((Room)i).ToString().ToLower())
                 {
                     Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent((Room)i));
                     return;
                 }
         }
-
-        Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(Room.None, parse.Find("Backdrop")));
-      
+        Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.Find("Image")));
     }
 
     void OnPoseChange(Parse parse)

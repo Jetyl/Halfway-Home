@@ -72,7 +72,7 @@ A chorus of whispers dissolves the silence.
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Background / YourRoom
 The whispers fade into the chitter of birdsong. 
 I shudder at the thought of losing myself so deeply in my own mind.
 Just one more week.
