@@ -11,34 +11,59 @@ VAR current_room = "unset"
 
 VAR ByTimothy = false
 
-EXTERNAL PlayMusic(trackName)
-EXTERNAL CharEnter(nameString, poseString)
-EXTERNAL CharExit(nameString)
 EXTERNAL GetValue(value)
 
 -> Start
 
 === Start ===
-#Trissa=Calm #Eduardo=Calm #Charlotte=Calm #Isaac=Calm #Max=Calm #Timothy=Calm
 I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebatory Welcome Dinner.
-The Halfway Home has these big get together dinners, whenever we get someone new, or someone leaves.
-its supposed to be a big bonding moment. Or, somthing like that.
-I actually barely remember my welcome dinner.
-Eduardo and Isaac are off in their own little corner, giggling to themselves. Charlotte and Max are setting out more of the tableware and food.
+The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
+It's supposed to be a big bonding moment. Or, something like that.
+I actually barely remember my welcome dinner. I think there were beans? That's about all I got.
 Timothy, the star of this show, gets the center seat, so he can meet everybody. Currently, he seems to be talking with Trissa.
-
+Eduardo and Isaac are off in their own little corner, giggling to themselves. 
+Charlotte and Max are helping serve food at the front of the line.
 I decide to...
 *[Sit near Timothy] ->NearTimothy
 *[Sit near Eduardo] ->NearEduardo
-*[Help Charlotte layout the dishes] ->NearCharlotte
+*[Offer help to Charlotte] ->NearCharlotte
 
 
 ===NearTimothy===
 ~ByTimothy = true
+I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table.
+I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy # Timothy = Calm
+[Timothy] "Hi, {player_name}."
+[Trissa] "Come to see the man of hour, huh?"
+[{player_name}] "Sure did."
+{delusion > 40: [Voices] "As if he wants to see you."}
+[Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
+[Timothy] "That's kind of a lotta pressure."
+*[Reassure Him]
+	{
+		-awareness > 1: 
+			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."}
+			// Add 2 Timothy Points
+		-else : 
+			[{player_name}] "I remember feeling the same way at my welcome dinner. It's okay be to nervous. It'll pass soon."
+			// Add 1 Timothy Point
+*[Leave it to Trissa]
+	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"
+	[Trissa] "You're talking to me, aren't ya?"
+	[Timothy] "Uh, yeah?"
+	[Trissa] "If you can handle [i]my[/i] energy, you can handle anything!"
+	[Timothy] "Thanks, Trissa."
+-Timothy looks grateful. He is about to reply when Max shows up with a plate of food. # Max = Calm
+[Max] "Hey, gang!"
+I give them a nod of acknowledgement.
+[Trissa] "Hi, Max!"
+[Timothy] "Hey."
+[Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec."
+Max stands up and clears his throat.
 ->Toast
 
 ===NearEduardo===
-
+I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
 
 ->Toast
 

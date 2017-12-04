@@ -6433,7 +6433,7 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
   - ID: 1
     Tag: 
-    Backdrop: {fileID: 21300000, guid: d2e35a78348ee4c418e7200c36ba5132, type: 3}
+    Backdrop: {fileID: 21300000, guid: 81b056e7b6887dd49a67f8d8d3d35354, type: 3}
   - ID: 2
     Tag: 
     Backdrop: {fileID: 21300000, guid: bc32afdfc4ce0414ba482420ab070a8a, type: 3}
@@ -6445,13 +6445,13 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: a328869e3db734a40a6f3fb06e7c3826, type: 3}
   - ID: 5
     Tag: 
-    Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
+    Backdrop: {fileID: 21300000, guid: c8925e8e7e964a34296c0cf617ec1aba, type: 3}
   - ID: 6
     Tag: 
     Backdrop: {fileID: 21300000, guid: 7c7518763d71c724ca3777f173cd9546, type: 3}
   - ID: 7
     Tag: 
-    Backdrop: {fileID: 21300000, guid: 5537ee2bbb9fb8a4bb96e608310ecfcc, type: 3}
+    Backdrop: {fileID: 21300000, guid: 246d69b4745eef942a4cda45f390626d, type: 3}
   - ID: 8
     Tag: 
     Backdrop: {fileID: 21300000, guid: bbe7db06e22fbdb488cd74a0d2c2aaf9, type: 3}
@@ -6473,7 +6473,7 @@ MonoBehaviour:
   LeftSpot: {fileID: 1463426191}
   RightSpot: {fileID: 517490444}
   Varience: 4
-  StartingRoom: 1
+  StartingRoom: 0
   BackgroundFadeTime: 2
 --- !u!1 &850827991
 GameObject:

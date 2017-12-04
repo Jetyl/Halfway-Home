@@ -63,7 +63,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 
 ===Introductions===
 [Max] "Heya {player_name}. Don't tell me I woke ya up?" # Keyless = Calm
-[{player_name}] "Yeah."
+[{player_name}] "Nah, I was already awake."
 [Max] "Hope you weren't planning on sleeping in. You know you should have your routine down by now."
 [{player_name}] "Yeah, yeah, I know."
 [Max] "Ya oughta. Pretty soon you won't have old Max to be there reminding ya."
