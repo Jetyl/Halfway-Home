@@ -168,5 +168,16 @@
     "Type" : 1
    }
   ]
+ },
+ {
+  "PlotName" : "Weekly",
+  "BeatNumber" : 0,
+  "BeatName"   : "Weekly",
+  "Point"      : [
+   {
+    "Name" : "TimothyPoints",
+    "Type" : 2
+   }
+  ]
  }
 ]
