@@ -19,13 +19,13 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: e3b02de8090d72b41ac682ae0106489b, type: 3}
     jsonAsset: {fileID: 4900000, guid: c1208e87599faad43af8e1f82e1978e8, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: b6131b5de3eb21542b746fbf262f556f, type: 3}
+    inkAsset: {fileID: 102900000, guid: 893f748fb27e62746b3c0f1b5fe5dbaf, type: 3}
     jsonAsset: {fileID: 4900000, guid: ae57396b37480db4abdce8433cf9b4e2, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 6f2312eea6177f64988a297f21aef59c, type: 3}
     jsonAsset: {fileID: 4900000, guid: 44296f1b3be2c8243a822aca4f32e20f, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: e7f50d8d87b62ee44bcd2424a16f1bf1, type: 3}
+    inkAsset: {fileID: 102900000, guid: 8f64ef9d21f93d047b1236b5e065699f, type: 3}
     jsonAsset: {fileID: 4900000, guid: e7045c641ab76c14f98488729a18c636, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
@@ -67,7 +67,7 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: ed966d22f7ce2d842af69585c6d3e1f9, type: 3}
     jsonAsset: {fileID: 4900000, guid: 9cea254481401b04198736107fbbb8f0, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 0f9087724bf9eae46a6290f5a5c5c0e3, type: 3}
+    inkAsset: {fileID: 102900000, guid: 6bf017efd8ed1464e9bc4f7b2aacc20f, type: 3}
     jsonAsset: {fileID: 0}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 2498eef49cb5ab14a825bb9c698b8c50, type: 3}
@@ -76,19 +76,22 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
     jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: c9093b2d395476748beb254466931ced, type: 3}
+    inkAsset: {fileID: 102900000, guid: a99c661a63430ff45bfd5aee0e7aeef9, type: 3}
     jsonAsset: {fileID: 4900000, guid: 7fe9dc8b053f14b499b3b960d16f8ae6, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: ca263a3e498508e43be9cd1cda4f26c6, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 30f8ba92a6afaeb40bde0588a99ae6e4, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 27424af8d3bb8fd4b8e9652f6b00e94c, type: 3}
     jsonAsset: {fileID: 4900000, guid: 822b6926ecbad284990485b02f3c47c5, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 3d92962c4013cd049a95e34560c81465, type: 3}
+    inkAsset: {fileID: 102900000, guid: e9aec4ec2c51e6748a0f813afb141e7a, type: 3}
     jsonAsset: {fileID: 4900000, guid: bdfddd18d94cf5645b7c460681564cc4, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 78447c5488f59014b8407981bb454ab0, type: 3}
+    inkAsset: {fileID: 102900000, guid: 7110e0ecec3bc44489549674d680a466, type: 3}
     jsonAsset: {fileID: 4900000, guid: 70a49d294f213d84aae4792b2cbdf60d, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
+    inkAsset: {fileID: 102900000, guid: 9e2eabeae3c21fa49bb3a54f539e0df6, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
   compilationStack:
   - state: 1
@@ -100,6 +103,50 @@ MonoBehaviour:
       Dinner.ink
     jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
       Dinner.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 2
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
+      jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Welcome Dinner.ink
+    jsonAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Welcome Dinner.json
+    output:
+    - 'ERROR: ''Welcome Dinner.ink'' line 45: Expected end of line but saw ''}'''
+    - 'ERROR: ''Welcome Dinner.ink'' line 47: ''else'' case in conditional should
+      always be the final one'
+    - 'ERROR: ''Welcome Dinner.ink'' line 45: Expected end of line but saw ''}'''
+    - 'ERROR: ''Welcome Dinner.ink'' line 45: Expected end of line but saw ''}'''
+    - 'ERROR: ''Welcome Dinner.ink'' line 47: ''else'' case in conditional should
+      always be the final one'
+    - 'ERROR: ''Welcome Dinner.ink'' line 45: Expected end of line but saw ''}'''
+    errorOutput: []
+    timeTaken: 0
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: f1f5cc76f85972c42b64c03095efc244, type: 3}
+      jsonAsset: {fileID: 4900000, guid: 660959c702d4685408d4da977ecaa0c6, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Memory.ink
+    jsonAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Memory.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: da0c05f9d585be048bfe4a30a48300e1, type: 3}
+      jsonAsset: {fileID: 4900000, guid: 735a098bae5308e41a5dbd9113cf2905, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Knock on the Morning Door.ink
+    jsonAbsoluteFilePath: C:/Users/Jesse/Desktop/Digipen/Fall 2017/GAM400/Halfway-Home/Halfway
+      Home/Assets/Resources/StoryFiles/Day1/Knock on the Morning Door.json
     output: []
     errorOutput: []
     timeTaken: 0
