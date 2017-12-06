@@ -79,6 +79,9 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: c9093b2d395476748beb254466931ced, type: 3}
     jsonAsset: {fileID: 4900000, guid: 7fe9dc8b053f14b499b3b960d16f8ae6, type: 3}
   - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: cddacc9d460132244b5f78343c40e9a8, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 30f8ba92a6afaeb40bde0588a99ae6e4, type: 3}
+  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 27424af8d3bb8fd4b8e9652f6b00e94c, type: 3}
     jsonAsset: {fileID: 4900000, guid: 822b6926ecbad284990485b02f3c47c5, type: 3}
   - compileAutomatically: 0
@@ -91,6 +94,30 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
   compilationStack:
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
+      jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
+      Dinner.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
+      Dinner.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 2
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: cddacc9d460132244b5f78343c40e9a8, type: 3}
+      jsonAsset: {fileID: 0}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Big
+      Happy Family.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Big
+      Happy Family.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
   - state: 1
     inkFile:
       compileAutomatically: 0

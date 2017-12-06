@@ -10,6 +10,7 @@ VAR week = 0
 VAR current_room = "unset"
 
 VAR ByTimothy = false
+VAR HeardIsaacsStory = false
 
 EXTERNAL GetValue(value)
 
@@ -42,11 +43,12 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 *[Reassure Him]
 	{
 		-awareness > 1: 
-			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."}
+			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."
 			// Add 2 Timothy Points
 		-else : 
 			[{player_name}] "I remember feeling the same way at my welcome dinner. It's okay be to nervous. It'll pass soon."
 			// Add 1 Timothy Point
+	}
 *[Leave it to Trissa]
 	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"
 	[Trissa] "You're talking to me, aren't ya?"
@@ -59,23 +61,51 @@ I give them a nod of acknowledgement.
 [Trissa] "Hi, Max!"
 [Timothy] "Hey."
 [Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec."
-Max stands up and clears his throat.
+Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit
 ->Toast
 
 ===NearEduardo===
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
-
+As I approach, the two are giggling about something. # Eduardo = Happy # Isaac = Happy
+[{player_name}] "Mind if I join you?"
+{delusion > 40: [Voices] "Of course they mind. Why would anyone want [i]you[/i] around?"}
+Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
+[Eduardo] "Nah, man. Get in here!"
+[Eduardo] "I was just telling my meu bem Isaac here the story about [i]my[/i] first day. I could have sworn I already told it to him, though."
+[Isaac] "Oh, you have. I just never get tired of it." # Eduardo = Surprised
+[Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game, tesouro."
+[Eduardo] "Hey, {player_name}, you ever heard the story of Isaac's first day?"
+[Isaac] "Oh no..." # Isaac = Surprised
+[Eduardo] "It was only a couple of weeks before yours..."
+As if on cue, Max makes a loud sound from the center of the room and rises to their feet.
+[Eduardo] "Oh, you lucky man. Next time..." # Eduardo = Exit # Isaac = Exit
 ->Toast
 
 ===NearCharlotte===
-
-
+I duck past the line to where Charlotte stands behind the serving area, busily refilling several trays at once.
+[{player_name}] "Hey, Charlotte. Is there uh... something I can help with maybe?" # Charlotte = Calm
+[Charlotte] "I'm sure I could find a use for you."
+{delusion > 40: [Voices] "She'd have to be a miracle worker to do [i]that[/i]."}
+[Charlotte] "Heavens, that was curt of me. Allow me to try that again." # Charlotte = Sad
+[Charlotte] "That is very generous of you. I can't think of anything at the moment, but..."
+[Charlotte] "On second thought, there actually is a task for which I could benefit from your assistance. Or, more accurately, Max could."
+[Max] "Say what now? Did I hear my name?" # Max = Calm
+[Charlotte] "It is my understanding that you're about to make the preparations for Timothy's toast. Is that correct?"
+[Max] "Heh. Yeah, that's right."
+[Charlotte] "Would {player_name} make for a suitable second to perform your duties while you are thusly occupied?"
+[Max] "Uh. Yeah, {player_gender} could totally cover for me. I'd actually really appreciate that!"
+[Charlotte] "It's settled, then."
+[Max] "Thanks a bunch, {player_name}, I owe you one!"
+Max hustles toward the kitchen and out of sight. # Max = Exit
+I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal.
+Max returns with a plate of their own. # Max = Calm
+[Max] "Everything's set. Hit me up with some grub, {player_name}! Oh, and you're good to eat with us as soon as I've done the toast."
+The moment I finish dishing them up a sizeable portion, Max takes off towards the center table. # Charlotte = Exit
 ->Toast
 
 ===Toast===
-#Max=Calm
-[Max] "Can I get everyone's attention!"
-the whole cafe quites a little, as Max speaks up.
+[Max] "Can I get everyone's attention!" #Max=Calm
+The whole cafe quites a little, as Max speaks up.
 [Max] "Thanks eveybody for showing yerselfs"
 [Max] "Today we're welcoming our newest family member, Timothy Miyrui."
 [Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
@@ -85,7 +115,7 @@ the whole cafe quites a little, as Max speaks up.
 [Max] "But we all want to wish him the best of luck"
 [Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
-#Max=Calm Max sits back down near Timothy, and the usual chatter of the room resumes.
+Max sits back down near Timothy, and the usual chatter of the room resumes. #Max=Calm
 {
 	- ByTimothy == false:
 		I get up and move closer to them and Timothy, given Trissa seems to have up and moved.
@@ -109,13 +139,12 @@ the whole cafe quites a little, as Max speaks up.
 
 ===TutorialTalk===
 [Max] "I wanna thank ya for showing Timothy the ropes for me."
-[Max] "I'm rul sorry about that."
+[Max] "I'm real sorry about that."
 //make a choice here maybe?
 [{player_name}] "No problem"
 [{player_name}] "Did you ever find your keys?"
 [Max] "Oh! yeah... I did."
-[Max] "the little sucker fell between the couch cushions in the common's. musta been loose on ma chain or somethin'."
-
+[Max] "The little sucker fell between the couch cushions in the commons. Must've been loose on my chain or somethin'."
 ->TalkingToTimothy
 
 ===GeneralTalk===
@@ -132,7 +161,16 @@ You have no idea.
 
 ===TalkingToTimothy===
 [{player_name}] "Hey, Timothy. how's the dinner?"
-scene end. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
-
-
+[Timothy] "It's nice. Uh, sorry again for taking the other bed. I'm sure you were enjoying the extra space."
+{
+		-awareness > 1: 
+			[{player_name}] "Actually, I think it'll be good for me to have some company during my last week."
+			[Timothy] "Oh. Cool." # Timothy = Surprised
+		-else : 
+			[{player_name}] "Oh, please. I feel worse for you. You've gotta share a room with [i]me[/i]."
+			Timothy chuckles softly. # Timothy = Happy
+	}
+We spend the next hour or so talking about our interests and such.
+It's mostly small talk, but Timothy relaxes more the longer we chat.
+When it's finally time to head to bed, he seems almost comfortable. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
 -> END
