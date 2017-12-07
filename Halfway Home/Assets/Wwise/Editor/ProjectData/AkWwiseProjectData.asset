@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1943439072
-    m_lastTimePart2: -1999297600
+    m_lastTimePsrt1: 581679715
+    m_lastTimePart2: -1999290951
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -108,6 +108,26 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1259498987
       Guid: 0151b7227d452146b772f73362c102e9
+      maxAttenuation: 0
+    - Name: Stop_All
+      Path: PlayMusic\Stop_All
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Stop_All
+        ObjectType: 3
+      ID: 452547817
+      Guid: 112021dd1518b24197dcbbbf570d32e5
+      maxAttenuation: 0
+    - Name: stop_music_bardman
+      Path: PlayMusic\stop_music_bardman
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: stop_music_bardman
+        ObjectType: 3
+      ID: -1479791197
+      Guid: 3898f2bb8cd5bc4fb85ede37fc74e27b
       maxAttenuation: 0
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
@@ -166,8 +186,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1933201515
-    m_lastTimePart2: -1999297600
+    m_lastTimePsrt1: 581909997
+    m_lastTimePart2: -1999290951
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -237,11 +257,7 @@ MonoBehaviour:
   ExpandedItems:
   - /Halfway Home_WwiseProject
   - /Halfway Home_WwiseProject/Events
-  - /Halfway Home_WwiseProject/Events/PlaySFX
-  - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_menu
-  - /Halfway Home_WwiseProject/SoundBanks
-  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
-  - /Halfway Home_WwiseProject/SoundBanks/TestBanks
+  - /Halfway Home_WwiseProject/Events/PlayMusic
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
