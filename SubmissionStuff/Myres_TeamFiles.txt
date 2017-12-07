@@ -1,9 +1,10 @@
 Work Done Included:
 
 Made (solo):
-	-
+	- User Interface
+	- Wwise Integration (and related logic)
 
 
 Made (with Jesse):
-	-Narrative concept
-	-scene writing
+	- Narrative design
+	- Scene writing
