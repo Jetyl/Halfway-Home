@@ -128,7 +128,11 @@ He doesn't seem to want to let go.
 To free myself, I pry my finger's underneath his palm, and peel his finger's off me.
 His arms are noticably shaking now.
 I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Timothy=Exit
-I Go get Max. (add here. skipping for right now.)
+[{player_name}] "Max! Max!" #Max=Calm #Charlotte=Calm #Eduardo=Calm
+[Max] "yo! {player_name}, what's up?"
+[{player_name}] "It's Timothy. He-He's acting weird, and not responding. I-I think something wrong!"
+[Max] "What?!" #Max=Suprised
+Max darts past me to where Timothy is sitting in a speed quite frightening for someone their size. #Max=Exit
 ->MoodKiller
 
 ===HowDoIComfort===
@@ -144,6 +148,22 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 		->ForcefulAssistence
 	-else:
 	"Its okay Timothy. You're going to be okay."
+	I put my not-griped hand on his hand, and get him to look at me.
+	"Its okay. Your safe. I'm here for you."
+	he's not breathing.
+	"IT's okay, you can breath. there there."
+	and like that, the floodgates open. He exhales a sputter of air, as tears fall aross his face.
+	[Timothy] "I-I-I'm sorry. I'm sorry."
+	[{player_name}] "It's okay. let it out. Your safe here. its okay."
+	[Max] "Hey Timothy."
+	as if by magic, Max appears beside me. I guess they noticed what had been happening over hear. #Max=Calm
+	"Buddy, you alright?"
+	[Timothy] "*hic* N-N-*hic*n-n-no, *hic*"
+	[Max] "Do you want to go someplace quiet?"
+	Timothy nods thru the tears and shivering.
+	Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like their thanking me.
+	And like that, Max and Timothy left the cafe. #Max=Exit #Timothy=Exit
+	MoodKiller->
 	
 }
 
