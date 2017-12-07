@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	271523436	play_music_guitarlate			\PlayMusic\play_music_guitarlate	
+	452547817	Stop_All			\PlayMusic\Stop_All	
 	1259498987	Play_music_placeholder_main			\PlayMusic\Play_music_placeholder_main	
+	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\play_sfx_human_footsteps_approaching	
 	3101734072	play_menuunpause			\PlaySFX\play_sfx_menu\play_menuunpause	
 	3108296289	play_music_bardman			\PlayMusic\play_music_bardman	
 	3169174387	play_menuexit			\PlaySFX\play_sfx_menu\play_menuexit	
@@ -13,6 +15,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	302959056	sfx_menu_chime_exitgame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_exitgame_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu SFX\Menu SFX\sfx_menu_chime_exitgame		570796
 	407667121	guitar_late_placeholder	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\guitar_late_placeholder_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music\music_guitarlate\music_placeholder_guitarlate_80bpm\guitar_late_placeholder		11321408
 	424879526	bardman_placeholder	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\bardman_placeholder_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music\music_bardman\music_placeholder_bardman_65bpm\bardman_placeholder		13713472
+	541639029	sfx_footsteps_placeholder1	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Human SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder1		140608
 	558653419	sfx_menu_chime_unpausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu SFX\Menu SFX\sfx_menu_chime_unpausegame		570796
+	865371990	sfx_footsteps_placeholder2	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Human SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder2		112576
 	950120731	sfx_menu_button_mouseover	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_button_mouseover_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu SFX\Menu SFX\sfx_menu_button_mouseover		285468
 
