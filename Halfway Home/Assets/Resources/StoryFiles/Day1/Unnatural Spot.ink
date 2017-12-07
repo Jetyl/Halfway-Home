@@ -11,7 +11,7 @@ VAR week = 0
 VAR current_room = "unset"
 VAR GameFails = 0
 VAR CorrectGuesses = 0
-VAR FirstVowel = false
+VAR FirstVowel = true
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -48,28 +48,24 @@ I get closer, and see that he's scribling something in the dirt.
 "lets see, lets start with..."
 +[Common consants] -> Constant
 +[Can I buy a vowel?] -> Vowel
-+{GetValue("SolvedHangman") == true}[It's Hope] -> AlreadyKnow
-
++{GetValue("SolvedHangman")}[It's Hope] -> AlreadyKnow
 
 
 === HangMan ===
 +[Common consants] -> Constant
 +[Vowels] -> Vowel
-{
-	-CorrectGuesses == 3:
-		+[Guess at the answer] ->Guess
-}
++{CorrectGuesses == 3}[Guess at the answer] -> Guess
 
 === Vowel ===
-{
-	-FirstVowel:
-	[{player_name}] "can I buy a vowel?"
-	[Timothy] "hehehehe... yeah."
-	[{player_name}] "okay, then..."
-
+{FirstVowel:
+	[{player_name}] "Can I buy a vowel?"
+	[Timothy] "Hehehe... yeah."
+	[{player_name}] "Okay, then..."
+	~ FirstVowel = false
+-else:
+	[Timothy] "Go for it."
 }
-~FirstVowel = false
-*A-> Wrong
+*A -> Wrong
 *E -> Correct
 *I -> Wrong
 *O -> Correct

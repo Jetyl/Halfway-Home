@@ -179,5 +179,16 @@
     "Type" : 2
    }
   ]
+ },
+ {
+  "PlotName" : "Permanent",
+  "BeatNumber" : 0,
+  "BeatName"   : "Permanent",
+  "Point"      : [
+   {
+    "Name" : "SolvedHangman",
+    "Type" : 1
+   }
+  ]
  }
 ]
