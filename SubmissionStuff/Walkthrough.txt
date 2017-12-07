@@ -1,0 +1,38 @@
+Halfway Home Walkthrough
+
+-Start a new game, and read thru the opening scene. opening choices have no greater impact.
+
+-When presented with the choice of which bathroom to run thru, that determines your character's
+gender. Male, Female, or No-Binary
+
+-Name pop-up should appear. give you player whatever name you wish
+
+-A Scene will play, introducing the player to timothy, and max. You will be asked to chaperone 
+Timothy around, while Max looks for theif keys.
+
+-Map Screen should appear, with only one choice at first, the kitchen. go there.
+
+-you will get a scene, explaining the kitchens function
+
+-You will return to the map screen, with more choices. You can do these in any order
+
+-Going to the garden, after getting its function, a hangman game will occur. the Answer is "HOPE"
+You do not need to succed at this game to continue.
+
+-Once you've gone to every room, the Kithen should reopen. Go there.
+
+-A scene should play, then reurn you to the map. go to your bedroom, to finish the day
+
+-After that, Day 2 should begin. there is no unique content from day 2, to day 6. do whatever you wish
+until day 7
+
+-On day 7, go to the Kitchen at Noon. You will get an important scene. Make whatever choices you wish.
+
+-after that, do whatever until you are called back to the kitchen, for the final dinner.
+
+-Enjoy the final dinner scene. return to bedroom after.
+
+-player character with reflect, and sleep, waking up again on day 1. repeat the day 1 opening scene, meeting
+Timothy and Max again.
+
+-Once scene is over, game should end
