@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+@file   TriggerAnotherEvent.cs
+@author Christian Sagel
+@par    email: ckpsm@live.com
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
 using System;
 using System.Collections;
 using System.Collections.Generic;

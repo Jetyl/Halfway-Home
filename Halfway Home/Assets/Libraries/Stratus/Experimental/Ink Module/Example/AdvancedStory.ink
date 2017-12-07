@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*
+@file   AdvancedStory.ink
+@author Christian Sagel
+@par    email: c.sagel@digipen.edu
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
 // Variables
 VAR cats = 0
 

@@ -5,6 +5,7 @@
 @par    email: ckpsm@live.com
 @date   7/14/2016
 @brief  Sample script demonstrating how the custom event system "works".
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;

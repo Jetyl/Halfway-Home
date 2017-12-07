@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/******************************************************************************/
+/*!
+File:   ProgressPoint.cs
+Author: Jesse Lozano
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using UnityEngine;
 using System;
 using System.Collections.Generic;
 using LitJson;

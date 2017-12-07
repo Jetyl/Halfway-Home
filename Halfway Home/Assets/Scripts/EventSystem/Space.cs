@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/******************************************************************************/
+/*!
+File:   Space.cs
+Author: Jesse Lozano
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using UnityEngine;
 using System;
 
 public class Space : MonoBehaviour

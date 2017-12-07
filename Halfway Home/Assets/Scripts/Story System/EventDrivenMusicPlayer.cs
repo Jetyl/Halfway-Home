@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************/
+/*!
+File:   EventDrivenMusicPlayer.cs
+Author: ChristianSagel
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Stratus;
