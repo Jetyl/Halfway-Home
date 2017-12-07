@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="PlayMusic" ID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="play_music_bardman" ID="{C965C962-FB4B-4687-8FA8-69995A11193F}">
+				<Event Name="play_music_fakeit" ID="{C965C962-FB4B-4687-8FA8-69995A11193F}">
 					<ChildrenList>
 						<Action Name="" ID="{6B94950B-CFA4-442A-BBD9-E5F0738A1EE5}" ShortID="260900169">
 							<PropertyList>
@@ -11,21 +11,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="music_bardman" ID="{6B673475-2E7C-48B5-90A1-E94AB638347B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="play_music_guitarlate" ID="{5D14B071-14CF-4EFE-9C46-812E908E90E4}">
-					<ChildrenList>
-						<Action Name="" ID="{E1130416-E061-4AA7-8970-102D64A8A327}" ShortID="596200715">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="music_guitarlate" ID="{A44749AD-D19E-4CAE-A02B-F6273FA1D52A}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+									<ObjectRef Name="music_fakeit" ID="{6B673475-2E7C-48B5-90A1-E94AB638347B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
