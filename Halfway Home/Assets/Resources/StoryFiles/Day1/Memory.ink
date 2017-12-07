@@ -11,6 +11,7 @@ VAR week = 0
 VAR current_room = "unset"
 
 EXTERNAL SetPlayerGender(gender)
+EXTERNAL GetPlayerName()
 EXTERNAL GetStringValue(name)
 EXTERNAL SetStringValue(name, string)
 
@@ -73,7 +74,7 @@ A chorus of whispers dissolves the silence.
 
 === Wake ===
 I open my eyes, taking in the morning light streaming through the skinny window of my room. # Background / YourRoom
-The whispers fade into the chitter of birdsong. 
+The whispers fade into the chitter of birdsong. {GetPlayerName()}
 I shudder at the thought of losing myself so deeply in my own mind.
 Just one more week.
 I lay awake, concentrating on the tingling warmth of the ribbon of sunlight on my shoulder and cheek.

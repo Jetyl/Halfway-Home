@@ -571,7 +571,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 16
+    endTime: 18
     ProgressLocked: 1
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -5783,11 +5783,11 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 11
+    endTime: 13
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 18
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
@@ -11562,7 +11562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
-  StartHour: 10
+  StartHour: 12
   DebugMode: 0
   StartDelusion: 10
   StartStress: 45
@@ -12632,7 +12632,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 11
+    endTime: 13
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -13726,11 +13726,11 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 11
+    endTime: 13
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 18
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
@@ -14189,16 +14189,16 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 10
+    endTime: 11
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 11
+    starttime: 13
     endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 17
+    starttime: 18
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
@@ -15254,11 +15254,11 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 11
+    endTime: 13
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 18
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial

@@ -68,7 +68,7 @@ MonoBehaviour:
     jsonAsset: {fileID: 4900000, guid: 9cea254481401b04198736107fbbb8f0, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 0f9087724bf9eae46a6290f5a5c5c0e3, type: 3}
-    jsonAsset: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: edf42b8e4ea94374092e4b18260e84a0, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 2498eef49cb5ab14a825bb9c698b8c50, type: 3}
     jsonAsset: {fileID: 4900000, guid: a191f947e07f12c43893c60618984925, type: 3}
@@ -93,40 +93,4 @@ MonoBehaviour:
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
-  compilationStack:
-  - state: 1
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
-      jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
-      Dinner.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
-      Dinner.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
-  - state: 2
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: cddacc9d460132244b5f78343c40e9a8, type: 3}
-      jsonAsset: {fileID: 0}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Big
-      Happy Family.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day7/Big
-      Happy Family.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
-  - state: 1
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: 7d08b700f925b8e4f99c7b1e644b1662, type: 3}
-      jsonAsset: {fileID: 4900000, guid: f5520ab63aba3f14b9efc1f55ca56da9, type: 3}
-    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
-      Dinner.ink
-    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Welcome
-      Dinner.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
+  compilationStack: []

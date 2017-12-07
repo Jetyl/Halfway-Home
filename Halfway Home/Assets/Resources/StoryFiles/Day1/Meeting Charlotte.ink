@@ -33,9 +33,9 @@ EXTERNAL GetPlayerData()
 	Charlotte glances at Timothy.
 	"Where are my manners? You must properly introduce this new face." # Charlotte = Surprised
 +{grace<3}[Great (rude)]
-	[{player_name}] Just great. Nothing beats wasting my life in a box with a bunch of fellow crazies.
-	[Charlotte] Mind your manners! I’ve heard it rumored that you are to rejoin polite society soon. Such churlish elocution will do you no favors there. # Charlotte = Angry
-	[{player_name}] Sorry, Charlotte. I'm just frustrated is all.
+	[{player_name}] "Just great. Nothing beats wasting my life in a box with a bunch of fellow crazies.""
+	[Charlotte] "Mind your manners! I’ve heard it rumored that you are to rejoin polite society soon. Such churlish elocution will do you no favors there."" # Charlotte = Angry
+	[{player_name}] "Sorry, Charlotte. I'm just frustrated is all.""
 	Charlotte glances at Timothy.
 	[Charlotte] "How hypocritical of me. Here I am lecturing you on manners, meanwhile failing to request an introduction to your associate." # Charlotte = Surprised
 +{grace > 3}[Well, thanks (formal)]
@@ -84,7 +84,7 @@ I hate that shirt.
 [Timothy] "Hi. I'm... Timothy." # Timothy = Afraid
 [Trissa] "No need to act so scared, my man. I don't bite! Not often, anyway..."
 Timothy looks like he might not believe her.
-[Trissa] "I'm joking, of course! You and me are gonna be tight compadres, wait and see. 
+[Trissa] "I'm joking, of course! You and me are gonna be tight compadres, wait and see."
 "Just take it easy your first week. You'll find your rhythm."
 [Timothy] "Ok." # Timothy = Happy
 Trissa turns to look at me and lowers her voice to speak privately.
@@ -92,6 +92,5 @@ Trissa turns to look at me and lowers her voice to speak privately.
 "Anyways, I gotta run. Take care y'all!"
 [Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
-[Timothy] "Uh... where to next?" # Charlotte = Exit
-# Timothy = Exit
+[Timothy] "Uh... where to next?" # Charlotte = Exit # Timothy = Exit
 -> END
