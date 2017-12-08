@@ -186,8 +186,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 568260011
-    m_lastTimePart2: -1999290762
+    m_lastTimePsrt1: -719602849
+    m_lastTimePart2: -1999290760
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
