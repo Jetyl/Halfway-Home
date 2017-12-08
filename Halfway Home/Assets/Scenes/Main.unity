@@ -3167,6 +3167,54 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 378869262}
+--- !u!1 &382783475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 382783476}
+  - component: {fileID: 382783477}
+  m_Layer: 5
+  m_Name: EndGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &382783476
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382783475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1371098736}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1072}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &382783477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382783475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266bf054b76c66f409cf54da1f3b3dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreditScene: 2
+  FadeScreeen: {fileID: 1813037000410612, guid: 540ac11ea7c3b904f93da5301ec6e5e2,
+    type: 2}
 --- !u!1 &390378206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10838,6 +10886,7 @@ RectTransform:
   - {fileID: 390378207}
   - {fileID: 1551691319}
   - {fileID: 1009562353}
+  - {fileID: 382783476}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11587,8 +11636,8 @@ MonoBehaviour:
   StartDelusion: 10
   StartStress: 45
   StartFatigue: 35
-  DebugDay: 1
-  DebugHour: 18
+  DebugDay: 7
+  DebugHour: 17
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
