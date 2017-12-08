@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1632875559
-    m_lastTimePart2: -1999290876
+    m_lastTimePsrt1: -1520521502
+    m_lastTimePart2: -1999290773
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -186,8 +186,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -908430727
-    m_lastTimePart2: -1999290876
+    m_lastTimePsrt1: -1513848782
+    m_lastTimePart2: -1999290773
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

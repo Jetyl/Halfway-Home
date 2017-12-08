@@ -117,8 +117,7 @@ public class ProgressSystem
             return;
             
         ProgressBook[_key].BoolValue = change;
-               
-            
+
 
 
         UpdatePlotLines();

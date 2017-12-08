@@ -139,7 +139,8 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 } 
 <>I was lookin' fer."
 {
-	-GetValue("Tutorial"):
+	//-GetValue("Tutorial"):
+	-week == 1:
 		->TutorialTalk
 	-else:
 		->GeneralTalk

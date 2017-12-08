@@ -574,6 +574,11 @@ MonoBehaviour:
     endTime: 17
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 17
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -3382,6 +3387,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -5791,6 +5801,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -6430,7 +6445,7 @@ MonoBehaviour:
   Backdrop:
   - ID: 0
     Tag: Dream
-    Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
+    Backdrop: {fileID: 0}
   - ID: 1
     Tag: 
     Backdrop: {fileID: 21300000, guid: 81b056e7b6887dd49a67f8d8d3d35354, type: 3}
@@ -6466,8 +6481,8 @@ MonoBehaviour:
     Backdrop: {fileID: 0}
   SpecialBackdrops:
   - ID: 0
-    Tag: 
-    Backdrop: {fileID: 0}
+    Tag: Dream
+    Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
   FrontCurtain: {fileID: 2006069810}
   BackCuratin: {fileID: 206367696}
   LeftSpot: {fileID: 1463426191}
@@ -10999,6 +11014,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -11563,12 +11583,12 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 12
-  DebugMode: 0
+  DebugMode: 1
   StartDelusion: 10
   StartStress: 45
   StartFatigue: 35
-  DebugDay: 1
-  DebugHour: 10
+  DebugDay: 7
+  DebugHour: 18
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
@@ -12641,6 +12661,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -12710,9 +12735,14 @@ MonoBehaviour:
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 18
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
@@ -13850,6 +13880,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -14317,6 +14352,11 @@ MonoBehaviour:
     starttime: 18
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 1
   AccessPoint: KitchenVisists
@@ -15377,6 +15417,11 @@ MonoBehaviour:
     starttime: 17
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 

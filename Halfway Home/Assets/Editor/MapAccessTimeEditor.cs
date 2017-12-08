@@ -67,6 +67,34 @@ namespace HalfwayHome
       serializedObject.ApplyModifiedProperties();
     }
 
+    string GetTime(int time)
+    {
+        while(time > 24)
+        {
+            time -= 24;
+        }
+
+        string Txt = "";
+
+            if (time < 12)
+            {
+                if (time == 0)
+                    Txt = "12:00 AM";
+                else
+                    Txt = time + ":00 AM";
+
+            }
+            else
+            {
+                if (time == 12)
+                    Txt = "12:00 PM";
+                else
+                    Txt = (time - 12) + ":00 PM";
+            }
+
+            return Txt;
+          
+    }
 
     void OrganizeLines()
     {
@@ -83,11 +111,15 @@ namespace HalfwayHome
     var element = list.serializedProperty.GetArrayElementAtIndex(index);
     rect.y += 2;
     rect.height += EditorGUIUtility.singleLineHeight * 5;
-    list.elementHeight = EditorGUIUtility.singleLineHeight * 5;
-    EditorGUI.LabelField(new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight),
-          "Day: " + element.FindPropertyRelative("Day").intValue
-          + " from: " + element.FindPropertyRelative("starttime").intValue +
-          " to: " + element.FindPropertyRelative("endTime").intValue);
+      list.elementHeight = EditorGUIUtility.singleLineHeight * 6;
+
+      string day = "Day: " + element.FindPropertyRelative("Day").intValue;
+      string start = " from: " + GetTime(element.FindPropertyRelative("starttime").intValue);
+      string end = " to: " + GetTime(element.FindPropertyRelative("endTime").intValue);
+      
+
+      EditorGUI.LabelField(new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight),
+          day + start + end);
     element.FindPropertyRelative("ProgressLocked").boolValue = EditorGUI.ToggleLeft(new Rect(rect.x + 250, rect.y, rect.width - 250, EditorGUIUtility.singleLineHeight), "Progress Locked",
           element.FindPropertyRelative("ProgressLocked").boolValue);
     element.FindPropertyRelative("Day").intValue = EditorGUI.IntSlider(new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight + 2, rect.width, EditorGUIUtility.singleLineHeight), "Day",
@@ -100,7 +132,7 @@ namespace HalfwayHome
     if (element.FindPropertyRelative("ProgressLocked").boolValue == true)
     {
       rect.height += EditorGUIUtility.singleLineHeight * 6;
-      list.elementHeight = EditorGUIUtility.singleLineHeight * 6;
+      //list.elementHeight = EditorGUIUtility.singleLineHeight * 6;
       element.FindPropertyRelative("ProgressKey").stringValue = EditorGUI.TextField(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 4) + 8, rect.width, EditorGUIUtility.singleLineHeight), "Progress Flag",
             element.FindPropertyRelative("ProgressKey").stringValue);
     }

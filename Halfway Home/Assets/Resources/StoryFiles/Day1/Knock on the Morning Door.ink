@@ -1,4 +1,4 @@
-﻿/******************************************************************************/
+/******************************************************************************/
 /*
 @file   KnockOnTheMorningDoor.ink
 @author Jesse Lozano
@@ -16,7 +16,6 @@ VAR stress = 0
 VAR delusion = 0
 VAR week = 0
 VAR current_room = "unset"
-
 VAR pronouns = ""
 VAR possesive = "" 
 
@@ -42,17 +41,19 @@ EXTERNAL SetValue(name, values)
 	 -else:
 	 	~possesive = "them"
 }
+
+
 //~player_name = "Player"
-~week = 1
+//~week = 1
 //play knocking sound effect
-A cheerful knock drags me out of my dreary haze.
+A cheerful knock drags me out of my dreary haze. # Background / YourRoom
 { 
-	- week == 1:
+	-week == 1:
 		What do they want?
 	- week == 2:
 		Must be Max, to take me away from this limbo.
-	- GetValue("FirstRRR"):
-		-> RestartRequired
+	//- GetValue("FirstRRR"):
+	//	-> RestartRequired
 	-else:
 		The week has begun again.
 }
@@ -61,12 +62,13 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 //turn off knocking. door opening sound?
 
 { 
-	- week == 1:
+	
+	-week == 1:
 		->Introductions
-	- week == 2:
-		->Again
+	//- week == 2:
+	//	->Again
 	-else:
-		->Repeat
+		->Again
 }
 
 ===Introductions===
@@ -109,7 +111,7 @@ Timothy sighs dejectedly. Maybe he's used to this?
 -> TakingTimothy
 
 ===Again===
-What?
+What? # Keyless = Calm #Timothy=Calm
 [Max] "Heya {player_name}. Don't tell me I woke ya up?"
 What in the...?
 "Hope you weren't planning on sleeping in. You know you should have your routine down by now."
@@ -120,7 +122,7 @@ this doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
 [{player_name}] "what are you doing back so soon?" #Timothy=Calm
-"We're you being sent back to Blackwell Hospital?" #Timothy=Scared
+"We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
 [Max] "Uh, {player_name}, you still dreaming buddy?"
 "Timothy Myuri is the roommate I told you about"
 wait
@@ -165,6 +167,7 @@ this can't all be just deja vu, can it?
 I think.... I think I'm back on the first day Timothy arrived here.@ But how? why?
 I sit there, alone with my thoughts, theroizing how or why this situation has come before me, before I realize the time.
 [{player_name}] "I-I should go looking for someone."
+author Note: That is the end of this build. Hope you enjoyed it! :3
 -> END
 
 ===Repeat===
