@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BankMemory>
+<<<<<<< Updated upstream
 	<Timestamp>131571880710000000</Timestamp>
 	<DataSize>67968944</DataSize>
 	<FileSize>67971143</FileSize>
 	<DecodedSize>67968912</DecodedSize>
+=======
+	<Timestamp>131572361720000000</Timestamp>
+	<DataSize>54255468</DataSize>
+	<FileSize>54257239</FileSize>
+	<DecodedSize>54255440</DecodedSize>
+>>>>>>> Stashed changes
 	<SFXPreFetchSize>0</SFXPreFetchSize>
 	<SFXInMemorySize>2160388</SFXInMemorySize>
 	<SFXMissingFiles>0</SFXMissingFiles>

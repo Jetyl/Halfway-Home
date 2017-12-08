@@ -44,6 +44,10 @@
 				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\PlayMusic\Play_music_placeholder_main"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\play_sfx_human_footsteps_approaching"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\Stop_All" MaxAttenuation="0.000000"/>
+<<<<<<< Updated upstream
+=======
+				<Event Id="4065124416" Name="stop_music_fakeit" ObjectPath="\Events\PlayMusic\stop_music_fakeit" MaxAttenuation="0.000000"/>
+>>>>>>> Stashed changes
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11926160" Language="SFX">
