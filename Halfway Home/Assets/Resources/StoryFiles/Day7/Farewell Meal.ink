@@ -25,32 +25,27 @@ EXTERNAL GetValue(value)
 
 === Start ===
 I'm called to the kitchen for my farewell meal.
-I walk in seeing everyone chatting, and having a good time.
-Acting like everything is okay.
+I walk in seeing everyone chatting and having a good time.
+Acting like everything is okay. // Should only happen if Timothy not helped
 Trissa is chatting up Jesse and John at the center table.
-
-
-
-
-===CharlottePositive===
-I see Charlotte, over in her usual chair,<delay=2> relaxing, of all things.
-
-->Toast
-
-===CharlotteNagative===
-I see Charlotte assisting in the preperations of the farewell meal.
-
-->Toast
-
-===EduardoPositive===
-Eduardo and Isaac are in their usual corner, giggling
-
-->Toast
-
-===EduardoNagative===
-Eduardo and Isaac are suprisingly not sitting nearby each other, but on near oppostie ends of the room.
-
-->Toast
+I see Charlotte assisting in the preperations of the farewell meal. // TODO: Support good outcome: I see Charlotte, over in her usual chair, relaxing of all things.
+Eduardo and Isaac are suprisingly not sitting nearby each other, but on near opposite ends of the room. // TODO: Support good outcome: Eduardo and Isaac are in their usual corner, giggling.
+[Max] "We've got your throne all ready, sire." # Max = Happy
+They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
+I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
+[Max] "I'll grab you some food!"
+[{player_name}] "Thanks." # Max	 = Exit
+Eduardo is the first to come up. # Eduardo = Sad
+[Eduardo] "Hey, {player_name}. It was great hangin'."
+[Eduardo] "With your chill, I'm sure you'll go great out there."
+Eduardo turns to leave.
++[Ask if he's okay.]
+	[{player_name}] "You seem pretty down, man..."
+	[Eduardo] "Just at the bottom today. Usually I've got Isaac to help around this time, but..."
+	[Eduardo] "I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more."
+	[Eduardo] "But this isn't your problem, eh? You've got the whole world waiting for you."
++[Let him be.]
+	I decide he's probably just in his depressive state and needs some time to himself.
 
 ===Toast===
 #Max=Calm

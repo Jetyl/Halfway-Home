@@ -115,7 +115,7 @@ The moment I finish dishing them up a sizeable portion, Max takes off towards th
 [Max] "Can I get everyone's attention!" #Max=Calm
 The whole cafe quites a little, as Max speaks up.
 [Max] "Thanks eveybody for showing yerselfs"
-[Max] "Today we're welcoming our newest family member, Timothy Miyrui."
+[Max] "Today we're welcoming our newest family member, Timothy Myuri."
 [Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
 [Max] "He just got out Blackwell Hospital, for those who need the context for that,"
 [Jesse] "Thanks Fam!"
