@@ -7,6 +7,7 @@ This is the string holder for the Events system. that way, for the user to input
 what type of event they want when connecting or dispatching, they just type Events.
 and they'll get the string the code will be looking for.
 
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 *******************************************************************************/
 
 using System;

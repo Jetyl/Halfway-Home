@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************/
+/*!
+File:   HalfwayHomeStoryReader.cs
+Author: Christian Sagel
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Stratus.Modules.InkModule;

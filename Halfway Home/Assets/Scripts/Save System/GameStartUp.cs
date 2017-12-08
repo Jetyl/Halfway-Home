@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/******************************************************************************/
+/*!
+File:   GameStartUp.cs
+Author: Jesse Lozano
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using UnityEngine;
 using System.Collections;
 using LitJson;
 using System.Collections.Generic;

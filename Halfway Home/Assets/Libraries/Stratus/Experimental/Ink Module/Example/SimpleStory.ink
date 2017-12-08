@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*
+@file   SimpleStory.ink
+@author Christian Sagel
+@par    email: c.sagel@digipen.edu
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
 - I looked at Monsieur John 
 *   ... and I could contain myself no longer.    
     'What is the purpose of our journey, Monsieur?'

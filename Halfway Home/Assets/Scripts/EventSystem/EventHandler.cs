@@ -6,6 +6,7 @@ Brief Description:
 This is the handler for each event type, and what the user uses to interact 
 with the event System
 
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 *******************************************************************************/
 
 

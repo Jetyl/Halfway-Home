@@ -4,6 +4,7 @@
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @note:   https://gist.github.com/LotteMakesStuff/dd785ff49b2a5048bb60333a6a125187
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
