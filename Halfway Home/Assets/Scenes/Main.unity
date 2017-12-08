@@ -574,6 +574,11 @@ MonoBehaviour:
     endTime: 17
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 17
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -3382,6 +3387,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -5790,6 +5800,11 @@ MonoBehaviour:
     starttime: 17
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
@@ -10999,6 +11014,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -12641,6 +12661,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -12710,9 +12735,14 @@ MonoBehaviour:
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
-    starttime: 18
+    starttime: 17
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
@@ -13850,6 +13880,11 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -14317,6 +14352,11 @@ MonoBehaviour:
     starttime: 18
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 18
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 1
   AccessPoint: KitchenVisists
@@ -15377,6 +15417,11 @@ MonoBehaviour:
     starttime: 17
     endTime: 23
     ProgressLocked: 1
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 17
+    endTime: 23
+    ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
