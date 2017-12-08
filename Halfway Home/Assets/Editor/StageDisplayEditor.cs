@@ -65,11 +65,11 @@ public class StageDisplayEditor : Editor
 
             for (var i = 0; i < SpecialBackdrop.arraySize; ++i)
             {
-                Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
-                    Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
+                SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
+                    SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
 
-                EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).
-                    FindPropertyRelative("Backdrop"), new GUIContent(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
+                EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).
+                    FindPropertyRelative("Backdrop"), new GUIContent(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
             }
 
             EditorGUILayout.Space();

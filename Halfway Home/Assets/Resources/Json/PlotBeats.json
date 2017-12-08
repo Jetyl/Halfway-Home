@@ -166,6 +166,10 @@
    {
     "Name" : "Saved Timothy",
     "Type" : 1
+   },
+   {
+    "Name" : "Saved Self",
+    "Type" : 1
    }
   ]
  },
@@ -187,6 +191,17 @@
   "Point"      : [
    {
     "Name" : "SolvedHangman",
+    "Type" : 1
+   }
+  ]
+ },
+ {
+  "PlotName" : "HATE",
+  "BeatNumber" : 0,
+  "BeatName"   : "Temporary bullshit",
+  "Point"      : [
+   {
+    "Name" : "SubmissionBuildRepeat",
     "Type" : 1
    }
   ]

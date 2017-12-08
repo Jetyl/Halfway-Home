@@ -99,6 +99,7 @@ namespace HalfwayHome
                     return;
                 }
         }
+
         Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.Find("Image")));
     }
 
@@ -220,6 +221,7 @@ namespace HalfwayHome
 
     public bool GetValue(string ValueName)
     {
+      print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
       return Game.current.Progress.GetBoolValue(ValueName);
     }
 

@@ -26,7 +26,7 @@ EXTERNAL SetStringValue(name, string)
 -> Start
 
 === Start ===
-//~week += 1
+~week = 1
 The whispers are close behind me now. # Play : play_music_bardman
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching

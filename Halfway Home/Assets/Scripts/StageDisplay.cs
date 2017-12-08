@@ -17,8 +17,7 @@ public class StageDisplay : MonoBehaviour
     public List<CharacterList> CastList;
 
     public List<RoomDetails> Backdrop;
-
-
+    
     public List<RoomDetails> SpecialBackdrops;
 
     public SpriteRenderer FrontCurtain;
@@ -244,7 +243,6 @@ public class StageDisplay : MonoBehaviour
         {
             foreach (var room in SpecialBackdrops)
             {
-
                 if (room.Tag == eventdata.character)
                 {
 

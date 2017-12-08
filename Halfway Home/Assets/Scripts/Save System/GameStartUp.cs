@@ -119,7 +119,7 @@ public class GameStartUp : MonoBehaviour
     {
         Game.current.Day = DebugDay;
         Game.current.Hour = DebugHour;
-        Game.current.Progress.SetValue("Week", DebugWeek);
+        Game.current.Progress.SetValue("week", DebugWeek);
         Game.current.Progress.SetValue("Debug Mode", true);
         Game.current.Self.SetSocialStat(Personality.Social.awareness, DebugAwareness);
         Game.current.Self.SetSocialStat(Personality.Social.grace, DebugGrace);
