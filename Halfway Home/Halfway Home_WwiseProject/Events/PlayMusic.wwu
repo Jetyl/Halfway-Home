@@ -39,7 +39,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="music_bardman" ID="{6B673475-2E7C-48B5-90A1-E94AB638347B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+									<ObjectRef Name="music_fakeit" ID="{6B673475-2E7C-48B5-90A1-E94AB638347B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

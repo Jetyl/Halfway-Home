@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -43,6 +43,7 @@
 				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\PlayMusic\Play_music_placeholder_main"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\play_sfx_human_footsteps_approaching"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\Stop_All" MaxAttenuation="0.000000"/>
+				<Event Id="2815176099" Name="stop_music_bardman" ObjectPath="\Events\PlayMusic\stop_music_bardman" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11926160" Language="SFX">
@@ -57,34 +58,21 @@
 					<ShortName>sfx_menu_chime_exitgame.wav</ShortName>
 					<Path>SFX\sfx_menu_chime_exitgame_1C9C67B2.wem</Path>
 				</File>
-<<<<<<< HEAD
-=======
-				<File Id="407667121" Language="SFX">
-					<ShortName>guitar_late_placeholder.wav</ShortName>
-					<Path>SFX\guitar_late_placeholder_F17FB28C.wem</Path>
-				</File>
-				<File Id="424879526" Language="SFX">
-					<ShortName>bardman_placeholder.wav</ShortName>
-					<Path>SFX\bardman_placeholder_F17FB28C.wem</Path>
-				</File>
 				<File Id="541639029" Language="SFX">
 					<ShortName>sfx_footsteps_placeholder1.wav</ShortName>
 					<Path>SFX\sfx_footsteps_placeholder1_1C9C67B2.wem</Path>
 				</File>
->>>>>>> master
 				<File Id="558653419" Language="SFX">
 					<ShortName>sfx_menu_chime_unpausegame.wav</ShortName>
 					<Path>SFX\sfx_menu_chime_unpausegame_1C9C67B2.wem</Path>
 				</File>
-<<<<<<< HEAD
 				<File Id="738802588" Language="SFX">
 					<ShortName>fake_it_til_you_break_it.wav</ShortName>
 					<Path>SFX\fake_it_til_you_break_it_F17FB28C.wem</Path>
-=======
+				</File>
 				<File Id="865371990" Language="SFX">
 					<ShortName>sfx_footsteps_placeholder2.wav</ShortName>
 					<Path>SFX\sfx_footsteps_placeholder2_1C9C67B2.wem</Path>
->>>>>>> master
 				</File>
 				<File Id="950120731" Language="SFX">
 					<ShortName>sfx_menu_button_mouseover.wav</ShortName>
