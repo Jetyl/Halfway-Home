@@ -153,7 +153,7 @@ namespace HalfwayHome
       if (Day != day)
         return false;
 
-      for (int i = starttime; i < endTime; ++i)
+      for (int i = starttime; i <= endTime; ++i)
       {
         if (i == hour)
           return true;
