@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1520521502
-    m_lastTimePart2: -1999290773
+    m_lastTimePsrt1: 568224905
+    m_lastTimePart2: -1999290762
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -119,14 +119,14 @@ MonoBehaviour:
       ID: 452547817
       Guid: 112021dd1518b24197dcbbbf570d32e5
       maxAttenuation: 0
-    - Name: stop_music_bardman
-      Path: PlayMusic\stop_music_bardman
+    - Name: stop_music_fakeit
+      Path: PlayMusic\stop_music_fakeit
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
-      - ElementName: stop_music_bardman
+      - ElementName: stop_music_fakeit
         ObjectType: 3
-      ID: -1479791197
+      ID: -229842880
       Guid: 3898f2bb8cd5bc4fb85ede37fc74e27b
       maxAttenuation: 0
   - PhysicalPath: Events\PlaySFX.wwu
@@ -186,8 +186,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1513848782
-    m_lastTimePart2: -1999290773
+    m_lastTimePsrt1: -719602849
+    m_lastTimePart2: -1999290760
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

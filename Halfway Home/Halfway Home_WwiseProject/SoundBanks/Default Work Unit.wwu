@@ -14,10 +14,7 @@
 						<ObjectRef Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
-<<<<<<< Updated upstream
-=======
 						<ObjectRef Name="stop_music_fakeit" ID="{BBF29838-D58C-4FBC-B85E-DE37FC74E27B}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
->>>>>>> Stashed changes
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
