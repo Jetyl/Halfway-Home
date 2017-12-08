@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3169174387	play_menuexit			\PlaySFX\play_sfx_menu\play_menuexit	
 	3596481523	play_menupause			\PlaySFX\play_sfx_menu\play_menupause	
 	4008650974	play_menumouseover			\PlaySFX\play_sfx_menu\play_menumouseover	
+	4065124416	stop_music_fakeit			\PlayMusic\stop_music_fakeit	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11926160	sfx_menu_chime_pausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu SFX\Menu SFX\sfx_menu_chime_pausegame		480144

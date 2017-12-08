@@ -31,7 +31,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="stop_music_bardman" ID="{BBF29838-D58C-4FBC-B85E-DE37FC74E27B}">
+				<Event Name="stop_music_fakeit" ID="{BBF29838-D58C-4FBC-B85E-DE37FC74E27B}">
 					<ChildrenList>
 						<Action Name="" ID="{2FDB8976-44E9-43D7-B932-56A6429162CF}" ShortID="353453508">
 							<PropertyList>
@@ -63,7 +63,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="music_bardman_placeholder" ID="{886F1923-B0B9-459A-AF01-DB224585C7C0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+									<ObjectRef Name="music_bardman_placeholder" ID="{ED814CE8-74B4-4D63-9462-45949D7251EE}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
