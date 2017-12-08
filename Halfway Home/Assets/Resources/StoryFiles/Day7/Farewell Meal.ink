@@ -37,73 +37,42 @@ I take my seat at the center table, remembering how, less than a week ago, Timot
 [{player_name}] "Thanks." # Max	 = Exit
 Eduardo is the first to come up. # Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
-[Eduardo] "With your chill, I'm sure you'll go great out there."
+[Eduardo] "With your chill, I'm sure you'll do great out there."
 Eduardo turns to leave.
 +[Ask if he's okay.]
 	[{player_name}] "You seem pretty down, man..."
-	[Eduardo] "Just at the bottom today. Usually I've got Isaac to help around this time, but..."
-	[Eduardo] "I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more."
-	[Eduardo] "But this isn't your problem, eh? You've got the whole world waiting for you."
+	[Eduardo] "Sim, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
+	[Eduardo] "I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more." # Eduardo = Angry
+	[Eduardo] "But this isn't your problem, eh? You've got the whole world waiting for you. Come back and visit, okay?." # Eduardo = Sad
 +[Let him be.]
 	I decide he's probably just in his depressive state and needs some time to himself.
-
-===Toast===
-#Max=Calm
-[Max] "Can I get everyone's attention!"
-the whole cafe quites a little, as Max speaks up.
-[Max] "Thanks eveybody for showing yerselfs"
-[Max] "Today we're welcoming our newest family member, Timothy Miyrui."
-[Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
-[Max] "He just got out Blackwell Hospital, for those who need the context for that,"
-[Jesse] "Thanks Fam!"
-[Max] "And he said he's not really up to this kinda group speaking, which we all can understand."
-[Max] "But we all want to wish him the best of luck"
-[Max] "And to welcome him to our home."
-[Everyone] "Welcome Timothy!"
-#Max=Exit Max sits back down near Timothy, and the usual chatter of the room resumes.
-[Max] "Eeeh, {player_name}, just the <>
-{
-	-player_gender == "M": 
-		man 
-	-player_gender == "F": 
-		gal
-	-else: 
-		person
-} 
-<> I was lookin' fer."
-{
-	-GetValue("Tutorial"):
-		->TutorialTalk
-	-else:
-		->GeneralTalk
-}
-
-===TutorialTalk===
-[Max] "I wanna thank ya for showing Timothy the ropes for me."
-[Max] "I'm rul sorry about that."
-//make a choice here maybe?
-[{player_name}] "No problem"
-[{player_name}] "Did you ever find your keys?"
-[Max] "Oh! yeah... I did."
-[Max] "the little sucker fell between the couch cushions in the common's. musta been loose on ma chain or somethin'."
-
-->TalkingToTimothy
-
-===GeneralTalk===
-[Max] "I wanna again, apologies for the whole roommate debacle."
-[Max] "I know you don't want another thing on your plate for this week."
-You have no idea.
-[Max] "Also, thanks with the save with the keys."
-[{player_name}] "no prob."
-[Max] "how'd you even know they were there?"
-//choice here maybe.
-[{player_name}] "lucky guess."
-[Max]"Well that's some fine luck ya got." 
-->TalkingToTimothy
-
-===TalkingToTimothy===
-[{player_name}] "Hey, Timothy. how's the dinner?"
-scene end. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit
-
-
+- Next to approach is Charlotte, who seems to have taken a break from her duties. # Eduardo = Exit
+[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
++[Yeah.]
+	[{player_name}] "It's fine, I guess."
+	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.
+	[Charlotte] "Well, that's not quite the enthusiasm I have come to expect from outgoing residents." # Charlotte = Calm
+	[Charlotte] "Perhaps I am simply too used to Trissa's unwavering excitement. She's leaving two weeks from now and it seems to be her favorite subject of conversation."
+	Charlotte seems to be carrying on without any concern for Timothy's absence.
++[Not really.]
+	[{player_name}] "You're kidding, right? Did you not hear about Timothy?"
+	[Charlotte] "Ah, you refer to the events of earlier today involving Mr. Myuri." # Charlotte = Calm
+	[Charlotte] "These things happen from time to time. The hospital is the best place for him, I'm sure."
+- How is she so unphased?
+[Charlotte] "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
+I watch Charlotte stride gracefully toward the serving line as Max emerges with a steaming plate of food. # Charlotte = Exit
+[Max] "Sorry that took so long! Turns out the cook wasn't really ready yet." # Max = Calm
+[{player_name}] "I don't mind at all."
+[Max] "Thanks for being so cool about... well, everything." # Max = Happy
+[Max] "Timothy might not have had the chance to thank you today, but I know he appreciated what you did for him." # Max = Sad
+[Max] "Anyway, time for the toast." # Max Calm
+[Max] "Ladies, gentlemen, and everyone in between, may I have your attention?"
+The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
+[Max] "It's been a rough week for many of us, I know."
+[Max] "Today we said goodbye to our newest resident, Timothy Myuri, who I have received word is safe and comfortable at Blackwell. It wasn't what we all hoped for, but I'm sure we'll see him again when he's ready." # Max = Sad
+[Max] "But today we also say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!" # Max = Happy
+[Max] "This toast is to both of you. May you find happiness and good fortune as you face the challenges ahead."
+Max raises their cup and the room follows suit. A small applause follows the toast and the murmur of conversation returns.
+A few more residents come up to say goodbye, but they're not really people I knew that well.
+Today has really tired me out. I end up leaving the cafeteria early.
 -> END
