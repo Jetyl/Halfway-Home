@@ -3616,8 +3616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  valueGuid: 0151b7227d452146b772f73362c102e9
-  eventID: 1259498987
+  valueGuid: 62c965c94bfb87468fa869995a11193f
+  eventID: -1489559458
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0

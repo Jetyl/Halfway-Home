@@ -9,33 +9,18 @@
 				<File Name="Test1" Hash="2418005219" Timestamp="131541345552198274"/>
 			</Language>
 		</Banks>
-		<XMLInfo>
-			<Language ID="-1">
-				<File Name="" Hash="3755654427" Timestamp="131541345552698303"/>
-			</Language>
-		</XMLInfo>
 	</Platform>
 	<Platform GUID="{B5FD0CE7-D49D-4DF5-9D4F-E1E460C9235A}">
 		<Banks>
 			<Language ID="393239870">
-<<<<<<< HEAD
-				<File Name="HalfwaySoundbank" Hash="2902957294" Timestamp="131570998259568521"/>
-				<File Name="Init" Hash="2971798797" Timestamp="131570998259928542"/>
-=======
-				<File Name="HalfwaySoundbank" Hash="1118052098" Timestamp="131571555789106407"/>
-				<File Name="Init" Hash="2971798797" Timestamp="131568098798779382"/>
->>>>>>> master
-				<File Name="Test" Hash="756948723" Timestamp="131522307231918325"/>
-				<File Name="Test1" Hash="3855899043" Timestamp="131542076405639874"/>
+				<File Name="HalfwaySoundbank" Hash="3083563329" Timestamp="131571836808250268"/>
+				<File Name="Init" Hash="2971798797" Timestamp="131571836845432395"/>
+				<File Name="Test1" Hash="2418005219" Timestamp="131571836845122377"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-<<<<<<< HEAD
-				<File Name="" Hash="1958717256" Timestamp="131570998260128553"/>
-=======
-				<File Name="" Hash="1393737567" Timestamp="131571555789311954"/>
->>>>>>> master
+				<File Name="" Hash="1547869061" Timestamp="131571836845602404"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
