@@ -5,6 +5,7 @@ author      Jesse Lozano
 Brief Description:
 This is the system manger for the Event System I added to Unity
 
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 *******************************************************************************/
 
 using UnityEngine;

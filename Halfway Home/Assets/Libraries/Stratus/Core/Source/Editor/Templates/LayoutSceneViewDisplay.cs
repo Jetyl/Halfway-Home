@@ -1,4 +1,12 @@
-﻿using Stratus.Utilities;
+﻿/******************************************************************************/
+/*!
+@file   LayoutSceneViewDisplay.cs
+@author Christian Sagel
+@par    email: ckpsm@live.com
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using Stratus.Utilities;
 using System;
 using UnityEditor;
 using UnityEngine;
