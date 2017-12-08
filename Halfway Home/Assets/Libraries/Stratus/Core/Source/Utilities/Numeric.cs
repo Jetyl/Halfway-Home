@@ -6,6 +6,7 @@
 @date   5/25/2016
 @note   Credit to Or Aviram: 
         https://forum.unity3d.com/threads/draw-a-field-only-if-a-condition-is-met.448855/
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;

@@ -5,6 +5,7 @@
 @par    email: ckpsm@live.com
 @date   5/25/2016
 @brief  The main event system class that acts as a proxy/operator for all events.
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;

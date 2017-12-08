@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************/
+/*!
+File:   HalfwayHomeStoryReader.cs
+Author: Christian Sagel
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Stratus.Modules.InkModule;
@@ -66,9 +73,9 @@ namespace HalfwayHome
       string setWStatPattern = RegexParser.Presets.ComposeBinaryOperation(statLabel, valueLabel, "=>");
       parser.AddPattern("WellbeingSet", setWStatPattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnWellbeingStatSet);
 
-      // Music
-      string playMusic = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
-      parser.AddPattern("MusicTrigger", playMusic, RegexParser.Target.Tag, RegexParser.Scope.Group, OnMusicTrigger);
+      // Music & SFX
+      string playAudio = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
+      parser.AddPattern("AudioTrigger", playAudio, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioTrigger);
 
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
@@ -103,6 +110,7 @@ namespace HalfwayHome
       }
       else
       {
+        Trace.Script(parse.Find("Person"));
         Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
       }
     }
@@ -180,15 +188,17 @@ namespace HalfwayHome
       Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
     }
 
-    void OnMusicTrigger(Parse parse)
+    void OnAudioTrigger(Parse parse)
     {
       if(parse.Find("Mode").ToLower() == "play")
       {
         Trace.Script($"Play {parse.Find("Event")} music");
+        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.Find("Event")));
       }
       else if(parse.Find("Mode").ToLower() == "sfx")
       {
         Trace.Script($"Play {parse.Find("Event")} sound effect");
+        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.Find("Event")));
       }
     }
     //------------------------------------------------------------------------/

@@ -5,7 +5,7 @@ project     a-0
 
 Brief Description:
 
-
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 *******************************************************************************/
 
 

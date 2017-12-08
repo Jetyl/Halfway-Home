@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*
+@file   RoomDefaults.ink
+@author Jesse Lozano & John Myres
+@par    email: jesse.lozano@digipen.edu, john.myres@digipen.edu
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
 VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0

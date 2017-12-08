@@ -1,0 +1,11 @@
+Work Done Included:
+
+Made (solo):
+	- User Interface
+	- Asset Implementation (art & audio)
+	- Wwise Integration (and related logic)
+
+
+Made (with Jesse):
+	- Narrative design
+	- Scene writing

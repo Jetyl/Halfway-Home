@@ -1,4 +1,12 @@
-﻿VAR player_name = "tbd"
+﻿/******************************************************************************/
+/*
+@file   RecoverRestartRequired.ink
+@author Jesse Lozano
+@par    email: jesse.lozano@digipen.edu
+All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
 VAR expression = 0
@@ -17,7 +25,7 @@ EXTERNAL SetTimeBlock(int)
 -> Start
 
 === Start ===
-After a brief scare of today's events, and everyone's shock, I head into my room to rest.
+Once the Dinner's wound down, I make my leave, and head into my room to rest.
 I saved Timothy, and The Time loops should be broken!
 //add some details based on how the player "saved" timothy
 Now, All I've got to do is wait, til tomorrow comes...
@@ -60,7 +68,7 @@ I tell myself that, over and over, untill I fall asleep.
 <color=111111>Determining Following Action: ... COMPLETE
 <color=111111>Reinintializing.... Recontructing....
 <color=111111><b>R</b>ecovery <b>R</b>estart <b>R</b>equired
-<color=111111>Awaiting Input....
+<color=111111>Awaiting Further Input....
 {SetTimeBlock(0)}
 ~week += 1
 ->END
