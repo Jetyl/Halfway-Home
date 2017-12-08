@@ -22,6 +22,7 @@ EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL SetValue(name, values)
+EXTERNAL SetIntValue(name, string)
 
 -> Start
 
@@ -73,7 +74,7 @@ I don't want to stay here, in this vacant room. I don't want to waste away.
 I don't want to leave.@ I don't want to stay.@ I don't want anything but to make this pain go away.
 I just want the pain to go away...
 I silently wish to myself, this over<delay=2> and over, until nothing else remains. #Background / Dream
-I want the pain, to go away. {SetValue("SubmissionBuildRepeat", true)}
+I want the pain, to go away. {SetIntValue("week", 2)}
 ....
 .......
 ................{SetTimeBlock(0)}
@@ -83,7 +84,7 @@ I want the pain, to go away. {SetValue("SubmissionBuildRepeat", true)}
 <color=A5C5E3FF>Reinintializing.... @Recontructing.... @Resetting....
 <color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired
 <color=A5C5E3FF>Operation Active in: 3... @2... @1
-~week += 1
+//~week += 1
 ->END
 
 ==RepeatRRR==

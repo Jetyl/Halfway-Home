@@ -22,12 +22,13 @@ EXTERNAL SetPlayerGender(gender)
 EXTERNAL GetPlayerName()
 EXTERNAL GetStringValue(name)
 EXTERNAL SetStringValue(name, string)
+EXTERNAL SetIntValue(name, string)
 
 -> Start
 
 === Start ===
-~week = 1
-The whispers are close behind me now. # Play : play_music_bardman
+//~week = 1
+The whispers are close behind me now.{SetIntValue("week", 1)} # Play : play_music_bardman
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching

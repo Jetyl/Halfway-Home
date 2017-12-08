@@ -16,7 +16,6 @@ VAR stress = 0
 VAR delusion = 0
 VAR week = 0
 VAR current_room = "unset"
-VAR AreYouKiddingMe = false
 VAR pronouns = ""
 VAR possesive = "" 
 
@@ -43,39 +42,33 @@ EXTERNAL SetValue(name, values)
 	 	~possesive = "them"
 }
 
-~AreYouKiddingMe = GetValue("SubmissionBuildRepeat")
 
 //~player_name = "Player"
 //~week = 1
 //play knocking sound effect
 A cheerful knock drags me out of my dreary haze. # Background / YourRoom
 { 
-	-AreYouKiddingMe:
-		Must be Max, to take me away from this limbo.
-	//- week == 1:
-	-else:
+	-week == 1:
 		What do they want?
-	//- week == 2:
-	//	Must be Max, to take me away from this limbo.
+	- week == 2:
+		Must be Max, to take me away from this limbo.
 	//- GetValue("FirstRRR"):
 	//	-> RestartRequired
-	//-else:
-	//	The week has begun again.
+	-else:
+		The week has begun again.
 }
 I slowly creak out of my bed, and slump and lumber towards the door.
 [{player_name}] "I'm coming, I'm coming..."
 //turn off knocking. door opening sound?
 
 { 
-	-AreYouKiddingMe:
-		->Again
-	//- week == 1:
-	-else:
+	
+	-week == 1:
 		->Introductions
 	//- week == 2:
 	//	->Again
-	//-else:
-	//	->Again
+	-else:
+		->Again
 }
 
 ===Introductions===
@@ -129,7 +122,7 @@ this doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
 [{player_name}] "what are you doing back so soon?" #Timothy=Calm
-"We're you being sent back to Blackwell Hospital?" #Timothy=Scared
+"We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
 [Max] "Uh, {player_name}, you still dreaming buddy?"
 "Timothy Myuri is the roommate I told you about"
 wait

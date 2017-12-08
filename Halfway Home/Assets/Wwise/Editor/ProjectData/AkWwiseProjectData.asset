@@ -76,28 +76,18 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1697163587
-    m_lastTimePart2: -1999290947
+    m_lastTimePsrt1: -783432321
+    m_lastTimePart2: -1999290891
     List:
-    - Name: play_music_bardman
-      Path: PlayMusic\play_music_bardman
+    - Name: play_music_fakeit
+      Path: PlayMusic\play_music_fakeit
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
-      - ElementName: play_music_bardman
+      - ElementName: play_music_fakeit
         ObjectType: 3
-      ID: -1186671007
+      ID: -1489559458
       Guid: 62c965c94bfb87468fa869995a11193f
-      maxAttenuation: 0
-    - Name: play_music_guitarlate
-      Path: PlayMusic\play_music_guitarlate
-      PathAndIcons:
-      - ElementName: PlayMusic
-        ObjectType: 12
-      - ElementName: play_music_guitarlate
-        ObjectType: 3
-      ID: 271523436
-      Guid: 71b0145dcf14fe4e9c46812e908e90e4
       maxAttenuation: 0
     - Name: Play_music_placeholder_main
       Path: PlayMusic\Play_music_placeholder_main
@@ -186,8 +176,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1690304283
-    m_lastTimePart2: -1999290947
+    m_lastTimePsrt1: -771254702
+    m_lastTimePart2: -1999290891
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

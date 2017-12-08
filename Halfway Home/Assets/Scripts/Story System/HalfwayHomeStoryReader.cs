@@ -38,7 +38,9 @@ namespace HalfwayHome
     {
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
+      story.runtime.BindExternalFunction(nameof(SetIntValue), new System.Action<string, int>(SetIntValue));
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
+      story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => { GetIntValue(valueName); });
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
@@ -220,11 +222,22 @@ namespace HalfwayHome
       Game.current.Progress.SetValue(ValueName, newValue);
     }
 
+    public void SetIntValue(string ValueName, int newValue)
+    {
+      Game.current.Progress.SetValue(ValueName, newValue);
+    }
+
     public bool GetValue(string ValueName)
     {
       print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
       return Game.current.Progress.GetBoolValue(ValueName);
     }
+
+    public int GetIntValue(string ValueName)
+    {
+      return Game.current.Progress.GetIntValue(ValueName);
+    }
+
 
     public string GetStringValue(string ValueName)
     {
