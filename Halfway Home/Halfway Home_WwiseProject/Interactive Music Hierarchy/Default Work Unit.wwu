@@ -166,9 +166,6 @@
 							</TransitionList>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{FFE6E38D-E29B-4956-9410-444B36CD87E1}" ShortID="389859118">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{E1FC8576-971E-4F4D-8691-BBB70F3D93FB}" ShortID="862888921">
 											<PropertyList>
@@ -338,6 +335,103 @@
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="music_bardman_placeholder" ID="{ED814CE8-74B4-4D63-9462-45949D7251EE}" ShortID="163676398">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="music_bardman_placeholder" ID="{886F1923-B0B9-459A-AF01-DB224585C7C0}" ShortID="346005511">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="92806.3506904488"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="bardman_placeholder" ID="{38E6EB49-7415-4060-A2AD-D8EA32065415}" ShortID="70566626">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="bardman_placeholder" ID="{BC8DAF93-3CF5-4B6F-8EFA-E18277C3AD3D}" ShortID="1014402371">
+													<Language>SFX</Language>
+													<AudioFile>bardman_placeholder.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{946674CE-BA6D-49C1-92E9-0ED554F7AEDE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{288CCA0B-8458-4114-978E-1ABB7D43B010}">
+													<ClipList>
+														<MusicClip Name="bardman_placeholder" ID="{4365F91C-67F4-4DC6-ABE9-7169F58C63A9}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="71424"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="bardman_placeholder" ID="{BC8DAF93-3CF5-4B6F-8EFA-E18277C3AD3D}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{CAF4814E-CB49-4743-8EB1-5CB2E356216F}"/>
+										<MusicCue Name="Exit Cue" ID="{B446DDDA-B861-4B05-965E-A2702F2BF55A}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="71414.5210011508"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9002BC94-F208-42CD-8037-C6AF61F343D5}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{CF66F89B-9DED-49C2-9AF2-201A1B71DC95}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{FBCE6D9C-63A2-48D4-A752-0B1A1A8591ED}" ShortID="617203045">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{7EC16BF2-69F8-4CF4-9F2C-30EC931F7439}" ShortID="802449279">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="music_bardman_placeholder" ID="{886F1923-B0B9-459A-AF01-DB224585C7C0}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>

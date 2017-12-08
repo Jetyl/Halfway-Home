@@ -55,6 +55,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}">
+					<ChildrenList>
+						<Action Name="" ID="{8D575403-314F-4363-9F12-A7AC1A6980B5}" ShortID="241306622">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_bardman_placeholder" ID="{886F1923-B0B9-459A-AF01-DB224585C7C0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
