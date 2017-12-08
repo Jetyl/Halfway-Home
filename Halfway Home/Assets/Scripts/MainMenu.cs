@@ -66,6 +66,11 @@ public class MainMenu : MonoBehaviour
         LoadLevel();
     }
 
+    public void Credits()
+    {
+      SceneManager.LoadScene("Credits");
+    }
+
     void LoadLevel()
     {
         //iTween.CameraFadeAdd();

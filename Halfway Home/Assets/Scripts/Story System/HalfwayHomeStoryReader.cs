@@ -111,6 +111,7 @@ namespace HalfwayHome
       }
       else
       {
+        Trace.Script(parse.Find("Person"));
         Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
       }
     }
