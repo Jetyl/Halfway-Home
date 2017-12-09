@@ -23,6 +23,7 @@ EXTERNAL GetValue(value)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
+EXTERNAL CallSleep()
 
 -> Start
 
@@ -75,7 +76,7 @@ I don't want to leave.@ I don't want to stay.@ I don't want anything but to make
 I just want the pain to go away...
 I silently wish to myself, this over<delay=2> and over, until nothing else remains. #Background / Dream
 I want the pain, to go away. {SetIntValue("week", 2)}
-....
+....{CallSleep()}
 .......
 ................{SetTimeBlock(0)}
 //have this in UI color

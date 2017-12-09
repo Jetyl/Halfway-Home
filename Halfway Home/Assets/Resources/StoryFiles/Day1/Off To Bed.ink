@@ -19,7 +19,8 @@ VAR current_room = "unset"
 
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
-
+EXTERNAL SetTimeBlock(int)
+EXTERNAL CallSleep()
 
 -> Start
 
@@ -42,7 +43,7 @@ I sit there, wavering between consiousness, and unconsiousness, when I hear a vo
 [Timothy] "Hey,<delay=2> {player_name}?"
 [{player_name}] "Yeah?"
 {
-	- GetValue("Tutorial") == true:
+	- week == 1:
 		-> TalkWeek1
 	- else:
 		-> Start.Question		
@@ -51,8 +52,8 @@ I sit there, wavering between consiousness, and unconsiousness, when I hear a vo
 [Timothy] "D-d-does it ever get easier?"
 "Being here, I-I mean."
 [{player_name}] "..."
-*[Yes] -> Comfort
-*[No] -> Cold
++[Yes] -> Comfort
++[No] -> Cold
 
 
 === ContemplateWeek1 ===
@@ -84,14 +85,17 @@ Eh, its only for one week.
 	- expression >= 1:
 		"It was nice meeting you."
 }
-I start to drift off from there. My thoughts slow and hazy.
-My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes.
-I toss and turn, pained to be awake.
+I start to drift off from there. My thoughts slow and hazy. #Background / Dream
+My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes. {CallSleep()}
+I toss and turn, pained to be awake. #Background / YourRoom
 I look over at my spare bed, and Timothy's still there.
 I guess its his bed now.
-Slumberland becons me back to it, but I should be getting up about now.
+Slumberland becons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
 +[Get Up]
-	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. In no time, I'm ready to head out.
+	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. 
+	 In no time, I'm ready to head out. If, a little more tired than I'd like #fatigue -= 40
 +[Stay in Bed]
-	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("SleptIn", true)}
+	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("Slept In Day 2", true)} #fatigue -= 80
+	 //semester 1 line, remove later
+	 In hours that felt like minutes, I finally drag myself out, to begin my day.
 -> END

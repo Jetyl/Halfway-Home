@@ -144,7 +144,7 @@ And with that Max quickly runs off, leaving me and Timothy alone
 [{player_name}] "Timothy, are getting really weird deja vu today too?"
 Timothy is just kind of quietly staring at the corner where his bed is.
 "Yo, Timothy, can you hear me?"
-[Timothy] "<size=30%>I don't know you<size=100%>"
+[Timothy] "<size=50%>I don't know you<size=100%>"
 [{player_name}] "what?"
 [Max] "okay, I'm back!" #Max=Calm
 "Anyways, where we're we Timothy?"
