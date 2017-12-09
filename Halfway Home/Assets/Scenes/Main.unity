@@ -579,6 +579,11 @@ MonoBehaviour:
     endTime: 17
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -3435,8 +3440,33 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 2
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -5852,6 +5882,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -11063,8 +11098,33 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 2
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -11637,7 +11697,7 @@ MonoBehaviour:
   StartStress: 45
   StartFatigue: 35
   DebugDay: 7
-  DebugHour: 17
+  DebugHour: 12
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
@@ -12711,7 +12771,7 @@ MonoBehaviour:
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -12791,6 +12851,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -13932,6 +13997,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -15470,6 +15540,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0

@@ -32,7 +32,7 @@ until day 7
 
 -Enjoy the final dinner scene. return to bedroom after.
 
--player character with reflect, and sleep, waking up again on day 1. repeat the day 1 opening scene, meeting
-Timothy and Max again.
+-in the bedroom, player character with reflect, and sleep, waking up again on day 1. 
+repeat the day 1 opening scene, meeting Timothy and Max again, but different.
 
--Once scene is over, game should end
+-Once the scene is over, game should end

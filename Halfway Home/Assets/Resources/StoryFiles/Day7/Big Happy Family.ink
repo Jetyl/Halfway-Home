@@ -27,7 +27,7 @@ EXTERNAL SetValue(name, values)
 {
 	-GetValue("SavedTimothy"):
 		->SadStart
-	-else
+	-else:
 		->SadStart
 }
 
@@ -59,8 +59,10 @@ It's... odd.<delay=2>@ almost like we're a big happy family.
 [Eduardo] "Hey, Tim-Tim! What do you think?" #Max = Exit #Trissa = Exit #Charlotte=Exit #Timothy=Sad
 Timothy stays quiet. #Eduardo=Exit
 [{player_name}] "hey, Timothy."
-+ "You okay?"
-+ "Ya there?"
++ [You okay?]
+	"You okay?"
++ [Ya there?]
+	"Ya there?"
 [Timothy] "..."
 Timothy doesn't respond.
 In fact, looking at Timothy, I notice a handful of things off.
@@ -71,13 +73,12 @@ His hand clasps onto my arm with a shaky, but intense grip. I feel his heartbeat
 His lips move, as if trying to speak, but no words come from them.
 With his free hand, he clutches onto his shirt.
 all these little tiny actions I pick up, draw my mind to a conclusion that something is happening to Timothy.
-+ What's going on?!
-{
-	-awareness >= 1:
-	+a Panic Attack?!
-	-week >= 2:
-	+Not Again!
-}
++ [What's going on?!]
+	What's going on?!
++{awareness >= 1}[a Panic Attack?!]
+	he's having a panic attack.
++{week >= 2}[Not Again!]
+	Oh no, it's happening again.
 "uh, M-Max? Max?"
 no one seems to hear my weak call, over the chatter and laughter.
 I...

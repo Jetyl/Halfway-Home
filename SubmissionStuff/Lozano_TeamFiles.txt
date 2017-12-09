@@ -12,3 +12,4 @@ Made (solo):
 Made (with John):
 	-Narrative concept
 	-scene writing
+	-System Design
