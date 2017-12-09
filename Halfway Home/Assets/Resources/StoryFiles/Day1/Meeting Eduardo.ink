@@ -25,8 +25,8 @@ EXTERNAL PlayMusic(trackName)
 //prolly have the "room to talk about part first, then this"
 [Timothy] "So, who are they?" # Timothy = Calm
 //show eduardo and Isaac
-[{player_name}] "Oh, that's Eduardo and Isaac." # Eduardo = Calm # Isaac = Calm
-"HEY!"
+[{player_name}] "Oh, that's Eduardo and Isaac." # Eduardo = Calm 
+"HEY!" # Isaac = Calm
 [Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, how's it hangin'?"
 [{player_name}] "Oh, fine."
 "Max asked me to show around the new kid."
@@ -60,8 +60,8 @@ That would be Eduardo, who's quite preoccupied cuddling Isaac.
 +[Leave] -> Leaving
 
 === Leaving ===
-[{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
-[Eduardo] "later!" # Eduardo = Exit # Isaac = Exit # Timothy = Exit
+[{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later." # Isaac = Exit
+[Eduardo] "later!" # Eduardo = Exit  # Timothy = Exit
 -> END
 
 === HeyEddy ===

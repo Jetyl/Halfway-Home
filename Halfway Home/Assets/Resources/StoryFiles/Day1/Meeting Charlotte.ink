@@ -48,7 +48,7 @@ EXTERNAL GetPlayerData()
 	[Charlotte] "How hypocritical of me. Here I am lecturing you on manners, meanwhile failing to request an introduction to your associate." # Charlotte = Surprised
 +{grace > 3}[Well, thanks (formal)]
 	[{player_name}] "I am doing well, thank you. And how are you? As well as you look, I hope." # Charlotte = Surprised
-	[Charlotte] "When did you acquire such charm? I must say it is a special joy to find a kindred spirit with whom I may hold a proper conversation!" # charlotte=happy {CharEnter("Charlotte", "Happy")}
+	[Charlotte] "When did you acquire such charm? I must say it is a special joy to find a kindred spirit with whom I may hold a proper conversation!" # charlotte=happy
 	"Oh dear, that sounded terribly callous, didn’t it? Your eloquence may have caught me off-guard, { -player_gender == "M": sir-player_gender == "F": madam-else: friend}." # Charlotte = Afraid
 	"Please do not think I hold those without formal dialectical training in any sort of contempt."
 	[{player_name}] "Of course not. # Charlotte = Calm
@@ -70,7 +70,7 @@ Timothy peeks out from his hiding place in the shadows behind me. # Timothy = Ca
 === Trissa ===
 [Timothy] "Uh... hi." # Timothy = Afraid
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # Charlotte = Happy
-[Timothy] "Th-<delay=1>thanks." # timothy=happy # Timothy = Happy
+[Timothy] "Th-<delay=1>thanks." # Timothy = Happy
 [Charlotte] "My roommate is here, too. Trissa, dear, come and meet the new arrival!"
 [Trissa] "Hiya! What's goin on, Lotty? You say something about a new arrival?" # Trissa = Calm
 [Charlotte] "I did indeed. This is Timothy, {player_name}'s new roommate." # Charlotte = Calm
@@ -100,5 +100,5 @@ Trissa turns to look at me and lowers her voice to speak privately.
 "Anyways, I gotta run. Take care y'all!"
 [Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
-[Timothy] "Uh... where to next?" # Charlotte = Exit # Timothy = Exit
+[Timothy] "Uh... where to next?" # Charlotte = Exit
 -> END

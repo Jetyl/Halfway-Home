@@ -50,8 +50,8 @@ Max, frantically looking for their keys.
 }
 
 === FindersKeepers ===
-I sneak away from Timothy for a breif second to the couch Max had mentioned lossing the keys in #Timothy = Exit #Keyless = Exit
-I fish the keys out of the couch cushion, and pocket them. Finder's Keeper's after all.
+I sneak away from Timothy for a breif second to the couch Max had mentioned lossing the keys in #Keyless = Exit
+I fish the keys out of the couch cushion, and pocket them. Finder's Keeper's after all. #Timothy = Exit 
 I casually walk back to where Timothy is standing.
 Timothy seems to be more preoccupied watching Max. #Timothy = Calm
 ->Misgender

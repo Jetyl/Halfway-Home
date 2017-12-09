@@ -38,16 +38,16 @@ I sit myself down with my meal.
 [Timothy] "oh.<delay=2> Hi."
 he seems to be in a quiet mood today.<delay=2>@ whatever.
 I silently eat with him Timothy for a while, untill I hear a loud voice approach. #Timothy = Exit
-[Eduardo] "Heeeeeey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm
-[{player_name}] "eh, fine I guess..."
+[Eduardo] "Heeeeeey! {player_name}! How's it going?" #Eduardo = Calm 
+[{player_name}] "eh, fine I guess..." #Isaac = Calm
 + "How about you?"
 + "Where've you two been?"
-[Eduardo] "Oh, we kinda... just got up."
-[Max] "Again? You two really need to get your sleep schedules" #Max = Calm #Eduardo = Suprised
+[Eduardo] "Oh, we kinda... just got up." #Max = Calm
+[Max] "Again? You two really need to get your sleep schedules"  #Eduardo = Suprised
 Max seems to have also walked in, overhearing Eduardo's hard to miss voice.
-[Eduardo] "H-Hey! We were busy, alright!"
-[Trissa] "doing what, making out?" #Trissa = Calm #Isaac = Exit #Charlotte = Calm
-[Eduardo] "Oh don't you start too!"
+[Eduardo] "H-Hey! We were busy, alright!" #Trissa = Calm
+[Trissa] "doing what, making out?"  #Isaac = Exit 
+[Eduardo] "Oh don't you start too!" #Charlotte = Calm
 [Charlotte] "Really now. If either of you need assistence making a schedule, you can just ask" #Charlotte = Happy
 //continue this line of merryment 
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm
@@ -56,14 +56,15 @@ It's... odd.<delay=2>@ almost like we're a big happy family.
 
 
 ===Breakdown===
-[Eduardo] "Hey, Tim-Tim! What do you think?" #Max = Exit #Trissa = Exit #Charlotte=Exit #Timothy=Sad
+[Eduardo] "Hey, Tim-Tim!" #Max = Exit
+[Eduardo] "What do you think?" #Timothy=Sad
 Timothy stays quiet. #Eduardo=Exit
-[{player_name}] "hey, Timothy."
+[{player_name}] "hey, Timothy." #Trissa = Exit 
 + [You okay?]
 	"You okay?"
 + [Ya there?]
 	"Ya there?"
-[Timothy] "..."
+[Timothy] "..." #Charlotte=Exit
 Timothy doesn't respond.
 In fact, looking at Timothy, I notice a handful of things off.
 He doesn't seem to be looking at anything in particular, and he's shaking slightly.
@@ -135,10 +136,10 @@ I....
 I Pull my arm, to try and free it from Timothy's Vice-like grip, but to no avail.
 He doesn't seem to want to let go.
 To free myself, I pry my finger's underneath his palm, and peel his finger's off me.
-His arms are noticably shaking now.
+His arms are noticably shaking now. #Eduardo=Calm
 I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Timothy=Exit
-[{player_name}] "Max! Max!" #Max=Calm #Charlotte=Calm #Eduardo=Calm
-[Max] "yo! {player_name}, what's up?"
+[{player_name}] "Max! Max!" #Max=Calm  
+[Max] "yo! {player_name}, what's up?" #Charlotte=Calm
 [{player_name}] "It's Timothy. He-He's acting weird, and not responding. I-I think something wrong!"
 [Max] "What?!" #Max=Suprised
 Max darts past me to where Timothy is sitting in a speed quite frightening for someone their size. #Max=Exit
@@ -170,17 +171,17 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 	[Timothy] "*hic* N-N-*hic*n-n-no, *hic*"
 	[Max] "Do you want to go someplace quiet?"
 	Timothy nods thru the tears and shivering.
-	Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like their thanking me.
-	And like that, Max and Timothy left the cafe. #Max=Exit #Timothy=Exit
+	Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like their thanking me. #Timothy=Exit
+	And like that, Max and Timothy left the cafe. #Max=Exit 
 	MoodKiller->
 	
 }
 
 ===MoodKiller===
-My attention draws back to crowd of people around me. #Trissa=Suprised #Eduardo=Suprised #Isaac=Suprised #Charlotte=Happy
-[Charlotte] "It was a rather humorous endevour. hm?" #Charlotte=Calm
-"Why'd everyone get so quiet?"
-[Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-"
+My attention draws back to crowd of people around me. #Trissa=Suprised
+[Charlotte] "It was a rather humorous endeavour. hm?" #Charlotte=Calm
+"Why'd everyone get so quiet?" #Eduardo=Suprised
+[Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-" #Isaac=Suprised
 Isaac jabs his boyfriend in the gut. #Isaac=Angry
 [Isaac] "We're going. Gotta talk." #Isaac=Exit #Eduardo=Exit
 Isaac drags Eduardo out of the cafe in a huff.

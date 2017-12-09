@@ -25,7 +25,7 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 I Walk into my room, to go to bed. 
-I hope into the shower real quick, and by the time I come out, Timothy is already curled up in his bed.
+I hope into the shower real quick, and by the time I come out, Timothy is already curled up in his bed. # Timothy = Calm
 //if first week
 { 
 	- week == 1:
@@ -84,7 +84,7 @@ Eh, its only for one week.
 	- expression >= 1:
 		"It was nice meeting you."
 }
-I start to drift off from there. My thoughts slow and hazy.
+I start to drift off from there. My thoughts slow and hazy. # Timothy = Exit
 My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes.
 I toss and turn, pained to be awake.
 I look over at my spare bed, and Timothy's still there.
