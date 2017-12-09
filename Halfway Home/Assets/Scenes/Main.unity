@@ -5871,7 +5871,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -11695,9 +11695,9 @@ MonoBehaviour:
   DebugMode: 0
   StartDelusion: 10
   StartStress: 45
-  StartFatigue: 35
-  DebugDay: 7
-  DebugHour: 12
+  StartFatigue: 86
+  DebugDay: 1
+  DebugHour: 17
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
@@ -11705,7 +11705,7 @@ MonoBehaviour:
   DebugValues:
   - ProgressName: Tutorial
     TypeID: 1
-    BoolValue: 0
+    BoolValue: 1
     IntValue: 0
     FloatValue: 0
     StringValue: 
@@ -12840,7 +12840,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -13986,7 +13986,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -14464,7 +14464,7 @@ MonoBehaviour:
     ProgressKey: Tutorial
   - Day: 1
     starttime: 13
-    endTime: 17
+    endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -15529,7 +15529,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1

@@ -111,8 +111,8 @@ Timothy sighs dejectedly. Maybe he's used to this?
 -> TakingTimothy
 
 ===Again===
-What? # Keyless = Calm #Timothy=Calm
-[Max] "Heya {player_name}. Don't tell me I woke ya up?"
+What? # Keyless = Calm 
+[Max] "Heya {player_name}. Don't tell me I woke ya up?" #Timothy=Calm
 What in the...?
 "Hope you weren't planning on sleeping in. You know you should have your routine down by now."
 What the HELL?!
@@ -151,8 +151,8 @@ Timothy is just kind of quietly staring at the corner where his bed is.
 [Timothy] "You we're showing me around I think..."
 [Max] "Ah, yes."
 "Well lets head off."
-"See you at the welcome dinner {player_name}!" #Max=Exit #Timothy=Exit
-wait
+"See you at the welcome dinner {player_name}!" #Max=Exit 
+wait #Timothy=Exit
 "Thanks again for the tip on the keys!"
 and, they're gone...
 What is even going on?

@@ -41,8 +41,8 @@ I decide to...
 ===NearTimothy===
 ~ByTimothy = true
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table.
-I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy # Timothy = Calm
-[Timothy] "Hi, {player_name}."
+I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy
+[Timothy] "Hi, {player_name}." # Timothy = Calm
 [Trissa] "Come to see the man of hour, huh?"
 [{player_name}] "Sure did."
 {delusion > 40: [Voices] "As if he wants to see you."}
@@ -68,14 +68,14 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 I give them a nod of acknowledgement.
 [Trissa] "Hi, Max!"
 [Timothy] "Hey."
-[Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec."
-Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit
+[Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec." # Timothy = Exit
+Max stands up and clears his throat. # Trissa = Exit 
 ->Toast
 
 ===NearEduardo===
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
-As I approach, the two are giggling about something. # Eduardo = Happy # Isaac = Happy
-[{player_name}] "Mind if I join you?"
+As I approach, the two are giggling about something. # Eduardo = Happy 
+[{player_name}] "Mind if I join you?" # Isaac = Happy
 {delusion > 40: [Voices] "Of course they mind. Why would anyone want [i]you[/i] around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
 [Eduardo] "Nah, man. Get in here!"
@@ -85,8 +85,8 @@ Isaac is too busy cracking up to respond, but Eduardo is able to compose himself
 [Eduardo] "Hey, {player_name}, you ever heard the story of Isaac's first day?"
 [Isaac] "Oh no..." # Isaac = Surprised
 [Eduardo] "It was only a couple of weeks before yours..."
-As if on cue, Max makes a loud sound from the center of the room and rises to their feet.
-[Eduardo] "Oh, you lucky man. Next time..." # Eduardo = Exit # Isaac = Exit
+As if on cue, Max makes a loud sound from the center of the room and rises to their feet. # Isaac = Exit
+[Eduardo] "Oh, you lucky man. Next time..." # Eduardo = Exit 
 ->Toast
 
 ===NearCharlotte===
@@ -169,7 +169,7 @@ You have no idea.
 ->TalkingToTimothy
 
 ===TalkingToTimothy===
-[{player_name}] "Hey, Timothy. how's the dinner?"
+[{player_name}] "Hey, Timothy. how's the dinner?" # Max = Exit
 [Timothy] "It's nice. Uh, sorry again for taking the other bed. I'm sure you were enjoying the extra space."
 {
 		-awareness > 1: 
@@ -181,5 +181,5 @@ You have no idea.
 	}
 We spend the next hour or so talking about our interests and such.
 It's mostly small talk, but Timothy relaxes more the longer we chat.
-When it's finally time to head to bed, he seems almost comfortable. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
+When it's finally time to head to bed, he seems almost comfortable. #Timothy=Exit
 -> END

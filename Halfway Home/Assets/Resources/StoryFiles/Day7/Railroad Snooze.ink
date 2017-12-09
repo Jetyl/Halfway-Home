@@ -59,7 +59,7 @@ Timothy looks dead tired. #Timothy=Sad
 "Don't worry, I'm sure today will be a nice and simple day."
 And with that, MAx directed us to begin our morning routine.
 They made special note of me needing to start packing for tomorrow...
-tomorrow...
-Either way, We wrapped up our morning chores, and went off into the day.
+tomorrow... # Max = Exit
+Either way, We wrapped up our morning chores, and went off into the day. # Timothy = Exit
 
 ->END

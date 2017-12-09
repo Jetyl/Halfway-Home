@@ -114,7 +114,11 @@ public class StageDisplay : MonoBehaviour
                 Actors.Remove(Roll);
             }
 
-            if(Roll.Character.Character == eventdata.character)
+            if (eventdata.character.ToLower() == "all")
+            {
+                Roll.ChangePose(eventdata.Pose);
+            }
+            else if(Roll.Character.Character == eventdata.character)
             {
                
                 Roll.ChangePose(eventdata.Pose);
@@ -122,6 +126,9 @@ public class StageDisplay : MonoBehaviour
                 return;
             }
         }
+
+        if (eventdata.character.ToLower() == "all")
+            return;
 
         //if here, character is not on scene
         foreach (var person in CastList)
@@ -152,6 +159,23 @@ public class StageDisplay : MonoBehaviour
 
     void CharacterExit(StageDirectionEvent eventdata)
     {
+
+        if (eventdata.character.ToLower() == "all")
+        {
+            while(Actors.Count != 0)
+            {
+                Actors[0].ExitStage();
+                Actors.Remove(Actors[0]);
+            }
+            
+            for (var i = 0; i < SpotLights.Count; ++i)
+            {
+                SpotLights[(StagePosition)i] = 0;
+            }
+
+        }
+
+
         foreach (var Roll in Actors)
         {
 
@@ -160,6 +184,7 @@ public class StageDisplay : MonoBehaviour
                 Actors.Remove(Roll);
             }
 
+            
             if (Roll.Character.Character == eventdata.character)
             {
 
