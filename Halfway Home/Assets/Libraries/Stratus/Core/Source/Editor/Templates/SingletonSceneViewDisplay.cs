@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   SingletonSceneViewDisplay.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
 
@@ -19,12 +11,12 @@ namespace Stratus
   public abstract class SingletonSceneViewDisplay<T> : LayoutSceneViewDisplay where T : Singleton<T>
   {
     protected virtual bool showInPlayMode { get; } = true;
-    protected T activeInstance => Singleton<T>.get;
+    protected T instance => Singleton<T>.get;
     protected override bool isValid
     {
       get
       {            
-        return showInPlayMode && activeInstance != null && activeInstance.isActiveAndEnabled;
+        return showInPlayMode && instance != null && instance.isActiveAndEnabled;
       }
     }
 

@@ -6,7 +6,6 @@
 @date   5/25/2016
 @note   Credit to: Or-Aviram: 
         https://forum.unity3d.com/threads/draw-a-field-only-if-a-condition-is-met.448855/
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -32,7 +31,7 @@ namespace Stratus
   /// </summary>
   public enum PropertyDrawingType
   {
-    ReadOnly =2,
+    ReadOnly = 2,
     DontDraw = 3
   }
 
@@ -54,7 +53,7 @@ namespace Stratus
     /// <param name="comparedValue">The value the property is being compared to</param>
     /// <param name="comparison">The predicate to use</param>
     /// <param name="default">What should happen if the condition is not met</param>
-    public DrawIfAttribute(string comparedPropertyName, object comparedValue, ComparisonType comparison, PropertyDrawingType defaultBehavior)
+    public DrawIfAttribute(string comparedPropertyName, object comparedValue, ComparisonType comparison, PropertyDrawingType defaultBehavior = PropertyDrawingType.DontDraw)
     {
       this.ComparedPropertyName = comparedPropertyName;
       this.ComparedValue = comparedValue;

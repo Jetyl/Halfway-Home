@@ -81,9 +81,9 @@ namespace HalfwayHome
       // 2. Dialog: Update the current speaker
       Parse speaker = parse.Find(HalfwayHomeStoryReader.speakerLabel);
       if (speaker != null)
-        currentSpeaker = speaker.value;
+        currentSpeaker = speaker.firstValue;
       
-      Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.value, currentSpeaker));
+      Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.firstValue, currentSpeaker));
     }
     
     protected override void OnPresentChoices(List<Choice> choices)

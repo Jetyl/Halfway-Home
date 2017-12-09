@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: c.sagel\@digipen.edu
 @par    DigiPen login: c.sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -15,12 +14,21 @@ namespace Stratus
 {
   public class Checkpoint : MonoBehaviour 
   {
+    /// <summary>
+    /// Signals that a checkpoint hhas been added
+    /// </summary>
     public class AnnounceEvent : Stratus.Event { public Checkpoint Checkpoint; }
-    public static List<Checkpoint> available { get; private set; } = new List<Checkpoint>();
 
+    /// <summary>
+    /// A map of all currently enabled checkpoints, indexed by their names
+    /// </summary>
+    public static Dictionary<string, Checkpoint> available { get; private set; } = new Dictionary<string, Checkpoint>();
+
+    //--------------------------------------------------------------------------------------------/
+    // Messages
+    //--------------------------------------------------------------------------------------------/
     void Start()
     {
-      // Announce that this checkpoint exists!
       var e = new AnnounceEvent();
       e.Checkpoint = this;
       Scene.Dispatch<AnnounceEvent>(e);
@@ -28,15 +36,22 @@ namespace Stratus
 
     private void OnEnable()
     {
-      //Trace.Script("Checkpoint up!", this);
-      available.Add(this);
+      available.Add(name, this);
     }
 
     private void OnDisable()
     {
-      available.Remove(this);
+      available.Remove(name);
     }
 
+    private void OnValidate()
+    {
+      
+    }
+
+    //--------------------------------------------------------------------------------------------/
+    // Methods
+    //--------------------------------------------------------------------------------------------/
     /// <summary>
     /// Warps the selected transform onto the checkpoint
     /// </summary>
@@ -53,9 +68,9 @@ namespace Stratus
     /// <returns></returns>
     public static Vector3 GetPosition(string checkpointName)
     {
-      return available.Find(x => x.name == checkpointName).transform.position;
+      return available[checkpointName].transform.position;
+      //return available.Find(x => x.name == checkpointName).transform.position;
     }
-
 
   }  
 }

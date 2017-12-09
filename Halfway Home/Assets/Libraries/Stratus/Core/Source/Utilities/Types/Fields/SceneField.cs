@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   SceneField.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
@@ -166,17 +158,17 @@ namespace Stratus
     /// Loads this scene
     /// </summary>
     /// <param name="mode"></param>
-    public void Load(LoadSceneMode mode)
+    public void Load(LoadSceneMode mode, Scene.SceneCallback onFinished = null)
     {      
-      Scene.Load(this, true, mode);
+      Scene.Load(this, mode, onFinished);
     }
 
     /// <summary>
     /// Unloads this scene (asynchronously)
     /// </summary>
-    public void Unload()
+    public void Unload(Scene.SceneCallback onFinished = null)
     {
-      Scene.Unload(this);
+      Scene.Unload(this, onFinished);
     }
 
     /// <summary>
@@ -207,7 +199,7 @@ namespace Stratus
     /// <param name="mode"></param>
     public void Add()
     {
-      Scene.AddOrLoad(this);
+      Scene.Load(this);
     }
 
     /// <summary>
@@ -216,7 +208,7 @@ namespace Stratus
     /// <returns>True if the operation succeeded</returns>
     public void Close()
     {
-      Scene.CloseOrUnload(this);
+      Scene.Unload(this);
     }
 
 

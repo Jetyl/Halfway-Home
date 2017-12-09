@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   PariedTrigger.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using Stratus;
 using System;
 
@@ -20,11 +12,16 @@ namespace Stratus
   {
     [Header("Pair Settings")]
     [Tooltip("The other trigger which we activate on")]
-    public Trigger Other;
+    public Trigger other;
     
-    protected override void OnInitialize()
+    protected override void OnAwake()
     {
-      Other.onActivate += this.Activate;
+      other.onActivate += OnPairActivated;
+    }
+
+    void OnPairActivated(Trigger other)
+    {
+      Activate();
     }
 
   }

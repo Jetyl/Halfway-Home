@@ -3,7 +3,6 @@
 @file   EnableEvent.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -18,12 +17,12 @@ namespace Stratus
   /// </summary>
   public class EnableEvent : Triggerable
   {
-    public enum TargetType { Component, GameObject }
+    public enum Action { Enable, Disable, Toggle }
 
-    public Behaviour Target;
-    public TargetType Type = TargetType.Component;
+    [Tooltip("The GameObject being toggled")]
+    public GameObject target;
     [Tooltip("Whether the target is being enabled or disabled")]
-    public bool Enabled = true;
+    public Action action = Action.Enable;
 
     protected override void OnAwake()
     {      
@@ -31,14 +30,16 @@ namespace Stratus
 
     protected override void OnTrigger()
     {
-      //Trace.Script("Enabling!");
-      switch (this.Type)
+      switch (this.action)
       {
-        case TargetType.Component:
-          this.Target.enabled = this.Enabled;
+        case Action.Enable:
+          this.target.SetActive(true);
           break;
-        case TargetType.GameObject:
-          this.Target.gameObject.SetActive(this.Enabled);
+        case Action.Disable:
+          this.target.SetActive(false);
+          break;
+        case Action.Toggle:
+          this.target.SetActive(!this.target.activeSelf);
           break;
       }
     }

@@ -5,7 +5,6 @@
 @par    email: ckpsm@live.com
 @date   7/14/2016
 @brief  A demonstration of how to compose Actions.
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;

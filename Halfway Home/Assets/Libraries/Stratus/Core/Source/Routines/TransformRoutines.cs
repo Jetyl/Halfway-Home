@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -41,7 +40,19 @@ namespace Stratus
         }
       }
     }
+    
+    public static IEnumerator Rotate(Transform transform, Vector3 rotation, float duration, TimeScale timeScale = TimeScale.FixedDelta)
+    {
+      Quaternion initialRotation = transform.rotation;
+      Quaternion targetRotation = Quaternion.Euler(rotation);
 
+      System.Action<float> func = (float t) =>
+      {
+        transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, t);
+      };
+      
+      yield return Lerp(func, duration);
+    }
 
 
     /// <summary>
@@ -79,6 +90,7 @@ namespace Stratus
         yield return Lerp(func, duration);
     }
 
+    
 
     /// <summary>
     /// Rotates around a given pivot until cancelled

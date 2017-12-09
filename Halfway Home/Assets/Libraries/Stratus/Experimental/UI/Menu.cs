@@ -3,7 +3,6 @@
 @file   Menu.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -15,11 +14,9 @@ namespace Stratus
 {
   namespace UI
   {
-    /**************************************************************************/
-    /*!
-    @class Menu Base class for all menu components.
-    */
-    /**************************************************************************/
+    /// <summary>
+    /// Base class for all menus
+    /// </summary>
     public abstract class Menu : Window
     {
       public Window RootWindow;

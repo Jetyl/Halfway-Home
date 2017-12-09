@@ -21,7 +21,7 @@ namespace Stratus
       {
         get
         {
-          return base.isValid && activeInstance.showDisplay;
+          return base.isValid && instance.showDisplay;
         }
       }
 
@@ -39,7 +39,7 @@ namespace Stratus
 
       protected override void OnGUI(Rect position)
       {
-        if (activeInstance.displayLinks)
+        if (instance.displayLinks)
         {
           Handles.color = displayLinksColor;
           foreach (var link in sceneLinks)
@@ -52,7 +52,7 @@ namespace Stratus
           }
         }
 
-        if (activeInstance.displayBoundaries)
+        if (instance.displayBoundaries)
         {
           Handles.color = displayBoundariesColor;
           foreach(var bounds in sceneBoundaries)
@@ -64,7 +64,7 @@ namespace Stratus
 
       protected override void OnGUILayout(Rect position)
       { 
-        if (activeInstance.scenePool == null)
+        if (instance.scenePool == null)
         {
           GUILayout.Label("No ScenePool asset has been set!");
           return;
@@ -72,13 +72,13 @@ namespace Stratus
 
         GUILayout.BeginHorizontal();
         GUILayout.Label("Scenes:");
-        if (GUILayout.Button("Open All")) activeInstance.OpenAll();
-        if (GUILayout.Button("Close All")) activeInstance.CloseAll();
+        if (GUILayout.Button("Open All")) instance.OpenAll();
+        if (GUILayout.Button("Close All")) instance.CloseAll();
         GUILayout.EndHorizontal();
         GUILayout.Space(2.5f);
 
         displayScrollPosition = GUILayout.BeginScrollView(displayScrollPosition, false, false);
-        foreach (var scene in activeInstance.scenes)
+        foreach (var scene in instance.scenes)
         {
           GUILayout.BeginHorizontal();
           GUILayout.Label($"- " + scene.name);
@@ -98,7 +98,7 @@ namespace Stratus
         GUILayout.BeginHorizontal();
         {
           GUILayout.Label($"Links ({sceneLinks.Length})");
-          activeInstance.displayLinks = GUILayout.Toggle(activeInstance.displayLinks, "Show");
+          instance.displayLinks = GUILayout.Toggle(instance.displayLinks, "Show");
           if (GUILayout.Button("Select"))
           {
             foreach(var link in sceneLinks)
@@ -109,8 +109,8 @@ namespace Stratus
           }
         }
         GUILayout.EndHorizontal();
-        activeInstance.displayBoundaries = GUILayout.Toggle(activeInstance.displayBoundaries, "Show scene boundaries");
-        activeInstance.loadOnlyInitial = GUILayout.Toggle(activeInstance.loadOnlyInitial, "Load only initial scene on play");
+        instance.displayBoundaries = GUILayout.Toggle(instance.displayBoundaries, "Show scene boundaries");
+        instance.loadInitial = GUILayout.Toggle(instance.loadInitial, "Load initial scene on play");
 
       }
 

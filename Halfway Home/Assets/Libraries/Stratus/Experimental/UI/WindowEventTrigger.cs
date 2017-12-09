@@ -1,10 +1,9 @@
 /******************************************************************************/
 /*!
-@file   WnidowEventTrigger.cs
+@file   WnidowTrigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -24,7 +23,7 @@ namespace Stratus
       public enum TriggerType { Opened, Closed }
       public TriggerType Type;
       
-      protected override void OnInitialize()
+      protected override void OnAwake()
       {
         if (this.Type == TriggerType.Opened)
           this.gameObject.Connect<Stratus.UI.Window.OpenedEvent>(this.OnWindowOpened);

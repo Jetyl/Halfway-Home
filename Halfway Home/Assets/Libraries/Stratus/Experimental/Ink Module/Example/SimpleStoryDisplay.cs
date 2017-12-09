@@ -1,10 +1,3 @@
-/******************************************************************************/
-/*!
-File:   SimpleStoryDisplay.cs
-Author: Christian Sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -88,8 +81,8 @@ namespace Stratus
           Parse message = line.Find("Message");
           if (speaker != null && message != null)
           {
-            speakerText.text = speaker.value;
-            messageText.text = message.value;
+            speakerText.text = speaker.firstValue;
+            messageText.text = message.firstValue;
           }
         }
       }

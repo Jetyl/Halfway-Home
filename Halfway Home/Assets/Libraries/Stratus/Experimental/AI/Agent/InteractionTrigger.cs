@@ -3,7 +3,6 @@
 @file   InteractionTrigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -27,7 +26,7 @@ namespace Stratus
       /// <summary>
       /// Initializes the InteractionTrigger, subscribing to events with the player
       /// </summary>
-      protected override void OnInitialize()
+      protected override void OnAwake()
       {
         this.gameObject.Connect<Sensor.ScanEvent>(this.OnScanEvent);
         this.gameObject.Connect<Agent.InteractEvent>(this.OnInteractEvent);

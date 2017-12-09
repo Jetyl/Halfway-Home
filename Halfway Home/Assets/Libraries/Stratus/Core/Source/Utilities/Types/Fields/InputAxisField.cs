@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   InputAxisField.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Stratus
@@ -24,7 +16,8 @@ namespace Stratus
     {
       Pressed,
       Down,
-      Up
+      Up,
+      None
     }
 
     #pragma warning disable 414
@@ -38,6 +31,10 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Methods
     //------------------------------------------------------------------------/
+    /// <summary>
+    /// set axis
+    /// </summary>
+    public void setAxis(string axisName) { axis = axisName; }
     /// <summary>
     /// Returns true if the current value of the virtual axis is greater than 0
     /// </summary>
@@ -70,7 +67,6 @@ namespace Stratus
     /// Returns true the first frame the user releases the button
     /// </summary>
     public bool isUp { get { return Input.GetButtonUp(axis); } }
-
 
 
 

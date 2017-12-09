@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   RoutinesExtensions.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using Stratus;
 
 
@@ -63,7 +55,7 @@ namespace Stratus
     /// <param name="routine"></param>
     /// <param name="tag"></param>
     /// <param name="onFinished"></param>
-    public static void StartTaggedCoroutine(this MonoBehaviour mb, IEnumerator routine, string tag, System.Action onFinished = null)
+    public static void StartCoroutine(this MonoBehaviour mb, IEnumerator routine, string tag, System.Action onFinished = null)
     {
       TaggedRoutines.StartCoroutine(mb, routine, tag, onFinished);
     }

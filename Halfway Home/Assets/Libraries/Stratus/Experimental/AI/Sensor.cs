@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -125,7 +124,6 @@ namespace Stratus
       }
       
       private Agent agent;      
-      private Color idleColor = Color.green;
       private Color detectionColor => new Color(1f, 0.5f, 0f, 0.1f);
       private Color interactionColor => new Color(0f, 1f, 0f, 0.1f);
       private Stopwatch scanTimer;

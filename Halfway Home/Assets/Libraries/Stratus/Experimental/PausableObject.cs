@@ -4,7 +4,6 @@
 @file   PauseBehaviour.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using System.Collections;
@@ -13,6 +12,7 @@ using UnityEngine;
 using Stratus;
 using System.Linq;
 using UnityEngine.AI;
+using System.Linq.Expressions;
 
 namespace Stratus
 {
@@ -22,17 +22,48 @@ namespace Stratus
   /// </summary>
   public abstract class PausableObject : MonoBehaviour
   {
-    // Properties
-    private bool isInitialized { get; set; }
+    //------------------------------------------------------------------------/
+    // Definitions
+    //------------------------------------------------------------------------/
+    public class ComponentState<ComponentType, State> where ComponentType : Component where State : struct
+    {
+      public ComponentType component;
+      public State lastState;
+      //public State beforeLastState;
 
+      public ComponentState(ComponentType component, State state)
+      {
+        this.component = component;
+        this.lastState = state;
+      }      
+    }
+
+    //------------------------------------------------------------------------/
     // Fields
-    private Behaviour[] behaviours;
-    private Rigidbody[] rigidbodies;
+    //------------------------------------------------------------------------/
+    [Tooltip("Whether lights should be considered for pausing")]
+    public bool ignoreLights = true;
+
+    private List<ComponentState<Behaviour, bool>> behaviours = new List<ComponentState<Behaviour, bool>>();
+    private List<ComponentState<Rigidbody, Vector3>> rigidbodies = new List<ComponentState<Rigidbody, Vector3>>();
     private ParticleSystem[] particleSystems;
     private bool[] particleStates;
-    private Vector3 previousVelocity;
 
+    //------------------------------------------------------------------------/
+    // Properties
+    //------------------------------------------------------------------------/
+    /// <summary>
+    /// Whether this pausable objet has been initialized
+    /// </summary>
+    private bool initialized { get; set; }
+    /// <summary>
+    /// Whether the objects are being currently paused
+    /// </summary>
+    public static bool paused { get; private set; }
+
+    //------------------------------------------------------------------------/
     // Virtual
+    //------------------------------------------------------------------------/
     protected abstract void SetPauseMechanism();
     protected virtual void OnStart() {}
 
@@ -44,7 +75,7 @@ namespace Stratus
       SetPauseMechanism();
       RegisterPausableComponents();
       OnStart();
-      this.isInitialized = true;
+      initialized = true;
     }
     
     //------------------------------------------------------------------------/
@@ -56,11 +87,14 @@ namespace Stratus
     /// <param name="paused"></param>
     protected void Pause(bool paused)
     {
-      if (!isInitialized)
+      if (!initialized)
         RegisterPausableComponents();
-      
-      ToggleBehaviours(paused);
-      ToggleRigidBodies(paused);
+
+      PausableObject.paused = paused;
+      bool enabled = !paused;
+      ToggleBehaviours(enabled);
+      ToggleRigidBodies(enabled);
+
       ToggleParticleSystems(paused);
     }
 
@@ -70,11 +104,30 @@ namespace Stratus
     /// </summary>
     void RegisterPausableComponents()
     {
-      // Add all behaviours (except renderers)
-      this.behaviours = this.gameObject.GetComponentsInChildren<Behaviour>();
-      this.rigidbodies = this.gameObject.GetComponentsInChildren<Rigidbody>();
+      // Add all behaviours (except renderers and lights)
+      foreach (var behaviour in gameObject.GetComponentsInChildren<Behaviour>())
+      {
+        if (behaviour is Light && ignoreLights)
+          continue;
 
-      // Particles: Save their states
+        behaviours.Add(new ComponentState<Behaviour, bool>(behaviour, behaviour.enabled));
+      }
+
+      // Add all rigidbodies
+      foreach (var rb in gameObject.GetComponentsInChildren<Rigidbody>())
+      {
+        rigidbodies.Add(new ComponentState<Rigidbody, Vector3>(rb, rb.velocity));
+      }
+
+      //this.behaviours = (from behavior
+      //                  in gameObject.GetComponentsInChildren<Behaviour>()
+      //                   where !(behavior is Light)
+      //                   select behavior).ToArray();
+
+      // Add rigidbodies
+      //this.rigidbodies = this.gameObject.GetComponentsInChildren<Rigidbody>();
+
+      // Add particles, saving their states
       this.particleSystems = this.gameObject.GetComponentsInChildren<ParticleSystem>();
       this.particleStates = new bool[particleSystems.Length];
       for (var i = 0; i < particleSystems.Length; ++i)
@@ -88,12 +141,27 @@ namespace Stratus
     /// Toggles all behaviour-derived components
     /// </summary>
     /// <param name="paused"></param>
-    void ToggleBehaviours(bool paused)
+    void ToggleBehaviours(bool enabled)
     {
-      // Other behaviours
       foreach (var behaviour in behaviours)
       {
-        behaviour.enabled = !paused;
+        // If we should enable this component, only attempt to do so if the following conditions are met:
+        // a) the object is currently enabled
+        bool currentlyEnabled = behaviour.component.enabled;
+        // b) if it was previously enabled before the last pause
+        bool previouslyEnabled = (behaviour.lastState == true);
+        if (enabled && !currentlyEnabled && previouslyEnabled)
+        {
+          behaviour.component.enabled = true;        
+          behaviour.lastState = currentlyEnabled;
+        }
+
+        // If we need to disable this component, only do so if it is currently enabled
+        else if (!enabled && currentlyEnabled)
+        {
+          behaviour.component.enabled = false;
+          behaviour.lastState = currentlyEnabled;
+        }
       }
     }
 
@@ -101,21 +169,24 @@ namespace Stratus
     /// Toggles all rigidbodies
     /// </summary>
     /// <param name="paused"></param>
-    void ToggleRigidBodies(bool paused)
+    void ToggleRigidBodies(bool enabled)
     {
       foreach (var rb in rigidbodies)
       {
-        if (paused)
+        // If we should enable this rigidbody, only do so if:
+        // a) it is currently sleeping
+        bool sleeping = rb.component.IsSleeping();
+        if (enabled && sleeping)
         {
-          rb.useGravity = false;
-          previousVelocity = rb.velocity;
-          rb.Sleep();
+          rb.component.useGravity = true;
+          rb.component.WakeUp();
+          rb.component.velocity = rb.lastState;          
         }
-        else
+        else if (!enabled && !sleeping)
         {
-          rb.useGravity = true;
-          rb.WakeUp();
-          rb.velocity = previousVelocity;
+          rb.component.useGravity = false;
+          rb.lastState = rb.component.velocity;
+          rb.component.Sleep();
         }
       }
     }
@@ -152,6 +223,7 @@ namespace Stratus
 
       }
     }
+       
 
   }
 

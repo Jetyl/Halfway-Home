@@ -1,10 +1,3 @@
-/******************************************************************************/
-/*!
-File:   StoryReader.cs
-Author: Christian Sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +27,8 @@ namespace Stratus
         public bool listeningToScene = false;
         [Tooltip("Whether to automatically restart an ended story on load")]
         public bool automaticRestart = false;
+        [Tooltip("Whether story events should be queued, for one to play after the other")]
+        public bool queueStories = false;
 
         [Header("States")]
         [Tooltip("Whether the state of stories should automatically be saved by default")]
@@ -48,6 +43,10 @@ namespace Stratus
         /// The current data for this reader
         /// </summary>
         private StorySave storySave = new StorySave();
+        /// <summary>
+        /// The queue of stories to be played
+        /// </summary>
+        private Queue<Story.LoadEvent> storyQueue = new Queue<Story.LoadEvent>();
 
         //------------------------------------------------------------------------------------------/
         // Properties
@@ -75,7 +74,10 @@ namespace Stratus
         /// The name of the folder to store the data of this reader at
         /// </summary>
         protected virtual string saveFolder => "Stratus Example";
-
+        /// <summary>
+        /// Whether this story reader is currently reading a story
+        /// </summary>
+        public bool currentlyReading { get; private set; }
         //------------------------------------------------------------------------------------------/
         // Virtual Functions
         //------------------------------------------------------------------------------------------/
@@ -92,8 +94,8 @@ namespace Stratus
         private void Awake()
         {
           Subscribe();
-          OnAwake();
           OnLoad(stories);
+          OnAwake();
         }
 
         /// <summary>
@@ -188,10 +190,19 @@ namespace Stratus
           story = newStory;
 
           // If a knot was provided
-          if (knot != null)
+          if (knot != null && knot.Length > 0)
+          {
+            if (!story.runtime.canContinue)
+            {
+              if (automaticRestart)
+                Restart();
+              else
+                Trace.Error($"The story {story.name} has already been ended, thus we can't jump to the knot!", this);
+            }
             JumpToKnot(knot);
+          }
           else if (restart)          
-            TryRestart();
+            Restart();
           
 
           // Start it
@@ -216,13 +227,23 @@ namespace Stratus
         }
 
         /// <summary>
-        /// Attempt to restart the stry
+        /// Starts the story
         /// </summary>
-        void TryRestart()
+        void GoToStart()
+        {
+          if (logging)
+            Trace.Script($"Navigating to the start of the story {story.name}", this);
+          story.runtime.state.GoToStart();
+        }
+
+        /// <summary>
+        /// Attempt to restart the story back to its initial state
+        /// </summary>
+        void Restart()
         {         
            if (logging)
-              Trace.Script("Restarting the story '" + story.name + "'!", this);
-            story.runtime.state.GoToStart();
+              Trace.Script("Restarting the state for the story '" + story.name + "'", this);
+            story.runtime.ResetState();
         }
 
         //------------------------------------------------------------------------------------------/
@@ -248,7 +269,16 @@ namespace Stratus
 
         void OnLoadEvent(Story.LoadEvent e)
         {
-          this.LoadStory(e.storyFile, e.restart, e.knot);
+          // If we are currently in the middle of a story, have allowed stories to be queued, and this story
+          // requests to be queued...
+          if (currentlyReading && queueStories && e.queue)
+          {
+            Trace.Script($"Queued up the story {e.storyFile.name}!");
+            storyQueue.Enqueue(e);
+          }
+          // Otherwise take over the current story
+          else
+            this.LoadStory(e.storyFile, e.restart, e.knot);
         }
 
         void OnContinueEvent(Story.ContinueEvent e)
@@ -372,7 +402,7 @@ namespace Stratus
         /// <summary>
         /// Stops the current story
         /// </summary>
-        public void Pause()
+        public void Stop()
         {
           EndStory();
         }
@@ -444,7 +474,7 @@ namespace Stratus
           if (StorySave.Exists(saveFileName, saveFolder))
           {
             storySave = StorySave.Load(saveFileName, saveFolder);
-                        
+
             // From list to dictionary!
             foreach (var story in storySave.stories)
             {
@@ -485,6 +515,8 @@ namespace Stratus
           startedEvent.readerObject = this.gameObject;
           this.gameObject.Dispatch<Story.StartedEvent>(startedEvent);
           Scene.Dispatch<Story.StartedEvent>(startedEvent);
+
+          currentlyReading = true;
 
           // Update the first line of dialog
           this.ContinueStory(!resume);
@@ -530,7 +562,17 @@ namespace Stratus
           Scene.Dispatch<Story.EndedEvent>(storyEnded);
 
           // Save the story
-          Save();          
+          Save();
+
+          currentlyReading = false;
+
+          // If we are queuing stories and there's one queueud up, let's start it
+          if (queueStories && storyQueue.Count > 0)
+          {
+            var e = storyQueue.Dequeue();
+            this.LoadStory(e.storyFile, e.restart, e.knot);
+          }
+
         }
 
         //------------------------------------------------------------------------------------------/
@@ -595,8 +637,7 @@ namespace Stratus
           this.stitch = "." + stitchName;
           if (logging)
             Trace.Script("Updating stitch to '" + stitch + "'", this);
-        }       
-
+        }     
       }
 
       /// <summary>
@@ -618,10 +659,8 @@ namespace Stratus
 
         protected override void OnAwake()
         {
-
           parser = new ParserType();
           OnConfigureParser(parser);
-          
         }
 
         public string latestKnot { get; private set; }

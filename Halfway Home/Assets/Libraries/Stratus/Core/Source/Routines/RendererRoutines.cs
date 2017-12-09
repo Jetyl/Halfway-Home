@@ -3,7 +3,6 @@
 @file   RendererRoutines.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -74,6 +73,22 @@ namespace Stratus
         light.range = Lerp(startRange, range, t);
         light.intensity = Lerp(startIntensity, intensity, t);
         //Trace.Script($" color = {light.color} range = {light.range} intensity = {light.intensity}");
+      };
+
+      yield return Lerp(func, duration, timeScale);
+    }
+
+    public static IEnumerator Blend(Light light, Color color, float intensity, float range, float duration, TimeScale timeScale = TimeScale.Delta)
+    {
+      Color startColor = light.color;
+      float startRange = light.range;
+      float startIntensity = light.intensity;
+
+      System.Action<float> func = (float t) =>
+      {
+        light.color = Color.Lerp(startColor, color, t);
+        light.range = Lerp(startRange, range, t);
+        light.intensity = Lerp(startIntensity, intensity, t);
       };
 
       yield return Lerp(func, duration, timeScale);

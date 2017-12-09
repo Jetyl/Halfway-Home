@@ -5,7 +5,6 @@
 @par    email: c.sagel\@digipen.edu
 @par    DigiPen login: c.sagel
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -49,6 +48,18 @@ namespace Stratus
     {
       int randomSelection = UnityEngine.Random.Range(0, list.Count);
       return list[randomSelection];
+    }
+
+    /// <summary>
+    /// Returns a random element from the array
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="source"></param>
+    /// <returns></returns>
+    public static T Random<T>(this T[] array)
+    {
+      int randomSelection = UnityEngine.Random.Range(0, array.Length);
+      return array[randomSelection];
     }
 
     /// <summary>

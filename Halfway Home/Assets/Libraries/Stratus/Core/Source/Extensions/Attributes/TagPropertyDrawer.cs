@@ -6,7 +6,6 @@
 @date   5/25/2016
 @note   Original by DYLAN ENGELMAN http://jupiterlighthousestudio.com/custom-inspectors-unity/
         Altered by Brecht Lecluyse http://www.brechtos.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 #if UNITY_EDITOR

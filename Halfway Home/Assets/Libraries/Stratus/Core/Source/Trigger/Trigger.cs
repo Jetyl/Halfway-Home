@@ -3,12 +3,12 @@
 @file   EventTrigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
 using Stratus;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 namespace Stratus
 {
@@ -31,10 +31,13 @@ namespace Stratus
       /// Instructs the triggerable to deactivate
       /// </summary>
       [Tooltip("Instructs the triggerable to deactivate")]
-      Off
+      Off,
+      /// <summary>
+      /// Instructs the triggerable something it cared about happened
+      /// </summary>
+      [Tooltip("Instructs the triggerable something it cared about happened")]
+      Signal
     }
-
-    
 
     /// <summary>
     /// When received by a triggerable component, it will activate it
@@ -63,10 +66,10 @@ namespace Stratus
     /// </summary>
     public enum DeliveryMethod
     {
-      [Tooltip("All triggerables on the target's GameObject will be triggered")]
-      All,
-      [Tooltip("Only the target triggerable will be triggered")]
-      Single
+      [Tooltip("All triggerable components in the GameObject will be triggered")]
+      GameObject,
+      [Tooltip("Only the target triggerable component will be triggered")]
+      Component
     }
 
     //------------------------------------------------------------------------/
@@ -74,22 +77,22 @@ namespace Stratus
     //------------------------------------------------------------------------/
     [Header("Targeting")]
     [Tooltip("What component to send the trigger event to")]
-    public Stratus.Triggerable target;
+    public List<Triggerable> targets = new List<Triggerable>();
     [Tooltip("What instruction to send to the triggerable")]
     public Instruction instruction;
     [Tooltip("Whether the trigger will be sent to the GameObject as an event or invoked directly on the dispatcher component")]
-    public DeliveryMethod delivery = DeliveryMethod.All;
+    public DeliveryMethod delivery = DeliveryMethod.GameObject;
     [Tooltip("Whether it should also trigger all of the target's children")]
     public bool recursive = false;
-    
+
     [Header("Lifetime")]
-    [Tooltip("Whether the trigger should persist after being activated")]    
+    [Tooltip("Whether the trigger should persist after being activated")]
     public bool persistent = true;
 
     /// <summary>
     /// Subscribe to be notified when this trigger has been activated
     /// </summary>
-    public UnityAction onActivate { get; set; } = () => {};
+    public UnityAction<Trigger> onActivate { get; set; } = (Trigger trigger) => { };
 
     //------------------------------------------------------------------------/
     // Properties
@@ -106,25 +109,38 @@ namespace Stratus
     /// <summary>
     /// Invoked the first time this trigger is initialized
     /// </summary>
-    protected abstract void OnInitialize();
+    protected abstract void OnAwake();
 
     /// <summary>
     /// Invoked when this trigger is enabled
     /// </summary>
-    protected virtual void OnEnabled() {}
+    protected virtual void OnEnabled() { }
 
     //------------------------------------------------------------------------/
-    // Methods
+    // Messages
     //------------------------------------------------------------------------/
     /// <summary>
     /// On awake, thee trigger first initializes the subclass before connecting to enabled events
     /// </summary>
     void Awake()
     {
-      this.OnInitialize();
+      this.OnAwake();
       this.gameObject.Connect<EnableEvent>(this.OnEnableEvent);
     }
 
+    private void OnValidate()
+    {
+      
+    }
+
+    private void Reset()
+    {
+      targets.Add(null);
+    }
+
+    //------------------------------------------------------------------------/
+    // Methods
+    //------------------------------------------------------------------------/
     /// <summary>
     /// If the trigger was initially disabled,, enables it
     /// </summary>
@@ -139,39 +155,59 @@ namespace Stratus
     /// </summary>
     protected void Activate()
     {
-      if (enabled)
-      {
-        if (delivery == DeliveryMethod.All)
-        {
-          if (!this.target)
-          {
-            Trace.Error("No target set!", this, true);
-          }
+      if (!enabled)
+        return;
 
-          this.target.gameObject.Dispatch<TriggerEvent>(triggerEvent);
+      // Dispatch the trigger event onto a given target if one is provided
+      foreach(var target in targets)
+      {
+        if (delivery == DeliveryMethod.GameObject)
+        {
+          target.gameObject.Dispatch<TriggerEvent>(triggerEvent);
           if (this.recursive)
           {
-            foreach (var child in this.target.gameObject.Children())
+            foreach (var child in target.gameObject.Children())
             {
               child.Dispatch<TriggerEvent>(triggerEvent);
             }
           }
         }
 
-        else if (delivery == DeliveryMethod.Single)
+        else if (delivery == DeliveryMethod.Component)
         {
-          this.target.Trigger();
+          target.Trigger();
         }
-
-        // If not persistent, disable
-        if (!persistent)
-        {
-          this.enabled = false;
-        }
-
-        this.onActivate();
-        //if (isDebug) Trace.Script("Triggering!", this);
       }
+
+      //if (target)
+      //{
+      //  if (delivery == DeliveryMethod.Event)
+      //  {
+      //    this.target.gameObject.Dispatch<TriggerEvent>(triggerEvent);
+      //    if (this.recursive)
+      //    {
+      //      foreach (var child in this.target.gameObject.Children())
+      //      {
+      //        child.Dispatch<TriggerEvent>(triggerEvent);
+      //      }
+      //    }
+      //  }
+      //
+      //  else if (delivery == DeliveryMethod.Invoke)
+      //  {
+      //    this.target.Trigger();
+      //  }
+      //}
+
+      // If not persistent, disable
+      if (!persistent)
+      {
+        this.enabled = false;
+      }
+
+      // Announce this trigger was activated
+      this.onActivate(this);
+
     }
 
 

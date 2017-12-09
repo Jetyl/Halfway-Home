@@ -1,9 +1,8 @@
 /******************************************************************************/
 /*!
-@file   SceneBrowser.cs
+@file   SceneSelector.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -97,6 +96,13 @@ namespace Stratus
       GUILayout.Label("Bookmarks", EditorStyles.centeredGreyMiniLabel);
       foreach (var scene in BookmarkedScenes)
       {
+        // If it was deleted from the outside, we need to remove this reference
+        if (scene == null)
+        {
+          RemoveBookmarkedScene(scene);
+          return;
+        }
+
         EditorGUILayout.BeginHorizontal();
         // Open scene
         if (GUILayout.Button(scene.name, EditorStyles.toolbarButton))

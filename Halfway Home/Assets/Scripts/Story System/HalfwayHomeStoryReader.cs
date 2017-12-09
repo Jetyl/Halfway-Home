@@ -107,15 +107,32 @@ namespace HalfwayHome
 
     void OnPoseChange(Parse parse)
     {
-      if(parse.Find("Pose") == "Exit")
+      foreach(var match in parse.matches)
       {
-        Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
+        if (match.ContainsKey("Pose"))
+        {
+          var pose = match["Pose"];
+          var person = match["Person"];
+          if (pose == "exit")
+            Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(person, "Calm"));
+          else
+          {
+            Trace.Script(parse.Find("Person"));
+            Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(person, pose));
+          }
+        }
+
+        //if(parse.Find("Pose") == "Exit")
+        //{
+        //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
+        //}
+        //else
+        //{
+        //  Trace.Script(parse.Find("Person"));        
+        //  Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
+        //}
       }
-      else
-      {
-        Trace.Script(parse.Find("Person"));
-        Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
-      }
+
     }
     
     void OnSocialStatIncrement(Parse parse)

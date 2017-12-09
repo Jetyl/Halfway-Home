@@ -5,7 +5,6 @@
 @par    email: ckpsm@live.com
 @note  Resource: It3ration
        http://answers.unity3d.com/questions/489942/how-to-make-a-readonly-property-in-inspector.html
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 #if UNITY_EDITOR

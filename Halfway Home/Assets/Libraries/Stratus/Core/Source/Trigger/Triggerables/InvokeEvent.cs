@@ -3,7 +3,6 @@
 @file   InvokeDispatcher.cs
 @author Christian Sagel
 @par    email: ckpsm\@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -21,7 +20,7 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Properties
     //------------------------------------------------------------------------/
-    public UnityEvent Method = new UnityEvent();
+    public UnityEvent callbacks = new UnityEvent();
 
     //------------------------------------------------------------------------/
     // Methods
@@ -32,7 +31,7 @@ namespace Stratus
 
     protected override void OnTrigger()
     {
-      Method.Invoke();
+      callbacks.Invoke();
     }
   }
 

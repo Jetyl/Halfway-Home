@@ -1,10 +1,3 @@
-/******************************************************************************/
-/*!
-File:   StoryDisplay.cs
-Author: Christian Sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -155,12 +148,14 @@ namespace Stratus
         /// <param name="choice"></param>
         public void SelectChoice(Choice choice)
         {
-          Trace.Script(choice + " was selected");
+          if (logging)
+            Trace.Script(choice.text + " was selected", this);
 
           // Inform the current conversation of the choice
           var choiceEvent = new Story.SelectChoiceEvent();
           choiceEvent.choice = choice;
           readerObject.gameObject.Dispatch<Story.SelectChoiceEvent>(choiceEvent);
+          Scene.Dispatch<Story.SelectChoiceEvent>(choiceEvent);
 
           // Now do any extra stuff
           OnChoiceSelected();
@@ -172,6 +167,7 @@ namespace Stratus
         public void ContinueStory()
         {
           readerObject.Dispatch<Story.ContinueEvent>(new Story.ContinueEvent());
+          Scene.Dispatch<Story.ContinueEvent>(new Story.ContinueEvent());
         }
       }
     } 

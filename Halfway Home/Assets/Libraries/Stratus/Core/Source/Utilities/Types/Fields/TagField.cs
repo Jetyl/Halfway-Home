@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   TagField.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Stratus
@@ -20,6 +12,18 @@ namespace Stratus
     [SerializeField]
     private string tag = "Untagged";
     public static implicit operator string(TagField tagField) { return tagField.tag; }
+
+    /// <summary>
+    /// The current value of this tag
+    /// </summary>
+    public string value { get { return tag; } set { tag = value; } }
+
+    /// <summary>
+    /// Checks whether the GameObject has this tag
+    /// </summary>
+    /// <param name="go"></param>
+    /// <returns></returns>
+    public bool Matches(GameObject go) => go.tag == this;
   }
 
 }

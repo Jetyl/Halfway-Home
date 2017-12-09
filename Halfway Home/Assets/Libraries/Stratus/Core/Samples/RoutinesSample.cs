@@ -1,13 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   RoutinesSample.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using Stratus;
 using System.Collections;
 
@@ -109,7 +100,7 @@ namespace Stratus
       void ScaleSequence()
       {
         var scaling = Routines.Scale(transform, new float[] { 0.5f, 4f, 1f }, duration, repeat);
-        this.StartTaggedCoroutine(scaling, "Scale");
+        this.StartCoroutine(scaling, "Scale");
       }
 
       void StopScaleSequence()

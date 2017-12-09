@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 #if UNITY_EDITOR
@@ -97,13 +96,17 @@ namespace Stratus
 
       // If the condition is met, draw the field
       if (conditionMet)
+      {
+        //EditorGUILayout.PropertyField(property);
         EditorGUI.PropertyField(position, property);
+      }
       // Otherwise use the default ebhavior
       else
       {
         if (DrawIf.DefaultBehavior == PropertyDrawingType.ReadOnly)
         {
           UnityEngine.GUI.enabled = false;
+          //EditorGUILayout.PropertyField(property);
           EditorGUI.PropertyField(position, property);
           UnityEngine.GUI.enabled = true;
         }

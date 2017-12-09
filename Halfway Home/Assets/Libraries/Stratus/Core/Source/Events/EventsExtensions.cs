@@ -5,7 +5,6 @@
 @par    email: ckpsm@live.com
 @date   5/25/2016
 @brief  Extends base Unity classes to provide functionality.
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;

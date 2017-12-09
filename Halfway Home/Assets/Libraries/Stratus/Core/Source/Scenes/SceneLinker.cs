@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   SceneLinker.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Stratus
 {
@@ -30,13 +22,10 @@ namespace Stratus
       //----------------------------------------------------------------------/
       // Properties: Public
       //----------------------------------------------------------------------/
-      /// <summary>
-      /// Whether to show a debug display in the editor's scene view
-      /// </summary>
       [Tooltip("Whether to show a debug display in the editor's scene view")]
       public bool showDisplay = true;
-      [Tooltip("Whether to close all other open scenes on entering play mode")]
-      public bool loadOnlyInitial = true;
+      [Tooltip("Whether the initial scene should be automatically loaded when entering Play")]
+      public bool loadInitial = true;
       [Tooltip("Whether to highlight all current scene links in the scene")]
       public bool displayLinks = true;
       [Tooltip("Whether to higlight the boundaries of all scenes")]
@@ -46,38 +35,19 @@ namespace Stratus
       // Messages
       //----------------------------------------------------------------------/
       protected override void OnAwake()
-      {        
-        if (!scenePool.initialScene.isLoading)
-        {
-          Trace.Script("Loading initial scene");
-          scenePool.initialScene.Load(UnityEngine.SceneManagement.LoadSceneMode.Additive);
-        }
+      {
+        if (scenePool.initialScene == null)
+          return;
 
-        //if (loadOnlyInitial)
-        //{
-        //  foreach(var scene in Scene.activeScenes)
-        //  {
-        //    if (scene == scenePool.initialScene)
-        //      continue;
-        //
-        //    // Don't unload the scene this linker is on!
-        //    // @TODO: Do something about the equals function?
-        //    if (scene.name == Scene.activeScene.name)
-        //      continue;
-        //
-        //    //if (scene.isLoading)
-        //    Trace.Script("Unloading " + scene.name);
-        //    scene.Close();
-        //  }
-        //}
-
+        if (loadInitial)
+          LoadInitialScene();
       }
 
       //----------------------------------------------------------------------/
       // Methods
       //----------------------------------------------------------------------/
       /// <summary>
-      /// Opens all scenes in the editor
+      /// Opens all scenes
       /// </summary>
       public void OpenAll()
       {
@@ -85,11 +55,35 @@ namespace Stratus
       }
 
       /// <summary>
-      /// Closes all scenes in the editor
+      /// Closes all scenes
       /// </summary>
       public void CloseAll()
       {
+        //Trace.Script("Closing all scenes");
         scenePool.CloseAll();
+      }
+      
+      /// <summary>
+      /// Restarts from the beginning, from the initial scene
+      /// </summary>      
+      public void Restart(System.Action onFinished = null)
+      {        
+       scenePool.CloseAll(()=>
+       {
+         LoadInitialScene(onFinished);
+       });
+      }
+
+      public void LoadInitialScene(System.Action onFinished = null)
+      {
+        if (scenePool.initialScene.isLoading)
+          return;
+
+        scenePool.initialScene.Load(UnityEngine.SceneManagement.LoadSceneMode.Additive, () =>
+        {
+          //Trace.Script("Finished loading initial scene");
+          onFinished?.Invoke();
+        });
       }
     }
   }

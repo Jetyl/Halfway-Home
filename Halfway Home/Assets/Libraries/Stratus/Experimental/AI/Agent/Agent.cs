@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: c.sagel\@digipen.edu
 @par    DigiPen login: c.sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -107,6 +106,8 @@ namespace Stratus
       //------------------------------------------------------------------------/
       // Interface
       //------------------------------------------------------------------------/
+      protected abstract void OnAgentAwake();
+      protected abstract void OnAgentDestroy();
       protected abstract void OnStart();
       protected abstract void OnSubscribe();
       protected abstract void OnUpdate();
@@ -125,22 +126,40 @@ namespace Stratus
       //------------------------------------------------------------------------/
       // Messages
       //------------------------------------------------------------------------/
-      /// <summary>
-      /// Initializes this agent
-      /// </summary>
-      void Start()
+      private void Awake()
       {
-        if (this.logging) this.AddLineRenderer();
-
         // Cache the main components, ho!
         this.navigation = GetComponent<NavMeshAgent>(); ;
         this.sensor = GetComponent<Sensor>();
         this.rigidbody = GetComponent<Rigidbody>();
 
+        // Subscribe to events
         this.Subscribe();
+
+        OnAgentAwake();
+      }
+
+      private void OnDestroy()
+      {
+        OnAgentDestroy();        
+      }
+
+      /// <summary>
+      /// Initializes this agent
+      /// </summary>
+      void Start()
+      {
+        if (this.logging) this.AddLineRenderer();        
         this.OnStart();
         currentState = State.Idle;
       }
+
+      //void OnEnable()
+      //{
+      //  this.navigation = GetComponent<NavMeshAgent>(); ;
+      //  this.sensor = GetComponent<Sensor>();
+      //  this.rigidbody = GetComponent<Rigidbody>();
+      //}
 
       /// <summary>
       /// Updates this agent
@@ -167,6 +186,10 @@ namespace Stratus
 
       private void OnEnable()
       {
+        this.navigation = GetComponent<NavMeshAgent>(); ;
+        this.sensor = GetComponent<Sensor>();
+        this.rigidbody = GetComponent<Rigidbody>();
+
         if (this.steeringRoutine != null)
         {
           //Trace.Script("Resuming steering!", this);
@@ -174,7 +197,6 @@ namespace Stratus
           StartCoroutine(this.steeringRoutine);
         }
       }
-
 
       //------------------------------------------------------------------------/
       // Events

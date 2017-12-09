@@ -1,11 +1,4 @@
-/******************************************************************************/
-/*!
-@file   EventTrigger.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
+
 using System;
 using Stratus.Dependencies.TypeReferences;
 using UnityEngine;
@@ -24,7 +17,7 @@ namespace Stratus
     [Tooltip("The scope of the event")]
     public Event.Scope scope;
 
-    protected override void OnInitialize()
+    protected override void OnAwake()
     {
       if (type.Type == null)
       {

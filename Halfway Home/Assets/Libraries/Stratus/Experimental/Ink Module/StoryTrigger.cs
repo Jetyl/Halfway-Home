@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   StoryTrigger.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using UnityEngine;
 
 namespace Stratus
@@ -19,38 +11,35 @@ namespace Stratus
       /// </summary>
       public class StoryTrigger : Trigger
       {
-        public enum Type
-        {
-          Loaded,
-          Started,
-          Continue,
-          Ended
-        }
+
 
         [Tooltip("The story this trigger is reacting to")]
         public StoryReader reader;
         [Tooltip("What type of event this is being triggered by")]
-        public Type storyEvent;
+        public Story.EventType storyEvent;
         [Tooltip("What variable we are ")]
         public Story.Variable variable;
 
         // Fields
         private TextAsset storyFile;
 
-        protected override void OnInitialize()
+        protected override void OnAwake()
         {
+          if (reader == null)
+            reader = FindObjectOfType<StoryReader>();
+
           switch (storyEvent)
           {
-            case Type.Loaded:
+            case Story.EventType.Loaded:
               reader.gameObject.Connect<Story.LoadedEvent>(this.OnStoryLoadedEvent);
               break;
-            case Type.Started:
+            case Story.EventType.Started:
               reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
               break;
-            case Type.Continue:
+            case Story.EventType.Continue:
               reader.gameObject.Connect<Story.ContinueEvent>(this.OnStoryContinueEvent);
               break;
-            case Type.Ended:
+            case Story.EventType.Ended:
               reader.gameObject.Connect<Story.EndedEvent>(this.OnStoryEndedEvent);
               break;
           }

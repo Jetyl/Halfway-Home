@@ -4,21 +4,20 @@
 @author Christian Sagel
 @par    email: c.sagel\@digipen.edu
 @par    DigiPen login: c.sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
 using Stratus;
 using System;
 
-namespace Prototype 
+namespace Stratus 
 {
   public class InputTrigger : Trigger
   {
     public InputField input = new InputField();
     public InputField.Action action = InputField.Action.Down;
     
-    protected override void OnInitialize()
+    protected override void OnAwake()
     {      
     }
 

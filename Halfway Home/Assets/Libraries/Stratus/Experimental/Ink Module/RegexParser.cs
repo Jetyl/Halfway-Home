@@ -1,16 +1,5 @@
-/******************************************************************************/
-/*!
-@file   RegexParser.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Text.RegularExpressions;
-using System;
 
 namespace Stratus
 {
@@ -113,9 +102,9 @@ namespace Stratus
           // Try every parse
           foreach (var category in patterns)
           {
-            Regex r = new Regex(category.pattern, RegexOptions.IgnoreCase);
-            Dictionary<string, string> groups = new Dictionary<string, string>();
+            Regex r = new Regex(category.pattern, RegexOptions.IgnoreCase);            
             string value = null;
+            Parse parse = new InkModule.Parse(category.label);
 
             // Whether a match has been found
             bool foundMatch = false;
@@ -125,32 +114,64 @@ namespace Stratus
             // Check the line
             if (category.target == Target.Line)
             {
+              Dictionary<string, string> groups = new Dictionary<string, string>();
               if (isGrouped)
                 foundMatch = MatchGroups(ref groups, r, line);
               else
                 foundMatch = Match(ref value, r, line);
+
+              if (foundMatch)
+              {
+                if (isGrouped)
+                  parse.Add(groups);
+                else
+                  parse.Add(value);
+
+                //category.onParse?.Invoke(parse);
+              }
             }
 
             // Check every tag
             else if (category.target == Target.Tag)
             {
+              // We need to check every tag
+              //Parse parse = new InkModule.Parse(category.label, )
               foreach (var tag in tags)
               {
+                Dictionary<string, string> groups = new Dictionary<string, string>();
                 if (isGrouped)
                   foundMatch = MatchGroups(ref groups, r, tag);
                 else
                   foundMatch = Match(ref value, r, tag);
                 if (foundMatch)
-                  break;
+                {
+                  if (isGrouped)
+                    parse.Add(groups);
+                  else
+                    parse.Add(value);
+                  //Parse parse = new Parse(category.label, value, groups);
+                  //parses.Add(category.label, parse);
+                }
+                //break;
               }
+
+              //if (parse.isValid)
+              //  category.onParse?.Invoke(parse);
             }
 
             // If a match was found, lets add this parse
-            if (foundMatch)
+            //if (foundMatch)
+            //{
+            //  Parse parse = new Parse(category.label, value, groups);
+            //  parses.Add(category.label, parse);
+            //  category.onParse?.Invoke(parse);
+            //}
+
+            // If this parse captured anything, let's add it to the parsed line
+            if (parse.isValid)
             {
-              Parse parse = new Parse(category.label, value, groups);
-              parses.Add(category.label, parse);
               category.onParse?.Invoke(parse);
+              parses.Add(parse.label, parse);
             }
 
           }

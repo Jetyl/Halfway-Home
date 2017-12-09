@@ -3,7 +3,6 @@
 @file   TimerTrigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -21,7 +20,7 @@ namespace Stratus
     [Tooltip("How long to wait before triggering")]
     public float Timer;
     
-    protected override void OnInitialize()
+    protected override void OnAwake()
     {
       if (enabled)
         this.RunTimer();

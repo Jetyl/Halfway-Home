@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   SaveData.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -276,7 +268,7 @@ namespace Stratus
     /// <param name="folderName"></param>
     public static bool Delete(string name, string folderName)
     {
-      if (!Exists(name, folder))
+      if (!Exists(name, folderName))
         return false;
 
       var fullPath = ComposePath(name, folderName);

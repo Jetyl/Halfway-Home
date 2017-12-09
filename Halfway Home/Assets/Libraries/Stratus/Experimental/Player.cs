@@ -1,21 +1,14 @@
-/******************************************************************************/
-/*!
-@file   Player.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using Stratus.AI;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Stratus
 {
   /// <summary>
   /// Base class for the player' avatar logic
   /// </summary>
-  public abstract class Player : Agent
+  public abstract class Player<T> : Agent where T : MonoBehaviour
   {
     //--------------------------------------------------------------------------------------------/
     // Event Declarations
@@ -24,7 +17,7 @@ namespace Stratus
     /// Represents an action taken by the player
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class ActionEvent<T>
+    public abstract class ActionEvent<U>
     {
       /// <summary>
       /// An input event represents a request to perform a specific action
@@ -60,21 +53,43 @@ namespace Stratus
     public class ExitCombatEvent : Stratus.Event
     {
     }
-    
+
     //--------------------------------------------------------------------------------------------/
     // Properties
     //--------------------------------------------------------------------------------------------/
+    /// <summary>
+    /// Returns a reference to the first player
+    /// </summary>
+    public static T first => all.Count > 0 ? all[0] : null;
+    /// <summary>
+    /// Container for all players
+    /// </summary>
+    public static List<T> all { get; set; } = new List<T>();
+    
     public override Blackboard blackboard { get { throw new NotImplementedException("The player does not use a blackboard!"); } }
+
 
     //--------------------------------------------------------------------------------------------/
     // Events
     //--------------------------------------------------------------------------------------------/
     protected abstract void OnRevive();
+    protected abstract void OnPlayerAwake();
     protected abstract void OnPlayerSubscribe();
 
     //--------------------------------------------------------------------------------------------/
     // Messages
     //--------------------------------------------------------------------------------------------/
+    protected override void OnAgentAwake()
+    {
+      all.Add(this as T);
+      OnPlayerAwake();
+    }
+
+    protected override void OnAgentDestroy()
+    {
+      all.Remove(this as T);
+    }
+
     protected override void OnCombatEnter()
     {
       //Trace.Script("Entered combat!", this);

@@ -4,7 +4,6 @@
 @author Christian Sagel
 @par    email: ckpsm@live.com
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -84,6 +83,43 @@ namespace Stratus
   /// </summary>
   public abstract class ActionProperty : Action
   {
+    /// <summary>
+    /// The supported types for this interpolator
+    /// </summary>
+    public enum Types
+    {
+      Integer,
+      Float,
+      Boolean,
+      Vector2,
+      Vector3,
+      Vector4,
+      Color,
+      None
+    }
+
+    /// <summary>
+    /// The types supported by this interpolator
+    /// </summary>
+    public static System.Type[] supportedTypes { get; } = new System.Type[7] { typeof(float), typeof(int), typeof(bool), typeof(Vector2), typeof(Vector3), typeof(Color), typeof(Vector4) };
+
+    /// <summary>
+    /// Deduces if the given type is one of the supported ones
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    public static Types Deduce(System.Type type)
+    {
+      if (type == typeof(int)) return Types.Integer;
+      else if (type == typeof(float)) return Types.Float;
+      else if (type == typeof(bool)) return Types.Boolean;
+      else if (type == typeof(Vector2)) return Types.Vector2;
+      else if (type == typeof(Vector3)) return Types.Vector3;
+      else if (type == typeof(Vector4)) return Types.Vector4;
+      else if (type == typeof(Color)) return Types.Color;
+      return Types.None;
+    }
+
     protected Ease EaseType;
     
     /// <summary>

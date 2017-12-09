@@ -25,10 +25,11 @@ namespace Stratus
   [Singleton("Stratus Scene Events", true, true)]
   public class Scene : Singleton<Scene>
   {
-    public abstract class StatusEvent : Stratus.Event { public string Name; }
+    public abstract class StatusEvent : Stratus.Event { public string name; }
     public class ChangedEvent : StatusEvent { }
     public class LoadedEvent : StatusEvent { }
     public class UnloadedEvent : StatusEvent { }
+    public class ReloadEvent : Stratus.Event { }
     public delegate void SceneCallback();
 
     //----------------------------------------------------------------------------------/
@@ -76,12 +77,13 @@ namespace Stratus
     /// </summary>
     public static float loadingProgress
     {
-      get
-      {
-        if (get.loadingOperation == null)
-          return 0.0f;
-        return get.loadingOperation.progress;
-      }
+      get; private set;
+      //get
+      //{
+      //  if (get.loadingOperation == null)
+      //    return 0.0f;
+      //  return get.loadingOperation.progress;
+      //}
     }
 
     /// <summary>
@@ -91,7 +93,7 @@ namespace Stratus
     public static UnityAction onSceneChanged { get; set; }
 
     /// <summary>
-    /// A provided callback for when all scenes in a loading operation have finished loading..
+    /// A provided callback for when all scenes in a loading operation have finished loading
     /// </summary>
     public static UnityAction onAllScenesLoaded { get; set; }
 
@@ -111,6 +113,9 @@ namespace Stratus
     private static SceneCallback onSceneLoadedCallback { get; set; }
     private static SceneCallback onSceneUnloadedCallback { get; set; }
     private static SceneCallback onAllScenesLoadedCallback { get; set; }
+    /// <summary>
+    /// The current asynchronous loading operation
+    /// </summary>
     private AsyncOperation loadingOperation { get; set; }
 
     private static Func<UnityEngine.SceneManagement.Scene> getActiveScene
@@ -125,6 +130,9 @@ namespace Stratus
       }
     }
 
+    /// <summary>
+    /// Keeps track of how many active scenes there are
+    /// </summary>
     private static int sceneCount
     {
       get
@@ -146,6 +154,8 @@ namespace Stratus
 #endif
       return SceneManager.GetSceneAt(index);
     }
+
+    //private static Dictionary<SceneField, SceneCallback> 
 
 
     //----------------------------------------------------------------------------------/
@@ -169,77 +179,9 @@ namespace Stratus
     /// Loads the scene specified by name.
     /// </summary>
     /// <param name="sceneName"></param>
-    public static void Load(string sceneName, bool async = false, LoadSceneMode mode = LoadSceneMode.Single, SceneCallback onSceneLoaded = null)
+    public static void Load(SceneField scene, LoadSceneMode mode = LoadSceneMode.Additive, SceneCallback onSceneLoaded = null)
     {
-      onSceneLoadedCallback = onSceneLoaded;
-
-      if (async)
-        SceneManager.LoadSceneAsync(sceneName, mode);
-      else
-        SceneManager.LoadScene(sceneName, mode);
-    }
-
-
-    /// <summary>
-    /// Loads multiple scenes in sequence asynchronouosly (additively)
-    /// </summary>
-    /// <param name="scenes"></param>
-    /// <param name="onSceneLoaded"></param>
-    public static void Load(SceneField[] scenes, SceneCallback onScenesLoaded = null)
-    {
-      onAllScenesLoadedCallback = onScenesLoaded;
-
-      #if UNITY_EDITOR
-      if (isEditMode)
-      {
-        foreach (var scene in scenes)
-        {
-          UnityEditor.SceneManagement.EditorSceneManager.LoadScene(scene, LoadSceneMode.Additive);
-        }
-        return;
-      }
-      #endif
-
-      get.StartCoroutine(get.LoadSequentially(scenes));
-    }
-
-    /// <summary>
-    /// Unloads the specified scene asynchronously
-    /// </summary>
-    /// <param name="sceneName"></param>
-    public static void Unload(SceneField scene, SceneCallback onSceneUnloaded = null)
-    {
-      #if UNITY_EDITOR
-      if (isEditMode)
-      {
-        UnityEditor.SceneManagement.EditorSceneManager.UnloadSceneAsync(scene);
-        return;
-      }
-#endif
-      
-      SceneManager.UnloadSceneAsync(scene);
-    }
-
-    
-
-    /// <summary>
-    /// Unloads multiple scenes in sequence asynchronously
-    /// </summary>
-    /// <param name="scenes"></param>
-    public static void Unload(SceneField[] scenes)
-    {
-      foreach (var scene in scenes)
-      {
-        Scene.Unload(scene);
-      }
-    }
-
-    /// <summary>
-    /// Adds the scene additively in the editor or loads it in playmode
-    /// </summary>
-    /// <param name="sceneName"></param>
-    public static void AddOrLoad(SceneField scene)
-    {
+      // Edit mode
       #if UNITY_EDITOR
       if (isEditMode)
       {
@@ -248,40 +190,92 @@ namespace Stratus
       }
       #endif
 
-      Scene.Load(scene, true, LoadSceneMode.Additive);
+      // Play mode
+      get.StartCoroutine(get.LoadAsync(scene, mode, onSceneLoaded));
     }
 
     /// <summary>
-    /// Closes the scene in the editor or unloads it in playmode
+    /// Unloads the specified scene asynchronously
     /// </summary>
-    /// <param name="scene"></param>
-    public static void CloseOrUnload(SceneField scene)
+    /// <param name="sceneName"></param>
+    public static void Unload(SceneField scene, SceneCallback onSceneUnloaded = null)
     {
-      #if UNITY_EDITOR  
+      // Editor mode
+      #if UNITY_EDITOR
       if (isEditMode)
-      {
+      {         
         EditorSceneManager.CloseScene(scene.runtime, true);
         return;
       }
       #endif
 
-      Scene.Unload(scene);
+      // Play Mode
+      get.StartCoroutine(get.UnloadAsync(scene, onSceneUnloaded));
     }
 
-    ///// <summary>
-    ///// Unloads the current scene
-    ///// </summary>
-    //public static void Unload()
-    //{
-    //  SceneManager.UnloadSceneAsync(Scene.activeScene);
-    //}
+    /// <summary>
+    /// Loads multiple scenes in sequence asynchronouosly (additively)
+    /// </summary>
+    /// <param name="scenes"></param>
+    /// <param name="onSceneLoaded"></param>
+    public static void Load(SceneField[] scenes, SceneCallback onScenesLoaded = null)
+    {
+      // Editor mode
+      #if UNITY_EDITOR
+      if (isEditMode)
+      {
+        foreach (var scene in scenes)
+        {
+          EditorSceneManager.OpenScene(scene.path, UnityEditor.SceneManagement.OpenSceneMode.Additive);
+          //EditorSceneManager.LoadScene(scene, LoadSceneMode.Additive);
+        }
+        return;
+      }
+      #endif
+
+      // Play mode
+      get.StartCoroutine(get.LoadAsync(scenes, onScenesLoaded));
+    }
+
+
+    /// <summary>
+    /// Unloads multiple scenes in sequence asynchronously
+    /// </summary>
+    /// <param name="scenes"></param>
+    public static void Unload(SceneField[] scenes, SceneCallback onScenesUnloaded = null)
+    {
+      // Editor mode
+      #if UNITY_EDITOR
+      if (isEditMode)
+      {
+        foreach (var scene in scenes)
+        {
+          Trace.Script($"Closing {scene.name}");
+          EditorSceneManager.CloseScene(scene.runtime, true);
+        }
+        return;
+      }
+      #endif
+      
+      // Play mode
+      get.StartCoroutine(get.UnloadAsync(scenes, onScenesUnloaded));
+
+    }
 
     /// <summary>
     /// Reloads the current scene
     /// </summary>
     public static void Reload()
     {
-      Load(Scene.activeScene.name);
+      Scene.Load(Scene.activeScene, LoadSceneMode.Single);
+    }
+
+    /// <summary>
+    /// Reloads the specified scene
+    /// </summary>
+    public static void Reload(SceneField scene, SceneCallback onFinished = null)
+    {      
+      Scene.Load(Scene.activeScene, LoadSceneMode.Single);
     }
 
     /// <summary>
@@ -323,7 +317,7 @@ namespace Stratus
     /// <typeparam name="T"></typeparam>
     /// <param name="includeInactive"></param>
     /// <returns></returns>
-    public static T[] GetComponentsInActiveScene<T>(bool includeInactive = false) where T : MonoBehaviour
+    public static T[] GetComponentsInActiveScene<T>(bool includeInactive = false) where T : Component
     {
       return activeScene.GetComponents<T>(includeInactive);
     }
@@ -334,7 +328,7 @@ namespace Stratus
     /// <typeparam name="T"></typeparam>
     /// <param name="includeInactive"></param>
     /// <returns></returns>
-    public static T[] GetComponentsInAllActiveScenes<T>(bool includeInactive = false) where T : MonoBehaviour
+    public static T[] GetComponentsInAllActiveScenes<T>(bool includeInactive = false) where T : Component
     {
       List<T> components = new List<T>();
 
@@ -351,16 +345,6 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Methods: Private
     //------------------------------------------------------------------------/
-    /// <summary>
-    /// Loads the specified scene asynchronously
-    /// </summary>
-    /// <param name="sceneName"></param>
-    /// <param name="mode"></param>
-    void LoadSequentially(string sceneName, LoadSceneMode mode)
-    {
-      StartCoroutine(LoadAsyncRoutine(sceneName, mode));
-    }
-
     /// <summary>
     /// Received when the active scene changes
     /// </summary>
@@ -403,16 +387,43 @@ namespace Stratus
     /// </summary>
     /// <param name="sceneName"></param>
     /// <param name="mode"></param>
-    IEnumerator LoadAsyncRoutine(string sceneName, LoadSceneMode mode)
+    IEnumerator LoadAsync(string sceneName, LoadSceneMode mode, SceneCallback onFinished = null)
     {
+      loadingProgress = 0f;
       loadingOperation = SceneManager.LoadSceneAsync(sceneName, mode);
       if (loadingOperation != null)
       {
         while (!loadingOperation.isDone)
         {
+          loadingProgress = loadingOperation.progress;
           yield return null;
         }
       }
+
+      loadingProgress = 1f;
+      onFinished?.Invoke();
+    }
+
+    /// <summary>
+    /// Loads the specified scene asynchronously
+    /// </summary>
+    /// <param name="sceneName"></param>
+    /// <param name="mode"></param>
+    IEnumerator UnloadAsync(string sceneName, SceneCallback onFinished = null)
+    {
+      loadingProgress = 0f;
+      loadingOperation = SceneManager.UnloadSceneAsync(sceneName);
+      if (loadingOperation != null)
+      {
+        while (!loadingOperation.isDone)
+        {
+          loadingProgress = loadingOperation.progress;
+          yield return null;
+        }
+      }
+
+      loadingProgress = 1f;
+      onFinished?.Invoke();
     }
 
     /// <summary>
@@ -420,23 +431,61 @@ namespace Stratus
     /// </summary>
     /// <param name="scenes"></param>
     /// <returns></returns>
-    IEnumerator LoadSequentially(SceneField[] scenes)
+    IEnumerator LoadAsync(SceneField[] scenes, SceneCallback onFinished = null)
     {
+      loadingProgress = 0f;
       // Get the scene names in a queue
       var sceneNames = new Queue<string>();
-      foreach (var scene in scenes) sceneNames.Enqueue(scene);
-
+      foreach (var scene in scenes)
+        sceneNames.Enqueue(scene);
+      
       while (sceneNames.Count > 0)
       {
         var nextScene = sceneNames.Dequeue();
         loadingOperation = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive);
         while (!loadingOperation.isDone)
         {
+          loadingProgress = loadingOperation.progress / (float)scenes.Length;
           yield return null;
         }
-        Trace.Script("Finished loading " + nextScene);
+        //Trace.Script("Finished loading " + nextScene);
       }
 
+      loadingProgress = 1f;
+      onFinished?.Invoke();
+      onAllScenesLoadedCallback?.Invoke();
+    }
+
+    /// <summary>
+    /// Loads multiple scenes asynchronously in sequence, additively
+    /// </summary>
+    /// <param name="scenes"></param>
+    /// <returns></returns>
+    IEnumerator UnloadAsync(SceneField[] scenes, SceneCallback onFinished = null)
+    {
+      loadingProgress = 0f;
+      // Get the scene names in a queue
+      var sceneQueue = new Queue<SceneField>();
+      foreach (var scene in scenes)
+        sceneQueue.Enqueue(scene);
+
+      while (sceneQueue.Count > 0)
+      {
+        var nextScene = sceneQueue.Dequeue();
+        if (!nextScene.isLoaded)
+          continue;
+
+        loadingOperation = SceneManager.UnloadSceneAsync(nextScene);
+        while (!loadingOperation.isDone)
+        {
+          loadingProgress = loadingOperation.progress / (float)scenes.Length;
+          yield return null;
+        }
+        //Trace.Script("Finished unloading " + nextScene);
+      }
+
+      loadingProgress = 1f;
+      onFinished?.Invoke();
       onAllScenesLoadedCallback?.Invoke();
     }
 

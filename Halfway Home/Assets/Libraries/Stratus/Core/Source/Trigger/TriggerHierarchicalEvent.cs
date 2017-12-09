@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   TriggerHierarchicalEvent.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -34,7 +26,7 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Members
     //------------------------------------------------------------------------/
-    protected override void PreInitialize()
+    protected override void PreAwake()
     {
       this.SetTargets();
     }

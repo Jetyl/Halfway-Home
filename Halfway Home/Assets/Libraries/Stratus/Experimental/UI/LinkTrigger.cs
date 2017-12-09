@@ -1,9 +1,8 @@
 /******************************************************************************/
 /*!
-@file   LinkTrigger.cs
+@file   LinkEventTrigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -20,7 +19,7 @@ namespace Stratus
   {
     public Link.EventType Type = Link.EventType.Confirm;
     
-    protected override void OnInitialize()
+    protected override void OnAwake()
     {
       switch (Type)
       {

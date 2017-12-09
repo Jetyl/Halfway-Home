@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   InputFieldDrawer.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace Stratus

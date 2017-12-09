@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*
-@file   HowToInk.ink
-@author John Myres
-@par    email: john.myres@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 VAR InkKnowledge = 0
 
 -> This_Is_A_Knot

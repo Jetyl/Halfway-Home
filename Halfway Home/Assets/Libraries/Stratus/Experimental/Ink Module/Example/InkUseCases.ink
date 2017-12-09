@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*
-@file   InkUseCases.ink
-@author John Myres
-@par    email: john.myres@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 VAR player_name = "unset"
 VAR player_gender = "unset"
 VAR grace = 0

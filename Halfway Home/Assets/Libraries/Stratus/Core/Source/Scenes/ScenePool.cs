@@ -1,12 +1,4 @@
-﻿/******************************************************************************/
-/*!
-@file   ScenePool.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Stratus
@@ -24,29 +16,37 @@ namespace Stratus
       /// <summary>
       /// The initial scene to be loaded upon entering play mode (will be the first one listed on the scenes array)
       /// </summary>
-      public SceneField initialScene => scenes[0];
+      public SceneField initialScene
+      {
+        get
+        {
+          if (scenes.Length > 0)
+            return scenes[0];
+          return null;
+        }
+      } 
 
       /// <summary>
       /// Opens all scenes in the editor
       /// </summary>
-      public void OpenAll()
+      public void OpenAll(Scene.SceneCallback onOpened = null)
       {
-        foreach (var scene in this.scenes)
-          scene.Add();
+        Scene.Load(scenes, onOpened);
+
+        //foreach (var scene in this.scenes)
+        //  scene.Add();
       }
 
       /// <summary>
       /// Closes all scenes in the editor
       /// </summary>
-      public void CloseAll()
+      public void CloseAll(Scene.SceneCallback onClosed = null)
       {
-        foreach (var scene in this.scenes)
-          scene.Close();
-      }
+        Scene.Unload(scenes, onClosed);
 
-      [Serializable]
-      public class Selection
-      {
+        //foreach (var scene in this.scenes)
+        //  scene.Close();
+
 
       }
 

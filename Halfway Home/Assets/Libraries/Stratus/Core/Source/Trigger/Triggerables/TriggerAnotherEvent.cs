@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   TriggerAnotherEvent.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,7 +14,7 @@ namespace Stratus
     [Tooltip("What component to send the trigger event to")]
     public Triggerable Target;
     [Tooltip("Whether the trigger will be sent to the GameObject as an event or invoked directly on the dispatcher component")]
-    public Trigger.DeliveryMethod Delivery = Stratus.Trigger.DeliveryMethod.All;
+    public Trigger.DeliveryMethod Delivery = Stratus.Trigger.DeliveryMethod.GameObject;
     [Tooltip("Whether it should also trigger all of the object's children")]
     public bool Recursive = false;
 
@@ -32,7 +24,7 @@ namespace Stratus
 
     protected override void OnTrigger()
     {
-      if (this.Delivery == Stratus.Trigger.DeliveryMethod.All)
+      if (this.Delivery == Stratus.Trigger.DeliveryMethod.GameObject)
       {
         if (!this.Target)
         {          
@@ -48,7 +40,7 @@ namespace Stratus
         }
       }
 
-      else if (this.Delivery == Stratus.Trigger.DeliveryMethod.Single)
+      else if (this.Delivery == Stratus.Trigger.DeliveryMethod.Component)
       {
         this.Target.Trigger();
       }

@@ -1,11 +1,3 @@
-/******************************************************************************/
-/*!
-@file   Story.cs
-@author Christian Sagel
-@par    email: ckpsm@live.com
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -75,6 +67,16 @@ namespace Stratus
         /// </summary>
         public enum Types { Integer, Boolean, String, Float }
 
+
+        public enum EventType
+        {
+          Loaded,
+          Started,
+          Continue,
+          SelectChoice,
+          Ended
+        }
+
         /// <summary>
         /// Represents a variable supported by Ink
         /// </summary>
@@ -134,6 +136,10 @@ namespace Stratus
           /// Whether to restart the story if already loaded
           /// </summary>
           public bool restart = false;
+          /// <summary>
+          /// Whether this story should be queued, if there's one currently running it will be read after
+          /// </summary>
+          public bool queue = false;
         }
 
         /// <summary>

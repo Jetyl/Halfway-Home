@@ -1,10 +1,3 @@
-/******************************************************************************/
-/*!
-File:   Parse.cs
-Author: Christian Sagel
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-*/
-/******************************************************************************/
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,14 +20,11 @@ namespace Stratus
         /// CTOR
         /// </summary>
         /// <param name="label"></param>
-        /// <param name="value"></param>
-        /// <param name="onParse"></param>
-        /// <param name="groups"></param>
-        public Parse(string label, string value, Dictionary<string, string> groups)
+        public Parse(string label)
         {
           this.label = label;
-          this.value = value;
-          this.groups = groups;
+          //this.value = value;
+          //this.groups = groups;
         }
 
         /// <summary>
@@ -44,12 +34,42 @@ namespace Stratus
         /// <summary>
         /// The substring value of this parse (only valid for non-grouped)
         /// </summary>
-        public string value { get; private set; }
+        public List<string> values { get; private set; } = new List<string>();
+        /// <summary>
+        /// The first value of this parse (only valid for non-grouped)
+        /// </summary>
+        public string firstValue => values.Count > 0 ? values[0] : null;
         /// <summary>
         /// The captured groups for this parse
         /// </summary>
-        private Dictionary<string, string> groups { get; set; } = new Dictionary<string, string>();
-        
+        public List<Dictionary<string, string>> matches { get; set; } = new List<Dictionary<string, string>>();
+        /// <summary>
+        /// The first match captured by this parse
+        /// </summary>
+        public Dictionary<string, string> firstMatch => matches.Count > 0 ? matches[0] : null;
+        /// <summary>
+        /// Whether this parse was successful
+        /// </summary>
+        public bool isValid => (values.Count > 0 || matches.Count > 0);
+
+        /// <summary>
+        /// Adds a substring value to this parse
+        /// </summary>
+        /// <param name="value"></param>
+        public void Add(string value)
+        {
+          values.Add(value);
+        }
+
+        /// <summary>
+        /// Adds a match (of groups) to this parse
+        /// </summary>
+        /// <param name="match"></param>
+        public void Add(Dictionary<string, string> match)
+        {
+          matches.Add(match);
+        }
+
         /// <summary>
         /// Retrieves a specific value from a group in this parse
         /// </summary>
@@ -57,11 +77,12 @@ namespace Stratus
         /// <returns></returns>
         public string Find(string group)
         {
-          if (!groups.ContainsKey(group))
+          foreach(var match in matches)
           {
-            throw new System.ArgumentOutOfRangeException($"The key '{group}' was not found among this parse!");
+            if (match.ContainsKey(group))
+              return match[group];
           }
-          return groups[group];
+          throw new System.ArgumentOutOfRangeException($"The key '{group}' was not found among this parse's groups!");                   
         }
 
         /// <summary>
@@ -71,11 +92,17 @@ namespace Stratus
         {
           get
           {
-            StringBuilder builder = new StringBuilder();
-            foreach (var group in groups)
+            StringBuilder builder = new StringBuilder(); 
+            foreach(var match in matches)
             {
-              builder.Append($"[{group.Key},{group.Value}]");
+              builder.Append("{");
+              foreach (var group in match)
+              {
+                builder.Append($"[{group.Key},{group.Value}]");
+              }
+              builder.Append("}");
             }
+
             return builder.ToString();
           }
         }

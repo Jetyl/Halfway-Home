@@ -5,7 +5,6 @@
 @par    email: c.sagel\@digipen.edu
 @par    DigiPen login: c.sagel
 @date   5/25/2016
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using UnityEngine;
@@ -17,13 +16,14 @@ namespace Stratus
   public static class StructExtensions
   {
     /// <summary>
-    /// Sets the alpha on the color instantly.
+    /// Returns a copy of the color with a modified alpha
     /// </summary>
     /// <param name="color">The color whose alpha to change</param>
     /// <param name="alpha">The alpha value to set</param>
-    public static void SetAlpha(this Color color, float alpha)
+    public static Color SetAlpha(this Color color, float alpha)
     {
       color = new Color(color.r, color.g, color.b, alpha);
+      return color;
     }
 
     /// <summary>
@@ -132,6 +132,30 @@ namespace Stratus
       }
 
       throw new System.Exception("Missing component");
+    }
+
+    /// <summary>
+    /// Returns a linearly interpolated value from a (other) to itself (b) at a given t (0-1)
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="t"></param>
+    /// <returns></returns>
+    public static float LerpFrom(this float b, float a, float t)
+    {
+      return (1 - t) * a + t * b;
+    }
+
+    /// <summary>
+    /// Returns a linearly interpolated value from a (itself) to the target (b) at a given t (0-1)
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="t"></param>
+    /// <returns></returns>
+    public static float LerpTo(this float a, float b, float t)
+    {
+      return (1 - t) * a + t * b;
     }
 
   }
