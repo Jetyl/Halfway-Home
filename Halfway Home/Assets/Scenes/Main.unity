@@ -6565,7 +6565,7 @@ MonoBehaviour:
   SpecialBackdrops:
   - ID: 0
     Tag: Dream
-    Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
+    Backdrop: {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
   FrontCurtain: {fileID: 2006069810}
   BackCuratin: {fileID: 206367696}
   LeftSpot: {fileID: 1463426191}
