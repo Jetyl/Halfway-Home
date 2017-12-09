@@ -92,17 +92,17 @@ namespace HalfwayHome
 
     void OnSetBackground(Parse parse)
     {
-      if(parse.Find("Background").ToLower() == "background" || parse.Find("Background").ToLower() == "backdrop")
+      if(parse.FindFirst("Background").ToLower() == "background" || parse.FindFirst("Background").ToLower() == "backdrop")
         for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
-               if(parse.Find("Image").ToLower() == ((Room)i).ToString().ToLower())
+               if(parse.FindFirst("Image").ToLower() == ((Room)i).ToString().ToLower())
                 {
                     Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent((Room)i));
                     return;
                 }
         }
 
-        Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.Find("Image")));
+        Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.FindFirst("Image")));
     }
 
     void OnPoseChange(Parse parse)
@@ -117,7 +117,7 @@ namespace HalfwayHome
             Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(person, "Calm"));
           else
           {
-            Trace.Script(parse.Find("Person"));
+            Trace.Script(parse.FindFirst("Person"));
             Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(person, pose));
           }
         }
@@ -137,8 +137,8 @@ namespace HalfwayHome
     
     void OnSocialStatIncrement(Parse parse)
     {
-      string stat = parse.Find(statLabel).ToLower();
-      string count = parse.Find(countLabel);
+      string stat = parse.FindFirst(statLabel).ToLower();
+      string count = parse.FindFirst(countLabel);
       Trace.Script($"{stat} = {count}");
 
       var eventStat = Personality.Social.awareness;
@@ -169,9 +169,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatIncrement(Parse parse)
     {
-      string stat = parse.Find(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).ToLower();
       int value = 0;
-      int.TryParse(parse.Find(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel), out value);
 
       OnWellbeingStatChange(stat, value);
       Trace.Script($"{stat} increased by {value}");
@@ -179,9 +179,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatDecrement(Parse parse)
     {
-      string stat = parse.Find(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).ToLower();
       int value = 0;
-      int.TryParse(parse.Find(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel), out value);
 
       OnWellbeingStatChange(stat, -value);
       Trace.Script($"{stat} decreased by {value}");
@@ -189,9 +189,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatSet(Parse parse)
     {
-      string stat = parse.Find(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).ToLower();
       int value = 0;
-      int.TryParse(parse.Find(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel), out value);
 
       OnWellbeingStatChange(stat, value, true);
       Trace.Script($"{stat} set to {value}");
@@ -210,15 +210,15 @@ namespace HalfwayHome
 
     void OnAudioTrigger(Parse parse)
     {
-      if(parse.Find("Mode").ToLower() == "play")
+      if(parse.FindFirst("Mode").ToLower() == "play")
       {
-        Trace.Script($"Play {parse.Find("Event")} music");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.Find("Event")));
+        Trace.Script($"Play {parse.FindFirst("Event")} music");
+        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
       }
-      else if(parse.Find("Mode").ToLower() == "sfx")
+      else if(parse.FindFirst("Mode").ToLower() == "sfx")
       {
-        Trace.Script($"Play {parse.Find("Event")} sound effect");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.Find("Event")));
+        Trace.Script($"Play {parse.FindFirst("Event")} sound effect");
+        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
       }
     }
     //------------------------------------------------------------------------/

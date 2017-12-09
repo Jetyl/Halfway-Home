@@ -579,6 +579,11 @@ MonoBehaviour:
     endTime: 17
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
@@ -3435,8 +3440,33 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 2
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -5841,7 +5871,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -5852,6 +5882,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -6530,7 +6565,7 @@ MonoBehaviour:
   SpecialBackdrops:
   - ID: 0
     Tag: Dream
-    Backdrop: {fileID: 21300000, guid: 68f6ea8b6f55ee742b2a1d57f3edf6b9, type: 3}
+    Backdrop: {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
   FrontCurtain: {fileID: 2006069810}
   BackCuratin: {fileID: 206367696}
   LeftSpot: {fileID: 1463426191}
@@ -11063,8 +11098,33 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+  - Day: 2
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 0
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -11635,8 +11695,8 @@ MonoBehaviour:
   DebugMode: 0
   StartDelusion: 10
   StartStress: 45
-  StartFatigue: 35
-  DebugDay: 7
+  StartFatigue: 86
+  DebugDay: 1
   DebugHour: 17
   DebugWeek: 1
   DebugExpression: 0
@@ -11645,7 +11705,7 @@ MonoBehaviour:
   DebugValues:
   - ProgressName: Tutorial
     TypeID: 1
-    BoolValue: 0
+    BoolValue: 1
     IntValue: 0
     FloatValue: 0
     StringValue: 
@@ -12711,7 +12771,7 @@ MonoBehaviour:
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 7
-    starttime: 17
+    starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
@@ -12780,7 +12840,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -12791,6 +12851,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -13921,7 +13986,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -13932,6 +13997,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -14394,7 +14464,7 @@ MonoBehaviour:
     ProgressKey: Tutorial
   - Day: 1
     starttime: 13
-    endTime: 17
+    endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -15459,7 +15529,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 13
+    endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 1
@@ -15470,6 +15540,11 @@ MonoBehaviour:
   - Day: 7
     starttime: 17
     endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 7
+    starttime: 12
+    endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0

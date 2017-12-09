@@ -181,6 +181,10 @@
    {
     "Name" : "TimothyPoints",
     "Type" : 2
+   },
+   {
+    "Name" : "Slept In Day 2",
+    "Type" : 1
    }
   ]
  },
@@ -191,17 +195,6 @@
   "Point"      : [
    {
     "Name" : "SolvedHangman",
-    "Type" : 1
-   }
-  ]
- },
- {
-  "PlotName" : "HATE",
-  "BeatNumber" : 0,
-  "BeatName"   : "Temporary bullshit",
-  "Point"      : [
-   {
-    "Name" : "SubmissionBuildRepeat",
     "Type" : 1
    }
   ]

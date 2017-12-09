@@ -75,7 +75,7 @@ namespace Stratus
         /// </summary>
         /// <param name="parseCategory"></param>
         /// <returns></returns>
-        public string Find(string group)
+        public string FindFirst(string group)
         {
           foreach(var match in matches)
           {
