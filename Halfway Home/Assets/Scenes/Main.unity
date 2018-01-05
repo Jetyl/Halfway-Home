@@ -499,6 +499,7 @@ MonoBehaviour:
   logging: 0
   listeningToScene: 0
   automaticRestart: 0
+  queueStories: 0
   saveStates: 1
   saveOnExit: 0
 --- !u!114 &60031325
@@ -6531,7 +6532,7 @@ MonoBehaviour:
     Backdrop: {fileID: 0}
   - ID: 1
     Tag: 
-    Backdrop: {fileID: 21300000, guid: 81b056e7b6887dd49a67f8d8d3d35354, type: 3}
+    Backdrop: {fileID: 21300000, guid: 3620ea9192a75a3478481013bf9d3159, type: 3}
   - ID: 2
     Tag: 
     Backdrop: {fileID: 21300000, guid: bc32afdfc4ce0414ba482420ab070a8a, type: 3}
