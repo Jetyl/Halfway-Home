@@ -135,15 +135,15 @@ MonoBehaviour:
   - Name: Calm
     Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
   - Name: Angry
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 63110a3f17ce95f4ebddecc1042889de, type: 3}
   - Name: Happy
     Visual: {fileID: 21300000, guid: 2409f737229a82644b550d0eaeefb9dd, type: 3}
   - Name: Sad
     Visual: {fileID: 21300000, guid: 7974b83b0b1096942938cb31ac668252, type: 3}
   - Name: Afraid
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: 1b39e7be23d8040498b6b2fcd7fcc4ca, type: 3}
   - Name: Surprised
-    Visual: {fileID: 21300000, guid: 2ec24500e1cb4004daddcbd1db9322c4, type: 3}
+    Visual: {fileID: 21300000, guid: e94266733a76de94ebffd39a89f904a3, type: 3}
   Distances:
   - Scale: 0
     Offset: 0
