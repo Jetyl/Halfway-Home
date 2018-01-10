@@ -20,11 +20,15 @@ public class StageDisplay : MonoBehaviour
     
     public List<RoomDetails> SpecialBackdrops;
 
+    private Room CurrentRoom = Room.None;
+    private string CurrentCG = "";
+
     public SpriteRenderer FrontCurtain;
     public SpriteRenderer BackCuratin;
     public GameObject LeftSpot;
     public GameObject RightSpot;
     public float Varience = 2;
+    public float SpotSize = 12;
 
     List<CharacterDisplay> Actors;
 
@@ -106,6 +110,7 @@ public class StageDisplay : MonoBehaviour
 
     void CharacterChanges(StageDirectionEvent eventdata)
     {
+        //for characters already on scene
         foreach(var Roll in Actors)
         {
 
@@ -114,6 +119,7 @@ public class StageDisplay : MonoBehaviour
                 Actors.Remove(Roll);
             }
 
+            //if the command is all, affect all
             if (eventdata.character.ToLower() == "all")
             {
                 Roll.ChangePose(eventdata.Pose);
@@ -133,6 +139,7 @@ public class StageDisplay : MonoBehaviour
         //if here, character is not on scene
         foreach (var person in CastList)
         {
+            //adding character to scene
             if(person.Character == eventdata.character)
             {
                 var cast = Instantiate(person.Actor);
@@ -189,9 +196,9 @@ public class StageDisplay : MonoBehaviour
             {
 
                 SpotLights[Roll.Direction] -= 1;
-                UpdateStagePositions(Roll.Direction);
                 Roll.ExitStage();
                 Actors.Remove(Roll);
+                UpdateStagePositions(Roll.Direction);
                 return;
             }
         }
@@ -220,24 +227,39 @@ public class StageDisplay : MonoBehaviour
     {
         int i = 0;
         var spot = new Vector3();
+        float CenterPoint = 0;
+        float Spacing = 0;
         switch(pos)
         {
             case StagePosition.Center:
                 spot = gameObject.transform.position;
+                CenterPoint = 0.5f;
                 break;
             case StagePosition.Left:
                 spot = LeftSpot.transform.position;
+                CenterPoint = 1/4;
                 break;
             case StagePosition.Right:
                 spot = RightSpot.transform.position;
+                CenterPoint = 3/4;
                 break;
             default:
                 break;
         }
 
-
-        if (SpotLights[pos] != 1)
-            spot.x -= (Varience/2) * (SpotLights[pos] - 1);
+        //if the number of people in that spot is more than the spacing given allows
+        if(Varience * SpotLights[pos] > SpotSize + 1)
+        {
+            Spacing = SpotSize / SpotLights[pos];
+            spot.x -= SpotSize * CenterPoint;
+            print(SpotSize);
+        }
+        else if (SpotLights[pos] != 1)
+        {
+            Spacing = Varience;
+            spot.x -= (Varience * (SpotLights[pos] - 1))/2;
+        }
+        
 
         foreach (var Roll in Actors)
         {
@@ -247,9 +269,9 @@ public class StageDisplay : MonoBehaviour
             {
                 spot.z = Roll.transform.localPosition.z;
                 spot.y = Roll.transform.localPosition.y;
-                
+                print("spacing:" + Spacing);
                 iTween.MoveTo(Roll.gameObject, spot, 2);
-                spot.x += Varience;
+                spot.x += Spacing;
                 i += 1;
                 if (i >= SpotLights[pos])
                     return;
@@ -263,12 +285,21 @@ public class StageDisplay : MonoBehaviour
 
     void SceneryChange(StageDirectionEvent eventdata)
     {
+        if(eventdata.Backdrop == CurrentRoom)
+        {
+            if (eventdata.Backdrop != Room.None || eventdata.character == CurrentCG)
+                return;
+        }
         
         if(eventdata.Backdrop == Room.None)
         {
+
+            CurrentRoom = Room.None;
+            CurrentCG = eventdata.character;
+
             foreach (var room in SpecialBackdrops)
             {
-                if (room.Tag == eventdata.character)
+                if (room.Tag == CurrentCG)
                 {
 
                     StartCoroutine(BackdropChange(room.Backdrop));
@@ -279,10 +310,12 @@ public class StageDisplay : MonoBehaviour
         }
         else
         {
+            CurrentRoom = eventdata.Backdrop;
+            CurrentCG = "";
             foreach (var room in Backdrop)
             {
 
-                if (room.ID == eventdata.Backdrop)
+                if (room.ID == CurrentRoom)
                 {
 
                     StartCoroutine(BackdropChange(room.Backdrop));

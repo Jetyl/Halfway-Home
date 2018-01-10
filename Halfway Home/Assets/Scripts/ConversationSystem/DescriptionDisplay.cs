@@ -74,7 +74,8 @@ public class DescriptionDisplay : MonoBehaviour
         if(Input.GetButtonDown("Skip"))
         {
             Skipping = !Skipping;
-            Decription.Skipping = Skipping;
+            Decription.SetSkipping(Skipping);
+            
         }
 
         if(Skipping)
@@ -211,7 +212,7 @@ public class DescriptionDisplay : MonoBehaviour
     void OnStopSkipping(DefaultEvent eventdata)
     {
         Skipping = false;
-        Decription.Skipping = false;
+        Decription.SetSkipping(Skipping);
     }
 
 }

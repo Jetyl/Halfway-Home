@@ -113,7 +113,7 @@ namespace HalfwayHome
         {
           var pose = match["Pose"];
           var person = match["Person"];
-          if (pose == "exit")
+          if (pose.ToLower() == "exit")
             Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(person, "Calm"));
           else
           {

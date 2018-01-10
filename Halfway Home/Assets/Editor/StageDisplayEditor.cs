@@ -33,6 +33,7 @@ public class StageDisplayEditor : Editor
         SerializedProperty LeftSpot = serializedObject.FindProperty("LeftSpot");
         SerializedProperty RightSpot = serializedObject.FindProperty("RightSpot");
         SerializedProperty Varience = serializedObject.FindProperty("Varience");
+        SerializedProperty SpotSize = serializedObject.FindProperty("SpotSize");
 
         SerializedProperty StartingRoom = serializedObject.FindProperty("StartingRoom");
         SerializedProperty BackgroundFadeTime = serializedObject.FindProperty("BackgroundFadeTime");
@@ -85,8 +86,9 @@ public class StageDisplayEditor : Editor
         EditorGUILayout.PropertyField(LeftSpot, new GUIContent("Left Spot"), true);
         EditorGUILayout.PropertyField(RightSpot, new GUIContent("Right Spot"), true);
         EditorGUILayout.PropertyField(Varience, new GUIContent("Varience"), true);
+        EditorGUILayout.PropertyField(SpotSize, new GUIContent("Maximum Feild of Sprites"), true);
 
-
+        
 
         list.DoLayoutList();
         
