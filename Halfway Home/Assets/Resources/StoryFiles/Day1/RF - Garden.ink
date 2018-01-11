@@ -30,15 +30,15 @@ EXTERNAL GetStringValue(value)
 [{player_name}] "Here's the garden grounds" #Timothy = Calm
 [Timothy] "Oh! I-It's nice and calm out here." #Timothy = Happy
 [{player_name}] "Yeah, I suppose it is." #Timothy = Calm
-"I suppose the gardens are a great place to mediate, amongs other things"
-"I think there's a gardening club, or something that meets out here on some days"
-"I don't know. I don't usually go to it."
+"I suppose the gardens are a great place to meditate, amongs other things"
+"I think there's a gardening club or something that meets out here sometimes."
+"I don't know. I've never actually gone to it."
 [Timothy] "..." #Timothy = Happy
-[{player_name}] "But yeah, gardens are a good place to reflect." #Timothy = Exit
-"You can just sort of zen out. be <i>aware</i> of the life around you, and you yourself, I suppose."
-"It can be pretty enlightening, but I dunno. I try not to be alone with my thoughts to much."
-"Its, uh... sorta caused problems in my life."
-wait a minute. Where's Timothy?
+[{player_name}] "But yeah, its a good place to reflect." #Timothy = Exit
+"You can just sort of zen out. Be <i>aware</i> of the life around you... and yourself, I suppose."
+"It can be pretty enlightening, but I dunno. I try not to be alone with my thoughts too much."
+"It's, uh... sorta caused problems in my life."
+Wait a minute. Where's Timothy?
 "Timothy?"
 Oh crap, did I lose him already?
 "Uh, Timothy? Where'd you go?"

@@ -105,7 +105,7 @@ I don't like where this is going. //Oh, you don't like the sound of that.
 "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
 [Max] "Thanks buddy." # Keyless = Exit
-And just like that, Max leaves you all alone with this new stranger.
+And just like that, Max leaves me all alone with this new stranger.
 Timothy sighs dejectedly. Maybe he's used to this?
 [{player_name}] "Uh... hey."
 -> TakingTimothy
@@ -192,12 +192,12 @@ This can't be happening. this can't be happening.
 Though I've been falling off the wagon more often as of late.
 "So yeah."
 Timothy looks... not disinterested, but guarded and... preoccupied? Jeez, my ability to read people has seriously atrophied.
-I go over and grab my watch of the desk beside my bed. 8:54. Close enough for my needs. He'll probably think I'm super weird, but Timothy should know about my system.
+I go over and grab my watch off the desk beside my bed. 8:54. Close enough for my needs. He'll probably think I'm super weird, but Timothy should know about my system.
 "So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I suffered from before was Lost Time."
 [Timothy] "You mean you'd lose track of time? Doesn't everybody do that?"
 [{player_name}] "No, it's more like..."
 "There would be entire hours where I just am not home, up here:"
-"Hours, maybe days, that I couldn't account for. couldn't remember."
+"Hours, maybe days, that I couldn't account for and couldn't remember."
 "It's a type of dissociation."
 "When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were."
 "But ever since I count and keep track of the hours of the day very closely."

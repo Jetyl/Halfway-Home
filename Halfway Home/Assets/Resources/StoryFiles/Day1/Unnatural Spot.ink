@@ -32,28 +32,28 @@ EXTERNAL SetValue(ValueName, newValue)
 -> UnnatrualSpot
 
 === UnnatrualSpot ===
-I wander around the gardens for a bit, until I spot Timothy, in an unusual opening of shrubry by the building.
+I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Calm
 //CG mayhaps later
-He's crocuhed over, looking down at a small patch of dirt in the grass, with a stick in hand.
+He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
-I get closer, and see that he's scribling something in the dirt.
+I get closer, and see that he's writing something in the dirt.
 {
 	- week == 1:
-		"Whatch'a doing?"
-		I lean in, seeing a bunch of crude lines.
+		"Whatch'ya doing?"
+		I lean in to see a row of straight lines under a weird-looking symbol.
 		[Timothy] "Hangman..."
-		[{player_name}] "Oh!"
+		[{player_name}] "Oh! That's what that is. I thought you might be a wizard or something."
+		Timothy chuckles. #Timothy=Happy
 		Now that he mentions it, yeah, I can see the Hangman set up. It seems to be looking for a 4 letter word.
 	- else:
-		"Hangman game?"
-		[Timothy] "hm? oh..."
-		"Yeah..."
-		[{player_name}] "cool. cool."
-		its the same scrawled hangman setup, with the same 4 letter word in it.
+		"Hangman?"
+		[Timothy] "Hm? Oh. Yeah..."
+		[{player_name}] "Cool. Cool."
+		It's the same scrawled hangman setup as... before... with the same 4 letter word in it.
 }
 [Timothy] "Guess."
 [{player_name}] "Hm? oh, uh, okay."
-"lets see, lets start with..."
+"Let's see...""
 +[Common consants] -> Constant
 +[Can I buy a vowel?] -> Vowel
 +{GetValue("SolvedHangman")}[It's Hope] -> AlreadyKnow
@@ -80,7 +80,7 @@ I get closer, and see that he's scribling something in the dirt.
 *U -> Wrong
 
 === Constant ===
-okay, some common consants are...
+Okay, some common consants are...
 *S-> Wrong
 *T-> Wrong
 *R-> Wrong
