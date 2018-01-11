@@ -34,9 +34,8 @@ public class AutoType : MonoBehaviour
     Coroutine typing;
 
     float DefaultVolume;
-
-    [HideInInspector]
-    public bool Skipping;
+    
+    bool Skipping;
 
     bool Paused;
 
@@ -58,6 +57,19 @@ public class AutoType : MonoBehaviour
 
     }
 
+    public void SetSkipping(bool SetSkip)
+    {
+        Skipping = SetSkip;
+
+        if(Skipping &&typing != null)
+        {
+            StopCoroutine(typing);
+            Text.text = message;
+            Text.maxVisibleCharacters = message.Length;
+            Space.DispatchEvent(Events.FinishedAutoType);
+        }
+           
+    }
 
     public void Clear()
     {

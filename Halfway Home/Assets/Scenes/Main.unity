@@ -6572,6 +6572,7 @@ MonoBehaviour:
   LeftSpot: {fileID: 1463426191}
   RightSpot: {fileID: 517490444}
   Varience: 4
+  SpotSize: 12
   StartingRoom: 0
   BackgroundFadeTime: 2
 --- !u!1 &850827991
