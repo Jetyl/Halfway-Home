@@ -82,6 +82,7 @@ public class Events
     //description system
     public static readonly String AutoType = "AutoTypeEvent";
     public static readonly String FinishedAutoType = "FinishedAutoTypeEvent";
+    public static readonly String PrintLine = "PrintLineEvent";
     public static readonly String SkipTyping = "SkipTypingEvent";
     public static readonly String StopSkipTyping = "StopSkipTypingEvent";
     public static readonly String Description = "DescriptionEvent";

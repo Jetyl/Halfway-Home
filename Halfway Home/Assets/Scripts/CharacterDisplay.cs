@@ -36,10 +36,7 @@ public class CharacterDisplay : MonoBehaviour
     {
 
         //visual = GetComponentInChildren<SpriteRenderer>();
-        var awhite = Color.white;
-        awhite.a = 0;
-        visual.color = awhite;
-        BackSprite.color = awhite;
+        
 
 	}
 	
@@ -68,20 +65,41 @@ public class CharacterDisplay : MonoBehaviour
         transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);
     }
 
-    public void EnterStage(string pose, StageDistance distance)
+    public void EnterStage(string pose, StageDistance distance, bool Skip)
     {
         Start(); // just incase this gets called before start, somehow;
         
         visual.sprite = GetPose(pose);
         ChangeDistance(distance);
-        //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
-        
+
+
+        var awhite = Color.white;
+        awhite.a = 0;
+
+        if (Skip)
+        {
+            visual.color = Color.white;
+            BackSprite.color = awhite;
+        }
+        else
+        {
+
+            visual.color = awhite;
+            BackSprite.color = awhite;
+
+            visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
+        }
+            
+
 
     }
-    public void ChangePose(string pose)
+    public void ChangePose(string pose, bool Skip)
     {
         //visual.sprite = GetPose(pose);
-        StartCoroutine(ChangeSprite(GetPose(pose)));
+        if (!Skip)
+            StartCoroutine(ChangeSprite(GetPose(pose)));
+        else
+            visual.sprite = GetPose(pose);
     }
 
     IEnumerator ChangeSprite(Sprite newSprite)
@@ -130,11 +148,20 @@ public class CharacterDisplay : MonoBehaviour
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
     }
-    public void ExitStage()
+    public void ExitStage(bool Skip)
     {
         //visual.sprite = Poses[pose];
         var awhite = Color.white;
         awhite.a = 0;
+
+        if (Skip)
+        {
+            visual.color = awhite;
+            Destroy(gameObject, 0.5f);
+            return;
+        }
+
+        
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
         var pos = transform.position;
 

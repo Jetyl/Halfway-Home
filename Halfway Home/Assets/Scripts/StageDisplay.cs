@@ -36,8 +36,11 @@ public class StageDisplay : MonoBehaviour
 
     public Room StartingRoom;
     public float BackgroundFadeTime = 2;
+    public float SpriteMoveTime = 2;
 
     bool Load = false;
+
+    bool Skip = false;
 
 	// Use this for initialization
 	void Start ()
@@ -54,6 +57,9 @@ public class StageDisplay : MonoBehaviour
         Space.Connect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
         Space.Connect<StageDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
+        Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkip);
+        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OffSkip);
+
         Space.Connect<DefaultEvent>(Events.Save, OnSave);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 
@@ -68,6 +74,16 @@ public class StageDisplay : MonoBehaviour
 		
 	}
 
+    void OnSkip(DefaultEvent eventdata)
+    {
+        Skip = true;
+        StopAllCoroutines();
+    }
+
+    void OffSkip(DefaultEvent eventdata)
+    {
+        Skip = false;
+    }
 
     void OnSave(DefaultEvent eventdata)
     {
@@ -122,12 +138,12 @@ public class StageDisplay : MonoBehaviour
             //if the command is all, affect all
             if (eventdata.character.ToLower() == "all")
             {
-                Roll.ChangePose(eventdata.Pose);
+                Roll.ChangePose(eventdata.Pose, Skip);
             }
             else if(Roll.Character.Character == eventdata.character)
             {
                
-                Roll.ChangePose(eventdata.Pose);
+                Roll.ChangePose(eventdata.Pose, Skip);
                 Roll.ChangeDistance(eventdata.Distance);
                 return;
             }
@@ -149,7 +165,7 @@ public class StageDisplay : MonoBehaviour
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
-                    directions.EnterStage(eventdata.Pose, eventdata.Distance);
+                    directions.EnterStage(eventdata.Pose, eventdata.Distance, Skip);
                     Actors.Add(directions);
                     directions.Direction = eventdata.Direction;
                     SpotLights[eventdata.Direction] += 1;
@@ -171,7 +187,7 @@ public class StageDisplay : MonoBehaviour
         {
             while(Actors.Count != 0)
             {
-                Actors[0].ExitStage();
+                Actors[0].ExitStage(Skip);
                 Actors.Remove(Actors[0]);
             }
             
@@ -196,7 +212,7 @@ public class StageDisplay : MonoBehaviour
             {
 
                 SpotLights[Roll.Direction] -= 1;
-                Roll.ExitStage();
+                Roll.ExitStage(Skip);
                 Actors.Remove(Roll);
                 UpdateStagePositions(Roll.Direction);
                 return;
@@ -269,8 +285,12 @@ public class StageDisplay : MonoBehaviour
             {
                 spot.z = Roll.transform.localPosition.z;
                 spot.y = Roll.transform.localPosition.y;
-                print("spacing:" + Spacing);
-                iTween.MoveTo(Roll.gameObject, spot, 2);
+
+                if (!Skip)
+                    iTween.MoveTo(Roll.gameObject, spot, SpriteMoveTime);
+                else
+                    Roll.transform.localPosition = spot;
+
                 spot.x += Spacing;
                 i += 1;
                 if (i >= SpotLights[pos])
@@ -301,8 +321,16 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.Tag == CurrentCG)
                 {
+                    if (!Skip)
+                        StartCoroutine(BackdropChange(room.Backdrop));
+                    else
+                    {
 
-                    StartCoroutine(BackdropChange(room.Backdrop));
+                        FrontCurtain.sprite = room.Backdrop;
+
+                        FrontCurtain.color = Color.white;
+                    }
+                    
 
                 }
 
@@ -317,8 +345,15 @@ public class StageDisplay : MonoBehaviour
 
                 if (room.ID == CurrentRoom)
                 {
+                    if (!Skip)
+                        StartCoroutine(BackdropChange(room.Backdrop));
+                    else
+                    {
 
-                    StartCoroutine(BackdropChange(room.Backdrop));
+                        FrontCurtain.sprite = room.Backdrop;
+
+                        FrontCurtain.color = Color.white;
+                    }
 
                 }
 

@@ -6575,6 +6575,7 @@ MonoBehaviour:
   SpotSize: 12
   StartingRoom: 0
   BackgroundFadeTime: 2
+  SpriteMoveTime: 2
 --- !u!1 &850827991
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,7 +7455,6 @@ MonoBehaviour:
     DelayMultiplier: 10
   - chracter: 33
     DelayMultiplier: 10
-  Skipping: 0
 --- !u!114 &988875922
 MonoBehaviour:
   m_ObjectHideFlags: 0
