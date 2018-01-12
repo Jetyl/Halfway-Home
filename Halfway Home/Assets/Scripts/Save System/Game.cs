@@ -49,6 +49,9 @@ public class Game
 
     public List<CharacterIntermission> CastCall;
 
+    public string CurrentHistory = "";
+    public string CurrentSpeaker = "";
+
     public Game()
     {
        

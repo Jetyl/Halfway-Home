@@ -19,6 +19,7 @@ public class CharacterDisplay : MonoBehaviour
     public List<Distances> Distances;
 
     public StagePosition Direction;
+    public StagePosition FacingDirection;
 
     public StageDistance Distance;
 
@@ -30,6 +31,8 @@ public class CharacterDisplay : MonoBehaviour
     public bool FlipOnLeft;
 
     string Pose;
+
+    bool Entering;
 
 	// Use this for initialization
 	void Start ()
@@ -55,6 +58,7 @@ public class CharacterDisplay : MonoBehaviour
         data.PosY = transform.position.y;
         data.Name = Pose;
         data.Dir = Direction;
+        data.face = FacingDirection;
         Game.current.CastCall.Add(data);
     }
 
@@ -62,15 +66,19 @@ public class CharacterDisplay : MonoBehaviour
     {
         visual.sprite = GetPose(chara.Name);
         ChangeDistance(chara.Dis);
+        ChangeFacing(chara.face);
         transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);
     }
 
-    public void EnterStage(string pose, StageDistance distance, bool Skip)
+    public void EnterStage(string pose, StageDistance distance, StagePosition facing,  bool Skip)
     {
         Start(); // just incase this gets called before start, somehow;
+
         
+
         visual.sprite = GetPose(pose);
         ChangeDistance(distance);
+        ChangeFacing(facing);
 
 
         var awhite = Color.white;
@@ -83,16 +91,45 @@ public class CharacterDisplay : MonoBehaviour
         }
         else
         {
-
+            Entering = true;
             visual.color = awhite;
             BackSprite.color = awhite;
 
-            visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
+            //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
         }
             
 
 
     }
+
+    public void MoveOnStage(Vector3 newPosition, float time)
+    {
+
+        if(Entering)
+        {
+
+            Entering = false;
+
+            var pos = newPosition;
+
+            if (Direction == StagePosition.Left)
+            {
+                pos.x -= 2.5f;
+            }
+            else
+            {
+                pos.x += 2.5f;
+            }
+
+            transform.localPosition = pos;
+
+
+        }
+
+
+        iTween.MoveTo(gameObject, newPosition, time);
+    }
+
     public void ChangePose(string pose, bool Skip)
     {
         //visual.sprite = GetPose(pose);
@@ -119,20 +156,20 @@ public class CharacterDisplay : MonoBehaviour
 
     }
 
-    public void ChangePosition(StagePosition pos)
+    public void ChangeFacing(StagePosition pos)
     {
-        Direction = pos;
+        FacingDirection = pos;
 
         if (FlipOnLeft)
         {
-            if (Direction == StagePosition.Left)
+            if (FacingDirection == StagePosition.Left)
                 visual.flipX = true;
             else
                 visual.flipX = false;
         }
         else
         {
-            if (Direction == StagePosition.Right)
+            if (FacingDirection == StagePosition.Right)
                 visual.flipX = true;
             else
                 visual.flipX = false;
@@ -165,7 +202,7 @@ public class CharacterDisplay : MonoBehaviour
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
         var pos = transform.position;
 
-        if(Direction == StagePosition.Left)
+        if(FacingDirection == StagePosition.Left)
         {
             pos.x -= 2.5f;
         }
@@ -216,6 +253,7 @@ public class CharacterIntermission
     //class for if player saved mid scene.
     public string chara;
     public StagePosition Dir;
+    public StagePosition face;
     public StageDistance Dis;
     public float PosX;
     public float PosY;

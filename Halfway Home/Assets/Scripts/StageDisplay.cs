@@ -145,6 +145,7 @@ public class StageDisplay : MonoBehaviour
                
                 Roll.ChangePose(eventdata.Pose, Skip);
                 Roll.ChangeDistance(eventdata.Distance);
+                Roll.ChangeFacing(eventdata.FacingDirection);
                 return;
             }
         }
@@ -158,14 +159,15 @@ public class StageDisplay : MonoBehaviour
             //adding character to scene
             if(person.Character == eventdata.character)
             {
-                var cast = Instantiate(person.Actor);
+
+                var cast = Instantiate(person.Actor, Vector3.zero, Quaternion.identity);
 
                 var directions = cast.GetComponent<CharacterDisplay>();
                 if (directions == null)
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
-                    directions.EnterStage(eventdata.Pose, eventdata.Distance, Skip);
+                    directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
                     Actors.Add(directions);
                     directions.Direction = eventdata.Direction;
                     SpotLights[eventdata.Direction] += 1;
@@ -248,15 +250,15 @@ public class StageDisplay : MonoBehaviour
         switch(pos)
         {
             case StagePosition.Center:
-                spot = gameObject.transform.position;
+                spot = gameObject.transform.localPosition;
                 CenterPoint = 0.5f;
                 break;
             case StagePosition.Left:
-                spot = LeftSpot.transform.position;
+                spot = LeftSpot.transform.localPosition;
                 CenterPoint = 1/4;
                 break;
             case StagePosition.Right:
-                spot = RightSpot.transform.position;
+                spot = RightSpot.transform.localPosition;
                 CenterPoint = 3/4;
                 break;
             default:
@@ -264,7 +266,7 @@ public class StageDisplay : MonoBehaviour
         }
 
         //if the number of people in that spot is more than the spacing given allows
-        if(Varience * SpotLights[pos] > SpotSize + 1)
+        if (Varience * SpotLights[pos] > SpotSize + 1)
         {
             Spacing = SpotSize / SpotLights[pos];
             spot.x -= SpotSize * CenterPoint;
@@ -285,9 +287,9 @@ public class StageDisplay : MonoBehaviour
             {
                 spot.z = Roll.transform.localPosition.z;
                 spot.y = Roll.transform.localPosition.y;
-
+                
                 if (!Skip)
-                    iTween.MoveTo(Roll.gameObject, spot, SpriteMoveTime);
+                    Roll.MoveOnStage(spot, SpriteMoveTime);
                 else
                     Roll.transform.localPosition = spot;
 
@@ -411,14 +413,16 @@ public class StageDirectionEvent : DefaultEvent
     public Vector3 Position;
     public Room Backdrop;
     public StagePosition Direction;
+    public StagePosition FacingDirection;
     public StageDistance Distance;
 
-    public StageDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center)
+    public StageDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center, StagePosition face = StagePosition.Right)
     {
         character = person;
         Pose = pose;
         Direction = Pos;
         Distance = Dis;
+        FacingDirection = face;
     }
 
     public StageDirectionEvent(Room scenery, string tag = "")

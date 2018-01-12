@@ -53,16 +53,22 @@ public class SpeakerDisplay : MonoBehaviour
         eventdata.Speaker = eventdata.Speaker.Replace("[", "");
         eventdata.Speaker = eventdata.Speaker.Replace("]", "");
 
-        if (Characters.Contains(eventdata.Speaker))
-        {
-            txt.color = Speakers[eventdata.Speaker];
-        }
-        else
-            txt.color = Color.white;
+        txt.color = GetColor(eventdata.Speaker);
+        
 
         txt.text = TextParser.DynamicEdit(eventdata.Speaker);
 
 
+    }
+
+    public Color GetColor(string Speaker)
+    {
+        if (Characters.Contains(Speaker))
+        {
+            return Speakers[Speaker];
+        }
+        else
+            return Color.white;
     }
 
 }
