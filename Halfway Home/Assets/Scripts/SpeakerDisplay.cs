@@ -13,6 +13,8 @@ using TMPro;
 public class SpeakerDisplay : MonoBehaviour
 {
 
+    public GameObject Box;
+
     public List<string> Characters;
     public List<Color> Colors;
 
@@ -48,7 +50,13 @@ public class SpeakerDisplay : MonoBehaviour
         
         
         if (eventdata.Speaker == "")
+        {
             txt.text = "";
+            Box.SetActive(false);
+            return;
+        }
+
+        Box.SetActive(true);
 
         eventdata.Speaker = eventdata.Speaker.Replace("[", "");
         eventdata.Speaker = eventdata.Speaker.Replace("]", "");

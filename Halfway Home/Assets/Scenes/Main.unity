@@ -5032,6 +5032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02068f7195a0eca4b918c0e91d577205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Box: {fileID: 603277534}
   Characters:
   - '#PlayerName'
   - Timothy
