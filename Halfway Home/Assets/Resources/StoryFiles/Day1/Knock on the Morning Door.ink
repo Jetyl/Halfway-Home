@@ -52,8 +52,8 @@ A cheerful knock drags me out of my dreary haze. # Background / YourRoom
 		What do they want?
 	- week == 2:
 		Must be Max, to take me away from this limbo.
-	//- GetValue("FirstRRR"):
-	//	-> RestartRequired
+	- GetValue("FirstRRR"):
+		-> RestartRequired
 	-else:
 		The week has begun again.
 }

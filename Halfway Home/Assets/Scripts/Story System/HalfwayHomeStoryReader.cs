@@ -236,6 +236,7 @@ namespace HalfwayHome
 
     public void SetValue(string ValueName, bool newValue)
     {
+            print(ValueName + " " + newValue);
       Game.current.Progress.SetValue(ValueName, newValue);
     }
 

@@ -35,6 +35,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool Stop = false;
 
+    bool NoClick = false;
+
     // Use this for initialization
     void Start ()
     {
@@ -73,6 +75,9 @@ public class DescriptionDisplay : MonoBehaviour
         if (Stop)
             return;
 
+        if (NoClick)
+            return;
+
         if(Input.GetButtonDown("Skip"))
         {
             Skipping = !Skipping;
@@ -102,8 +107,7 @@ public class DescriptionDisplay : MonoBehaviour
                 //turn this back on when the animation is working again
                 //NextLine.SetBool("Play", true);
 
-
-                    
+                
                 return;
             }
 
@@ -228,7 +232,16 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
-    
+    public void ClickableOff()
+    {
+        NoClick = true;
+    }
+    public void ClickableOn()
+    {
+        NoClick = false;
+    }
+
+
 }
 
 

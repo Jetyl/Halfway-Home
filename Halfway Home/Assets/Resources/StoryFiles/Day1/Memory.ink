@@ -22,7 +22,7 @@ EXTERNAL SetPlayerGender(gender)
 EXTERNAL GetPlayerName()
 EXTERNAL GetStringValue(name)
 EXTERNAL SetStringValue(name, string)
-EXTERNAL SetIntValue(name, string)
+EXTERNAL SetIntValue(name, int)
 
 -> Start
 
