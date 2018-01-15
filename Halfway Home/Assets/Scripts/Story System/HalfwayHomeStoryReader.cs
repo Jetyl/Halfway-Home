@@ -36,12 +36,14 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     protected override void OnBindExternalFunctions(Story story)
     {
+            
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.runtime.BindExternalFunction(nameof(SetIntValue), new System.Action<string, int>(SetIntValue));
-      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
-      story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => { GetIntValue(valueName); });
-      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
+      story.runtime.BindExternalFunction(nameof(SetStringValue), new System.Action<string, string>(SetStringValue));
+      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
@@ -86,7 +88,7 @@ namespace HalfwayHome
 
     protected override void OnStoryLoaded(Story story)
     {
-
+            
     }
 
 
@@ -247,8 +249,10 @@ namespace HalfwayHome
 
     public bool GetValue(string ValueName)
     {
-      print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
-      return Game.current.Progress.GetBoolValue(ValueName);
+        print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
+        return Game.current.Progress.GetBoolValue(ValueName);
+        
+
     }
 
     public int GetIntValue(string ValueName)
@@ -256,10 +260,15 @@ namespace HalfwayHome
       return Game.current.Progress.GetIntValue(ValueName);
     }
 
+        public void SetStringValue(string ValueName, string value)
+    {
+            Game.current.Progress.SetValue(ValueName, value);
+    }
+
 
     public string GetStringValue(string ValueName)
     {
-            print(ValueName);
+            
             print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
