@@ -154,11 +154,12 @@ MonoBehaviour:
   - Scale: 0.75
     Offset: 0
   Direction: 0
+  FacingDirection: 0
   Distance: 0
   visual: {fileID: 212268110233276374}
   BackSprite: {fileID: 212427123477562210}
   SpriteSwitchSpeed: 1
-  FlipOnLeft: 1
+  FlipOnLeft: 0
 --- !u!114 &114559324231784268
 MonoBehaviour:
   m_ObjectHideFlags: 1

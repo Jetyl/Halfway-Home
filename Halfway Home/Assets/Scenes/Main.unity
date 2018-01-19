@@ -6589,21 +6589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18c7e315f47d2d47ad2f3560419d12a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CastList:
-  - Character: Timothy
-    Actor: {fileID: 1084522956037128, guid: 8f2b7af634d0a7747b3d7e4d2cdfabe7, type: 2}
-  - Character: Charlotte
-    Actor: {fileID: 1084522956037128, guid: 6bb840f0a95122c4c9afa8c0b5d6815f, type: 2}
-  - Character: Eduardo
-    Actor: {fileID: 1241828928622914, guid: 4f2b51899cd9f8241a2ca7209e12a8d4, type: 2}
-  - Character: Max
-    Actor: {fileID: 1435825661436478, guid: 34f01b2dd26bd084a8ea0179f22e39c6, type: 2}
-  - Character: Isaac
-    Actor: {fileID: 1241828928622914, guid: fa8398f3fd73c1641945e36d77c1eef8, type: 2}
-  - Character: Trissa
-    Actor: {fileID: 1084522956037128, guid: fd736ba1e38741042aac431366108868, type: 2}
-  - Character: Keyless
-    Actor: {fileID: 1435825661436478, guid: 61990b8c5ea0e3744ba2fd9969c1fbdb, type: 2}
   Backdrop:
   - ID: 0
     Tag: Dream
@@ -6647,13 +6632,8 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
   FrontCurtain: {fileID: 2006069810}
   BackCuratin: {fileID: 206367696}
-  LeftSpot: {fileID: 1463426191}
-  RightSpot: {fileID: 517490444}
-  Varience: 4
-  SpotSize: 12
   StartingRoom: 0
   BackgroundFadeTime: 2
-  SpriteMoveTime: 2
 --- !u!114 &849746600
 MonoBehaviour:
   m_ObjectHideFlags: 0

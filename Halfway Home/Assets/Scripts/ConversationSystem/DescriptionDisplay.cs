@@ -35,7 +35,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool Stop = false;
 
-    bool NoClick = false;
+    [HideInInspector]
+    public bool NoClick = false;
 
     // Use this for initialization
     void Start ()

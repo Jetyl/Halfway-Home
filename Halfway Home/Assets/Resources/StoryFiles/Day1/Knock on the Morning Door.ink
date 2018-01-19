@@ -78,7 +78,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 [{player_name}] "Yeah, yeah, I know."
 [Max] "Ya oughta. Pretty soon you won't have old Max to be there reminding ya."
 [{player_name}] "Yeah."
-[Scrawny looking kid] "..." # Timothy = Calm
+[Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"
 [Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah?"

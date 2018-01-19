@@ -34,6 +34,11 @@ public class CharacterDisplay : MonoBehaviour
 
     bool Entering;
 
+    Vector3 Destination;
+
+    Coroutine Expressing;
+    
+
 	// Use this for initialization
 	void Start ()
     {
@@ -46,8 +51,32 @@ public class CharacterDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		
+        
 	}
+
+    void EndTransitions(DefaultEvent eventdata)
+    {
+        print("On");
+        if(Expressing != null)
+        {
+            StopCoroutine(Expressing);
+            Expressing = null;
+
+            visual.sprite = BackSprite.sprite;
+            var awhite = Color.white;
+            awhite.a = 0;
+
+            visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 0.01f));
+            BackSprite.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 0.01f));
+
+        }
+        
+        
+        iTween.Stop(gameObject);
+
+        transform.localPosition = Destination;
+
+    }
 
     public void OnSave()
     {
@@ -74,7 +103,8 @@ public class CharacterDisplay : MonoBehaviour
     {
         Start(); // just incase this gets called before start, somehow;
 
-        
+        Space.Connect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
+
 
         visual.sprite = GetPose(pose);
         ChangeDistance(distance);
@@ -105,6 +135,8 @@ public class CharacterDisplay : MonoBehaviour
     public void MoveOnStage(Vector3 newPosition, float time)
     {
 
+        Destination = newPosition;
+
         if(Entering)
         {
 
@@ -122,19 +154,21 @@ public class CharacterDisplay : MonoBehaviour
             }
 
             transform.localPosition = pos;
-
-
+            
         }
 
 
-        iTween.MoveTo(gameObject, newPosition, time);
+        iTween.MoveTo(gameObject, Destination, time);
     }
 
     public void ChangePose(string pose, bool Skip)
     {
+        if (pose == "None" || pose == "")
+            return;
+
         //visual.sprite = GetPose(pose);
         if (!Skip)
-            StartCoroutine(ChangeSprite(GetPose(pose)));
+            Expressing = StartCoroutine(ChangeSprite(GetPose(pose)));
         else
             visual.sprite = GetPose(pose);
     }
@@ -148,7 +182,7 @@ public class CharacterDisplay : MonoBehaviour
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, SpriteSwitchSpeed));
         BackSprite.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(SpriteSwitchSpeed + 0.25f);
 
         visual.sprite = newSprite;
         visual.color = Color.white;
@@ -158,21 +192,37 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangeFacing(StagePosition pos)
     {
+        if (pos == StagePosition.None)
+            return;
+
         FacingDirection = pos;
 
         if (FlipOnLeft)
         {
             if (FacingDirection == StagePosition.Left)
+            {
                 visual.flipX = true;
+                BackSprite.flipX = true;
+            }
             else
+            {
                 visual.flipX = false;
+                BackSprite.flipX = false;
+            }
+                
         }
         else
         {
             if (FacingDirection == StagePosition.Right)
+            {
                 visual.flipX = true;
+                BackSprite.flipX = true;
+            }
             else
+            {
                 visual.flipX = false;
+                BackSprite.flipX = false;
+            }
         }
 
 
@@ -180,6 +230,9 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangeDistance(StageDistance distance)
     {
+        if (distance == StageDistance.None)
+            return;
+
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
         transform.localScale = new Vector3(scale, scale, scale);
@@ -228,6 +281,12 @@ public class CharacterDisplay : MonoBehaviour
 
         Debug.LogError("Character: " + Character.Character + " does not know pose " + name);
         return null;
+    }
+
+
+    void OnDestroy()
+    {
+        Space.DisConnect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
     }
 
 }

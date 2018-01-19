@@ -116,14 +116,15 @@ namespace HalfwayHome
           var pose = match["Pose"];
           var person = match["Person"];
           if (pose.ToLower() == "exit")
-            Space.DispatchEvent(Events.CharacterExit, new CastDirectionEvent(person, "Calm"));
+            Space.DispatchEvent(Events.CharacterExit, new CastDirectionEvent(person));
           else
           {
             Trace.Script(parse.FindFirst("Person"));
+                        
             Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
           }
         }
-
+        
         //if(parse.Find("Pose") == "Exit")
         //{
         //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
@@ -238,7 +239,6 @@ namespace HalfwayHome
 
     public void SetValue(string ValueName, bool newValue)
     {
-            print(ValueName + " " + newValue);
       Game.current.Progress.SetValue(ValueName, newValue);
     }
 
@@ -249,7 +249,6 @@ namespace HalfwayHome
 
     public bool GetValue(string ValueName)
     {
-        print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
         return Game.current.Progress.GetBoolValue(ValueName);
         
     }

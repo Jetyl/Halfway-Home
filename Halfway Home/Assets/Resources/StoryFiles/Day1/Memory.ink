@@ -33,12 +33,6 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-testing my getters and setters for booleans
-~SetValue("FirstRRR", true)
-I have just set the test value in the progress book to true. this can be confirmed code side
-~Test = GetValue("FirstRRR")
-I have just gotten the test value from my progress book. it is of value {Test:true|false}.
-please let this work...
 The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_bardman
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching

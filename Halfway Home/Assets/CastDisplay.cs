@@ -38,7 +38,6 @@ public class CastDisplay : MonoBehaviour
 
         Space.Connect<CastDirectionEvent>(Events.CharacterCall, CharacterChanges);
         Space.Connect<CastDirectionEvent>(Events.CharacterExit, CharacterExit);
-        Space.Connect<CastDirectionEvent>(Events.MoveCharacter, MoveCharacter);
 
         Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkip);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OffSkip);
@@ -106,6 +105,13 @@ public class CastDisplay : MonoBehaviour
 
     void CharacterChanges(CastDirectionEvent eventdata)
     {
+        //if the command is all, affect all
+        if (eventdata.character.ToLower() == "all")
+        {
+            CallAllCast(eventdata.Pose);
+            return;
+        }
+
         //for characters already on scene
         foreach (var Roll in Actors)
         {
@@ -115,23 +121,28 @@ public class CastDisplay : MonoBehaviour
                 Actors.Remove(Roll);
             }
 
-            //if the command is all, affect all
-            if (eventdata.character.ToLower() == "all")
-            {
-                Roll.ChangePose(eventdata.Pose, Skip);
-            }
-            else if (Roll.Character.Character == eventdata.character)
+            if (Roll.Character.Character == eventdata.character)
             {
 
                 Roll.ChangePose(eventdata.Pose, Skip);
                 Roll.ChangeDistance(eventdata.Distance);
                 Roll.ChangeFacing(eventdata.FacingDirection);
+
+                if (eventdata.Direction != StagePosition.None && eventdata.Direction != Roll.Direction)
+                {
+                    var oldDirections = Roll.Direction;
+                    SpotLights[Roll.Direction] -= 1;
+                    Roll.Direction = eventdata.Direction;
+                    SpotLights[eventdata.Direction] += 1;
+
+                    UpdateStagePositions(oldDirections);
+                    UpdateStagePositions(eventdata.Direction);
+                }
+                
                 return;
             }
         }
-
-        if (eventdata.character.ToLower() == "all")
-            return;
+        
 
         //if here, character is not on scene
         foreach (var person in CastList)
@@ -149,9 +160,13 @@ public class CastDisplay : MonoBehaviour
                 {
                     directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
                     Actors.Add(directions);
+
+                    if (eventdata.Direction == StagePosition.None)
+                        eventdata.Direction = StagePosition.Center;
+
                     directions.Direction = eventdata.Direction;
-                    SpotLights[eventdata.Direction] += 1;
-                    UpdateStagePositions(eventdata.Direction);
+                    SpotLights[directions.Direction] += 1;
+                    UpdateStagePositions(directions.Direction);
 
                 }
             }
@@ -192,7 +207,6 @@ public class CastDisplay : MonoBehaviour
 
             if (Roll.Character.Character == eventdata.character)
             {
-
                 SpotLights[Roll.Direction] -= 1;
                 Roll.ExitStage(Skip);
                 Actors.Remove(Roll);
@@ -203,22 +217,7 @@ public class CastDisplay : MonoBehaviour
     }
 
 
-
-    void MoveCharacter(CastDirectionEvent eventdata)
-    {
-        if (GetActor(eventdata.character) < 0)
-            return;
-
-
-        var actor = Actors[GetActor(eventdata.character)];
-
-        SpotLights[actor.Direction] -= 1;
-        actor.Direction = eventdata.Direction;
-        SpotLights[eventdata.Direction] += 1;
-
-        UpdateStagePositions(eventdata.Direction);
-
-    }
+    
 
 
     void UpdateStagePositions(StagePosition pos)
@@ -306,6 +305,22 @@ public class CastDisplay : MonoBehaviour
         return -1;
     }
 
+
+    void CallAllCast(string Pose)
+    {
+        foreach (var Roll in Actors)
+        {
+
+            if (Roll == null)
+            {
+                Actors.Remove(Roll);
+                continue;
+            }
+            
+            Roll.ChangePose(Pose, Skip);
+            
+        }
+    }
 }
 
 public class CastDirectionEvent : DefaultEvent
@@ -317,6 +332,7 @@ public class CastDirectionEvent : DefaultEvent
     public StagePosition FacingDirection;
     public StageDistance Distance;
 
+    
     public CastDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center, StagePosition face = StagePosition.Right)
     {
         character = person;
@@ -326,19 +342,54 @@ public class CastDirectionEvent : DefaultEvent
         FacingDirection = face;
     }
     
-
-    //changing someone's position
-    public CastDirectionEvent(string person, StagePosition Dir)
+    public CastDirectionEvent(string person, string calls)
     {
         character = person;
-        Direction = Dir;
+        Pose = "None";
+
+        string[] directions = calls.Split(',');
+
+        foreach (string call in directions)
+        {
+            MonoBehaviour.print(call);
+            var calling = call.Replace(" ", "");
+
+            switch (calling.ToLower())
+            {
+                case "left":
+                    FacingDirection = StagePosition.Left;
+                    break;
+                case "right":
+                    FacingDirection = StagePosition.Right;
+                    break;
+                case "close":
+                    Distance = StageDistance.Close;
+                    break;
+                case "medium":
+                    Distance = StageDistance.Center;
+                    break;
+                case "far":
+                    Distance = StageDistance.Far;
+                    break;
+                case "stage_right":
+                    Direction = StagePosition.Right;
+                    break;
+                case "stage_left":
+                    Direction = StagePosition.Left;
+                    break;
+                case "stage_center":
+                    Direction = StagePosition.Center;
+                    break;
+                default:
+                    Pose = calling;
+                    break;
+            }
+            
+        }
+        
+
     }
 
-    public CastDirectionEvent(string person, StageDistance Dis)
-    {
-        character = person;
-        Distance = Dis;
-    }
 
 }
 

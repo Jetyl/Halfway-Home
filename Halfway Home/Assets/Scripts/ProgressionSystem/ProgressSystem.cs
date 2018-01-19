@@ -115,8 +115,7 @@ public class ProgressSystem
 
         if (ProgressBook[_key].TypeID != PointTypes.Flag)
             return;
-
-        Debug.Log(_key + " is " + change);
+        
          
         ProgressBook[_key].BoolValue = change;
 
