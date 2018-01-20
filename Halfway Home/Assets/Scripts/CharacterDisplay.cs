@@ -38,7 +38,6 @@ public class CharacterDisplay : MonoBehaviour
 
     Coroutine Expressing;
     
-
 	// Use this for initialization
 	void Start ()
     {
@@ -54,30 +53,7 @@ public class CharacterDisplay : MonoBehaviour
         
 	}
 
-    void EndTransitions(DefaultEvent eventdata)
-    {
-        print("On");
-        if(Expressing != null)
-        {
-            StopCoroutine(Expressing);
-            Expressing = null;
-
-            visual.sprite = BackSprite.sprite;
-            var awhite = Color.white;
-            awhite.a = 0;
-
-            visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 0.01f));
-            BackSprite.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 0.01f));
-
-        }
-        
-        
-        iTween.Stop(gameObject);
-
-        transform.localPosition = Destination;
-
-    }
-
+    
     public void OnSave()
     {
         var data = new CharacterIntermission();
@@ -102,8 +78,7 @@ public class CharacterDisplay : MonoBehaviour
     public void EnterStage(string pose, StageDistance distance, StagePosition facing,  bool Skip)
     {
         Start(); // just incase this gets called before start, somehow;
-
-        Space.Connect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
+        
 
 
         visual.sprite = GetPose(pose);
@@ -124,7 +99,6 @@ public class CharacterDisplay : MonoBehaviour
             Entering = true;
             visual.color = awhite;
             BackSprite.color = awhite;
-
             //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
         }
             
@@ -159,6 +133,7 @@ public class CharacterDisplay : MonoBehaviour
 
 
         iTween.MoveTo(gameObject, Destination, time);
+        
     }
 
     public void ChangePose(string pose, bool Skip)
@@ -168,14 +143,19 @@ public class CharacterDisplay : MonoBehaviour
 
         //visual.sprite = GetPose(pose);
         if (!Skip)
+        {
+            if (Expressing != null)
+                StopCoroutine(Expressing);
+
             Expressing = StartCoroutine(ChangeSprite(GetPose(pose)));
+        }
+            
         else
             visual.sprite = GetPose(pose);
     }
 
     IEnumerator ChangeSprite(Sprite newSprite)
     {
-
         BackSprite.sprite = newSprite;
         var Awhite = Color.white;
         Awhite.a = 0;
@@ -187,7 +167,6 @@ public class CharacterDisplay : MonoBehaviour
         visual.sprite = newSprite;
         visual.color = Color.white;
         BackSprite.color = Awhite;
-
     }
 
     public void ChangeFacing(StagePosition pos)
@@ -286,7 +265,7 @@ public class CharacterDisplay : MonoBehaviour
 
     void OnDestroy()
     {
-        Space.DisConnect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
+        //Space.DisConnect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
     }
 
 }

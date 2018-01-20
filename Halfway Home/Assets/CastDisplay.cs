@@ -351,7 +351,7 @@ public class CastDirectionEvent : DefaultEvent
 
         foreach (string call in directions)
         {
-            MonoBehaviour.print(call);
+            //MonoBehaviour.print(call);
             var calling = call.Replace(" ", "");
 
             switch (calling.ToLower())

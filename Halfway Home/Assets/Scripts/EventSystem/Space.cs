@@ -55,7 +55,8 @@ public class Space : MonoBehaviour
 
     static public void DisConnect<T>(string eventName, Action<T> function) where T : EventData
     {
-        EventSystem.DisconnectEvent<T>(Instance.gameObject, eventName, function);
+        if (Instance.gameObject != null)
+            EventSystem.DisconnectEvent<T>(Instance.gameObject, eventName, function);
     }
 }
 

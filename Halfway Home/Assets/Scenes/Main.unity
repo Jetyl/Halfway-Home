@@ -516,6 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speaker: {fileID: 568080877}
   NextLine: {fileID: 0}
+  NoClick: 0
 --- !u!1 &60859184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,6 +5269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185893efedc58c741b2915008b6040f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MapTransitions: 1
   DefaultActions: {fileID: 4900000, guid: 813b6617d71cf3f49b993368814ba8c6, type: 3}
 --- !u!114 &613250404
 MonoBehaviour:

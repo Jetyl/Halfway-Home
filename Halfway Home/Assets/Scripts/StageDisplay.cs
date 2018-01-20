@@ -163,13 +163,59 @@ public class StageDirectionEvent : DefaultEvent
 {
     public string character;
     public Room Backdrop;
+    public TransitionTypes Transitions;
     
-    public StageDirectionEvent(Room scenery, string tag = "")
+    public StageDirectionEvent(Room scenery, string tag = "", TransitionTypes move = TransitionTypes.CrossFade)
     {
         Backdrop = scenery;
         character = tag;
+        Transitions = move;
     }
     
+    public StageDirectionEvent(string data)
+    {
+        string[] calls = data.Split(',');
+        Backdrop = Room.None;
+        Transitions = TransitionTypes.None;
+
+        foreach(var direct in calls)
+        {
+            var directions = direct.Replace(" ", "");
+            
+            if(directions.ToLower().Contains("transition_"))
+            {
+                directions = directions.ToLower().Replace("transition_", "");
+
+                for (var i = 0; i < Enum.GetValues(typeof(TransitionTypes)).Length; ++i)
+                {
+                    if (directions == ((TransitionTypes)i).ToString().ToLower())
+                    {
+                        Transitions = (TransitionTypes)i;
+                        break;
+                    }
+                }
+
+            }
+
+            if (directions.ToLower().Contains("cg_"))
+            {
+                character = directions.ToLower().Replace("cg_", "");
+                continue;
+
+            }
+
+            for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
+            {
+                if (directions.ToLower() == ((Room)i).ToString().ToLower())
+                {
+                    Backdrop = (Room)i;
+                    break;
+                }
+            }
+        }
+
+    }
+
 }
 
 [Serializable]
