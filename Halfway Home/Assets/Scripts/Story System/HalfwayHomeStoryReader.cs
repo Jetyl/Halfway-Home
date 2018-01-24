@@ -161,11 +161,11 @@ namespace HalfwayHome
       else
       {
         if (stat == "awareness")
-          Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         if (stat == "grace")
-          Game.current.Self.IncrementSocialTier(Personality.Social.grace);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         if (stat == "expression")
-          Game.current.Self.IncrementSocialTier(Personality.Social.expression);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         Space.DispatchEvent(Events.StatChange);
       }
     }
