@@ -22,7 +22,10 @@ public class StageDisplay : MonoBehaviour
 
     public SpriteRenderer FrontCurtain;
     public SpriteRenderer BackCuratin;
-   
+
+    public WipeTransitionAnimator WipeCurtain;
+    public EyeTransitionAnimator EyeCurtain;
+
     public Room StartingRoom;
     public float BackgroundFadeTime = 2;
 
@@ -72,12 +75,9 @@ public class StageDisplay : MonoBehaviour
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
-
         
         SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom));
     }
-
-    
 
     void SceneryChange(StageDirectionEvent eventdata)
     {
@@ -96,20 +96,7 @@ public class StageDisplay : MonoBehaviour
             foreach (var room in SpecialBackdrops)
             {
                 if (room.Tag == CurrentCG)
-                {
-                    if (!Skip)
-                        StartCoroutine(BackdropChange(room.Backdrop));
-                    else
-                    {
-
-                        FrontCurtain.sprite = room.Backdrop;
-
-                        FrontCurtain.color = Color.white;
-                    }
-                    
-
-                }
-
+                    BackdropChange(room.Backdrop, eventdata.Transitions);
             }
         }
         else
@@ -118,21 +105,8 @@ public class StageDisplay : MonoBehaviour
             CurrentCG = "";
             foreach (var room in Backdrop)
             {
-
                 if (room.ID == CurrentRoom)
-                {
-                    if (!Skip)
-                        StartCoroutine(BackdropChange(room.Backdrop));
-                    else
-                    {
-
-                        FrontCurtain.sprite = room.Backdrop;
-
-                        FrontCurtain.color = Color.white;
-                    }
-
-                }
-
+                    BackdropChange(room.Backdrop, eventdata.Transitions);
             }
         }
 
@@ -140,7 +114,54 @@ public class StageDisplay : MonoBehaviour
         
     }
 
-    IEnumerator BackdropChange(Sprite newBackdrop)
+    public void BackdropChange(Sprite newbackdrop, TransitionTypes transition)
+    {
+
+        if(Skip)
+        {
+
+            FrontCurtain.sprite = newbackdrop;
+
+            FrontCurtain.color = Color.white;
+
+            return;
+        }
+
+        switch (transition)
+        {
+            case TransitionTypes.None:
+                FrontCurtain.sprite = newbackdrop;
+                FrontCurtain.color = Color.white;
+                break;
+            case TransitionTypes.CrossFade:
+                StartCoroutine(CrossFade(newbackdrop));
+                break;
+            case TransitionTypes.Wipe:
+                StartCoroutine(Wipe(newbackdrop, 1));
+                break;
+            case TransitionTypes.WipeLeft:
+                StartCoroutine(Wipe(newbackdrop, -1));
+                break;
+            case TransitionTypes.BlackWipe:
+                StartCoroutine(BlackWipe(newbackdrop, 1));
+                break;
+            case TransitionTypes.BlackWipeLeft:
+                StartCoroutine(BlackWipe(newbackdrop, -1));
+                break;
+            case TransitionTypes.EyeClose:
+                StartCoroutine(EyeCloseFade(newbackdrop));
+                break;
+            case TransitionTypes.EyeOpen:
+                StartCoroutine(EyeOpenFade(newbackdrop));
+                break;
+            default:
+                break;
+        }
+
+    }
+
+
+    IEnumerator CrossFade(Sprite newBackdrop)
     {
         BackCuratin.sprite = newBackdrop;
         var Awhite = Color.white;
@@ -155,7 +176,93 @@ public class StageDisplay : MonoBehaviour
         BackCuratin.color = Awhite;
 
     }
-    
+
+    IEnumerator Wipe(Sprite newBackdrop, int direction)
+    {
+        WipeCurtain.FadeDirection = new Vector2(direction, 0);
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = FrontCurtain.sprite;
+        WipeCurtain.Progress = 0;
+        FrontCurtain.sprite = newBackdrop;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
+        {
+            WipeCurtain.Progress = t;
+            yield return null;
+        }
+
+        WipeCurtain.Progress = 1;
+
+        FrontCurtain.sprite = newBackdrop;
+
+    }
+
+    IEnumerator BlackWipe(Sprite newBackdrop, int direction)
+    {
+        WipeCurtain.FadeDirection = new Vector2(direction, 0);
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = FrontCurtain.sprite;
+        WipeCurtain.Progress = 0;
+        FrontCurtain.sprite = null;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
+        {
+            WipeCurtain.Progress = t;
+            yield return null;
+        }
+        WipeCurtain.Progress = 1;
+
+
+        yield return new WaitForSeconds(0.25f);
+        WipeCurtain.FadeDirection = -WipeCurtain.FadeDirection;
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = newBackdrop;
+        
+        for (float t = 1.0f; t < 0.0f; t -= Time.deltaTime / BackgroundFadeTime)
+        {
+            WipeCurtain.Progress = t;
+            yield return null;
+        }
+        WipeCurtain.Progress = 0;
+        
+        FrontCurtain.sprite = newBackdrop;
+
+        yield return new WaitForSeconds(Time.deltaTime);
+        WipeCurtain.Progress = 1;
+    }
+
+
+    IEnumerator EyeCloseFade(Sprite newBackdrop)
+    {
+        EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = FrontCurtain.sprite;
+        EyeCurtain.Progress = 0;
+        FrontCurtain.sprite = newBackdrop;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
+        {
+            EyeCurtain.Progress = t;
+            yield return null;
+        }
+
+        EyeCurtain.Progress = 1;
+
+    }
+
+    IEnumerator EyeOpenFade(Sprite newBackdrop)
+    {
+        EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = newBackdrop;
+        EyeCurtain.Progress = 1;
+        
+        for (float t = 1.0f; t < 0.0f; t -= Time.deltaTime / BackgroundFadeTime)
+        {
+            EyeCurtain.Progress = t;
+            yield return null;
+        }
+        EyeCurtain.Progress = 0;
+
+        FrontCurtain.sprite = newBackdrop;
+
+        yield return new WaitForSeconds(Time.deltaTime);
+        EyeCurtain.Progress = 1;
+    }
+
 }
 
 
@@ -231,5 +338,9 @@ public enum TransitionTypes
     None,
     CrossFade,
     Wipe,
-    BlackWipe
+    BlackWipe,
+    WipeLeft,
+    BlackWipeLeft,
+    EyeOpen,
+    EyeClose
 }
