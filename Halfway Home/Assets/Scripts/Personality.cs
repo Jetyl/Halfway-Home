@@ -34,20 +34,14 @@ public class Personality
     
     Dictionary<Social, int> BasicSocialStars;
     Dictionary<Social, int> BonusSocialStars;
-
-    int GraceStars = 0;
-    int GraceValue = 0;
-    int ExpressionStars = 0;
-    int ExpressionValue = 0;
-    int AwarenessStars = 0;
-    int AwarenessValue = 0;
+    
     
     int StressThreshold1 = 20; //value of stress, where it will begin decrimetting social stats by 1
     int StressThreshold2 = 50; //value of stress, where it will begin decrimetting social stats by 2
     int StressThreshold3 = 80; //value of stress, where it will begin decrimetting social stats by 3
 
 
-    int SocialThreshold = 50;
+    public int SocialThreshold = 50;
     int MaxSocialStars = 3; //maximum number of tiers the player can get normally (not counting character growths)
     int MaxBonusStars = 2;
 
@@ -126,7 +120,19 @@ public class Personality
 
     public int GetSocialProgress(Social stat)
     {
-        return SocialValues[stat] - (BasicSocialStars[stat] * SocialThreshold);
+        return SocialValues[stat];
+    }
+
+    //returns the current number of stars collected
+    public int GetBasicSocialStat(Social stat)
+    {
+        return BasicSocialStars[stat];
+    }
+
+    //returns the current number of stars collected
+    public int GetBonusSocialStat(Social stat)
+    {
+        return BonusSocialStars[stat];
     }
 
     //returns the current number of stars collected

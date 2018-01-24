@@ -12,6 +12,8 @@ using UnityEngine;
 public class StatManger : MonoBehaviour
 {
 
+    public int SocialThresholdValue = 50;
+
     public int DefaultIncrementValue = 5;
 
     public List<StatAdder> IncrementValues;
@@ -19,6 +21,8 @@ public class StatManger : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        Game.current.Self.SocialThreshold = SocialThresholdValue;
+
         Space.Connect<ChangeStatEvent>(Events.AddStat, OnAddValue);
 	}
 	
