@@ -36,9 +36,13 @@ public class SpeakerDisplayEditor : Editor
         SerializedProperty Speakers = serializedObject.FindProperty("Speakers");
         SerializedProperty Characters = serializedObject.FindProperty("Characters");
         SerializedProperty Colors = serializedObject.FindProperty("Colors");
-        
+
+        SerializedProperty Box = serializedObject.FindProperty("Box");
+
 
         EditorGUILayout.Space();
+
+        EditorGUILayout.PropertyField(Box, new GUIContent("Speaker Box"));
 
         Characters.arraySize = AmountOfCharacters + 1;
         Colors.arraySize = AmountOfCharacters + 1;

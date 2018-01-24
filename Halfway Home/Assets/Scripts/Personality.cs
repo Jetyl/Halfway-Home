@@ -28,31 +28,46 @@ public class Personality
         expression
     }
 
-    int GraceTier = 0;
-    int GraceValue = 0;
-    int ExpressionTier = 0;
-    int ExpressionValue = 0;
-    int AwarenessTier = 0;
-    int AwarenessValue = 0;
+    Dictionary<Wellbeing, int> WellbeingValues;
 
-    int DelusionValue = 1;
-
-    int FatigueValue = 0;
+    Dictionary<Social, int> SocialValues;
     
-    int StressValue = 1;
+    Dictionary<Social, int> BasicSocialStars;
+    Dictionary<Social, int> BonusSocialStars;
+    
+    
     int StressThreshold1 = 20; //value of stress, where it will begin decrimetting social stats by 1
     int StressThreshold2 = 50; //value of stress, where it will begin decrimetting social stats by 2
     int StressThreshold3 = 80; //value of stress, where it will begin decrimetting social stats by 3
 
 
-    int SocialThreshold = 50;
-    int MaxSocialGrowth = 3; //maximum number of tiers the player can get normally (not counting character growths)
-    int MaxBonusTiers = 2;
+    public int SocialThreshold = 50;
+    int MaxSocialStars = 3; //maximum number of tiers the player can get normally (not counting character growths)
+    int MaxBonusStars = 2;
 
     int MaxWellbeingValue = 100;
 
     public Personality()
     {
+        WellbeingValues = new Dictionary<Wellbeing, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
+        {
+            WellbeingValues.Add((Wellbeing)i, 0);
+
+        }
+
+        SocialValues = new Dictionary<Social, int>();
+        BasicSocialStars = new Dictionary<Social, int>();
+        BonusSocialStars = new Dictionary<Social, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
+        {
+            SocialValues.Add((Social)i, 0);
+            BasicSocialStars.Add((Social)i, 0);
+            BonusSocialStars.Add((Social)i, 0);
+
+        }
 
     }
 
@@ -103,42 +118,35 @@ public class Personality
         
     }
 
-
-    public int GetTrueSocialStat(Social stat)
+    public int GetSocialProgress(Social stat)
     {
-        switch (stat)
-        {
-            case Social.awareness:
-                return AwarenessTier + (AwarenessValue / SocialThreshold);
-            case Social.expression:
-                return ExpressionTier + (ExpressionValue / SocialThreshold);
-            case Social.grace:
-                return GraceTier + (GraceValue / SocialThreshold);
-            default:
-                return 0;
-        }
+        return SocialValues[stat];
     }
 
+    //returns the current number of stars collected
+    public int GetBasicSocialStat(Social stat)
+    {
+        return BasicSocialStars[stat];
+    }
+
+    //returns the current number of stars collected
+    public int GetBonusSocialStat(Social stat)
+    {
+        return BonusSocialStars[stat];
+    }
+
+    //returns the current number of stars collected
+    public int GetTrueSocialStat(Social stat)
+    {
+        return BasicSocialStars[stat] + BonusSocialStars[stat];
+    }
+
+    //returns the star count, minus stress reduction
     public int GetModifiedSocialStat(Social stat)
     {
         int stressReduction = GetStressReduction();
-        int socialstat = 0;
-
-        switch (stat)
-        {
-            case Social.awareness:
-                socialstat = AwarenessTier + (AwarenessValue/SocialThreshold) - stressReduction;
-                break;
-            case Social.expression:
-                socialstat = ExpressionTier + (GraceValue / SocialThreshold) - stressReduction;
-                break;
-            case Social.grace:
-                socialstat = GraceTier + (GraceValue / SocialThreshold) - stressReduction;
-                break;
-            default:
-                return 0;
-        }
-
+        int socialstat = BasicSocialStars[stat] + BonusSocialStars[stat] - stressReduction;
+        
         if (socialstat < 0)
             socialstat = 0;
 
@@ -147,119 +155,39 @@ public class Personality
 
     public void SetSocialStat(Social stat, int Value)
     {
-        switch (stat)
-        {
-            case Social.awareness:
 
-                //AwarenessValue = Value;
-                if(Value <= MaxBonusTiers)
-                AwarenessTier = Value;// / SocialThreshold;
-                else
-                {
-                    AwarenessTier = MaxBonusTiers;
-                    AwarenessValue = (Value - MaxBonusTiers) * SocialThreshold;
-                }
-                
-                break;
-            case Social.expression:
-
-
-                //ExpressionTier = Value;
-                if (Value <= MaxBonusTiers)
-                    ExpressionTier = Value;// / SocialThreshold;
-                else
-                {
-                    ExpressionTier = MaxBonusTiers;
-                    ExpressionValue = (Value - MaxBonusTiers) * SocialThreshold;
-
-                }
-                //ExpressionTier = Value / SocialThreshold;
-
-                break;
-            case Social.grace:
-
-                //GraceTier = Value;
-                if (Value <= MaxBonusTiers)
-                    GraceTier = Value;// / SocialThreshold;
-                else
-                {
-                    GraceTier = MaxBonusTiers;
-                    GraceValue = (Value - MaxBonusTiers) * SocialThreshold;
-
-                }
-                //GraceTier = Value / SocialThreshold;
-
-                break;
-            default:
-                break;
-        }
-
+        SocialValues[stat] = Value;
+        BasicSocialStars[stat] = Value / SocialThreshold;
+        
     }
 
     public void IncrementSocialStat(Social stat, int addition)
     {
+
+        if (BasicSocialStars[stat] >= MaxSocialStars)
+            return;
+
         if (addition < 0)
             addition = 0;
 
-        switch (stat)
-        {
-            case Social.awareness:
-                if ((AwarenessValue/SocialThreshold) >= MaxSocialGrowth)
-                    break;
-
-                AwarenessValue += addition;
-                
-                break;
-            case Social.expression:
-                if ((ExpressionTier/SocialThreshold) >= MaxSocialGrowth)
-                    break;
-
-                ExpressionValue += addition;
-                
-                break;
-            case Social.grace:
-                if ((GraceTier/SocialThreshold) >= MaxSocialGrowth)
-                    break;
-
-                GraceValue += addition;
-                if (GraceValue >= SocialThreshold * GraceTier)
-                {
-                    IncrementSocialTier(stat);
-                }
-                break;
-            default:
-                break;
-        }
+        SocialValues[stat] += addition;
+        BasicSocialStars[stat] = SocialValues[stat] / SocialThreshold;
         
-
     }
 
-    public void IncrementSocialTier(Social stat)
+    public void AddBonusSocialStar(Social stat)
     {
-        switch (stat)
-        {
-            case Social.awareness:
-                AwarenessTier += 1;
-                if (AwarenessTier > MaxBonusTiers)
-                    AwarenessTier = MaxBonusTiers;
-                break;
-            case Social.expression:
-                ExpressionTier += 1;
-                if (ExpressionTier > MaxBonusTiers)
-                    ExpressionTier = MaxBonusTiers;
-                break;
-            case Social.grace:
-                GraceTier += 1;
-                if (GraceTier > MaxBonusTiers)
-                    GraceTier = MaxBonusTiers;
-                break;
-            default:
-                break;
-        }
+
+        if (BonusSocialStars[stat] >= MaxBonusStars)
+            return;
+
+        BonusSocialStars[stat] += 1;
+        
     }
 
     int GetStressReduction()
     {
+        var StressValue = WellbeingValues[Wellbeing.stress];
 
         if (StressValue < StressThreshold1)
             return 0;
@@ -273,17 +201,7 @@ public class Personality
 
     public int GetWellbingStat(Wellbeing stat)
     {
-        switch (stat)
-        {
-            case Wellbeing.delusion:
-                return DelusionValue;
-            case Wellbeing.fatigue:
-                return FatigueValue;
-            case Wellbeing.stress:
-                return StressValue;
-            default:
-                return 0;
-        }
+        return WellbeingValues[stat];
     }
 
     public void SetWellbeingStat(Wellbeing stat, int value)
@@ -294,50 +212,20 @@ public class Personality
         if (value > MaxWellbeingValue)
             value = MaxWellbeingValue;
 
-        switch (stat)
-        {
-            case Wellbeing.delusion:
-                DelusionValue = value;
-                break;
-            case Wellbeing.fatigue:
-                FatigueValue = value;
-                break;
-            case Wellbeing.stress:
-                StressValue = value;
-                break;
-            default:
-                break;
-        }
+        WellbeingValues[stat] = value;
+        
     }
 
     public void IncrementWellbeingStat(Wellbeing stat, int value)
     {
-        switch (stat)
-        {
-            case Wellbeing.delusion:
-                DelusionValue += value;
-                if (DelusionValue > MaxWellbeingValue)
-                    DelusionValue = MaxWellbeingValue;
-                if (DelusionValue < 0)
-                    DelusionValue = 0;
-                break;
-            case Wellbeing.fatigue:
-                FatigueValue += value;
-                if (FatigueValue > MaxWellbeingValue)
-                    FatigueValue = MaxWellbeingValue;
-                if (FatigueValue < 0)
-                    FatigueValue = 0;
-                break;
-            case Wellbeing.stress:
-                StressValue += value;
-                if (StressValue > MaxWellbeingValue)
-                    StressValue = MaxWellbeingValue;
-                if (StressValue < 0)
-                    StressValue = 0;
-                break;
-            default:
-                break;
-        }
+
+        WellbeingValues[stat] += value;
+
+        if (WellbeingValues[stat] > MaxWellbeingValue)
+            WellbeingValues[stat] = MaxWellbeingValue;
+        if (WellbeingValues[stat] < 0)
+            WellbeingValues[stat] = 0;
+        
     }
 
 }

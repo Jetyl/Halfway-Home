@@ -14,6 +14,7 @@ namespace HalfwayHome
   public class MapDisplay : MonoBehaviour
   {
 
+        public TransitionTypes MapTransitions;
     public TextAsset DefaultActions;
 
     //script for handling the map logic of the game.

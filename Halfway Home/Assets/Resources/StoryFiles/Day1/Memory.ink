@@ -17,12 +17,17 @@ VAR delusion = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
+VAR Test = false
 
 EXTERNAL SetPlayerGender(gender)
 EXTERNAL GetPlayerName()
 EXTERNAL GetStringValue(name)
 EXTERNAL SetStringValue(name, string)
-EXTERNAL SetIntValue(name, string)
+EXTERNAL SetIntValue(name, int)
+
+EXTERNAL GetIntValue(value)
+EXTERNAL GetValue(value)
+EXTERNAL SetValue(name, values)
 
 -> Start
 
@@ -32,7 +37,7 @@ The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Drea
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route.
+I am forced to stop and look for another route. 
 To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
 I need to choose now!
 +[Stairs]

@@ -62,7 +62,6 @@ public class TimelineSystem : MonoBehaviour
     {
         
         TimeLine = eventdata.conversation;
-        print("wht");
         NextNode(0);
     }
 

@@ -19,6 +19,7 @@ public class CharacterDisplay : MonoBehaviour
     public List<Distances> Distances;
 
     public StagePosition Direction;
+    public StagePosition FacingDirection;
 
     public StageDistance Distance;
 
@@ -31,24 +32,28 @@ public class CharacterDisplay : MonoBehaviour
 
     string Pose;
 
+    bool Entering;
+
+    Vector3 Destination;
+
+    Coroutine Expressing;
+    
 	// Use this for initialization
 	void Start ()
     {
 
         //visual = GetComponentInChildren<SpriteRenderer>();
-        var awhite = Color.white;
-        awhite.a = 0;
-        visual.color = awhite;
-        BackSprite.color = awhite;
+        
 
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        
 	}
 
+    
     public void OnSave()
     {
         var data = new CharacterIntermission();
@@ -58,6 +63,7 @@ public class CharacterDisplay : MonoBehaviour
         data.PosY = transform.position.y;
         data.Name = Pose;
         data.Dir = Direction;
+        data.face = FacingDirection;
         Game.current.CastCall.Add(data);
     }
 
@@ -65,59 +71,137 @@ public class CharacterDisplay : MonoBehaviour
     {
         visual.sprite = GetPose(chara.Name);
         ChangeDistance(chara.Dis);
+        ChangeFacing(chara.face);
         transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);
     }
 
-    public void EnterStage(string pose, StageDistance distance)
+    public void EnterStage(string pose, StageDistance distance, StagePosition facing,  bool Skip)
     {
         Start(); // just incase this gets called before start, somehow;
         
+
+
         visual.sprite = GetPose(pose);
         ChangeDistance(distance);
-        //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, 2));
-        
+        ChangeFacing(facing);
+
+
+        var awhite = Color.white;
+        awhite.a = 0;
+
+        if (Skip)
+        {
+            visual.color = Color.white;
+            BackSprite.color = awhite;
+        }
+        else
+        {
+            Entering = true;
+            visual.color = awhite;
+            BackSprite.color = awhite;
+            //visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
+        }
+            
+
 
     }
-    public void ChangePose(string pose)
+
+    public void MoveOnStage(Vector3 newPosition, float time)
     {
+
+        Destination = newPosition;
+
+        if(Entering)
+        {
+
+            Entering = false;
+
+            var pos = newPosition;
+
+            if (Direction == StagePosition.Left)
+            {
+                pos.x -= 2.5f;
+            }
+            else
+            {
+                pos.x += 2.5f;
+            }
+
+            transform.localPosition = pos;
+            
+        }
+
+
+        iTween.MoveTo(gameObject, Destination, time);
+        
+    }
+
+    public void ChangePose(string pose, bool Skip)
+    {
+        if (pose == "None" || pose == "")
+            return;
+
         //visual.sprite = GetPose(pose);
-        StartCoroutine(ChangeSprite(GetPose(pose)));
+        if (!Skip)
+        {
+            if (Expressing != null)
+                StopCoroutine(Expressing);
+
+            Expressing = StartCoroutine(ChangeSprite(GetPose(pose)));
+        }
+            
+        else
+            visual.sprite = GetPose(pose);
     }
 
     IEnumerator ChangeSprite(Sprite newSprite)
     {
-
         BackSprite.sprite = newSprite;
         var Awhite = Color.white;
         Awhite.a = 0;
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, SpriteSwitchSpeed));
         BackSprite.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, SpriteSwitchSpeed));
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(SpriteSwitchSpeed + 0.25f);
 
         visual.sprite = newSprite;
         visual.color = Color.white;
         BackSprite.color = Awhite;
-
     }
 
-    public void ChangePosition(StagePosition pos)
+    public void ChangeFacing(StagePosition pos)
     {
-        Direction = pos;
+        if (pos == StagePosition.None)
+            return;
+
+        FacingDirection = pos;
 
         if (FlipOnLeft)
         {
-            if (Direction == StagePosition.Left)
+            if (FacingDirection == StagePosition.Left)
+            {
                 visual.flipX = true;
+                BackSprite.flipX = true;
+            }
             else
+            {
                 visual.flipX = false;
+                BackSprite.flipX = false;
+            }
+                
         }
         else
         {
-            if (Direction == StagePosition.Right)
+            if (FacingDirection == StagePosition.Right)
+            {
                 visual.flipX = true;
+                BackSprite.flipX = true;
+            }
             else
+            {
                 visual.flipX = false;
+                BackSprite.flipX = false;
+            }
         }
 
 
@@ -125,20 +209,32 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangeDistance(StageDistance distance)
     {
+        if (distance == StageDistance.None)
+            return;
+
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
     }
-    public void ExitStage()
+    public void ExitStage(bool Skip)
     {
         //visual.sprite = Poses[pose];
         var awhite = Color.white;
         awhite.a = 0;
+
+        if (Skip)
+        {
+            visual.color = awhite;
+            Destroy(gameObject, 0.5f);
+            return;
+        }
+
+        
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
         var pos = transform.position;
 
-        if(Direction == StagePosition.Left)
+        if(FacingDirection == StagePosition.Left)
         {
             pos.x -= 2.5f;
         }
@@ -166,6 +262,12 @@ public class CharacterDisplay : MonoBehaviour
         return null;
     }
 
+
+    void OnDestroy()
+    {
+        //Space.DisConnect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
+    }
+
 }
 
 [System.Serializable]
@@ -189,6 +291,7 @@ public class CharacterIntermission
     //class for if player saved mid scene.
     public string chara;
     public StagePosition Dir;
+    public StagePosition face;
     public StageDistance Dis;
     public float PosX;
     public float PosY;

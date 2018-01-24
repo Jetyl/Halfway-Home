@@ -46,7 +46,7 @@ public class AutoType : MonoBehaviour
         audios = GetComponent<AudioSource>();
         Text.useMaxVisibleDescender = true;
         EventSystem.ConnectEvent<AutoTypeEvent>(gameObject, Events.AutoType, TypingText);
-        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.SkipTyping, SkipTyping);
+        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.PrintLine, SkipTyping);
         DefaultVolume = audios.volume;
 
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);

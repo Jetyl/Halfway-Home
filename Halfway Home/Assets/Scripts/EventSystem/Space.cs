@@ -53,6 +53,11 @@ public class Space : MonoBehaviour
         EventSystem.ConnectEvent<T>(Instance.gameObject, eventName, function);
     }
 
+    static public void DisConnect<T>(string eventName, Action<T> function) where T : EventData
+    {
+        if (Instance.gameObject != null)
+            EventSystem.DisconnectEvent<T>(Instance.gameObject, eventName, function);
+    }
 }
 
 public enum EventListener

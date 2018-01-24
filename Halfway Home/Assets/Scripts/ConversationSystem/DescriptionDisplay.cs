@@ -17,7 +17,7 @@ public class DescriptionDisplay : MonoBehaviour
     
 
     Animator anime;
-    AutoType Decription;
+    AutoType Description;
     public GameObject Speaker;
 
     public Animator NextLine;
@@ -35,11 +35,14 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool Stop = false;
 
+    [HideInInspector]
+    public bool NoClick = false;
+
     // Use this for initialization
     void Start ()
     {
         anime = gameObject.GetComponent<Animator>();
-        Decription = gameObject.GetComponentInChildren<AutoType>();
+        Description = gameObject.GetComponentInChildren<AutoType>();
         //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
         
 
@@ -51,11 +54,13 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnStopSkipping);
+        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
 
 
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
         Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
+        Space.Connect<DefaultEvent>(Events.OpenHistory, OnStop);
+        Space.Connect<DefaultEvent>(Events.CloseHistory, OnNonStop);
 
     }
 	
@@ -71,10 +76,19 @@ public class DescriptionDisplay : MonoBehaviour
         if (Stop)
             return;
 
+        if (NoClick)
+            return;
+
         if(Input.GetButtonDown("Skip"))
         {
             Skipping = !Skipping;
-            Decription.SetSkipping(Skipping);
+
+            if (Skipping)
+                Space.DispatchEvent(Events.SkipTyping);
+            else
+                Space.DispatchEvent(Events.StopSkipTyping);
+
+            Description.SetSkipping(Skipping);
             
         }
 
@@ -89,13 +103,12 @@ public class DescriptionDisplay : MonoBehaviour
             
             if (!isFinished)
             {
-                Decription.gameObject.DispatchEvent(Events.SkipTyping);
+                Description.gameObject.DispatchEvent(Events.PrintLine);
 
                 //turn this back on when the animation is working again
                 //NextLine.SetBool("Play", true);
 
-
-                    
+                
                 return;
             }
 
@@ -145,7 +158,7 @@ public class DescriptionDisplay : MonoBehaviour
 
         //UpdateSpeaker(0);
         Active = true;
-        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
+        Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
     }
 
@@ -155,7 +168,7 @@ public class DescriptionDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
         anime.SetBool("IsUp", false);
         Active = false;
-        Decription.Clear();
+        Description.Clear();
         StartCoroutine(WaitTilClosed());
     }
 
@@ -174,13 +187,13 @@ public class DescriptionDisplay : MonoBehaviour
     IEnumerator WaitTilOpened()
     {
 
-        Decription.Clear();
+        Description.Clear();
 
 
         yield return new WaitForSeconds(1.5f);
         
         Active = true;
-        Decription.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
+        Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
     }
 
@@ -212,8 +225,23 @@ public class DescriptionDisplay : MonoBehaviour
     void OnStopSkipping(DefaultEvent eventdata)
     {
         Skipping = false;
-        Decription.SetSkipping(Skipping);
+        Description.SetSkipping(Skipping);
     }
+
+    void OnSkipOff(DefaultEvent eventdata)
+    {
+        Space.DispatchEvent(Events.StopSkipTyping);
+    }
+
+    public void ClickableOff()
+    {
+        NoClick = true;
+    }
+    public void ClickableOn()
+    {
+        NoClick = false;
+    }
+
 
 }
 

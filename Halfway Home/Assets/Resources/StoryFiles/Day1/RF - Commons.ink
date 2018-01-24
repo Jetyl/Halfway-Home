@@ -63,7 +63,7 @@ I cringe at the potential minefield before me as I reflexively correct Timothy.
 [{player_name}] "Their keys."
 [Timothy] "Huh?"
 [{player_name}] "Max is not a guy. Their pronouns are they/them."
-[Timothy] "Oh! Uh I-I..." #Timothy = Scared
+[Timothy] "Oh! Uh I-I..." #Timothy = Afraid
 "S-s-sorry, I-I-I just..."
 [{player_name}] "Timothy, just relax. It's fine."
 "If you make a mistake like that all you've got to do is apologize and not make a big deal out of it."

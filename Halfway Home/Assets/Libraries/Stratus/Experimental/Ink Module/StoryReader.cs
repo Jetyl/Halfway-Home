@@ -678,6 +678,14 @@ namespace Stratus
 
           if (logging)
             Trace.Script($"\"{line}\" ");
+          
+          if(story.runtime.currentErrors != null)
+                    {
+                        for(int i = 0; i < story.runtime.currentErrors.Count; ++i)
+                        {
+                            print(story.runtime.currentErrors[i]);
+                        }
+                    }
 
           var updateEvent = new Story.UpdateLineEvent(parser.Parse(line, tags), visited);
           Scene.Dispatch<Story.UpdateLineEvent>(updateEvent);

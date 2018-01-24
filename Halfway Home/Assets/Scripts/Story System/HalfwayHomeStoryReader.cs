@@ -36,12 +36,14 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     protected override void OnBindExternalFunctions(Story story)
     {
+            
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.runtime.BindExternalFunction(nameof(SetIntValue), new System.Action<string, int>(SetIntValue));
-      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => { GetValue(valueName); });
-      story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => { GetIntValue(valueName); });
-      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => { GetStringValue(valueName); });
+      story.runtime.BindExternalFunction(nameof(SetStringValue), new System.Action<string, string>(SetStringValue));
+      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
@@ -86,7 +88,7 @@ namespace HalfwayHome
 
     protected override void OnStoryLoaded(Story story)
     {
-
+            
     }
 
 
@@ -114,14 +116,15 @@ namespace HalfwayHome
           var pose = match["Pose"];
           var person = match["Person"];
           if (pose.ToLower() == "exit")
-            Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(person, "Calm"));
+            Space.DispatchEvent(Events.CharacterExit, new CastDirectionEvent(person));
           else
           {
             Trace.Script(parse.FindFirst("Person"));
-            Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(person, pose));
+                        
+            Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
           }
         }
-
+        
         //if(parse.Find("Pose") == "Exit")
         //{
         //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
@@ -158,11 +161,11 @@ namespace HalfwayHome
       else
       {
         if (stat == "awareness")
-          Game.current.Self.IncrementSocialTier(Personality.Social.awareness);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         if (stat == "grace")
-          Game.current.Self.IncrementSocialTier(Personality.Social.grace);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         if (stat == "expression")
-          Game.current.Self.IncrementSocialTier(Personality.Social.expression);
+          Game.current.Self.AddBonusSocialStar(eventStat);
         Space.DispatchEvent(Events.StatChange);
       }
     }
@@ -246,8 +249,8 @@ namespace HalfwayHome
 
     public bool GetValue(string ValueName)
     {
-      print(ValueName + " " +Game.current.Progress.GetBoolValue(ValueName));
-      return Game.current.Progress.GetBoolValue(ValueName);
+        return Game.current.Progress.GetBoolValue(ValueName);
+        
     }
 
     public int GetIntValue(string ValueName)
@@ -255,10 +258,15 @@ namespace HalfwayHome
       return Game.current.Progress.GetIntValue(ValueName);
     }
 
+        public void SetStringValue(string ValueName, string value)
+    {
+            Game.current.Progress.SetValue(ValueName, value);
+    }
+
 
     public string GetStringValue(string ValueName)
     {
-            print(ValueName);
+            
             print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }

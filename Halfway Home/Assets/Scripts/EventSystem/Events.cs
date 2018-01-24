@@ -82,12 +82,15 @@ public class Events
     //description system
     public static readonly String AutoType = "AutoTypeEvent";
     public static readonly String FinishedAutoType = "FinishedAutoTypeEvent";
+    public static readonly String PrintLine = "PrintLineEvent";
     public static readonly String SkipTyping = "SkipTypingEvent";
     public static readonly String StopSkipTyping = "StopSkipTypingEvent";
     public static readonly String Description = "DescriptionEvent";
     public static readonly String FinishedDescription = "FinishedDescriptionEvent";
     public static readonly String CloseDescription = "CloseDescriptionEvent";
     public static readonly String DescriptionClosed = "DescriptionClosedEvent";
+    public static readonly String OpenHistory = "OpenHistoryEvent";
+    public static readonly String CloseHistory = "CloseHistoryEvent";
 
     //choice system
     public static readonly String Choice = "ChoiceEvent";
