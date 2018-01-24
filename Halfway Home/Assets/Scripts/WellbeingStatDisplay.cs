@@ -1,8 +1,8 @@
 ﻿/******************************************************************************/
 /*!
 File:   WellbeingStatDisplay.cs
-Author: Jesse Lozano
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+Author: Jesse Lozano & John Myres
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using System.Collections;
@@ -12,12 +12,15 @@ using UnityEngine.UI;
 
 public class WellbeingStatDisplay : MonoBehaviour
 {
-    public Image Bar;
+    public Image FrontGauge;
+    public Image BackGauge;
     public float ChangeTime = 2;
 
     public Personality.Wellbeing WellnessStat;
 
     public List<UIStatColorMarkers> ColorChanges;
+
+    public List<UIStatColorMarkers> BackColorChanges;
 
     // Use this for initialization
     void Start ()
@@ -37,38 +40,42 @@ public class WellbeingStatDisplay : MonoBehaviour
     {
         int stat = Game.current.Self.GetWellbingStat(WellnessStat);
         float percent = (float)stat / 100f;
-        //Bar.transform.localScale = new Vector3(percent, 1, 1);
-        StartCoroutine(ChangeSize(percent, ChangeTime));
+
+        StartCoroutine(UpdateGauges(percent, ChangeTime));
     }
 
 
-    IEnumerator ChangeSize(float Percentage, float aTime)
+    IEnumerator UpdateGauges(float Percentage, float aTime)
     {
 
-        var startVal = Bar.transform.localScale.x;
+        var startVal = FrontGauge.fillAmount;
 
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
         {
             float percentagepoint = Mathf.Lerp(startVal, Percentage, t);
-            Bar.transform.localScale = new Vector3(percentagepoint, 1, 1);
-            var newcolor = Bar.color;
+            FrontGauge.fillAmount = percentagepoint;
+            var newFrontColor = FrontGauge.color;
+            var newBackColor = BackGauge.color;
             foreach(var color in ColorChanges)
             {
                 if (percentagepoint >= color.PercentagePastPoint)
-                    newcolor = color.statColor;
+                    newFrontColor = color.statColor;
             }
-            Bar.color = newcolor;
+            FrontGauge.color = newFrontColor;
+
+            foreach(var color in BackColorChanges)
+            {
+                if (percentagepoint >= color.PercentagePastPoint)
+                    newBackColor = color.statColor;
+            }
+            FrontGauge.color = newFrontColor;
+            BackGauge.color = newBackColor;
 
             yield return null;
         }
 
-
-
-        Bar.transform.localScale = new Vector3(Percentage, 1, 1);
-
+        FrontGauge.fillAmount = Percentage;
     }
-
-
 }
 
 [System.Serializable]

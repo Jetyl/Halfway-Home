@@ -62,7 +62,7 @@ Eh, its only for one week.
 -> Start.IntoBed
 
 === TalkWeek1 ==
-[Timothy] "th-th-thank you...<delay=2> for showing me around"
+[Timothy] "Th-thank you...<delay=2> for showing me around."
 [{player_name}] "Oh"
 "No problem."
 ->Start.Question

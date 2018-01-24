@@ -1,66 +1,52 @@
 ﻿/******************************************************************************/
 /*!
 File:   TimeDisplay.cs
-Author: Jesse Lozano
+Author: Jesse Lozano & John Myres
 All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class TimeDisplay : MonoBehaviour
 {
+  public TextMeshProUGUI TimeText;
+  public TextMeshProUGUI AMPMText;
+  public Image Day;
 
-    public bool Hour;
-    public bool Day;
+  public Sprite[] Days;
 
-    TextMeshProUGUI txt;
-
-	// Use this for initialization
-	void Start ()
+  void Start ()
     {
-        txt = GetComponent<TextMeshProUGUI>();
+       Space.Connect<DefaultEvent>(Events.TimeChange, UpdateDisplay);
 
-        Space.Connect<DefaultEvent>(Events.TimeChange, UpdateDisplay);
+       UpdateDisplay(new DefaultEvent());
 
-    UpdateDisplay(new DefaultEvent());
+	  }
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
+  void UpdateDisplay(DefaultEvent eventdata)
     {
-		
-	}
+      if (Game.current.Hour == 12)
+      {
+          TimeText.text = "12:00";
+          AMPMText.text = "PM";
+      }
+      else if(Game.current.Hour < 12)
+      {
+          TimeText.text = Game.current.Hour + ":00";
+          AMPMText.text = "PM";
+      }
+      else
+      {
+          TimeText.text = (Game.current.Hour - 12) + ":00";
+          AMPMText.text = "AM";
 
+      }
 
-    void UpdateDisplay(DefaultEvent eventdata)
-    {
-        if (Hour)
-        {
-            string Txt = Game.current.Hour + ":00";
-
-            if (Game.current.Hour < 12)
-            {
-                if (Game.current.Hour == 0)
-                    Txt = "12:00 AM";
-                else
-                    Txt = Game.current.Hour + ":00 AM";
-
-            }
-            else
-            {
-                if (Game.current.Hour == 12)
-                    Txt = "12:00 PM";
-                else
-                    Txt = (Game.current.Hour - 12) + ":00 PM";
-            }
-            txt.text = Txt;
-        }
-        else if (Day)
-            txt.text = Game.current.Day + "";
+      Day.sprite = Days[Game.current.Day  - 1];
     }
 
 }
