@@ -24,7 +24,9 @@ public class StageDisplayEditor : Editor
         SerializedProperty SpecialBackdrop = serializedObject.FindProperty("SpecialBackdrops");
         SerializedProperty FrontCurtain = serializedObject.FindProperty("FrontCurtain");
         SerializedProperty BackCuratin = serializedObject.FindProperty("BackCuratin");
-        
+
+        SerializedProperty WipeCurtain = serializedObject.FindProperty("WipeCurtain");
+        SerializedProperty EyeCurtain = serializedObject.FindProperty("EyeCurtain");
 
         SerializedProperty StartingRoom = serializedObject.FindProperty("StartingRoom");
         SerializedProperty BackgroundFadeTime = serializedObject.FindProperty("BackgroundFadeTime");
@@ -74,8 +76,10 @@ public class StageDisplayEditor : Editor
         EditorGUILayout.PropertyField(FrontCurtain, new GUIContent("Front Curtain"), true);
         EditorGUILayout.PropertyField(BackCuratin, new GUIContent("BackCuratin"), true);
 
-        
-        
+        EditorGUILayout.PropertyField(WipeCurtain, new GUIContent("Wipe Transition Curtain"), true);
+        EditorGUILayout.PropertyField(EyeCurtain, new GUIContent("Eye Transition Curtain"), true);
+
+
 
         serializedObject.ApplyModifiedProperties();
     }
