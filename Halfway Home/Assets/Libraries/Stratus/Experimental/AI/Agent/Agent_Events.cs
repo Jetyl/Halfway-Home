@@ -11,7 +11,7 @@ namespace Stratus
 {
   namespace AI
   {
-    public abstract partial class Agent : MonoBehaviour
+    public abstract partial class Agent : StratusBehaviour
     {
       //------------------------------------------------------------------------/
       // Event Declarations
@@ -114,15 +114,7 @@ namespace Stratus
       public class StopEvent : Stratus.Event
       {
       }
-
-      /// <summary>
-      /// Signals an interactive object that the agent wants to interact with it
-      /// </summary>
-      public class InteractEvent : Stratus.Event
-      {
-        public GameObject Object;
-      }
-
+ 
       /// <summary>
       /// Signals the agent that the given object can be interacted with. 
       /// </summary>

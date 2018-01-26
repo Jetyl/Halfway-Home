@@ -26,6 +26,7 @@ namespace Stratus
     public string text = "Note";
     [Header("Settings")]
     public DrawMode drawMode = DrawMode.Always;
+    [ColorUsage(false)]
     public Color color = Color.yellow;
     public Vector3 offset = new Vector3();
     [Header("Text")]

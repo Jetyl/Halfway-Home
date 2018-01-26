@@ -13,7 +13,7 @@ namespace Stratus
 {
   namespace AI
   {
-    public abstract partial class Agent : MonoBehaviour
+    public abstract partial class Agent : StratusBehaviour
     {
       /// <summary>
       /// Used to temporarily set, then revert navigation settings

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.Events;
+
 
 namespace Stratus.Utilities
 {
@@ -22,7 +22,7 @@ namespace Stratus.Utilities
       if (onClick != null)
         choice.onClick.AddListener(onClick);
 
-      TextMeshProUGUI choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
+      TMPro.TextMeshProUGUI choiceText = choice.GetComponentInChildren<TMPro.TextMeshProUGUI>();
       choiceText.text = text;
       return choice;
     }

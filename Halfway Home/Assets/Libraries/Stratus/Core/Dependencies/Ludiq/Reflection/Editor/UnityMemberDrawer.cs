@@ -83,8 +83,13 @@ namespace Stratus.Dependencies.Ludiq.Reflection.Editor
 			targetType = DetermineTargetType();
 		}
 
-		/// <inheritdoc />
-		protected override void RenderMemberControl(Rect position)
+    protected override void OnTargetChange()
+    {
+      SetValue(null);
+    }
+
+    /// <inheritdoc />
+    protected override void RenderMemberControl(Rect position)
 		{
 			// Other Targets
 			// Some Unity Objects, like Assets, are not supported by the drawer. 

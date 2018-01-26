@@ -102,7 +102,7 @@ namespace Stratus
           // Try every parse
           foreach (var category in patterns)
           {
-            Regex r = new Regex(category.pattern, RegexOptions.IgnoreCase);            
+            Regex r = new Regex(category.pattern, RegexOptions.IgnoreCase);
             string value = null;
             Parse parse = new InkModule.Parse(category.label);
 
@@ -280,7 +280,7 @@ namespace Stratus
           public static string ComposeBinaryOperation(string variableLabel, string operandLabel, string binaryOperator)
           {
             binaryOperator = Regex.Escape(binaryOperator);
-            return $"(?<{variableLabel}>\\w+)[ ]*{binaryOperator}[ ]*(?<{operandLabel}>\\w+)";
+            return $"(?<{variableLabel}>\\w+)[ ]*{binaryOperator}[ ]*(?<{operandLabel}>.*)";
           }
 
           /// <summary>

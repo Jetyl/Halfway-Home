@@ -12,6 +12,9 @@ using Stratus;
 using UnityEditor;
 using System.Linq.Expressions;
 using System;
+using System.Reflection;
+using System.Linq;
+using System.Collections;
 
 namespace Stratus
 {
@@ -19,6 +22,27 @@ namespace Stratus
   {
     public static class SerializedPropertyExtensions
     {
+
+      public static T GetObject<T>(this SerializedProperty property, FieldInfo fieldInfo) where T : class
+      {
+        var obj = fieldInfo.GetValue(property.serializedObject.targetObject);
+        var type = obj.GetType();
+        if (obj == null) { return null; }
+
+        T actualObject = null;
+        //if (typeof(IEnumerable).IsAssignableFrom(obj.GetType()))
+        if (type.IsArray)// || type.IsGenericType)
+        {
+          var index = Convert.ToInt32(new string(property.propertyPath.Where(c => char.IsDigit(c)).ToArray()));
+          actualObject = ((T[])obj)[index];
+        }
+        else
+        {
+          actualObject = obj as T;
+        }
+        return actualObject;
+      }
+
       /// <summary>
       /// Returns the value of a given property
       /// </summary>

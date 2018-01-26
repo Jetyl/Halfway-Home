@@ -9,15 +9,27 @@ namespace Stratus
 {
   public class ObjectNoteDisplay : BehaviourSceneViewDisplay<ObjectNote>, IHierarchyWindowItemOnGUI
   {
+    //--------------------------------------------------------------------------------------------/
+    // Properties
+    //--------------------------------------------------------------------------------------------/
+    /// <summary>
+    /// The currently highlighted note
+    /// </summary>
+    public ObjectNote highlightedNote { get; private set; }
     protected override bool isValid => (EditorApplication.isPlaying == false);
+    public bool isAddingNote => ObjectNotesWindow.isAddingNoteOnSceneView;
 
+    //--------------------------------------------------------------------------------------------/
+    // Fields
+    //--------------------------------------------------------------------------------------------/
     public Texture2D icon;
     private const string iconName = "NoteIcon.png";
     private const float iconWidth = 15f;
-
     private const string path = "/Core/Utilities/";
-    public bool isAddingNote => ObjectNotesWindow.isAddingNoteOnSceneView;
 
+    //--------------------------------------------------------------------------------------------/
+    // Messages
+    //--------------------------------------------------------------------------------------------/
     protected override void OnInitialize()
     {
       base.OnInitialize();
@@ -29,6 +41,8 @@ namespace Stratus
     {
       base.OnSceneGUI(view);
       OnAddingNote(view);
+      if (highlightedNote)
+        ShowTooltip(highlightedNote);
       //ProcessEvents(UnityEngine.Event.current);
     }
 
@@ -45,7 +59,7 @@ namespace Stratus
       if (note.text == null)
         return;
 
-      DrawTooltip(note, selectionRect);
+      DrawHierarchyTooltip(note, selectionRect);
     }
 
     protected override void OnInspect(ObjectNote note)
@@ -106,11 +120,12 @@ namespace Stratus
       //  OnMouseOver(note, e);
     }
 
-    private void DrawTooltip(ObjectNote note, Rect selectionRect)
+    private void DrawHierarchyTooltip(ObjectNote note, Rect selectionRect)
     {
       if (!note.hasStyle)
         return;
 
+      string objectName = note.gameObject.name;
       Vector2 size = note.style.CalcSize(new GUIContent(note.text));
       //float width = size.x;
       //width = CalculateLengthOfMessage(note.style, note.text);
@@ -122,10 +137,10 @@ namespace Stratus
       //GUI.Box(selectionRect, note.text);
       GUI.backgroundColor = Color.white;
 
-      //var e = UnityEngine.Event.current;
-      //var mousePos = e.mousePosition;
-      //if (selectionRect.Contains(mousePos))
-      //  OnMouseOver(note, e);
+      var e = UnityEngine.Event.current;
+      var mousePos = e.mousePosition;
+      if (selectionRect.Contains(mousePos))
+        OnMouseOver(note, e);
     }
 
 
@@ -136,7 +151,8 @@ namespace Stratus
       if (e.isMouse && e.button == 0)
       {
         Trace.Script("Clicked on " + note.name);
-        e.Use();
+        highlightedNote = note;
+        //e.Use();
       }
 
     }
@@ -155,6 +171,14 @@ namespace Stratus
             Trace.Script("Left mouse up!");
           break;
       }
+    }
+
+    private void ShowTooltip(ObjectNote note)
+    {
+      Vector2 screen = new Vector2(Screen.width, Screen.height);
+      Rect bottomRight = new Rect(screen, screen);
+      EditorGUI.HelpBox(bottomRight, "Boop", MessageType.Info);
+      Trace.Script("Showing tooltip");
     }
 
 

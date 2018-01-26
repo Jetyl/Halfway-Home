@@ -14,7 +14,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a float value
   /// </summary>
-  public class ActionPropertyFloat : ActionPropertyGeneric<float>
+  public class ActionPropertyFloat : ActionPropertyBase<float>
   {
     public ActionPropertyFloat(object target, PropertyInfo property, float endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -34,7 +34,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a Vector2 value
   /// </summary>
-  public class ActionPropertyVector2 : ActionPropertyGeneric<Vector2>
+  public class ActionPropertyVector2 : ActionPropertyBase<Vector2>
   {
     public ActionPropertyVector2(object target, PropertyInfo property, Vector2 endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -54,7 +54,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a Vector3 value
   /// </summary>
-  public class ActionPropertyVector3 : ActionPropertyGeneric<Vector3>
+  public class ActionPropertyVector3 : ActionPropertyBase<Vector3>
   {
     public ActionPropertyVector3(object target, PropertyInfo property, Vector3 endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -73,7 +73,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a Vector4 value
   /// </summary>
-  public class ActionPropertyVector4 : ActionPropertyGeneric<Vector4>
+  public class ActionPropertyVector4 : ActionPropertyBase<Vector4>
   {
     public ActionPropertyVector4(object target, PropertyInfo property, Vector4 endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -92,7 +92,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a Color value
   /// </summary>
-  public class ActionPropertyColor : ActionPropertyGeneric<Color>
+  public class ActionPropertyColor : ActionPropertyBase<Color>
   {
     public ActionPropertyColor(object target, PropertyInfo property, Color endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -113,7 +113,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a Quaternion value
   /// </summary>
-  public class ActionPropertyQuaternion : ActionPropertyGeneric<Quaternion>
+  public class ActionPropertyQuaternion : ActionPropertyBase<Quaternion>
   {
     public ActionPropertyQuaternion(object target, PropertyInfo property, Quaternion endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -139,7 +139,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating a boolean value
   /// </summary>
-  public class ActionPropertyBool : ActionPropertyGeneric<bool>
+  public class ActionPropertyBool : ActionPropertyBase<bool>
   {
     public ActionPropertyBool(object target, PropertyInfo property, bool endValue, float duration, Ease ease)
       : base(target, property, endValue, duration, ease) { }
@@ -155,7 +155,7 @@ namespace Stratus
   /// <summary>
   /// Used for interpolating an integer value
   /// </summary>
-  public class ActionPropertyInt : ActionPropertyGeneric<int>
+  public class ActionPropertyInt : ActionPropertyBase<int>
   {
     float CurrentValue;
 

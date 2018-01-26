@@ -11,17 +11,17 @@ namespace Stratus
   {
     CompositeTrigger composite => target as CompositeTrigger;
 
-    private SerializedProperty typeProp => declaredProperties[0];
-    private SerializedProperty criteriaProp => declaredProperties[1];
-    private SerializedProperty neededProp => declaredProperties[2];
-    private SerializedProperty triggersProp => declaredProperties[3];
-    private SerializedProperty triggerablesProp => declaredProperties[4];
+    private SerializedProperty typeProp => declaredProperties.Item2[0];
+    private SerializedProperty criteriaProp => declaredProperties.Item2[1];
+    private SerializedProperty neededProp => declaredProperties.Item2[2];
+    private SerializedProperty triggersProp => declaredProperties.Item2[3];
+    private SerializedProperty triggerablesProp => declaredProperties.Item2[4];
 
-    protected override void Configure()
+    protected override void PostEnable()
     {
-      //base.Configure();
-    }
-
+      //propertyGroupDrawOverrides.Add(typeof(CompositeTrigger), DrawCompositeTriggerProperties);
+    } 
+    
     protected override void DrawDeclaredProperties()
     {
       DrawSerializedProperty(typeProp, serializedObject);

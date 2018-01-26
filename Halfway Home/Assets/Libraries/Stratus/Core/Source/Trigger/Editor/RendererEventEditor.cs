@@ -5,12 +5,12 @@ using UnityEditor;
 
 namespace Stratus
 {
-  [CustomEditor(typeof(RendererEvent))]
+  [CustomEditor(typeof(RendererEvent))] 
   public class RendererEventEditor : TriggerableEditor
   {
     RendererEvent rendererEvent => target as RendererEvent;
 
-    protected override void Configure()
+    protected override void PostEnable()
     {
       
     }

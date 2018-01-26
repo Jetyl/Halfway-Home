@@ -14,7 +14,7 @@ namespace Stratus
       /// <summary>
       /// An abstract interface for displaying an ink story in an event-driven way
       /// </summary>
-      public abstract class StoryDisplay : MonoBehaviour
+      public abstract class StoryDisplay : StratusBehaviour
       {
         //------------------------------------------------------------------------------------------/
         // Fields

@@ -11,7 +11,7 @@ namespace Stratus
   /// <summary>
   /// Base class for all windows
   /// </summary>
-  public abstract class BaseWindow : MonoBehaviour
+  public abstract class BaseWindow : StratusBehaviour
   {
     //--------------------------------------------------------------------------------------------/
     // Declarations
@@ -24,14 +24,15 @@ namespace Stratus
     //--------------------------------------------------------------------------------------------/
     // Fields
     //--------------------------------------------------------------------------------------------/
-    [Tooltip("Whether to print debug output")]
-    public bool log = false;
+    //[HideInInspector]
 
     [Header("Window")]
     [Tooltip("The main canvas group for this window")]
     public CanvasGroup canvas;
     [Tooltip("The first button to be selected")]
     public Selectable defaultSelected;
+    [Tooltip("Whether to print debug output")]
+    public bool log = false;
 
     [Header("Transition")]
     [Range(0f, 3f)]
@@ -69,7 +70,7 @@ namespace Stratus
     /// <summary>
     /// A provided callback whenever the current window changes
     /// </summary>
-    public System.Action<BaseWindow> onWindowChange;
+    public System.Action<BaseWindow> onWindowChange { get; set; }
     /// <summary>
     /// Whether this window is currently polling input
     /// </summary>
@@ -257,7 +258,8 @@ namespace Stratus
     {
       if (state != State.Closed || !shouldOpen)
       {
-        Trace.Script($"Cannot open this window!, state = {state}");
+        if (log)
+          Trace.Script($"Cannot open this window!, state = {state}");
         return;
       }
 
@@ -340,7 +342,9 @@ namespace Stratus
       Transition(true, () =>
       {
         //pollingInput = true;
-        defaultSelected?.Select();
+        if (defaultSelected)
+          UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(defaultSelected.gameObject);
+        //defaultSelected?.Select();
         OnOpen();
         windows.Push(this);
         state = State.Opened;

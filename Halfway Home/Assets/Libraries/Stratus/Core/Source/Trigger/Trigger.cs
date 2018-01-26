@@ -1,6 +1,6 @@
 /******************************************************************************/
 /*!
-@file   EventTrigger.cs
+@file   Trigger.cs
 @author Christian Sagel
 @par    email: ckpsm@live.com
 */
@@ -136,6 +136,10 @@ namespace Stratus
     private void Reset()
     {
       targets.Add(null);
+
+      // If a trigger system is present, hide this component and set its default
+      CheckForTriggerSystem();
+      
     }
 
     //------------------------------------------------------------------------/
@@ -208,6 +212,20 @@ namespace Stratus
       // Announce this trigger was activated
       this.onActivate(this);
 
+    }
+
+    private void CheckForTriggerSystem()
+    {
+      var triggerSystem = gameObject.GetComponent<TriggerSystem>();
+      if (triggerSystem)
+      {
+        this.hideFlags = HideFlags.HideInInspector;
+        triggerSystem.triggers.Add(this);
+      }
+      else
+      {
+        this.hideFlags = HideFlags.None;
+      }
     }
 
 

@@ -102,22 +102,32 @@ namespace Stratus
 
     private void OnEnable()
     {
-      EditorApplication.playmodeStateChanged += OnApplicationStateChanged;
+      EditorApplication.playModeStateChanged += OnApplicationStateChanged;
       Reset();
     }
 
     private void OnDisable()
     {
-      EditorApplication.playmodeStateChanged -= OnApplicationStateChanged;
+      EditorApplication.playModeStateChanged -= OnApplicationStateChanged;
     }
 
-    void OnApplicationStateChanged()
+    void OnApplicationStateChanged(PlayModeStateChange stateChange)
     {
-      if (Application.isPlaying)
+      switch (stateChange)
       {
-        //Trace.Script("Playing again!");
-        Reset();
+        case PlayModeStateChange.EnteredEditMode:
+          break;
+        case PlayModeStateChange.ExitingEditMode:
+          break;
+        case PlayModeStateChange.EnteredPlayMode:
+          Reset();
+          break;
+        case PlayModeStateChange.ExitingPlayMode:
+          break;
+        default:
+          break;
       }
+      
     }
 
     void Reset()

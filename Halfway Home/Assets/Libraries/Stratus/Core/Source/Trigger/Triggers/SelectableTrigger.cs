@@ -10,8 +10,7 @@ namespace Stratus
     public Selectable selectable;
     public SelectableProxy.SelectionType type;
     public bool state;
-
-    private SelectableProxy proxy;
+    public SelectableProxy proxy { get; private set; }
 
     protected override void OnAwake()
     {

@@ -206,6 +206,8 @@ namespace Stratus.Dependencies.Ludiq.Reflection
 
 					if (componentObject == null)
 					{
+            //name = string.Empty;
+            //component = string.Empty;
 						throw new UnityReflectionException(string.Format("Target object does not contain a component of type '{0}'.", component));
 					}
 
@@ -555,5 +557,30 @@ namespace Stratus.Dependencies.Ludiq.Reflection
 			
 			// TODO: Compare parameter types
 		}
-	}
+
+    public override int GetHashCode()
+    {
+      var hashCode = 952728625;
+      hashCode = hashCode * -1521134295 + sourceType.GetHashCode();
+      hashCode = hashCode * -1521134295 + EqualityComparer<FieldInfo>.Default.GetHashCode(fieldInfo);
+      hashCode = hashCode * -1521134295 + EqualityComparer<PropertyInfo>.Default.GetHashCode(propertyInfo);
+      hashCode = hashCode * -1521134295 + EqualityComparer<MethodInfo>.Default.GetHashCode(methodInfo);
+      hashCode = hashCode * -1521134295 + isExtension.GetHashCode();
+      hashCode = hashCode * -1521134295 + EqualityComparer<string[]>.Default.GetHashCode(_parameterTypes);
+      hashCode = hashCode * -1521134295 + EqualityComparer<Type[]>.Default.GetHashCode(__parameterTypes);
+      hashCode = hashCode * -1521134295 + EqualityComparer<Type[]>.Default.GetHashCode(parameterTypes);
+      hashCode = hashCode * -1521134295 + EqualityComparer<UnityObject>.Default.GetHashCode(_target);
+      hashCode = hashCode * -1521134295 + EqualityComparer<UnityObject>.Default.GetHashCode(target);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_component);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(component);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_name);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(name);
+      hashCode = hashCode * -1521134295 + isTargeted.GetHashCode();
+      hashCode = hashCode * -1521134295 + isReflected.GetHashCode();
+      hashCode = hashCode * -1521134295 + isAssigned.GetHashCode();
+      hashCode = hashCode * -1521134295 + EqualityComparer<UnityObject>.Default.GetHashCode(reflectionTarget);
+      hashCode = hashCode * -1521134295 + EqualityComparer<Type>.Default.GetHashCode(type);
+      return hashCode;
+    }
+  }
 }

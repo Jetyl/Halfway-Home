@@ -126,8 +126,15 @@ namespace Stratus.Dependencies.Ludiq.Reflection.Editor
 				memberPosition = EditorGUI.PrefixLabel(position, label);
 			}
 
-			// Render controls
+      // Render controls
+      EditorGUI.BeginChangeCheck();
 			RenderTargetControl(targetPosition);
+      if (EditorGUI.EndChangeCheck())
+      {
+        Trace.Script("Changed the target!");
+        OnTargetChange();
+      }
+
 			RenderMemberControl(memberPosition);
 
 			// Restore the indent level
@@ -159,6 +166,7 @@ namespace Stratus.Dependencies.Ludiq.Reflection.Editor
 		}
 
 		protected abstract void RenderMemberControl(Rect position);
+    protected virtual void OnTargetChange() {}
 
 		/// <summary>
 		/// Returns the object assigned as self-target from a serialized object.

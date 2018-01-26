@@ -34,9 +34,9 @@ namespace Stratus
     /// <summary>
     /// Enables the lock
     /// </summary>
-    public virtual void Enable(bool lockCursor = true)
+    public virtual void Enable()
     {
-      LockCursor(lockCursor);
+      LockCursor(isLocked);
     }
 
     /// <summary>
@@ -60,12 +60,18 @@ namespace Stratus
     /// Locks the cursor
     /// </summary>
     /// <param name="isLocked"></param>
-    public void LockCursor(bool isLocked)
+    public void LockCursor(bool lockCursor)
     {
+      isLocked = lockCursor;
+
+      //Cursor.lockState = CursorLockMode.None;
+      //if (isLocked)
+      //  Cursor.lockState = CursorLockMode.Locked;
+      
       Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
       Cursor.visible = !isLocked;
       pollInput = isLocked;
-      //Trace.Script("Cursor lockstate = " + Cursor.lockState + ", Visible = " + Cursor.visible);
+      //Trace.Script($"lockCursor = {lockCursor}, Cursor lockstate = {Cursor.lockState}, Visible = " + Cursor.visible);
     }
 
     /// <summary>

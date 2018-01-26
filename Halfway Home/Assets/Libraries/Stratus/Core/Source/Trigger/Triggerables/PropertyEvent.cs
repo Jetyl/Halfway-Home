@@ -14,40 +14,22 @@ namespace Stratus
     //--------------------------------------------------------------------------------------------/
     // Fields
     //--------------------------------------------------------------------------------------------/    
-    public List<PropertySetterField> setters = new List<PropertySetterField>();
-    public PropertySetterField wat;
-
+    public PropertySetterField[] setters;
+    
     //--------------------------------------------------------------------------------------------/
     // Messages
     //--------------------------------------------------------------------------------------------/
     protected override void OnAwake()
     {
-      foreach (var property in setters)
-        property.Initialize();
+      //foreach (var property in setters)
+      //  property.Initialize();
     }
 
     protected override void OnTrigger()
     {
       foreach (var property in setters)
         property.Set(this);
-    }
-
-    private void OnValidate()
-    {
-      wat.Validate();
-      foreach (var setter in setters)
-        setter.Validate();
-    }
-
-    //--------------------------------------------------------------------------------------------/
-    // Methods
-    //--------------------------------------------------------------------------------------------/ 
-    //private void ChangeProperty()
-    //{
-    //  var lerp = PrepareInterpolator(); // Routines.Lerp(interpolateFunc, duration);
-    //  this.StartTaggedCoroutine(lerp, "ChangeProperty");
-    //}
-
+    }    
 
   }
 }

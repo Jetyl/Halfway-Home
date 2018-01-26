@@ -22,7 +22,7 @@ namespace Stratus
     /// which observes through sensors and acts upon an environment using actuators 
     /// and directs its activity towards achieving goals.
     /// </summary>
-    public abstract partial class Agent : MonoBehaviour
+    public abstract partial class Agent : StratusBehaviour
     {
       public enum State
       {
@@ -206,8 +206,8 @@ namespace Stratus
       /// </summary>
       protected virtual void Subscribe()
       {
-        this.gameObject.Connect<InteractEvent>(this.OnInteractEvent);
-        this.gameObject.Connect<Sensor.InteractScanResultEvent>(this.OnInteractScanResultEvent);
+        this.gameObject.Connect<Sensor.InteractEvent>(this.OnInteractEvent);
+        this.gameObject.Connect<Sensor.ScanResultEvent>(this.OnInteractScanResultEvent);
         this.gameObject.Connect<DeathEvent>(this.OnDeathEvent);
         this.gameObject.Connect<MoveToEvent>(this.OnMoveToEvent);
         this.gameObject.Connect<EngageTargetEvent>(this.OnEngageTargetEvent);
@@ -230,20 +230,20 @@ namespace Stratus
         this.Stop();
         this.OnDeath();
       }
-      void OnInteractEvent(Agent.InteractEvent e)
+      void OnInteractEvent(Sensor.InteractEvent e)
       {
-        if (this.sensor.closestInteractive)
+        if (this.sensor.closestInteractable)
         {
           if (this.logging) Trace.Script("Interacting!", this);
-          var interactEvent = new Agent.InteractEvent();
-          interactEvent.Object = this.gameObject;
-          this.sensor.closestInteractive.gameObject.Dispatch<Agent.InteractEvent>(interactEvent);
+          var interactEvent = new Sensor.InteractEvent();
+          interactEvent.sensor = this.sensor;
+          this.sensor.closestInteractable.gameObject.Dispatch<Sensor.InteractEvent>(interactEvent);
         }
       }
 
-      void OnInteractScanResultEvent(Sensor.InteractScanResultEvent e)
+      void OnInteractScanResultEvent(Sensor.ScanResultEvent e)
       {
-        this.OnInteractScan(e.HasFoundInteractions);
+        this.OnInteractScan(e.hasFoundInteractions);
       }
 
       void OnMoveToEvent(MoveToEvent e)

@@ -136,7 +136,7 @@ namespace Stratus
     {
       var type = typeof(EditorWindow).Assembly.GetType("UnityEditor.SceneHierarchyWindow");
       var hierarchyWindow = EditorWindow.GetWindow(type);
-      var e = new UnityEngine.Event { keyCode = KeyCode.F2, type = EventType.keyDown }; // or Event.KeyboardEvent("f2");
+      var e = new UnityEngine.Event { keyCode = KeyCode.F2, type = EventType.KeyDown }; // or Event.KeyboardEvent("f2");
       hierarchyWindow.SendEvent(e);
       //EditorWindow.focusedWindow.SendEvent(e);
     }

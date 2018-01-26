@@ -13,7 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Stratus.Utilities;
 
-namespace Stratus
+namespace Stratus.Editors
 {
   public class SceneBrowser : EditorWindow
   {
@@ -107,29 +107,26 @@ namespace Stratus
         // Open scene
         if (GUILayout.Button(scene.name, EditorStyles.toolbarButton))
         {
-          var button = UnityEngine.Event.current.button;
-          // Left click
-          if (button == 0)
-          {
-            var scenePath = AssetDatabase.GetAssetPath(scene);
-            if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
+          StratusEditorUtlity.OnMouseClick(
+            () =>
             {
-              EditorSceneManager.OpenScene(scenePath);
-            }
-          }
-          // Right click
-          else if (button == 1)
-          {
-            var menu = new GenericMenu();
-            menu.AddItem(new GUIContent("Remove"), false,
-              () =>
+              var scenePath = AssetDatabase.GetAssetPath(scene);
+              if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
               {
-                //Trace.Script("Removing " + scene.name);
-                RemoveBookmarkedScene(scene);
+                EditorSceneManager.OpenScene(scenePath);
               }
-              );
-            menu.ShowAsContext();
-          }
+            },
+            () =>
+            {
+              var menu = new GenericMenu();
+              menu.AddItem(new GUIContent("Remove"), false,
+                () =>
+                {
+                  RemoveBookmarkedScene(scene);
+                }
+                );
+              menu.ShowAsContext();
+            });
         }
         EditorGUILayout.EndHorizontal();
       }

@@ -64,18 +64,23 @@ namespace Stratus
         display.Initialize();
         SceneView.onSceneGUIDelegate += display.OnSceneGUI;
         EditorApplication.hierarchyWindowChanged += display.OnHierarchyWindowChanged;
-        EditorApplication.playmodeStateChanged += display.OnHierarchyWindowChanged;
+        EditorApplication.playModeStateChanged += display.OnPlayModeStateChanged;
       }
     }
 
     //------------------------------------------------------------------------/
-    // Procedures: Static
+    // Methods: Private
     //------------------------------------------------------------------------/
     private void Initialize()
     {
       this.OnInitialize();
-    }    
+    }
     
+    private void OnPlayModeStateChanged(PlayModeStateChange playModeState)
+    {
+      OnHierarchyWindowChanged();      
+    }
+
     //------------------------------------------------------------------------/
     // Methods: Public Static
     //------------------------------------------------------------------------/   
@@ -92,16 +97,6 @@ namespace Stratus
         Handles.DrawWireCube(pos, scale);
       }
     }
-
-    //public static Vector3 mousePosition
-    //{
-    //  get
-    //  {
-    //    Vector3 mousePos = UnityEngine.Event.current.mousePosition;
-    //    Camera camera = SceneView.currentDrawingSceneView.camera;
-    //
-    //  }
-    //}
 
   }
 

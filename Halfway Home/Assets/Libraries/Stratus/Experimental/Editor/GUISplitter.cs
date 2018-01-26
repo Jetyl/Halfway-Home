@@ -357,9 +357,9 @@ namespace Stratus
         y *= SizeModifier.y;
 
         if (Orientation == OrientationType.Horizontal)          
-          GUILayout.Box(GUIContent.none, Styles.EditorLine, GUILayout.Width(1f), GUILayout.Height(height));
+          GUILayout.Box(GUIContent.none, StratusEditorStyles.editorLine, GUILayout.Width(1f), GUILayout.Height(height));
         else if (Orientation == OrientationType.Vertical)
-          GUILayout.Box(GUIContent.none, Styles.EditorLine, GUILayout.Width(width), GUILayout.Height(1f));
+          GUILayout.Box(GUIContent.none, StratusEditorStyles.editorLine, GUILayout.Width(width), GUILayout.Height(1f));
 
         //GUILayout.Box(GUIContent.none, Styles.EditorLine, GUILayout.Width(width), GUILayout.Height(1f));
         //var splitterRect = GUILayoutUtility.GetLastRect();

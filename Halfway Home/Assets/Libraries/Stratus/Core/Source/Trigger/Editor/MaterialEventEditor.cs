@@ -10,7 +10,7 @@ namespace Stratus
   {
     MaterialEvent materialEvent => target as MaterialEvent;
 
-    protected override void Configure()
+    protected override void PostEnable()
     {
 
     }
