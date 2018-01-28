@@ -8,6 +8,7 @@ All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace HalfwayHome
 {
@@ -15,10 +16,11 @@ namespace HalfwayHome
   {
 
         public TransitionTypes MapTransitions;
-    public TextAsset DefaultActions;
+        public List<DepressionTimeMultiplier> TimeDilation;
+        public TextAsset DefaultActions;
 
-    //script for handling the map logic of the game.
-    List<ConvMap> ChoicesAvalible;
+        //script for handling the map logic of the game.
+        List<ConvMap> ChoicesAvalible;
 
         bool LoadedToMap = false;
 
@@ -83,11 +85,18 @@ namespace HalfwayHome
           }
 
             //if gets here, no scene was there. send a default sorta dealie
+            int multiplier = 1;
+
+            foreach(var multiple in TimeDilation)
+            {
+                if (multiple.DepressionValue >= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
+                    multiplier = multiple.Multiplier;
+            }
 
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
             Game.current.CurrentRoom = eventdata.Destination;
             gameObject.SetActive(false);
-            Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
+            Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
             print(gameObject.activeSelf);
         }
@@ -111,5 +120,14 @@ namespace HalfwayHome
       DrainEnergy = fatigue;
     }
 
-  } 
+  }
+
+
+    [Serializable]
+    public struct DepressionTimeMultiplier
+    {
+        [Range(1, 100)]
+        public int DepressionValue;
+        public int Multiplier;
+    }
 }

@@ -27,6 +27,7 @@ public class StageDisplayEditor : Editor
 
         SerializedProperty WipeCurtain = serializedObject.FindProperty("WipeCurtain");
         SerializedProperty EyeCurtain = serializedObject.FindProperty("EyeCurtain");
+        SerializedProperty CurtainDefault = serializedObject.FindProperty("CurtainDefault");
 
         SerializedProperty StartingRoom = serializedObject.FindProperty("StartingRoom");
         SerializedProperty BackgroundFadeTime = serializedObject.FindProperty("BackgroundFadeTime");
@@ -78,6 +79,7 @@ public class StageDisplayEditor : Editor
 
         EditorGUILayout.PropertyField(WipeCurtain, new GUIContent("Wipe Transition Curtain"), true);
         EditorGUILayout.PropertyField(EyeCurtain, new GUIContent("Eye Transition Curtain"), true);
+        EditorGUILayout.PropertyField(CurtainDefault, new GUIContent("Curtain Default Sprite"), true);
 
 
 

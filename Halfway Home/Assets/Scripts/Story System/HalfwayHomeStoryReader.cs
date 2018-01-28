@@ -94,6 +94,18 @@ namespace HalfwayHome
 
     void OnSetBackground(Parse parse)
     {
+            
+      foreach(var match in parse.matches)
+      {
+        if (match.ContainsKey("Background"))
+        {
+          var Image = match["Image"];
+                        
+          Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
+                    return;
+        }
+      }
+
       if(parse.FindFirst("Background").ToLower() == "background" || parse.FindFirst("Background").ToLower() == "backdrop")
         for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
@@ -115,14 +127,11 @@ namespace HalfwayHome
         {
           var pose = match["Pose"];
           var person = match["Person"];
-          if (pose.ToLower() == "exit")
-            Space.DispatchEvent(Events.CharacterExit, new CastDirectionEvent(person));
-          else
-          {
+          
             Trace.Script(parse.FindFirst("Person"));
                         
             Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
-          }
+          
         }
         
         //if(parse.Find("Pose") == "Exit")

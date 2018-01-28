@@ -37,7 +37,7 @@ public class CastDisplay : MonoBehaviour
         }
 
         Space.Connect<CastDirectionEvent>(Events.CharacterCall, CharacterChanges);
-        Space.Connect<CastDirectionEvent>(Events.CharacterExit, CharacterExit);
+        //Space.Connect<CastDirectionEvent>(Events.CharacterExit, CharacterExit);
 
         Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkip);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OffSkip);
@@ -105,6 +105,12 @@ public class CastDisplay : MonoBehaviour
 
     void CharacterChanges(CastDirectionEvent eventdata)
     {
+        if (eventdata.Exiting)
+        {
+            CharacterExit(eventdata);
+            return;
+        }
+            
         //if the command is all, affect all
         if (eventdata.character.ToLower() == "all")
         {
@@ -184,7 +190,7 @@ public class CastDisplay : MonoBehaviour
         {
             while (Actors.Count != 0)
             {
-                Actors[0].ExitStage(Skip);
+                Actors[0].ExitStage(eventdata.Direction, Skip);
                 Actors.Remove(Actors[0]);
             }
 
@@ -208,7 +214,7 @@ public class CastDisplay : MonoBehaviour
             if (Roll.Character.Character == eventdata.character)
             {
                 SpotLights[Roll.Direction] -= 1;
-                Roll.ExitStage(Skip);
+                Roll.ExitStage(eventdata.Direction, Skip);
                 Actors.Remove(Roll);
                 UpdateStagePositions(Roll.Direction);
                 return;
@@ -331,6 +337,7 @@ public class CastDirectionEvent : DefaultEvent
     public StagePosition Direction;
     public StagePosition FacingDirection;
     public StageDistance Distance;
+    public bool Exiting;
 
     
     public CastDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center, StagePosition face = StagePosition.Right)
@@ -356,6 +363,9 @@ public class CastDirectionEvent : DefaultEvent
 
             switch (calling.ToLower())
             {
+                case "exit":
+                    Exiting = true;
+                    break;
                 case "left":
                     FacingDirection = StagePosition.Left;
                     break;
