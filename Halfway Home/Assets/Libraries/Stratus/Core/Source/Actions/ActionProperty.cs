@@ -6,76 +6,11 @@
 @date   5/25/2016
 */
 /******************************************************************************/
-using UnityEngine;
-using System.Collections;
 using System.Reflection;
-using System.Linq.Expressions;
+using UnityEngine;
 
 namespace Stratus
 {
-  /// <summary>
-  /// Common interpolation algorithms
-  /// </summary>
-  public enum Ease
-  {
-    /// <summary>
-    /// Linear interpolation
-    /// </summary>
-    Linear,
-    QuadIn,
-    QuadInOut,
-    QuadOut,
-    SinIn,
-    SinInOut,
-    SinOut,
-  }
-  
-  /// <summary>
-  /// Provides methods for common interpolation algorithms.
-  /// </summary>
-  public static class Easing
-  {
-    public static float Linear(float t)
-    {
-      return t;
-    }
-
-    public static float QuadIn(float t)
-    {
-      return t * t;
-    }
-
-    public static float QuadOut(float t)
-    {
-      return t * (2 - t);
-    }
-
-    public static float Calculate(float t, Ease ease)
-    {
-      float easeVal = 0.0f;
-      switch (ease)
-      {
-        case Ease.Linear:
-          easeVal = Linear(t);
-          break;
-        case Ease.QuadIn:
-          easeVal = QuadIn(t);
-          break;
-        case Ease.QuadOut:
-          easeVal = QuadOut(t);
-          break;
-
-        case Ease.QuadInOut:
-        case Ease.SinIn:
-        case Ease.SinInOut:
-        case Ease.SinOut:
-          throw new System.NotImplementedException("That ease type is not supported yet!");
-      }
-      return easeVal;
-    }
-
-  }
-  
   /// <summary>
   /// A type of action that modifies the value of
   /// a given property over a specified amount of time, using a specified
@@ -151,7 +86,7 @@ namespace Stratus
   @class ActionPropertyDelegate 
   */
   /**************************************************************************/
-  public abstract class ActionPropertyGeneric<T> : ActionProperty
+  public abstract class ActionPropertyBase<T> : ActionProperty
   {
     protected T Difference;
     protected T InitialValue;
@@ -167,7 +102,7 @@ namespace Stratus
     @brief ActionPropertyGeneric constructor for Properties
     */
     /**************************************************************************/
-    public ActionPropertyGeneric(object target, PropertyInfo property, T endValue, float duration, Ease ease)
+    public ActionPropertyBase(object target, PropertyInfo property, T endValue, float duration, Ease ease)
   : base(duration, ease)
     {
       Target = target;
@@ -182,7 +117,7 @@ namespace Stratus
     @brief ActionPropertyGeneric constructor for Fields
     */
     /**************************************************************************/
-    public ActionPropertyGeneric(object target, FieldInfo field, T endValue, float duration, Ease ease)
+    public ActionPropertyBase(object target, FieldInfo field, T endValue, float duration, Ease ease)
   : base(duration, ease)
     {
       Target = target;

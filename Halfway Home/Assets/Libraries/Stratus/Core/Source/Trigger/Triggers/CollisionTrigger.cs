@@ -42,19 +42,6 @@ namespace Stratus
       // Attempt to use self as a target first
       source = GetComponent<Collider>();
     }
-
-    //public static CollisionTrigger Construct(Transform transform, Triggerable target, Instruction instruction, string tag, TriggerType type, bool persistent)
-    //{
-    //  var collisionTrigger = transform.GetOrAddComponent<CollisionTrigger>();
-    //  collisionTrigger.target = target;
-    //  collisionTrigger.instruction = instruction;
-    //  collisionTrigger.targetType.value = tag;
-    //  collisionTrigger.type = type;
-    //  collisionTrigger.persistent = persistent;
-    //  return collisionTrigger;
-    //}
-
-
   }
 
 }

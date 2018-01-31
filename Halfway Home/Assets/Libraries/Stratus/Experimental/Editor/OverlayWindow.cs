@@ -20,24 +20,22 @@ namespace Stratus
      
     static OverlayWindow()
     {
-      EditorApplication.playmodeStateChanged += OnPlayModeStateChange;
-      //OnPlayModeStateChange();
+      EditorApplication.playModeStateChanged += OnPlayModeStateChange;
     }
 
-    //[MenuItem("Stratus/Tools/Overlay")]
     static void Open()
     {
       EditorWindow.GetWindow(typeof(OverlayWindow), true, "Overlay");
     }
 
-    static void OnPlayModeStateChange()
+    static void OnPlayModeStateChange(PlayModeStateChange stateChange)
     {
-      if (EditorApplication.isPlaying && currentMode != Mode.Play)
+      if (stateChange == PlayModeStateChange.EnteredPlayMode)
       {
         OverlayWindow.OnPlayMode();
         currentMode = Mode.Play;
       }
-      else if (currentMode != Mode.Edit)
+      else if (stateChange == PlayModeStateChange.EnteredEditMode)
       {
         OverlayWindow.OnEditMode();
         currentMode = Mode.Edit;

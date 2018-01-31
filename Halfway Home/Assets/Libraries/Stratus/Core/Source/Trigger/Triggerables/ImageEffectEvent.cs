@@ -93,8 +93,8 @@ namespace Stratus
       previousAlpha = currentAlpha;
       currentAlpha = alpha;
       //image.CrossFadeAlpha(alpha, duration, ignoreTimeScale);
-      this.StartCoroutine(Routines.Lerp(image.color.a, alpha, duration, (float val) => { image.color = image.color.SetAlpha(val); }, Routines.Lerp), "Fade");
-
+      this.StartCoroutine(Routines.Lerp(image.color.a, alpha, duration, (float val) => { image.color = image.color.SetAlpha(val); }, Routines.Lerp), "Fade");      
+      
     }
 
     public void FadeColor(Color color, float duration, bool ignoreTimeScale)

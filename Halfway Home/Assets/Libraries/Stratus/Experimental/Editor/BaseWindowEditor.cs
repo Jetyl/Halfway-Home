@@ -5,8 +5,8 @@ using UnityEditor;
 
 namespace Stratus
 {
-  //[CustomEditor(typeof(BaseEditor), true), CanEditMultipleObjects]
-  //public class BaseWindowEditor : BaseEditor<BaseWindow>
-  //{
-  //}
+  [CustomEditor(typeof(BaseEditor), true), CanEditMultipleObjects]
+  public class BaseWindowEditor : BaseEditor<BaseWindow> 
+  {
+  }
 }

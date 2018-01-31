@@ -1,4 +1,3 @@
-
 /******************************************************************************/
 /*!
 @file   PauseBehaviour.cs
@@ -20,7 +19,7 @@ namespace Stratus
   /// Handles pausing the currently running behaviors on the
   /// gameobject (Rigidbodies, AI, etc)
   /// </summary>
-  public abstract class PausableObject : MonoBehaviour
+  public abstract class PausableObject : StratusBehaviour
   {
     //------------------------------------------------------------------------/
     // Definitions

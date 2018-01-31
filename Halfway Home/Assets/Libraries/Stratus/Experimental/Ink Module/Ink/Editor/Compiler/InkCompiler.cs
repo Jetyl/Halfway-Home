@@ -47,7 +47,7 @@ namespace Ink.UnityIntegration {
 		}
 
 		static InkCompiler () {
-			EditorApplication.playmodeStateChanged += OnPlayModeChange;
+			EditorApplication.playModeStateChanged += OnPlayModeChange;
 			EditorApplication.update += Update;
 		}
 
@@ -97,8 +97,8 @@ namespace Ink.UnityIntegration {
 			}
 		}
 
-		private static void OnPlayModeChange () {
-			if(EditorApplication.isPlayingOrWillChangePlaymode) {
+		private static void OnPlayModeChange (PlayModeStateChange stateChange)   {
+			if(stateChange == PlayModeStateChange.EnteredPlayMode) {
 				if(compiling)
 					Debug.LogWarning("Entered Play Mode while Ink was still compiling. Recommend exiting and re-entering play mode.");
 			}

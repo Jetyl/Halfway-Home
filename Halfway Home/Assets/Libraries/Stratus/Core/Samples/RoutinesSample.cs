@@ -101,6 +101,7 @@ namespace Stratus
       {
         var scaling = Routines.Scale(transform, new float[] { 0.5f, 4f, 1f }, duration, repeat);
         this.StartCoroutine(scaling, "Scale");
+        
       }
 
       void StopScaleSequence()

@@ -37,7 +37,7 @@ The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Drea
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route. 
+I am forced to stop and look for another route.
 To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
 I need to choose now!
 +[Stairs]
@@ -87,7 +87,7 @@ A chorus of whispers dissolves the silence.
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom 
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen
 The whispers fade into the chitter of birdsong. {GetPlayerName()}
 I shudder at the thought of losing myself so deeply in my own mind.
 Just one more week.

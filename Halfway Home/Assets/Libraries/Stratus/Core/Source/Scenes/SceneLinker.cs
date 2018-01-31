@@ -59,7 +59,6 @@ namespace Stratus
       /// </summary>
       public void CloseAll()
       {
-        //Trace.Script("Closing all scenes");
         scenePool.CloseAll();
       }
       

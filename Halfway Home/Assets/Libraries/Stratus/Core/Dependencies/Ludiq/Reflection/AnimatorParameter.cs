@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Stratus.Dependencies.Ludiq.Reflection
@@ -197,5 +198,19 @@ namespace Stratus.Dependencies.Ludiq.Reflection
 				this.target == other.target &&
 				this.name == other.name;
 		}
-	}
+
+    public override int GetHashCode()
+    {
+      var hashCode = 1662607080;
+      hashCode = hashCode * -1521134295 + EqualityComparer<Animator>.Default.GetHashCode(_target);
+      hashCode = hashCode * -1521134295 + EqualityComparer<Animator>.Default.GetHashCode(target);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_name);
+      hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(name);
+      hashCode = hashCode * -1521134295 + EqualityComparer<AnimatorControllerParameter>.Default.GetHashCode(parameterInfo);
+      hashCode = hashCode * -1521134295 + isLinked.GetHashCode();
+      hashCode = hashCode * -1521134295 + isAssigned.GetHashCode();
+      hashCode = hashCode * -1521134295 + EqualityComparer<Type>.Default.GetHashCode(type);
+      return hashCode;
+    }
+  }
 }

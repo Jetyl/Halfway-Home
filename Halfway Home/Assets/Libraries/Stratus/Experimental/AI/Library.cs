@@ -63,12 +63,12 @@ namespace Stratus
       public static bool CheckFieldOfView(Transform source, Transform target, float fov)
       {
         // Compute the vector pointing from the source towards the target
-        Vector3 toTarget = source.position - target.position;
+        Vector3 toTarget = target.position - source.position;
 
         // If the dot product between the source and the target is less than the cosine
         // of the field of view, the target is within it
-        var dot = Vector3.Dot(source.forward, toTarget);
-        if (dot < Mathf.Cos(fov))
+        var dot = Vector3.Dot(source.forward, toTarget.normalized);
+        if (dot > Mathf.Cos(Mathf.Deg2Rad * fov / 2f))
         {
           return true;
         }
@@ -93,12 +93,15 @@ namespace Stratus
       /// <param name="source"></param>
       /// <param name="fov"></param>
       /// <param name="range"></param>
-      public static void DrawFieldOfView(Transform source, float fov, float range, Color color)
+      public static void DrawFieldOfView(Transform source, float fov, float range, Color color, bool fixRotation = false)
       {
         #if UNITY_EDITOR
         UnityEditor.Handles.color = color;
-        Vector3 vec = Quaternion.Euler(0f, -fov / 2f, 0f) * source.forward;
-        UnityEditor.Handles.DrawSolidArc(source.position, source.up, vec, fov, range);
+        Vector3 forward = source.forward;
+        if (fixRotation)
+          forward.y = 0f;
+        Vector3 vec = Quaternion.Euler(0f, -fov / 2f, 0f) * forward;
+        UnityEditor.Handles.DrawSolidArc(source.position, Vector3.up, vec, fov, range);
         #endif
       }
 

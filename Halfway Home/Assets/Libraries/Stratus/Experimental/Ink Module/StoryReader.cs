@@ -14,14 +14,11 @@ namespace Stratus
       /// <summary>
       /// An abstract interface for reading an ink story file in an event-driven way
       /// </summary>
-      public abstract class StoryReader : MonoBehaviour
+      public abstract class StoryReader : StratusBehaviour
       {
         //------------------------------------------------------------------------------------------/
         // Public Fields
         //------------------------------------------------------------------------------------------/
-        [Tooltip("Whether to log to the console")]
-        public bool logging = false;
-
         [Header("Options")]
         [Tooltip("Whether this reader will react to scene-wide story events")]
         public bool listeningToScene = false;
@@ -29,6 +26,10 @@ namespace Stratus
         public bool automaticRestart = false;
         [Tooltip("Whether story events should be queued, for one to play after the other")]
         public bool queueStories = false;
+        [Tooltip("How long to wait before playing the next queued story")]
+        public float queueDelay = 0f;
+        [Tooltip("Whether to log to the console")]
+        public bool logging = false;
 
         [Header("States")]
         [Tooltip("Whether the state of stories should automatically be saved by default")]
@@ -564,15 +565,24 @@ namespace Stratus
           // Save the story
           Save();
 
+          // We are no longer reading a story
           currentlyReading = false;
 
           // If we are queuing stories and there's one queueud up, let's start it
           if (queueStories && storyQueue.Count > 0)
-          {
-            var e = storyQueue.Dequeue();
-            this.LoadStory(e.storyFile, e.restart, e.knot);
-          }
+            QueueNextStory();
+        }
 
+        private void QueueNextStory()
+        {
+          var e = storyQueue.Dequeue();
+
+          if (logging)
+            Trace.Script($"Queuing the story {e.storyFile.name} to be played in {queueDelay} seconds");
+
+          var seq = Actions.Sequence(this);
+          Actions.Delay(seq, queueDelay);
+          Actions.Call(seq, () => LoadStory(e.storyFile, e.restart, e.knot));
         }
 
         //------------------------------------------------------------------------------------------/
@@ -678,14 +688,6 @@ namespace Stratus
 
           if (logging)
             Trace.Script($"\"{line}\" ");
-          
-          if(story.runtime.currentErrors != null)
-                    {
-                        for(int i = 0; i < story.runtime.currentErrors.Count; ++i)
-                        {
-                            print(story.runtime.currentErrors[i]);
-                        }
-                    }
 
           var updateEvent = new Story.UpdateLineEvent(parser.Parse(line, tags), visited);
           Scene.Dispatch<Story.UpdateLineEvent>(updateEvent);

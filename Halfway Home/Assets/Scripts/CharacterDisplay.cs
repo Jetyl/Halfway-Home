@@ -217,7 +217,7 @@ public class CharacterDisplay : MonoBehaviour
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
     }
-    public void ExitStage(bool Skip)
+    public void ExitStage(StagePosition direction, bool Skip)
     {
         //visual.sprite = Poses[pose];
         var awhite = Color.white;
@@ -229,16 +229,15 @@ public class CharacterDisplay : MonoBehaviour
             Destroy(gameObject, 0.5f);
             return;
         }
-
         
         visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
         var pos = transform.position;
 
-        if(FacingDirection == StagePosition.Left)
+        if(direction == StagePosition.Left)
         {
             pos.x -= 2.5f;
         }
-        else
+        else if ( direction ==  StagePosition.Right)
         {
             pos.x += 2.5f;
         }

@@ -26,6 +26,8 @@ public class StageDisplay : MonoBehaviour
     public WipeTransitionAnimator WipeCurtain;
     public EyeTransitionAnimator EyeCurtain;
 
+    public Sprite CurtainDefault;
+
     public Room StartingRoom;
     public float BackgroundFadeTime = 2;
 
@@ -95,7 +97,7 @@ public class StageDisplay : MonoBehaviour
 
             foreach (var room in SpecialBackdrops)
             {
-                if (room.Tag == CurrentCG)
+                if (room.Tag.ToLower() == CurrentCG)
                     BackdropChange(room.Backdrop, eventdata.Transitions);
             }
         }
@@ -190,6 +192,10 @@ public class StageDisplay : MonoBehaviour
             yield return null;
         }
 
+
+        yield return new WaitForSeconds(Time.deltaTime);
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
+
         WipeCurtain.Progress = 1;
 
         FrontCurtain.sprite = newBackdrop;
@@ -215,9 +221,9 @@ public class StageDisplay : MonoBehaviour
         WipeCurtain.FadeDirection = -WipeCurtain.FadeDirection;
         WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = newBackdrop;
         
-        for (float t = 1.0f; t < 0.0f; t -= Time.deltaTime / BackgroundFadeTime)
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
         {
-            WipeCurtain.Progress = t;
+            WipeCurtain.Progress = 1 - t;
             yield return null;
         }
         WipeCurtain.Progress = 0;
@@ -225,6 +231,7 @@ public class StageDisplay : MonoBehaviour
         FrontCurtain.sprite = newBackdrop;
 
         yield return new WaitForSeconds(Time.deltaTime);
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
         WipeCurtain.Progress = 1;
     }
 
@@ -243,6 +250,9 @@ public class StageDisplay : MonoBehaviour
 
         EyeCurtain.Progress = 1;
 
+        yield return new WaitForSeconds(Time.deltaTime);
+        EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
+
     }
 
     IEnumerator EyeOpenFade(Sprite newBackdrop)
@@ -250,16 +260,17 @@ public class StageDisplay : MonoBehaviour
         EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = newBackdrop;
         EyeCurtain.Progress = 1;
         
-        for (float t = 1.0f; t < 0.0f; t -= Time.deltaTime / BackgroundFadeTime)
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
         {
-            EyeCurtain.Progress = t;
+            EyeCurtain.Progress = 1 - t;
             yield return null;
         }
         EyeCurtain.Progress = 0;
-
+        
         FrontCurtain.sprite = newBackdrop;
 
         yield return new WaitForSeconds(Time.deltaTime);
+        EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
         EyeCurtain.Progress = 1;
     }
 
@@ -287,38 +298,41 @@ public class StageDirectionEvent : DefaultEvent
 
         foreach(var direct in calls)
         {
+            MonoBehaviour.print(direct);
+            bool stop = false;
             var directions = direct.Replace(" ", "");
             
-            if(directions.ToLower().Contains("transition_"))
+            for (var i = 0; i < Enum.GetValues(typeof(TransitionTypes)).Length; ++i)
             {
-                directions = directions.ToLower().Replace("transition_", "");
-
-                for (var i = 0; i < Enum.GetValues(typeof(TransitionTypes)).Length; ++i)
+                if (directions.ToLower() == ((TransitionTypes)i).ToString().ToLower())
                 {
-                    if (directions == ((TransitionTypes)i).ToString().ToLower())
-                    {
-                        Transitions = (TransitionTypes)i;
-                        break;
-                    }
+                    
+                    Transitions = (TransitionTypes)i;
+                    stop = true;
+                    break;
                 }
-
             }
 
-            if (directions.ToLower().Contains("cg_"))
-            {
-                character = directions.ToLower().Replace("cg_", "");
+            if (stop)
                 continue;
-
-            }
 
             for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
             {
                 if (directions.ToLower() == ((Room)i).ToString().ToLower())
                 {
                     Backdrop = (Room)i;
+                    stop = true;
                     break;
                 }
             }
+
+            if (stop)
+                continue;
+            
+            character = directions.ToLower();
+                
+
+            
         }
 
     }

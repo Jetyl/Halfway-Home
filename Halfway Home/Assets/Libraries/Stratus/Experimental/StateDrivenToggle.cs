@@ -174,7 +174,7 @@ namespace Stratus
     {
       if (!initialized)
         return;
-      Trace.Script($"Reverting to '{previousState}");
+      //Trace.Script($"Reverting to '{previousState}");
       Change(previousState);
     }
 

@@ -13,6 +13,7 @@ namespace Stratus
   [SingletonAsset("Assets", "Stratus Preferences")]
   public class Preferences : SingletonAsset<Preferences>
   {
+    
     /// <summary>
     /// Allows scenes to be bookmarked from the project folder, used by the scene browser
     /// </summary>
@@ -24,7 +25,7 @@ namespace Stratus
     /// </summary>
     [SerializeField]
     public Internal.TagColors tagColors = new Internal.TagColors();
-
+    
     /// <summary>
     /// Settings for the overlay window
     /// </summary>

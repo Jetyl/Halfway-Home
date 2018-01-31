@@ -22,7 +22,7 @@ namespace Stratus
     //--------------------------------------------------------------------------------------------/
     // Static Methods
     //--------------------------------------------------------------------------------------------/
-    [MenuItem("Stratus/Windows/Notes")]
+    [MenuItem("Stratus/Windows/Object Notes")]
     public static void Open()
     {
       EditorWindow.GetWindow(typeof(ObjectNotesWindow), false, Title);
@@ -44,6 +44,7 @@ namespace Stratus
         ShowHeader("Scene");
         ModifyScene();
       }
+      EditorGUILayout.Separator();
       {
         ShowHeader("Object");
         ModifyObject(selection);
@@ -83,7 +84,7 @@ namespace Stratus
     private void ModifyScene()
     {
       //if (GUILayout.Button("Add Note At Position")) SelectNotePosition();
-      if (GUILayout.Button("Remove all from Scene")) RemoveAllNotes();
+      if (GUILayout.Button("Remove all Notes")) RemoveAllNotes();
     }
 
     private void RemoveAllNotes()

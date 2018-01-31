@@ -12,7 +12,7 @@ namespace Stratus
 {
   namespace AI
   {
-    public abstract partial class Agent : MonoBehaviour
+    public abstract partial class Agent : StratusBehaviour
     {
       private void OnDrawGizmos()
       {

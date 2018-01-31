@@ -281,11 +281,15 @@ namespace Stratus
     /// </summary>
     /// <param name="name"></param>
     /// <param name="folderName"></param>
-    public static void Delete(string name)
+    public static bool Delete(string name)
     {
+      if (!Exists(name, defaultPath))
+        return false;
+
       var fileName = name + extension;
       var fullPath = defaultPath + fileName;
       File.Delete(fullPath);
+      return true;
     }
 
     /// <summary>

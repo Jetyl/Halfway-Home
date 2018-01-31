@@ -2,87 +2,141 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.Events;
+using Stratus.Dependencies.Ludiq.Reflection;
+using Stratus.Utilities;
 
 namespace Stratus
 {
   [CustomPropertyDrawer(typeof(PropertySetterField))]
   public class PropertySetterFieldDrawer : PropertyDrawer
   {
-    private float propertyHeight;
-    private float padding = 2f;
+    private const float lines = 7f;
+    private const float padding = 2f;
+    private float propertyHeight => (EditorGUIUtility.singleLineHeight + padding) * lines;
 
+    
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-      return propertyHeight;
-      //return property.FindPropertyRelative("propertyHeight").floatValue * EditorGUIUtility.singleLineHeight;
+      if (property.isExpanded)
+        return propertyHeight;
+      else
+        return EditorGUIUtility.singleLineHeight * 2f;
 
     }
-    
+
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-      propertyHeight = 0;
+      var target = property.GetObject<PropertySetterField>(fieldInfo);
+
+      float height = EditorGUIUtility.singleLineHeight + padding;
       var memberProp = property.FindPropertyRelative("property");
-
-      //var setter = (PropertySetterField)property.objectReferenceValue;
-
       var typeProperty = property.FindPropertyRelative("propertyType");
       var type = (ActionProperty.Types)typeProperty.enumValueIndex;
+      
+
+      //var sourceType = (UnityMember.SourceType)memberProp.FindPropertyRelative("sourceType").enumValueIndex;
 
       label = EditorGUI.BeginProperty(position, label, property);
-      EditorGUI.PrefixLabel(position, label);
       Rect contentPosition = position;
-      //Rect contentPosition = position;
-      //EditorGUI.indentLevel = 0;
-      EditorGUI.PropertyField(contentPosition, memberProp);
-      float height = EditorGUIUtility.singleLineHeight + padding;      
-      contentPosition.height = height;
-      propertyHeight = 2f * height;
+            
 
-      // If property has been selected yet
-      if (type != ActionProperty.Types.None)
+      //EditorGUI.LabelField(contentPosition, new GUIContent(property.displayName)); // property);
+      //contentPosition.y += height;
+      //EditorGUI.PropertyField(contentPosition, memberProp);
+
+      //contentPosition.x += 10f;
+      //EditorGUI.BeginChangeCheck();
+      //property.isExpanded = EditorGUI.Foldout(position, property.isExpanded, property.displayName);
+      //if (EditorGUI.EndChangeCheck())
+      //{
+      //  UnityEngine.Event.current.Use();
+      //}
+
+      //if (GUILayout.Button(property.displayName, EditorStyles.label))
+      //{
+      //  property.isExpanded = !property.isExpanded;
+      //}
+
+      //contentPosition.y += height;
+
+      EditorGUI.PropertyField(contentPosition, memberProp, new GUIContent(property.displayName));
+      contentPosition.height = height;
+      //propertyHeight = 2f * height;
+
+      if (target != null)
       {
-        contentPosition.y += height * 2f;
-        GUIContent valueLabel = new GUIContent("Value");
+        target.Validate();
+        property.isExpanded = target.property.isAssigned;
+      }
+
+      if (property.isExpanded)
+      {
+        // Indent 
+        var indent = EditorGUI.indentLevel;
+        EditorGUI.indentLevel = 1;
+        contentPosition.y += (height * 2f) + 1f;
+        
+        // Show the value type
+        var valueTypeProperty = property.FindPropertyRelative("valueType");
+        EditorGUI.PropertyField(contentPosition, valueTypeProperty);
+
+        // Add a suffix to get the dynamic version, if needed
+        string suffix = "Static";
+        var valueType = (PropertySetterField.ValueType)valueTypeProperty.enumValueIndex;
+        if (valueType == PropertySetterField.ValueType.Dynamic)
+          suffix = "Dynamic";
+
+        contentPosition.y += height;
+
+        // Set the value
+        GUIContent valueLabel = GUIContent.none;
         switch (type)
         {
-          case ActionProperty.Types.Integer:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("intValue"), valueLabel);
+          case ActionProperty.Types.None:
+            EditorGUI.LabelField(contentPosition, valueLabel);
+            break;
+          case ActionProperty.Types.Integer:            
+              EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"intValue{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Float:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("floatValue"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"floatValue{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Boolean:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("boolValue"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"boolValue{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Vector2:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("vector2Value"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"vector2Value{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Vector3:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("vector3Value"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"vector3Value{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Vector4:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("vector4Value"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"vector4Value{suffix}"), valueLabel);
             break;
           case ActionProperty.Types.Color:
-            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("colorValue"), valueLabel);
+            EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative($"colorValue{suffix}"), valueLabel);
             break;
           default:
             break;
         }
 
-        var durationProp = property.FindPropertyRelative("duration");
+
         contentPosition.y += height;
-        //contentPosition.width /= 2f;
+        var durationProp = property.FindPropertyRelative("duration");
         EditorGUI.PropertyField(contentPosition, durationProp);
 
-        var toggleprop = property.FindPropertyRelative("toggle");
+        contentPosition.y += height + padding;
+        var easeProp = property.FindPropertyRelative("ease");
+        EditorGUI.PropertyField(contentPosition, easeProp);
+        //contentPosition.width /= 2f;
+
         contentPosition.y += height;
+        var toggleprop = property.FindPropertyRelative("toggle");
+        EditorGUI.PropertyField(contentPosition, toggleprop);
         //contentPosition.width *= 2f;
         //contentPosition.x += contentPosition.width / 2f;
-        EditorGUI.PropertyField(contentPosition, toggleprop);
-
-
-        propertyHeight += 2f * height;
+        EditorGUI.indentLevel = indent;
       }
 
       EditorGUI.EndProperty();

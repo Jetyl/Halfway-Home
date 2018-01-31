@@ -25,14 +25,14 @@ namespace Stratus
 
     protected override void DrawDeclaredProperties()
     {
-      DrawSerializedProperty(declaredProperties[0], serializedObject);
+      DrawSerializedProperty(declaredProperties.Item2[0], serializedObject);
       if (sceneEvent.type == SceneEvent.Type.Load || sceneEvent.type == SceneEvent.Type.Unload)
       {
-        DrawSerializedProperty(declaredProperties[1], serializedObject);
+        DrawSerializedProperty(declaredProperties.Item2[1], serializedObject);
       }
       if (sceneEvent.type == SceneEvent.Type.Load)
       {
-        DrawSerializedProperty(declaredProperties[2], serializedObject);
+        DrawSerializedProperty(declaredProperties.Item2[2], serializedObject);
       }
 
     }

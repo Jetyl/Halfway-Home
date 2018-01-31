@@ -35,7 +35,7 @@ namespace Stratus
     /// Whether this event dispatcher will respond to trigger events
     /// </summary>
     [Tooltip("How long after activation before the event is fired")]
-    public float Delay;
+    public float delay;
 
     //------------------------------------------------------------------------/
     // Properties
@@ -76,7 +76,13 @@ namespace Stratus
       this.OnAwake();
       onTriggered = (Triggerable trigger) => {};
     }
-    
+
+    private void Reset()
+    {
+      // If a trigger system is present, hide this component and set its default
+      CheckForTriggerSystem();
+    }
+
     /// <summary>
     /// When the trigger event is received, runs the trigger sequence.
     /// </summary>
@@ -105,11 +111,25 @@ namespace Stratus
     protected void ActivateTrigger()
     {
       var seq = Actions.Sequence(this.gameObject.Actions());
-      Actions.Delay(seq, this.Delay);
+      Actions.Delay(seq, this.delay);
       Actions.Call(seq, this.OnTrigger);
       Actions.Call(seq, ()=>onTriggered(this));
     }
-    
+
+    private void CheckForTriggerSystem()
+    {
+      var triggerSystem = gameObject.GetComponent<TriggerSystem>();
+      if (triggerSystem)
+      {
+        this.hideFlags = HideFlags.HideInInspector;
+        triggerSystem.triggerables.Add(this);
+      }
+      else
+      {
+        this.hideFlags = HideFlags.None;
+      }
+    }
+
   }
 
 }

@@ -9,53 +9,94 @@ namespace Stratus
   [Serializable]
   public class PropertySetterField 
   {
-    [Filter(typeof(float), typeof(int), typeof(bool), typeof(Vector2), typeof(Vector3), typeof(Color), typeof(Vector4), Fields = true, Properties = true, Public = true)]
+    public enum ValueType
+    {
+      Static,
+      Dynamic,
+    }
+
+    // Common fields
+    [Filter(typeof(float), typeof(int), typeof(bool), typeof(Vector2), typeof(Vector3), typeof(Vector4), typeof(Color), Fields = true, Properties = true, Public = true, Gettable = false, Methods = false, Settable = true, Inherited = true)]
     public UnityMember property;
     [Tooltip("Over how long to interpolate this property to the specified value")]
     public float duration;
-    // Different value types
-    //[DrawIf("propertyType", ActionProperty.Types.Integer, ComparisonType.Equals)]
+    [Tooltip("The type of easing to be used for the interpolation")]
+    public Ease ease;
+    [Tooltip("What type of value is being used for the field")]
+    public ValueType valueType = ValueType.Static;
+    
+
+    // Different value types    
     [SerializeField]
-    private int intValue;
-    //[DrawIf("propertyType", ActionProperty.Types.Float, ComparisonType.Equals)]
+    private int intValueStatic;
+    [SerializeField] [Filter(typeof(int), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember intValueDynamic;
+
     [SerializeField]
-    private float floatValue;
-    //[DrawIf("propertyType", ActionProperty.Types.Boolean, ComparisonType.Equals)]
+    private float floatValueStatic;
+    [SerializeField] [Filter(typeof(float), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember floatValueDynamic;
+
     [SerializeField]
-    private bool boolValue;
-    //[DrawIf("propertyType", ActionProperty.Types.Vector2, ComparisonType.Equals)]
+    private bool boolValueStatic;
+    [SerializeField] [Filter(typeof(bool), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember boolValueDynamic;
+
     [SerializeField]
-    private Vector2 vector2Value;
-    //[DrawIf("propertyType", ActionProperty.Types.Vector3, ComparisonType.Equals)]
+    private Vector2 vector2ValueStatic;
+    [SerializeField] [Filter(typeof(Vector2), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember vector2ValueDynamic;
+
     [SerializeField]
-    private Vector3 vector3Value;
-    //[DrawIf("propertyType", ActionProperty.Types.Vector4, ComparisonType.Equals)]
+    private Vector3 vector3ValueStatic;
+    [SerializeField] [Filter(typeof(Vector3), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember vector3ValueDynamic;
+
     [SerializeField]
-    private Vector4 vector4Value;
-    //[DrawIf("propertyType", ActionProperty.Types.Color, ComparisonType.Equals)]
+    private Vector4 vector4ValueStatic;
+    [SerializeField] [Filter(typeof(Vector4), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember vector4ValueDynamic;
+
     [SerializeField]
-    private Color colorValue;
+    private Color colorValueStatic = Color.white;
+    [SerializeField] [Filter(typeof(Color), Fields = true, Properties = true, Inherited = true)]
+    private UnityMember colorValueDynamic;
 
     [Tooltip("Whether a consecutive call will interpolate the property back to its intitial value")]
     public bool toggle;
 
     // The enumerated type of this property
-    [SerializeField]
-    [HideInInspector]
+    [SerializeField] 
     private ActionProperty.Types propertyType = ActionProperty.Types.None;
     // Saved values for toggling
     private object previousValue;
     // Interpolate function used
     private IEnumerator interpolateRoutine;
+    // All runtime instances for setter fields
+    private static Dictionary<PropertySetterField, int> instances;
 
-    //private int propertyHeight => (propertyType == ActionProperty.Types.None) ? 2 : 5;
+    //--------------------------------------------------------------------------------------------/
+    // Properties
+    //--------------------------------------------------------------------------------------------/
+    public int intValue => (valueType == ValueType.Dynamic) ? intValueDynamic.Get<int>() : intValueStatic;
+    public float floatValue => (valueType == ValueType.Dynamic) ? floatValueDynamic.Get<float>() : floatValueStatic;
+    public bool boolValue => (valueType == ValueType.Dynamic) ? boolValueDynamic.Get<bool>() : boolValueStatic;
+    public Vector2 vector2Value => (valueType == ValueType.Dynamic) ? vector2ValueDynamic.Get<Vector2>() : vector2ValueStatic;
+    public Vector3 vector3Value => (valueType == ValueType.Dynamic) ? vector3ValueDynamic.Get<Vector3>() : vector3ValueStatic;
+    public Vector4 vector4Value => (valueType == ValueType.Dynamic) ? vector4ValueDynamic.Get<Vector4>() : vector4ValueStatic;
+    public Color colorValue => (valueType == ValueType.Dynamic) ? colorValueDynamic.Get<Color>() : colorValueStatic;
+
+    private static int created { get; set; } = 0;
+    private int id { get; set; } = -1;
+    private bool isRegistered => id > -1;
+    private string identifier => $"{property.name} + {id}";
 
     //--------------------------------------------------------------------------------------------/
     // Methods
     //--------------------------------------------------------------------------------------------/
     public IEnumerator MakeInterpolateRoutine()
     {
-      IEnumerator lerp = null;
+      IEnumerator interpolator = null;
       switch (propertyType)
       {
         case ActionProperty.Types.Integer:
@@ -63,7 +104,8 @@ namespace Stratus
             int currentValue = property.Get<int>();
             bool shouldToggle = (toggle && currentValue == intValue);
             int nextValue = shouldToggle ? (int)previousValue : intValue;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (float val) => { property.Set(Mathf.CeilToInt(val)); }, Routines.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (float val) => { property.Set(Mathf.CeilToInt(val)); }, Routines.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (float val) => { property.Set(Mathf.CeilToInt(val)); }, ease);
             previousValue = currentValue;
           }
           break;
@@ -73,7 +115,8 @@ namespace Stratus
             bool shouldToggle = (toggle && currentValue == floatValue);
             Trace.Script("Previous float " + previousValue + ", Current Float = " + currentValue + ", Float Value = " + floatValue + ", shouldToggle = " + shouldToggle);
             float nextValue = shouldToggle ? (float)previousValue : floatValue;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (float val) => { property.Set(val); }, Routines.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (float val) => { property.Set(val); }, Routines.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (float val) => { property.Set(val); }, ease);
             previousValue = currentValue;
           }
           break;
@@ -82,7 +125,7 @@ namespace Stratus
             bool currentValue = property.Get<bool>();
             bool shouldToggle = (toggle && currentValue == boolValue);
             bool nextValue = shouldToggle ? (bool)previousValue : boolValue;
-            lerp = Routines.Call(() => { property.Set(nextValue); }, duration);
+            interpolator = Routines.Call(() => { property.Set(nextValue); }, duration);
             previousValue = currentValue;
           }
           break;
@@ -91,7 +134,8 @@ namespace Stratus
             Vector2 currentValue = property.Get<Vector2>();
             bool shouldToggle = (toggle && currentValue == vector2Value);
             Vector2 nextValue = shouldToggle ? (Vector2)previousValue : vector2Value;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (Vector2 val) => { property.Set(val); }, Vector2.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (Vector2 val) => { property.Set(val); }, Vector2.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (Vector2 val) => { property.Set(val); }, ease);
             previousValue = currentValue;
           }
           break;
@@ -100,7 +144,8 @@ namespace Stratus
             Vector3 currentValue = property.Get<Vector3>();
             bool shouldToggle = (toggle && currentValue == vector3Value);
             Vector3 nextValue = shouldToggle ? (Vector3)previousValue : vector3Value;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (Vector3 val) => { property.Set(val); }, Vector3.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (Vector3 val) => { property.Set(val); }, Vector3.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (Vector3 val) => { property.Set(val); }, ease);
             previousValue = currentValue;
           }
           break;
@@ -109,7 +154,8 @@ namespace Stratus
             Vector4 currentValue = property.Get<Vector4>();
             bool shouldToggle = (toggle && currentValue == vector4Value);
             Vector4 nextValue = shouldToggle ? (Vector4)previousValue : vector4Value;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (Vector4 val) => { property.Set(val); }, Vector4.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (Vector4 val) => { property.Set(val); }, Vector4.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (Vector4 val) => { property.Set(val); }, ease);
             previousValue = currentValue;
           }
           break;
@@ -118,24 +164,17 @@ namespace Stratus
             Color currentValue = property.Get<Color>();
             bool shouldToggle = (toggle && currentValue == colorValue);
             Color nextValue = shouldToggle ? (Color)previousValue : colorValue;
-            lerp = Routines.Lerp(currentValue, nextValue, duration, (Color val) => { property.Set(val); }, Color.Lerp);
+            //interpolator = Routines.Lerp(currentValue, nextValue, duration, (Color val) => { property.Set(val); }, Color.Lerp);
+            interpolator = Routines.Interpolate(currentValue, nextValue, duration, (Color val) => { property.Set(val); }, ease);
             previousValue = currentValue;
           }
           break;
         default:
           break;
       }
-      return lerp;
+      return interpolator;
     }
-
-    /// <summary>
-    /// Initializes this field
-    /// </summary>
-    public void Initialize()
-    {
-      previousValue = property.Get();
-    }
-
+    
     /// <summary>
     /// Validates the type of this property in editor
     /// </summary>
@@ -152,8 +191,21 @@ namespace Stratus
     /// </summary>
     public void Set(MonoBehaviour owner)
     {
+      if (!property.isAssigned)
+        return;
+            
+      if (!isRegistered)
+        Register();
+
       interpolateRoutine = MakeInterpolateRoutine(); // Routines.Lerp(interpolateFunc, duration);
-      owner.StartCoroutine(interpolateRoutine, property.name);
+      owner.StartCoroutine(interpolateRoutine, identifier);
+      
+    }
+
+    private void Register()
+    {
+      id = created++;
+      Debug.Log($"Boop from {id}");
     }
 
   }

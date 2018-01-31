@@ -224,6 +224,17 @@ namespace Stratus
       return closestTarget;
     }
 
+    /// <summary>
+    /// Calculates the horizontal field of view for the camera. By default the fieldOfView property returns the vertical.
+    /// </summary>
+    /// <param name="camera"></param>
+    /// <returns></returns>
+    public static float GetHorizontalFOV(this Camera camera)
+    {
+      return Mathf.Rad2Deg * 2f * Mathf.Atan(Mathf.Tan(Mathf.Deg2Rad * camera.fieldOfView * 0.5f) * camera.aspect);
+      
+    }    
+
 
   }
 }
