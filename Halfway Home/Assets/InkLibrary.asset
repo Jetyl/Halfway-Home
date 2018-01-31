@@ -96,4 +96,10 @@ MonoBehaviour:
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: d7258b430da5e174492cd5d1721112a4, type: 3}
+    jsonAsset: {fileID: 4900000, guid: eede21032990857488f62e3c68a6f360, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 514b3e5aecee5274b95d76ab4a7fc1c9, type: 3}
+    jsonAsset: {fileID: 4900000, guid: ddc7527685ce6e8498fb3ed118b397e9, type: 3}
   compilationStack: []
