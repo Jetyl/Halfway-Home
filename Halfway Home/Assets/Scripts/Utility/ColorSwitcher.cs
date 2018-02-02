@@ -18,13 +18,11 @@ public class ColorSwitcher : MonoBehaviour
   public void SwitchColorTo(int colorState)
   {
     if (colorState + 1 > Colors.Length) return;
-    Debug.Log("Color swap");
     GetComponent<Image>().CrossFadeColor(Colors[colorState], 0f, true, false);
   }
 
   public void RevertColor()
   {
-    Debug.Log("Color revert");
     GetComponent<Image>().CrossFadeColor(StartColor, 0f, true, false);
   }
 }
