@@ -93,5 +93,5 @@ I shudder at the thought of losing myself so deeply in my own mind.
 Just one more week.
 I lay awake, concentrating on the tingling warmth of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
-// This is the beginning of KNOCK
+// This is the beginning of KNOCK »
 -> END
