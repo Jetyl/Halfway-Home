@@ -8607,18 +8607,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: Backdrop.Array.data[6].Backdrop
-      value: 
-      objectReference: {fileID: 21300000, guid: 68ba4828a76d03b418dd0c4775a81513,
-        type: 3}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: Backdrop.Array.data[9].Backdrop
-      value: 
-      objectReference: {fileID: 21300000, guid: 3becd8b624c965c48a199cf81e0178ff,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
   m_IsPrefabParent: 0
@@ -17264,12 +17252,12 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 12
-  DebugMode: 1
+  DebugMode: 0
   StartDelusion: 10
   StartStress: 45
-  StartFatigue: 60
-  DebugDay: 2
-  DebugHour: 17
+  StartFatigue: 30
+  DebugDay: 1
+  DebugHour: 18
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
