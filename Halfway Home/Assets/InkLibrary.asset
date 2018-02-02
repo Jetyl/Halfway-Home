@@ -102,4 +102,46 @@ MonoBehaviour:
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 9e2eabeae3c21fa49bb3a54f539e0df6, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
-  compilationStack: []
+  compilationStack:
+  - state: 2
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: d7258b430da5e174492cd5d1721112a4, type: 3}
+      jsonAsset: {fileID: 0}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day5/ColdSkyHideaway.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day5/ColdSkyHideaway.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: f1f5cc76f85972c42b64c03095efc244, type: 3}
+      jsonAsset: {fileID: 4900000, guid: 660959c702d4685408d4da977ecaa0c6, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Memory.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day1/Memory.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: 514b3e5aecee5274b95d76ab4a7fc1c9, type: 3}
+      jsonAsset: {fileID: 0}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day3/LongNightHangout.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Resources/StoryFiles/Day3/LongNightHangout.json
+    output: []
+    errorOutput: []
+    timeTaken: 0
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: a8a94d2cf7d230947a01020e233e9f39, type: 3}
+      jsonAsset: {fileID: 4900000, guid: fb8d816e9d8d9a04bb364e44927997fa, type: 3}
+    inkAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Libraries/Stratus/Experimental/Ink
+      Module/Example/AdvancedStory.ink
+    jsonAbsoluteFilePath: C:/Users/Jalor/Halfway-Home/Halfway Home/Assets/Libraries/Stratus/Experimental/Ink
+      Module/Example/AdvancedStory.json
+    output: []
+    errorOutput: []
+    timeTaken: 0

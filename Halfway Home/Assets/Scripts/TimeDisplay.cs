@@ -37,12 +37,12 @@ public class TimeDisplay : MonoBehaviour
       else if(Game.current.Hour < 12)
       {
           TimeText.text = Game.current.Hour + ":00";
-          AMPMText.text = "PM";
+          AMPMText.text = "AM";
       }
       else
       {
           TimeText.text = (Game.current.Hour - 12) + ":00";
-          AMPMText.text = "AM";
+          AMPMText.text = "PM";
 
       }
 

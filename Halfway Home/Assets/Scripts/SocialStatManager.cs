@@ -26,6 +26,7 @@ public class SocialStatManager : MonoBehaviour
   public void UpdateDisplay()
   {
     float barStat = Game.current.Self.GetSocialProgress(SocialStat) / (Game.current.Self.SocialThreshold * 3);
+    Debug.Log(Game.current.Self.GetSocialProgress(SocialStat) + ", " + Game.current.Self.SocialThreshold * 3);
     StatBar.fillAmount = barStat;
 
     int basicTier = Game.current.Self.GetBasicSocialStat(SocialStat);
