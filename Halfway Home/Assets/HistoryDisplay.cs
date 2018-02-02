@@ -64,6 +64,8 @@ public class HistoryDisplay : MonoBehaviour
 
     void UpdateHistory(DescriptionEvent eventdata)
     {
+        TextParser.ExtractTextSpeed(ref eventdata.Line);
+
         if(eventdata.Speaker != CurrentSpeaker)
         {
             CurrentSpeaker = eventdata.Speaker;

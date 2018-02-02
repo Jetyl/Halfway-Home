@@ -5785,7 +5785,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 61
+  m_fontSize: 60.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9227,6 +9227,11 @@ RectTransform:
   m_AnchoredPosition: {x: 402, y: -127}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &948728250 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 731198918}
 --- !u!1 &974342460
 GameObject:
   m_ObjectHideFlags: 0

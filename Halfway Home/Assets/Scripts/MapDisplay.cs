@@ -89,7 +89,7 @@ namespace HalfwayHome
 
             foreach(var multiple in TimeDilation)
             {
-                if (multiple.DepressionValue >= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
+                if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
                     multiplier = multiple.Multiplier;
             }
 
@@ -98,7 +98,7 @@ namespace HalfwayHome
             gameObject.SetActive(false);
             Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
-            print(gameObject.activeSelf);
+
         }
 
 
