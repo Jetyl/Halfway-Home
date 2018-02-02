@@ -62,7 +62,7 @@ namespace HalfwayHome
       }
 
       self = GetComponent<Button>();
-      Space.Connect<DefaultEvent>(Events.ReturnToMap, CheckAccess);
+      Space.Connect<DefaultEvent>(Events.TimeChange, CheckAccess);
       Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
     }
@@ -70,10 +70,9 @@ namespace HalfwayHome
     // Update is called once per frame
     void Update()
     {
-
+            
     }
-
-
+        
     void CheckAccess(DefaultEvent Eventdata)
     {
       self.interactable = true;
@@ -143,7 +142,7 @@ namespace HalfwayHome
 
     public bool IsClosed(int day, int hour)
     {
-
+            
       if (ProgressLocked)
       {
         if (!Game.current.Progress.GetBoolValue(ProgressKey))

@@ -300,7 +300,7 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: 493db0088c978894aaad44bf11d1b6d5, type: 3}
   - ID: 6
     Tag: 
-    Backdrop: {fileID: 21300000, guid: 7c7518763d71c724ca3777f173cd9546, type: 3}
+    Backdrop: {fileID: 21300000, guid: 68ba4828a76d03b418dd0c4775a81513, type: 3}
   - ID: 7
     Tag: 
     Backdrop: {fileID: 21300000, guid: 246d69b4745eef942a4cda45f390626d, type: 3}
@@ -309,7 +309,7 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: 51dc2af09ec4a6a4f9ba0694c78675a4, type: 3}
   - ID: 9
     Tag: 
-    Backdrop: {fileID: 0}
+    Backdrop: {fileID: 21300000, guid: 3becd8b624c965c48a199cf81e0178ff, type: 3}
   - ID: 10
     Tag: 
     Backdrop: {fileID: 0}
@@ -324,6 +324,7 @@ MonoBehaviour:
   BackCuratin: {fileID: 212070676895858708}
   WipeCurtain: {fileID: 114651947331197304}
   EyeCurtain: {fileID: 114130720915473102}
+  CurtainDefault: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
   StartingRoom: 0
   BackgroundFadeTime: 2
 --- !u!114 &114651947331197304
@@ -379,6 +380,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -394,6 +396,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -421,6 +424,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -436,6 +440,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -463,6 +468,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -478,6 +484,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -505,6 +512,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -520,6 +528,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
