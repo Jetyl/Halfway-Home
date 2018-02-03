@@ -107,8 +107,13 @@ public partial class AkUtilities
     // Unity platform enum to Wwise soundbank reference platform name mapping.
     private static IDictionary<BuildTarget, string[]> platformMapping = new Dictionary<BuildTarget, string[]>()
     {
-        { BuildTarget.StandaloneOSX, new string[] { "Mac" } },
+#if UNITY_2017_3_OR_NEWER
+		{ BuildTarget.StandaloneOSX, new string[] { "Mac" } },
+#else
+		{ BuildTarget.StandaloneOSXUniversal, new string[] { "Mac" } },
         { BuildTarget.StandaloneOSXIntel, new string[] { "Mac" } },
+        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
+#endif
         { BuildTarget.StandaloneWindows, new string[] { "Windows" } },
         // { BuildTarget.WebPlayer, null },
         // { BuildTarget.WebPlayerStreamed, null },
@@ -124,7 +129,6 @@ public partial class AkUtilities
         { BuildTarget.StandaloneLinux64, new string[] { "Linux" } },
         { BuildTarget.StandaloneLinuxUniversal, new string[] { "Linux" } },
         // { BuildTarget.WP8Player, null },
-        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
         // { BuildTarget.BlackBerry, null },
         // { BuildTarget.Tizen, null },
         { BuildTarget.PSP2, new string[] { "VitaHW", "VitaSW" } },

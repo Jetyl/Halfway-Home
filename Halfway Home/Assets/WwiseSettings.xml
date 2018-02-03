@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WwiseProjectPath>../Halfway Home_WwiseProject/Halfway Home_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../Halfway Home/Halfway Home_WwiseProject/Halfway Home_WwiseProject.wproj</WwiseProjectPath>
   <SoundbankPath>Audio/GeneratedSoundBanks/</SoundbankPath>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2017.1.1.6340</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2017.1.4.6407</WwiseInstallationPathWindows>
   <WwiseInstallationPathMac>null</WwiseInstallationPathMac>
   <CreatedPicker>true</CreatedPicker>
 </WwiseSettings>

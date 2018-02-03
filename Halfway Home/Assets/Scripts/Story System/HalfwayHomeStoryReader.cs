@@ -298,7 +298,7 @@ namespace HalfwayHome
 
     public void GetPlayerName()
     {
-      var nameInfo = new IdentityDisplay.PlayerGetInfoEvent(true);
+      var nameInfo = new IdentityDisplay.PlayerGetInfoEvent();
       Space.DispatchEvent(Events.GetPlayerInfo, nameInfo);
     }
 

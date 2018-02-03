@@ -12,34 +12,16 @@ using TMPro;
 
 public class IdentityDisplay : MonoBehaviour
 {
-    public bool IsNameDisplay;
     public GameObject ChoiceBox;
     public GameObject ConfirmBox;
+    public TextMeshProUGUI ConfirmText;
     public TMP_InputField Name;
-    public TextMeshProUGUI Pronouns;
 
-    string genderPicked = "N";
     string namePicked = "Sam";
 
-  public class PlayerGetInfoEvent : DefaultEvent
-  {
-    public bool IsName;
+  public class PlayerGetInfoEvent : DefaultEvent { };
 
-    public PlayerGetInfoEvent(bool isName)
-    {
-      IsName = isName;
-    }
-  }
-
-  public class PlayerSetInfoEvent : DefaultEvent
-  {
-    public bool IsName;
-
-    public PlayerSetInfoEvent(bool isName)
-    {
-      IsName = isName;
-    }
-  }
+  public class PlayerSetInfoEvent : DefaultEvent { };
 
   // Use this for initialization
   void Start ()
@@ -51,24 +33,6 @@ public class IdentityDisplay : MonoBehaviour
         Space.Connect<IdentityDisplay.PlayerGetInfoEvent>(Events.GetPlayerInfo, OnGetPlayerInfo);
         gameObject.SetActive(false);
   }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
-    public void AssignGender(string gender)
-    {
-        genderPicked = gender;
-
-        if (genderPicked == "N")
-            Pronouns.text = "They/Them";
-        if (genderPicked == "M")
-            Pronouns.text = "He/Him";
-        if (genderPicked == "F")
-            Pronouns.text = "She/Her";
-    }
 
     public void AssignName()
     {
@@ -80,25 +44,20 @@ public class IdentityDisplay : MonoBehaviour
 
     public void ConfirmIdentity()
     {
+        ConfirmText.text = "Is your name " + namePicked + "?";
         ConfirmBox.SetActive(true);
+        ChoiceBox.SetActive(false);
     }
 
     public void SetIdentity()
     {
-        if (IsNameDisplay)
-        {
-            Game.current.PlayerName = namePicked;
-            Game.current.Progress.SetValue<string>("PlayerName", Game.current.PlayerName);
-        }
-        else
-        { 
-            Game.current.Progress.SetValue<string>("PlayerGender", genderPicked);
-        }
+        Game.current.PlayerName = namePicked;
+        Game.current.Progress.SetValue<string>("PlayerName", Game.current.PlayerName);
 
         ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
         
-        var setData = new IdentityDisplay.PlayerSetInfoEvent(IsNameDisplay);
+        var setData = new IdentityDisplay.PlayerSetInfoEvent();
         Space.DispatchEvent(Events.SetPlayerIdentity, setData);
         Space.DispatchEvent(Events.GetPlayerInfoFinished);
         gameObject.SetActive(false);
@@ -106,10 +65,7 @@ public class IdentityDisplay : MonoBehaviour
 
     public void OnGetPlayerInfo(IdentityDisplay.PlayerGetInfoEvent e)
     {
-        if(e.IsName == IsNameDisplay)
-        {
-          gameObject.SetActive(true);
-          ConfirmBox.SetActive(false);
-        }
+        gameObject.SetActive(true);
+        ConfirmBox.SetActive(false);
     }
 }

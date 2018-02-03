@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using TMPro;
 
@@ -8,6 +9,8 @@ public class HistoryDisplay : MonoBehaviour
 {
 
     public GameObject HistoryWindow;
+
+    public ScrollRect ScrollArea;
 
     public TextMeshProUGUI Text;
 
@@ -50,6 +53,7 @@ public class HistoryDisplay : MonoBehaviour
         Text.text = History;
 
         HistoryWindow.SetActive(true);
+        ScrollArea.verticalNormalizedPosition = 0f;
         Space.DispatchEvent(Events.OpenHistory);
 
     }
@@ -88,8 +92,7 @@ public class HistoryDisplay : MonoBehaviour
         }
 
         History += Environment.NewLine + TextParser.DynamicEdit(eventdata.Line);
-
-    }
+  }
 
     void ClearHistory(DefaultEvent eventdata)
     {
