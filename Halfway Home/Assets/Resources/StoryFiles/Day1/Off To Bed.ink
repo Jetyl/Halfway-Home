@@ -85,9 +85,9 @@ Eh, its only for one week.
 	- expression >= 1:
 		"It was nice meeting you."
 }
-I start to drift off from there. My thoughts slow and hazy. #Background / Dream
+I start to drift off from there. My thoughts slow and hazy. #Background / Dream , eyeclose
 My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes. {CallSleep()}
-I toss and turn, pained to be awake. #Background / YourRoom
+I toss and turn, pained to be awake. #Background / YourRoom, eyeopen
 I look over at my spare bed, and Timothy's still there.
 I guess its his bed now.
 Slumberland becons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
@@ -95,7 +95,8 @@ Slumberland becons me back to it, but I should be getting up about now.{SetTimeB
 	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. 
 	 In no time, I'm ready to head out. If, a little more tired than I'd like #fatigue -= 40
 +[Stay in Bed]
-	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. {SetValue("Slept In Day 2", true)} #fatigue -= 80
+	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. #Background / Dream, eyeclose
+	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
 	 //semester 1 line, remove later
-	 In hours that felt like minutes, I finally drag myself out, to begin my day.
+	 That loud knocking noise, wakes me up again... #fatigue -= 80
 -> END

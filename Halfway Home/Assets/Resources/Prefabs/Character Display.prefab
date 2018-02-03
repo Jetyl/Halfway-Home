@@ -324,7 +324,7 @@ MonoBehaviour:
   BackCuratin: {fileID: 212070676895858708}
   WipeCurtain: {fileID: 114651947331197304}
   EyeCurtain: {fileID: 114130720915473102}
-  CurtainDefault: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
+  CurtainDefault: {fileID: 0}
   StartingRoom: 0
   BackgroundFadeTime: 2
 --- !u!114 &114651947331197304

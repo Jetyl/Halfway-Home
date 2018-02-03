@@ -166,8 +166,8 @@ namespace HalfwayHome
     /// <param name="value"></param>
     void ObserveVariable(string variableName, object value)
     {
-      Trace.Script($"Updating {variableName} to {value}", this);
-      stats[variableName].Set((int)value);
+      //Trace.Script($"Updating {variableName} to {value}", this);
+      //stats[variableName].Set((int)value);
     }
 
     // Set the values back

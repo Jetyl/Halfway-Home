@@ -164,6 +164,9 @@ public class CastDisplay : MonoBehaviour
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
+                    if (eventdata.FacingDirection == StagePosition.None)
+                        eventdata.FacingDirection = StagePosition.Center;
+
                     directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
                     Actors.Add(directions);
 

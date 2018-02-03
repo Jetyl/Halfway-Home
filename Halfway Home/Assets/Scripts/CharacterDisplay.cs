@@ -176,17 +176,19 @@ public class CharacterDisplay : MonoBehaviour
 
         FacingDirection = pos;
 
+        print(Character.Character + ", " + FacingDirection);
+
         if (FlipOnLeft)
         {
-            if (FacingDirection == StagePosition.Left)
-            {
-                visual.flipX = true;
-                BackSprite.flipX = true;
-            }
-            else
+            if (FacingDirection == StagePosition.Right)
             {
                 visual.flipX = false;
                 BackSprite.flipX = false;
+            }
+            else
+            {
+                visual.flipX = true;
+                BackSprite.flipX = true;
             }
                 
         }

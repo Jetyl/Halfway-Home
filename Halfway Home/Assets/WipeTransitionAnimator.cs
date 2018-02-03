@@ -28,7 +28,8 @@ public class WipeTransitionAnimator : MonoBehaviour
         matBlock = new MaterialPropertyBlock();
         matBlock.SetVector("_Dir", new Vector4(FadeDirection.x, FadeDirection.y, 0.0f, 0.0f));
         matBlock.SetFloat("_Width", FadeWidth);
-        matBlock.SetTexture("_MainTex", ren.sprite.texture);
+        if (ren.sprite != null)
+            matBlock.SetTexture("_MainTex", ren.sprite.texture);
     }
 	
 	// Update is called once per frame
@@ -43,7 +44,7 @@ public class WipeTransitionAnimator : MonoBehaviour
 
             matBlock.SetVector("_Dir", new Vector4(FadeDirection.x, FadeDirection.y, 0.0f, 0.0f));
 
-            if (matBlock.GetTexture("_MainTex") != ren.sprite.texture)
+            if (ren.sprite != null && matBlock.GetTexture("_MainTex") != ren.sprite.texture)
                 matBlock.SetTexture("_MainTex", ren.sprite.texture);
         }
         

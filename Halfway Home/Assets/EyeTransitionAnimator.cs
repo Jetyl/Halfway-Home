@@ -25,7 +25,8 @@ public class EyeTransitionAnimator : MonoBehaviour
     void InitMatBlock()
     {
         matBlock = new MaterialPropertyBlock();
-        matBlock.SetTexture("_MainTex", ren.sprite.texture);
+        if (ren.sprite != null)
+            matBlock.SetTexture("_MainTex", ren.sprite.texture);
     }
     
 
@@ -36,8 +37,9 @@ public class EyeTransitionAnimator : MonoBehaviour
             ren = GetComponent<SpriteRenderer>();
         if (matBlock == null)
             InitMatBlock();
-        else if (matBlock.GetTexture("_MainTex") != ren.sprite.texture)
-            matBlock.SetTexture("_MainTex", ren.sprite.texture);
+        else if (ren.sprite != null)
+            if (matBlock.GetTexture("_MainTex") != ren.sprite.texture)
+                matBlock.SetTexture("_MainTex", ren.sprite.texture);
 
         matBlock.SetFloat("_Progress", Progress);
 
