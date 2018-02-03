@@ -14,8 +14,6 @@ public class StatManger : MonoBehaviour
 
     public int SocialThresholdValue = 50;
 
-    public int DefaultIncrementValue = 5;
-
     public List<StatAdder> IncrementValues;
 
 	// Use this for initialization
