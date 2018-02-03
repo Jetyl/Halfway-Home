@@ -74,6 +74,7 @@ namespace Stratus
         void OnStoryUpdateEvent(Story.UpdateLineEvent e)
         {
           OnStoryUpdate(e.parse);
+                    print(e.visited);
         }
 
         /// <summary>

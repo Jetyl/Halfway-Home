@@ -700,7 +700,14 @@ namespace Stratus
           string latest = keys[keys.Count - 1];
           int count = story.runtime.state.visitCounts[latest];
           //Trace.Script($"Latest stitch = {latest},  times read = {count}");
-          
+          //Jesse's version. gets current knot
+          if(story.runtime.state.currentPath != null)
+                    {
+                        string path = story.runtime.state.currentPath.head.name;
+                        var num = story.runtime.state.VisitCountAtPathString(path);
+
+                        print(path + ", " + num);
+                    }
 
           if (count > 1)
             return true;

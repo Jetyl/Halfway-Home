@@ -84,7 +84,7 @@ I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.
 A chorus of whispers dissolves the silence.
 [Voices] "This is who you are."
--> Wake
+-> Start
 
 === Wake ===
 I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen

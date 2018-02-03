@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 568224905
-    m_lastTimePart2: -1999290762
+    m_lastTimePsrt1: 1019438306
+    m_lastTimePart2: -1999290760
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -148,8 +148,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -1323350784
-    m_lastTimePart2: -1999302795
+    m_lastTimePsrt1: -1534860073
+    m_lastTimePart2: -1999302392
     List:
     - Name: Play_City_of_Tears
       Path: TestEvents\Play_City_of_Tears
@@ -165,29 +165,29 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1954157561
-    m_lastTimePart2: -1999294962
+    m_lastTimePsrt1: 1123921550
+    m_lastTimePart2: -1999293138
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 543502613
-    m_lastTimePart2: -1999302418
+    m_lastTimePsrt1: -1506133689
+    m_lastTimePart2: -1999302392
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
-    m_lastTimePsrt1: 543011305
-    m_lastTimePart2: -1999302418
+    m_lastTimePsrt1: -1506118645
+    m_lastTimePart2: -1999302392
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -719602849
-    m_lastTimePart2: -1999290760
+    m_lastTimePsrt1: 763145716
+    m_lastTimePart2: -1999290745
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -201,8 +201,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: -803350784
-    m_lastTimePart2: -1999302795
+    m_lastTimePsrt1: -1506153738
+    m_lastTimePart2: -1999302392
     List:
     - Name: Test1
       Path: TestBanks\Test1
@@ -217,8 +217,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 1954269703
-    m_lastTimePart2: -1999294962
+    m_lastTimePsrt1: 1123891423
+    m_lastTimePart2: -1999293138
     List:
     - Name: Effects_Slider
       Path: Default Work Unit\Effects_Slider
@@ -251,8 +251,8 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
-    m_lastTimePsrt1: 542966181
-    m_lastTimePart2: -1999302418
+    m_lastTimePsrt1: -1506108622
+    m_lastTimePart2: -1999302392
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject

@@ -22,6 +22,12 @@ public class DescriptionDisplay : MonoBehaviour
 
     public Animator NextLine;
 
+    public float AutoTimeDelay = 2;
+
+    float AutoTimer = 0;
+
+    public bool Auto = false;
+
     bool Active = false;
 
     bool isFinished = false;
@@ -92,10 +98,31 @@ public class DescriptionDisplay : MonoBehaviour
             
         }
 
-        if(Skipping)
+        if (Input.GetButtonDown("Auto"))
+        {
+            Auto = !Auto;
+            AutoTimer = 0;
+        }
+        
+        if (Skipping)
         {
             if (isFinished)
                 Finished();
+        }
+        else if(Auto)
+        {
+            if(isFinished)
+            {
+                if (AutoTimer > AutoTimeDelay)
+                {
+                    AutoTimer = 0;
+                    Finished();
+                }
+                else
+                    AutoTimer += Time.deltaTime;
+            }
+
+            
         }
         else if (Input.GetMouseButtonDown(0) == true)
         {
