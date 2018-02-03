@@ -15,16 +15,23 @@ public class HistoryDisplay : MonoBehaviour
     public TextMeshProUGUI Text;
 
     public SpeakerDisplay SpeakerColors;
+    
+    public Button[] ButtonsDisabledOnDisplay;
+    public Image[] ImagesHiddenOnDisplay;
+    public TextMeshProUGUI[] TextHiddenOnDisplay;
 
     string History = "";
 
     string CurrentSpeaker = "";
+
+    private bool Displayed;
 
 	// Use this for initialization
 	void Start ()
     {
 
         HistoryWindow.SetActive(false);
+        Displayed = false;
 
         Space.Connect<DescriptionEvent>(Events.Description, UpdateHistory);
 
@@ -39,11 +46,17 @@ public class HistoryDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetKeyDown(KeyCode.J))
+		if(Input.GetButtonDown("History"))
         {
-            ShowHistory();
+            ToggleHistory();
         }
 	}
+
+  public void ToggleHistory()
+  {
+    if (!Displayed) ShowHistory();
+    else CloseHistory();
+  }
 
 
     public void ShowHistory()
@@ -55,16 +68,50 @@ public class HistoryDisplay : MonoBehaviour
         HistoryWindow.SetActive(true);
         ScrollArea.verticalNormalizedPosition = 0f;
         Space.DispatchEvent(Events.OpenHistory);
-
+        Displayed = true;
+        EnableButtons(false);
+        EnableImages(false);
+        EnableText(false);
     }
 
     public void CloseHistory()
     {
         HistoryWindow.SetActive(false);
         Space.DispatchEvent(Events.CloseHistory);
+        Displayed = false;
+        EnableButtons(true);
+        EnableImages(true);
+        EnableText(true);
     }
 
+    void EnableButtons(bool e)
+    { 
+        foreach (Button o in ButtonsDisabledOnDisplay)
+        {
+          o.interactable = e;
+          o.image.raycastTarget = e;
+          foreach (Image i in o.GetComponentsInChildren<Image>())
+          {
+            i.raycastTarget = e;
+          }
+        }
+    }
+    
+    void EnableImages(bool e)
+    {
+        foreach (Image i in ImagesHiddenOnDisplay)
+        {
+          i.enabled = e;
+        }
+    }
 
+    void EnableText(bool e)
+    {
+        foreach (TextMeshProUGUI t in TextHiddenOnDisplay)
+        {
+          t.enabled = e;
+        }
+    }
 
     void UpdateHistory(DescriptionEvent eventdata)
     {
