@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4559618791119428}
   - component: {fileID: 114436012824126240}
+  - component: {fileID: 114073430541728044}
   m_Layer: 0
   m_Name: Isaac
   m_TagString: Untagged
@@ -102,6 +103,22 @@ Transform:
   m_Father: {fileID: 4559618791119428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114073430541728044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241828928622914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288af69128d17934d869f46663053a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker:
+    Character: Isaac
+    Actor: {fileID: 0}
+  ScaleRatio: 1.1
+  TimeToScale: 0.5
 --- !u!114 &114139620927140818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +201,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -199,6 +217,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -226,6 +245,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -241,6 +261,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

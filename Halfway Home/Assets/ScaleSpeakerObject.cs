@@ -12,10 +12,12 @@ public class ScaleSpeakerObject : MonoBehaviour
 
     bool Scaled;
 
+    string MCName;
+
 	// Use this for initialization
 	void Start ()
     {
-
+        MCName = Game.current.PlayerName;
         Space.Connect<DescriptionEvent>(Events.Description, OnScale);
     }
 	
@@ -27,9 +29,16 @@ public class ScaleSpeakerObject : MonoBehaviour
 
     void OnScale(DescriptionEvent eventdata)
     {
-        if(Scaled)
+        
+        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
+        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
+
+        if (eventdata.Speaker == "")
+            return;
+
+        if (Scaled)
         {
-            if (eventdata.Speaker != Speaker.Character)
+            if (eventdata.Speaker != Speaker.Character && eventdata.Speaker != MCName)
             {
                 Scaled = false;
                 
@@ -38,11 +47,12 @@ public class ScaleSpeakerObject : MonoBehaviour
         }
         else
         {
-            if(eventdata.Speaker == Speaker.Character)
+            print(eventdata.Speaker);
+            if (eventdata.Speaker == Speaker.Character)
             {
                 Scaled = true;
-
-                Vector3 newscale = transform.lossyScale * ScaleRatio;
+                
+                Vector3 newscale = transform.localScale * ScaleRatio;
                 iTween.ScaleTo(gameObject, newscale, TimeToScale);
             }
         }

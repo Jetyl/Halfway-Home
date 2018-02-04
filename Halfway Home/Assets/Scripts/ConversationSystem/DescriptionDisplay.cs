@@ -67,6 +67,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenHistory, OnStop);
         Space.Connect<DefaultEvent>(Events.CloseHistory, OnNonStop);
+        Space.Connect<DefaultEvent>(Events.OpenUI, OnNonStop);
+        Space.Connect<DefaultEvent>(Events.CloseUI, OnStop);
 
     }
 	

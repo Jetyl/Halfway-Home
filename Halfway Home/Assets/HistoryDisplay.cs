@@ -127,14 +127,16 @@ public class HistoryDisplay : MonoBehaviour
 
             Color col = SpeakerColors.GetColor(eventdata.Speaker);
 
+            string Speaker = eventdata.Speaker;
+
             if(col != Text.color)
             {
                 var add = "<#" + ColorUtility.ToHtmlStringRGBA(col) + ">";
 
-                eventdata.Speaker = add + eventdata.Speaker + "</color>";
+                Speaker = add + eventdata.Speaker + "</color>";
             }
 
-            History += Environment.NewLine + TextParser.DynamicEdit(eventdata.Speaker);
+            History += Environment.NewLine + TextParser.DynamicEdit(Speaker);
 
         }
 
