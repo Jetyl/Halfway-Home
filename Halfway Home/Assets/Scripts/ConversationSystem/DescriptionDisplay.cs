@@ -26,7 +26,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     float AutoTimer = 0;
 
-    public bool Auto = false;
+    bool Auto = false;
 
     bool Active = false;
 
@@ -102,8 +102,7 @@ public class DescriptionDisplay : MonoBehaviour
 
         if (Input.GetButtonDown("Auto"))
         {
-            Auto = !Auto;
-            AutoTimer = AutoTimeDelay;
+            ToggleAuto();
         }
         
         if (Skipping)
@@ -147,6 +146,11 @@ public class DescriptionDisplay : MonoBehaviour
 
     }
 
+    public void ToggleAuto()
+    {
+        Auto = !Auto;
+        AutoTimer = AutoTimeDelay;
+    }
 
 
     public void Finished()
