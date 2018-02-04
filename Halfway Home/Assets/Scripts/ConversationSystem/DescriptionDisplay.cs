@@ -24,6 +24,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     public float AutoTimeDelay = 2;
 
+    public bool DebugSkipping;
+
     float AutoTimer = 0;
 
     bool Auto = false;
@@ -88,22 +90,11 @@ public class DescriptionDisplay : MonoBehaviour
             return;
 
         if(Input.GetButtonDown("Skip"))
-        {
-            Skipping = !Skipping;
-
-            if (Skipping)
-                Space.DispatchEvent(Events.SkipTyping);
-            else
-                Space.DispatchEvent(Events.StopSkipTyping);
-
-            Description.SetSkipping(Skipping);
+            ToggleSkip();
             
-        }
-
         if (Input.GetButtonDown("Auto"))
-        {
             ToggleAuto();
-        }
+        
         
         if (Skipping)
         {
@@ -152,6 +143,17 @@ public class DescriptionDisplay : MonoBehaviour
         AutoTimer = AutoTimeDelay;
     }
 
+    public void ToggleSkip()
+    {
+        Skipping = !Skipping;
+
+        if (Skipping)
+            Space.DispatchEvent(Events.SkipTyping);
+        else
+            Space.DispatchEvent(Events.StopSkipTyping);
+
+        Description.SetSkipping(Skipping);
+    }
 
     public void Finished()
     {
@@ -256,8 +258,12 @@ public class DescriptionDisplay : MonoBehaviour
 
     void OnStopSkipping(DefaultEvent eventdata)
     {
-        Skipping = false;
-        Description.SetSkipping(Skipping);
+        if(!DebugSkipping)
+        {
+            Skipping = false;
+            Description.SetSkipping(Skipping);
+        }
+
     }
 
     void OnSkipOff(DefaultEvent eventdata)
