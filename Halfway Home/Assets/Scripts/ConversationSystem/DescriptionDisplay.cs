@@ -103,7 +103,7 @@ public class DescriptionDisplay : MonoBehaviour
         if (Input.GetButtonDown("Auto"))
         {
             Auto = !Auto;
-            AutoTimer = 0;
+            AutoTimer = AutoTimeDelay;
         }
         
         if (Skipping)
@@ -135,8 +135,7 @@ public class DescriptionDisplay : MonoBehaviour
                 Description.gameObject.DispatchEvent(Events.PrintLine);
 
                 //turn this back on when the animation is working again
-                //NextLine.SetBool("Play", true);
-
+                NextLine.SetBool("Play", true);
                 
                 return;
             }
@@ -154,7 +153,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         isFinished = false;
         //turn these on when next line animation is working again
-        // NextLine.SetBool("Play", false);
+         NextLine.SetBool("Play", false);
          // NextLine.Play("LinePlaying");
         
 
@@ -229,8 +228,8 @@ public class DescriptionDisplay : MonoBehaviour
     void OnFinishedTyping(DefaultEvent eventdata)
     {
         isFinished = true;
-        
-            //NextLine.SetBool("Play", true);
+        if (!Auto)
+            NextLine.SetBool("Play", true);
     }
 
     void OnPause(DefaultEvent eventdata)

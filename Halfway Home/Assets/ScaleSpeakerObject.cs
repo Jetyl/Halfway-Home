@@ -58,4 +58,9 @@ public class ScaleSpeakerObject : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        Space.DisConnect<DescriptionEvent>(Events.Description, OnScale);
+    }
+
 }
