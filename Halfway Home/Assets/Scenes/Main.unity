@@ -591,7 +591,6 @@ MonoBehaviour:
   Speaker: {fileID: 568080877}
   NextLine: {fileID: 2086867357}
   AutoTimeDelay: 2
-  Auto: 0
   NoClick: 0
 --- !u!1 &60819604
 GameObject:
