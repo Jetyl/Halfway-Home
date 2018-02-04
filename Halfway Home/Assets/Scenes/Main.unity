@@ -591,6 +591,7 @@ MonoBehaviour:
   Speaker: {fileID: 568080877}
   NextLine: {fileID: 2086867357}
   AutoTimeDelay: 2
+  DebugSkipping: 0
   NoClick: 0
 --- !u!1 &60819604
 GameObject:
@@ -1840,7 +1841,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4167,7 +4168,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9554
+      value: 287.9573
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4177,7 +4178,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 525.9108
+      value: 525.9146
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4197,7 +4198,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9554
+      value: 287.9573
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4207,7 +4208,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 525.9108
+      value: 525.9146
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4227,7 +4228,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9554
+      value: 287.9573
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4237,7 +4238,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 525.9108
+      value: 525.9146
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4257,7 +4258,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 287.9554
+      value: 287.9573
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -4267,7 +4268,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 525.9108
+      value: 525.9146
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -17334,7 +17335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.01965}
+  m_AnchoredPosition: {x: 0, y: 903.0137}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -19117,7 +19118,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1586990784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60031325}
+        m_MethodName: ToggleAuto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1981507017}
+        m_MethodName: Swap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1586990784
@@ -22323,7 +22346,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1916987724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60031325}
+        m_MethodName: ToggleSkip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1916987724
@@ -22868,6 +22902,7 @@ GameObject:
   - component: {fileID: 1981507016}
   - component: {fileID: 1981507015}
   - component: {fileID: 1981507014}
+  - component: {fileID: 1981507017}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -22939,6 +22974,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1981507012}
+--- !u!114 &1981507017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1981507012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9876cd1e188ed43ad0fbea2e699ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwapSprite: {fileID: 21300000, guid: e03eca46ac8851c4cbd5c1b964b44535, type: 3}
 --- !u!1 &1988768294
 GameObject:
   m_ObjectHideFlags: 0
