@@ -14,9 +14,10 @@ namespace Stratus
   /// </summary>
   public abstract class BaseEditor : Editor
   {
-    public enum DrawOrder { Base, Declared }
+    /// <summary>
+    /// Maps serialized properties to validating functions
+    /// </summary>
     public class PropertyConstraintMap : Dictionary<SerializedProperty, Func<bool>> { }
-
     /// <summary>
     /// Specific constraints that dictate whether a specified property should be displayed
     /// </summary>
@@ -50,19 +51,38 @@ namespace Stratus
     /// </summary>
     protected Dictionary<SerializedProperty, ReorderableList> reorderableLists { get; set; } = new Dictionary<SerializedProperty, ReorderableList>();
     /// <summary>
+    /// Custom draw functions to be invoked after property drawing
+    /// </summary>
+    protected List<System.Action> drawFunctions { get; set; } = new List<System.Action>();
+    /// <summary>
+    /// The default label style for headers
+    /// </summary>
+    protected GUIStyle labelStyle { get; set; } 
+    /// <summary>
+    /// The default background style used
+    /// </summary>
+    protected GUIStyle backgroundStyle { get; set; }
+    /// <summary>
+    /// The default style used for each section
+    /// </summary>
+    protected GUIStyle sectionStyle { get; set; }
+    /// <summary>
     /// Whether any custom GUI styles have been configured
     /// </summary>
-    private bool initializedStyles { get; set; }
+    private bool doneFirstUpdate { get; set; }
 
     protected virtual void InitializeBaseEditor() {}
     protected virtual void PostEnable() {}
-    protected virtual void OnConfigureGUIStyles() {}
+    protected virtual void OnFirstUpdate() {}
 
     //------------------------------------------------------------------------/
     // Messages
     //------------------------------------------------------------------------/
     private void OnEnable()
     {
+      if (target == null)
+        return;
+
       AddProperties();
       InitializeBaseEditor();
       PostEnable();
@@ -71,10 +91,12 @@ namespace Stratus
     public override void OnInspectorGUI()
     {
       // Invoke the very first time
-      if (!initializedStyles)
+      if (!doneFirstUpdate)
       {
-        OnConfigureGUIStyles();
-        initializedStyles = true;
+        backgroundStyle = StratusEditorStyles.box;
+        labelStyle = StratusEditorStyles.skin.label;
+        OnFirstUpdate();
+        doneFirstUpdate = true;
       }
 
       // Update the serialized object, saving data
@@ -82,6 +104,17 @@ namespace Stratus
 
       // Now draw the base editor
       OnBaseEditorGUI();
+
+      // Now draw any custom draw functions
+      if (drawFunctions.Count > 0)
+      {
+        foreach(var drawFn in drawFunctions)
+        {
+          EditorGUILayout.BeginVertical(backgroundStyle);
+          drawFn();
+          EditorGUILayout.EndVertical();
+        }
+      }
     }
 
     public virtual void OnBaseEditorGUI()
@@ -96,14 +129,14 @@ namespace Stratus
           continue;
 
         // If all properties fail the constraints check
-        //if (!ValidateConstraints(properties.Item2))
-        //  continue;
+        if (!ValidateConstraints(properties.Item2))
+          continue;
 
 
         if (drawTypeLabels)
-          EditorGUILayout.LabelField(properties.Item1.Name, EditorStyles.centeredGreyMiniLabel);
+          EditorGUILayout.LabelField(properties.Item1.Name, labelStyle);
 
-        EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+        EditorGUILayout.BeginVertical(backgroundStyle);
         DrawProperties(properties.Item2);
         EditorGUILayout.EndVertical();
       }
@@ -112,8 +145,8 @@ namespace Stratus
       if (declaredProperties.Item2.Length > 0)
       {
         if (drawTypeLabels)
-          EditorGUILayout.LabelField(declaredProperties.Item1.Name, EditorStyles.centeredGreyMiniLabel);
-        EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+          EditorGUILayout.LabelField(declaredProperties.Item1.Name, labelStyle);
+        EditorGUILayout.BeginVertical(backgroundStyle);
         DrawProperties(declaredProperties.Item2);
         EditorGUILayout.EndVertical();
       }
@@ -256,12 +289,13 @@ namespace Stratus
       Type currentType = declaredType;
       while (currentType != typeof(MonoBehaviour))
       {
-        var properties = GetSerializedProperties(serializedObject, currentType);
-        //Trace.Script($"Adding properties for {currentType.Name}");
-
         // Add the properties onto the map
+        var properties = GetSerializedProperties(serializedObject, currentType);
         foreach (var prop in properties)
         {
+          // Check the attributes for this proeprty
+          //prop.
+
           propertyMap.Add(prop.name, prop);
           if (prop.isArray && prop.propertyType != SerializedPropertyType.String)
           {
@@ -275,7 +309,6 @@ namespace Stratus
         propertyGroups.Add(new Tuple<Type, SerializedProperty[]>(currentType, properties));
 
         // Move onto the next type
-        //Trace.Script($"BaseType = {currentType.BaseType.Name}");
         currentType = currentType.BaseType;
       }
 
@@ -292,15 +325,30 @@ namespace Stratus
     {
       foreach(var prop in properties)
       {
-        if (propertyConstraints.ContainsKey(prop) && propertyConstraints[prop]())
+        bool foundConstraint = propertyConstraints.ContainsKey(prop);
+
+        // If no constraint was found for this property, it means 
+        // that at least one property can be drawn
+        if (!foundConstraint)
           return true;
+        // If the property was found and validated, it means we can draw it
+        else
+        {
+          bool validated = propertyConstraints[prop]();
+          if (validated)
+            return true;
+        }
+        
       }
 
-      // None of the properties could be drawn
+      // No constraints were validated
       return false;
     }
 
-
+    /// <summary>
+    /// Always returns false
+    /// </summary>
+    protected bool DontDraw => false;
 
   }
 

@@ -88,7 +88,7 @@ namespace Stratus
       /// <summary>
       /// The rigidbody component used by this component
       /// </summary>
-      public new Rigidbody rigidbody { get; private set; }
+      public Rigidbody rigidBody { get; private set; }
 
       //------------------------------------------------------------------------/
       // Fields: Private
@@ -131,8 +131,8 @@ namespace Stratus
         // Cache the main components, ho!
         this.navigation = GetComponent<NavMeshAgent>(); ;
         this.sensor = GetComponent<Sensor>();
-        this.rigidbody = GetComponent<Rigidbody>();
-
+        this.rigidBody = GetComponent<Rigidbody>();
+        
         // Subscribe to events
         this.Subscribe();
 
@@ -188,7 +188,7 @@ namespace Stratus
       {
         this.navigation = GetComponent<NavMeshAgent>(); ;
         this.sensor = GetComponent<Sensor>();
-        this.rigidbody = GetComponent<Rigidbody>();
+        this.rigidBody = GetComponent<Rigidbody>();
 
         if (this.steeringRoutine != null)
         {
@@ -207,7 +207,7 @@ namespace Stratus
       protected virtual void Subscribe()
       {
         this.gameObject.Connect<Sensor.InteractEvent>(this.OnInteractEvent);
-        this.gameObject.Connect<Sensor.ScanResultEvent>(this.OnInteractScanResultEvent);
+        this.gameObject.Connect<Sensor.DetectionResultEvent>(this.OnInteractScanResultEvent);
         this.gameObject.Connect<DeathEvent>(this.OnDeathEvent);
         this.gameObject.Connect<MoveToEvent>(this.OnMoveToEvent);
         this.gameObject.Connect<EngageTargetEvent>(this.OnEngageTargetEvent);
@@ -241,7 +241,7 @@ namespace Stratus
         }
       }
 
-      void OnInteractScanResultEvent(Sensor.ScanResultEvent e)
+      void OnInteractScanResultEvent(Sensor.DetectionResultEvent e)
       {
         this.OnInteractScan(e.hasFoundInteractions);
       }

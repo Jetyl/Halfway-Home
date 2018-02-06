@@ -13,9 +13,9 @@ using System.Collections.Generic;
 namespace Stratus
 {
   /// <summary>
-  /// Triggers an event when the specified condition is met.
+  /// A component that triggers a selected triggerable when the specified condition is met.
   /// </summary>
-  public abstract class Trigger : MonoBehaviour
+  public abstract class Trigger : BaseTrigger
   {
     //------------------------------------------------------------------------/
     // Events
@@ -64,12 +64,12 @@ namespace Stratus
     /// <summary>
     /// How the trigger is delivered to the target triggerable
     /// </summary>
-    public enum DeliveryMethod
+    public enum Scope
     {
+      [Tooltip("Only the target triggerable will be triggered")]
+      Component,
       [Tooltip("All triggerable components in the GameObject will be triggered")]
-      GameObject,
-      [Tooltip("Only the target triggerable component will be triggered")]
-      Component
+      GameObject
     }
 
     //------------------------------------------------------------------------/
@@ -81,7 +81,7 @@ namespace Stratus
     [Tooltip("What instruction to send to the triggerable")]
     public Instruction instruction;
     [Tooltip("Whether the trigger will be sent to the GameObject as an event or invoked directly on the dispatcher component")]
-    public DeliveryMethod delivery = DeliveryMethod.GameObject;
+    public Scope scope = Scope.Component;
     [Tooltip("Whether it should also trigger all of the target's children")]
     public bool recursive = false;
 
@@ -128,20 +128,6 @@ namespace Stratus
       this.gameObject.Connect<EnableEvent>(this.OnEnableEvent);
     }
 
-    private void OnValidate()
-    {
-      
-    }
-
-    private void Reset()
-    {
-      targets.Add(null);
-
-      // If a trigger system is present, hide this component and set its default
-      CheckForTriggerSystem();
-      
-    }
-
     //------------------------------------------------------------------------/
     // Methods
     //------------------------------------------------------------------------/
@@ -165,7 +151,10 @@ namespace Stratus
       // Dispatch the trigger event onto a given target if one is provided
       foreach(var target in targets)
       {
-        if (delivery == DeliveryMethod.GameObject)
+        if (target == null)
+          continue;
+
+        if (scope == Scope.GameObject)
         {
           target.gameObject.Dispatch<TriggerEvent>(triggerEvent);
           if (this.recursive)
@@ -177,7 +166,7 @@ namespace Stratus
           }
         }
 
-        else if (delivery == DeliveryMethod.Component)
+        else if (scope == Scope.Component)
         {
           target.Trigger();
         }
@@ -214,19 +203,7 @@ namespace Stratus
 
     }
 
-    private void CheckForTriggerSystem()
-    {
-      var triggerSystem = gameObject.GetComponent<TriggerSystem>();
-      if (triggerSystem)
-      {
-        this.hideFlags = HideFlags.HideInInspector;
-        triggerSystem.triggers.Add(this);
-      }
-      else
-      {
-        this.hideFlags = HideFlags.None;
-      }
-    }
+
 
 
 

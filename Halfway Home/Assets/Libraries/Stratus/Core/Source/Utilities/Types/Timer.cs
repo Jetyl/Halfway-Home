@@ -121,9 +121,7 @@ namespace Stratus
         Update(dt);
         if (this.isFinished)
         {
-          //if (this.OnFinished == null)
-          //  Trace.Error("The provided callback function was not set!");
-          //this.OnFinished();
+          OnFinished?.Invoke();
           this.Reset();
         }
       }

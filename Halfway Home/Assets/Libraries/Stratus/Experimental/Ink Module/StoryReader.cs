@@ -36,6 +36,8 @@ namespace Stratus
         public bool saveStates = true;
         [Tooltip("Whether to save story data when exiting playmode")]
         public bool saveOnExit = false;
+        [Tooltip("Whether state information should be cleared on a restart")]
+        public bool clearStateOnRestart = false;
 
         //------------------------------------------------------------------------------------------/
         // Private Fields
@@ -83,9 +85,9 @@ namespace Stratus
         // Virtual Functions
         //------------------------------------------------------------------------------------------/
         protected abstract void OnAwake();
-        protected virtual void OnStoryLoaded(Story story) {}
+        protected virtual void OnStoryLoaded(Story story) { }
         protected abstract void OnBindExternalFunctions(Story story);
-        
+
         //------------------------------------------------------------------------------------------/
         // Messages
         //------------------------------------------------------------------------------------------/
@@ -196,15 +198,15 @@ namespace Stratus
             if (!story.runtime.canContinue)
             {
               if (automaticRestart)
-                Restart();
+                Restart(clearStateOnRestart);
               else
                 Trace.Error($"The story {story.name} has already been ended, thus we can't jump to the knot!", this);
             }
             JumpToKnot(knot);
           }
-          else if (restart)          
-            Restart();
-          
+          else if (restart || automaticRestart)
+            Restart(clearStateOnRestart);
+
 
           // Start it
           InitializeStory();
@@ -240,11 +242,14 @@ namespace Stratus
         /// <summary>
         /// Attempt to restart the story back to its initial state
         /// </summary>
-        void Restart()
-        {         
-           if (logging)
-              Trace.Script("Restarting the state for the story '" + story.name + "'", this);
+        void Restart(bool clearState)
+        {
+          if (logging)
+            Trace.Script("Restarting the state for the story '" + story.name + "'", this);
+          if (clearState)
             story.runtime.ResetState();
+          else
+            story.runtime.state.GoToStart();
         }
 
         //------------------------------------------------------------------------------------------/
@@ -335,7 +340,7 @@ namespace Stratus
         void OnObserveVariableEvent(Story.ObserveVariableEvent e)
         {
           if (logging)
-            Trace.Script("Observing " + e.variableName);          
+            Trace.Script("Observing " + e.variableName);
           story.runtime.ObserveVariable(e.variableName, e.variableObserver);
         }
 
@@ -451,7 +456,7 @@ namespace Stratus
             stories.Add(story.name, story);
 
           story.timesRead++;
-          stories[story.name].savedState = story.runtime.state.ToJson();          
+          stories[story.name].savedState = story.runtime.state.ToJson();
           //Trace.Script($"Saving {story.name}");
         }
 
@@ -647,7 +652,7 @@ namespace Stratus
           this.stitch = "." + stitchName;
           if (logging)
             Trace.Script("Updating stitch to '" + stitch + "'", this);
-        }     
+        }
       }
 
       /// <summary>
@@ -677,15 +682,15 @@ namespace Stratus
         public string latestStitch { get; private set; }
 
         protected override void UpdateCurrentLine()
-        {          
+        {
           var line = story.runtime.currentText;
           var tags = story.runtime.currentTags;
 
           // Check whether this line has been visited before
-          bool visited = CheckIfRead();
-          if (visited)
-            Trace.Script("This line has been visited previously!");
+          bool visited = CheckIfKnotVisited();
 
+          if (visited && logging)
+            Trace.Script("This knot has been visited previously!");
           if (logging)
             Trace.Script($"\"{line}\" ");
 
@@ -694,23 +699,31 @@ namespace Stratus
         }
 
         // @TODO: Not working properly for the very first knot?
-        bool CheckIfRead()
+        bool CheckIfKnotVisited()
         {
-          var keys = new List<string>(story.runtime.state.visitCounts.Keys);
-          string latest = keys[keys.Count - 1];
-          int count = story.runtime.state.visitCounts[latest];
+          //var keys = new List<string>(story.runtime.state.visitCounts.Keys);
+          //string latest = keys[keys.Count - 1];
+          //int count = story.runtime.state.visitCounts[latest];
+          //if (count > 1)
+          //  return true;
+
           //Trace.Script($"Latest stitch = {latest},  times read = {count}");
-          //Jesse's version. gets current knot
-          if(story.runtime.state.currentPath != null)
-                    {
-                        string path = story.runtime.state.currentPath.head.name;
-                        var num = story.runtime.state.VisitCountAtPathString(path);
 
-                        print(path + ", " + num);
-                    }
+          Path currentPath = story.runtime.state.currentPath;
+          if (currentPath != null)
+          {
+            Path.Component currentHead = currentPath.head;
+            string key = story.runtime.state.currentPath.head.name;
+            if (key != null)
+            {
+              latestKnot = key;
+              int timesVisited = story.runtime.state.VisitCountAtPathString(key);
+              if (timesVisited > 1)
+                return true;
+            }
+          }
 
-          if (count > 1)
-            return true;
+
           return false;
         }
 

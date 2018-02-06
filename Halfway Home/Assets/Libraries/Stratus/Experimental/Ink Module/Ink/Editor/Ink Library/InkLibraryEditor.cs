@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 
 namespace Ink.UnityIntegration {
 
@@ -29,6 +26,7 @@ namespace Ink.UnityIntegration {
 
 			EditorGUILayout.HelpBox("This file caches information about ink files in your project.", MessageType.Info);
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("inkLibrary"), true);
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("pendingCompilationStack"), true);
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("compilationStack"), true);
 			if(GUI.changed && target != null)         
 				EditorUtility.SetDirty(target);

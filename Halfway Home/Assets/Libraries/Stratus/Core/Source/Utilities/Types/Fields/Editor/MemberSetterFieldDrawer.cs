@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.Events;
-using Stratus.Dependencies.Ludiq.Reflection;
 using Stratus.Utilities;
+using UnityEditor;
+using UnityEngine;
 
 namespace Stratus
 {
-  [CustomPropertyDrawer(typeof(PropertySetterField))]
-  public class PropertySetterFieldDrawer : PropertyDrawer
+  [CustomPropertyDrawer(typeof(MemberSetterField))]
+  public class MemberSetterFieldDrawer : PropertyDrawer
   {
     private const float lines = 7f;
     private const float padding = 2f;
@@ -27,11 +23,11 @@ namespace Stratus
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-      var target = property.GetObject<PropertySetterField>(fieldInfo);
+      var target = property.GetObject<MemberSetterField>(fieldInfo);
 
       float height = EditorGUIUtility.singleLineHeight + padding;
-      var memberProp = property.FindPropertyRelative("property");
-      var typeProperty = property.FindPropertyRelative("propertyType");
+      var memberProp = property.FindPropertyRelative("member");
+      var typeProperty = property.FindPropertyRelative("memberType");
       var type = (ActionProperty.Types)typeProperty.enumValueIndex;
       
 
@@ -67,7 +63,7 @@ namespace Stratus
       if (target != null)
       {
         target.Validate();
-        property.isExpanded = target.property.isAssigned;
+        property.isExpanded = target.member.isAssigned;
       }
 
       if (property.isExpanded)
@@ -83,8 +79,8 @@ namespace Stratus
 
         // Add a suffix to get the dynamic version, if needed
         string suffix = "Static";
-        var valueType = (PropertySetterField.ValueType)valueTypeProperty.enumValueIndex;
-        if (valueType == PropertySetterField.ValueType.Dynamic)
+        var valueType = (MemberSetterField.ValueType)valueTypeProperty.enumValueIndex;
+        if (valueType == MemberSetterField.ValueType.Dynamic)
           suffix = "Dynamic";
 
         contentPosition.y += height;

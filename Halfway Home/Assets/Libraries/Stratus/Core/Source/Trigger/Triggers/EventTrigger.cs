@@ -15,7 +15,7 @@ namespace Stratus
     [Tooltip("What type of event this trigger will activate on")]
     public ClassTypeReference type;
     [Tooltip("The scope of the event")]
-    public Event.Scope scope;
+    public Event.Scope eventScope;
 
     protected override void OnAwake()
     {
@@ -25,7 +25,7 @@ namespace Stratus
         return;
       }
 
-      switch (this.scope)
+      switch (this.eventScope)
       {
         case Event.Scope.GameObject:
           this.gameObject.Connect(this.OnEvent, this.type);

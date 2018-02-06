@@ -16,17 +16,45 @@ namespace Stratus
   /// </summary>
   public static class StratusEditorStyles
   {
+    /// <summary>
+    /// The default skin used by the Stratus framework
+    /// </summary>
+    public static GUISkin skin { get; private set; }
+    /// <summary>
+    /// A thin line for used within an editor window
+    /// </summary>
     public static GUIStyle editorLine { get; private set; }
+    /// <summary>
+    /// A tintable background
+    /// </summary>
     public static GUIStyle tintable { get; private set; }
-
     /// <summary>
     /// The main background color used by UI elmeents
     /// </summary>
     public static Color backgroundColor => azureColor;
+    /// <summary>
+    /// The default color used for Stratus
+    /// </summary>
     public static Color azureColor { get; set; }
+    public static GUIStyle box => skin.box;
+    public static GUIStyle button => skin.button;
+    public static GUIStyle blueButton => skin.FindStyle("Blue Button");
+    public static GUIStyle greenButton => skin.FindStyle("Green Button");
+    public static GUIStyle filledBox => skin.FindStyle("Filled Box");
+    public static GUIStyle outlineBox => skin.FindStyle("Outline Box");
+    public static GUIStyle greyCircleButton => skin.FindStyle("Grey Circle Button");
+    public static GUIStyle blueCircleButton => skin.FindStyle("Blue Circle Button");
+    public static GUIStyle blueBoxTickButton => skin.FindStyle("Blue Box Tick Button");
+    public static GUIStyle header => skin.FindStyle("Header");
+    public static GUIStyle miniText => skin.FindStyle("Mini Text");
+    public static GUIStyle backgroundLight => skin.FindStyle("Light Background");
+    public static GUIStyle background => skin.FindStyle("Background");
 
     static StratusEditorStyles()
     {
+      // Load the default skin
+      skin = Resources.Load<GUISkin>("Stratus Skin"); 
+
       azureColor = new Color(0, 191, 255);
       editorLine = new GUIStyle(GUI.skin.box);
       editorLine.border.top = editorLine.border.bottom =

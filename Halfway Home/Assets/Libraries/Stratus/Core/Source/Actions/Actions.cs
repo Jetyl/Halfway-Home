@@ -85,6 +85,21 @@ namespace Stratus
     }
 
     /// <summary>
+    /// Creates an action group, a set which runs all actions in parallel
+    /// </summary>
+    /// <param name="owner">A reference to the owner of this action sequence.</param>
+    /// <returns></returns>
+    public static ActionSet Group(MonoBehaviour component)
+    {
+      // Construct the sequence
+      ActionSet group = new ActionGroup();
+      // Add it to the owner
+      component.gameObject.Actions().Add(group);
+      // Return it
+      return group;
+    }
+
+    /// <summary>
     /// Creates an ActionDelay and adds it to the specified set.
     /// </summary>
     /// <param name="set">A reference to the ActionSet that this action belongs to.</param>

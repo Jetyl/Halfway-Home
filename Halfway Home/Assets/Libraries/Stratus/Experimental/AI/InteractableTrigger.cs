@@ -13,9 +13,9 @@ namespace Stratus.AI
   /// <summary>
   /// Receives interaction events with the player
   /// </summary>
-  public class InteractionTrigger : Trigger
+  public class InteractableTrigger : Trigger
   {
-    public enum TriggerType { Interaction, Scan }
+    public enum TriggerType { Interaction, Detection }
 
     [Header("Interaction")]
     public TriggerType type = TriggerType.Interaction;    
@@ -30,8 +30,8 @@ namespace Stratus.AI
         case TriggerType.Interaction:
           this.gameObject.Connect<Sensor.InteractEvent>(this.OnInteractEvent);
           break;
-        case TriggerType.Scan:
-          this.gameObject.Connect<Sensor.ScanEvent>(this.OnScanEvent);
+        case TriggerType.Detection:
+          this.gameObject.Connect<Sensor.DetectionEvent>(this.OnDetection);
           break;
       }
     }
@@ -40,20 +40,9 @@ namespace Stratus.AI
     /// Received when this object is within vicinity of the agent.
     /// </summary>
     /// <param name="e"></param>
-    void OnScanEvent(Sensor.ScanEvent e)
+    void OnDetection(Sensor.DetectionEvent e)
     {
-      //if (!enabled)
-      //  return;
-
-      //if (type == TriggerType.Scan)
       this.Activate();
-      //else if (type == TriggerType.Interaction)
-      //{
-      //  var response = new Agent.InteractionAvailableEvent();
-      //  response.interactive = this;
-      //  response.context = this.context;
-      //  e.agent.gameObject.Dispatch<Agent.InteractionAvailableEvent>(response);
-      //}
     }
 
     /// <summary>

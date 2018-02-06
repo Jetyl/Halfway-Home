@@ -11,14 +11,23 @@ namespace Stratus
   [RequireComponent(typeof(Collider))]
   public class CollisionProxy : Proxy
   {
-    public enum TriggerType { Enter, Exit, Stay }
+    //public enum CollisionMode { Trigger, Collision }
+    public enum TriggerType
+    {
+      TriggerEnter,
+      TriggerExit,
+      TriggerStay,
+      CollisionEnter,
+      CollisionExit,
+      CollisionStay
+    }
     public delegate void OnTriggerMessage(Collider collider);
 
     //------------------------------------------------------------------------/
     // Fields
     //------------------------------------------------------------------------/
     [Header("Collision")]
-    public TriggerType type;
+    public TriggerType type;    
 
     //------------------------------------------------------------------------/
     // Properties
@@ -31,33 +40,33 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Messages
     //------------------------------------------------------------------------/
-    /// <summary>
-    /// If its activated when it detects a collision with a target.
-    /// </summary>
-    /// <param name="collision"></param>
     private void OnTriggerEnter(Collider other)
     {
-      //Trace.Script("Collided with " + other.name);
-      OnTrigger(other, TriggerType.Enter);
+      OnTrigger(other, TriggerType.TriggerEnter);
     }
 
-    /// <summary>
-    /// If its activated when it detects a collision with a target.
-    /// </summary>
-    /// <param name="collision"></param>
     private void OnTriggerStay(Collider other)
     {
-      //Trace.Script("Collided with " + other.name);
-      OnTrigger(other, TriggerType.Stay);
+      OnTrigger(other, TriggerType.TriggerStay);
     }
-
-    /// <summary>
-    /// If its activated when it detects a collision with a target..
-    /// </summary>
-    /// <param name="collision"></param>
     private void OnTriggerExit(Collider other)
     {
-      OnTrigger(other, TriggerType.Exit);
+      OnTrigger(other, TriggerType.TriggerExit);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+      OnTrigger(collision.collider, TriggerType.CollisionEnter);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+      OnTrigger(collision.collider, TriggerType.CollisionExit);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+      OnTrigger(collision.collider, TriggerType.CollisionStay);
     }
 
     //------------------------------------------------------------------------/

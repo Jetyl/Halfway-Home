@@ -120,7 +120,7 @@ namespace Stratus
       /// </summary>
       public class InteractionAvailableEvent : Stratus.Event
       {
-        public InteractionTrigger Interactive;
+        public InteractableTrigger Interactive;
         public string Context;
       }
 

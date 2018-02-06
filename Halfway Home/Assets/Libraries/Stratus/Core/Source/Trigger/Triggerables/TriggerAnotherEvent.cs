@@ -14,7 +14,7 @@ namespace Stratus
     [Tooltip("What component to send the trigger event to")]
     public Triggerable Target;
     [Tooltip("Whether the trigger will be sent to the GameObject as an event or invoked directly on the dispatcher component")]
-    public Trigger.DeliveryMethod Delivery = Stratus.Trigger.DeliveryMethod.GameObject;
+    public Trigger.Scope Delivery = Stratus.Trigger.Scope.GameObject;
     [Tooltip("Whether it should also trigger all of the object's children")]
     public bool Recursive = false;
 
@@ -24,7 +24,7 @@ namespace Stratus
 
     protected override void OnTrigger()
     {
-      if (this.Delivery == Stratus.Trigger.DeliveryMethod.GameObject)
+      if (this.Delivery == Stratus.Trigger.Scope.GameObject)
       {
         if (!this.Target)
         {          
@@ -40,7 +40,7 @@ namespace Stratus
         }
       }
 
-      else if (this.Delivery == Stratus.Trigger.DeliveryMethod.Component)
+      else if (this.Delivery == Stratus.Trigger.Scope.Component)
       {
         this.Target.Trigger();
       }

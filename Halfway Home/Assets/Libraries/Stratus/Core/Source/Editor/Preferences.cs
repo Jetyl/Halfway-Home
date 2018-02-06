@@ -13,7 +13,7 @@ namespace Stratus
   [SingletonAsset("Assets", "Stratus Preferences")]
   public class Preferences : SingletonAsset<Preferences>
   {
-    
+    [Header("Saved Settings")]
     /// <summary>
     /// Allows scenes to be bookmarked from the project folder, used by the scene browser
     /// </summary>
@@ -29,7 +29,7 @@ namespace Stratus
     /// <summary>
     /// Settings for the overlay window
     /// </summary>
-    public OverlayWindow.Settings overlaySettings = new OverlayWindow.Settings();
+    public OverlayWindow.Settings overlaySettings = new OverlayWindow.Settings();    
 
     /// <summary>
     /// Resets all settings to their default

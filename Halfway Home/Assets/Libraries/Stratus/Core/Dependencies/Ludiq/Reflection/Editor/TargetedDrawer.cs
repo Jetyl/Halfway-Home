@@ -131,7 +131,6 @@ namespace Stratus.Dependencies.Ludiq.Reflection.Editor
 			RenderTargetControl(targetPosition);
       if (EditorGUI.EndChangeCheck())
       {
-        Trace.Script("Changed the target!");
         OnTargetChange();
       }
 

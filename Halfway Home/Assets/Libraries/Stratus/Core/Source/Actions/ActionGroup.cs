@@ -28,6 +28,8 @@ namespace Stratus
     /// <returns>How much time was consumed while updating.</returns>
     public override float Update(float dt)
     {
+      Migrate();
+
       var mostTimeElapsed = 0.0f;
 
       // In an ActionGroup, every action is updated in parallel, given the same 
@@ -35,8 +37,8 @@ namespace Stratus
       foreach (var action in this.ActiveActions)
       {
         // If an action is inactive, continue to the next one
-        if (action.isActive)
-          continue;
+        //if (!action.isActive)
+        //  continue;
 
         // Every action consumes time from the time slice given (dt)
         var timeElapsed = action.Update(dt);

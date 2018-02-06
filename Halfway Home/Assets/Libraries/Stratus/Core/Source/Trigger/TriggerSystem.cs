@@ -31,22 +31,32 @@ namespace Stratus
     {
       AddExisting();
       ShowComponents(false);
+      ValidateTriggers();
     }
 
     private void OnDisable()
     {
-      ShowComponents(true);
+      //ShowComponents(true);
     }    
 
     private void Reset()
     {
       AddExisting();
+      ValidateTriggers();
       ShowComponents(false);
     }
 
     //------------------------------------------------------------------------/
     // Methods
     //------------------------------------------------------------------------/
+    public void Add(BaseTrigger baseTrigger)
+    {
+      if (baseTrigger is Trigger)
+        triggers.Add(baseTrigger as Trigger);
+      else if (baseTrigger is Triggerable)
+        triggerables.Add(baseTrigger as Triggerable);
+    }
+
     private void AddExisting()
     {
       triggers.Clear();
@@ -57,7 +67,7 @@ namespace Stratus
 
     public void ShowComponents(bool show)
     {
-      Trace.Script($"show = {show}", this);
+      //Trace.Script($"show = {show}", this);
       HideFlags flag = show ? HideFlags.None : HideFlags.HideInInspector;
       foreach (var trigger in triggers)
         trigger.hideFlags = flag;
@@ -69,7 +79,7 @@ namespace Stratus
     {
       foreach (var trigger in triggers)
       {
-        trigger.delivery = Trigger.DeliveryMethod.Component;
+        trigger.scope = Trigger.Scope.Component;
       }
         
     }

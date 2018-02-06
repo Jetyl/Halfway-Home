@@ -26,7 +26,7 @@ namespace Stratus.AI
     /// respond with a corresponding event to signal that they are able to be
     /// interacted with.
     /// </summary>
-    public class ScanEvent : Stratus.Event
+    public class DetectionEvent : Stratus.Event
     {
       /// <summary>
       /// The sensor that is outputting the scan
@@ -56,7 +56,7 @@ namespace Stratus.AI
     /// <summary>
     /// The results of a given scan
     /// </summary>
-    public class ScanResultEvent : Stratus.Event
+    public class DetectionResultEvent : Stratus.Event
     {
       /// <summary>
       /// Whether interactions were found by this sensor
@@ -377,7 +377,7 @@ namespace Stratus.AI
       bool foundInteractions = false;
 
       // The scan event that will be sent
-      var scanEvent = new ScanEvent();
+      var scanEvent = new DetectionEvent();
       scanEvent.sensor = this;
 
       if (castResults != null)
@@ -395,7 +395,7 @@ namespace Stratus.AI
             continue;
 
           // Scan it
-          interactable.gameObject.Dispatch<ScanEvent>(scanEvent);
+          interactable.gameObject.Dispatch<DetectionEvent>(scanEvent);
 
           // Create a query object, filling with scanned data
           var query = new InteractionQuery();
@@ -417,9 +417,9 @@ namespace Stratus.AI
       interactivesInRange = interactions.ToArray();
 
       // Now inform the agent of the current results
-      var scanResult = new ScanResultEvent();
+      var scanResult = new DetectionResultEvent();
       scanResult.hasFoundInteractions = foundInteractions;
-      this.gameObject.Dispatch<ScanResultEvent>(scanResult);
+      this.gameObject.Dispatch<DetectionResultEvent>(scanResult);
       return foundInteractions;
     }
 

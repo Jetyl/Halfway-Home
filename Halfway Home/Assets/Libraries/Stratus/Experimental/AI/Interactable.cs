@@ -32,7 +32,7 @@ namespace Stratus.AI
     //------------------------------------------------------------------------/
     protected abstract void OnAwake();
     protected abstract void OnInteract(Sensor sensor);
-    protected abstract void OnScan(Sensor sensor);
+    protected abstract void OnDetect(Sensor sensor);
 
     //------------------------------------------------------------------------/
     // Messages
@@ -40,7 +40,7 @@ namespace Stratus.AI
     private void Awake()
     {
       this.gameObject.Connect<Sensor.InteractEvent>(this.OnInteractEvent);
-      this.gameObject.Connect<Sensor.ScanEvent>(this.OnScanEvent);
+      this.gameObject.Connect<Sensor.DetectionEvent>(this.OnDetectEvent);
       OnAwake();
     }
 
@@ -52,12 +52,12 @@ namespace Stratus.AI
     /// </summary>
     /// <param name="e"></param>
 
-    void OnScanEvent(Sensor.ScanEvent e)
+    void OnDetectEvent(Sensor.DetectionEvent e)
     {
       // Fill out information about this object
       e.scanData = this.data;
       // Inform this object that it has been scanned
-      OnScan(e.sensor);
+      OnDetect(e.sensor);
     }
 
     /// <summary>

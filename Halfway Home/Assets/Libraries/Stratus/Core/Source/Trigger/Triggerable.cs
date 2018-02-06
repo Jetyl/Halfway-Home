@@ -15,7 +15,7 @@ namespace Stratus
   /// <summary>
   /// A component that when triggered will perform a specific action.
   /// </summary>
-  public abstract class Triggerable : MonoBehaviour
+  public abstract class Triggerable : BaseTrigger
   {
     /// <summary>
     /// This event signals that the triggerable has finished
@@ -77,12 +77,6 @@ namespace Stratus
       onTriggered = (Triggerable trigger) => {};
     }
 
-    private void Reset()
-    {
-      // If a trigger system is present, hide this component and set its default
-      CheckForTriggerSystem();
-    }
-
     /// <summary>
     /// When the trigger event is received, runs the trigger sequence.
     /// </summary>
@@ -112,22 +106,10 @@ namespace Stratus
     {
       var seq = Actions.Sequence(this.gameObject.Actions());
       Actions.Delay(seq, this.delay);
+      if (logging)
+        Actions.Trace(seq, $"Triggered!");
       Actions.Call(seq, this.OnTrigger);
       Actions.Call(seq, ()=>onTriggered(this));
-    }
-
-    private void CheckForTriggerSystem()
-    {
-      var triggerSystem = gameObject.GetComponent<TriggerSystem>();
-      if (triggerSystem)
-      {
-        this.hideFlags = HideFlags.HideInInspector;
-        triggerSystem.triggerables.Add(this);
-      }
-      else
-      {
-        this.hideFlags = HideFlags.None;
-      }
     }
 
   }
