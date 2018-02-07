@@ -36,9 +36,9 @@ namespace HalfwayHome
       Body = GetComponent<Button>();
       DefaultColors = Body.colors;
 
-      Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
+      //Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
 
-      Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
+      //Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
     }
 
     // Update is called once per frame

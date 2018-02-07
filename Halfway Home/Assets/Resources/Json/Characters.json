@@ -2,7 +2,7 @@
 [
  {
   "Name" : "Timothy",
-  "slug" : null,
+  "slug" : "Chibis/TinyTim",
   "Schedule" : [
    [
     0,
@@ -216,7 +216,7 @@
  },
  {
   "Name" : "Charlotte",
-  "slug" : null,
+  "slug" : "Chibis/LilCharlotte",
   "Schedule" : [
    [
     0,
@@ -430,7 +430,7 @@
  },
  {
   "Name" : "Eduardo",
-  "slug" : null,
+  "slug" : "Chibis/Eggplant",
   "Schedule" : [
    [
     0,
@@ -644,7 +644,7 @@
  },
  {
   "Name" : "Max",
-  "slug" : null,
+  "slug" : "Chibis/MiniMax",
   "Schedule" : [
    [
     0,
@@ -858,7 +858,7 @@
  },
  {
   "Name" : "Isaac",
-  "slug" : null,
+  "slug" : "Chibis/IttyBittyIsaac",
   "Schedule" : [
    [
     0,
@@ -1072,7 +1072,7 @@
  },
  {
   "Name" : "Trissa",
-  "slug" : null,
+  "slug" : "Chibis/BeebeeTrissa",
   "Schedule" : [
    [
     0,
