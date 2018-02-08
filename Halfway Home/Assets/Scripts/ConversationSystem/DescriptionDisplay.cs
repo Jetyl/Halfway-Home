@@ -36,7 +36,6 @@ public class DescriptionDisplay : MonoBehaviour
         
     string Line;
   
-    bool AutoOnLast;
     bool Paused = false;
 
     bool Skipping = false;
@@ -63,6 +62,7 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
+        Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
 
 
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
@@ -181,7 +181,10 @@ public class DescriptionDisplay : MonoBehaviour
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
         
-        AutoOnLast = eventdata.AutoFinish;
+        if(!eventdata.CanSkip && Skipping)
+        {
+            ToggleSkip();
+        }
         /*
         if(!anime.GetBool("IsUp"))
         {
@@ -271,6 +274,12 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
+
+    void OnDebug(DefaultEvent eventdata)
+    {
+        DebugSkipping = true;
+    }
+
     public void ClickableOff()
     {
         NoClick = true;
@@ -287,15 +296,15 @@ public class DescriptionDisplay : MonoBehaviour
 public class DescriptionEvent : DefaultEvent
 {
     
-    public bool AutoFinish;
+    public bool CanSkip;
     //public List<Line> Lines;
     public string Line;
     public string Speaker;
    
-    public DescriptionEvent(string _lines, string _speaker, bool autoFinish_ = false)
+    public DescriptionEvent(string _lines, string _speaker, bool CanSkip_ = false)
     {
         Line = _lines;
-        AutoFinish = autoFinish_;
+        CanSkip = CanSkip_;
         Speaker = _speaker;
     }
 

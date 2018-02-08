@@ -132,6 +132,9 @@ public class GameStartUp : MonoBehaviour
         yield return new WaitForSeconds(Time.deltaTime * frames);
 
         Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
+
+        if (DebugMode)
+            Space.DispatchEvent(Events.Debug);
     }
 
 
