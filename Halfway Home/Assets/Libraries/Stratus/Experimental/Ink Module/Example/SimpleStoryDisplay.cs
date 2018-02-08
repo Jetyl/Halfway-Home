@@ -68,7 +68,7 @@ namespace Stratus
         display = false;
       }
 
-      protected override void OnStoryUpdate(ParsedLine line)
+      protected override void OnStoryUpdate(ParsedLine line, bool visited)
       {       
         if (!line.isParsed)
         {

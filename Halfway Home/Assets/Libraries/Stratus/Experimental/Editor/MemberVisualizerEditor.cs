@@ -18,7 +18,7 @@ namespace Stratus
 
     private void DrawRenderingSettings()
     {
-      EditorGUILayout.LabelField("Rendering Settings", StratusEditorStyles.header);
+      EditorGUILayout.LabelField("Rendering Settings", StratusGUIStyles.header);
       //foreach (var gameObject in declaredTarget.sel)
       //{
       //  EditorGUILayout.LabelField(gameObject.n)

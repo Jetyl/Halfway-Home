@@ -93,8 +93,8 @@ namespace Stratus
       // Invoke the very first time
       if (!doneFirstUpdate)
       {
-        backgroundStyle = StratusEditorStyles.box;
-        labelStyle = StratusEditorStyles.skin.label;
+        backgroundStyle = StratusGUIStyles.box;
+        labelStyle = StratusGUIStyles.skin.label;
         OnFirstUpdate();
         doneFirstUpdate = true;
       }

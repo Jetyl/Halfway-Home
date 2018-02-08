@@ -27,7 +27,7 @@ namespace Stratus
         protected abstract void OnStart();
         protected abstract void OnStoryStarted();
         protected abstract void OnStoryEnded();
-        protected abstract void OnStoryUpdate(ParsedLine parse);
+        protected abstract void OnStoryUpdate(ParsedLine parse, bool visited);
         protected abstract void OnPresentChoices(List<Choice> choices);
         protected abstract void OnChoiceSelected();
 
@@ -73,7 +73,7 @@ namespace Stratus
         /// <param name="e"></param>
         void OnStoryUpdateEvent(Story.UpdateLineEvent e)
         {
-          OnStoryUpdate(e.parse);
+          OnStoryUpdate(e.parse, e.visited);
         }
 
         /// <summary>

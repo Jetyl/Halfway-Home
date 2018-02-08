@@ -15,9 +15,9 @@ namespace Stratus
     /// A required attribute for configuring the LayoutSceneViewDisplay
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class LayoutSceneViewDisplayAttribute : Attribute
+    public sealed class LayoutViewDisplayAttributeAttribute : Attribute
     {
-      public LayoutSceneViewDisplayAttribute(string title, float width, float height, Overlay.Anchor anchor, Overlay.Dimensions dimensions)
+      public LayoutViewDisplayAttributeAttribute(string title, float width, float height, Overlay.Anchor anchor, Overlay.Dimensions dimensions)
       {
         this.title = title;
         this.width = width;
@@ -59,7 +59,7 @@ namespace Stratus
     protected override void OnInitialize()
     {
       Type type = GetType();
-      var settings = AttributeUtility.FindAttribute<LayoutSceneViewDisplayAttribute>(type);
+      var settings = AttributeUtility.FindAttribute<LayoutViewDisplayAttributeAttribute>(type);
       if (settings == null)
       {
         throw new MissingReferenceException("Missing [LayoutSceneViewDisplay] attribute declaration for the class '" + type.Name + "'");
