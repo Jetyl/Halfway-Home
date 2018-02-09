@@ -69,6 +69,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_music_caysonstylesample" ID="{7BAAD155-1BD3-496E-A83C-8AE665C9F636}">
+					<ChildrenList>
+						<Action Name="" ID="{1771A924-87BF-43B5-892B-662C29894121}" ShortID="562828555">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_caysonstylesample" ID="{37B58F9E-F87E-4A0D-BCD2-147CA5E9DFE5}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_creepy_atmo" ID="{D156287F-4894-4C1C-BCA7-AF317221DE2D}">
+					<ChildrenList>
+						<Action Name="" ID="{3E28908F-84F0-469B-8674-13C1645CCB9F}" ShortID="598170828">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_creepyatmo" ID="{7292487D-CE46-4126-BDAC-AFB5657187EF}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

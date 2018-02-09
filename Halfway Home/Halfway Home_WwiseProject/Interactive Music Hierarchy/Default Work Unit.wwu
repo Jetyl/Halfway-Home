@@ -438,6 +438,180 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="music_creepyatmo" ID="{41F2DA1C-10B6-4B62-B482-7638ACD04BE3}" ShortID="516029820">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="music_creepyatmo" ID="{7292487D-CE46-4126-BDAC-AFB5657187EF}" ShortID="199775927">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="102539.319727891"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="creepy atmo v0_5" ID="{C256B376-2DC6-4AC8-AAB0-C37DF6D312B2}" ShortID="982623756">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="creepy atmo v0_5" ID="{7D522D3E-1836-4ED9-A3D8-7700268B3180}" ShortID="297822875">
+													<Language>SFX</Language>
+													<AudioFile>creepy atmo v0.5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{813E4A46-09A2-4353-BC12-DF706FF6BD85}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{A48BE745-EC1C-4B34-BC5E-9A2A0D3F34B9}">
+													<ClipList>
+														<MusicClip Name="creepy atmo v0_5" ID="{61A4347B-7AED-4597-8AB6-9AD442AA5C64}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="102539.319727891"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="creepy atmo v0_5" ID="{7D522D3E-1836-4ED9-A3D8-7700268B3180}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{5186D8FF-8ECB-4881-9545-6B850B59FF83}"/>
+										<MusicCue Name="Exit Cue" ID="{5A15B714-128D-472E-9B91-ABFF8839FF27}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="1000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{A69B3751-802E-4471-ADED-8212EA062D68}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{84C12405-8E73-4C1C-9649-17CCE74EB73E}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{F2289A96-BA22-4FF8-92E4-9BCCCD1E6316}" ShortID="1043403550"/>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="music_caysonstylesample" ID="{6053D7E8-4DD9-4DF5-8017-AACEB05DC69C}" ShortID="802714124">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="music_caysonstylesample" ID="{37B58F9E-F87E-4A0D-BCD2-147CA5E9DFE5}" ShortID="197661383">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="71954.9206349206"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="cayson_halfwayhome_stylesample_v0_1" ID="{AA50405B-AB6E-494A-9782-465D643E1351}" ShortID="932490196">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cayson_halfwayhome_stylesample_v0_1" ID="{6C1EA0B9-1466-46DF-B157-74920CC61D2A}" ShortID="642104307">
+													<Language>SFX</Language>
+													<AudioFile>cayson_halfwayhome_stylesample_v0.1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8C384276-B8B7-4682-9B50-98623992929A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{81650BFC-B0AF-4946-8A7B-B6CA7013E6EC}">
+													<ClipList>
+														<MusicClip Name="cayson_halfwayhome_stylesample_v0_1" ID="{61CFCF7E-AD24-462C-A1CE-3814C6069397}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="71954.9206349206"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="cayson_halfwayhome_stylesample_v0_1" ID="{6C1EA0B9-1466-46DF-B157-74920CC61D2A}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{B966DB16-4D0D-4F00-8F67-D715A8895AE9}"/>
+										<MusicCue Name="Exit Cue" ID="{DA1C5A4E-22F9-4914-9F79-8A698D6AAE00}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="1000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{B2261200-B680-4369-BFE3-1704AA7A553F}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{B2AFB3A1-A86C-4A7A-8226-9A34507F7D21}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{F0DE50FB-0989-4EA2-8D62-B673233CDA38}" ShortID="723049014"/>
+							</Playlist>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
