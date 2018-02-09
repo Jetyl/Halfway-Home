@@ -16,6 +16,7 @@ namespace HalfwayHome
   {
 
         public TransitionTypes MapTransitions;
+        public bool AllowTimeDilation = true;
         public List<DepressionTimeMultiplier> TimeDilation;
         public TextAsset DefaultActions;
 
@@ -52,7 +53,9 @@ namespace HalfwayHome
             yield return new WaitForSeconds(Time.deltaTime);
             if (!LoadedToMap)
                 gameObject.SetActive(false);
-            
+
+            Game.current.Progress.SetValue("Depression Time Dilation", AllowTimeDilation);
+
         }
 
 
@@ -62,7 +65,7 @@ namespace HalfwayHome
             Game.current.AlterTime();
             gameObject.SetActive(true);
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
-
+            AllowTimeDilation = Game.current.Progress.GetBoolValue("Depression Time Dilation");
     }
 
     void MapChoice(MapEvent eventdata)
@@ -87,12 +90,15 @@ namespace HalfwayHome
             //if gets here, no scene was there. send a default sorta dealie
             int multiplier = 1;
 
-            foreach(var multiple in TimeDilation)
+            if(AllowTimeDilation && eventdata.DrainEnergy)
             {
-                if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
-                    multiplier = multiple.Multiplier;
+                foreach (var multiple in TimeDilation)
+                {
+                    if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
+                        multiplier = multiple.Multiplier;
+                }
             }
-
+            
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
             Game.current.CurrentRoom = eventdata.Destination;
             gameObject.SetActive(false);

@@ -27,7 +27,7 @@ EXTERNAL SetValue(name, values)
 {
 	-GetValue("SavedTimothy"):
 		->SadStart
-	-else
+	-else:
 		->SadStart
 }
 
@@ -42,8 +42,8 @@ I silently eat with him Timothy for a while, untill I hear a loud voice approach
 [{player_name}] "eh, fine I guess..."
 + "How about you?"
 + "Where've you two been?"
-[Eduardo] "Oh, we kinda... just got up."
-[Max] "Again? You two really need to get your sleep schedules" #Max = Calm #Eduardo = Suprised
+-[Eduardo] "Oh, we kinda... just got up."
+[Max] "Again? You two really need to get your sleep schedules" #Max = Calm #Eduardo = Surprised
 Max seems to have also walked in, overhearing Eduardo's hard to miss voice.
 [Eduardo] "H-Hey! We were busy, alright!"
 [Trissa] "doing what, making out?" #Trissa = Calm #Isaac = Exit #Charlotte = Calm
@@ -61,7 +61,7 @@ Timothy stays quiet. #Eduardo=Exit
 [{player_name}] "hey, Timothy."
 + "You okay?"
 + "Ya there?"
-[Timothy] "..."
+-[Timothy] "..."
 Timothy doesn't respond.
 In fact, looking at Timothy, I notice a handful of things off.
 He doesn't seem to be looking at anything in particular, and he's shaking slightly.
@@ -78,7 +78,7 @@ all these little tiny actions I pick up, draw my mind to a conclusion that somet
 	-week >= 2:
 	+Not Again!
 }
-"uh, M-Max? Max?"
+-"uh, M-Max? Max?"
 no one seems to hear my weak call, over the chatter and laughter.
 I...
 +[Speak Louder]->ACallForHelp
@@ -139,7 +139,7 @@ I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Timot
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Calm #Eduardo=Calm
 [Max] "yo! {player_name}, what's up?"
 [{player_name}] "It's Timothy. He-He's acting weird, and not responding. I-I think something wrong!"
-[Max] "What?!" #Max=Suprised
+[Max] "What?!" #Max=Surprised
 Max darts past me to where Timothy is sitting in a speed quite frightening for someone their size. #Max=Exit
 ->MoodKiller
 
@@ -171,12 +171,12 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 	Timothy nods thru the tears and shivering.
 	Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like their thanking me.
 	And like that, Max and Timothy left the cafe. #Max=Exit #Timothy=Exit
-	MoodKiller->
+	->MoodKiller
 	
 }
 
 ===MoodKiller===
-My attention draws back to crowd of people around me. #Trissa=Suprised #Eduardo=Suprised #Isaac=Suprised #Charlotte=Happy
+My attention draws back to crowd of people around me. #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy
 [Charlotte] "It was a rather humorous endevour. hm?" #Charlotte=Calm
 "Why'd everyone get so quiet?"
 [Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-"
@@ -190,7 +190,7 @@ Isaac drags Eduardo out of the cafe in a huff.
 [{player_name}]
 +"I messed up."
 +"Timothy Broke."
-I slump, as I get up out of my chair, and towards the door.
+-I slump, as I get up out of my chair, and towards the door.
 "I messed up..."
 [Charlotte] "But, what do you mean by that?"
 I walk away from Cafe. #Charlotte=Exit

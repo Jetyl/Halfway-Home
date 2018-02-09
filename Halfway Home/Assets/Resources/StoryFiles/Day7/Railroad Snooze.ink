@@ -36,19 +36,19 @@ I Scamper into bedroom, yawning as I do.
 	-else:
 		I barely make it onto the bed before I close my eyes to rest.
 }
-I ride the railroad to dreamland in a flash, and I am out. #Background / Dream
-... 
-......{SetTimeBlock(0)}
-......... ~CallSleep()
-[???] "...{player_name}."
+I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
+... {SetValue("Depression Time Dilation", false)}
+......{SetTimeBlock(0)} 
+......... {CallSleep()}
+[unknown] "...{player_name}."
 huh?
 "{player_name}. get up ya silly bum."
-In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom
+In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom, eyeopen
 [Max] "You don't want to be sleeping in on your last day, now do you?" #Max=Calm
 [{player_name}] "oh, uh... morning I guess."
 I give a large yawn as I strech out of bed.
 [Max] "ya sleep well? ya look tired."
-[{player_name}] "actually... yeah. I think I slept really well." #fatigue = 0
+[{player_name}] "actually... yeah. I think I slept really well." #fatigue => 0
 not that I wouldn't like to go back to sleep, mind you. 
 still, I feel very refreshed, oddly enough.
 [Max] "That's great!" #Max=Happy
@@ -60,6 +60,5 @@ Timothy looks dead tired. #Timothy=Sad
 And with that, MAx directed us to begin our morning routine.
 They made special note of me needing to start packing for tomorrow...
 tomorrow...
-Either way, We wrapped up our morning chores, and went off into the day.
-
+Either way, We wrapped up our morning chores, and went off into the day. #All = Exit
 ->END

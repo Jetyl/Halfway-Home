@@ -47,7 +47,7 @@ public class ScaleSpeakerObject : MonoBehaviour
         }
         else
         {
-            print(eventdata.Speaker);
+            
             if (eventdata.Speaker == Speaker.Character)
             {
                 Scaled = true;
