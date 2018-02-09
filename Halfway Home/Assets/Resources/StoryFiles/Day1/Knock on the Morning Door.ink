@@ -46,7 +46,7 @@ EXTERNAL SetValue(name, values)
 //~player_name = "Player"
 //~week = 1
 //play knocking sound effect
-A cheerful knock drags me out of my dreary haze. # Background / YourRoom
+A cheerful knock drags me out of my dreary haze. # Background / YourRoom, eyeopen
 { 
 	-week == 1:
 		What do they want?

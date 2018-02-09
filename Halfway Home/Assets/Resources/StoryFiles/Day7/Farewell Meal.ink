@@ -74,5 +74,5 @@ The cafeteria's ambient babble slowly subsides into silence. Max looks over an i
 [Max] "This toast is to both of you. May you find happiness and good fortune as you face the challenges ahead."
 Max raises their cup and the room follows suit. A small applause follows the toast and the murmur of conversation returns.
 A few more residents come up to say goodbye, but they're not really people I knew that well.
-Today has really tired me out. I end up leaving the cafeteria early.
+Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 -> END

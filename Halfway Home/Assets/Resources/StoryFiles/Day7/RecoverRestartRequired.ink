@@ -74,7 +74,7 @@ I don't want to leave. I've been here too long. I don't know what I'll do when I
 I don't want to stay here, in this vacant room. I don't want to waste away.
 I don't want to leave.@ I don't want to stay.@ I don't want anything but to make this pain go away.
 I just want the pain to go away...
-I silently wish to myself, this over<delay=2> and over, until nothing else remains. #Background / Dream
+I silently wish to myself, this over<delay=2> and over, until nothing else remains. #Background / Dream, eyeclose
 I want the pain, to go away. {SetIntValue("week", 2)}
 ....{CallSleep()}
 .......{SetValue("Depression Time Dilation", true)}

@@ -144,30 +144,29 @@ public static class TextParser
         return null;
     }
 
-
     public static Dictionary<int, float> ExtractTextSpeed(ref string text)
     {
 
         Dictionary<int, float> newSpeed = new Dictionary<int, float>();
         float oldspeed = 20;
+        int cutback = 0; //for other rich text functions, so they do not get in the way
 
-        for(int i = 0; i < text.Length; ++i)
+        for (int i = 0; i < text.Length; ++i)
         {
             if (text[i] == '<')
             {
-
-              if (i + 7 > text.Length)
-                break;
+                if (text.Length < i + 7)
+                    continue;
 
                 var check = text.Substring(i, 7);
-                if(check == "<speed=" || check == "<Speed=")
+                if (check == "<speed=" || check == "<Speed=")
                 {
                     for (int j = i + 7; j < text.Length; ++j)
                     {
                         if (text[j] == '>')
                         {
                             float speed = float.Parse(text.Substring(i + 7, j - (i + 7)));
-                            newSpeed.Add(i, speed);
+                            newSpeed.Add(i - cutback, speed);
                             oldspeed = speed;
                             text = text.Remove(i, j + 1 - i);
                             break;
@@ -175,16 +174,29 @@ public static class TextParser
 
                     }
                 }
-                if (check == "<delay=" || check == "<Delay=")
+                else if (check == "<delay=" || check == "<Delay=")
                 {
                     for (int j = i + 7; j < text.Length; ++j)
                     {
                         if (text[j] == '>')
                         {
                             float speed = float.Parse(text.Substring(i + 7, j - (i + 7)));
-                            newSpeed.Add(i, speed);
-                            newSpeed.Add(i + 1, oldspeed);
+                            newSpeed.Add(i - cutback, speed);
+                            newSpeed.Add((i + 1) - cutback, oldspeed);
                             text = text.Remove(i, j + 1 - i);
+                            break;
+                        }
+
+                    }
+                }
+                else
+                {
+                    for (int j = i; j < text.Length; ++j)
+                    {
+                        if (text[j] == '>')
+                        {
+                            cutback += j - i;
+                            cutback += 2; //add two, for the < and >
                             break;
                         }
 
@@ -193,7 +205,7 @@ public static class TextParser
             }
         }
 
-        
+
         return newSpeed;
     }
 

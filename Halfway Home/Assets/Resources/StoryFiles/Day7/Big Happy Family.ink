@@ -24,6 +24,8 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
+I skipped breakfest today because I wasn't feeling it, but now, I feel like getting some grub.
+I fill up my plate up, and go to sit down. #fatigue -= 35
 {
 	-GetValue("SavedTimothy"):
 		->SadStart
@@ -32,7 +34,7 @@ EXTERNAL SetValue(name, values)
 }
 
 === SadStart ===
-I walk into the cafe for some lunch, and I spot Timothy sitting at one of the tables by his lonesome. #Timothy = Sad
+I spot Timothy sitting at one of the tables by his lonesome. #Timothy = Sad
 [{player_name}] "Sup"
 I sit myself down with my meal.
 [Timothy] "oh.<delay=2> Hi."

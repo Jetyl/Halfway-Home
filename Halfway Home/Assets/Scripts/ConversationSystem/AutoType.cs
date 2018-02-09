@@ -119,50 +119,25 @@ public class AutoType : MonoBehaviour
     {
         Text.maxVisibleCharacters = visible;
         Text.text = message;
-        int Skip = 0;
-        int length = message.Length;
         if(!Skipping)
         {
+            
+            yield return new WaitForSeconds(Time.deltaTime);
+
             while (Text.maxVisibleCharacters < message.Length)
             {
-
-                if (Text.text[Text.maxVisibleCharacters] == '<')
-                {
-                    int i = Text.maxVisibleCharacters;
-                    while (Text.text[i] != '>')
-                    {
-                        i += 1;
-                    }
-                    i -= Text.maxVisibleCharacters;
-                    length -= i;
-                    Skip = i;
-
-                }
-
-
-                //skip rich text stuff
-                if (Text.text[Text.maxVisibleCharacters] == '<')
-                {
-                    //AudioOff = true;
-                }
-                if (Text.text[Text.maxVisibleCharacters] == '>')
-                {
-                    //AudioOff = false;
-                }
-
+                
 
                 if (!audios.isPlaying)
                 {
-                    if (Text.maxVisibleCharacters < length && Skip == 0)
+                    if (visible < Text.GetParsedText().Length)
                     {
+                        //print(Text.maxVisibleCharacters);
                         audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
                             * Game.current.Progress.GetFloatValue("MasterVolume");
                         audios.PlayOneShot(sound);
                     }
-                    else
-                    {
-                        Skip -= 1;
-                    }
+
 
                 }
 
@@ -173,11 +148,17 @@ public class AutoType : MonoBehaviour
                     //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
                 }
 
-                var charaPause = DelayContains(message[Text.maxVisibleCharacters], letterPause);
+                var vis = Text.maxVisibleCharacters;
+
+                if (vis < 0)
+                    vis = 0;
+                if (vis >= Text.GetParsedText().Length)
+                    vis = Text.GetParsedText().Length - 1;
 
 
-
-                Text.maxVisibleCharacters += 1;
+                var charaPause = DelayContains(Text.GetParsedText()[vis], letterPause);
+                
+                Text.maxVisibleCharacters++;
 
                 yield return new WaitForSeconds(charaPause);
             }
