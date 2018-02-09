@@ -1,4 +1,4 @@
-﻿/******************************************************************************/
+/******************************************************************************/
 /*
 @file   OffToBed.ink
 @author Jesse Lozano
@@ -97,6 +97,5 @@ Slumberland becons me back to it, but I should be getting up about now.{SetTimeB
 +[Stay in Bed]
 	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. #Background / Dream, eyeclose
 	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
-	 //semester 1 line, remove later
 	 That loud knocking noise, wakes me up again... #fatigue -= 80
 -> END

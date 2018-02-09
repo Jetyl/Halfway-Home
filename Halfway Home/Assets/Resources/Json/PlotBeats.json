@@ -86,6 +86,10 @@
    {
     "Name" : "LoadSavedGame",
     "Type" : 1
+   },
+   {
+    "Name" : "Depression Time Dilation",
+    "Type" : 1
    }
   ]
  },

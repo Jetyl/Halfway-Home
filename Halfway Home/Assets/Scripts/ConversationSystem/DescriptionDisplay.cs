@@ -181,10 +181,14 @@ public class DescriptionDisplay : MonoBehaviour
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
         
-        if(!eventdata.CanSkip && Skipping)
+        if(!DebugSkipping)
         {
-            ToggleSkip();
+            if (!eventdata.CanSkip && Skipping)
+            {
+                ToggleSkip();
+            }
         }
+        
         /*
         if(!anime.GetBool("IsUp"))
         {
@@ -261,11 +265,10 @@ public class DescriptionDisplay : MonoBehaviour
 
     void OnStopSkipping(DefaultEvent eventdata)
     {
-        if(!DebugSkipping)
-        {
-            Skipping = false;
-            Description.SetSkipping(Skipping);
-        }
+        
+        Skipping = false;
+        Description.SetSkipping(Skipping);
+        
 
     }
 

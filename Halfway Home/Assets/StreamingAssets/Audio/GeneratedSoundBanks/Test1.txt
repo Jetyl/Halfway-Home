@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	952529443	Play_City_of_Tears			\TestEvents\Play_City_of_Tears	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	501377540	City of Tears	C:\Users\Greg\Documents\Halfway\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\City of Tears_F17FB28C.wem		\Interactive Music Hierarchy\Test\City of Tears\City of Tears		55519020
+
