@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1339521849
-    m_lastTimePart2: -1999278854
+    m_lastTimePsrt1: 529127680
+    m_lastTimePart2: -1999278204
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -88,6 +88,26 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1186671007
       Guid: 73b0f8eaa4977b4b8fb323861e08fcc6
+      maxAttenuation: 0
+    - Name: play_music_caysonstylesample
+      Path: PlayMusic\play_music_caysonstylesample
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_caysonstylesample
+        ObjectType: 3
+      ID: 1227704222
+      Guid: 55d1aa7bd31b6e49a83c8ae665c9f636
+      maxAttenuation: 0
+    - Name: play_music_creepy_atmo
+      Path: PlayMusic\play_music_creepy_atmo
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_creepy_atmo
+        ObjectType: 3
+      ID: 1372805254
+      Guid: 7f2856d194481c4cbca7af317221de2d
       maxAttenuation: 0
     - Name: play_music_fakeit
       Path: PlayMusic\play_music_fakeit
@@ -132,8 +152,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 14676156
-    m_lastTimePart2: -1999292092
+    m_lastTimePsrt1: 529162778
+    m_lastTimePart2: -1999278204
     List:
     - Name: play_sfx_human_footsteps_approaching
       Path: PlaySFX\play_sfx_human_footsteps_approaching
@@ -144,6 +164,26 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1641533016
       Guid: 8ce9bb6b7092b34383ca23591e2b26fc
+      maxAttenuation: 0
+    - Name: play_sfx_human_ghostwhisper
+      Path: PlaySFX\play_sfx_human_ghostwhisper
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_human_ghostwhisper
+        ObjectType: 3
+      ID: 2124921401
+      Guid: 47f994b770f0314195f234839929104c
+      maxAttenuation: 0
+    - Name: play_sfx_human_knock
+      Path: PlaySFX\play_sfx_human_knock
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_human_knock
+        ObjectType: 3
+      ID: -1975467304
+      Guid: 09c4e180a80cf9439e010eef78ce1bbe
       maxAttenuation: 0
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
@@ -186,8 +226,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1328682928
-    m_lastTimePart2: -1999278854
+    m_lastTimePsrt1: 1381362315
+    m_lastTimePart2: -1999278203
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -258,6 +298,9 @@ MonoBehaviour:
   - /Halfway Home_WwiseProject
   - /Halfway Home_WwiseProject/Events
   - /Halfway Home_WwiseProject/Events/PlayMusic
+  - /Halfway Home_WwiseProject/Events/PlaySFX
+  - /Halfway Home_WwiseProject/SoundBanks
+  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

@@ -33,11 +33,11 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_bardman
+The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
 I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route. #grace+
+I am forced to stop and look for another route.
 To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
 I need to choose now!
 +[Stairs]
@@ -49,20 +49,20 @@ I need to choose now!
 
 === Stairs ===
 My pace slows as I climb. I can hear the whispers getting louder.
-[Voices] "You cannot escape this."
+[Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper
 The stairs open into a dark hallway. In the distance I can see a faint electric glow.
 I crest the top of the stairs with a leap and barrel toward the light.
-[Voices] "You will fail."
+[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
 -> Bathroom
 
 === Hallway ===
 The corridor seems to go on forever.
 An unbroken pattern of thick doors, yellow lights, and medical lockers blurs past on repeat.
-[Voices] "This is pointless."
+[Voices] "This is pointless." # SFX : play_sfx_human_ghostwhisper
 My body feels heavier and heavier. I don't know how much longer I can keep this up.
 In the distance, I notice something new: a faint electric glow.
 I force myself forward.
-[Voices] "You will fail."
+[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
 -> Bathroom
 
 === Bathroom ===
@@ -83,7 +83,7 @@ I rush to the sink. The handle turns noiselessly. A cold jet of water streams so
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.
 A chorus of whispers dissolves the silence.
-[Voices] "This is who you are."
+[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper
 -> Wake
 
 === Wake ===
