@@ -162,7 +162,7 @@ MonoBehaviour:
       _target: {fileID: 921377854}
       _component: Camera
       _name: aspect
-    visualizationMode: 2
+    visualizationMode: 3
     color: {r: 0, g: 0, b: 0, a: 1}
     prefix: 0
   pollFrequency: 1

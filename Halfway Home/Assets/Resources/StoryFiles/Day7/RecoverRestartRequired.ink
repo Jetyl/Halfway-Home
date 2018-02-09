@@ -77,7 +77,7 @@ I just want the pain to go away...
 I silently wish to myself, this over<delay=2> and over, until nothing else remains. #Background / Dream
 I want the pain, to go away. {SetIntValue("week", 2)}
 ....{CallSleep()}
-.......
+.......{SetValue("Depression Time Dilation", true)}
 ................{SetTimeBlock(0)}
 //have this in UI color
 <color=A5C5E3FF>Objectives.... Detected. @Initiating Protocol R-3 Instance 00001224671

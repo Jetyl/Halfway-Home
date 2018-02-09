@@ -61,9 +61,9 @@ namespace Stratus
 
     protected override void OnFirstUpdate()
     {
-      headerStyle = StratusEditorStyles.header;
-      buttonStyle = StratusEditorStyles.button;
-      selectedButtonStyle = StratusEditorStyles.blueButton;
+      headerStyle = StratusGUIStyles.header;
+      buttonStyle = StratusGUIStyles.button;
+      selectedButtonStyle = StratusGUIStyles.blueButton;
     }
 
     public override void OnBaseEditorGUI()
@@ -128,7 +128,7 @@ namespace Stratus
         return;
 
       EditorGUILayout.Separator();
-      EditorGUILayout.BeginVertical(StratusEditorStyles.backgroundLight, GUILayout.ExpandWidth(false));
+      EditorGUILayout.BeginVertical(StratusGUIStyles.backgroundLight, GUILayout.ExpandWidth(false));
       {
         EditorGUILayout.LabelField(selectedName, EditorStyles.miniBoldLabel);
         //selectedEditor.serializedObject.Update();
@@ -148,12 +148,12 @@ namespace Stratus
       bool isConnected = connectedTriggerables[triggerable];
       if (isConnected)
       {
-        if (GUILayout.Button(string.Empty, StratusEditorStyles.blueCircleButton, GUILayout.Width(connectedButtonWidth)))
+        if (GUILayout.Button(string.Empty, StratusGUIStyles.blueCircleButton, GUILayout.Width(connectedButtonWidth)))
           Disconnect(selectedTrigger, triggerable);
       }
       else
       {
-        if (GUILayout.Button(string.Empty, StratusEditorStyles.greyCircleButton, GUILayout.Width(connectedButtonWidth)))
+        if (GUILayout.Button(string.Empty, StratusGUIStyles.greyCircleButton, GUILayout.Width(connectedButtonWidth)))
           Connect(selectedTrigger, triggerable);
       }
     }
@@ -166,7 +166,7 @@ namespace Stratus
         if (selected == trigger)
           style = selectedButtonStyle;
         else if (selectedTriggerable && connectedTriggers.ContainsKey(trigger) && connectedTriggers[trigger])
-          style = StratusEditorStyles.greenButton;
+          style = StratusGUIStyles.greenButton;
       }
 
       Draw(trigger, style, SelectTrigger, RemoveTrigger, SetTriggerContextMenu);
@@ -180,7 +180,7 @@ namespace Stratus
         if (selected == triggerable)
           style = selectedButtonStyle;
         else if (selectedTrigger && connectedTriggerables.ContainsKey(triggerable) && connectedTriggerables[triggerable])
-          style = StratusEditorStyles.greenButton;
+          style = StratusGUIStyles.greenButton;
       }
 
       Draw(triggerable, style, SelectTriggerable, RemoveTriggerable, SetTriggerableContextMenu);

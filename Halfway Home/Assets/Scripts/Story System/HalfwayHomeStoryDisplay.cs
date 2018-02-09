@@ -67,7 +67,7 @@ namespace HalfwayHome
       
     }
 
-    protected override void OnStoryUpdate(ParsedLine parse)
+    protected override void OnStoryUpdate(ParsedLine parse, bool visited)
     {
       Parse dialog = parse.Find(HalfwayHomeStoryReader.dialogLabel);
       // 1. Monologue

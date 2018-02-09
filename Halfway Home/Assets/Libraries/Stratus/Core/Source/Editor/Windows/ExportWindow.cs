@@ -7,7 +7,7 @@ namespace Stratus
 {
   public class ExportWindow : EditorWindow
   {
-    [MenuItem("Stratus/Export")]
+    [MenuItem("Stratus/Export Package")]
     private static void Open()
     {
       Export();          

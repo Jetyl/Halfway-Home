@@ -7,14 +7,14 @@
 */
 /******************************************************************************/
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 namespace Stratus
 {
   /// <summary>
   /// Custom styles for the Stratus framework
   /// </summary>
-  public static class StratusEditorStyles
+  public static class StratusGUIStyles
   {
     /// <summary>
     /// The default skin used by the Stratus framework
@@ -50,7 +50,7 @@ namespace Stratus
     public static GUIStyle backgroundLight => skin.FindStyle("Light Background");
     public static GUIStyle background => skin.FindStyle("Background");
 
-    static StratusEditorStyles()
+    static StratusGUIStyles()
     {
       // Load the default skin
       skin = Resources.Load<GUISkin>("Stratus Skin"); 
@@ -64,9 +64,12 @@ namespace Stratus
       editorLine.padding.top = editorLine.padding.bottom =
       editorLine.padding.left = editorLine.padding.right = 1;
 
+      #if UNITY_EDITOR
       tintable = new GUIStyle();
-      tintable.normal.background = EditorGUIUtility.whiteTexture;
+      tintable.normal.background = UnityEditor.EditorGUIUtility.whiteTexture;
       tintable.stretchWidth = tintable.stretchHeight = true;
+      #endif
+
     }
 
     /// <summary>

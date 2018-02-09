@@ -103,6 +103,10 @@ namespace Stratus
       get { return canvas.interactable; }
       protected set { canvas.interactable = value; }
     }
+    /// <summary>
+    /// The current event system
+    /// </summary>
+    public static UnityEngine.EventSystems.EventSystem eventSystem => UnityEngine.EventSystems.EventSystem.current;
 
     //--------------------------------------------------------------------------------------------/
     // Methods
@@ -343,7 +347,7 @@ namespace Stratus
       {
         //pollingInput = true;
         if (defaultSelected)
-          UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(defaultSelected.gameObject);
+          eventSystem.SetSelectedGameObject(defaultSelected.gameObject);
         //defaultSelected?.Select();
         OnOpen();
         windows.Push(this);

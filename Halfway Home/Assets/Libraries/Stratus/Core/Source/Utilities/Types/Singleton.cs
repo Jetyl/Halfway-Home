@@ -13,7 +13,7 @@ using Stratus.Utilities;
 namespace Stratus
 {
   /// <summary>
-  /// An optional attribute for Stratus singletons, offering more control
+  /// An optional attribute for Stratus singletons, offering more control over its initial setup.
   /// </summary>
   [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
   public sealed class SingletonAttribute : Attribute
@@ -105,9 +105,12 @@ namespace Stratus
         }
 
         return instance;
-      }
-    }       
-
+      }      
+    }
+    /// <summary>
+    /// Whether this singleton has been instantiated
+    /// </summary>
+    public static bool instantiated => get != null;
     //------------------------------------------------------------------------/
     // Fields
     //------------------------------------------------------------------------/
@@ -125,15 +128,15 @@ namespace Stratus
     //------------------------------------------------------------------------/
     // Methods
     //------------------------------------------------------------------------/
-    static protected void Instantiate()
-    {
-      if (isQuitting)
-        return;
-
-      var obj = new GameObject();
-      var instance = obj.AddComponent<T>();
-      Singleton<T>.instance = instance;
-    }
+    //static protected void Instantiate()
+    //{
+    //  if (isQuitting)
+    //    return;
+    //
+    //  var obj = new GameObject();
+    //  var instance = obj.AddComponent<T>();
+    //  Singleton<T>.instance = instance;
+    //}
    
     void Awake()
     {
@@ -172,6 +175,16 @@ namespace Stratus
     {
       isQuitting = true;
     }
+
+
+    ///// <summary>
+    ///// Instantiates this singleton, if allowed
+    ///// </summary>
+    //public static void Instantiate()
+    //{
+    //  if (shouldInstantiate)
+    //    get.
+    //}
 
     protected void Poke()
     {

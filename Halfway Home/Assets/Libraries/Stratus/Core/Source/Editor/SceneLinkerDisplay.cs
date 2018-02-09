@@ -6,7 +6,7 @@ namespace Stratus
 {
   namespace Experimental
   {
-    [LayoutSceneViewDisplay("Scene Linker", 225f, 200f, Overlay.Anchor.TopLeft, Overlay.Dimensions.Absolute)]
+    [LayoutViewDisplayAttribute("Scene Linker", 225f, 200f, Overlay.Anchor.TopLeft, Overlay.Dimensions.Absolute)]
     public class SceneLinkerDisplay : SingletonSceneViewDisplay<SceneLinker> 
     {
       private Vector2 displayScrollPosition { get; set; } = Vector2.zero;

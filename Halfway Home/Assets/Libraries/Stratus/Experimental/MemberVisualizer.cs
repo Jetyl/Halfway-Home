@@ -19,7 +19,8 @@ namespace Stratus
       {
         Scene,
         Game,
-        SceneGUI
+        SceneGUI,
+        GameGUI
       }
 
       public enum PrefixScheme
@@ -35,7 +36,7 @@ namespace Stratus
       [Filter(Methods = false, Properties = true, NonPublic = true, ReadOnly = true, Static = true, Inherited = true, Fields = true)]
       public UnityMember member;
       [Tooltip("How this member is visualized")]
-      public VisualizationMode visualizationMode;
+      public VisualizationMode visualizationMode = VisualizationMode.Scene;
       [Tooltip("What color to use")]
       public Color color = Color.white;
       [Tooltip("How to describe this member")]
@@ -154,9 +155,21 @@ namespace Stratus
     /// </summary>
     public DrawList gameGUIDrawList { get; private set; } = new DrawList();
     /// <summary>
-    /// All window draw lists
+    /// The draw list for all properties in the scene gui
     /// </summary>
-    public static Dictionary<MemberVisualizer, DrawList> windowDrawLists { get; set; } = new Dictionary<MemberVisualizer, DrawList>();
+    public static Dictionary<MemberVisualizer, DrawList> sceneGUIDrawLists { get; set; } = new Dictionary<MemberVisualizer, DrawList>();
+    /// <summary>
+    /// How many properties to draw in the scene gui
+    /// </summary>
+    public static int sceneGUIDrawCount { get; private set; }
+    /// <summary>
+    /// The draw list for all properties in the game gui
+    /// </summary>
+    public static Dictionary<MemberVisualizer, DrawList> gameGUIDrawLists { get; set; } = new Dictionary<MemberVisualizer, DrawList>();
+    /// <summary>
+    /// How many properties to draw in the game gui
+    /// </summary>
+    public static int gameGUIDrawCount { get; private set; }
 
     //------------------------------------------------------------------------/
     // Fields Private
@@ -213,13 +226,25 @@ namespace Stratus
     private void OnEnable()
     {
       instances.Add(this);
-      windowDrawLists.Add(this, sceneGUIDrawList);
+      sceneGUIDrawLists.Add(this, sceneGUIDrawList);
+      sceneGUIDrawCount += sceneGUIDrawList.Count;
+      gameGUIDrawLists.Add(this, gameGUIDrawList);
+      gameGUIDrawCount += gameGUIDrawList.Count;
+      if (Application.isPlaying && gameGUIDrawList.Count > 0 && !MemberVisualizerGameGUI.instantiated)
+      {
+        MemberVisualizerGameGUI.get.Add(this);
+      }
+
     }
 
     private void OnDisable()
     {      
       instances.Remove(this);
-      windowDrawLists.Remove(this);
+      sceneGUIDrawLists.Remove(this);
+      sceneGUIDrawCount -= sceneGUIDrawList.Count;
+      gameGUIDrawCount -= gameGUIDrawList.Count;
+      gameGUIDrawLists.Remove(this);
+      MemberVisualizerGameGUI.get.Remove(this);
     }
 
     //------------------------------------------------------------------------/
@@ -261,7 +286,9 @@ namespace Stratus
             break;
           case MemberVisualizationField.VisualizationMode.SceneGUI:
             AddToDrawList(memberField, sceneGUIDrawList);
-            //AddToDrawList(memberField, gameDrawList);
+            break;
+          case MemberVisualizationField.VisualizationMode.GameGUI:
+            AddToDrawList(memberField, gameGUIDrawList);
             break;
           default:
             break;

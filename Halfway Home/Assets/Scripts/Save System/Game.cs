@@ -67,6 +67,7 @@ public class Game
         Progress.SetValue("SFXVolume", 1.0f);
         Progress.SetValue("TextSpeed", 1.0f);
         Progress.SetValue("week", 1);
+        Progress.SetValue("Depression Time Dilation", true);
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
         ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();

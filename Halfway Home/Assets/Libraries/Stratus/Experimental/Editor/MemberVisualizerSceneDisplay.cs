@@ -5,11 +5,11 @@ using UnityEditor;
 
 namespace Stratus
 {
-  [LayoutSceneViewDisplay("Member Visualizer", 225f, 200f, Overlay.Anchor.BottomRight, Overlay.Dimensions.Absolute)]
+  [LayoutViewDisplayAttribute("Member Visualizer", 225f, 200f, Overlay.Anchor.BottomRight, Overlay.Dimensions.Absolute)]
   public class MemberVisualizerSceneDisplay : LayoutSceneViewDisplay
   {
     //private bool useCustomColors = false;
-    protected override bool isValid => MemberVisualizer.windowDrawLists.Count > 0;
+    protected override bool isValid => MemberVisualizer.sceneGUIDrawCount > 0;
     private Vector2 scrollPos = Vector2.zero;
     private GUIStyle textStyle;
 
@@ -26,7 +26,7 @@ namespace Stratus
     protected override void OnGUILayout(Rect position)
     {
       scrollPos = GUILayout.BeginScrollView(scrollPos, false, false);
-      foreach(var drawList in MemberVisualizer.windowDrawLists)
+      foreach(var drawList in MemberVisualizer.sceneGUIDrawLists)
       {
         foreach (var dl in drawList.Value)
         {
@@ -37,7 +37,7 @@ namespace Stratus
             //if (useCustomColors)
             //  GUILayout.Label($"<color={member.hexColor}>{member.description}</color>");
             //else
-              GUILayout.Label($"{member.description}", StratusEditorStyles.miniText);
+              GUILayout.Label($"{member.description}", StratusGUIStyles.miniText);
           }
         }
       }      

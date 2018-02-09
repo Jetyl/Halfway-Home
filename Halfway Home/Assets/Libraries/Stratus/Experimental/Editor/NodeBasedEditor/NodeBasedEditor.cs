@@ -143,7 +143,7 @@ namespace Stratus
         //ViewportCenter = new Vector2(0f, 0f);
 
         //GUILayout.BeginArea(position);
-        StratusEditorStyles.DrawBackgroundColor(position, settings.Background);
+        StratusGUIStyles.DrawBackgroundColor(position, settings.Background);
         DrawGrid(position, settings.InnerGrid.Spacing, settings.InnerGrid.Opacity, settings.InnerGrid.Color);
         DrawGrid(position, settings.OuterGrid.Spacing, settings.OuterGrid.Opacity, settings.OuterGrid.Color);
         DrawNodes();
