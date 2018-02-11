@@ -189,7 +189,7 @@ Isaac drags Eduardo out of the cafe in a huff.
 "Well. I'm out. See you at dinner." #Trissa=Exit
 [Charlotte] "But, what... what just happened?"
 "{player_name}, Tell me what just happened?"
-[{player_name}]
+[{player_name}] "..."
 +"I messed up."
 +"Timothy Broke."
 -I slump, as I get up out of my chair, and towards the door.

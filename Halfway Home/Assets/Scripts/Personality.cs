@@ -153,6 +153,20 @@ public class Personality
         return socialstat;
     }
 
+    public void SetSocialStar(Social stat, int Value)
+    {
+
+        SocialValues[stat] = Value * SocialThreshold;
+        if (Value <= MaxSocialStars)
+            BasicSocialStars[stat] = Value;
+        else
+        {
+            BasicSocialStars[stat] = MaxSocialStars;
+            BonusSocialStars[stat] = Value - MaxSocialStars;
+        }
+
+    }
+
     public void SetSocialStat(Social stat, int Value)
     {
 

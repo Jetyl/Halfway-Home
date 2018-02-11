@@ -35,6 +35,8 @@ public class StageDisplay : MonoBehaviour
 
     bool Skip = false;
 
+    Sprite CurrentBackdrop;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -86,7 +88,8 @@ public class StageDisplay : MonoBehaviour
         if(eventdata.Backdrop == CurrentRoom)
         {
             if (eventdata.Backdrop != Room.None || eventdata.character == CurrentCG)
-                return;
+                if (eventdata.Transitions != TransitionTypes.BlackWipe && eventdata.Transitions != TransitionTypes.BlackWipeLeft)
+                    return;
         }
         
         if(eventdata.Backdrop == Room.None)
@@ -116,8 +119,24 @@ public class StageDisplay : MonoBehaviour
         
     }
 
+    void ResetBackdrop()
+    {
+        StopAllCoroutines();
+
+        WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
+        WipeCurtain.Progress = 1;
+
+        EyeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = CurtainDefault;
+        EyeCurtain.Progress = 1;
+
+        FrontCurtain.sprite = CurrentBackdrop;
+    }
+
     public void BackdropChange(Sprite newbackdrop, TransitionTypes transition)
     {
+
+        ResetBackdrop();
+        CurrentBackdrop = newbackdrop;
 
         if(Skip)
         {
@@ -128,7 +147,7 @@ public class StageDisplay : MonoBehaviour
 
             return;
         }
-
+        
         switch (transition)
         {
             case TransitionTypes.None:
@@ -209,7 +228,7 @@ public class StageDisplay : MonoBehaviour
         WipeCurtain.Progress = 0;
         FrontCurtain.sprite = null;
 
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / (BackgroundFadeTime/2))
         {
             WipeCurtain.Progress = t;
             yield return null;
@@ -221,7 +240,7 @@ public class StageDisplay : MonoBehaviour
         WipeCurtain.FadeDirection = -WipeCurtain.FadeDirection;
         WipeCurtain.gameObject.GetComponent<SpriteRenderer>().sprite = newBackdrop;
         
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / BackgroundFadeTime)
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / (BackgroundFadeTime/2))
         {
             WipeCurtain.Progress = 1 - t;
             yield return null;

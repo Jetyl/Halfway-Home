@@ -145,7 +145,15 @@ public class CharacterDisplay : MonoBehaviour
         if (!Skip)
         {
             if (Expressing != null)
+            {
+
                 StopCoroutine(Expressing);
+                visual.sprite = BackSprite.sprite; 
+                visual.color = Color.white;
+                var Awhite = Color.white;
+                Awhite.a = 0;
+                BackSprite.color = Awhite;
+            }
 
             Expressing = StartCoroutine(ChangeSprite(GetPose(pose)));
         }

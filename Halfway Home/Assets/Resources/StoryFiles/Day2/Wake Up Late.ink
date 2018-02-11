@@ -29,11 +29,11 @@ EXTERNAL CallSleep()
 [???] "Are y'all still asleep in there?" //knock noise
 uuuugh.... #Background / YourRoom, eyeopn
 Max, (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
-[Max] "!" #Max = suprised
-"{player_name}... You did just get up?" #Max = sad
+[Max] "!" #Max = Surprised
+"{player_name}... You did just get up?" #Max = Sad
 +[Be Honest]
 	[{player_name}] "yeah..."
-	[Max] "Siiiiiiiiiiiiiggggggggggggghhhhhhhhhh" #Max = mad
+	[Max] "Siiiiiiiiiiiiiggggggggggggghhhhhhhhhh" #Max = Angry
 	"{player_name}! You're leaving this place in less than a week now."
 	{
 		- week == 1:
@@ -43,7 +43,7 @@ Max, (and I know its Max) is hollering concerned, as I slink out of my silken ca
 	}
 +[Lie]
 	[{player_name}] "Whaaaaaaaaat, noooooo."
-	[Max] "..." #Max = mad
+	[Max] "..." #Max = Angry
 	"{player_name}, you are still in your PJs."
 	Oh, right. drat.
 
@@ -54,10 +54,10 @@ I look over at his bed, and yep, he is still there, snoozing it up.
 "Timothy? Timothy, wake up now." #Max = Calm
 Max instantly switches back to their lax persona as they nudge Timothy awake.
 [Timothy] "h...huh?" #Timothy = Calm
-"Gah! I'm up! I'm up!" #Timothy = suprised
+"Gah! I'm up! I'm up!" #Timothy = Surprised
 [Max] "Hehehaha, I gotcha buddy"
 [Timothy] "I am so sorry Max! I promise, I'll never do sleep in like this again!"
 [Max] "Its fine my little man."
-Max then directs Timothy for his first real, full day here.
+Max then directs Timothy for his first real, full day here. #All = exit
 and, on that note, I should probably head out now, before Max remember's I too slept in way late.
 -> END
