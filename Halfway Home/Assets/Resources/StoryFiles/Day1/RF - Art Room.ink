@@ -32,8 +32,8 @@ EXTERNAL GetStringValue(value)
 "In general, its always open to mess with stuff, if you want."
 [Timothy] "They've got a lot of um...."
 "stuff... in here."
-[{player_name}] "Yeah, they encourage people to get creative and <i>Express</i> themselves."
-It generally stress me out though. 
+[{player_name}] "Yeah, they encourage people to get creative and <color=A5C5E3FF><i>express</i></color> themselves."
+I'm not super good at <color=A5C5E3FF><i>expressing</i></color> myself right now, so it just kind of <color=A5C5E3FF><i>stresses</i></color> me out. 
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not R-R-Right now."
 "Th-Thanks though..." #Timothy = Exit

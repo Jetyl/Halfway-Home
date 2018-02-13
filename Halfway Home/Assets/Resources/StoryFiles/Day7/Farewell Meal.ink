@@ -34,8 +34,8 @@ Eduardo and Isaac are suprisingly not sitting nearby each other, but on near opp
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
 [Max] "I'll grab you some food!"
-[{player_name}] "Thanks." # Max	 = Exit
-Eduardo is the first to come up. # Eduardo = Sad
+[{player_name}] "Thanks." #Max = Exit
+Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 [Eduardo] "With your chill, I'm sure you'll do great out there."
 Eduardo turns to leave.

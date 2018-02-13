@@ -29,7 +29,7 @@ EXTERNAL GetStringValue(value)
 === KitchenFunction ===
 [{player_name}] "So this is the cafe." #Timothy = Calm
 "You can come here for breakfest, lunch, and dinner."
-"You can come really anytime you're hungry. Eating will rejuvinate you and lower your <i>fatigue</i>"
+"You can come really anytime you're hungry. Eating will rejuvinate you and lower your <color=A5C5E3FF><i>fatigue</i></color>"
 "You know, all pretty obvious stuff."
 "Oh!, uh, I mean."
 "Crap, you don't have an eating disorder or something do you?"
@@ -41,5 +41,5 @@ EXTERNAL GetStringValue(value)
 "Well, uh, lets go see what they got today."
 "If I recall, today is pancake day."
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit
-I feel refreshed by the delicous meal. #Fatigue -= 20
+I feel refreshed by the delicous meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
 -> END

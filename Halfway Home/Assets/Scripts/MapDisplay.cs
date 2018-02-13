@@ -71,7 +71,7 @@ namespace HalfwayHome
     void MapChoice(MapEvent eventdata)
     {
 
-      Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(eventdata.Destination));
+      Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(eventdata.Destination, "", MapTransitions));
 
           for (int i = 0; i < ChoicesAvalible.Count; ++i)
           {

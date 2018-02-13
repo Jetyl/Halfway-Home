@@ -118,13 +118,10 @@ public class DescriptionDisplay : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) == true)
         {
-
-            
             if (!isFinished)
             {
                 Description.gameObject.DispatchEvent(Events.PrintLine);
-
-                //turn this back on when the animation is working again
+                
                 NextLine.SetBool("Play", true);
                 
                 return;
@@ -158,16 +155,12 @@ public class DescriptionDisplay : MonoBehaviour
     public void Finished()
     {
         isFinished = false;
-        //turn these on when next line animation is working again
+
          NextLine.SetBool("Play", false);
          // NextLine.Play("LinePlaying");
         
-
-        
         Active = false;
-            
-
-
+        
         Space.DispatchEvent(Events.FinishedDescription);
         
 

@@ -38,6 +38,8 @@ public class WellbeingStatDisplay : MonoBehaviour
 
     void UpdateStats(DefaultEvent eventdata)
     {
+        StopAllCoroutines();
+
         int stat = Game.current.Self.GetWellbingStat(WellnessStat);
         float percent = (float)stat / 100f;
 

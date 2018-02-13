@@ -113,7 +113,7 @@ He nods #Timothy = Calm
 		I hold back a slight chuckle, and simply pat Timothy on the head.
 		[{player_name}] "thanks, I guess?"
 		its reaking peak awkwardness now, but its kinda sweet, and I appeciate the gesture, as unneed as it is.
-		It does relax me a little, so thats nice. # Stress -= 10
+		It does relax me a little, so thats nice. @<color=A5C5E3FF><i>(Stress Reduced!)</i></color> # Stress -= 10
 		[Timothy] "I'm sorry..." #Timothy = Calm
 }
 Leaving that awkard conversation behind us, its time to move on!

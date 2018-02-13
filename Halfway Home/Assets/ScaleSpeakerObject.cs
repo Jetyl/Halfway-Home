@@ -29,7 +29,10 @@ public class ScaleSpeakerObject : MonoBehaviour
 
     void OnScale(DescriptionEvent eventdata)
     {
-        
+
+        if (this == null)
+            return;
+
         eventdata.Speaker = eventdata.Speaker.Replace("[", "");
         eventdata.Speaker = eventdata.Speaker.Replace("]", "");
 
@@ -60,7 +63,7 @@ public class ScaleSpeakerObject : MonoBehaviour
 
     void OnDestroy()
     {
-        Space.DisConnect<DescriptionEvent>(Events.Description, OnScale);
+        //Space.DisConnect<DescriptionEvent>(Events.Description, OnScale);
     }
 
 }

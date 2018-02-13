@@ -83,8 +83,8 @@ EXTERNAL CallSleep()
 }
 
 // external function to bring up stats summary
-Wellbeing stats updated.
-Rest relieved a small amount of Stress. # Stress -= 10
+<color=A5C5E3FF><i>Wellbeing stats updated.</i></color>
+<color=A5C5E3FF><i>Rest relieved a moderate amount of Stress. # Stress -= 20
 {
 	-fatigue > 50:
 		<>@Sleep <>
@@ -97,11 +97,11 @@ Rest relieved a small amount of Stress. # Stress -= 10
 				reduced Fatigue significantly. # Fatigue => 20
 		}
 }
-<>@Solitude increased Delusion slightly. # Delusion += 10
+<>@Solitude increased Depression slightly.</i></color> # Delusion += 5
 -> END
 
 === Commons ===
-// Reduce Delusion
+// Reduce Delusion, increase stress
 // Ground yourself in the cozy heart of the House.
 {
 	- expression < 2:
@@ -140,9 +140,9 @@ The room is {~suprisingly empty, with only a few people reading by the window|fi
 }
 
 // Call external for wellbeing
-Wellbeing stats have updated.
-Social interaction lowered Delusion significantly. # Delusion -= 20
-However, it also increased Stress slighty. # Stress += 10
+<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
+<color=A5C5E3FF><i>Social interaction lowered Depression significantly.</i></color> # Delusion -= 25
+<color=A5C5E3FF><i>However, it also increased Stress slighty.</i></color> # Stress += 10
 
 -> END
 
@@ -158,8 +158,8 @@ Front Desk text placeholder.
 // TODO: Get info on time of day and # of visits to Kitchen to make narrative more immersive.
 I head to the small cafeteria to get some grub.
 I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
-Wellbeing stats have updated.
-Fatigue has been reduced moderately. # Fatigue -= 20
+<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
+<color=A5C5E3FF><i>Fatigue has been reduced moderately.</i></color> # Fatigue -= 20
 -> END
 
 === Garden ===
@@ -179,16 +179,16 @@ My solitude gives me plenty of time to reflect.
 	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
 }
 // Call external for wellbeing
-Wellbeing stats have updated.
-Your time in the sun has left you feeling tired, increasing Fatigue slightly. # Fatigue += 10
-Being alone has increased your Delusion slightly. # Delusion += 10
+<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
+<color=A5C5E3FF><i>Your time in the sun has left you feeling tired, increasing Fatigue slightly.</i></color> # Fatigue += 10
+<color=A5C5E3FF><i>Being alone has increased your Depression slightly.</i></color> # Delusion += 10
 {
 	- awareness > 3:
-		Your proficiency with introspection reduces Stress slightly. # Stress -= 10
+		<color=A5C5E3FF><i>Your proficiency with introspection reduces Stress slightly.</i></color> # Stress -= 10
 }
 // Call external for social
-Social stats have improved!
-Reflection has increased Awareness slightly. # Awareness+
+<color=A5C5E3FF><i>Social stats have improved!</i></color>
+<color=A5C5E3FF><i>Reflection has increased Awareness slightly.</i></color> # Awareness+
 -> END
 
 === Library ===
@@ -203,20 +203,20 @@ I peruse the shelves until a title catches my eye.
 I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archaeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
 // Call external for wellbeing
-Wellbeing stats have updated.
-Focusing on the text has taken a toll on your concentration, increasing Fatigue slightly. # Fatigue += 10
+<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
+<color=A5C5E3FF><i>Focusing on the text has taken a toll on your concentration, increasing Fatigue slightly.</i></color> # Fatigue += 10
 {
 	- grace > 3:
-		Competency with Grace has resulted in this activity relieving stress! # Stress -= 10
+		<color=A5C5E3FF><i>Competency with Grace has resulted in this activity relieving stress!</i></color> # Stress -= 10
 	- grace > 2:
-		Experience with Grace has removed the Stress from this activity!
+		<color=A5C5E3FF><i>Experience with Grace has removed the Stress from this activity!</i></color>
 	- else:
-		Engaging with the material was enlightening, but increased Stress slightly. # Stress += 10
+		<color=A5C5E3FF><i>Engaging with the material was enlightening, but increased Stress slightly.</i></color> # Stress += 10
 }
 
 // Call external for social
-Social stats have improved!
-New knowledge has increased Grace slightly. # Grace+
+<color=A5C5E3FF><i>Social stats have improved!</i></color>
+<color=A5C5E3FF><i>New knowledge has increased Grace slightly.</i></color> # Grace+
 -> END
 
 === ArtRoom ===
@@ -227,20 +227,20 @@ I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel
 Time to make something!
 After about an hour, I finish. My arms are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 // Call external for wellbeing
-Wellbeing stats have updated.
-Creative exertion increased Fatigue slightly. # Fatigue += 10
+<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
+<color=A5C5E3FF><i>Creative exertion increased Fatigue slightly.</i></color> # Fatigue += 10
 {
 	- expression > 3:
-		Competency with Expression has resulted in this activity relieving stress! # Stress -= 10
+		<color=A5C5E3FF><i>Competency with Expression has resulted in this activity relieving stress!</i></color> # Stress -= 10
 	- expression > 2:
-		Experience with Expression has removed the Stress from this activity!
+		<color=A5C5E3FF><i>Experience with Expression has removed the Stress from this activity!</i></color>
 	- else:
-		The extended period of focus increased Stress slightly. # Stress += 10
+		<color=A5C5E3FF><i>The extended period of focus increased Stress slightly.</i></color> # Stress += 10
 }
 
 // Call external for social
-Social stats have improved!
-Creativity has increased Expression slightly. # Expression+
+<color=A5C5E3FF><i>Social stats have improved!</i></color>
+<color=A5C5E3FF><i>Creativity has increased Expression slightly.</i></color> # Expression+
 -> END
 
 === Store ===
@@ -261,7 +261,7 @@ After a brisk walk I reach my destination.
 = Grace
 {shuffle:
 	- I watch as an older {~man|woman} greets the clerk formally and I am impressed by their politeness.
-		The encounter proves educational, increasing Grace. # Grace+
+		The encounter proves educational, increasing <color=A5C5E3FF><i>Grace</i></color>. # Grace+
 		-> Store.Expression
 	- ->Store.Expression
 	- ->Store.Expression
@@ -270,7 +270,7 @@ After a brisk walk I reach my destination.
 {shuffle:
 	- I spend a while looking for something and one of the other customers notices and helps me out.
 	We get to talking and I realize afterward that I didn't feel uncomfortable at all. 
-	The experience boosts confidence, increasing Expression. # Expression+
+	The experience boosts confidence, increasing <color=A5C5E3FF><i>Expression</i></color>. # Expression+
 		-> Store.Awareness 
 	- ->Store.Awareness
 	- ->Store.Awareness
@@ -280,7 +280,7 @@ After a brisk walk I reach my destination.
 	- While I'm gathering my things, a blind man walks in tapping a white cane in front of himself. 
 	I am about to offer help when I notice him confidently pulling items off of the shelves. 
 	I watch him for a minute, moving from aisle to aisle with practiced precision.
-	His self-sufficiency inspires an increase in Awareness. # Awareness+
+	His self-sufficiency inspires an increase in <color=A5C5E3FF><i>Awareness</i></color>. # Awareness+
 		-> END
 	- ->END
 	- ->END
@@ -292,12 +292,12 @@ After a brisk walk I reach my destination.
 
 = Small
 For some reason, being out in public makes me feel more isolated. I feel myself shrink.
-Delusion increased slightly. # Delusion += 10
+<color=A5C5E3FF><i>Depression increased slightly.</i></color> # Delusion += 10
 -> Store.Stress
 = Large
 The clerk is busy in the back of the store. 
 My darker thoughts come out as I'm left waiting for what feels like an eternity.
-Delusion increases significantly. # Delusion += 20
+<color=A5C5E3FF><i>Depression increases significantly.</i></color> # Delusion += 25
 -> Store.Stress
 
 === StoreStress ===
@@ -305,12 +305,12 @@ Delusion increases significantly. # Delusion += 20
 
 = Small
 The shop is packed. The process of gathering my items for checkout is uncomfortable.
-Stress increases slightly. # Stress += 10
+<color=A5C5E3FF><i>Stress increases slightly</i></color>. # Stress += 10
 -> Store.Fatigue
 
 = Large
 Some boisterous customers are talking loudly about how how Blackwell Psychiatric Hospital and the Halfway House are a blight on their community. I have rarely felt so unwelcome.
-Stress increases significantly. # Stress += 20
+<color=A5C5E3FF><i>Stress increases significantly.</i></color> # Stress += 20
 -> Store.Fatigue
 
 === StoreFatigue ===
@@ -318,13 +318,13 @@ Stress increases significantly. # Stress += 20
 
 = Small
 It was unusually hot out on my return trip, exacerbating the physical exertion of my walk.
-Fatigue increased slightly. # Fatigue += 10
+<color=A5C5E3FF><i>Fatigue increased slightly.</i></color> # Fatigue += 10
 -> Store.Grace
 
 = Large
 I am distracted on the return trip and get turned around.
 I hurry and find my way back, but it takes a lot out of me.
-Fatigue increases significantly. # Fatigue += 20
+<color=A5C5E3FF><i>Fatigue increases significantly.</i></color> # Fatigue += 20
 -> Store.Grace
 
 === Warning ===

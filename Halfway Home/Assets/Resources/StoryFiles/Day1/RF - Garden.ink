@@ -35,9 +35,10 @@ EXTERNAL GetStringValue(value)
 "I don't know. I've never actually gone to it."
 [Timothy] "..." #Timothy = Happy
 [{player_name}] "But yeah, its a good place to reflect." #Timothy = Exit
-"You can just sort of zen out. Be <i>aware</i> of the life around you... and yourself, I suppose."
+"You can just sort of zen out. Be <color=A5C5E3FF><i>aware</i></color> of the life around you... and yourself, I suppose."
 "It can be pretty enlightening, but I dunno. I try not to be alone with my thoughts too much."
 "It's, uh... sorta caused problems in my life."
+being alone with my thoughts too long just kind of <color=A5C5E3FF><i>depress</i></color> me.
 Wait a minute. Where's Timothy?
 "Timothy?"
 Oh crap, did I lose him already?

@@ -121,9 +121,9 @@ public class GameStartUp : MonoBehaviour
         Game.current.Hour = DebugHour;
         Game.current.Progress.SetValue("week", DebugWeek);
         Game.current.Progress.SetValue("Debug Mode", true);
-        Game.current.Self.SetSocialStat(Personality.Social.awareness, DebugAwareness);
-        Game.current.Self.SetSocialStat(Personality.Social.grace, DebugGrace);
-        Game.current.Self.SetSocialStat(Personality.Social.expression, DebugExpression);
+        Game.current.Self.SetSocialStar(Personality.Social.awareness, DebugAwareness);
+        Game.current.Self.SetSocialStar(Personality.Social.grace, DebugGrace);
+        Game.current.Self.SetSocialStar(Personality.Social.expression, DebugExpression);
     }
 
 
@@ -134,7 +134,10 @@ public class GameStartUp : MonoBehaviour
         Space.DispatchEvent(Events.StartGame, new ConversationEvent(Timeline));
 
         if (DebugMode)
+        {
+            SetDebugValues();
             Space.DispatchEvent(Events.Debug);
+        }
     }
 
 
