@@ -33,13 +33,13 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
-I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
-I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
-The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route.
-To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
-I need to choose now!
+The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo # Expression++
+I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching # Expression++
+I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching # Expression++
+The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching # Expression++
+I am forced to stop and look for another route. # Expression++
+To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway. # Awareness++
+I need to choose now! # Awareness++
 +[Stairs]
 	I decide that higher ground is more important and race up the stairs. # SFX : play_sfx_human_footsteps_approaching
 	->Stairs
@@ -48,11 +48,11 @@ I need to choose now!
 	->Hallway
 
 === Stairs ===
-My pace slows as I climb. I can hear the whispers getting louder.
-[Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper
-The stairs open into a dark hallway. In the distance I can see a faint electric glow.
-I crest the top of the stairs with a leap and barrel toward the light.
-[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
+My pace slows as I climb. I can hear the whispers getting louder. # Awareness++
+[Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper # Awareness++
+The stairs open into a dark hallway. In the distance I can see a faint electric glow. # Awareness++
+I crest the top of the stairs with a leap and barrel toward the light. # Awareness++
+[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper # Awareness++
 -> Bathroom
 
 === Hallway ===
@@ -66,17 +66,17 @@ I force myself forward.
 -> Bathroom
 
 === Bathroom ===
-As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
-Ahead of me the hallway darkens to the point of pitch blackness. No luck that way.
-I head down the bathroom corridor. Three marked entrances open before me.
-On instinct, I rush into the...
+As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left. # Expression++
+Ahead of me the hallway darkens to the point of pitch blackness. No luck that way. # Expression++
+I head down the bathroom corridor. Three marked entrances open before me. # Expression++
+On instinct, I rush into the... # Expression++
 *[Men's Restroom] 
 	~SetPlayerGender("M")
 *[Lady's Restroom] 
 	~SetPlayerGender("F")
 *[All-Gender Restroom] 
 	~SetPlayerGender("N")
-- The bathroom is clean and well-lit, but so cold that I can see my breath fogging the air in front of me.
+- The bathroom is clean and well-lit, but so cold that I can see my breath fogging the air in front of me. # Expression++
 The air is still and quiet. The silence is deeply unsettling.
 I take a few steps before I notice that the tile floor makes no sound.
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
