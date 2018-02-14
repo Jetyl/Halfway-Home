@@ -19,6 +19,7 @@ public class UIFader : MonoBehaviour
 
   public bool StartFaded = true;
   public const float DefaultFadeTime = 0f;
+  private bool IsHidden;
 
   List<UIChild> UIChildren = new List<UIChild>();
 
@@ -31,6 +32,14 @@ public class UIFader : MonoBehaviour
     if (StartFaded) Hide(0f);
 	}
 
+  private void Update()
+  {
+    if(GetComponent<Graphic>() && GetComponent<Graphic>().color.a != 0 && IsHidden)
+    {
+      Hide();
+    }
+  }
+
   public void Hide(float fadeTime = DefaultFadeTime)
   {
     if(GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(0f, fadeTime, true);
@@ -38,6 +47,8 @@ public class UIFader : MonoBehaviour
     {
       c.Element.CrossFadeAlpha(0f, fadeTime, true);
     }
+
+    IsHidden = true;
   }
 
   public void Show(float fadeTime = DefaultFadeTime)
@@ -47,5 +58,7 @@ public class UIFader : MonoBehaviour
     {
       c.Element.CrossFadeAlpha(c.InitAlpha, fadeTime, true);
     }
+
+    IsHidden = false;
   }
 }
