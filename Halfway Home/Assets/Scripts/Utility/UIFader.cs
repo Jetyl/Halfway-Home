@@ -25,10 +25,7 @@ public class UIFader : MonoBehaviour
 
 	void Start ()
   {
-    foreach (Graphic g in GetComponentsInChildren<Graphic>())
-    {
-      UIChildren.Add(new UIChild(g, g.color.a));
-    }
+    ResetChildren();
     if (StartFaded) Hide(0f);
 	}
 
@@ -40,8 +37,18 @@ public class UIFader : MonoBehaviour
     }
   }
 
+  public void ResetChildren()
+  {
+    UIChildren.Clear();
+    foreach (Graphic g in GetComponentsInChildren<Graphic>())
+    {
+      UIChildren.Add(new UIChild(g, g.color.a));
+    }
+  }
+
   public void Hide(float fadeTime = DefaultFadeTime)
   {
+    ResetChildren();
     if(GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(0f, fadeTime, true);
     foreach(UIChild c in UIChildren)
     {
@@ -53,6 +60,7 @@ public class UIFader : MonoBehaviour
 
   public void Show(float fadeTime = DefaultFadeTime)
   {
+    ResetChildren();
     if (GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(1f, fadeTime, true);
     foreach (UIChild c in UIChildren)
     {
