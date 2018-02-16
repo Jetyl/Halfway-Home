@@ -37,9 +37,9 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         }
         
 
-        if (Actors.ContainsKey(eventdata.Speaker.ToLower()))
+        if (Actors.ContainsKey(eventdata.TrueSpeaker.ToLower()))
         {
-            StagePosition pos = Actors[eventdata.Speaker.ToLower()];
+            StagePosition pos = Actors[eventdata.TrueSpeaker.ToLower()];
             Debug.Log(pos);
             switch(pos)
             {
