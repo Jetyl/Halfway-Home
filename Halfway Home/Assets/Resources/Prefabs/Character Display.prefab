@@ -288,13 +288,13 @@ MonoBehaviour:
     Backdrop: {fileID: 21300000, guid: 3620ea9192a75a3478481013bf9d3159, type: 3}
   - ID: 2
     Tag: 
-    Backdrop: {fileID: 21300000, guid: bc32afdfc4ce0414ba482420ab070a8a, type: 3}
+    Backdrop: {fileID: 21300000, guid: f984ddc4970cdd0498a3ce3f1f4e12ef, type: 3}
   - ID: 3
     Tag: 
     Backdrop: {fileID: 21300000, guid: 4ef0f511afe147349a6c26780ace2dc1, type: 3}
   - ID: 4
     Tag: 
-    Backdrop: {fileID: 21300000, guid: a328869e3db734a40a6f3fb06e7c3826, type: 3}
+    Backdrop: {fileID: 21300000, guid: 74cc687f645df454a86ac03591cfb9dc, type: 3}
   - ID: 5
     Tag: 
     Backdrop: {fileID: 21300000, guid: 493db0088c978894aaad44bf11d1b6d5, type: 3}
@@ -405,7 +405,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -413,7 +413,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212070676895858708
 SpriteRenderer:
@@ -537,7 +537,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -545,5 +545,5 @@ SpriteRenderer:
   m_Size: {x: 0.04, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

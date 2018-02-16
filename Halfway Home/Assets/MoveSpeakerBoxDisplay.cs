@@ -36,10 +36,6 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         }
         
 
-        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
-        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
-
-
         if (Actors.ContainsKey(eventdata.Speaker.ToLower()))
         {
             //do whatever you want it to do here, regarding position

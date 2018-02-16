@@ -29,7 +29,7 @@ public class RoomIconDisplay : MonoBehaviour
             var spot = transform.GetChild(i).GetComponent<Image>();
             if (spot != null)
                 IconSpots.Add(spot);
-        }
+        } 
 
         Space.Connect<DefaultEvent>(Events.ReturnToMap, ClearIcons);
         Space.Connect<MapIconEvent>(Events.MapIcon, PlaceIcon);

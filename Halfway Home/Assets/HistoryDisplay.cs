@@ -121,11 +121,7 @@ public class HistoryDisplay : MonoBehaviour
         {
             CurrentSpeaker = eventdata.Speaker;
 
-
-            eventdata.Speaker = eventdata.Speaker.Replace("[", "");
-            eventdata.Speaker = eventdata.Speaker.Replace("]", "");
-
-            Color col = SpeakerColors.GetColor(eventdata.Speaker);
+            Color col = SpeakerColors.GetColor(eventdata.TrueSpeaker);
 
             string Speaker = eventdata.Speaker;
 

@@ -182,15 +182,6 @@ public class DescriptionDisplay : MonoBehaviour
             }
         }
         
-        /*
-        if(!anime.GetBool("IsUp"))
-        {
-            anime.SetBool("IsUp", true);
-            StartCoroutine(WaitTilOpened());
-            return;
-        }*/
-
-        //UpdateSpeaker(0);
         Active = true;
         Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
@@ -296,12 +287,24 @@ public class DescriptionEvent : DefaultEvent
     //public List<Line> Lines;
     public string Line;
     public string Speaker;
+    public string TrueSpeaker; //speaker without the nickname
    
     public DescriptionEvent(string _lines, string _speaker, bool CanSkip_ = false)
     {
         Line = _lines;
         CanSkip = CanSkip_;
-        Speaker = _speaker;
+        
+        Speaker = _speaker.Replace("[", "");
+        Speaker = Speaker.Replace("]", "");
+
+        string[] calls = Speaker.Split('0');
+
+        TrueSpeaker = calls[0].Replace(" ", "");
+        if (calls.Length > 1)
+            Speaker = calls[1];
+        else
+            Speaker = TrueSpeaker;
+
     }
 
 }

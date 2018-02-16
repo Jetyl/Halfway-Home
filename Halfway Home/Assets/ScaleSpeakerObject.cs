@@ -32,16 +32,14 @@ public class ScaleSpeakerObject : MonoBehaviour
 
         if (this == null)
             return;
+        
 
-        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
-        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
-
-        if (eventdata.Speaker == "")
+        if (eventdata.TrueSpeaker == "")
             return;
 
         if (Scaled)
         {
-            if (eventdata.Speaker != Speaker.Character && eventdata.Speaker != MCName)
+            if (eventdata.TrueSpeaker != Speaker.Character && eventdata.TrueSpeaker != MCName)
             {
                 Scaled = false;
                 
@@ -51,7 +49,7 @@ public class ScaleSpeakerObject : MonoBehaviour
         else
         {
             
-            if (eventdata.Speaker == Speaker.Character)
+            if (eventdata.TrueSpeaker == Speaker.Character)
             {
                 Scaled = true;
                 

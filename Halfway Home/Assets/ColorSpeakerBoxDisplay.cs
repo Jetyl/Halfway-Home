@@ -31,14 +31,8 @@ public class ColorSpeakerBoxDisplay : MonoBehaviour
 
     void OnSpeak(DescriptionEvent eventdata)
     {
-        
-
-        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
-        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
-        
-        
-        if(Visual.color != GetColor(eventdata.Speaker))
-            gameObject.DispatchEvent(Events.Fade, new FadeEvent(GetColor(eventdata.Speaker), FadeTime));
+        if(Visual.color != GetColor(eventdata.TrueSpeaker))
+            gameObject.DispatchEvent(Events.Fade, new FadeEvent(GetColor(eventdata.TrueSpeaker), FadeTime));
         
         
     }

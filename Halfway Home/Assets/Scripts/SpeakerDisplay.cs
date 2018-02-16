@@ -57,11 +57,9 @@ public class SpeakerDisplay : MonoBehaviour
         }
 
         Box.SetActive(true);
+        
 
-        eventdata.Speaker = eventdata.Speaker.Replace("[", "");
-        eventdata.Speaker = eventdata.Speaker.Replace("]", "");
-
-        txt.color = GetColor(eventdata.Speaker);
+        txt.color = GetColor(eventdata.TrueSpeaker);
         
 
         txt.text = TextParser.DynamicEdit(eventdata.Speaker);
