@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class MoveSpeakerBoxDisplay : MonoBehaviour
 {
     
@@ -38,11 +39,23 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
 
         if (Actors.ContainsKey(eventdata.Speaker.ToLower()))
         {
-            //do whatever you want it to do here, regarding position
+            StagePosition pos = Actors[eventdata.Speaker.ToLower()];
+            Debug.Log(pos);
+            switch(pos)
+            {
+              case StagePosition.Left:
+                GetComponent<Animator>().SetInteger("Position", 0);
+                break;
+              case StagePosition.Center:
+                GetComponent<Animator>().SetInteger("Position", 1);
+                break;
+              case StagePosition.Right:
+                GetComponent<Animator>().SetInteger("Position", 2);
+                break;
+              default:
+                break;
+            }
         }
-        
-
-
     }
 
 

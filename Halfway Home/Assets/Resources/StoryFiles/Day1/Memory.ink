@@ -34,8 +34,8 @@ EXTERNAL SetValue(name, values)
 === Start ===
 //~week = 1
 The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
-I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching # Expression+++
-I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching # Expression+++
+I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
+I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
 I am forced to stop and look for another route.
 To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
