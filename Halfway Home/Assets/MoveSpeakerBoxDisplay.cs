@@ -36,7 +36,6 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
             return;
         }
         
-
         if (Actors.ContainsKey(eventdata.TrueSpeaker.ToLower()))
         {
             StagePosition pos = Actors[eventdata.TrueSpeaker.ToLower()];
@@ -53,8 +52,13 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
                 GetComponent<Animator>().SetInteger("Position", 2);
                 break;
               default:
+                GetComponent<Animator>().SetInteger("Position", 0);
                 break;
             }
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("Position", 0);
         }
     }
 
@@ -70,7 +74,8 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         if (!Actors.ContainsKey(eventdata.character.ToLower()))
             Actors.Add(eventdata.character.ToLower(), eventdata.Direction);
 
-        Actors[eventdata.character.ToLower()] = eventdata.Direction;
+        if (eventdata.Direction != StagePosition.None)
+          Actors[eventdata.character.ToLower()] = eventdata.Direction;
 
     }
 

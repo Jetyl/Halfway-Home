@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: 14686184
-    m_lastTimePart2: -1999292092
+    m_lastTimePsrt1: -235237511
+    m_lastTimePart2: -1999276617
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -37,17 +37,65 @@ MonoBehaviour:
       ID: -1125792909
       Guid: b5637d528302aa49bd7e7dd5169d1a17
       maxAttenuation: 0
-    - Name: play_menumouseover
-      Path: PlaySFX\play_sfx_menu\play_menumouseover
+    - Name: play_menumouseover_00
+      Path: PlaySFX\play_sfx_menu\play_menumouseover_00
       PathAndIcons:
       - ElementName: PlaySFX
         ObjectType: 12
       - ElementName: play_sfx_menu
         ObjectType: 12
-      - ElementName: play_menumouseover
+      - ElementName: play_menumouseover_00
         ObjectType: 3
-      ID: -286316322
+      ID: -431668563
       Guid: 1325d90f3ad6b04fa5bd9e0d9ec74850
+      maxAttenuation: 0
+    - Name: play_menumouseover_01
+      Path: PlaySFX\play_sfx_menu\play_menumouseover_01
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menumouseover_01
+        ObjectType: 3
+      ID: -431668564
+      Guid: 45b72cb5f61a0d45bcac55703b367135
+      maxAttenuation: 0
+    - Name: play_menumouseover_02
+      Path: PlaySFX\play_sfx_menu\play_menumouseover_02
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menumouseover_02
+        ObjectType: 3
+      ID: -431668561
+      Guid: 189bfd2a4478584aaee3889975eb11b6
+      maxAttenuation: 0
+    - Name: play_menumouseover_03
+      Path: PlaySFX\play_sfx_menu\play_menumouseover_03
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menumouseover_03
+        ObjectType: 3
+      ID: -431668562
+      Guid: e0438c5d5c82cf458bec0d8a7ae8df19
+      maxAttenuation: 0
+    - Name: play_menumouseover_04
+      Path: PlaySFX\play_sfx_menu\play_menumouseover_04
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menumouseover_04
+        ObjectType: 3
+      ID: -431668567
+      Guid: 73dbc586b7d0d741a4395e4c73ce77b4
       maxAttenuation: 0
     - Name: play_menupause
       Path: PlaySFX\play_sfx_menu\play_menupause
@@ -226,8 +274,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1173543179
-    m_lastTimePart2: -1999278106
+    m_lastTimePsrt1: -108119475
+    m_lastTimePart2: -1999276617
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

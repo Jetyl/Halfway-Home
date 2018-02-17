@@ -15,7 +15,11 @@ namespace AK
     {
         static const AkUniqueID PLAY_CITY_OF_TEARS = 952529443U;
         static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
-        static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER_00 = 3863298733U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER_01 = 3863298732U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER_02 = 3863298735U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER_03 = 3863298734U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER_04 = 3863298729U;
         static const AkUniqueID PLAY_MENUPAUSE = 3596481523U;
         static const AkUniqueID PLAY_MENUUNPAUSE = 3101734072U;
         static const AkUniqueID PLAY_MUSIC_BARDMAN = 3108296289U;

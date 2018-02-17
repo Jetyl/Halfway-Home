@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="play_sfx_menu" ID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" OwnerID="{27633E19-4858-4606-983F-7C034C7283A6}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}">
+				<Event Name="play_menumouseover_00" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}">
 					<ChildrenList>
 						<Action Name="" ID="{D65D101F-7FB0-4997-AC6A-B1A15A7E0366}" ShortID="35164096">
 							<PropertyList>
@@ -54,6 +54,62 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menumouseover_01" ID="{B52CB745-1AF6-450D-BCAC-55703B367135}">
+					<ChildrenList>
+						<Action Name="" ID="{C38DB1AB-1FF5-4EC4-A09A-73787E9DB13E}" ShortID="869841033">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menumouseover_02" ID="{2AFD9B18-7844-4A58-AEE3-889975EB11B6}">
+					<ChildrenList>
+						<Action Name="" ID="{2EE4964D-CEE4-43B0-B95F-DB0E7E109754}" ShortID="227971850">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menumouseover_03" ID="{5D8C43E0-825C-45CF-8BEC-0D8A7AE8DF19}">
+					<ChildrenList>
+						<Action Name="" ID="{9E64123A-4877-4315-9FD0-7E8CC5E48164}" ShortID="872289128">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menumouseover_04" ID="{86C5DB73-D0B7-41D7-A439-5E4C73CE77B4}">
+					<ChildrenList>
+						<Action Name="" ID="{D7705340-D6AD-49E0-B242-4ADD378CC13C}" ShortID="280160849">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

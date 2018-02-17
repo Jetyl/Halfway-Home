@@ -10,7 +10,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3108296289	play_music_bardman			\PlayMusic\play_music_bardman	
 	3169174387	play_menuexit			\PlaySFX\play_sfx_menu\play_menuexit	
 	3596481523	play_menupause			\PlaySFX\play_sfx_menu\play_menupause	
-	4008650974	play_menumouseover			\PlaySFX\play_sfx_menu\play_menumouseover	
+	3863298729	play_menumouseover_04			\PlaySFX\play_sfx_menu\play_menumouseover_04	
+	3863298732	play_menumouseover_01			\PlaySFX\play_sfx_menu\play_menumouseover_01	
+	3863298733	play_menumouseover_00			\PlaySFX\play_sfx_menu\play_menumouseover_00	
+	3863298734	play_menumouseover_03			\PlaySFX\play_sfx_menu\play_menumouseover_03	
+	3863298735	play_menumouseover_02			\PlaySFX\play_sfx_menu\play_menumouseover_02	
 	4065124416	stop_music_fakeit			\PlayMusic\stop_music_fakeit	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

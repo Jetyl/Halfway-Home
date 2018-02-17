@@ -36,7 +36,11 @@
 			<Path>HalfwaySoundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3169174387" Name="play_menuexit" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menuexit"/>
-				<Event Id="4008650974" Name="play_menumouseover" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover"/>
+				<Event Id="3863298733" Name="play_menumouseover_00" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover_00"/>
+				<Event Id="3863298732" Name="play_menumouseover_01" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover_01"/>
+				<Event Id="3863298735" Name="play_menumouseover_02" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover_02"/>
+				<Event Id="3863298734" Name="play_menumouseover_03" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover_03"/>
+				<Event Id="3863298729" Name="play_menumouseover_04" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menumouseover_04"/>
 				<Event Id="3596481523" Name="play_menupause" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menupause"/>
 				<Event Id="3101734072" Name="play_menuunpause" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_menuunpause"/>
 				<Event Id="3108296289" Name="play_music_bardman" ObjectPath="\Events\PlayMusic\play_music_bardman"/>
