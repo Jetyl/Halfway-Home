@@ -101,8 +101,15 @@ public class StageDisplay : MonoBehaviour
             foreach (var room in SpecialBackdrops)
             {
                 if (room.Tag.ToLower() == CurrentCG)
+                {
                     BackdropChange(room.Backdrop, eventdata.Transitions);
+                    return;
+                }
             }
+
+            //go to no background (likely for CG)
+            BackdropChange(null, eventdata.Transitions);
+
         }
         else
         {

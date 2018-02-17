@@ -1887,8 +1887,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Art
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114031150418602040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1967,8 +1972,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Garden
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114048334904085010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2122,6 +2132,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114077323252011430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2534,8 +2545,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Library
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114197817775578562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2556,6 +2572,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114199788840510494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2687,6 +2704,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185893efedc58c741b2915008b6040f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MapTransitions: 0
+  AllowTimeDilation: 1
+  TimeDilation: []
   DefaultActions: {fileID: 0}
 --- !u!114 &114240970195010018
 MonoBehaviour:
@@ -2929,6 +2949,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114271494237587764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3273,6 +3294,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114313151685095508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3374,6 +3396,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114345626112923966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3403,8 +3426,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114364710619591618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3941,6 +3969,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 2
+  DrainFatigue: 1
 --- !u!114 &114493294218531662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4320,8 +4349,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to FD
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114568411923236512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4455,6 +4489,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 8
+  DrainFatigue: 1
 --- !u!114 &114583262239639418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4556,6 +4591,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114644980969487416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4576,6 +4612,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114659443298304158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5728,8 +5765,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: Been to Commons
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114882615842161854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5968,6 +6010,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   TimeSpending: 1
+  DrainFatigue: 1
 --- !u!114 &114912840826236712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6224,8 +6267,13 @@ MonoBehaviour:
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
   AccessPoint: 
-  TimesCanVisit: 0
+  VisitMulitplier: 0
+  HourVisited: 
+  DayVisited: 
   ManualAccess: 
+  FatigueCloseLimit: 100
+  StressCloseLimit: 100
+  DelusionCloseLimit: 100
 --- !u!114 &114943877928103618
 MonoBehaviour:
   m_ObjectHideFlags: 1

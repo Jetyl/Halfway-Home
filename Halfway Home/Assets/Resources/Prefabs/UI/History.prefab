@@ -549,8 +549,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HistoryWindow: {fileID: 1198820940559160}
+  ScrollArea: {fileID: 0}
   Text: {fileID: 114165372155206946}
   SpeakerColors: {fileID: 0}
+  ButtonsDisabledOnDisplay: []
+  ImagesHiddenOnDisplay: []
+  TextHiddenOnDisplay: []
 --- !u!114 &114923205770274564
 MonoBehaviour:
   m_ObjectHideFlags: 1

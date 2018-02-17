@@ -730,6 +730,7 @@ MonoBehaviour:
     Value: 100
   ModifiedStatText: 
   ModifedStatColor: {r: 0, g: 0, b: 0, a: 0}
+  Debug: 0
 --- !u!114 &114076463565531896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -774,6 +775,7 @@ MonoBehaviour:
     Value: 2
   ModifiedStatText: 
   ModifedStatColor: {r: 0, g: 0, b: 0, a: 0}
+  Debug: 0
 --- !u!114 &114100669654923474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1187,6 +1189,7 @@ MonoBehaviour:
     Value: 100
   ModifiedStatText: 
   ModifedStatColor: {r: 0, g: 0, b: 0, a: 0}
+  Debug: 0
 --- !u!114 &114292709795727550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1278,6 +1281,7 @@ MonoBehaviour:
     Value: 2
   ModifiedStatText: Expression lowered due to high stress
   ModifedStatColor: {r: 1, g: 0.93103445, b: 0, a: 1}
+  Debug: 0
 --- !u!114 &114331120027673126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1809,6 +1813,7 @@ MonoBehaviour:
     Value: 2
   ModifiedStatText: 
   ModifedStatColor: {r: 0, g: 0, b: 0, a: 0}
+  Debug: 0
 --- !u!114 &114494088088595206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2384,6 +2389,7 @@ MonoBehaviour:
     Value: 100
   ModifiedStatText: 
   ModifedStatColor: {r: 0, g: 0, b: 0, a: 0}
+  Debug: 0
 --- !u!114 &114784627116611016
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4740660146959848}
   - component: {fileID: 114567418828194960}
   - component: {fileID: 114223561511709960}
+  - component: {fileID: 114882403670198374}
   m_Layer: 0
   m_Name: Character Display
   m_TagString: Untagged
@@ -371,6 +372,22 @@ MonoBehaviour:
   InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
   InitializeFadeTime: 1
   IsFading: 0
+--- !u!114 &114882403670198374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779096992707614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4dd272ac282c1b4ca702cebcbf58694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CGs:
+  - Tag: HangMan
+    Graphic: {fileID: 1288692834534888, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
+  OpenCGTag: Open
+  CloseCGTag: Exit
 --- !u!212 &212031393984077694
 SpriteRenderer:
   m_ObjectHideFlags: 1
