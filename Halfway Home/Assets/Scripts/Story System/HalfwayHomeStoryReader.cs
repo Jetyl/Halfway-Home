@@ -99,13 +99,24 @@ namespace HalfwayHome
       {
         if (match.ContainsKey("Background"))
         {
-          var Image = match["Image"];
+                if(match["Background"].ToLower() == "background")
+                {
+                    var Image = match["Image"];
+                    Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
+                }
+                else
+                {
                         
-          Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
-                    return;
+                    var Image = match["Image"];
+                    Space.DispatchEvent(Events.CG, new CustomGraphicEvent(match["Background"], Image));
+                }
+                    
+                    //return;
         }
+        
       }
-
+            
+            /*
       if(parse.FindFirst("Background").ToLower() == "background" || parse.FindFirst("Background").ToLower() == "backdrop")
         for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
@@ -117,6 +128,7 @@ namespace HalfwayHome
         }
 
         Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.FindFirst("Image")));
+        */
     }
 
     void OnPoseChange(Parse parse)

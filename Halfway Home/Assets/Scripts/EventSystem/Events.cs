@@ -76,6 +76,7 @@ public class Events
     public static readonly String CharacterExit = "CharacterExitEvent";
     public static readonly String Backdrop = "BackdropEvent";
     public static readonly String MoveCharacter = "MoveCharacterEvent";
+    public static readonly String CG = "CustomGraphicEvent";
     public static readonly String NewDay = "NewDayEvent";
     public static readonly String GetPlayerInfo = "PlayerInfoEvent";
     public static readonly String GetPlayerInfoFinished = "FinishedPlayerInfoEvent";

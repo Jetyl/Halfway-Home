@@ -29,6 +29,34 @@ public static class TextParser
 
     }
 
+    public static IEnumerator FrameDelay(GameObject target, Events tag)
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        target.DispatchEvent(tag);
+
+    }
+
+    public static IEnumerator FrameDelay<T>(Events tag, T eventdata) where T : EventData
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+
+        Space.DispatchEvent(tag, eventdata);
+
+    }
+
+    public static IEnumerator FrameDelay<T>(GameObject target, Events tag, T eventdata) where T : EventData
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        target.DispatchEvent(tag, eventdata);
+
+    }
+
     //send the Lines Array json data
     public static List<Line> ParseLines(JsonData text)
     {

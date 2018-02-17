@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: CGs
+    uniqueID: 1167640351
+    locked: 0
+  - name: Backgrounds
+    uniqueID: 3947386505
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 1080481173
     locked: 0

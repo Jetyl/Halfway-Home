@@ -33,10 +33,9 @@ EXTERNAL SetValue(ValueName, newValue)
 
 === UnnatrualSpot ===
 I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Calm
-//CG mayhaps later
 He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
-I get closer, and see that he's writing something in the dirt.
+I get closer, and see that he's writing something in the dirt. #Hangman / Open
 {
 	- week == 1:
 		"Whatch'ya doing?"
@@ -88,14 +87,27 @@ Okay, some common consants are...
 *H-> Correct
 
 === Wrong ===
-[Timothy] "Nope!"
 ~GameFails += 1
+[Timothy] "Nope!"
 //scrawling noise
 {
 	- GameFails == 6:
 		->YouLose
+	- GameFails == 5:
+		"oh no. one more shot!" #Hangman / 5
+		"Next guess?" 
+		->HangMan
+	- GameFails == 4:
+		"Next guess?" #Hangman / 4
+		->HangMan
+	- GameFails == 3:
+		"Next guess?" #Hangman / 3
+		->HangMan
+	- GameFails == 2:
+		"Next guess?" #Hangman / 2
+		->HangMan
 	- else:
-		"Next guess?"
+		"Next guess?" #Hangman / 1
 		->HangMan
 }
 
@@ -128,7 +140,7 @@ You know, that and weird time travel shenagians.
 ->GameOver
 
 === YouLose ===
-[Timothy] "You lose."
+[Timothy] "You lose." #Hangman / 6
 [{player_name}] "aw dang."
 "Hey Timothy, what was the answer anyways?"
 "oh, nothing important..."
