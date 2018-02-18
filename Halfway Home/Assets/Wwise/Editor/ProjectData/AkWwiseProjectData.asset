@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: -235237511
-    m_lastTimePart2: -1999276617
+    m_lastTimePsrt1: 573989358
+    m_lastTimePart2: -1999276460
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -274,8 +274,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -108119475
-    m_lastTimePart2: -1999276617
+    m_lastTimePsrt1: 574043473
+    m_lastTimePart2: -1999276460
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

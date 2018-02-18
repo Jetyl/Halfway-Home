@@ -8557,7 +8557,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -11864,7 +11864,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -16585,7 +16585,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -18584,7 +18584,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -20599,7 +20599,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -21450,8 +21450,8 @@ MonoBehaviour:
   StartDelusion: 45
   StartStress: 45
   StartFatigue: 25
-  DebugDay: 1
-  DebugHour: 12
+  DebugDay: 3
+  DebugHour: 0
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
@@ -22180,7 +22180,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22339,7 +22339,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -25187,7 +25187,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -25207,158 +25207,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1806326563}
---- !u!1001 &1810227995
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018323468660672, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 212134485779976484, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212134485779976484, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212765222108725530, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212765222108725530, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212294357085005958, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212294357085005958, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212044975137562954, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212044975137562954, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000266373270636, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000266373270636, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212705739765063904, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212705739765063904, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212505357386189620, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212505357386189620, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212823780345024640, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212823780345024640, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212022862905340256, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212022862905340256, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212494962637599492, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212494962637599492, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212666474213442666, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1167640351
-      objectReference: {fileID: 0}
-    - target: {fileID: 212666474213442666, guid: 08ff9803d59952e47a8ca1005708a2fb,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1814137052
 GameObject:
   m_ObjectHideFlags: 0
@@ -28729,7 +28577,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

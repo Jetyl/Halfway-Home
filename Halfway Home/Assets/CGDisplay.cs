@@ -6,7 +6,7 @@ using System;
 public class CGDisplay : MonoBehaviour
 {
 
-    public List<CGDetails> CGs;
+    public List<CGDetails> CGList;
     
     public string OpenCGTag = "Open";
 
@@ -49,6 +49,7 @@ public class CGDisplay : MonoBehaviour
         if(eventdata.ContainsAct(OpenCGTag))
         {
             Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, "", eventdata.HasTransition()));
+            Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
         }
 
         if(eventdata.ContainsAct(CloseCGTag))
@@ -63,7 +64,7 @@ public class CGDisplay : MonoBehaviour
 
     CGDetails GetCG(string tag)
     {
-        foreach (var CG in CGs)
+        foreach (var CG in CGList)
         {
             if (CG.Tag.ToLower() == tag.ToLower())
                 return CG;
@@ -74,7 +75,7 @@ public class CGDisplay : MonoBehaviour
 
     bool Contains(string tag)
     {
-        foreach(var CG in CGs)
+        foreach(var CG in CGList)
         {
             if (CG.Tag.ToLower() == tag.ToLower())
                 return true;

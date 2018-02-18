@@ -44,8 +44,10 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetHour), () =>  GetHour());
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
+      story.runtime.BindExternalFunction(nameof(AlterTime), new System.Action(AlterTime));
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
       story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
     }
@@ -298,6 +300,16 @@ namespace HalfwayHome
 
     }
 
+    public void AlterTime()
+    {
+      Game.current.AlterTime();
+
+    }
+
+    public int GetHour()
+    {
+        return Game.current.Hour;
+    }
     public void CallSleep()
     {
       Game.current.Slept();

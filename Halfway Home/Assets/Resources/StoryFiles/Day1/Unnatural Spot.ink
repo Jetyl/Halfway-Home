@@ -73,9 +73,9 @@ I get closer, and see that he's writing something in the dirt. #Hangman / Open
 	[Timothy] "Go for it."
 }
 *A -> Wrong
-*E -> Correct
+*E -> Correct #Hangman / E
 *I -> Wrong
-*O -> Correct
+*O -> Correct #Hangman / O
 *U -> Wrong
 
 === Constant ===
@@ -84,7 +84,7 @@ Okay, some common consants are...
 *T-> Wrong
 *R-> Wrong
 *N-> Wrong
-*H-> Correct
+*H-> Correct #Hangman / H
 
 === Wrong ===
 ~GameFails += 1
@@ -116,7 +116,7 @@ Okay, some common consants are...
 ~CorrectGuesses += 1
 {
 	- CorrectGuesses == 3:
-		"Any Guesses?"
+		"care to guess the word?"
 		hmmm....
 		->Guess
 	- else:
@@ -127,7 +127,7 @@ Okay, some common consants are...
 ===Guess===
 [{player_name}] "Is it..."
 *[Hole] ->Wrong
-*[Hope] ->YouWin
+*[Hope] ->YouWin #Hangman / P
 *[Home] ->Wrong
 
 
