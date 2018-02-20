@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1722154426	Play_SoftDing			\Default Work Unit\Play_SoftDing	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	618604650	SoftDing	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Mac\SFX\SoftDing_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoftDing		67816
-

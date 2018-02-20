@@ -6,8 +6,7 @@ using UnityEngine;
 public class MoveSpeakerBoxDisplay : MonoBehaviour
 {
     
-  Dictionary<string, StagePosition> Actors;
-  private bool IsSkipping = false;
+    Dictionary<string, StagePosition> Actors;
 
 	// Use this for initialization
 	void Start ()
@@ -18,13 +17,17 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         
         Space.Connect<CastDirectionEvent>(Events.CharacterCall, CharacterChanges);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
-        
-        Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
-        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+
     }
+	
+	// Update is called once per frame
+	void Update ()
+    {
+		
+	}
 
 
-  void OnNewLine(DescriptionEvent eventdata)
+    void OnNewLine(DescriptionEvent eventdata)
     {
 
 
@@ -36,7 +39,7 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         if (Actors.ContainsKey(eventdata.TrueSpeaker.ToLower()))
         {
             StagePosition pos = Actors[eventdata.TrueSpeaker.ToLower()];
-            GetComponent<Animator>().SetBool("Skipping", IsSkipping);
+            Debug.Log(pos);
             switch(pos)
             {
               case StagePosition.Left:
@@ -104,16 +107,6 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
             Actors.Add(actor.chara, actor.Dir);
             
         }
-    }
-
-    void OnSkipTyping(DefaultEvent eventdata)
-    {
-        IsSkipping = true;
-    }
-
-    void OnStopSkipTyping(DefaultEvent eventdata)
-    {
-        IsSkipping = false;
     }
 
 

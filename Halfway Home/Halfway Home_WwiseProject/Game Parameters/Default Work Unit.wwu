@@ -6,6 +6,16 @@
 				<GameParameter Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
 				<GameParameter Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}"/>
 				<GameParameter Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}"/>
+				<GameParameter Name="mainMenuMouseHover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}">
+					<Comment>-1 = Hovering over Quit or while Confirm Quit is open (LPF 1k)
+0 = Hovering over nothing (LPF 4k)
+1 = Hovering over New Game or Resume (LPF off)</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="-1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

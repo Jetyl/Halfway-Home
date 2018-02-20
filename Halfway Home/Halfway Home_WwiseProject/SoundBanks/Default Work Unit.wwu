@@ -5,22 +5,22 @@
 			<ChildrenList>
 				<SoundBank Name="HalfwaySoundbank" ID="{3417FDDD-0A6B-4D9F-8AE2-7EE68E28303B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="lpf4k_music_mainmenu" ID="{8496C79F-B6F3-40C4-9151-C1286B3A04EF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menumouseover_04" ID="{86C5DB73-D0B7-41D7-A439-5E4C73CE77B4}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menumouseover_01" ID="{B52CB745-1AF6-450D-BCAC-55703B367135}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menumouseover_03" ID="{5D8C43E0-825C-45CF-8BEC-0D8A7AE8DF19}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_music_placeholder_main" ID="{22B75101-457D-4621-B772-F73362C102E9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_music_mainmenu" ID="{7F4FB6EE-1CFA-4668-8F73-D43AF818D1EE}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_fakeit" ID="{C965C962-FB4B-4687-8FA8-69995A11193F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menumouseover_02" ID="{2AFD9B18-7844-4A58-AEE3-889975EB11B6}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="lpf1k_music_mainmenu" ID="{27156CCC-91EF-4AE6-9B75-30460BACAB21}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_creepy_atmo" ID="{D156287F-4894-4C1C-BCA7-AF317221DE2D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="lpfOff_music_mainmenu" ID="{2A9A2C19-19AB-4C5C-82E0-04A15A7685EF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menumouseover_00" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_mainmenu" ID="{CF4A563F-94A5-4E84-BC54-7237209990B7}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stop_music_fakeit" ID="{BBF29838-D58C-4FBC-B85E-DE37FC74E27B}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

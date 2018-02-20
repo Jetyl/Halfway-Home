@@ -5,6 +5,9 @@ Author: Jesse Lozano
 All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
+
+// edited by Christien Ayson: stop music on start game
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +24,9 @@ public class MainMenu : MonoBehaviour
     public GameObject ClearSavePanel;
 
     public GameObject FadeScreeen;
+    
+    // Music object
+    public GameObject musicObject;
 
 	// Use this for initialization
 	void Start ()
@@ -64,6 +70,9 @@ public class MainMenu : MonoBehaviour
         ClearSavePanel.SetActive(false);
         SaveLoad.Delete();
         LoadLevel();
+        
+        // Stop Music
+        AkSoundEngine.PostEvent("stop_music_mainmenu", musicObject);
     }
 
     public void Credits()

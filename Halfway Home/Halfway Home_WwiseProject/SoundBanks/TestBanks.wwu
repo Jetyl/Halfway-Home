@@ -6,6 +6,7 @@
 				<SoundBank Name="Test1" ID="{541FEC6D-FE04-4985-A3E4-E1B2D39C4BA7}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_City_of_Tears" ID="{7FF0D896-6C00-4C5D-9930-2EFFE7FC6A4C}" WorkUnitID="{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="empty_event" ID="{702FC6F3-84A5-4D06-B963-04FA999B2FFF}" WorkUnitID="{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
