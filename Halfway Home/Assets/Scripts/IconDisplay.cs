@@ -37,14 +37,14 @@ public class IconDisplay : MonoBehaviour
     void TurnMapOn(DefaultEvent Eventdata)
     {
         
-        foreach (JsonData character in schedules)
+        for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
-            for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
+            if (i == (int)Room.None)
+                continue;
+            var icons = new MapIconEvent((Room)i);
+
+            foreach (JsonData character in schedules)
             {
-                if (i == (int)Room.None)
-                    continue;
-                
-                
                 if ((Room)(int)character["Schedule"][Game.current.Day][Game.current.Hour] == (Room)i)
                 {
                     if ((Room)i == Room.Sleeping) //if sleping, activate sleeping icon, and move on
@@ -55,21 +55,24 @@ public class IconDisplay : MonoBehaviour
                     {
                         Space.DispatchEvent(Events.AwakeIcon, new CharacterEvent((string)character["Name"]));
 
-                        Sprite icon = null;
+                        //Sprite icon = null;
                         if(Game.current.KnowsWhereAbouts((string)character["Name"]) == false)
                         {
-                            icon = UnknownPersonSprite;
+                            icons.Icons.Add(UnknownPersonSprite);
                         }
                         else if (character["slug"] != null)
                         {
                             var slug = (string)character["slug"];
-                            icon = Resources.Load<Sprite>("Sprites/" + slug);
+                            icons.Icons.Add(Resources.Load<Sprite>("Sprites/" + slug));
                         }
-                        Space.DispatchEvent(Events.MapIcon, new MapIconEvent((Room)i, icon));
+                        //StartCoroutine(TextParser.FrameDelay(Events.MapIcon, new MapIconEvent((Room)i, icon)));
+                        //Space.DispatchEvent(Events.MapIcon, new MapIconEvent((Room)i, icon));
                     }
                 }
-                
             }
+            print("Room to call: " + icons.CurrentRoom);
+
+            Space.DispatchEvent(Events.MapIcon, icons);
         }
 
     }
@@ -80,12 +83,12 @@ public class MapIconEvent : DefaultEvent
 {
     public Room CurrentRoom;
 
-    public Sprite Icon;
+    public List<Sprite> Icons;
 
-    public MapIconEvent(Room location, Sprite icon)
+    public MapIconEvent(Room location)
     {
         CurrentRoom = location;
-        Icon = icon;
+        Icons = new List<Sprite>();
     }
 
 }

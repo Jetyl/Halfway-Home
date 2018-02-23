@@ -88,17 +88,17 @@ the two talk about how they met.
 
 ===TwoAM===
 //the 2 am hour talk
-the two talk about their usual night time rituals.
+the two talk about an anime they both like. also, complain about copyright
 ->TimePassing
 
 ===ThreeAM===
 //the 3 am hour talk
-the two talk about their usual night time rituals.
+the two talk about the nature of attraction.
 ->TimePassing
 
 ===FourAM===
 //the 4 am hour talk
-the two talk about their usual night time rituals.
+the two talk about why their in the halfway home.
 ->TimePassing
 
 ===FiveAM===
@@ -112,9 +112,12 @@ Eduardo gets drowsy. Isaac admits something personal.
 ->MorningMax
 
 ===LeaveEarly===
+I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means its probably a good time to call it a night.
 I deceide to leave the two to their chatting, and head to bed.
 ->END
 
 ===MorningMax===
+The sun actually begins to rise again, which is the first sign we stayed up way too late.
+The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early.
 Everyone stays awake so long, that max arrives, and shoo's everyone to their bedroom.
 ->END

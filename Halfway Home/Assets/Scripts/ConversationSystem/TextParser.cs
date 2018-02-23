@@ -43,7 +43,6 @@ public static class TextParser
 
         yield return new WaitForSeconds(Time.deltaTime);
 
-
         Space.DispatchEvent(tag, eventdata);
 
     }

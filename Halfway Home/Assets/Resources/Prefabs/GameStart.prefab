@@ -9,17 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1790076546362216}
+  m_RootGameObject: {fileID: 1534117081900202}
   m_IsPrefabParent: 1
---- !u!1 &1790076546362216
+--- !u!1 &1534117081900202
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4717149702988948}
-  - component: {fileID: 114842675025336548}
+  - component: {fileID: 4039426199608004}
+  - component: {fileID: 114314275975373366}
+  - component: {fileID: 114602336194486026}
+  - component: {fileID: 114583930868255730}
   m_Layer: 0
   m_Name: GameStart
   m_TagString: Untagged
@@ -27,12 +29,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4717149702988948
+--- !u!4 &4039426199608004
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790076546362216}
+  m_GameObject: {fileID: 1534117081900202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,18 +42,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114842675025336548
+--- !u!114 &114314275975373366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790076546362216}
+  m_GameObject: {fileID: 1534117081900202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecbf5454604a88042b28be27873858ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timeline: {fileID: 4900000, guid: e4c02e3da1c43e54bb606da3c52b302d, type: 3}
-  DebugMode: 1
-  DebugDay: 0
-  DebugHour: 11
+  Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
+  StartDay: 1
+  StartHour: 12
+  DebugMode: 0
+  StartDelusion: 45
+  StartStress: 45
+  StartFatigue: 25
+  DebugDay: 1
+  DebugHour: 12
+  DebugWeek: 1
+  DebugExpression: 0
+  DebugGrace: 0
+  DebugAwareness: 0
+  DebugValues:
+  - ProgressName: Tutorial
+    TypeID: 1
+    BoolValue: 1
+    IntValue: 0
+    FloatValue: 0
+    StringValue: 
+    compare: 0
+  ReaderReference: {fileID: 0}
+--- !u!114 &114583930868255730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534117081900202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18fffc0f7dc817641b66a8235982ab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocialThresholdValue: 10
+  IncrementValues:
+  - key: Minor
+    value: 1
+  - key: Major
+    value: 2
+--- !u!114 &114602336194486026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534117081900202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a408ee497204da4ea933c2180c5fe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuObject: {fileID: 0}
+  HackySoundThing: {fileID: 0}

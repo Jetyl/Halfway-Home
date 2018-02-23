@@ -45,6 +45,8 @@ public class Game
 
     public int CurrentNode;
 
+    public string CurrentCG;
+
     public string SavedInk;
 
     public List<CharacterIntermission> CastCall;

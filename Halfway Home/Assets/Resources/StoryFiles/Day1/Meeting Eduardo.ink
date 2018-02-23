@@ -23,7 +23,6 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-//prolly have the "room to talk about part first, then this"
 {
 	- GetValue("Tutorial") == true:
 		-> MeetWithTimothy
@@ -95,7 +94,27 @@ I decide to go over there, and see how they are doing.
 	I decided it isn't worth it. and pretend like everything is normal.
 	[{player_name}] "Oh, fine."
 	[Eduardo] "That's good."
-- [Eduardo] "Well, anyways." #Eduardo = Calm
+- [Eduardo] "Well, anyways. I was just telling Isaac this <i>hilarious</i> story where-" #Eduardo = Calm
+[Isaac] "Eh, wasn't that funny." #Isaac = Calm
+[Eduardo] "Isaac?!" #Eduardo = Surprised
+"If you didn't think it was funny, why didn't you say anything?"
+[Isaac] "..." #Isaac = Afraid
+Isaac looks like he wants to say something, but either embaressed, or afraid to. maybe because I'm here?
+Eduardo either doesn't notice this, or is more focused on that lack of a verbal answer, and begins poking Isaac slightly
+[Eduardo] "Isaac, you know if I'm annoying you or something, you can tell me. Right?"
+"Hey, Isaac. Isaac. Isaac?"
+[Isaac] "..."
+Isaac seems to be lost in his own little world right now.
+[Eduardo] "Isssaaaaaaccc!" #Eduardo = Exit, stage_right #Isaac = Exit, stage_right
+-> Needy
+
+
+===ExitSolo===
+[{player_name}] "So, uh..."
+I try to speak up, hoping maybe one of them will notice I'm still here, and was still talking to them, but to no avil.
+I decide to leave these two weird lovebirds alone, and get going.
+Still, it was an engaging conversation at least.
+<color=A5C5E3FF><i>Your Depression has Decreased, slightly!</i></color> #delusion -= 15
 ->END
 
 ===WorkAlone===
@@ -113,7 +132,6 @@ As I show Timothy around all the art supplies and such when a very rowdy duo wal
 [Eduardo 0The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy
 [Isaac 0The Quiet One] "hrm." #Isaac = Calm
 [Timothy] "uh, who are they?" # Timothy = Calm, stage_left, Left
-//show eduardo and Isaac
 [{player_name}] "who, them? that's Eduardo and Isaac." # Timothy = stage_center #Eduardo = Exit #Isaac = Exit
 "They're the couple, like, two doors down from us. @They're nice people."
 "C'mon, I'll introduce you."
@@ -136,31 +154,75 @@ I walk over to they pair, Timothy in tow.
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach #Eduardo = Left #Isaac = Angry
 [Isaac] "Sorry. Eddy's super manic right now. kinda a jerk."
-[Eduardo] "...Eddy?" //I'm picturing eduardo with like, a puppydog sad face
+[Eduardo] "...Eddy?" #Eduardo = Afraid
 [Isaac] "Some people don't like nicknames." #Isaac = Left
-[Eduardo] "Isssaaaaaaccc!" #Eduardo = Exit, stage_right #Isaac = Exit, stage_right
-Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.
-Isaac looks off to another part of the room
-[Isaac] "Sorry. bout that." #Isaac = Calm, Left
+[Eduardo0Eddy] "C'mon Isaac, you know I didn't mean it!"
+[Isaac] "Hrm."
+Isaac appears to be able to completely ignore Eduardo in an instant. Instead he looking back at Timothy
+[Isaac] "Sorry. bout that."
 [Timothy] "O-Okay."
 [Isaac] "Isaac. Isaac Avidan."
 [Timothy] "huh?"
 [Isaac] "My name. If it wasn't said already. Which is was. Never mind."
 A potent silence fills the room. Isaac's not much of a conversationalist, and frankly neither am I.
-That would be Eduardo, who's quite preoccupied cuddling Isaac.
+Isaac just kind of goes back to working on his art peice. I suppose he feels the conversation is over then
+Eduardo on the other hand...
+[Eduardo] "Hey Isaac, you know I was just pulling some fun right? Isaac."
+"Hey, Isaac. Isaac. Isaac?"
+[Isaac] "..."
+Isaac seems to be lost in his own little world right now.
+[Eduardo] "Isssaaaaaaccc!" #Eduardo = Exit, stage_right #Isaac = Exit, stage_right
+-> Needy
+
+===ExitWithTimothy===
+[Timothy] "um..." 
+Timothy tugs on my shirt slightly, pobably feeling as awkward as I do.
+I suppose we should get going on the tour. Although, Eduardo never actually apologized to Timothy.
+I...
 +[Get Eduardo's Attention] -> HeyEddy
-+[Leave] -> Leaving
++[Let it slide, and get going] -> Leaving
 
 === Leaving ===
-[{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
-[Eduardo] "later!" # Eduardo = Exit # Isaac = Exit # Timothy = Exit
+I let it go, I doubt I could get their attention anyways.
+{
+	- GetValue("Tutorial") == true:
+		I motion for Timothy to follow, as we leave the lovebirds to their buisness
+}
+Off to do something else, I supose.
 -> END
 
 === HeyEddy ===
 [{player_name}] "Hey Eddy"
-[Eduardo] "Don't call me that!"
+[Eduardo0Eddy] "Don't call me that!"
 Wow, immediate snap back.
 [{player_name}] "Maybe apologize to Timothy?"
-[Eduardo] "Oh, yeah. Shit, man. Sorry. Didn't mean to make you uncomfortable."
+[Eduardo0Eddy] "Oh, yeah. Shit, man. Sorry. Didn't mean to make you uncomfortable."
 [Timothy] "It's<delay=2> okay."
+[{player_name}] "Sorry to, by the way."
+[Isaac] "no problem. he deserved it."
+[Eduardo] "Isssaaaaaaccc!"
+And Eduardo goes right back to Isaac, which is my queue to get going.
+[{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
+[Isaac] "hrm." #All = Exit
 -> Leaving
+
+=== Needy ===
+Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair. //Show the CG
+Isaac looks off to another part of the room
+The two are rather well known for the PDA around the home. although, one of them more than the other.
+[Isaac] "used to be worse."
+Isaac seems to respond as if he could read my mind!
+"Eduardo used to have no respect for anyone's boundries."
+"now its just me."
+[Eduardo] "What can I say? I'm needy."
+[Isaac] "hrm"
+[Eduardo] "And I wuv you!" //make the CG blush
+Despite Isaac's complete poker face at Eduardo being all over him, a cheesy line like that seems to break him.
+Man, relationships are weird.
+{
+	- GetValue("Tutorial") == true:
+		-> ExitWithTimothy
+	- else:
+		-> ExitSolo
+
+}

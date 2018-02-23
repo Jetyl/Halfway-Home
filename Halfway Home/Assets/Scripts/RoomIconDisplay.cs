@@ -26,12 +26,12 @@ public class RoomIconDisplay : MonoBehaviour
 
         for(int i = 0; i < transform.childCount; ++i)
         {
-            var spot = transform.GetChild(i).GetComponent<Image>();
+            Image spot = transform.GetChild(i).GetComponent<Image>();
             if (spot != null)
                 IconSpots.Add(spot);
         } 
 
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, ClearIcons);
+        //Space.Connect<DefaultEvent>(Events.ReturnToMap, ClearIcons);
         Space.Connect<MapIconEvent>(Events.MapIcon, PlaceIcon);
     }
 	
@@ -42,9 +42,9 @@ public class RoomIconDisplay : MonoBehaviour
 	}
 
 
-    void ClearIcons(DefaultEvent Eventdata)
+    void ClearIcons()
     {
-
+        print(Location + " Cleared!");
         foreach(Image spot in IconSpots)
         {
             spot.sprite = null;
@@ -60,18 +60,29 @@ public class RoomIconDisplay : MonoBehaviour
         if (Eventdata.CurrentRoom != Location)
             return;
 
-        int i = Random.Range(0, IconSpots.Count);
+        print(Eventdata.CurrentRoom + " & " + Location);
 
-        while(IconSpots[i].sprite != null)
+        ClearIcons();
+        
+        foreach(var icon in Eventdata.Icons)
         {
-            i = Random.Range(0, IconSpots.Count);
+            print(Location + ": " + icon);
+
+            int i = Random.Range(0, IconSpots.Count);
+
+            while (IconSpots[i].sprite != null)
+            {
+                i = Random.Range(0, IconSpots.Count);
+            }
+
+            IconSpots[i].sprite = icon;
+
+            var colo = IconSpots[i].color;
+            colo.a = 1;
+            IconSpots[i].color = colo;
         }
 
-        IconSpots[i].sprite = Eventdata.Icon;
-
-        var colo = IconSpots[i].color;
-        colo.a = 1;
-        IconSpots[i].color = colo;
+        
     }
 
 }
