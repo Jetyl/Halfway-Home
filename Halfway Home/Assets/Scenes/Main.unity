@@ -8557,7 +8557,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10884,31 +10884,30 @@ MonoBehaviour:
   Rooms:
   - Name: Bedroom
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
+    - {fileID: 114047532697408494, guid: 7134826cd8b570a41ba2cd88f07fa1f9, type: 2}
+    - {fileID: 114047532697408494, guid: 2277c7fdad8ef9d4bb4b94174f44884c, type: 2}
+    - {fileID: 114047532697408494, guid: 6ba88d5520962464dab4244c650e2f70, type: 2}
   - Name: Cafe
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
+    - {fileID: 114047532697408494, guid: 7134826cd8b570a41ba2cd88f07fa1f9, type: 2}
   - Name: Commons
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
+    - {fileID: 114047532697408494, guid: c8fae79608a50f045856edafb301ad93, type: 2}
+    - {fileID: 114047532697408494, guid: 24b0a52d05df13140a69c6d1c931459b, type: 2}
   - Name: Library
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
+    - {fileID: 114047532697408494, guid: 39bd59a6b63815842aeb9840592acb37, type: 2}
+    - {fileID: 114047532697408494, guid: 24b0a52d05df13140a69c6d1c931459b, type: 2}
+    - {fileID: 114047532697408494, guid: 97224633c77e46a45ad65c51ba450629, type: 2}
   - Name: Garden
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
+    - {fileID: 114047532697408494, guid: d403f918310efec4fab2cd3ad1857547, type: 2}
+    - {fileID: 114047532697408494, guid: 6ba88d5520962464dab4244c650e2f70, type: 2}
   - Name: Art
     DisplayImages:
-    - {fileID: 114047532697408494, guid: 804595fd57a780d4dbe366d59c54e7f5, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
-    - {fileID: 114962012991203712, guid: a0c50d2c0dfb10a4fa9b5c9295aa94f4, type: 2}
+    - {fileID: 114047532697408494, guid: a44634a3f92fcc84a975b65c540852f4, type: 2}
+    - {fileID: 114047532697408494, guid: 24b0a52d05df13140a69c6d1c931459b, type: 2}
+    - {fileID: 114047532697408494, guid: 97224633c77e46a45ad65c51ba450629, type: 2}
   - Name: Store
     DisplayImages: []
   - Name: Charlotte
@@ -11864,7 +11863,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -16585,7 +16584,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -18584,7 +18583,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -20599,7 +20598,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -21446,12 +21445,12 @@ MonoBehaviour:
   Timeline: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
   StartDay: 1
   StartHour: 12
-  DebugMode: 0
+  DebugMode: 1
   StartDelusion: 45
   StartStress: 45
   StartFatigue: 25
-  DebugDay: 3
-  DebugHour: 0
+  DebugDay: 1
+  DebugHour: 12
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0
@@ -22180,7 +22179,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22339,7 +22338,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -25101,7 +25100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25187,7 +25186,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -28577,7 +28576,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

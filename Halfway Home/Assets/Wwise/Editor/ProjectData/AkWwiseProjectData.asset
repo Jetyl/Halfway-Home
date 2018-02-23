@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: 573989358
-    m_lastTimePart2: -1999276460
+    m_lastTimePsrt1: -667819925
+    m_lastTimePart2: -1999275837
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -124,8 +124,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1161925715
-    m_lastTimePart2: -1999278106
+    m_lastTimePsrt1: -667634432
+    m_lastTimePart2: -1999275837
     List:
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
@@ -236,8 +236,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: 14681174
-    m_lastTimePart2: -1999292092
+    m_lastTimePsrt1: -667664512
+    m_lastTimePart2: -1999275837
     List:
     - Name: Play_City_of_Tears
       Path: TestEvents\Play_City_of_Tears
@@ -274,8 +274,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 574043473
-    m_lastTimePart2: -1999276460
+    m_lastTimePsrt1: -666521472
+    m_lastTimePart2: -1999275837
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -289,8 +289,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: 38043278
-    m_lastTimePart2: -1999292092
+    m_lastTimePsrt1: -666416191
+    m_lastTimePart2: -1999275837
     List:
     - Name: Test1
       Path: TestBanks\Test1
@@ -305,8 +305,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 14691197
-    m_lastTimePart2: -1999292092
+    m_lastTimePsrt1: -667634432
+    m_lastTimePart2: -1999275837
     List:
     - Name: Effects_Slider
       Path: Default Work Unit\Effects_Slider
