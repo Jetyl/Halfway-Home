@@ -41,6 +41,8 @@ The car behind me pulls away. No going back now, not that I'd want to. I've had 
 I open the heavy oak doors and step inside. // Front Desk - Background TBD
 I don't have to wait long before someone notices my entrance. # Max = Happy
 [Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting?"
+~GetPlayerName()
+[Max0Tall Redhead] "{player_name}, right?"
 [{player_name}] "That's me."
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
 [Max0Tall Redhead] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
@@ -61,7 +63,7 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What a jokester. They seem weirdly serious, though.
+What? They're joking, right? I just got here... There's no way I lost a whole week.
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
 But they're gone...
@@ -88,15 +90,16 @@ Max is reading by the fireplace. I wander over and join them. # Max = Calm
 	[Max] "But you seem unphased. You've got resolve, my friend." # Max = Happy
 
 -Max keeps talking, but I'm no longer listening.
-Six months? I haven't... that can't be right.
-I rise from my seat and stumble toward my bedroom. # Max = Exit
-All sound seems to fall away as I open my door. I move to step into the room, but stop myself abruptly.
+No. No, no, no. Six months?! I haven't... this can't be happening!
+My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
+My body rises from my seat and stumbles toward my bedroom. # Max = Exit
+All sound seems to fall away as my hand pulls open the door.
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me.
 [Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
-Fear breaks me from my stupor and I turn to run.
+Fear breaks me from my stupor and I am in control again. I turn to run.
 -> Blackwell
 
 === Blackwell ===
@@ -114,6 +117,7 @@ I need to choose now!
 	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
 	->Hallway
 
+/*
 === OldStart ===
 The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
@@ -128,26 +132,23 @@ I need to choose now!
 +[Hallway]
 	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
 	->Hallway
+*/
 
 === Stairs ===
 My pace slows as I climb. I can hear the whispers getting louder.
 [Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper
 The stairs open into a dark hallway. In the distance I can see a faint electric glow.
-I crest the top of the stairs with a leap and barrel toward the light.
-[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
+
 -> Bathroom
 
 === Hallway ===
-The corridor seems to go on forever.
-An unbroken pattern of thick doors, yellow lights, and medical lockers blurs past on repeat.
+The corridor seems to go on forever. I don't know how much longer I can keep this up.
 [Voices] "This is pointless." # SFX : play_sfx_human_ghostwhisper
-My body feels heavier and heavier. I don't know how much longer I can keep this up.
 In the distance, I notice something new: a faint electric glow.
-I force myself forward.
-[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
 -> Bathroom
 
 === Bathroom ===
+[Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
 As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
 Ahead of me the hallway darkens to the point of pitch blackness. No luck that way.
 I head down the bathroom corridor. Three marked entrances open before me.
@@ -159,20 +160,19 @@ On instinct, I rush into the...
 *[All-Gender Restroom] 
 	~SetPlayerGender("N")
 - The bathroom is clean and well-lit, but so cold that I can see my breath fogging the air in front of me.
-The air is still and quiet. The silence is deeply unsettling.
 I take a few steps before I notice that the tile floor makes no sound.
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.
-A chorus of whispers dissolves the silence.
 [Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper
 -> Wake
 
 === Wake ===
 I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen
-The whispers fade into the chitter of birdsong. {GetPlayerName()}
-I shudder at the thought of losing myself so deeply in my own mind.
-Just one more week.
+The whispers fade into the chitter of birdsong.
+I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
+They always feels so real, like I'm actually back at my first day here.
+Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.
 I lay awake, concentrating on the tingling warmth of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK »

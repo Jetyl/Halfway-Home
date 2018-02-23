@@ -3,7 +3,7 @@
 @file   MeetingCharlotte.ink
 @author John Myres
 @par    email: john.myres@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 VAR player_name = "tbd"
@@ -17,8 +17,6 @@ VAR delusion = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
-
-EXTERNAL GetPlayerData()
 
 -> Start
 
@@ -71,8 +69,10 @@ Timothy peeks out from his hiding place in the shadows behind me. # Timothy = Ca
 [Timothy] "Uh... hi." # Timothy = Afraid
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # Charlotte = Happy
 [Timothy] "Th-<delay=1>thanks." # timothy=happy # Timothy = Happy
-[Charlotte] "My roommate is here, too. Trissa, dear, come and meet the new arrival!"
-[Trissa] "Hiya! What's goin on, Lotty? You say something about a new arrival?" # Trissa = Calm
+[Charlotte] "My roommate is here, too. Doubtless she'll be overjoyed to make your acquaintance." # Charlotte = Angry
+I get an uncharacteristic hint of annoyance from Charlotte as she beckons to her.
+"Trissa, dear, come and meet the new arrival!" # Charlotte = Calm
+[Trissa] "Hiya! What's goin on, Lotty? You say somethin' about a new arrival?" # Trissa = Calm
 [Charlotte] "I did indeed. This is Timothy, {player_name}'s new roommate." # Charlotte = Calm
 [Trissa] "Who?"
 [{player_name}] "Me. {player_name}?"

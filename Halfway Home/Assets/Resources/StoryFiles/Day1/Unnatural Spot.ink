@@ -35,7 +35,7 @@ EXTERNAL SetValue(ValueName, newValue)
 I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Calm
 He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
-I get closer, and see that he's writing something in the dirt. #Hangman / Open
+I get closer and see that he's writing something in the dirt. #Hangman / Open
 {
 	- week == 1:
 		"Whatch'ya doing?"
@@ -48,10 +48,10 @@ I get closer, and see that he's writing something in the dirt. #Hangman / Open
 		"Hangman?"
 		[Timothy] "Hm? Oh. Yeah..."
 		[{player_name}] "Cool. Cool."
-		It's the same scrawled hangman setup as... before... with the same 4 letter word in it.
+		It's the same scrawled hangman setup as before... with the same 4 letter word in it.
 }
 [Timothy] "Guess."
-[{player_name}] "Hm? oh, uh, okay."
+[{player_name}] "Hm? Oh, uh, okay."
 "Let's see...""
 +[Common consants] -> Constant
 +[Can I buy a vowel?] -> Vowel
@@ -136,7 +136,7 @@ Okay, some common consants are...
 [Timothy] "What?! No Way!" #Timothy = Suprised
 "How'd you guess is so quickly?" #Timothy=Sad
 [{player_name}] "Lucky guess?"
-You know, that and weird time travel shenagians.
+You know, that and weird time travel shenanigans.
 ->GameOver
 
 === YouLose ===
@@ -153,9 +153,9 @@ You know, that and weird time travel shenagians.
 
 
 === GameOver ===
-[Timothy] "hehehe.."
+[Timothy] "Hehehe.."
 [{player_name}] "what's so funny?"
-[Timothy] "oh, nothing... its just..."
+[Timothy] "Oh, nothing... its just..."
 "Hangman is a good game..."
 "It teaches you that just by saying a few wrong things, you can end someone’s life..."
 //make this tutorial check instead

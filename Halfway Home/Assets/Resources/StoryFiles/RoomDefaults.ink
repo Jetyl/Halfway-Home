@@ -3,7 +3,7 @@
 @file   RoomDefaults.ink
 @author John Myres
 @par    email: john.myres@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 VAR player_name = "tbd"

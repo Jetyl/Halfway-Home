@@ -1,4 +1,4 @@
-/******************************************************************************/
+﻿/****************************************************************************/
 /*
 @file   OffToBed.ink
 @author Jesse Lozano
@@ -25,8 +25,8 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-I Walk into my room, to go to bed. 
-I hope into the shower real quick, and by the time I come out, Timothy is already curled up in his bed.
+I walk into my room to go to bed. 
+I hop into the shower real quick. By the time I come out Timothy is already curled up in his bed.
 //if first week
 { 
 	- week == 1:
@@ -37,16 +37,16 @@ I hope into the shower real quick, and by the time I come out, Timothy is alread
 }
 
 =IntoBed
-I plant myself in my own bed, and sqwirm under the sheets.
-I am beat.
-I sit there, wavering between consiousness, and unconsiousness, when I hear a voice.
+I plant myself in my own bed, and squirm under the sheets.
+I am <i>beat</i>.
+I sit there, wavering between consiousness and unconsiousness, when I hear a voice.
 [Timothy] "Hey,<delay=2> {player_name}?"
 [{player_name}] "Yeah?"
 {
 	- week == 1:
 		-> TalkWeek1
 	- else:
-		-> Start.Question		
+		-> Start.Question	
 }
 =Question
 [Timothy] "D-d-does it ever get easier?"
@@ -63,19 +63,23 @@ Eh, its only for one week.
 
 === TalkWeek1 ==
 [Timothy] "Th-thank you...<delay=2> for showing me around."
-[{player_name}] "Oh"
+[{player_name}] "Oh."
 "No problem."
 ->Start.Question
 
 === Comfort ===
-[{player_name}] "yeah."
-"Yeah.<delay=5> it does."
-[Timothy] "th-thats good..."
+[{player_name}] "Yeah."
+"Yeah.<delay=5> It does."
+[Timothy] "Th-that's good..."
 ->Sleep
 
 === Cold ===
 [{player_name}] "No.<delay=2> Not really."
-[Timothy] "oh... <delay=1> okay."
+[Timothy] "Oh... <delay=1> okay."
+{
+	- grace >= 1:
+		[{player_name}] "But you'll get stronger."
+}
 ->Sleep
 
 === Sleep ===
@@ -86,16 +90,16 @@ Eh, its only for one week.
 		"It was nice meeting you."
 }
 I start to drift off from there. My thoughts slow and hazy. #Background / Dream , eyeclose
-My dreams, if I had any, escape my memory, and the next thing I know, the suns in my eyes. {CallSleep()}
+My dreams, if I had any, escape my memory, and the next thing I know the suns in my eyes. {CallSleep()}
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen
-I look over at my spare bed, and Timothy's still there.
-I guess its his bed now.
-Slumberland becons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
+I look over at my spare bed. Timothy's still there, breathing softly.
+I guess it's his bed now.
+Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
 +[Get Up]
-	 I sigh, getting out of my cloth cocoon, and quickly get ready for the day. 
-	 In no time, I'm ready to head out. If, a little more tired than I'd like #fatigue -= 40
+	 I sigh, getting out of my cloth cocoon and quickly  readying myself for the day. 
+	 In no time I'm ready to head out. I'm a little more tired than I'd have liked, though. #fatigue -= 40
 +[Stay in Bed]
-	 I curl even deeper into lethargic bliss, and welcome the sweet unconcuiousness again. #Background / Dream, eyeclose
+	 I curl even deeper into lethargic bliss and welcome sweet unconsciousness again. #Background / Dream, eyeclose
 	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
-	 That loud knocking noise, wakes me up again... #fatigue -= 80
+	 That loud knocking noise wakes me up again... #fatigue -= 80
 -> END
