@@ -59,13 +59,13 @@ Timothy seems to be preoccupied watching Max. #Timothy = Calm
 === Misgender ===
 [Timothy] "I hope he finds his keys." #Keyless = Exit
 [{player_name}] "Their keys."
-I instictively correct Timothy on Max's pronouns (they/them), and move on showing timothy around the Commons area. #Timothy= Surprised
-"So the commons being a socail hub, is good for grounding you, if your having a bad day" #Timothy=Exit
-for me, its usally good when I get in a <color=A5C5E3FF><i>depressive</i></color> funk, but still, it can be <color=A5C5E3FF><i>stressful</i></color>.
+I instictively correct Timothy on Max's pronouns and move on, showing Timothy around the Commons area. #Timothy= Surprised
+"If I'm having a bad day, I sometimes come here. Social interaction helps with my uh... <color=A5C5E3FF><i>depression</i></color>, but it can be kinda <color=A5C5E3FF><i>stressful</i></color>." #Timothy=Exit
+"I dunno exactly what your needs are, but the Commons are a good place to go if you want to be around people."
 "Ya got that, Timothy?"
 "Huh?" #Timothy =Afraid
 Timothy has frozen where I had last looked, and is shaking slightly.
-"uh, Timothy? you okay?"
+"Uh, Timothy? you okay?"
 //[{player_name}] "Max is not a guy. Their pronouns are they/them."
 [Timothy] "Oh! Uh I-I..."
 Timothy starts stammering to say, something.
@@ -74,13 +74,13 @@ Timothy starts stammering to say, something.
 The kid looks like I caught him stealing cookies from a cookie jar, or something.
 [Timothy] "I-I-I'm s-sorry I-I-"
 "I-I'm sorry I insulted Max and misgendered th-them!"
-Oh! <delay=1>thats what this is about?
-[{player_name}] "uh, dude, its, um, okay."
-[Timothy] "Huh!" #Timothy = Surprised
-"y-you mean you're n-not mad at me?" #Timothy = Afraid
-[{player_name}] "...no."
-"You said you're sorry, and you didn't mean to be disrespectful or anything. its no harm, no foul dude."
-honestly, what kind of life did this kid have where he thinks people would get mad over something like that?
+Oh! <delay=1>That's what this is about?
+[{player_name}] "Uh, dude, it's okay."
+[Timothy] "Huh?" #Timothy = Surprised
+"Y-you mean you're n-not mad at me?" #Timothy = Afraid
+[{player_name}] "...Of course not."
+"You said you're sorry, and you didn't mean to be disrespectful or anything. It's no harm, no foul dude."
+Honestly, what kind of life did this kid have where he thinks people would get mad over something like that?
 I mean, yeah, some people will get mad if he refused to correct himself, or make a big deal out of it or something.
 And Max is the chillist person I know, and has tolerated <i><b>much</i></b> worse crap than that.
 {
@@ -91,9 +91,9 @@ And Max is the chillist person I know, and has tolerated <i><b>much</i></b> wors
 [Timothy] "O-okay..."
 {
 	-week == 1:
-		Man, I am going to have to walk on egg shells around this kid aren't I?
+		Man, I am going to have to walk on egg shells around this kid, aren't I?
 	-else:
-		Man, If he's having a freakout over this, its no wonder he freaks out like he did by the end of the week.
+		Man, if he's having a freakout over this, it's no wonder he breaks down by the end of the week.
 }
 I give Timothy a minute to collect himself before continuing the tour.
 [{player_name}] "You okay now?"
@@ -102,17 +102,17 @@ He nods #Timothy = Calm
 [{player_name}] "Cool. then lets keep going."
 {
 	-player_gender == "N":
-		[Timothy]"oh, a-a-and {player_name}?"
+		[Timothy]"Oh, {player_name}?"
 		[{player_name}] "Yeah?"
-		[Timothy] "I-I-I.." #Timothy = Happy
+		[Timothy] "I..." #Timothy = Happy
 		Timothy starts shaking, looking away from me in embaressment, before giving me a woobly thumbs up.
-		[Timothy] "I-I Th-Think y-you're v-val-valid."
+		[Timothy] "I-I th-think y-you're v-val-valid."
 		"A-and I-I-I'm s-sorry if I-I sc-screw up, an-and pl-please correct m-me if I do."
-		[{player_name}] "uhhhhh..."
+		[{player_name}] "Uh..."
 		"S-SORRY!" #Timothy = Afraid
 		I hold back a slight chuckle, and simply pat Timothy on the head.
-		[{player_name}] "thanks, I guess?"
-		its reaking peak awkwardness now, but its kinda sweet, and I appeciate the gesture, as unneed as it is.
+		[{player_name}] "Thanks, I guess?"
+		It's reaking peak awkwardness now, but it's kinda sweet and I appeciate the gesture, as unnecessary as it is.
 		It does relax me a little, so thats nice. @<color=A5C5E3FF><i>(Stress Reduced!)</i></color> # Stress -= 10
 		[Timothy] "I'm sorry..." #Timothy = Calm
 }
