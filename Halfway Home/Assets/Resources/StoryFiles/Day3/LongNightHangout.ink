@@ -78,37 +78,68 @@ another hour passes with the duo. I get a bit more tired. {AlterTime()}
 
 ===Midnight===
 //the midnight hour talk
+[{player_name}] "So, are you two always up this late?"
+[Eduardo] "Eh, I'm not really sure always is the best term for it, but-"
+[Isaac] "Yes. Always."
+[Eduardo] "Issaaaaaaac!"
+[Isaac] "Always when he's manic like this. to be exact."
+[Eduardo] "<size=50%>that's not that much better ya know...<size=100%>"
+"I feel fine. Great even!"
+//talk about eduardo's bipolar mood swings some more
+[Isaac] "Not always out here. of course."
+"Usually spend the nights he can't sleep in our bedroom. or painting"
+[{player_name}] "You actually get anything done this late?"
+[Isaac] "hrm. better than doing nothing."
 the two talk about their usual night time rituals.
 ->TimePassing
 
 ===OneAM===
 //the 1am hour talk
 the two talk about how they met.
+[{player_name}] "so, how did you two get together?"
 ->TimePassing
 
 ===TwoAM===
 //the 2 am hour talk
 the two talk about an anime they both like. also, complain about copyright
+[Eduardo] "you know what trope really bugs the crap outta me in anime?"
+[Isaac] "hrm?"
+[Eduardo] "You got all these modern day stories, with all these fakey off brand refrences to real world things, instead of just straight up saying, hey yo! this is a thing."
++[what about that?]
+	[{player_name}] "I don't quite think i follow."
++[That's the only problem you have?]
+	[{player_name}] "Really? that's your only problem with anime?"
+	[Eduardo] "What? no, but this is the one I feel like ranting about at 2AM"
+-[Eduardo] "Like, it just really destorys the emerssion, for one."
+"Second, it makes real world conversation like, near impossible."
 ->TimePassing
 
 ===ThreeAM===
 //the 3 am hour talk
 the two talk about the nature of attraction.
+[{player_name}] "So, random question, but what are you two?"
+
 ->TimePassing
 
 ===FourAM===
 //the 4 am hour talk
 the two talk about why their in the halfway home.
+[Eduardo] "Man, I know I don't say this often enough, but I'm gunna miss you guys when I leave."
 ->TimePassing
 
 ===FiveAM===
 //the 5 am hour talk
-the two talk about their usual night time rituals.
+the two talk about memes.
 ->TimePassing
 
 ===SixAM===
 //the 6 am hour talk
 Eduardo gets drowsy. Isaac admits something personal.
+[Eduardo] ">Yawns aggresively"
+"Isaac... Tell me a story."
+[Isaac] "no."
+[Eduardo] "Issaaaaaaac!"
+[Isaac] ">Sighs"
 ->MorningMax
 
 ===LeaveEarly===

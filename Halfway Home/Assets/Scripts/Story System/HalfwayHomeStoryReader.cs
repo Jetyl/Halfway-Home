@@ -108,7 +108,6 @@ namespace HalfwayHome
                 }
                 else
                 {
-                        
                     var Image = match["Image"];
                     Space.DispatchEvent(Events.CG, new CustomGraphicEvent(match["Background"], Image));
                 }

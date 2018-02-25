@@ -61,7 +61,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"
 	[Trissa] "You're talking to me, aren't ya?"
 	[Timothy] "Uh, yeah?"
-	[Trissa] "If you can handle [i]my[/i] energy, you can handle anything!"
+	[Trissa] "If you can handle <i>my</i> energy, you can handle anything!"
 	[Timothy] "Thanks, Trissa."
 -Timothy looks grateful. He is about to reply when Max shows up with a plate of food. # Max = Calm
 [Max] "Hey, gang!"
@@ -76,10 +76,10 @@ Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
 As I approach, the two are giggling about something. # Eduardo = Happy # Isaac = Happy
 [{player_name}] "Mind if I join you?"
-{delusion > 40: [Voices] "Of course they mind. Why would anyone want [i]you[/i] around?"}
+{delusion > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
 [Eduardo] "Nah, man. Get in here!"
-[Eduardo] "I was just telling my meu bem Isaac here the story about [i]my[/i] first day. I could have sworn I already told it to him, though."
+[Eduardo] "I was just telling my meu bem Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
 [Isaac] "Oh, you have. I just never get tired of it." # Eduardo = Surprised
 [Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game, tesouro."
 [Eduardo] "Hey, {player_name}, you ever heard the story of Isaac's first day?"
@@ -93,7 +93,7 @@ As if on cue, Max makes a loud sound from the center of the room and rises to th
 I duck past the line to where Charlotte stands behind the serving area, busily refilling several trays at once.
 [{player_name}] "Hey, Charlotte. Is there uh... something I can help with maybe?" # Charlotte = Calm
 [Charlotte] "I'm sure I could find a use for you."
-{delusion > 40: [Voices] "She'd have to be a miracle worker to do [i]that[/i]."}
+{delusion > 40: [Voices] "She'd have to be a miracle worker to do <i>that</i>."}
 [Charlotte] "Heavens, that was curt of me. Allow me to try that again." # Charlotte = Sad
 [Charlotte] "That is very generous of you. I can't think of anything at the moment, but..."
 [Charlotte] "On second thought, there actually is a task for which I could benefit from your assistance. Or, more accurately, Max could."
@@ -115,7 +115,7 @@ The moment I finish dishing them up a sizeable portion, Max takes off towards th
 [Max] "Can I get everyone's attention!" #Max=Calm
 The whole cafe quites a little, as Max speaks up.
 [Max] "Thanks eveybody for showing yerselfs"
-[Max] "Today we're welcoming our newest family member, Timothy Myuri."
+[Max] "Today we're welcoming our newest family member, Timothy Miyuri."
 [Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
 [Max] "He just got out Blackwell Hospital, for those who need the context for that,"
 [Jesse] "Thanks Fam!"
@@ -176,7 +176,7 @@ You have no idea.
 			[{player_name}] "Actually, I think it'll be good for me to have some company during my last week."
 			[Timothy] "Oh. Cool." # Timothy = Surprised
 		-else : 
-			[{player_name}] "Oh, please. I feel worse for you. You've gotta share a room with [i]me[/i]."
+			[{player_name}] "Oh, please. I feel worse for you. You've gotta share a room with <i>me</i>."
 			Timothy chuckles softly. # Timothy = Happy
 	}
 We spend the next hour or so talking about our interests and such.

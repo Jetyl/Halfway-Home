@@ -14,12 +14,15 @@ public class CGDisplay : MonoBehaviour
 
     CGDetails ActiveCG;
 
+    bool Active;
+
 	// Use this for initialization
 	void Start ()
     {
         ActiveCG = new CGDetails();
         
         Space.Connect<CustomGraphicEvent>(Events.CG, OnDisplay);
+        Space.Connect<DefaultEvent>(Events.Backdrop, OnClose);
 
     }
 	
@@ -28,6 +31,14 @@ public class CGDisplay : MonoBehaviour
     {
 		
 	}
+
+    void OnClose(DefaultEvent eventdata)
+    {
+        if (!Active)
+            return;
+        CloseCG();
+
+    }
 
     void OnDisplay(CustomGraphicEvent eventdata)
     {
@@ -50,16 +61,29 @@ public class CGDisplay : MonoBehaviour
         {
             Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, "", eventdata.HasTransition()));
             Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
+            Active = true;
         }
 
         if(eventdata.ContainsAct(CloseCGTag))
         {
-            Destroy(ActiveCG.Graphic, 5);
-            ActiveCG = new CGDetails();
+            CloseCG();
         }
 
         //ActiveCG.Graphic.DispatchEvent(Events.CG, eventdata);
 
+    }
+
+    void OpenCG()
+    {
+        Active = true;
+    }
+
+    void CloseCG()
+    {
+        Active = false;
+        ActiveCG.Graphic.DispatchEvent(Events.CloseCG);
+        Destroy(ActiveCG.Graphic, 5);
+        ActiveCG = new CGDetails();
     }
 
     CGDetails GetCG(string tag)

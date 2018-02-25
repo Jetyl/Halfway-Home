@@ -40,8 +40,7 @@ Pretty cheesy, but I don't really stand much chance in the real world. Maybe thi
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of hospitals.
 I open the heavy oak doors and step inside. // Front Desk - Background TBD
 I don't have to wait long before someone notices my entrance. # Max = Happy
-[Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting?"
-~GetPlayerName()
+[Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting?" {GetPlayerName()}
 [Max0Tall Redhead] "{player_name}, right?"
 [{player_name}] "That's me."
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.

@@ -40,7 +40,7 @@ I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, 
 ... {SetValue("Depression Time Dilation", false)}
 ......{SetTimeBlock(0)} 
 ......... {CallSleep()}
-[unknown] "...{player_name}."
+[Max 0Unknown] "...{player_name}."
 huh?
 "{player_name}. get up ya silly bum."
 In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom, eyeopen

@@ -22,6 +22,8 @@ public class LinearCGAnimator : MonoBehaviour
     {
         EventSystem.ConnectEvent<CustomGraphicEvent>(gameObject, Events.CG, NextCell);
 
+        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.CloseCG, OnClose);
+
         FrontCurtain.sprite = Cells[0];
         FrontCurtain.DispatchEvent(Events.Fade, new FadeEvent(Color.white, TransitionSpeed));
 
@@ -32,6 +34,16 @@ public class LinearCGAnimator : MonoBehaviour
     {
 		
 	}
+
+
+    void OnClose(DefaultEvent eventdata)
+    {
+        var Awhite = Color.white;
+        Awhite.a = 0;
+        FrontCurtain.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Awhite, TransitionSpeed));
+
+
+    }
 
     void NextCell(CustomGraphicEvent eventdata)
     {

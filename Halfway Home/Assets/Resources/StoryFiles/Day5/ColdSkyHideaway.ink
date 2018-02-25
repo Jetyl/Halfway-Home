@@ -140,5 +140,5 @@ I help Issac up off the ground. //player has finished helping his issues
 
 
 === Recap ===
-I go to Issac's little hideaway, and talk him thru his issues
+I go to Issac's little hideaway, and talk him thru his issues like last time.
 ->END
