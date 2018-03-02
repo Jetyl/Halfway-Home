@@ -14,6 +14,8 @@ public class DynamicCGAnimator : MonoBehaviour
     {
 
         EventSystem.ConnectEvent<CustomGraphicEvent>(gameObject, Events.CG, NextCommand);
+
+        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.CloseCG, OnClose);
     }
 	
 	// Update is called once per frame
@@ -54,6 +56,19 @@ public class DynamicCGAnimator : MonoBehaviour
 
     }
 
+    void OnClose(DefaultEvent eventdata)
+    {  
+
+        foreach (var command in Commands)
+        {
+            var col = Color.white;
+            col.a = 0;
+
+            command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+        }
+
+        
+    }
 
 
 }

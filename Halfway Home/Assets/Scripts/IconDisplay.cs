@@ -24,7 +24,7 @@ public class IconDisplay : MonoBehaviour
 
         schedules = TextParser.ToJson("Characters");
 
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
+        Space.Connect<DefaultEvent>(Events.UpdateMap, TurnMapOn);
     }
 	
 	// Update is called once per frame

@@ -12,8 +12,11 @@ namespace TMPro.Examples
 
         public AnimationCurve VertexCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.25f, 2.0f), new Keyframe(0.5f, 0), new Keyframe(0.75f, 2.0f), new Keyframe(1, 0f));
         public float AngleMultiplier = 1.0f;
+        [Range(0f, 0.25f)]
         public float SpeedMultiplier = 1.0f;
         public float CurveScale = 1.0f;
+
+        bool Flip;
 
         void Awake()
         {
@@ -61,8 +64,8 @@ namespace TMPro.Examples
             {
                 if (!m_TextComponent.havePropertiesChanged && old_CurveScale == CurveScale && old_curve.keys[1].value == VertexCurve.keys[1].value)
                 {
-                    yield return null;
-                    continue;
+                    //yield return null;
+                    //continue;
                 }
 
                 old_CurveScale = CurveScale;
@@ -107,14 +110,22 @@ namespace TMPro.Examples
                     vertices[vertexIndex + 3] += -offsetToMidBaseline;
 
                     // Compute the angle of rotation for each character based on the animation curve
-                    float x0 = (offsetToMidBaseline.x - boundsMinX) / (boundsMaxX - boundsMinX); // Character's position relative to the bounds of the mesh.
+                    float x0 = ((offsetToMidBaseline.x - boundsMinX) / (boundsMaxX - boundsMinX)) + AngleMultiplier; // Character's position relative to the bounds of the mesh.
+                    x0 = x0 - Mathf.Floor(x0);
                     float x1 = x0 + 0.0001f;
                     float y0 = VertexCurve.Evaluate(x0) * CurveScale;
                     float y1 = VertexCurve.Evaluate(x1) * CurveScale;
 
+                    //print("x0:" + x0 + " x1:" + x1);
+                    float x3 = ((offsetToMidBaseline.x - boundsMinX) / (boundsMaxX - boundsMinX)) + 0.0001f;
+                    AngleMultiplier -= Time.deltaTime * SpeedMultiplier;
+
+                    if (AngleMultiplier < 0)
+                        AngleMultiplier += 1;
+
                     Vector3 horizontal = new Vector3(1, 0, 0);
                     //Vector3 normal = new Vector3(-(y1 - y0), (x1 * (boundsMaxX - boundsMinX) + boundsMinX) - offsetToMidBaseline.x, 0);
-                    Vector3 tangent = new Vector3(x1 * (boundsMaxX - boundsMinX) + boundsMinX, y1) - new Vector3(offsetToMidBaseline.x, y0);
+                    Vector3 tangent = new Vector3(x3 * (boundsMaxX - boundsMinX) + boundsMinX, y1) - new Vector3(offsetToMidBaseline.x, y0);
 
                     float dot = Mathf.Acos(Vector3.Dot(horizontal, tangent.normalized)) * 57.2957795f;
                     Vector3 cross = Vector3.Cross(horizontal, tangent);

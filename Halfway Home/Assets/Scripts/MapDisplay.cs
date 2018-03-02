@@ -66,6 +66,9 @@ namespace HalfwayHome
             gameObject.SetActive(true);
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
             AllowTimeDilation = Game.current.Progress.GetBoolValue("Depression Time Dilation");
+
+            StartCoroutine(TextParser.FrameDelay(Events.UpdateMap));
+
     }
 
     void MapChoice(MapEvent eventdata)

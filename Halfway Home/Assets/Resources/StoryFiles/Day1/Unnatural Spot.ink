@@ -42,7 +42,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 		I lean in to see a row of straight lines under a weird-looking symbol.
 		[Timothy] "Hangman..."
 		[{player_name}] "Oh! That's what that is. I thought you might be a wizard or something."
-		Timothy chuckles. #Timothy=Happy
+		Timothy chuckles. //#Timothy=Happy
 		Now that he mentions it, yeah, I can see the Hangman set up. It seems to be looking for a 4 letter word.
 	- else:
 		"Hangman?"
@@ -133,7 +133,7 @@ Okay, some common consants are...
 
 ===AlreadyKnow===
 [{player_name}] "It's hope."
-[Timothy] "What?! No Way!" #Timothy = Suprised
+[Timothy] "What?! No Way!" #Timothy = Surprised
 "How'd you guess is so quickly?" #Timothy=Sad
 [{player_name}] "Lucky guess?"
 You know, that and weird time travel shenanigans.
@@ -153,15 +153,15 @@ You know, that and weird time travel shenanigans.
 
 
 === GameOver ===
-[Timothy] "Hehehe.."
-[{player_name}] "what's so funny?"
+[Timothy] "Hehehe.." #Background / Garden, crossfade #Timothy = Happy
+[{player_name}] "what's so funny?" 
 [Timothy] "Oh, nothing... its just..."
-"Hangman is a good game..."
-"It teaches you that just by saying a few wrong things, you can end someone’s life..."
+"Hangman is a good game..." 
+"It teaches you that just by saying a few wrong things, you can end someone’s life..." #Timothy = Sad
 //make this tutorial check instead
 {
 	-week == 1:
-		"OH! uh... S-Sorry f-for interupt-t-t-ting the t-tour.."
+		"OH! uh... S-Sorry f-for interupt-t-t-ting the t-tour.." #Timothy = Surprised
 		[{player_name}] "its okay."
 }
 {
@@ -170,7 +170,7 @@ You know, that and weird time travel shenanigans.
 		not this week timothy. noth this week.
 }
 [{player_name}] "so, what are you doing over here?"
-[Timothy] "I'm not sure..."
+[Timothy] "I'm not sure..." #Timothy = Calm
 "have you ever felt like a patch of earth is just unnatrual?"
 "That, you hold a connection to an otherwise pointless peice of land?"
 [{player_name}] "Do you like this spot?"
