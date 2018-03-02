@@ -54,14 +54,14 @@ VAR current_room = "unset"
 
 === Introduce_Timothy ===
 [{player_name}] "What? Oh! Yeah, sorry."
-"Charlotte, this is Timothy, my new roommate. Timothy, this is Charlotte. She's... uh, she lives here, too."
+"Charlotte, this is Timothy Miyuri, my new roommate. Timothy, this is Charlotte Blackwell. She's... uh, she lives here, too."
 -> Trissa
 
 == Formal_Introduce_Timothy ===
-[{player_name}] "Of course not. But before we continue, let me introduce my roommate Timothy." 
+[{player_name}] "Of course not. But before we continue, let me introduce my roommate Timothy Miyuri." 
 [Charlotte] "Oh! Yes, indeed." # Charlotte = Surprised
 Timothy peeks out from his hiding place in the shadows behind me. # Timothy = Calm
-[{player_name}] "Timothy, this is my fellow resident Charlotte. She's a top-class orator. Always knows the right thing to say."
+[{player_name}] "Timothy, this is my fellow resident Charlotte Blackwell. She's a top-class orator. Always knows the right thing to say."
 [Charlotte] "You flatterer! You seem to have dipped your tongue in silver since we last spoke, {player_name}." # Charlotte = Happy
 -> Trissa
 

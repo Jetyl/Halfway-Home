@@ -193,6 +193,26 @@
    {
     "Name" : "Slept In Day 2",
     "Type" : 1
+   },
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 1
+   },
+   {
+    "Name" : "ReadyForInstruction",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedTeatime",
+    "Type" : 1
    }
   ]
  },
@@ -203,6 +223,14 @@
   "Point"      : [
    {
     "Name" : "SolvedHangman",
+    "Type" : 1
+   },
+   {
+    "Name" : "SeenEmpathy",
+    "Type" : 1
+   },
+   {
+    "Name" : "SeenLessons",
     "Type" : 1
    }
   ]
