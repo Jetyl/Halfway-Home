@@ -269,7 +269,7 @@ I...
 [Eduardo] "<delay=1>...Poke!" //have eduardo poke isaac
 Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
 [Isaac] "What?"
-[Eduardo] "" //some cheesy line
+[Eduardo] "I love you" //some cheesy line
 Isaac glows a bright red blush.
 [Isaac] "hrm. Attraction is weird."
 ->TimePassing
@@ -278,16 +278,89 @@ Isaac glows a bright red blush.
 //the 4 am hour talk
 the two talk about why their in the halfway home.
 [Eduardo] "Man, I know I don't say this often enough, but I'm gunna miss you guys when I leave."
-
-[Eduardo] "byeah, {player_name} what got you here?"
-uhh..
+[{player_name}] "Are you leaving soon?"
+[Eduardo] "I dunno man. maybe? it ain't on my schedule or nothin'."
+"I just feel, when you start nearing the two year mark, maybe ya've been here too long, ya know?"
+[Isaac] "..."
+[{player_name}] "uh, I guess?"
+I'm just lucky enough to be leaving here after just over 1 year. I don't want to imagine 2.
+{
+	-week >= 2:
+	then again, with time repeating like it is, maybe I will be here for another year, mentally.
+	uugh... that's a depressing thought. #delusion += 2
+}
+[Eduardo] "I mean, I do love it here. It's way better than where I was before, ya know?"
+"I've dealt with my, ness, since I was real little."
+"Me and my folks knew my brain was borked since I was like, 12 or so, so it wasn't like `oh, he's just that crazy medina kid`. y'know."
+"I had the words to describe my madness."
+"But that didn't fix nothin'."
+"Didn't stop kids from saying I'mma freak, or whatever."
+"dealing with things as is just got worse and worse, somehow."
+"Like, it feels like, once you <i>know</i> the problem, it should start getting fixed, but nope!"
+"I just kept getting crazier."
+"Smartest move I made was coming here, to get away from that noise."
+"To get all the kinds of help, those pills don't work with."
+"But I'm good now. And I'm getting super antsy. So I might be leaving soonish."
+"Hey Isaac, wanna come with when I do?"
+[Isaac] "..."
+[Eduardo] "Ya don't gotta, if ya don't wanna. I live nearby, so I can come see ya from time to time til ya are ready."
+"Prolly not everyday, if I leave. `responsiblities` and all that."
+[Isaac] "Thanks. I'd like that."
+[Eduardo] "Balla!"
+look at these two, planning their future, and stuff. I can't look past the next week.
+{
+	-week >= 2:
+	though, these two aren't litetarlly trapped in time like I am, so maybe I should give myself a pass.
+	{
+		-delusion >= 75:
+		[Voices] "Excuses, Excuses."
+	}
+}
+[Eduardo] "byeah, {player_name}. Ya gonna miss us when your gone?"
++[Of course]
+	[{player_name}] "Of course. You guys are my friends."
+	[Eduardo] "Aww! Thanks!"
++[Not in the slightest]
+	[{player_name}] "eh, not really."
+	I be completely honest. probably not the polite answer, but whatever. <i>(your expression has increased!)</i> #expression+
+	[Eduardo] "Oh! I'm so hurt."
+	[Isaac] "No, you're not."
+	[Eduardo] "eh yeah."
+	"Sorry you feel that way though."
++{expression > 1}[Way to put me on the spot!]
+	[{player_name}] "Wow, way to put me on the spot dude!"
+	[Eduardo] "hehe, sorry!"
+	He's not sorry at all. I can tell.
+-[Eduardo] "I know I'll miss ya."
+[Isaac] "Same."
+"Actually. {player_name}. Can I ask you something personal?"
+[{player_name}] "uh, sure." 
+[Isaac] "why'd you come here? to Sunflower House. I mean."
+uhh...
 +[Avoid answering the question]
 	[{player_name}] "I'd rather not talk about that..."
 +{expression>2}[Give your backstory]
 	[{player_name}] "Well, um..."
-
+	"I got recommended here by my Doctors at Blackwell."
+	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitly</i></b> didn't want."
+	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it."
+	"I was so mad at them for trapping me there. Was so mad at myself for being so freaking broken I couldn't survive anywhere else."
+	"5 years of my life wasted away in that building. thats almost a 4th of my life. it's most of what I remember, anyways."
+	"Sterile rooms. Sterile hallways. Sterile smiles."
+	"I remember even thinking they were sending me here, not because I was `ready`, or anything like that. but because they wanted to get rid of me."
+	"I mean, I took it anyways. so maybe I shouldn't be mad."
+	"I do like it here much better than Blackwell."
+	"As is, this place is basically my home."
+	"hehe, how sad is that?"
+	I cease my word vomit, and let the awkward silence fill the room.
+	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`s. @Just nothing.
+	It kind of feels good, to get that off my chest. <i>(your expression increased)</i> #expression++
+	It takes a minute, bfore either of them respond. It's Isaac surprisingly, who responds to my sob story.
 -[Isaac] "hrm. @Life is stimply unfair...@ Sometimes, I'spose."
-
+"Sory for asking."
+[{player_name}] "Oh, uh, no problem."
+I suppose this topic has been soured.
+I check my watch to see the time.
 ->TimePassing
 
 ===FiveAM===
@@ -324,7 +397,8 @@ I wonder if Max is up already. probably is.
 		[Eduardo] "Issaaaaaaac!"
 		[Isaac] ">Sighs"
 		"just go to sleep."
-		[Eduardo]
+		[Eduardo] "but I'm not, *Yawns* tired..."
+
 }
 These two are, really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
@@ -333,7 +407,7 @@ These two are, really sappy together. It's kind of sweet, in its own way.
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means its probably a good time to call it a night.
 I deceide to leave the two to their chatting, and head to bed. #background / commons, crossfade
 I faceplant myself into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
-it doesn't take long for me to lose consciousness #background / dream, eyesclose
+it doesn't take long for me to lose consciousness #background / dream, eyeclose
 
 
 ->END
