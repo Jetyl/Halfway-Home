@@ -1,4 +1,4 @@
-﻿/******************************************************************************/
+/******************************************************************************/
 /*
 @file   MeetingEduardo.ink
 @author Jesse Lozano
@@ -188,7 +188,7 @@ I let it go, I doubt I could get their attention anyways.
 	- GetValue("Tutorial") == true:
 		I motion for Timothy to follow, as we leave the lovebirds to their buisness
 }
-Off to do something else, I supose.
+Off to do something else, I supose. #All = Exit
 -> END
 
 === HeyEddy ===
@@ -204,7 +204,7 @@ Wow, immediate snap back.
 And Eduardo goes right back to Isaac, which is my queue to get going.
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
 [Isaac] "hrm." #All = Exit
--> Leaving
+-> END
 
 === Needy ===
 Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair. //Show the CG
