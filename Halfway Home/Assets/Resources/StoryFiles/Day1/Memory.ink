@@ -33,13 +33,13 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. // House establishing shot - Background TBD
-The paint seems to be a bit more faded than in the pictures, but it's still a beautiful old building.
+This is it. Sunflower House. #Background / HouseFront
+The paint seems to be a bit more faded than in the pictures, but it's a lot more appealing than Blackwell.
 'A Garden for the Mind' according to the brochure the doctors gave me.
-Pretty cheesy, but I don't really stand much chance in the real world. Maybe this place is what I need.
-The car behind me pulls away. No going back now, not that I'd want to. I've had enough of hospitals.
-I open the heavy oak doors and step inside. // Front Desk - Background TBD
-I don't have to wait long before someone notices my entrance. # Max = Happy
+Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe their right.
+The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.
+I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
+I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
 [Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting?" {GetPlayerName()}
 [Max0Tall Redhead] "{player_name}, right?"
 [{player_name}] "That's me."
@@ -51,15 +51,15 @@ The other residents begin to whisper amongst each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. #Background / YourRoom
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe
 [Max] "Your quarters, sire. I hope you find them to your liking."
 [Max] "Anyhoo, I've got to finish mopping the cafe. Been a bit behind... as usual, really."
-[Max] "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
+[Max] "I'll leave you to unpack and get settled. Why don't you come and find me in the cafe when you're done?"
 I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen
+I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
 What? They're joking, right? I just got here... There's no way I lost a whole week.
@@ -70,7 +70,7 @@ A chill runs down my spine. What's going on?
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / Commons
+I head out into the common room. # Background / CommonsNight, Blackwipe
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them. # Max = Calm
 *[Ask what's going on]

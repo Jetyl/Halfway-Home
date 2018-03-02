@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.8449006
+  m_Size: 0.99999785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9843,6 +9843,11 @@ Prefab:
       propertyPath: CGList.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9950,6 +9955,39 @@ Prefab:
       value: 
       objectReference: {fileID: 1288692834534888, guid: 08ff9803d59952e47a8ca1005708a2fb,
         type: 2}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[1].Tag
+      value: HouseFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[1].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ee03a8dcecc16e49aa1585bb30884f5,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[2].Tag
+      value: CommonsNight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[2].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 311b05bb2864f1a47895520b771d727b,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[3].Tag
+      value: CommonsDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[3].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: ed888740280d5ea4a98c0d7276098c0b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
   m_IsPrefabParent: 0
