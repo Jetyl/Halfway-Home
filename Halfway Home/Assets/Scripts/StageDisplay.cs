@@ -37,6 +37,11 @@ public class StageDisplay : MonoBehaviour
 
     Sprite CurrentBackdrop;
 
+    [Range(0, 23)]
+    public float DayTimeStart = 6;
+    [Range(0, 23)]
+    public float DayTimeEnd = 18;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -103,7 +108,7 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.Tag.ToLower() == CurrentCG)
                 {
-                    BackdropChange(room.Backdrop, eventdata.Transitions);
+                    BackdropChange(room.Backdrops[0], eventdata.Transitions);
                     return;
                 }
             }
@@ -119,7 +124,14 @@ public class StageDisplay : MonoBehaviour
             foreach (var room in Backdrop)
             {
                 if (room.ID == CurrentRoom)
-                    BackdropChange(room.Backdrop, eventdata.Transitions);
+                {
+
+                    if(Game.current.Hour >= DayTimeStart && Game.current.Hour <= DayTimeEnd)
+                        BackdropChange(room.Backdrops[0], eventdata.Transitions);
+                    else
+                        BackdropChange(room.Backdrops[1], eventdata.Transitions);
+                }
+                    
             }
         }
 
@@ -371,7 +383,7 @@ public class RoomDetails
 {
     public Room ID;
     public string Tag;
-    public Sprite Backdrop;
+    public Sprite[] Backdrops;
 }
 
 public enum TransitionTypes
