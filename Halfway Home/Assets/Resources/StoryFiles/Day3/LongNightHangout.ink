@@ -242,15 +242,15 @@ crap, I didn't expect him to turn this on me.
 I...
 +[answer unabshedly]
 	"well, I..."
-	+[Like Guys]
+	++[Like Guys]
 		"I think guys are really attractive."
-	+[Like Girls]
+	++[Like Girls]
 		"I think girls are really cute.."
-	+[Like People]
+	++[Like People]
 		"I just find people attractive."
-	+[Like No One]
+	++[Like No One]
 		"I'm just not into people."
-	-You feel good <i>expressing</i> your interests outloud. #expression++
+	--You feel good <i>expressing</i> your interests outloud. #expression++
 	"I'm not really into labels, tho,"
 	I shrug.
 	[Isaac] "fair."
@@ -265,7 +265,7 @@ I...
 "Wanting things from other people is weird."
 "Life would be simpler without it. Hrm."
 "But... @when you have it, you don't want it gone."
-"You <i>should</i>. its smart. @But people ain't smart."
+"You <i>should</i>. Its smart. @But people ain't smart."
 [Eduardo] "<delay=1>...Poke!" //have eduardo poke isaac
 Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
 [Isaac] "What?"
@@ -414,7 +414,7 @@ it doesn't take long for me to lose consciousness #background / dream, eyeclose
 
 ===MorningMax===
 The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade
-The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early. #Max = surprised
+The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
 [{player_name}] "hehe, yeah..."
 [Isaac] "we stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left
@@ -424,7 +424,7 @@ The second sign, is Max, who comes in for they morning mopping, and is rather su
 [Isaac] "Hrm. K." #Isaac = Exit
 [Max] "And as for you, {player_name}."
 Oh boy, here comes the Max talk.
-"You shouldn't be throwing your sleep schedule outta wack like this." #Max = sad
+"You shouldn't be throwing your sleep schedule outta wack like this." #Max = Sad
 "I know you're an adult, and you're leaving in just a few days, but..."
 "It's because of that, you really outta know better."
 +[I'm sorry Max]
@@ -432,6 +432,8 @@ Oh boy, here comes the Max talk.
 +[I got Dragged in by Eduardo]
 	[{player_name}] "I got dragged in by Eduardo."
 	[Max] "Yeah, I'm sure you did."
++{expression >2}[Max stop Micro-Managing Me!]
+	[{player_name}] "Max, Please, I am an adult. Stop Micro-Managing me!"
 -[Max] "Look, just, go to bed, okay. And get your sleep schedule sorted out before this Monday."
 "I better go make sure everthing is in order before everyone else wakes up."
 And Max leaves me, alone in the commons, as they get to work.

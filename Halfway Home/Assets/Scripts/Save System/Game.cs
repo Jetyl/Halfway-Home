@@ -191,7 +191,7 @@ public class Game
 
         if(DrainEnergy)
             Self.IncrementWellbeingStat(Personality.Wellbeing.fatigue, 10 * CurrentTimeBlock);
-        Self.IncrementWellbeingStat(Personality.Wellbeing.delusion, 2 * CurrentTimeBlock);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.delusion, 1 * CurrentTimeBlock);
         Space.DispatchEvent(Events.StatChange);
 
         DrainEnergy = false;

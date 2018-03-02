@@ -5240,7 +5240,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5250,7 +5250,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5270,7 +5270,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -550
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5280,7 +5280,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5300,7 +5300,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5310,7 +5310,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5330,7 +5330,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -5340,7 +5340,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114667000320042228, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -12653,7 +12653,7 @@ MonoBehaviour:
   HourVisited: Hour Kitchen Visited
   DayVisited: Day Kitchen Visisted
   ManualAccess: 
-  FatigueCloseLimit: 95
+  FatigueCloseLimit: 99
   StressCloseLimit: 100
   DelusionCloseLimit: 100
 --- !u!114 &931970216
@@ -16285,7 +16285,7 @@ MonoBehaviour:
   Behaviour: {fileID: 1174770654}
   TransitionSpeed: 2
   ZeroStressValue: 0
-  MaxStressValue: 0.5
+  MaxStressValue: 0.75
   ZeroFatigueValue: 0
   MaxFatigueValue: 0.75
   ZeroDepressionValue: 1
@@ -20918,7 +20918,7 @@ MonoBehaviour:
   ClosedTimeContainer:
   - Day: 1
     starttime: 0
-    endTime: 16
+    endTime: 17
     ProgressLocked: 1
     ProgressKey: Tutorial
   - Day: 7
@@ -20928,7 +20928,7 @@ MonoBehaviour:
     ProgressKey: Tutorial
   - Day: 7
     starttime: 12
-    endTime: 12
+    endTime: 17
     ProgressLocked: 0
     ProgressKey: Tutorial
   LimitedDailyAccess: 0
@@ -26564,6 +26564,16 @@ Prefab:
       propertyPath: ReaderReference
       value: 
       objectReference: {fileID: 60031324}
+    - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: DebugMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: DebugDay
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
   m_IsPrefabParent: 0
