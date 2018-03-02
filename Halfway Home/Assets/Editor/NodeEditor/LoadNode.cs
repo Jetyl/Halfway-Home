@@ -35,7 +35,7 @@ public class LoadNode : BaseNode
 
         inPoint.Draw();
         GUI.Box(rect, "", style);
-        EditorGUI.LabelField(new Rect(rect.position + new Vector2(25, 15), new Vector2(150, 20)), "THe Load Node");
+        EditorGUI.LabelField(new Rect(rect.position + new Vector2(25, 15), new Vector2(150, 20)), "The Load Node");
         title = GUI.TextField(new Rect(rect.position + new Vector2(25, 35), new Vector2(150, 20)), title);
         GUI.Label(new Rect(rect.position + new Vector2(25, 65), new Vector2(150, 20)), "ID: " + ID);
 

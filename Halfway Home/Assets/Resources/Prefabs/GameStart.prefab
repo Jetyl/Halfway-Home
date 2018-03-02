@@ -57,11 +57,11 @@ MonoBehaviour:
   StartDay: 1
   StartHour: 12
   DebugMode: 0
-  StartDelusion: 45
-  StartStress: 45
-  StartFatigue: 25
-  DebugDay: 1
-  DebugHour: 12
+  StartDelusion: 15
+  StartStress: 20
+  StartFatigue: 30
+  DebugDay: 3
+  DebugHour: 17
   DebugWeek: 1
   DebugExpression: 0
   DebugGrace: 0

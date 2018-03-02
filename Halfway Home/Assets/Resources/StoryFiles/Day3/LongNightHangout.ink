@@ -17,6 +17,7 @@ VAR delusion = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
+VAR HoursSpent = 0
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -33,7 +34,7 @@ EXTERNAL GetHour()
 
 === Start ===
 I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
-Walking in, I spy Euardo and Isaac as the only ones in the room.
+Walking in, I spy Euardo and Isaac as the only ones in the room. ~HoursSpent = 0
 [Eduardo] "Hey! {player_name}! how's it hanging?!"
 [{player_name}] "What are you guys still doing up?"
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
@@ -53,7 +54,7 @@ another hour passes with the duo. I get a bit more tired. {AlterTime()}
 	-GetIntValue("fatigue") > 90:
 		->LeaveEarly
 	-else:
-		I Suppose I could go another hour. {SetTimeBlock(1)}
+		I Suppose I could go another hour. {SetTimeBlock(1)} ~HourseSpent = HoursSpent + 1
 		->NextHour
 }
 =NextHour
@@ -119,11 +120,37 @@ the two talk about how they met.
 I can see that.
 "He's nosey too. Kept following me around. Dragging me places."
 [Eduardo] "Hey! You never said you wanted me to stop."
-[Isaac] "I didn't mind it. Still don't."
-[Eduardo] "hehe, yeah. I admit. I'm not good with other peoples boundries."
+[Isaac] "hrm." //I didn't mind it. Still don't."
+[Eduardo] "hehe, yeah. I s'pose other peoples boundries was one of my issues before coming here."
 "I dunno, I guess I just need to be really close to people to feel comfortable, y'know?"
-"s'caused me problems out there in he real world."
+"s'caused me problems out there in the real world."
 "In the real world, the closeness of a relationship is defined by whoever's got the higher boundries."
+"Like, you wanna be friends with someone, but they don't, well, then you ain't friends."
+"and thats just the basic stuff. relationship stuff gets even crazier."
++[You didn't abuse anyone, did you?]
+	[{player_name}] "Eduardo, you we're like, too pushy with anyone you knew right?"
+	"Made anyone do anything they didn't want to?"
+	[Eduardo] "What? naw man. I mean. I don't think so."
+	"I am really bad at reading people dawg."
+	"Mostly why I don't care to try. I just try to be myself."
++[you we're abused, were you?]
+	[{player_name}] "Eduardo, You we're like, taken advantage of by anyone, were you?"
+	"You didn't like, do things just to get attention, right?"
+	[Eduardo] "Of course I did! Lots of things."
+	"but, I dunno, I wouldn't of called any of it abusive."
+	"I was just a dumb kid who wanted attention."
+-[Eduardo] "I dunno man, just sometimes it feels like I <i><b>need</i><b> all this attention no one is willing to give me."
+"And yeah, when I'd get super manic I think they <i>are</i> willing, when really, their not."
+"And when I fall off that high, and get all bummed out, I just think that, aw man, I've been such a jerk. and that's why no one cares."
+"but not anymore. Ain't that right Isaac?"
+[Isaac] "hrm."
+Isaac does say much, but he plays with Eduardo's hair.
+That seems to satiate Eduardo, who grows oddly quiet, as the two of them just look in each other's eyes.
+[{player_name}] ">Coughs"
+[Eduardo] "Oh, {player_name}, your still here?"
+did he literally forget I was here?
+"Oh, uh yeah, where were we."
+I deliberately don't remind him of the topic, and let him wander onto something new.
 ->TimePassing
 
 ===TwoAM===
@@ -191,38 +218,156 @@ I can see that.
 ===ThreeAM===
 //the 3 am hour talk
 the two talk about the nature of attraction.
-[{player_name}] "So, random question, but what are you two?"
-
+[{player_name}] "So, random question, but what are you two? if you don't mind me asking?"
+[Eduardo] "Well I'm human. I don't know about Isaac though."
+[Isaac] "hrm."
+Isaac slugs Eduardo in the stomach.
+[Eduardo] "hehehahaha. no, but seriously, you might need to be a bit more spesific {player_name}"
+[{player_name}] "I was asking about your orientation."
+[Eduardo] "Oh? that? I thought it was obvious for me? I am two ways about everything"
+huh?
+[Isaac] "He's bisexual."
+"He does that joke everytime anyone asks."
+Eduardo begins laughing like a hyena, as his boyfriend explains his dumb joke.
+[Eduardo]"What can I say? I love being your bipolar bisexual Bro."
+Eduardo pokes Isaac's unchanging expression, while he has the derpiest grin on his face.
+[{player_name}] "Isaac, what about you?"
+[Isaac] "Asexual. Androromantic."
+[{player_name}] "Androromantic?"
+[Isaac] "Attracted to masculinity. @s'what it means."
+[{player_name}] "oh, interesting."
+[Eduardo] "So, {player_name}, what about you? who do you fancy?"
+[{player_name}] "uh..."
+crap, I didn't expect him to turn this on me.
+I...
++[answer unabshedly]
+	"well, I..."
+	+[Like Guys]
+		"I think guys are really attractive."
+	+[Like Girls]
+		"I think girls are really cute.."
+	+[Like People]
+		"I just find people attractive."
+	+[Like No One]
+		"I'm just not into people."
+	-You feel good <i>expressing</i> your interests outloud. #expression++
+	"I'm not really into labels, tho,"
+	I shrug.
+	[Isaac] "fair."
++[avoid answering]
+	"oh, you know. I, uh..."
+	"I'd rather not answer that."
+	[Eduardo] "Aww, no fair. we told you!"
+	[Isaac] "no means no, Eduardo."
+	[Eduardo] "ugh, fiiiiiiine."
+	"<size=50%>you guys are no fun..."
+-[Isaac] "attaction is weird."
+"Wanting things from other people is weird."
+"Life would be simpler without it. Hrm."
+"But... @when you have it, you don't want it gone."
+"You <i>should</i>. its smart. @But people ain't smart."
+[Eduardo] "<delay=1>...Poke!" //have eduardo poke isaac
+Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
+[Isaac] "What?"
+[Eduardo] "" //some cheesy line
+Isaac glows a bright red blush.
+[Isaac] "hrm. Attraction is weird."
 ->TimePassing
 
 ===FourAM===
 //the 4 am hour talk
 the two talk about why their in the halfway home.
 [Eduardo] "Man, I know I don't say this often enough, but I'm gunna miss you guys when I leave."
+
+[Eduardo] "byeah, {player_name} what got you here?"
+uhh..
++[Avoid answering the question]
+	[{player_name}] "I'd rather not talk about that..."
++{expression>2}[Give your backstory]
+	[{player_name}] "Well, um..."
+
+-[Isaac] "hrm. @Life is stimply unfair...@ Sometimes, I'spose."
+
 ->TimePassing
 
 ===FiveAM===
 //the 5 am hour talk
 the two talk about memes.
+[Eduardo] "oh! Oh! OH!"
+[Isaac] "hrm?"
+
 ->TimePassing
 
 ===SixAM===
 //the 6 am hour talk
 Eduardo gets drowsy. Isaac admits something personal.
-[Eduardo] ">Yawns aggresively"
-"Isaac... Tell me a story."
-[Isaac] "no."
-[Eduardo] "Issaaaaaaac!"
-[Isaac] ">Sighs"
+[Eduardo] "oh, we're past the magic hours."
+[{player_name}] "huh?"
+[Isaac] "the nights almost over."
+Oh yeah. jeez, its 6!
+I wonder if Max is up already. probably is.
+[Eduardo] "Man, the night is so pretty."
+"All dat gentle darkness, mixed with the soft glow of street lights, and 24 hour stores."
+"man, I miss that, y'know?"
+"Hey Isaac?"
+[Isaac]"hrm?"
+[Eduardo]"When we get outta this joint, can we just stay up every night, talking like this?"
+[Isaac] "Sure."
+[Eduardo] "I'd Like that."
+[Isaac] "Me too."
+[Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
+{
+	-HoursSpent >= 5:
+		[Eduardo] ">Yawns aggresively"
+		"Isaac... Tell me a story."
+		[Isaac] "no."
+		[Eduardo] "Issaaaaaaac!"
+		[Isaac] ">Sighs"
+		"just go to sleep."
+		[Eduardo]
+}
+These two are, really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
 
 ===LeaveEarly===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means its probably a good time to call it a night.
-I deceide to leave the two to their chatting, and head to bed.
+I deceide to leave the two to their chatting, and head to bed. #background / commons, crossfade
+I faceplant myself into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
+it doesn't take long for me to lose consciousness #background / dream, eyesclose
+
+
 ->END
 
 ===MorningMax===
-The sun actually begins to rise again, which is the first sign we stayed up way too late.
-The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early.
-Everyone stays awake so long, that max arrives, and shoo's everyone to their bedroom.
+The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade
+The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early. #Max = surprised
+[Max] "Wowie! Y'all are up early."
+[{player_name}] "hehe, yeah..."
+[Isaac] "we stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left
+[Eduardo] "zzz"
+[Max] "Oh, for the love of..." #Max = Angry
+"Isaac, Take Eduardo back to your guy's room, and go to bed."
+[Isaac] "Hrm. K." #Isaac = Exit
+[Max] "And as for you, {player_name}."
+Oh boy, here comes the Max talk.
+"You shouldn't be throwing your sleep schedule outta wack like this." #Max = sad
+"I know you're an adult, and you're leaving in just a few days, but..."
+"It's because of that, you really outta know better."
++[I'm sorry Max]
+	[{player_name}] "I'm sorry Max."
++[I got Dragged in by Eduardo]
+	[{player_name}] "I got dragged in by Eduardo."
+	[Max] "Yeah, I'm sure you did."
+-[Max] "Look, just, go to bed, okay. And get your sleep schedule sorted out before this Monday."
+"I better go make sure everthing is in order before everyone else wakes up."
+And Max leaves me, alone in the commons, as they get to work.
+And with that, I get up and leave as well.
+{
+	-delusion > 60:
+		Max is right, I shouldn't have done this.
+		[Voices] "Your so stupid."
+		I'm so stupid.
+	-else:
+		Despite what Max things, I... Actually feel very good about the night I spent.
+}
 ->END

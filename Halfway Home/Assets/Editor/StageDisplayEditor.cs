@@ -32,6 +32,10 @@ public class StageDisplayEditor : Editor
         SerializedProperty StartingRoom = serializedObject.FindProperty("StartingRoom");
         SerializedProperty BackgroundFadeTime = serializedObject.FindProperty("BackgroundFadeTime");
 
+
+        SerializedProperty DayTimeStart = serializedObject.FindProperty("DayTimeStart");
+        SerializedProperty DayTimeEnd = serializedObject.FindProperty("DayTimeEnd");
+
         EditorGUILayout.Space();
 
         showbackdrops = EditorGUILayout.Foldout(showbackdrops, new GUIContent("Backdrops"));
@@ -44,8 +48,14 @@ public class StageDisplayEditor : Editor
             {
                 Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("ID").enumValueIndex = i;
 
-                EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).
-                    FindPropertyRelative("Backdrop"), new GUIContent( (Room)i + " Backdrop"), true);
+                var back = Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
+                back.arraySize = 2;
+
+                EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(0),
+                    new GUIContent( (Room)i + " Backdrop, day"), true);
+
+                EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(1),
+                    new GUIContent((Room)i + " Backdrop, night"), true);
             }
 
             EditorGUILayout.Space();
@@ -63,8 +73,11 @@ public class StageDisplayEditor : Editor
                 SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
                     SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
 
-                EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).
-                    FindPropertyRelative("Backdrop"), new GUIContent(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
+                var spec = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
+                spec.arraySize = 1;
+
+                EditorGUILayout.PropertyField(spec.GetArrayElementAtIndex(0),
+                    new GUIContent(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
             }
 
             EditorGUILayout.Space();
@@ -82,6 +95,8 @@ public class StageDisplayEditor : Editor
         EditorGUILayout.PropertyField(CurtainDefault, new GUIContent("Curtain Default Sprite"), true);
 
 
+        EditorGUILayout.PropertyField(DayTimeStart, new GUIContent("Daytime Start:"), true);
+        EditorGUILayout.PropertyField(DayTimeEnd, new GUIContent("Daytime End:"), true);
 
         serializedObject.ApplyModifiedProperties();
     }

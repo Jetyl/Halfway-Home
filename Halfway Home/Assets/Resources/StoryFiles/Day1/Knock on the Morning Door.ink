@@ -72,18 +72,20 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 }
 
 ===Introductions===
-[Keyless0Max] "Heya {player_name}. Don't tell me I woke ya up?" # Keyless = Calm
-[{player_name}] "Nah, I was already awake."
-[Keyless0Max] "Hope you weren't planning on sleeping in. You know you should have your routine down by now."
-[{player_name}] "Yeah, yeah, I know."
-[Keyless0Max] "Ya oughta. Pretty soon you won't have old Max to be there reminding ya."
+[Keyless0Max] "Hella yella, my {player_name} fella." # Keyless = Calm
+What.
+[{player_name}] "huh?"
+"Uugh... @Morning Max."
+[Keyless0Max] "Morning? It's almost noon! Don't tell me, I was yer alarm clock this morning?"
+[{player_name}] "N-no... @I was already awake."
+[Keyless0Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
 [{player_name}] "Yeah."
 [Timothy0Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"
 [Keyless0Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
-[{player_name}] "Uh... yeah?"
+[{player_name}] "Uh... yeah."
 [Keyless0Max] "You don't remember, do you?"
-[{player_name}] "... No."
+[{player_name}] "... @No."
 Max looks dissapointed in me. It's a sadly common look. # Keyless = Sad
 [Keyless0Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
@@ -112,11 +114,15 @@ Timothy sighs dejectedly. Maybe he's used to this?
 
 ===Again===
 What? # Keyless = Calm #Timothy=Calm
-[Keyless0Max] "Heya {player_name}. Don't tell me I woke ya up?"
-What in the...?
-"Hope you weren't planning on sleeping in. You know you should have your routine down by now."
-What the HELL?!
-"Ya oughta. Pretty soon you won't have old Max to be there reminding ya"
+[Keyless0Max] "Hella Yella, my {player_name} fella."
+[{player_name}] "huh?"
+D-didn't Max say that before?
+"uh?... Morning Max." 
+[Keyless@Max] "Morning? It's almost noon! Don't tell me, I was yer alarm clock this morning?"
+[{player_name}] "W-What? N-no... @I, uh, was already awake."
+Okay, I'm getting the strangest case of deja vu right now...
+[Keyless0Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
+Okay, now its getting weird.
 "uh, Yello? Earth to {player_name}. ya still there?"
 this doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
