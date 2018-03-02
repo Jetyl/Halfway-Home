@@ -190,7 +190,7 @@ This can't be happening. this can't be happening.
 
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
-[{player_name}] "So, um..."
+[{player_name}] "So, um..." #Timothy = center
 "Well, this is my room. Although, I guess it'll be <i>our</i> room for the time being."
 "You can come here if you want to just get away from it all and destress."
 "Also, obviously, you can just knock out here if you're too fatigued to do anything else. Or just whenever, really"
@@ -198,7 +198,7 @@ This can't be happening. this can't be happening.
 Though I've been falling off the wagon more often as of late.
 "So yeah."
 Timothy looks... not disinterested, but guarded and... preoccupied? Jeez, my ability to read people has seriously atrophied.
-I go over and grab my watch off the desk beside my bed. 8:54. Close enough for my needs. He'll probably think I'm super weird, but Timothy should know about my system.
+I go over and grab my watch off the desk beside my bed. MAx was right, it is almost noon. He'll probably think I'm super weird, but Timothy should know about my system.
 "So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I suffered from before was Lost Time."
 [Timothy] "You mean you'd lose track of time? Doesn't everybody do that?"
 [{player_name}] "No, it's more like..."

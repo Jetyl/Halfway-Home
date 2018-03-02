@@ -116,7 +116,7 @@ public class DescriptionDisplay : MonoBehaviour
 
             
         }
-        else if (Input.GetMouseButtonDown(0) == true)
+        else if (Input.GetMouseButtonDown(0) == true || Input.GetButtonDown("Next"))
         {
             if (!isFinished)
             {
