@@ -323,6 +323,8 @@ I wonder if Max is up already. probably is.
 		[Isaac] "no."
 		[Eduardo] "Issaaaaaaac!"
 		[Isaac] ">Sighs"
+		"just go to sleep."
+		[Eduardo]
 }
 These two are, really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
