@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9838,6 +9838,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1174770651}
     m_Modifications:
+    - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: CGList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9870,6 +9880,114 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212581752768543538, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -347580791
+      objectReference: {fileID: 0}
+    - target: {fileID: 212581752768543538, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212070676895858708, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -347580791
+      objectReference: {fileID: 0}
+    - target: {fileID: 212070676895858708, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212031393984077694, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -347580791
+      objectReference: {fileID: 0}
+    - target: {fileID: 212031393984077694, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212507266546122010, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -347580791
+      objectReference: {fileID: 0}
+    - target: {fileID: 212507266546122010, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[5].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 92e2e2b3ad1544649ba8040a8e24df74,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[8].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a430e18621e5a54c9bb34f7db6099f6,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[2].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: ed888740280d5ea4a98c0d7276098c0b,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[1].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e5b2f464cf68cb4ba66953129de4469,
+        type: 3}
+    - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: CGList.Array.data[0].Tag
+      value: Hangman
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: CGList.Array.data[0].Graphic
+      value: 
+      objectReference: {fileID: 1288692834534888, guid: 08ff9803d59952e47a8ca1005708a2fb,
+        type: 2}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[1].Tag
+      value: HouseFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[1].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ee03a8dcecc16e49aa1585bb30884f5,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[2].Tag
+      value: CommonsNight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[2].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: 311b05bb2864f1a47895520b771d727b,
+        type: 3}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[3].Tag
+      value: CommonsDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: SpecialBackdrops.Array.data[3].Backdrop
+      value: 
+      objectReference: {fileID: 21300000, guid: ed888740280d5ea4a98c0d7276098c0b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
   m_IsPrefabParent: 0

@@ -132,7 +132,7 @@ MonoBehaviour:
   Speaker:
     Character: Trissa
     Actor: {fileID: 0}
-  ScaleRatio: 1.1
+  ScaleRatio: 1.02
   TimeToScale: 0.5
 --- !u!114 &114820324330857468
 MonoBehaviour:

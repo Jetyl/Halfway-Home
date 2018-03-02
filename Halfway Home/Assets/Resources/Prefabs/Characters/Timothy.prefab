@@ -117,7 +117,7 @@ MonoBehaviour:
   Speaker:
     Character: Timothy
     Actor: {fileID: 0}
-  ScaleRatio: 1.2
+  ScaleRatio: 1.02
   TimeToScale: 0.5
 --- !u!114 &114519777961192366
 MonoBehaviour:

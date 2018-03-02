@@ -190,7 +190,7 @@ MonoBehaviour:
   Speaker:
     Character: Max
     Actor: {fileID: 0}
-  ScaleRatio: 1.1
+  ScaleRatio: 1.02
   TimeToScale: 0.5
 --- !u!212 &212268110233276374
 SpriteRenderer:

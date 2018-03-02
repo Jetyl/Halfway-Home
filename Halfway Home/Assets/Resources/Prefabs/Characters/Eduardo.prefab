@@ -132,7 +132,7 @@ MonoBehaviour:
   Speaker:
     Character: Eduardo
     Actor: {fileID: 0}
-  ScaleRatio: 1.1
+  ScaleRatio: 1.02
   TimeToScale: 0.5
 --- !u!114 &114436012824126240
 MonoBehaviour:
