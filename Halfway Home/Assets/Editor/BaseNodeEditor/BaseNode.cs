@@ -29,10 +29,9 @@ public class BaseNode
         style = nodeStyle;
         inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
-        defaultNodeStyle = nodeStyle;
-        selectedNodeStyle = selectedStyle;
+        defaultNodeStyle = new GUIStyle(nodeStyle);
+        selectedNodeStyle = new GUIStyle(selectedStyle);
         OnRemoveNode = OnClickRemoveNode;
-
         title = "";
     }
 
@@ -98,7 +97,24 @@ public class BaseNode
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
+
+
+        genericMenu.AddItem(new GUIContent("Change Color/Grey"), false, () => ChangeColor(0));
+        genericMenu.AddItem(new GUIContent("Change Color/Cyan"), false, () => ChangeColor(1));
+        genericMenu.AddItem(new GUIContent("Change Color/Seafoam"), false, () => ChangeColor(2));
+        genericMenu.AddItem(new GUIContent("Change Color/Green"), false, () => ChangeColor(3));
+        genericMenu.AddItem(new GUIContent("Change Color/Yellow"), false, () => ChangeColor(4));
+        genericMenu.AddItem(new GUIContent("Change Color/Orange"), false, () => ChangeColor(5));
+        genericMenu.AddItem(new GUIContent("Change Color/Red"), false, () => ChangeColor(6));
+
         genericMenu.ShowAsContext();
+    }
+
+
+    private void ChangeColor(int number)
+    {
+        defaultNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/lightskin/images/node" + number +".png") as Texture2D;
+        selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/lightskin/images/node" + number + " on.png") as Texture2D;
     }
 
     private void OnClickRemoveNode()
