@@ -30,6 +30,10 @@ public class MapNode : BaseNode
         NextID = (int)data["NextID"]; 
         TypeID = NodeTypes.MapNode;
 
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
         Day = (int)data["Day"];
         Hour = (int)data["Hour"];
         Length = (int)data["Length"];

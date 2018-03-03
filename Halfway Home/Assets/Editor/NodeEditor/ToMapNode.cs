@@ -25,7 +25,9 @@ public class ToMapNode : BaseNode
 
         title = (string)data["title"];
 
-        
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
 
         TypeID = NodeTypes.ToMapNode;
 

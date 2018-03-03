@@ -312,16 +312,14 @@ namespace HalfwayHome
       return Game.current.Progress.GetIntValue(ValueName);
     }
 
-        public void SetStringValue(string ValueName, string value)
+    public void SetStringValue(string ValueName, string value)
     {
-            Game.current.Progress.SetValue(ValueName, value);
+      Game.current.Progress.SetValue(ValueName, value);
     }
 
 
     public string GetStringValue(string ValueName)
     {
-            
-            print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
 
@@ -332,7 +330,6 @@ namespace HalfwayHome
     }
     public int GetSelfStat(string stat_name)
     {
-            print(Game.current.Self.GetStat(stat_name));
         return Game.current.Self.GetStat(stat_name);
     }
 

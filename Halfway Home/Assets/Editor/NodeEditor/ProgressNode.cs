@@ -80,6 +80,10 @@ public class ProgressNode : BaseNode
         outPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         BranchOutPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Branch, outPointStyle, OnClickOutPoint);
 
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
         TypeID = NodeTypes.ProgressNode;
 
         int ty = (int)data["TypeOfProgress"];

@@ -48,6 +48,9 @@ public class ChangeNode : BaseNode
     {
         
         TypeID = NodeTypes.ChangeNode;
+        
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
 
         int ty = (int)data["TypeOfProgress"];
         TypeOfProgress = (ProgressType)ty;

@@ -47,6 +47,10 @@ public class ChainNode : BaseNode
         ChoicePoints = new List<ChoiceConnectionPoint>();
         ChoiceIDs = new List<int>();
 
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
         ID = (int)data["ID"];
 
         title = (string)data["title"];

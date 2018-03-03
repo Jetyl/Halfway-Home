@@ -27,7 +27,9 @@ public class LoopNode : BaseNode
     {
 
         TypeID = NodeTypes.LoopNode;
-
+        
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
 
         ID = (int)data["ID"];
 

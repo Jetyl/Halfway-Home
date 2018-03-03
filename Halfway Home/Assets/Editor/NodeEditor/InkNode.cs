@@ -34,6 +34,10 @@ public class InkNode : BaseNode
 
         title = (string)data["title"];
 
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
         if (data["Story"] != null)
         {
             InkFile = Resources.Load((string)data["Story"]) as TextAsset;

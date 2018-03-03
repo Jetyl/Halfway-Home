@@ -27,6 +27,10 @@ public class LoadNode : BaseNode
         
         TypeID = NodeTypes.LoadNode;
 
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
     }
 
 

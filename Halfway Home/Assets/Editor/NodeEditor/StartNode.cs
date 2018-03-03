@@ -18,7 +18,7 @@ public class StartNode : BaseNode
         DisableUI = false;
     }
 
-    public StartNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int nextID, string Title, bool Disable) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public StartNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int nextID, string Title, bool Disable, int color) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
     {
         title = Title;
         inPoint = null;
@@ -26,6 +26,7 @@ public class StartNode : BaseNode
         NextID = nextID;
         TypeID = NodeTypes.StartNode;
         DisableUI = Disable;
+        
     }
 
 

@@ -253,6 +253,8 @@ public class ProgressionEditor : BaseNodeEditor
 
             double width = (double)ProgressionData[i]["width"];
             double height = (double)ProgressionData[i]["height"];
+            
+            int col = (int)ProgressionData[i]["color"];
 
             int j = (int)ProgressionData[i]["TypeID"];
             NodeTypes ID = (NodeTypes)j;
@@ -260,11 +262,11 @@ public class ProgressionEditor : BaseNodeEditor
             switch (ID)
             {
                 case NodeTypes.StartNode:
-                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["NextID"], (string)ProgressionData[i]["title"], false);
+                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["NextID"], (string)ProgressionData[i]["title"], false, col);
                     nodes.Add(StartPoint);
                     break;
                 case NodeTypes.EndingNode:
-                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["ID"], (int)ProgressionData[i]["EndID"], (string)ProgressionData[i]["title"], false));
+                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["ID"], (int)ProgressionData[i]["EndID"], (string)ProgressionData[i]["title"], false, col));
                     break;
                 case NodeTypes.ProgressNode:
                     nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ProgressionData[i]));

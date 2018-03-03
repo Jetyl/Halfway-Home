@@ -15,6 +15,8 @@ public class BaseNode
     public bool isDragged;
     public bool isSelected;
 
+    public int NodeColor = 1;
+
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
 
@@ -31,6 +33,7 @@ public class BaseNode
         outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         defaultNodeStyle = new GUIStyle(nodeStyle);
         selectedNodeStyle = new GUIStyle(selectedStyle);
+        ChangeColor(NodeColor);
         OnRemoveNode = OnClickRemoveNode;
         title = "";
     }
@@ -111,8 +114,9 @@ public class BaseNode
     }
 
 
-    private void ChangeColor(int number)
+    protected void ChangeColor(int number)
     {
+        NodeColor = number;
         defaultNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/lightskin/images/node" + number +".png") as Texture2D;
         selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/lightskin/images/node" + number + " on.png") as Texture2D;
     }
