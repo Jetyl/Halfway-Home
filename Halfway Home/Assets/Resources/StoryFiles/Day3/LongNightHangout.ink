@@ -436,7 +436,7 @@ Oh boy, here comes the Max talk.
 	[{player_name}] "Max, Please, I am an adult. Stop Micro-Managing me!"
 -[Max] "Look, just, go to bed, okay. And get your sleep schedule sorted out before this Monday."
 "I better go make sure everthing is in order before everyone else wakes up."
-And Max leaves me, alone in the commons, as they get to work.
+And Max leaves me, alone in the commons, as they get to work. #Max = Exit
 And with that, I get up and leave as well.
 {
 	-delusion > 60:

@@ -26574,6 +26574,11 @@ Prefab:
       propertyPath: DebugDay
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: DebugHour
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
   m_IsPrefabParent: 0

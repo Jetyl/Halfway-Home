@@ -109,11 +109,11 @@ I tell myself that, over and over, untill I fall asleep.
 .......
 ................
 //have this in UI color
-<color=A5C5E3FF>Progress Status: ... DETECTING @ Primary Objective: ... FAILURE @ Secondary Objective: ... SUCCESS
-<color=A5C5E3FF>Determining Following Action: ... COMPLETE
-<color=A5C5E3FF>Reinintializing.... @Recontructing.... @Resetting....
-<color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired
-<color=A5C5E3FF>Awaiting Further Input....
+<color=A5C5E3FF>Progress Status: ... DETECTING @ Primary Objective: ... FAILURE @ Secondary Objective: ... SUCCESS </color>
+<color=A5C5E3FF>Determining Following Action: ... COMPLETE</color>
+<color=A5C5E3FF>Reinintializing.... @Recontructing.... @Resetting....</color>
+<color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired</color>
+<color=A5C5E3FF>Awaiting Further Input....</color>
 {SetTimeBlock(0)}
 //~week += 1
 ->END
