@@ -29,12 +29,15 @@ EXTERNAL GetIntValue(value)
 EXTERNAL AlterTime()
 EXTERNAL SetTimeBlock(time)
 EXTERNAL GetHour()
+EXTERNAL GetSelfStat(stat_name)
+EXTERNAL CallSleep()
 
 -> Start
 
 === Start ===
 I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
-Walking in, I spy Euardo and Isaac as the only ones in the room. ~HoursSpent = 0
+~HoursSpent = 0
+Walking in, I spy Euardo and Isaac as the only ones in the room. 
 [Eduardo] "Hey! {player_name}! how's it hanging?!"
 [{player_name}] "What are you guys still doing up?"
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
@@ -49,13 +52,17 @@ I sit down, and hangout with Isaac and Eduardo for a while.
 ->TimePassing.NextHour
 
 ===TimePassing===
-another hour passes with the duo. I get a bit more tired. {AlterTime()}
+another hour passes with the duo. I get a bit more tired. #time % 1
 {
-	-GetIntValue("fatigue") > 90:
-		->LeaveEarly
+	-GetSelfStat("fatigue") > 90:
+		->TooTired
 	-else:
-		I Suppose I could go another hour. {SetTimeBlock(1)} ~HourseSpent = HoursSpent + 1
-		->NextHour
+		~HoursSpent = HoursSpent + 1
+		I Suppose I could go another hour, but should I? //{SetTimeBlock(1)}
+		+[Stay another hour]
+			->NextHour
+		+[Call it a night, and head off]
+			->LeaveEarly
 }
 =NextHour
 {
@@ -404,12 +411,20 @@ These two are, really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
 
 ===LeaveEarly===
+I decide now is a good time to head off from this conversation. #background / commons, crossfade
+I wave off to the other two as I leave. they seem to be set to keep talking for hours. 
+I'm almost jealous of Eduardo. So free to express himself, and to do what he wants.
+I could do to be a little more like that. @only a little. @<i>(Your Expression has increased)</i> #expression++
+->END
+
+===TooTired===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means its probably a good time to call it a night.
 I deceide to leave the two to their chatting, and head to bed. #background / commons, crossfade
 I faceplant myself into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 it doesn't take long for me to lose consciousness #background / dream, eyeclose
-
-
+... {CallSleep()} #time %12
+..... #fatigue => 0
+I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops.
 ->END
 
 ===MorningMax===
@@ -439,11 +454,12 @@ Oh boy, here comes the Max talk.
 And Max leaves me, alone in the commons, as they get to work. #Max = Exit
 And with that, I get up and leave as well.
 {
-	-delusion > 60:
+	-delusion > 75:
 		Max is right, I shouldn't have done this.
 		[Voices] "Your so stupid."
 		I'm so stupid.
 	-else:
 		Despite what Max things, I... Actually feel very good about the night I spent.
+		<i>Your Expression has increased!</i> #expression++
 }
 ->END

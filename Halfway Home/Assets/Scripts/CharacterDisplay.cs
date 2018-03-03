@@ -50,7 +50,6 @@ public class CharacterDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        
 	}
 
     

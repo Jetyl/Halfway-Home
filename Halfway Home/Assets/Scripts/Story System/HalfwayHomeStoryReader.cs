@@ -44,6 +44,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetSelfStat), (string stat_name) =>  GetSelfStat(stat_name));
       story.runtime.BindExternalFunction(nameof(GetHour), () =>  GetHour());
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
@@ -86,6 +87,11 @@ namespace HalfwayHome
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
+
+      
+      // Time Change
+      string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
+      parser.AddPattern("ChangeTime", changeTime, RegexParser.Target.Tag, RegexParser.Scope.Group, OnChangeTime);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -93,6 +99,32 @@ namespace HalfwayHome
             
     }
 
+
+    void OnChangeTime(Parse parse)
+    {
+            foreach (var match in parse.matches)
+            {
+                if (match.ContainsKey("time"))
+                {
+                    if (match["time"].ToLower() == "set_time")
+                    {
+                        string[] set = match["value"].Split(',');
+                        Game.current.Day = int.Parse(set[0]);
+                        Game.current.Hour = int.Parse(set[1]);
+                        Space.DispatchEvent(Events.TimeChange);
+                    }
+                    else
+                    {
+                        int hour = int.Parse(match["value"]);
+                        Game.current.SetTimeBlock(hour);
+                        Game.current.AlterTime();
+                    }
+
+                    //return;
+                }
+
+            }
+        }
 
     void OnSetBackground(Parse parse)
     {
@@ -298,11 +330,15 @@ namespace HalfwayHome
       Game.current.SetTimeBlock(time);
 
     }
+    public int GetSelfStat(string stat_name)
+    {
+            print(Game.current.Self.GetStat(stat_name));
+        return Game.current.Self.GetStat(stat_name);
+    }
 
-    public void AlterTime()
+        public void AlterTime()
     {
       Game.current.AlterTime();
-
     }
 
     public int GetHour()
