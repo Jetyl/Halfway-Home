@@ -33,7 +33,7 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. #Background / HouseFront
+This is it. Sunflower House. # Background / HouseFront
 The paint seems to be a bit more faded than in the pictures, but it's a lot more appealing than Blackwell.
 'A Garden for the Mind' according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe their right.
@@ -46,7 +46,7 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
 [Max0Tall Redhead] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
 The other residents begin to whisper amongst each other.
-[Max] "Since your room's here on the first floor, I'll be your RA! That means that if you need anything non-medical, I'm the one to talk to."
+[Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
 [Max] "It also means I get to show you to your room! Follow me!" # Max = Happy
 ->Unpack
 
@@ -54,7 +54,7 @@ The other residents begin to whisper amongst each other.
 The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe
 [Max] "Your quarters, sire. I hope you find them to your liking."
 [Max] "Anyhoo, I've got to finish mopping the cafe. Been a bit behind... as usual, really."
-[Max] "I'll leave you to unpack and get settled. Why don't you come and find me in the cafe when you're done?"
+[Max] "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
 I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit
 -> Cafe
 
