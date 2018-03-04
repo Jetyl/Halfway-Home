@@ -422,9 +422,9 @@ I yawn, as my eyes make another attempt at forcing themselves closed. My attenti
 I deceide to leave the two to their chatting, and head to bed. #background / commons, crossfade
 I faceplant myself into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 it doesn't take long for me to lose consciousness #background / dream, eyeclose
-... {CallSleep()} #time %12
+... {CallSleep()} #sleep %12
 ..... #fatigue => 0
-I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops.
+I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops. #background/YourRoom, eyeopen
 ->END
 
 ===MorningMax===

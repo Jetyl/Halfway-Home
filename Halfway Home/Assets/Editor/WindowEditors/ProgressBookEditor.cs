@@ -5,7 +5,7 @@ using LitJson;
 using System.IO;
 using System.Collections.Generic;
 using UnityEditorInternal;
-public class PlotBeatEditor : EditorWindow
+public class ProgressBookEditor : EditorWindow
 {
     [SerializeField]
     public JsonData BeatData;
@@ -22,11 +22,11 @@ public class PlotBeatEditor : EditorWindow
     private ReorderableList List;
     private ReorderableList PlotList;
 
-    [MenuItem("Window/Halfway Home/PlotBeatEditor")]
+    [MenuItem("Window/Halfway Home/ProgressEditor")]
 
     public static void ShowWindow()
     {
-        GetWindow(typeof(PlotBeatEditor));
+        GetWindow(typeof(ProgressBookEditor));
     }
 
     public void Awake()
@@ -60,7 +60,7 @@ public class PlotBeatEditor : EditorWindow
         GUILayout.BeginVertical();
 
         // display for the currently selected beat
-        EditorGUILayout.LabelField("Current Beat");
+        EditorGUILayout.LabelField("Current Progress Tag");
 
         if (SelectedBeat >= 0)
         {
@@ -69,13 +69,13 @@ public class PlotBeatEditor : EditorWindow
                 SelectedBeat = Plots.Count - 1;
 
 
-            Plots[SelectedBeat].PlotName = EditorGUILayout.TextField("Plot Name", Plots[SelectedBeat].PlotName);
+            Plots[SelectedBeat].PlotName = EditorGUILayout.TextField("Tag Note", Plots[SelectedBeat].PlotName);
 
             //make sure no number's overlap
 
-            Plots[SelectedBeat].BeatNumber = EditorGUILayout.IntField("Beat Number", Plots[SelectedBeat].BeatNumber);
+            Plots[SelectedBeat].BeatNumber = EditorGUILayout.IntField("Tag Number", Plots[SelectedBeat].BeatNumber);
 
-            Plots[SelectedBeat].BeatName = EditorGUILayout.TextField("Beat Name", Plots[SelectedBeat].BeatName);
+            Plots[SelectedBeat].BeatName = EditorGUILayout.TextField("Tag Name", Plots[SelectedBeat].BeatName);
             
             List.DoLayoutList();
             
@@ -91,7 +91,7 @@ public class PlotBeatEditor : EditorWindow
 
         GUILayout.BeginVertical();
         // The actual window code goes here
-        if (GUILayout.Button("Save Plot Beats"))
+        if (GUILayout.Button("Save Progress Book"))
         {
             SaveItemInfo();
             
@@ -109,7 +109,7 @@ public class PlotBeatEditor : EditorWindow
         PlotList = new ReorderableList(Plots, typeof(Beat), true, true, true, true);
 
         PlotList.drawHeaderCallback = (Rect rect) => {
-            EditorGUI.LabelField(rect, "Plot Beats");
+            EditorGUI.LabelField(rect, "Tags");
         };
 
         PlotList.drawElementCallback =

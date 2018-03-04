@@ -278,7 +278,9 @@ public class Game
 
     public void NewDay()
     {
-        
+
+        Progress.ResetDay();
+
         Day += 1;
         //update the day in the progression system
         var point = new ProgressPoint("Day", PointTypes.Integer);
@@ -296,7 +298,7 @@ public class Game
 
     public void Slept()
     {
-        Progress.ResetDaily();
+        Progress.ResetSleep();
     }
 
     public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)

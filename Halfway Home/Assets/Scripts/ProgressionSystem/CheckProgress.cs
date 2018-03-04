@@ -31,10 +31,8 @@ public class CheckProgress : MonoBehaviour
     public Sprite InventoryMatch;
 
     public bool CurrentlyInInventory;
-
-    public ProgressType TypeOfProgress;
     
-
+    
     public float MoodValueToMatch;
 
     public ValueCompare Compare;
@@ -60,7 +58,6 @@ public class CheckProgress : MonoBehaviour
     public float DrainSpeed;
 
     public string BeatName;
-    public Beat.BeatState beatState;
     
     public bool PreviousScene;
 
@@ -71,12 +68,10 @@ public class CheckProgress : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-
-        if(TypeOfProgress == ProgressType.ProgressPoint)
-        {
-            if(Game.current.Progress.Contains(CheckToMatch.ProgressName) != true)
-                print(CheckToMatch.ProgressName + " not set on Object " + gameObject.name);
-        }
+        
+        if(Game.current.Progress.Contains(CheckToMatch.ProgressName) != true)
+            print(CheckToMatch.ProgressName + " not set on Object " + gameObject.name);
+        
 
 
         if (ListeningOn == EventListener.Owner)
@@ -93,31 +88,12 @@ public class CheckProgress : MonoBehaviour
 
     void Check(DefaultEvent eventdata)
     {
-
-        switch (TypeOfProgress)
-        {
-            case ProgressType.None:
-                break;
-            case ProgressType.ProgressPoint:
-
-                if (Game.current.Progress.CheckProgress(CheckToMatch))
-                    Pass();
-                else
-                    Fail();
-
-                break;
-            
-            case ProgressType.PlotBeat:
-                if (Game.current.Progress.CheckBeatState(BeatName, beatState))
-                    Pass();
-                else
-                    Fail();
-                break;
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
+        
+        if (Game.current.Progress.CheckProgress(CheckToMatch))
+            Pass();
+        else
+            Fail();
+                
         
 
     }
@@ -171,12 +147,6 @@ public class CheckProgress : MonoBehaviour
 }
 
 
-public enum ProgressType
-{
-    None,
-    ProgressPoint,
-    PlotBeat
-}
 
 
 public enum ValueCompare

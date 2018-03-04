@@ -39,7 +39,7 @@ I Scamper into bedroom, yawning as I do.
 I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
 ... {SetValue("Depression Time Dilation", false)}
 ......{SetTimeBlock(0)} 
-......... {CallSleep()}
+......... {CallSleep()} #set_time%7,9
 [Max 0Unknown] "...{player_name}."
 huh?
 "{player_name}. get up ya silly bum."

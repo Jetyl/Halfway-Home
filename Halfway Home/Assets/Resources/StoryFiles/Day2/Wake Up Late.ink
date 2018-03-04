@@ -27,7 +27,7 @@ EXTERNAL CallSleep()
 
 === Start ===
 [Max] "Are y'all still asleep in there?" //knock noise
-uuuugh.... #Background / YourRoom, eyeopn
+uuuugh.... #Background / YourRoom, eyeopen
 Max, (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "!" #Max = Surprised
 "{player_name}... You did just get up?" #Max = Sad
