@@ -259,12 +259,12 @@ I should probably head out as well. {SetValue("ReadyForTea", true)}
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at 2pm?"
 	"I usually take tea at 3, but I shall make an exception so that we have some uninterrupted time."
-	[{player_name}] "2pm tomorrow. Got it."
+	[{player_name}] "2pm tomorrow. Got it." {SetValue("ReadyForInstruction", true)}
 *[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
-	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
+	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}." {SetValue("ReadyForInstruction", false)}
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
-I should probably head out as well. {SetValue("ReadyForInstruction", true)}
+I should probably head out as well.
 -> END
 
 === Fail ===
