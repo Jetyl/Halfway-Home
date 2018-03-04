@@ -23,9 +23,9 @@ public class MapNode : BaseNode
     bool Opened;
     bool People; 
 
-    public MapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int NodeID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public MapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, int NodeID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
-        inPoint = null;
+        //inPoint = null;
         ID = NodeID;
         NextID = -1;
         TypeID = NodeTypes.MapNode;
@@ -36,7 +36,7 @@ public class MapNode : BaseNode
         OrganizeLines();
     }
 
-    public MapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public MapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         title = (string)data["title"];
         inPoint = null;
@@ -78,6 +78,29 @@ public class MapNode : BaseNode
 
     }
 
+    public override BaseNode Duplicate(int index)
+    {
+
+        Vector2 pos = new Vector2(rect.x + 25, rect.y + 25);
+
+        MapNode copy = new MapNode(pos, rect.width, rect.height, style, selectedNodeStyle, inPoint.style, outPoint.style,
+            inPoint.OnClickConnectionPoint, outPoint.OnClickConnectionPoint, OnRemoveNode, OnDuplicateNode, index);
+
+        copy.Locale = Locale;
+        copy.Hour = Hour;
+        copy.Day = Day;
+        copy.Length = Length;
+        copy.Locks = Locks.ConvertAll(book => new ProgressPoint(book));
+        copy.PeoplePresent = new List<string>(PeoplePresent);
+
+        
+        copy.OrganizeLines();
+
+        copy.ChangeColor(NodeColor);
+        copy.ID = index;
+
+        return copy;
+    }
 
     public override void Draw()
     {

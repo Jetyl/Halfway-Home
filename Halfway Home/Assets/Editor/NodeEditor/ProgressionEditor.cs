@@ -98,7 +98,7 @@ public class ProgressionEditor : BaseNodeEditor
             nodes = new List<BaseNode>();
         }
 
-        nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+        nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
         NewID += 1;
     }
 
@@ -108,7 +108,7 @@ public class ProgressionEditor : BaseNodeEditor
         {
             nodes = new List<BaseNode>();
         }
-        StartPoint = new StartNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        StartPoint = new StartNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode);
         nodes.Add(StartPoint);
         
     }
@@ -120,7 +120,7 @@ public class ProgressionEditor : BaseNodeEditor
             nodes = new List<BaseNode>();
         }
         
-        nodes.Add(new EndingNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+        nodes.Add(new EndingNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
         NewID += 1;
     }
 
@@ -131,7 +131,7 @@ public class ProgressionEditor : BaseNodeEditor
             nodes = new List<BaseNode>();
         }
 
-        nodes.Add(new ChangeNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+        nodes.Add(new ChangeNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
         NewID += 1;
     }
 
@@ -262,17 +262,17 @@ public class ProgressionEditor : BaseNodeEditor
             switch (ID)
             {
                 case NodeTypes.StartNode:
-                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["NextID"], (string)ProgressionData[i]["title"], false, col);
+                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, (int)ProgressionData[i]["NextID"], (string)ProgressionData[i]["title"], false, col);
                     nodes.Add(StartPoint);
                     break;
                 case NodeTypes.EndingNode:
-                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ProgressionData[i]["ID"], (int)ProgressionData[i]["EndID"], (string)ProgressionData[i]["title"], false, col));
+                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, (int)ProgressionData[i]["ID"], (int)ProgressionData[i]["EndID"], (string)ProgressionData[i]["title"], false, col));
                     break;
                 case NodeTypes.ProgressNode:
-                    nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ProgressionData[i]));
+                    nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ProgressionData[i]));
                     break;
                 case NodeTypes.ChangeNode:
-                    nodes.Add(new ChangeNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ProgressionData[i]));
+                    nodes.Add(new ChangeNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ProgressionData[i]));
                     break;
                 default:
                     break;

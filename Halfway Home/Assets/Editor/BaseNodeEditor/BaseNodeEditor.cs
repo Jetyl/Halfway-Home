@@ -256,7 +256,7 @@ public class BaseNodeEditor : EditorWindow
             nodes = new List<BaseNode>();
         }
 
-        nodes.Add(new BaseNode(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        nodes.Add(new BaseNode(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode));
     }
 
     protected void OnClickInPoint(ConnectionPoint inPoint)
@@ -366,6 +366,13 @@ public class BaseNodeEditor : EditorWindow
 
 
         return true;
+    }
+
+
+
+    protected virtual void OnClickDuplicateNode<T>(T node) where T : BaseNode
+    {
+        nodes.Add(node.Duplicate(0));
     }
 
 }
