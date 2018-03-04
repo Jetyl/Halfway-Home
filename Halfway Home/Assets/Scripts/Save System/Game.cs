@@ -225,7 +225,7 @@ public class Game
         int i = Hour + 1;
         int j = Day;
 
-        //if they character stays there for several hours, update that here
+        //if the character stays there for several hours, update that here
         while(Schedule[Character][j][i] == Schedule[Character][Day][Hour])
         {
             ScheduleUnderstanding[Character][j][i] = true;

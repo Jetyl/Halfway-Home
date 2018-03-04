@@ -428,8 +428,8 @@ I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @who
 ->END
 
 ===MorningMax===
-The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade
-The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early. #Max = Surprised
+The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade #time%1
+The second sign, is Max, who comes in for their morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
 [{player_name}] "hehe, yeah..."
 [Isaac] "we stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left

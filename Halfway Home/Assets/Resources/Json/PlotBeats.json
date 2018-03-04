@@ -213,6 +213,10 @@
    {
     "Name" : "CompletedTeatime",
     "Type" : 1
+   },
+   {
+    "Name" : "HadLateNightHangout",
+    "Type" : 1
    }
   ]
  },

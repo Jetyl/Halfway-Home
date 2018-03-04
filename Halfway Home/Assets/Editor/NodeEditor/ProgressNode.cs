@@ -81,8 +81,6 @@ public class ProgressNode : BaseNode
 
         TypeID = NodeTypes.ProgressNode;
 
-        int ty = (int)data["TypeOfProgress"];
-
         ID = (int)data["ID"];
 
         PassID = (int)data["PassID"];
