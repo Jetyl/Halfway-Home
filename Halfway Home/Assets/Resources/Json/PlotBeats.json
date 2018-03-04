@@ -133,9 +133,9 @@
   ]
  },
  {
-  "PlotName" : "Daily",
+  "PlotName" : "Sleepy",
   "BeatNumber" : 0,
-  "BeatName"   : "Daily",
+  "BeatName"   : "Sleepy",
   "Point"      : [
    {
     "Name" : "KitchenVisists",
@@ -213,6 +213,21 @@
    {
     "Name" : "CompletedTeatime",
     "Type" : 1
+   },
+   {
+    "Name" : "HadLateNightHangout",
+    "Type" : 1
+   }
+  ]
+ },
+ {
+  "PlotName" : "Daily",
+  "BeatNumber" : 0,
+  "BeatName"   : "Daily",
+  "Point"      : [
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 2
    }
   ]
  },

@@ -106,12 +106,18 @@ namespace HalfwayHome
             {
                 if (match.ContainsKey("time"))
                 {
-                    if (match["time"].ToLower() == "set_time")
+                    if (match["time"].ToLower() == "set_time" || match["time"].ToLower() == "time_set")
                     {
-                        string[] set = match["value"].Split(',');
+                        string[] set = match["value"].Replace(" ","").Split(',');
                         Game.current.Day = int.Parse(set[0]);
                         Game.current.Hour = int.Parse(set[1]);
                         Space.DispatchEvent(Events.TimeChange);
+                    }
+                    else if (match["time"].ToLower() == "sleep")
+                    {
+                        int hour = int.Parse(match["value"]);
+                        Game.current.SetTimeBlock(hour, false);
+                        Game.current.AlterTime();
                     }
                     else
                     {

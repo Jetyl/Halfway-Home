@@ -422,14 +422,14 @@ I yawn, as my eyes make another attempt at forcing themselves closed. My attenti
 I deceide to leave the two to their chatting, and head to bed. #background / commons, crossfade
 I faceplant myself into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 it doesn't take long for me to lose consciousness #background / dream, eyeclose
-... {CallSleep()} #time %12
+... {CallSleep()} #sleep %12
 ..... #fatigue => 0
-I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops.
+I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops. #background/YourRoom, eyeopen
 ->END
 
 ===MorningMax===
-The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade
-The second sign, is Max, who comes in for they morning mopping, and is rather surprised to see us up so early. #Max = Surprised
+The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade #time%1
+The second sign, is Max, who comes in for their morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
 [{player_name}] "hehe, yeah..."
 [Isaac] "we stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left

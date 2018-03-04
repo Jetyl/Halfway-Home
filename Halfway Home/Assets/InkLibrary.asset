@@ -73,6 +73,9 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: b1a5881c49fc14b4b81b66bd12e1f460, type: 3}
     jsonAsset: {fileID: 4900000, guid: 63bf801787666c141b71e6c2d15da80d, type: 3}
   - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 440b9ca8aa0814640834102da85acec7, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 35b2b158c0a8ffe47b47d1d9cf822f94, type: 3}
+  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 514b3e5aecee5274b95d76ab4a7fc1c9, type: 3}
     jsonAsset: {fileID: 4900000, guid: ddc7527685ce6e8498fb3ed118b397e9, type: 3}
   - compileAutomatically: 0
@@ -94,10 +97,10 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: e9aec4ec2c51e6748a0f813afb141e7a, type: 3}
     jsonAsset: {fileID: 4900000, guid: bdfddd18d94cf5645b7c460681564cc4, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 78447c5488f59014b8407981bb454ab0, type: 3}
+    inkAsset: {fileID: 102900000, guid: 7110e0ecec3bc44489549674d680a466, type: 3}
     jsonAsset: {fileID: 4900000, guid: 70a49d294f213d84aae4792b2cbdf60d, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 3420ecc8cf30ae4438e986c6f3bc106d, type: 3}
+    inkAsset: {fileID: 102900000, guid: 9e2eabeae3c21fa49bb3a54f539e0df6, type: 3}
     jsonAsset: {fileID: 4900000, guid: aed85835601cbbc46b05f5b7817e8db7, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: a750415b6a04e9b4bac0e566422c3a12, type: 3}
@@ -106,7 +109,7 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 40dcf32b28df21242a615bd74705470f, type: 3}
     jsonAsset: {fileID: 4900000, guid: 5bb01449e38a62943b9e9d0bb6679711, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 9af1ed0bcba48ef4fa8fdcddf69c6eca, type: 3}
+    inkAsset: {fileID: 102900000, guid: 833f35a4d4e697248941c88ae936429b, type: 3}
     jsonAsset: {fileID: 4900000, guid: 81df652aaff873443a1d34f304ed943d, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: abf146fb29e2f0547be0dc998a07c828, type: 3}
@@ -115,7 +118,7 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 3872752dd353e354f9324f116fc701d2, type: 3}
     jsonAsset: {fileID: 4900000, guid: 813b6617d71cf3f49b993368814ba8c6, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: d7f128d8cac4bd4408dfabb5508b083c, type: 3}
+    inkAsset: {fileID: 102900000, guid: 05b47da4bafc2d94581b40ad645bc49b, type: 3}
     jsonAsset: {fileID: 4900000, guid: 858d9c39a86784b498d61251803b91b4, type: 3}
   pendingCompilationStack: []
   compilationStack: []

@@ -59,7 +59,7 @@ public class Game
        
         Day = 0;
         Hour = 0;
-        PlayerName = "Me";
+        PlayerName = "Sam";
         CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();
@@ -225,7 +225,7 @@ public class Game
         int i = Hour + 1;
         int j = Day;
 
-        //if they character stays there for several hours, update that here
+        //if the character stays there for several hours, update that here
         while(Schedule[Character][j][i] == Schedule[Character][Day][Hour])
         {
             ScheduleUnderstanding[Character][j][i] = true;
@@ -278,7 +278,9 @@ public class Game
 
     public void NewDay()
     {
-        
+
+        Progress.ResetDay();
+
         Day += 1;
         //update the day in the progression system
         var point = new ProgressPoint("Day", PointTypes.Integer);
@@ -296,7 +298,7 @@ public class Game
 
     public void Slept()
     {
-        Progress.ResetDaily();
+        Progress.ResetSleep();
     }
 
     public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)

@@ -20,8 +20,6 @@ public class ProgressNode : BaseNode
     public Texture2D InventoryMatch;
 
     public bool Current;
-
-    public ProgressType TypeOfProgress;
     
 
     public ValueCompare Compare;
@@ -40,7 +38,6 @@ public class ProgressNode : BaseNode
     public float Drain;
 
     public string BeatName;
-    public Beat.BeatState BeatState;
     
     public bool PreviousScene;
 
@@ -49,13 +46,12 @@ public class ProgressNode : BaseNode
     public string DreamName;
 
     //a null node
-    public ProgressNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int NodeID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public ProgressNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, int NodeID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         inPoint = new ProgressionConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         BranchOutPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Branch, outPointStyle, OnClickOutPoint);
-
-        TypeOfProgress = ProgressType.None;
+        
         ID = NodeID;
         PassID = -1;
         FailID = -1;
@@ -69,12 +65,11 @@ public class ProgressNode : BaseNode
         TaskNumber = 0;
         NewTaskState = Task.TaskState.Unstarted;
         BeatName = "";
-        BeatState = Beat.BeatState.Unstarted;
         DreamName = "";
     }
 
 
-    public ProgressNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public ProgressNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         inPoint = new ProgressionConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
@@ -85,9 +80,6 @@ public class ProgressNode : BaseNode
             ChangeColor((int)data["color"]);
 
         TypeID = NodeTypes.ProgressNode;
-
-        int ty = (int)data["TypeOfProgress"];
-        TypeOfProgress = (ProgressType)ty;
 
         ID = (int)data["ID"];
 
@@ -169,11 +161,7 @@ public class ProgressNode : BaseNode
             BeatName = (string)data["BeatName"];
         else
             BeatName = "";
-
-        if (data.Keys.Contains("Beat"))
-            BeatState = (Beat.BeatState)(int)data["Beat"];
-
-        
+                
 
         if (data.Keys.Contains("Previous"))
             PreviousScene = (bool)data["Previous"];
@@ -194,7 +182,7 @@ public class ProgressNode : BaseNode
             DreamName = "";
 
     }
-
+    
 
     public override void Draw()
     {
@@ -204,36 +192,15 @@ public class ProgressNode : BaseNode
         GUI.Box(rect, "", style);
         title = GUI.TextField(new Rect(rect.position + new Vector2(25, 15), new Vector2(150, 20)), title);
         GUI.Label(new Rect(rect.position + new Vector2(25, 40), new Vector2(150, 20)), "ID: " + ID);
-        TypeOfProgress = (ProgressType)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 65), new Vector2(150, 20)), TypeOfProgress);
         AddDisplay();
     }
 
     void AddDisplay()
     {
-        switch (TypeOfProgress)
-        {
-            case ProgressType.None:
-                rect.size = new Vector2(200, 100);
-                break;
-            case ProgressType.ProgressPoint:
-                rect.size = new Vector2(200, 155);
-                CheckPoint.ProgressName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), CheckPoint.ProgressName);
-                CheckPoint.TypeID = (PointTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), CheckPoint.TypeID);
-                ProgressPointDisplay();
-                break;
-            
-            case ProgressType.PlotBeat:
-                rect.size = new Vector2(200, 125);
-                BeatName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), BeatName);
-
-                BeatState = (Beat.BeatState)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 110), new Vector2(150, 20)), BeatState);
-                break;
-            
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
+        rect.size = new Vector2(200, 155);
+        CheckPoint.ProgressName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), CheckPoint.ProgressName);
+        CheckPoint.TypeID = (PointTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), CheckPoint.TypeID);
+        ProgressPointDisplay();
     }
 
 

@@ -18,6 +18,8 @@ public class IconDisplay : MonoBehaviour
 
     public Sprite UnknownPersonSprite;
 
+    List<CharacterList> locations;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -36,40 +38,56 @@ public class IconDisplay : MonoBehaviour
 
     void TurnMapOn(DefaultEvent Eventdata)
     {
+        var scenes = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
         
+        //go thru every room
         for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
         {
-            if (i == (int)Room.None)
+            if (i == (int)Room.None) //if none, skip
                 continue;
-            var icons = new MapIconEvent((Room)i);
 
-            foreach (JsonData character in schedules)
+            if ((Room)i == Room.Sleeping) //if sleping, activate sleeping icon, and move on
             {
-                if ((Room)(int)character["Schedule"][Game.current.Day][Game.current.Hour] == (Room)i)
+                foreach (JsonData character in schedules)
                 {
-                    if ((Room)i == Room.Sleeping) //if sleping, activate sleeping icon, and move on
+                    if ((Room)(int)character["Schedule"][Game.current.Day][Game.current.Hour] == (Room)i)
                     {
-                        Space.DispatchEvent(Events.SleepIcon, new CharacterEvent((string)character["Name"]));
+                         Space.DispatchEvent(Events.SleepIcon, new CharacterEvent((string)character["Name"]));
                     }
                     else
                     {
+                        //decativating all other sleep icons
                         Space.DispatchEvent(Events.AwakeIcon, new CharacterEvent((string)character["Name"]));
-
-                        //Sprite icon = null;
-                        if(Game.current.KnowsWhereAbouts((string)character["Name"]) == false)
-                        {
-                            icons.Icons.Add(UnknownPersonSprite);
-                        }
-                        else if (character["slug"] != null)
-                        {
-                            var slug = (string)character["slug"];
-                            icons.Icons.Add(Resources.Load<Sprite>("Sprites/" + slug));
-                        }
-                        //StartCoroutine(TextParser.FrameDelay(Events.MapIcon, new MapIconEvent((Room)i, icon)));
-                        //Space.DispatchEvent(Events.MapIcon, new MapIconEvent((Room)i, icon));
                     }
                 }
             }
+
+            var icons = new MapIconEvent((Room)i);
+
+            foreach(ConvMap scene in scenes) //for every current scene availbe
+            {
+                if (scene.RoomLocation != (Room)i)
+                    continue;
+
+                foreach (JsonData character in schedules) //go thru each character
+                {
+                    if (!scene.Characters.Contains((string)character["Name"])) //are they there?
+                        continue;
+
+                    //has the player seen this scene already?
+                    if (Game.current.KnowsWhereAbouts((string)character["Name"]) == false)
+                    {
+                        icons.Icons.Add(UnknownPersonSprite);
+                    }
+                    else if (character["slug"] != null)
+                    {
+                        var slug = (string)character["slug"];
+                        icons.Icons.Add(Resources.Load<Sprite>("Sprites/" + slug));
+                    }
+                }
+                
+            }
+            
             print("Room to call: " + icons.CurrentRoom);
 
             Space.DispatchEvent(Events.MapIcon, icons);

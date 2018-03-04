@@ -24,8 +24,9 @@ public class BaseNode
     public GUIStyle defaultNodeStyle;
     public GUIStyle selectedNodeStyle;
     public Action<BaseNode> OnRemoveNode;
+    public Action<BaseNode> OnDuplicateNode;
 
-    public BaseNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode) 
+    public BaseNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode) 
     {
         rect = new Rect(position.x, position.y, width, height);
         style = nodeStyle;
@@ -35,7 +36,22 @@ public class BaseNode
         selectedNodeStyle = new GUIStyle(selectedStyle);
         ChangeColor(NodeColor);
         OnRemoveNode = OnClickRemoveNode;
+        OnDuplicateNode = OnClickDuplicateNode;
         title = "";
+    }
+
+    public virtual BaseNode Duplicate(int index)
+    {
+        Vector2 pos = new Vector2(rect.x + 25, rect.y + 25);
+
+        BaseNode copy = new BaseNode(pos, rect.width, rect.height, style, selectedNodeStyle, inPoint.style, outPoint.style,
+            inPoint.OnClickConnectionPoint, outPoint.OnClickConnectionPoint, OnRemoveNode, OnDuplicateNode);
+
+        copy.ChangeColor(NodeColor);
+        copy.ID = index;
+
+        return copy;
+
     }
 
     public void Drag(Vector2 delta)
@@ -100,6 +116,7 @@ public class BaseNode
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
+        genericMenu.AddItem(new GUIContent("Duplicate node"), false, OnClickDuplicate);
 
 
         genericMenu.AddItem(new GUIContent("Change Color/Grey"), false, () => ChangeColor(0));
@@ -128,5 +145,15 @@ public class BaseNode
             OnRemoveNode(this);
         }
     }
+
+
+    private void OnClickDuplicate()
+    {
+        if (OnDuplicateNode != null)
+        {
+            OnDuplicateNode(this);
+        }
+    }
+
 }
 

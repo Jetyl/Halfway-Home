@@ -98,7 +98,7 @@ public class TimelineEditor : BaseNodeEditor
             nodes = new List<BaseNode>();
         }
 
-        nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+        nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
         NewID += 1;
     }
 
@@ -112,35 +112,35 @@ public class TimelineEditor : BaseNodeEditor
         switch (type)
         {
             case NodeTypes.StartNode:
-                StartPoint = new StartNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+                StartPoint = new StartNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode);
                 nodes.Add(StartPoint);
                 return;
             case NodeTypes.EndingNode:
-                nodes.Add(new EndingNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new EndingNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode,  NewID));
                 break;
             case NodeTypes.ProgressNode:
-                nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new ProgressNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.ChangeNode:
-                nodes.Add(new ChangeNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new ChangeNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.MultiProgressNode:
-                nodes.Add(new ChainNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new ChainNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.MapNode:
-                nodes.Add(new MapNode(mousePosition, 350, 200, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new MapNode(mousePosition, 350, 200, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.ToMapNode:
-                nodes.Add(new ToMapNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new ToMapNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.InkNode:
-                nodes.Add(new InkNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new InkNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.LoadNode:
-                nodes.Add(new LoadNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new LoadNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             case NodeTypes.LoopNode:
-                nodes.Add(new LoopNode(mousePosition, 325, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, NewID));
+                nodes.Add(new LoopNode(mousePosition, 325, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
             default:
                 break;
@@ -275,6 +275,13 @@ public class TimelineEditor : BaseNodeEditor
         genericMenu.ShowAsContext();
     }
 
+
+    protected override void OnClickDuplicateNode<T>(T node)
+    {
+        nodes.Add(node.Duplicate(NewID));
+        NewID += 1;
+    }
+
     public void LoadInfo(JsonData pro)
     {
 
@@ -314,35 +321,35 @@ public class TimelineEditor : BaseNodeEditor
             switch (ID)
             {
                 case NodeTypes.StartNode:
-                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ConversationData[i]["NextID"], (string)ConversationData[i]["title"], (bool)ConversationData[i]["Disable"], col);
+                    StartPoint = new StartNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode,(int)ConversationData[i]["NextID"], (string)ConversationData[i]["title"], (bool)ConversationData[i]["Disable"], col);
                     nodes.Add(StartPoint);
                     break;
                 case NodeTypes.EndingNode:
-                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, (int)ConversationData[i]["ID"], (int)ConversationData[i]["EndID"], (string)ConversationData[i]["title"], (bool)ConversationData[i]["Enable"], col));
+                    nodes.Add(new EndingNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode,(int)ConversationData[i]["ID"], (int)ConversationData[i]["EndID"], (string)ConversationData[i]["title"], (bool)ConversationData[i]["Enable"], col));
                     break;
                 case NodeTypes.ProgressNode:
-                    nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new ProgressNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.ChangeNode:
-                    nodes.Add(new ChangeNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new ChangeNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.MultiProgressNode:
-                    nodes.Add(new ChainNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new ChainNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.MapNode:
-                    nodes.Add(new MapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new MapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.ToMapNode:
-                    nodes.Add(new ToMapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new ToMapNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.InkNode:
-                    nodes.Add(new InkNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new InkNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.LoadNode:
-                    nodes.Add(new LoadNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new LoadNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 case NodeTypes.LoopNode:
-                    nodes.Add(new LoopNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, ConversationData[i]));
+                    nodes.Add(new LoopNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 default:
                     break;
@@ -480,126 +487,87 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.Write(((ProgressNode)node).PassID);
                     Jwriter.WritePropertyName("FailID");
                     Jwriter.Write(((ProgressNode)node).FailID);
-                    Jwriter.WritePropertyName("TypeOfProgress");
-                    Jwriter.Write((int)((ProgressNode)node).TypeOfProgress);
+                    Jwriter.WritePropertyName("CheckToMatch");
 
-                    switch (((ProgressNode)node).TypeOfProgress)
+                    Jwriter.WriteArrayStart();
+                    Jwriter.WriteObjectStart();
+                    Jwriter.WritePropertyName("Name");
+                    Jwriter.Write(((ProgressNode)node).CheckPoint.ProgressName);
+                    Jwriter.WritePropertyName("Type");
+                    Jwriter.Write((int)((ProgressNode)node).CheckPoint.TypeID);
+
+                    switch (((ProgressNode)node).CheckPoint.TypeID)
                     {
-                        case ProgressType.None:
-
+                        case PointTypes.Flag:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ProgressNode)node).CheckPoint.BoolValue);
                             break;
-                        case ProgressType.ProgressPoint:
-                            Jwriter.WritePropertyName("CheckToMatch");
-
-                            Jwriter.WriteArrayStart();
-                            Jwriter.WriteObjectStart();
-                            Jwriter.WritePropertyName("Name");
-                            Jwriter.Write(((ProgressNode)node).CheckPoint.ProgressName);
-                            Jwriter.WritePropertyName("Type");
-                            Jwriter.Write((int)((ProgressNode)node).CheckPoint.TypeID);
-
-                            switch (((ProgressNode)node).CheckPoint.TypeID)
-                            {
-                                case PointTypes.Flag:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ProgressNode)node).CheckPoint.BoolValue);
-                                    break;
-                                case PointTypes.Float:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ProgressNode)node).CheckPoint.FloatValue);
-                                    Jwriter.WritePropertyName("Compare");
-                                    Jwriter.Write((int)((ProgressNode)node).CheckPoint.compare);
-                                    break;
-                                case PointTypes.Integer:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ProgressNode)node).CheckPoint.IntValue);
-                                    Jwriter.WritePropertyName("Compare");
-                                    Jwriter.Write((int)((ProgressNode)node).CheckPoint.compare);
-                                    break;
-                                case PointTypes.String:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ProgressNode)node).CheckPoint.StringValue);
-                                    break;
-                                default:
-                                    break;
-                            }
-
-                            Jwriter.WriteObjectEnd();
-                            Jwriter.WriteArrayEnd();
+                        case PointTypes.Float:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ProgressNode)node).CheckPoint.FloatValue);
+                            Jwriter.WritePropertyName("Compare");
+                            Jwriter.Write((int)((ProgressNode)node).CheckPoint.compare);
                             break;
-
-                        case ProgressType.PlotBeat:
-
-                            Jwriter.WritePropertyName("Beat");
-                            Jwriter.Write((int)((ProgressNode)node).BeatState);
-
-                            Jwriter.WritePropertyName("BeatName");
-                            Jwriter.Write(((ProgressNode)node).BeatName);
-
+                        case PointTypes.Integer:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ProgressNode)node).CheckPoint.IntValue);
+                            Jwriter.WritePropertyName("Compare");
+                            Jwriter.Write((int)((ProgressNode)node).CheckPoint.compare);
                             break;
-                            
+                        case PointTypes.String:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ProgressNode)node).CheckPoint.StringValue);
+                            break;
                         default:
-                            Debug.LogError("Unrecognized Option");
                             break;
                     }
 
+                    Jwriter.WriteObjectEnd();
+                    Jwriter.WriteArrayEnd();
 
                     break;
 
                 case NodeTypes.ChangeNode:
                     Jwriter.WritePropertyName("NextID");
                     Jwriter.Write(((ChangeNode)node).NextID);
-                    Jwriter.WritePropertyName("TypeOfProgress");
-                    Jwriter.Write((int)((ChangeNode)node).TypeOfProgress);
 
-                    switch (((ChangeNode)node).TypeOfProgress)
+                    Jwriter.WritePropertyName("CheckToMatch");
+
+                    Jwriter.WriteArrayStart();
+                    Jwriter.WriteObjectStart();
+                    Jwriter.WritePropertyName("Name");
+                    Jwriter.Write(((ChangeNode)node).CheckPoint.ProgressName);
+                    Jwriter.WritePropertyName("Type");
+                    Jwriter.Write((int)((ChangeNode)node).CheckPoint.TypeID);
+
+                    switch (((ChangeNode)node).CheckPoint.TypeID)
                     {
-                        case ProgressType.None:
+                        case PointTypes.Flag:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ChangeNode)node).CheckPoint.BoolValue);
                             break;
-                        case ProgressType.ProgressPoint:
-                            Jwriter.WritePropertyName("CheckToMatch");
-
-                            Jwriter.WriteArrayStart();
-                            Jwriter.WriteObjectStart();
-                            Jwriter.WritePropertyName("Name");
-                            Jwriter.Write(((ChangeNode)node).CheckPoint.ProgressName);
-                            Jwriter.WritePropertyName("Type");
-                            Jwriter.Write((int)((ChangeNode)node).CheckPoint.TypeID);
-
-                            switch (((ChangeNode)node).CheckPoint.TypeID)
-                            {
-                                case PointTypes.Flag:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ChangeNode)node).CheckPoint.BoolValue);
-                                    break;
-                                case PointTypes.Float:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ChangeNode)node).CheckPoint.FloatValue);
-                                    Jwriter.WritePropertyName("Compare");
-                                    Jwriter.Write((int)((ChangeNode)node).CheckPoint.compare);
-                                    break;
-                                case PointTypes.Integer:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ChangeNode)node).CheckPoint.IntValue);
-                                    Jwriter.WritePropertyName("Compare");
-                                    Jwriter.Write((int)((ChangeNode)node).CheckPoint.compare);
-                                    break;
-                                case PointTypes.String:
-                                    Jwriter.WritePropertyName("MatchValue");
-                                    Jwriter.Write(((ChangeNode)node).CheckPoint.StringValue);
-                                    break;
-                                default:
-                                    break;
-                            }
-
-                            Jwriter.WriteObjectEnd();
-                            Jwriter.WriteArrayEnd();
+                        case PointTypes.Float:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ChangeNode)node).CheckPoint.FloatValue);
+                            Jwriter.WritePropertyName("Compare");
+                            Jwriter.Write((int)((ChangeNode)node).CheckPoint.compare);
                             break;
-
+                        case PointTypes.Integer:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ChangeNode)node).CheckPoint.IntValue);
+                            Jwriter.WritePropertyName("Compare");
+                            Jwriter.Write((int)((ChangeNode)node).CheckPoint.compare);
+                            break;
+                        case PointTypes.String:
+                            Jwriter.WritePropertyName("MatchValue");
+                            Jwriter.Write(((ChangeNode)node).CheckPoint.StringValue);
+                            break;
                         default:
-                            Debug.LogError("Unrecognized Option");
                             break;
                     }
+
+                    Jwriter.WriteObjectEnd();
+                    Jwriter.WriteArrayEnd();
 
                     break;
                 case NodeTypes.MultiProgressNode:
@@ -641,6 +609,60 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.WritePropertyName("NextID");
                     Jwriter.Write(((MapNode)node).NextID);
 
+
+                    Jwriter.WritePropertyName("Locks");
+                    Jwriter.WriteArrayStart();
+
+                    for(int i = 0; i < ((MapNode)node).Locks.Count; ++i)
+                    {
+
+                        Jwriter.WriteObjectStart();
+                        Jwriter.WritePropertyName("Name");
+                        Jwriter.Write(((MapNode)node).Locks[i].ProgressName);
+                        Jwriter.WritePropertyName("Type");
+                        Jwriter.Write((int)((MapNode)node).Locks[i].TypeID);
+
+                        switch (((MapNode)node).Locks[i].TypeID)
+                        {
+                            case PointTypes.Flag:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].BoolValue);
+                                break;
+                            case PointTypes.Float:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].FloatValue);
+                                Jwriter.WritePropertyName("Compare");
+                                Jwriter.Write((int)((MapNode)node).Locks[i].compare);
+                                break;
+                            case PointTypes.Integer:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].IntValue);
+                                Jwriter.WritePropertyName("Compare");
+                                Jwriter.Write((int)((MapNode)node).Locks[i].compare);
+                                break;
+                            case PointTypes.String:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].StringValue);
+                                break;
+                            default:
+                                break;
+                        }
+
+                        Jwriter.WriteObjectEnd();
+                    }
+
+                    Jwriter.WriteArrayEnd();
+                    
+                    Jwriter.WritePropertyName("Characters");
+                    Jwriter.WriteArrayStart();
+
+                    for (int i = 0; i < ((MapNode)node).PeoplePresent.Count; ++i)
+                    {
+                        Jwriter.Write(((MapNode)node).PeoplePresent[i]);
+                    }           
+
+                    Jwriter.WriteArrayEnd();
+                    
                     break;
                 case NodeTypes.ToMapNode:
 

@@ -45,6 +45,17 @@ public class ProgressPoint
         StringValue = "";
     }
 
+    public ProgressPoint(ProgressPoint copy_)
+    {
+        ProgressName = copy_.ProgressName;
+        TypeID = copy_.TypeID;
+        StringValue = copy_.StringValue;
+        BoolValue = copy_.BoolValue;
+        IntValue = copy_.IntValue;
+        FloatValue = copy_.FloatValue;
+        compare = copy_.compare;
+    }
+
     /*
     public static implicit operator string(ProgressPoint value)
     {

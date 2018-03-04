@@ -25,7 +25,7 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 I skipped breakfest today because I wasn't feeling it, but now, I feel like getting some grub.
-I fill up my plate up, and go to sit down. #fatigue -= 35
+I fill up my plate up, and go to sit down. #fatigue -= 50
 {
 	-GetValue("SavedTimothy"):
 		->SadStart

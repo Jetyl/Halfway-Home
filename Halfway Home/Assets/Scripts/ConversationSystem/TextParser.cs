@@ -273,46 +273,14 @@ public static class TextParser
     
     public static int CheckProgress(JsonData data)
     {
-
-
-        int ty = (int)data["TypeOfProgress"];
-
-        ProgressType type = (ProgressType)ty;
-
         int NextID = -1;
 
-        switch (type)
-        {
-            case ProgressType.None:
-                break;
-            case ProgressType.ProgressPoint:
+        ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
 
-                ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
-
-                if (Game.current.Progress.CheckProgress(CheckToMatch))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-
-                break;
-            
-            case ProgressType.PlotBeat:
-
-                string BeatName = (string)data["BeatName"];
-                int statin = (int)data["Beat"];
-                Beat.BeatState beatState = (Beat.BeatState)statin;
-
-                if (Game.current.Progress.CheckBeatState(BeatName, beatState))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
-
+        if (Game.current.Progress.CheckProgress(CheckToMatch))
+            NextID = (int)data["PassID"];
+        else
+            NextID = (int)data["FailID"];
 
         return NextID;
     }
@@ -339,29 +307,12 @@ public static class TextParser
 
     public static int MakeProgress(JsonData data)
     {
-
-        int ty = (int)data["TypeOfProgress"];
-
-        ProgressType type = (ProgressType)ty;
-
         int NextID = -1;
 
-        switch (type)
-        {
-            case ProgressType.None:
-                break;
-            case ProgressType.ProgressPoint:
+        ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
 
-                ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
-                
-                Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
-                NextID = (int)data["NextID"];
-                break;
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
+        Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
+        NextID = (int)data["NextID"];
 
 
         return NextID;

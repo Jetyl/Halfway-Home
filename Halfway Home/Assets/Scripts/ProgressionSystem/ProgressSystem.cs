@@ -204,6 +204,28 @@ public class ProgressSystem
 
     }
 
+    public void DegradeProgress(string _key)
+    {
+        if (!ProgressBook.ContainsKey(_key))
+            return;
+
+        switch (ProgressBook[_key].TypeID)
+        {
+            case PointTypes.Float:
+                ProgressBook[_key].FloatValue -= 1;
+                if (ProgressBook[_key].FloatValue < 0)
+                    ProgressBook[_key].FloatValue = 0;
+                break;
+            case PointTypes.Integer:
+                ProgressBook[_key].IntValue -= 1;
+                if (ProgressBook[_key].IntValue < 0)
+                    ProgressBook[_key].IntValue = 0;
+                break;
+            default:
+                break;
+        }
+    }
+
     public bool CheckProgress(ProgressPoint key)
     {
         if (!ProgressBook.ContainsKey(key.ProgressName))
@@ -303,71 +325,10 @@ public class ProgressSystem
     //updates the plotlines, checkng off beats if they need to be checked off
     void UpdatePlotLines()
     {
-        foreach(var beat in PlotLines)
-        {
-            //if the Beat is Global, we do not care about it
-            if (beat.PlotName == "Global")
-                continue;
-
-
-
-            if (beat.BeatComplete())
-            {
-                
-                string id = beat.PlotName;
-                int num = beat.BeatNumber;
-
-                foreach (var beat2 in PlotLines)
-                {
-                    string id2 = beat.PlotName;
-                    int num2 = beat.BeatNumber;
-                    //if it is in the same line, and is the next step
-                    if(id == id2 && num + 1 == num2)
-                    {
-                        beat2.StartBeat();//starts beat (does nothing if already started)
-
-                    }
-                    
-                }
-            }
-
-
-        }
+        
     }
 
-    public bool CheckBeatState(string beatName, Beat.BeatState state)
-    {
-        foreach (var beat in PlotLines)
-        {
-            if (beat.BeatName == beatName)
-            {
-                return beat.GetState() == state;
-            }
-              
-        }
-        return false;
-    }
-
-    public void BeatFailed(string beatName)
-    {
-        foreach (var beat in PlotLines)
-        {
-            if (beat.BeatName == beatName)
-                beat.BeatFailed();
-
-        }
-    }
-
-    public void BeatFailed(string plotName, int beatNumber)
-    {
-        foreach (var beat in PlotLines)
-        {
-            if (beat.PlotName == plotName && beat.BeatNumber == beatNumber)
-                beat.BeatFailed();
-
-        }
-    }
-
+    
     public void ResetBeats()
     {
         foreach (var beat in PlotLines)
@@ -381,7 +342,22 @@ public class ProgressSystem
         }
     }
 
-    public void ResetDaily()
+    public void ResetSleep()
+    {
+        foreach (var beat in PlotLines)
+        {
+            //reset the daily grind
+            if (beat.BeatName == "Sleepy")
+            {
+                beat.ResetBeat();
+                return;
+            }
+                
+
+        }
+    }
+
+    public void ResetDay()
     {
         foreach (var beat in PlotLines)
         {
@@ -391,24 +367,18 @@ public class ProgressSystem
                 beat.ResetBeat();
                 return;
             }
-                
+
 
         }
     }
+
+
 }
 
 [System.Serializable]
 public class Beat
 {
-
-    public enum BeatState
-    {
-        Unstarted,
-        InProgress,
-        Success,
-        Failed
-    }
-
+    
     public string PlotName;
     public string BeatName;
 
@@ -417,13 +387,10 @@ public class Beat
     public List<ProgressPoint> Points;
     
 
-    private BeatState State;
-
     //default Contructor
     public Beat ()
     {
         Points = new List<ProgressPoint>();
-        State = BeatState.Unstarted;
     }
 
     //main game constructor
@@ -432,7 +399,6 @@ public class Beat
         PlotName = (string)beatData["PlotName"];
         BeatName = (string)beatData["BeatName"];
         BeatNumber = (int)beatData["BeatNumber"];
-        State = BeatState.Unstarted;
 
         Points = new List<ProgressPoint>();
 
@@ -454,7 +420,6 @@ public class Beat
         PlotName = (string)beatData["PlotName"];
         BeatName = (string)beatData["BeatName"];
         BeatNumber = (int)beatData["BeatNumber"];
-        State = BeatState.Unstarted;
 
         Points = new List<ProgressPoint>();
 
@@ -472,26 +437,26 @@ public class Beat
     //resets the bools associated with this beat, if beat is failed, or in progress
     public void ResetBeat()
     {
-        //only reset progress to failed, and inprogress beats
-        if (State == BeatState.Success || State == BeatState.Unstarted)
-            return;
 
         foreach (var boo in Points)
         {
             Game.current.Progress.ResetProgress(boo.ProgressName);
         }
+        
+    }
 
-        State = BeatState.InProgress;
+    //reduces ints and floats in the beat
+    public void DegradeBeat()
+    {
+        foreach (var boo in Points)
+        {
+            Game.current.Progress.ResetProgress(boo.ProgressName);
+        }
+        
     }
 
     public bool BeatComplete()
     {
-        if (State == BeatState.Success)
-            return true;
-
-        if (State == BeatState.Failed || State == BeatState.Unstarted)
-            return false;
-
         //if in progress, check bools
         foreach (var boo in Points)
         {
@@ -503,28 +468,12 @@ public class Beat
                 return false;
             }
         }
-
-        State = BeatState.Success;
+        
 
         return true;
     }
-
-    public void StartBeat()
-    {
-        if (State == BeatState.Unstarted)
-            State = BeatState.InProgress;
-    }
-
-    public void BeatFailed()
-    {
-        State = BeatState.Failed;
-    }
-
-    public BeatState GetState()
-    {
-        return State;
-    }
-
+    
+    
 }
 
 [System.Serializable]
