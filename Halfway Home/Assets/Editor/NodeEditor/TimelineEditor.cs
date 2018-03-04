@@ -602,6 +602,60 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.WritePropertyName("NextID");
                     Jwriter.Write(((MapNode)node).NextID);
 
+
+                    Jwriter.WritePropertyName("Locks");
+                    Jwriter.WriteArrayStart();
+
+                    for(int i = 0; i < ((MapNode)node).Locks.Count; ++i)
+                    {
+
+                        Jwriter.WriteObjectStart();
+                        Jwriter.WritePropertyName("Name");
+                        Jwriter.Write(((MapNode)node).Locks[i].ProgressName);
+                        Jwriter.WritePropertyName("Type");
+                        Jwriter.Write((int)((MapNode)node).Locks[i].TypeID);
+
+                        switch (((MapNode)node).Locks[i].TypeID)
+                        {
+                            case PointTypes.Flag:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].BoolValue);
+                                break;
+                            case PointTypes.Float:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].FloatValue);
+                                Jwriter.WritePropertyName("Compare");
+                                Jwriter.Write((int)((MapNode)node).Locks[i].compare);
+                                break;
+                            case PointTypes.Integer:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].IntValue);
+                                Jwriter.WritePropertyName("Compare");
+                                Jwriter.Write((int)((MapNode)node).Locks[i].compare);
+                                break;
+                            case PointTypes.String:
+                                Jwriter.WritePropertyName("MatchValue");
+                                Jwriter.Write(((MapNode)node).Locks[i].StringValue);
+                                break;
+                            default:
+                                break;
+                        }
+
+                        Jwriter.WriteObjectEnd();
+                    }
+
+                    Jwriter.WriteArrayEnd();
+                    
+                    Jwriter.WritePropertyName("Characters");
+                    Jwriter.WriteArrayStart();
+
+                    for (int i = 0; i < ((MapNode)node).PeoplePresent.Count; ++i)
+                    {
+                        Jwriter.Write(((MapNode)node).PeoplePresent[i]);
+                    }           
+
+                    Jwriter.WriteArrayEnd();
+                    
                     break;
                 case NodeTypes.ToMapNode:
 

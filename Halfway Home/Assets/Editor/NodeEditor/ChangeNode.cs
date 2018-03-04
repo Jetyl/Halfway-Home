@@ -12,8 +12,6 @@ public class ChangeNode : BaseNode
 
     public string InventoryItemName;
     
-
-    
     public bool SendNoification;
 
     public string NoteTitle;

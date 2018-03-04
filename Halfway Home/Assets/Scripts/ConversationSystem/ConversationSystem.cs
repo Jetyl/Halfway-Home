@@ -500,6 +500,8 @@ public class ConvMap : ConvNode
     int Hour;
     int Length;
     public Room RoomLocation;
+    public List<ProgressPoint> Locks;
+    public List<string> Characters;
 
     public ConvMap(JsonData start)
     {
@@ -510,6 +512,21 @@ public class ConvMap : ConvNode
         Hour = (int)start["Hour"];
         Length = (int)start["Length"];
         RoomLocation = (Room)(int)start["Room"];
+
+        Locks = new List<ProgressPoint>();
+
+        foreach(JsonData locks in start["Locks"])
+        {
+            Locks.Add(new ProgressPoint(locks));
+        }
+        
+        Characters = new List<string>();
+
+        foreach (JsonData people in start["Characters"])
+        {
+            Characters.Add((string)people);
+        }
+
     }
 
 
@@ -519,8 +536,24 @@ public class ConvMap : ConvNode
 
     }
 
+    public bool IsUnlocked()
+    {
+
+        foreach(var Chain in Locks)
+        {
+            if (Game.current.Progress.CheckProgress(Chain) == false)
+                return false;
+        }
+
+        return true;
+    }
+    
+
     public bool AvalibleNow(int day, int hour)
     {
+
+        if (IsUnlocked() == false)
+            return false;
 
         //if this time is before this day
         if (day < Day)
