@@ -78,7 +78,7 @@ What.
 "Uugh... @Morning Max."
 [Keyless0Max] "Morning? It's almost noon! Don't tell me, I was yer alarm clock this morning?"
 [{player_name}] "N-no... @I was already awake."
-[Keyless0Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
+[Keyless0Max] "that's good. Y'all can't be relying on a the Max alarm pretty soon."
 [{player_name}] "Yeah."
 [Timothy0Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"

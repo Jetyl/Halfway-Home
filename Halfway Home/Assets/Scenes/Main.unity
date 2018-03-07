@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.999998
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16308,6 +16308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Behaviour: {fileID: 1174770654}
   TransitionSpeed: 2
+  DeadZone: 0.25
   ZeroStressValue: 0
   MaxStressValue: 0.75
   ZeroFatigueValue: 0

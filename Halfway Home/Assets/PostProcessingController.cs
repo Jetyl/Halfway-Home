@@ -13,6 +13,9 @@ public class PostProcessingController : MonoBehaviour
     PostProcessingProfile profile;
 
     [Range(0, 1)]
+    public float DeadZone = .25f;
+
+    [Range(0, 1)]
     public float ZeroStressValue = 0;
 
     [Range(0, 1)]
@@ -48,6 +51,7 @@ public class PostProcessingController : MonoBehaviour
 
         Space.Connect<DefaultEvent>(Events.StatChange, OnStatChange);
 
+        StartCoroutine(TextParser.FrameDelay(Events.StatChange));
 
 	}
 	
@@ -64,18 +68,20 @@ public class PostProcessingController : MonoBehaviour
         print("updating!");
         int Dstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion);
         float Dpercent = (float)Dstat / 100f;
+        Dpercent = Mathf.Clamp01((Dpercent - DeadZone) / (1 - DeadZone));
 
         var newSatValue = Mathf.Lerp(ZeroDepressionValue, MaxDepressionValue, Dpercent);
-
-
+        
         int Sstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.stress);
         float Spercent = (float)Sstat / 100f;
+        Spercent = Mathf.Clamp01((Spercent - DeadZone) / (1 - DeadZone));
 
         var newGrainValue = Mathf.Lerp(ZeroStressValue, MaxStressValue, Spercent);
 
 
         int Fstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue);
         float Fpercent = (float)Fstat / 100f;
+        Fpercent = Mathf.Clamp01((Fpercent - DeadZone) / (1 - DeadZone));
 
         var newVinValue = Mathf.Lerp(ZeroFatigueValue, MaxFatigueValue, Fpercent);
 
