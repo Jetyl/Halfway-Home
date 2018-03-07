@@ -39,7 +39,7 @@ public class MapNode : BaseNode
     public MapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         title = (string)data["title"];
-        inPoint = null;
+        //inPoint = null;
         ID = (int)data["ID"];
         NextID = (int)data["NextID"]; 
         TypeID = NodeTypes.MapNode;
@@ -82,6 +82,8 @@ public class MapNode : BaseNode
     {
 
         Vector2 pos = new Vector2(rect.x + 25, rect.y + 25);
+
+        Debug.Log(inPoint);
 
         MapNode copy = new MapNode(pos, rect.width, rect.height, style, selectedNodeStyle, inPoint.style, outPoint.style,
             inPoint.OnClickConnectionPoint, outPoint.OnClickConnectionPoint, OnRemoveNode, OnDuplicateNode, index);
