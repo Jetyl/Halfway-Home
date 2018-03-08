@@ -48,14 +48,31 @@ He looks happy, but also nervous. wonder what's up?
 [Timothy] "Oh, I'm just got up all bright and early, like you asked!"
 [Max] "Sweet man!" #Max = happy
 "Y'know, I'm really glad your adjusting here nicely."
-Max is proud, and gives some wisdom on self motivation.
-Trissa walks in.
-Max then leaves, and timothy deflates. he goes to get some breakfest.
-you can then decide if you want to give timothy some space, or go eat with him.
+[Timothy] "R-Really?"
+[Max] "Yeah Man! with an attitidue like that, You'll be all better, and ready to get back out there in no time!"
+[Timothy] "Oh! <size=30%> uh.. um...<size=100%>" #Timothy = surprised #Trissa = sad, stage_right
+[Trissa] "Yo! Max, Can I talk to you for a second?"
+[Max] "Sure, what's up?" #Max = stage_right
+[Trissa] "Um, could we chat outside?"
+[Max] "Sure!"
+[Timothy] "uh, um..." #Trissa = exit #Max = exit
+"Oh, okay..." #Timothy = surprised
+"..." #Timothy = sad
+Timothy seems to deflate, as he goes off to get his breakfest.
+He takes his tray and plops himseld at a table across the cafe.
+He looks kind of sad. I should...
 +[Give Him Some Space]
-	You decide to give timothy some space.
-	You eat in quiet comfort. Fatigue and Stress reduced #fatigue -=30 #stress -=15
-+[Have Breakfest with Timothy]
-	You move your food over to near Timothy, and chat with him.
-	you have a nice simple conversation with him. expression, grace, and awareness all increase! #expression+ #grace+ #awareness+	
+	I should give the little fella some space. #Timothy = exit
+	I eat my breakfest in quiet comfort. (<i>Fatigue and Stress reduced<i>) #fatigue -=30 #stress -=15
+	Finished with my meal, I head off, leaving Timothy where he is. 
++[Move over there, and have breakfest with Timothy]
+	I pick up my meal, and go over to Timothy.
+	[{player_name}] "Hey Timothy!"
+	[Timothy] "hey..."
+	[{player_name}] "Mind if I sit with you?"
+	[Timothy] "...sure."
+	I Sit down with Timothy, and chat with him while we eat.
+	The food is invigorating and Timothy seems to relax as we talk. 
+	Fatigue reduced! #fatigue -=20 
+	Expression, grace, and awareness all increase! #expression+ #grace+ #awareness+	
 ->END
