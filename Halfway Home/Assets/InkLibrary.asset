@@ -115,9 +115,6 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: abf146fb29e2f0547be0dc998a07c828, type: 3}
     jsonAsset: {fileID: 4900000, guid: c58c10799b229b4419ba980c05231f5d, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 3872752dd353e354f9324f116fc701d2, type: 3}
-    jsonAsset: {fileID: 4900000, guid: 813b6617d71cf3f49b993368814ba8c6, type: 3}
-  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 05b47da4bafc2d94581b40ad645bc49b, type: 3}
     jsonAsset: {fileID: 4900000, guid: 858d9c39a86784b498d61251803b91b4, type: 3}
   pendingCompilationStack: []
