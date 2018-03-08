@@ -217,6 +217,10 @@
    {
     "Name" : "HadLateNightHangout",
     "Type" : 1
+   },
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 1
    }
   ]
  },
