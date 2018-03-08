@@ -60,12 +60,12 @@ Now, I should probably be getting ready for tomorrow.
 
 
 ==FirstRRR==
-Well, I supose its not my room anymore. not after today.
+Well, I suppose it’s not my room anymore. not after today.
 It's Timothy's Room now. but...
 I'm not sure he'll ever return to claim it.
 I look at my bags, half packed with the crap I call my own.
 with a heavy sigh, I look away, and toss myself into my sheets. @One of the last things I can call my own in this space.
-I'm alone in a room ment for no one, and nothing is fine.
+I'm alone in a room meant for no one, and nothing is fine.
 I'm leaving tomorrow...
 I'm leaving tomorrow, and I don't know what to do.
 I start shaking slightly, as tears bubble in my eyes.
@@ -81,8 +81,8 @@ I want the pain, to go away. {SetIntValue("week", 2)}
 ................{SetTimeBlock(0)}
 //have this in UI color
 <color=A5C5E3FF>Objectives.... Detected. @Initiating Protocol R-3 Instance 00001224671
-<color=A5C5E3FF>Detecting Parameters: ... COMPLETE @Hypothizing End State: ... COMPLETE @Localizing Probablity Space: ... COMPLETE
-<color=A5C5E3FF>Reinintializing.... @Recontructing.... @Resetting....
+<color=A5C5E3FF>Detecting Parameters: ... COMPLETE @Hypnotizing End State: ... COMPLETE @Localizing Probability Space: ... COMPLETE
+<color=A5C5E3FF>Reinitializing.... @Reconstructing.... @Resetting....
 <color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired
 <color=A5C5E3FF>Operation Active in: 3... @2... @1
 //~week += 1
@@ -104,7 +104,7 @@ But its fine.
 I broke the loop.
 I saved Timothy.
 Everything will be turn out okay.
-I tell myself that, over and over, untill I fall asleep.
+I tell myself that, over and over, until I fall asleep.
 .....
 .......
 ................

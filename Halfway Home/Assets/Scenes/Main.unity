@@ -16308,6 +16308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Behaviour: {fileID: 1174770654}
   TransitionSpeed: 2
+  DeadZone: 0.25
   ZeroStressValue: 0
   MaxStressValue: 0.75
   ZeroFatigueValue: 0

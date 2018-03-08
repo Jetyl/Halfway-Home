@@ -120,7 +120,7 @@ another hour passes with the duo. I get a bit more tired. #time % 1
 
 ===OneAM===
 //the 1am hour talk
-the two talk about how they met.
+//the two talk about how they met.
 [{player_name}] "so, how did you two get together?"
 [Eduardo] "Well, ole Sunflower house did make us roommates. I s'pose thats where it started."
 [Isaac] "Eduardo isn't for personal boundries."
@@ -224,7 +224,7 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 
 ===ThreeAM===
 //the 3 am hour talk
-the two talk about the nature of attraction.
+//the two talk about the nature of attraction.
 [{player_name}] "So, random question, but what are you two? if you don't mind me asking?"
 [Eduardo] "Well I'm human. I don't know about Isaac though."
 [Isaac] "hrm."
@@ -283,7 +283,7 @@ Isaac glows a bright red blush.
 
 ===FourAM===
 //the 4 am hour talk
-the two talk about why their in the halfway home.
+//the two talk about why their in the halfway home.
 [Eduardo] "Man, I know I don't say this often enough, but I'm gunna miss you guys when I leave."
 [{player_name}] "Are you leaving soon?"
 [Eduardo] "I dunno man. maybe? it ain't on my schedule or nothin'."
@@ -372,15 +372,33 @@ I check my watch to see the time.
 
 ===FiveAM===
 //the 5 am hour talk
-the two talk about memes.
+//the two talk about the satire paradox.
 [Eduardo] "oh! Oh! OH!"
 [Isaac] "hrm?"
+[Eduardo] "You know what sucks?"
+[Isaac] "hrm."
+[Eduardo] "You can never change anyone's minds on nothing."
+"Like, no matter what you do, no matter how you express an opinion, you can't change someone's mind, once they've already decided something."
+"Ya get what I mean?"
++[Agree]
+	[{player_name}] "Yeah, I agree with the sentiment."
++[Disagree]
+	[{player_name}] "I Disagree."
+	[Eduardo] "see what I mean. Can't ever convincen' anybody of anything."
+-[Eduardo] "everybody goes into a thing with their own notions on a thing, and never budge."
+[Isaac] "the satire paradox. @Supports that idea. @To a point."
+[{player_name}] "what's the `satire paradox`?"
+
+[Isaac] "People take the path of least resistence. Always."
+
+[Eduardo] "see? theire ain't no point to trying to convince people if they hate ya. @Better to just be yerself, and say `F you` to the haters."
+
 
 ->TimePassing
 
 ===SixAM===
 //the 6 am hour talk
-Eduardo gets drowsy. Isaac admits something personal.
+//Eduardo gets drowsy. Isaac admits something personal.
 [Eduardo] "oh, we're past the magic hours."
 [{player_name}] "huh?"
 [Isaac] "the nights almost over."
@@ -405,6 +423,8 @@ I wonder if Max is up already. probably is.
 		[Isaac] ">Sighs"
 		"just go to sleep."
 		[Eduardo] "but I'm not, *Yawns* tired..."
+		"zzz..."
+		[Isaac] "He's such a dork."
 
 }
 These two are, really sappy together. It's kind of sweet, in its own way.
