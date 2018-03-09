@@ -181,7 +181,7 @@ You know, that and weird time travel shenanigans.
 [{player_name}] "what?"
 [Timothy] "oh, uh, n-nothing. Its just a strange feeling I'm having."
 "I've been getting those a lot... lately..."
-[{player_name}] "Well okay, if you say so."
+[{player_name}] "Well okay, if you say so." #Timothy = Exit
 {
 	-week >= 2:
 		I spend the remainder of the hour showing timothy around the gardens, finding more relaxing, more natural feeling places.

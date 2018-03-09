@@ -137,7 +137,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 	-else: 
 		person
 } 
-<>I was lookin' fer."
+<> I was lookin' fer."
 {
 	//-GetValue("Tutorial"):
 	-week == 1:

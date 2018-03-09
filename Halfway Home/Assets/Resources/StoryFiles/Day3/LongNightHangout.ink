@@ -378,6 +378,7 @@ I check my watch to see the time.
 [Eduardo] "You know what sucks?"
 [Isaac] "hrm."
 [Eduardo] "You can never change anyone's minds on nothing."
+[{player_name}] "What?"
 "Like, no matter what you do, no matter how you express an opinion, you can't change someone's mind, once they've already decided something."
 "Ya get what I mean?"
 +[Agree]
@@ -386,14 +387,43 @@ I check my watch to see the time.
 	[{player_name}] "I Disagree."
 	[Eduardo] "see what I mean. Can't ever convincen' anybody of anything."
 -[Eduardo] "everybody goes into a thing with their own notions on a thing, and never budge."
-[Isaac] "the satire paradox. @Supports that idea. @To a point."
+"Everythin's gotta conform to their way of seeing the world, or they just reject it as `unnatural` or whatever."
+"It's so stupid."
+[Isaac] "Hrm."
+[{player_name}] "Isaac, do you got something to say to that?"
+[Isaac] "hrm? no. Just that..."
+"the satire paradox. @Supports that idea. @To a point."
 [{player_name}] "what's the `satire paradox`?"
-
-[Isaac] "People take the path of least resistence. Always."
-
-[Eduardo] "see? theire ain't no point to trying to convince people if they hate ya. @Better to just be yerself, and say `F you` to the haters."
-
-
+[Isaac] "An Idea. heard about it from a podcast. @'S good."
+[{player_name}] "well, yeah, but what's it about."
+[Isaac] "'S about how people interpert comedy & satire."
+"Basically... hrm."
+Isaac falls silent, as he seems to be summoning the words.
+"Basically, people will see what they want to see, in satire."
+"If someone is satirizing a certain political movement, or cultural norm, the people who support it won't see it as a critism of them."
+"basically, they don't laugh because of how silly or dumb they are, but because of how <i>right</i> they are."
+"A funny way to tell `the truth`, apperently."
+[Eduardo] "uh-huh..."
+Eduardo is noding his head in agreement.
+[Isaac] "A'course, it's not just comdey that applies to."
+"People take the path of least resistence. Always."
+"So when media or whatever trys to tell you something you don't wanna hear, you don't hear it."
+[Eduardo] "see? their ain't no point to trying to convince people if they hate ya. @Better to just be yerself, and say `F you` to the haters."
++[Agree with the sentiment]
+	[{player_name}] "Yeah, I get that feeling."
+	"It really can suck how stubborn some people can be."
+	"and I can see the appeal in not worrying about other people's own headspaces,"
+	"I'm not sure I 100% agree with you, but I get the sentiment."
++[Disagree with the sentiment]
+	[{player_name}] "yeah, no."
+	"I admit persuading people can be hard, but you shouldn't just not try."
+	"I mean, doesn't most art exists to say <i>something</i>, even if its just a feeling or idea."
+	"saying `You can't convince anyone, so why bother` seems both very defeatest"
+-"But, those are just my feeling."
+[Eduardo] "eh, fair. You do you, and whatever."
+"Like I said, you can't convince people of nothing, so I don't presume I'll change your opinion, or you'll change mine."
+"Ain't that right Isaac?"
+[Isaac] "...<delay=1>@hrm."
 ->TimePassing
 
 ===SixAM===
