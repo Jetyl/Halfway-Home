@@ -36,12 +36,16 @@ EXTERNAL SetValue(name, values)
 This is it. Sunflower House. # Background / HouseFront
 The paint seems to be a bit more faded than in the pictures, but it's a lot more appealing than Blackwell.
 'A Garden for the Mind' according to the brochure the doctors gave me.
-Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe their right.
+Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
-[Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting?" {GetPlayerName()}
-[Max0Tall Redhead] "{player_name}, right?"
+[Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
+*[Help Them Out] {GetPlayerName()}
+	[{player_name}] "It's {player_name}. And yeah, that's me."
++[Wait]
+	[Max] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}"
+-[Max0Tall Redhead] "{player_name}, right?" //{GetPlayerName()}
 [{player_name}] "That's me."
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
 [Max0Tall Redhead] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm

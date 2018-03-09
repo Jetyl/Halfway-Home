@@ -117,7 +117,7 @@ I decide it's best not to approach Charlotte.
 	[{player_name}] "I like fantasy worlds a lot, so that probably."
 	[Charlotte] "Quite a lot goes into creating such wonderous places. It's a hard genre to dislike, and an even harder genre to disrespect."
 	++[Science Fiction]
-	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy-player_gender == "F":girl-else:person}."
+	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy|{player_gender == "F":girl|person}}."
 	[Charlotte] "A challenging genre, to be sure. One which asks us questions we are often afraid to ask ourselves."
 	++[Horror]
 	[{player_name}] "I like horror books, actually."
@@ -140,7 +140,7 @@ I decide it's best not to approach Charlotte.
 	[Charlotte] "A grounded choice. You know I think you're the first person I've encountered with such a preference."
 	++[I prefere variety]
 	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way."
-	[Charlotte] "{player_gender == "M":A man-player_gender == "F":A woman-else:Someone} after my own heart."
+	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart."
 -[Charlotte] "I know just the thing."
 She stands up and walks over to a far shelf. She returns holding a thick, nondescript book.
 "Somewhere along the line this fellow lost his jacket, but, I assure you, you will be no less absorbed."
@@ -264,6 +264,7 @@ I should probably head out as well. {SetValue("ReadyForTea", true)}
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}." {SetValue("ReadyForInstruction", false)}
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
+Man, Charlotte is seriously living in a different century from anyone I've ever met.
 I should probably head out as well.
 -> END
 
@@ -274,6 +275,7 @@ Charlotte glances as the wall clock above the door and exclaims. # Charlotte = S
 Charlotte rises to her feet.
 "Until next we meet, {player_name}."
 She curtsies and strides out of the room.
+Man, Charlotte is seriously living in a different century from anyone I've ever met.
 She seemed embarassed. Maybe asking her a question would have been better...
 Oh, well. I guess I'd better head out, too.
 -> END
