@@ -134,14 +134,14 @@ I can see that.
 "In the real world, the closeness of a relationship is defined by whoever's got the higher boundries."
 "Like, you wanna be friends with someone, but they don't, well, then you ain't friends."
 "and thats just the basic stuff. relationship stuff gets even crazier."
-+[You didn't abuse anyone, did you?]
-	[{player_name}] "Eduardo, you we're like, too pushy with anyone you knew right?"
++[Didn't have many friends growing up?]
+	[{player_name}] "Eduardo, how many friends did you have growing up?"
 	"Made anyone do anything they didn't want to?"
 	[Eduardo] "What? naw man. I mean. I don't think so."
 	"I am really bad at reading people dawg."
 	"Mostly why I don't care to try. I just try to be myself."
-+[you we're abused, were you?]
-	[{player_name}] "Eduardo, You we're like, taken advantage of by anyone, were you?"
++[Didn't have past relationships before now?]
+	[{player_name}] "Eduardo, if you don't mind me asking, how many relationships have you had?"
 	"You didn't like, do things just to get attention, right?"
 	[Eduardo] "Of course I did! Lots of things."
 	"but, I dunno, I wouldn't of called any of it abusive."
