@@ -28,13 +28,16 @@ EXTERNAL GetStringValue(value)
 
 === GardenFunction ===
 [{player_name}] "Here's the garden grounds" #Timothy = Calm
-[Timothy] "Oh! I-It's nice and calm out here." #Timothy = Happy
+[Timothy] "Oh!" #Timothy = Happy
 [{player_name}] "Yeah, I suppose it is." #Timothy = Calm
 "The gardens are a great place to meditate, amongst other things."
 "I think there's a gardening club or something that meets out here sometimes."
 "I don't know. I've never actually gone to it."
-[Timothy] "..." #Timothy = Happy
-[{player_name}] "But yeah, it's a good place to reflect." #Timothy = Exit
+[Timothy] "...It's so pretty here.~" #Timothy = Happy, stage_left, right
+[{player_name}] "yeah, I suppose it is."
+I'll admit it is very pretty out here. @the Gardens is one of the biggest selling points for the Sunflower House in their brochere.
+It's almost a shame I never made use of it as much as I could here.
+[{player_name}] "But yeah, the Gardens are a good place to reflect on things." #Timothy = Exit
 "You can just sort of zen out. Be <color=A5C5E3FF><i>aware</i></color> of the life around you... and yourself, I suppose."
 "It can be pretty enlightening, but I dunno. I try not to be alone with my thoughts too much."
 "It's, uh... sorta caused problems in my life."

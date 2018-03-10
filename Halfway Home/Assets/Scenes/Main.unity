@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26597,7 +26597,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

@@ -86,7 +86,7 @@ What.
 [{player_name}] "Uh... yeah."
 [Keyless0Max] "You don't remember, do you?"
 [{player_name}] "... @No."
-Max looks dissapointed in me. It's a sadly common look. # Keyless = Sad
+Max looks disappointed in me. It's a sadly common look. # Keyless = Sad
 [Keyless0Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." # Timothy = Happy
@@ -130,7 +130,7 @@ this doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "what are you doing back so soon?" #Timothy=Calm
 "We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
 [Keyless0Max] "Uh, {player_name}, you still dreaming buddy?"
-"Timothy Myuri is the roommate I told you about"
+"Timothy Miyuri is the roommate I told you about"
 wait
 "You two will be sharing a room for the week, since we're kinda tight on space around here."
 wait
@@ -166,21 +166,21 @@ I'm left in my room, looking around. all of Timothy's stuff has been packed in t
 my bags, on the other hand, have been emptied, and put away, from where I left them last night...
 Last night....
 [{player_name}] "Aggh!"
-my head hurts, as if for a second I brain formed a spliting migrine, but I continue to follow the strangeness around me.
+my head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
 Was last night... really last night?
-the knock on the door.@ Max inroducing Timothy as if we never met.@ Timothey even still being here!
+the knock on the door.@ Max introducing Timothy as if we never met.@ Timothey even still being here!
 this can't all be just deja vu, can it?
 I think.... I think I'm back on the first day Timothy arrived here.@ But how? why?
-I sit there, alone with my thoughts, theroizing how or why this situation has come before me, before I realize the time.
+I sit there, alone with my thoughts, theorizing how or why this situation has come before me, before I realize the time.
 [{player_name}] "I-I should go looking for someone."
-author Note: That is the end of this build. Hope you enjoyed it! :3
+<color=A5C5E3FF><i>author Note: That is the end of this build. Hope you enjoyed it! :3</i></color>
 -> END
 
 ===Repeat===
 same stuff as previously. to be expanded later.
 for now, do you tell max where their keys are, and thus take Timothy around the home?
 +[Yes, tell max where the keys are] ->Day1Alone
-+[No, withold that information] ->TakingTimothy
++[No, withhold that information] ->TakingTimothy
 
 ===RestartRequired===
 Nonononononononono.
@@ -192,23 +192,26 @@ This can't be happening. this can't be happening.
 {SetValue("Tutorial", true)}
 [{player_name}] "So, um..." #Timothy = Stage_center
 "Well, this is my room. Although, I guess it'll be <i>our</i> room for the time being."
-"You can come here if you want to just get away from it all and destress."
+"You can come here if you want to just get away from it all and distress."
 "Also, obviously, you can just knock out here if you're too fatigued to do anything else. Or just whenever, really"
 "I try to limit myself to 8 hours a day."
 Though I've been falling off the wagon more often as of late.
 "So yeah."
 Timothy looks... not disinterested, but guarded and... preoccupied? Jeez, my ability to read people has seriously atrophied.
 I go over and grab my watch off the desk beside my bed. Max was right, it is almost noon. He'll probably think I'm super weird, but Timothy should know about my system.
-"So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I suffered from before was Lost Time."
+"So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I've suffered from before was Lost Time."
 [Timothy] "You mean you'd lose track of time? Doesn't everybody do that?"
 [{player_name}] "No, it's more like..."
 "There would be entire hours where I just am not home, up here:"
-"Hours, maybe days, that I couldn't account for and couldn't remember."
-"It's a type of dissociation."
+"Hours, maybe days, that I couldn't account for and couldn't remember. As if the time was lost"
+"although, Lost Time is actually a misnomer. I suppose the actual term is dissociative amnesia."
+"It's a type of dissociation, where you lose hours or days of memory."
+"For me, I've found out it tends to flair up when I'm more <color=A5C5E3FF><i>Depressed</i></color>"
+If I get too <color=A5C5E3FF><i>Depressed</i></color>, the amount of time it takes to do a task can <color=A5C5E3FF><i>Double</i></color>, or even <color=A5C5E3FF><i>Triple</i></color>
 "When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were."
 "But ever since I count and keep track of the hours of the day very closely."
 "I regiment what I do in a very hourly basis."
-I flash Timothy the time on my watch, almost 9.
+I flash Timothy the time on my watch, almost noon.
 "C'mon, I'll show you."
 //show map.
 I am really starting to get hungry, so first stop: I should show Timothy the Cafe area. # Timothy = Exit

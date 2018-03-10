@@ -27,7 +27,7 @@ public class AutoTypeEditor : Editor
 
         EditorGUILayout.Space();
 
-        EditorGUILayout.PropertyField(DefaultPauseSpeed, new GUIContent("Default Pause Speed"), true);
+        EditorGUILayout.PropertyField(DefaultPauseSpeed, new GUIContent("Characters Per Second"), true);
         EditorGUILayout.PropertyField(sound, new GUIContent("Sound Effect"), true);
         
         list.DoLayoutList();

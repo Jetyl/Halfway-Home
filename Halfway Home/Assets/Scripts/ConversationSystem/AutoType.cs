@@ -124,13 +124,11 @@ public class AutoType : MonoBehaviour
             
             yield return new WaitForSeconds(Time.deltaTime);
 
-            while (Text.maxVisibleCharacters < message.Length)
+            while (Text.maxVisibleCharacters < Text.GetParsedText().Length)
             {
-                
-
                 if (!audios.isPlaying)
                 {
-                    if (visible < Text.GetParsedText().Length)
+                    if (Text.maxVisibleCharacters < Text.GetParsedText().Length)
                     {
                         //print(Text.maxVisibleCharacters);
                         audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
@@ -143,9 +141,17 @@ public class AutoType : MonoBehaviour
 
                 if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
                 {
-                    letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
+                    if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters + 1))
+                    {
+                        letterPause = (UpdateSpeed[Text.maxVisibleCharacters]);
 
-                    //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                        //print("Delay " + letterPause);
+                    }
+                    else
+                    {
+                        letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
+                        //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                    }
                 }
 
                 var vis = Text.maxVisibleCharacters;
@@ -157,7 +163,7 @@ public class AutoType : MonoBehaviour
 
 
                 var charaPause = DelayContains(Text.GetParsedText()[vis], letterPause);
-                
+                //print(Text.GetParsedText()[vis] + " " + charaPause);
                 Text.maxVisibleCharacters++;
 
                 yield return new WaitForSeconds(charaPause);
