@@ -46,7 +46,7 @@ VAR current_room = "unset"
 	[Charlotte] "How hypocritical of me. Here I am lecturing you on manners, meanwhile failing to request an introduction to your associate." # Charlotte = Surprised
 +{grace > 3}[Well, thanks (formal)]
 	[{player_name}] "I am doing well, thank you. And how are you? As well as you look, I hope." # Charlotte = Surprised
-	[Charlotte] "When did you acquire such charm? I must say it is a special joy to find a kindred spirit with whom I may hold a proper conversation!" # charlotte=happy {CharEnter("Charlotte", "Happy")}
+	[Charlotte] "When did you acquire such charm? I must say it is a special joy to find a kindred spirit with whom I may hold a proper conversation!" # Charlotte=happy {CharEnter("Charlotte", "Happy")}
 	"Oh dear, that sounded terribly callous, didn’t it? Your eloquence may have caught me off-guard, { -player_gender == "M": sir-player_gender == "F": madam-else: friend}." # Charlotte = Afraid
 	"Please do not think I hold those without formal dialectical training in any sort of contempt."
 	[{player_name}] "Of course not. # Charlotte = Calm
@@ -66,13 +66,13 @@ Timothy peeks out from his hiding place in the shadows behind me. # Timothy = Ca
 -> Trissa
 
 === Trissa ===
-[Timothy] "Uh... hi." # Timothy = Afraid
+[Timothy] "Uh... hi." # Timothy = Afraid, Stage_Left, Right
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # Charlotte = Happy
 [Timothy] "Th-<delay=1>thanks." # timothy=happy # Timothy = Happy
 [Charlotte] "My roommate is here, too. Doubtless she'll be overjoyed to make your acquaintance." # Charlotte = Angry
 I get an uncharacteristic hint of annoyance from Charlotte as she beckons to her.
-"Trissa, dear, come and meet the new arrival!" # Charlotte = Calm
-[Trissa] "Hiya! What's goin on, Lotty? You say somethin' about a new arrival?" # Trissa = Calm
+"Trissa, dear, come and meet the new arrival!" # Charlotte = Calm, Right
+[Trissa] "Hiya! What's goin on, Lotty? You say somethin' about a new arrival?" # Trissa = Calm, Stage_Right, Left
 [Charlotte] "I did indeed. This is Timothy, {player_name}'s new roommate." # Charlotte = Calm
 [Trissa] "Who?"
 [{player_name}] "Me. {player_name}?"
@@ -98,7 +98,7 @@ Timothy looks like he might not believe her.
 Trissa turns to look at me and lowers her voice to speak privately.
 [Trissa] "You take care of this one, alright? Let's make sure to give Timothy a good home."
 "Anyways, I gotta run. Take care y'all!"
-[Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
+[Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit # Charlotte = Left
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
 [Timothy] "Uh... where to next?" # Charlotte = Exit # Timothy = Exit
 -> END
