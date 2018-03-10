@@ -223,21 +223,21 @@ Should... Should I question him about that?
 [{player_name}] "so, what are you doing over here?"
 [Timothy] "I'm not sure..." #Timothy = Calm
 "These gardens are really pretty, and..."
-"I don't know, I guess I'm really bad at putting feelings like that into words?"
+"I don't know, I guess I'm really bad at putting feelings like that into words?" #Timothy=Sad
 "Game's made sense... to me. @So I, uh, made my feelings a game?"
 "I'm probably not making any sense."
 [{player_name}] "No, no, I think I get it?"
 {
 	-GameFails < 6:
 		"So, why Hope?"
-		[Timothy] "Oh, uh, um, well..."
+		[Timothy] "Oh, uh, um, well..." #Timothy = Happy
 		"It is my first day here. and, I guess, the gardens made me think about word 'Hope'."
 	-else:
 		"So, what was the word?"
-		[Timothy] "It's a secret.
+		[Timothy] "It's a secret."  #Timothy = Angry
 		"You didn't win, so thats the breaks."
 }
-[Timothy] "..." #Timothy = afraid
+[Timothy] "..." #Timothy = Afraid
 "I'm sorry. I'm acting weird."
 [{player_name}] "No, no, you're fine."
 [Timothy] "T-Thanks." #Timothy = Happy
