@@ -110,9 +110,9 @@ public class GameStartUp : MonoBehaviour
     {
         Game.current.Day = StartDay;
         Game.current.Hour = StartHour;
-        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.delusion, StartDelusion);
-        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.fatigue, StartFatigue);
-        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.stress, StartStress);
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Depression, StartDelusion);
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Fatigue, StartFatigue);
+        Game.current.Self.SetWellbeingStat(Personality.Wellbeing.Stress, StartStress);
     }
 
     void SetDebugValues()
@@ -121,9 +121,9 @@ public class GameStartUp : MonoBehaviour
         Game.current.Hour = DebugHour;
         Game.current.Progress.SetValue("week", DebugWeek);
         Game.current.Progress.SetValue("Debug Mode", true);
-        Game.current.Self.SetSocialStar(Personality.Social.awareness, DebugAwareness);
-        Game.current.Self.SetSocialStar(Personality.Social.grace, DebugGrace);
-        Game.current.Self.SetSocialStar(Personality.Social.expression, DebugExpression);
+        Game.current.Self.SetSocialStar(Personality.Social.Awareness, DebugAwareness);
+        Game.current.Self.SetSocialStar(Personality.Social.Grace, DebugGrace);
+        Game.current.Self.SetSocialStar(Personality.Social.Expression, DebugExpression);
     }
 
 

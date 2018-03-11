@@ -38,6 +38,7 @@ public class SocialStatManager : MonoBehaviour
     PreviousTier = Game.current.Self.GetBasicSocialStat(SocialStat) + Game.current.Self.GetBonusSocialStat(SocialStat);
     PreviousProgress = Game.current.Self.GetSocialProgress(SocialStat);
     Space.Connect<DefaultEvent>(Events.StatChange, UpdateStats);
+    Space.Connect<DefaultEvent>(Events.UpdateMap, UpdateStats);
     StatBar.maxValue = Game.current.Self.SocialThreshold * 3;
     UpdateDisplay();
   }
@@ -45,7 +46,8 @@ public class SocialStatManager : MonoBehaviour
   public void UpdateDisplay()
   {
     float barStat = Game.current.Self.GetSocialProgress(SocialStat);
-    Debug.Log(Game.current.Self.GetSocialProgress(SocialStat) + ", " + Game.current.Self.SocialThreshold * 3);
+    //Debug.Log(Game.current.Self.GetSocialProgress(SocialStat) + ", " + Game.current.Self.SocialThreshold * 3);
+    print($"BAR {SocialStat.ToString()} SET TO {barStat}");
     StatBar.value = barStat;
 
     int basicTier = Game.current.Self.GetBasicSocialStat(SocialStat);

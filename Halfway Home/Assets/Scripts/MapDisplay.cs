@@ -101,7 +101,7 @@ namespace HalfwayHome
             {
                 foreach (var multiple in TimeDilation)
                 {
-                    if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion))
+                    if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression))
                         multiplier = multiple.Multiplier;
                 }
             }

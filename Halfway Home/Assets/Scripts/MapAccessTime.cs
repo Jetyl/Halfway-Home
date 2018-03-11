@@ -93,13 +93,13 @@ namespace HalfwayHome
         }
       }
 
-      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue) > FatigueCloseLimit)
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue) > FatigueCloseLimit)
         self.interactable = false;
 
-      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.stress) > StressCloseLimit)
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.Stress) > StressCloseLimit)
         self.interactable = false;
 
-      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion) > DelusionCloseLimit)
+      if (Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression) > DelusionCloseLimit)
         self.interactable = false;
 
       foreach (var point in ClosedTimeContainer)

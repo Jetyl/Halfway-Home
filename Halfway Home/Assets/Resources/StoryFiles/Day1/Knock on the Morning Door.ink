@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 VAR pronouns = ""
@@ -76,7 +76,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 What.
 [{player_name}] "huh?"
 "Uugh... @Morning Max."
-[Keyless0Max] "Morning? It's almost noon! Don't tell me, I was yer alarm clock this morning?"
+[Keyless0Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "N-no... @I was already awake."
 [Keyless0Max] "that's good. Y'all can't be relying on a the Max alarm pretty soon."
 [{player_name}] "Yeah."
@@ -118,22 +118,22 @@ What? # Keyless = Calm #Timothy=Calm
 [{player_name}] "huh?"
 D-didn't Max say that before?
 "uh?... Morning Max." 
-[Keyless@Max] "Morning? It's almost noon! Don't tell me, I was yer alarm clock this morning?"
+[Keyless@Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "W-What? N-no... @I, uh, was already awake."
 Okay, I'm getting the strangest case of deja vu right now...
 [Keyless0Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
 Okay, now its getting weird.
-"uh, Yello? Earth to {player_name}. ya still there?"
-this doesn't feel real. Besides Max, I see... #Timothy=Calm
+"Uh, hello? Earth to {player_name}. Ya still there?"
+This doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
 [{player_name}] "what are you doing back so soon?" #Timothy=Calm
 "We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
 [Keyless0Max] "Uh, {player_name}, you still dreaming buddy?"
-"Timothy Miyuri is the roommate I told you about"
-wait
+"Timothy Miyuri is the roommate I told you about."
+Wait...
 "You two will be sharing a room for the week, since we're kinda tight on space around here."
-wait
+Wait...
 [Keyless0Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
 [Timothy] "Okay." # Timothy = Calm
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
@@ -158,17 +158,17 @@ Timothy is just kind of quietly staring at the corner where his bed is.
 [Keyless0Max] "Ah, yes."
 "Well lets head off."
 "See you at the welcome dinner {player_name}!" #Max=Exit #Timothy=Exit
-wait
+Wait...
 "Thanks again for the tip on the keys!"
-and, they're gone...
+And, they're gone...
 What is even going on?
 I'm left in my room, looking around. all of Timothy's stuff has been packed in the bags they brought in. 
-my bags, on the other hand, have been emptied, and put away, from where I left them last night...
+My bags, on the other hand, have been emptied, and put away, from where I left them last night...
 Last night....
 [{player_name}] "Aggh!"
-my head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
+My head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
 Was last night... really last night?
-the knock on the door.@ Max introducing Timothy as if we never met.@ Timothey even still being here!
+the knock on the door.@ Max introducing Timothy as if we never met.@ Timothy even still being here!
 this can't all be just deja vu, can it?
 I think.... I think I'm back on the first day Timothy arrived here.@ But how? why?
 I sit there, alone with my thoughts, theorizing how or why this situation has come before me, before I realize the time.
@@ -183,7 +183,7 @@ for now, do you tell max where their keys are, and thus take Timothy around the 
 +[No, withhold that information] ->TakingTimothy
 
 ===RestartRequired===
-Nonononononononono.
+Nonononono!
 In a bolt, I'm out of bed, and sprint for the door.
 This can't be happening. this can't be happening.
 -> Repeat

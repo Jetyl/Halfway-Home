@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -63,13 +63,13 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 [Timothy] "Guess."
 [{player_name}] "Hm? Oh, uh, okay."
 "Let's see...""
-+[Common consants] -> Constant
++[Common consonants] -> Constant
 +[Can I buy a vowel?] -> Vowel
 +{GetValue("SolvedHangman")}[It's Hope] -> AlreadyKnow
 
 
 === HangMan ===
-+[Common consants] -> Constant
++[Common consonants] -> Constant
 +[Vowels] -> Vowel
 +{CorrectGuesses == 3}[Guess at the answer] -> Guess
 
@@ -101,7 +101,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	-> Wrong
 
 === Constant ===
-Okay, some common consants are...
+Okay, some common consonants are...
 *[S]
 	[{player_name}] "how about 'S'?"
 	-> Wrong
@@ -150,7 +150,7 @@ Okay, some common consants are...
 {
 	- CorrectGuesses == 3:
 		"care to guess the word?"
-		hmmm....
+		Hmm....
 		->Guess
 	- else:
 		"Next guess?"
@@ -206,7 +206,7 @@ Should... Should I question him about that?
 		-expression > 2:
 			You question Timothy
 		-else:
-			<color=A5C5E3FF><i>Unfortunatly, Your <b>expression</b> is not high enough to succesfully ask Timothy this question.</i></color>
+			<color=A5C5E3FF><i>Unfortunately, Your <b>expression</b> is not high enough to successfully ask Timothy this question.</i></color>
 			->QuestionTimothy
 	}
 +[Let it Slide]
@@ -217,7 +217,7 @@ Should... Should I question him about that?
 //make this tutorial check instead
 {
 	-GetValue("Tutorial") == true:
-		"OH! uh... S-Sorry f-for interupt-t-t-ting the t-tour.." #Timothy = Surprised
+		"OH! uh... S-Sorry f-for interrupting the t-tour.." #Timothy = Surprised
 		[{player_name}] "its okay."
 }
 [{player_name}] "so, what are you doing over here?"

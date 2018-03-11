@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -41,12 +41,16 @@ The car behind me pulls away. No going back now, not that I'd want to. I've had 
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
 [Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
+->Start.NameEntry
+=NameEntry
 *[Help Them Out] {GetPlayerName()}
 	[{player_name}] "It's {player_name}. And yeah, that's me."
+	->Start.Introductions
 +[Wait]
 	[Max] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}"
--[Max0Tall Redhead] "{player_name}, right?" //{GetPlayerName()}
-[{player_name}] "That's me."
+	->Start.NameEntry
+=Introductions
+[Max0Tall Redhead] "{player_name}! That was it!"
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
 [Max0Tall Redhead] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
 The other residents begin to whisper amongst each other.
@@ -120,22 +124,6 @@ I need to choose now!
 	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
 	->Hallway
 
-=== OldStart ===
-The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
-I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
-I need to get out of this place. # SFX : play_sfx_human_footsteps_approaching
-The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route.
-To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
-I need to choose now!
-+[Stairs]
-	I decide that higher ground is more important and race up the stairs. # SFX : play_sfx_human_footsteps_approaching
-	->Stairs
-+[Hallway]
-	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
-	->Hallway
-*/
-/*
 === Stairs ===
 My pace slows as I climb. I can hear the whispers getting louder.
 [Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper

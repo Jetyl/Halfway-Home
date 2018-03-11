@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -111,7 +111,7 @@ I tell myself that, over and over, until I fall asleep.
 //have this in UI color
 <color=A5C5E3FF>Progress Status: ... DETECTING @ Primary Objective: ... FAILURE @ Secondary Objective: ... SUCCESS </color>
 <color=A5C5E3FF>Determining Following Action: ... COMPLETE</color>
-<color=A5C5E3FF>Reinintializing.... @Recontructing.... @Resetting....</color>
+<color=A5C5E3FF>Reinitializing.... @Reconstructing.... @Resetting....</color>
 <color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired</color>
 <color=A5C5E3FF>Awaiting Further Input....</color>
 {SetTimeBlock(0)}

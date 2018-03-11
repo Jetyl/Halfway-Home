@@ -60,7 +60,7 @@ public class RoomIconDisplay : MonoBehaviour
         if (Eventdata.CurrentRoom != Location)
             return;
 
-        print(Eventdata.CurrentRoom + " & " + Location);
+        //print(Eventdata.CurrentRoom + " & " + Location);
 
         ClearIcons();
         

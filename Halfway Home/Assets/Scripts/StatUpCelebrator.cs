@@ -45,8 +45,8 @@ public class StatUpCelebrator : MonoBehaviour
     StatText.text = ToTitleCase($"{e.Stat} Up!");
     var curTier = Game.current.Self.GetBasicSocialStat(e.Stat);
     var specTier = Game.current.Self.GetBonusSocialStat(e.Stat);
-    if (e.Stat == Personality.Social.awareness) curColor = AwarenessStarColor;
-    else if (e.Stat == Personality.Social.grace) curColor = GraceStarColor;
+    if (e.Stat == Personality.Social.Awareness) curColor = AwarenessStarColor;
+    else if (e.Stat == Personality.Social.Grace) curColor = GraceStarColor;
     else curColor = ExpressionStarColor;
     switch(curTier)
     {

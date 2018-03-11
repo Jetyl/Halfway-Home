@@ -10,6 +10,7 @@ public class WellbeingStatBar : MonoBehaviour
   public Image BackBar;
   public Slider StatBar;
   public TextMeshProUGUI StatText;
+  public TextMeshProUGUI DescText;
   public TextMeshProUGUI FeelingText;
 
   public List<UIStatDescriptions> TextAndColorChanges;
@@ -44,7 +45,7 @@ public class WellbeingStatBar : MonoBehaviour
   void UpdateDisplay()
   {
     int stat = Game.current.Self.GetWellbingStat(DisplayedStat);
-
+    DescText.text = DisplayedStat.ToString();
     StatBar.value = stat;
 
     Color newFrontColor = FillBar.color;
@@ -54,11 +55,11 @@ public class WellbeingStatBar : MonoBehaviour
       if ((float)stat / 100f >= stage.PercentagePastPoint)
       {
         newFrontColor = stage.statColor;
-        if (DisplayedStat == Personality.Wellbeing.delusion)
+        if (DisplayedStat == Personality.Wellbeing.Depression)
         {
           newFeel = stage.DepressionStageText;
         }
-        else if (DisplayedStat == Personality.Wellbeing.fatigue)
+        else if (DisplayedStat == Personality.Wellbeing.Fatigue)
         {
           newFeel = stage.FatigueStageText;
         }

@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -35,7 +35,7 @@ EXTERNAL GetStringValue(value)
 "I don't know. I've never actually gone to it."
 [Timothy] "...It's so pretty here.~" #Timothy = Happy, stage_left, right
 [{player_name}] "yeah, I suppose it is."
-I'll admit it is very pretty out here. @the Gardens is one of the biggest selling points for the Sunflower House in their brochere.
+I'll admit it is very pretty out here. @the Gardens is one of the biggest selling points for the Sunflower House in their brochure.
 It's almost a shame I never made use of it as much as I could here.
 [{player_name}] "But yeah, the Gardens are a good place to reflect on things." #Timothy = Exit
 "You can just sort of zen out. Be <color=A5C5E3FF><i>aware</i></color> of the life around you... and yourself, I suppose."

@@ -66,20 +66,20 @@ public class PostProcessingController : MonoBehaviour
         StopAllCoroutines();
 
         print("updating!");
-        int Dstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.delusion);
+        int Dstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression);
         float Dpercent = (float)Dstat / 100f;
         Dpercent = Mathf.Clamp01((Dpercent - DeadZone) / (1 - DeadZone));
 
         var newSatValue = Mathf.Lerp(ZeroDepressionValue, MaxDepressionValue, Dpercent);
         
-        int Sstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.stress);
+        int Sstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.Stress);
         float Spercent = (float)Sstat / 100f;
         Spercent = Mathf.Clamp01((Spercent - DeadZone) / (1 - DeadZone));
 
         var newGrainValue = Mathf.Lerp(ZeroStressValue, MaxStressValue, Spercent);
 
 
-        int Fstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.fatigue);
+        int Fstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue);
         float Fpercent = (float)Fstat / 100f;
         Fpercent = Mathf.Clamp01((Fpercent - DeadZone) / (1 - DeadZone));
 

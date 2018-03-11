@@ -204,11 +204,11 @@ namespace HalfwayHome
       string count = parse.FindFirst(countLabel);
       Trace.Script($"{stat} = {count}");
 
-      var eventStat = Personality.Social.awareness;
+      var eventStat = Personality.Social.Awareness;
       if (stat == "grace")
-        eventStat = Personality.Social.grace;
+        eventStat = Personality.Social.Grace;
       if (stat == "expression")
-        eventStat = Personality.Social.expression;
+        eventStat = Personality.Social.Expression;
 
       if(count == "+")
       {
@@ -262,11 +262,11 @@ namespace HalfwayHome
 
     void OnWellbeingStatChange(string stat, int value, bool assign = false)
     {
-      var eventStat = Personality.Wellbeing.delusion;
+      var eventStat = Personality.Wellbeing.Depression;
       if (stat == "stress")
-        eventStat = Personality.Wellbeing.stress;
+        eventStat = Personality.Wellbeing.Stress;
       if (stat == "fatigue")
-        eventStat = Personality.Wellbeing.fatigue;
+        eventStat = Personality.Wellbeing.Fatigue;
 
       Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
     }

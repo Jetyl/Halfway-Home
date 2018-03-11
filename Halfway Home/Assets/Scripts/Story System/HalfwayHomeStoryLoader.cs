@@ -75,7 +75,7 @@ namespace HalfwayHome
     [Header("Story")]
     public HalfwayHomeStoryReader reader;
 
-    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion" };
+    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "depression" };
     private Dictionary<string, StatAccess> stats = new Dictionary<string, StatAccess>();
 
     void Start()

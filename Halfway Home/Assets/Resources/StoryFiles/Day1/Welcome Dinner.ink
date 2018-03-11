@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -25,7 +25,7 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebatory Welcome Dinner.
+I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner.
 The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
 It's supposed to be a big bonding moment. Or, something like that.
 I actually barely remember my welcome dinner. I think there were beans? That's about all I got.
@@ -45,7 +45,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 [Timothy] "Hi, {player_name}."
 [Trissa] "Come to see the man of hour, huh?"
 [{player_name}] "Sure did."
-{delusion > 40: [Voices] "As if he wants to see you."}
+{depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
 [Timothy] "That's kind of a lotta pressure."
 *[Reassure Him]
@@ -65,7 +65,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 	[Timothy] "Thanks, Trissa."
 -Timothy looks grateful. He is about to reply when Max shows up with a plate of food. # Max = Calm
 [Max] "Hey, gang!"
-I give them a nod of acknowledgement.
+I give them a nod of acknowledgment.
 [Trissa] "Hi, Max!"
 [Timothy] "Hey."
 [Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec."
@@ -76,7 +76,7 @@ Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
 As I approach, the two are giggling about something. # Eduardo = Happy # Isaac = Happy
 [{player_name}] "Mind if I join you?"
-{delusion > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
+{depression > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
 [Eduardo] "Nah, man. Get in here!"
 [Eduardo] "I was just telling my meu bem Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
@@ -93,7 +93,7 @@ As if on cue, Max makes a loud sound from the center of the room and rises to th
 I duck past the line to where Charlotte stands behind the serving area, busily refilling several trays at once.
 [{player_name}] "Hey, Charlotte. Is there uh... something I can help with maybe?" # Charlotte = Calm
 [Charlotte] "I'm sure I could find a use for you."
-{delusion > 40: [Voices] "She'd have to be a miracle worker to do <i>that</i>."}
+{depression > 40: [Voices] "She'd have to be a miracle worker to do <i>that</i>."}
 [Charlotte] "Heavens, that was curt of me. Allow me to try that again." # Charlotte = Sad
 [Charlotte] "That is very generous of you. I can't think of anything at the moment, but..."
 [Charlotte] "On second thought, there actually is a task for which I could benefit from your assistance. Or, more accurately, Max could."
@@ -108,13 +108,13 @@ Max hustles toward the kitchen and out of sight. # Max = Exit
 I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal.
 Max returns with a plate of their own. # Max = Calm
 [Max] "Everything's set. Hit me up with some grub, {player_name}! Oh, and you're good to eat with us as soon as I've done the toast."
-The moment I finish dishing them up a sizeable portion, Max takes off towards the center table. # Charlotte = Exit
+The moment I finish dishing them up a sizable portion, Max takes off towards the center table. # Charlotte = Exit
 ->Toast
 
 ===Toast===
 [Max] "Can I get everyone's attention!" #Max=Calm
 The whole cafe quites a little, as Max speaks up.
-[Max] "Thanks eveybody for showing yerselfs"
+[Max] "Thanks everybody for showing yerselfs"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
 [Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
 [Max] "He just got out Blackwell Hospital, for those who need the context for that,"

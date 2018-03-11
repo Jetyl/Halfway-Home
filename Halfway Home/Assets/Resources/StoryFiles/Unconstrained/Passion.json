@@ -1,1 +1,1 @@
-﻿{"inkVersion":17,"root":["done",{"#f":3}],"listDefs":{}}
+﻿{"inkVersion":17,"root":[{"->":"Start"},"done",{"Start":["end",{"#f":3}],"global decl":["ev","str","^tbd","/str",{"VAR=":"player_name"},"str","^tbd","/str",{"VAR=":"player_gender"},0,{"VAR=":"grace"},0,{"VAR=":"expression"},0,{"VAR=":"awareness"},0,{"VAR=":"fatigue"},0,{"VAR=":"stress"},0,{"VAR=":"depression"},0,{"VAR=":"doubt"},0,{"VAR=":"week"},"str","^unset","/str",{"VAR=":"current_room"},0,{"VAR=":"seenBefore"},"/ev","end",null],"#f":3}],"listDefs":{}}

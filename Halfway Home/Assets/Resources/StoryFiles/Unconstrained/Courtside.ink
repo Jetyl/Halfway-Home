@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -490,7 +490,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 {
 	-playerLetters == 0:
 		[{player_name}] "You got me, Timothy. Well done!" # Timothy = Happy
-		{-delusion>40:[Voices] "You call that a throw? What a failure."}
+		{-depression>40:[Voices] "You call that a throw? What a failure."}
 		{
 			-timLetters == 0:
 				[Timothy] "So do I win?"
@@ -513,7 +513,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 	-playerLetters == 1:
 		~playerLetters = playerLetters + 1
 		[{player_name}] "I'm on the ropes now."
-		{-delusion>40:[Voices] "You can't even beat a guy who's never held a basketball before. Disgraceful."}
+		{-depression>40:[Voices] "You can't even beat a guy who's never held a basketball before. Disgraceful."}
 		{
 			-timLetters == 2:
 				[{player_name}] "We're both one away. I guess that means we're in sudden death."
@@ -556,14 +556,14 @@ Timothy nods.
 [Max] "See you around, {player_name}."
 Max and Timothy head into the building, leaving me alone in the garden.
 I sit alone for a while, replaying the conversation in my mind.
-<>@Solitude increased Depression slightly.</i></color> # Delusion += 5
+<>@Solitude increased Depression slightly.</i></color> # depression += 5
 -> END
 
 === Ignored ===
 =TimWon
 [Timothy] "I... I actually did it!" # Timothy = Happy
 [{player_name}] "You actually did. I told you you could do it."
-{-delusion>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
+{-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
 [Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)}
 ->Ignored.Conclusion
 

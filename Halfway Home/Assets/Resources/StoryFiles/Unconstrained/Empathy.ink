@@ -1,4 +1,4 @@
-﻿/******************************************************************************/
+/******************************************************************************/
 /*
 @file   Empathy.ink
 @author John Myres
@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -142,7 +142,7 @@ I decide it's best not to approach Charlotte.
 	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way."
 	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart."
 -[Charlotte] "I know just the thing."
-She stands up and walks over to a far shelf. # Charlotte = Exit
+She stands up and walks over to a far shelf. # Charlotte = Exit, StageLeft
 She returns holding a thick, nondescript book. # Charlotte = Happy
 "Somewhere along the line this fellow lost his jacket, but, I assure you, you will be no less absorbed."
 I take the book from her and look it over. It has a very humble appearance, but I am excited to start on it nonetheless.

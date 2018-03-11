@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 1
 VAR current_room = "unset"
 
@@ -49,7 +49,7 @@ EXTERNAL CallSleep()
 
 
 === YourRoom ===
-// Reduce Stress, Remove Fatigue, Increase Delusion
+// Reduce Stress, Remove Fatigue, Increase depression
 // Recover for the next day. The isolation reminds you of a darker time.
 ~ temp new_fatigue = "none"
 {fatigue > 40:
@@ -97,11 +97,11 @@ EXTERNAL CallSleep()
 				reduced Fatigue significantly. # Fatigue => 20
 		}
 }
-<>@Solitude increased Depression slightly.</i></color> # Delusion += 5
+<>@Solitude increased Depression slightly.</i></color> # depression += 5
 -> END
 
 === Commons ===
-// Reduce Delusion, increase stress
+// Reduce depression, increase stress
 // Ground yourself in the cozy heart of the House.
 {
 	- expression < 2:
@@ -110,9 +110,9 @@ EXTERNAL CallSleep()
 		I've gotten a lot more comfortable around people. I head to the Commons, which feels even more homey than usual.
 }
 {
-	- delusion > 50:
+	- depression > 50:
 		{
-			- delusion > 89:
+			- depression > 89:
 				[Voices] "<i>No one wants you around.<i>"
 				The voices in my head are drowning everything out.
 				[Voices] "<i>You deserve to be alone.<i>"
@@ -123,7 +123,7 @@ EXTERNAL CallSleep()
 		}
 	- else:
 		{
-			- delusion > 29:
+			- depression > 29:
 				The Voices have left me alone for a while. 
 				I intend to keep it that way.
 			- else:
@@ -141,7 +141,7 @@ The room is {~surprisingly empty, with only a few people reading by the window|f
 
 // Call external for wellbeing
 <color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Social interaction lowered Depression significantly.</i></color> # Delusion -= 25
+<color=A5C5E3FF><i>Social interaction lowered Depression significantly.</i></color> # depression -= 25
 <color=A5C5E3FF><i>However, it also increased Stress slightly.</i></color> # Stress += 10
 
 -> END
@@ -163,7 +163,7 @@ I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left
 -> END
 
 === Garden ===
-// Increase Delusion, Increase Awareness
+// Increase depression, Increase Awareness
 // Contemplate your journey: the good and the bad.
 I decide that some time alone would be good for me, but rather than shutting myself in my room on such a nice day I head outside.
 The sweet smell of the garden envelops me as I step out into the crisp spring air.
@@ -181,7 +181,7 @@ My solitude gives me plenty of time to reflect.
 // Call external for wellbeing
 <color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
 <color=A5C5E3FF><i>Your time in the sun has left you feeling tired, increasing Fatigue slightly.</i></color> # Fatigue += 10
-<color=A5C5E3FF><i>Being alone has increased your Depression slightly.</i></color> # Delusion += 10
+<color=A5C5E3FF><i>Being alone has increased your Depression slightly.</i></color> # depression += 10
 {
 	- awareness > 3:
 		<color=A5C5E3FF><i>Your proficiency with introspection reduces Stress slightly.</i></color> # Stress -= 10
@@ -251,9 +251,9 @@ The store isn't far and there's only a few blocks of mostly vacant streets on th
 The idea is slightly off-putting, but I figure it'll be good for me.
 The unpredictability of it is kind of exciting. I feel like anything could happen.
 After a brisk walk I reach my destination.
-->Store.Delusion
-= Delusion
-{~->StoreDelusion|->Store.Stress}
+->Store.depression
+= depression
+{~->Storedepression|->Store.Stress}
 = Stress
 {~->StoreStress|->Store.Fatigue}
 = Fatigue
@@ -287,17 +287,17 @@ After a brisk walk I reach my destination.
 }
 
 
-=== StoreDelusion ===
-{~->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Small|->StoreDelusion.Large}
+=== Storedepression ===
+{~->Storedepression.Small|->Storedepression.Small|->Storedepression.Small|->Storedepression.Small|->Storedepression.Large}
 
 = Small
 For some reason, being out in public makes me feel more isolated. I feel myself shrink.
-<color=A5C5E3FF><i>Depression increased slightly.</i></color> # Delusion += 10
+<color=A5C5E3FF><i>Depression increased slightly.</i></color> # depression += 10
 -> Store.Stress
 = Large
 The clerk is busy in the back of the store. 
 My darker thoughts come out as I'm left waiting for what feels like an eternity.
-<color=A5C5E3FF><i>Depression increases significantly.</i></color> # Delusion += 25
+<color=A5C5E3FF><i>Depression increases significantly.</i></color> # depression += 25
 -> Store.Stress
 
 === StoreStress ===

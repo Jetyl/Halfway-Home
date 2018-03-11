@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 1
 VAR current_room = "unset"
 
@@ -39,7 +39,7 @@ I hop into the shower real quick. By the time I come out Timothy is already curl
 =IntoBed
 I plant myself in my own bed, and squirm under the sheets.
 I am <i>beat</i>.
-I sit there, wavering between consiousness and unconsiousness, when I hear a voice.
+I sit there, wavering between consciousness and unconsciousness, when I hear a voice.
 [Timothy] "Hey,<delay=2> {player_name}?"
 [{player_name}] "Yeah?"
 {

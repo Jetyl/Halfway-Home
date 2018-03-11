@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -29,7 +29,7 @@ EXTERNAL GetValue(value)
 
 === Start ===
 I step out into the gardens. its rather cold out tonight.
-there isn't a single star in sky tonight.
+There isn't a single star in sky tonight.
 { 
 	
 	-GetValue("IssacOpenedUp") == true:
@@ -42,8 +42,8 @@ there isn't a single star in sky tonight.
 
 === StoneGiant ===
 I don't really have a reason to be strolling out here at this time, but I feel it.
-walking around the beaten path, I spot an unusual sight.
-its Issac, sitting in a little hidden patch of grass, staring up at the sky. #Issac = Sad
+Walking around the beaten path, I spot an unusual sight.
+It's Issac, sitting in a little hidden patch of grass, staring up at the sky. #Issac = Sad
 ->Quiet
 
 === TryAgain ===
@@ -54,18 +54,18 @@ I go to where I know Issac is hiding, to talk to him about what is bothering him
 === Quiet ===
 [{player_name}] "Hey, Issac. What's up?" #Issac = Sad
 [Issac] "...."
-no response. not suprising
+No response. not surprising
 [{player_name}] "so... um, what'cha looking at?"
 [Issac] "..."
-"...hm?" #Issac = Left
-[{player_name}] "I don't usuallly see you out here."
+"...Hm?" #Issac = Left
+[{player_name}] "I don't usually see you out here."
 [Issac] "..."
 "I'm hiding"
 +[Want to be left alone?]
-	[{player_name}] "oh! um, want to be left alone then?"
+	[{player_name}] "Oh! um, want to be left alone then?"
 	[Issac] "..."
-	"yeah"
-	[{player_name}] "uh, okay. see you later then."
+	"Yeah."
+	[{player_name}] "Uh, okay. See you later then."
 	->GivenUp
 +[Want to talk about it?]
 	[{player_name}] "Do you.. want to talk about it?"
@@ -74,57 +74,57 @@ no response. not suprising
 			->PullingTeeth
 		-else
 			[Issac] "..."
-			"note really."
-			[{player_name}] "...okay... I'll see you around, then."
+			"Not really."
+			[{player_name}] "...Okay... I'll see you around, then."
 			[Issac] "..."
-			"thanks."
+			"Thanks."
 			->GivenUp
 	}
 
 === PullingTeeth ===
 //show Issac CG here
 [Issac] "..." 
-“.............”
-“...............................”
-“............You..............”
-“.............. You ready?......... to leave?”
+“...”
+“...”
+“...You...”
+“...You ready...? To leave?”
 +[Yeah]
 	[{player_name}] "Y-yeah. I am."
-	[Issac] "hm"
+	[Issac] "Hm."
 	->PoorGrip
 +[....]
 	[{player_name}] "..."
-	[Issac] "hm"
+	[Issac] "Hm."
 	->PoorGrip
 +{grace>2}[Whether I am or not, I’m still leaving]
 	[{player_name}] "Whether I am or not, I’m still leaving."
-	[Issac] "Hm... that's true. Hm....."
+	[Issac] "Hm... That's true. Hm..."
 	->OpenAnswer
 +{expression>2} [No, not really]
 	[{player_name}] "No, not really"
 	[Issac] "Are you scared? To leave?"
-	[{player_name}] "......Yeah."
+	[{player_name}] "...Yeah."
 	->OpenAnswer
 
 
 =PoorGrip 
-[Issac] "......"
-"......................"
+[Issac] "..."
+"..."
 //continue here
 ->HelpfulListener
 
 =OpenAnswer
-[Issac] "......"
-"..........does......"
+[Issac] "..."
+"...Does...?"
 "...Does your life feel like its moving too fast for you?"
 [{player_name}] "A bit, yeah."
-"Do, uh, Do you feel that way too?"
-[Issac] "........."
+"Do, uh, do you feel that way too?"
+[Issac] "..."
 After a few quiet seconds, Issac nods, slightly.
-"How......"
-"How long............ Do you..........."
-".........Think....I..............I........"
-"......I've.........been...here..."
+"How...?"
+"How long... do you...?"
+"...Think...I...I...?"
+"...I've...been...here...?"
 How long he's been here?
 //continue here
 ->HelpfulListener
@@ -140,5 +140,5 @@ I help Issac up off the ground. //player has finished helping his issues
 
 
 === Recap ===
-I go to Issac's little hideaway, and talk him thru his issues like last time.
+I go to Issac's little hideaway, and talk him through his issues like last time.
 ->END
