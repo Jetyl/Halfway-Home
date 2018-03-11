@@ -81,10 +81,7 @@ namespace HalfwayHome
             if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
             {
                     Game.current.CurrentRoom = eventdata.Destination;
-                    foreach(string chara in ChoicesAvalible[i].Characters)
-                    {
-                        Game.current.UpdateScheduleUnderstanding(chara);
-                    }
+                    ChoicesAvalible[i].SetSceneTime();
                     gameObject.SetActive(false);
                     Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
                     Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));

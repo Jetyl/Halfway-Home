@@ -41,6 +41,7 @@ public class SceneStatusIcon : MonoBehaviour
 
     void OnMap(DefaultEvent eventdata)
     {
+        /*
         var see = Game.current.FlagMap(Location);
 
         switch(see)
@@ -65,7 +66,7 @@ public class SceneStatusIcon : MonoBehaviour
             default:
                 break;
         }
-
+        */
         
 
     }

@@ -34,11 +34,8 @@ public class Game
     //character name, day of week, the location that hour
     private Dictionary<string, List<List<Room>>> Schedule;
 
-    //character name, day of week, then has seen whereabouts that hour
-    private Dictionary<string, List<List<bool>>> ScheduleUnderstanding;
-
-    private Dictionary<Room, List<List<SceneSeen>>> WatchList;
-
+    private Dictionary<string, TimeStamp> SceneList;
+    
     public bool InCurrentStory;
 
     public string CurrentStory;
@@ -72,7 +69,7 @@ public class Game
         Progress.SetValue("Depression Time Dilation", true);
 
         Schedule = new  Dictionary<string, List<List<Room>>>();
-        ScheduleUnderstanding = new Dictionary<string, List<List<bool>>>();
+        SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
 
         var schedulefiller = TextParser.ToJson("Characters");
@@ -80,7 +77,6 @@ public class Game
         foreach(JsonData character in schedulefiller)
         {
             var Aday = new List<List<Room>>();
-            var Cday = new List<List<bool>>();
 
             for (int i = 0; i <= 7; ++i)
             {
@@ -94,35 +90,12 @@ public class Game
                 }
 
                 Aday.Add(hours);
-                Cday.Add(seen);
             }
 
             Schedule.Add((string)character["Name"], Aday);
-            ScheduleUnderstanding.Add((string)character["Name"], Cday);
 
         }
-
-        WatchList = new Dictionary<Room, List<List<SceneSeen>>>();
-        for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
-        {
-            var Bday = new List<List<SceneSeen>>();
-
-            for (int k = 0; k <= 7; ++k)
-            {
-                var See = new List<SceneSeen>();
-                for (int j = 0; j < 24; ++j)
-                {
-                    See.Add(SceneSeen.Unseen);
-                }
-
-                Bday.Add(See);
-            }
-
-            WatchList.Add((Room)i, Bday);
-        }
-
-
-
+        
     }
 
     public Game(Game copy_)
@@ -153,24 +126,15 @@ public class Game
 
     public void SoftReset()
     {
-
-        
         Day = 0;
 
         Progress.ResetBeats();
-
         
-
-
     }
 
     public void HardReset()
     {
-        
-
         PlayerName = "";
-
-
         
         Day = 0;
         Progress = new ProgressSystem();
@@ -187,7 +151,6 @@ public class Game
             Hour -= 24;
             NewDay();
         }
-        Space.DispatchEvent(Events.TimeChange);
 
         if(DrainEnergy)
             Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 10 * CurrentTimeBlock);
@@ -196,6 +159,8 @@ public class Game
 
         DrainEnergy = false;
         CurrentTimeBlock = 0;
+
+        Space.DispatchEvent(Events.TimeChange);
     }
 
     public void SetTimeBlock(int Amount)
@@ -211,71 +176,33 @@ public class Game
         CurrentTimeBlock = Amount;
         DrainEnergy = DrainFatigue;
     }
-
-    public bool KnowsWhereAbouts(string character)
+    public bool HasSeenBeenScene(string scene_name, TimeStamp time_stamp)
     {
-        return ScheduleUnderstanding[character][Day][Hour];
-        
-    }
-
-    public void UpdateScheduleUnderstanding(string Character)
-    {
-        ScheduleUnderstanding[Character][Day][Hour] = true;
-
-        int i = Hour + 1;
-        int j = Day;
-
-        //if the character stays there for several hours, update that here
-        while(Schedule[Character][j][i] == Schedule[Character][Day][Hour])
+        if(!SceneList.ContainsKey(scene_name))
         {
-            ScheduleUnderstanding[Character][j][i] = true;
-
-            i += 1;
-
-            if(i == 24)
-            {
-                i = 0;
-                j += 1;
-            }
+            return false;
         }
 
+        return SceneList[scene_name] == time_stamp;
     }
 
-    public SceneSeen FlagMap(Room location)
+    public void SetSceneData(string scene_name, TimeStamp time_stamp)
     {
-        return WatchList[location][Day][Hour];
-    }
-
-    public void SetSeenFlag(Room location, int Length, bool Complete, int day = -1, int hour = -1)
-    {
-
-        if (day == -1)
-            day = Day;
-        if (hour == -1)
-            hour = Hour;
-
-        for(int i = 0; i < Length; ++i)
+        if (!SceneList.ContainsKey(scene_name))
         {
-            if (Complete)
-                WatchList[location][day][hour + i] = SceneSeen.Completed;
-            else
-                WatchList[location][day][hour + i] = SceneSeen.Seen;
-
-            if (hour + i == 24)
-            {
-
-                while (hour + i > 0)
-                {
-                    hour -= 1;
-                }
-                
-
-                day += 1;
-            }
+            SceneList.Add(scene_name, time_stamp);
+        }
+    }
+    public bool IsSceneUnlocked(string scene_name, TimeStamp time_stamp)
+    {
+        if (!SceneList.ContainsKey(scene_name))
+        {
+            return true;
         }
 
+        return SceneList[scene_name] == time_stamp;
     }
-
+    
     public void NewDay()
     {
 
@@ -336,10 +263,53 @@ public enum Room
     EduardosRoom,
     Sleeping
 }
+
 [Serializable]
-public enum SceneSeen
+public class TimeStamp
 {
-    Unseen,
-    Seen,
-    Completed
+    public int day;
+    public int hour;
+    public int duration;
+
+    public TimeStamp(int _day, int _hour, int _duration)
+    {
+        day = _day;
+        hour = _hour;
+        duration = _duration;
+    }
+
+    public static bool operator ==(TimeStamp x, TimeStamp y)
+    {
+        if (x.day == y.day && x.hour == y.hour && x.duration == y.duration) return true;
+        return false;
+    }
+
+    public static bool operator !=(TimeStamp x, TimeStamp y)
+    {
+        if (x.day != y.day || x.hour != y.hour || x.duration != y.duration) return true;
+        return false;
+    }
+
+
+    public override bool Equals(System.Object obj)
+    {
+        if (obj == null)
+            return false;
+        TimeStamp c = obj as TimeStamp;
+        if ((System.Object)c == null)
+            return false;
+        return (day == c.day && hour == c.hour && duration == c.duration);
+    }
+    public bool Equals(TimeStamp c)
+    {
+        if ((object)c == null)
+            return false;
+        return (day == c.day && hour == c.hour && duration == c.duration);
+    }
+
+    public override int GetHashCode()
+    {
+        return this.day.GetHashCode();
+    }
+
 }

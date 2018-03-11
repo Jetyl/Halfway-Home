@@ -68,7 +68,7 @@ public class StageDisplay : MonoBehaviour
     void OnSkip(DefaultEvent eventdata)
     {
         Skip = true;
-        StopAllCoroutines();
+        ResetBackdrop();
     }
 
     void OffSkip(DefaultEvent eventdata)

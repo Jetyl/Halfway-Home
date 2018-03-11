@@ -75,7 +75,7 @@ public class IconDisplay : MonoBehaviour
                         continue;
 
                     //has the player seen this scene already?
-                    if (Game.current.KnowsWhereAbouts((string)character["Name"]) == false)
+                    if (scene.WatchedScene() == false)
                     {
                         icons.Icons.Add(UnknownPersonSprite);
                     }
