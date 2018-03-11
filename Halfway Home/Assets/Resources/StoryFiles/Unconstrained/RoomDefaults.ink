@@ -71,7 +71,7 @@ EXTERNAL CallSleep()
 	~CallSleep()
 	I wake up feeling <>
 	{shuffle:
-		-completely reinvograted.
+		-completely reinvigorated.
 		-groggy.
 		~new_fatigue = "low"
 		-reasonably rested.
@@ -131,7 +131,7 @@ EXTERNAL CallSleep()
 				I'm pretty sure he was talking about car maintenance, but I feel like it applies to socializing, too.
 		}
 }
-The room is {~suprisingly empty, with only a few people reading by the window|filled with the low murmur of conversation punctuated by bursts of laughter}.
+The room is {~surprisingly empty, with only a few people reading by the window|filled with the low murmur of conversation punctuated by bursts of laughter}.
 {
 	- expression < 2:
 		I plop down on a {~sofa|chair} next to a few other residents. We chat about {~the unusual weather|video games|last night's game|what we plan on doing when we leave}.
@@ -142,7 +142,7 @@ The room is {~suprisingly empty, with only a few people reading by the window|fi
 // Call external for wellbeing
 <color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
 <color=A5C5E3FF><i>Social interaction lowered Depression significantly.</i></color> # Delusion -= 25
-<color=A5C5E3FF><i>However, it also increased Stress slighty.</i></color> # Stress += 10
+<color=A5C5E3FF><i>However, it also increased Stress slightly.</i></color> # Stress += 10
 
 -> END
 
@@ -200,7 +200,7 @@ My solitude gives me plenty of time to reflect.
 	- else: I wander into the library, figuring that I should really catch up on all the knowledge I've missed out on in the last few years.
 }
 I peruse the shelves until a title catches my eye. 
-I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archaeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
+I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
 // Call external for wellbeing
 <color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>

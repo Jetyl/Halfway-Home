@@ -28,7 +28,7 @@ EXTERNAL GetValue(name)
 -> Start
 
 === Start ===
-When I step into the garden, I notice that Timothy is here absent-mindedly playing with the grass.
+When I step into the garden, I notice that Timothy is here absentmindedly playing with the grass.
 I was looking to be alone, but I can't help noticing he looks especially bored.
 I'm deliberating whether or not to approach him when he looks up.
 [Timothy] "Oh! Hey, uh, roomie." # Timothy = Surprised
@@ -36,7 +36,7 @@ Guess I'm committed to it now. # Timothy = Calm
 [{player_name}] "What are you up to?"
 [Timothy] "M-me? Oh, nothing."
 [{player_name}] "Usually when people say that they're just being polite."
-Timothy laughs softly. # Timoth = Happy
+Timothy laughs softly. # Timothy = Happy
 [Timothy] "Yeah, but I really wasn't doing anything."
 [{player_name}] "I used to do nothing a lot. I understand."
 [{player_name}] "You should really try and look busy at least."
@@ -95,7 +95,7 @@ Timothy breathes a sigh of relief. # Timothy = Calm
 [{player_name}] "Assuming they do it, yeah. You have to match your boast. If I say I'm gonna `swish`, but the ball hits the rim, it doesn't count... even if it goes in."
 [Timothy] "I don't know if I can even make it in at all..." # Timothy = Sad
 [{player_name}] "That's okay. How about we play a shorter version? We can do a three-letter word instead."
-[Timothy] "Yeah, that sounds good." # Timoth = Calm
+[Timothy] "Yeah, that sounds good." # Timothy = Calm
 [{player_name}] "Okay, how about..."
 +[PIG]
 	[{player_name}] "PIG? I think that's the most common choice for shorter games."
@@ -518,7 +518,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 			-timLetters == 2:
 				[{player_name}] "We're both one away. I guess that means we're in sudden death."
 				[Timothy] "Ah! That's a lot of pressure!" # Timothy = Afraid
-				[{player_name}] "Well, I'll probaby miss anyway."
+				[{player_name}] "Well, I'll probably miss anyway."
 				->GameTime.PlayerTurn
 			-else:
 				[{player_name}] "Wow, Timothy. You're doing really well!" # Timothy = Happy

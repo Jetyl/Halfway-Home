@@ -49,7 +49,7 @@ I decide to take this opportunity to spend some time with Charlotte. # Charlotte
 {
 	-grace==0:
 		[{player_name}] "Uh... hi, Charlotte. Could I, um, sit there? I mean next to you. I mean, you don't have to move or anything."
-		Jeez that was akward. Why am I so bad at this?
+		Jeez that was awkward. Why am I so bad at this?
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "I would be pleased if you would, {player_name}." # Charlotte = Happy
 
@@ -100,7 +100,7 @@ I idly browse the shelves for a book, like normal.
 I decide it's best not to approach Charlotte.
 
 === Reading ===
-[Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurances are rarer than I would like." {SetValue("SeenEmpathy", true)}
+[Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)}
 "Perhaps you would be willing to make one yourself?"
 [{player_name}] "Oh, uh... I don't really read enough to feel like I could."
 [Charlotte] "I see." # Charlotte = Sad
@@ -111,11 +111,11 @@ I decide it's best not to approach Charlotte.
 +[Fiction]
 	[{player_name}] "Fiction, I guess."
 	[Charlotte] "And how about genre? Fantasy? Science Fiction? Horror?"
-	Charlotte gains a mischevious look. # Charlotte = Happy
+	Charlotte gains a mischievous look. # Charlotte = Happy
 	[Charlotte] "Or perhaps you prefer Romance?"
 	++[Fantasy]
 	[{player_name}] "I like fantasy worlds a lot, so that probably."
-	[Charlotte] "Quite a lot goes into creating such wonderous places. It's a hard genre to dislike, and an even harder genre to disrespect."
+	[Charlotte] "Quite a lot goes into creating such wondrous places. It's a hard genre to dislike, and an even harder genre to disrespect."
 	++[Science Fiction]
 	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy|{player_gender == "F":girl|person}}."
 	[Charlotte] "A challenging genre, to be sure. One which asks us questions we are often afraid to ask ourselves."
@@ -138,11 +138,12 @@ I decide it's best not to approach Charlotte.
 	++[Creative Nonfiction]
 	[{player_name}] "I like reading stories about things that really happened."
 	[Charlotte] "A grounded choice. You know I think you're the first person I've encountered with such a preference."
-	++[I prefere variety]
+	++[I prefer variety]
 	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way."
 	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart."
 -[Charlotte] "I know just the thing."
-She stands up and walks over to a far shelf. She returns holding a thick, nondescript book.
+She stands up and walks over to a far shelf. # Charlotte = Exit
+She returns holding a thick, nondescript book. # Charlotte = Happy
 "Somewhere along the line this fellow lost his jacket, but, I assure you, you will be no less absorbed."
 I take the book from her and look it over. It has a very humble appearance, but I am excited to start on it nonetheless.
 -> Confessions
@@ -166,7 +167,7 @@ I take the book from her and look it over. It has a very humble appearance, but 
 [Charlotte] "Ah... Max is always telling me I do too much around here. Maybe they have a point..." # Charlotte = Surprised
 She shrugs.
 [Charlotte] "When I was little I didn't understand anything about people. And is it not human nature to hate what we do not understand?" # Charlotte = Sad
-"I fear I was quite a horrible, loathesome child. But that's a story for another time."
+"I fear I was quite a horrible, loathsome child. But that's a story for another time."
 "When I matured, I forced myself to care. I resolved to train myself to recognize the physical signs of emotion." # Charlotte = Angry
 "I swore to myself and my family that I would never again act without regard for others."
 "I was prepared to check myself into Blackwell, but my family insisted I come here first. I know it's only a matter of time before I end up there, but I had to honor their wishes." # Charlotte = Sad
@@ -176,7 +177,7 @@ She shrugs.
 Charlotte's eyes dart around my face before she breathes a gentle sigh of relief.
 [Charlotte] "My apologies for the monologue. You withstood it with aplomb, I must say. You are an excellent listener, do you know that?" # Charlotte = Happy
 [{player_name}] "Thanks for sharing. But I mean it was no trouble. I just sat here, really."
-[Charlotte] "Nonesense. I know quite well the struggle of strapping in while an oblivious associate starts oversharing."
+[Charlotte] "Nonsense. I know quite well the struggle of strapping in while an oblivious associate starts over-sharing."
 -> Questions
 
 === Questions ===
@@ -195,9 +196,9 @@ Charlotte looks at me expectantly.
 [{player_name}] "Yeah... you know, for someone who is apparently good at reading people, you're not that hard to read yourself."
 Charlotte sighs. # Charlotte = Sad
 [Charlotte] "My mother once told me the same thing, you know."
-"Heavens, it's emabrassing to admit the truth: I've been... less than courteous towards her... at times."
+"Heavens, it's embarrassing to admit the truth: I've been... less than courteous towards her... at times."
 Charlotte recoils as if her own words had stung her as she uttered them.
-"To make matters worse, she has never said an unkind word to me... she has never reciprocated the unjust spite I have levied aganst her."
+"To make matters worse, she has never said an unkind word to me... she has never reciprocated the unjust spite I have levied against her."
 "I'm jealous of her, {player_name}. She may have a different sort of grace, but hers is so fluid and natural. She is far better at any of this than I ever will be, no matter how hard I try."
 "She doesn't understand how valuable her gift is! To be so caring. To be so empathetic. She has never had to work for such qualities as I have!" # Charlotte = Angry
 {grace>2:
@@ -219,7 +220,7 @@ Charlotte recoils as if her own words had stung her as she uttered them.
 "Regrettably, my great grandfather gave his life in the war a few years later. Blackwell Asylum atrophied without his guidance."
 "It became a cruel place for the discarded. I fear it was not longer a place of medicine and hospice, but something far darker."
 "When my great aunt Viola died, it was a wake-up call for my grandparents. They shut down Blackwell and vowed only to reopen it when they were prepared to run it properly and the necessary restitutions had been made."
-"Blackwell did indeed reopen a decade later as Blackwell Psychatric Hospital. It is, thankfully, a very different sort of place, where care for its patients is paramount, to which I'm sure you can attest."
+"Blackwell did indeed reopen a decade later as Blackwell Psychiatric Hospital. It is, thankfully, a very different sort of place, where care for its patients is paramount, to which I'm sure you can attest."
 "My family is very touchy about this legacy. When I confronted them about my own condition, they refused to allow me to go to Blackwell. They worried it would 'reopen old wounds'." # Charlotte = Angry
 "So they sent me here to Sunflower House. If you ask me, they are simply delaying the inevitable. But I have honored their wishes thus far."
 "Thanks for taking such an interest, {player_name}!." # Charlotte = Happy
@@ -276,6 +277,6 @@ Charlotte rises to her feet.
 "Until next we meet, {player_name}."
 She curtsies and strides out of the room.
 Man, Charlotte is seriously living in a different century from anyone I've ever met.
-She seemed embarassed. Maybe asking her a question would have been better...
+She seemed embarrassed. Maybe asking her a question would have been better...
 Oh, well. I guess I'd better head out, too.
 -> END

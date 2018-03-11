@@ -90,7 +90,7 @@ Max is reading by the fireplace. I wander over and join them. # Max = Calm
 	Max looks up from their book and smiles. # Max = Happy
 	[Max] "You seem to be adjusting well."
 	[Max] "Usually folks hit a rough patch at the six-month mark. I certainly did." # Max = Sad
-	[Max] "But you seem unphased. You've got resolve, my friend." # Max = Happy
+	[Max] "But you seem unfazed. You've got resolve, my friend." # Max = Happy
 
 -Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
@@ -120,7 +120,6 @@ I need to choose now!
 	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
 	->Hallway
 
-/*
 === OldStart ===
 The whispers are close behind me now.{SetIntValue("week", 1)} #Background / Dream # Play : play_music_creepy_atmo
 I sprint through sickly white corridors past a sea of smiling strangers. # SFX : play_sfx_human_footsteps_approaching
@@ -136,7 +135,7 @@ I need to choose now!
 	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
 	->Hallway
 */
-
+/*
 === Stairs ===
 My pace slows as I climb. I can hear the whispers getting louder.
 [Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper
