@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -43,7 +43,7 @@ I...
 ===SoloIntroductions===
 I decide to go over there, and see how they are doing.
 {
-	-delusion > 85:
+	-depression > 85:
 	[Voices] "You'll be wasting their time."
 }
 [Eduardo] "I'm telling you, it was hilarious." #Eduardo = Happy
@@ -114,13 +114,13 @@ Isaac seems to be lost in his own little world right now.
 I try to speak up, hoping maybe one of them will notice I'm still here, and was still talking to them, but to no avil.
 I decide to leave these two weird lovebirds alone, and get going.
 Still, it was an engaging conversation at least.
-<color=A5C5E3FF><i>Your Depression has Decreased, slightly!</i></color> #delusion -= 15
+<color=A5C5E3FF><i>Your Depression has Decreased, slightly!</i></color> #depression -= 15
 ->END
 
 ===WorkAlone===
 I ignore the two of them, and work on my own little drawing.
 {
-	-delusion > 55:
+	-depression > 55:
 	[Voices] "They wouldn't want to spend time with you anyways."
 }
 I pull out some of the spare paper the room has stocked, and begin scketching whatever comes to mind.
