@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -204,5 +204,5 @@ Isaac drags Eduardo out of the cafe in a huff.
 [Charlotte] "But, what do you mean by that?"
 I walk away from Cafe. #Charlotte=Exit
 It was stupid to think of this unstable place as a family.
-I'm so stupid. #delusion += 5
+I'm so stupid. #depression += 5
 ->END
