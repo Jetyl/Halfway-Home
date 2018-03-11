@@ -495,10 +495,8 @@ public class ConvMultiProgress : ConvNode
 **/
 public class ConvMap : ConvNode
 {
-
-    int Day;
-    int Hour;
-    int Length;
+    string Title;
+    TimeStamp time;
     public Room RoomLocation;
     public List<ProgressPoint> Locks;
     public List<string> Characters;
@@ -506,11 +504,9 @@ public class ConvMap : ConvNode
     public ConvMap(JsonData start)
     {
         ID = (int)start["ID"];
+        Title = (string)start["Tag"];
         Destination = (int)start["NextID"];
-
-        Day = (int)start["Day"];
-        Hour = (int)start["Hour"];
-        Length = (int)start["Length"];
+        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"]);
         RoomLocation = (Room)(int)start["Room"];
 
         Locks = new List<ProgressPoint>();
@@ -536,6 +532,16 @@ public class ConvMap : ConvNode
 
     }
 
+    public bool WatchedScene()
+    {
+        return Game.current.HasSeenBeenScene(Title, time);
+    }
+
+    public void SetSceneTime()
+    {
+        Game.current.SetSceneData(Title, time);
+    }
+
     public bool IsUnlocked()
     {
 
@@ -545,7 +551,8 @@ public class ConvMap : ConvNode
                 return false;
         }
 
-        return true;
+        return Game.current.IsSceneUnlocked(Title, time);
+        
     }
     
 
@@ -556,17 +563,17 @@ public class ConvMap : ConvNode
             return false;
 
         //if this time is before this day
-        if (day < Day)
+        if (day < time.day)
             return false;
 
         //if its after, it is most likely false, but there is one edge case to check
-        if(day > Day)
+        if(day > time.day)
         {
-            if(Day + 1 == day)
+            if(time.day + 1 == day)
             {
-                if(Hour + Length > 24)
+                if(time.hour + time.duration > 24)
                 {
-                    if (hour + Length - 24 > hour)
+                    if (hour + time.duration - 24 > hour)
                         return true;
                 }
             }
@@ -577,15 +584,15 @@ public class ConvMap : ConvNode
         //is on the same date
 
         //if this time is before this hour
-        if (hour < Hour)
+        if (hour < time.hour)
             return false;
 
         //if it is this hour, we good
-        if (hour == Hour)
+        if (hour == time.hour)
             return true;
 
-        //if this hour is within the length given, we good
-        if (hour <= Hour + Length)
+        //if this hour is within the length given, we good (exclusive end)
+        if (hour < time.hour + time.duration)
             return true;
 
         return false;

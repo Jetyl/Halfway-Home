@@ -215,6 +215,7 @@ public class CharacterDisplay : MonoBehaviour
 
 
     }
+    
 
     public void ChangeDistance(StageDistance distance)
     {

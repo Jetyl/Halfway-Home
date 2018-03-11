@@ -596,6 +596,10 @@ public class TimelineEditor : BaseNodeEditor
                     break;
                 case NodeTypes.MapNode:
 
+
+                    Jwriter.WritePropertyName("Tag");
+                    Jwriter.Write(((MapNode)node).Tag);
+
                     Jwriter.WritePropertyName("Day");
                     Jwriter.Write(((MapNode)node).Day);
                     Jwriter.WritePropertyName("Hour");

@@ -27,7 +27,7 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-I skipped breakfest today because I wasn't feeling it, but now, I feel like getting some grub.
+I skipped breakfast today because I wasn't feeling it, but now, I feel like getting some grub.
 I fill up my plate up, and go to sit down. #fatigue -= 50
 {
 	-GetValue("SavedTimothy"):
@@ -44,7 +44,7 @@ I spot Timothy sitting at one of the tables by his lonesome. #Timothy = Sad
 I sit myself down with my meal.
 [Timothy] "oh.<delay=2> Hi."
 he seems to be in a quiet mood today.<delay=2>@ whatever.
-I silently eat with him Timothy for a while, untill I hear a loud voice approach. #Timothy = Exit
+I silently eat with him Timothy for a while, until I hear a loud voice approach. #Timothy = Exit
 [Eduardo] "Heeeeeey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm
 [{player_name}] "eh, fine I guess..."
 + "How about you?"
@@ -55,8 +55,8 @@ Max seems to have also walked in, overhearing Eduardo's hard to miss voice.
 [Eduardo] "H-Hey! We were busy, alright!"
 [Trissa] "doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
 [Eduardo] "Oh don't you start too!" #Eduardo = Angry
-[Charlotte] "Really now. If either of you need assistence making a schedule, you can just ask" #Charlotte = Happy
-//continue this line of merryment 
+[Charlotte] "Really now. If either of you need assistance making a schedule, you can just ask" #Charlotte = Happy
+//continue this line of merriment 
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm
 It's... odd.<delay=2>@ almost like we're a big happy family.
 ->Breakdown
@@ -73,7 +73,7 @@ Timothy doesn't respond.
 In fact, looking at Timothy, I notice a handful of things off.
 He doesn't seem to be looking at anything in particular, and he's shaking slightly.
 [{player_name}] "Man, are you okay?"
-Timothy looks vaugly in my direction, and reaches his hand out.
+Timothy looks vaguely in my direction, and reaches his hand out.
 His hand clasps onto my arm with a shaky, but intense grip. I feel his heartbeat, racing insanely fast.
 His lips move, as if trying to speak, but no words come from them.
 With his free hand, he clutches onto his shirt.
@@ -116,9 +116,9 @@ I...
 		}
 		[Max] "Hey, Timothy. I "m here. whatever's happening, I'm hear to help."
 		"there's nothing to be afraid of. your safe here."
-		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a sturrering inhale.
+		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a stuttering inhale.
 		"There there. It's okay. just breath. just breath"
-		As Timothy begins to breath again, the tears begin to flow. @He's balling up a storm.
+		As Timothy begins to breathe again, the tears begin to flow. @He's balling up a storm.
 		[Timothy] "S-S-S-SORRRRRRYY!!!"
 		[Max] "hehe, Its okay. you've done nothing wrong."
 		"We don't have to stay here if you don't want to."
@@ -142,7 +142,7 @@ I try to get up, and get Max. @@To get away from all of this.
 I Pull my arm, to try and free it from Timothy's Vice-like grip, but to no avail.
 He doesn't seem to want to let go.
 To free myself, I pry my finger's underneath his palm, and peel his finger's off me.
-His arms are noticably shaking now.
+His arms are noticeably shaking now.
 I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Timothy=Exit
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Happy, Stage_right, right 
 [Max] "yo! {player_name}, what's up?"
@@ -168,10 +168,10 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 		I put my not-griped hand on his hand, and get him to look at me.
 		"Its okay. Your safe. I'm here for you."
 		he's not breathing.
-		"It's okay, you can breath. there there."
-		and like that, the floodgates open. He exhales a sputter of air, as tears fall aross his face.
+		"It's okay, you can breathe. there there."
+		and like that, the floodgates open. He exhales a sputter of air, as tears fall across his face.
 		[Timothy] "I-I-I'm sorry. I'm sorry."
-		[{player_name}] "It's okay. let it out. Your safe here. its okay."
+		[{player_name}] "It's okay. let it out. Your safe here. it’s okay."
 		[Max] "Hey Timothy."
 		as if by magic, Max appears beside me. I guess they noticed what had been happening over hear. #Max=Calm
 		"Buddy, you alright?"
@@ -186,7 +186,7 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 
 ===MoodKiller===
 My attention draws back to crowd of people around me. #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy, Stage_center
-[Charlotte] "It was a rather humorous endevour. hm?" #Charlotte=Calm
+[Charlotte] "It was a rather humorous endeavor. hm?" #Charlotte=Calm
 "Why'd everyone get so quiet?"
 [Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-"
 Isaac jabs his boyfriend in the gut. #Isaac=Angry

@@ -75,7 +75,7 @@ public class Personality
     {
         for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
         {
-            if(Enum.GetName(typeof(Wellbeing), (Wellbeing)i) == statName)
+            if(Enum.GetName(typeof(Wellbeing), (Wellbeing)i).ToLower() == statName.ToLower())
             {
                 return GetWellbingStat((Wellbeing)i);
             }
@@ -84,7 +84,7 @@ public class Personality
 
         for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
         {
-            if (Enum.GetName(typeof(Social), (Social)i) == statName)
+            if (Enum.GetName(typeof(Social), (Social)i).ToLower() == statName.ToLower())
             {
                 return GetModifiedSocialStat((Social)i);
             }
@@ -100,7 +100,7 @@ public class Personality
     {
         for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
         {
-            if (Enum.GetName(typeof(Wellbeing), (Wellbeing)i) == statName)
+            if (Enum.GetName(typeof(Wellbeing), (Wellbeing)i).ToLower() == statName.ToLower())
             {
                 SetWellbeingStat((Wellbeing)i, value);
             }
@@ -109,7 +109,7 @@ public class Personality
 
         for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
         {
-            if (Enum.GetName(typeof(Social), (Social)i) == statName)
+            if (Enum.GetName(typeof(Social), (Social)i).ToLower() == statName.ToLower())
             {
                  SetSocialStat((Social)i, value);
             }

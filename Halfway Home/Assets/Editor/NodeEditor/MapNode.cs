@@ -11,6 +11,7 @@ public class MapNode : BaseNode
 
     string[] EventNames;
 
+    public string Tag;
     public Room Locale;
     public int Day;
     public int Hour;
@@ -29,7 +30,7 @@ public class MapNode : BaseNode
         ID = NodeID;
         NextID = -1;
         TypeID = NodeTypes.MapNode;
-
+        Tag = "";
         PeoplePresent = new List<string>();
         Locks = new List<ProgressPoint>();
 
@@ -45,7 +46,10 @@ public class MapNode : BaseNode
         TypeID = NodeTypes.MapNode;
         PeoplePresent = new List<string>();
         Locks = new List<ProgressPoint>();
+        Tag = "";
 
+        if (data.Keys.Contains("Tag"))
+            Tag = ((string)data["Tag"]);
 
         if (data.Keys.Contains("color"))
             ChangeColor((int)data["color"]);
@@ -110,10 +114,12 @@ public class MapNode : BaseNode
         outPoint.Draw();
         GUI.Box(rect, "", style);
         EditorGUI.LabelField(new Rect(rect.position + new Vector2(25, 15), new Vector2(300, 20)), "Map Choice Node");
-        title = GUI.TextField(new Rect(rect.position + new Vector2(25, 40), new Vector2(300, 20)), title);
-        GUI.Label(new Rect(rect.position + new Vector2(25, 60), new Vector2(150, 20)), "ID: " + ID);
+        title = GUI.TextField(new Rect(rect.position + new Vector2(25, 35), new Vector2(300, 20)), title);
+        GUI.Label(new Rect(rect.position + new Vector2(150, 15), new Vector2(150, 20)), "ID: " + ID);
 
-        Locale = (Room)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 80), new Vector2(300, 20)), new GUIContent("Room Location"), Locale);
+        Tag = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 60), new Vector2(300, 20)), new GUIContent("Scene Tag"), Tag);
+        
+        Locale = (Room)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 85), new Vector2(300, 20)), new GUIContent("Room Location"), Locale);
         Day = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 105), new Vector2(300, 20)), new GUIContent("Day of the Week"), Day, 0, 7);
         Hour = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 130), new Vector2(300, 20)), new GUIContent("Hour of the Day"), Hour, 0, 23);
         Length = EditorGUI.IntSlider(new Rect(rect.position + new Vector2(25, 155), new Vector2(300, 20)), new GUIContent("Length of time Availble"), Length, 1, 24);
