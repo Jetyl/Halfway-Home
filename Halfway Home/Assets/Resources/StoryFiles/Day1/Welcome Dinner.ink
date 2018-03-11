@@ -27,8 +27,8 @@ EXTERNAL GetValue(value)
 === Start ===
 I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner.
 The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
-It's supposed to be a big bonding moment. Or, something like that.
-I actually barely remember my welcome dinner. I think there were beans? That's about all I got.
+It's supposed to be a big bonding moment. Or something like that.
+I actually barely remember my own welcome dinner. I think there were beans? That's about all I got.
 Timothy, the star of this show, gets the center seat, so he can meet everybody. Currently, he seems to be talking with Trissa.
 Eduardo and Isaac are off in their own little corner, giggling to themselves. 
 Charlotte and Max are helping serve food at the front of the line.
@@ -41,13 +41,13 @@ I decide to...
 ===NearTimothy===
 ~ByTimothy = true
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table.
-I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy # Timothy = Calm
+I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy, Stage_Right, Left # Timothy = Happy, Right
 [Timothy] "Hi, {player_name}."
 [Trissa] "Come to see the man of hour, huh?"
 [{player_name}] "Sure did."
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
-[Timothy] "That's kind of a lotta pressure."
+[Timothy] "That's kind of a lotta pressure." # Timothy = Afraid
 *[Reassure Him]
 	{
 		-awareness > 1: 
@@ -63,18 +63,22 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 	[Timothy] "Uh, yeah?"
 	[Trissa] "If you can handle <i>my</i> energy, you can handle anything!"
 	[Timothy] "Thanks, Trissa."
--Timothy looks grateful. He is about to reply when Max shows up with a plate of food. # Max = Calm
+-Timothy looks grateful. # Timothy = Happy
+Was I any different from him when I first got here?
+On that note, am I any better now?
+<color=A5C5E3FF><i>Reflection has increased Awareness slightly.</i></color> # Awareness+
+I am driven from my thoughts when Max shows up with a plate of food. # Max = Calm, Stage_Left, Right
 [Max] "Hey, gang!"
 I give them a nod of acknowledgment.
 [Trissa] "Hi, Max!"
 [Timothy] "Hey."
 [Max] "I can't wait to talk about your first day, Timothy, but first we've gotta deal with the formalities. One sec."
-Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit
+Max stands up and clears his throat. # Trissa = Exit # Timothy = Exit # Max = Stage_Center
 ->Toast
 
 ===NearEduardo===
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for Eduardo and Isaac's booth.
-As I approach, the two are giggling about something. # Eduardo = Happy # Isaac = Happy
+As I approach, the two are giggling about something. # Eduardo = Happy, Stage_Left, Right # Isaac = Happy, Stage_Right, Left
 [{player_name}] "Mind if I join you?"
 {depression > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
@@ -85,6 +89,11 @@ Isaac is too busy cracking up to respond, but Eduardo is able to compose himself
 [Eduardo] "Hey, {player_name}, you ever heard the story of Isaac's first day?"
 [Isaac] "Oh no..." # Isaac = Surprised
 [Eduardo] "It was only a couple of weeks before yours..."
+I spend a few minutes listening to Eduardo tell the tale.
+Eduardo really is a masterful storyteller. His raw charisma is inspiring.
+<color=A5C5E3FF><i>Inspiration has increased Expression slightly.</i></color> # Expression+
+[Eduardo] "And you know what the most embarrassing part was?"
+Isaac looks deathly pale. # Isaac = Afraid
 As if on cue, Max makes a loud sound from the center of the room and rises to their feet.
 [Eduardo] "Oh, you lucky man. Next time..." # Eduardo = Exit # Isaac = Exit
 ->Toast
@@ -101,11 +110,13 @@ I duck past the line to where Charlotte stands behind the serving area, busily r
 [Charlotte] "It is my understanding that you're about to make the preparations for Timothy's toast. Is that correct?"
 [Max] "Heh. Yeah, that's right."
 [Charlotte] "Would {player_name} make for a suitable second to perform your duties while you are thusly occupied?"
-[Max] "Uh. Yeah, {player_gender} could totally cover for me. I'd actually really appreciate that!"
+[Max] "Uh. Yeah, {player_name} could totally cover for me. I'd actually really appreciate that!"
 [Charlotte] "It's settled, then."
 [Max] "Thanks a bunch, {player_name}, I owe you one!"
 Max hustles toward the kitchen and out of sight. # Max = Exit
 I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal.
+Charlotte serves each portion with a smile. Her graceful demeanor is inspiring.
+<color=A5C5E3FF><i>Inspiration has increased Grace slightly.</i></color> # Grace+
 Max returns with a plate of their own. # Max = Calm
 [Max] "Everything's set. Hit me up with some grub, {player_name}! Oh, and you're good to eat with us as soon as I've done the toast."
 The moment I finish dishing them up a sizable portion, Max takes off towards the center table. # Charlotte = Exit
@@ -114,11 +125,11 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 ===Toast===
 [Max] "Can I get everyone's attention!" #Max=Calm
 The whole cafe quites a little, as Max speaks up.
-[Max] "Thanks everybody for showing yerselfs"
+[Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
 [Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
 [Max] "He just got out Blackwell Hospital, for those who need the context for that,"
-[Jesse] "Thanks Fam!"
+[Jesse] "Thanks, fam!"
 [Max] "And he said he's not really up to this kinda group speaking, which we all can understand."
 [Max] "But we all want to wish him the best of luck"
 [Max] "And to welcome him to our home."
@@ -137,7 +148,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 	-else: 
 		person
 } 
-<> I was lookin' fer."
+<> I was lookin' for."
 {
 	//-GetValue("Tutorial"):
 	-week == 1:
@@ -162,7 +173,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 You have no idea.
 [Max] "Also, thanks with the save with the keys."
 [{player_name}] "no prob."
-[Max] "how'd you even know they were there?"
+[Max] "How'd you even know they were there?"
 //choice here maybe.
 [{player_name}] "lucky guess."
 [Max]"Well that's some fine luck ya got." 
