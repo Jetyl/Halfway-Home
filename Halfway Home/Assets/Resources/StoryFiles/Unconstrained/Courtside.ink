@@ -614,5 +614,7 @@ The two of us share a comfortable silence for a few minutes, before Timothy fina
 [Timothy] "I'm getting hungry, so I'm off to get something to eat. It was nice hanging out with you, {player_name}."
 Timothy rises, smiles, and strides off at a relaxed pace.
 I think Timothy will feel more comfortable here after our conversation.
-I'd best get going, too.
+I rest for a few more minutes, thinking about what Timothy said about me being "laid back." I've never thought of that as a strength before.
+<color=2C7CE3><i>Spending time with Timothy has increased <b>Awareness</b> significantly!</i></color> # Awareness++
+I'd better get going, too.
 -> END
