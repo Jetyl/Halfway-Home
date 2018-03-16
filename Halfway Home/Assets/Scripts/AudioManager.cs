@@ -36,7 +36,21 @@ public class AudioManager : MonoBehaviour
 
   void OnAudioEvent(AudioEvent e)
   {
-    AkSoundEngine.PostEvent("Stop_All", e.SFX ? SFXPlayer.gameObject : MusicPlayer.gameObject);
+    // christien da sound designer's spaghettiii code: dont stop all if vertical layering is wanted
+    if (e.FileName != "play_music_tension_stem_03" &&
+        e.FileName != "play_music_tension_stem_04" &&
+        e.FileName != "play_music_tension_stem_05" &&
+        e.FileName != "play_music_tension_stem_06" &&
+        e.FileName != "play_music_tension_stem_07" &&
+        e.FileName != "play_music_tension_intro_01" &&
+        e.FileName != "play_music_tension_intro_02" &&
+        e.FileName != "stop_music_tension_intro_02" &&
+        e.FileName != "play_music_tension_intro_03" &&
+        e.FileName != "play_music_tension_intro_04")
+    {
+        AkSoundEngine.PostEvent("Stop_All", e.SFX ? SFXPlayer.gameObject : MusicPlayer.gameObject);
+    }
+    
     AkSoundEngine.PostEvent(e.FileName, e.SFX ? SFXPlayer.gameObject : MusicPlayer.gameObject);
   }
 	

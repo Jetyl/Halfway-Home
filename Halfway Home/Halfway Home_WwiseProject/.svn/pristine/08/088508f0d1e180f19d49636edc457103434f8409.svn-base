@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{27633E19-4858-4606-983F-7C034C7283A6}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="PlaySFX" ID="{27633E19-4858-4606-983F-7C034C7283A6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}">
+					<ChildrenList>
+						<Action Name="" ID="{96C17BF7-8734-4679-86E2-686E82B8F221}" ShortID="743260587">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_human_footsteps_approaching" ID="{209CC912-AFBB-4732-BBFE-253B4062549E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<WorkUnit Name="play_sfx_menu" ID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" PersistMode="Reference"/>
+				<Event Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}">
+					<ChildrenList>
+						<Action Name="" ID="{23A15D81-7584-4AEE-A5A9-548970F87D40}" ShortID="34131475">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_human_ghostwhisper" ID="{78556E65-9541-49F8-A01B-4B511E2A0177}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}">
+					<ChildrenList>
+						<Action Name="" ID="{BA340D48-1DAD-408C-AC1D-3E85CFCA48D4}" ShortID="288854344">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

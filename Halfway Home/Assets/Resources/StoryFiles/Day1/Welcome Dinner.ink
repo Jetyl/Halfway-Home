@@ -66,7 +66,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 -Timothy looks grateful. # Timothy = Happy
 Was I any different from him when I first got here?
 On that note, am I any better now?
-<color=A5C5E3FF><i>Reflection has increased Awareness slightly.</i></color> # Awareness+
+<color=2C7CE3><i>Reflection has increased <b>Awareness</b> slightly.</i></color> # Awareness+
 I am driven from my thoughts when Max shows up with a plate of food. # Max = Calm, Stage_Left, Right
 [Max] "Hey, gang!"
 I give them a nod of acknowledgment.
@@ -91,7 +91,7 @@ Isaac is too busy cracking up to respond, but Eduardo is able to compose himself
 [Eduardo] "It was only a couple of weeks before yours..."
 I spend a few minutes listening to Eduardo tell the tale.
 Eduardo really is a masterful storyteller. His raw charisma is inspiring.
-<color=A5C5E3FF><i>Inspiration has increased Expression slightly.</i></color> # Expression+
+<color=E39217><i>Inspiration has increased <b>Expression</b> slightly.</i></color> # Expression+
 [Eduardo] "And you know what the most embarrassing part was?"
 Isaac looks deathly pale. # Isaac = Afraid
 As if on cue, Max makes a loud sound from the center of the room and rises to their feet.

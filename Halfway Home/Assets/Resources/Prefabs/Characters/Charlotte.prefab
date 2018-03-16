@@ -175,7 +175,7 @@ MonoBehaviour:
   Speaker:
     Character: Charlotte
     Actor: {fileID: 0}
-  ScaleRatio: 1.02
+  ScaleRatio: 1.04
   TimeToScale: 0.5
 --- !u!114 &114861325213738950
 MonoBehaviour:

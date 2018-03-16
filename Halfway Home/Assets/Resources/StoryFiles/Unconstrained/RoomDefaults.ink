@@ -239,8 +239,7 @@ After about an hour, I finish. My arms are starting to ache, but something about
 }
 
 // Call external for social
-<color=A5C5E3FF><i>Social stats have improved!</i></color>
-<color=A5C5E3FF><i>Creativity has increased Expression slightly.</i></color> # Expression+
+<color=E39217><i>Creativity has increased <b>Expression slightly.</i></color> # Expression+
 -> END
 
 === Store ===
@@ -297,7 +296,7 @@ For some reason, being out in public makes me feel more isolated. I feel myself 
 = Large
 The clerk is busy in the back of the store. 
 My darker thoughts come out as I'm left waiting for what feels like an eternity.
-<color=A5C5E3FF><i>Depression increases significantly.</i></color> # depression += 25
+<color=A5C5E3FF><i>Depression increases significantly.</i></color> # depression += 20
 -> Store.Stress
 
 === StoreStress ===
