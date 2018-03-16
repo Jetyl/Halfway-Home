@@ -17,7 +17,6 @@ namespace AK
         static const AkUniqueID LPF1K_MUSIC_MAINMENU = 3373299806U;
         static const AkUniqueID LPF4K_MUSIC_MAINMENU = 3370483183U;
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
-        static const AkUniqueID PLAY_CITY_OF_TEARS = 952529443U;
         static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
         static const AkUniqueID PLAY_MENUPAUSE = 3596481523U;
