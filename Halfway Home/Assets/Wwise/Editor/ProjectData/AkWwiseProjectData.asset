@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: -148887552
-    m_lastTimePart2: -1999272387
+    m_lastTimePsrt1: -1182155929
+    m_lastTimePart2: -1999271216
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -76,8 +76,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 471497324
-    m_lastTimePart2: -1999272330
+    m_lastTimePsrt1: -1182075720
+    m_lastTimePart2: -1999271216
     List:
     - Name: lpf1k_music_mainmenu
       Path: PlayMusic\play_music_mainmenu\lpf1k_music_mainmenu
@@ -212,6 +212,30 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1402380568
       Guid: 05cd33e0f3243642a773590afef23bbb
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_03
+      Path: PlayMusic\play_music_tension\play_music_tension_intro_03
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_03
+        ObjectType: 3
+      ID: 1402380569
+      Guid: 2ff433ce0066df4e8f6f0d05ef146bb7
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_04
+      Path: PlayMusic\play_music_tension\play_music_tension_intro_04
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_04
+        ObjectType: 3
+      ID: 1402380574
+      Guid: a64afe9fa8d0bd4c9f4820c8bbb1c4b3
       maxAttenuation: 0
     - Name: play_music_tension_stem_03
       Path: PlayMusic\play_music_tension\play_music_tension_stem_03
@@ -356,8 +380,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -148887552
-    m_lastTimePart2: -1999272387
+    m_lastTimePsrt1: -1182060676
+    m_lastTimePart2: -1999271216
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -404,8 +428,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1268154666
-    m_lastTimePart2: -1999272332
+    m_lastTimePsrt1: -1151765090
+    m_lastTimePart2: -1999271216
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -419,8 +443,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: -683854848
-    m_lastTimePart2: -1999272386
+    m_lastTimePsrt1: -1151719974
+    m_lastTimePart2: -1999271216
     List:
     - Name: Test1
       Path: TestBanks\Test1
@@ -435,8 +459,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -148887552
-    m_lastTimePart2: -1999272387
+    m_lastTimePsrt1: -1182075720
+    m_lastTimePart2: -1999271216
     List:
     - Name: Effects_Slider
       Path: Default Work Unit\Effects_Slider

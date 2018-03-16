@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352173644047890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.63, z: 0}
+  m_LocalPosition: {x: 0, y: -2.3, z: 0}
   m_LocalScale: {x: 0.43, y: 0.43, z: 1}
   m_Children: []
   m_Father: {fileID: 4233352954010880}
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616756262647528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.63, z: 0}
+  m_LocalPosition: {x: 0, y: -2.3, z: 0}
   m_LocalScale: {x: 0.42999998, y: 0.42999998, z: 1}
   m_Children: []
   m_Father: {fileID: 4233352954010880}
@@ -117,7 +117,7 @@ MonoBehaviour:
   Speaker:
     Character: Timothy
     Actor: {fileID: 0}
-  ScaleRatio: 1.02
+  ScaleRatio: 1.04
   TimeToScale: 0.5
 --- !u!114 &114519777961192366
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   - Name: Angry
     Visual: {fileID: 21300000, guid: 247f53db865c5054fb2e4bab57265dca, type: 3}
   - Name: Happy
-    Visual: {fileID: 21300000, guid: b96b8c07afb44b24393c65c35149441e, type: 3}
+    Visual: {fileID: 21300000, guid: 81a67ed76b56f4042bb159e5feb4826f, type: 3}
   - Name: Sad
     Visual: {fileID: 21300000, guid: 5df5244c6e088b74487edcc03236f3c9, type: 3}
   - Name: Afraid
@@ -231,7 +231,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.6499996, y: 22}
+  m_Size: {x: 15.42, y: 36.07}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.6499996, y: 22}
+  m_Size: {x: 15.42, y: 36.07}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

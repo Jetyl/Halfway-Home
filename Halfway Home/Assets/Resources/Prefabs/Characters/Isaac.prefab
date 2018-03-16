@@ -117,7 +117,7 @@ MonoBehaviour:
   Speaker:
     Character: Isaac
     Actor: {fileID: 0}
-  ScaleRatio: 1.02
+  ScaleRatio: 1.04
   TimeToScale: 0.5
 --- !u!114 &114139620927140818
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   - Scale: 0
     Offset: 0
   - Scale: 2
-    Offset: -5
+    Offset: -6
   - Scale: 1
     Offset: 0
   - Scale: 0.75
