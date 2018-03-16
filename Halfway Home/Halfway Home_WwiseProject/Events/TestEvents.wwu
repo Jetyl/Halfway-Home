@@ -3,20 +3,6 @@
 	<Events>
 		<WorkUnit Name="TestEvents" ID="{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_City_of_Tears" ID="{7FF0D896-6C00-4C5D-9930-2EFFE7FC6A4C}">
-					<ChildrenList>
-						<Action Name="" ID="{E237F670-65D0-433A-9A58-07941536CCA8}" ShortID="478647939">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="City of Tears" ID="{C0D0EB36-1BCB-4AB6-9981-788F1D1AEB86}" WorkUnitID="{F4130F67-56CE-4B83-AF85-C44D1801AA3B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="empty_event" ID="{702FC6F3-84A5-4D06-B963-04FA999B2FFF}"/>
 			</ChildrenList>
 		</WorkUnit>

@@ -46,6 +46,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}">
+					<ChildrenList>
+						<Action Name="" ID="{E376016F-EF54-4E4F-A8EA-41383553C0DA}" ShortID="852557167">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<WorkUnit Name="play_sfx_ambient" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

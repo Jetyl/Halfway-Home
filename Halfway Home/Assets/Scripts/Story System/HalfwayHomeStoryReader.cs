@@ -273,16 +273,33 @@ namespace HalfwayHome
 
     void OnAudioTrigger(Parse parse)
     {
-      if(parse.FindFirst("Mode").ToLower() == "play")
+      foreach (var match in parse.matches)
       {
-        Trace.Script($"Play {parse.FindFirst("Event")} music");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
+        if (match.ContainsKey("Mode"))
+        {
+          if (match["Mode"].ToLower() == "play")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event")} music");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
+          }
+          else if (match["Mode"].ToLower() == "sfx")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event")} sound effect");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
+          }
+        }
+
       }
-      else if(parse.FindFirst("Mode").ToLower() == "sfx")
-      {
-        Trace.Script($"Play {parse.FindFirst("Event")} sound effect");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
-      }
+      //if (parse.FindFirst("Mode").ToLower() == "play")
+      //{
+      //  Trace.Script($"Play {parse.FindFirst("Event")} music");
+      //  Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
+      //}
+      //else if(parse.FindFirst("Mode").ToLower() == "sfx")
+      //{
+      //  Trace.Script($"Play {parse.FindFirst("Event")} sound effect");
+      //  Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
+      //}
     }
     //------------------------------------------------------------------------/
     // Story

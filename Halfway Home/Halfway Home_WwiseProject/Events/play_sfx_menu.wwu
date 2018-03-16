@@ -59,6 +59,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}">
+					<ChildrenList>
+						<Action Name="" ID="{232897C7-AB9D-46A4-9257-D1D7A258B5FF}" ShortID="886826755">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_text_scroll" ID="{D9C11BC5-D4F3-4E27-AF4F-22D8BF874C2E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

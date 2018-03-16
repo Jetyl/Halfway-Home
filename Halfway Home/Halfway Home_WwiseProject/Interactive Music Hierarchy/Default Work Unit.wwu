@@ -759,6 +759,11 @@
 								<MusicSegment Name="music_tension_stem_01" ID="{0F5484E3-4C5A-46EB-925F-2454532EE416}" ShortID="411939168">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="237542"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -818,6 +823,11 @@
 								<MusicSegment Name="music_tension_stem_02" ID="{5E9979C5-95BF-45AB-896B-146BDF44DD84}" ShortID="315149036">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="237542"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -877,6 +887,11 @@
 								<MusicSegment Name="music_tension_stem_03" ID="{5CD8C64F-1B03-4559-985F-606C67602A10}" ShortID="1028870434">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="241638"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -936,6 +951,11 @@
 								<MusicSegment Name="music_tension_stem_04" ID="{3CB22EF4-F04B-4576-A968-744D424C6D5B}" ShortID="50401503">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="237542"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -995,6 +1015,11 @@
 								<MusicSegment Name="music_tension_stem_05" ID="{A8147AE0-3642-4D3F-9D6F-8C1A0EECB7F8}" ShortID="143069519">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="240272.666666667"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1054,6 +1079,11 @@
 								<MusicSegment Name="music_tension_stem_06" ID="{03D753E4-585A-4BC4-939E-9AE9562C2DD3}" ShortID="442547391">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="238907.333333333"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1113,6 +1143,11 @@
 								<MusicSegment Name="music_tension_stem_07" ID="{E23D0D6F-2DB2-4ED0-8BAA-B8681CE55B90}" ShortID="961946325">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="238907.333333333"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
