@@ -72,13 +72,13 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 }
 
 ===Introductions===
-[Keyless0Max] "Hella yella, my {player_name} fella." # Keyless = Calm
-What.
-[{player_name}] "huh?"
-"Uugh... @Morning Max."
-[Keyless0Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
+[Keyless>Max] "Hella yella, my {player_name} fella." # Keyless = Calm
+What?
+[{player_name}] "Huh?"
+"Ugh... @Morning, Max."
+[Keyless0Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
 [{player_name}] "N-no... @I was already awake."
-[Keyless0Max] "that's good. Y'all can't be relying on a the Max alarm pretty soon."
+[Keyless0Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
 [{player_name}] "Yeah."
 [Timothy0Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"

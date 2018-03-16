@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\e.bergman\Desktop\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\e.bergman\Desktop\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\e.bergman\Desktop\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\e.bergman\Desktop\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -43,9 +43,12 @@
 				<Event Id="1053457286" Name="play_music_tension_stem_05" ObjectPath="\Events\PlayMusic\play_music_tension\play_music_tension_stem_05" MaxAttenuation="0.000000"/>
 				<Event Id="1053457285" Name="play_music_tension_stem_06" ObjectPath="\Events\PlayMusic\play_music_tension\play_music_tension_stem_06" MaxAttenuation="0.000000"/>
 				<Event Id="1053457284" Name="play_music_tension_stem_07" ObjectPath="\Events\PlayMusic\play_music_tension\play_music_tension_stem_07" MaxAttenuation="0.000000"/>
+				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\play_sfx_ambient\play_sfx_ambient_heartbeat"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\play_sfx_human_footsteps_approaching"/>
 				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\play_sfx_human_ghostwhisper"/>
 				<Event Id="2319499992" Name="play_sfx_human_knock" ObjectPath="\Events\PlaySFX\play_sfx_human_knock"/>
+				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\play_sfx_object_car_away"/>
+				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\play_sfx_menu\play_textscroll"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\Stop_All" MaxAttenuation="0.000000"/>
 				<Event Id="4065124416" Name="stop_music_fakeit" ObjectPath="\Events\PlayMusic\stop_music_fakeit" MaxAttenuation="0.000000"/>
 				<Event Id="3152554426" Name="stop_music_mainmenu" ObjectPath="\Events\PlayMusic\play_music_mainmenu\stop_music_mainmenu" MaxAttenuation="0.000000"/>
@@ -116,6 +119,10 @@
 					<ShortName>tension_stem_07.wav</ShortName>
 					<Path>SFX\tension_stem_07_F17FB28C.wem</Path>
 				</File>
+				<File Id="541036875" Language="SFX">
+					<ShortName>sfx_object_car_away1.wav</ShortName>
+					<Path>SFX\sfx_object_car_away1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="541639029" Language="SFX">
 					<ShortName>sfx_footsteps_placeholder1.wav</ShortName>
 					<Path>SFX\sfx_footsteps_placeholder1_1C9C67B2.wem</Path>
@@ -131,6 +138,10 @@
 				<File Id="689613253" Language="SFX">
 					<ShortName>tension_stem_02.wav</ShortName>
 					<Path>SFX\tension_stem_02_F17FB28C.wem</Path>
+				</File>
+				<File Id="716081321" Language="SFX">
+					<ShortName>sfx_menu_text_scroll.wav</ShortName>
+					<Path>SFX\sfx_menu_text_scroll_1C9C67B2.wem</Path>
 				</File>
 				<File Id="738802588" Language="SFX">
 					<ShortName>fake_it_til_you_break_it.wav</ShortName>
@@ -151,6 +162,10 @@
 				<File Id="1014402371" Language="SFX">
 					<ShortName>bardman_placeholder.wav</ShortName>
 					<Path>SFX\bardman_placeholder_F17FB28C.wem</Path>
+				</File>
+				<File Id="1030560068" Language="SFX">
+					<ShortName>sfx_object_heartbeat.wav</ShortName>
+					<Path>SFX\sfx_object_heartbeat_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

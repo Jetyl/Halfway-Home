@@ -19,11 +19,29 @@ MonoBehaviour:
     m_lastTimePsrt1: -148887552
     m_lastTimePart2: -1999272387
     List: []
+  - PhysicalPath: Events\play_sfx_ambient.wwu
+    ParentPhysicalPath: Events\PlaySFX.wwu
+    Guid: '{A85A1477-0869-4B85-B85B-6883C5EA7C89}'
+    m_lastTimePsrt1: 930336382
+    m_lastTimePart2: -1999271149
+    List:
+    - Name: play_sfx_ambient_heartbeat
+      Path: PlaySFX\play_sfx_ambient\play_sfx_ambient_heartbeat
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_ambient
+        ObjectType: 12
+      - ElementName: play_sfx_ambient_heartbeat
+        ObjectType: 3
+      ID: 197627707
+      Guid: 61b20794fef4584db5cb380bca2d2b81
+      maxAttenuation: 0
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: -1182155929
-    m_lastTimePart2: -1999271216
+    m_lastTimePsrt1: 930306302
+    m_lastTimePart2: -1999271149
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -72,6 +90,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1193233224
       Guid: f1c8b32eb669524d8097bf63f61c9c4a
+      maxAttenuation: 0
+    - Name: play_textscroll
+      Path: PlaySFX\play_sfx_menu\play_textscroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_textscroll
+        ObjectType: 3
+      ID: 319656260
+      Guid: c2fb1d74e17817469a2d8453c9ddbb3a
       maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
@@ -344,8 +374,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: -148887552
-    m_lastTimePart2: -1999272387
+    m_lastTimePsrt1: 930356440
+    m_lastTimePart2: -1999271149
     List:
     - Name: play_sfx_human_footsteps_approaching
       Path: PlaySFX\play_sfx_human_footsteps_approaching
@@ -377,11 +407,21 @@ MonoBehaviour:
       ID: -1975467304
       Guid: 09c4e180a80cf9439e010eef78ce1bbe
       maxAttenuation: 0
+    - Name: play_sfx_object_car_away
+      Path: PlaySFX\play_sfx_object_car_away
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_object_car_away
+        ObjectType: 3
+      ID: 1700209709
+      Guid: 37bb7d809445874bbd30929a0124d776
+      maxAttenuation: 0
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -1182060676
-    m_lastTimePart2: -1999271216
+    m_lastTimePsrt1: 930381502
+    m_lastTimePart2: -1999271149
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -392,16 +432,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -257765375
       Guid: f3c62f70a584064db96304fa999b2fff
-      maxAttenuation: 0
-    - Name: Play_City_of_Tears
-      Path: TestEvents\Play_City_of_Tears
-      PathAndIcons:
-      - ElementName: TestEvents
-        ObjectType: 12
-      - ElementName: Play_City_of_Tears
-        ObjectType: 3
-      ID: 952529443
-      Guid: 96d8f07f006c5d4c99302effe7fc6a4c
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -428,8 +458,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1151765090
-    m_lastTimePart2: -1999271216
+    m_lastTimePsrt1: 1949019188
+    m_lastTimePart2: -1999271071
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -443,18 +473,9 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: -1151719974
-    m_lastTimePart2: -1999271216
-    List:
-    - Name: Test1
-      Path: TestBanks\Test1
-      PathAndIcons:
-      - ElementName: TestBanks
-        ObjectType: 12
-      - ElementName: Test1
-        ObjectType: 7
-      ID: 576110586
-      Guid: 6dec1f5404fe8549a3e4e1b2d39c4ba7
+    m_lastTimePsrt1: -1148634791
+    m_lastTimePart2: -1999271146
+    List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -508,8 +529,8 @@ MonoBehaviour:
   ExpandedItems:
   - /Halfway Home_WwiseProject
   - /Halfway Home_WwiseProject/Events
-  - /Halfway Home_WwiseProject/Events/PlayMusic
-  - /Halfway Home_WwiseProject/Events/PlayMusic/play_music_mainmenu
+  - /Halfway Home_WwiseProject/Events/PlaySFX
+  - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_ambient
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
