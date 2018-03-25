@@ -10,6 +10,7 @@
 						<ObjectRef Name="lpf4k_music_mainmenu" ID="{8496C79F-B6F3-40C4-9151-C1286B3A04EF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="lpf_ambience_fireplace" ID="{B6AA6E16-D33A-422D-98AF-F047EAD1A29D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_02" ID="{E033CD05-24F3-4236-A773-590AFEF23BBB}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_stem_03" ID="{262851DD-1B01-42B5-B607-670166EC5262}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
@@ -20,6 +21,7 @@
 						<ObjectRef Name="stop_music_mainmenu" ID="{7F4FB6EE-1CFA-4668-8F73-D43AF818D1EE}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_fakeit" ID="{C965C962-FB4B-4687-8FA8-69995A11193F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_music_placeholder_main" ID="{1D05F51F-01CC-469A-9152-B15E852D3C87}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension" ID="{635B0651-40CB-4826-8EFB-A84713ACCAD8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="lpf1k_music_mainmenu" ID="{27156CCC-91EF-4AE6-9B75-30460BACAB21}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
@@ -34,6 +36,7 @@
 						<ObjectRef Name="play_music_tension_stem_05" ID="{FAEB6A03-988E-4D71-8146-4911E2F29E32}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_01" ID="{A16EC170-92A7-4DA2-AE76-BC548844626E}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_mainmenu" ID="{CF4A563F-94A5-4E84-BC54-7237209990B7}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_03" ID="{CE33F42F-6600-4EDF-8F6F-0D05EF146BB7}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stop_music_fakeit" ID="{BBF29838-D58C-4FBC-B85E-DE37FC74E27B}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
