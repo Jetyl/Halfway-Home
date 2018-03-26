@@ -96,18 +96,18 @@ Timothy and Max both invite themselves into my room carrying several bags, likel
 Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
 [Keyless0Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
-[Keyless0Max] "It would seem I have misplaced my keys."
+[Keyless0Max] "I can't find my keys! I must have left 'em somewhere..."
 [{player_name}] "Uh-oh."
 [Keyless0Max] "Yeah, that's not good."
 Max's eyes start darting while they think of what their next action should be.
-"{player_name}, Imma need you to do me a solid."
-I don't like where this is going. //Oh, you don't like the sound of that.
+"{player_name}, I'm gonna need you to do me a solid."
+I have the feeling I'm about to be volunteered for something. //Oh, you don't like the sound of that.
 "Well... It's Timothy's first day, so someone's gotta show him the ropes." # Keyless = Happy
 "But I can't have my keys unaccounted for here."
 "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
-[Keyless0Max] "Thanks buddy." # Keyless = Exit
-And just like that, Max leaves me all alone with this new stranger.
+[Keyless0Max] "Thanks, buddy!"
+And just like that, Max leaves me all alone with this new stranger. # Keyless = Exit
 Timothy sighs dejectedly. Maybe he's used to this?
 [{player_name}] "Uh... hey."
 -> TakingTimothy
@@ -191,30 +191,29 @@ This can't be happening. this can't be happening.
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
 [{player_name}] "So, um..." #Timothy = Stage_center
+Oh, man. I did not wake up expecting to be a tour guide today. Whatever.
 "Well, this is my room. Although, I guess it'll be <i>our</i> room for the time being."
-"You can come here if you want to just get away from it all and distress."
-"Also, obviously, you can just knock out here if you're too fatigued to do anything else. Or just whenever, really"
+"You can come here if you want to just get away from it all and de-stress."
+"Also, obviously, you can just knock out here if you're too <color=A5C5E3FF>fatigued</color> to do anything else. Or just whenever, really."
 "I try to limit myself to 8 hours a day."
 Though I've been falling off the wagon more often as of late.
-"So yeah."
-Timothy looks... not disinterested, but guarded and... preoccupied? Jeez, my ability to read people has seriously atrophied.
 I go over and grab my watch off the desk beside my bed. Max was right, it is almost noon. He'll probably think I'm super weird, but Timothy should know about my system.
 "So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I've suffered from before was Lost Time."
 [Timothy] "You mean you'd lose track of time? Doesn't everybody do that?"
 [{player_name}] "No, it's more like..."
-"There would be entire hours where I just am not home, up here:"
+"There would be entire hours where I just am not home, up here."
 "Hours, maybe days, that I couldn't account for and couldn't remember. As if the time was lost"
-"although, Lost Time is actually a misnomer. I suppose the actual term is dissociative amnesia."
+"The actual term is dissociative amnesia."
 "It's a type of dissociation, where you lose hours or days of memory."
-"For me, I've found out it tends to flair up when I'm more <color=A5C5E3FF><i>Depressed</i></color>"
-If I get too <color=A5C5E3FF><i>Depressed</i></color>, the amount of time it takes to do a task can <color=A5C5E3FF><i>Double</i></color>, or even <color=A5C5E3FF><i>Triple</i></color>
+"For me, I've found out it tends to flair up when I'm more <color=A5C5E3FF><i>depressed</i></color>."
+If I get too <color=A5C5E3FF><i>depressed</i></color>, the amount of time it takes to do a task can <color=A5C5E3FF><i>double</i></color>, or even <color=A5C5E3FF><i>triple</i></color>.
 "When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were."
 "But ever since I count and keep track of the hours of the day very closely."
 "I regiment what I do in a very hourly basis."
 I flash Timothy the time on my watch, almost noon.
 "C'mon, I'll show you."
 //show map.
-I am really starting to get hungry, so first stop: I should show Timothy the Cafe area. # Timothy = Exit
+I am really starting to get hungry, so my first move should be to show Timothy the Cafe area. # Timothy = Exit
 ~SetValue("Tutorial", true)
 -> END
 
