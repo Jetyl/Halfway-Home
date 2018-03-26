@@ -144,7 +144,7 @@ MonoBehaviour:
   - Name: Afraid
     Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
   - Name: Surprised
-    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
+    Visual: {fileID: 21300000, guid: ae8976e0b9096b744992d10ff10eaa8b, type: 3}
   Distances:
   - Scale: 0
     Offset: 0

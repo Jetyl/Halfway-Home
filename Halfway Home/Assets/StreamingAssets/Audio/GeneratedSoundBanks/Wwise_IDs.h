@@ -13,7 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID EMPTY_EVENT = 4037201921U;
         static const AkUniqueID LPF1K_MUSIC_MAINMENU = 3373299806U;
         static const AkUniqueID LPF4K_MUSIC_MAINMENU = 3370483183U;
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
@@ -36,9 +35,12 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_TENSION_STEM_05 = 1053457286U;
         static const AkUniqueID PLAY_MUSIC_TENSION_STEM_06 = 1053457285U;
         static const AkUniqueID PLAY_MUSIC_TENSION_STEM_07 = 1053457284U;
+        static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
         static const AkUniqueID PLAY_SFX_HUMAN_GHOSTWHISPER = 2124921401U;
         static const AkUniqueID PLAY_SFX_HUMAN_KNOCK = 2319499992U;
+        static const AkUniqueID PLAY_SFX_OBJECT_CAR_AWAY = 1700209709U;
+        static const AkUniqueID PLAY_TEXTSCROLL = 319656260U;
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_MUSIC_FAKEIT = 4065124416U;
         static const AkUniqueID STOP_MUSIC_MAINMENU = 3152554426U;
@@ -57,7 +59,6 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID HALFWAYSOUNDBANK = 3658133546U;
-        static const AkUniqueID TEST1 = 576110586U;
     } // namespace BANKS
 
     namespace BUSSES

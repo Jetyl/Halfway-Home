@@ -15,7 +15,8 @@ public class AutoType : MonoBehaviour
 {
     // 1/(pause speed + player pref) = # of characters added to the screen per second.
     public float DefaultPauseSpeed = 0.2f; 
-    public AudioClip sound;
+    //public AudioClip sound;
+    public string ScrollEvent;
 
     public List<AutoDelays> ExtraDelays;
 
@@ -25,7 +26,7 @@ public class AutoType : MonoBehaviour
 
     string message;
 
-    AudioSource audios;
+    //AudioSource audios;
 
     private TextMeshProUGUI Text;
 
@@ -43,11 +44,11 @@ public class AutoType : MonoBehaviour
     void Start()
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
-        audios = GetComponent<AudioSource>();
+        //audios = GetComponent<AudioSource>();
         Text.useMaxVisibleDescender = true;
         EventSystem.ConnectEvent<AutoTypeEvent>(gameObject, Events.AutoType, TypingText);
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.PrintLine, SkipTyping);
-        DefaultVolume = audios.volume;
+        //DefaultVolume = audios.volume;
 
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
@@ -126,11 +127,13 @@ public class AutoType : MonoBehaviour
 
             while (Text.maxVisibleCharacters < Text.GetParsedText().Length)
             {
+                Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, ScrollEvent));
+                /*
                 if (!audios.isPlaying)
                 {
                     if (Text.maxVisibleCharacters < Text.GetParsedText().Length)
                     {
-                        //print(Text.maxVisibleCharacters);
+                        print(Text.maxVisibleCharacters);
                         audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
                             * Game.current.Progress.GetFloatValue("MasterVolume");
                         audios.PlayOneShot(sound);
@@ -138,7 +141,7 @@ public class AutoType : MonoBehaviour
 
 
                 }
-
+                */
                 if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
                 {
                     if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters + 1))
@@ -179,7 +182,7 @@ public class AutoType : MonoBehaviour
 
         Text.maxVisibleCharacters = message.Length;
 
-        audios.Stop();
+        //audios.Stop();
         Space.DispatchEvent(Events.FinishedAutoType);
         
     }

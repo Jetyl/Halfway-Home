@@ -37,10 +37,10 @@ This is it. Sunflower House. # Background / HouseFront
 The paint seems to be a bit more faded than in the pictures, but it's a lot more appealing than Blackwell.
 'A Garden for the Mind' according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
-The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.
+The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
-[Max0Tall Redhead] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
+[Max0Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
 =NameEntry
 *[Help Them Out] {GetPlayerName()}
@@ -50,10 +50,10 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 	[Max] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}"
 	->Start.NameEntry
 =Introductions
-[Max0Tall Redhead] "{player_name}! That was it!"
+[Max0Janitor?] "{player_name}! That was it!"
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
-[Max0Tall Redhead] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
-The other residents begin to whisper amongst each other.
+[Max0Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
+The other residents begin to whisper to each other.
 [Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
 [Max] "It also means I get to show you to your room! Follow me!" # Max = Happy
 ->Unpack
@@ -104,7 +104,7 @@ All sound seems to fall away as my hand pulls open the door.
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
-My heart sinks to the floor. Overwhelming dread overcomes me.
+My heart sinks to the floor. Overwhelming dread overcomes me. # SFX : play_sfx_ambient_heartbeat
 [Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
 Fear breaks me from my stupor and I am in control again. I turn to run.
 -> Blackwell
@@ -161,7 +161,7 @@ A formless shadow gazes into me from the reflective surface.
 I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen
 The whispers fade into the chitter of birdsong.
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
-They always feels so real, like I'm actually back at my first day here.
+They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.
 I lay awake, concentrating on the tingling warmth of the ribbon of sunlight on my shoulder and cheek.
 My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.

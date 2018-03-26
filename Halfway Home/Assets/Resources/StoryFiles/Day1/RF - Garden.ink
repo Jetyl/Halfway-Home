@@ -30,18 +30,18 @@ EXTERNAL GetStringValue(value)
 [{player_name}] "Here's the garden grounds" #Timothy = Calm
 [Timothy] "Oh!" #Timothy = Happy
 [{player_name}] "Yeah, I suppose it is." #Timothy = Calm
-"The gardens are a great place to meditate, amongst other things."
+"The garden is a great place to meditate, among other things."
 "I think there's a gardening club or something that meets out here sometimes."
 "I don't know. I've never actually gone to it."
-[Timothy] "...It's so pretty here.~" #Timothy = Happy, stage_left, right
+[Timothy] "...It's so pretty here." #Timothy = Happy, stage_left, right
 [{player_name}] "yeah, I suppose it is."
-I'll admit it is very pretty out here. @the Gardens is one of the biggest selling points for the Sunflower House in their brochure.
-It's almost a shame I never made use of it as much as I could here.
-[{player_name}] "But yeah, the Gardens are a good place to reflect on things." #Timothy = Exit
+I'll admit it is very pretty out here. @The garden is one of the biggest selling points for Sunflower House in their brochure.
+It's a shame I never really made use of it.
+[{player_name}] "But yeah, the garden is a good place to reflect on things." #Timothy = Exit
 "You can just sort of zen out. Be <color=A5C5E3FF><i>aware</i></color> of the life around you... and yourself, I suppose."
-"It can be pretty enlightening, but I dunno. I try not to be alone with my thoughts too much."
+"It can be enlightening, but I try not to be alone with my thoughts too much."
 "It's, uh... sorta caused problems in my life."
-Being alone with my thoughts too long just kind of <color=A5C5E3FF><i>depresses</i></color> me.
+Being alone with my thoughts too long <color=A5C5E3FF><i>depresses</i></color> me.
 Wait a minute. Where's Timothy?
 "Timothy?"
 Oh crap, did I lose him already?

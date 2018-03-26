@@ -22,13 +22,13 @@ public class AutoTypeEditor : Editor
         serializedObject.Update();
 
         SerializedProperty DefaultPauseSpeed = serializedObject.FindProperty("DefaultPauseSpeed");
-        SerializedProperty sound = serializedObject.FindProperty("sound");
+        SerializedProperty ScrollEvent = serializedObject.FindProperty("ScrollEvent");
 
 
         EditorGUILayout.Space();
 
         EditorGUILayout.PropertyField(DefaultPauseSpeed, new GUIContent("Characters Per Second"), true);
-        EditorGUILayout.PropertyField(sound, new GUIContent("Sound Effect"), true);
+        EditorGUILayout.PropertyField(ScrollEvent, new GUIContent("Sound Effect"), true);
         
         list.DoLayoutList();
 
