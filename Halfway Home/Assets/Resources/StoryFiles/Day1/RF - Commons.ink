@@ -28,7 +28,7 @@ EXTERNAL GetValue(value)
 -> CommonsFunction
 
 === CommonsFunction ===
-[{player_name}] "This is the Commons!" #Timothy = Calm
+[{player_name}] "This is the Commons!" #Timothy = Calm # play : play_music_happy
 "You probably already came through here to get to our room."
 [Timothy] "Yeah..."
 [{player_name}] "Anyway, this is sort of a big hub area."

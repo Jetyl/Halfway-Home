@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID LPF_AMBIENCE_FIREPLACE = 2152539480U;
+        static const AkUniqueID LPF_MUSIC_CAFEJAZZ = 1799610860U;
         static const AkUniqueID LPF1K_MUSIC_MAINMENU = 3373299806U;
         static const AkUniqueID LPF4K_MUSIC_MAINMENU = 3370483183U;
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
@@ -24,8 +25,11 @@ namespace AK
         static const AkUniqueID PLAY_MENUPAUSE = 3596481523U;
         static const AkUniqueID PLAY_MENUUNPAUSE = 3101734072U;
         static const AkUniqueID PLAY_MUSIC_BARDMAN = 3108296289U;
+        static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
         static const AkUniqueID PLAY_MUSIC_CREEPY_ATMO = 1372805254U;
+        static const AkUniqueID PLAY_MUSIC_CREEPY_ATMO_02 = 2374614039U;
         static const AkUniqueID PLAY_MUSIC_FAKEIT = 2805407838U;
+        static const AkUniqueID PLAY_MUSIC_HAPPY = 1020080944U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;

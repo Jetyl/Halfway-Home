@@ -67,18 +67,18 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe
+I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe # play : play_music_cafejazz
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week.
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
+What? They're joking, right? I just got here... There's no way I lost a whole week. # play : lpf_music_cafejazz
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # play : play_ambience_fireplace
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
 But they're gone...
 A chill runs down my spine. What's going on?
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / CommonsNight, Blackwipe
+I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them. # Max = Calm
 *[Ask what's going on]
