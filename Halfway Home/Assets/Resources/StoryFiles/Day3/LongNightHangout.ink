@@ -251,8 +251,10 @@ I...
 	++[Like Guys]
 		"I think guys are really attractive."
 	++[Like Girls]
-		"I think girls are really cute.."
-	++[Like People]
+		"I think girls are really cute."
+	++[Like Guys and Girls]
+		"I think guys and girls are cute."
+	++[Like All People]
 		"I just find people attractive."
 	++[Like No One]
 		"I'm just not into people."

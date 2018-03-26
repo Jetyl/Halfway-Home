@@ -266,6 +266,13 @@ public static class TextParser
         text = text.Replace("@", Environment.NewLine);
         text = text.Replace("<color=", "<color=#");
         text = text.Replace("`", "\"");
+        //color stuff
+        text = text.Replace("color_wellbeing_relief", "1FD118");
+        text = text.Replace("color_wellbeing_penalty", "ED3913");
+        text = text.Replace("color_awareness", "2075DF");
+        text = text.Replace("color_expression", "C34182");
+        text = text.Replace("color_grace", "DE9E20");
+        text = text.Replace("color_descriptor", "6999A6");
 
         return text;
     }

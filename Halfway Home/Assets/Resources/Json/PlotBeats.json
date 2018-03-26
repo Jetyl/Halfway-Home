@@ -251,6 +251,18 @@
    {
     "Name" : "SeenLessons",
     "Type" : 1
+   },
+   {
+    "Name" : "IsaacOpenedUp",
+    "Type" : 1
+   },
+   {
+    "Name" : "ColdTalkBefore",
+    "Type" : 1
+   },
+   {
+    "Name" : "Knows Isaac's Tenure",
+    "Type" : 1
    }
   ]
  }
