@@ -48,3 +48,13 @@ SubmissionStuff/HalfwayHome_Submission/Source/
 *.mp4
 
 *.bnk
+
+Halfway Home/Assets/StreamingAssets/Audio/GeneratedSoundBanks/English\(US\)\.meta
+
+Halfway Home/Assets/StreamingAssets/Audio/GeneratedSoundBanks/HalfwaySoundbank\.bnk\.meta
+
+Halfway Home/Assets/StreamingAssets/Audio/GeneratedSoundBanks/HalfwaySoundbank\.txt
+
+Halfway Home/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Init\.bnk\.meta
+
+Halfway Home/Assets/StreamingAssets/Audio/GeneratedSoundBanks/SoundbanksInfo\.xml
