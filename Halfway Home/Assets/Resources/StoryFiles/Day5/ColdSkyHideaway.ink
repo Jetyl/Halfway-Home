@@ -25,6 +25,7 @@ EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(ValueName, newValue)
+EXTERNAL SetTimeBlock(time)
 
 -> Start
 
@@ -86,6 +87,7 @@ No response. not surprising
 
 === PullingTeeth ===
 //show Isaac CG here
+~SetValue("ColdTalkBefore", true)
 [Isaac] "..." 
 “...”
 “...”
@@ -182,21 +184,26 @@ Isaac looks pained trying to speak as much as he is.
 Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
 And he came to Sunflower house to improve himself, but still isn't any better. How should I help him?
 +[Give Him Advice]
-	You give Isaac advice to improve himself. the awareness answer
+	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>awareness</i> of your life, as an example.</color>
 	->Recoil
 +[Give Him motivation]
-	You try to motivate Isaac to improve himself. the expression answer.
+	<color=color_descriptor>You try to motivate Isaac to improve himself with your empassioned <i>expression</i>.</color>
 	->Recoil
 +{grace >= 3}[Give Him Time]
+	<color=color_descriptor>With your hightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
 	->Relationships
 
 ===Relationships===
+<color=color_descriptor>You sit in silence as time passes, letting Isaac recompose himself.</color> #time %1
 [Isaac] "..."
+~SetTimeBlock(1)
+"...hrm."
+"...I thought.... I was getting better..."
 having given Isaac time, he beings trying to talk about his relationship with Eduardo.
 he's at a lost of what to do.
 Give him advice?
 +[Yes]
-	You try to give Isaac relationship advice
+	<color=color_descriptor>You try give Isaac some relationship advice, based on your limited experiences, and what you've seen in media.</color>
 	->Recoil
 +[No]
 	->Faulty
@@ -219,10 +226,21 @@ Oh well.
 
 === HelpfulListener ===
 I help Isaac up off the ground. //player has finished helping his issues
+~SetValue("IsaacOpenedUp", true)
 ->END
 
 ===Recoil===
-Isaac just shelters up more, and says nothing. //failed to listen or help Isaac
+<color=color_descriptor>As you keep talking, you notice Isaac has once again gone unreposnsive.</color>
+[{player_name}] "hey, uh, is any of this helping."
+[Isaac] "hrm."
+"..."
+"sure."
+[{player_name}] "Um, Okay."
+I keep talking to Isaac for a while longer, but I don't feel like anything I'm saying is helpful. #background / gardens, crossfade #Isaac = sad
+after a while, Isaac asks to leave, and we part ways. the biting cold of the night nips at my face. #Isaac = exit
+I guess I screwed that up? I feel like I did, anyways.
+Maybe I should've let Isaac talk more...
+//failed to listen or help Isaac
 ->END
 
 === Recap ===
