@@ -33,7 +33,7 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. # Background / HouseFront
+<color=color_descriptor>This is it. Sunflower House.</color> # Background / HouseFront
 The paint seems to be a bit more faded than in the pictures, but it's a lot more appealing than Blackwell.
 'A Garden for the Mind' according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
