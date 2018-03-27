@@ -47,7 +47,6 @@ EXTERNAL CallSleep()
 		-> Warning
 }
 
-
 === YourRoom ===
 // Reduce Stress, Remove Fatigue, Increase depression
 // Recover for the next day. The isolation reminds you of a darker time.
@@ -83,21 +82,20 @@ EXTERNAL CallSleep()
 }
 
 // external function to bring up stats summary
-<color=A5C5E3FF><i>Wellbeing stats updated.</i></color>
-<color=A5C5E3FF><i>Rest relieved a moderate amount of Stress. # Stress -= 20
+<color=color_descriptor><i>Rest <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. # Stress -= 20
 {
 	-fatigue > 50:
-		<>@Sleep <>
+		<>@<color=color_descriptor>Sleep <>
 		{
 			- new_fatigue == "none":
-				removed all Fatigue! # Fatigue => 0
+				<color=color_wellbeing_relief>removed all <b>Fatigue</b>! # Fatigue => 0
 			- new_fatigue == "low":
-				reduced Fatigue. # Fatigue => 40
+				<color=color_wellbeing_relief>reduced <b>Fatigue</b>. # Fatigue => 40
 			- new_fatigue == "medium":
-				reduced Fatigue significantly. # Fatigue => 20
+				<color=color_wellbeing_relief>reduced <b>Fatigue</b> significantly. # Fatigue => 20
 		}
 }
-<>@Solitude increased Depression slightly.</i></color> # depression += 5
+<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
 -> END
 
 === Commons ===
@@ -140,10 +138,7 @@ The room is {~surprisingly empty, with only a few people reading by the window|f
 }
 
 // Call external for wellbeing
-<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Social interaction lowered Depression significantly.</i></color> # depression -= 25
-<color=A5C5E3FF><i>However, it also increased Stress slightly.</i></color> # Stress += 10
-
+<color_descriptor><i>Social interaction <color_wellbeing_relief>lowered <b>Depression</b> significantly, but also <color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
 -> END
 
 === FrontDesk ===
@@ -158,8 +153,7 @@ Front Desk text placeholder.
 // TODO: Get info on time of day and # of visits to Kitchen to make narrative more immersive.
 I head to the small cafeteria to get some grub.
 I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
-<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Fatigue has been reduced moderately.</i></color> # Fatigue -= 20
+<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> moderately.</i></color> # Fatigue -= 20
 -> END
 
 === Garden ===
@@ -178,17 +172,12 @@ My solitude gives me plenty of time to reflect.
 	- I think about the friends I used to have on the outside and where their lives may have taken them.
 	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
 }
-// Call external for wellbeing
-<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Your time in the sun has left you feeling tired, increasing Fatigue slightly.</i></color> # Fatigue += 10
-<color=A5C5E3FF><i>Being alone has increased your Depression slightly.</i></color> # depression += 10
+<color=color_descriptor><i>Time alone in the sun <color=color_wellbeing_penalty>increased <b>Fatigue</b> and <b>Depression</b> slightly. # Fatigue += 10 # depression += 10
 {
 	- awareness > 3:
-		<color=A5C5E3FF><i>Your proficiency with introspection reduces Stress slightly.</i></color> # Stress -= 10
+		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> slightly. # Stress -= 10
 }
-// Call external for social
-<color=A5C5E3FF><i>Social stats have improved!</i></color>
-<color=A5C5E3FF><i>Reflection has increased Awareness slightly.</i></color> # Awareness+
+<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
 -> END
 
 === Library ===
@@ -202,21 +191,16 @@ My solitude gives me plenty of time to reflect.
 I peruse the shelves until a title catches my eye. 
 I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
-// Call external for wellbeing
-<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Focusing on the text has taken a toll on your concentration, increasing Fatigue slightly.</i></color> # Fatigue += 10
+<color=color_descriptor><i>Focusing on the text has taken a toll on your concentration, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> slightly<color=color_descriptor>. # Fatigue += 10
 {
-	- grace > 3:
-		<color=A5C5E3FF><i>Competency with Grace has resulted in this activity relieving stress!</i></color> # Stress -= 10
 	- grace > 2:
-		<color=A5C5E3FF><i>Experience with Grace has removed the Stress from this activity!</i></color>
+		<>@Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b>! # Stress -= 10
+	- grace > 1:
+		<>@Experience with <color=color_grace><b>Grace</b><color=color_descriptor> has removed the <b>Stress<b> from this activity!
 	- else:
-		<color=A5C5E3FF><i>Engaging with the material was enlightening, but increased Stress slightly.</i></color> # Stress += 10
+		<>@Engaging with the material was enlightening, but <color=color_wellbeing_penalty>increased <b>Stress</b> slightly. # Stress += 10
 }
-
-// Call external for social
-<color=A5C5E3FF><i>Social stats have improved!</i></color>
-<color=A5C5E3FF><i>New knowledge has increased Grace slightly.</i></color> # Grace+
+<>@<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 -> END
 
 === ArtRoom ===
@@ -226,20 +210,16 @@ The Art Room is {~practically empty|occupied by a few of its regulars|bustling}.
 I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
 Time to make something!
 After about an hour, I finish. My arms are starting to ache, but something about channeling intention into physical form makes me feel more capable.
-// Call external for wellbeing
-<color=A5C5E3FF><i>Wellbeing stats have updated.</i></color>
-<color=A5C5E3FF><i>Creative exertion increased Fatigue slightly.</i></color> # Fatigue += 10
+<color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>. # Fatigue += 10
 {
-	- expression > 3:
-		<color=A5C5E3FF><i>Competency with Expression has resulted in this activity relieving stress!</i></color> # Stress -= 10
 	- expression > 2:
-		<color=A5C5E3FF><i>Experience with Expression has removed the Stress from this activity!</i></color>
+		<>@Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b><color=color_descriptor>! # Stress -= 10
+	- expression > 1:
+		<>@Experience with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor>!
 	- else:
-		<color=A5C5E3FF><i>The extended period of focus increased Stress slightly.</i></color> # Stress += 10
+		<>@The extended period of focus <color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>. # Stress += 10
 }
-
-// Call external for social
-<color=E39217><i>Creativity has increased <b>Expression slightly.</i></color> # Expression+
+<>@Creativity has <color=color_expression>improved <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 -> END
 
 === Store ===
@@ -254,13 +234,13 @@ After a brisk walk I reach my destination.
 = depression
 {~->Storedepression|->Store.Stress}
 = Stress
-{~->StoreStress|->Store.Fatigue}
+{~->StoreStress|->Store.Grace}
 = Fatigue
-{~->StoreFatigue|->Store.Grace}
+{~->StoreFatigue|->END}
 = Grace
 {shuffle:
 	- I watch as an older {~man|woman} greets the clerk formally and I am impressed by their politeness.
-		The encounter proves educational, increasing <color=A5C5E3FF><i>Grace</i></color>. # Grace+
+		<i><color=color_descriptor>The encounter proves educational, <color=color_grace>increasing <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 		-> Store.Expression
 	- ->Store.Expression
 	- ->Store.Expression
@@ -269,7 +249,7 @@ After a brisk walk I reach my destination.
 {shuffle:
 	- I spend a while looking for something and one of the other customers notices and helps me out.
 	We get to talking and I realize afterward that I didn't feel uncomfortable at all. 
-	The experience boosts confidence, increasing <color=A5C5E3FF><i>Expression</i></color>. # Expression+
+	<i><color=color_descriptor>The experience boosts confidence, <color=color_expression>increasing <b>Expression</b><color=color_descriptor>.</color> # Expression+
 		-> Store.Awareness 
 	- ->Store.Awareness
 	- ->Store.Awareness
@@ -279,10 +259,10 @@ After a brisk walk I reach my destination.
 	- While I'm gathering my things, a blind man walks in tapping a white cane in front of himself. 
 	I am about to offer help when I notice him confidently pulling items off of the shelves. 
 	I watch him for a minute, moving from aisle to aisle with practiced precision.
-	His self-sufficiency inspires an increase in <color=A5C5E3FF><i>Awareness</i></color>. # Awareness+
-		-> END
-	- ->END
-	- ->END
+	<i><color=color_descriptor>His self-sufficiency inspires an <color=color_awareness>increase in <b>Awareness</b><color=color_descriptor>.</i></color> # Awareness+
+		-> Store.Fatigue
+	- ->Store.Fatigue
+	- ->Store.Fatigue
 }
 
 
