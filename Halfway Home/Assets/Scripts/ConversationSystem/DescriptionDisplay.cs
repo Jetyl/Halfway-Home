@@ -64,13 +64,15 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
 
-
+        //events that activate/deactivate the text box
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
         Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenHistory, OnStop);
         Space.Connect<DefaultEvent>(Events.CloseHistory, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenUI, OnNonStop);
         Space.Connect<DefaultEvent>(Events.CloseUI, OnStop);
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnStop);
+        Space.Connect<DefaultEvent>(Events.ClockFinished, OnNonStop);
 
     }
 	

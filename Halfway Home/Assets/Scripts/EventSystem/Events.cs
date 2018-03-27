@@ -127,6 +127,7 @@ public class Events
     public static readonly String AddStat = "AddStatEvent";
     public static readonly String StatChange = "StatChangeEvent";
     public static readonly String TimeChange = "TimeChangeEvent";
+    public static readonly String ClockFinished = "ClockFillEvent";
 
     //a null event. no one should listen to this
     public static readonly String Null = "NullEvent";

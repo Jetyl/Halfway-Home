@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 namespace HalfwayHome
 {
@@ -19,16 +20,40 @@ namespace HalfwayHome
         public bool AllowTimeDilation = true;
         public List<DepressionTimeMultiplier> TimeDilation;
         public TextAsset DefaultActions;
-
+        public Image Background;
+        public GameObject MapRooms;
+        public GameObject SocialStats;
         //script for handling the map logic of the game.
         List<ConvMap> ChoicesAvalible;
 
         bool LoadedToMap = false;
 
+        Image Body;
+        float backgroundAlpha;
+
+        Vector3 MapOffset;
+        Vector3 StatsOffset;
+
+        bool Active;
+
         // Use this for initialization
         void Start()
         {
-            Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
+
+            Body = GetComponent<Image>();
+            backgroundAlpha = Background.color.a;
+
+
+            StatsOffset = SocialStats.transform.localPosition;
+            StatsOffset.x -= SocialStats.GetComponent<RectTransform>().rect.width;
+            
+            MapOffset = MapRooms.transform.localPosition;
+            MapOffset.x += MapRooms.GetComponent<RectTransform>().rect.width;
+
+            //Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
+            Space.Connect<DefaultEvent>(Events.ReturnToMap, ClockMapDelay);
+
+            Space.Connect<DefaultEvent>(Events.ClockFinished, TurnMapOn);
 
             Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
@@ -52,44 +77,103 @@ namespace HalfwayHome
         {
             yield return new WaitForSeconds(Time.deltaTime);
             if (!LoadedToMap)
-                gameObject.SetActive(false);
+            {
+                Color aBody = Body.color;
+                aBody.a = 0;
+                Body.color = aBody;
+
+                Color aBack = Background.color;
+                aBack.a = 0;
+                Background.color = aBack;
+
+                //default the map itself, and stats, off screen
+                SocialStats.transform.localPosition = StatsOffset;
+                MapRooms.transform.localPosition = MapOffset;
+                //til then, this line.
+                //gameObject.SetActive(false);
+            }
 
             Game.current.Progress.SetValue("Depression Time Dilation", AllowTimeDilation);
 
         }
 
-
-    void TurnMapOn(DefaultEvent Eventdata)
-    {
-            //print("here");
+    
+        void ClockMapDelay(DefaultEvent eventdata)
+        {
+            Active = true;
             Game.current.AlterTime();
+
+            Color aBody = Body.color;
+            aBody.a = 1;
+            gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBody));
+
+            Color aBack = Background.color;
+            aBack.a = backgroundAlpha;
+            Background.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBack));
+        }
+
+        void TurnMapOn(DefaultEvent Eventdata)
+        {
+
+            if (!Active)
+                return;
+
+            Active = false;
+            //print("here");
+            //Game.current.AlterTime();
+
+            //psudo code time!
+            //grab the transitions script, and put it on the map object.
+            //call it here, to pull the map and stats onto the screen.
+            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, 1));
+            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, 1));
+
             gameObject.SetActive(true);
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
             AllowTimeDilation = Game.current.Progress.GetBoolValue("Depression Time Dilation");
 
             StartCoroutine(TextParser.FrameDelay(Events.UpdateMap));
 
-    }
+        }
 
-    void MapChoice(MapEvent eventdata)
-    {
+        void TurnMapOff()
+        {
+            Color aBody = Body.color;
+            aBody.a = 0;
+            gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBody));
 
-      Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(eventdata.Destination, "", MapTransitions));
+            Color aBack = Background.color;
+            aBack.a = 0;
+            Background.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBack));
 
-          for (int i = 0; i < ChoicesAvalible.Count; ++i)
-          {
-            if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
+
+            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(MapOffset, 1));
+            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(StatsOffset, 1));
+
+            //grab the transitions script, and put it on the map object.
+            //call it here, to pull the map and stats off the screen.
+
+        }
+
+        void MapChoice(MapEvent eventdata)
+        {
+
+            Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(eventdata.Destination, "", MapTransitions));
+
+            for (int i = 0; i < ChoicesAvalible.Count; ++i)
             {
+                if (ChoicesAvalible[i].RoomLocation == eventdata.Destination)
+                {
                     Game.current.CurrentRoom = eventdata.Destination;
                     ChoicesAvalible[i].SetSceneTime();
-                    gameObject.SetActive(false);
+                    TurnMapOff();
+                    //gameObject.SetActive(false);
                     Game.current.SetTimeBlock(eventdata.Length, eventdata.DrainEnergy);
                     Space.DispatchEvent(Events.LeaveMap, new DestinationNodeEvent(ChoicesAvalible[i].ID));
-
-
+                    
                     return;
+                }
             }
-          }
 
             //if gets here, no scene was there. send a default sorta dealie
             int multiplier = 1;
@@ -105,7 +189,8 @@ namespace HalfwayHome
             
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
             Game.current.CurrentRoom = eventdata.Destination;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            TurnMapOff();
             Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
 
