@@ -66,7 +66,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 -Timothy looks grateful. # Timothy = Happy
 Was I any different from him when I first got here?
 On that note, am I any better now?
-<color=2C7CE3><i>Reflection has increased <b>Awareness</b> slightly.</i></color> # Awareness+
+<color=color_descriptor><i>Reflection has <color=color_awareness>improved <b>Awareness</b> faintly<color=color_descriptor>.</i></color> # Awareness+
 I am driven from my thoughts when Max shows up with a plate of food. # Max = Calm, Stage_Left, Right
 [Max] "Hey, gang!"
 I give them a nod of acknowledgment.
@@ -91,7 +91,7 @@ Isaac is too busy cracking up to respond, but Eduardo is able to compose himself
 [Eduardo] "It was only a couple of weeks before yours..."
 I spend a few minutes listening to Eduardo tell the tale.
 Eduardo really is a masterful storyteller. His raw charisma is inspiring.
-<color=E39217><i>Inspiration has increased <b>Expression</b> slightly.</i></color> # Expression+
+<color=color_descriptor><i>Inspiration has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 [Eduardo] "And you know what the most embarrassing part was?"
 Isaac looks deathly pale. # Isaac = Afraid
 As if on cue, Max makes a loud sound from the center of the room and rises to their feet.
@@ -116,7 +116,7 @@ I duck past the line to where Charlotte stands behind the serving area, busily r
 Max hustles toward the kitchen and out of sight. # Max = Exit
 I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal.
 Charlotte serves each portion with a smile. Her graceful demeanor is inspiring.
-<color=A5C5E3FF><i>Inspiration has increased Grace slightly.</i></color> # Grace+
+<color=color_descriptor><i>Inspiration has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 Max returns with a plate of their own. # Max = Calm
 [Max] "Everything's set. Hit me up with some grub, {player_name}! Oh, and you're good to eat with us as soon as I've done the toast."
 The moment I finish dishing them up a sizable portion, Max takes off towards the center table. # Charlotte = Exit

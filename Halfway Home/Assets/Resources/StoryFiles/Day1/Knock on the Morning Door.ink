@@ -118,7 +118,7 @@ What? # Keyless = Calm #Timothy=Calm
 [{player_name}] "huh?"
 D-didn't Max say that before?
 "uh?... Morning Max." 
-[Keyless@Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
+[Keyless>Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "W-What? N-no... @I, uh, was already awake."
 Okay, I'm getting the strangest case of deja vu right now...
 [Keyless>Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
