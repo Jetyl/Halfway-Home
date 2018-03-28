@@ -33,7 +33,7 @@ He moves closer to block my view of his work. # Timothy = Stage_Center
 [{player_name}] "Should I leave?"
 [Timothy] "W-what? No! I mean... I just get nervous when people watch me is all."
 [{player_name}] "I wasn't trying to be nosy or anything. I was just curious what you were up to."
-[{player_name}] "But if you don't wanna share, that's cool. I mostly wanted to say ~hi~ anyway."
+[{player_name}] "But if you don't wanna share, that's cool. I mostly wanted to say `hi` anyway."
 Timothy visibly relaxes. # Timothy = Happy
 [Timothy] "Right! Well... hi!"
 Should I leave Timothy be or try to figure out what he's been up to?
@@ -45,8 +45,7 @@ I decide I'm not interested in pressing Timothy for more.
 [{player_name}] "Well, good talkin' to ya. See you around."
 Timothy nods and turns back to his drawing. # Timothy = Exit
 I head to the back of the garden and look up at the passing clouds for a while.
-<color=A5C5E3FF><i>Reflection increased Awareness slightly.</i></color> # Awareness+
-<color=A5C5E3FF><i>Loneliness increased depression.</i></color> # Depression += 10
+<color=color_descriptor><i>Reflection <color=color_awareness> improved <b>Awareness</b> faintly<color=color_descriptor>, but loneliness <color=color_wellbeing_penalty>increased <b>Depression</b> slightly<color=color_descriptor>.</i></color> # Awareness+ # Depression += 10
 
 === Cartography ===
 I decide to try and get Timothy to open up about what he's working on.
@@ -138,7 +137,7 @@ I think I understand myself better, too.
 "It can probably feel overwhelming at times, but to me it's inspiring."
 "I don't really have a passion for anything like you do. You made me realize that. So thanks."
 [Timothy] "Uh... Wow. I'm glad I could help." # Timothy = Happy
-<color=color_descriptor>This revelation has <color=color_awareness>increased Awareness greatly.</color> # Awareness+++
+<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "Of course! Anyway, I'll see you around."
 [Timothy] "Yeah!"
@@ -149,7 +148,7 @@ I make my way out of the garden feeling somehow wiser.
 [{player_name}] "It seems like a unique hobby."
 [Timothy] "I haven't really found anyone else as into it as I am, so I guess it is."
 Maybe I should get a hobby... It would at least give me something to do to occupy my thoughts.
-<color=color_descriptor>Timothy's passion inspires <color=color_awareness>increased Awareness.</color> # Awareness++
+<color=color_descriptor></i>Timothy's passion inspires a <color=color_awareness>significant increase to <b>Awareness</b><color=color_descriptor>.</color></i> # Awareness++
 [{player_name}] "Thanks for sharing, Timothy."
 [Timothy] "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "I'll see you around."

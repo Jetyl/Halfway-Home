@@ -138,7 +138,7 @@ The room is {~surprisingly empty, with only a few people reading by the window|f
 }
 
 // Call external for wellbeing
-<color_descriptor><i>Social interaction <color_wellbeing_relief>lowered <b>Depression</b> significantly, but also <color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
+<color=color_descriptor><i>Social interaction <color=color_wellbeing_relief>lowered <b>Depression</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
 -> END
 
 === FrontDesk ===
@@ -271,12 +271,12 @@ After a brisk walk I reach my destination.
 
 = Small
 For some reason, being out in public makes me feel more isolated. I feel myself shrink.
-<color=A5C5E3FF><i>Depression increased slightly.</i></color> # depression += 10
+<color=color_wellbeing_penalty><i><b>Depression</b> increased slightly</i></color>. # depression += 10
 -> Store.Stress
 = Large
 The clerk is busy in the back of the store. 
 My darker thoughts come out as I'm left waiting for what feels like an eternity.
-<color=A5C5E3FF><i>Depression increases significantly.</i></color> # depression += 20
+<color=color_wellbeing_penalty><i><b>Depression</b> increases significantly</i></color>. # depression += 20
 -> Store.Stress
 
 === StoreStress ===
@@ -284,12 +284,12 @@ My darker thoughts come out as I'm left waiting for what feels like an eternity.
 
 = Small
 The shop is packed. The process of gathering my items for checkout is uncomfortable.
-<color=A5C5E3FF><i>Stress increases slightly</i></color>. # Stress += 10
+<color=color_wellbeing_penalty><i><b>Stress</b> increases slightly</i></color>. # Stress += 10
 -> Store.Fatigue
 
 = Large
 Some boisterous customers are talking loudly about how how Blackwell Psychiatric Hospital and the Halfway House are a blight on their community. I have rarely felt so unwelcome.
-<color=A5C5E3FF><i>Stress increases significantly.</i></color> # Stress += 20
+<color=color_wellbeing_penalty><i><b>Stress</b> increases significantly</i></color>. # Stress += 20
 -> Store.Fatigue
 
 === StoreFatigue ===
@@ -297,13 +297,13 @@ Some boisterous customers are talking loudly about how how Blackwell Psychiatric
 
 = Small
 It was unusually hot out on my return trip, exacerbating the physical exertion of my walk.
-<color=A5C5E3FF><i>Fatigue increased slightly.</i></color> # Fatigue += 10
+<color=color_wellbeing_penalty><i><b>Fatigue</b> increased slightly</i></color>. # Fatigue += 10
 -> Store.Grace
 
 = Large
 I am distracted on the return trip and get turned around.
 I hurry and find my way back, but it takes a lot out of me.
-<color=A5C5E3FF><i>Fatigue increases significantly.</i></color> # Fatigue += 20
+<color=color_wellbeing_penalty><i><b>Fatigue</b> increases significantly</i></color>. # Fatigue += 20
 -> Store.Grace
 
 === Warning ===

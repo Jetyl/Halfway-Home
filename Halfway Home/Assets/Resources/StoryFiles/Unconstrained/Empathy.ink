@@ -1,4 +1,4 @@
-/******************************************************************************/
+﻿****************************************************************************/
 /*
 @file   Empathy.ink
 @author John Myres
@@ -234,9 +234,12 @@ Charlotte glances as the wall clock above the door and exclaims. # Charlotte = S
 [Charlotte] "Heavens, how time has passed!"
 "I have a routine to maintain. It has been a pleasure, {player_name}." # Charlotte = Calm
 Charlotte rises and takes a step toward the door before turning back to me.
-{grace>3:
-	->Invitation
--else: ->Instruction
+{
+	-grace>3: ->Invitation
+	-grace<3: 
+		<color=color_descriptor><i>Spending time with Charlotte has <color=color_grace>improved <b>Grace<b> faintly<color=color_descriptor>.</color></i> # Grace+
+		->Instruction
+	-else: ->Instruction
 }
 
 === Invitation ===
