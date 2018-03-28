@@ -76,29 +76,29 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 What?
 [{player_name}] "Huh?"
 "Ugh... @Morning, Max."
-[Keyless0Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
+[Keyless>Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
 [{player_name}] "N-no... @I was already awake."
-[Keyless0Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
+[Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
 [{player_name}] "Yeah."
 [Timothy0Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"
-[Keyless0Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
+[Keyless>Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah."
-[Keyless0Max] "You don't remember, do you?"
+[Keyless>Max] "You don't remember, do you?"
 [{player_name}] "... @No."
 Max looks disappointed in me. It's a sadly common look. # Keyless = Sad
-[Keyless0Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
+[Keyless>Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." # Timothy = Happy
-[Keyless0Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
+[Keyless>Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
 [Timothy] "Okay." # Timothy = Calm
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
 Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
-[Keyless0Max] "Oh crap." # Keyless = Surprised
+[Keyless>Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
-[Keyless0Max] "I can't find my keys! I must have left 'em somewhere..."
+[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..."
 [{player_name}] "Uh-oh."
-[Keyless0Max] "Yeah, that's not good."
+[Keyless>Max] "Yeah, that's not good."
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, I'm gonna need you to do me a solid."
 I have the feeling I'm about to be volunteered for something. //Oh, you don't like the sound of that.
@@ -106,7 +106,7 @@ I have the feeling I'm about to be volunteered for something. //Oh, you don't li
 "But I can't have my keys unaccounted for here."
 "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
-[Keyless0Max] "Thanks, buddy!"
+[Keyless>Max] "Thanks, buddy!"
 And just like that, Max leaves me all alone with this new stranger. # Keyless = Exit
 Timothy sighs dejectedly. Maybe he's used to this?
 [{player_name}] "Uh... hey."
@@ -114,14 +114,14 @@ Timothy sighs dejectedly. Maybe he's used to this?
 
 ===Again===
 What? # Keyless = Calm #Timothy=Calm
-[Keyless0Max] "Hella Yella, my {player_name} fella."
+[Keyless>Max] "Hella Yella, my {player_name} fella."
 [{player_name}] "huh?"
 D-didn't Max say that before?
 "uh?... Morning Max." 
 [Keyless@Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "W-What? N-no... @I, uh, was already awake."
 Okay, I'm getting the strangest case of deja vu right now...
-[Keyless0Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
+[Keyless>Max] "Das good. Das good. Y'all can't be relying on a the Max alarm pretty soon."
 Okay, now its getting weird.
 "Uh, hello? Earth to {player_name}. Ya still there?"
 This doesn't feel real. Besides Max, I see... #Timothy=Calm
@@ -129,22 +129,22 @@ This doesn't feel real. Besides Max, I see... #Timothy=Calm
 [Timothy] "Meep!" #Timothy=Surprised
 [{player_name}] "what are you doing back so soon?" #Timothy=Calm
 "We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
-[Keyless0Max] "Uh, {player_name}, you still dreaming buddy?"
+[Keyless>Max] "Uh, {player_name}, you still dreaming buddy?"
 "Timothy Miyuri is the roommate I told you about."
 Wait...
 "You two will be sharing a room for the week, since we're kinda tight on space around here."
 Wait...
-[Keyless0Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
+[Keyless>Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possesive} for the next week." # Keyless = Calm
 [Timothy] "Okay." # Timothy = Calm
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
 Once Max has got all the bags in, they pat themselves down in a brief panic, before realizing something is wrong.
-[Keyless0Max] "Oh crap." # Keyless = Surprised
+[Keyless>Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
-[Keyless0Max] "It would seem I have misplaced my keys."
+[Keyless>Max] "It would seem I have misplaced my keys."
 [{player_name}] "Again?"
-[Keyless0Max] "Ah! I'm not that forgetful!" #Keyless=Sad
+[Keyless>Max] "Ah! I'm not that forgetful!" #Keyless=Sad
 [{player_name}] "N-no, but, you lost them last week too, remember? they we're stuck in the couch cushions?"
-[Keyless0Max] "Couch cushions? hm..." #Keyless=Calm
+[Keyless>Max] "Couch cushions? hm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
 And with that Max quickly runs off, leaving me and Timothy alone
 [{player_name}] "Timothy, are getting really weird deja vu today too?"
@@ -152,10 +152,10 @@ Timothy is just kind of quietly staring at the corner where his bed is.
 "Yo, Timothy, can you hear me?"
 [Timothy] "<size=50%>I don't know you<size=100%>"
 [{player_name}] "what?"
-[Keyless0Max] "okay, I'm back!" #Max=Calm
+[Keyless>Max] "okay, I'm back!" #Max=Calm
 "Anyways, where we're we Timothy?"
 [Timothy] "You we're showing me around I think..."
-[Keyless0Max] "Ah, yes."
+[Keyless>Max] "Ah, yes."
 "Well lets head off."
 "See you at the welcome dinner {player_name}!" #Max=Exit #Timothy=Exit
 Wait...

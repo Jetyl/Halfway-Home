@@ -299,7 +299,7 @@ public class DescriptionEvent : DefaultEvent
         Speaker = _speaker.Replace("[", "");
         Speaker = Speaker.Replace("]", "");
 
-        string[] calls = Speaker.Split('0');
+        string[] calls = Speaker.Split('>');
 
         TrueSpeaker = calls[0].Replace(" ", "");
         if (calls.Length > 1)

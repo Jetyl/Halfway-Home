@@ -107,6 +107,18 @@ public class TimeUpdateDisplay : MonoBehaviour
 
         yield return new WaitForSeconds(ClockFadeTime);
 
+        if(currentHour >= DayTimeStart && currentHour <= DayTimeEnd)
+        {
+
+            //Hand.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aHand, ClockFadeTime));
+            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeColor, aTime/2f));
+        }
+        else
+        {
+            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeColor, aTime/2f));
+        }
+
+
         float rot = -((currentHour + (currentDay *24)) / 12.0f) * (360);
 
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)

@@ -39,19 +39,19 @@ Pretty cheesy, but they said I don't really stand much chance in the real world.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
-[Max0Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
+[Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
 =NameEntry
 *[Help Them Out] {GetPlayerName()}
 	[{player_name}] "It's {player_name}. And yeah, that's me."
 	->Start.Introductions
 +[Wait]
-	[Max] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}"
+	[Max>Janitor?] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}"
 	->Start.NameEntry
 =Introductions
-[Max0Janitor?] "{player_name}! That was it!"
+[Max>Janitor?] "{player_name}! That was it!"
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
-[Max0Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
+[Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
 The other residents begin to whisper to each other.
 [Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
 [Max] "It also means I get to show you to your room! Follow me!" # Max = Happy

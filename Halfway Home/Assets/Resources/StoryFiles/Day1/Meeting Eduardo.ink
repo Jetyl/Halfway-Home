@@ -129,8 +129,8 @@ I pull out some of the spare paper the room has stocked, and begin sketching wha
 
 ===MeetWithTimothy===
 As I show Timothy around all the art supplies, a rowdy duo walk in.
-[Eduardo 0The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy
-[Isaac 0The Quiet One] "Hrm." #Isaac = Calm
+[Eduardo >The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy
+[Isaac >The Quiet One] "Hrm." #Isaac = Calm
 [Timothy] "Uh, who are they?" # Timothy = Calm, stage_left, Left
 [{player_name}] "That's Eduardo and Isaac." # Timothy = stage_center #Eduardo = Exit #Isaac = Exit
 "They're the couple, like, two doors down from us. @They're nice people."
@@ -176,7 +176,7 @@ Isaac seems to be lost in his own little world right now.
 
 ===ExitWithTimothy===
 [Timothy] "Um..." 
-Timothy tugs on my shirt slightly, probably feeling as awkward as I do.
+Timothy taps my side slightly to get my attention, probably feeling as awkward as I do.
 I suppose we should get going on the tour. Although, Eduardo never actually apologized to Timothy.
 I...
 +[Get Eduardo's Attention] -> HeyEddy
@@ -193,9 +193,9 @@ Off to do something else, I suppose. #All = Exit
 
 === HeyEddy ===
 [{player_name}] "Hey, Eddy."
-[Eduardo0Eddy] "Don't call me that!" # Eduardo = Angry
+[Eduardo>Eddy] "Don't call me that!" # Eduardo = Angry
 [{player_name}] "Maybe apologize to Timothy?"
-[Eduardo0Eddy] "Oh, yeah. Shit, man. Sorry. Didn't mean to make you uncomfortable." # Eduardo = Surprised, Left
+[Eduardo>Eddy] "Oh, yeah. Shit, man. Sorry. Didn't mean to make you uncomfortable." # Eduardo = Surprised, Left
 [Timothy] "It's<delay=2> okay."
 [{player_name}] "I'm sorry, too. For calling you Eddy."
 [Isaac] "He deserved it."
