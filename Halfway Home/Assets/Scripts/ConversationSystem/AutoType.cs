@@ -20,6 +20,8 @@ public class AutoType : MonoBehaviour
 
     public List<AutoDelays> ExtraDelays;
 
+    public List<char> DelayAllowances;
+
     float letterPause;
 
     float PauseSpeedMultiplier = 1;
@@ -165,7 +167,7 @@ public class AutoType : MonoBehaviour
                     vis = Text.GetParsedText().Length - 1;
 
 
-                var charaPause = DelayContains(Text.GetParsedText()[vis], letterPause);
+                var charaPause = DelayContains(vis, letterPause);
                 //print(Text.GetParsedText()[vis] + " " + charaPause);
                 Text.maxVisibleCharacters++;
 
@@ -188,12 +190,34 @@ public class AutoType : MonoBehaviour
     }
 
 
-    float DelayContains(char character, float value)
+    float DelayContains(int index, float value)
     {
-        foreach(var del in ExtraDelays)
+
+        if(Text.GetParsedText().Length <= index + 1)
+            return value;
+
+        //first we needs to see if we can even have a modifed delay for this character.
+        bool Allow = false;
+        char chara = Text.GetParsedText()[index + 1];
+
+        foreach (var del in DelayAllowances)
+        {
+            if (chara == del)
+                Allow = true;
+
+        }
+
+        if (!Allow)
+            return value;
+        
+        //now that we know we can get a modified delay, search for a modified delay
+        char character = Text.GetParsedText()[index];
+
+        foreach (var del in ExtraDelays)
         {
             if(del.chracter == character)
             {
+                print(character);
                 return value * del.DelayMultiplier;
             }
 
@@ -201,6 +225,7 @@ public class AutoType : MonoBehaviour
 
         return value;
     }
+
 
 
 }
