@@ -30545,6 +30545,7 @@ GameObject:
   - component: {fileID: 1814137054}
   - component: {fileID: 1814137056}
   - component: {fileID: 1814137057}
+  - component: {fileID: 1814137058}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -30581,7 +30582,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 86f94b403eafce04ab9fd2e1f3c1d3e7, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0.353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -30631,6 +30632,18 @@ MonoBehaviour:
   InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
   InitializeFadeTime: 1
   IsFading: 0
+--- !u!114 &1814137058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814137052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98497aa4d2ec64b43a0fdd515818ec5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsCanvasRenderer: 1
 --- !u!114 &1829547510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31944,7 +31957,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
