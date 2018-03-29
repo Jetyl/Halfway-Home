@@ -143,7 +143,23 @@ public class TimelineSystem : MonoBehaviour
         return options;
     }
     
+    public bool TryCheatCode(string code)
+    {
+        foreach (var node in TimeLine.GetAllNodes())
+        {
+            if (node is ConvCheat)
+            {
+                if (((ConvCheat)node).code == code)
+                {
+                    NextNode(node.Destination);
+                    return true;
+                }
+            }
 
+        }
+
+        return false;
+    }
 
 }
 

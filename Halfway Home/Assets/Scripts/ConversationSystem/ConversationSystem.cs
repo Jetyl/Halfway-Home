@@ -29,7 +29,8 @@ public enum NodeTypes
     MapNode = 12,
     ToMapNode = 13,
     LoadNode = 14,
-    LoopNode = 15
+    LoopNode = 15,
+    CheatNode = 16
 }
 
 
@@ -118,6 +119,9 @@ public class ConversationSystem
                     break;
                 case NodeTypes.LoopNode:
                     Nodes.Add(new ConvLoop(conversation[i]));
+                    break;
+                case NodeTypes.CheatNode:
+                    Nodes.Add(new ConvCheat(conversation[i]));
                     break;
                 default:
                     break;
@@ -1100,6 +1104,36 @@ public class ConvCall : ConvNode
         else
             tar.DispatchEvent(eventToCall);
 
+    }
+
+}
+
+
+/**
+    * CLASS NAME: ConvCall
+    * DESCRIPTION  : calling events outside of conv system. must take default event
+**/
+public class ConvCheat : ConvNode
+{
+    public string code;
+
+    public ConvCheat(JsonData key)
+    {
+
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+        code = (string)key["Code"];
+
+        code = code.ToLower();
+
+
+
+    }
+
+    public override void CallAction()
+    {
+        
     }
 
 }
