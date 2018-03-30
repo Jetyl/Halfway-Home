@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using Stratus;
 
 namespace HalfwayHome
 {
@@ -23,6 +24,7 @@ namespace HalfwayHome
         public Image Background;
         public GameObject MapRooms;
         public GameObject SocialStats;
+        public float MapTransitionDuration = 1.0f;
         //script for handling the map logic of the game.
         List<ConvMap> ChoicesAvalible;
 
@@ -125,8 +127,8 @@ namespace HalfwayHome
             //psudo code time!
             //grab the transitions script, and put it on the map object.
             //call it here, to pull the map and stats onto the screen.
-            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, 1));
-            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, 1));
+            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
+            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
 
             //gameObject.SetActive(true);
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
@@ -146,13 +148,12 @@ namespace HalfwayHome
             aBack.a = 0;
             Background.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBack));
 
-
-            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(MapOffset, 1));
-            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(StatsOffset, 1));
-
+            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(MapOffset, MapTransitionDuration));
+            SocialStats.DispatchEvent(Events.Translate, new TransformEvent(StatsOffset, MapTransitionDuration));
+            var delaySeq = Actions.Sequence(this);
+            Actions.Call(delaySeq, ()=>Space.DispatchEvent(Events.MapTransitionOutCompleted, new DefaultEvent()), MapTransitionDuration*2);
             //grab the transitions script, and put it on the map object.
             //call it here, to pull the map and stats off the screen.
-
         }
 
         void MapChoice(MapEvent eventdata)

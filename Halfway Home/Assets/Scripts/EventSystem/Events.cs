@@ -64,6 +64,7 @@ public class Events
     public static readonly String EndGame = "EndGameEvent";
     public static readonly String MapChoiceMade = "MapChoiceMadeEvent";
     public static readonly String MapChoiceConfirmed = "MapChoiceConfirmedEvent";
+    public static readonly String MapTransitionOutCompleted = "MapTransitionOutCompletedEvent";
     public static readonly String LeaveMap = "LeaveMapEvent";
     public static readonly String ReturnToMap = "ReturnToMapEvent";
     public static readonly String UpdateMap = "UpdateMapEvent";

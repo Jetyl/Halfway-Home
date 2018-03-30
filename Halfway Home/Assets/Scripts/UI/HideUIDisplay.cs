@@ -6,24 +6,24 @@ using UnityEngine.UI;
 public class HideUIDisplay : MonoBehaviour
 {
 
-    bool UIOn = true;
-
+  bool UIOn = true;
+  private bool OnMap;
   public GameObject[] IgnoredObjects;
   private List<Graphic> activeUIElements = new List<Graphic>();
 
 	// Use this for initialization
 	void Start ()
     {
-		
-
-
-	}
+      Space.Connect<DefaultEvent>(Events.ReturnToMap, OnReturnToMap);
+      Space.Connect<DefaultEvent>(Events.MapTransitionOutCompleted, OnMapTransition);
+      OnMap = false;
+	  }
 	
 	// Update is called once per frame
 	void Update ()
     {
 
-        if (Input.GetMouseButtonDown(1) == true)
+        if (Input.GetMouseButtonDown(1) == true && !OnMap)
         {
             if (UIOn)
                 TurnUIOff();
@@ -33,19 +33,29 @@ public class HideUIDisplay : MonoBehaviour
 
         if(!UIOn)
         {
-            if (Input.GetMouseButtonDown(0) == true)
+            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Next"))
             {
                 TurnUIOn();
             }
         }
     }
 
+    void OnReturnToMap(DefaultEvent e)
+    {
+      OnMap = true;
+    }
+    
+    void OnMapTransition(DefaultEvent e)
+    {
+      OnMap = false;
+    }
 
     void TurnUIOn()
     {
         UIOn = true;
         foreach (var obj in activeUIElements)
         {
+            activeUIElements.RemoveAll(item => item == null);
             obj.enabled = true;
             if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = true;
         }
