@@ -34,7 +34,7 @@ EXTERNAL SetValue(name, values)
 === Start ===
 //~week = 1
 This is it. Sunflower House. # Background / HouseFront
-'A Garden for the Mind' according to the brochure the doctors gave me.
+`A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
