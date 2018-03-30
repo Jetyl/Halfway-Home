@@ -12,6 +12,7 @@ using System;
 using LitJson;
 using System.IO;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -265,7 +266,16 @@ public static class TextParser
         //text = text.Replace("#PlayerName", Game.current.PlayerName);
         text = text.Replace("@", Environment.NewLine);
         text = text.Replace("<color=", "<color=#");
+        
+        var regex = new Regex(Regex.Escape("\""));
+        text = regex.Replace(text, "“", 1);
+
+        var regret = new Regex(Regex.Escape("`"));
+        text = regret.Replace(text, "“", 1);
+        
         text = text.Replace("`", "\"");
+
+        
         //color stuff
         text = text.Replace("color_wellbeing_relief", "1FD118");
         text = text.Replace("color_wellbeing_penalty", "ED3913");

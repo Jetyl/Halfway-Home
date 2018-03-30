@@ -19,7 +19,8 @@ VAR week = 0
 VAR current_room = "unset"
 VAR GameFails = 0
 VAR CorrectGuesses = 0
-VAR FirstVowel = true
+VAR ConstantGuess = 0
+VAR VowelGuess = 0
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -62,25 +63,26 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 [{player_name}] "uh, sure."
 [Timothy] "Guess."
 [{player_name}] "Hm? Oh, uh, okay."
-"Let's see...""
+"Let's see..."
 +[Common consonants] -> Constant
 +[Can I buy a vowel?] -> Vowel
 +{GetValue("SolvedHangman")}[It's Hope] -> AlreadyKnow
 
 
 === HangMan ===
-+[Common consonants] -> Constant
-+[Vowels] -> Vowel
++{ConstantGuess < 5}[Common consonants] -> Constant
++{VowelGuess < 5}[Vowels] -> Vowel
 +{CorrectGuesses == 3}[Guess at the answer] -> Guess
 
 === Vowel ===
-{FirstVowel:
+{VowelGuess < 1:
 	[{player_name}] "Can I buy a vowel?"
 	[Timothy] "Hehehe... yeah."
 	[{player_name}] "Okay, then..."
-	~ FirstVowel = false
+	~ VowelGuess += 1
 -else:
 	[Timothy] "Go for it."
+	~ VowelGuess += 1
 }
 *[A] 
 	[{player_name}] "how about 'A'?"
@@ -94,7 +96,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	-> Wrong
 *[O]
 	[{player_name}] "how about 'O'?"
-	[Timothy] "There is an 'E'" #Hangman / O
+	[Timothy] "There is an 'O'" #Hangman / O
 	-> Correct
 *[U]
 	[{player_name}] "how about 'U'?"
@@ -102,6 +104,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 
 === Constant ===
 Okay, some common consonants are...
+~ ConstantGuess += 1
 *[S]
 	[{player_name}] "how about 'S'?"
 	-> Wrong
@@ -187,7 +190,8 @@ You know, that and weird time travel shenanigans.
 
 === YouWin ===
 [Timothy] "Yep!" #Hangman / P
-"It's Hope." ~SetValue("SolvedHangman", true)
+"It's Hope." 
+~SetValue("SolvedHangman", true)
 ->GameOver
 
 
