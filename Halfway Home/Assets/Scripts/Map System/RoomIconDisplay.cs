@@ -16,17 +16,17 @@ public class RoomIconDisplay : MonoBehaviour
     public Room Location;
     
 
-    List<Image> IconSpots;
+    List<ChibiDisplay> IconSpots;
 
 	// Use this for initialization
 	void Start ()
     {
 
-        IconSpots = new List<Image>();
+        IconSpots = new List<ChibiDisplay>();
 
         for(int i = 0; i < transform.childCount; ++i)
         {
-            Image spot = transform.GetChild(i).GetComponent<Image>();
+            ChibiDisplay spot = transform.GetChild(i).GetComponent<ChibiDisplay>();
             if (spot != null)
                 IconSpots.Add(spot);
         } 
@@ -45,12 +45,9 @@ public class RoomIconDisplay : MonoBehaviour
     void ClearIcons()
     {
         print(Location + " Cleared!");
-        foreach(Image spot in IconSpots)
+        foreach(ChibiDisplay spot in IconSpots)
         {
-            spot.sprite = null;
-            var colo = spot.color;
-            colo.a = 0;
-            spot.color = colo;
+            spot.Clear();
         }
         
     }
@@ -70,16 +67,13 @@ public class RoomIconDisplay : MonoBehaviour
 
             int i = Random.Range(0, IconSpots.Count);
 
-            while (IconSpots[i].sprite != null)
+            while (IconSpots[i].Active)
             {
                 i = Random.Range(0, IconSpots.Count);
             }
 
-            IconSpots[i].sprite = icon;
-
-            var colo = IconSpots[i].color;
-            colo.a = 1;
-            IconSpots[i].color = colo;
+            IconSpots[i].SetSprite(icon);
+            
         }
 
         
