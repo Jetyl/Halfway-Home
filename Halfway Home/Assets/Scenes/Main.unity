@@ -6270,7 +6270,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6280,7 +6280,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6300,7 +6300,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -550
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6310,7 +6310,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6330,7 +6330,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6340,7 +6340,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6360,7 +6360,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -250
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6370,7 +6370,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114667000320042228, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -8236,6 +8236,7 @@ GameObject:
   - component: {fileID: 472578176}
   - component: {fileID: 472578175}
   - component: {fileID: 472578177}
+  - component: {fileID: 472578178}
   m_Layer: 5
   m_Name: InfoArea
   m_TagString: Untagged
@@ -8309,6 +8310,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartFaded: 1
+--- !u!114 &472578178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472578173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9a09ff75d36634882aed3d876296a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomText: {fileID: 1267802389}
+  EffectText: {fileID: 1766393366}
+  Descriptors:
+  - name: Art Room
+    Room: 7
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: Show Timothy the Art Room.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: I'll show Timothy the art room after we've eaten.
+    - name: TutorialShown
+      DescriptorType: 2
+      DescriptorText: I already showed Timothy the Art Room.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Create something.
+    - name: Fatigue
+      DescriptorType: 4
+      DescriptorText: I'm too tired to be creative.
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
+  - name: 
+    Room: 0
+    Conditions: []
 --- !u!1 &475564725
 GameObject:
   m_ObjectHideFlags: 0
@@ -15472,9 +15526,9 @@ MonoBehaviour:
             m_StringArgument: Study the world, its people, and its myths.
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 928670986}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15782,7 +15836,7 @@ MonoBehaviour:
   HourVisited: Hour Kitchen Visited
   DayVisited: Day Kitchen Visisted
   ManualAccess: 
-  FatigueCloseLimit: 99
+  FatigueCloseLimit: 100
   StressCloseLimit: 100
   DelusionCloseLimit: 100
 --- !u!114 &931970216
@@ -18040,26 +18094,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 1070638857}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Create something.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Art Room
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 832852568}
@@ -27660,7 +27703,7 @@ MonoBehaviour:
   triggerList: 
   useOtherObject: 0
   valueGuid: 8ce9bb6b7092b34383ca23591e2b26fc
-  eventID: 452547817
+  eventID: -1641533016
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 2

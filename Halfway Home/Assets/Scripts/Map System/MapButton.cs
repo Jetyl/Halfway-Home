@@ -47,6 +47,11 @@ namespace HalfwayHome
 
     }
 
+    public void HoverOverRoom()
+    {
+      Stratus.Scene.Dispatch<DynamicMapDescriptor.HoverOverRoomEvent>(new DynamicMapDescriptor.HoverOverRoomEvent(Location, GetComponent<MapAccessTime>(), GetComponent<Button>().interactable));
+    }
+
     public void SelectRoom()
     {
       Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, TimeSpending, DrainFatigue));

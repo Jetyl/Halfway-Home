@@ -67,7 +67,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_menu_text_scroll" ID="{D9C11BC5-D4F3-4E27-AF4F-22D8BF874C2E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+									<ObjectRef Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

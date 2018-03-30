@@ -145,7 +145,7 @@
 										<ActiveSource Name="sfx_menu_chime_unpausegame" ID="{A7BBC937-8086-468D-B85B-A96B21CB82CC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="sfx_menu_text_scroll" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" ShortID="835502543">
+								<Sound Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" ShortID="835502543">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
