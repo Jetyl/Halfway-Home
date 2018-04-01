@@ -531,7 +531,6 @@ MonoBehaviour:
   - /Halfway Home_WwiseProject/Events
   - /Halfway Home_WwiseProject/Events/PlaySFX
   - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_ambient
-  - /Halfway Home_WwiseProject/Events/PlaySFX/play_sfx_menu
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

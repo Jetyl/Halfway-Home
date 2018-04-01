@@ -103,7 +103,7 @@ All sound seems to fall away as my hand pulls open the door.
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
-My heart sinks to the floor. Overwhelming dread overcomes me. # SFX : play_sfx_ambient_heartbeat
+My heart sinks to the floor. Overwhelming dread overcomes me. # Ambience : play_sfx_ambient_heartbeat
 [Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
 Fear breaks me from my stupor and I am in control again. I turn to run.
 -> Blackwell

@@ -254,12 +254,17 @@ namespace HalfwayHome
           if (match["Mode"].Trim().ToLower() == "play")
           {
             Trace.Script($"Play {parse.FindFirst("Event").Trim()} music");
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, parse.FindFirst("Event")));
           }
           else if (match["Mode"].Trim().ToLower() == "sfx")
           {
             Trace.Script($"Play {parse.FindFirst("Event").Trim()} sound effect");
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, parse.FindFirst("Event")));
+          }
+          else if (match["Mode"].Trim().ToLower() == "ambience")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event").Trim()} ambience");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
           }
         }
 

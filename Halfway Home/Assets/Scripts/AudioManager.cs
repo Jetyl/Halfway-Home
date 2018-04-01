@@ -15,18 +15,25 @@ public class AudioManager : MonoBehaviour
 {
   public class AudioEvent : Stratus.Event
   {
-    public bool SFX;
+    public enum SoundType
+    {
+      Music,
+      SFX,
+      Ambience
+    };
+    public SoundType Type;
     public string FileName;
 
-    public AudioEvent(bool sfx, string fileName)
+    public AudioEvent(SoundType type, string fileName)
     {
-      SFX = sfx;
+      Type = type;
       FileName = fileName;
     }
   };
 
   public AkAmbient SFXPlayer;
   public AkAmbient MusicPlayer;
+  public AkAmbient AmbiencePlayer;
 
 	// Use this for initialization
 	void Start ()
@@ -48,10 +55,10 @@ public class AudioManager : MonoBehaviour
         e.FileName != "play_music_tension_intro_03" &&
         e.FileName != "play_music_tension_intro_04")
     {
-        AkSoundEngine.PostEvent("Stop_All", e.SFX ? SFXPlayer.gameObject : MusicPlayer.gameObject);
+        AkSoundEngine.PostEvent("Stop_All", e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
     }
-    
-    AkSoundEngine.PostEvent(e.FileName, e.SFX ? SFXPlayer.gameObject : MusicPlayer.gameObject);
+
+    AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
   }
 	
 	// Update is called once per frame

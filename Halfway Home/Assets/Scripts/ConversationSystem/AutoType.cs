@@ -129,7 +129,7 @@ public class AutoType : MonoBehaviour
 
             while (Text.maxVisibleCharacters < Text.GetParsedText().Length)
             {
-                Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, ScrollEvent));
+                Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, ScrollEvent));
                 /*
                 if (!audios.isPlaying)
                 {
