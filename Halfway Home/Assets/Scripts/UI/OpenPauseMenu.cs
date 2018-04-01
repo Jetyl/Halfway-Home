@@ -40,6 +40,7 @@ public class OpenPauseMenu : MonoBehaviour
     {
         this.Paused = true;
         this.MenuObject.gameObject.SetActive(true);
+        MenuObject.Back();
     // test audio thing
     }
 

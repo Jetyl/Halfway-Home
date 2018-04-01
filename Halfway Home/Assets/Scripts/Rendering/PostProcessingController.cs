@@ -120,4 +120,10 @@ public class PostProcessingController : MonoBehaviour
 
     }
 
+    void OnDestroy()
+    {
+        Space.DisConnect<DefaultEvent>(Events.StatChange, OnStatChange);
+    }
+
+
 }

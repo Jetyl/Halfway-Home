@@ -278,6 +278,28 @@ public class DescriptionDisplay : MonoBehaviour
         NoClick = false;
     }
 
+    void OnDestroy()
+    {
+
+        Space.DisConnect<DescriptionEvent>(Events.Description, UpdateDescription);
+        Space.DisConnect<DefaultEvent>(Events.FinishedAutoType, OnFinishedTyping);
+        Space.DisConnect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
+        Space.DisConnect<DefaultEvent>(Events.Pause, OnPause);
+        Space.DisConnect<DefaultEvent>(Events.UnPause, OnUnPause);
+        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
+        Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
+        Space.DisConnect<DefaultEvent>(Events.Debug, OnDebug);
+              
+        //events that activate/deactivate the text box
+        Space.DisConnect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.OpenHistory, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.CloseHistory, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.OpenUI, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.CloseUI, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.TimeChange, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.ClockFinished, OnNonStop);
+    }
 
 }
 

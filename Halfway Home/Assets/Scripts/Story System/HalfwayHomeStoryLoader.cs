@@ -181,6 +181,14 @@ namespace HalfwayHome
       varChange.variable.stringValue = Game.current.PlayerName;
       reader.gameObject.Dispatch<Stratus.Modules.InkModule.Story.SetVariableValueEvent>(varChange);
     }
-  }
+        void OnDestroy()
+        {
+            Space.DisConnect<StoryEvent>(Events.NewStory, OnNewStory);
+            //Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
+            Space.DisConnect<DefaultEvent>(Events.SetPlayerIdentity, OnSetPlayerIdentity);
+        }
+
+
+    }
 
 }

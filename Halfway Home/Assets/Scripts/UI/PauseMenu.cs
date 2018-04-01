@@ -9,14 +9,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Stratus;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
   public HalfwayHome.HalfwayHomeStoryReader ReaderReference;
+
+    public GameObject Pause;
+    public GameObject Confirm;
+    public GameObject Options;
+
+    bool Quiting;
+
 	// Use this for initialization
 	void Start ()
     {
         gameObject.SetActive(false);
+        Confirm.SetActive(false);
     }
 
     public void Continue()
@@ -37,6 +46,35 @@ public class PauseMenu : MonoBehaviour
         ReaderReference.Clear();
     }
 
+    public void Back()
+    {
+        Pause.SetActive(true);
+        Confirm.SetActive(false);
+        Options.SetActive(false);
+    }
+
+    public void OpenOptions()
+    {
+        Pause.SetActive(false);
+        Options.SetActive(true);
+    }
+
+    public void ConfirmAction(bool Quit)
+    {
+        Quiting = Quit;
+        Pause.SetActive(false);
+        Confirm.SetActive(true);
+
+    }
+
+    public void OnConfirmed()
+    {
+        if (Quiting)
+            Quit();
+        else
+            ReturnToMain();
+    }
+
     public void Quit()
     {
         print("off");
@@ -54,10 +92,9 @@ public class PauseMenu : MonoBehaviour
         //StartCoroutine(iQuit());
     }
 
-    public static IEnumerator iQuit()
+    public void ReturnToMain()
     {
-        yield return new WaitForEndOfFrame();
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
 }
