@@ -77,4 +77,9 @@ public class SpeakerDisplay : MonoBehaviour
             return Color.white;
     }
 
+    void OnDestroy()
+    {
+        Space.DisConnect<DescriptionEvent>(Events.Description, OnNewLine);
+    }
+
 }

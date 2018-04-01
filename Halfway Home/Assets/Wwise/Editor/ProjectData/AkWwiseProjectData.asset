@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: 254780536
-    m_lastTimePart2: -1999268237
+    m_lastTimePsrt1: -1838600482
+    m_lastTimePart2: -1999268201
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit

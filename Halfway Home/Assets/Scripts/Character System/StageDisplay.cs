@@ -313,6 +313,18 @@ public class StageDisplay : MonoBehaviour
         EyeCurtain.Progress = 1;
     }
 
+
+    void OnDestroy()
+    {
+        Space.DisConnect<StageDirectionEvent>(Events.Backdrop, SceneryChange);
+
+        Space.DisConnect<DefaultEvent>(Events.SkipTyping, OnSkip);
+        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OffSkip);
+
+        Space.DisConnect<DefaultEvent>(Events.Save, OnSave);
+        Space.DisConnect<DefaultEvent>(Events.Load, OnLoad);
+    }
+
 }
 
 

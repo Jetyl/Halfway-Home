@@ -151,7 +151,7 @@ public class ProgressSystem
             return;
 
         
-        ProgressBook[_key].FloatValue += change;
+        ProgressBook[_key].FloatValue = change;
         
 
 
