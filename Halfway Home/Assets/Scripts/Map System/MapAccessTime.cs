@@ -34,6 +34,9 @@ namespace HalfwayHome
     public int StressCloseLimit = 100;
     public int DelusionCloseLimit = 100;
 
+    [HideInInspector]
+    public int LimitedAccessNextAvailableTime;
+
     Button self;
 
     // Use this for initialization
@@ -85,6 +88,7 @@ namespace HalfwayHome
         int hour = Game.current.Progress.GetIntValue(HourVisited);
         int day = Game.current.Progress.GetIntValue(DayVisited);
         int length = Game.current.Progress.GetIntValue(AccessPoint) * VisitMulitplier;
+        LimitedAccessNextAvailableTime = Game.current.GetNewTimeAfterDuration(hour, length);
         //if last time visited, plus times visited (times multiplier) is greater that current time
         if (Game.current.WithinTimeDifference(hour, day, length))
         {

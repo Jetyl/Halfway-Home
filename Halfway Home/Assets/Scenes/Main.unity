@@ -389,6 +389,7 @@ MonoBehaviour:
   FatigueCloseLimit: 90
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &14467239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,20 +438,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Get some fresh air and contemplate your journey.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 14467239}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6270,7 +6260,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6280,7 +6270,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6300,7 +6290,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -550
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6310,7 +6300,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6330,7 +6320,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6340,7 +6330,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6360,7 +6350,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6370,7 +6360,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114667000320042228, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -8342,27 +8332,128 @@ MonoBehaviour:
     - name: Fatigue
       DescriptorType: 4
       DescriptorText: I'm too tired to be creative.
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
-  - name: 
-    Room: 0
-    Conditions: []
+  - name: Library
+    Room: 6
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: Show Timothy the Library.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: I'll show Timothy the library after we've eaten.
+    - name: TutorialShown
+      DescriptorType: 2
+      DescriptorText: I already showed Timothy the Library.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Study the world, its people, and its myths.
+    - name: Fatigue
+      DescriptorType: 4
+      DescriptorText: Charlotte might get angry at me if I fall asleep with my face
+        in a book.
+  - name: Commons
+    Room: 2
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: Show Timothy the Common Room.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: I'll show Timothy the Common Room after we've eaten.
+    - name: TutorialShown
+      DescriptorType: 2
+      DescriptorText: I already showed Timothy the Common Room.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Ground yourself in the cozy heart of the House.
+    - name: Fatigue
+      DescriptorType: 4
+      DescriptorText: I'm exhausted. No energy to socialize.
+    - name: Stress
+      DescriptorType: 5
+      DescriptorText: I need some time to myself right now.
+  - name: Garden
+    Room: 5
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: Show Timothy the Garden.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: I'll show Timothy the Garden after we've eaten.
+    - name: TutorialShown
+      DescriptorType: 2
+      DescriptorText: I already showed Timothy the Garden.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Get some fresh air and contemplate your journey.
+    - name: 
+      DescriptorType: 0
+      DescriptorText: 
+  - name: Cafe
+    Room: 4
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: Show Timothy the Cafeteria.
+    - name: TutorialShown
+      DescriptorType: 2
+      DescriptorText: Best to stay out until the big Welcome Dinner tonight.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Have a meal to keep up my strength.
+    - name: Delay
+      DescriptorType: 6
+      DescriptorText: I'm not hungry. I could probably eat again around replace.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: No point in going back to the cafe right now.
+  - name: Store
+    Room: 8
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: No way I'm going to the store today.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: Take a fleeting trip into the Real World.
+    - name: Fatigue
+      DescriptorType: 4
+      DescriptorText: I'm way too tired to leave the building.
+    - name: Stress
+      DescriptorType: 5
+      DescriptorText: I'm too wound up to even think about leaving.
+    - name: Closed
+      DescriptorType: 6
+      DescriptorText: The store is open from 8am to 7pm Monday through Saturday.
+  - name: Charlotte & Trissa's Room
+    Room: 9
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: I'd rather not just go door to door with Timothy.
+    - name: Default
+      DescriptorType: 3
+      DescriptorText: I am not about to knock on someone's door unannounced.
+    - name: Invited
+      DescriptorType: 5
+      DescriptorText: I've been invited to tea.
+  - name: Bedroom
+    Room: 1
+    Conditions:
+    - name: Tutorial
+      DescriptorType: 0
+      DescriptorText: It's been a long day. Time to get some sleep.
+    - name: TutorialUnavailable
+      DescriptorType: 1
+      DescriptorText: As much as I'd like to go back to bed, I've got to play tour
+        guide.
+    - name: 
+      DescriptorType: 0
+      DescriptorText: 
+    - name: 
+      DescriptorType: 0
+      DescriptorText: 
 --- !u!1 &475564725
 GameObject:
   m_ObjectHideFlags: 0
@@ -13056,6 +13147,66 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+  - Day: 1
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 1
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 2
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 2
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 3
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 4
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 5
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 0
+    endTime: 7
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+  - Day: 6
+    starttime: 19
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
   - Day: 7
     starttime: 0
     endTime: 23
@@ -13070,6 +13221,7 @@ MonoBehaviour:
   FatigueCloseLimit: 75
   StressCloseLimit: 50
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &780683387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13118,20 +13270,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Take a fleeting trip into the Real World.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 780683387}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14335,6 +14476,7 @@ MonoBehaviour:
   FatigueCloseLimit: 90
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &874652966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14383,20 +14525,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Unavailable.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 874652966}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15467,6 +15598,7 @@ MonoBehaviour:
   FatigueCloseLimit: 90
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &928670986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15513,17 +15645,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0.1
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Study the world, its people, and its myths.
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 928670986}
@@ -15839,6 +15960,7 @@ MonoBehaviour:
   FatigueCloseLimit: 100
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &931970216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15887,20 +16009,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Have a meal to keep up your strength.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 931970216}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18046,6 +18157,7 @@ MonoBehaviour:
   FatigueCloseLimit: 90
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &1070638857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23747,6 +23859,7 @@ MonoBehaviour:
   FatigueCloseLimit: 80
   StressCloseLimit: 65
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &1402280990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23795,20 +23908,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Ground yourself in the cozy heart of the House.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 1402280990}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24713,6 +24815,7 @@ MonoBehaviour:
   FatigueCloseLimit: 90
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &1455537608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25094,7 +25197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.01373}
+  m_AnchoredPosition: {x: 0, y: 903.0137}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -25285,6 +25388,7 @@ MonoBehaviour:
   FatigueCloseLimit: 100
   StressCloseLimit: 100
   DelusionCloseLimit: 100
+  LimitedAccessNextAvailableTime: 0
 --- !u!114 &1468191006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25333,21 +25437,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1766393366}
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Recover for the next day. The isolation may have adverse
-              effects.
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1267802389}
-          m_MethodName: set_text
-          m_Mode: 5
+        - m_Target: {fileID: 1468191006}
+          m_MethodName: HoverOverRoom
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -32190,7 +32282,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -32245,7 +32337,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[0].BoolValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

@@ -129,6 +129,10 @@
    {
     "Name" : "Been to FD",
     "Type" : 1
+   },
+   {
+    "Name" : "Been to Cafe",
+    "Type" : 1
    }
   ]
  },

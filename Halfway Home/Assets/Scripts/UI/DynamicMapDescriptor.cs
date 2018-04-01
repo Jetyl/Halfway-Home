@@ -27,6 +27,7 @@ public class DynamicMapDescriptor : MonoBehaviour
     TutorialShown,
     Default,
     Fatigue,
+    Stress,
     Special1,
     Special2
   };
@@ -58,14 +59,13 @@ public class DynamicMapDescriptor : MonoBehaviour
 
   void OnHoverOverRoomEvent(HoverOverRoomEvent e)
   {
-    SetRoomText(e.Place);
+    MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
     switch (e.Place)
     {
       case Room.ArtRoom:
-        MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
+        RoomText.text = "Art Room";
         if (Game.current.Progress.GetBoolValue("Tutorial") == true)
         {
-          Trace.Script("Room is open: " + e.Open);
           if (e.Open) type = MapTooltipDescriptorType.Tutorial;
           else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
           else type = MapTooltipDescriptorType.TutorialUnavailable;
@@ -74,133 +74,107 @@ public class DynamicMapDescriptor : MonoBehaviour
         EffectText.text = FindDescriptor(Room.ArtRoom, type);
         break;
       case Room.CharlottesRoom:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.Commons:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.EduardosRoom:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.Garden:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.Kitchen:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.Library:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.Store:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      case Room.YourRoom:
-        //MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
-        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
-        //{
-        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
-        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
-        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
-        //}
-        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
-        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
-        break;
-      default:
-        break;
-    }
-
-  }
-
-  void SetRoomText(Room r)
-  {
-    switch (r)
-    {
-      case Room.ArtRoom:
-        RoomText.text = "Art Room";
-        break;
-      case Room.CharlottesRoom:
         RoomText.text = "Charlotte & Trissa's Room";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true) type = MapTooltipDescriptorType.Tutorial;
+        else if (e.Open) type = MapTooltipDescriptorType.Special1;
+        EffectText.text = FindDescriptor(Room.CharlottesRoom, type);
         break;
       case Room.Commons:
         RoomText.text = "Common Room";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        {
+          if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+          else if (Game.current.Progress.GetBoolValue("Been to Commons") == true) type = MapTooltipDescriptorType.TutorialShown;
+          else type = MapTooltipDescriptorType.TutorialUnavailable;
+        }
+        else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
+        else if (e.AccessRules.StressCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Stress)) type = MapTooltipDescriptorType.Stress;
+        EffectText.text = FindDescriptor(Room.Commons, type);
         break;
       case Room.EduardosRoom:
-        RoomText.text = "Eduardo & Isaac's Room";
+        // Currently not hoverable
+        //RoomText.text = "Eduardo & Isaac's Room";
+        //if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        //{
+        //  if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+        //  else if (Game.current.Progress.GetBoolValue("Been to Art") == true) type = MapTooltipDescriptorType.TutorialShown;
+        //  else type = MapTooltipDescriptorType.TutorialUnavailable;
+        //}
+        //else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
+        //EffectText.text = FindDescriptor(Room.ArtRoom, type);
         break;
       case Room.Garden:
         RoomText.text = "Garden";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        {
+          if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+          else if (Game.current.Progress.GetBoolValue("Been to Garden") == true) type = MapTooltipDescriptorType.TutorialShown;
+          else type = MapTooltipDescriptorType.TutorialUnavailable;
+        }
+        else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
+        EffectText.text = FindDescriptor(Room.Garden, type);
         break;
       case Room.Kitchen:
-        RoomText.text = "Cafe";
+        RoomText.text = "Cafeteria";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        {
+          if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+          else if (Game.current.Progress.GetBoolValue("Been to Cafe") == true) type = MapTooltipDescriptorType.TutorialShown;
+          else type = MapTooltipDescriptorType.TutorialUnavailable;
+
+          EffectText.text = FindDescriptor(Room.Kitchen, type);
+        }
+        else if (!e.Open)
+        {
+          type = MapTooltipDescriptorType.Special1;
+
+          var nextTime = e.AccessRules.LimitedAccessNextAvailableTime;
+          string t = "";
+          if (nextTime == 0) t = "12pm";
+          else if (nextTime > 12) t = (nextTime - 12).ToString() + "pm";
+          else t = nextTime.ToString() + "am";
+
+          string final = FindDescriptor(Room.Kitchen, type);
+          Trace.Script(t);
+          EffectText.text = final.Replace("replace", t);
+        }
+        else
+        {
+          EffectText.text = FindDescriptor(Room.Kitchen, type);
+        }
         break;
       case Room.Library:
         RoomText.text = "Library";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        {
+          if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+          else if (Game.current.Progress.GetBoolValue("Been to Library") == true) type = MapTooltipDescriptorType.TutorialShown;
+          else type = MapTooltipDescriptorType.TutorialUnavailable;
+        }
+        else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
+        EffectText.text = FindDescriptor(Room.Library, type);
         break;
       case Room.Store:
         RoomText.text = "Store";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true) type = MapTooltipDescriptorType.Tutorial;
+        else if (e.AccessRules.FatigueCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Fatigue)) type = MapTooltipDescriptorType.Fatigue;
+        else if (e.AccessRules.StressCloseLimit < Game.current.Self.GetWellbingStat(Personality.Wellbeing.Stress)) type = MapTooltipDescriptorType.Stress;
+        else if (!e.Open) type = MapTooltipDescriptorType.Special1;
+        EffectText.text = FindDescriptor(Room.Store, type);
         break;
       case Room.YourRoom:
-        RoomText.text = "My and Timothy's Room";
+        RoomText.text = "My & Timothy's Room";
+        if (Game.current.Progress.GetBoolValue("Tutorial") == true)
+        {
+          if (e.Open) type = MapTooltipDescriptorType.Tutorial;
+          else type = MapTooltipDescriptorType.TutorialUnavailable;
+        }
+        EffectText.text = FindDescriptor(Room.YourRoom, type);
         break;
       default:
         break;
     }
+
   }
 
   string FindDescriptor(Room r, MapTooltipDescriptorType t)

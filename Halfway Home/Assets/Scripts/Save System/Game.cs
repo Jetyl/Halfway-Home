@@ -245,6 +245,13 @@ public class Game
         return false;
     }
 
+    public int GetNewTimeAfterDuration(int InitialHour,  int Duration)
+    {
+        var newHour = InitialHour + 1 + Duration;
+        if(newHour >= 24) newHour -=24;
+        return newHour;
+    }
+
 
 }
 [Serializable]
