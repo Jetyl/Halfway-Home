@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -9,7 +12,7 @@ public class MProperty
 {
     public string name;
     public string description;
-    public ShaderUtil.ShaderPropertyType type;
+    //public ShaderUtil.ShaderPropertyType type;
     public bool hidden = false;
 }
 
@@ -60,7 +63,7 @@ public class CustomSpriteEditor : Editor
             MProperty newProp = new MProperty();
             newProp.name = ShaderUtil.GetPropertyName(s, i);
             newProp.description = ShaderUtil.GetPropertyDescription(s, i);
-            newProp.type = ShaderUtil.GetPropertyType(s, i);
+            //newProp.type = ShaderUtil.GetPropertyType(s, i);
             newProp.hidden = ShaderUtil.IsShaderPropertyHidden(s, i);
 
             //These are hardcoded values that Unity already takes care of for us

@@ -59,6 +59,7 @@ public class DynamicMapDescriptor : MonoBehaviour
 
   void OnHoverOverRoomEvent(HoverOverRoomEvent e)
   {
+    Trace.Script("Tutorial = " + Game.current.Progress.GetBoolValue("Tutorial"));
     MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
     switch (e.Place)
     {

@@ -80,7 +80,7 @@ What?
 [{player_name}] "N-no... @I was already awake."
 [Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
 [{player_name}] "Yeah."
-[Timothy0Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
+[Timothy>Scrawny looking kid] "..." # Timothy = Calm #Timothy = stage_Right
 [{player_name}] "Who's that?"
 [Keyless>Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah."
