@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: -532910944
-    m_lastTimePart2: -1999269355
+    m_lastTimePsrt1: 254780536
+    m_lastTimePart2: -1999268237
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -106,8 +106,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1154750139
-    m_lastTimePart2: -1999269180
+    m_lastTimePsrt1: -1368740105
+    m_lastTimePart2: -1999267364
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -254,6 +254,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1489559458
       Guid: 62c965c94bfb87468fa869995a11193f
+      maxAttenuation: 0
+    - Name: play_music_happy
+      Path: PlayMusic\play_music_happy
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_happy
+        ObjectType: 3
+      ID: 1020080944
+      Guid: 48c78ac111e7c84fbe2309d0afeb3655
       maxAttenuation: 0
     - Name: play_music_mainmenu
       Path: PlayMusic\music_mainmenu\play_music_mainmenu
@@ -528,8 +538,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -809329518
-    m_lastTimePart2: -1999269220
+    m_lastTimePsrt1: -1365145545
+    m_lastTimePart2: -1999267364
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
