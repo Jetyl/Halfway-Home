@@ -33,11 +33,11 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. # Background / HouseFront
+This is it. Sunflower House. # Background / HouseFront # play : play_ambience_birds
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
-I open the heavy oak doors and step inside. # Background / Commons, Blackwipe
+I open the heavy oak doors and step inside. # Background / Commons, Blackwipe # play : play_ambience_fireplace
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
 [Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
@@ -58,7 +58,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # play : lpf_ambience_fireplace
 [Max] "Your quarters, sire. I hope you find them to your liking."
 [Max] "Anyhoo, I've got to finish mopping the cafe. Been a bit behind... as usual, really."
 [Max] "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
@@ -66,18 +66,18 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe
+I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe # play : play_music_cafejazz
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week.
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
+What? They're joking, right? I just got here... There's no way I lost a whole week. # play : lpf_music_cafejazz
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # play : play_ambience_fireplace
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
 But they're gone...
 A chill runs down my spine. What's going on?
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / CommonsNight, Blackwipe
+I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them. # Max = Calm
 *[Ask what's going on]

@@ -27,7 +27,7 @@ EXTERNAL GetStringValue(value)
 -> KitchenFunction
 
 === KitchenFunction ===
-[{player_name}] "So this is the cafe." #Timothy = Calm
+[{player_name}] "So this is the cafe." #Timothy = Calm # play : play_music_cafejazz
 "We've got our very own cook who does a pretty admirable job with everybody's restrictions and whatnot."
 "You can come here for breakfast, lunch, and dinner. Or really anytime you're hungry. There's usually some tidbits left out if you're a midnight snacker."
 "Eating will rejuvenate you and lower your <color=A5C5E3FF><i>fatigue</i></color>."

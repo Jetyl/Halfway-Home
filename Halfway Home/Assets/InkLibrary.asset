@@ -64,7 +64,7 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: d7258b430da5e174492cd5d1721112a4, type: 3}
     jsonAsset: {fileID: 4900000, guid: eede21032990857488f62e3c68a6f360, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: b86d0f44bf7ae6a4a83728e293fe25e4, type: 3}
+    inkAsset: {fileID: 102900000, guid: 16f39b5f653207a4981e7a7c796b2695, type: 3}
     jsonAsset: {fileID: 4900000, guid: 5c1af7eb0a352e842b0c5917c94273b6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: a99c661a63430ff45bfd5aee0e7aeef9, type: 3}
