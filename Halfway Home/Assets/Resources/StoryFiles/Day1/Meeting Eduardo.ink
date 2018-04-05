@@ -28,7 +28,7 @@ EXTERNAL GetValue(value)
 		-> MeetWithTimothy
 	- else:
 		-> MeetAlone
-
+z
 }
 
 ===MeetAlone===
@@ -156,7 +156,7 @@ Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
 [Isaac] "Sorry. Eddy's super manic right now. Makes him kind of a jerk."
 [Eduardo] "...Eddy?" #Eduardo = Afraid
 [Isaac] "Some people don't like nicknames." #Isaac = Left
-[Eduardo0Eddy] "C'mon Isaac, you know I didn't mean it!"
+[Eduardo>Eddy] "C'mon Isaac, you know I didn't mean it!"
 [Isaac] "Hrm."
 Isaac appears to be able to completely ignore Eduardo in an instant. Instead he looks back at Timothy.
 [Isaac] "Sorry... About that."

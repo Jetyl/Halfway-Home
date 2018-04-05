@@ -20735,8 +20735,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Charlotte & Trissa's Room
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 190c9b041bc4ab3438d4cb4eba1c1019, type: 2}
-  m_sharedMaterial: {fileID: 21499765098947770, guid: 190c9b041bc4ab3438d4cb4eba1c1019,
+  m_fontAsset: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
+  m_sharedMaterial: {fileID: 21287393459767818, guid: ecaf128ba9ac344459c7ade51e748aea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -20761,7 +20761,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.2
+  m_fontSize: 31.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -28616,8 +28616,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Effects
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 190c9b041bc4ab3438d4cb4eba1c1019, type: 2}
-  m_sharedMaterial: {fileID: 21499765098947770, guid: 190c9b041bc4ab3438d4cb4eba1c1019,
+  m_fontAsset: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
+  m_sharedMaterial: {fileID: 21287393459767818, guid: ecaf128ba9ac344459c7ade51e748aea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
