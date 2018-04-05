@@ -30,7 +30,8 @@ public enum NodeTypes
     ToMapNode = 13,
     LoadNode = 14,
     LoopNode = 15,
-    CheatNode = 16
+    CheatNode = 16,
+    RoomNode = 17
 }
 
 
@@ -122,6 +123,9 @@ public class ConversationSystem
                     break;
                 case NodeTypes.CheatNode:
                     Nodes.Add(new ConvCheat(conversation[i]));
+                    break;
+                case NodeTypes.RoomNode:
+                    Nodes.Add(new ConvRoom(conversation[i]));
                     break;
                 default:
                     break;
@@ -604,6 +608,39 @@ public class ConvMap : ConvNode
 
 }
 
+
+/**
+    * CLASS NAME: ConvRoom
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvRoom : ConvNode
+{
+
+    public Room RoomLocation;
+    public TransitionTypes fade;
+
+    public ConvRoom(JsonData key)
+    {
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+
+        RoomLocation = (Room)(int)key["Room"];
+        fade = (TransitionTypes)(int)key["Transition"];
+    }
+
+
+    public override void CallAction()
+    {
+
+        Space.DispatchEvent(Events.Backdrop, 
+            new StageDirectionEvent(RoomLocation, "", fade));
+
+
+    }
+
+}
+
 /**
     * CLASS NAME: ConvReturn
     * DESCRIPTION  : the start of the conversation
@@ -1041,27 +1078,34 @@ public class ConvSound : ConvNode
     public bool remove = false;
     public bool Music = false;
 
+    public string file;
+    public AudioManager.AudioEvent.SoundType layer;
+
     public ConvSound(JsonData key)
     {
 
         ID = (int)key["ID"];
         Destination = (int)key["NextID"];
 
-        if (key["Slug"] != null)
-            sound = Resources.Load("Sounds/" + (string)key["Slug"]) as AudioClip;
-        else
-            sound = null;
-            
-        Song = (bool)key["bool"];
-        remove = (bool)key["stop"];
-        Music = (bool)key["music"];
+        //if (key["Slug"] != null)
+        //    sound = Resources.Load("Sounds/" + (string)key["Slug"]) as AudioClip;
+        //else
+        //    sound = null;
+        //    
+        //Song = (bool)key["bool"];
+        //remove = (bool)key["stop"];
+        //Music = (bool)key["music"];
+        //
+
+        file = (string)key["Sound"];
+        layer = (AudioManager.AudioEvent.SoundType)(int)key["Layer"];
 
 
     }
 
     public override void CallAction()
     {
-
+        Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(layer, file));
         //Space.DispatchEvent(Events.Jukebox, new SoundEvent(sound, Song, remove, Music));
 
     }

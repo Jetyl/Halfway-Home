@@ -42,7 +42,7 @@ public class StatManger : MonoBehaviour
         {
             foreach (var tier in IncrementValues)
             {
-                if (tier.key == eventdata.Key)
+                if (tier.key.ToLower() == eventdata.Key.ToLower())
                 {
                     Game.current.Self.IncrementSocialStat(eventdata.SocialStat, tier.value);
                 }

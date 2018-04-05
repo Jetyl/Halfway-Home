@@ -16,6 +16,7 @@ public class CheatNode : BaseNode
         ID = id;
         NextID = -1;
         TypeID = NodeTypes.CheatNode;
+        CheatCode = "";
         
     }
 
@@ -27,6 +28,11 @@ public class CheatNode : BaseNode
 
         title = (string)data["title"];
         TypeID = NodeTypes.CheatNode;
+
+        CheatCode = (string)data["Code"];
+
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
 
     }
 

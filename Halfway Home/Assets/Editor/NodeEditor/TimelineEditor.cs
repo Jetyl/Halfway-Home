@@ -145,6 +145,12 @@ public class TimelineEditor : BaseNodeEditor
             case NodeTypes.CheatNode:
                 nodes.Add(new CheatNode(mousePosition, 200, 120, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
+            case NodeTypes.RoomNode:
+                nodes.Add(new RoomNode(mousePosition, 300, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
+                break;
+            case NodeTypes.SoundNode:
+                nodes.Add(new SoundNode(mousePosition, 300, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
+                break;
             default:
                 break;
         }
@@ -265,16 +271,22 @@ public class TimelineEditor : BaseNodeEditor
             genericMenu.AddItem(new GUIContent("Add End node"), false, () => OnClickAddNode(mousePosition, NodeTypes.EndingNode));
             genericMenu.AddItem(new GUIContent("Add Map node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MapNode));
             genericMenu.AddItem(new GUIContent("Add Return node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ToMapNode));
-            genericMenu.AddItem(new GUIContent("Add Ink node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InkNode));
             genericMenu.AddItem(new GUIContent("Add Load node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LoadNode));
             genericMenu.AddItem(new GUIContent("Add Loop node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LoopNode));
 
-            genericMenu.AddItem(new GUIContent("Add Cheat node"), false, () => OnClickAddNode(mousePosition, NodeTypes.CheatNode));
+            genericMenu.AddItem(new GUIContent("Display/Add Set Room node"), false, () => OnClickAddNode(mousePosition, NodeTypes.RoomNode));
+            genericMenu.AddItem(new GUIContent("Display/Add Ink node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InkNode));
+            genericMenu.AddItem(new GUIContent("Display/Add Sound node"), false, () => OnClickAddNode(mousePosition, NodeTypes.SoundNode));
 
 
             genericMenu.AddItem(new GUIContent("Progress/Add Progress node"), false, () => OnClickAddNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Progress/Add Change node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ChangeNode));
             genericMenu.AddItem(new GUIContent("Progress/Add Multi-Progress node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MultiProgressNode));
+
+
+            genericMenu.AddItem(new GUIContent("Add Cheat node"), false, () => OnClickAddNode(mousePosition, NodeTypes.CheatNode));
+
+
         }
 
         genericMenu.ShowAsContext();
@@ -358,6 +370,12 @@ public class TimelineEditor : BaseNodeEditor
                     break;
                 case NodeTypes.CheatNode:
                     nodes.Add(new CheatNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
+                    break;
+                case NodeTypes.RoomNode:
+                    nodes.Add(new RoomNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
+                    break;
+                case NodeTypes.SoundNode:
+                    nodes.Add(new SoundNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 default:
                     break;
@@ -723,6 +741,24 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.Write(((CheatNode)node).NextID);
                     Jwriter.WritePropertyName("Code");
                     Jwriter.Write(((CheatNode)node).CheatCode);
+                    break;
+                case NodeTypes.RoomNode:
+
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((RoomNode)node).NextID);
+                    Jwriter.WritePropertyName("Room");
+                    Jwriter.Write((int)((RoomNode)node).Locale);
+                    Jwriter.WritePropertyName("Transition");
+                    Jwriter.Write((int)((RoomNode)node).transition);
+                    break;
+                case NodeTypes.SoundNode:
+
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((SoundNode)node).NextID);
+                    Jwriter.WritePropertyName("Sound");
+                    Jwriter.Write(((SoundNode)node).SoundFile);
+                    Jwriter.WritePropertyName("Layer");
+                    Jwriter.Write((int)((SoundNode)node).Layer);
                     break;
                 default:
                     break;
