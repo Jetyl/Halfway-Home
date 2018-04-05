@@ -9,25 +9,35 @@ public class CheatCodes : MonoBehaviour
     public bool Active;
     public GameObject Screen;
     TMP_InputField codeBreaker;
+    public TextMeshProUGUI CheatsStateText;
+    public string QuickJumpScene1;
+    public string QuickJumpScene2;
+    public string QuickJumpScene3;
 
-	// Use this for initialization
-	void Start ()
+  // Use this for initialization
+  void Start ()
     {
+        Active = false;
         codeBreaker = Screen.GetComponentInChildren<TMP_InputField>();
         Screen.SetActive(false);
         codeBreaker.DeactivateInputField();
-
-	}
+        CheatsStateText.gameObject.SetActive(false);
+	  }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (!Active)
-            return;
-
-        if(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        // Toggle cheat mode
+        if (Input.GetButtonDown("Cheats"))
         {
-            if(Input.GetKeyDown(KeyCode.J))
+          Active = !Active;
+          if(CheatsStateText != null) CheatsStateText.gameObject.SetActive(Active);
+        }
+        
+        if (Active)
+        {
+            // Check for manual entry
+            if(Input.GetButtonDown("StringEntry"))
             {
                 Screen.SetActive(!Screen.activeSelf);
 
@@ -41,9 +51,39 @@ public class CheatCodes : MonoBehaviour
                 }
 
             }
-        }
-
-
+            // Check for stat change hotkeys
+            if(Input.GetButton("AwarenessChange"))
+            {
+                if(Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("minor", Personality.Social.Awareness));
+            }
+            if (Input.GetButton("GraceChange"))
+            {
+              if (Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("minor", Personality.Social.Grace));
+            }
+            if (Input.GetButton("ExpressionChange"))
+            {
+              if (Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("minor", Personality.Social.Expression));
+            }
+            if (Input.GetButton("FatigueChange"))
+            {
+              if (Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(10, Personality.Wellbeing.Fatigue));
+              else if (Input.GetButtonDown("Decrease")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(-10, Personality.Wellbeing.Fatigue));
+            }
+            if (Input.GetButton("StressChange"))
+            {
+              if (Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(10, Personality.Wellbeing.Stress));
+              else if (Input.GetButtonDown("Decrease")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(-10, Personality.Wellbeing.Stress));
+            }
+            if (Input.GetButton("DepressionChange"))
+            {
+              if (Input.GetButtonDown("Increase")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(10, Personality.Wellbeing.Depression));
+              else if (Input.GetButtonDown("Decrease")) Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(-10, Personality.Wellbeing.Depression));
+            }
+            // Check for quick state hotkeys
+            if(Input.GetButtonDown("JumpToState1")) ValidateCode(QuickJumpScene1);
+            else if (Input.GetButtonDown("JumpToState2")) ValidateCode(QuickJumpScene2);
+            else if (Input.GetButtonDown("JumpToState2")) ValidateCode(QuickJumpScene3);
+    }
 	}
 
 
