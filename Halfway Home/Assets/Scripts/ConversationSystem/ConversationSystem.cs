@@ -1177,7 +1177,7 @@ public class ConvCheat : ConvNode
 
     public override void CallAction()
     {
-        
+        Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
     }
 
 }

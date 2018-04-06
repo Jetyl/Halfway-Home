@@ -82,7 +82,7 @@ public class CheatCodes : MonoBehaviour
             // Check for quick state hotkeys
             if(Input.GetButtonDown("JumpToState1")) ValidateCode(QuickJumpScene1);
             else if (Input.GetButtonDown("JumpToState2")) ValidateCode(QuickJumpScene2);
-            else if (Input.GetButtonDown("JumpToState2")) ValidateCode(QuickJumpScene3);
+            else if (Input.GetButtonDown("JumpToState3")) ValidateCode(QuickJumpScene3);
     }
 	}
 

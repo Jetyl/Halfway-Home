@@ -151,6 +151,7 @@ public class TimelineSystem : MonoBehaviour
             {
                 if (((ConvCheat)node).code == code)
                 {
+                    node.CallAction();
                     NextNode(node.Destination);
                     return true;
                 }

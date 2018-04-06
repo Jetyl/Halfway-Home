@@ -70,22 +70,22 @@ Sure enough, I can see the hoop affixed to the building behind the library. # Ma
 +[Pass] -> Refuse
 
 === Ballin ===
-When we reach the court I practice dribbling the ball around a little. It's been a long time since I last played basketball.
+When we reach the court I practice dribbling the ball around a little. It's been a long time since I last played basketball. # Basketball / Open # Basketball / HeadCalm # Basketball / ArmNoBall
 Actually, it's been a long time since I played any sport at all.
 The concrete half-court has a few weeds growing out of the cracks, but is otherwise in good condition considering it never gets used.
-[{player_name}] "You seemed kinda hesitant before. You sure you want to do this?"
+[{player_name}] "You seemed kinda hesitant before. You sure you want to do this?" 
 [Timothy] "I do! I mean, it sounds fun... I just... I don't a-actually know how."
 [{player_name}] "I played a bit as a kid. My dad kinda forced me, really, but I had fun anyway."
 That was so long ago. I feel like a completely different person now.
-[Timothy] "Okay, so what do I do?" # Timothy = Happy
+[Timothy] "Okay, so what do I do?" # Basketball / HeadHappy
 [{player_name}] "Well, you've got two teams, right? Pretty standard. Usually you have two baskets, too, and each time tries to get the ball in the other team's hoop."
-[Timothy] "Okay ." # Timothy = Calm
+[Timothy] "Okay ." # Basketball / HeadCalm
 [{player_name}] "And the game is played over... some amount of time, broken into... was it quarters? Oh, man, I don't actually remember any of the specifics."
 [{player_name}] "Also, you have to keep moving or else you have to stop. And you can't carry the ball, you have to bounce it on the ground."
 [{player_name}] "Oh, and if you do stop, you can pass the ball, but... well, we don't have any team members so I guess just don't?"
-Timothy looks completely lost. # Timothy = Surprised
+Timothy looks completely lost. # Basketball / HeadVeryNervous
 [{player_name}] "You know what, don't worry about all that. I know a much simpler way to play."
-Timothy breathes a sigh of relief. # Timothy = Calm
+Timothy breathes a sigh of relief. # Basketball / HeadCalm
 [{player_name}] "It's called HORSE. We take turns trying to get the ball in the basket. When one of us does, the other has to try to make it in from the same place."
 [{player_name}] "If that person fails, then it becomes their turn and they get a letter. H, then O, and so on until they have the whole word. If that happens, they lose."
 [{player_name}] "If they succeed, though, the person who made the original shot gets to go again."
@@ -93,9 +93,9 @@ Timothy breathes a sigh of relief. # Timothy = Calm
 [{player_name}] "There's something else, too. When you go to make a basket, you can make a called shot. Like `backboard` or `swish`..."
 [Timothy] "So then the other person has to do that, too?"
 [{player_name}] "Assuming they do it, yeah. You have to match your boast. If I say I'm gonna `swish`, but the ball hits the rim, it doesn't count... even if it goes in."
-[Timothy] "I don't know if I can even make it in at all..." # Timothy = Sad
+[Timothy] "I don't know if I can even make it in at all..."# Basketball / HeadVeryNervous
 [{player_name}] "That's okay. How about we play a shorter version? We can do a three-letter word instead."
-[Timothy] "Yeah, that sounds good." # Timothy = Calm
+[Timothy] "Yeah, that sounds good." # Basketball / HeadCalm
 [{player_name}] "Okay, how about..."
 +[PIG]
 	[{player_name}] "PIG? I think that's the most common choice for shorter games."
@@ -110,175 +110,175 @@ Timothy breathes a sigh of relief. # Timothy = Calm
 	[{player_name}] "RAT? Rats don't usually get a lotta love."
 	~gameName = "RAT"
 -[Timothy] "Yeah, sure."
-I gently bounce-pass the ball to Timothy.
+I gently bounce-pass the ball to Timothy. # Basketball / ArmBall
 [{player_name}] "Why don't you start?"
-[Timothy] "Ah! But, I..."
-Timothy exhales.
+[Timothy] "Ah! But, I..." # Basketball / HeadNervousAway
+Timothy exhales. # Basketball / HeadCalm
 [Timothy] "Okay. I just have to throw it in, right?"
 [{player_name}] "Yup."
--> GameTime
+-> GameTime.TimothyTurn
 
 === GameTime ===
 
 =TimothyTurn
 {shuffle:
-	-Timothy walks up close to the basket and winds up...
+	-Timothy walks up close to the basket and winds up... # Basketball / HeadUp
 		{shuffle:
-			-He makes a perfect shot!
+			-He makes a perfect shot! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It bounces off the rim.
+			-It bounces off the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
-	-Timothy walks up close to the basket and winds up...
+	-Timothy walks up close to the basket and winds up... # Basketball / HeadUp
 		{shuffle:
-			-He makes a perfect shot!
+			-He makes a perfect shot! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It bounces off the rim.
+			-It bounces off the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
-	-Timothy walks up close to the basket and winds up...
+	-Timothy walks up close to the basket and winds up... # Basketball / HeadUp
 		{shuffle:
-			-He makes a perfect shot!
+			-He makes a perfect shot! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestEasy
-			-It bounces off the rim.
+			-It bounces off the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
-	-Timothy walks to the middle of the court. He looks focused as he takes the shot.
+	-Timothy walks to the middle of the court. He looks focused as he takes the shot. # Basketball / HeadUp
 		{shuffle:
-			-He nails it!
+			-He nails it! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestMedium
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestMedium
-			-It bounces off the rim.
+			-It bounces off the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
-			-It ricochets off the backboard.
+			-It ricochets off the backboard. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
-	-Timothy walks to the middle of the court. He looks focused as he takes the shot.
+	-Timothy walks to the middle of the court. He looks focused as he takes the shot. # Basketball / HeadUp
 		{shuffle:
-			-He nails it!
+			-He nails it! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestMedium
-			-It goes in!
+			-It goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestMedium
-			-It bounces off the rim.
+			-It bounces off the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
-			-It ricochets off the backboard.
+			-It ricochets off the backboard. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
-	-Timothy walks to the back of the court.
+	-Timothy walks to the back of the court. # Basketball / HeadUp
 		[Timothy] "Heh. Here goes nothing..."
 		He flings the ball and...
 		{shuffle:
-			-Miraculously, it goes in!
+			-Miraculously, it goes in! # Basketball / HeadHappyAway # Basketball / ArmNoBall
 				->GameTime.PlayerTestHard
-			-It bounces off the back of the rim.
+			-It bounces off the back of the rim. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
-			-It falls short of the basket.
+			-It falls short of the basket. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
-			-He misses wildly.
+			-He misses wildly. # Basketball / HeadNervousAway # Basketball / ArmNoBall
 				->GameTime.PlayerTurn
 		}
 }
 
 =TimothyTestEasy
-I recover my ball and pass it to Timothy.
-He looks determined as he tosses the ball.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He looks determined as he tosses the ball. # Basketball / HeadUp
 {shuffle:
-	-It goes in! Guess I'm gonna have to do better than that.
+	-It goes in! Guess I'm gonna have to do better than that. # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-It goes in! Guess I'm gonna have to do better than that.
+	-It goes in! Guess I'm gonna have to do better than that. # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-It goes in! Guess I'm gonna have to do better than that.
+	-It goes in! Guess I'm gonna have to do better than that. # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-Unfortunately for Timothy, the ball bounces off the rim.
+	-Unfortunately for Timothy, the ball bounces off the rim. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyTestMedium
-I recover my ball and pass it to Timothy.
-He looks nervous as he tosses the ball.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He looks nervous as he tosses the ball. # Basketball / HeadUp
 {shuffle:
-	-It goes in! Maybe I should step up my game...
+	-It goes in! Maybe I should step up my game... # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-It goes in! Maybe I should step up my game...
+	-It goes in! Maybe I should step up my game... # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-It goes in! Maybe I should step up my game...
+	-It goes in! Maybe I should step up my game... # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-Unfortunately for Timothy, the ball falls short of the basket.
+	-Unfortunately for Timothy, the ball falls short of the basket. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-Unfortunately for Timothy, he makes it in without meeting the challenge.
+	-Unfortunately for Timothy, he makes it in without meeting the challenge. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyTestHard
-I recover my ball and pass it to Timothy.
-He tenses up as he tosses the ball.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He tenses up as he tosses the ball. # Basketball / HeadUp
 {shuffle:
-	-It goes in! I'll have to try again.
+	-It goes in! I'll have to try again. # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-It goes in! I'll have to try again.
+	-It goes in! I'll have to try again. # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-Unfortunately for Timothy, the ball falls short of the basket.
+	-Unfortunately for Timothy, the ball falls short of the basket. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-Unfortunately for Timothy, the ball bounces off the rim.
+	-Unfortunately for Timothy, the ball bounces off the rim. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyTestHarder
-I recover my ball and pass it to Timothy.
-He clenches his teeth as he tosses the ball.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He clenches his teeth as he tosses the ball. # Basketball / HeadUp
 {shuffle:
-	-It goes in exactly as required. {Not too shabby, but can he keep this up?|Maybe he <i>can</i> keep this up...|Huh.}
+	-It goes in exactly as required. {Not too shabby, but can he keep this up?|Maybe he <i>can</i> keep this up...|Huh.} # Basketball / HeadHappyAway # Basketball / ArmNoBall
 		->GameTime.PlayerTurn
-	-Unfortunately for Timothy, the ball bounces off the rim.
+	-Unfortunately for Timothy, the ball bounces off the rim. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-Unfortunately for Timothy, he makes it in without meeting the challenge.
+	-Unfortunately for Timothy, he makes it in without meeting the challenge. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyTestHopeless
-I recover my ball and pass it to Timothy.
-He exhales fiercely as he tosses the ball.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He exhales fiercely as he tosses the ball. # Basketball / HeadUp
 {shuffle:
-	-It sails smoothly into the hoop. Timothy looks even more surprised than I am. # Timothy = Surprised
-	[Timothy] "{Oh, man. I don't think I can do that again.|How did I do that twice?!|Fate is laughing at both of us right now.|Okay, then!}" # Timothy = Happy
+	-It sails smoothly into the hoop. Timothy looks even more surprised than I am. # Basketball / HeadHappyAway # Basketball / ArmNoBall
+	[Timothy] "{Oh, man. I don't think I can do that again.|How did I do that twice?!|Fate is laughing at both of us right now.|Okay, then!}" # Basketball / HeadHappy
 		->GameTime.PlayerTurn
-	-Unfortunately for Timothy, the ball bounces off the rim.
+	-Unfortunately for Timothy, the ball bounces off the rim. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-Unfortunately for Timothy, he makes it in without meeting the challenge.
+	-Unfortunately for Timothy, he makes it in without meeting the challenge. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyJawDrop
-I recover my ball and pass it to Timothy.
-He {just kind of stands there looking awestruck|looks just as dumbfounded as before}.
-He shakes it off and looks incredibly nervous as he heads to the back of the court to try and recreate the ridiculous shot.
+I recover my ball and pass it to Timothy. # Basketball / ArmBall
+He {just kind of stands there looking awestruck|looks just as dumbfounded as before}. # Basketball / HeadUp
+He shakes it off and looks incredibly nervous as he heads to the back of the court to try and recreate the ridiculous shot. # Basketball / HeadUp
 {shuffle:
-	-He makes it in, but not like you did.
+	-He makes it in, but not like you did. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-Unfortunately for Timothy, the ball bounces off the rim.
+	-Unfortunately for Timothy, the ball bounces off the rim. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
-	-The ball flies past the hoop and bounces off the building wall.
+	-The ball flies past the hoop and bounces off the building wall. # Basketball / HeadVeryNervousAway # Basketball / ArmNoBall
 		->GameTime.TimothyFail
 }
 
 =TimothyFail
 {
 	-timLetters == 0:
-		Timothy looks tense. # Timothy = Afraid
-		[Timothy] "Oh no! I couldn't do it!"
+		Timothy looks tense.
+		[Timothy] "Oh no! I couldn't do it!" # Basketball / HeadVeryNervous
 		[{player_name}] "Take it easy, man. It just means you get a letter. In this case, <>
 			{
 				-gameName=="PIG":`P
@@ -287,14 +287,14 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 				-gameName=="RAT":`R
 			}
 			<>."
-		[Timothy] "Of course. Sorry." # Timothy = Calm
+		[Timothy] "Of course. Sorry." # Basketball / HeadCalm
 		[{player_name}] "Hey, no worries! It's your turn now, so you get your chance for revenge."
 		~timLetters = timLetters + 1
 		I collect the ball and pass it to him.
 		->GameTime.TimothyTurn
 	-timLetters == 1:
 		~timLetters = timLetters + 1
-		[Timothy] "Not again! Now I've got <> # Timothy = Afraid
+		[Timothy] "Not again! Now I've got <> # Basketball / HeadVeryNervous
 			{
 				-gameName=="PIG":`PI
 				-gameName=="DOG":`DO
@@ -305,13 +305,13 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 		{
 			-playerLetters == 2:
 				[{player_name}] "We're both one away. I guess that means we're in sudden death."
-				[Timothy] "Ah! That's a lot of pressure!"
+				[Timothy] "Ah! That's a lot of pressure!" # Basketball / HeadVeryNervous
 				I pass the ball back to him.
 				[{player_name}] "You're up!"
 				->GameTime.TimothyTurn
 			-else:
 				[{player_name}] "You haven't lost yet. Although if you miss again..."
-				[Timothy] "It's too much! Could we... uh... M-maybe stop playing now?"
+				[Timothy] "It's too much! Could we... uh... M-maybe stop playing now?" # Basketball / HeadVeryNervous
 				->GameTime.BreakRequestPlayerAdvantage
 		}
 	-else:
@@ -489,7 +489,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 =PlayerFail
 {
 	-playerLetters == 0:
-		[{player_name}] "You got me, Timothy. Well done!" # Timothy = Happy
+		[{player_name}] "You got me, Timothy. Well done!" # Basketball / HeadHappy
 		{-depression>40:[Voices] "You call that a throw? What a failure."}
 		{
 			-timLetters == 0:
@@ -508,7 +508,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 				[{player_name}] "Sure do. {-timLetters==1:Now we're even!-else:Looks like you're making a comeback!}"
 		}
 		~playerLetters = playerLetters + 1
-		Timothy looks more determined than before. # Timothy = Calm
+		Timothy looks more determined than before. # Basketball / HeadCalm
 		->GameTime.PlayerTurn
 	-playerLetters == 1:
 		~playerLetters = playerLetters + 1
@@ -517,11 +517,11 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 		{
 			-timLetters == 2:
 				[{player_name}] "We're both one away. I guess that means we're in sudden death."
-				[Timothy] "Ah! That's a lot of pressure!" # Timothy = Afraid
+				[Timothy] "Ah! That's a lot of pressure!" # Basketball / HeadVeryNervous
 				[{player_name}] "Well, I'll probably miss anyway."
 				->GameTime.PlayerTurn
 			-else:
-				[{player_name}] "Wow, Timothy. You're doing really well!" # Timothy = Happy
+				[{player_name}] "Wow, Timothy. You're doing really well!" # Basketball / HeadHappy
 				[Timothy] "Thanks, {player_name}."
 				He moves to get the ball, but stops himself and turns back to me.
 				[Timothy] "Would it... I-I hate to ask, but would it be awful if we stopped playing now?"
@@ -537,14 +537,14 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 +[Stop The Game Early] -> Break
 +[Encourage Him To Keep Playing]
 	[{player_name}] "Timothy, you can do this! And even if you don't, it's not like there's anything riding on this game. We're just two roommates passing a ball around!"
-	[Timothy] "I-if you say so. Okay, let's finish this." # Timothy = Sad 
+	[Timothy] "I-if you say so. Okay, let's finish this." # Basketball / HeadVeryNervous
 	->GameTime.TimothyTurn
 
 =BreakRequestTimAdvantage
 +[Stop The Game Early] -> Break
 +[Encourage Him To Keep Playing]
 	[{player_name}] "Timothy, you can do this! And even if you don't, it's not like there's anything riding on this game. We're just two roommates passing a ball around!"
-	[Timothy] "I-if you say so. Okay, let's finish this." # Timothy = Sad 
+	[Timothy] "I-if you say so. Okay, let's finish this." # Basketball / HeadVeryNervous
 	->GameTime.PlayerTurn
 
 === Refuse ===
@@ -561,30 +561,30 @@ I sit alone for a while, replaying the conversation in my mind.
 
 === Ignored ===
 =TimWon
-[Timothy] "I... I actually did it!" # Timothy = Happy
+[Timothy] "I... I actually did it!" # Basketball / HeadHappy
 [{player_name}] "You actually did. I told you you could do it."
 {-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
 [Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)}
 ->Ignored.Conclusion
 
 =PlayerWon
-[Timothy] "I f-failed!" # Timothy = Angry
+[Timothy] "I f-failed!" # Basketball / HeadNervousAway
 [{player_name}] "It's no big deal, man."
 [Timothy] "I need to get some water and lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)}
 ->Ignored.Conclusion
 
 
 =Conclusion
-"Thanks for playing with me." # Timothy = Calm
+"Thanks for playing with me." # Basketball / HeadCalm
 [{player_name}] "Yeah, of course."
-Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the building. # Timothy = Exit
+Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the building. # Basketball / Exit
 I had fun, but I didn't really get to talk to Timothy one on one. Maybe I should have stopped the game when he asked...
 Nothing can be done about it now. I should get going as well.
 -> END
 
 === Break ===
 [{player_name}] "Sure, Timothy. It makes no difference to me." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 3)}
-[Timothy] "Thanks." # Timothy = Happy
+[Timothy] "Thanks." # Basketball / Exit # Timothy = Happy
 [{player_name}] "I can't believe I never noticed this was here..."
 [Timothy] "I didn't notice it either."
 [{player_name}] "Yeah, but you've got an excuse. I've been here almost a year."
