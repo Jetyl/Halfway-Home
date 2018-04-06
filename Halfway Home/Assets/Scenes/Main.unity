@@ -3167,8 +3167,8 @@ MonoBehaviour:
   Screen: {fileID: 1139390439}
   CheatsStateText: {fileID: 443707927}
   QuickJumpScene1: Restart
-  QuickJumpScene2: Empathy
-  QuickJumpScene3: Courtside
+  QuickJumpScene2: Hangout Now
+  QuickJumpScene3: Hangman Now
 --- !u!1 &232715749
 GameObject:
   m_ObjectHideFlags: 0
@@ -31257,7 +31257,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
