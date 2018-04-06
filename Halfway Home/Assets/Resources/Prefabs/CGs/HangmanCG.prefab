@@ -484,28 +484,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CommandSpeed: 1
   Commands:
-  - Tag: Open
-    Graphic: {fileID: 1653291174475542}
-  - Tag: H
-    Graphic: {fileID: 1231570641971668}
-  - Tag: O
-    Graphic: {fileID: 1376019985935478}
-  - Tag: P
-    Graphic: {fileID: 1247996229168676}
-  - Tag: E
-    Graphic: {fileID: 1112949966793890}
-  - Tag: 1
-    Graphic: {fileID: 1529421547054802}
-  - Tag: 2
-    Graphic: {fileID: 1306771753037996}
-  - Tag: 3
-    Graphic: {fileID: 1942710609075632}
-  - Tag: 4
-    Graphic: {fileID: 1081076450638032}
-  - Tag: 5
-    Graphic: {fileID: 1258372118781022}
-  - Tag: 6
-    Graphic: {fileID: 1429983617776032}
+  - Group: Dirt
+    CloseTag: Close
+    Details:
+    - Tag: Open
+      Graphic: {fileID: 1653291174475542}
+  - Group: H
+    CloseTag: Close
+    Details:
+    - Tag: H
+      Graphic: {fileID: 1231570641971668}
+  - Group: O
+    CloseTag: Close
+    Details:
+    - Tag: O
+      Graphic: {fileID: 1376019985935478}
+  - Group: P
+    CloseTag: Close
+    Details:
+    - Tag: P
+      Graphic: {fileID: 1247996229168676}
+  - Group: E
+    CloseTag: Close
+    Details:
+    - Tag: E
+      Graphic: {fileID: 1112949966793890}
+  - Group: Loss 1
+    CloseTag: Close
+    Details:
+    - Tag: 1
+      Graphic: {fileID: 1529421547054802}
+  - Group: Loss 2
+    CloseTag: Close
+    Details:
+    - Tag: 2
+      Graphic: {fileID: 1306771753037996}
+  - Group: Loss 3
+    CloseTag: Close
+    Details:
+    - Tag: 3
+      Graphic: {fileID: 1942710609075632}
+  - Group: Loss 4
+    CloseTag: Close
+    Details:
+    - Tag: 4
+      Graphic: {fileID: 1081076450638032}
+  - Group: Loss 5
+    CloseTag: Close
+    Details:
+    - Tag: 5
+      Graphic: {fileID: 1258372118781022}
+  - Group: Loss 6
+    CloseTag: Close
+    Details:
+    - Tag: 6
+      Graphic: {fileID: 1429983617776032}
 --- !u!114 &114420559771951746
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ public class DynamicCGAnimator : MonoBehaviour
 
     public float CommandSpeed = 1;
 
-    public List<CGDetails> Commands;
+    public List<CGGrouping> Commands;
 
 	// Use this for initialization
 	void Start ()
@@ -26,18 +26,33 @@ public class DynamicCGAnimator : MonoBehaviour
     
     void NextCommand(CustomGraphicEvent eventdata)
     {
-        
+        int i = 0;
         foreach(var act in eventdata.Actions)
         {
             print("Action:" + act);
-            foreach (var command in Commands)
+            foreach (var Group in Commands)
             {
-                if(act.ToLower() == command.Tag.ToLower())
+
+                if(act.ToLower() == Group.CloseTag.ToLower())
                 {
-                    SendCommand(command);
-                    break;
+                    ClearGrouping(Group);
+                }
+                else
+                {
+                    foreach (var command in Group.Details)
+                    {
+                        if (act.ToLower() == command.Tag.ToLower())
+                        {
+                            ClearGrouping(Group, command.Tag);
+                            print(command.Tag.ToLower());
+                            SendCommand(command);
+                            break;
+                        }
+                    }
                 }
             }
+
+            ++i;
 
         }
 
@@ -48,10 +63,7 @@ public class DynamicCGAnimator : MonoBehaviour
         var vis = command.Graphic.GetComponent<SpriteRenderer>();
 
         var col = Color.white;
-
-        if (vis.color.a != 0)
-            col.a = 0;
-
+        
         command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
 
     }
@@ -61,13 +73,35 @@ public class DynamicCGAnimator : MonoBehaviour
 
         foreach (var command in Commands)
         {
+            ClearGrouping(command);
+        }
+
+        
+    }
+
+    void ClearGrouping(CGGrouping group)
+    {
+        foreach (var command in group.Details)
+        {
             var col = Color.white;
             col.a = 0;
 
             command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
         }
+    }
 
-        
+    void ClearGrouping(CGGrouping group, string exceptionTag)
+    {
+        foreach (var command in group.Details)
+        {
+            if (command.Tag.ToLower() == exceptionTag.ToLower())
+                continue;
+
+            var col = Color.white;
+            col.a = 0;
+
+            command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+        }
     }
 
 

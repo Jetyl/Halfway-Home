@@ -48,7 +48,7 @@ public class CGDisplay : MonoBehaviour
             return;
         }
 
-        if (eventdata.Tag != ActiveCG.Tag)
+        if (eventdata.Tag.ToLower() != ActiveCG.Tag.ToLower())
         {
             ActiveCG = new CGDetails();
             ActiveCG.Tag = eventdata.Tag;
@@ -115,8 +115,16 @@ public class CGDisplay : MonoBehaviour
 [Serializable]
 public class CGDetails
 {
-    public string Tag;
+    public string Tag = "";
     public GameObject Graphic;
+}
+
+[Serializable]
+public class CGGrouping
+{
+    public string Group = "";
+    public string CloseTag = "Close";
+    public CGDetails[] Details;
 }
 
 
@@ -124,6 +132,7 @@ public class CustomGraphicEvent : DefaultEvent
 {
     public string Tag;
     public string[] Actions;
+    
 
     public CustomGraphicEvent(string tag = "")
     {
@@ -135,6 +144,12 @@ public class CustomGraphicEvent : DefaultEvent
         Tag = tag;
 
         Actions = data.Split(',');
+        
+        for(int i = 0; i < Actions.Length; ++i)
+        {
+            Actions[i] = Actions[i].Trim();
+            
+        }
         
     }
 
