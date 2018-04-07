@@ -46,11 +46,18 @@ EXTERNAL SetValue(name, values)
 //~player_name = "Player"
 //~week = 1
 //play knocking sound effect
-A cheerful knock drags me out of my dreary haze. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
 { 
 	-week == 1:
+		A cheerful knock drags me out of my dreary haze. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
 		What do they want?
 	- week == 2:
+		I wake with a start. # Depression => 25 # Play : Stop_All # Ambience : Stop_All # Background / YourRoom, EyeOpen
+		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
+		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
+		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
+		I guess I've got to get ready to leave now, but I'm not really in a rush.
+		I lay staring at the ceiling, as I've done so many times before, wondering what the next roof over my head will look like.
+		A cheerful knock drags me out of my dreary haze. # SFX : play_sfx_human_knock
 		Must be Max, to take me away from this limbo.
 	- GetValue("FirstRRR"):
 		-> RestartRequired

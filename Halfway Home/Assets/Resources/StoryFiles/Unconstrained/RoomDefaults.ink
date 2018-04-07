@@ -240,7 +240,7 @@ After a brisk walk I reach my destination.
 = Grace
 {shuffle:
 	- I watch as an older {~man|woman} greets the clerk formally and I am impressed by their politeness.
-		<i><color=color_descriptor>The encounter proves educational, <color=color_grace>increasing <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
+		<i><color=color_descriptor>The encounter proves educational, <color=color_grace>increasing <b>Grace</b>faintly<color=color_descriptor>.</i></color> # Grace+
 		-> Store.Expression
 	- ->Store.Expression
 	- ->Store.Expression
@@ -249,7 +249,7 @@ After a brisk walk I reach my destination.
 {shuffle:
 	- I spend a while looking for something and one of the other customers notices and helps me out.
 	We get to talking and I realize afterward that I didn't feel uncomfortable at all. 
-	<i><color=color_descriptor>The experience boosts confidence, <color=color_expression>increasing <b>Expression</b><color=color_descriptor>.</color> # Expression+
+	<i><color=color_descriptor>The experience boosts confidence, <color=color_expression>increasing <b>Expression</b>faintly<color=color_descriptor>.</color> # Expression+
 		-> Store.Awareness 
 	- ->Store.Awareness
 	- ->Store.Awareness
@@ -259,7 +259,7 @@ After a brisk walk I reach my destination.
 	- While I'm gathering my things, a blind man walks in tapping a white cane in front of himself. 
 	I am about to offer help when I notice him confidently pulling items off of the shelves. 
 	I watch him for a minute, moving from aisle to aisle with practiced precision.
-	<i><color=color_descriptor>His self-sufficiency inspires an <color=color_awareness>increase in <b>Awareness</b><color=color_descriptor>.</i></color> # Awareness+
+	<i><color=color_descriptor>His self-sufficiency inspires a <color=color_awareness> faint increase in <b>Awareness</b><color=color_descriptor>.</i></color> # Awareness+
 		-> Store.Fatigue
 	- ->Store.Fatigue
 	- ->Store.Fatigue

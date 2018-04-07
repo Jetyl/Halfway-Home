@@ -59,7 +59,7 @@ The other residents begin to whisper to each other.
 
 === Unpack ===
 The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # Ambience : lpf_ambience_fireplace
-[Max] "Your quarters, sire. I hope you find them to your liking."
+[Max] "Your quarters, your Majesty. I hope you find them to your liking."
 [Max] "Anyhoo, I've got to finish mopping the cafe. Been a bit behind... as usual, really."
 [Max] "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
 I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit
