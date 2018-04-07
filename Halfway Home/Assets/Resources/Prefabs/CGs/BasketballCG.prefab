@@ -462,28 +462,28 @@ MonoBehaviour:
   - Group: Arm
     CloseTag: Close
     Details:
-    - Tag: Ball
+    - Tag: ArmBall
       Graphic: {fileID: 1661518155574444}
-    - Tag: No_Ball
+    - Tag: ArmNoBall
       Graphic: {fileID: 1969467418531464}
   - Group: Timothy
     CloseTag: Close
     Details:
-    - Tag: Look 1
+    - Tag: HeadHappy
       Graphic: {fileID: 1047083174742828}
-    - Tag: Look 2
+    - Tag: HeadCalm
       Graphic: {fileID: 1039273296591122}
-    - Tag: Look 3
+    - Tag: HeadHappyAway
       Graphic: {fileID: 1473224186476586}
-    - Tag: Look 4
+    - Tag: HeadCalmAway
       Graphic: {fileID: 1267092069522966}
-    - Tag: Look 5
+    - Tag: NervousAway
       Graphic: {fileID: 1297794666191054}
-    - Tag: Look 6
+    - Tag: HeadVeryNervousAway
       Graphic: {fileID: 1797914109987850}
-    - Tag: Look 7
+    - Tag: HeadVeryNervous
       Graphic: {fileID: 1210506875424288}
-    - Tag: Up
+    - Tag: HeadUp
       Graphic: {fileID: 1900831022970288}
 --- !u!114 &114576778572632614
 MonoBehaviour:
