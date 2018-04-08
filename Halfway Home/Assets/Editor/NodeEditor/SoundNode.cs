@@ -40,6 +40,9 @@ public class SoundNode : BaseNode
         //Remove = (bool)data["stop"];
         //
         TypeID = NodeTypes.SoundNode;
+        
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
 
         SoundFile = (string)data["Sound"];
         Layer = (AudioManager.AudioEvent.SoundType)(int)data["Layer"];
