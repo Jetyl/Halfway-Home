@@ -70,7 +70,7 @@ I leave to head to the cafe, where Max said they would be. It's not hard to find
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
 What? They're joking, right? I just got here... There's no way I lost a whole week. # play : lpf_music_cafejazz
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # Ambience : play_ambience_fireplace
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
 But they're gone...
 A chill runs down my spine. What's going on?
@@ -100,7 +100,7 @@ No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
 My body rises from my seat and stumbles toward my bedroom. # Max = Exit
 All sound seems to fall away as my hand pulls open the door.
-Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
+Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo # Ambience : stop_ambience_all
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me. # Ambience : play_sfx_ambient_heartbeat
@@ -152,12 +152,12 @@ On instinct, I rush into the...
 I take a few steps before I notice that the tile floor makes no sound.
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
-A formless shadow gazes into me from the reflective surface.
+A formless shadow gazes into me from the reflective surface. # Ambience : stop_ambience_all
 [Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen # Ambience : Stop_All
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_with_fade_and_fireplace # Background / YourRoom, EyeOpen
 The whispers fade into the chitter of birdsong.
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

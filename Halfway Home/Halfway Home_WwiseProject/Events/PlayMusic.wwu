@@ -696,6 +696,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{EB3FAD2B-89E5-49F9-B0A3-55B22276E0A8}" ShortID="554326343">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Volume" Type="Real64" Value="-6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Folder Name="intro_ambiences" ID="{C7833C74-3E84-4867-A34B-6326FE6DD249}" ShortID="269462963">
@@ -731,6 +742,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{73BBC9A5-24F9-4306-B4EA-5A8BD9AE99F7}" ShortID="669674481">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="27"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -788,6 +809,106 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="stop_ambience_all" ID="{35222556-C09F-4F2B-8799-96863F957830}">
+							<ChildrenList>
+								<Action Name="" ID="{B48936C5-CD09-4335-9E14-D5AF052A3D74}" ShortID="268863792">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_birds" ID="{18174A1E-8ABF-4BBF-81C5-A5E304D3E973}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2CC54125-E725-4298-AB72-0BB10090DC7A}" ShortID="352320828">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_fireplace_with_lpf" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}">
+							<ChildrenList>
+								<Action Name="" ID="{F4196D59-DE41-4F73-B5A8-33505B45EAE5}" ShortID="96701807">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A2E8484F-CB59-4288-B642-382BD82EF50F}" ShortID="311818583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="16"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1AC9CA9A-631C-4DF8-B253-27B72AA2FC4D}" ShortID="983978979">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Highpass" Type="int16" Value="41"/>
+										<Property Name="Lowpass" Type="int16" Value="36"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7A139282-B5F8-4919-B01A-BF7AB3C75B37}" ShortID="306167156">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lpfOff_ambience_fireplace" ID="{59E16B23-E1A6-4B8D-B006-47F6BDD28DA4}">
+							<ChildrenList>
+								<Action Name="" ID="{021C3039-5107-4C2F-885A-CB8FF6ADB5D7}" ShortID="1062972741">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Highpass" Type="int16" Value="41"/>
+										<Property Name="Lowpass" Type="int16" Value="36"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AE661898-7D82-432A-B7B4-4C371FE054B8}" ShortID="63708024">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="27"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="music_cafejazz" ID="{1FEB3445-B71A-413B-9BD9-25172DD1922B}" ShortID="149184749">
@@ -827,6 +948,76 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_cafejazz" ID="{DFBA01E7-4192-467F-BC4E-52B55134C81A}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_music_cafejazz_02" ID="{A71D9B5B-70EE-4F13-B4A4-B7C66C40D196}">
+							<ChildrenList>
+								<Action Name="" ID="{7F7BAA5C-7F6A-422C-830A-72368C574853}" ShortID="172390264">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_mainmenu" ID="{436502EC-69ED-45DE-A3AF-5439E92887F8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C5D2ADA2-74EF-4D0B-ABC6-E537D1C89B28}" ShortID="917104689">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="27"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_cafejazz" ID="{DFBA01E7-4192-467F-BC4E-52B55134C81A}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CC4A0085-4A8C-4492-BD07-E8C9E90A5A4B}" ShortID="428434993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_cafejazz" ID="{FF3E8379-A1EA-4057-967F-26A9D6287B67}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{744A3D20-67EC-47D0-9634-7B19DB7E5928}" ShortID="194602460">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C31B7978-54A7-4335-8E66-D9DF6B923CE0}" ShortID="513507065">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Highpass" Type="int16" Value="41"/>
+										<Property Name="Lowpass" Type="int16" Value="36"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B22A338E-5719-4D72-B50B-33B6301B9362}" ShortID="345652201">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="16"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -883,6 +1074,113 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="music_happy" ID="{C5BC4057-C857-4050-B2F0-EA3450711E80}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_music_placeholder_main_with_fade" ID="{D0DE123E-A02B-45FE-8245-30C7E0780649}">
+					<ChildrenList>
+						<Action Name="" ID="{6A53F56C-FD61-4EB4-BCE3-157DDBAB343B}" ShortID="320429021">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{29DAB7E9-13CD-442A-8467-3BA5DE2858F1}" ShortID="757793707">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder" ID="{93556F48-2D81-4D87-BF4A-B65FB9E723DA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C438CAC-ACE2-4EAE-ACF7-002AE2ECAC1F}" ShortID="438315970">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+								<Property Name="FadeTime" Type="Real64" Value="8"/>
+								<Property Name="Volume" Type="Real64" Value="-6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_music_placeholder_main_with_fade_and_fireplace" ID="{152AD1D3-B4FE-4BE5-8E5E-781F322D4079}">
+					<ChildrenList>
+						<Action Name="" ID="{85333C31-7D12-4C11-B6C7-40ADD577D903}" ShortID="936390812">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{00158727-4D44-49D0-B1F1-A1689AD631E5}" ShortID="74320794">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder" ID="{93556F48-2D81-4D87-BF4A-B65FB9E723DA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E05D56D-0B73-4FB0-B434-847858FAFAE8}" ShortID="867758679">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+								<Property Name="FadeTime" Type="Real64" Value="8"/>
+								<Property Name="Volume" Type="Real64" Value="-6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0E83C2DD-6391-4ABD-8AB7-9D98E4AB0800}" ShortID="1020849300">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{60832FB2-0594-45DC-A6F0-D60C307E517E}" ShortID="232481103">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Highpass" Type="int16" Value="41"/>
+								<Property Name="Lowpass" Type="int16" Value="36"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5A6A179E-BC36-4702-A954-8CE9E3B82939}" ShortID="12070644">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

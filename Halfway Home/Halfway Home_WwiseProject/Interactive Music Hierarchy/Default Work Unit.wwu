@@ -182,7 +182,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -442,7 +442,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -457,7 +457,7 @@
 							<ChildrenList>
 								<MusicSegment Name="music_creepyatmo" ID="{7292487D-CE46-4126-BDAC-AFB5657187EF}" ShortID="199775927">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="102539.319727891"/>
+										<Property Name="EndPosition" Type="Real64" Value="121000"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -509,7 +509,7 @@
 										<MusicCue Name="Exit Cue" ID="{5A15B714-128D-472E-9B91-ABFF8839FF27}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												<Property Name="TimeMs" Type="Real64" Value="96000"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -1621,7 +1621,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1727,13 +1727,6 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="music_creepyatmo2" ID="{80226DF0-FF8A-4BE4-BB2F-C3828968731D}" ShortID="610639533">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>

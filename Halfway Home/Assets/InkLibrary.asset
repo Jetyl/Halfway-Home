@@ -61,14 +61,8 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 514b3e5aecee5274b95d76ab4a7fc1c9, type: 3}
     jsonAsset: {fileID: 4900000, guid: ddc7527685ce6e8498fb3ed118b397e9, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 671af8253db180641b63402a430e624a, type: 3}
-    jsonAsset: {fileID: 0}
-  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: d7258b430da5e174492cd5d1721112a4, type: 3}
     jsonAsset: {fileID: 4900000, guid: eede21032990857488f62e3c68a6f360, type: 3}
-  - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: b86d0f44bf7ae6a4a83728e293fe25e4, type: 3}
-    jsonAsset: {fileID: 4900000, guid: 5c1af7eb0a352e842b0c5917c94273b6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: a99c661a63430ff45bfd5aee0e7aeef9, type: 3}
     jsonAsset: {fileID: 4900000, guid: 7fe9dc8b053f14b499b3b960d16f8ae6, type: 3}
