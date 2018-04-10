@@ -44,13 +44,14 @@ EXTERNAL CallSleep()
 }
 
 ===MailCall===
-You walk into the commons, and run into max.
+I walk past the commons area, seeing a decent gathering of people. #Charlotte = calm, right #Trissa = calm, right, #Eduardo = calm, left #Isaac = calm, left
+You walk into the commons, and run into max. #Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = calm
 They have the mail for the residence, and gives it out ot everybody.
 comedy and hijinks insue.
 Timothy gets one letter, and looks sad.
 {
-	-grace > 2:
-		because of your excellence grace, you notice that timothy looks sad, and slings away from the conversation
+	-week > 1:
+		because of you know the future, and Timothy's future breakdown, you can choose to follow timothy as he slings away from the conversation
 		Do you follow him?
 		+[Follow Timothy]
 			->ClosedWound
