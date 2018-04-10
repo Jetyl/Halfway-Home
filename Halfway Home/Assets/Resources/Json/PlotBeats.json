@@ -224,6 +224,10 @@
    },
    {
     "Name" : "CompletedCourtside",
+    "Type" : 2
+   },
+   {
+    "Name" : "CompletedPassion",
     "Type" : 1
    }
   ]
