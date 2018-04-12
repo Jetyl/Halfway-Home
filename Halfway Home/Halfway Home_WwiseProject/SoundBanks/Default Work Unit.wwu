@@ -27,6 +27,7 @@
 						<ObjectRef Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension" ID="{635B0651-40CB-4826-8EFB-A84713ACCAD8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_music_placeholder_main_fadein" ID="{CCB4ADE7-C8AA-4A59-8E1E-3A7C32DAF259}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="lpf1k_music_mainmenu" ID="{27156CCC-91EF-4AE6-9B75-30460BACAB21}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
@@ -38,6 +39,7 @@
 						<ObjectRef Name="play_music_creepy_atmo_02" ID="{6F113FA0-8EAD-4C93-8709-E1719973E777}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_04" ID="{9FFE4AA6-D0A8-4CBD-9F48-20C8BBB1C4B3}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_cafejazz" ID="{D77CE261-2488-4CD7-AF6D-D446908A628F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_happy_nointro" ID="{CA96AF14-A4CF-4CEA-9DCE-267267D4749E}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_ambient_heartbeat" ID="{9407B261-F4FE-4D58-B5CB-380BCA2D2B81}" WorkUnitID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_stem_05" ID="{FAEB6A03-988E-4D71-8146-4911E2F29E32}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
