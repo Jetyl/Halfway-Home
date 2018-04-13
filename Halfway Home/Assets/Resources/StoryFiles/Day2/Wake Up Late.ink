@@ -26,11 +26,11 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-[Max] "Are y'all still asleep in there?" //knock noise
+[Max] "Are y'all still asleep in there?" //knock noise # Play : Play_music_placeholder_main_fadein
 uuuugh.... #Background / YourRoom, eyeopen
-Max, (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
+Max—and I know its Max—is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "!" #Max = Surprised
-"{player_name}... You did just get up?" #Max = Sad
+"{player_name}... Did you just get up?" #Max = Sad
 +[Be Honest]
 	[{player_name}] "yeah..."
 	Max sighs exasperatedly. #Max = Angry
@@ -55,9 +55,9 @@ I look over at his bed, and yep, he is still there, snoozing it up.
 Max instantly switches back to their lax persona as they nudge Timothy awake.
 [Timothy] "H...huh?" #Timothy = Calm
 "Gah! I'm up! I'm up!" #Timothy = Surprised
-[Max] "Ha, I gotcha buddy"
+[Max] "Ha, I gotcha buddy."
 [Timothy] "I am so sorry Max! I promise, I'll never sleep in like this again!"
 [Max] "Its fine, guy."
-Max then directs Timothy for his first real, full day here. #All = exit
-And, on that note, I should probably head out now, before Max remembers I too slept in way late.
+Max then directs Timothy for his first actual full day here. #All = exit
+And, on that note, I should probably head out now, before Max remembers I also slept in way late.
 -> END

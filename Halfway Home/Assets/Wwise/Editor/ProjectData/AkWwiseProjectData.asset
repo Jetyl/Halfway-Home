@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: -1838600482
-    m_lastTimePart2: -1999268201
+    m_lastTimePsrt1: 319096455
+    m_lastTimePart2: -1999266373
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -106,8 +106,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 547309689
-    m_lastTimePart2: -1999266204
+    m_lastTimePsrt1: -816198035
+    m_lastTimePart2: -1999265729
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -157,6 +157,18 @@ MonoBehaviour:
       ID: -924484113
       Guid: 9fc79684f3b6c4409151c1286b3a04ef
       maxAttenuation: 0
+    - Name: lpfOff_ambience_fireplace
+      Path: PlayMusic\intro_ambiences\lpfOff_ambience_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: lpfOff_ambience_fireplace
+        ObjectType: 3
+      ID: 1029258403
+      Guid: 236be159a6e18d4bb00647f6bdd28da4
+      maxAttenuation: 0
     - Name: lpfOff_music_mainmenu
       Path: PlayMusic\music_mainmenu\lpfOff_music_mainmenu
       PathAndIcons:
@@ -193,6 +205,18 @@ MonoBehaviour:
       ID: -1364989386
       Guid: dd2125434c2c264897b057b5c816a8f4
       maxAttenuation: 0
+    - Name: play_ambience_fireplace_with_lpf
+      Path: PlayMusic\intro_ambiences\play_ambience_fireplace_with_lpf
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_with_lpf
+        ObjectType: 3
+      ID: -310455222
+      Guid: 14ef77cc95f92d46bafba30806d20fbc
+      maxAttenuation: 0
     - Name: play_music_bardman
       Path: PlayMusic\play_music_bardman
       PathAndIcons:
@@ -214,6 +238,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 240662438
       Guid: 61e27cd78824d74caf6dd446908a628f
+      maxAttenuation: 0
+    - Name: play_music_cafejazz_02
+      Path: PlayMusic\music_cafejazz\play_music_cafejazz_02
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_cafejazz
+        ObjectType: 4
+      - ElementName: play_music_cafejazz_02
+        ObjectType: 3
+      ID: -1489365513
+      Guid: 5b9b1da7ee70134fb4a4b7c66c40d196
       maxAttenuation: 0
     - Name: play_music_caysonstylesample
       Path: PlayMusic\play_music_caysonstylesample
@@ -286,6 +322,26 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1259498987
       Guid: 1ff5051dcc019a469152b15e852d3c87
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_with_fade
+      Path: PlayMusic\Play_music_placeholder_main_with_fade
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_with_fade
+        ObjectType: 3
+      ID: 829505847
+      Guid: 3e12ded02ba0fe45824530c7e0780649
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_with_fade_and_fireplace
+      Path: PlayMusic\Play_music_placeholder_main_with_fade_and_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_with_fade_and_fireplace
+        ObjectType: 3
+      ID: 222627597
+      Guid: d3d12a15feb4e54b8e5e781f322d4079
       maxAttenuation: 0
     - Name: play_music_tension
       Path: PlayMusic\music_tension\play_music_tension
@@ -417,6 +473,18 @@ MonoBehaviour:
       ID: 452547817
       Guid: 112021dd1518b24197dcbbbf570d32e5
       maxAttenuation: 0
+    - Name: stop_ambience_all
+      Path: PlayMusic\intro_ambiences\stop_ambience_all
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: stop_ambience_all
+        ObjectType: 3
+      ID: 1720799084
+      Guid: 562522359fc02b4f879996863f957830
+      maxAttenuation: 0
     - Name: stop_music_fakeit
       Path: PlayMusic\stop_music_fakeit
       PathAndIcons:
@@ -538,8 +606,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 547450062
-    m_lastTimePart2: -1999266204
+    m_lastTimePsrt1: -816147927
+    m_lastTimePart2: -1999265729
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank

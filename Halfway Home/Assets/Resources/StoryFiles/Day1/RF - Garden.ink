@@ -27,7 +27,7 @@ EXTERNAL GetStringValue(value)
 -> GardenFunction
 
 === GardenFunction ===
-[{player_name}] "Here's the garden grounds." #Timothy = Calm
+[{player_name}] "Here's the garden grounds." #Timothy = Calm # Play : Play_music_placeholder_main_fadein
 [Timothy] "Oh!" #Timothy = Happy
 [{player_name}]"The garden is a great place to meditate, among other things."
 "I think there's a gardening club or something that meets out here sometimes."

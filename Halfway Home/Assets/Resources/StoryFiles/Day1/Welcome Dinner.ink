@@ -25,7 +25,7 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner.
+I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner. # Play : Play_music_placeholder_main_fadein
 The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
 It's supposed to be a big bonding moment. Or something like that.
 I actually barely remember my own welcome dinner. I think there were beans? That's about all I got.
@@ -43,7 +43,7 @@ I decide to...
 I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table.
 I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy, Stage_Right, Left # Timothy = Happy, Right
 [Timothy] "Hi, {player_name}."
-[Trissa] "Come to see the man of hour, huh?"
+[Trissa] "Come to see the man of the hour, huh?"
 [{player_name}] "Sure did."
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
@@ -124,14 +124,13 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 
 ===Toast===
 [Max] "Can I get everyone's attention!" #Max=Calm
-The whole cafe quites a little, as Max speaks up.
+The whole café quiets a little, as Max speaks up.
 [Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
-[Max] "Now, Some of you have already talked with him, but for those, that haven't, he's dis guy right here."
-[Max] "He just got out Blackwell Hospital, for those who need the context for that,"
-[Jesse] "Thanks, fam!"
-[Max] "And he said he's not really up to this kinda group speaking, which we all can understand."
-[Max] "But we all want to wish him the best of luck"
+[Max] "Now, some of you have already talked with him, but for those that haven't, he's dis guy right here."
+[Max] "He just got out of Blackwell Hospital."
+[Max] "And he said he's not really up to this kind of group speaking, which we all can understand."
+[Max] "But we all want to wish him the best of luck."
 [Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
 Max sits back down near Timothy, and the usual chatter of the room resumes. #Max=Calm
@@ -161,7 +160,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 [Max] "I wanna thank ya for showing Timothy the ropes for me."
 [Max] "I'm real sorry about that."
 //make a choice here maybe?
-[{player_name}] "No problem"
+[{player_name}] "No problem."
 [{player_name}] "Did you ever find your keys?"
 [Max] "Oh! yeah... I did."
 [Max] "The little sucker fell between the couch cushions in the commons. Must've been loose on my chain or somethin'."
@@ -180,7 +179,7 @@ You have no idea.
 ->TalkingToTimothy
 
 ===TalkingToTimothy===
-[{player_name}] "Hey, Timothy. how's the dinner?"
+[{player_name}] "Hey, Timothy. How's the dinner?"
 [Timothy] "It's nice. Uh, sorry again for taking the other bed. I'm sure you were enjoying the extra space."
 {
 		-awareness > 1: 

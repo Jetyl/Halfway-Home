@@ -83,14 +83,14 @@ Eh, its only for one week.
 ->Sleep
 
 === Sleep ===
-[Timothy] "Good night {player_name}"
-[{player_name}] "Good night Timothy"
+[Timothy] "Good night, {player_name}."
+[{player_name}] "Good night, Timothy."
 {
 	- expression >= 1:
 		"It was nice meeting you."
 }
-I start to drift off from there. My thoughts slow and hazy. #Background / Dream , eyeclose
-My dreams, if I had any, escape my memory, and the next thing I know the suns in my eyes. {CallSleep()} #sleep%12
+I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose
+My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%12
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.

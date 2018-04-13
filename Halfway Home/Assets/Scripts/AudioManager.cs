@@ -55,8 +55,10 @@ public class AudioManager : MonoBehaviour
         e.FileName != "play_music_tension_intro_03" &&
         e.FileName != "play_music_tension_intro_04" &&
         e.FileName != "play_ambience_birds" &&
+        e.FileName != "play_ambience_fireplace" &&
         e.FileName != "lpf_ambience_fireplace" &&
-        e.FileName != "lpf_music_cafejazz")
+        e.FileName != "play_music_cafe_jazz_02"
+       )
     {
         AkSoundEngine.PostEvent("Stop_All", e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
     }
