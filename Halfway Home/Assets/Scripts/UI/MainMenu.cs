@@ -22,15 +22,33 @@ public class MainMenu : MonoBehaviour
 
     public GameObject FadeScreeen;
 
-	// Use this for initialization
-	void Start ()
+    public StatBasedSpriteChanger FlowerA;
+    public StatBasedSpriteChanger FlowerG;
+    public StatBasedSpriteChanger FlowerE;
+
+  // Use this for initialization
+  void Start ()
     {
         SaveLoad.Load();
-
-        if (SaveLoad.GetSave(0) == null) //if a save exists, set that to the main game
+        
+        //if a save exists, set that to the main game
+        if (SaveLoad.GetSave(0) == null)
+        {
             ContinueButton.interactable = false;
+            FlowerA.SetState(0);
+            FlowerG.SetState(0);
+            FlowerE.SetState(0);
+        }
+        else
+        {
+            // JESSE PLS FIX
+            //FlowerA.SetState(Game.current.Progress.GetIntValue("Awareness"));
+            //FlowerG.SetState(Game.current.Progress.GetIntValue("Grace"));
+            //FlowerE.SetState(Game.current.Progress.GetIntValue("Expression"));
+        }
 
-        ConfirmationPanel.SetActive(false);
+
+    ConfirmationPanel.SetActive(false);
         ClearSavePanel.SetActive(false);
 
     }

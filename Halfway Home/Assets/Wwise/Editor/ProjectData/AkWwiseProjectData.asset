@@ -106,8 +106,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 946755339
-    m_lastTimePart2: -1999265206
+    m_lastTimePsrt1: 379940102
+    m_lastTimePart2: -1999265520
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -626,8 +626,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 946861966
-    m_lastTimePart2: -1999265206
+    m_lastTimePsrt1: 380070449
+    m_lastTimePart2: -1999265520
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
