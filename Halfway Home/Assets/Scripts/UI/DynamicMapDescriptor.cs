@@ -127,17 +127,21 @@ public class DynamicMapDescriptor : MonoBehaviour
         }
         else if (!e.Open)
         {
-          type = MapTooltipDescriptorType.Special1;
+          if (Game.current.Day == 7) type = MapTooltipDescriptorType.Special2;
+          else
+          {
+            type = MapTooltipDescriptorType.Special1;
 
-          var nextTime = e.AccessRules.LimitedAccessNextAvailableTime;
-          string t = "";
-          if (nextTime == 0) t = "12pm";
-          else if (nextTime > 12) t = (nextTime - 12).ToString() + "pm";
-          else t = nextTime.ToString() + "am";
+            var nextTime = e.AccessRules.LimitedAccessNextAvailableTime;
+            string t = "";
+            if (nextTime == 0) t = "12pm";
+            else if (nextTime > 12) t = (nextTime - 12).ToString() + "pm";
+            else t = nextTime.ToString() + "am";
 
-          string final = FindDescriptor(Room.Kitchen, type);
-          Trace.Script(t);
-          EffectText.text = final.Replace("replace", t);
+            string final = FindDescriptor(Room.Kitchen, type);
+            Trace.Script(t);
+            EffectText.text = final.Replace("replace", t);
+          }
         }
         else
         {

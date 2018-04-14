@@ -106,8 +106,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -816198035
-    m_lastTimePart2: -1999265729
+    m_lastTimePsrt1: 379940102
+    m_lastTimePart2: -1999265520
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -301,6 +301,16 @@ MonoBehaviour:
       ID: 1020080944
       Guid: 48c78ac111e7c84fbe2309d0afeb3655
       maxAttenuation: 0
+    - Name: play_music_happy_nointro
+      Path: PlayMusic\play_music_happy_nointro
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_happy_nointro
+        ObjectType: 3
+      ID: -2138575148
+      Guid: 14af96cacfa4ea4c9dce267267d4749e
+      maxAttenuation: 0
     - Name: play_music_mainmenu
       Path: PlayMusic\music_mainmenu\play_music_mainmenu
       PathAndIcons:
@@ -322,6 +332,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1259498987
       Guid: 1ff5051dcc019a469152b15e852d3c87
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_fadein
+      Path: PlayMusic\Play_music_placeholder_main_fadein
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_fadein
+        ObjectType: 3
+      ID: -353786287
+      Guid: e7adb4ccaac8594a8e1e3a7c32daf259
       maxAttenuation: 0
     - Name: Play_music_placeholder_main_with_fade
       Path: PlayMusic\Play_music_placeholder_main_with_fade
@@ -606,8 +626,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -816147927
-    m_lastTimePart2: -1999265729
+    m_lastTimePsrt1: 380070449
+    m_lastTimePart2: -1999265520
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
