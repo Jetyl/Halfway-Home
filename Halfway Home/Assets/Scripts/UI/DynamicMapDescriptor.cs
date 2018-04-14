@@ -37,6 +37,7 @@ public class DynamicMapDescriptor : MonoBehaviour
   {
     public string name;
     public MapTooltipDescriptorType DescriptorType;
+        public ProgressPoint Condition;
     public string DescriptorText;
   }
 
@@ -45,12 +46,29 @@ public class DynamicMapDescriptor : MonoBehaviour
   {
     public string name;
     public Room Room;
+        public DescriptorCondition DefaultCondition;
     public List<DescriptorCondition> Conditions;
-  }
+
+        public DescriptorCondition GetText()
+        {
+            foreach(var point in Conditions)
+            {
+                if(Game.current.Progress.CheckProgress(point.Condition))
+                {
+                    return point;
+                }
+            }
+
+            return DefaultCondition;
+        }
+
+    }
 
   public TextMeshProUGUI RoomText;
   public TextMeshProUGUI EffectText;
   public List<RoomDescriptor> Descriptors;
+
+
 
 	void Start ()
   {
@@ -59,8 +77,46 @@ public class DynamicMapDescriptor : MonoBehaviour
 
   void OnHoverOverRoomEvent(HoverOverRoomEvent e)
   {
-    Trace.Script("Tutorial = " + Game.current.Progress.GetBoolValue("Tutorial"));
+    //Trace.Script("Tutorial = " + Game.current.Progress.GetBoolValue("Tutorial"));
     MapTooltipDescriptorType type = MapTooltipDescriptorType.Default;
+
+        //switch (e.Place)
+        //{
+        //    case Room.ArtRoom:
+        //        
+        //        break;
+        //    case Room.CharlottesRoom:
+        //        
+        //        break;
+        //    case Room.Commons:
+        //       
+        //        break;
+        //    case Room.EduardosRoom:
+        //        
+        //        break;
+        //    case Room.Garden:
+        //        
+        //        break;
+        //    case Room.Kitchen:
+        //        
+        //        break;
+        //    case Room.Library:
+        //        
+        //        break;
+        //    case Room.Store:
+        //        
+        //        break;
+        //    case Room.YourRoom:
+        //        
+        //        break;
+        //    default:
+        //
+        //        break;
+        //}
+        //
+        //RoomText.text = GetRoomName(e.Place);
+        //EffectText.text = GetDescriptor(e.Place);
+
     switch (e.Place)
     {
       case Room.ArtRoom:
@@ -182,9 +238,32 @@ public class DynamicMapDescriptor : MonoBehaviour
   {
     return Descriptors.Find(index => index.Room == r).Conditions.Find(ind => ind.DescriptorType == t).DescriptorText;
   }
-	
-	// Update is called once per frame
-	void Update ()
+
+    string GetDescriptor(Room r)
+    {
+        foreach(var rooms in Descriptors)
+        {
+            if (rooms.Room == r)
+                return rooms.GetText().DescriptorText;
+        }
+
+        return "";
+    }
+
+    string GetRoomName(Room r)
+    {
+        foreach (var rooms in Descriptors)
+        {
+            if (rooms.Room == r)
+                return rooms.name;
+        }
+
+        return "";
+    }
+
+
+    // Update is called once per frame
+    void Update ()
   {
 		
 	}
