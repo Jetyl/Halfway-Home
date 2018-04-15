@@ -18,7 +18,7 @@ public class StatBasedSpriteChanger : MonoBehaviour
   // Use this for initialization
   void Start ()
   {
-    currentImage = GetComponent<Image>();
+        currentImage = GetComponent<Image>();
 	}
 	
 	// Update is called once per frame
@@ -29,12 +29,23 @@ public class StatBasedSpriteChanger : MonoBehaviour
 
   public void SetState(int tier)
   {
-    if (tier == 0 && Zero != null) currentImage.sprite = Zero;
-    else if (tier == 0) currentImage.CrossFadeAlpha(0, 0, true);
-    else if (tier == 1 && One != null) currentImage.sprite = One;
-    else if (tier == 2 && Two != null) currentImage.sprite = Two;
-    else if (tier == 3 && Three != null) currentImage.sprite = Three;
-    else if (tier == 4 && Four != null) currentImage.sprite = Four;
-    else if (tier == 5 && Five != null) currentImage.sprite = Five;
+        Start();
+
+        currentImage.color = Color.white;
+
+        if (tier == 0 && Zero != null)
+            currentImage.sprite = Zero;
+        else if (tier == 0)
+            currentImage.color = Color.clear;
+        else if (tier == 1 && One != null)
+            currentImage.sprite = One;
+        else if (tier == 2 && Two != null)
+            currentImage.sprite = Two;
+        else if (tier == 3 && Three != null)
+            currentImage.sprite = Three;
+        else if (tier == 4 && Four != null)
+            currentImage.sprite = Four;
+        else if (tier == 5 && Five != null)
+            currentImage.sprite = Five;
   }
 }

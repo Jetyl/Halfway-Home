@@ -22,6 +22,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     public Animator NextLine;
 
+    public SpriteSwapper AutoButton;
+
     public float AutoTimeDelay = 2;
 
     public bool DebugSkipping;
@@ -140,6 +142,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         Auto = !Auto;
         AutoTimer = AutoTimeDelay;
+        AutoButton.Swap();
     }
 
     public void ToggleSkip()

@@ -41,10 +41,10 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            // JESSE PLS FIX
-            //FlowerA.SetState(Game.current.Progress.GetIntValue("Awareness"));
-            //FlowerG.SetState(Game.current.Progress.GetIntValue("Grace"));
-            //FlowerE.SetState(Game.current.Progress.GetIntValue("Expression"));
+            // JESSE PLS FIX //Done
+            FlowerA.SetState(GetStateLevel(Personality.Social.Awareness));
+            FlowerG.SetState(GetStateLevel(Personality.Social.Grace));
+            FlowerE.SetState(GetStateLevel(Personality.Social.Expression));
         }
 
 
@@ -107,6 +107,19 @@ public class MainMenu : MonoBehaviour
         
         SceneManager.LoadScene(MainLevel);
 
+    }
+
+    public int GetStateLevel(Personality.Social stat)
+    {
+        int level = 0;
+        for(int i = 0; i < SaveLoad.GetSize(); ++i)
+        {
+            int lv = SaveLoad.GetSave(i).Self.GetTrueSocialStat(stat);
+            if (lv > level)
+                level = lv;
+        }
+
+        return level;
     }
 
     public void ConfirmQuit()
