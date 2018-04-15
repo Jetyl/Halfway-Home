@@ -34,7 +34,7 @@ EXTERNAL GetValue(value)
 [{player_name}] "Anyway, this is sort of a big hub area."
 "The front desk is nearby, so if you need anything there or are expecting any packages, there's where you go."
 "The Commons is also obviously a big social area."
-Which is why it stresses me out.
+Which is why it stresses me out. But it does help with my depression.
 [Timothy] "It's pretty empty right now..."
 Huh. Yeah, it is. That's rare.
 The only other person in sight is... #Keyless = Calm
@@ -60,7 +60,7 @@ Timothy seems to be preoccupied watching Max. #Timothy = Calm
 [Timothy] "I hope he finds his keys." #Keyless = Exit
 [{player_name}] "Their keys."
 I instinctively correct Timothy on Max's pronouns and move on, showing Timothy around the Commons area. #Timothy= Surprised
-"If I'm having a bad day, I sometimes come here. Social interaction helps with my uh... <color=A5C5E3FF><i>depression</i></color>, but it can be kinda <color=A5C5E3FF><i>stressful</i></color>." #Timothy=Exit
+"If I'm having a bad day, I sometimes come here. Social interaction helps with my uh... <color=color_wellbeing_relief><i>depression</i></color>, but it can be kinda <color=color_wellbeing_penalty><i>stressful</i></color>." #Timothy=Exit
 "I dunno exactly what your needs are, but the Commons are a good place to go if you want to be around people."
 "Ya got that, Timothy?"
 "Huh?" #Timothy =Afraid
@@ -113,7 +113,7 @@ He nods #Timothy = Calm
 		I hold back a slight chuckle.
 		[{player_name}] "Thanks, I guess?"
 		It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.
-		It does relax me a little, so thats nice. @<color=A5C5E3FF><i>(Stress Reduced!)</i></color> # Stress -= 10
+		It does relax me a little, so thats nice. @<color=color_wellbeing_relief><i>Stress decreased slightly!</i></color> # Stress -= 10
 		[Timothy] "I'm sorry..." #Timothy = Calm
 }
 Leaving that awkward conversation behind us, its time to move on!

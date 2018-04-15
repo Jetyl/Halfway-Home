@@ -34,8 +34,9 @@ EXTERNAL GetStringValue(value)
 [{player_name}] "Yeah... they fit a lotta books into a small space."
 "They have book recomendations, if you find the selection overwhelming."
 "I know I did."
-"This week's recomendation is... <i>Lessons in Grace</i> by Tybalt Lyndel."
+"This week's recomendation is... <i>Lessons in <color=color_grace>Grace</i></color> by Tybalt Lyndel." # Grace * Show
 Hmm... not sure what that one's about.
+"I haven't really spent much time in here, but I probably should..."
 "But yeah, you want to browse around the selection?"
 [Timothy] "Maybe l-later."
 "Th-thanks though..." #Timothy = Exit
