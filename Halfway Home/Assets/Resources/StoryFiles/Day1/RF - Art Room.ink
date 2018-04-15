@@ -31,9 +31,9 @@ EXTERNAL GetStringValue(value)
 "The home puts up these art therapy sessions you can go for, if thats your jam or whatever."
 "In general it's always open to mess with stuff, if you want."
 [Timothy] "They've got a lot of um.... stuff... in here."
-[{player_name}] "Yeah, they encourage people to get creative and <color=A5C5E3FF><i>express</i></color> themselves."
-I'm not super good at <color=A5C5E3FF><i>expressing</i></color> myself, so it just kind of <color=A5C5E3FF><i>stresses</i></color> me out. 
-It also tends to <color=A5C5E3FF><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
+[{player_name}] "Yeah, they encourage people to get creative and <color=color_expression><i>express</i></color> themselves." # Expression * Show
+I'm not super good at <color=color_expression><i>expressing</i></color> myself, so it just kind of <color=color_wellbeing_penalty><i>stresses</i></color> me out. 
+It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
 "Th-thanks though..." #Timothy = Exit

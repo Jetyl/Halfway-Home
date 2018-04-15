@@ -33,7 +33,7 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds
+This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds # All * Hide
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
@@ -157,7 +157,7 @@ A formless shadow gazes into me from the reflective surface. # Ambience : stop_a
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_with_fade_and_fireplace # Background / YourRoom, EyeOpen
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_with_fade_and_fireplace # Background / YourRoom, EyeOpen # Time * Show
 The whispers fade into the chitter of birdsong.
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

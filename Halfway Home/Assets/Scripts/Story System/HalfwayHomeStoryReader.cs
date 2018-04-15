@@ -92,11 +92,15 @@ namespace HalfwayHome
       // Time Change
       string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
       parser.AddPattern("ChangeTime", changeTime, RegexParser.Target.Tag, RegexParser.Scope.Group, OnChangeTime);
+
+      // UI Toggle
+      string displayUI = RegexParser.Presets.ComposeBinaryOperation("UI", "display", "*");
+      parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
     }
 
     protected override void OnStoryLoaded(Story story)
     {
-            
+       
     }
 
 
@@ -243,6 +247,19 @@ namespace HalfwayHome
         eventStat = Personality.Wellbeing.Fatigue;
 
       Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
+    }
+
+    void OnUIDisplay(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("UI"))
+        {
+          Trace.Script($"{parse.FindFirst("display").Trim().ToLower()} {match["UI"].Trim().ToLower()}");
+          // Send event with element and show/hide state
+          Stratus.Scene.Dispatch<TagToggler.TutorialDisplayChange>(new TagToggler.TutorialDisplayChange(match["UI"].Trim().ToLower(), parse.FindFirst("display").Trim().ToLower() == "hide"));
+        }
+      }
     }
 
     void OnAudioTrigger(Parse parse)

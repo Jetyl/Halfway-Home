@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HideUIDisplay : MonoBehaviour
 {
-
   bool UIOn = true;
   private bool OnMap;
   public GameObject[] IgnoredObjects;
@@ -73,7 +72,7 @@ public class HideUIDisplay : MonoBehaviour
           {
             if(g == obj.gameObject) ignore = true;
           }
-          if (obj.gameObject.activeSelf & obj.enabled && !ignore)
+          if (obj.gameObject.activeSelf && obj.enabled && !ignore)
           {
             obj.enabled = false;
             if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = false;
