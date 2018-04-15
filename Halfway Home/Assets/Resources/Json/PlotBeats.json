@@ -163,6 +163,10 @@
    {
     "Name" : "Manuel Kitchen Turn Off",
     "Type" : 1
+   },
+   {
+    "Name" : "Manuel Kitchen Tooltip",
+    "Type" : 4
    }
   ]
  },
