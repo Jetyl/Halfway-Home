@@ -365,30 +365,39 @@ MonoBehaviour:
     endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 17
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 12
     endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: Been to Garden
+  DynamicTooltip: 
   FatigueCloseLimit: 90
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &14467239
 MonoBehaviour:
@@ -1014,7 +1023,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.15
+  m_fontSize: 42.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1363,6 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speaker: {fileID: 568080877}
   NextLine: {fileID: 2086867357}
+  AutoButton: {fileID: 0}
   AutoTimeDelay: 2
   DebugSkipping: 1
   NoClick: 0
@@ -2866,7 +2876,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9426694
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6089,7 +6099,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -90.55007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6099,7 +6109,7 @@ Prefab:
     - target: {fileID: 224565737960536114, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6119,7 +6129,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -221.6502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6129,7 +6139,7 @@ Prefab:
     - target: {fileID: 224066454510974304, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224286323406134680, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6149,7 +6159,7 @@ Prefab:
     - target: {fileID: 224286323406134680, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -352.75037
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224286323406134680, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6159,7 +6169,7 @@ Prefab:
     - target: {fileID: 224286323406134680, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224267182771367418, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6179,7 +6189,7 @@ Prefab:
     - target: {fileID: 224267182771367418, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -483.8505
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224267182771367418, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6189,7 +6199,7 @@ Prefab:
     - target: {fileID: 224267182771367418, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224383582781024064, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6209,7 +6219,7 @@ Prefab:
     - target: {fileID: 224383582781024064, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -614.9506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224383582781024064, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6219,7 +6229,7 @@ Prefab:
     - target: {fileID: 224383582781024064, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224444618615708870, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6239,7 +6249,7 @@ Prefab:
     - target: {fileID: 224444618615708870, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -66.83679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224444618615708870, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6264,7 +6274,7 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -171.47528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6289,7 +6299,7 @@ Prefab:
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -282.07867
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6299,12 +6309,12 @@ Prefab:
     - target: {fileID: 224775615215781188, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 75.6034
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224167406015942004, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 75.6034
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114667000320042228, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6319,7 +6329,7 @@ Prefab:
     - target: {fileID: 224444618615708870, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 63.673576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1943035749706770, guid: ed9a2b18bdf776741ab96361c8c5b2fc, type: 2}
       propertyPath: m_IsActive
@@ -6383,7 +6393,7 @@ Prefab:
     - target: {fileID: 224849542402732670, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -90.55007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224849542402732670, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6393,7 +6403,7 @@ Prefab:
     - target: {fileID: 224849542402732670, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224882452362280238, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6413,7 +6423,7 @@ Prefab:
     - target: {fileID: 224882452362280238, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -221.6502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224882452362280238, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6423,7 +6433,7 @@ Prefab:
     - target: {fileID: 224882452362280238, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224613576341211986, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6443,7 +6453,7 @@ Prefab:
     - target: {fileID: 224613576341211986, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -352.75037
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224613576341211986, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6453,7 +6463,7 @@ Prefab:
     - target: {fileID: 224613576341211986, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224048434169351892, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6473,7 +6483,7 @@ Prefab:
     - target: {fileID: 224048434169351892, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -483.8505
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224048434169351892, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6483,7 +6493,7 @@ Prefab:
     - target: {fileID: 224048434169351892, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224531060695895590, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6503,7 +6513,7 @@ Prefab:
     - target: {fileID: 224531060695895590, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -614.9506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224531060695895590, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
@@ -6513,7 +6523,7 @@ Prefab:
     - target: {fileID: 224531060695895590, guid: ed9a2b18bdf776741ab96361c8c5b2fc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 81.10014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1925219769184150, guid: ed9a2b18bdf776741ab96361c8c5b2fc, type: 2}
       propertyPath: m_IsActive
@@ -6973,7 +6983,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.05
+  m_fontSize: 57.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7770,208 +7780,190 @@ MonoBehaviour:
   EffectText: {fileID: 1766393366}
   Descriptors:
   - name: Art Room
-    Room: 7
+    Room: 0
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: Show Timothy the Art Room.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: I'll show Timothy the art room after we've eaten.
-    - name: TutorialShown
-      DescriptorType: 2
+    - Conditions: []
       DescriptorText: I already showed Timothy the Art Room.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Create something.
-    - name: Fatigue
-      DescriptorType: 4
+    - Conditions: []
       DescriptorText: I'm too tired to be creative.
   - name: Library
     Room: 6
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: Show Timothy the Library.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: I'll show Timothy the library after we've eaten.
-    - name: TutorialShown
-      DescriptorType: 2
+    - Conditions: []
       DescriptorText: I already showed Timothy the Library.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Study the world, its people, and its myths.
-    - name: Fatigue
-      DescriptorType: 4
+    - Conditions: []
       DescriptorText: Charlotte might get angry at me if I fall asleep with my face
         in a book.
   - name: Commons
     Room: 2
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: Show Timothy the Common Room.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: I'll show Timothy the Common Room after we've eaten.
-    - name: TutorialShown
-      DescriptorType: 2
+    - Conditions: []
       DescriptorText: I already showed Timothy the Common Room.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Ground yourself in the cozy heart of the House.
-    - name: Fatigue
-      DescriptorType: 4
+    - Conditions: []
       DescriptorText: I'm exhausted. No energy to socialize.
-    - name: Stress
-      DescriptorType: 5
+    - Conditions: []
       DescriptorText: I need some time to myself right now.
   - name: Garden
     Room: 5
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: Show Timothy the Garden.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: I'll show Timothy the Garden after we've eaten.
-    - name: TutorialShown
-      DescriptorType: 2
+    - Conditions: []
       DescriptorText: I already showed Timothy the Garden.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Get some fresh air and contemplate your journey.
-    - name: Fatigue
-      DescriptorType: 4
+    - Conditions: []
       DescriptorText: I'd rather not fall asleep on a bench or something.
   - name: Cafe
     Room: 4
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: Show Timothy the Cafeteria.
-    - name: TutorialShown
-      DescriptorType: 2
+    - Conditions: []
       DescriptorText: Best to stay out until the big Welcome Dinner tonight.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Have a meal to keep up my strength.
-    - name: Delay
-      DescriptorType: 6
+    - Conditions: []
       DescriptorText: I'm not hungry. I could probably eat again around replace.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: No point in going back to the cafe right now.
   - name: Store
-    Room: 8
+    Room: 5
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: No way I'm going to the store today.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Take a fleeting trip into the Real World.
-    - name: Fatigue
-      DescriptorType: 4
+    - Conditions: []
       DescriptorText: I'm way too tired to leave the building.
-    - name: Stress
-      DescriptorType: 5
+    - Conditions: []
       DescriptorText: I'm too wound up to even think about leaving.
-    - name: Closed
-      DescriptorType: 6
+    - Conditions: []
       DescriptorText: The store is open from 8am to 7pm Monday through Saturday.
   - name: Charlotte & Trissa's Room
     Room: 9
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: I'd rather not just go door to door with Timothy.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: I am not about to knock on someone's door unannounced.
-    - name: Invited
-      DescriptorType: 5
+    - Conditions: []
       DescriptorText: I've been invited to tea.
   - name: Bedroom
     Room: 1
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: It's been a long day. Time to get some sleep.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: As much as I'd like to go back to bed, I've got to play tour
         guide.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
-    - name: 
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: 
   - name: Bedroom
     Room: 1
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: It's been a long day. Time to get some sleep.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: As much as I'd like to go back to bed, I've got to play tour
         guide.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
-    - name: 
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: 
   - name: Bedroom
     Room: 1
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: It's been a long day. Time to get some sleep.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: As much as I'd like to go back to bed, I've got to play tour
         guide.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
-    - name: 
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: 
   - name: Bedroom
-    Room: 1
+    Room: 10
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: It's been a long day. Time to get some sleep.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: As much as I'd like to go back to bed, I've got to play tour
         guide.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
-    - name: 
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: 
   - name: Bedroom
-    Room: 1
+    Room: 11
+    DefaultCondition:
+      Conditions: []
+      DescriptorText: 
     Conditions:
-    - name: Tutorial
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: It's been a long day. Time to get some sleep.
-    - name: TutorialUnavailable
-      DescriptorType: 1
+    - Conditions: []
       DescriptorText: As much as I'd like to go back to bed, I've got to play tour
         guide.
-    - name: Default
-      DescriptorType: 3
+    - Conditions: []
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
-    - name: 
-      DescriptorType: 0
+    - Conditions: []
       DescriptorText: 
 --- !u!1 &475564725
 GameObject:
@@ -12681,80 +12673,99 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 2
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 2
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 3
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 3
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 4
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 4
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 5
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 5
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 6
     starttime: 0
     endTime: 7
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 6
     starttime: 19
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: 
+  DynamicTooltip: 
   FatigueCloseLimit: 75
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 50
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &780683387
 MonoBehaviour:
@@ -13971,45 +13982,57 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 2
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 3
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 4
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 5
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 6
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: ReadyforTea
+  DynamicTooltip: 
   FatigueCloseLimit: 90
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &874652966
 MonoBehaviour:
@@ -14657,7 +14680,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.15
+  m_fontSize: 42.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15108,30 +15131,39 @@ MonoBehaviour:
     endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: I'm hungry. I should go to the Cafe first
   - Day: 1
     starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: I just want to go to bed right now...
   - Day: 7
     starttime: 17
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 12
     endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: Been to Library
+  DynamicTooltip: 
   FatigueCloseLimit: 90
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &928670986
 MonoBehaviour:
@@ -15379,40 +15411,51 @@ MonoBehaviour:
     endTime: 11
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 13
     endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 18
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 0
     endTime: 11
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 13
     endTime: 16
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 18
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 1
   AccessPoint: KitchenVisists
   VisitMulitplier: 3
   HourVisited: Hour Kitchen Visited
   DayVisited: Day Kitchen Visisted
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: 
+  DynamicTooltip: 
   FatigueCloseLimit: 100
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &931970216
 MonoBehaviour:
@@ -17420,30 +17463,39 @@ MonoBehaviour:
     endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 17
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 12
     endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: Been to Art
+  DynamicTooltip: 
   FatigueCloseLimit: 90
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &1070638857
 MonoBehaviour:
@@ -23146,35 +23198,45 @@ MonoBehaviour:
     endTime: 12
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 1
     starttime: 17
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 17
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 12
     endTime: 12
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 3
     starttime: 1
     endTime: 7
     ProgressLocked: 1
     ProgressKey: HadLateNightHangout
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: Been to Commons
+  DynamicTooltip: 
   FatigueCloseLimit: 80
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 65
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &1402280990
 MonoBehaviour:
@@ -24011,45 +24073,57 @@ MonoBehaviour:
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 2
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 3
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 4
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 5
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 6
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 0
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: 
+  DynamicTooltip: 
   FatigueCloseLimit: 90
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &1455537608
 MonoBehaviour:
@@ -24432,7 +24506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.01373}
+  m_AnchoredPosition: {x: 0, y: 902.5683}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -24604,25 +24678,33 @@ MonoBehaviour:
     endTime: 17
     ProgressLocked: 1
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 17
     endTime: 17
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   - Day: 7
     starttime: 12
     endTime: 17
     ProgressLocked: 0
     ProgressKey: Tutorial
+    ToolTipInfo: 
   LimitedDailyAccess: 0
   AccessPoint: 
   VisitMulitplier: 0
   HourVisited: 
   DayVisited: 
+  DailyAccessTooltip: 'Come back at #time, to do a thing'
   ManualAccess: 
+  DynamicTooltip: 
   FatigueCloseLimit: 100
+  FatigueCloseTooltip: I'm too tired for this
   StressCloseLimit: 100
-  DelusionCloseLimit: 100
+  StressCloseTooltip: I'm too stressed for this
+  DepressionCloseLimit: 100
+  DepressionCloseTooltip: I'm too tired for this
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &1468191006
 MonoBehaviour:
