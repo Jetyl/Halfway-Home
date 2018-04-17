@@ -3813,8 +3813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c51307a14eed442bec7894c6e92141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConfirmationPanel: {fileID: 890026187}
-  ClearPanel: {fileID: 0}
+  ConfirmationPanel: {fileID: 498120686}
+  ClearPanel: {fileID: 339510911}
   mousePosition: 0
   gameObjectID: {fileID: 1547697618}
 --- !u!1 &1600328220

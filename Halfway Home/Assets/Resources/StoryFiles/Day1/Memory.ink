@@ -121,24 +121,7 @@ Behind me, the friendly hallways of Sunflower House have dissolved into the sick
 I sprint headlong down the sterile hallway. I can feel the darkness closing in behind me. # SFX : play_sfx_human_footsteps_approaching
 <speed=40>It wants to trap me. I can't let that happen. I have to get out!
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
-I am forced to stop and look for another route.
-To my left, a set of stairs winds upwards into darkness. To my right stretches a dimly lit hallway.
-I need to choose now!
-+[Stairs]
-	I decide that higher ground is more important and race up the stairs. # SFX : play_sfx_human_footsteps_approaching
-	->Stairs
-+[Hallway]
-	The stairs would only slow me down. I race down the hallway. # SFX : play_sfx_human_footsteps_approaching
-	->Hallway
-
-=== Stairs ===
-My pace slows as I climb. I can hear the whispers getting louder.
-[Voices] "You cannot escape this." # SFX : play_sfx_human_ghostwhisper
-The stairs open into a dark hallway. In the distance I can see a faint electric glow.
-
--> Bathroom
-
-=== Hallway ===
+I dive into a corridor that extends into darkness to my left.
 The corridor seems to go on forever. I don't know how much longer I can keep this up.
 [Voices] "This is pointless." # SFX : play_sfx_human_ghostwhisper
 In the distance, I notice something new: a faint electric glow.
@@ -147,7 +130,6 @@ In the distance, I notice something new: a faint electric glow.
 === Bathroom ===
 [Voices] "You will fail." # SFX : play_sfx_human_ghostwhisper
 As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
-Ahead of me the hallway darkens to the point of pitch blackness. No luck that way.
 I head down the bathroom corridor. Three marked entrances open before me.
 On instinct, I rush into the...
 *[Men's Restroom] 
@@ -157,7 +139,6 @@ On instinct, I rush into the...
 *[All-Gender Restroom] 
 	~SetPlayerGender("N")
 - The bathroom is clean and well-lit, but so cold that I can see my breath fogging the air in front of me.
-I take a few steps before I notice that the tile floor makes no sound.
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface. # Ambience : stop_ambience_all
@@ -170,7 +151,6 @@ The whispers fade into the chitter of birdsong.
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.
-I lay awake, concentrating on the tingling warmth of the ribbon of sunlight on my shoulder and cheek.
-My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
+I lay awake. My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
 // This is the beginning of KNOCK »
 -> END
