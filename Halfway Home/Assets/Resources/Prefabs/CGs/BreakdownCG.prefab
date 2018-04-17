@@ -9,195 +9,153 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1084522956037128}
+  m_RootGameObject: {fileID: 1454680618709400}
   m_IsPrefabParent: 1
---- !u!1 &1084522956037128
+--- !u!1 &1454680618709400
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4233352954010880}
-  - component: {fileID: 114820324330857468}
-  - component: {fileID: 114250963820312670}
+  - component: {fileID: 4659265377378306}
+  - component: {fileID: 114946860140199222}
   m_Layer: 0
-  m_Name: Timothy
+  m_Name: BreakdownCG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1352173644047890
+--- !u!1 &1654659777931688
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4505666462390732}
-  - component: {fileID: 212937683764110152}
-  - component: {fileID: 114519777961192366}
+  - component: {fileID: 4569540001545352}
+  - component: {fileID: 212436505787416250}
+  - component: {fileID: 114453541420719810}
   m_Layer: 0
-  m_Name: Character Sprite
+  m_Name: FrontCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1616756262647528
+--- !u!1 &1917093034332336
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4827448283679742}
-  - component: {fileID: 212646563533514692}
-  - component: {fileID: 114861325213738950}
+  - component: {fileID: 4088132700150090}
+  - component: {fileID: 212536122563856634}
+  - component: {fileID: 114385439675489544}
   m_Layer: 0
-  m_Name: Character Switch Sprite
+  m_Name: BackCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4233352954010880
+--- !u!4 &4088132700150090
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1084522956037128}
+  m_GameObject: {fileID: 1917093034332336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4659265377378306}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4569540001545352
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654659777931688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4659265377378306}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4659265377378306
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454680618709400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4505666462390732}
-  - {fileID: 4827448283679742}
+  - {fileID: 4569540001545352}
+  - {fileID: 4088132700150090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4505666462390732
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352173644047890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3, z: 0}
-  m_LocalScale: {x: 0.43, y: 0.43, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4233352954010880}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4827448283679742
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616756262647528}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3, z: 0}
-  m_LocalScale: {x: 0.42999998, y: 0.42999998, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4233352954010880}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114250963820312670
+--- !u!114 &114385439675489544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1084522956037128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288af69128d17934d869f46663053a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speaker:
-    Character: Timothy
-    Actor: {fileID: 0}
-  ScaleRatio: 1.04
-  TimeToScale: 0.5
---- !u!114 &114519777961192366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352173644047890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeOnInitialize: 1
-  InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
-  InitializeFadeTime: 1
-  IsFading: 0
---- !u!114 &114820324330857468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1084522956037128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5544cd7c0e5b3d74e9a52ba82237d9c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character:
-    Character: Timothy
-    Actor: {fileID: 0}
-  Poses:
-  - Name: Calm
-    Visual: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
-  - Name: Angry
-    Visual: {fileID: 21300000, guid: 247f53db865c5054fb2e4bab57265dca, type: 3}
-  - Name: Happy
-    Visual: {fileID: 21300000, guid: 81a67ed76b56f4042bb159e5feb4826f, type: 3}
-  - Name: Sad
-    Visual: {fileID: 21300000, guid: 5df5244c6e088b74487edcc03236f3c9, type: 3}
-  - Name: Afraid
-    Visual: {fileID: 21300000, guid: 73d86a8fdf2741f42877c0168bc8c5b4, type: 3}
-  - Name: Surprised
-    Visual: {fileID: 21300000, guid: 58b1f3632b437a14592e0a2f178a2578, type: 3}
-  Distances:
-  - Scale: 0
-    Offset: 0
-  - Scale: 2
-    Offset: -5
-  - Scale: 1
-    Offset: 0
-  - Scale: 0.75
-    Offset: 0
-  Direction: 0
-  FacingDirection: 0
-  Distance: 0
-  visual: {fileID: 212937683764110152}
-  BackSprite: {fileID: 212646563533514692}
-  SpriteSwitchSpeed: 0.5
-  FlipOnLeft: 0
---- !u!114 &114861325213738950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616756262647528}
+  m_GameObject: {fileID: 1917093034332336}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FadeOnInitialize: 0
-  InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
-  InitializeFadeTime: 2
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
   IsFading: 0
---- !u!212 &212646563533514692
+--- !u!114 &114453541420719810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654659777931688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 0
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
+  IsFading: 0
+--- !u!114 &114946860140199222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454680618709400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fc0a12516e5e24f80271c0dcf4fc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrontCurtain: {fileID: 212436505787416250}
+  BackCuratin: {fileID: 212536122563856634}
+  Cells:
+  - {fileID: 21300000, guid: 638dbe0b4f929a7408701b31152e3792, type: 3}
+  - {fileID: 21300000, guid: f64462d61fd578b42a356bbcf74804b6, type: 3}
+  TransitionSpeed: 1
+  NextCellCall: Next
+--- !u!212 &212436505787416250
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616756262647528}
+  m_GameObject: {fileID: 1654659777931688}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -223,25 +181,25 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1080481173
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15.42, y: 36.07}
+  m_Size: {x: 38.399998, y: 24.339998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
---- !u!212 &212937683764110152
+--- !u!212 &212536122563856634
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352173644047890}
+  m_GameObject: {fileID: 1917093034332336}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -267,16 +225,16 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1080481173
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf708bdf08227b343bd2c090ed98880a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15.42, y: 36.07}
+  m_Size: {x: 38.399998, y: 24.339998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

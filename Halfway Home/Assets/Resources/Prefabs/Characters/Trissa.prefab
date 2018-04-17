@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeOnInitialize: 1
   InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
-  InitializeFadeTime: 2
+  InitializeFadeTime: 1
   IsFading: 0
 --- !u!114 &114276035914453536
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   Distance: 0
   visual: {fileID: 212971932926963918}
   BackSprite: {fileID: 212646563533514692}
-  SpriteSwitchSpeed: 1
+  SpriteSwitchSpeed: 0.5
   FlipOnLeft: 1
 --- !u!114 &114861325213738950
 MonoBehaviour:
