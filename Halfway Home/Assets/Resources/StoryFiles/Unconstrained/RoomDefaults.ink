@@ -179,7 +179,7 @@ I head to the small cafeteria to get some grub.
 {
 	- currentHour > 21: ->Kitchen.Night
 	- currentHour < 7: -> Kitchen.Night
-	-else: Kitchen.Day
+	-else: ->Kitchen.Day
 }
 =Day
 I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
