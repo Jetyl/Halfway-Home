@@ -16,16 +16,19 @@ VAR stress = 0
 VAR depression = 0
 VAR week = 1
 VAR current_room = "unset"
+VAR currentHour = 0
 
 EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL CallSleep()
+EXTERNAL GetHour()
 
 -> Start
 
 === Start ===
+~currentHour = GetHour()
 {
 	- current_room == "YourRoom":
 		-> YourRoom
@@ -129,17 +132,38 @@ EXTERNAL CallSleep()
 				I'm pretty sure he was talking about car maintenance, but I feel like it applies to socializing, too.
 		}
 }
+{
+	- currentHour > 21: ->Commons.Night
+	- currentHour < 7: -> Commons.Night
+	-else: Commons.Day
+}
+=Day
 The room is {~surprisingly empty, with only a few people reading by the window|filled with the low murmur of conversation punctuated by bursts of laughter}.
 {
-	- expression < 2:
+	- expression > 2:
 		I plop down on a {~sofa|chair} next to a few other residents. We chat about {~the unusual weather|video games|last night's game|what we plan on doing when we leave}.
 	- else:
 		I sit to the side, basking in the warmth of human interaction like a campfire. I don't quite have the courage to approach any of the other residents, but the environment does me good.
 }
-
-// Call external for wellbeing
 <color=color_descriptor><i>Social interaction <color=color_wellbeing_relief>lowered <b>Depression</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
 -> END
+
+=Night
+{shuffle:
+	- When I arrive, the room is completely empty. I should have figured as much given the time.
+	I spend the hour sitting by the fireplace, contemplating the choices that led me to sitting alone in the commons in the middle of the night.
+	<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
+	-> END
+	- I wander in expecting no one to be around, but there are actually a few other sleepless residents here {~playing a board game|watching a movie|reclining by the fireplace|playing a video game on the couch}.
+	{
+		-expression > 2:
+		I ask if I can join in and they welcome me.
+		-else:
+		I'm too shy to ask if I can join in, so I simply take a seat nearby and thumb through a magazine, enjoying the shared space.
+	}
+	<color=color_descriptor><i>Social interaction <color=color_wellbeing_relief>lowered <b>Depression</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
+	-> END
+}
 
 === FrontDesk ===
 // Pills
@@ -152,13 +176,30 @@ Front Desk text placeholder.
 // Have a meal to keep up your strength.
 // TODO: Get info on time of day and # of visits to Kitchen to make narrative more immersive.
 I head to the small cafeteria to get some grub.
+{
+	- currentHour > 21: ->Kitchen.Night
+	- currentHour < 7: -> Kitchen.Night
+	-else: Kitchen.Day
+}
+=Day
 I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
+<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> moderately.</i></color> # Fatigue -= 20
+-> END
+=Night
+The cook here is awesome and always leaves out some snacks for the more restless residents.
+There's a {~basket full of apples|plate of cookies|a few stacks of crackers next to some peanut butter} left out on the counter. Don't mind if I do.
 <color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> moderately.</i></color> # Fatigue -= 20
 -> END
 
 === Garden ===
 // Increase depression, Increase Awareness
 // Contemplate your journey: the good and the bad.
+{
+	- currentHour > 18: ->Garden.Night
+	- currentHour < 7: -> Garden.Night
+	-else: Garden.Day
+}
+=Day
 I decide that some time alone would be good for me, but rather than shutting myself in my room on such a nice day I head outside.
 The sweet smell of the garden envelops me as I step out into the crisp spring air.
 {shuffle:
@@ -173,6 +214,28 @@ My solitude gives me plenty of time to reflect.
 	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
 }
 <color=color_descriptor><i>Time alone in the sun <color=color_wellbeing_penalty>increased <b>Fatigue</b> and <b>Depression</b> slightly. # Fatigue += 10 # depression += 10
+{
+	- awareness > 3:
+		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> slightly. # Stress -= 10
+}
+<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
+-> END
+
+=Night
+I think some night air is just what I need.
+I step out into the cool garden, lit by moonlight and fireflies.
+{shuffle:
+	- I spend a while meandering along the small gravel path. It's a short path and I end up looping it several times.
+	- I take a seat on the bench by the pond, watching the light from countless fireflies spark above the quietly babbling stream.
+	- I lay down in a patch of grass and stare up at the churning stars. I try to remember the constellations my grandmother taught me long ago.
+}
+My solitude gives me plenty of time to reflect.
+{shuffle:
+	- I wonder what my life will look like years from now.
+	- I think about the friends I used to have on the outside and where their lives may have taken them.
+	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
+}
+<color=color_descriptor><i>Time alone under the stars <color=color_wellbeing_penalty>increased <b>Depression</b> slightly. # depression += 10
 {
 	- awareness > 3:
 		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> slightly. # Stress -= 10
@@ -200,7 +263,7 @@ The book is {~beautifully written and I learn a lot just from the prose.| rather
 	- else:
 		<>@Engaging with the material was enlightening, but <color=color_wellbeing_penalty>increased <b>Stress</b> slightly. # Stress += 10
 }
-<>@<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
+<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 -> END
 
 === ArtRoom ===

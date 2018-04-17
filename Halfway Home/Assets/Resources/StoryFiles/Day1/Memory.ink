@@ -34,6 +34,7 @@ EXTERNAL SetValue(name, values)
 === Start ===
 //~week = 1
 This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds # All * Hide
+It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
@@ -59,9 +60,16 @@ The other residents begin to whisper to each other.
 
 === Unpack ===
 The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # Ambience : lpf_ambience_fireplace
-[Max] "Your quarters, your Majesty. I hope you find them to your liking."
-[Max] "Anyhoo, I've got to finish mopping the cafe. Been a bit behind... as usual, really."
-[Max] "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
+"Your quarters, your Majesty. I hope you find them to your liking."
+"I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
+"I wear a lotta hats around here, in case you can't tell. Anyway..."
+They pull out a small bit of paper from their pocket and begin reading aloud.
+"Welcome to our community. Here at Sunflower House we believe in creating the optimal environment for residents to grow."
+"We favor a hands-off approach coupled with longer residency periods to minimize pressure and maximize recovery."
+"We will never tell you what to do or when to do it, but instead offer a wealth of options to you for the duration of your stay, however long it may be."
+"There's some legal stuff, blah blah blah. I think you've got it."
+"Anyhoo, I've got to finish mopping the cafe."
+"I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
 I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit
 -> Cafe
 
