@@ -69,7 +69,18 @@ public class AudioManager : MonoBehaviour
 	
     void OnLoad(DefaultEvent eventdata)
     {
-        //Game.current.CurrentTrack; //the loaded music track
+        if(Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
+        {
+
+            AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
+        }
+
+        if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
+        {
+            AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
+        }
+
+        //the loaded music track
     }
 
 	// Update is called once per frame
