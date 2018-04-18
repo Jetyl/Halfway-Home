@@ -79,7 +79,7 @@ We spend an hour going over the basics of psychology, anthropology, and body lan
 		[Charlotte] "I think we've spent enough time on this for now. How about we move on to another topic?"
 }
 {
-	-topicsDiscussed>1:->Trissa
+	-topicsDiscussed==2:->Trissa
 	-else:->Topic
 }
 
@@ -117,7 +117,7 @@ We spend the next hour talking about different tips and tricks for changing your
 		[Charlotte] "Let's move on."
 }
 {
-	-topicsDiscussed>1:->Trissa
+	-topicsDiscussed==2:->Trissa
 	-else:->Topic
 }
 
@@ -152,7 +152,7 @@ We spend an hour talking about different tactics to adapting to new social rules
 		[Charlotte] "I think you grasp the important concepts. Shall we continue on to the next topic?"
 }
 {
-	-topicsDiscussed>1:->Trissa
+	-topicsDiscussed==2:->Trissa
 	-else:->Topic
 }
 
@@ -164,8 +164,8 @@ We spend an hour talking about different tactics to adapting to new social rules
 *{topicsDiscussed == 3}[Thank Her For Her Time] -> Farewell
 
 === Trissa ===
-Before Charlotte can continue, the door to the library swings open with a cheerful creak. # Charlotte = Calm, Right
-In strides Trissa, looking as laid back as ever. # Trissa = Calm, Left
+Before Charlotte can continue, the door to the library swings open with a cheerful creak. # Charlotte = Calm, stage_Right
+In strides Trissa, looking as laid back as ever. # Trissa = Calm, stage_Left, Right
 [Trissa] "Yo, Lotty. I'm about to head to the store if you-"
 "Oh, hey {player_name}! Are you two having a party in here?" # Trissa = Happy
 "And you didn't think to invite your bestie Trissa?" # Trissa = Angry
@@ -189,7 +189,7 @@ In strides Trissa, looking as laid back as ever. # Trissa = Calm, Left
 "Good seeing you again, {player_name}. Keep it real."
 Trissa strides confidently out of the room, throwing a thumbs up behind her as she exits. # Trissa = Exit
 [Charlotte] "She's just... too... perfect!"
-Charlotte sighs and composes herself. # Charlotte = Calm, Center
+Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 "Sorry about that. Now where were we?"
 "Ah, yes. You were about to choose another topic..."
 ->Topic
@@ -209,7 +209,7 @@ Charlotte sighs and composes herself. # Charlotte = Calm, Center
 Wow. I had no idea Charlotte had changed so much.
 "I refused to eat for a week just to see the pain and worry on my parents' faces. They only got me to stop by bribing me with my Great Aunt Viola's jewelry box."
 "Goodness, how petty I was back then." # Charlotte = Angry
-"After that I became somewhat obsessed with her. She had the most beautiful old things with such <i/>history</i> to them." # Charlotte = Calm
+"After that I became somewhat obsessed with her. She had the most beautiful old things with such <i>history</i> to them." # Charlotte = Calm
 "I eventually found my way into her old things up in the attic. Among them was her diary, written in her own neat hand."
 "What I read in that diary changed me, {player_name}. She was like me."
 "Not exactly, mind you, but she struggled with the same feeling that I did. She felt the same isolation."
@@ -227,7 +227,12 @@ Wow. I had no idea Charlotte had changed so much.
 "To bring a very long explanation to a close, that is why I care, {player_name}."
 [{player_name}] "Wow. You uh... really opened up."
 "That's really amazing, Charlotte. It seems like you've grown a lot."
--> Farewell
+{
+	-topicsDiscussed==3:->Farewell
+	-else:
+	[Charlotte] "Thank you. Now where were we?"
+	->Topic
+}
 
 === Farewell ===
 [{player_name}] "Thanks for taking the time to show me all this stuff, Charlotte."
