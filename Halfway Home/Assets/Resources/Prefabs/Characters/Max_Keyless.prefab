@@ -159,7 +159,7 @@ MonoBehaviour:
   Distance: 0
   visual: {fileID: 212268110233276374}
   BackSprite: {fileID: 212427123477562210}
-  SpriteSwitchSpeed: 1
+  SpriteSwitchSpeed: 0.5
   FlipOnLeft: 0
 --- !u!114 &114559324231784268
 MonoBehaviour:

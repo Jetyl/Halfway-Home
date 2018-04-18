@@ -83,18 +83,29 @@ public class TimeUpdateDisplay : MonoBehaviour
 
     void UpdateTime(DefaultEvent eventdata)
     {
+        var oldHour = currentHour;
         currentHour = Game.current.Hour;
         var oldday = currentDay;
         currentDay = Game.current.Day;
 
         float multiplier = 1;
 
-        if(currentDay - oldday != 0)
+        if (oldHour == currentHour && currentDay == oldday)
+        {
+            Space.DispatchEvent(Events.ClockFinished);
+            return;
+        }
+            
+
+        if (currentDay - oldday != 0)
         {
             multiplier = Mathf.Abs(currentDay - oldday) * MultiDayChangeMultiplier;
             if (multiplier < 1)
                 multiplier = 1;
         }
+
+        
+
 
         StartCoroutine(Swing(AnimationTime * multiplier));
     }

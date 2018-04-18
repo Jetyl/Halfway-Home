@@ -68,12 +68,12 @@ Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit
 [{player_name}] "hey, Timothy."
 + "You okay?"
 + "Ya there?"
--[Timothy] "..."
+-[Timothy] "..." #Breakdown / Open
 Timothy doesn't respond. # play : play_music_tension_intro_03
 In fact, looking at Timothy, I notice a handful of things off. # play : play_music_tension_intro_04
 He doesn't seem to be looking at anything in particular, and he's shaking slightly.
 [{player_name}] "Man, are you okay?"
-Timothy looks vaguely in my direction, and reaches his hand out.
+Timothy looks vaguely in my direction, and reaches his hand out. #Breakdown / Next
 His hand clasps onto my arm with a shaky, but intense grip. I feel his heartbeat, racing insanely fast.
 His lips move, as if trying to speak, but no words come from them.
 With his free hand, he clutches onto his shirt.
@@ -143,7 +143,7 @@ I Pull my arm, to try and free it from Timothy's Vice-like grip, but to no avail
 He doesn't seem to want to let go.
 To free myself, I pry my finger's underneath his palm, and peel his finger's off me. # play : play_music_tension_stem_06
 His arms are noticeably shaking now.
-I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Timothy=Exit
+I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Background / Kitchen
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Happy, Stage_right, right 
 [Max] "yo! {player_name}, what's up?"
 [{player_name}] "It's Timothy. He-He's acting weird, and not responding. I-I think something wrong!"

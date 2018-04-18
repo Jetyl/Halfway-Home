@@ -25,7 +25,8 @@ public class LinearCGAnimator : MonoBehaviour
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.CloseCG, OnClose);
 
         FrontCurtain.sprite = Cells[0];
-        FrontCurtain.DispatchEvent(Events.Fade, new FadeEvent(Color.white, TransitionSpeed));
+        StartCoroutine(TextParser.FrameDelay(FrontCurtain.gameObject, Events.Fade, new FadeEvent(Color.white, TransitionSpeed)));
+        //FrontCurtain.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, TransitionSpeed));
 
 	}
 	
