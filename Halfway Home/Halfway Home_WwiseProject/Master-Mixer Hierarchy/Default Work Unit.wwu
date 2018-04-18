@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{8011013C-2F47-48AE-8EE4-65D01964509C}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{7DC64487-E31D-4A68-9ABB-C28F3AD635C2}" ShortID="50041826">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{8886B4FB-BBC2-4FC6-9084-41D84914131D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ChildrenList>
 						<Bus Name="Music Bus" ID="{64C7666D-4B32-4EE5-BFC8-4A6EA7B11E6F}">
 							<PropertyList>
