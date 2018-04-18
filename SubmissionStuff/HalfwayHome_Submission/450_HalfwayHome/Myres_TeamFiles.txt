@@ -9,6 +9,7 @@ Made (with Jesse):
 	- Narrative design
 	- System design
 	- Scene writing (roughly half of the scenes are mine)
+	- Cheats
 
 Made (with Christien)
 	- Audio Implementation
