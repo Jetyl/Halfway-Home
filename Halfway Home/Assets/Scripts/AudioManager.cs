@@ -38,13 +38,13 @@ public class AudioManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
   {
-    Scene.Connect<AudioEvent>(OnAudioEvent);
+        Scene.Connect<AudioEvent>(OnAudioEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
 
   void OnAudioEvent(AudioEvent e)
   {
-    // christien da sound designer's spaghettiii code: dont stop all if vertical layering is wanted
+    //christien da sound designer's spaghettiii code: dont stop all if vertical layering is wanted
     if (e.FileName != "play_music_tension_stem_03" &&
         e.FileName != "play_music_tension_stem_04" &&
         e.FileName != "play_music_tension_stem_05" &&
@@ -66,25 +66,44 @@ public class AudioManager : MonoBehaviour
 
     AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
   }
-	
-    void OnLoad(DefaultEvent eventdata)
+
+  void OnLoad(DefaultEvent eventdata)
+  {
+    
+    if (Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
     {
-        if(Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
-        {
-
-            AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
-        }
-
-        if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
-        {
-            AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
-        }
-
-        //the loaded music track
+      Trace.Script($"Loading music {Game.current.CurrentTrack}");
+      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+      AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
     }
+    else
+    {
+      Trace.Script("Stopping Music");
+      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+    }
+    
+    if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
+    {
+      Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
+      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+      AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
+    }
+    else
+    {
+      Trace.Script("Stopping Ambience");
+      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+    }
+  }
 
-	// Update is called once per frame
-	void Update ()
+  public void StopEverything()
+  {
+    AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+    AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+    AkSoundEngine.PostEvent("Stop_All", SFXPlayer.gameObject);
+  }
+
+  // Update is called once per frame
+  void Update ()
   {
     AkSoundEngine.RenderAudio();
   }
