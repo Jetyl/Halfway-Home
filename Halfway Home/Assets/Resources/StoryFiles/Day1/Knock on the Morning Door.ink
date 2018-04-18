@@ -104,11 +104,9 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 [Keyless>Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
 [Keyless>Max] "I can't find my keys! I must have left 'em somewhere..."
-[{player_name}] "Uh-oh." // Could remove line
-[Keyless>Max] "Yeah, that's not good." // Could remove line
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, I'm gonna need you to do me a solid."
-I have the feeling I'm about to be volunteered for something. //Oh, you don't like the sound of that.
+Oh, you don't like the sound of that.
 "Well... It's Timothy's first day, so someone's gotta show him the ropes." # Keyless = Happy
 "But I can't have my keys unaccounted for here."
 "So could you be a pal and show him around?"

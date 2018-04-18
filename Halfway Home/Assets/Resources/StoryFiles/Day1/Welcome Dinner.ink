@@ -191,6 +191,6 @@ You have no idea.
 	}
 We spend the next hour or so talking about our interests and such.
 It's mostly small talk, but Timothy relaxes more the longer we chat.
-Some others join in and in no time a few hours have passed. # Time * 3
+Some others join in and in no time a few hours have passed. # Time % 3
 When it's finally time to head to bed, he seems almost comfortable. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
 -> END
