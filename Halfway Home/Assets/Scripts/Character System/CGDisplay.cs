@@ -40,6 +40,19 @@ public class CGDisplay : MonoBehaviour
 
     }
 
+
+    void OnSave(DefaultEvent eventdata)
+    {
+        
+    }
+
+    void OnLoad(DefaultEvent eventdata)
+    {
+        
+
+    }
+
+
     void OnDisplay(CustomGraphicEvent eventdata)
     {
         if(!Contains(eventdata.Tag))

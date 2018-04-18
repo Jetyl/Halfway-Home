@@ -46,6 +46,8 @@ public class Game
 
     public string SavedInk;
 
+    public string CurrentTrack;
+
     public List<CharacterIntermission> CastCall;
 
     public string CurrentHistory = "";

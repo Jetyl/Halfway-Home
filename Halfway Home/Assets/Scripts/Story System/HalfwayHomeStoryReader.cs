@@ -296,7 +296,7 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     public void PlayMusic(string name)
     {
-
+            Game.current.CurrentTrack = name;
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
 
