@@ -271,6 +271,7 @@ namespace HalfwayHome
           if (match["Mode"].Trim().ToLower() == "play")
           {
             Trace.Script($"Play {parse.FindFirst("Event").Trim()} music");
+            Game.current.CurrentTrack = parse.FindFirst("Event");
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, parse.FindFirst("Event")));
           }
           else if (match["Mode"].Trim().ToLower() == "sfx")
@@ -281,6 +282,7 @@ namespace HalfwayHome
           else if (match["Mode"].Trim().ToLower() == "ambience")
           {
             Trace.Script($"Play {parse.FindFirst("Event").Trim()} ambience");
+            Game.current.CurrentAmbience = parse.FindFirst("Event");
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
           }
         }
@@ -296,7 +298,6 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     public void PlayMusic(string name)
     {
-
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
 
