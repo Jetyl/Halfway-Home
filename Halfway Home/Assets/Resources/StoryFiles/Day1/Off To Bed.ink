@@ -62,19 +62,19 @@ Eh, its only for one week.
 -> Start.IntoBed
 
 === TalkWeek1 ==
-[Timothy] "Th-thank you...<delay=2> for showing me around."
+[Timothy] "Th-thank you...<delay=1> for showing me around."
 [{player_name}] "Oh."
 "No problem."
 ->Start.Question
 
 === Comfort ===
 [{player_name}] "Yeah."
-"Yeah.<delay=5> It does."
+"Yeah.<delay=1> It does."
 [Timothy] "Th-that's good..."
 ->Sleep
 
 === Cold ===
-[{player_name}] "No.<delay=2> Not really."
+[{player_name}] "No.<delay=1> Not really."
 [Timothy] "Oh... <delay=1> okay."
 {
 	- grace >= 1:

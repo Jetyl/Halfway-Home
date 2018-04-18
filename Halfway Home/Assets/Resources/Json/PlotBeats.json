@@ -257,6 +257,14 @@
    {
     "Name" : "CompletedPassion",
     "Type" : 1
+   },
+   {
+    "Name" : "HadColdSkyHideaway",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadMorningMisery",
+    "Type" : 1
    }
   ]
  },

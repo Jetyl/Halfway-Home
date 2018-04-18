@@ -7,6 +7,7 @@ public class CheatCodes : MonoBehaviour
 {
 
     public bool Active;
+    public DescriptionDisplay DebugSkipping;
     public GameObject Screen;
     TMP_InputField codeBreaker;
     public TextMeshProUGUI CheatsStateText;
@@ -22,6 +23,7 @@ public class CheatCodes : MonoBehaviour
         Screen.SetActive(false);
         codeBreaker.DeactivateInputField();
         CheatsStateText.gameObject.SetActive(false);
+        DebugSkipping.DebugSkipping = false;
 	  }
 	
 	// Update is called once per frame
@@ -31,6 +33,8 @@ public class CheatCodes : MonoBehaviour
         if (Input.GetButtonDown("Cheats"))
         {
           Active = !Active;
+            
+          DebugSkipping.DebugSkipping = Active;
           if(CheatsStateText != null) CheatsStateText.gameObject.SetActive(Active);
         }
         
