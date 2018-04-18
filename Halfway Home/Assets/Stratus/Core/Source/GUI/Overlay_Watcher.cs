@@ -13,7 +13,7 @@ namespace Stratus
 {
   public partial class StratusGUI
   {
-    protected override bool isPersistent { get { return true; } }
+    //protected override bool isPersistent { get { return true; } }
 
     /// <summary>
     /// Keeps watch over a given variable

@@ -6,11 +6,11 @@ using UnityEditor;
 namespace Stratus
 {
   [CustomEditor(typeof(MemberVisualizer))]
-  public class MemberVisualizerEditor : BaseEditor<MemberVisualizer>
+  public class MemberVisualizerEditor : BehaviourEditor<MemberVisualizer>
   {
     private SerializedProperty renderSettingsList => propertyMap["renderSettingsList"];
 
-    protected override void OnBaseEditorEnable()
+    protected override void OnStratusEditorEnable()
     {
       propertyConstraints.Add(renderSettingsList, False);
       drawGroupRequests.Add(new DrawGroupRequest(DrawRenderingSettings));
