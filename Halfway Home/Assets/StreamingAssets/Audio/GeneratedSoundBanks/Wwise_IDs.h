@@ -66,6 +66,7 @@ namespace AK
     {
         static const AkUniqueID EFFECTS_SLIDER = 2886374787U;
         static const AkUniqueID MAINMENUMOUSEHOVER = 2678891614U;
+        static const AkUniqueID MASTER_SLIDER = 2486326433U;
         static const AkUniqueID MENU_SLIDER = 2902037724U;
         static const AkUniqueID MUSIC_SLIDER = 1127857866U;
     } // namespace GAME_PARAMETERS

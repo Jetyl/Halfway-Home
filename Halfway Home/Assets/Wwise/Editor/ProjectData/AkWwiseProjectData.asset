@@ -605,8 +605,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 850742995
-    m_lastTimePart2: -1999272228
+    m_lastTimePsrt1: -1779518382
+    m_lastTimePart2: -1999264561
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -648,8 +648,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -532810720
-    m_lastTimePart2: -1999269355
+    m_lastTimePsrt1: 819145197
+    m_lastTimePart2: -1999264558
     List:
     - Name: Effects_Slider
       Path: Default Work Unit\Effects_Slider
@@ -669,6 +669,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: -1616075682
       Guid: cf02f5d59ad29e4f8d947837a548a654
+    - Name: Master_Slider
+      Path: Default Work Unit\Master_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master_Slider
+        ObjectType: 13
+      ID: -1808640863
+      Guid: 9be02610048efe4aa34ac0a88c50bea7
     - Name: Menu_Slider
       Path: Default Work Unit\Menu_Slider
       PathAndIcons:
