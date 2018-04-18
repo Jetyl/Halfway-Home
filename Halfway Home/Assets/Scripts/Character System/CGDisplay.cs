@@ -24,6 +24,9 @@ public class CGDisplay : MonoBehaviour
         Space.Connect<CustomGraphicEvent>(Events.CG, OnDisplay);
         Space.Connect<DefaultEvent>(Events.Backdrop, OnClose);
 
+        Space.Connect<DefaultEvent>(Events.Save, OnSave);
+        Space.Connect<DefaultEvent>(Events.Load, OnLoad);
+
     }
 	
 	// Update is called once per frame
@@ -59,6 +62,11 @@ public class CGDisplay : MonoBehaviour
             ActiveCG = new CGDetails();
             ActiveCG.Tag = Game.current.CurrentCG;
             ActiveCG.Graphic = Instantiate(GetCG(ActiveCG.Tag).Graphic, transform);
+
+
+            StartCoroutine(TextParser.FrameDelay(ActiveCG.Graphic, Events.CG, new CustomGraphicEvent(ActiveCG.Tag, OpenCGTag)));
+
+            StartCoroutine(TextParser.FrameDelay(ActiveCG.Graphic, Events.Load));
 
             //Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, ""));
             //Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
@@ -152,6 +160,8 @@ public class CGGrouping
 {
     public string Group = "";
     public string CloseTag = "Close";
+    [HideInInspector]
+    public string ActiveTag = "";
     public CGDetails[] Details;
 }
 

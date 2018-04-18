@@ -42,11 +42,11 @@ Walking in, I spy Eduardo and Isaac as the only ones in the room.
 [{player_name}] "What are you guys still doing up?"
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
 [Isaac] "Eduardo can't sleep." #hangout / hrm_down
-[Eduardo] "Issaaaaaaac!"
-[Isaac] "Hrm. I'm not wrong."
-"{player_name}. Can't sleep either?"
+[Eduardo] "Issaaaaaaac!" #hangout / sad_I
+[Isaac] "Hrm. I'm not wrong." #hangout / hrm_down
+"{player_name}. Can't sleep either?" #hangout /hrm_Up
 [{player_name}] "Something like that, yeah."
-[Eduardo] "Well, your free to hangout with us!"
+[Eduardo] "Well, your free to hangout with us!" #hangout / happy_u, hand_up
 [{player_name}] "sure."
 I sit down, and hangout with Isaac and Eduardo for a while.
 ->TimePassing.NextHour
@@ -87,7 +87,7 @@ another hour passes with the duo. I get a bit more tired. #time % 1
 ===Midnight===
 //the midnight hour talk
 [{player_name}] "So, are you two always up this late?"
-[Eduardo] "Eh, I'm not really sure always is the best term for it, but-"
+[Eduardo] "Eh, I'm not really sure always is the best term for it, but-" #hangout / smile_u, hang_up
 [Isaac] "Yes. Always."
 [Eduardo] "Issaaaaaaac!"
 [Isaac] "Always when he's manic like this. to be exact."
