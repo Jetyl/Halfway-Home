@@ -39,6 +39,7 @@ public class AudioManager : MonoBehaviour
 	void Start ()
   {
     Scene.Connect<AudioEvent>(OnAudioEvent);
+        Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
 
   void OnAudioEvent(AudioEvent e)
@@ -66,6 +67,22 @@ public class AudioManager : MonoBehaviour
     AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
   }
 	
+    void OnLoad(DefaultEvent eventdata)
+    {
+        if(Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
+        {
+
+            AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
+        }
+
+        if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
+        {
+            AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
+        }
+
+        //the loaded music track
+    }
+
 	// Update is called once per frame
 	void Update ()
   {

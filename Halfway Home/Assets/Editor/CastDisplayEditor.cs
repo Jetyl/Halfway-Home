@@ -27,6 +27,7 @@ public class CastDisplayEditor : Editor
         SerializedProperty RightSpot = serializedObject.FindProperty("RightSpot");
         SerializedProperty Varience = serializedObject.FindProperty("Varience");
         SerializedProperty SpotSize = serializedObject.FindProperty("SpotSize");
+        SerializedProperty SpriteMoveTime = serializedObject.FindProperty("SpriteMoveTime");
 
         EditorGUILayout.Space();
         
@@ -34,6 +35,7 @@ public class CastDisplayEditor : Editor
         EditorGUILayout.PropertyField(RightSpot, new GUIContent("Right Spot"), true);
         EditorGUILayout.PropertyField(Varience, new GUIContent("Varience"), true);
         EditorGUILayout.PropertyField(SpotSize, new GUIContent("Maximum Feild of Sprites"), true);
+        EditorGUILayout.PropertyField(SpriteMoveTime, new GUIContent("Sprite Move Time"), true);
 
 
 

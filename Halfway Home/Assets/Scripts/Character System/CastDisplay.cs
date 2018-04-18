@@ -19,7 +19,6 @@ public class CastDisplay : MonoBehaviour
     Dictionary<StagePosition, int> SpotLights; //number of people in spot
 
     public Room StartingRoom;
-    public float BackgroundFadeTime = 2;
     public float SpriteMoveTime = 2;
 
     bool Load = false;

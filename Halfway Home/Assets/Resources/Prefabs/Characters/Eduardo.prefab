@@ -175,7 +175,7 @@ MonoBehaviour:
   Distance: 0
   visual: {fileID: 212535475533993886}
   BackSprite: {fileID: 212549528819510172}
-  SpriteSwitchSpeed: 1
+  SpriteSwitchSpeed: 0.5
   FlipOnLeft: 0
 --- !u!114 &114537744749944788
 MonoBehaviour:
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeOnInitialize: 1
   InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
-  InitializeFadeTime: 2
+  InitializeFadeTime: 1
   IsFading: 0
 --- !u!212 &212535475533993886
 SpriteRenderer:

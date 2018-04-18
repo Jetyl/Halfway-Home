@@ -1,5 +1,6 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1127857866	Music_Slider			\Default Work Unit\Music_Slider	
+	2486326433	Master_Slider			\Default Work Unit\Master_Slider	
 	2886374787	Effects_Slider			\Default Work Unit\Effects_Slider	
 	2902037724	Menu_Slider			\Default Work Unit\Menu_Slider	
 

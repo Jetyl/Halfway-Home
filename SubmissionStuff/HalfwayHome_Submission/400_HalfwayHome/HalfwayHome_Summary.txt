@@ -1,8 +1,0 @@
-Halfway Home
-By: Jesse Lozano & John Myres
-
-Halfway Home is a Visual Novel Stat Management Game, about recovery, mental health, and time.
-The player controls a resident at this halfway home (default name is Sam), who is set to leave in 1 week.
-Upon meeting the new resident Timothy, Sam sets out on a seemingly uneventful final week.
-But when strange outcomes occur, and Sam ends the week waking up at its beginning again and again, 
-its up to them to improve their social skills and break the Time Loop.

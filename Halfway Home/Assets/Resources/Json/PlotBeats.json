@@ -167,6 +167,30 @@
    {
     "Name" : "Manuel Kitchen Tooltip",
     "Type" : 4
+   },
+   {
+    "Name" : "Manuel Art Tooltip",
+    "Type" : 4
+   },
+   {
+    "Name" : "Manuel Library Tooltip",
+    "Type" : 4
+   },
+   {
+    "Name" : "Manuel Garden Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Store Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Bedroom Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Commons Tooltip",
+    "Type" : 0
    }
   ]
  },
@@ -232,6 +256,14 @@
    },
    {
     "Name" : "CompletedPassion",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadColdSkyHideaway",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadMorningMisery",
     "Type" : 1
    }
   ]

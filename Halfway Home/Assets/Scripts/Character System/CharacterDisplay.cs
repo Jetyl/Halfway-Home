@@ -240,7 +240,7 @@ public class CharacterDisplay : MonoBehaviour
             return;
         }
         
-        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, 1));
+        visual.gameObject.DispatchEvent(Events.Fade, new FadeEvent(awhite, SpriteSwitchSpeed));
         var pos = transform.position;
 
         if(direction == StagePosition.Left)
