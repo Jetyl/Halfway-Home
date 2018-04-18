@@ -5,10 +5,11 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
-Halfway Home/Temp/*
-Halfway Home/Library/*
-Halfway Home/Build/*
-Halfway Home/Obj/*
+Halfway Home/[Ll]ibrary/
+Halfway Home/[Tt]emp/
+Halfway Home/[Oo]bj/
+Halfway Home/[Bb]uild/
+Halfway Home/[Bb]uilds/
 Halfway Home/WebBuild/*
 Halfway Home/WindowsBuild/*
 *LightingData.asset
