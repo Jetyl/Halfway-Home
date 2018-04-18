@@ -41,32 +41,32 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 [{player_name}] "Eh, it going."
 +[How bout you?]
 	"How about you?"
-	[Eduardo] "Freaking fantastic."
+	[Eduardo] "Freaking fantastic." #Eduardo = Angry
 	[{player_name}] "That's good."
 +[Why are you eating breakfest here?]
 	"Why are you eating breakfest here?"
-	[Eduardo] "eh. do I need a reason?"
+	[Eduardo] "eh. do I need a reason?" #Eduardo = Angry
 	[{player_name}] "I guess not. just weird is all."
-	[Eduardo] "{player_gender == "F": Girl| Man}, I live to be weird!"
+	[Eduardo] "{player_gender == "F": Girl| Man}, I live to be weird!" #Eduardo = Calm
 +[Where's Isaac?]
 	"Where's Isaac?"
-	[Eduardo] "Sleeping, probably."
--[{player_name}] "I am rather suprised to see you here though. I didn't take you for a morning person."
+	[Eduardo] "Sleeping, probably." #Eduardo = Angry
+-[{player_name}] "I am rather suprised to see you here though. I didn't take you for a morning person." #Eduardo = suprised
 [Eduardo] "Hey, I take offense to that!"
 [{player_name}] "Do you? Do you really?"
 [Eduardo] "Haha, no." #Eduardo = Happy
 "My sleep schedule has been all over the place lately."
 {
 	-GetValue("HadLateNightHangout"):
-		 "That all nighter we pulled the other day really put it in a twist."
+		 "That all nighter we pulled the other day really put it in a twist." #Eduardo = suprised
 		 "I slept most of the day, and today I got up before the sun."
 		 "It's weird, {player_gender == "F": girl| man}. So weird."
 	-else:
 		"Me and Isaac stay up all night the other day, so it kind threw everything off."
-		"Crap, was it even yesterday, or two days ago? What day is it, anyways?"
+		"Crap, was it even yesterday, or two days ago? What day is it, anyways?" #Eduardo = suprised
 		[{player_name}] "Thursday."
 		[Eduardo] "Okay then yeah, it was yesterday. Or, I guess it started Tuesday night?"
-		"Time is weird, okay."
+		"Time is weird, okay." #Eduardo = Angry
 		[{player_name}] "sure..."
 		{
 			-week == 1:
@@ -80,8 +80,8 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 		}
 
 }
-[Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?"
-"Or maybe this place just reminds me of Isaac."
+[Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?" #Eduardo = Angry
+"Or maybe this place just reminds me of Isaac." #Eduardo = Calm
 "I Really do love him, you know." //show CG here.
 "Isaac really does complete me."
 Oh dear, Eduardo appears to be going into a gushing fit over his boyfriend.

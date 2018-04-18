@@ -45,18 +45,18 @@ There isn't a single star in sky tonight.
 === StoneGiant ===
 I don't really have a reason to be strolling out here at this time of night, but I feels nice being out here with the fireflies.
 Walking around the beaten path, I spot an unusual sight.
-It's Isaac, sitting in a little hidden patch of grass, staring up at the sky. #Isaac = Sad
+It's Isaac, sitting in a little hidden patch of grass, staring up at the sky. #Isaac = Sad, right
 He is almost motionless, like a stone giant silently protecting the guardians.
 He is, however, noticably perturbed. @I walk over to see how he's doing.
 ->Quiet
 
 === TryAgain ===
-I go to where I know Isaac is hiding, to talk to him about what is bothering him.
+I go to where I know Isaac is hiding, to talk to him about what is bothering him. #Isaac = Sad, right
 ->Quiet
 
 
 === Quiet ===
-[{player_name}] "Hey, Isaac. What's up?" #Isaac = Sad
+[{player_name}] "Hey, Isaac. What's up?" 
 [Isaac] "...."
 No response. not surprising
 [{player_name}] "so... um, what'cha looking at?"
@@ -76,7 +76,7 @@ No response. not surprising
 	{
 		-GetValue("LongNightHangoutComplete") == true:
 			->PullingTeeth
-		-else
+		-else:
 			[Isaac] "..."
 			"Not really."
 			[{player_name}] "...Okay... I'll see you around, then."
