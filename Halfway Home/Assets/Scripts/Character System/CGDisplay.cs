@@ -43,12 +43,27 @@ public class CGDisplay : MonoBehaviour
 
     void OnSave(DefaultEvent eventdata)
     {
-        
+        if (!Active)
+        {
+            Game.current.CurrentCG = "";
+            return;
+        }
+
+        Game.current.CurrentCG = ActiveCG.Tag;
     }
 
     void OnLoad(DefaultEvent eventdata)
     {
-        
+        if(Game.current.CurrentCG != "")
+        {
+            ActiveCG = new CGDetails();
+            ActiveCG.Tag = Game.current.CurrentCG;
+            ActiveCG.Graphic = Instantiate(GetCG(ActiveCG.Tag).Graphic, transform);
+
+            //Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, ""));
+            //Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
+            Active = true;
+        }
 
     }
 

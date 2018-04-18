@@ -79,14 +79,14 @@ public class StageDisplay : MonoBehaviour
     void OnSave(DefaultEvent eventdata)
     {
         Game.current.CurrentRoom = CurrentRoom;
-        Game.current.CurrentCG = CurrentCG;
+        Game.current.CurrentBackdrop = CurrentCG;
     }
 
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
         
-        SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom, Game.current.CurrentCG, TransitionTypes.None));
+        SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom, Game.current.CurrentBackdrop, TransitionTypes.None));
     }
 
     void SceneryChange(StageDirectionEvent eventdata)

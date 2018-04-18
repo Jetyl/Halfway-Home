@@ -42,7 +42,9 @@ public class Game
 
     public int CurrentNode;
 
+    public string CurrentBackdrop;
     public string CurrentCG;
+    public List<string> CGCalls;
 
     public string SavedInk;
 
