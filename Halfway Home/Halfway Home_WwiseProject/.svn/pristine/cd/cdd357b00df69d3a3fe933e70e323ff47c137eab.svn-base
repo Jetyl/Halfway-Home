@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" SchemaVersion="80" RootDocumentID="{27633E19-4858-4606-983F-7C034C7283A6}">
+	<Events>
+		<WorkUnit Name="play_sfx_menu" ID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" OwnerID="{27633E19-4858-4606-983F-7C034C7283A6}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}">
+					<ChildrenList>
+						<Action Name="" ID="{D65D101F-7FB0-4997-AC6A-B1A15A7E0366}" ShortID="35164096">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}">
+					<ChildrenList>
+						<Action Name="" ID="{DB6E42C2-10D1-49B8-AFCE-D0C17B47ED09}" ShortID="638288882">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_chime_exitgame" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}">
+					<ChildrenList>
+						<Action Name="" ID="{55A76322-3267-4961-A970-D8A5627C56B6}" ShortID="97732726">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}">
+					<ChildrenList>
+						<Action Name="" ID="{911B2070-FE74-42F3-BE35-29E9843ED2D5}" ShortID="574743888">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

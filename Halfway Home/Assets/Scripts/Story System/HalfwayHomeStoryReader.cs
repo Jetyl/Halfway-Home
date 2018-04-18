@@ -44,8 +44,11 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetSelfStat), (string stat_name) =>  GetSelfStat(stat_name));
+      story.runtime.BindExternalFunction(nameof(GetHour), () =>  GetHour());
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
+      story.runtime.BindExternalFunction(nameof(AlterTime), new System.Action(AlterTime));
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
       story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
     }
@@ -84,13 +87,54 @@ namespace HalfwayHome
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
+
+      
+      // Time Change
+      string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
+      parser.AddPattern("ChangeTime", changeTime, RegexParser.Target.Tag, RegexParser.Scope.Group, OnChangeTime);
+
+      // UI Toggle
+      string displayUI = RegexParser.Presets.ComposeBinaryOperation("UI", "display", "*");
+      parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
     }
 
     protected override void OnStoryLoaded(Story story)
     {
-            
+       
     }
 
+
+    void OnChangeTime(Parse parse)
+    {
+            foreach (var match in parse.matches)
+            {
+                if (match.ContainsKey("time"))
+                {
+                    if (match["time"].ToLower().Trim() == "set_time" || match["time"].ToLower().Trim() == "time_set")
+                    {
+                        string[] set = match["value"].Replace(" ","").Split(',');
+                        Game.current.Day = int.Parse(set[0]);
+                        Game.current.Hour = int.Parse(set[1]);
+                        Space.DispatchEvent(Events.TimeChange);
+                    }
+                    else if (match["time"].ToLower().Trim() == "sleep")
+                    {
+                        int hour = int.Parse(match["value"].Trim());
+                        Game.current.SetTimeBlock(hour, false);
+                        Game.current.AlterTime();
+                    }
+                    else
+                    {
+                        int hour = int.Parse(match["value"].Trim());
+                        Game.current.SetTimeBlock(hour);
+                        Game.current.AlterTime();
+                    }
+
+                    //return;
+                }
+
+            }
+        }
 
     void OnSetBackground(Parse parse)
     {
@@ -99,24 +143,19 @@ namespace HalfwayHome
       {
         if (match.ContainsKey("Background"))
         {
-          var Image = match["Image"];
-                        
-          Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
-                    return;
-        }
-      }
-
-      if(parse.FindFirst("Background").ToLower() == "background" || parse.FindFirst("Background").ToLower() == "backdrop")
-        for (var i = 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
-        {
-               if(parse.FindFirst("Image").ToLower() == ((Room)i).ToString().ToLower())
+                if(match["Background"].Trim().ToLower() == "background")
                 {
-                    Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent((Room)i));
-                    return;
+                    var Image = match["Image"].Trim();
+                    Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
+                }
+                else
+                {
+                    var Image = match["Image"].Trim();
+                    Space.DispatchEvent(Events.CG, new CustomGraphicEvent(match["Background"].Trim(), Image));
                 }
         }
-
-        Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Room.None, parse.FindFirst("Image")));
+        
+      }
     }
 
     void OnPoseChange(Parse parse)
@@ -125,39 +164,29 @@ namespace HalfwayHome
       {
         if (match.ContainsKey("Pose"))
         {
-          var pose = match["Pose"];
-          var person = match["Person"];
+          var pose = match["Pose"].Trim();
+          var person = match["Person"].Trim();
           
-            Trace.Script(parse.FindFirst("Person"));
+            Trace.Script(parse.FindFirst("Person").Trim());
                         
             Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
           
         }
-        
-        //if(parse.Find("Pose") == "Exit")
-        //{
-        //  Space.DispatchEvent(Events.CharacterExit, new StageDirectionEvent(parse.Find("Person"), "Calm"));
-        //}
-        //else
-        //{
-        //  Trace.Script(parse.Find("Person"));        
-        //  Space.DispatchEvent(Events.CharacterCall, new StageDirectionEvent(parse.Find("Person"), parse.Find("Pose")));
-        //}
       }
 
     }
     
     void OnSocialStatIncrement(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).ToLower();
-      string count = parse.FindFirst(countLabel);
+      string stat = parse.FindFirst(statLabel).ToLower().Trim();
+      string count = parse.FindFirst(countLabel).Trim();
       Trace.Script($"{stat} = {count}");
 
-      var eventStat = Personality.Social.awareness;
+      var eventStat = Personality.Social.Awareness;
       if (stat == "grace")
-        eventStat = Personality.Social.grace;
+        eventStat = Personality.Social.Grace;
       if (stat == "expression")
-        eventStat = Personality.Social.expression;
+        eventStat = Personality.Social.Expression;
 
       if(count == "+")
       {
@@ -181,9 +210,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatIncrement(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).Trim().ToLower();
       int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
 
       OnWellbeingStatChange(stat, value);
       Trace.Script($"{stat} increased by {value}");
@@ -191,9 +220,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatDecrement(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).ToLower().Trim();
       int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
 
       OnWellbeingStatChange(stat, -value);
       Trace.Script($"{stat} decreased by {value}");
@@ -201,9 +230,9 @@ namespace HalfwayHome
 
     void OnWellbeingStatSet(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).ToLower();
+      string stat = parse.FindFirst(statLabel).Trim().ToLower();
       int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel), out value);
+      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
 
       OnWellbeingStatChange(stat, value, true);
       Trace.Script($"{stat} set to {value}");
@@ -211,26 +240,53 @@ namespace HalfwayHome
 
     void OnWellbeingStatChange(string stat, int value, bool assign = false)
     {
-      var eventStat = Personality.Wellbeing.delusion;
+      var eventStat = Personality.Wellbeing.Depression;
       if (stat == "stress")
-        eventStat = Personality.Wellbeing.stress;
+        eventStat = Personality.Wellbeing.Stress;
       if (stat == "fatigue")
-        eventStat = Personality.Wellbeing.fatigue;
+        eventStat = Personality.Wellbeing.Fatigue;
 
       Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(value, eventStat, assign));
     }
 
+    void OnUIDisplay(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("UI"))
+        {
+          Trace.Script($"{parse.FindFirst("display").Trim().ToLower()} {match["UI"].Trim().ToLower()}");
+          // Send event with element and show/hide state
+          Stratus.Scene.Dispatch<TagToggler.TutorialDisplayChange>(new TagToggler.TutorialDisplayChange(match["UI"].Trim().ToLower(), parse.FindFirst("display").Trim().ToLower() == "hide"));
+        }
+      }
+    }
+
     void OnAudioTrigger(Parse parse)
     {
-      if(parse.FindFirst("Mode").ToLower() == "play")
+      foreach (var match in parse.matches)
       {
-        Trace.Script($"Play {parse.FindFirst("Event")} music");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(false, parse.FindFirst("Event")));
-      }
-      else if(parse.FindFirst("Mode").ToLower() == "sfx")
-      {
-        Trace.Script($"Play {parse.FindFirst("Event")} sound effect");
-        Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(true, parse.FindFirst("Event")));
+        if (match.ContainsKey("Mode"))
+        {
+          if (match["Mode"].Trim().ToLower() == "play")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event").Trim()} music");
+            Game.current.CurrentTrack = parse.FindFirst("Event");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, parse.FindFirst("Event")));
+          }
+          else if (match["Mode"].Trim().ToLower() == "sfx")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event").Trim()} sound effect");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, parse.FindFirst("Event")));
+          }
+          else if (match["Mode"].Trim().ToLower() == "ambience")
+          {
+            Trace.Script($"Play {parse.FindFirst("Event").Trim()} ambience");
+            Game.current.CurrentAmbience = parse.FindFirst("Event");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
+          }
+        }
+
       }
     }
     //------------------------------------------------------------------------/
@@ -242,7 +298,6 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     public void PlayMusic(string name)
     {
-
       Scene.Dispatch<PlayMusicEvent>(new PlayMusicEvent() { track = name });
     }
 
@@ -267,16 +322,14 @@ namespace HalfwayHome
       return Game.current.Progress.GetIntValue(ValueName);
     }
 
-        public void SetStringValue(string ValueName, string value)
+    public void SetStringValue(string ValueName, string value)
     {
-            Game.current.Progress.SetValue(ValueName, value);
+      Game.current.Progress.SetValue(ValueName, value);
     }
 
 
     public string GetStringValue(string ValueName)
     {
-            
-            print(Game.current.Progress.GetStringValue(ValueName));
       return Game.current.Progress.GetStringValue(ValueName);
     }
 
@@ -285,7 +338,20 @@ namespace HalfwayHome
       Game.current.SetTimeBlock(time);
 
     }
+    public int GetSelfStat(string stat_name)
+    {
+        return Game.current.Self.GetStat(stat_name);
+    }
 
+        public void AlterTime()
+    {
+      Game.current.AlterTime();
+    }
+
+    public int GetHour()
+    {
+        return Game.current.Hour;
+    }
     public void CallSleep()
     {
       Game.current.Slept();

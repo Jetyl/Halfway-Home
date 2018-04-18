@@ -169,7 +169,9 @@ public class EventHandler
         for (int i = 0; i < functionList.Count; ++i)
         {
             //if the function is static, or exists
-            if (functionList[i].Method.IsStatic || !functionList[i].Target.Equals(null))
+            //Debug.Log(EventTargets[eventName][i] + " is not Null: " + !EventTargets[eventName][i].Equals(null));
+
+            if ((functionList[i].Method.IsStatic || !functionList[i].Target.Equals(null)) && !EventTargets[eventName][i].Equals(null))
             {
                 functionList[i].Invoke(eventData);
 
@@ -177,6 +179,8 @@ public class EventHandler
             else
             {
                 functionList.RemoveAt(i);
+                EventTargets[eventName].RemoveAt(i);
+                EventMethods[eventName].RemoveAt(i);
                 --i;
             }
         }

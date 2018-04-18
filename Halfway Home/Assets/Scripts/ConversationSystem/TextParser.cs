@@ -12,6 +12,7 @@ using System;
 using LitJson;
 using System.IO;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -26,6 +27,33 @@ public static class TextParser
         yield return new WaitForSeconds(Time.deltaTime);
 
         Space.DispatchEvent(tag);
+
+    }
+
+    public static IEnumerator FrameDelay(GameObject target, Events tag)
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        target.DispatchEvent(tag);
+
+    }
+
+    public static IEnumerator FrameDelay<T>(Events tag, T eventdata) where T : EventData
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        Space.DispatchEvent(tag, eventdata);
+
+    }
+
+    public static IEnumerator FrameDelay<T>(GameObject target, Events tag, T eventdata) where T : EventData
+    {
+
+        yield return new WaitForSeconds(Time.deltaTime);
+
+        target.DispatchEvent(tag, eventdata);
 
     }
 
@@ -238,6 +266,23 @@ public static class TextParser
         //text = text.Replace("#PlayerName", Game.current.PlayerName);
         text = text.Replace("@", Environment.NewLine);
         text = text.Replace("<color=", "<color=#");
+        
+        var regex = new Regex(Regex.Escape("\""));
+        text = regex.Replace(text, "“", 1);
+
+        var regret = new Regex(Regex.Escape("`"));
+        text = regret.Replace(text, "“", 1);
+        
+        text = text.Replace("`", "\"");
+
+        
+        //color stuff
+        text = text.Replace("color_wellbeing_relief", "1FD118");
+        text = text.Replace("color_wellbeing_penalty", "ED3913");
+        text = text.Replace("color_awareness", "2075DF");
+        text = text.Replace("color_expression", "C34182");
+        text = text.Replace("color_grace", "DE9E20");
+        text = text.Replace("color_descriptor", "6999A6");
 
         return text;
     }
@@ -245,46 +290,14 @@ public static class TextParser
     
     public static int CheckProgress(JsonData data)
     {
-
-
-        int ty = (int)data["TypeOfProgress"];
-
-        ProgressType type = (ProgressType)ty;
-
         int NextID = -1;
 
-        switch (type)
-        {
-            case ProgressType.None:
-                break;
-            case ProgressType.ProgressPoint:
+        ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
 
-                ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
-
-                if (Game.current.Progress.CheckProgress(CheckToMatch))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-
-                break;
-            
-            case ProgressType.PlotBeat:
-
-                string BeatName = (string)data["BeatName"];
-                int statin = (int)data["Beat"];
-                Beat.BeatState beatState = (Beat.BeatState)statin;
-
-                if (Game.current.Progress.CheckBeatState(BeatName, beatState))
-                    NextID = (int)data["PassID"];
-                else
-                    NextID = (int)data["FailID"];
-                break;
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
-
+        if (Game.current.Progress.CheckProgress(CheckToMatch))
+            NextID = (int)data["PassID"];
+        else
+            NextID = (int)data["FailID"];
 
         return NextID;
     }
@@ -311,29 +324,12 @@ public static class TextParser
 
     public static int MakeProgress(JsonData data)
     {
-
-        int ty = (int)data["TypeOfProgress"];
-
-        ProgressType type = (ProgressType)ty;
-
         int NextID = -1;
 
-        switch (type)
-        {
-            case ProgressType.None:
-                break;
-            case ProgressType.ProgressPoint:
+        ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
 
-                ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
-                
-                Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
-                NextID = (int)data["NextID"];
-                break;
-            
-            default:
-                Debug.LogError("Unrecognized Option");
-                break;
-        }
+        Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
+        NextID = (int)data["NextID"];
 
 
         return NextID;

@@ -64,8 +64,10 @@ public class Events
     public static readonly String EndGame = "EndGameEvent";
     public static readonly String MapChoiceMade = "MapChoiceMadeEvent";
     public static readonly String MapChoiceConfirmed = "MapChoiceConfirmedEvent";
+    public static readonly String MapTransitionOutCompleted = "MapTransitionOutCompletedEvent";
     public static readonly String LeaveMap = "LeaveMapEvent";
     public static readonly String ReturnToMap = "ReturnToMapEvent";
+    public static readonly String UpdateMap = "UpdateMapEvent";
     public static readonly String NewStory = "NewStoryEvent";
     public static readonly String ResumeStory = "ResumeStoryEvent";
     public static readonly String FinishedStory = "FinishedStoryEvent";
@@ -76,6 +78,8 @@ public class Events
     public static readonly String CharacterExit = "CharacterExitEvent";
     public static readonly String Backdrop = "BackdropEvent";
     public static readonly String MoveCharacter = "MoveCharacterEvent";
+    public static readonly String CG = "CustomGraphicEvent";
+    public static readonly String CloseCG = "CloseCustomGraphicEvent";
     public static readonly String NewDay = "NewDayEvent";
     public static readonly String GetPlayerInfo = "PlayerInfoEvent";
     public static readonly String GetPlayerInfoFinished = "FinishedPlayerInfoEvent";
@@ -124,6 +128,7 @@ public class Events
     public static readonly String AddStat = "AddStatEvent";
     public static readonly String StatChange = "StatChangeEvent";
     public static readonly String TimeChange = "TimeChangeEvent";
+    public static readonly String ClockFinished = "ClockFillEvent";
 
     //a null event. no one should listen to this
     public static readonly String Null = "NullEvent";

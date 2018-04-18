@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 namespace TMPro.Examples
 {
 
@@ -11,6 +10,7 @@ namespace TMPro.Examples
         public float AngleMultiplier = 1.0f;
         public float SpeedMultiplier = 1.0f;
         public float CurveScale = 1.0f;
+        public float JitterScale = 120.0f;
 
         private TMP_Text m_TextComponent;
         private bool hasTextChanged;
@@ -44,7 +44,7 @@ namespace TMPro.Examples
 
         void Start()
         {
-            StartCoroutine(AnimateVertexColors());
+            StartCoroutine(AnimateVertexJitter());
         }
 
 
@@ -58,7 +58,7 @@ namespace TMPro.Examples
         /// Method to animate vertex colors of a TMP Text object.
         /// </summary>
         /// <returns></returns>
-        IEnumerator AnimateVertexColors()
+        IEnumerator AnimateVertexJitter()
         {
 
             // We force an update of the text object since it would only be updated at the end of the frame. Ie. before this code is executed on the first frame.
@@ -83,6 +83,10 @@ namespace TMPro.Examples
             // Cache the vertex data of the text object as the Jitter FX is applied to the original position of the characters.
             TMP_MeshInfo[] cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
 
+            int numMaterials;
+            Vector3[][] sourceVertices = new Vector3[1][];
+            Vector3[][] destVertices = new Vector3[1][];
+            
             while (true)
             {
                 // Get new copy of vertex data if the text has changed.
@@ -90,6 +94,34 @@ namespace TMPro.Examples
                 {
                     // Update the copy of the vertex data for the text object.
                     cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
+
+                    numMaterials = textInfo.materialCount;
+
+                    sourceVertices = new Vector3[numMaterials][];
+
+                    //print("we copyin up in this");
+                    //print("there be " + numMaterials + " maturiulz");
+
+                    for (int i = 0; i < numMaterials; i++)
+                    {
+                        int numVerts = cachedMeshInfo[i].vertices.Length;
+
+                        sourceVertices[i] = new Vector3[numVerts];
+                        destVertices[i] = new Vector3[numVerts];
+
+                        //print("thar be " + cachedMeshInfo[i].vertices.Length + " vurticees for material " + i);
+
+                        System.Array.Copy(cachedMeshInfo[i].vertices, sourceVertices[i], numVerts);
+
+                        
+                        //for (int j = 0; j < numVerts; j++)
+                        //{
+                        //    sourceVertices[i][j] = cachedMeshInfo[i].vertices[j];
+                        //}
+                        //sourceVertices[i] = cachedMeshInfo[i].vertices;
+                    }
+
+                    //sourceVertices = cachedMeshInfo[materialIndex].vertices;
 
                     hasTextChanged = false;
                 }
@@ -122,38 +154,48 @@ namespace TMPro.Examples
                     int vertexIndex = textInfo.characterInfo[i].vertexIndex;
 
                     // Get the cached vertices of the mesh used by this text element (character or sprite).
-                    Vector3[] sourceVertices = cachedMeshInfo[materialIndex].vertices;
+                    //Vector3[] sourceVertices = cachedMeshInfo[materialIndex].vertices;
 
                     // Determine the center point of each character at the baseline.
                     //Vector2 charMidBasline = new Vector2((sourceVertices[vertexIndex + 0].x + sourceVertices[vertexIndex + 2].x) / 2, charInfo.baseLine);
                     // Determine the center point of each character.
-                    Vector2 charMidBasline = (sourceVertices[vertexIndex + 0] + sourceVertices[vertexIndex + 2]) / 2;
+                    Vector2 charMidBasline = (sourceVertices[materialIndex][vertexIndex + 0] + sourceVertices[materialIndex][vertexIndex + 2]) / 2;
 
                     // Need to translate all 4 vertices of each quad to aligned with middle of character / baseline.
                     // This is needed so the matrix TRS is applied at the origin for each character.
                     Vector3 offset = charMidBasline;
 
-                    Vector3[] destinationVertices = textInfo.meshInfo[materialIndex].vertices;
+                    //Vector3[] destinationVertices = sourceVertices[materialIndex].vertices;
 
-                    destinationVertices[vertexIndex + 0] = sourceVertices[vertexIndex + 0] - offset;
-                    destinationVertices[vertexIndex + 1] = sourceVertices[vertexIndex + 1] - offset;
-                    destinationVertices[vertexIndex + 2] = sourceVertices[vertexIndex + 2] - offset;
-                    destinationVertices[vertexIndex + 3] = sourceVertices[vertexIndex + 3] - offset;
+                    //destinationVertices[vertexIndex + 0] = sourceVertices[vertexIndex + 0] - offset;
+                    //destinationVertices[vertexIndex + 1] = sourceVertices[vertexIndex + 1] - offset;
+                    //destinationVertices[vertexIndex + 2] = sourceVertices[vertexIndex + 2] - offset;
+                    //destinationVertices[vertexIndex + 3] = sourceVertices[vertexIndex + 3] - offset;
 
                     vertAnim.angle = Mathf.SmoothStep(-vertAnim.angleRange, vertAnim.angleRange, Mathf.PingPong(loopCount / 25f * vertAnim.speed, 1f));
-                    Vector3 jitterOffset = new Vector3(Random.Range(-.25f, .25f), Random.Range(-.25f, .25f), 0);
+                    Vector3 jitterOffset = new Vector3(Random.Range(-.25f, .25f), Random.Range(-.25f, .25f), 0) * JitterScale;
 
                     matrix = Matrix4x4.TRS(jitterOffset * CurveScale, Quaternion.Euler(0, 0, Random.Range(-5f, 5f) * AngleMultiplier), Vector3.one);
 
-                    destinationVertices[vertexIndex + 0] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 0]);
-                    destinationVertices[vertexIndex + 1] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 1]);
-                    destinationVertices[vertexIndex + 2] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 2]);
-                    destinationVertices[vertexIndex + 3] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 3]);
+                    //destinationVertices[vertexIndex + 0] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 0]);
+                    //destinationVertices[vertexIndex + 1] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 1]);
+                    //destinationVertices[vertexIndex + 2] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 2]);
+                    //destinationVertices[vertexIndex + 3] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 3]);
 
-                    destinationVertices[vertexIndex + 0] += offset;
-                    destinationVertices[vertexIndex + 1] += offset;
-                    destinationVertices[vertexIndex + 2] += offset;
-                    destinationVertices[vertexIndex + 3] += offset;
+                   //destinationVertices[vertexIndex + 0] += offset;
+                   //destinationVertices[vertexIndex + 1] += offset;
+                   //destinationVertices[vertexIndex + 2] += offset;
+                   //destinationVertices[vertexIndex + 3] += offset;
+
+                    destVertices[materialIndex][vertexIndex + 0] = jitterOffset + sourceVertices[materialIndex][vertexIndex + 0];
+                    destVertices[materialIndex][vertexIndex + 1] = jitterOffset + sourceVertices[materialIndex][vertexIndex + 1];
+                    destVertices[materialIndex][vertexIndex + 2] = jitterOffset + sourceVertices[materialIndex][vertexIndex + 2];
+                    destVertices[materialIndex][vertexIndex + 3] = jitterOffset + sourceVertices[materialIndex][vertexIndex + 3];
+
+                    //print("vert " + vertexIndex + " be " + sourceVertices[materialIndex][vertexIndex]);
+                    //print("NEW vert " + vertexIndex + " be " + destVertices[materialIndex][vertexIndex]);
+
+                    System.Array.Copy(destVertices[materialIndex], textInfo.meshInfo[materialIndex].vertices, destVertices[materialIndex].Length);
 
                     vertexAnim[i] = vertAnim;
                 }
@@ -167,7 +209,7 @@ namespace TMPro.Examples
 
                 loopCount += 1;
 
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.03f);
             }
         }
 

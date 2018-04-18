@@ -15,9 +15,12 @@ public class AutoType : MonoBehaviour
 {
     // 1/(pause speed + player pref) = # of characters added to the screen per second.
     public float DefaultPauseSpeed = 0.2f; 
-    public AudioClip sound;
+    //public AudioClip sound;
+    public string ScrollEvent;
 
     public List<AutoDelays> ExtraDelays;
+
+    public List<char> DelayAllowances;
 
     float letterPause;
 
@@ -25,7 +28,7 @@ public class AutoType : MonoBehaviour
 
     string message;
 
-    AudioSource audios;
+    //AudioSource audios;
 
     private TextMeshProUGUI Text;
 
@@ -43,11 +46,11 @@ public class AutoType : MonoBehaviour
     void Start()
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
-        audios = GetComponent<AudioSource>();
+        //audios = GetComponent<AudioSource>();
         Text.useMaxVisibleDescender = true;
         EventSystem.ConnectEvent<AutoTypeEvent>(gameObject, Events.AutoType, TypingText);
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.PrintLine, SkipTyping);
-        DefaultVolume = audios.volume;
+        //DefaultVolume = audios.volume;
 
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
@@ -124,15 +127,15 @@ public class AutoType : MonoBehaviour
             
             yield return new WaitForSeconds(Time.deltaTime);
 
-            while (Text.maxVisibleCharacters < message.Length)
+            while (Text.maxVisibleCharacters < Text.GetParsedText().Length)
             {
-                
-
+                Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, ScrollEvent));
+                /*
                 if (!audios.isPlaying)
                 {
-                    if (visible < Text.GetParsedText().Length)
+                    if (Text.maxVisibleCharacters < Text.GetParsedText().Length)
                     {
-                        //print(Text.maxVisibleCharacters);
+                        print(Text.maxVisibleCharacters);
                         audios.volume = DefaultVolume * Game.current.Progress.GetFloatValue("SFXVolume")
                             * Game.current.Progress.GetFloatValue("MasterVolume");
                         audios.PlayOneShot(sound);
@@ -140,12 +143,20 @@ public class AutoType : MonoBehaviour
 
 
                 }
-
+                */
                 if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters))
                 {
-                    letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
+                    if (UpdateSpeed.ContainsKey(Text.maxVisibleCharacters + 1))
+                    {
+                        letterPause = (UpdateSpeed[Text.maxVisibleCharacters]);
 
-                    //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                        //print("Delay " + letterPause);
+                    }
+                    else
+                    {
+                        letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
+                        //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                    }
                 }
 
                 var vis = Text.maxVisibleCharacters;
@@ -156,8 +167,8 @@ public class AutoType : MonoBehaviour
                     vis = Text.GetParsedText().Length - 1;
 
 
-                var charaPause = DelayContains(Text.GetParsedText()[vis], letterPause);
-                
+                var charaPause = DelayContains(vis, letterPause);
+                //print(Text.GetParsedText()[vis] + " " + charaPause);
                 Text.maxVisibleCharacters++;
 
                 yield return new WaitForSeconds(charaPause);
@@ -173,18 +184,40 @@ public class AutoType : MonoBehaviour
 
         Text.maxVisibleCharacters = message.Length;
 
-        audios.Stop();
+        //audios.Stop();
         Space.DispatchEvent(Events.FinishedAutoType);
         
     }
 
 
-    float DelayContains(char character, float value)
+    float DelayContains(int index, float value)
     {
-        foreach(var del in ExtraDelays)
+
+        if(Text.GetParsedText().Length <= index + 1)
+            return value;
+
+        //first we needs to see if we can even have a modifed delay for this character.
+        bool Allow = false;
+        char chara = Text.GetParsedText()[index + 1];
+
+        foreach (var del in DelayAllowances)
+        {
+            if (chara == del)
+                Allow = true;
+
+        }
+
+        if (!Allow)
+            return value;
+        
+        //now that we know we can get a modified delay, search for a modified delay
+        char character = Text.GetParsedText()[index];
+
+        foreach (var del in ExtraDelays)
         {
             if(del.chracter == character)
             {
+                print(character);
                 return value * del.DelayMultiplier;
             }
 
@@ -192,6 +225,7 @@ public class AutoType : MonoBehaviour
 
         return value;
     }
+
 
 
 }

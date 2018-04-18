@@ -60,6 +60,7 @@ public class IdentityDisplay : MonoBehaviour
         var setData = new IdentityDisplay.PlayerSetInfoEvent();
         Space.DispatchEvent(Events.SetPlayerIdentity, setData);
         Space.DispatchEvent(Events.GetPlayerInfoFinished);
+        Space.DispatchEvent(Events.FinishedDescription);
         gameObject.SetActive(false);
     }
 

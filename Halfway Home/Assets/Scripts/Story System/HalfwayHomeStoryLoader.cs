@@ -75,7 +75,7 @@ namespace HalfwayHome
     [Header("Story")]
     public HalfwayHomeStoryReader reader;
 
-    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "delusion" };
+    private string[] statNames { get; } = { "grace", "expression", "awareness", "stress", "fatigue", "depression" };
     private Dictionary<string, StatAccess> stats = new Dictionary<string, StatAccess>();
 
     void Start()
@@ -181,6 +181,14 @@ namespace HalfwayHome
       varChange.variable.stringValue = Game.current.PlayerName;
       reader.gameObject.Dispatch<Stratus.Modules.InkModule.Story.SetVariableValueEvent>(varChange);
     }
-  }
+        void OnDestroy()
+        {
+            Space.DisConnect<StoryEvent>(Events.NewStory, OnNewStory);
+            //Scene.Connect<Story.SavedEvent>(this.OnStorySavedEvent);
+            Space.DisConnect<DefaultEvent>(Events.SetPlayerIdentity, OnSetPlayerIdentity);
+        }
+
+
+    }
 
 }

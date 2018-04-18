@@ -36,21 +36,37 @@ namespace HalfwayHome
 
       SerializedProperty FatigueCloseLimit = serializedObject.FindProperty("FatigueCloseLimit");
       SerializedProperty StressCloseLimit = serializedObject.FindProperty("StressCloseLimit");
-      SerializedProperty DelusionCloseLimit = serializedObject.FindProperty("DelusionCloseLimit");
+      SerializedProperty DepressionCloseLimit = serializedObject.FindProperty("DepressionCloseLimit");
+
+      
+      SerializedProperty FatigueCloseTooltip = serializedObject.FindProperty("FatigueCloseTooltip");
+      SerializedProperty StressCloseTooltip = serializedObject.FindProperty("StressCloseTooltip");
+      SerializedProperty DepressionCloseTooltip = serializedObject.FindProperty("DepressionCloseTooltip");
+
+      
+      SerializedProperty DynamicTooltip = serializedObject.FindProperty("DynamicTooltip");
+      SerializedProperty DailyAccessTooltip = serializedObject.FindProperty("DailyAccessTooltip");
 
 
       EditorGUILayout.Space();
 
-      EditorGUILayout.IntSlider(FatigueCloseLimit, 0, 100, "Fatigue Percent Close");
+      EditorGUILayout.IntSlider(FatigueCloseLimit, 0, 100, "Fatigue Percent Close");      
+      EditorGUILayout.PropertyField(FatigueCloseTooltip, new GUIContent("Fatigue Closed Tooltip"), true);
       EditorGUILayout.IntSlider(StressCloseLimit, 0, 100, "Stress Percent Close");
-      EditorGUILayout.IntSlider(DelusionCloseLimit, 0, 100, "Delusion Percent Close");
+      EditorGUILayout.PropertyField(StressCloseTooltip, new GUIContent("Stress Closed Tooltip"), true);
+      EditorGUILayout.IntSlider(DepressionCloseLimit, 0, 100, "Depression Percent Close");
+      EditorGUILayout.PropertyField(DepressionCloseTooltip, new GUIContent("Depression Closed Tooltip"), true);
             
       EditorGUILayout.Space();
 
       EditorGUILayout.PropertyField(ManualAccess, new GUIContent("Manual Turn Off Flag"), true);
+      EditorGUILayout.PropertyField(DynamicTooltip, new GUIContent("Manual Turn Tooltip Key"), true);
+      EditorGUILayout.Space();
+
       EditorGUILayout.PropertyField(LimitedDailyAccess, new GUIContent("Limited Daily Access?"), true);
       if (LimitedDailyAccess.boolValue == true)
       {
+        EditorGUILayout.PropertyField(DailyAccessTooltip, new GUIContent("Close Time Tooltip"), true);
         EditorGUILayout.PropertyField(TimesCanVisit, new GUIContent("Times Can Visit"), true);
 
         EditorGUILayout.PropertyField(AccessPoint, new GUIContent("Progress: Times visisted"), true);
@@ -110,8 +126,8 @@ namespace HalfwayHome
   {
     var element = list.serializedProperty.GetArrayElementAtIndex(index);
     rect.y += 2;
-    rect.height += EditorGUIUtility.singleLineHeight * 5;
-      list.elementHeight = EditorGUIUtility.singleLineHeight * 6;
+    rect.height += EditorGUIUtility.singleLineHeight * 6;
+      list.elementHeight = EditorGUIUtility.singleLineHeight * 7;
 
       string day = "Day: " + element.FindPropertyRelative("Day").intValue;
       string start = " from: " + GetTime(element.FindPropertyRelative("starttime").intValue);
@@ -136,6 +152,12 @@ namespace HalfwayHome
       element.FindPropertyRelative("ProgressKey").stringValue = EditorGUI.TextField(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 4) + 8, rect.width, EditorGUIUtility.singleLineHeight), "Progress Flag",
             element.FindPropertyRelative("ProgressKey").stringValue);
     }
+
+      element.FindPropertyRelative("ToolTipInfo").stringValue = EditorGUI.TextField(
+          new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 5) + 10,
+          rect.width, EditorGUIUtility.singleLineHeight),
+          "Reason Closed: ", element.FindPropertyRelative("ToolTipInfo").stringValue);
+
     rect = new Rect(rect.x, rect.y, rect.width, rect.height);
   };
 

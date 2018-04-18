@@ -22,6 +22,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     public Animator NextLine;
 
+    public SpriteSwapper AutoButton;
+
     public float AutoTimeDelay = 2;
 
     public bool DebugSkipping;
@@ -64,13 +66,15 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
 
-
+        //events that activate/deactivate the text box
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
         Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenHistory, OnStop);
         Space.Connect<DefaultEvent>(Events.CloseHistory, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenUI, OnNonStop);
         Space.Connect<DefaultEvent>(Events.CloseUI, OnStop);
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnStop);
+        Space.Connect<DefaultEvent>(Events.ClockFinished, OnNonStop);
 
     }
 	
@@ -116,7 +120,7 @@ public class DescriptionDisplay : MonoBehaviour
 
             
         }
-        else if (Input.GetMouseButtonDown(0) == true)
+        else if (Input.GetMouseButtonDown(0) == true || Input.GetButtonDown("Next"))
         {
             if (!isFinished)
             {
@@ -138,6 +142,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         Auto = !Auto;
         AutoTimer = AutoTimeDelay;
+        AutoButton.Swap();
     }
 
     public void ToggleSkip()
@@ -182,15 +187,6 @@ public class DescriptionDisplay : MonoBehaviour
             }
         }
         
-        /*
-        if(!anime.GetBool("IsUp"))
-        {
-            anime.SetBool("IsUp", true);
-            StartCoroutine(WaitTilOpened());
-            return;
-        }*/
-
-        //UpdateSpeaker(0);
         Active = true;
         Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
@@ -285,6 +281,28 @@ public class DescriptionDisplay : MonoBehaviour
         NoClick = false;
     }
 
+    void OnDestroy()
+    {
+
+        Space.DisConnect<DescriptionEvent>(Events.Description, UpdateDescription);
+        Space.DisConnect<DefaultEvent>(Events.FinishedAutoType, OnFinishedTyping);
+        Space.DisConnect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
+        Space.DisConnect<DefaultEvent>(Events.Pause, OnPause);
+        Space.DisConnect<DefaultEvent>(Events.UnPause, OnUnPause);
+        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
+        Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
+        Space.DisConnect<DefaultEvent>(Events.Debug, OnDebug);
+              
+        //events that activate/deactivate the text box
+        Space.DisConnect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.OpenHistory, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.CloseHistory, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.OpenUI, OnNonStop);
+        Space.DisConnect<DefaultEvent>(Events.CloseUI, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.TimeChange, OnStop);
+        Space.DisConnect<DefaultEvent>(Events.ClockFinished, OnNonStop);
+    }
 
 }
 
@@ -296,12 +314,24 @@ public class DescriptionEvent : DefaultEvent
     //public List<Line> Lines;
     public string Line;
     public string Speaker;
+    public string TrueSpeaker; //speaker without the nickname
    
     public DescriptionEvent(string _lines, string _speaker, bool CanSkip_ = false)
     {
         Line = _lines;
         CanSkip = CanSkip_;
-        Speaker = _speaker;
+        
+        Speaker = _speaker.Replace("[", "");
+        Speaker = Speaker.Replace("]", "");
+
+        string[] calls = Speaker.Split('>');
+
+        TrueSpeaker = calls[0].Replace(" ", "");
+        if (calls.Length > 1)
+            Speaker = calls[1];
+        else
+            Speaker = TrueSpeaker;
+
     }
 
 }

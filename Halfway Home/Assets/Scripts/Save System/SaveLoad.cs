@@ -76,6 +76,8 @@ public static class SaveLoad
             File.Delete(Application.persistentDataPath + "/savedGames.gd");
         }
 
+        savedGames = new List<Game>();
+
     }
 
     public static bool isEmpty()

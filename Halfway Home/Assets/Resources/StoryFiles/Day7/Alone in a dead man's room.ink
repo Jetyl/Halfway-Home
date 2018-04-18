@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -25,9 +25,9 @@ EXTERNAL SetTimeBlock(int)
 -> Start
 
 === Start ===
-After hours of solum talking and worrying, I slip away to my room.
-Well, I supose its not my room anymore. not after today.
-It's Timothy's Room now. but...
+After hours of solemn talking and worrying, I slip away to my room.
+Well, I suppose it's not my room anymore. not after today.
+It's Timothy's Room now. But...
 I'm not sure he'll ever return to claim it.
 I look at my bags, half packed with the crap I call my own.
 with a heavy sigh, I look away, and toss myself into my sheets. one of the last things I can call my own in this space.

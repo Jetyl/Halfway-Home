@@ -10,7 +10,7 @@ public class EndingNode : BaseNode
     public int EndingID;
     public bool EnableUI;
 
-    public EndingNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int MyID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public EndingNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, int MyID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         outPoint = null;
         ID = MyID;
@@ -19,7 +19,7 @@ public class EndingNode : BaseNode
         EnableUI = false;
     }
 
-    public EndingNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int MyID, int endID, string Title, bool Enable) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public EndingNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, int MyID, int endID, string Title, bool Enable, int color) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         title = Title;
         outPoint = null;
@@ -29,6 +29,18 @@ public class EndingNode : BaseNode
         EnableUI = Enable;
     }
 
+    public override BaseNode Duplicate(int index)
+    {
+        Vector2 pos = new Vector2(rect.x + 25, rect.y + 25);
+
+        EndingNode copy = new EndingNode(pos, rect.width, rect.height, style, selectedNodeStyle, inPoint.style, outPoint.style,
+            inPoint.OnClickConnectionPoint, outPoint.OnClickConnectionPoint, OnRemoveNode, OnDuplicateNode, index);
+
+        copy.ChangeColor(NodeColor);
+        copy.EnableUI = EnableUI;
+
+        return copy;
+    }
 
     public override void Draw()
     {

@@ -4,144 +4,236 @@
   "title" : "Main timeline start",
   "ID"    : 0,
   "TypeID" : 0,
-  "NodePositionX" : -5471.04443359375,
-  "NodePositionY" : -95.3860778808594,
+  "NodePositionX" : -5558.03125,
+  "NodePositionY" : -212.900970458984,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : 10036,
   "Disable"       : false
  },
  {
-  "title" : "Must go to Kitchen",
+  "title" : "Must go to Cafe",
   "ID"    : 10000,
   "TypeID" : 12,
-  "NodePositionX" : -3798.06079101563,
-  "NodePositionY" : -115.993453979492,
+  "NodePositionX" : -3909.04077148438,
+  "NodePositionY" : -243.507171630859,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Tutorial Cafe",
   "Day"           : 1,
   "Hour"          : 12,
   "Length"        : 1,
   "Room"          : 4,
-  "NextID"        : 10007
+  "NextID"        : 10007,
+  "Locks"         : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
  },
  {
   "title" : "Tutorial Choices",
   "ID"    : 10002,
   "TypeID" : 13,
-  "NodePositionX" : -3125.939453125,
-  "NodePositionY" : -84.1604690551758,
+  "NodePositionX" : -3092.91967773438,
+  "NodePositionY" : -184.673431396484,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Opening Scene",
   "ID"    : 10003,
   "TypeID" : 11,
-  "NodePositionX" : -4472.80859375,
-  "NodePositionY" : -94.2437438964844,
+  "NodePositionX" : -4574.7900390625,
+  "NodePositionY" : -212.758392333984,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10006,
   "Story"         : "StoryFiles/Day1/Memory"
  },
  {
-  "title" : "Must go to kitchen",
+  "title" : "Must go to cafe",
   "ID"    : 10004,
   "TypeID" : 13,
-  "NodePositionX" : -4023.07006835938,
-  "NodePositionY" : -84.4934921264648,
+  "NodePositionX" : -4127.0537109375,
+  "NodePositionY" : -201.007415771484,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Knock knock knock",
   "ID"    : 10006,
   "TypeID" : 11,
-  "NodePositionX" : -4242.0322265625,
-  "NodePositionY" : -95.9419860839844,
+  "NodePositionX" : -4353.013671875,
+  "NodePositionY" : -210.456634521484,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10004,
   "Story"         : "StoryFiles/Day1/Knock on the Morning Door"
  },
  {
-  "title" : "Kitchen Tutorial",
+  "title" : "Cafe Tutorial",
   "ID"    : 10007,
   "TypeID" : 11,
-  "NodePositionX" : -3385.0595703125,
-  "NodePositionY" : -87.1782913208008,
+  "NodePositionX" : -3535.04467773438,
+  "NodePositionY" : -193.691009521484,
   "width"         : 200.0,
   "height"        : 120.0,
-  "NextID"        : 10002,
+  "color"         : 1,
+  "NextID"        : 10155,
   "Story"         : "StoryFiles/Day1/RF - Kitchen"
  },
  {
   "title" : "Commons Tutorial",
   "ID"    : 10008,
   "TypeID" : 12,
-  "NodePositionX" : -2871.6376953125,
-  "NodePositionY" : 68.8450241088867,
+  "NodePositionX" : -2890.60424804688,
+  "NodePositionY" : -144.666595458984,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Tutorial Commons",
   "Day"           : 1,
   "Hour"          : 13,
   "Length"        : 7,
   "Room"          : 2,
-  "NextID"        : 10018
+  "NextID"        : 10018,
+  "Locks"         : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   },
+   {
+    "Name" : "Been to Commons",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Max"
+  ]
  },
  {
   "title" : "Garden Tutorial",
   "ID"    : 10010,
   "TypeID" : 12,
-  "NodePositionX" : -2861.62451171875,
-  "NodePositionY" : -356.572326660156,
+  "NodePositionX" : -2868.59350585938,
+  "NodePositionY" : -447.091156005859,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Tutorial Garden",
   "Day"           : 1,
   "Hour"          : 13,
   "Length"        : 7,
   "Room"          : 5,
-  "NextID"        : 10016
+  "NextID"        : 10016,
+  "Locks"         : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   },
+   {
+    "Name" : "Been to Garden",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
  },
  {
   "title" : "Library Tutorial",
   "ID"    : 10011,
   "TypeID" : 12,
-  "NodePositionX" : -2859.17431640625,
-  "NodePositionY" : -569.632263183594,
+  "NodePositionX" : -2864.99975585938,
+  "NodePositionY" : -696.733276367188,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Tutorial Library",
   "Day"           : 1,
   "Hour"          : 13,
   "Length"        : 7,
   "Room"          : 6,
-  "NextID"        : 10019
+  "NextID"        : 10019,
+  "Locks"         : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   },
+   {
+    "Name" : "Been to Library",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Charlotte",
+   "Trissa"
+  ]
  },
  {
   "title" : "Art Room Tutorial",
   "ID"    : 10012,
   "TypeID" : 12,
-  "NodePositionX" : -2871.849609375,
-  "NodePositionY" : 271.037841796875,
+  "NodePositionX" : -2891.81811523438,
+  "NodePositionY" : 151.524810791016,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Tutorial Art",
   "Day"           : 1,
   "Hour"          : 13,
   "Length"        : 7,
   "Room"          : 7,
-  "NextID"        : 10017
+  "NextID"        : 10017,
+  "Locks"         : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   },
+   {
+    "Name" : "Been to Art",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Eduardo",
+   "Isaac"
+  ]
  },
  {
   "title" : "Garden Tutorial",
   "ID"    : 10016,
   "TypeID" : 11,
-  "NodePositionX" : -2422.22973632813,
-  "NodePositionY" : -319.360412597656,
+  "NodePositionX" : -2442.19409179688,
+  "NodePositionY" : -438.874359130859,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10024,
   "Story"         : "StoryFiles/Day1/RF - Garden"
  },
@@ -149,10 +241,11 @@
   "title" : "Art Room Tutorial",
   "ID"    : 10017,
   "TypeID" : 11,
-  "NodePositionX" : -2429.86474609375,
-  "NodePositionY" : 307.335388183594,
+  "NodePositionX" : -2449.82983398438,
+  "NodePositionY" : 187.818756103516,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10027,
   "Story"         : "StoryFiles/Day1/RF - Art Room"
  },
@@ -160,10 +253,11 @@
   "title" : "Commons Tutorial",
   "ID"    : 10018,
   "TypeID" : 11,
-  "NodePositionX" : -2426.7529296875,
-  "NodePositionY" : 125.402694702148,
+  "NodePositionX" : -2446.72045898438,
+  "NodePositionY" : 5.89248657226563,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10025,
   "Story"         : "StoryFiles/Day1/RF - Commons"
  },
@@ -171,10 +265,11 @@
   "title" : "Library Tutorial",
   "ID"    : 10019,
   "TypeID" : 11,
-  "NodePositionX" : -2413.3408203125,
-  "NodePositionY" : -534.5966796875,
+  "NodePositionX" : -2433.30737304688,
+  "NodePositionY" : -654.122924804688,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10022,
   "Story"         : "StoryFiles/Day1/RF - Library"
  },
@@ -182,10 +277,11 @@
   "title" : "Charlotte + Trissa",
   "ID"    : 10020,
   "TypeID" : 11,
-  "NodePositionX" : -1783.80712890625,
-  "NodePositionY" : -522.458374023438,
+  "NodePositionX" : -1655.40673828125,
+  "NodePositionY" : -610.362915039063,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10021,
   "Story"         : "StoryFiles/Day1/Meeting Charlotte"
  },
@@ -193,23 +289,24 @@
   "title" : "",
   "ID"    : 10021,
   "TypeID" : 13,
-  "NodePositionX" : -1346.81860351563,
-  "NodePositionY" : -108.028144836426,
+  "NodePositionX" : -1366.78857421875,
+  "NodePositionY" : -227.542572021484,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Been to Library = True",
   "ID"    : 10022,
   "TypeID" : 2,
-  "NodePositionX" : -2154.95068359375,
-  "NodePositionY" : -557.456420898438,
+  "NodePositionX" : -2174.9140625,
+  "NodePositionY" : -676.984985351563,
   "width"         : 200.0,
   "height"        : 170.0,
-  "NextID"        : 10020,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "color"         : 1,
+  "NextID"        : 10209,
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Library",
     "Type" : 1,
@@ -221,13 +318,13 @@
   "title" : "Been to Garden = True",
   "ID"    : 10024,
   "TypeID" : 2,
-  "NodePositionX" : -2156.77026367188,
-  "NodePositionY" : -336.772430419922,
+  "NodePositionX" : -2176.7333984375,
+  "NodePositionY" : -456.290374755859,
   "width"         : 200.0,
   "height"        : 170.0,
-  "NextID"        : 10051,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "color"         : 1,
+  "NextID"        : 10211,
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Garden",
     "Type" : 1,
@@ -239,13 +336,13 @@
   "title" : "Been to Commons = True",
   "ID"    : 10025,
   "TypeID" : 2,
-  "NodePositionX" : -2150.58837890625,
-  "NodePositionY" : 102.74324798584,
+  "NodePositionX" : -2170.552734375,
+  "NodePositionY" : -16.7652282714844,
   "width"         : 200.0,
   "height"        : 170.0,
-  "NextID"        : 10021,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "color"         : 1,
+  "NextID"        : 10208,
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Commons",
     "Type" : 1,
@@ -257,13 +354,13 @@
   "title" : "Been to Art = True",
   "ID"    : 10027,
   "TypeID" : 2,
-  "NodePositionX" : -2150.921875,
-  "NodePositionY" : 287.739929199219,
+  "NodePositionX" : -2170.8857421875,
+  "NodePositionY" : 168.226959228516,
   "width"         : 200.0,
   "height"        : 170.0,
-  "NextID"        : 10030,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "color"         : 1,
+  "NextID"        : 10207,
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Art",
     "Type" : 1,
@@ -275,10 +372,11 @@
   "title" : "Eduardo + Isaac",
   "ID"    : 10030,
   "TypeID" : 11,
-  "NodePositionX" : -1796.41748046875,
-  "NodePositionY" : 317.574462890625,
+  "NodePositionX" : -1675.26904296875,
+  "NodePositionY" : 108.059967041016,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10021,
   "Story"         : "StoryFiles/Day1/Meeting Eduardo"
  },
@@ -286,24 +384,37 @@
   "title" : "Welcome Dinner, After Tutorials",
   "ID"    : 10031,
   "TypeID" : 12,
-  "NodePositionX" : -1121.07897949219,
-  "NodePositionY" : -150.535583496094,
+  "NodePositionX" : -1130.05517578125,
+  "NodePositionY" : -305.050384521484,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Welcome Dinner",
   "Day"           : 1,
   "Hour"          : 17,
   "Length"        : 1,
   "Room"          : 4,
-  "NextID"        : 10032
+  "NextID"        : 10032,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Charlotte",
+   "Eduardo",
+   "Max",
+   "Isaac",
+   "Trissa"
+  ]
  },
  {
   "title" : "Welcome Dinner",
   "ID"    : 10032,
   "TypeID" : 11,
-  "NodePositionX" : -712.345825195313,
-  "NodePositionY" : -136.034851074219,
+  "NodePositionX" : -732.315734863281,
+  "NodePositionY" : -255.551116943359,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10038,
   "Story"         : "StoryFiles/Day1/Welcome Dinner"
  },
@@ -311,10 +422,11 @@
   "title" : "Off to Bed",
   "ID"    : 10034,
   "TypeID" : 11,
-  "NodePositionX" : 82.5097351074219,
-  "NodePositionY" : -132.574554443359,
+  "NodePositionX" : 62.5402221679688,
+  "NodePositionY" : -252.092132568359,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10071,
   "Story"         : "StoryFiles/Day1/Off To Bed"
  },
@@ -322,14 +434,14 @@
   "title" : "",
   "ID"    : 10036,
   "TypeID" : 1,
-  "NodePositionX" : -5234.35205078125,
-  "NodePositionY" : -128.511657714844,
+  "NodePositionX" : -5330.3505859375,
+  "NodePositionY" : -249.028656005859,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "PassID"        : 10041,
   "FailID"        : 10037,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Debug Mode",
     "Type" : 1,
@@ -341,48 +453,57 @@
   "title" : "to map for Debuging",
   "ID"    : 10037,
   "TypeID" : 13,
-  "NodePositionX" : -4981.68310546875,
-  "NodePositionY" : 69.1045455932617,
+  "NodePositionX" : -5073.67578125,
+  "NodePositionY" : -47.4068298339844,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "",
   "ID"    : 10038,
   "TypeID" : 13,
-  "NodePositionX" : -495.484680175781,
-  "NodePositionY" : -128.586853027344,
+  "NodePositionX" : -515.450500488281,
+  "NodePositionY" : -248.103851318359,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Your Room only",
   "ID"    : 10039,
   "TypeID" : 12,
-  "NodePositionX" : -301.361968994141,
-  "NodePositionY" : -175.570526123047,
+  "NodePositionX" : -316.322570800781,
+  "NodePositionY" : -307.585540771484,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Off to Bed",
   "Day"           : 1,
   "Hour"          : 18,
   "Length"        : 5,
   "Room"          : 1,
-  "NextID"        : 10034
+  "NextID"        : 10034,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
  },
  {
   "title" : "",
   "ID"    : 10041,
   "TypeID" : 1,
-  "NodePositionX" : -4982.09716796875,
-  "NodePositionY" : -121.658378601074,
+  "NodePositionX" : -5080.0888671875,
+  "NodePositionY" : -259.175140380859,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "PassID"        : 10043,
   "FailID"        : 10042,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "LoadSavedGame",
     "Type" : 1,
@@ -394,13 +515,13 @@
   "title" : "for repeats! Load to location",
   "ID"    : 10042,
   "TypeID" : 2,
-  "NodePositionX" : -4713.7880859375,
-  "NodePositionY" : -119.837089538574,
+  "NodePositionX" : -4811.7763671875,
+  "NodePositionY" : -233.354827880859,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "NextID"        : 10003,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "LoadSavedGame",
     "Type" : 1,
@@ -412,38 +533,45 @@
   "title" : "Load the Game",
   "ID"    : 10043,
   "TypeID" : 14,
-  "NodePositionX" : -4715.494140625,
-  "NodePositionY" : -221.503326416016,
+  "NodePositionX" : -4809.482421875,
+  "NodePositionY" : -335.018157958984,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Goes to Room Self Reflection",
   "ID"    : 10044,
   "TypeID" : 12,
-  "NodePositionX" : 1136.63037109375,
-  "NodePositionY" : 165.973297119141,
+  "NodePositionX" : 1116.65844726563,
+  "NodePositionY" : 46.4662170410156,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Recovery Restart Required",
   "Day"           : 7,
   "Hour"          : 18,
   "Length"        : 2,
   "Room"          : 1,
-  "NextID"        : 10046
+  "NextID"        : 10046,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+  ]
  },
  {
   "title" : "Is The Time Loop Broken?",
   "ID"    : 10045,
   "TypeID" : 1,
-  "NodePositionX" : 1766.98657226563,
-  "NodePositionY" : 177.386184692383,
+  "NodePositionX" : 1747.01928710938,
+  "NodePositionY" : 57.8763732910156,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "PassID"        : 10052,
   "FailID"        : 10048,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Saved Self",
     "Type" : 1,
@@ -455,10 +583,11 @@
   "title" : "Recover Restart Required",
   "ID"    : 10046,
   "TypeID" : 11,
-  "NodePositionX" : 1533.97827148438,
-  "NodePositionY" : 204.717926025391,
+  "NodePositionX" : 1514.01586914063,
+  "NodePositionY" : 85.2064514160156,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10045,
   "Story"         : "StoryFiles/Day7/RecoverRestartRequired"
  },
@@ -466,10 +595,11 @@
   "title" : "",
   "ID"    : 10048,
   "TypeID" : 15,
-  "NodePositionX" : 2006.51135253906,
-  "NodePositionY" : 208.496490478516,
+  "NodePositionX" : 1986.53247070313,
+  "NodePositionY" : 88.9877014160156,
   "width"         : 325.0,
   "height"        : 150.0,
+  "color"         : 1,
   "NextID"        : 10049,
   "Day"           : 1,
   "Hour"          : 12
@@ -478,10 +608,11 @@
   "title" : "repeat knocking",
   "ID"    : 10049,
   "TypeID" : 11,
-  "NodePositionX" : 2385.50244140625,
-  "NodePositionY" : 227.49658203125,
+  "NodePositionX" : 2365.50903320313,
+  "NodePositionY" : 107.986724853516,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10062,
   "Story"         : "StoryFiles/Day1/Knock on the Morning Door"
  },
@@ -489,20 +620,22 @@
   "title" : "repeating weeks",
   "ID"    : 10050,
   "TypeID" : 13,
-  "NodePositionX" : 2630.49633789063,
-  "NodePositionY" : 102.49666595459,
+  "NodePositionX" : 2615.80590820313,
+  "NodePositionY" : 228.983795166016,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Timothy intro",
   "ID"    : 10051,
   "TypeID" : 11,
-  "NodePositionX" : -1814.361328125,
-  "NodePositionY" : -243.79313659668,
+  "NodePositionX" : -1707.65576171875,
+  "NodePositionY" : -334.418548583984,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10021,
   "Story"         : "StoryFiles/Day1/Unnatural Spot"
  },
@@ -510,10 +643,11 @@
   "title" : "",
   "ID"    : 10052,
   "TypeID" : -1,
-  "NodePositionX" : 1968.84423828125,
-  "NodePositionY" : 63.782642364502,
+  "NodePositionX" : 1948.86645507813,
+  "NodePositionY" : -55.7281188964844,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "EndID"         : 0,
   "Enable"        : false
  },
@@ -521,24 +655,36 @@
   "title" : "Farewell Meal, End Game",
   "ID"    : 10053,
   "TypeID" : 12,
-  "NodePositionX" : -1119.42370605469,
-  "NodePositionY" : 81.3498001098633,
+  "NodePositionX" : -1138.50830078125,
+  "NodePositionY" : -86.9087829589844,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Farewell Meal",
   "Day"           : 7,
   "Hour"          : 17,
   "Length"        : 1,
   "Room"          : 4,
-  "NextID"        : 10054
+  "NextID"        : 10054,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Charlotte",
+   "Eduardo",
+   "Max",
+   "Isaac",
+   "Trissa"
+  ]
  },
  {
   "title" : "",
   "ID"    : 10054,
   "TypeID" : 11,
-  "NodePositionX" : -719.999267578125,
-  "NodePositionY" : 122.878082275391,
+  "NodePositionX" : -717.114562988281,
+  "NodePositionY" : -40.9156188964844,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10056,
   "Story"         : "StoryFiles/Day7/Farewell Meal"
  },
@@ -546,34 +692,42 @@
   "title" : "",
   "ID"    : 10056,
   "TypeID" : 13,
-  "NodePositionX" : -493.334533691406,
-  "NodePositionY" : 130.655868530273,
+  "NodePositionX" : -484.730773925781,
+  "NodePositionY" : -25.9947204589844,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Trying to sleep past the end of game content",
   "ID"    : 10057,
   "TypeID" : 12,
-  "NodePositionX" : -182.865524291992,
-  "NodePositionY" : 113.532539367676,
+  "NodePositionX" : -202.833312988281,
+  "NodePositionY" : -5.97714233398438,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Railroad Snooze A",
   "Day"           : 7,
   "Hour"          : 0,
   "Length"        : 8,
   "Room"          : 1,
-  "NextID"        : 10058
+  "NextID"        : 10058,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+  ]
  },
  {
   "title" : "power nap",
   "ID"    : 10058,
   "TypeID" : 11,
-  "NodePositionX" : 288.133056640625,
-  "NodePositionY" : 160.532638549805,
+  "NodePositionX" : 268.160339355469,
+  "NodePositionY" : 41.0248107910156,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10060,
   "Story"         : "StoryFiles/Day7/Railroad Snooze"
  },
@@ -581,24 +735,31 @@
   "title" : "",
   "ID"    : 10059,
   "TypeID" : 12,
-  "NodePositionX" : -183.865524291992,
-  "NodePositionY" : 312.53271484375,
+  "NodePositionX" : -201.833312988281,
+  "NodePositionY" : 214.016998291016,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Railroad Snooze B",
   "Day"           : 6,
   "Hour"          : 18,
   "Length"        : 5,
   "Room"          : 1,
-  "NextID"        : 10058
+  "NextID"        : 10058,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+  ]
  },
  {
   "title" : "",
   "ID"    : 10060,
   "TypeID" : 15,
-  "NodePositionX" : 546.022827148438,
-  "NodePositionY" : 145.866088867188,
+  "NodePositionX" : 511.051940917969,
+  "NodePositionY" : 8.02676391601563,
   "width"         : 325.0,
   "height"        : 150.0,
+  "color"         : 1,
   "NextID"        : 10061,
   "Day"           : 7,
   "Hour"          : 9
@@ -607,20 +768,22 @@
   "title" : "",
   "ID"    : 10061,
   "TypeID" : 13,
-  "NodePositionX" : 910.467224121094,
-  "NodePositionY" : 171.421813964844,
+  "NodePositionX" : 890.494812011719,
+  "NodePositionY" : 51.9125061035156,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Temp End",
   "ID"    : 10062,
   "TypeID" : -1,
-  "NodePositionX" : 2652.95874023438,
-  "NodePositionY" : 230.298645019531,
+  "NodePositionX" : 2615.94262695313,
+  "NodePositionY" : 105.787506103516,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "EndID"         : 1,
   "Enable"        : false
  },
@@ -628,24 +791,37 @@
   "title" : "Timothy's breakdown",
   "ID"    : 10063,
   "TypeID" : 12,
-  "NodePositionX" : -187.036437988281,
-  "NodePositionY" : 593.441101074219,
+  "NodePositionX" : -207.003234863281,
+  "NodePositionY" : 473.895904541016,
   "width"         : 350.0,
-  "height"        : 200.0,
+  "height"        : 225.0,
+  "color"         : 1,
+  "Tag"           : "Big Happy Family",
   "Day"           : 7,
   "Hour"          : 12,
   "Length"        : 1,
   "Room"          : 4,
-  "NextID"        : 10064
+  "NextID"        : 10064,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Charlotte",
+   "Eduardo",
+   "Max",
+   "Isaac",
+   "Trissa"
+  ]
  },
  {
   "title" : "",
   "ID"    : 10064,
   "TypeID" : 11,
-  "NodePositionX" : 212.074188232422,
-  "NodePositionY" : 637.552185058594,
+  "NodePositionX" : 608.770202636719,
+  "NodePositionY" : 528.007202148438,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 1,
   "NextID"        : 10065,
   "Story"         : "StoryFiles/Day7/Big Happy Family"
  },
@@ -653,24 +829,25 @@
   "title" : "",
   "ID"    : 10065,
   "TypeID" : 13,
-  "NodePositionX" : 487.073455810547,
-  "NodePositionY" : 643.552429199219,
+  "NodePositionX" : 853.766296386719,
+  "NodePositionY" : 539.005249023438,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Did they Sleep In",
   "ID"    : 10067,
   "TypeID" : 1,
-  "NodePositionX" : 1287.11669921875,
-  "NodePositionY" : -153.587112426758,
+  "NodePositionX" : 1453.41235351563,
+  "NodePositionY" : -276.853851318359,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "PassID"        : 10070,
   "FailID"        : 10068,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Slept In Day 2",
     "Type" : 1,
@@ -682,10 +859,11 @@
   "title" : "Waking Up Bright and Early",
   "ID"    : 10068,
   "TypeID" : 15,
-  "NodePositionX" : 1571.18017578125,
-  "NodePositionY" : -122.412590026855,
+  "NodePositionX" : 1787.46264648438,
+  "NodePositionY" : -238.177093505859,
   "width"         : 325.0,
   "height"        : 150.0,
+  "color"         : 1,
   "NextID"        : 10069,
   "Day"           : 2,
   "Hour"          : 6
@@ -694,20 +872,22 @@
   "title" : "day 2",
   "ID"    : 10069,
   "TypeID" : 13,
-  "NodePositionX" : 2162.28588867188,
-  "NodePositionY" : -100.916618347168,
+  "NodePositionX" : 2339.79418945313,
+  "NodePositionY" : -225.431243896484,
   "width"         : 200.0,
   "height"        : 100.0,
+  "color"         : 1,
   "NextID"        : -1
  },
  {
   "title" : "Add The Max Wake up Scene Here",
   "ID"    : 10070,
   "TypeID" : 15,
-  "NodePositionX" : 1578.75146484375,
-  "NodePositionY" : -360.269409179688,
+  "NodePositionX" : 1756.28491210938,
+  "NodePositionY" : -487.539398193359,
   "width"         : 325.0,
   "height"        : 150.0,
+  "color"         : 2,
   "NextID"        : 10076,
   "Day"           : 2,
   "Hour"          : 12
@@ -716,13 +896,13 @@
   "title" : "Turn back on the garden",
   "ID"    : 10071,
   "TypeID" : 2,
-  "NodePositionX" : 317.608520507813,
-  "NodePositionY" : -155.269973754883,
+  "NodePositionX" : 297.631042480469,
+  "NodePositionY" : -274.787445068359,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "NextID"        : 10072,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Garden",
     "Type" : 1,
@@ -734,13 +914,13 @@
   "title" : "turn back on the commons",
   "ID"    : 10072,
   "TypeID" : 2,
-  "NodePositionX" : 560.8818359375,
-  "NodePositionY" : -153.76594543457,
+  "NodePositionX" : 540.906921386719,
+  "NodePositionY" : -273.283538818359,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "NextID"        : 10073,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Commons",
     "Type" : 1,
@@ -752,13 +932,13 @@
   "title" : "turn back on the library",
   "ID"    : 10073,
   "TypeID" : 2,
-  "NodePositionX" : 804.348571777344,
-  "NodePositionY" : -153.730178833008,
+  "NodePositionX" : 784.374694824219,
+  "NodePositionY" : -273.247406005859,
   "width"         : 200.0,
   "height"        : 170.0,
+  "color"         : 1,
   "NextID"        : 10075,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Library",
     "Type" : 1,
@@ -770,13 +950,13 @@
   "title" : "turn the art room back on",
   "ID"    : 10075,
   "TypeID" : 2,
-  "NodePositionX" : 1043.6552734375,
-  "NodePositionY" : -153.535598754883,
+  "NodePositionX" : 1023.69067382813,
+  "NodePositionY" : -273.054046630859,
   "width"         : 200.0,
   "height"        : 170.0,
-  "NextID"        : 10067,
-  "TypeOfProgress" : 1,
-  "CheckToMatch"   : [
+  "color"         : 1,
+  "NextID"        : 10156,
+  "CheckToMatch"  : [
    {
     "Name" : "Been to Art",
     "Type" : 1,
@@ -788,11 +968,1896 @@
   "title" : "",
   "ID"    : 10076,
   "TypeID" : 11,
-  "NodePositionX" : 1936.22778320313,
-  "NodePositionY" : -216.206268310547,
+  "NodePositionX" : 2106.24438476563,
+  "NodePositionY" : -345.722259521484,
   "width"         : 200.0,
   "height"        : 120.0,
+  "color"         : 2,
   "NextID"        : 10069,
   "Story"         : "StoryFiles/Day2/Wake Up Late"
+ },
+ {
+  "title" : "Long Night Hangout",
+  "ID"    : 10077,
+  "TypeID" : 12,
+  "NodePositionX" : 2735.95239257813,
+  "NodePositionY" : -212.001556396484,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 6,
+  "Tag"           : "Long Night Hangout",
+  "Day"           : 3,
+  "Hour"          : 0,
+  "Length"        : 6,
+  "Room"          : 2,
+  "NextID"        : 10078,
+  "Locks"         : [
+   {
+    "Name" : "HadLateNightHangout",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Eduardo",
+   "Isaac"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10078,
+  "TypeID" : 11,
+  "NodePositionX" : 3138.94409179688,
+  "NodePositionY" : -163.002532958984,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 6,
+  "NextID"        : 10145,
+  "Story"         : "StoryFiles/Day3/LongNightHangout"
+ },
+ {
+  "title" : "",
+  "ID"    : 10080,
+  "TypeID" : 13,
+  "NodePositionX" : 3623.93286132813,
+  "NodePositionY" : -159.001556396484,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 6,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Charlotte Day 2 Morning",
+  "ID"    : 10083,
+  "TypeID" : 12,
+  "NodePositionX" : -2668.81225585938,
+  "NodePositionY" : -1720.78955078125,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 2,
+  "Hour"          : 8,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10115,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 2 Afternoon",
+  "ID"    : 10090,
+  "TypeID" : 12,
+  "NodePositionX" : -2265.81030273438,
+  "NodePositionY" : -1718.3994140625,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 2,
+  "Hour"          : 13,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10115,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 3 Morning",
+  "ID"    : 10091,
+  "TypeID" : 12,
+  "NodePositionX" : -2667.26440429688,
+  "NodePositionY" : -1397.31323242188,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 3,
+  "Hour"          : 8,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10130,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 3 Afternoon",
+  "ID"    : 10092,
+  "TypeID" : 12,
+  "NodePositionX" : -2233.7109375,
+  "NodePositionY" : -1402.30932617188,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 3,
+  "Hour"          : 13,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10130,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "First Scene",
+  "ID"    : 10093,
+  "TypeID" : 11,
+  "NodePositionX" : -1343.18798828125,
+  "NodePositionY" : -1320.3955078125,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 4,
+  "NextID"        : 10100,
+  "Story"         : "StoryFiles/Unconstrained/Empathy"
+ },
+ {
+  "title" : "Third Scene",
+  "ID"    : 10094,
+  "TypeID" : 11,
+  "NodePositionX" : 2734.56372070313,
+  "NodePositionY" : -1091.05029296875,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 4,
+  "NextID"        : 10116,
+  "Story"         : "StoryFiles/Unconstrained/Teatime"
+ },
+ {
+  "title" : "Second Scene",
+  "ID"    : 10095,
+  "TypeID" : 11,
+  "NodePositionX" : -383.854797363281,
+  "NodePositionY" : -803.317504882813,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 4,
+  "NextID"        : 10134,
+  "Story"         : "StoryFiles/Unconstrained/Lessons"
+ },
+ {
+  "title" : "Charlotte Day 4 Afternoon",
+  "ID"    : 10097,
+  "TypeID" : 12,
+  "NodePositionX" : -2271.09057617188,
+  "NodePositionY" : -1081.21337890625,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 4,
+  "Hour"          : 13,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10129,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 4 Morning",
+  "ID"    : 10098,
+  "TypeID" : 12,
+  "NodePositionX" : -2669.34741210938,
+  "NodePositionY" : -1082.88525390625,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Empathy",
+  "Day"           : 4,
+  "Hour"          : 8,
+  "Length"        : 2,
+  "Room"          : 6,
+  "NextID"        : 10129,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10100,
+  "TypeID" : 13,
+  "NodePositionX" : -1095.046875,
+  "NodePositionY" : -1310.3447265625,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 4,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Charlotte Day 5 Afternoon",
+  "ID"    : 10102,
+  "TypeID" : 12,
+  "NodePositionX" : -934.233703613281,
+  "NodePositionY" : -592.379516601563,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Lessons",
+  "Day"           : 5,
+  "Hour"          : 14,
+  "Length"        : 1,
+  "Room"          : 6,
+  "NextID"        : 10095,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 4,
+    "Compare"    : 2
+   },
+   {
+    "Name" : "ReadyForInstruction",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 4 Teatime",
+  "ID"    : 10104,
+  "TypeID" : 12,
+  "NodePositionX" : 1203.12426757813,
+  "NodePositionY" : -1505.90234375,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Tea Time",
+  "Day"           : 4,
+  "Hour"          : 15,
+  "Length"        : 1,
+  "Room"          : 9,
+  "NextID"        : 10139,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 3 Teatime",
+  "ID"    : 10105,
+  "TypeID" : 12,
+  "NodePositionX" : 1208.25903320313,
+  "NodePositionY" : -1791.7216796875,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Tea Time",
+  "Day"           : 3,
+  "Hour"          : 15,
+  "Length"        : 1,
+  "Room"          : 9,
+  "NextID"        : 10137,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 5 Teatime",
+  "ID"    : 10106,
+  "TypeID" : 12,
+  "NodePositionX" : 1208.86645507813,
+  "NodePositionY" : -1234.7001953125,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Tea Time",
+  "Day"           : 5,
+  "Hour"          : 15,
+  "Length"        : 1,
+  "Room"          : 9,
+  "NextID"        : 10140,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 6 Teatime",
+  "ID"    : 10107,
+  "TypeID" : 12,
+  "NodePositionX" : 1206.56567382813,
+  "NodePositionY" : -954.110961914063,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Tea Time",
+  "Day"           : 6,
+  "Hour"          : 15,
+  "Length"        : 1,
+  "Room"          : 9,
+  "NextID"        : 10141,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10109,
+  "TypeID" : 1,
+  "NodePositionX" : 2161.59985351563,
+  "NodePositionY" : -1243.16381835938,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "PassID"        : 10117,
+  "FailID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10110,
+  "TypeID" : 13,
+  "NodePositionX" : 3086.76879882813,
+  "NodePositionY" : -1288.72802734375,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 4,
+  "NextID"        : -1
+ },
+ {
+  "title" : "",
+  "ID"    : 10115,
+  "TypeID" : 2,
+  "NodePositionX" : -1676.70947265625,
+  "NodePositionY" : -1630.00732421875,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 4,
+  "NextID"        : 10093,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 2,
+    "Compare"    : 0
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10116,
+  "TypeID" : 2,
+  "NodePositionX" : 2989.40551757813,
+  "NodePositionY" : -1123.77392578125,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "NextID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedTeatime",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10117,
+  "TypeID" : 1,
+  "NodePositionX" : 2447.62719726563,
+  "NodePositionY" : -1347.37548828125,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "PassID"        : 10110,
+  "FailID"        : 10094,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedTeatime",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10118,
+  "TypeID" : 13,
+  "NodePositionX" : 126.129089355469,
+  "NodePositionY" : -798.403442382813,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 4,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Charlotte Day 3 Afternoon",
+  "ID"    : 10119,
+  "TypeID" : 12,
+  "NodePositionX" : -940.749328613281,
+  "NodePositionY" : -1184.48388671875,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Lessons",
+  "Day"           : 3,
+  "Hour"          : 14,
+  "Length"        : 1,
+  "Room"          : 6,
+  "NextID"        : 10095,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 2,
+    "Compare"    : 2
+   },
+   {
+    "Name" : "ReadyForInstruction",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "Charlotte Day 4 Afternoon",
+  "ID"    : 10120,
+  "TypeID" : 12,
+  "NodePositionX" : -940.692687988281,
+  "NodePositionY" : -892.146362304688,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 4,
+  "Tag"           : "Lessons",
+  "Day"           : 4,
+  "Hour"          : 14,
+  "Length"        : 1,
+  "Room"          : 6,
+  "NextID"        : 10095,
+  "Locks"         : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 3,
+    "Compare"    : 2
+   },
+   {
+    "Name" : "ReadyForInstruction",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ],
+  "Characters"    : [
+   "Charlotte"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10129,
+  "TypeID" : 2,
+  "NodePositionX" : -1681.04150390625,
+  "NodePositionY" : -1052.42639160156,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 4,
+  "NextID"        : 10093,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 4,
+    "Compare"    : 0
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10130,
+  "TypeID" : 2,
+  "NodePositionX" : -1675.15869140625,
+  "NodePositionY" : -1345.64404296875,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 4,
+  "NextID"        : 10093,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 3,
+    "Compare"    : 0
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10134,
+  "TypeID" : 2,
+  "NodePositionX" : -124.692687988281,
+  "NodePositionY" : -828.615356445313,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "NextID"        : 10118,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10137,
+  "TypeID" : 1,
+  "NodePositionX" : 1839.99829101563,
+  "NodePositionY" : -1628.8623046875,
+  "width"         : 200.0,
+  "height"        : 195.0,
+  "color"         : 4,
+  "PassID"        : 10109,
+  "FailID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 2,
+    "Compare"    : 2
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10138,
+  "TypeID" : 1,
+  "NodePositionX" : 1845.76000976563,
+  "NodePositionY" : -1392.01342773438,
+  "width"         : 200.0,
+  "height"        : 195.0,
+  "color"         : 4,
+  "PassID"        : 10109,
+  "FailID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 3,
+    "Compare"    : 2
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10139,
+  "TypeID" : 1,
+  "NodePositionX" : 1592.94506835938,
+  "NodePositionY" : -1410.40942382813,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "PassID"        : 10137,
+  "FailID"        : 10138,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10140,
+  "TypeID" : 1,
+  "NodePositionX" : 1591.80249023438,
+  "NodePositionY" : -1213.6279296875,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "PassID"        : 10138,
+  "FailID"        : 10142,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10141,
+  "TypeID" : 1,
+  "NodePositionX" : 1590.80053710938,
+  "NodePositionY" : -1016.63195800781,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "PassID"        : 10142,
+  "FailID"        : 10143,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10142,
+  "TypeID" : 1,
+  "NodePositionX" : 1847.82250976563,
+  "NodePositionY" : -1140.52294921875,
+  "width"         : 200.0,
+  "height"        : 195.0,
+  "color"         : 4,
+  "PassID"        : 10109,
+  "FailID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 4,
+    "Compare"    : 2
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10143,
+  "TypeID" : 1,
+  "NodePositionX" : 1846.12329101563,
+  "NodePositionY" : -900.380981445313,
+  "width"         : 200.0,
+  "height"        : 195.0,
+  "color"         : 4,
+  "PassID"        : 10109,
+  "FailID"        : 10110,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2,
+    "MatchValue" : 5,
+    "Compare"    : 2
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10145,
+  "TypeID" : 2,
+  "NodePositionX" : 3380.50219726563,
+  "NodePositionY" : -193.809173583984,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 6,
+  "NextID"        : 10080,
+  "CheckToMatch"  : [
+   {
+    "Name" : "HadLateNightHangout",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10146,
+  "TypeID" : 12,
+  "NodePositionX" : -1488.48681640625,
+  "NodePositionY" : 225.023834228516,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "Courtside",
+  "Day"           : 2,
+  "Hour"          : 15,
+  "Length"        : 4,
+  "Room"          : 5,
+  "NextID"        : 10147,
+  "Locks"         : [
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10147,
+  "TypeID" : 11,
+  "NodePositionX" : -1050.42407226563,
+  "NodePositionY" : 433.766021728516,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 2,
+  "NextID"        : 10151,
+  "Story"         : "StoryFiles/Unconstrained/Courtside"
+ },
+ {
+  "title" : "",
+  "ID"    : 10148,
+  "TypeID" : 13,
+  "NodePositionX" : -505.211242675781,
+  "NodePositionY" : 554.494506835938,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 2,
+  "NextID"        : -1
+ },
+ {
+  "title" : "",
+  "ID"    : 10150,
+  "TypeID" : 12,
+  "NodePositionX" : -1488.68017578125,
+  "NodePositionY" : 494.698638916016,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "Courtside",
+  "Day"           : 3,
+  "Hour"          : 15,
+  "Length"        : 4,
+  "Room"          : 5,
+  "NextID"        : 10196,
+  "Locks"         : [
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 2
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10151,
+  "TypeID" : 2,
+  "NodePositionX" : -752.128234863281,
+  "NodePositionY" : 405.989898681641,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 2,
+  "NextID"        : 10148,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2,
+    "MatchValue" : 2,
+    "Compare"    : 0
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10152,
+  "TypeID" : 12,
+  "NodePositionX" : -641.649719238281,
+  "NodePositionY" : 741.205444335938,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "Authority's Approval",
+  "Day"           : 3,
+  "Hour"          : 7,
+  "Length"        : 2,
+  "Room"          : 4,
+  "NextID"        : 10153,
+  "Locks"         : [
+   {
+    "Name" : "Slept In Day 2",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Max"
+  ]
+ },
+ {
+  "title" : "Smol Timothy Scene",
+  "ID"    : 10153,
+  "TypeID" : 11,
+  "NodePositionX" : -209.524719238281,
+  "NodePositionY" : 822.258178710938,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 2,
+  "NextID"        : 10154,
+  "Story"         : "StoryFiles/Day3/Authority's Approval"
+ },
+ {
+  "title" : "",
+  "ID"    : 10154,
+  "TypeID" : 13,
+  "NodePositionX" : 30.4743041992188,
+  "NodePositionY" : 834.257202148438,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 2,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Been to Cafe = true",
+  "ID"    : 10155,
+  "TypeID" : 2,
+  "NodePositionX" : -3314.52514648438,
+  "NodePositionY" : -219.543548583984,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 1,
+  "NextID"        : 10002,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Been to Cafe",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10156,
+  "TypeID" : 2,
+  "NodePositionX" : 1240.51879882813,
+  "NodePositionY" : -275.986663818359,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 1,
+  "NextID"        : 10067,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ]
+ },
+ {
+  "title" : "CheatToEmpathy",
+  "ID"    : 10157,
+  "TypeID" : 16,
+  "NodePositionX" : -1701.77099609375,
+  "NodePositionY" : -2067.24633789063,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10168,
+  "Code"          : "Empathy"
+ },
+ {
+  "title" : "RestartGame",
+  "ID"    : 10158,
+  "TypeID" : 16,
+  "NodePositionX" : -4699.8427734375,
+  "NodePositionY" : -502.489593505859,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10178,
+  "Code"          : "Restart"
+ },
+ {
+  "title" : "JumpToCourtside",
+  "ID"    : 10160,
+  "TypeID" : 16,
+  "NodePositionX" : -1360.54833984375,
+  "NodePositionY" : 107.872467041016,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10174,
+  "Code"          : "Courtside"
+ },
+ {
+  "title" : "quick jump to hangout",
+  "ID"    : 10161,
+  "TypeID" : 16,
+  "NodePositionX" : 2158.55883789063,
+  "NodePositionY" : -469.827484130859,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10162,
+  "Code"          : "Hangout Now"
+ },
+ {
+  "title" : "",
+  "ID"    : 10162,
+  "TypeID" : 15,
+  "NodePositionX" : 2396.96704101563,
+  "NodePositionY" : -401.450531005859,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10166,
+  "Day"           : 3,
+  "Hour"          : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10166,
+  "TypeID" : 17,
+  "NodePositionX" : 2771.68481445313,
+  "NodePositionY" : -392.185882568359,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10078,
+  "Room"          : 2,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10168,
+  "TypeID" : 15,
+  "NodePositionX" : -1470.63427734375,
+  "NodePositionY" : -2064.71411132813,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10169,
+  "Day"           : 2,
+  "Hour"          : 8
+ },
+ {
+  "title" : "",
+  "ID"    : 10169,
+  "TypeID" : 17,
+  "NodePositionX" : -1422.67529296875,
+  "NodePositionY" : -1882.3115234375,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10170,
+  "Room"          : 6,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10170,
+  "TypeID" : 9,
+  "NodePositionX" : -1380.79248046875,
+  "NodePositionY" : -1733.5234375,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10172,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10172,
+  "TypeID" : 9,
+  "NodePositionX" : -1264.45751953125,
+  "NodePositionY" : -1543.16333007813,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10093,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10173,
+  "TypeID" : 17,
+  "NodePositionX" : -719.708312988281,
+  "NodePositionY" : 123.344146728516,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10175,
+  "Room"          : 5,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10174,
+  "TypeID" : 15,
+  "NodePositionX" : -1080.994140625,
+  "NodePositionY" : 130.094146728516,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10173,
+  "Day"           : 3,
+  "Hour"          : 16
+ },
+ {
+  "title" : "",
+  "ID"    : 10175,
+  "TypeID" : 9,
+  "NodePositionX" : -1058.70532226563,
+  "NodePositionY" : 271.094146728516,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10176,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10176,
+  "TypeID" : 9,
+  "NodePositionX" : -734.455871582031,
+  "NodePositionY" : 268.592193603516,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10147,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10178,
+  "TypeID" : 9,
+  "NodePositionX" : -4470.94921875,
+  "NodePositionY" : -507.661468505859,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10179,
+  "Sound"         : "Stop_All",
+  "Layer"         : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10179,
+  "TypeID" : 15,
+  "NodePositionX" : -4162.951171875,
+  "NodePositionY" : -498.661468505859,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10003,
+  "Day"           : 1,
+  "Hour"          : 12
+ },
+ {
+  "title" : "Hangman",
+  "ID"    : 10180,
+  "TypeID" : 16,
+  "NodePositionX" : -4250.8427734375,
+  "NodePositionY" : -1026.94787597656,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10181,
+  "Code"          : "Hangman Now"
+ },
+ {
+  "title" : "",
+  "ID"    : 10181,
+  "TypeID" : 15,
+  "NodePositionX" : -3998.17651367188,
+  "NodePositionY" : -973.615356445313,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10182,
+  "Day"           : 1,
+  "Hour"          : 13
+ },
+ {
+  "title" : "",
+  "ID"    : 10182,
+  "TypeID" : 2,
+  "NodePositionX" : -3573.73413085938,
+  "NodePositionY" : -973.615356445313,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 5,
+  "NextID"        : 10183,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Tutorial",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10183,
+  "TypeID" : 17,
+  "NodePositionX" : -3307.07104492188,
+  "NodePositionY" : -953.615844726563,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10184,
+  "Room"          : 5,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10184,
+  "TypeID" : 9,
+  "NodePositionX" : -2969.10034179688,
+  "NodePositionY" : -870.625366210938,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 1,
+  "NextID"        : 10185,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10185,
+  "TypeID" : 9,
+  "NodePositionX" : -2627.34692382813,
+  "NodePositionY" : -856.791137695313,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 1,
+  "NextID"        : 10024,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "Morning Misery",
+  "ID"    : 10186,
+  "TypeID" : 12,
+  "NodePositionX" : 3084.28247070313,
+  "NodePositionY" : 5.07217407226563,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 6,
+  "Tag"           : "Morning Misery",
+  "Day"           : 4,
+  "Hour"          : 6,
+  "Length"        : 4,
+  "Room"          : 7,
+  "NextID"        : 10187,
+  "Locks"         : [
+   {
+    "Name" : "HadMorningMisery",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Eduardo"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10187,
+  "TypeID" : 11,
+  "NodePositionX" : 3576.11645507813,
+  "NodePositionY" : 119.366607666016,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 6,
+  "NextID"        : 10189,
+  "Story"         : "StoryFiles/Day4/Morning Misery"
+ },
+ {
+  "title" : "",
+  "ID"    : 10189,
+  "TypeID" : 13,
+  "NodePositionX" : 3836.11596679688,
+  "NodePositionY" : 127.366607666016,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 6,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Cold Sky Hideaway",
+  "ID"    : 10190,
+  "TypeID" : 12,
+  "NodePositionX" : 3021.11840820313,
+  "NodePositionY" : 449.133209228516,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 6,
+  "Tag"           : "Cold Sky Hideaway",
+  "Day"           : 5,
+  "Hour"          : 19,
+  "Length"        : 4,
+  "Room"          : 5,
+  "NextID"        : 10191,
+  "Locks"         : [
+   {
+    "Name" : "HadColdSkyHideaway",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Isaac"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10191,
+  "TypeID" : 11,
+  "NodePositionX" : 3482.12915039063,
+  "NodePositionY" : 436.632232666016,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 6,
+  "NextID"        : 10192,
+  "Story"         : "StoryFiles/Day5/ColdSkyHideaway"
+ },
+ {
+  "title" : "",
+  "ID"    : 10192,
+  "TypeID" : 13,
+  "NodePositionX" : 3753.90307617188,
+  "NodePositionY" : 387.409820556641,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 6,
+  "NextID"        : -1
+ },
+ {
+  "title" : "",
+  "ID"    : 10193,
+  "TypeID" : 12,
+  "NodePositionX" : -1495.03369140625,
+  "NodePositionY" : 774.424194335938,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "Passion",
+  "Day"           : 3,
+  "Hour"          : 15,
+  "Length"        : 4,
+  "Room"          : 5,
+  "NextID"        : 10200,
+  "Locks"         : [
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2,
+    "MatchValue" : 2,
+    "Compare"    : 2
+   },
+   {
+    "Name" : "CompletedPassion",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10196,
+  "TypeID" : 11,
+  "NodePositionX" : -1044.85473632813,
+  "NodePositionY" : 600.445678710938,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 2,
+  "NextID"        : 10198,
+  "Story"         : "StoryFiles/Unconstrained/Courtside"
+ },
+ {
+  "title" : "",
+  "ID"    : 10198,
+  "TypeID" : 2,
+  "NodePositionX" : -799.856262207031,
+  "NodePositionY" : 578.949584960938,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 2,
+  "NextID"        : 10148,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2,
+    "MatchValue" : 3,
+    "Compare"    : 0
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10199,
+  "TypeID" : 12,
+  "NodePositionX" : -1499.03466796875,
+  "NodePositionY" : 1085.42431640625,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "",
+  "Day"           : 4,
+  "Hour"          : 15,
+  "Length"        : 4,
+  "Room"          : 5,
+  "NextID"        : 10200,
+  "Locks"         : [
+   {
+    "Name" : "CompletedPassion",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ],
+  "Characters"    : [
+   "Timothy"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10200,
+  "TypeID" : 11,
+  "NodePositionX" : -1000.53448486328,
+  "NodePositionY" : 975.83935546875,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 2,
+  "NextID"        : 10201,
+  "Story"         : "StoryFiles/Unconstrained/Passion"
+ },
+ {
+  "title" : "",
+  "ID"    : 10201,
+  "TypeID" : 2,
+  "NodePositionX" : -739.533020019531,
+  "NodePositionY" : 977.83935546875,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 2,
+  "NextID"        : 10202,
+  "CheckToMatch"  : [
+   {
+    "Name" : "CompletedPassion",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10202,
+  "TypeID" : 13,
+  "NodePositionX" : -506.531555175781,
+  "NodePositionY" : 1015.84033203125,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 2,
+  "NextID"        : -1
+ },
+ {
+  "title" : "Open Letter",
+  "ID"    : 10203,
+  "TypeID" : 12,
+  "NodePositionX" : 450.804870605469,
+  "NodePositionY" : 685.834350585938,
+  "width"         : 350.0,
+  "height"        : 225.0,
+  "color"         : 2,
+  "Tag"           : "Letters",
+  "Day"           : 5,
+  "Hour"          : 15,
+  "Length"        : 3,
+  "Room"          : 2,
+  "NextID"        : 10205,
+  "Locks"         : [
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Charlotte",
+   "Eduardo",
+   "Max",
+   "Isaac",
+   "Trissa"
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10205,
+  "TypeID" : 11,
+  "NodePositionX" : 971.250244140625,
+  "NodePositionY" : 773.736694335938,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 2,
+  "NextID"        : 10206,
+  "Story"         : "StoryFiles/Day5/Open Letter, Closed Wound"
+ },
+ {
+  "title" : "",
+  "ID"    : 10206,
+  "TypeID" : 13,
+  "NodePositionX" : 1271.24731445313,
+  "NodePositionY" : 774.736694335938,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 2,
+  "NextID"        : -1
+ },
+ {
+  "title" : "tooltip for art closing",
+  "ID"    : 10207,
+  "TypeID" : 2,
+  "NodePositionX" : -1914.87890625,
+  "NodePositionY" : 163.789459228516,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 1,
+  "NextID"        : 10030,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Manuel Art Tooltip",
+    "Type" : 4,
+    "MatchValue" : "I already showed Timothy the Art Room."
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10208,
+  "TypeID" : 2,
+  "NodePositionX" : -1878.3623046875,
+  "NodePositionY" : -91.7144470214844,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 1,
+  "NextID"        : 10021,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Manuel Commons Tooltip",
+    "Type" : 4,
+    "MatchValue" : "I already showed Timothy the Common Room."
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10209,
+  "TypeID" : 2,
+  "NodePositionX" : -1911.08447265625,
+  "NodePositionY" : -665.410034179688,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 1,
+  "NextID"        : 10020,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Manuel Library Tooltip",
+    "Type" : 4,
+    "MatchValue" : "I already showed Timothy the Library."
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10211,
+  "TypeID" : 2,
+  "NodePositionX" : -1933.306640625,
+  "NodePositionY" : -417.631195068359,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 1,
+  "NextID"        : 10051,
+  "CheckToMatch"  : [
+   {
+    "Name" : "Manuel Garden Tooltip",
+    "Type" : 4,
+    "MatchValue" : "I already showed Timothy the Garden."
+   }
+  ]
+ },
+ {
+  "title" : "JumpToPassion",
+  "ID"    : 10212,
+  "TypeID" : 16,
+  "NodePositionX" : -1850.89892578125,
+  "NodePositionY" : 1166.09033203125,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10213,
+  "Code"          : "Passion"
+ },
+ {
+  "title" : "",
+  "ID"    : 10213,
+  "TypeID" : 15,
+  "NodePositionX" : -1678.03857421875,
+  "NodePositionY" : 1325.95166015625,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10214,
+  "Day"           : 4,
+  "Hour"          : 15
+ },
+ {
+  "title" : "",
+  "ID"    : 10214,
+  "TypeID" : 17,
+  "NodePositionX" : -1587.80126953125,
+  "NodePositionY" : 1533.76123046875,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10216,
+  "Room"          : 5,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10216,
+  "TypeID" : 9,
+  "NodePositionX" : -1228.91357421875,
+  "NodePositionY" : 1360.09521484375,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10217,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10217,
+  "TypeID" : 9,
+  "NodePositionX" : -1059.24633789063,
+  "NodePositionY" : 1180.76513671875,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10200,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "JumpToLessons",
+  "ID"    : 10218,
+  "TypeID" : 16,
+  "NodePositionX" : -433.762023925781,
+  "NodePositionY" : -1742.2998046875,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10219,
+  "Code"          : "Lessons"
+ },
+ {
+  "title" : "",
+  "ID"    : 10219,
+  "TypeID" : 15,
+  "NodePositionX" : -446.698547363281,
+  "NodePositionY" : -1611.42724609375,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10220,
+  "Day"           : 4,
+  "Hour"          : 14
+ },
+ {
+  "title" : "",
+  "ID"    : 10220,
+  "TypeID" : 17,
+  "NodePositionX" : -439.635070800781,
+  "NodePositionY" : -1446.9833984375,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10221,
+  "Room"          : 6,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10221,
+  "TypeID" : 9,
+  "NodePositionX" : -424.667297363281,
+  "NodePositionY" : -1268.5556640625,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10222,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10222,
+  "TypeID" : 9,
+  "NodePositionX" : -286.843078613281,
+  "NodePositionY" : -1068.66760253906,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10095,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "JumpToMorningMisery",
+  "ID"    : 10223,
+  "TypeID" : 16,
+  "NodePositionX" : 1829.90209960938,
+  "NodePositionY" : 368.253326416016,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10224,
+  "Code"          : "Misery"
+ },
+ {
+  "title" : "",
+  "ID"    : 10224,
+  "TypeID" : 15,
+  "NodePositionX" : 2033.90551757813,
+  "NodePositionY" : 367.253326416016,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10225,
+  "Day"           : 3,
+  "Hour"          : 7
+ },
+ {
+  "title" : "",
+  "ID"    : 10225,
+  "TypeID" : 17,
+  "NodePositionX" : 2377.40747070313,
+  "NodePositionY" : 362.253326416016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10226,
+  "Room"          : 7,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10226,
+  "TypeID" : 9,
+  "NodePositionX" : 2693.98754882813,
+  "NodePositionY" : 331.087310791016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10227,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10227,
+  "TypeID" : 9,
+  "NodePositionX" : 3019.73754882813,
+  "NodePositionY" : 254.587310791016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10187,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "JumpToColdSky",
+  "ID"    : 10228,
+  "TypeID" : 16,
+  "NodePositionX" : 1802.07397460938,
+  "NodePositionY" : 559.979858398438,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10230,
+  "Code"          : "Cold"
+ },
+ {
+  "title" : "",
+  "ID"    : 10229,
+  "TypeID" : 17,
+  "NodePositionX" : 2370.20434570313,
+  "NodePositionY" : 569.479858398438,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10231,
+  "Room"          : 5,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10230,
+  "TypeID" : 15,
+  "NodePositionX" : 2031.20434570313,
+  "NodePositionY" : 552.479858398438,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10229,
+  "Day"           : 5,
+  "Hour"          : 20
+ },
+ {
+  "title" : "",
+  "ID"    : 10231,
+  "TypeID" : 9,
+  "NodePositionX" : 2675.07543945313,
+  "NodePositionY" : 579.320678710938,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10232,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10232,
+  "TypeID" : 9,
+  "NodePositionX" : 2995.96411132813,
+  "NodePositionY" : 798.320678710938,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10191,
+  "Sound"         : "Play_music_placeholder_main",
+  "Layer"         : 0
+ },
+ {
+  "title" : "JumpToBreakdown",
+  "ID"    : 10233,
+  "TypeID" : 16,
+  "NodePositionX" : 213.912292480469,
+  "NodePositionY" : 190.269927978516,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 5,
+  "NextID"        : 10235,
+  "Code"          : "Breakdown"
+ },
+ {
+  "title" : "",
+  "ID"    : 10234,
+  "TypeID" : 17,
+  "NodePositionX" : 749.911804199219,
+  "NodePositionY" : 207.376373291016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10236,
+  "Room"          : 4,
+  "Transition"    : 3
+ },
+ {
+  "title" : "",
+  "ID"    : 10235,
+  "TypeID" : 15,
+  "NodePositionX" : 420.626647949219,
+  "NodePositionY" : 189.698638916016,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10234,
+  "Day"           : 7,
+  "Hour"          : 12
+ },
+ {
+  "title" : "",
+  "ID"    : 10236,
+  "TypeID" : 9,
+  "NodePositionX" : 185.483581542969,
+  "NodePositionY" : 346.841217041016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10237,
+  "Sound"         : "Stop_All",
+  "Layer"         : 2
+ },
+ {
+  "title" : "",
+  "ID"    : 10237,
+  "TypeID" : 9,
+  "NodePositionX" : 508.341003417969,
+  "NodePositionY" : 361.983795166016,
+  "width"         : 300.0,
+  "height"        : 150.0,
+  "color"         : 5,
+  "NextID"        : 10064,
+  "Sound"         : "Stop_All",
+  "Layer"         : 0
  }
 ]

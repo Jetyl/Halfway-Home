@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
@@ -27,17 +27,17 @@ EXTERNAL GetStringValue(value)
 -> LibraryFunction
 
 === LibraryFunction ===
-[{player_name}] "And here's the library" #Timothy = Calm
-"They have a whole stock of fiction and non-fiction stuff here, for yout needs"
-"There's also a book club, that meets a few times a week"
-[Timothy] "its... um... a little claustrophobic in here."
-[{player_name}] "yeah... it is pretty labrynithian."
-"They have a <i>lot</i> of books in here."
-"they have book recomendations, if you find the selection overwhelming."
+[{player_name}] "And here's the library." #Timothy = Calm # Play : Play_music_placeholder_main_fadein
+"They have a whole stock of fiction and non-fiction stuff here, for all your literary needs"
+"There's also a book club that meets a few times a week"
+[Timothy] "It's... um... a little claustrophobic in here."
+[{player_name}] "Yeah... they fit a lotta books into a small space."
+"They have book recomendations, if you find the selection overwhelming."
 "I know I did."
-"this week's recomendation is... <i>Lessons in Grace</i> by Tybalt Lyndel."
-hm... not sure what that one's about.
+"This week's recomendation is... <i>Lessons in <color=color_grace>Grace</i></color> by Tybalt Lyndel." # Grace * Show
+Hmm... not sure what that one's about.
+"I haven't really spent much time in here, but I probably should..."
 "But yeah, you want to browse around the selection?"
-[Timothy] "N-Not R-R-Right now."
-"Th-Thanks though..." #Timothy = Exit
+[Timothy] "Maybe l-later."
+"Th-thanks though..." #Timothy = Exit
 -> END

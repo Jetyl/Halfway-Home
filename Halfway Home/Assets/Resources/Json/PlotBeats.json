@@ -129,13 +129,17 @@
    {
     "Name" : "Been to FD",
     "Type" : 1
+   },
+   {
+    "Name" : "Been to Cafe",
+    "Type" : 1
    }
   ]
  },
  {
-  "PlotName" : "Daily",
+  "PlotName" : "Sleepy",
   "BeatNumber" : 0,
-  "BeatName"   : "Daily",
+  "BeatName"   : "Sleepy",
   "Point"      : [
    {
     "Name" : "KitchenVisists",
@@ -159,6 +163,34 @@
    {
     "Name" : "Manuel Kitchen Turn Off",
     "Type" : 1
+   },
+   {
+    "Name" : "Manuel Kitchen Tooltip",
+    "Type" : 4
+   },
+   {
+    "Name" : "Manuel Art Tooltip",
+    "Type" : 4
+   },
+   {
+    "Name" : "Manuel Library Tooltip",
+    "Type" : 4
+   },
+   {
+    "Name" : "Manuel Garden Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Store Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Bedroom Tooltip",
+    "Type" : 0
+   },
+   {
+    "Name" : "Manuel Commons Tooltip",
+    "Type" : 0
    }
   ]
  },
@@ -193,6 +225,57 @@
    {
     "Name" : "Slept In Day 2",
     "Type" : 1
+   },
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 1
+   },
+   {
+    "Name" : "ReadyForInstruction",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedEmpathy",
+    "Type" : 2
+   },
+   {
+    "Name" : "CompletedLessons",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedTeatime",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadLateNightHangout",
+    "Type" : 1
+   },
+   {
+    "Name" : "CompletedCourtside",
+    "Type" : 2
+   },
+   {
+    "Name" : "CompletedPassion",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadColdSkyHideaway",
+    "Type" : 1
+   },
+   {
+    "Name" : "HadMorningMisery",
+    "Type" : 1
+   }
+  ]
+ },
+ {
+  "PlotName" : "Daily",
+  "BeatNumber" : 0,
+  "BeatName"   : "Daily",
+  "Point"      : [
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 2
    }
   ]
  },
@@ -203,6 +286,26 @@
   "Point"      : [
    {
     "Name" : "SolvedHangman",
+    "Type" : 1
+   },
+   {
+    "Name" : "SeenEmpathy",
+    "Type" : 1
+   },
+   {
+    "Name" : "SeenLessons",
+    "Type" : 1
+   },
+   {
+    "Name" : "IsaacOpenedUp",
+    "Type" : 1
+   },
+   {
+    "Name" : "ColdTalkBefore",
+    "Type" : 1
+   },
+   {
+    "Name" : "Knows Isaac's Tenure",
     "Type" : 1
    }
   ]

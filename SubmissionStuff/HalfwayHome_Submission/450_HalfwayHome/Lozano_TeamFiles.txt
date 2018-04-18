@@ -1,0 +1,21 @@
+Work Done Included:
+
+Made (solo):
+	-Timeline system (and Editor)
+	-Schedule System (and Editor)
+	-Progression System (and Editor)
+	-Stage Display System
+	-Cast Display System 
+	-CG Display System
+	-Map Display System
+	-Text Display System
+	-Clock Display
+
+	
+
+
+Made (with John):
+	-Narrative concept
+	-scene writing
+	-System Design
+	-Cheats

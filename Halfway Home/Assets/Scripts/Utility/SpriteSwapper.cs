@@ -34,6 +34,6 @@ public class SpriteSwapper : MonoBehaviour
   void ResetToOld()
   {
     GetComponent<Image>().sprite = StartSprite;
-    Swapped = true;
+    Swapped = false;
   }
 }

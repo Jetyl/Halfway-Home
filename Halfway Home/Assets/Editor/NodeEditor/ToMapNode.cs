@@ -10,13 +10,13 @@ public class ToMapNode : BaseNode
     
 
 
-    public ToMapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, int MyID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public ToMapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, int MyID) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
         ID = MyID;
         TypeID = NodeTypes.ToMapNode;
     }
 
-    public ToMapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public ToMapNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
     {
 
         ID = (int)data["ID"];
@@ -25,12 +25,26 @@ public class ToMapNode : BaseNode
 
         title = (string)data["title"];
 
-        
+        if (data.Keys.Contains("color"))
+            ChangeColor((int)data["color"]);
+
 
         TypeID = NodeTypes.ToMapNode;
 
     }
 
+    public override BaseNode Duplicate(int index)
+    {
+        Vector2 pos = new Vector2(rect.x + 25, rect.y + 25);
+
+        ToMapNode copy = new ToMapNode(pos, rect.width, rect.height, style, selectedNodeStyle, inPoint.style, outPoint.style,
+            inPoint.OnClickConnectionPoint, outPoint.OnClickConnectionPoint, OnRemoveNode, OnDuplicateNode, index);
+
+        copy.ChangeColor(NodeColor);
+        copy.ID = index;
+
+        return copy;
+    }
 
     public override void Draw()
     {

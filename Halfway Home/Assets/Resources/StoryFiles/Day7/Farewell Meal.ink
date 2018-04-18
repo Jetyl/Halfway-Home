@@ -13,7 +13,7 @@ VAR expression = 0
 VAR awareness = 0
 VAR fatigue = 0
 VAR stress = 0
-VAR delusion = 0
+VAR depression = 0
 VAR week = 0
 VAR current_room = "unset"
 
@@ -28,8 +28,8 @@ I'm called to the kitchen for my farewell meal.
 I walk in seeing everyone chatting and having a good time.
 Acting like everything is okay. // Should only happen if Timothy not helped
 Trissa is chatting up Jesse and John at the center table.
-I see Charlotte assisting in the preperations of the farewell meal. // TODO: Support good outcome: I see Charlotte, over in her usual chair, relaxing of all things.
-Eduardo and Isaac are suprisingly not sitting nearby each other, but on near opposite ends of the room. // TODO: Support good outcome: Eduardo and Isaac are in their usual corner, giggling.
+I see Charlotte assisting in the preparations of the farewell meal. // TODO: Support good outcome: I see Charlotte, over in her usual chair, relaxing of all things.
+Eduardo and Isaac are surprisingly not sitting nearby each other, but on near opposite ends of the room. // TODO: Support good outcome: Eduardo and Isaac are in their usual corner, giggling.
 [Max] "We've got your throne all ready, sire." # Max = Happy
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
@@ -56,9 +56,9 @@ Eduardo turns to leave.
 	Charlotte seems to be carrying on without any concern for Timothy's absence.
 +[Not really.]
 	[{player_name}] "You're kidding, right? Did you not hear about Timothy?"
-	[Charlotte] "Ah, you refer to the events of earlier today involving Mr. Myuri." # Charlotte = Calm
+	[Charlotte] "Ah, you refer to the events of earlier today involving Mr. Miyuri." # Charlotte = Calm
 	[Charlotte] "These things happen from time to time. The hospital is the best place for him, I'm sure."
-- How is she so unphased?
+- How is she so unfazed?
 [Charlotte] "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
 I watch Charlotte stride gracefully toward the serving line as Max emerges with a steaming plate of food. # Charlotte = Exit
 [Max] "Sorry that took so long! Turns out the cook wasn't really ready yet." # Max = Calm
@@ -69,7 +69,7 @@ I watch Charlotte stride gracefully toward the serving line as Max emerges with 
 [Max] "Ladies, gentlemen, and everyone in between, may I have your attention?"
 The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
 [Max] "It's been a rough week for many of us, I know."
-[Max] "Today we said goodbye to our newest resident, Timothy Myuri, who I have received word is safe and comfortable at Blackwell. It wasn't what we all hoped for, but I'm sure we'll see him again when he's ready." # Max = Sad
+[Max] "Today we said goodbye to our newest resident, Timothy Miyuri, who I have received word is safe and comfortable at Blackwell. It wasn't what we all hoped for, but I'm sure we'll see him again when he's ready." # Max = Sad
 [Max] "But today we also say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!" # Max = Happy
 [Max] "This toast is to both of you. May you find happiness and good fortune as you face the challenges ahead."
 Max raises their cup and the room follows suit. A small applause follows the toast and the murmur of conversation returns.

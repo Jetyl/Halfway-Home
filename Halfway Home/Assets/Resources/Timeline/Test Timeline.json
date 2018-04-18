@@ -1,59 +1,70 @@
 
 [
  {
-  "title" : "test timeline",
+  "title" : "",
   "ID"    : 0,
   "TypeID" : 0,
-  "NodePositionX" : 166.46435546875,
-  "NodePositionY" : 95.4484252929688,
+  "NodePositionX" : 194.0,
+  "NodePositionY" : -37.0,
   "width"         : 200.0,
   "height"        : 100.0,
-  "NextID"        : 10003,
+  "color"         : 1,
+  "NextID"        : -1,
   "Disable"       : false
  },
  {
   "title" : "",
   "ID"    : 10000,
-  "TypeID" : 12,
-  "NodePositionX" : 141.46435546875,
-  "NodePositionY" : 264.448364257813,
-  "width"         : 350.0,
-  "height"        : 200.0,
-  "Day"           : 1,
-  "Hour"          : 1,
-  "Length"        : 24,
-  "Room"          : 2,
-  "NextID"        : 10002
+  "TypeID" : -1,
+  "NodePositionX" : 780.0,
+  "NodePositionY" : 242.0,
+  "width"         : 200.0,
+  "height"        : 120.0,
+  "color"         : 1,
+  "EndID"         : 0,
+  "Enable"        : false
+ },
+ {
+  "title" : "",
+  "ID"    : 10001,
+  "TypeID" : 13,
+  "NodePositionX" : 457.0,
+  "NodePositionY" : -41.0,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 1,
+  "NextID"        : -1
  },
  {
   "title" : "",
   "ID"    : 10002,
-  "TypeID" : 13,
-  "NodePositionX" : 619.464477539063,
-  "NodePositionY" : 317.448425292969,
-  "width"         : 200.0,
-  "height"        : 100.0,
-  "NextID"        : -1
- },
- {
-  "title" : "Test!",
-  "ID"    : 10003,
-  "TypeID" : 11,
-  "NodePositionX" : 489.714477539063,
-  "NodePositionY" : 102.698425292969,
-  "width"         : 200.0,
-  "height"        : 120.0,
-  "NextID"        : 10004,
-  "Story"         : "StoryFiles/Day0/Memory"
- },
- {
-  "title" : "",
-  "ID"    : 10004,
-  "TypeID" : 13,
-  "NodePositionX" : 772.464477539063,
-  "NodePositionY" : 117.448425292969,
-  "width"         : 200.0,
-  "height"        : 100.0,
-  "NextID"        : -1
+  "TypeID" : 12,
+  "NodePositionX" : 297.0,
+  "NodePositionY" : 106.0,
+  "width"         : 350.0,
+  "height"        : 305.0,
+  "color"         : 1,
+  "Day"           : 0,
+  "Hour"          : 0,
+  "Length"        : 1,
+  "Room"          : 0,
+  "NextID"        : 10000,
+  "Locks"         : [
+   {
+    "Name" : "plase",
+    "Type" : 1,
+    "MatchValue" : true
+   },
+   {
+    "Name" : "whynot",
+    "Type" : 2,
+    "MatchValue" : 0,
+    "Compare"    : 0
+   }
+  ],
+  "Characters"    : [
+   "Timothy",
+   "Charlotte"
+  ]
  }
 ]

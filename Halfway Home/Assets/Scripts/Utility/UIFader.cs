@@ -29,6 +29,11 @@ public class UIFader : MonoBehaviour
     if (StartFaded) Hide(0f);
 	}
 
+  private void OnEnable()
+  {
+    if (StartFaded) Hide(0f);
+  }
+
   private void Update()
   {
     if(GetComponent<Graphic>() && GetComponent<Graphic>().color.a != 0 && IsHidden)

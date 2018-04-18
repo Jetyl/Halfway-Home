@@ -29,7 +29,9 @@ public enum NodeTypes
     MapNode = 12,
     ToMapNode = 13,
     LoadNode = 14,
-    LoopNode = 15
+    LoopNode = 15,
+    CheatNode = 16,
+    RoomNode = 17
 }
 
 
@@ -118,6 +120,12 @@ public class ConversationSystem
                     break;
                 case NodeTypes.LoopNode:
                     Nodes.Add(new ConvLoop(conversation[i]));
+                    break;
+                case NodeTypes.CheatNode:
+                    Nodes.Add(new ConvCheat(conversation[i]));
+                    break;
+                case NodeTypes.RoomNode:
+                    Nodes.Add(new ConvRoom(conversation[i]));
                     break;
                 default:
                     break;
@@ -495,21 +503,34 @@ public class ConvMultiProgress : ConvNode
 **/
 public class ConvMap : ConvNode
 {
-
-    int Day;
-    int Hour;
-    int Length;
+    string Title;
+    TimeStamp time;
     public Room RoomLocation;
+    public List<ProgressPoint> Locks;
+    public List<string> Characters;
 
     public ConvMap(JsonData start)
     {
         ID = (int)start["ID"];
+        Title = (string)start["Tag"];
         Destination = (int)start["NextID"];
-
-        Day = (int)start["Day"];
-        Hour = (int)start["Hour"];
-        Length = (int)start["Length"];
+        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"]);
         RoomLocation = (Room)(int)start["Room"];
+
+        Locks = new List<ProgressPoint>();
+
+        foreach(JsonData locks in start["Locks"])
+        {
+            Locks.Add(new ProgressPoint(locks));
+        }
+        
+        Characters = new List<string>();
+
+        foreach (JsonData people in start["Characters"])
+        {
+            Characters.Add((string)people);
+        }
+
     }
 
 
@@ -519,21 +540,48 @@ public class ConvMap : ConvNode
 
     }
 
+    public bool WatchedScene()
+    {
+        return Game.current.HasSeenBeenScene(Title, time);
+    }
+
+    public void SetSceneTime()
+    {
+        Game.current.SetSceneData(Title, time);
+    }
+
+    public bool IsUnlocked()
+    {
+
+        foreach(var Chain in Locks)
+        {
+            if (Game.current.Progress.CheckProgress(Chain) == false)
+                return false;
+        }
+
+        return Game.current.IsSceneUnlocked(Title, time);
+        
+    }
+    
+
     public bool AvalibleNow(int day, int hour)
     {
 
+        if (IsUnlocked() == false)
+            return false;
+
         //if this time is before this day
-        if (day < Day)
+        if (day < time.day)
             return false;
 
         //if its after, it is most likely false, but there is one edge case to check
-        if(day > Day)
+        if(day > time.day)
         {
-            if(Day + 1 == day)
+            if(time.day + 1 == day)
             {
-                if(Hour + Length > 24)
+                if(time.hour + time.duration > 24)
                 {
-                    if (hour + Length - 24 > hour)
+                    if (hour + time.duration - 24 > hour)
                         return true;
                 }
             }
@@ -544,18 +592,51 @@ public class ConvMap : ConvNode
         //is on the same date
 
         //if this time is before this hour
-        if (hour < Hour)
+        if (hour < time.hour)
             return false;
 
         //if it is this hour, we good
-        if (hour == Hour)
+        if (hour == time.hour)
             return true;
 
-        //if this hour is within the length given, we good
-        if (hour <= Hour + Length)
+        //if this hour is within the length given, we good (exclusive end)
+        if (hour < time.hour + time.duration)
             return true;
 
         return false;
+    }
+
+}
+
+
+/**
+    * CLASS NAME: ConvRoom
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvRoom : ConvNode
+{
+
+    public Room RoomLocation;
+    public TransitionTypes fade;
+
+    public ConvRoom(JsonData key)
+    {
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+
+        RoomLocation = (Room)(int)key["Room"];
+        fade = (TransitionTypes)(int)key["Transition"];
+    }
+
+
+    public override void CallAction()
+    {
+
+        Space.DispatchEvent(Events.Backdrop, 
+            new StageDirectionEvent(RoomLocation, "", fade));
+
+
     }
 
 }
@@ -997,27 +1078,34 @@ public class ConvSound : ConvNode
     public bool remove = false;
     public bool Music = false;
 
+    public string file;
+    public AudioManager.AudioEvent.SoundType layer;
+
     public ConvSound(JsonData key)
     {
 
         ID = (int)key["ID"];
         Destination = (int)key["NextID"];
 
-        if (key["Slug"] != null)
-            sound = Resources.Load("Sounds/" + (string)key["Slug"]) as AudioClip;
-        else
-            sound = null;
-            
-        Song = (bool)key["bool"];
-        remove = (bool)key["stop"];
-        Music = (bool)key["music"];
+        //if (key["Slug"] != null)
+        //    sound = Resources.Load("Sounds/" + (string)key["Slug"]) as AudioClip;
+        //else
+        //    sound = null;
+        //    
+        //Song = (bool)key["bool"];
+        //remove = (bool)key["stop"];
+        //Music = (bool)key["music"];
+        //
+
+        file = (string)key["Sound"];
+        layer = (AudioManager.AudioEvent.SoundType)(int)key["Layer"];
 
 
     }
 
     public override void CallAction()
     {
-
+        Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(layer, file));
         //Space.DispatchEvent(Events.Jukebox, new SoundEvent(sound, Song, remove, Music));
 
     }
@@ -1060,6 +1148,36 @@ public class ConvCall : ConvNode
         else
             tar.DispatchEvent(eventToCall);
 
+    }
+
+}
+
+
+/**
+    * CLASS NAME: ConvCall
+    * DESCRIPTION  : calling events outside of conv system. must take default event
+**/
+public class ConvCheat : ConvNode
+{
+    public string code;
+
+    public ConvCheat(JsonData key)
+    {
+
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+        code = (string)key["Code"];
+
+        code = code.ToLower();
+
+
+
+    }
+
+    public override void CallAction()
+    {
+        Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
     }
 
 }
