@@ -1,0 +1,25 @@
+WWise Events To Make
+
+play_music_elegant  // All Charlotte non-sad scenes
+play_music_warm_friendly  // All Eduardo non-sad scenes
+play_music_bedtime_lullaby  // Day 1--Off To Bed
+                            // Day 3--Long Night Hangout: lines 467,474
+play_music_silly  // Art room music
+play_music_peaceful  // Garden music
+play_music_tender_moment // Day 5--ColdSkyHideaway: lines 227 ;; music whenever you help a character overcome their problems
+
+
+stop_all_then_fireplace_amb  // Library ambience
+play_music_happy_crowd_amb  // Day 1--Welcome Dinner
+play_ambience_nighttime_fireplace  // Day 3--LongNightHangout ;; Fireplace ambience as well as owls hooting, crickets chirping, and other nighttime ambient sounds
+play_ambience_nighttime // Day 5--ColdSkyHideaway ;; Owls hooting, crickets chirping, and other nighttime ambient sounds.
+
+
+play_sfx_glass_clinking  // Day 1 / Welcome Dinner
+
+
+
+Notes:
+Currently fireplace amb plays in cafe and bedroom. I'm considering doing this only for intro scenes.
+Planning to have just ambience and no music on Day 3--LongNightHangout and Day 5--ColdSkyHideaway
+

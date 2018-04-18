@@ -33,7 +33,7 @@ EXTERNAL SetValue(ValueName, newValue)
 -> UnnatrualSpot
 
 === UnnatrualSpot ===
-I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Happy, Stage_left
+I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Happy, Stage_left # Play : play_music_peaceful
 He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
 {

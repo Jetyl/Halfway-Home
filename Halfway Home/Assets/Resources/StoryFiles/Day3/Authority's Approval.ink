@@ -24,34 +24,34 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-The player walks into the cafe area for some breakfast. early in the morning
+I walk into the cafe area for some breakfast. It's early in the morning. # play : play_music_cafejazz_02
 I head over to the cafe for some breakfast. I could use the meal.
 I spot Max doing their daily mopping. #Max = calm, stage_left
-they're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
+They're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
 {
 	-GetValue("LongNightHangoutCompleted"):
 		[Max] "{player_name}, didn't I tell ya to go to bed?" #Max = angry
 		[{player_name}] "I'm not tired."
-		I shrug. I'm not <i>that</i> fatigued. at least, I won't be after I eat.
+		I shrug. I'm not <i>that</i> fatigued. At least, I won't be after I eat.
 		[Max] "Well, If you say so. You still shouldn't be staying up so late." #Max = sad
 		[{player_name}] "Don't worry, I won't."
 		[Max] "That's good. Eduardo's a good guy, but he underestimates how easily he can influence people." #Max = happy
 	-else:
 		[Max] "Heya, {player_name}!"
-		"Good Morning."
-		[{player_name}] "morning."
+		"Good morning."
+		[{player_name}] "...morning."
 }
 Max starts to go back to their mopping, when Timothy runs into the room. #Max = calm, stage_left #Timothy = happy, right
-He looks happy, but also nervous. wonder what's up?
+He looks happy, but also nervous... wonder what's up?
 [Timothy] "Max, Max, Max!"
-[Max] "Woah-ho! Morning Timothy. What's up"
-[Timothy] "Oh, I'm just got up all bright and early, like you asked!"
+[Max] "Woah-ho! Morning Timothy. What's up?"
+[Timothy] "Oh, I just got up all bright and early, like you asked!"
 [Max] "Sweet man!" #Max = happy
-"Y'know, I'm really glad your adjusting here nicely."
+"Y'know, I'm really glad you're adjusting here nicely."
 [Timothy] "R-Really?"
-[Max] "Yeah Man! with an attitude like that, You'll be all better, and ready to get back out there in no time!"
+[Max] "Yeah man! with an attitude like that, you'll be all better, and ready to get back out there in no time!"
 [Timothy] "Oh! <size=30%> uh.. um...<size=100%>" #Timothy = surprised #Trissa = sad, stage_right
-[Trissa] "Yo! Max, Can I talk to you for a second?"
+[Trissa] "Yo! Max, can I talk to you for a second?"
 [Max] "Sure, what's up?" #Max = stage_right
 [Trissa] "Um, could we chat outside?"
 [Max] "Sure!"

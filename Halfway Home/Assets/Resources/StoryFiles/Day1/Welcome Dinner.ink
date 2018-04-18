@@ -25,7 +25,7 @@ EXTERNAL GetValue(value)
 -> Start
 
 === Start ===
-I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner. # Play : Play_music_placeholder_main_fadein
+I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner. # Play : play_music_happy_crowd_amb
 The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
 It's supposed to be a big bonding moment. Or something like that.
 I actually barely remember my own welcome dinner. I think there were beans? That's about all I got.
@@ -123,7 +123,7 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 ->Toast
 
 ===Toast===
-[Max] "Can I get everyone's attention!" #Max=Calm
+[Max] "Can I get everyone's attention!" #Max=Calm # SFX : play_sfx_glass_clinking
 The whole café quiets a little, as Max speaks up.
 [Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."

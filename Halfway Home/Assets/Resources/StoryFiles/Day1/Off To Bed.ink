@@ -25,7 +25,7 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-I walk into my room to go to bed. 
+I walk into my room to go to bed. # Play : play_music_bedtime_lullaby
 I hop into the shower real quick. By the time I come out Timothy is already curled up in his bed.
 //if first week
 { 

@@ -21,7 +21,7 @@ VAR current_room = "unset"
 -> Start
 
 === Start ===
-[{player_name}] "Oh, hi Charlotte." # Charlotte = Calm
+[{player_name}] "Oh, hi Charlotte." # Charlotte = Calm # Play : play_music_elegant
 [Charlotte] "Ah, yes. {player_name}. How do you do?"
 +[Great (genuine)]
 	[{player_name}] "Great. I've been feeling better recently."
