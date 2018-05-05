@@ -20,10 +20,6 @@ namespace Stratus
         // Fields
         //--------------------------------------------------------------------/
         /// <summary>
-        /// The ink compiled JSON file
-        /// </summary>
-        public TextAsset file;
-        /// <summary>
         /// What knot in the conversation to start this story on, when loaded
         /// </summary>
         public string startingKnot = string.Empty;
@@ -37,9 +33,9 @@ namespace Stratus
         /// </summary>
         public int timesRead = 0;
         /// <summary>
-        /// The name of the story file
+        /// The path for the story file used
         /// </summary>
-        public string name => file.name;
+        public string filePath;
         /// <summary>
         /// Whether this story has been saved previously
         /// </summary>
@@ -56,7 +52,19 @@ namespace Stratus
         /// Whether to the story has started
         /// </summary>
         public bool started;
-        
+
+        //--------------------------------------------------------------------/
+        // Properties
+        //--------------------------------------------------------------------/
+        /// <summary>
+        /// The ink compiled JSON file
+        /// </summary>
+        public TextAsset file { get; set; }
+        /// <summary>
+        /// The name of the story file
+        /// </summary>
+        public string name => file.name;
+
         //--------------------------------------------------------------------/
         // Definitions
         //--------------------------------------------------------------------/
@@ -64,7 +72,6 @@ namespace Stratus
         /// The Ink language provides 4 common value types
         /// </summary>
         public enum Types { Integer, Boolean, String, Float }
-
 
         /// <summary>
         /// The type of story events
@@ -123,6 +130,7 @@ namespace Stratus
         /// <summary>
         /// Signals that a story should be loaded
         /// </summary>
+        [Serializable]
         public class LoadEvent : Stratus.Event
         {
           /// <summary>
@@ -141,6 +149,10 @@ namespace Stratus
           /// Whether this story should be queued, if there's one currently running it will be read after
           /// </summary>
           public bool queue = false;
+          /// <summary>
+          /// How long to wait to play the story, if queued
+          /// </summary>
+          public float queueDelay = 0.0f;
         }
 
         /// <summary>

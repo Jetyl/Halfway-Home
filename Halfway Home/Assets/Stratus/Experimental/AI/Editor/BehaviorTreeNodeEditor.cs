@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System;
-using Stratus.Editors;
+using Stratus.Editor;
 
 namespace Stratus
 {
@@ -29,8 +29,7 @@ namespace Stratus
       void OnAddSimple(BehaviorTreeNode node)
       {
         node.Name = "Simple";
-        var texture = Resources.Load("gamepad") as Texture2D;
-        node.AddContent(new Node.ContentElement(node.Name, "A simple node that likes you very much", texture, null));
+        node.AddContent(new Node.ContentElement(node.Name, "A simple node that likes you very much", null, null));
         //node.AddContent(new Node.ContentElement(node.Name, "A simple node that likes you very much", texture, null));
       }
 
