@@ -201,6 +201,7 @@ namespace Stratus
       textStyle.richText = true;
       // Set the poll timer
       pollTimer = new Stopwatch(pollFrequency);
+      pollTimer.resetOnFinished = true;
       pollTimer.SetCallback(OnPoll);
       // Create separate draw lists for different visualization modes
       CreateDrawLists();
@@ -216,7 +217,7 @@ namespace Stratus
 
     private void Update()
     {
-      pollTimer.AutomaticUpdate(Time.deltaTime);
+      pollTimer.Update(Time.deltaTime);
     }
 
     private void OnDrawGizmos()

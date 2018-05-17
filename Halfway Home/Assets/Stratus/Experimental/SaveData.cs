@@ -11,57 +11,8 @@ namespace Stratus
   /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
   /// </summary>
   [Serializable]
-  public abstract class SaveData
+  public abstract class JsonSaveData
   {
-    //--------------------------------------------------------------------------------------------/
-    // Classes
-    //--------------------------------------------------------------------------------------------/
-    /// <summary>
-    /// Specifies what suffixes to add to the save file name
-    /// </summary>
-    public enum SuffixFormat
-    {
-      Incremental,
-      SystemTime
-    }
-
-    //--------------------------------------------------------------------------------------------/
-    // Attributes
-    //--------------------------------------------------------------------------------------------/
-    /// <summary>
-    /// A required attribute that specifies the wanted folder path and name for a savedata asset
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
-    public sealed class SaveDataAttribute : Attribute
-    {
-      /// <summary>
-      /// The folder relative to the application's persistent data path where you want this data stored
-      /// </summary>
-      public string folder { get; set; }
-      /// <summary>
-      /// What naming convention to use for a save file of this type
-      /// </summary>
-      public string namingConvention { get; set; } // = typeof(SaveData).DeclaringType.Name;
-      /// <summary>
-      /// What suffix to use for a save file of this type
-      /// </summary>
-      public SuffixFormat suffix { get; set; } = SuffixFormat.Incremental;
-      /// <summary>
-      /// What extension format to use for a save file of this type
-      /// </summary>
-      public string extension { get; set; } = ".sav";
-
-      public class MissingException : Exception
-      {
-        public MissingException(string className) : base("The class declaration for " + className + " is missing the [SaveData] attribute, which provides the path information needed in order to construct the asset.")
-        {
-          // Fill later?
-          this.HelpLink = "http://msdn.microsoft.com";
-          this.Source = "Exception_Class_Samples";
-        }
-      }
-    }
-
     //--------------------------------------------------------------------------------------------/
     // Properties
     //--------------------------------------------------------------------------------------------/
@@ -71,14 +22,14 @@ namespace Stratus
     public string json { get { return JsonUtility.ToJson(this, true); } }
 
     /// <summary>
-    /// The character used to separate directories in Unity
-    /// </summary>
-    public static char DirectorySeparatorChar { get; } = '/';
-
-    /// <summary>
     /// Whether this SaveData has been saved to disk
     /// </summary>
     public bool isSaved { get; protected set; } = false;
+
+    /// <summary>
+    /// The persistent data path that Unity is using
+    /// </summary>
+    public static string relativePath => Application.persistentDataPath;
 
     //--------------------------------------------------------------------------------------------/
     // Fields
@@ -86,14 +37,24 @@ namespace Stratus
     /// <summary>
     /// The time at which this save was made
     /// </summary>
-    [HideInInspector]
+    public string name;
+
+    /// <summary>
+    /// The time at which this save was made
+    /// </summary>
     public string time;
+
+    //--------------------------------------------------------------------------------------------/
+    // Virtual
+    //--------------------------------------------------------------------------------------------/    
+    protected virtual void OnSave() { }
+    protected virtual bool OnLoad() => true;
   }
 
   /// <summary>
   /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
   /// </summary>
-  public abstract class SaveData<T> : SaveData
+  public abstract class JsonSaveData<T> : JsonSaveData where T : JsonSaveData
   {
     //--------------------------------------------------------------------------------------------/
     // Properties
@@ -101,42 +62,27 @@ namespace Stratus
     /// <summary>
     /// The folder inside the relative path to this asset
     /// </summary>
-    public static string namingConvention { get; } = attribute.GetProperty<string>("namingConvention");
+    public static string namingConvention { get; } = attribute.GetProperty<string>(nameof(SaveDataAttribute.namingConvention));
 
     /// <summary>
     /// The folder inside the relative path to this asset
     /// </summary>
-    public static string folder { get; } = attribute.GetProperty<string>("folder");
+    public static string folder { get; } = attribute.GetProperty<string>(nameof(SaveDataAttribute.folder));
 
     /// <summary>
     /// The extension used by this save data
     /// </summary>
-    public static string extension { get; } = attribute.GetProperty<string>("extension");
+    public static string extension { get; } = attribute.GetProperty<string>(nameof(SaveDataAttribute.extension));
 
     /// <summary>
     /// The extension used by this save data
     /// </summary>
-    public static SuffixFormat suffix { get; } = attribute.GetProperty<SuffixFormat>("suffix");
-
-    /// <summary>
-    /// The persistent data path that Unity is using
-    /// </summary>
-    public static string relativePath => Application.persistentDataPath;
+    public static SaveDataSuffixFormat suffix { get; } = attribute.GetProperty<SaveDataSuffixFormat>(nameof(SaveDataAttribute.suffix));
 
     /// <summary>
     /// The path to the directory being used by this save data, as specified by the [SaveData] attribute
     /// </summary>
-    public static string defaultPath
-    {
-      get
-      {
-        var path = relativePath;
-        if (folder != null)
-          path += DirectorySeparatorChar + folder;
-        path += DirectorySeparatorChar;
-        return path;
-      }
-    }
+    public static string defaultPath => SaveDataUtility.ComposeDefaultPath(relativePath, folder);
 
     /// <summary>
     /// The attribute containing data about this class
@@ -190,27 +136,35 @@ namespace Stratus
 
     private static SaveDataAttribute attribute_;
 
+
+    //public JsonSaveData(string name)
+    //{
+    //  this.name = name;
+    //}
+
     //--------------------------------------------------------------------------------------------/
     // Methods
     //--------------------------------------------------------------------------------------------/    
-    /// <summary>
-    /// Saves the data to the default path in the application's persistent path
-    /// using the default naming convention
-    /// </summary>
-    public static void Save(SaveData<T> saveData)
-    {
-      Save(saveData, ComposeName(suffix));
-    }
-    
+    ///// <summary>
+    ///// Saves the data to the default path in the application's persistent path
+    ///// using the default naming convention
+    ///// </summary>
+    //public static void Save(JsonSaveData<T> saveData)
+    //{
+    //  Save(saveData, ComposeName(suffix));
+    //}
+
     /// <summary>
     /// Saves the data to the default path in the application's persistent path
     /// using the specified filename
     /// </summary>
-    public static void Save(SaveData<T> saveData, string name)
+    public static void Save(JsonSaveData<T> saveData, string name)
     {
+      saveData.name = name;
+
       // Compose the path
-      var fileName = name + extension;
-      var fullPath = defaultPath + fileName;
+      string fileName = saveData.name + extension;
+      string fullPath = defaultPath + fileName;
 
       // Create the directory if missing
       if (!Directory.Exists(defaultPath))
@@ -223,11 +177,13 @@ namespace Stratus
     /// Saves the data to the specified folder in the application's persistent path
     /// using the specified filename
     /// </summary>
-    public static void Save(SaveData<T> saveData, string name, string folderName)
+    public static void Save(JsonSaveData<T> saveData, string name, string folderName)
     {
+      saveData.name = name;
+
       // Compose the path
-      var fileName = name + extension;
-      var path = relativePath + DirectorySeparatorChar + folderName + DirectorySeparatorChar;
+      var fileName = saveData.name + extension;
+      var path = relativePath + SaveDataUtility.directorySeparatorChar + folderName + SaveDataUtility.directorySeparatorChar;
       var fullPath = path + fileName;
 
       // Create the directory if missing
@@ -257,7 +213,7 @@ namespace Stratus
     /// <returns></returns>
     public static T Load(string name, string folderName)
     {
-      var fullPath = ComposePath(name, folderName);
+      var fullPath = SaveDataUtility.ComposePath(relativePath, folderName, name, extension);
       return Deserialize(fullPath);
     }
 
@@ -271,7 +227,8 @@ namespace Stratus
       if (!Exists(name, folderName))
         return false;
 
-      var fullPath = ComposePath(name, folderName);
+      var fullPath = SaveDataUtility.ComposePath(relativePath, folderName, name, extension);
+      //Trace.Script($"Deleting {fullPath}");
       File.Delete(fullPath);
       return true;
     }
@@ -293,37 +250,40 @@ namespace Stratus
     }
 
     /// <summary>
-    /// Checks whether the specified file exists in the specified folder
+    /// Deletes this save file at its folder
     /// </summary>
-    /// <param name="path"></param>
-    /// <returns></returns>
-    public static bool Exists(string name, string folder)
+    public void Delete()
     {
-      var fullPath = ComposePath(name, folder);
-      return File.Exists(fullPath);
+      Delete(name);
     }
 
-    /// <summary>
-    /// Checks whether the specified file exists in the default folder
-    /// </summary>
-    /// <param name="path"></param>
-    /// <returns></returns>
-    public static bool Exists(string name)
-    {
-      var fileName = name + extension;
-      var fullPath = defaultPath + fileName;
-      return File.Exists(fullPath);
-    }
+
+
+    ///// <summary>
+    ///// Checks whether the specified file exists in the default folder
+    ///// </summary>
+    ///// <param name="path"></param>
+    ///// <returns></returns>
+    //public static bool Exists(string name)
+    //{
+    //  var fileName = name + extension;
+    //  var fullPath = defaultPath + fileName;
+    //  return File.Exists(fullPath);
+    //}
+
+    
 
     /// <summary>
     /// Performs the serialization operation
     /// </summary>
     /// <param name="saveData"></param>
     /// <param name="fullPath"></param>
-    private static void Serialize(SaveData<T> saveData, string fullPath)
+    private static void Serialize(JsonSaveData<T> saveData, string fullPath)
     {
       // Update the time to save at
       saveData.time = DateTime.Now.ToString();
+      // Call a customized function before writing to disk
+      saveData.OnSave();
       // Write to disk
       File.WriteAllText(fullPath, saveData.json);
       // Note that it has been saved
@@ -343,41 +303,20 @@ namespace Stratus
 
       string data = File.ReadAllText(fullPath);
       T saveData = JsonUtility.FromJson<T>(data);
+      //JsonSaveData<T> saveData1 = default(JsonSaveData<T>);
+      JsonUtility.FromJsonOverwrite(data, saveData);
+      // Call a customized function on loading
+      var jsd = (JsonSaveData<T>)(object)saveData;
+      jsd.OnLoad();
       return saveData;
+      //return saveData1 as T;
     }
 
-    /// <summary>
-    /// Composes a valid path given the name of a file and the folder it's on
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="folderName"></param>
-    /// <returns></returns>
-    private static string ComposePath(string name, string folderName)
-    {
-      var fileName = name + extension;
-      var path = relativePath + DirectorySeparatorChar + folderName + DirectorySeparatorChar;
-      var fullPath = path + fileName;
-      return fullPath;
-    }
+    public static string ComposeName(SaveDataSuffixFormat format) => SaveDataUtility.ComposeDefaultName(format, namingConvention, count);
+    public static string ComposePath(string name, string folder) => SaveDataUtility.ComposePath(relativePath, folder, name, extension);
+    public static bool Exists(string name, string folder) => SaveDataUtility.Exists(relativePath, folder, name, extension);
 
-    /// <summary>
-    /// Composes a default save data name
-    /// </summary>
-    /// <param name="format"></param>
-    /// <returns></returns>
-    private static string ComposeName(SuffixFormat format)
-    {
-      string name = namingConvention;
-      switch (format)
-      {
-        case SuffixFormat.Incremental:
-          name += "_" + count;
-          break;
-        default:
-          break;
-      }
-      return name;
-    }
+
 
 
 

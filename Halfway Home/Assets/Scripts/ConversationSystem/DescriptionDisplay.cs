@@ -15,7 +15,7 @@ using System;
 public class DescriptionDisplay : MonoBehaviour
 {
     
-
+    
     Animator anime;
     AutoType Description;
     public GameObject Speaker;
