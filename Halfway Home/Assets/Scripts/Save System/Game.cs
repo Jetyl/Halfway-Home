@@ -56,6 +56,8 @@ public class Game
     public string CurrentHistory = "";
     public string CurrentSpeaker = "";
 
+    DateTime SaveStamp;
+
     public Game()
     {
        
@@ -118,9 +120,12 @@ public class Game
     {
         if(InCurrentStory)
         {
-            
+
         }
 
+        SaveStamp = DateTime.Now;
+        MonoBehaviour.print("Save #" + SaveStamp.TimeOfDay);
+        ScreenCapture.CaptureScreenshot("Game_" + SaveStamp.TimeOfDay + "_Saveshot.png");
 
     }
 

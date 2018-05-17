@@ -112,6 +112,17 @@ public static class SaveLoad
         return null;
     }
 
+    public static int GetSaveNumber(Game save)
+    {
+        for (int i = 0; i < savedGames.Count; ++i)
+        {
+            if (save == savedGames[i])
+                return i;
+        }
+
+        return -1;
+    }
+
     public static bool CanHaveNewSave()
     {
         if (savedGames.Count < 17)
