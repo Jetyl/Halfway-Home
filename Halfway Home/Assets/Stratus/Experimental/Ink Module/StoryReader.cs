@@ -107,8 +107,8 @@ namespace Stratus
         private void Awake()
         {
           Subscribe();
-          OnLoad(stories);
           OnAwake();
+          OnLoad(stories);
         }
 
         /// <summary>
