@@ -64,8 +64,7 @@ public class PostProcessingController : MonoBehaviour
     void OnStatChange(DefaultEvent eventdata)
     {
         StopAllCoroutines();
-
-        print("updating!");
+        
         int Dstat = Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression);
         float Dpercent = (float)Dstat / 100f;
         Dpercent = Mathf.Clamp01((Dpercent - DeadZone) / (1 - DeadZone));

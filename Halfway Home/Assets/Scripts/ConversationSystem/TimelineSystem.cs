@@ -96,7 +96,7 @@ public class TimelineSystem : MonoBehaviour
 
     public void NextNode(int index)
     {
-        print(index);
+        //print(index);
         if (index == -1)
         {
             //Game Over

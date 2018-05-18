@@ -217,7 +217,7 @@ public class AutoType : MonoBehaviour
         {
             if(del.chracter == character)
             {
-                print(character);
+                //print(character);
                 return value * del.DelayMultiplier;
             }
 
