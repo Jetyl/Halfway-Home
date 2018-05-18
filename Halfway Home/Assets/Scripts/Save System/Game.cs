@@ -7,6 +7,7 @@ All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 /******************************************************************************/
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using System;
 using LitJson;
 
@@ -124,10 +125,10 @@ public class Game
         }
 
         SaveStamp = DateTime.Now;
-        MonoBehaviour.print("Save #" + SaveStamp.TimeOfDay);
-        ScreenCapture.CaptureScreenshot("Game_" + SaveStamp.TimeOfDay + "_Saveshot.png");
-
+        //MonoBehaviour.print("Save #" + SaveStamp.Hour + SaveStamp.Minute + SaveStamp.Second);
+        
     }
+
 
     public void LoadGame()
     {

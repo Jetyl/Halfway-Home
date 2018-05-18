@@ -349,7 +349,7 @@ public class StageDirectionEvent : DefaultEvent
 
         foreach(var direct in calls)
         {
-            MonoBehaviour.print(direct);
+            //MonoBehaviour.print(direct);
             bool stop = false;
             var directions = direct.Replace(" ", "");
             
