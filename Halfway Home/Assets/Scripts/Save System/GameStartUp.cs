@@ -64,6 +64,7 @@ public class GameStartUp : MonoBehaviour
         }
         else
         {
+            //delete debugged saves, if we are no longer in a debug mode
             if(Game.current != null && Game.current.Progress.GetBoolValue("Debug Mode"))
             {
                 Game.current = null;

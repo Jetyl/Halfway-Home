@@ -42,7 +42,9 @@ public class Game
 
     public int CurrentNode;
 
+    public string CurrentBackdrop;
     public string CurrentCG;
+    public List<string> CGCalls;
 
     public string SavedInk;
 
@@ -53,6 +55,8 @@ public class Game
 
     public string CurrentHistory = "";
     public string CurrentSpeaker = "";
+
+    DateTime SaveStamp;
 
     public Game()
     {
@@ -116,9 +120,12 @@ public class Game
     {
         if(InCurrentStory)
         {
-            
+
         }
 
+        SaveStamp = DateTime.Now;
+        MonoBehaviour.print("Save #" + SaveStamp.TimeOfDay);
+        ScreenCapture.CaptureScreenshot("Game_" + SaveStamp.TimeOfDay + "_Saveshot.png");
 
     }
 

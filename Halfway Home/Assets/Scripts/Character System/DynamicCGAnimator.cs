@@ -16,6 +16,11 @@ public class DynamicCGAnimator : MonoBehaviour
         EventSystem.ConnectEvent<CustomGraphicEvent>(gameObject, Events.CG, NextCommand);
 
         EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.CloseCG, OnClose);
+
+
+        Space.Connect<DefaultEvent>(Events.Save, OnSave);
+        EventSystem.ConnectEvent<DefaultEvent>(gameObject, Events.Load, OnLoad);
+
     }
 	
 	// Update is called once per frame
@@ -23,7 +28,28 @@ public class DynamicCGAnimator : MonoBehaviour
     {
 		
 	}
-    
+
+    void OnSave(DefaultEvent eventdata)
+    {
+        Game.current.CGCalls = new List<string>();
+
+        foreach(var set in Commands)
+        {
+            Game.current.CGCalls.Add(set.ActiveTag);
+        }
+
+    }
+
+
+    void OnLoad(DefaultEvent eventdata)
+    {
+        foreach(var set in Game.current.CGCalls)
+        {
+            NextCommand(new CustomGraphicEvent("", set));
+        }
+
+    }
+
     void NextCommand(CustomGraphicEvent eventdata)
     {
         int i = 0;
@@ -35,6 +61,7 @@ public class DynamicCGAnimator : MonoBehaviour
 
                 if(act.ToLower() == Group.CloseTag.ToLower())
                 {
+                    Group.ActiveTag = Group.CloseTag;
                     ClearGrouping(Group);
                 }
                 else
@@ -43,6 +70,7 @@ public class DynamicCGAnimator : MonoBehaviour
                     {
                         if (act.ToLower() == command.Tag.ToLower())
                         {
+                            Group.ActiveTag = command.Tag;
                             ClearGrouping(Group, command.Tag);
                             print(command.Tag.ToLower());
                             SendCommand(command);

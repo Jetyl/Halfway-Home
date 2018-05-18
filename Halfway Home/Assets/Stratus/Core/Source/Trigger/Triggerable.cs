@@ -26,12 +26,6 @@ namespace Stratus
     // Fields
     //------------------------------------------------------------------------/
     /// <summary>
-    /// Whether we are printing debug output
-    /// </summary>
-    [Tooltip("Whether we are printing debug output")]
-    public bool logging = false;
-
-    /// <summary>
     /// Whether this event dispatcher will respond to trigger events
     /// </summary>
     [Tooltip("How long after activation before the event is fired")]
@@ -61,7 +55,6 @@ namespace Stratus
     abstract protected void OnAwake();
     abstract protected void OnTrigger();
     //protected virtual void OnTrigger(Trigger.Instruction instruction) {}
-    virtual protected void PreAwake() {}
 
     //------------------------------------------------------------------------/
     // Methods
@@ -71,8 +64,8 @@ namespace Stratus
     /// </summary>
     void Awake()
     {
+      awoke = true;
       this.gameObject.Connect<Trigger.TriggerEvent>(this.OnTriggerEvent);
-      this.PreAwake();
       this.OnAwake();
       onTriggered = (Triggerable trigger) => {};
     }
@@ -94,7 +87,10 @@ namespace Stratus
     public void Trigger()
     {
       if (!enabled)
-        return;      
+        return;
+
+      if (debug)
+        Trace.Script($"<i>{description}</i> has been triggered!", this);
       this.RunTriggerSequence();
       activated = true;
     }    
@@ -107,8 +103,6 @@ namespace Stratus
     {
       var seq = Actions.Sequence(this.gameObject.Actions());
       Actions.Delay(seq, this.delay);
-      if (logging)
-        Trace.Script($"Triggered {GetType().Name} - {description}", this);
       Actions.Call(seq, this.OnTrigger);
       Actions.Call(seq, ()=>onTriggered(this));      
     }
