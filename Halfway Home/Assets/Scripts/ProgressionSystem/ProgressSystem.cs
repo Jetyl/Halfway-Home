@@ -17,7 +17,10 @@ public class ProgressSystem
 
     private Dictionary<string, ProgressPoint> ProgressBook;
     private List<Beat> PlotLines;
-    
+
+    List<Task> Objectives;
+
+
 
     public ProgressSystem()
     {
@@ -30,6 +33,15 @@ public class ProgressSystem
         for (int ima = 0; ima < jBeat.Count; ++ima)
         {
             PlotLines.Add(new Beat(jBeat[ima], this));
+        }
+
+        Objectives = new List<Task>();
+
+        var jTask = TextParser.ToJson("TaskListing");
+
+        for (int ima = 0; ima < jTask.Count; ++ima)
+        {
+            Objectives.Add(new Task(jTask[ima]));
         }
 
         //updates plots on initialize
@@ -328,7 +340,27 @@ public class ProgressSystem
         
     }
 
-    
+    public void UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)
+    {
+      
+        if (Objectives.Count >= Number)
+            return;
+
+        if (SubTask != -1 && Objectives[Number].SubTasks.Count > SubTask)
+        {
+            Objectives[Number].SubTasks[SubTask].SetState(newState);
+            if (Objectives[Number].SubtasksComplete())
+                Objectives[Number].SetState(Task.TaskState.Success);
+        }
+        else
+            Objectives[Number].SetState(newState);
+
+
+        //send any system updating events here
+
+    }
+
+
     public void ResetBeats()
     {
         foreach (var beat in PlotLines)
@@ -489,14 +521,13 @@ public class Task
     }
 
     public int Number;
-    public int Set;
 
     public string Name;
-    public string Objective;
+    //public string Objective;
 
     public bool Hidden;
 
-    public string ConnectedBeat;
+    public List<Task> SubTasks;
 
     private TaskState State;
 
@@ -504,17 +535,24 @@ public class Task
     {
         Number = number;
         Name = "";
-        ConnectedBeat = "Independent Interactions";
     }
 
     public Task(JsonData taskData)
     {
         Number = (int)taskData["Number"];
         Name = (string)taskData["Name"];
-        Objective = (string)taskData["Objective"];
-        Set = (int)taskData["Set"];
+        //Objective = (string)taskData["Objective"];
+        SubTasks = new List<Task>();
+        //MonoBehaviour.print((int)taskData["SubCount"]);
+        for(int i = 0; i < (int)taskData["SubCount"]; ++i)
+        {
+            var sub = new Task((int)taskData["SubTasks"][i]["Number"]);
+            sub.Name = (string)taskData["SubTasks"][i]["Name"];
+            sub.Hidden = (bool)taskData["SubTasks"][i]["Hidden"];
+            SubTasks.Add(sub);
+        }
+
         Hidden = (bool)taskData["Hidden"];
-        ConnectedBeat = (string)taskData["Beat"];
         State = TaskState.Unstarted;
     }
 
@@ -537,6 +575,26 @@ public class Task
         }
     }
 
-    
+    public bool SubtasksComplete()
+    {
+        foreach(var task in SubTasks)
+        {
+            if (task.GetState() != TaskState.Success)
+                return false;
+        }
+
+        return true;
+    }
+
+    public bool SubtasksFailure()
+    {
+        foreach (var task in SubTasks)
+        {
+            if (task.GetState() == TaskState.Failed)
+                return true;
+        }
+
+        return false;
+    }
 
 }

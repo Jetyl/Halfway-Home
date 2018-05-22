@@ -1,0 +1,44 @@
+
+[
+ {
+  "Number" : 0,
+  "Name"   : "Show Timothy around the house",
+  "Hidden" : false,
+  "SubCount" : 5,
+  "SubTasks" : [
+   {
+    "Number" : 0,
+    "Name"   : "Show Timothy the Cafe",
+    "Hidden" : false
+   },
+   {
+    "Number" : 1,
+    "Name"   : "Show Timothy the Commons",
+    "Hidden" : false
+   },
+   {
+    "Number" : 2,
+    "Name"   : "Show Timothy the Gardens",
+    "Hidden" : false
+   },
+   {
+    "Number" : 3,
+    "Name"   : "Show Timothy the Art Room",
+    "Hidden" : false
+   },
+   {
+    "Number" : 4,
+    "Name"   : "Show Timothy the Library",
+    "Hidden" : false
+   }
+  ]
+ },
+ {
+  "Number" : 1,
+  "Name"   : "Go to Timothy's Welcome Dinner",
+  "Hidden" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ }
+]
