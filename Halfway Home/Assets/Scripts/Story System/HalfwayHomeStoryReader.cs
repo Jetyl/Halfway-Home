@@ -96,11 +96,61 @@ namespace HalfwayHome
       // UI Toggle
       string displayUI = RegexParser.Presets.ComposeBinaryOperation("UI", "display", "*");
       parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
+      
+      // Objective Updates
+      string updateTask = RegexParser.Presets.ComposeBinaryOperation("ID", "state", "&");
+      parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
     }
 
     protected override void OnStoryLoaded(Story story)
     {
        
+    }
+    
+    void OnUpdateObjectives(Parse parse)
+    {
+         foreach(var match in parse.matches)
+          {
+            if (match.ContainsKey("state"))
+            {
+              
+                var state = match["state"].Trim().ToLower();
+                var NewTaskState = Task.TaskState.Unstarted;
+
+                switch(state)
+                {
+                    case "start":
+                    case "in progress":
+                    case "inprogress":
+                            NewTaskState = Task.TaskState.InProgress;
+                        break;
+                    case "fail":
+                    case "failure":
+                    case "failed":
+                            NewTaskState = Task.TaskState.Failed;
+                        break;
+                    case "success":
+                    case "clear":
+                    case "finished":
+                    case "goal":
+                            NewTaskState = Task.TaskState.Success;
+                        break;
+                    default:
+                            break;
+                }
+
+                var id = match["ID"].Trim().Split('.');
+                int num1 = Convert.ToInt32(id[0]);
+                int num2 = -1;
+                if (id.Length > 1)
+                    num2 = Convert.ToInt32(id[1]);
+
+                
+                Game.current.Progress.UpdateTask(num1, NewTaskState, num2);
+          
+            }
+          }
+
     }
 
 

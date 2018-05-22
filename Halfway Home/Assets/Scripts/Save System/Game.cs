@@ -29,7 +29,7 @@ public class Game
     private bool DrainEnergy;
 
     public ProgressSystem Progress;
-
+    public GallerySystem Memory;
     public Personality Self;
 
     //character name, day of week, the location that hour
@@ -59,6 +59,9 @@ public class Game
 
     DateTime SaveStamp;
 
+
+
+
     public Game()
     {
        
@@ -68,6 +71,7 @@ public class Game
         CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();
+        Memory = new GallerySystem();
 
         Progress.SetValue("MasterVolume", 1.0f);
         Progress.SetValue("BackgroundVolume", 1.0f);
@@ -103,7 +107,11 @@ public class Game
             Schedule.Add((string)character["Name"], Aday);
 
         }
+
+
         
+
+
     }
 
     public Game(Game copy_)
