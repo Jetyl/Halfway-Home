@@ -36,16 +36,16 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     protected override void OnBindExternalFunctions(Story story)
     {
-            
+
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.runtime.BindExternalFunction(nameof(SetIntValue), new System.Action<string, int>(SetIntValue));
       story.runtime.BindExternalFunction(nameof(SetStringValue), new System.Action<string, string>(SetStringValue));
-      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) =>  GetValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetValue), (string valueName) => GetValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
-      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) =>  GetStringValue(valueName));
-      story.runtime.BindExternalFunction(nameof(GetSelfStat), (string stat_name) =>  GetSelfStat(stat_name));
-      story.runtime.BindExternalFunction(nameof(GetHour), () =>  GetHour());
+      story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => GetStringValue(valueName));
+      story.runtime.BindExternalFunction(nameof(GetSelfStat), (string stat_name) => GetSelfStat(stat_name));
+      story.runtime.BindExternalFunction(nameof(GetHour), () => GetHour());
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
       story.runtime.BindExternalFunction(nameof(AlterTime), new System.Action(AlterTime));
@@ -59,7 +59,7 @@ namespace HalfwayHome
       // @TODO: Change these to use groups
       parser.AddPattern(speakerLabel, RegexParser.Presets.insideSquareBrackets, RegexParser.Target.Line, RegexParser.Scope.Default);
       parser.AddPattern(dialogLabel, RegexParser.Presets.insideDoubleQuotes, RegexParser.Target.Line, RegexParser.Scope.Default);
-      
+
       // Poses
       string posePattern = RegexParser.Presets.ComposeBinaryOperation("Person", "Pose", "=");
       parser.AddPattern("Pose", posePattern, RegexParser.Target.Tag, RegexParser.Scope.Group, OnPoseChange);
@@ -88,7 +88,7 @@ namespace HalfwayHome
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
 
-      
+
       // Time Change
       string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
       parser.AddPattern("ChangeTime", changeTime, RegexParser.Target.Tag, RegexParser.Scope.Group, OnChangeTime);
@@ -96,7 +96,7 @@ namespace HalfwayHome
       // UI Toggle
       string displayUI = RegexParser.Presets.ComposeBinaryOperation("UI", "display", "*");
       parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
-      
+
       // Objective Updates
       string updateTask = RegexParser.Presets.ComposeBinaryOperation("ID", "state", "&");
       parser.AddPattern("UpdateTask", updateTask, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUpdateObjectives);
@@ -104,128 +104,142 @@ namespace HalfwayHome
 
     protected override void OnStoryLoaded(Story story)
     {
-       
+
     }
-    
+
+    protected override void OnSave(Dictionary<string, Story> stories)
+    {
+      base.OnSave(stories);
+    }
+
+    protected override void OnLoad(Dictionary<string, Story> stories)
+    {
+      base.OnLoad(stories);
+    }
+
+
+    //------------------------------------------------------------------------/
+    // Methods
+    //------------------------------------------------------------------------/
     void OnUpdateObjectives(Parse parse)
     {
-         foreach(var match in parse.matches)
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("state"))
+        {
+
+          var state = match["state"].Trim().ToLower();
+          var NewTaskState = Task.TaskState.Unstarted;
+
+          switch (state)
           {
-            if (match.ContainsKey("state"))
-            {
-              
-                var state = match["state"].Trim().ToLower();
-                var NewTaskState = Task.TaskState.Unstarted;
-
-                switch(state)
-                {
-                    case "start":
-                    case "in progress":
-                    case "inprogress":
-                            NewTaskState = Task.TaskState.InProgress;
-                        break;
-                    case "fail":
-                    case "failure":
-                    case "failed":
-                            NewTaskState = Task.TaskState.Failed;
-                        break;
-                    case "success":
-                    case "clear":
-                    case "finished":
-                    case "goal":
-                            NewTaskState = Task.TaskState.Success;
-                        break;
-                    default:
-                            break;
-                }
-
-                var id = match["ID"].Trim().Split('.');
-                int num1 = Convert.ToInt32(id[0]);
-                int num2 = -1;
-                if (id.Length > 1)
-                    num2 = Convert.ToInt32(id[1]);
-
-                
-                Game.current.Progress.UpdateTask(num1, NewTaskState, num2);
-          
-            }
+            case "start":
+            case "in progress":
+            case "inprogress":
+              NewTaskState = Task.TaskState.InProgress;
+              break;
+            case "fail":
+            case "failure":
+            case "failed":
+              NewTaskState = Task.TaskState.Failed;
+              break;
+            case "success":
+            case "clear":
+            case "finished":
+            case "goal":
+              NewTaskState = Task.TaskState.Success;
+              break;
+            default:
+              break;
           }
+
+          var id = match["ID"].Trim().Split('.');
+          int num1 = Convert.ToInt32(id[0]);
+          int num2 = -1;
+          if (id.Length > 1)
+            num2 = Convert.ToInt32(id[1]);
+
+
+          Game.current.Progress.UpdateTask(num1, NewTaskState, num2);
+
+        }
+      }
 
     }
 
 
     void OnChangeTime(Parse parse)
     {
-            foreach (var match in parse.matches)
-            {
-                if (match.ContainsKey("time"))
-                {
-                    if (match["time"].ToLower().Trim() == "set_time" || match["time"].ToLower().Trim() == "time_set")
-                    {
-                        string[] set = match["value"].Replace(" ","").Split(',');
-                        Game.current.Day = int.Parse(set[0]);
-                        Game.current.Hour = int.Parse(set[1]);
-                        Space.DispatchEvent(Events.TimeChange);
-                    }
-                    else if (match["time"].ToLower().Trim() == "sleep")
-                    {
-                        int hour = int.Parse(match["value"].Trim());
-                        Game.current.SetTimeBlock(hour, false);
-                        Game.current.AlterTime();
-                    }
-                    else
-                    {
-                        int hour = int.Parse(match["value"].Trim());
-                        Game.current.SetTimeBlock(hour);
-                        Game.current.AlterTime();
-                    }
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("time"))
+        {
+          if (match["time"].ToLower().Trim() == "set_time" || match["time"].ToLower().Trim() == "time_set")
+          {
+            string[] set = match["value"].Replace(" ", "").Split(',');
+            Game.current.Day = int.Parse(set[0]);
+            Game.current.Hour = int.Parse(set[1]);
+            Space.DispatchEvent(Events.TimeChange);
+          }
+          else if (match["time"].ToLower().Trim() == "sleep")
+          {
+            int hour = int.Parse(match["value"].Trim());
+            Game.current.SetTimeBlock(hour, false);
+            Game.current.AlterTime();
+          }
+          else
+          {
+            int hour = int.Parse(match["value"].Trim());
+            Game.current.SetTimeBlock(hour);
+            Game.current.AlterTime();
+          }
 
-                    //return;
-                }
-
-            }
+          //return;
         }
+
+      }
+    }
 
     void OnSetBackground(Parse parse)
     {
-            
-      foreach(var match in parse.matches)
+
+      foreach (var match in parse.matches)
       {
         if (match.ContainsKey("Background"))
         {
-                if(match["Background"].Trim().ToLower() == "background")
-                {
-                    var Image = match["Image"].Trim();
-                    Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
-                }
-                else
-                {
-                    var Image = match["Image"].Trim();
-                    Space.DispatchEvent(Events.CG, new CustomGraphicEvent(match["Background"].Trim(), Image));
-                }
+          if (match["Background"].Trim().ToLower() == "background")
+          {
+            var Image = match["Image"].Trim();
+            Space.DispatchEvent(Events.Backdrop, new StageDirectionEvent(Image));
+          }
+          else
+          {
+            var Image = match["Image"].Trim();
+            Space.DispatchEvent(Events.CG, new CustomGraphicEvent(match["Background"].Trim(), Image));
+          }
         }
-        
+
       }
     }
 
     void OnPoseChange(Parse parse)
     {
-      foreach(var match in parse.matches)
+      foreach (var match in parse.matches)
       {
         if (match.ContainsKey("Pose"))
         {
           var pose = match["Pose"].Trim();
           var person = match["Person"].Trim();
-          
-            Trace.Script(parse.FindFirst("Person").Trim());
-                        
-            Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
-          
+
+          Trace.Script(parse.FindFirst("Person").Trim());
+
+          Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent(person, pose));
+
         }
       }
 
     }
-    
+
     void OnSocialStatIncrement(Parse parse)
     {
       string stat = parse.FindFirst(statLabel).ToLower().Trim();
@@ -238,11 +252,11 @@ namespace HalfwayHome
       if (stat == "expression")
         eventStat = Personality.Social.Expression;
 
-      if(count == "+")
+      if (count == "+")
       {
         Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("Minor", eventStat));
       }
-      else if(count == "++")
+      else if (count == "++")
       {
         Space.DispatchEvent(Events.AddStat, new ChangeStatEvent("Major", eventStat));
       }
@@ -363,8 +377,8 @@ namespace HalfwayHome
 
     public bool GetValue(string ValueName)
     {
-        return Game.current.Progress.GetBoolValue(ValueName);
-        
+      return Game.current.Progress.GetBoolValue(ValueName);
+
     }
 
     public int GetIntValue(string ValueName)
@@ -390,17 +404,17 @@ namespace HalfwayHome
     }
     public int GetSelfStat(string stat_name)
     {
-        return Game.current.Self.GetStat(stat_name);
+      return Game.current.Self.GetStat(stat_name);
     }
 
-        public void AlterTime()
+    public void AlterTime()
     {
       Game.current.AlterTime();
     }
 
     public int GetHour()
     {
-        return Game.current.Hour;
+      return Game.current.Hour;
     }
     public void CallSleep()
     {

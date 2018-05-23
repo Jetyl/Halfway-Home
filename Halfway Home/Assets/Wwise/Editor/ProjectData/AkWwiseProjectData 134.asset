@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 476a76c211b069a957093179e8a613a4c168d824
   EventWwu: []
   AuxBusWwu: []
   StateWwu: []
@@ -20,6 +23,8 @@ MonoBehaviour:
   BankWwu: []
   RtpcWwu: []
   TriggerWwu: []
+<<<<<<< HEAD
+=======
 =======
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
@@ -713,6 +718,7 @@ MonoBehaviour:
     m_lastTimePart2: -1999302392
     List: []
 >>>>>>> master
+>>>>>>> 476a76c211b069a957093179e8a613a4c168d824
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
