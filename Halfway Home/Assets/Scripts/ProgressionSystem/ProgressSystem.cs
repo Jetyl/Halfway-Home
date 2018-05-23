@@ -327,6 +327,11 @@ public class ProgressSystem
 
 
     }
+    
+    public List<Task> GetObjectives()
+    {
+      return Objectives;
+    }
 
     public bool Contains(string key)
     {
