@@ -16,8 +16,12 @@ public class PauseMenu : MonoBehaviour
   public HalfwayHome.HalfwayHomeStoryReader ReaderReference;
 
     public GameObject Pause;
+    public GameObject SubmenuBackground;
     public GameObject Confirm;
-    public GameObject Options;
+    public GameObject OptionsPage;
+    public GameObject ToDoPage;
+    public GameObject SavePage;
+    public GameObject LoadPage;
 
     bool Quiting;
 
@@ -33,11 +37,29 @@ public class PauseMenu : MonoBehaviour
         Space.DispatchEvent(Events.UnPause);
     }
 
-    public void Save()
+    public void OpenSave()
     {
-        Space.DispatchEvent(Events.Save);
+        // old save
+        /*Space.DispatchEvent(Events.Save);
         SaveLoad.Save();
-        ReaderReference.Save();
+        ReaderReference.Save();*/
+        SubmenuBackground.SetActive(true);
+        Pause.SetActive(false);
+        SavePage.SetActive(true);
+    }
+
+    public void OpenLoad()
+    {
+        SubmenuBackground.SetActive(true);
+        Pause.SetActive(false);
+        LoadPage.SetActive(true);
+    }
+
+    public void OpenToDo()
+    {
+        SubmenuBackground.SetActive(true);
+        Pause.SetActive(false);
+        ToDoPage.SetActive(true);
     }
 
     public void Clear() //for debug purposes
@@ -50,13 +72,18 @@ public class PauseMenu : MonoBehaviour
     {
         Pause.SetActive(true);
         Confirm.SetActive(false);
-        Options.SetActive(false);
+        OptionsPage.SetActive(false);
+        SubmenuBackground.SetActive(false);
+        ToDoPage.SetActive(false);
+        SavePage.SetActive(false);
+        LoadPage.SetActive(false);
     }
 
     public void OpenOptions()
     {
+        SubmenuBackground.SetActive(true);
         Pause.SetActive(false);
-        Options.SetActive(true);
+        OptionsPage.SetActive(true);
     }
 
     public void ConfirmAction(bool Quit)
