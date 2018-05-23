@@ -99,7 +99,7 @@ namespace HalfwayHome
       
       // Objective Updates
       string updateTask = RegexParser.Presets.ComposeBinaryOperation("ID", "state", "&");
-      parser.AddPattern("DisplayUI", displayUI, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUIDisplay);
+      parser.AddPattern("UpdateTask", updateTask, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUpdateObjectives);
     }
 
     protected override void OnStoryLoaded(Story story)

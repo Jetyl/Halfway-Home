@@ -271,6 +271,16 @@ public class Game
         return newHour;
     }
 
+    public int TimeDifference(int time, int Date)
+    {
+        var dif = 0;
+
+        dif = (Hour + (Day * 24)) - (time + (Date * 24));
+
+        return dif;
+
+    }
+
 
 }
 [Serializable]

@@ -20,10 +20,12 @@ public class ProgressNode : BaseNode
     public Texture2D InventoryMatch;
 
     public bool Current;
-    
+
+    public ProgressType TypeOfProgress;
 
     public ValueCompare Compare;
-    
+
+    public string TaskID;
 
     public string NoteTitle;
 
@@ -51,7 +53,8 @@ public class ProgressNode : BaseNode
         inPoint = new ProgressionConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         BranchOutPoint = new ProgressionConnectionPoint(this, ConnectionPointType.Branch, outPointStyle, OnClickOutPoint);
-        
+
+        TypeOfProgress = ProgressType.None;
         ID = NodeID;
         PassID = -1;
         FailID = -1;
@@ -80,6 +83,15 @@ public class ProgressNode : BaseNode
             ChangeColor((int)data["color"]);
 
         TypeID = NodeTypes.ProgressNode;
+
+        if (data.Keys.Contains("TypeOfProgress"))
+        {
+            int ty = (int)data["TypeOfProgress"];
+            TypeOfProgress = (ProgressType)ty;
+        }
+        else
+            TypeOfProgress = ProgressType.ProgressPoint;
+        
 
         ID = (int)data["ID"];
 
@@ -192,15 +204,38 @@ public class ProgressNode : BaseNode
         GUI.Box(rect, "", style);
         title = GUI.TextField(new Rect(rect.position + new Vector2(25, 15), new Vector2(150, 20)), title);
         GUI.Label(new Rect(rect.position + new Vector2(25, 40), new Vector2(150, 20)), "ID: " + ID);
+        TypeOfProgress = (ProgressType)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 65), new Vector2(150, 20)), TypeOfProgress);
         AddDisplay();
     }
 
     void AddDisplay()
     {
-        rect.size = new Vector2(200, 155);
-        CheckPoint.ProgressName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), CheckPoint.ProgressName);
-        CheckPoint.TypeID = (PointTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), CheckPoint.TypeID);
-        ProgressPointDisplay();
+        switch (TypeOfProgress)
+        {
+            case ProgressType.None:
+                rect.size = new Vector2(200, 100);
+                break;
+            case ProgressType.ProgressPoint:
+                rect.size = new Vector2(200, 155);
+                CheckPoint.ProgressName = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 90), new Vector2(150, 20)), CheckPoint.ProgressName);
+                CheckPoint.TypeID = (PointTypes)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), CheckPoint.TypeID);
+                ProgressPointDisplay();
+                break;
+            case ProgressType.Objective:
+                rect.size = new Vector2(200, 190);
+                TaskID = EditorGUI.TextField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 20)), TaskID);
+                NewTaskState = (Task.TaskState)EditorGUI.EnumPopup(new Rect(rect.position + new Vector2(25, 140), new Vector2(150, 20)), NewTaskState);
+                //SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 160), new Vector2(150, 15)), "Send Notification Event", SendNoification);
+                break;
+            case ProgressType.CG:
+                rect.size = new Vector2(200, 200);
+                Image = EditorGUI.ObjectField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 50)), Image, typeof(Sprite), allowSceneObjects: true) as Sprite;
+                //SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 170), new Vector2(150, 15)), "Send Notification Event", SendNoification);
+                break;
+            default:
+                Debug.LogError("Unrecognized Option");
+                break;
+        }
     }
 
 

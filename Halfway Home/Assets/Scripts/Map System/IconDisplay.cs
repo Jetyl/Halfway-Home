@@ -88,7 +88,7 @@ public class IconDisplay : MonoBehaviour
                 
             }
             
-            print("Room to call: " + icons.CurrentRoom);
+            //print("Room to call: " + icons.CurrentRoom);
 
             Space.DispatchEvent(Events.MapIcon, icons);
         }
