@@ -31,7 +31,9 @@ public enum NodeTypes
     LoadNode = 14,
     LoopNode = 15,
     CheatNode = 16,
-    RoomNode = 17
+    RoomNode = 17,
+    TimeNode = 18,
+    NullNode = 19
 }
 
 
@@ -126,6 +128,12 @@ public class ConversationSystem
                     break;
                 case NodeTypes.RoomNode:
                     Nodes.Add(new ConvRoom(conversation[i]));
+                    break;
+                case NodeTypes.TimeNode:
+                    Nodes.Add(new ConvTime(conversation[i]));
+                    break;
+                case NodeTypes.NullNode:
+                    Nodes.Add(new ConvNull(conversation[i]));
                     break;
                 default:
                     break;
@@ -760,6 +768,59 @@ public class ConvLoop : ConvNode
     }
 
 }
+
+
+/**
+    * CLASS NAME: ConvTime
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvTime : ConvNode
+{
+    int Hour;
+    int Day;
+
+    public ConvTime(JsonData key)
+    {
+        ID = (int)key["ID"];
+        Destination = (int)key["NextID"];
+
+        Day = (int)key["Day"];
+        Hour = (int)key["Hour"];
+    }
+
+
+    public override void CallAction()
+    {
+
+    }
+
+    public bool AvalibleNow(int day, int hour)
+    {
+        return Day == day && hour == Hour;
+    }
+
+}
+
+/**
+    * CLASS NAME: ConvTime
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvNull : ConvNode
+{
+    
+    public ConvNull(JsonData key)
+    {
+        ID = (int)key["ID"];
+    }
+
+
+    public override void CallAction()
+    {
+
+    }
+
+}
+
 
 /**
     * CLASS NAME: ConvChoice

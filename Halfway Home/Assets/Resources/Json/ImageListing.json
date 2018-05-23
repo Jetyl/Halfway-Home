@@ -2,12 +2,12 @@
 [
  {
   "Name" : "Tea Time",
-  "Slug" : null,
+  "Slug" : "UI/MapStuff/Tea",
   "Set"  : 0
  },
  {
   "Name" : "Long Night Hangout",
-  "Slug" : null,
+  "Slug" : "CGs/Hangout/Edhand1",
   "Set"  : 0
  }
 ]

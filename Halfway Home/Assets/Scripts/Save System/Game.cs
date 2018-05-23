@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System;
 using LitJson;
+using Stratus.Modules.InkModule;
 
 [System.Serializable]
 public class Game
@@ -59,7 +60,7 @@ public class Game
 
     DateTime SaveStamp;
 
-
+    public StorySave Storybook;
 
 
     public Game()
@@ -269,6 +270,16 @@ public class Game
         var newHour = InitialHour + 1 + Duration;
         if(newHour >= 24) newHour -=24;
         return newHour;
+    }
+
+    public int TimeDifference(int time, int Date)
+    {
+        var dif = 0;
+
+        dif = (Hour + (Day * 24)) - (time + (Date * 24));
+
+        return dif;
+
     }
 
 

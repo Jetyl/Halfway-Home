@@ -1,0 +1,50 @@
+
+[
+ {
+  "title" : "",
+  "ID"    : 0,
+  "TypeID" : 0,
+  "NodePositionX" : 46.7490158081055,
+  "NodePositionY" : 123.693618774414,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 1,
+  "NextID"        : 10006,
+  "Disable"       : false
+ },
+ {
+  "title" : "",
+  "ID"    : 10003,
+  "TypeID" : 18,
+  "NodePositionX" : 7.74885177612305,
+  "NodePositionY" : 287.694244384766,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 1,
+  "NextID"        : 10004,
+  "Day"           : 2,
+  "Hour"          : 16
+ },
+ {
+  "title" : "",
+  "ID"    : 10004,
+  "TypeID" : 2,
+  "NodePositionX" : 392.972259521484,
+  "NodePositionY" : 254.471954345703,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 1,
+  "NextID"        : 10006,
+  "TypeOfProgress" : 0
+ },
+ {
+  "title" : "",
+  "ID"    : 10006,
+  "TypeID" : 19,
+  "NodePositionX" : 564.111083984375,
+  "NodePositionY" : 121.111129760742,
+  "width"         : 200.0,
+  "height"        : 90.0,
+  "color"         : 1
+ }
+]

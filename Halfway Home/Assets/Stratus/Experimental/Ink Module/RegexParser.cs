@@ -170,6 +170,7 @@ namespace Stratus
             // If this parse captured anything, let's add it to the parsed line
             if (parse.isValid)
             {
+                            UnityEngine.Debug.Log(parse.label + " | " + parse);
               category.onParse?.Invoke(parse);
               parses.Add(parse.label, parse);
             }

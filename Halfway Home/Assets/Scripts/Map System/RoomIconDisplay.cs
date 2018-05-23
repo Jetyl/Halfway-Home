@@ -44,7 +44,7 @@ public class RoomIconDisplay : MonoBehaviour
 
     void ClearIcons()
     {
-        print(Location + " Cleared!");
+        //print(Location + " Cleared!");
         foreach(ChibiDisplay spot in IconSpots)
         {
             spot.Clear();
