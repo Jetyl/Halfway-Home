@@ -16,14 +16,24 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 1329440174
     m_lastTimePart2: -1999297826
+=======
+    m_lastTimePsrt1: -2023137110
+    m_lastTimePart2: -1999297829
+>>>>>>> master
     List: []
   - PhysicalPath: Events\play_sfx_ambient.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{A85A1477-0869-4B85-B85B-6883C5EA7C89}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 930336382
     m_lastTimePart2: -1999271149
+=======
+    m_lastTimePsrt1: -968277779
+    m_lastTimePart2: -1999271075
+>>>>>>> master
     List:
     - Name: play_sfx_ambient_heartbeat
       Path: PlaySFX\play_sfx_ambient\play_sfx_ambient_heartbeat
@@ -40,8 +50,13 @@ MonoBehaviour:
   - PhysicalPath: Events\play_sfx_menu.wwu
     ParentPhysicalPath: Events\PlaySFX.wwu
     Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 254780536
     m_lastTimePart2: -1999268237
+=======
+    m_lastTimePsrt1: -1838600482
+    m_lastTimePart2: -1999268201
+>>>>>>> master
     List:
     - Name: play_menuexit
       Path: PlaySFX\play_sfx_menu\play_menuexit
@@ -106,8 +121,13 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 379940102
     m_lastTimePart2: -1999265520
+=======
+    m_lastTimePsrt1: 946755339
+    m_lastTimePart2: -1999265206
+>>>>>>> master
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -572,8 +592,13 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 930356440
     m_lastTimePart2: -1999271149
+=======
+    m_lastTimePsrt1: -968287805
+    m_lastTimePart2: -1999271075
+>>>>>>> master
     List:
     - Name: play_sfx_human_footsteps_approaching
       Path: PlaySFX\play_sfx_human_footsteps_approaching
@@ -588,8 +613,13 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 930381502
     m_lastTimePart2: -1999271149
+=======
+    m_lastTimePsrt1: -968277779
+    m_lastTimePart2: -1999271075
+>>>>>>> master
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -605,29 +635,49 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1779518382
     m_lastTimePart2: -1999264561
+=======
+    m_lastTimePsrt1: 2069216550
+    m_lastTimePart2: -1999264555
+>>>>>>> master
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 543502613
     m_lastTimePart2: -1999302418
+=======
+    m_lastTimePsrt1: -1506133689
+    m_lastTimePart2: -1999302392
+>>>>>>> master
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 543011305
     m_lastTimePart2: -1999302418
+=======
+    m_lastTimePsrt1: -1506118645
+    m_lastTimePart2: -1999302392
+>>>>>>> master
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 380070449
     m_lastTimePart2: -1999265520
+=======
+    m_lastTimePsrt1: 946861966
+    m_lastTimePart2: -1999265206
+>>>>>>> master
     List:
     - Name: HalfwaySoundbank
       Path: Default Work Unit\HalfwaySoundbank
@@ -641,15 +691,25 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TestBanks.wwu
     ParentPhysicalPath: 
     Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1148634791
     m_lastTimePart2: -1999271146
+=======
+    m_lastTimePsrt1: -833700929
+    m_lastTimePart2: -1999271075
+>>>>>>> master
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 819145197
     m_lastTimePart2: -1999264558
+=======
+    m_lastTimePsrt1: 2069146367
+    m_lastTimePart2: -1999264555
+>>>>>>> master
     List:
     - Name: Effects_Slider
       Path: Default Work Unit\Effects_Slider
@@ -700,8 +760,13 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 542966181
     m_lastTimePart2: -1999302418
+=======
+    m_lastTimePsrt1: -1506108622
+    m_lastTimePart2: -1999302392
+>>>>>>> master
     List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0

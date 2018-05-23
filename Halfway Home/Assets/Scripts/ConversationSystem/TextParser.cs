@@ -324,12 +324,51 @@ public static class TextParser
 
     public static int MakeProgress(JsonData data)
     {
+
+        int ty = (int)data["TypeOfProgress"];
+
+        ProgressType type = (ProgressType)ty;
+
         int NextID = -1;
 
-        ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
+        switch (type)
+        {
+            case ProgressType.None:
+                break;
+            case ProgressType.ProgressPoint:
 
-        Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
-        NextID = (int)data["NextID"];
+                ProgressPoint CheckToMatch = new ProgressPoint(data["CheckToMatch"][0]);
+
+                Game.current.Progress.UpdateProgress(CheckToMatch.ProgressName, CheckToMatch);
+                NextID = (int)data["NextID"];
+                break;
+            case ProgressType.CG:
+                Sprite Image = null;
+                if (data["ImageSlug"] != null)
+                {
+                    Image = Resources.Load<Sprite>("Sprites/" + (string)data["ImageSlug"]);
+
+                    Game.current.Memory.UnlockImage(Image);
+                }
+                break;
+            case ProgressType.Objective:
+                string num = (string)data["TaskNumber"];
+                string[] id = num.Split('.');
+                int num1 = Convert.ToInt32(id[0]);
+                int num2 = -1;
+                if (id.Length > 1)
+                    num2 = Convert.ToInt32(id[1]);
+                
+                int state = (int)data["TaskState"];
+                Task.TaskState NewTaskState = (Task.TaskState)state;
+                Game.current.Progress.UpdateTask(num1, NewTaskState, num2);
+                break;
+            default:
+                Debug.LogError("Unrecognized Option");
+                break;
+        }
+
+        
 
 
         return NextID;

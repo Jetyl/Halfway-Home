@@ -146,6 +146,13 @@ public class CheckProgress : MonoBehaviour
 
 }
 
+public enum ProgressType
+{
+    None,
+    ProgressPoint,
+    Objective,
+    CG
+}
 
 
 
