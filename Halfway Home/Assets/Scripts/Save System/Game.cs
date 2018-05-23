@@ -149,6 +149,8 @@ public class Game
         Day = 0;
 
         Progress.ResetBeats();
+
+        //add reset tasks
         
     }
 

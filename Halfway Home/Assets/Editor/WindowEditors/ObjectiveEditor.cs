@@ -92,6 +92,10 @@ public class ObjectiveEditor : EditorWindow
             if(ShowSub)
             {
                 SubList.DoLayoutList();
+
+                TiskTask[SelectedTask].AllShow = EditorGUILayout.ToggleLeft("Show all subtasks when main task is activated?", TiskTask[SelectedTask].AllShow);
+                TiskTask[SelectedTask].AllSuccess = EditorGUILayout.ToggleLeft("Main task set to complete when all subtasks are complete?", TiskTask[SelectedTask].AllSuccess);
+                TiskTask[SelectedTask].AllFail = EditorGUILayout.ToggleLeft("Main task set to fail when any subtask is failed?", TiskTask[SelectedTask].AllFail);
             }
 
 
@@ -190,6 +194,7 @@ public class ObjectiveEditor : EditorWindow
         element.Number = index;
         element.Name = GUI.TextField(new Rect(rect.x, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.Name);
         element.Hidden = GUI.Toggle(new Rect(rect.x + rect.width / 2, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), element.Hidden, "Hidden");
+        GUI.Label(new Rect(rect.x + rect.width * 0.75f, rect.y, rect.width * 0.25f, EditorGUIUtility.singleLineHeight), "Sub-Task #" + index);
         SubList.list[index] = element;
     };
 
@@ -242,6 +247,14 @@ public class ObjectiveEditor : EditorWindow
             //Jwriter.Write(task.Objective);
             Jwriter.WritePropertyName("Hidden");
             Jwriter.Write(task.Hidden);
+
+
+            Jwriter.WritePropertyName("ShowAll");
+            Jwriter.Write(task.AllShow);
+            Jwriter.WritePropertyName("GoalAll");
+            Jwriter.Write(task.AllSuccess);
+            Jwriter.WritePropertyName("FailAll");
+            Jwriter.Write(task.AllFail);
 
             Jwriter.WritePropertyName("SubCount");
             Jwriter.Write(task.SubTasks.Count);

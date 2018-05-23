@@ -147,6 +147,7 @@ namespace HalfwayHome
             case "clear":
             case "finished":
             case "goal":
+            case "complete":
               NewTaskState = Task.TaskState.Success;
               break;
             default:

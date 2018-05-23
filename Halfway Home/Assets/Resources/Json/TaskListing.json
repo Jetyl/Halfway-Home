@@ -4,6 +4,9 @@
   "Number" : 0,
   "Name"   : "Show Timothy around the house",
   "Hidden" : false,
+  "ShowAll" : false,
+  "GoalAll" : true,
+  "FailAll" : false,
   "SubCount" : 5,
   "SubTasks" : [
    {
@@ -37,6 +40,9 @@
   "Number" : 1,
   "Name"   : "Go to Timothy's Welcome Dinner",
   "Hidden" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
   "SubCount" : 0,
   "SubTasks" : [
   ]

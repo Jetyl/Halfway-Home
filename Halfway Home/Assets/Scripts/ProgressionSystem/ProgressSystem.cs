@@ -20,6 +20,7 @@ public class ProgressSystem
 
     List<Task> Objectives;
 
+    List<Task> ChronologicalObjectives;
 
 
     public ProgressSystem()
@@ -36,6 +37,7 @@ public class ProgressSystem
         }
 
         Objectives = new List<Task>();
+        ChronologicalObjectives = new List<Task>();
 
         var jTask = TextParser.ToJson("TaskListing");
 
@@ -343,7 +345,7 @@ public class ProgressSystem
     public void UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)
     {
       
-        if (Objectives.Count >= Number)
+        if (Objectives.Count <= Number)
             return;
 
         if (SubTask != -1 && Objectives[Number].SubTasks.Count > SubTask)
@@ -351,9 +353,22 @@ public class ProgressSystem
             Objectives[Number].SubTasks[SubTask].SetState(newState);
             if (Objectives[Number].SubtasksComplete())
                 Objectives[Number].SetState(Task.TaskState.Success);
+            if (Objectives[Number].SubtasksFailure())
+                Objectives[Number].SetState(Task.TaskState.Failed);
+
         }
         else
+        {
+            if(newState != Task.TaskState.Unstarted && Objectives[Number].GetState() == Task.TaskState.Unstarted)
+            {
+                if (!(newState == Task.TaskState.InProgress && Objectives[Number].Hidden))
+                    ChronologicalObjectives.Add(Objectives[Number]);
+                    
+            }
+
             Objectives[Number].SetState(newState);
+        }
+            
 
 
         //send any system updating events here
@@ -526,6 +541,9 @@ public class Task
     //public string Objective;
 
     public bool Hidden;
+    public bool AllShow;
+    public bool AllFail;
+    public bool AllSuccess;
 
     public List<Task> SubTasks;
 
@@ -553,6 +571,10 @@ public class Task
         }
 
         Hidden = (bool)taskData["Hidden"];
+
+        AllShow = (bool)taskData["ShowAll"];
+        AllSuccess = (bool)taskData["GoalAll"];
+        AllFail = (bool)taskData["FailAll"];
         State = TaskState.Unstarted;
     }
 
@@ -564,6 +586,12 @@ public class Task
     public void SetState(TaskState newState)
     {
         State = newState;
+
+        if(State == TaskState.InProgress && AllShow)
+        {
+            foreach (Task sub in SubTasks)
+                sub.SetState(State);
+        }
 
         if(State == TaskState.Success)
         {
@@ -577,6 +605,9 @@ public class Task
 
     public bool SubtasksComplete()
     {
+        if (!AllSuccess)
+            return false;
+
         foreach(var task in SubTasks)
         {
             if (task.GetState() != TaskState.Success)
@@ -588,6 +619,9 @@ public class Task
 
     public bool SubtasksFailure()
     {
+        if (!AllFail)
+            return false;
+
         foreach (var task in SubTasks)
         {
             if (task.GetState() == TaskState.Failed)
