@@ -315,11 +315,6 @@ namespace Stratus
     public static string ComposeName(SaveDataSuffixFormat format) => SaveDataUtility.ComposeDefaultName(format, namingConvention, count);
     public static string ComposePath(string name, string folder) => SaveDataUtility.ComposePath(relativePath, folder, name, extension);
     public static bool Exists(string name, string folder) => SaveDataUtility.Exists(relativePath, folder, name, extension);
-
-
-
-
-
   }
 
 }

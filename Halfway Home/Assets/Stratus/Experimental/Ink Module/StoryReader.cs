@@ -66,7 +66,7 @@ namespace Stratus
         /// once its ended, we will save its state so next time its asked to be loaded, we will
         /// load from a previous state.
         /// </summary>
-        private Dictionary<string, Story> stories { get; set; } = new Dictionary<string, Story>();
+        private Dictionary<string, Story> stories => storySave.stories;
         /// <summary>
         /// /The current knot (sub-section) of the story we are on
         /// </summary>
@@ -468,15 +468,11 @@ namespace Stratus
 
         protected virtual void OnSave(Dictionary<string, Story> stories)
         {
-          // If there's no story save yet
-          //if (storySave == null)
-          //  storySave = new StorySave();
-
           // From dictionary to list
-          List<Story> storyList = new List<Story>();
-          foreach (var story in stories)
-            storyList.Add(story.Value);
-          storySave.stories = storyList;
+          //List<Story> storyList = new List<Story>();
+          //foreach (var story in stories)
+          //  storyList.Add(story.Value);
+          //storySave.stories = storyList;
 
           // Now save it
           StorySave.Save(storySave, saveFileName, saveFolder);
@@ -492,21 +488,21 @@ namespace Stratus
             storySave = StorySave.Load(saveFileName, saveFolder);
 
             // From list to dictionary!
-            foreach (var story in storySave.stories)
-            {
-              if (debug)
-                Trace.Script($"Loaded {story.name}");
-              stories.Add(story.name, story);
-            }
-            //if (debug)
-            //  Trace.Script("Loaded!");
+            //foreach (var story in storySave.storyList)
+            //{
+            //  if (debug)
+            //    Trace.Script($"Loaded {story.name}");
+            //  stories.Add(story.name, story);
+            //}
           }
         }
 
         protected virtual void OnClear()
         {
           if (!StorySave.Delete(saveFileName, saveFolder))
-            Trace.Error("Failed to delete save file!", this);
+          {
+            //Trace.Error("Failed to delete save file!", this);
+          }
         }
         
         private void GetLatestKnot()
