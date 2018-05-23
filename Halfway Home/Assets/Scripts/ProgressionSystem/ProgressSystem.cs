@@ -325,6 +325,11 @@ public class ProgressSystem
 
 
     }
+    
+    public List<Task> GetObjectives()
+    {
+      return Objectives;
+    }
 
     public bool Contains(string key)
     {
@@ -343,7 +348,7 @@ public class ProgressSystem
     public void UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)
     {
       
-        if (Objectives.Count >= Number)
+        if (Objectives.Count <= Number)
             return;
 
         if (SubTask != -1 && Objectives[Number].SubTasks.Count > SubTask)
