@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System;
 using LitJson;
+using Stratus.Modules.InkModule;
 
 [System.Serializable]
 public class Game
@@ -59,7 +60,7 @@ public class Game
 
     DateTime SaveStamp;
 
-
+    public StorySave Storybook;
 
 
     public Game()
