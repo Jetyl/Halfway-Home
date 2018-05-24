@@ -117,5 +117,5 @@ He nods #Timothy = Calm
 		[Timothy] "I'm sorry..." #Timothy = Calm
 }
 Leaving that awkward conversation behind us, its time to move on!
-I shuffle Timothy off to another part of the building to continue the tour. #Timothy = Exit
+I shuffle Timothy off to another part of the building to continue the tour. #Timothy = Exit #0.1 & Success
 -> END

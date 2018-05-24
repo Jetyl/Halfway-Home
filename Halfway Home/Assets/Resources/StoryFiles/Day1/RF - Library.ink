@@ -39,5 +39,5 @@ Hmm... not sure what that one's about.
 "I haven't really spent much time in here, but I probably should..."
 "But yeah, you want to browse around the selection?"
 [Timothy] "Maybe l-later."
-"Th-thanks though..." #Timothy = Exit
+"Th-thanks though..." #Timothy = Exit #0.4 & Success
 -> END

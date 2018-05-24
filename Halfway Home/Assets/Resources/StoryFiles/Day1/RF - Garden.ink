@@ -33,7 +33,7 @@ EXTERNAL GetStringValue(value)
 "I think there's a gardening club or something that meets out here sometimes."
 "I don't know. I've never actually gone to it."
 [Timothy] "...It's so pretty here." #Timothy = Happy, stage_left, right
-[{player_name}] "Yeah, I suppose it is."
+[{player_name}] "Yeah, I suppose it is." #0.2 & Success
 I'll admit it is very nice out here. @The garden is one of the biggest selling points for Sunflower House in their brochure.
 It's a shame I never really made use of it.
 [{player_name}] "But yeah, the garden is a good place to reflect on things." #Timothy = Exit
