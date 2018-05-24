@@ -43,7 +43,7 @@ public class GameStartUp : MonoBehaviour
     public HalfwayHome.HalfwayHomeStoryReader ReaderReference;
 
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
 
         if (DebugMode)

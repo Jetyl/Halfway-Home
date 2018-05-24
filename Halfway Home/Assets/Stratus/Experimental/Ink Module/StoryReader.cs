@@ -47,7 +47,7 @@ namespace Stratus
         /// <summary>
         /// The current data for this reader
         /// </summary>
-        private StorySave storySave = new StorySave();
+        protected StorySave storySave { get; set; } = new StorySave();
         /// <summary>
         /// The queue of stories to be played
         /// </summary>
@@ -101,19 +101,17 @@ namespace Stratus
         //------------------------------------------------------------------------------------------/
         // Messages
         //------------------------------------------------------------------------------------------/
-        /// <summary>
-        /// Subscribe to common events
-        /// </summary>
         private void Awake()
         {
           Subscribe();
           OnAwake();
-          OnLoad(stories);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        private void Start()
+        {
+          OnLoad(stories);          
+        }
+
         private void OnDestroy()
         {
           if (saveOnExit)
