@@ -39,6 +39,6 @@ EXTERNAL GetStringValue(value)
 [Timothy] "I-It's okay..."
 [{player_name}] "Uh... cool."
 "Well, uh, lets go see what they got. If I recall, today is pancake day."
-I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit
+I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
 -> END

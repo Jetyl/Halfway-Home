@@ -36,5 +36,5 @@ I'm not super good at <color=color_expression><i>expressing</i></color> myself, 
 It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
-"Th-thanks though..." #Timothy = Exit
+"Th-thanks though..." #Timothy = Exit #0.3 & Success
 -> END

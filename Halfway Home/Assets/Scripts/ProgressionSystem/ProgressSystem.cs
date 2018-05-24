@@ -330,7 +330,7 @@ public class ProgressSystem
     
     public List<Task> GetObjectives()
     {
-      return Objectives;
+      return ChronologicalObjectives;
     }
 
     public bool Contains(string key)
