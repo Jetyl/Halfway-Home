@@ -39,13 +39,27 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenSave()
     {
-        // old save
-        /*Space.DispatchEvent(Events.Save);
-        SaveLoad.Save();
-        ReaderReference.Save();*/
         SubmenuBackground.SetActive(true);
         Pause.SetActive(false);
         SavePage.SetActive(true);
+    }
+    
+    public void SaveGame(int slot)
+    {
+        SaveLoad.SaveAt(slot);   
+    }
+    
+    public void LoadGame(int slot)
+    {
+        Game.current = SaveLoad.GetSave(slot);
+    }
+
+    public void OldSaveGame()
+    {
+        // old save
+        Space.DispatchEvent(Events.Save);
+        SaveLoad.Save();
+        ReaderReference.Save();
     }
 
     public void OpenLoad()
@@ -89,7 +103,7 @@ public class PauseMenu : MonoBehaviour
     public void ConfirmAction(bool Quit)
     {
         Quiting = Quit;
-        Pause.SetActive(false);
+        //Pause.SetActive(false);
         Confirm.SetActive(true);
 
     }
