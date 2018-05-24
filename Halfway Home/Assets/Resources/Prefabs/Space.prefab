@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4552734624111006}
   - component: {fileID: 114161262888773504}
   - component: {fileID: 114735337605975040}
+  - component: {fileID: 114955375340071256}
   m_Layer: 0
   m_Name: Space
   m_TagString: Untagged
@@ -61,5 +62,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5903d5dc8d792d746b18dd356acc616f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114955375340071256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843152857443550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e390b6ecc1cde42b50b5dc76d09806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

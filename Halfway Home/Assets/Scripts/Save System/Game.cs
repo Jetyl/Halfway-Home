@@ -58,7 +58,7 @@ public class Game
   public string CurrentHistory = "";
   public string CurrentSpeaker = "";
 
-  DateTime SaveStamp;
+  public DateTime SaveStamp;
 
   public StorySave StorySave = new StorySave();
 
