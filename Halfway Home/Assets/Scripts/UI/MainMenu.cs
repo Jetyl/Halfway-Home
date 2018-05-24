@@ -61,14 +61,14 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        if (SaveLoad.GetSave(0) == null) //if a save exists, set that to the main game
-        {
+        //if (SaveLoad.GetSave(0) == null) //if a save exists, set that to the main game
+       // {
             ConfirmNew();
-        }
-        else
-        {
-            ClearSavePanel.SetActive(true);
-        }
+       // }
+        //else
+        //{
+        //    ClearSavePanel.SetActive(true);
+        //}
             
     }
     public void ContinueGame()

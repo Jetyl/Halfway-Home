@@ -50,15 +50,12 @@ public class GameStartUp : MonoBehaviour
         {
             SaveLoad.Delete();
             ReaderReference.Clear();
-        }
 
-        SaveLoad.Load(); //loads the game file
+            SaveLoad.Load(); //loads the game file
 
-        if (SaveLoad.GetSave(0) != null) //if a save exists, set that to the main game
-            Game.current = SaveLoad.GetSave(0);
-       
-        if (DebugMode)
-        {
+            if (SaveLoad.GetSave(0) != null) //if a save exists, set that to the main game
+                Game.current = SaveLoad.GetSave(0);
+
             TestingAndDebugging();
             return;
         }
