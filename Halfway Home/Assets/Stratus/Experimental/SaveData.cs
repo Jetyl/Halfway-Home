@@ -51,10 +51,11 @@ namespace Stratus
     protected virtual bool OnLoad() => true;
   }
 
-  /// <summary>
-  /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
-  /// </summary>
-  public abstract class JsonSaveData<T> : JsonSaveData where T : JsonSaveData
+    /// <summary>
+    /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
+    /// </summary>
+    [Serializable]
+    public abstract class JsonSaveData<T> : JsonSaveData where T : JsonSaveData
   {
     //--------------------------------------------------------------------------------------------/
     // Properties

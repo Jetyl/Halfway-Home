@@ -14,7 +14,7 @@ using System.Linq;
 
 public static class SaveLoad
 {
-
+    private static string path = Application.persistentDataPath + "/savedGames.gd";
     private static List<Game> savedGames = new List<Game>();
 
     
@@ -25,25 +25,33 @@ public static class SaveLoad
 
         if(Game.current != null)
             Game.current.SaveGame();
-        
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create (Application.persistentDataPath + "/savedGames.gd");
-        bf.Serialize(file, savedGames);
-        file.Close();
+
+        //BinaryFormatter bf = new BinaryFormatter();
+        //
+        //FileStream file = File.Create (Application.persistentDataPath + "/savedGames.gd");
+        //bf.Serialize(file, savedGames);
+        //file.Close();
         Debug.Log("on");
+
+        // JSON
+        File.WriteAllText(path, JsonUtility.ToJson(savedGames));
+        
     }
 
 
     public static void Load()
     {
         MonoBehaviour.print(Application.persistentDataPath);
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(path))
         {
-            
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
-            savedGames = (List<Game>)bf.Deserialize(file);
-            file.Close();
+            //BinaryFormatter bf = new BinaryFormatter();
+            //FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            //savedGames = (List<Game>)bf.Deserialize(file);
+            //file.Close();
+
+            // JSON
+            string data = File.ReadAllText(path);
+            JsonUtility.FromJsonOverwrite(data, savedGames);
         }
         
     }
@@ -52,8 +60,8 @@ public static class SaveLoad
     public static void SaveAt(int index)
     {
 
-        if (!savedGames.Contains(Game.current))
-            Game.current = new Game(Game.current);
+        //if (!savedGames.Contains(Game.current))
+        //    Game.current = new Game(Game.current);
 
         savedGames.Insert(index, Game.current);
         Save();

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Halfway Home/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 267.asset.meta~master.meta
 guid: 5630e4d71e7017445bbe7283a0597500
 timeCreated: 1527200736
+=======
+guid: 35e788dc80f02a8418ef4b2ff29d8e51
+timeCreated: 1527200355
+>>>>>>> 3263bb50b44aa25186d3bbd6ad24b55466be4206:Halfway Home/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 267.asset.meta~master.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
