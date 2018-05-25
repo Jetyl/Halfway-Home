@@ -109,7 +109,7 @@ namespace Stratus
 
         private void Start()
         {
-          OnLoad(stories);          
+          OnLoad(stories);
         }
 
         private void OnDestroy()
@@ -159,7 +159,7 @@ namespace Stratus
         private void LoadStory(TextAsset storyFile, bool restart = false, string knot = null)
         {
           Story newStory = null;
-          
+
           // If this story has already been loaded, use the previous state
           bool previouslyLoaded = stories.ContainsKey(storyFile.name);
 
@@ -502,12 +502,12 @@ namespace Stratus
             //Trace.Error("Failed to delete save file!", this);
           }
         }
-        
+
         private void GetLatestKnot()
         {
           string latestKnot = story.runtime.state.currentPath != null ? story.runtime.state.currentPath.head.name : string.Empty;
           if (latestKnot != string.Empty)
-            story.latestKnot = latestKnot;          
+            story.latestKnot = latestKnot;
 
           //if (logging)
           //  Trace.Script($"Latest knot = {latestKnot}");
@@ -537,7 +537,10 @@ namespace Stratus
           currentlyReading = true;
 
           // Update the first line of dialog
-          this.ContinueStory(!resume);
+          if (resume)
+            ResumeStory();
+          else
+            ContinueStory(resume);
 
           story.started = true;
 
@@ -548,17 +551,29 @@ namespace Stratus
         }
 
         /// <summary>
+        /// Resumes a previously loaded story
+        /// </summary>
+        private void ResumeStory()
+        {
+          // Retrieves the latest knot in the story
+          GetLatestKnot();
+
+          // Get the next line
+          UpdateCurrentLine();
+        }
+
+        /// <summary>
         /// Updates the current dialog. This will check if the conversation can
         /// be continued. If it can't ,it will then check if there are any choices
         /// to be made.If there aren't, it will end the dialog.
         /// </summary>
-        void ContinueStory(bool forward = true)
+        private void ContinueStory(bool resume = false)
         {
           // If there is more dialog
           if (story.runtime.canContinue)
           {
-            if (forward)
-              story.runtime.Continue();
+            //if (!resume)
+            story.runtime.Continue();
 
             // Retrieves the latest knot in the story
             GetLatestKnot();
@@ -569,6 +584,9 @@ namespace Stratus
           // If we are given a choice
           else if (story.runtime.currentChoices.Count > 0)
           {
+            //if (resume)
+              //UpdateCurrentLine();
+
             PresentChoices();
           }
           // If we are done with the conversation, end story
@@ -587,7 +605,7 @@ namespace Stratus
             Trace.Script($"The story {story.name} has ended at the knot '{story.latestKnot}'");
 
           // Dispatch the ended event
-          var storyEnded = new Story.EndedEvent() { reader = this, story = this.story};
+          var storyEnded = new Story.EndedEvent() { reader = this, story = this.story };
           this.gameObject.Dispatch<Story.EndedEvent>(storyEnded);
           Scene.Dispatch<Story.EndedEvent>(storyEnded);
 
@@ -706,7 +724,7 @@ namespace Stratus
         public void SaveVariables()
         {
           Trace.Script("Variables:", this);
-          foreach(var variable in story.runtime.variablesState)
+          foreach (var variable in story.runtime.variablesState)
           {
             Trace.Script($"Variable {variable}");
           }

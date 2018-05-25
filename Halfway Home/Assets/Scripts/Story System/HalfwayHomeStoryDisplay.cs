@@ -64,7 +64,7 @@ namespace HalfwayHome
 
     protected override void OnStoryEnded()
     {
-      
+      RemoveChoices(choicesPanel);
     }
 
     protected override void OnStoryUpdate(ParsedLine parse, bool visited)
@@ -105,17 +105,9 @@ namespace HalfwayHome
     protected override void OnChoiceSelected()
     {
       displayChoices = false;
-      RemoveChoices();
+      RemoveChoices(choicesPanel);
     }
-
-    void RemoveChoices()
-    {
-      var choiceButtons = choicesPanel.GetComponentsInChildren<Button>();
-      foreach (var choiceButton in choiceButtons)
-      {
-        Destroy(choiceButton.gameObject);
-      }
-    }
+    
 
 
   }
