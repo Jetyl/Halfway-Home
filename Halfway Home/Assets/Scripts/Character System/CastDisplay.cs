@@ -92,6 +92,7 @@ public class CastDisplay : MonoBehaviour
                         directions.OnLoad(actor);
                         Actors.Add(directions);
                         SpotLights[actor.Dir] += 1;
+                        break;
 
                     }
                 }
