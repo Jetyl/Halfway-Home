@@ -33,7 +33,7 @@ namespace HalfwayHome
         Image Body;
         float backgroundAlpha;
 
-        Vector3 MapOffset;
+        //Vector3 MapOffset;
         Vector3 StatsOffset;
 
         bool Active;
@@ -49,8 +49,8 @@ namespace HalfwayHome
             StatsOffset = SocialStats.transform.localPosition;
             StatsOffset.x -= SocialStats.GetComponent<RectTransform>().rect.width;
             
-            MapOffset = MapRooms.transform.localPosition;
-            MapOffset.x += MapRooms.GetComponent<RectTransform>().rect.width;
+            //MapOffset = MapRooms.transform.localPosition;
+            //MapOffset.x += MapRooms.GetComponent<RectTransform>().rect.width;
 
             //Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
             Space.Connect<DefaultEvent>(Events.ReturnToMap, ClockMapDelay);
@@ -90,7 +90,7 @@ namespace HalfwayHome
 
                 //default the map itself, and stats, off screen
                 SocialStats.transform.localPosition = StatsOffset;
-                MapRooms.transform.localPosition = MapOffset;
+                //MapRooms.transform.localPosition = MapOffset;
                 //til then, this line.
                 //gameObject.SetActive(false);
             }
@@ -127,7 +127,7 @@ namespace HalfwayHome
             //psudo code time!
             //grab the transitions script, and put it on the map object.
             //call it here, to pull the map and stats onto the screen.
-            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
+            //MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
             SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
 
             //gameObject.SetActive(true);
@@ -148,7 +148,7 @@ namespace HalfwayHome
             aBack.a = 0;
             Background.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aBack));
 
-            MapRooms.DispatchEvent(Events.Translate, new TransformEvent(MapOffset, MapTransitionDuration));
+            //MapRooms.DispatchEvent(Events.Translate, new TransformEvent(MapOffset, MapTransitionDuration));
             SocialStats.DispatchEvent(Events.Translate, new TransformEvent(StatsOffset, MapTransitionDuration));
             var delaySeq = Actions.Sequence(this);
             Actions.Call(delaySeq, ()=>Space.DispatchEvent(Events.MapTransitionOutCompleted, new DefaultEvent()), MapTransitionDuration*2);
