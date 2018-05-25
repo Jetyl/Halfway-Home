@@ -29,8 +29,11 @@ public class MainMenu : MonoBehaviour
   // Use this for initialization
   void Start ()
     {
-        SaveLoad.Load();
-        
+        //SaveLoad.Load();
+
+        //default the game.current to no save
+        //Game.current = null;
+
         //if a save exists, set that to the main game
         if (SaveLoad.GetSave(0) == null)
         {

@@ -75,7 +75,7 @@ public class CastDisplay : MonoBehaviour
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
-        print(Game.current.CastCall);
+
         foreach (var actor in Game.current.CastCall)
         {
             foreach (var person in CastList)
@@ -92,6 +92,7 @@ public class CastDisplay : MonoBehaviour
                         directions.OnLoad(actor);
                         Actors.Add(directions);
                         SpotLights[actor.Dir] += 1;
+                        break;
 
                     }
                 }
