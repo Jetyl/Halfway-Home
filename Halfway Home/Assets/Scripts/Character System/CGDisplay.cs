@@ -46,21 +46,23 @@ public class CGDisplay : MonoBehaviour
 
     void OnSave(DefaultEvent eventdata)
     {
+        Game.current.CurrentCG = "";
         if (!Active)
         {
             Game.current.CurrentCG = "";
             return;
         }
-
+        
         Game.current.CurrentCG = ActiveCG.Tag;
     }
 
     void OnLoad(DefaultEvent eventdata)
     {
-        if(Game.current.CurrentCG != "")
+        if(Game.current.CurrentCG != "" && Game.current.CurrentCG != null)
         {
             ActiveCG = new CGDetails();
             ActiveCG.Tag = Game.current.CurrentCG;
+            print(Game.current.CurrentCG);
             ActiveCG.Graphic = Instantiate(GetCG(ActiveCG.Tag).Graphic, transform);
 
 
@@ -124,6 +126,7 @@ public class CGDisplay : MonoBehaviour
 
     CGDetails GetCG(string tag)
     {
+        print(tag);
         foreach (var CG in CGList)
         {
             if (CG.Tag.ToLower() == tag.ToLower())

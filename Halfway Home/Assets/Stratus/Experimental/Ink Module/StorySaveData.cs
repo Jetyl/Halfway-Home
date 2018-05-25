@@ -12,6 +12,7 @@ namespace Stratus
       /// Interface for easily saving the state of an ink runtime story
       /// </summary>
       [SaveData(extension = ".story")]
+      [System.Serializable]
       public class StorySave : JsonSaveData<StorySave>
       {
         /// <summary>
