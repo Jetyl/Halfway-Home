@@ -4437,6 +4437,7 @@ GameObject:
   - component: {fileID: 109118154}
   - component: {fileID: 109118156}
   - component: {fileID: 109118155}
+  - component: {fileID: 109118157}
   m_Layer: 5
   m_Name: JournalBack
   m_TagString: Untagged
@@ -4496,6 +4497,37 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109118153}
+--- !u!114 &109118157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109118153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2307a317f6eea764890f629290c65ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  moveOnInitialize: 0
+  currentEndPos: {x: 0, y: 0, z: 0}
 --- !u!1 &111978535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,8 +6026,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.91887397
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7394,7 +7426,6 @@ GameObject:
   - component: {fileID: 218735721}
   - component: {fileID: 218735723}
   - component: {fileID: 218735722}
-  - component: {fileID: 218735724}
   m_Layer: 5
   m_Name: Walls
   m_TagString: Untagged
@@ -7467,37 +7498,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218735720}
---- !u!114 &218735724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 218735720}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2307a317f6eea764890f629290c65ab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  moveOnInitialize: 0
-  currentEndPos: {x: 0, y: 0, z: 0}
 --- !u!1 &220235180
 GameObject:
   m_ObjectHideFlags: 0
@@ -22047,7 +22047,7 @@ MonoBehaviour:
     Multiplier: 4
   DefaultActions: {fileID: 4900000, guid: 813b6617d71cf3f49b993368814ba8c6, type: 3}
   Background: {fileID: 1814137054}
-  MapRooms: {fileID: 218735720}
+  MapRooms: {fileID: 109118153}
   SocialStats: {fileID: 1247866607}
   MapTransitionDuration: 1
 --- !u!114 &613250404
@@ -51558,7 +51558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.95386}
+  m_AnchoredPosition: {x: 0, y: 903.0136}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
