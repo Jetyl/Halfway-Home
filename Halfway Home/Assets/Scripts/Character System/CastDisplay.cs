@@ -66,6 +66,8 @@ public class CastDisplay : MonoBehaviour
 
     void OnSave(DefaultEvent eventdata)
     {
+        Game.current.CastCall = new List<CharacterIntermission>();
+
         foreach (var actor in Actors)
         {
             actor.OnSave();
@@ -75,7 +77,7 @@ public class CastDisplay : MonoBehaviour
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
-
+        print("Hello!!!!" + Game.current.CastCall);
         foreach (var actor in Game.current.CastCall)
         {
             foreach (var person in CastList)
@@ -99,7 +101,7 @@ public class CastDisplay : MonoBehaviour
 
             }
         }
-        Game.current.CastCall = new List<CharacterIntermission>();
+        
         
     }
 

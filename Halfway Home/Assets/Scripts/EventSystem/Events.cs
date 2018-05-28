@@ -54,6 +54,7 @@ public class Events
     public static readonly String QuitGame = "QuitGameEvent";
 
     public static readonly String Save = "SaveEvent";
+    public static readonly String PostSave = "PostSaveEvent";
     public static readonly String Load = "LoadEvent";
     public static readonly String Debug = "DebugEvent";
 

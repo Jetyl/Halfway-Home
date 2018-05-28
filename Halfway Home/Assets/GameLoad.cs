@@ -5,11 +5,23 @@ using System;
 
 public class GameLoad : MonoBehaviour
 {
+    private static GameLoad _instance;
 
-	// Use this for initialization
-	void Awake ()
+    // Use this for initialization
+    void Awake ()
     {
-        SaveLoad.Load(); //loads the game file
+
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+            SaveLoad.Load(); //loads the game file
+        }
+
+        
 
         
     }

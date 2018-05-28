@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
         //Game.current = null;
 
         //if a save exists, set that to the main game
-        if (SaveLoad.GetSave(0) == null)
+        if (SaveLoad.GetSize() == 0)
         {
             ContinueButton.interactable = false;
             FlowerA.SetState(0);

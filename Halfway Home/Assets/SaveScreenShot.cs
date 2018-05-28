@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SaveScreenShot : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class SaveScreenShot : MonoBehaviour
     {
 		Lens = GetComponent<Camera>();
         Lens.enabled = false;
+
+        Space.Connect<DefaultEvent>(Events.PostSave, SaveShot);
     }
 	
 	// Update is called once per frame
@@ -20,7 +23,7 @@ public class SaveScreenShot : MonoBehaviour
 		
 	}
 
-    void SaveShot()
+    void SaveShot(DefaultEvent eventdata)
     {
         var rend = new RenderTexture(Screen.width, Screen.height, 24);
         
@@ -39,8 +42,18 @@ public class SaveScreenShot : MonoBehaviour
         tex.Apply();
         byte[] bytes = tex.EncodeToPNG();
 
-        print(Application.persistentDataPath + "/Games_Saveshot.png");
-        System.IO.File.WriteAllBytes(Application.persistentDataPath + "/Games_Saveshot.png", bytes);
+        //var timestamp = DateTime.Now;
+
+        //var second = timestamp.Second;
+        //var minute = timestamp.Minute;
+        //var hour = timestamp.Hour;
+        //var Day = timestamp.DayOfYear;
+        //var year = timestamp.Year;
+
+        var index = SaveLoad.GetIndex(Game.current);
+
+        print(Application.persistentDataPath + "/Games_Saveshot_" + index + ".png");
+        System.IO.File.WriteAllBytes(Application.persistentDataPath + "/Games_Saveshot_" + index + ".png", bytes);
     }
 
 }

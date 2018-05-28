@@ -8,20 +8,26 @@ All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
+using System.IO;
 
 public class SaveDataDisplay : MonoBehaviour
 {
 
     public int DataIndex;
 
-    Text description;
+    public Image Screenshot;
+    public TextMeshProUGUI PlayerName;
+    public TextMeshProUGUI RealDate;
+    public TextMeshProUGUI GameTime;
+    public TextMeshProUGUI RealTime;
 
 
 	// Use this for initialization
 	void Start ()
     {
 
-        description = gameObject.transform.Find("Description").gameObject.GetComponent<Text>();
+        
 
         UpdateDisplay();
 
@@ -33,6 +39,10 @@ public class SaveDataDisplay : MonoBehaviour
 	
 	}
 
+    public void OnEnable()
+    {
+        UpdateDisplay();
+    }
 
     public void UpdateDisplay()
     {
@@ -43,24 +53,30 @@ public class SaveDataDisplay : MonoBehaviour
         if (gameData != null)
         {
 
-            description.text = "";
+            string path = Application.persistentDataPath + "/Games_Saveshot_" + DataIndex + ".png";
 
-            if (gameData.PlayerName != "")
-                description.text = gameData.PlayerName + " - ";
+            if (File.Exists(path))
+            {
+                var bytes = File.ReadAllBytes(path);
+                
+                Texture2D test = new Texture2D((int)Screenshot.preferredWidth, (int)Screenshot.preferredHeight);
+                test.LoadRawTextureData(bytes);
+                Screenshot.sprite = Sprite.Create(test, new Rect(0, 0, 128, 128), Screenshot.rectTransform.pivot);
+                
+            }
 
-            
+            PlayerName.text = gameData.PlayerName;
 
-            description.text += "Day " + (gameData.Day + 1) + " - ";
+            RealDate.text = "" + gameData.SaveStamp.Month + "/" + gameData.SaveStamp.Day + "/" + gameData.SaveStamp.Year;
+
+            GameTime.text = "Day:" + gameData.Day + " Hour:" + gameData.Hour;
+
+            RealTime.text = "" + gameData.SaveStamp.Hour + ":" + gameData.SaveStamp.Minute + ":" + gameData.SaveStamp.Second;
 
            
 
         }
-
-        else
-        {
-            description.text = "No SavedData";
-
-        }
+        
 
 
     }

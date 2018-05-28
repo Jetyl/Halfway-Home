@@ -69,6 +69,11 @@ public class CharacterDisplay : MonoBehaviour
     public void OnLoad(CharacterIntermission chara)
     {
         visual.sprite = GetPose(chara.Name);
+        var awhite = Color.white;
+        awhite.a = 0;
+        visual.color = Color.white;
+        BackSprite.color = awhite;
+
         ChangeDistance(chara.Dis);
         ChangeFacing(chara.face);
         transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);

@@ -48,7 +48,8 @@ public class PauseMenu : MonoBehaviour
     {
         Space.DispatchEvent(Events.Save);
         ReaderReference.Save();
-        SaveLoad.SaveAt(slot);   
+        SaveLoad.SaveAt(slot);
+        Space.DispatchEvent(Events.PostSave);
     }
     
     public void LoadGame(int slot)
@@ -62,6 +63,7 @@ public class PauseMenu : MonoBehaviour
         Space.DispatchEvent(Events.Save);
         SaveLoad.Save();
         ReaderReference.Save();
+
     }
 
     public void OpenLoad()

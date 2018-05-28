@@ -76,6 +76,20 @@ public static class SaveLoad
 
     }
 
+    public static int GetIndex(Game instance)
+    {
+        for (int i = 0; i < savedGames.Count; ++i)
+        {
+            if (savedGames[i] == instance)
+            {
+                return i;
+            }
+
+
+        }
+        return -1;
+    }
+
     public static void Delete()
     {
 
