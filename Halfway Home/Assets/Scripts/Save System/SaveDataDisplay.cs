@@ -21,23 +21,27 @@ public class SaveDataDisplay : MonoBehaviour
     public TextMeshProUGUI RealDate;
     public TextMeshProUGUI GameTime;
     public TextMeshProUGUI RealTime;
+    [Header("Stats")]
+    public Graphic[] AStars;
+    public Graphic[] GStars;
+    public Graphic[] EStars;
+    public Slider FSlider;
+    public Slider SSlider;
+    public Slider DSlider;
+    [Header("Colors")]
+    [Range(0, 1)]
+    public float EmptyAlpha;
+    public Color FilledStar;
+    public Color EmptyStar;
 
-
-	// Use this for initialization
-	void Start ()
+	  void Start ()
     {
 
         Space.Connect<DefaultEvent>(Events.PostSave, OnSave);
 
         UpdateDisplay();
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
+	  }
 
     public void OnEnable()
     {
@@ -79,12 +83,56 @@ public class SaveDataDisplay : MonoBehaviour
 
             RealTime.text = GetTime(gameData.SaveStamp.Hour, gameData.SaveStamp.Minute);
 
-           
+            //JESSE, REPLACE 0 VALUES WITH SAVE DATA
+            var awarenessTier = 0;
+            var graceTier = 0;
+            var expressionTier = 0;
+
+            for(int i = 0; i < AStars.Length; i++) 
+            {
+              AStars[i].color = (i < awarenessTier ? FilledStar : EmptyStar);
+            }
+
+            for (int i = 0; i < GStars.Length; i++)
+            {
+              GStars[i].color = (i < graceTier ? FilledStar : EmptyStar);
+            }
+
+            for (int i = 0; i < EStars.Length; i++)
+            {
+              EStars[i].color = (i < expressionTier ? FilledStar : EmptyStar);
+            }
+
+            //JESSE, REPLACE 0 VALUES WITH SAVE DATA
+            FSlider.value = 0;
+            SSlider.value = 0;
+            DSlider.value = 0;
+
+            SetChildAlpha(1);
 
         }
-        
+        else
+        {
+            Screenshot.sprite = null;
+            PlayerName.text = "???";
+
+            RealDate.text = "-/-/-";
+
+            GameTime.text = "???";
+
+            RealTime.text = "-:-";
+            SetChildAlpha(EmptyAlpha);
+        }
 
 
+    }
+
+    void SetChildAlpha(float alpha)
+    {
+      foreach(Graphic g in GetComponentsInChildren<Graphic>())
+      {
+        g.CrossFadeAlpha(alpha, 0f, true);
+      }
     }
 
     string GetTime(int hour, int min)
