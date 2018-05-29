@@ -45,7 +45,7 @@ public class Personality
     int MaxSocialStars = 3; //maximum number of tiers the player can get normally (not counting character growths)
     int MaxBonusStars = 2;
 
-    int MaxWellbeingValue = 100;
+    public int MaxWellbeingValue = 100;
 
     public Personality()
     {

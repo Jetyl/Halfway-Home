@@ -58,7 +58,6 @@ public class SaveDataDisplay : MonoBehaviour
 
         Game gameData = SaveLoad.GetSave(DataIndex);
 
-
         if (gameData != null)
         {
 
@@ -83,10 +82,10 @@ public class SaveDataDisplay : MonoBehaviour
 
             RealTime.text = GetTime(gameData.SaveStamp.Hour, gameData.SaveStamp.Minute);
 
-            //JESSE, REPLACE 0 VALUES WITH SAVE DATA
-            var awarenessTier = 0;
-            var graceTier = 0;
-            var expressionTier = 0;
+            //JESSE, REPLACE 0 VALUES WITH SAVE DATA //done
+            var awarenessTier = gameData.Self.GetTrueSocialStat(Personality.Social.Awareness);
+            var graceTier = gameData.Self.GetTrueSocialStat(Personality.Social.Grace);
+            var expressionTier = gameData.Self.GetTrueSocialStat(Personality.Social.Expression);
 
             for(int i = 0; i < AStars.Length; i++) 
             {
@@ -103,13 +102,12 @@ public class SaveDataDisplay : MonoBehaviour
               EStars[i].color = (i < expressionTier ? FilledStar : EmptyStar);
             }
 
-            //JESSE, REPLACE 0 VALUES WITH SAVE DATA
-            FSlider.value = 0;
-            SSlider.value = 0;
-            DSlider.value = 0;
+            //JESSE, REPLACE 0 VALUES WITH SAVE DATA //done
+            FSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Fatigue);
+            SSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Stress);
+            DSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Depression); 
 
             SetChildAlpha(1);
-
         }
         else
         {
