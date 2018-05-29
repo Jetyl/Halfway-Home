@@ -46,7 +46,7 @@ public class GalleryDisplay : MonoBehaviour
 
             if (art.unlocked)
                 art.GetImage(); //returns the sprite needed
-            else
+            //else
                 //LockedImage;
         }
     }
