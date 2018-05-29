@@ -11,7 +11,7 @@ public class GallerySystem
     
     public GallerySystem()
     {
-
+        MonoBehaviour.print("hello?");
         GalleryData = new List<ImageData>();
 
         var jImage = TextParser.ToJson("ImageListing");
@@ -37,6 +37,26 @@ public class GallerySystem
         
     }
 
+    public void UnlockImage(int index)
+    {
+        if (index < GalleryData.Count)
+            GalleryData[index].unlocked = true;
+        
+    }
+
+    public ImageData GetImage(int index)
+    {
+        if (index < GalleryData.Count)
+            return GalleryData[index];
+        else
+            return null;
+    }
+
+
+    public int GetSize()
+    {
+        return GalleryData.Count;
+    }
 }
 
 
