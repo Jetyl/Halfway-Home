@@ -27,7 +27,7 @@ public class SaveDataDisplay : MonoBehaviour
 	void Start ()
     {
 
-        
+        Space.Connect<DefaultEvent>(Events.PostSave, OnSave);
 
         UpdateDisplay();
 
@@ -40,6 +40,11 @@ public class SaveDataDisplay : MonoBehaviour
 	}
 
     public void OnEnable()
+    {
+        UpdateDisplay();
+    }
+
+    void OnSave(DefaultEvent eventdata)
     {
         UpdateDisplay();
     }
@@ -59,9 +64,10 @@ public class SaveDataDisplay : MonoBehaviour
             {
                 var bytes = File.ReadAllBytes(path);
                 
-                Texture2D test = new Texture2D((int)Screenshot.preferredWidth, (int)Screenshot.preferredHeight);
-                test.LoadRawTextureData(bytes);
-                Screenshot.sprite = Sprite.Create(test, new Rect(0, 0, 128, 128), Screenshot.rectTransform.pivot);
+                Texture2D test = new Texture2D(2, 2);
+                test.LoadImage(bytes); //this will resize it
+
+                Screenshot.sprite = Sprite.Create(test, new Rect(0, 0, test.width, test.height), new Vector2(0,0));
                 
             }
 
@@ -69,15 +75,49 @@ public class SaveDataDisplay : MonoBehaviour
 
             RealDate.text = "" + gameData.SaveStamp.Month + "/" + gameData.SaveStamp.Day + "/" + gameData.SaveStamp.Year;
 
-            GameTime.text = "Day:" + gameData.Day + " Hour:" + gameData.Hour;
+            GameTime.text = "" + (System.DayOfWeek)gameData.Day;
 
-            RealTime.text = "" + gameData.SaveStamp.Hour + ":" + gameData.SaveStamp.Minute + ":" + gameData.SaveStamp.Second;
+            RealTime.text = GetTime(gameData.SaveStamp.Hour, gameData.SaveStamp.Minute);
 
            
 
         }
         
 
+
+    }
+
+    string GetTime(int hour, int min)
+    {
+        string sHour;
+        string sMin;
+        string sNoon;
+
+        if (hour < 12)
+        {
+            sNoon = "AM";
+            if (hour == 0)
+                sHour = "12";
+            else
+                sHour = hour + "";
+
+        }
+        else
+        {
+            sNoon = "PM";
+            if (hour == 12)
+                sHour = "12";
+            else
+                sHour = (hour - 12) + "";
+        }
+
+        if (min < 10)
+            sMin = "0" + min;
+        else
+            sMin = "" + min;
+            
+
+        return sHour + ":" + sMin + " " + sNoon;
 
     }
 }
