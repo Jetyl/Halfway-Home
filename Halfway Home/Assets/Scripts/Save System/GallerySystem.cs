@@ -11,7 +11,7 @@ public class GallerySystem
     
     public GallerySystem()
     {
-        MonoBehaviour.print("hello?");
+
         GalleryData = new List<ImageData>();
 
         var jImage = TextParser.ToJson("ImageListing");
