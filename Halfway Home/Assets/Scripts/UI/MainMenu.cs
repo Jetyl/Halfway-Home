@@ -15,10 +15,13 @@ public class MainMenu : MonoBehaviour
 {
     public int MainLevel = 1;
 
+    public GameObject Buttons;
     public Button ContinueButton;
 
     public GameObject ConfirmationPanel;
     public GameObject ClearSavePanel;
+    public GameObject LoadPanel;
+    public GameObject GalleryPanel;
 
     public GameObject FadeScreeen;
 
@@ -44,34 +47,21 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            // JESSE PLS FIX //Done
             FlowerA.SetState(GetStateLevel(Personality.Social.Awareness));
             FlowerG.SetState(GetStateLevel(Personality.Social.Grace));
             FlowerE.SetState(GetStateLevel(Personality.Social.Expression));
         }
 
 
-    ConfirmationPanel.SetActive(false);
+        ConfirmationPanel.SetActive(false);
         ClearSavePanel.SetActive(false);
-
+        LoadPanel.SetActive(false);
+        //GalleryPanel.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     public void NewGame()
     {
-        //if (SaveLoad.GetSave(0) == null) //if a save exists, set that to the main game
-       // {
-            ConfirmNew();
-       // }
-        //else
-        //{
-        //    ClearSavePanel.SetActive(true);
-        //}
+        ConfirmNew();
             
     }
     public void ContinueGame()
@@ -87,6 +77,18 @@ public class MainMenu : MonoBehaviour
         Game.current = null;
         LoadLevel();
     }
+    
+    public void LoadGame()
+    {
+      LoadPanel.SetActive(true);
+      Buttons.SetActive(false);
+    }
+
+    public void OpenGallery()
+    {
+      GalleryPanel.SetActive(true);
+      Buttons.SetActive(false);
+    }
 
     public void Credits()
     {
@@ -95,11 +97,7 @@ public class MainMenu : MonoBehaviour
 
     void LoadLevel()
     {
-        //iTween.CameraFadeAdd();
-        //SceneManager.LoadScene(MainLevel);
-        
         StartCoroutine(LoadLevel(1));
-
     }
 
 
