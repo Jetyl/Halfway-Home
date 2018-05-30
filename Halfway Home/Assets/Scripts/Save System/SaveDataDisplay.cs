@@ -15,6 +15,7 @@ public class SaveDataDisplay : MonoBehaviour
 {
 
     public int DataIndex;
+    public bool IsLoad;
 
     public Image Screenshot;
     public TextMeshProUGUI PlayerName;
@@ -28,11 +29,16 @@ public class SaveDataDisplay : MonoBehaviour
     public Slider FSlider;
     public Slider SSlider;
     public Slider DSlider;
+    public Image Icon;
     [Header("Colors")]
     [Range(0, 1)]
     public float EmptyAlpha;
     public Color FilledStar;
     public Color EmptyStar;
+    [Header("Icons")]
+    public Sprite Save;
+    public Sprite Overwrite;
+    //public Sprite Load;
 
 	  void Start ()
     {
@@ -105,7 +111,14 @@ public class SaveDataDisplay : MonoBehaviour
             //JESSE, REPLACE 0 VALUES WITH SAVE DATA //done
             FSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Fatigue);
             SSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Stress);
-            DSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Depression); 
+            DSlider.value = gameData.Self.GetWellbingStat(Personality.Wellbeing.Depression);
+
+            if (IsLoad)
+            {
+              Screenshot.GetComponent<Button>().interactable = true;
+              Screenshot.raycastTarget = true;
+            } 
+            else Icon.sprite = Overwrite;
 
             SetChildAlpha(1);
         }
@@ -119,6 +132,14 @@ public class SaveDataDisplay : MonoBehaviour
             GameTime.text = "???";
 
             RealTime.text = "-:-";
+
+            if (IsLoad)
+            {
+              Screenshot.GetComponent<Button>().interactable = false;
+              Screenshot.raycastTarget = false;
+            } 
+            else Icon.sprite = Save;
+
             SetChildAlpha(EmptyAlpha);
         }
 

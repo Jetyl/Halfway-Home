@@ -13,12 +13,16 @@ public class SimpleSliderColor : MonoBehaviour
   public Color MidColor;
   public Color HighColor;
 
+  public void Start()
+  {
+    //WatchSlider.onValueChanged.AddListener(delegate { UpdateColor(); });
+  }
   public void UpdateColor()
   {
-    var color = GetComponent<Graphic>().color;
+    var obj = GetComponent<Graphic>();
 
-    if (WatchSlider.value < LowThreshold) color = LowColor;
-    else if (WatchSlider.value < MidThreshold) color = MidColor;
-    else color = HighColor;
+    if (WatchSlider.value < LowThreshold) obj.color = LowColor;
+    else if (WatchSlider.value < MidThreshold) obj.color = MidColor;
+    else obj.color = HighColor;
   }
 }
