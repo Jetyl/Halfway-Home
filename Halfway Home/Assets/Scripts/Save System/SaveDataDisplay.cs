@@ -56,6 +56,7 @@ public class SaveDataDisplay : MonoBehaviour
 
     void OnSave(DefaultEvent eventdata)
     {
+        print("whhhhhhhhhhhhhhhh");
         UpdateDisplay();
     }
 

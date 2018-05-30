@@ -49,12 +49,22 @@ public class PauseMenu : MonoBehaviour
         Space.DispatchEvent(Events.Save);
         ReaderReference.Save();
         SaveLoad.SaveAt(slot);
-        Space.DispatchEvent(Events.PostSave);
+        //Space.DispatchEvent(Events.PostSave, new SaveShotEvent(slot));
+        StartCoroutine(
+        TextParser.FrameDelay<SaveShotEvent>(Events.PostSave, new SaveShotEvent(slot)));
     }
     
     public void LoadGame(int slot)
     {
-        Game.current = SaveLoad.GetSave(slot);
+        Game data = SaveLoad.GetSave(slot);
+
+        if(data != null)
+        {
+            Game.current = SaveLoad.GetSave(slot);
+            SceneManager.LoadScene(1);
+        }
+
+        
     }
 
     public void OldSaveGame()

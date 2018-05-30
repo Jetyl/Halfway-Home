@@ -63,16 +63,17 @@ public static class SaveLoad
         //if (!savedGames.Contains(Game.current))
         //    Game.current = new Game(Game.current);
         
-
         while (savedGames.Count - 1 < index)
         {
             savedGames.Add(null);
         }
-            
-
 
         savedGames[index] = Game.current;
         Save();
+
+        var SavedGame = new Game(Game.current);
+
+        Game.current = SavedGame;
 
     }
 
