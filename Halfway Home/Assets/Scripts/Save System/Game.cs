@@ -46,7 +46,7 @@ public class Game
 
     public string CurrentBackdrop;
     public string CurrentCG;
-    public List<string> CGCalls;
+    public List<string> CGCalls = new List<string>();
 
     public string SavedInk;
 
@@ -94,12 +94,12 @@ public class Game
             for (int i = 0; i <= 7; ++i)
             {
                 var hours = new List<Room>();
-                var seen = new List<bool>();
+                //var seen = new List<bool>();
                 for (int j = 0; j < 24; ++j)
                 {
                     var lol = (Room)(int)character["Schedule"][i][j];
                     hours.Add(lol);
-                    seen.Add(false);
+                    //seen.Add(false);
                 }
 
                 Aday.Add(hours);
@@ -120,15 +120,50 @@ public class Game
         Day = copy_.Day;
         Hour = copy_.Hour;
         PlayerName = copy_.PlayerName;
-        Progress = copy_.Progress;
-        Self = copy_.Self;
-        Memory = copy_.Memory;
-        Schedule = copy_.Schedule;
-        SceneList = copy_.SceneList;
-        CastCall = copy_.CastCall;
-        CurrentRoom = copy_.CurrentRoom;
+
+        Progress = new ProgressSystem(copy_.Progress);
+        Self = new Personality(copy_.Self);
+        Memory = new GallerySystem (copy_.Memory);
+
+        Schedule = new Dictionary<string, List<List<Room>>>();
+        SceneList = new Dictionary<string, TimeStamp>();
+        CastCall = new List<CharacterIntermission>();
+        
+        foreach (string character in copy_.Schedule.Keys)
+        {
+            var Aday = new List<List<Room>>();
+
+            for (int i = 0; i <= 7; ++i)
+            {
+                var hours = new List<Room>();
+                for (int j = 0; j < 24; ++j)
+                {
+                    var lol = copy_.Schedule[character][i][j];
+                    hours.Add(lol);
+                }
+
+                Aday.Add(hours);
+            }
+
+            Schedule.Add(character, Aday);
+
+        }
+
+        foreach (string scene in copy_.SceneList.Keys)
+        {
+            SceneList.Add(scene, new TimeStamp(copy_.SceneList[scene]));
+
+        }
+        
+        for(int i = 0; i < copy_.CastCall.Count; ++i)
+        {
+            CastCall.Add(new CharacterIntermission(copy_.CastCall[i]));
+        }
+        
+
         StorySave = copy_.StorySave;
 
+        CurrentRoom = copy_.CurrentRoom;
         CurrentTimeBlock = copy_.CurrentTimeBlock;
         DrainEnergy = copy_.DrainEnergy;
         InCurrentStory = copy_.InCurrentStory;
@@ -136,7 +171,12 @@ public class Game
         CurrentNode = copy_.CurrentNode;
         CurrentBackdrop = copy_.CurrentBackdrop;
         CurrentCG = copy_.CurrentCG;
-        CGCalls = copy_.CGCalls;
+
+        CGCalls = new List<string>();
+        for(int i = 0; i < copy_.CGCalls.Count; ++i)
+        {
+            CGCalls.Add(copy_.CGCalls[i]);
+        }
 
         SavedInk = copy_.SavedInk;
         CurrentTrack = copy_.CurrentTrack;
@@ -340,6 +380,13 @@ public class TimeStamp
         day = _day;
         hour = _hour;
         duration = _duration;
+    }
+
+    public TimeStamp(TimeStamp copy_)
+    {
+        day = copy_.day;
+        hour = copy_.hour;
+        duration = copy_.duration;
     }
 
     public static bool operator ==(TimeStamp x, TimeStamp y)

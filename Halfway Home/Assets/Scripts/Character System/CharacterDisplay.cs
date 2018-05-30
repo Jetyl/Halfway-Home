@@ -310,4 +310,22 @@ public class CharacterIntermission
     public float PosX;
     public float PosY;
     public string Name;
+
+    public CharacterIntermission()
+    {
+        chara = "";
+        Name = "";
+    }
+
+    public CharacterIntermission(CharacterIntermission copy_)
+    {
+        chara = copy_.chara;
+        Dir = copy_.Dir;
+        face = copy_.face;
+        Dis = copy_.Dis;
+        PosX = copy_.PosX;
+        PosY = copy_.PosY;
+        Name = copy_.Name;
+    }
+
 }

@@ -71,6 +71,31 @@ public class Personality
 
     }
 
+    public Personality(Personality copy_)
+    {
+        SocialThreshold = copy_.SocialThreshold;
+
+        WellbeingValues = new Dictionary<Wellbeing, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
+        {
+            WellbeingValues.Add((Wellbeing)i, copy_.WellbeingValues[(Wellbeing)i]);
+
+        }
+
+        SocialValues = new Dictionary<Social, int>();
+        BasicSocialStars = new Dictionary<Social, int>();
+        BonusSocialStars = new Dictionary<Social, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
+        {
+            SocialValues.Add((Social)i, copy_.SocialValues[(Social)i]);
+            BasicSocialStars.Add((Social)i, copy_.BasicSocialStars[(Social)i]);
+            BonusSocialStars.Add((Social)i, copy_.BonusSocialStars[(Social)i]);
+
+        }
+    }
+
     public int GetStat(string statName)
     {
         for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)

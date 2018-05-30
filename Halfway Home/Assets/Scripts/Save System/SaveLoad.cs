@@ -72,7 +72,6 @@ public static class SaveLoad
         Save();
 
         var SavedGame = new Game(Game.current);
-
         Game.current = SavedGame;
 
     }

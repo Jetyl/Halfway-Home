@@ -51,6 +51,36 @@ public class ProgressSystem
 
     }
 
+    public ProgressSystem (ProgressSystem copy_)
+    {
+        ProgressBook = new Dictionary<string, ProgressPoint>();
+        PlotLines = new List<Beat>();
+
+        
+
+        for (int ima = 0; ima < copy_.PlotLines.Count; ++ima)
+        {
+            PlotLines.Add(new Beat(copy_.PlotLines[ima], this));
+        }
+
+        Objectives = new List<Task>();
+        ChronologicalObjectives = new List<Task>();
+
+        
+
+        for (int ima = 0; ima < copy_.Objectives.Count; ++ima)
+        {
+            Objectives.Add(new Task(copy_.Objectives[ima]));
+        }
+
+        for(int ima = 0; ima < copy_.ChronologicalObjectives.Count; ++ima)
+        {
+            ChronologicalObjectives.Add(Objectives[copy_.ChronologicalObjectives[ima].Number]);
+        }
+
+
+        UpdatePlotLines();
+    }
 
     public void UpdateProgress(string _key, ProgressPoint change)
     {
@@ -445,6 +475,21 @@ public class Beat
         Points = new List<ProgressPoint>();
     }
 
+    public Beat (Beat copy, ProgressSystem progress)
+    {
+        Points = new List<ProgressPoint>();
+
+        for (int i = 0; i < copy.Points.Count; ++i)
+        {
+            string boolName = copy.Points[i].ProgressName;
+            PointTypes type = copy.Points[i].TypeID;
+            ProgressPoint point = new ProgressPoint(boolName, type);
+
+            Points.Add(point);
+            progress.AddBool(boolName, point);
+        }
+    }
+
     //main game constructor
     public Beat(JsonData beatData, ProgressSystem progress)
     {
@@ -558,6 +603,29 @@ public class Task
     {
         Number = number;
         Name = "";
+    }
+
+    public Task(Task copy)
+    {
+        Number = copy.Number;
+        Name = copy.Name;
+        //Objective = (string)taskData["Objective"];
+        SubTasks = new List<Task>();
+        //MonoBehaviour.print((int)taskData["SubCount"]);
+        for (int i = 0; i < copy.SubTasks.Count; ++i)
+        {
+            var sub = new Task(copy.SubTasks[i].Number);
+            sub.Name = copy.SubTasks[i].Name;
+            sub.Hidden = copy.SubTasks[i].Hidden;
+            SubTasks.Add(sub);
+        }
+
+        Hidden = copy.Hidden;
+
+        AllShow = copy.AllShow;
+        AllSuccess = copy.AllSuccess;
+        AllFail = copy.AllFail;
+        State = copy.State;
     }
 
     public Task(JsonData taskData)

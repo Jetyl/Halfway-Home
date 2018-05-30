@@ -23,6 +23,17 @@ public class GallerySystem
 
     }
 
+    public GallerySystem (GallerySystem copy)
+    {
+
+        GalleryData = new List<ImageData>();
+        
+
+        for (int ima = 0; ima < copy.GalleryData.Count; ++ima)
+        {
+            GalleryData.Add(new ImageData(copy.GalleryData[ima]));
+        }
+    }
 
     public void UnlockImage(Sprite image_)
     {
@@ -73,6 +84,12 @@ public class ImageData
         //image = Resources.Load<Sprite>("Sprites/" + slug);
 
         unlocked = unlocked_;
+    }
+
+    public ImageData(ImageData copy_)
+    {
+        slug = copy_.slug;
+        unlocked = copy_.unlocked;
     }
 
     public Sprite GetImage()
