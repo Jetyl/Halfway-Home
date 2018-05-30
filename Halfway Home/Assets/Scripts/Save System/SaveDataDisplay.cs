@@ -13,7 +13,6 @@ using System.IO;
 
 public class SaveDataDisplay : MonoBehaviour
 {
-
     public int DataIndex;
     public bool IsLoad;
 
@@ -38,25 +37,25 @@ public class SaveDataDisplay : MonoBehaviour
     [Header("Icons")]
     public Sprite Save;
     public Sprite Overwrite;
-    //public Sprite Load;
+    [Space]
+    [Tooltip("Only necessary for Load Display.")]
+    public Button Delete;
 
-	  void Start ()
+    void Start()
     {
 
-        Space.Connect<DefaultEvent>(Events.PostSave, OnSave);
+      Space.Connect<DefaultEvent>(Events.PostSave, OnSave);
+      UpdateDisplay();
 
-        UpdateDisplay();
-
-	  }
+    }
 
     public void OnEnable()
     {
-        UpdateDisplay();
+      UpdateDisplay();
     }
 
     void OnSave(DefaultEvent eventdata)
     {
-        print("whhhhhhhhhhhhhhhh");
         UpdateDisplay();
     }
 
@@ -118,6 +117,7 @@ public class SaveDataDisplay : MonoBehaviour
             {
               Screenshot.GetComponent<Button>().interactable = true;
               Screenshot.raycastTarget = true;
+              Delete.interactable = true;
             } 
             else Icon.sprite = Overwrite;
 
@@ -138,6 +138,8 @@ public class SaveDataDisplay : MonoBehaviour
             {
               Screenshot.GetComponent<Button>().interactable = false;
               Screenshot.raycastTarget = false;
+              Delete.OnDeselect(null);
+              Delete.interactable = false;
             } 
             else Icon.sprite = Save;
 

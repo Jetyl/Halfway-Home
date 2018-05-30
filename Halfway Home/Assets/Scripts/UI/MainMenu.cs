@@ -100,6 +100,11 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LoadLevel(1));
     }
 
+    public void LoadAt(int slot)
+    {
+      Game.current = SaveLoad.GetSave(slot);
+      LoadLevel();
+    }
 
     IEnumerator LoadLevel(float aTime)
     {
@@ -110,11 +115,19 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void DeleteSaveSlot(int slot)
+    {
+      SaveLoad.DeleteAt(slot);
+    }
+
     public int GetStateLevel(Personality.Social stat)
     {
         int level = 0;
         for(int i = 0; i < SaveLoad.GetSize(); ++i)
         {
+            if (SaveLoad.GetSave(i) == null)
+              continue;
+
             int lv = SaveLoad.GetSave(i).Self.GetTrueSocialStat(stat);
             if (lv > level)
                 level = lv;

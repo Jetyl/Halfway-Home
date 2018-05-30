@@ -78,8 +78,8 @@ public static class SaveLoad
 
     public static void DeleteAt(int index)
     {
-
-        savedGames.RemoveAt(index);
+        savedGames[index] = null;
+        //savedGames.RemoveAt(index);
         Save();
 
     }
