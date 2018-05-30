@@ -67,6 +67,11 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    public void DeleteSaveSlot(int slot)
+    {
+        SaveLoad.DeleteAt(slot);
+    }
+
     public void OldSaveGame()
     {
         // old save
