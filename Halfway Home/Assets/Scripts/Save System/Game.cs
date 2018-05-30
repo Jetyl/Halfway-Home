@@ -117,8 +117,8 @@ public class Game
 
     public Game(Game copy_)
     {
-
         Day = copy_.Day;
+        Hour = copy_.Hour;
         PlayerName = copy_.PlayerName;
         Progress = copy_.Progress;
         Self = copy_.Self;
@@ -127,6 +127,26 @@ public class Game
         SceneList = copy_.SceneList;
         CastCall = copy_.CastCall;
         CurrentRoom = copy_.CurrentRoom;
+        StorySave = copy_.StorySave;
+
+        CurrentTimeBlock = copy_.CurrentTimeBlock;
+        DrainEnergy = copy_.DrainEnergy;
+        InCurrentStory = copy_.InCurrentStory;
+        CurrentStory = copy_.CurrentStory;
+        CurrentNode = copy_.CurrentNode;
+        CurrentBackdrop = copy_.CurrentBackdrop;
+        CurrentCG = copy_.CurrentCG;
+        CGCalls = copy_.CGCalls;
+
+        SavedInk = copy_.SavedInk;
+        CurrentTrack = copy_.CurrentTrack;
+        CurrentAmbience = copy_.CurrentAmbience;
+        
+        CurrentHistory = copy_.CurrentHistory;
+        CurrentSpeaker = copy_.CurrentSpeaker;
+
+        SaveStamp = copy_.SaveStamp;
+
 
     }
 

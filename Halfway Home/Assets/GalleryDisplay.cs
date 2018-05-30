@@ -7,6 +7,8 @@ public class GalleryDisplay : MonoBehaviour
 
     public Sprite LockedImage;
 
+    public GameObject GalleyObject; //the individual pictures. a prefab to instantiate
+
     private static GallerySystem Gallery;
 
 	// Use this for initialization

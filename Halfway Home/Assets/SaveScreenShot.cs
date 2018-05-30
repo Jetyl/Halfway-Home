@@ -14,7 +14,7 @@ public class SaveScreenShot : MonoBehaviour
 		Lens = GetComponent<Camera>();
         Lens.enabled = false;
 
-        Space.Connect<DefaultEvent>(Events.PostSave, SaveShot);
+        Space.Connect<SaveShotEvent>(Events.PostSave, SaveShot);
     }
 	
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class SaveScreenShot : MonoBehaviour
 		
 	}
 
-    void SaveShot(DefaultEvent eventdata)
+    void SaveShot(SaveShotEvent eventdata)
     {
         var rend = new RenderTexture(Screen.width, Screen.height, 24);
         
@@ -41,19 +41,22 @@ public class SaveScreenShot : MonoBehaviour
         tex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, false);
         tex.Apply();
         byte[] bytes = tex.EncodeToPNG();
-
-        //var timestamp = DateTime.Now;
-
-        //var second = timestamp.Second;
-        //var minute = timestamp.Minute;
-        //var hour = timestamp.Hour;
-        //var Day = timestamp.DayOfYear;
-        //var year = timestamp.Year;
-
-        var index = SaveLoad.GetIndex(Game.current);
+        
+        var index = eventdata.slotIndex;
 
         print(Application.persistentDataPath + "/Games_Saveshot_" + index + ".png");
         System.IO.File.WriteAllBytes(Application.persistentDataPath + "/Games_Saveshot_" + index + ".png", bytes);
     }
 
+}
+
+
+public class SaveShotEvent : DefaultEvent
+{
+    public int slotIndex;
+
+    public SaveShotEvent(int index)
+    {
+        slotIndex = index;
+    }
 }
