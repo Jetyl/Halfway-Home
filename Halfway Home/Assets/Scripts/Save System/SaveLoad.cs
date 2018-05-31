@@ -73,7 +73,7 @@ public static class SaveLoad
 
         var SavedGame = new Game(Game.current);
         Game.current = SavedGame;
-
+    
     }
 
     public static void DeleteAt(int index)

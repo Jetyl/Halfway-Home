@@ -116,7 +116,6 @@ namespace HalfwayHome
     protected override void OnLoad(Dictionary<string, Story> stories)
     {
       storySave = Game.current.StorySave;
-      //base.OnLoad(stories);
     }
 
 

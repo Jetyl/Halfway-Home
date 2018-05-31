@@ -109,7 +109,7 @@ namespace Stratus
 
         private void Start()
         {
-          OnLoad(stories);
+          LoadSave();
         }
 
         private void OnDestroy()
@@ -252,6 +252,14 @@ namespace Stratus
             story.runtime.state.GoToStart();
 
           story.started = false;
+        }
+
+        /// <summary>
+        /// Loads the current story save data
+        /// </summary>
+        public void LoadSave()
+        {
+          OnLoad(stories);
         }
 
         //------------------------------------------------------------------------------------------/
