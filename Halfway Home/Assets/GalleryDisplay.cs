@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GalleryDisplay : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class GalleryDisplay : MonoBehaviour
     public Sprite LockedImage;
 
     public Image[] GalleryPanels; //the individual pictures.
-
+    
+    public TextMeshProUGUI CaptionText;
+    public TextMeshProUGUI PageText;
     public Button NextPage;
     public Button BackPage;
 
@@ -36,12 +39,6 @@ public class GalleryDisplay : MonoBehaviour
         }
 
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     public void UpdateDisplay()
     {
@@ -54,21 +51,35 @@ public class GalleryDisplay : MonoBehaviour
             if(j >= Gallery.GetSize())
             {
                 frame.sprite = null;
+                frame.enabled = false;
                 ++j;
                 continue;
             }
 
             var art = Gallery.GetImage(j);
+            frame.enabled = true;
 
             if (art.unlocked)
-                frame.sprite = art.GetImage(); //returns the sprite needed
+            {
+              frame.sprite = art.GetImage(); //returns the sprite needed
+              frame.gameObject.GetComponent<Button>().interactable = false;
+            }
             else
-                frame.sprite = LockedImage;
-
+            {
+              frame.sprite = LockedImage;
+              frame.gameObject.GetComponent<Button>().interactable = false;
+            }
+                
             ++j;
         }
 
-        
+        UpdatePageText();
+
+        if (index == 0) BackPage.interactable = false;
+        else BackPage.interactable = true;
+
+        if (index >= Gallery.GetSize() - GalleryPanels.Length) NextPage.interactable = false;
+        else NextPage.interactable = true;
     }
 
     public void ExpandPicture(Image picture)
@@ -76,19 +87,35 @@ public class GalleryDisplay : MonoBehaviour
         //makes the big picture via fullscreen
     }
 
+    public void SetCaptionText(Image frame)
+    {
+      
+    }
+
+    public void UpdatePageText()
+    {
+      PageText.text = $"{GetCurrentPage()}/{GetPageCount()}";
+    }
+
+    public int GetPageCount()
+    {
+      return Mathf.CeilToInt((float)Gallery.GetSize() / (float)GalleryPanels.Length);
+    }
+
+    public int GetCurrentPage()
+    {
+      return Mathf.FloorToInt(index / GalleryPanels.Length) + 1;
+    }
+
     public void ForwardPage()
     {
-        if (index < Gallery.GetSize() - GalleryPanels.Length)
-            index += GalleryPanels.Length;
-
+        index += GalleryPanels.Length;
         UpdateDisplay();
     }
 
     public void BackwardsPage()
     {
-        if (index != 0)
-            index -= GalleryPanels.Length;
-
+        index -= GalleryPanels.Length;
         UpdateDisplay();
     }
 
