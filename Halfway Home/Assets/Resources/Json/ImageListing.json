@@ -1,38 +1,38 @@
 
 [
  {
+  "Name" : "Memory",
+  "Slug" : "CGs/Memory/houseCG2fix",
+  "Set"  : 0
+ },
+ {
+  "Name" : "Hangman",
+  "Slug" : "CGs/Hangman/hopealltogether",
+  "Set"  : 0
+ },
+ {
+  "Name" : "Courtside",
+  "Slug" : "CGs/Basketball/CourtsideGallery",
+  "Set"  : 0
+ },
+ {
+  "Name" : "Breakdown",
+  "Slug" : "CGs/Breakdown/TimothyBreakdown",
+  "Set"  : 0
+ },
+ {
   "Name" : "Tea Time",
-  "Slug" : "Temp Shit/aachaa",
+  "Slug" : "CGs/Teatime/TeaTime",
   "Set"  : 0
  },
  {
   "Name" : "Long Night Hangout",
-  "Slug" : "CGs/Hangout/Edhand1",
+  "Slug" : "CGs/Hangman/hopealltogether",
   "Set"  : 0
  },
  {
-  "Name" : "test1",
-  "Slug" : "UI/MapStuff/Aboveroom",
-  "Set"  : 0
- },
- {
-  "Name" : "test 2",
-  "Slug" : "Temp Shit/alter",
-  "Set"  : 0
- },
- {
-  "Name" : "3",
-  "Slug" : "UI/MapStuff/Background",
-  "Set"  : 0
- },
- {
-  "Name" : "4",
-  "Slug" : "CGs/Hangman/Arm2",
-  "Set"  : 0
- },
- {
-  "Name" : "5",
-  "Slug" : "Temp Shit/Ben_calm_01",
+  "Name" : "Test",
+  "Slug" : "CGs/Memory/houseCG3",
   "Set"  : 0
  }
 ]
