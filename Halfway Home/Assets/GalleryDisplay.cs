@@ -18,7 +18,7 @@ public class GalleryDisplay : MonoBehaviour
     private int index = 0;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
     {
         Gallery = new GallerySystem();
 
@@ -43,7 +43,7 @@ public class GalleryDisplay : MonoBehaviour
 		
 	}
 
-    void UpdateDisplay()
+    public void UpdateDisplay()
     {
         //loop thru the images.
         //assign either the locked image, or the gallery's image, if it is unlocked;
@@ -71,12 +71,12 @@ public class GalleryDisplay : MonoBehaviour
         
     }
 
-    void ExpandPicture(Image picture)
+    public void ExpandPicture(Image picture)
     {
         //makes the big picture via fullscreen
     }
 
-    void ForwardPage()
+    public void ForwardPage()
     {
         if (index < Gallery.GetSize() - GalleryPanels.Length)
             index += GalleryPanels.Length;
@@ -84,7 +84,7 @@ public class GalleryDisplay : MonoBehaviour
         UpdateDisplay();
     }
 
-    void BackwardsPage()
+    public void BackwardsPage()
     {
         if (index != 0)
             index -= GalleryPanels.Length;

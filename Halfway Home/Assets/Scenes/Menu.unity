@@ -1702,7 +1702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockedImage: {fileID: 0}
-  GalleyObject: {fileID: 0}
+  GalleryPanels: []
+  NextPage: {fileID: 0}
+  BackPage: {fileID: 0}
 --- !u!1 &142434110
 GameObject:
   m_ObjectHideFlags: 0
@@ -16385,8 +16387,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9e9dc8f304eb540853fdcb390c76ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LockedImage: {fileID: 0}
-  GalleyObject: {fileID: 0}
+  LockedImage: {fileID: 21300002, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
+  GalleryPanels:
+  - {fileID: 1840516530}
+  - {fileID: 395032658}
+  - {fileID: 1512046399}
+  - {fileID: 2017146210}
+  - {fileID: 731741077}
+  - {fileID: 2019249080}
+  NextPage: {fileID: 1923128988}
+  BackPage: {fileID: 1483973223}
 --- !u!1 &1438560447
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,7 +17175,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1483973224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1438429659}
+        m_MethodName: BackwardsPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1483973224
@@ -20922,6 +20943,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1438429659}
+        m_MethodName: UpdateDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1721034618
@@ -22983,7 +23015,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923128989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1438429659}
+        m_MethodName: ForwardPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1923128989
