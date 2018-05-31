@@ -18,7 +18,7 @@ public class GallerySystem
 
         for (int ima = 0; ima < jImage.Count; ++ima)
         {
-            GalleryData.Add(new ImageData((string)jImage[ima]["Slug"], false));
+            GalleryData.Add(new ImageData((string)jImage[ima]["Slug"], false, (string)jImage[ima]["Caption"]));
         }
 
     }
@@ -78,12 +78,15 @@ public class ImageData
     //public Sprite image;
     string slug;
 
-    public ImageData(string slug_, bool unlocked_)
+    public string Caption;
+
+    public ImageData(string slug_, bool unlocked_, string cap_)
     {
         slug = slug_;
         //image = Resources.Load<Sprite>("Sprites/" + slug);
 
         unlocked = unlocked_;
+        Caption = cap_;
     }
 
     public ImageData(ImageData copy_)
