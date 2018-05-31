@@ -2,12 +2,37 @@
 [
  {
   "Name" : "Tea Time",
-  "Slug" : "UI/MapStuff/Tea",
+  "Slug" : "Temp Shit/aachaa",
   "Set"  : 0
  },
  {
   "Name" : "Long Night Hangout",
   "Slug" : "CGs/Hangout/Edhand1",
+  "Set"  : 0
+ },
+ {
+  "Name" : "test1",
+  "Slug" : "UI/MapStuff/Aboveroom",
+  "Set"  : 0
+ },
+ {
+  "Name" : "test 2",
+  "Slug" : "Temp Shit/alter",
+  "Set"  : 0
+ },
+ {
+  "Name" : "3",
+  "Slug" : "UI/MapStuff/Background",
+  "Set"  : 0
+ },
+ {
+  "Name" : "4",
+  "Slug" : "CGs/Hangman/Arm2",
+  "Set"  : 0
+ },
+ {
+  "Name" : "5",
+  "Slug" : "Temp Shit/Ben_calm_01",
   "Set"  : 0
  }
 ]

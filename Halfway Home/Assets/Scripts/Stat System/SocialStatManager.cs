@@ -47,7 +47,7 @@ public class SocialStatManager : MonoBehaviour
   {
     float barStat = Game.current.Self.GetSocialProgress(SocialStat);
     //Debug.Log(Game.current.Self.GetSocialProgress(SocialStat) + ", " + Game.current.Self.SocialThreshold * 3);
-    print($"BAR {SocialStat.ToString()} SET TO {barStat}");
+    //print($"BAR {SocialStat.ToString()} SET TO {barStat}");
     StatBar.value = barStat;
 
     int basicTier = Game.current.Self.GetBasicSocialStat(SocialStat);
