@@ -3,36 +3,43 @@
  {
   "Name" : "Memory",
   "Slug" : "CGs/Memory/houseCG2fix",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : "a memory i had"
  },
  {
   "Name" : "Hangman",
   "Slug" : "CGs/Hangman/hopealltogether",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  },
  {
   "Name" : "Courtside",
   "Slug" : "CGs/Basketball/CourtsideGallery",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  },
  {
   "Name" : "Breakdown",
   "Slug" : "CGs/Breakdown/TimothyBreakdown",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  },
  {
   "Name" : "Tea Time",
   "Slug" : "CGs/Teatime/TeaTime",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  },
  {
   "Name" : "Long Night Hangout",
   "Slug" : "CGs/Hangman/hopealltogether",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  },
  {
   "Name" : "Test",
   "Slug" : "CGs/Memory/houseCG3",
-  "Set"  : 0
+  "Set"  : 0,
+  "Caption" : ""
  }
 ]

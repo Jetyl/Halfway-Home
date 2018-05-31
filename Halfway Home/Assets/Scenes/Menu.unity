@@ -1707,6 +1707,7 @@ MonoBehaviour:
   PageText: {fileID: 0}
   NextPage: {fileID: 0}
   BackPage: {fileID: 0}
+  DebugMode: 0
 --- !u!1 &142434110
 GameObject:
   m_ObjectHideFlags: 0
@@ -16401,6 +16402,7 @@ MonoBehaviour:
   PageText: {fileID: 1647776348}
   NextPage: {fileID: 1923128988}
   BackPage: {fileID: 1483973223}
+  DebugMode: 0
 --- !u!1 &1438560447
 GameObject:
   m_ObjectHideFlags: 0

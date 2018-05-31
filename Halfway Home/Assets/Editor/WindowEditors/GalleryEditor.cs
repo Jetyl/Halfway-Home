@@ -217,6 +217,10 @@ public class GalleryEditor : EditorWindow
             Jwriter.WritePropertyName("Set");
             Jwriter.Write(image.Set);
 
+
+            Jwriter.WritePropertyName("Caption");
+            Jwriter.Write(image.Caption);
+
             Jwriter.WriteObjectEnd();
         }
 

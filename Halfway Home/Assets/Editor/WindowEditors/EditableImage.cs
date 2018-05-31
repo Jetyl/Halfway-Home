@@ -12,12 +12,14 @@ public class EditableImage
     public Sprite Image;
     public int Set;
 
+    public string Caption;
+
     public EditableImage()
     {
         Name = "";
         Image = null;
         Set = 0;
-
+        Caption = "";
     }
 
 
@@ -34,7 +36,7 @@ public class EditableImage
 
         Set = (int)data["Set"];
 
-
+        Caption = (string)data["Caption"];
     }
 
     public void Draw()
@@ -44,6 +46,8 @@ public class EditableImage
         Image = EditorGUILayout.ObjectField(Image, typeof(Sprite), allowSceneObjects: true) as Sprite;
 
         Set = EditorGUILayout.IntField("Set Number", Set);
+
+        Caption = EditorGUILayout.TextField("Caption", Caption);
 
     }
 

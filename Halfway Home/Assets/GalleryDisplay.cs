@@ -20,6 +20,8 @@ public class GalleryDisplay : MonoBehaviour
 
     private int index = 0;
 
+    public bool DebugMode;
+
 	// Use this for initialization
 	void Awake ()
     {
@@ -35,6 +37,14 @@ public class GalleryDisplay : MonoBehaviour
 
                 if (art.unlocked)
                     Gallery.UnlockImage(j);
+            }
+        }
+
+        if(DebugMode)
+        {
+            for (int j = 0; j < Gallery.GetSize(); ++j)
+            {
+                Gallery.UnlockImage(j);
             }
         }
 
@@ -89,7 +99,33 @@ public class GalleryDisplay : MonoBehaviour
 
     public void SetCaptionText(Image frame)
     {
-      
+
+        int j = index;
+
+        foreach (Image isme in GalleryPanels)
+        {
+            if (j >= Gallery.GetSize())
+            {
+                ++j;
+                continue;
+            }
+
+            if(isme == frame)
+            {
+                var art = Gallery.GetImage(j);
+
+                if (art.unlocked)
+                    CaptionText.text = art.Caption;
+                else
+                    CaptionText.text = "???";
+                break;
+            }
+            
+
+            ++j;
+        }
+
+
     }
 
     public void UpdatePageText()
