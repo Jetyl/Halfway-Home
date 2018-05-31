@@ -56,7 +56,7 @@ public class MainMenu : MonoBehaviour
         ConfirmationPanel.SetActive(false);
         ClearSavePanel.SetActive(false);
         LoadPanel.SetActive(false);
-        //GalleryPanel.SetActive(false);
+        GalleryPanel.SetActive(false);
     }
 
     public void NewGame()

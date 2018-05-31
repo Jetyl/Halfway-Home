@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GalleryDisplay : MonoBehaviour
 {
@@ -52,4 +53,10 @@ public class GalleryDisplay : MonoBehaviour
                 //LockedImage;
         }
     }
+
+
+    public void dummy(Image test)
+  {
+
+  }
 }
