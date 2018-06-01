@@ -97,6 +97,7 @@ public class Events
     public static readonly String DescriptionClosed = "DescriptionClosedEvent";
     public static readonly String OpenHistory = "OpenHistoryEvent";
     public static readonly String CloseHistory = "CloseHistoryEvent";
+    public static readonly String NextLine = "AutoNextLineEvent";
 
     //choice system
     public static readonly String Choice = "ChoiceEvent";
