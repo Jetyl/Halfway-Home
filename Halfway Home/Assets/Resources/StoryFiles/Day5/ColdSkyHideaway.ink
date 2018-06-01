@@ -65,13 +65,17 @@ No response. not surprising
 [{player_name}] "I don't usually see you out here."
 [Isaac] "..."
 "I'm hiding"
-+[Want to be left alone?]
+{
+	-GetValue("ColdTalkBefore") == false:
+		Hiding? why would he be hiding from out here?
+}
++[Leave him be]
 	[{player_name}] "Oh! um, want to be left alone then?"
 	[Isaac] "..."
 	"Yeah."
 	[{player_name}] "Uh, okay. See you later then."
 	->GivenUp
-+[Want to talk about it?]
++[Try talking about it]
 	[{player_name}] "Do you.. want to talk about it?"
 	{
 		-GetValue("LongNightHangoutComplete") == true:
@@ -79,6 +83,7 @@ No response. not surprising
 		-else:
 			[Isaac] "..."
 			"Not really."
+			He looks apprehensive, like he wants to talk, but doesn't feel comfortable enough. Maybe he doesn't trust me enough?
 			[{player_name}] "...Okay... I'll see you around, then."
 			[Isaac] "..."
 			"Thanks."
@@ -92,7 +97,7 @@ No response. not surprising
 “...”
 “...”
 “...You...”
-“...You ready...? To leave?”
+“...You ready...? @To leave? @Here... I mean.”
 +[Yeah]
 	[{player_name}] "Y-yeah. I am."
 	[Isaac] "Hm."
@@ -103,7 +108,7 @@ No response. not surprising
 	->PoorGrip
 +{grace>2}[Whether I am or not, I’m still leaving]
 	[{player_name}] "Whether I am or not, I’m still leaving."
-	[Isaac] "Hm... That's true. Hm..."
+	[Isaac] "Hm... @That's true. Hm..."
 	->OpenAnswer
 +{expression>2} [No, not really]
 	[{player_name}] "No, not really"
@@ -125,6 +130,7 @@ No response. not surprising
 ->Talkative
 
 =OpenAnswer
+Isaac seems to appreciate my answer. (awareness up) #awareness+ //edit line latter
 [Isaac] "..."
 "...Does...?"
 "...Does your life feel like its moving too fast for you?"
@@ -151,6 +157,7 @@ I'd think he's been around...
 	I know how long he's been here, because he's told me.
 	[{player_name}] "You've been here for almost 2 and a half years, haven't you?"
 	Isaac nods. not even a little shocked I guessed it correctly.
+	he does smirk for a split second however, so maybe he appericates that i knew? (grace up) #grace+ //edit later
 -[Isaac] "Two years."
 "two years... @and six months..."
 {
@@ -182,7 +189,7 @@ Isaac looks pained trying to speak as much as he is.
 "..."
 "..."
 Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
-And he came to Sunflower house to improve himself, but still isn't any better. How should I help him?
+And he came to Sunflower House to improve himself, but still isn't any better. How should I help him?
 +[Give Him Advice]
 	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>awareness</i> of your life, as an example.</color>
 	->Recoil
@@ -199,17 +206,35 @@ And he came to Sunflower house to improve himself, but still isn't any better. H
 ~SetTimeBlock(1)
 "...hrm."
 "...I thought.... I was getting better..."
-having given Isaac time, he beings trying to talk about his relationship with Eduardo.
-he's at a lost of what to do.
-Give him advice?
-+[Yes]
+"...I was... eating. @I was... painting."
+"I was... with someone... so..."
+"...so..."
+"...why am I like this?"
+[{player_name}] "Is there something going on with you and Eduardo?"
+[Isaac] "..."
+"......yes."
+"...I@...@...we...@...he..."
+"...I... like him...@ but he...."
+"...he..."
+"He's so suffocating sometimes."
+"He... he's around me so often and I..."
+"I... I should like that...@ I don't.... @I don't..."
+"...I don't know what to do..."
+Isaac curls up even further into his ball.
+He seems to be running himself in circles over his conflicted feelings on Eduardo.
+I should....
++[Give Isaac relationship advice]
 	<color=color_descriptor>You try give Isaac some relationship advice, based on your limited experiences, and what you've seen in media.</color>
 	->Recoil
-+[No]
++[Let Isaac keep venting]
 	->Faulty
 
 
 ===Faulty===
+I should probably let Isaac work through his thoughts on his own.
+[Isaac] "..."
+"Why am I such a screw up..."
+"I feel... broken."
 Isaac describes his experiences, feeling broken. faulty.
 At the end, you are given a choice to say something, or no.
 +[Say something]
@@ -221,11 +246,17 @@ At the end, you are given a choice to say something, or no.
 I head off, leaving Isaac to stew in his hideaway. #Isaac = exit
 Something seems to be eating him, but I suppose I've tried to lend an ear.
 maybe he just doesn't trust me?
+{
+	-week >=2:
+		Maybe I should try hanging out with him earlier in the week. that might work. //add objective here
+}
 Oh well.
 ->END
 
 === HelpfulListener ===
 I help Isaac up off the ground. //player has finished helping his issues
+[Isaac] "I'mma talk to Eduardo about... all this sometime soon."
+"Before you leave. That's my deadline."
 ~SetValue("IsaacOpenedUp", true)
 ->END
 

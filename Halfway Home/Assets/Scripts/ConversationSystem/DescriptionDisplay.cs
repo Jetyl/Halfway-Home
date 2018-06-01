@@ -44,6 +44,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool Stop = false;
 
+    bool Next = false;
+
     [HideInInspector]
     public bool NoClick = false;
 
@@ -65,6 +67,7 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
+        Space.Connect<DefaultEvent>(Events.NextLine, OnNext);
 
         //events that activate/deactivate the text box
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
@@ -132,6 +135,15 @@ public class DescriptionDisplay : MonoBehaviour
             }
 
             Finished();
+            
+        }
+        else if (Next)
+        {
+            if (isFinished)
+            {
+                Next = false;
+                Finished();
+            }
             
         }
         
@@ -254,11 +266,9 @@ public class DescriptionDisplay : MonoBehaviour
 
     void OnStopSkipping(DefaultEvent eventdata)
     {
-        
         Skipping = false;
         Description.SetSkipping(Skipping);
         
-
     }
 
     void OnSkipOff(DefaultEvent eventdata)
@@ -266,6 +276,10 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
+    void OnNext(DefaultEvent eventdata)
+    {
+        Next = true;
+    }
 
     void OnDebug(DefaultEvent eventdata)
     {
@@ -292,7 +306,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
         Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
         Space.DisConnect<DefaultEvent>(Events.Debug, OnDebug);
-              
+        Space.DisConnect<DefaultEvent>(Events.NextLine, OnNext);
+
         //events that activate/deactivate the text box
         Space.DisConnect<DefaultEvent>(Events.GetPlayerInfo, OnStop);
         Space.DisConnect<DefaultEvent>(Events.GetPlayerInfoFinished, OnNonStop);

@@ -88,7 +88,7 @@ public class DynamicCGAnimator : MonoBehaviour
 
     void SendCommand(CGDetails command)
     {
-        var vis = command.Graphic.GetComponent<SpriteRenderer>();
+        //var vis = command.Graphic.GetComponent<SpriteRenderer>();
 
         var col = Color.white;
         
