@@ -297,6 +297,10 @@
     "Type" : 1
    },
    {
+    "Name" : "SeenTeatime",
+    "Type" : 1
+   },
+   {
     "Name" : "IsaacOpenedUp",
     "Type" : 1
    },
@@ -306,6 +310,10 @@
    },
    {
     "Name" : "Knows Isaac's Tenure",
+    "Type" : 1
+   },
+   {
+    "Name" : "Know Charlotte Jealous",
     "Type" : 1
    }
   ]
