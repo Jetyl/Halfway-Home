@@ -21,6 +21,15 @@ VAR current_room = "unset"
 -> Start
 
 === Start ===
+Making note of the time, I head to Charlotte's room. I would feel bad if I was late.
+Who knows what she would think of me?
+-> KickedOut
+
+=== KickedOut ===
+You bump into Trissa on her way out of the room. She seems to be a bit grumpy at having been "kicked out of her own room", but upon seeing you realizes Charlotte must have done so for your sake.
+-> SmallTalk
+
+=== SmallTalk ===
 Charlotte admits you into her room and invites you to take a seat by the window.
 She has already prepared the tea.
 She has a different line if you were invited here from Exile or Lessons.
