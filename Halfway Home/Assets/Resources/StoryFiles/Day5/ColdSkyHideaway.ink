@@ -233,8 +233,39 @@ I should....
 ===Faulty===
 I should probably let Isaac work through his thoughts on his own.
 [Isaac] "..."
-"Why am I such a screw up..."
-"I feel... broken."
+"such a screw up..."
+"can't live correctly. can't heal correctly."
+"Just... broken."
+"broken. broken. broken."
+"..."
+"they said so too.... that I was broken."
+"Broken cuz I was quiet. Broken cuz I didn't want... and..."
+"....and I don't..."
+"...I don't want."
+"Don't want what they said was wanted."
+"Don't need what they said was needed."
+"don't want to change. @who I am. @to be happy."
+"..."
+"......"
+"... I, uh, spend a lot of time. In my head."
+"I... make stories... in my head."
+"And... I'm happy there."
+"..."
+"You're there. All my friends are."
+"Acting out, uh... stories."
+Isaac's blushing quite a lot at that admission.
+"I... um... don't really... tell people that."
+"s'weird."
+"haven't even told Eduardo... not really."
+[{player_name}] "Why not?"
+[Isaac] "s'embarressing. cuz..."
+"cuz he's in most of them." //isaac burys his head, blushing profusly
+"...."
+"I... do like him."
+"but... the Eduardo in my head... and the one out here are..."
+"...too alike."
+"Eduardo's presense. his constant attention. In my head... I like that."
+"But, out here. I don't."
 Isaac describes his experiences, feeling broken. faulty.
 At the end, you are given a choice to say something, or no.
 +[Say something]

@@ -73,7 +73,7 @@ public class MainMenu : MonoBehaviour
     {
 
         ClearSavePanel.SetActive(false);
-        SaveLoad.Delete();
+        //SaveLoad.Delete();
         Game.current = null;
         LoadLevel();
     }

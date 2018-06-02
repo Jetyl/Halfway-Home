@@ -294,7 +294,7 @@ public class ProgressSystem
     }
 
 
-    public void AddBool (string key, ProgressPoint value)
+    public void AddPoint (string key, ProgressPoint value)
     {
 
         if (Contains(key))
@@ -446,7 +446,11 @@ public class ProgressSystem
             //reset the daily grind
             if (beat.BeatName == "Daily")
             {
-                beat.ResetBeat();
+                foreach(var point in beat.Points)
+                {
+                    DegradeProgress(point.ProgressName);
+                }
+                //beat.ResetBeat();
                 return;
             }
 
@@ -481,12 +485,10 @@ public class Beat
 
         for (int i = 0; i < copy.Points.Count; ++i)
         {
-            string boolName = copy.Points[i].ProgressName;
-            PointTypes type = copy.Points[i].TypeID;
-            ProgressPoint point = new ProgressPoint(boolName, type);
+            ProgressPoint point = new ProgressPoint(copy.Points[i]);
 
             Points.Add(point);
-            progress.AddBool(boolName, point);
+            progress.AddPoint(point.ProgressName, point);
         }
     }
 
@@ -506,7 +508,7 @@ public class Beat
             ProgressPoint point = new ProgressPoint(boolName, type);
 
             Points.Add(point);
-            progress.AddBool(boolName, point);
+            progress.AddPoint(boolName, point);
         }
 
     }

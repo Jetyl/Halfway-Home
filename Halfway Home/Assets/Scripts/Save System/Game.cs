@@ -161,7 +161,7 @@ public class Game
         }
         
 
-        StorySave = copy_.StorySave;
+        //StorySave = copy_.StorySave;
 
         CurrentRoom = copy_.CurrentRoom;
         CurrentTimeBlock = copy_.CurrentTimeBlock;

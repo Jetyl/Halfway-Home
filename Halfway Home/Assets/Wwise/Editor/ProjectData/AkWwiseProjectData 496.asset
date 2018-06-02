@@ -1,0 +1,717 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3e4db0df54bc645bbfb87a53f2e8c4, type: 3}
+  m_Name: AkWwiseProjectData 496
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
+    m_lastTimePsrt1: -2023137110
+    m_lastTimePart2: -1999297829
+    List: []
+  - PhysicalPath: Events\play_sfx_ambient.wwu
+    ParentPhysicalPath: Events\PlaySFX.wwu
+    Guid: '{A85A1477-0869-4B85-B85B-6883C5EA7C89}'
+    m_lastTimePsrt1: -968277779
+    m_lastTimePart2: -1999271075
+    List:
+    - Name: play_sfx_ambient_heartbeat
+      Path: PlaySFX\play_sfx_ambient\play_sfx_ambient_heartbeat
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_ambient
+        ObjectType: 12
+      - ElementName: play_sfx_ambient_heartbeat
+        ObjectType: 3
+      ID: 197627707
+      Guid: 61b20794fef4584db5cb380bca2d2b81
+      maxAttenuation: 0
+  - PhysicalPath: Events\play_sfx_menu.wwu
+    ParentPhysicalPath: Events\PlaySFX.wwu
+    Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
+    m_lastTimePsrt1: -1838600482
+    m_lastTimePart2: -1999268201
+    List:
+    - Name: play_menuexit
+      Path: PlaySFX\play_sfx_menu\play_menuexit
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menuexit
+        ObjectType: 3
+      ID: -1125792909
+      Guid: b5637d528302aa49bd7e7dd5169d1a17
+      maxAttenuation: 0
+    - Name: play_menumouseover
+      Path: PlaySFX\play_sfx_menu\play_menumouseover
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menumouseover
+        ObjectType: 3
+      ID: -286316322
+      Guid: 1325d90f3ad6b04fa5bd9e0d9ec74850
+      maxAttenuation: 0
+    - Name: play_menupause
+      Path: PlaySFX\play_sfx_menu\play_menupause
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menupause
+        ObjectType: 3
+      ID: -698485773
+      Guid: 9bc491bc44365c42bb53559271d437d9
+      maxAttenuation: 0
+    - Name: play_menuunpause
+      Path: PlaySFX\play_sfx_menu\play_menuunpause
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_menuunpause
+        ObjectType: 3
+      ID: -1193233224
+      Guid: f1c8b32eb669524d8097bf63f61c9c4a
+      maxAttenuation: 0
+    - Name: play_textscroll
+      Path: PlaySFX\play_sfx_menu\play_textscroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_menu
+        ObjectType: 12
+      - ElementName: play_textscroll
+        ObjectType: 3
+      ID: 319656260
+      Guid: c2fb1d74e17817469a2d8453c9ddbb3a
+      maxAttenuation: 0
+  - PhysicalPath: Events\PlayMusic.wwu
+    ParentPhysicalPath: 
+    Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
+    m_lastTimePsrt1: 946755339
+    m_lastTimePart2: -1999265206
+    List:
+    - Name: lpf_ambience_fireplace
+      Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: lpf_ambience_fireplace
+        ObjectType: 3
+      ID: -2142427816
+      Guid: 166eaab63ad32d4298aff047ead1a29d
+      maxAttenuation: 0
+    - Name: lpf_music_cafejazz
+      Path: PlayMusic\music_cafejazz\lpf_music_cafejazz
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_cafejazz
+        ObjectType: 4
+      - ElementName: lpf_music_cafejazz
+        ObjectType: 3
+      ID: 1799610860
+      Guid: d44a682d2836dc44ab986b5674d90864
+      maxAttenuation: 0
+    - Name: lpf1k_music_mainmenu
+      Path: PlayMusic\music_mainmenu\lpf1k_music_mainmenu
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_mainmenu
+        ObjectType: 4
+      - ElementName: lpf1k_music_mainmenu
+        ObjectType: 3
+      ID: -921667490
+      Guid: cc6c1527ef91e64a9b7530460bacab21
+      maxAttenuation: 0
+    - Name: lpf4k_music_mainmenu
+      Path: PlayMusic\music_mainmenu\lpf4k_music_mainmenu
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_mainmenu
+        ObjectType: 4
+      - ElementName: lpf4k_music_mainmenu
+        ObjectType: 3
+      ID: -924484113
+      Guid: 9fc79684f3b6c4409151c1286b3a04ef
+      maxAttenuation: 0
+    - Name: lpfOff_ambience_fireplace
+      Path: PlayMusic\intro_ambiences\lpfOff_ambience_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: lpfOff_ambience_fireplace
+        ObjectType: 3
+      ID: 1029258403
+      Guid: 236be159a6e18d4bb00647f6bdd28da4
+      maxAttenuation: 0
+    - Name: lpfOff_music_mainmenu
+      Path: PlayMusic\music_mainmenu\lpfOff_music_mainmenu
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_mainmenu
+        ObjectType: 4
+      - ElementName: lpfOff_music_mainmenu
+        ObjectType: 3
+      ID: -397550955
+      Guid: 192c9a2aab195c4c82e004a15a7685ef
+      maxAttenuation: 0
+    - Name: play_ambience_birds
+      Path: PlayMusic\intro_ambiences\play_ambience_birds
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_birds
+        ObjectType: 3
+      ID: 285561943
+      Guid: 5a6653fbe297ad4e8fecb9dbf2a2c1fa
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace
+      Path: PlayMusic\intro_ambiences\play_ambience_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace
+        ObjectType: 3
+      ID: -1364989386
+      Guid: dd2125434c2c264897b057b5c816a8f4
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_with_lpf
+      Path: PlayMusic\intro_ambiences\play_ambience_fireplace_with_lpf
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_with_lpf
+        ObjectType: 3
+      ID: -310455222
+      Guid: 14ef77cc95f92d46bafba30806d20fbc
+      maxAttenuation: 0
+    - Name: play_music_bardman
+      Path: PlayMusic\play_music_bardman
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_bardman
+        ObjectType: 3
+      ID: -1186671007
+      Guid: 73b0f8eaa4977b4b8fb323861e08fcc6
+      maxAttenuation: 0
+    - Name: play_music_cafejazz
+      Path: PlayMusic\music_cafejazz\play_music_cafejazz
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_cafejazz
+        ObjectType: 4
+      - ElementName: play_music_cafejazz
+        ObjectType: 3
+      ID: 240662438
+      Guid: 61e27cd78824d74caf6dd446908a628f
+      maxAttenuation: 0
+    - Name: play_music_cafejazz_02
+      Path: PlayMusic\music_cafejazz\play_music_cafejazz_02
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_cafejazz
+        ObjectType: 4
+      - ElementName: play_music_cafejazz_02
+        ObjectType: 3
+      ID: -1489365513
+      Guid: 5b9b1da7ee70134fb4a4b7c66c40d196
+      maxAttenuation: 0
+    - Name: play_music_caysonstylesample
+      Path: PlayMusic\play_music_caysonstylesample
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_caysonstylesample
+        ObjectType: 3
+      ID: 1227704222
+      Guid: 55d1aa7bd31b6e49a83c8ae665c9f636
+      maxAttenuation: 0
+    - Name: play_music_creepy_atmo
+      Path: PlayMusic\play_music_creepy_atmo
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_creepy_atmo
+        ObjectType: 3
+      ID: 1372805254
+      Guid: 7f2856d194481c4cbca7af317221de2d
+      maxAttenuation: 0
+    - Name: play_music_creepy_atmo_02
+      Path: PlayMusic\play_music_creepy_atmo_02
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_creepy_atmo_02
+        ObjectType: 3
+      ID: -1920353257
+      Guid: a03f116fad8e934c8709e1719973e777
+      maxAttenuation: 0
+    - Name: play_music_fakeit
+      Path: PlayMusic\play_music_fakeit
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_fakeit
+        ObjectType: 3
+      ID: -1489559458
+      Guid: 62c965c94bfb87468fa869995a11193f
+      maxAttenuation: 0
+    - Name: play_music_happy
+      Path: PlayMusic\play_music_happy
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_happy
+        ObjectType: 3
+      ID: 1020080944
+      Guid: 48c78ac111e7c84fbe2309d0afeb3655
+      maxAttenuation: 0
+    - Name: play_music_happy_nointro
+      Path: PlayMusic\play_music_happy_nointro
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_happy_nointro
+        ObjectType: 3
+      ID: -2138575148
+      Guid: 14af96cacfa4ea4c9dce267267d4749e
+      maxAttenuation: 0
+    - Name: play_music_mainmenu
+      Path: PlayMusic\music_mainmenu\play_music_mainmenu
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_mainmenu
+        ObjectType: 4
+      - ElementName: play_music_mainmenu
+        ObjectType: 3
+      ID: 1566693136
+      Guid: 3f564acfa594844ebc547237209990b7
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main
+      Path: PlayMusic\Play_music_placeholder_main
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main
+        ObjectType: 3
+      ID: 1259498987
+      Guid: 1ff5051dcc019a469152b15e852d3c87
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_fadein
+      Path: PlayMusic\Play_music_placeholder_main_fadein
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_fadein
+        ObjectType: 3
+      ID: -353786287
+      Guid: e7adb4ccaac8594a8e1e3a7c32daf259
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_with_fade
+      Path: PlayMusic\Play_music_placeholder_main_with_fade
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_with_fade
+        ObjectType: 3
+      ID: 829505847
+      Guid: 3e12ded02ba0fe45824530c7e0780649
+      maxAttenuation: 0
+    - Name: Play_music_placeholder_main_with_fade_and_fireplace
+      Path: PlayMusic\Play_music_placeholder_main_with_fade_and_fireplace
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Play_music_placeholder_main_with_fade_and_fireplace
+        ObjectType: 3
+      ID: 222627597
+      Guid: d3d12a15feb4e54b8e5e781f322d4079
+      maxAttenuation: 0
+    - Name: play_music_tension
+      Path: PlayMusic\music_tension\play_music_tension
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension
+        ObjectType: 3
+      ID: 1712470628
+      Guid: 51065b63cb4026488efba84713accad8
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_01
+      Path: PlayMusic\music_tension\play_music_tension_intro_01
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_01
+        ObjectType: 3
+      ID: 1402380571
+      Guid: 70c16ea1a792a24dae76bc548844626e
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_02
+      Path: PlayMusic\music_tension\play_music_tension_intro_02
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_02
+        ObjectType: 3
+      ID: 1402380568
+      Guid: 05cd33e0f3243642a773590afef23bbb
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_03
+      Path: PlayMusic\music_tension\play_music_tension_intro_03
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_03
+        ObjectType: 3
+      ID: 1402380569
+      Guid: 2ff433ce0066df4e8f6f0d05ef146bb7
+      maxAttenuation: 0
+    - Name: play_music_tension_intro_04
+      Path: PlayMusic\music_tension\play_music_tension_intro_04
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_intro_04
+        ObjectType: 3
+      ID: 1402380574
+      Guid: a64afe9fa8d0bd4c9f4820c8bbb1c4b3
+      maxAttenuation: 0
+    - Name: play_music_tension_stem_03
+      Path: PlayMusic\music_tension\play_music_tension_stem_03
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_stem_03
+        ObjectType: 3
+      ID: 1053457280
+      Guid: dd512826011bb542b607670166ec5262
+      maxAttenuation: 0
+    - Name: play_music_tension_stem_04
+      Path: PlayMusic\music_tension\play_music_tension_stem_04
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_stem_04
+        ObjectType: 3
+      ID: 1053457287
+      Guid: af962d906b65f742b298f281496fdcc6
+      maxAttenuation: 0
+    - Name: play_music_tension_stem_05
+      Path: PlayMusic\music_tension\play_music_tension_stem_05
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_stem_05
+        ObjectType: 3
+      ID: 1053457286
+      Guid: 036aebfa8e98714d81464911e2f29e32
+      maxAttenuation: 0
+    - Name: play_music_tension_stem_06
+      Path: PlayMusic\music_tension\play_music_tension_stem_06
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_stem_06
+        ObjectType: 3
+      ID: 1053457285
+      Guid: 3d188f2da8f62840a6444f842c4c8354
+      maxAttenuation: 0
+    - Name: play_music_tension_stem_07
+      Path: PlayMusic\music_tension\play_music_tension_stem_07
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: play_music_tension_stem_07
+        ObjectType: 3
+      ID: 1053457284
+      Guid: 3e299f376c0e1340963d0b5dd80cec22
+      maxAttenuation: 0
+    - Name: Stop_All
+      Path: PlayMusic\Stop_All
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: Stop_All
+        ObjectType: 3
+      ID: 452547817
+      Guid: 112021dd1518b24197dcbbbf570d32e5
+      maxAttenuation: 0
+    - Name: stop_ambience_all
+      Path: PlayMusic\intro_ambiences\stop_ambience_all
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: stop_ambience_all
+        ObjectType: 3
+      ID: 1720799084
+      Guid: 562522359fc02b4f879996863f957830
+      maxAttenuation: 0
+    - Name: stop_music_fakeit
+      Path: PlayMusic\stop_music_fakeit
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: stop_music_fakeit
+        ObjectType: 3
+      ID: -229842880
+      Guid: 3898f2bb8cd5bc4fb85ede37fc74e27b
+      maxAttenuation: 0
+    - Name: stop_music_mainmenu
+      Path: PlayMusic\music_mainmenu\stop_music_mainmenu
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_mainmenu
+        ObjectType: 4
+      - ElementName: stop_music_mainmenu
+        ObjectType: 3
+      ID: -1142412870
+      Guid: eeb64f7ffa1c68468f73d43af818d1ee
+      maxAttenuation: 0
+    - Name: stop_music_tension_intro_02
+      Path: PlayMusic\music_tension\stop_music_tension_intro_02
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_tension
+        ObjectType: 4
+      - ElementName: stop_music_tension_intro_02
+        ObjectType: 3
+      ID: -1411172702
+      Guid: 79eda741edd88e4ca5fd777eedcfc6c8
+      maxAttenuation: 0
+    - Name: play_sfx_human_ghostwhisper
+      Path: PlaySFX\play_sfx_human_ghostwhisper
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_human_ghostwhisper
+        ObjectType: 3
+      ID: 2124921401
+      Guid: 47f994b770f0314195f234839929104c
+      maxAttenuation: 0
+    - Name: play_sfx_human_knock
+      Path: PlaySFX\play_sfx_human_knock
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_human_knock
+        ObjectType: 3
+      ID: -1975467304
+      Guid: 09c4e180a80cf9439e010eef78ce1bbe
+      maxAttenuation: 0
+    - Name: play_sfx_object_car_away
+      Path: PlaySFX\play_sfx_object_car_away
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_object_car_away
+        ObjectType: 3
+      ID: 1700209709
+      Guid: 37bb7d809445874bbd30929a0124d776
+      maxAttenuation: 0
+  - PhysicalPath: Events\PlaySFX.wwu
+    ParentPhysicalPath: 
+    Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
+    m_lastTimePsrt1: -968287805
+    m_lastTimePart2: -1999271075
+    List:
+    - Name: play_sfx_human_footsteps_approaching
+      Path: PlaySFX\play_sfx_human_footsteps_approaching
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: play_sfx_human_footsteps_approaching
+        ObjectType: 3
+      ID: -1641533016
+      Guid: 8ce9bb6b7092b34383ca23591e2b26fc
+      maxAttenuation: 0
+  - PhysicalPath: Events\TestEvents.wwu
+    ParentPhysicalPath: 
+    Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
+    m_lastTimePsrt1: -968277779
+    m_lastTimePart2: -1999271075
+    List:
+    - Name: empty_event
+      Path: TestEvents\empty_event
+      PathAndIcons:
+      - ElementName: TestEvents
+        ObjectType: 12
+      - ElementName: empty_event
+        ObjectType: 3
+      ID: -257765375
+      Guid: f3c62f70a584064db96304fa999b2fff
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
+    m_lastTimePsrt1: 2069216550
+    m_lastTimePart2: -1999264555
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
+    m_lastTimePsrt1: -1506133689
+    m_lastTimePart2: -1999302392
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
+    m_lastTimePsrt1: -1506118645
+    m_lastTimePart2: -1999302392
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
+    m_lastTimePsrt1: 946861966
+    m_lastTimePart2: -1999265206
+    List:
+    - Name: HalfwaySoundbank
+      Path: Default Work Unit\HalfwaySoundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: HalfwaySoundbank
+        ObjectType: 7
+      ID: -636833750
+      Guid: ddfd17346b0a9f4d8ae27ee68e28303b
+  - PhysicalPath: SoundBanks\TestBanks.wwu
+    ParentPhysicalPath: 
+    Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
+    m_lastTimePsrt1: -833700929
+    m_lastTimePart2: -1999271075
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
+    m_lastTimePsrt1: 2069146367
+    m_lastTimePart2: -1999264555
+    List:
+    - Name: Effects_Slider
+      Path: Default Work Unit\Effects_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Effects_Slider
+        ObjectType: 13
+      ID: -1408592509
+      Guid: 4fd22bb2264af14b914c7f40bd24d5d9
+    - Name: mainMenuMouseHover
+      Path: Default Work Unit\mainMenuMouseHover
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mainMenuMouseHover
+        ObjectType: 13
+      ID: -1616075682
+      Guid: cf02f5d59ad29e4f8d947837a548a654
+    - Name: Master_Slider
+      Path: Default Work Unit\Master_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master_Slider
+        ObjectType: 13
+      ID: -1808640863
+      Guid: 9be02610048efe4aa34ac0a88c50bea7
+    - Name: Menu_Slider
+      Path: Default Work Unit\Menu_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu_Slider
+        ObjectType: 13
+      ID: -1392929572
+      Guid: 793ea6e9e4c4484c9091428a37d6d4df
+    - Name: Music_Slider
+      Path: Default Work Unit\Music_Slider
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Slider
+        ObjectType: 13
+      ID: 1127857866
+      Guid: 290b0f2bebb61c499ccbe466d41d28a7
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
+    m_lastTimePsrt1: -1506108622
+    m_lastTimePart2: -1999302392
+    List: []
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4
