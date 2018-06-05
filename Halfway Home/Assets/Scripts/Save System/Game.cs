@@ -44,9 +44,15 @@ public class Game
     [SerializeField]
     private List<TimeStamp> SavedSceneList;
 
+    public Dictionary<string, string> ScenePath;
+
+    [SerializeField]
+    private List<SceneData> SavedPathData;
+
     public bool InCurrentStory;
 
-    public string CurrentStory;
+    [SerializeField]
+    private string CurrentStory;
 
     public int CurrentNode;
 
@@ -94,6 +100,7 @@ public class Game
         Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
+        ScenePath = new Dictionary<string, string>();
 
         var schedulefiller = TextParser.ToJson("Characters");
 
@@ -134,7 +141,8 @@ public class Game
         Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
-        
+        ScenePath = new Dictionary<string, string>();
+
         foreach (CharacterSchedule character in copy_.Schedule)
         {
             var Aday = new List<DaySchedule>();
@@ -165,7 +173,13 @@ public class Game
         {
             CastCall.Add(new CharacterIntermission(copy_.CastCall[i]));
         }
-        
+
+        foreach (string scene in copy_.ScenePath.Keys)
+        {
+            ScenePath.Add(scene, (copy_.ScenePath[scene]));
+
+        }
+
 
         //StorySave = copy_.StorySave;
 
@@ -219,6 +233,14 @@ public class Game
             SavedSceneList.Add(new TimeStamp(SceneList[scene]));
         }
 
+        SavedPathData = new List<SceneData>();
+
+        foreach (string scene in ScenePath.Keys)
+        {
+            SavedPathData.Add(new SceneData(scene, ScenePath[scene]));
+
+        }
+
     }
 
 
@@ -233,6 +255,12 @@ public class Game
         for (int i = 0; i < SavedSceneList.Count; ++i)
         {
             SceneList.Add(SavedSceneList[i].Scene, SavedSceneList[i]);
+        }
+
+        ScenePath = new Dictionary<string, string>();
+        for(int j = 0; j < SavedPathData.Count; ++j)
+        {
+            ScenePath.Add(SavedPathData[j].name, SavedPathData[j].path);
         }
 
     }
@@ -376,6 +404,18 @@ public class Game
         return dif;
 
     }
+
+    public void SetCurrentStory(string name, string path)
+    {
+        if (!ScenePath.ContainsKey(name))
+            ScenePath.Add(name, path);
+        CurrentStory = path;
+    }
+
+    public string GetCurrentStory()
+    {
+        return CurrentStory;
+    }
     
 }
 [Serializable]
@@ -473,4 +513,18 @@ public class CharacterSchedule
 public class DaySchedule
 {
     public List<Room> Schedule = new List<Room>();
+}
+
+[Serializable]
+public class SceneData
+{
+    public string name;
+
+    public string path;
+
+    public SceneData(string name_, string path_)
+    {
+        name = name_;
+        path = path_;
+    }
 }
