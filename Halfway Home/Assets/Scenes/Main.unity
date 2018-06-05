@@ -5898,7 +5898,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -56793,6 +56793,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55191ba47f286747bd570b2c6c347c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TooltipData:
+  - Key: awareness
+    Strings:
+    - Key: good
+      Text: <color=#59FD64FF>You have ample <color=#2075DFFF>Awareness.
+      Color: {r: 0, g: 0.91724133, b: 1, a: 1}
+    - Key: poor
+      Text: <color=#FD5959FF>You lack <color=#2075DFFF>Awareness.
+      Color: {r: 0.9852941, g: 0.49264705, b: 0.49264705, a: 1}
+  - Key: grace
+    Strings:
+    - Key: good
+      Text: <color=#59FD64FF>You deftly apply what you know about <color=#DE9E20FF>Grace.
+      Color: {r: 1, g: 0.9724138, b: 0, a: 1}
+    - Key: poor
+      Text: <color=#FD5959FF>You have more to learn about <color=#DE9E20FF>Grace.
+      Color: {r: 0.9843137, g: 0.49411765, b: 0.49411765, a: 1}
+  - Key: expression
+    Strings:
+    - Key: good
+      Text: <color=#59FD64FF>You have proven your newfound powers of <color=#C33B61FF>Expression.
+      Color: {r: 1, g: 0, b: 0.84827566, a: 1}
+    - Key: poor
+      Text: <color=#FD5959FF>You still have trouble with <color=#C33B61FF>Expression.
+      Color: {r: 0.9843137, g: 0.49411765, b: 0.49411765, a: 1}
+  - Key: depression
+    Strings:
+    - Key: high
+      Text: <color=#A3A3A3FF> Your high depression <color=#A3A3A3FF>prevents you from
+        supressing the Voices.
+      Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   TooltipContent: {fileID: 1367268360}
 --- !u!1 &1599900663
 GameObject:
