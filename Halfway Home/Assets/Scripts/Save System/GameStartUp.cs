@@ -50,12 +50,7 @@ public class GameStartUp : MonoBehaviour
         {
             SaveLoad.Delete();
             ReaderReference.Clear();
-
-            SaveLoad.Load(); //loads the game file
-
-            if (SaveLoad.GetSave(0) != null) //if a save exists, set that to the main game
-                Game.current = SaveLoad.GetSave(0);
-
+            
             TestingAndDebugging();
             return;
         }
@@ -68,7 +63,7 @@ public class GameStartUp : MonoBehaviour
                 SaveLoad.Delete();
             }
         }
-
+        print(Game.current);
         if (Game.current == null) //for new games
         {
             ReaderReference.Clear();
@@ -76,9 +71,11 @@ public class GameStartUp : MonoBehaviour
             SetStartValues();
             Game.current.Progress.SetValue<bool>("Tutorial", true);
             StartCoroutine(DelayStart(2));
+            //print("new");
         }
         else
         {
+            //print("load");
             StartCoroutine(DelayStart(2));
         }
 

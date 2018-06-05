@@ -150,12 +150,12 @@ public class AutoType : MonoBehaviour
                     {
                         letterPause = (UpdateSpeed[Text.maxVisibleCharacters]);
 
-                        //print("Delay " + letterPause);
+                        print("Delay " + letterPause);
                     }
                     else
                     {
                         letterPause = 1 / (UpdateSpeed[Text.maxVisibleCharacters] * PauseSpeedMultiplier);
-                        //print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
+                        print("on " + letterPause + "with Speed: " + UpdateSpeed[Text.maxVisibleCharacters]);
                     }
                 }
 

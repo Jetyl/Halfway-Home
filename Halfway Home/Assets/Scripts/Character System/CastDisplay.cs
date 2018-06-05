@@ -77,7 +77,7 @@ public class CastDisplay : MonoBehaviour
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
-        print("Hello!!!!" + Game.current.CastCall);
+
         foreach (var actor in Game.current.CastCall)
         {
             foreach (var person in CastList)
