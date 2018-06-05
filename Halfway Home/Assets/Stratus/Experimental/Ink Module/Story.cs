@@ -20,34 +20,25 @@ namespace Stratus
         // Fields
         //--------------------------------------------------------------------/
         /// <summary>
-        /// What knot in the conversation to start this story on, when loaded
+        /// The name of the story file
         /// </summary>
-        public string startingKnot = string.Empty;
-        /// <summary>
-        /// The currently saved state of the story
-        /// </summary>
-        [SerializeField]
-        public string savedState;
-        /// <summary>
-        /// How many times this story has been started
-        /// </summary>
-        public int timesRead = 0;
+        public string fileName;
         /// <summary>
         /// The path for the story file used
         /// </summary>
         public string filePath;
         /// <summary>
-        /// Whether this story has been saved previously
+        /// The currently saved state of the story
         /// </summary>
-        public bool isSaved => string.IsNullOrEmpty(savedState);
+        public string savedState;
         /// <summary>
-        /// The runtime data structure used to drive the story
+        /// What knot in the conversation to start this story on, when loaded
         /// </summary>
-        public Ink.Runtime.Story runtime { get; set; }
+        public string startingKnot = string.Empty;
         /// <summary>
-        /// The current knot the story is on
+        /// How many times this story has been started
         /// </summary>
-        public string latestKnot { get; set; }
+        public int timesRead = 0;
         /// <summary>
         /// Whether to the story has started
         /// </summary>
@@ -61,9 +52,27 @@ namespace Stratus
         /// </summary>
         public TextAsset file { get; set; }
         /// <summary>
-        /// The name of the story file
+        /// Whether this story has been saved previously
         /// </summary>
-        public string name => file.name;
+        public bool isSaved => string.IsNullOrEmpty(savedState);
+        /// <summary>
+        /// The runtime data structure used to drive the story
+        /// </summary>
+        public Ink.Runtime.Story runtime { get; set; }
+        /// <summary>
+        /// The current knot the story is on
+        /// </summary>
+        public string latestKnot { get; set; }
+
+        //--------------------------------------------------------------------/
+        // CTOR
+        //--------------------------------------------------------------------/
+        public Story(TextAsset file)
+        {
+          this.fileName = file.name;
+          this.file = file;
+          //this.runtime = new Ink.Runtime.Story(file.text);
+        }
 
         //--------------------------------------------------------------------/
         // Definitions
@@ -123,7 +132,7 @@ namespace Stratus
             }
           }
         }
-
+        
         //--------------------------------------------------------------------/
         // Events
         //--------------------------------------------------------------------/
