@@ -102,7 +102,11 @@ namespace HalfwayHome
       parser.AddPattern("UpdateTask", updateTask, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUpdateObjectives);
 
       // skipline
-      parser.AddPattern("Skip", RegexParser.Presets.ComposeSpecificAssignment("Skip", "why christian"), RegexParser.Target.Tag, RegexParser.Scope.Group, OnSkip);
+      string skipLine = RegexParser.Presets.ComposeSpecificAssignment("skip", "this");
+      parser.AddPattern("Skip", skipLine, RegexParser.Target.Tag, RegexParser.Scope.Default, OnSkip);
+
+      string tooltipText = RegexParser.Presets.ComposeBinaryOperation("tooltip", "type", "^");
+      parser.AddPattern("Tooltip", tooltipText, RegexParser.Target.Tag, RegexParser.Scope.Group, OnTooltip);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -179,6 +183,58 @@ namespace HalfwayHome
 
     }
 
+    void OnTooltip(Parse parse)
+    {
+      if(parse.firstMatch.ContainsKey("tooltip"))
+      {
+        string tooltip;
+        string type;
+        parse.firstMatch.TryGetValue("tooltip", out tooltip);
+        parse.firstMatch.TryGetValue("type", out type);
+
+        TextTooltipBehavior.TooltipLineEvent tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.black, "");
+
+        if (tooltip.Trim().ToLower() == "awareness")
+        {
+          if(type.Trim().ToLower() == "good")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.cyan, "<color=#59FD64FF>You have ample <color=#2075DFFF>Awareness.");
+          }
+          else if(type.Trim().ToLower() == "poor")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.cyan, "<color=#FD5959FF>You lack <color=#2075DFFF>Awareness.");
+          }
+        }
+        else if (tooltip.Trim().ToLower() == "grace")
+        {
+          if (type.Trim().ToLower() == "good")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.yellow, "<color=#59FD64FF>You deftly apply what you know about <color=#DE9E20FF>Grace.");
+          }
+          else if (type.Trim().ToLower() == "poor")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.yellow, "<color=#FD5959FF>You have more to learn about <color=#DE9E20FF>Grace.");
+          }
+        }
+        else if (tooltip.Trim().ToLower() == "expression")
+        {
+          if (type.Trim().ToLower() == "good")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.magenta, "<color=#59FD64FF>You have proven your newfound powers of <color=#C33B61FF>Expression.");
+          }
+          else if (type.Trim().ToLower() == "poor")
+          {
+            tooltipEvent = new TextTooltipBehavior.TooltipLineEvent(Color.magenta, "<color=#FD5959FF>You still have trouble with <color=#C33B61FF>Expression.");
+          }
+        }
+        else
+        {
+
+        }
+
+        Stratus.Scene.Dispatch(tooltipEvent);
+      }
+    }
 
     void OnChangeTime(Parse parse)
     {

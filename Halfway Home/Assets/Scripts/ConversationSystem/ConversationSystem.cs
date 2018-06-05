@@ -703,7 +703,7 @@ public class ConvInk : ConvNode
     public override void CallAction()
     {
         Game.current.InCurrentStory = true;
-        Game.current.CurrentStory = story;
+        Game.current.SetCurrentStory(InkData.name, story);
         Game.current.CurrentNode = Destination;
         Space.DispatchEvent(Events.NewStory, new HalfwayHome.StoryEvent(InkData));
 
@@ -728,7 +728,7 @@ public class ConvLoad : ConvNode
         if(Game.current.InCurrentStory)
         {
             Destination = Game.current.CurrentNode;
-            var InkData = Resources.Load(Game.current.CurrentStory) as TextAsset;
+            var InkData = Resources.Load(Game.current.GetCurrentStory()) as TextAsset;
             Space.DispatchEvent(Events.NewStory, new HalfwayHome.StoryEvent(InkData, false));
         }
         else

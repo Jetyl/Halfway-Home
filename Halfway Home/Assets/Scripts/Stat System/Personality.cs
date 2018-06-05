@@ -27,15 +27,20 @@ public class Personality
         Grace,
         Expression
     }
-
+    
     Dictionary<Wellbeing, int> WellbeingValues;
-
+    [SerializeField]
+    List<int> SavedWellbeing;    
     Dictionary<Social, int> SocialValues;
-    
+    [SerializeField]
+    List<int> SavedSocial;
     Dictionary<Social, int> BasicSocialStars;
+    [SerializeField]
+    List<int> SavedBaseStars;
     Dictionary<Social, int> BonusSocialStars;
-    
-    
+    [SerializeField]
+    List<int> SavedBonusStars;
+
     int StressThreshold1 = 20; //value of stress, where it will begin decrimetting social stats by 1
     int StressThreshold2 = 50; //value of stress, where it will begin decrimetting social stats by 2
     int StressThreshold3 = 80; //value of stress, where it will begin decrimetting social stats by 3
@@ -265,6 +270,53 @@ public class Personality
         if (WellbeingValues[stat] < 0)
             WellbeingValues[stat] = 0;
         
+    }
+
+    public void Save()
+    {
+        SavedWellbeing = new List<int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
+        {
+            SavedWellbeing.Add(WellbeingValues[(Wellbeing)i]);
+
+        }
+
+        SavedSocial = new List<int>();
+        SavedBaseStars = new List<int>();
+        SavedBonusStars = new List<int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
+        {
+            SavedSocial.Add(SocialValues[(Social)i]);
+            SavedBaseStars.Add(BasicSocialStars[(Social)i]);
+            SavedBonusStars.Add(BonusSocialStars[(Social)i]);
+            
+
+        }
+    }
+
+    public void Load()
+    {
+        WellbeingValues = new Dictionary<Wellbeing, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Wellbeing)).Length; ++i)
+        {
+            WellbeingValues.Add((Wellbeing)i, SavedWellbeing[i]);
+
+        }
+
+        SocialValues = new Dictionary<Social, int>();
+        BasicSocialStars = new Dictionary<Social, int>();
+        BonusSocialStars = new Dictionary<Social, int>();
+
+        for (var i = 0; i < Enum.GetValues(typeof(Social)).Length; ++i)
+        {
+            SocialValues.Add((Social)i, SavedSocial[i]);
+            BasicSocialStars.Add((Social)i, SavedBaseStars[i]);
+            BonusSocialStars.Add((Social)i, SavedBonusStars[i]);
+
+        }
     }
 
 }

@@ -161,6 +161,14 @@
     "Type" : 2
    },
    {
+    "Name" : "CharlotteDoorClosed",
+    "Type" : 1
+   },
+   {
+    "Name" : "Manual Charlotte Tooltip",
+    "Type" : 4
+   },
+   {
     "Name" : "Manuel Kitchen Turn Off",
     "Type" : 1
    },
@@ -227,16 +235,8 @@
     "Type" : 1
    },
    {
-    "Name" : "ReadyForTea",
-    "Type" : 1
-   },
-   {
-    "Name" : "ReadyForInstruction",
-    "Type" : 1
-   },
-   {
     "Name" : "CompletedEmpathy",
-    "Type" : 2
+    "Type" : 1
    },
    {
     "Name" : "CompletedLessons",
@@ -275,6 +275,10 @@
   "Point"      : [
    {
     "Name" : "ReadyForTea",
+    "Type" : 2
+   },
+   {
+    "Name" : "ReadyForInstruction",
     "Type" : 2
    }
   ]

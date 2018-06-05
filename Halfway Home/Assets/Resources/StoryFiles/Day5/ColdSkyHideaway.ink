@@ -266,11 +266,19 @@ Isaac's blushing quite a lot at that admission.
 "...too alike."
 "Eduardo's presense. his constant attention. In my head... I like that."
 "But, out here. I don't."
-Isaac describes his experiences, feeling broken. faulty.
-At the end, you are given a choice to say something, or no.
-+[Say something]
+"He's around me all the time... @Talking all the time."
+"He showers me with affection. It was all I wanted. But..."
+"Now... that I have it... I can't stand it..."
+"...."
+"...I really am a broken human being. huh?" //Isaac looks up, smiling, but crying
++[No, you are not]
+	[{player_name}] "No, Isaac. You are not broken."
 	->HelpfulListener
-+[Naw fam]
++[No, you aren't]
+	[{player_name}] "No, Isaac. You aren't broken."
+	->HelpfulListener
++[Nah Fam]
+	[{player_name}] "Nah Fam, You ain't broken."
 	->HelpfulListener
 
 === GivenUp ===
@@ -285,9 +293,20 @@ Oh well.
 ->END
 
 === HelpfulListener ===
-I help Isaac up off the ground. //player has finished helping his issues
-[Isaac] "I'mma talk to Eduardo about... all this sometime soon."
+[Isaac] "..." //Isaac blushes
+"...what."
+[{player_name}] "Isaac, you are a wonderful person, and you deserve to be happy."
+"and eveything your feeling, just because I or, Eduardo, or anybody can't fully understand it, doesn't mean its not valid."
+"And if you're not happy with Isaac, you gotta tell him, man. people ain't psychic, Eduardo especially."
+[Isaac] "..."
+"t-thanks."
+"and... thanks. for, uh, letting me ramble."
+[{player_name}] "No Problem Isaac."
+I help Isaac up off the ground. #background = gardens #Isaac = calm
+[Isaac] "Oh, and, um..."
+"I am gunna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
+Isaac then quickly.
 ~SetValue("IsaacOpenedUp", true)
 ->END
 

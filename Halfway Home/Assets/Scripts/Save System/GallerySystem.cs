@@ -6,7 +6,7 @@ using LitJson;
 [System.Serializable]
 public class GallerySystem
 {
-
+    [SerializeField]
     List<ImageData> GalleryData;
     
     public GallerySystem()
@@ -76,6 +76,7 @@ public class ImageData
 {
     public bool unlocked;
     //public Sprite image;
+    [SerializeField]
     string slug;
 
     public string Caption;

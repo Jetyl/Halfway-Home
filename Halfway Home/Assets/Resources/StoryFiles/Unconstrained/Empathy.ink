@@ -197,13 +197,13 @@ Charlotte looks at me expectantly.
 Charlotte sighs. # Charlotte = Sad
 [Charlotte] "My mother once told me the same thing, you know."
 "Heavens, it's embarrassing to admit the truth: I've been... less than courteous towards her... at times."
-Charlotte recoils as if her own words had stung her as she uttered them.
+Charlotte recoils as if stung by her own words.
 "To make matters worse, she has never said an unkind word to me... she has never reciprocated the unjust spite I have levied against her."
-"I'm jealous of her, {player_name}. She may have a different sort of grace, but hers is so fluid and natural. She is far better at any of this than I ever will be, no matter how hard I try."
+"I'm jealous of her, {player_name}. She may have a different sort of grace, but hers is so fluid and natural. She is far better at any of this than I ever will be, no matter how hard I try." {SetValue("Know Charlotte Jealous", true)}
 "She doesn't understand how valuable her gift is! To be so caring. To be so empathetic. She has never had to work for such qualities as I have!" # Charlotte = Angry
 {grace>2:
-[{player_name}] "Have you spoken with her about this?"
--else: [{player_name}] "Wow. Uh... maybe try talking to her or something?"
+[{player_name}] "Have you spoken with her about this?" # Grace ^ Good
+-else: [{player_name}] "Wow. Uh... maybe try talking to her or something?" # Grace ^ Poor
 }
 [Charlotte] "Psh. Oh, I'm certain she would understand. She would be downright <i>sympathetic</i>, I expect."
 "It would only exacerbate things, my friend. I couldn't bear the thought of her pitying me like that." # Charlotte = Sad
@@ -220,8 +220,11 @@ Charlotte recoils as if her own words had stung her as she uttered them.
 "Regrettably, my great grandfather gave his life in the war a few years later. Blackwell Asylum atrophied without his guidance."
 "It became a cruel place for the discarded. I fear it was not longer a place of medicine and hospice, but something far darker."
 "When my great aunt Viola died, it was a wake-up call for my grandparents. They shut down Blackwell and vowed only to reopen it when they were prepared to run it properly and the necessary restitutions had been made."
-"Blackwell did indeed reopen a decade later as Blackwell Psychiatric Hospital. It is, thankfully, a very different sort of place, where care for its patients is paramount, to which I'm sure you can attest."
-"My family is very touchy about this legacy. When I confronted them about my own condition, they refused to allow me to go to Blackwell. They worried it would 'reopen old wounds'." # Charlotte = Angry
+"Blackwell did indeed reopen a decade later as Blackwell Psychiatric Hospital. It is, thankfully, a very different sort of place, where care for its patients is paramount."
+I might not like the place, but Blackwell never abused anyone that I saw.
+{-awareness>2:Looking back on it, I think what I really hated about Blackwell was who I was while I was there.}
+"My family is very touchy about this legacy. When I confronted them about my own condition, they refused to allow me to go to Blackwell.
+They worried it would 'reopen old wounds'." # Charlotte = Angry
 "So they sent me here to Sunflower House. If you ask me, they are simply delaying the inevitable. But I have honored their wishes thus far."
 "Thanks for taking such an interest, {player_name}!." # Charlotte = Happy
 {grace>2:
@@ -253,7 +256,7 @@ Charlotte rises and takes a step toward the door before turning back to me.
 	[{player_name}] "Sorry, while ordinarily I would never turn down an invitation for free food, I've got other obligations."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
-I should probably head out as well. {SetValue("ReadyForTea", true)}
+I should probably head out as well. {SetValue("ReadyForTea", 2)}
 -> END
 
 === Instruction ===
@@ -263,10 +266,10 @@ I should probably head out as well. {SetValue("ReadyForTea", true)}
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at 2pm?"
 	"I usually take tea at 3, but I shall make an exception so that we have some uninterrupted time."
-	[{player_name}] "2pm tomorrow. Got it." {SetValue("ReadyForInstruction", true)}
+	[{player_name}] "2pm tomorrow. Got it." {SetValue("ReadyForInstruction", 2)}
 *[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
-	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}." {SetValue("ReadyForInstruction", false)}
+	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}." {SetValue("ReadyForInstruction", 2)}
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
 Man, Charlotte is seriously living in a different century from anyone I've ever met.
 I should probably head out as well.

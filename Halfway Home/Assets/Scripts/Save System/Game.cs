@@ -16,412 +16,515 @@ using Stratus.Modules.InkModule;
 public class Game
 {
 
-  public static Game current { get; set; }
+    public static Game current { get; set; }
 
-  public string PlayerName;
+    public string PlayerName;
 
-  public Room CurrentRoom;
+    public Room CurrentRoom;
 
-  public int Day;
+    public int Day;
 
-  public int Hour;
+    public int Hour;
 
-  private int CurrentTimeBlock;
-  private bool DrainEnergy;
+    [SerializeField]
+    private int CurrentTimeBlock;
+    [SerializeField]
+    private bool DrainEnergy;
 
-  public ProgressSystem Progress;
-  public GallerySystem Memory;
-  public Personality Self;
+    public ProgressSystem Progress;
+    public GallerySystem Memory;
+    public Personality Self;
 
-  //character name, day of week, the location that hour
-  private Dictionary<string, List<List<Room>>> Schedule;
+    //character name, day of week, the location that hour
+    [SerializeField]
+    private List<CharacterSchedule> Schedule;
 
-  private Dictionary<string, TimeStamp> SceneList;
+    private Dictionary<string, TimeStamp> SceneList;
 
-  public bool InCurrentStory;
+    [SerializeField]
+    private List<TimeStamp> SavedSceneList;
 
-  public string CurrentStory;
+    public Dictionary<string, string> ScenePath;
 
-  public int CurrentNode;
+    [SerializeField]
+    private List<SceneData> SavedPathData;
 
-  public string CurrentBackdrop;
-  public string CurrentCG;
-  public List<string> CGCalls = new List<string>();
+    public bool InCurrentStory;
 
-  public string SavedInk;
+    [SerializeField]
+    private string CurrentStory;
 
-  public string CurrentTrack = "";
-  public string CurrentAmbience = "";
+    public int CurrentNode;
 
-  public List<CharacterIntermission> CastCall;
+    public string CurrentBackdrop;
+    public string CurrentCG;
+    public List<string> CGCalls = new List<string>();
 
-  public string CurrentHistory = "";
-  public string CurrentSpeaker = "";
+    public string SavedInk;
 
-  public DateTime SaveStamp;
+    public string CurrentTrack = "";
+    public string CurrentAmbience = "";
 
-  public StorySave StorySave = new StorySave();
+    public List<CharacterIntermission> CastCall;
+
+    public string CurrentHistory = "";
+    public string CurrentSpeaker = "";
+    
+    public DateTime SaveStamp;
+
+    [SerializeField]
+    private long SavedDate;
+    
+
+    public StorySave StorySave = new StorySave();
 
 
-  public Game()
-  {
-
-    Day = 0;
-    Hour = 0;
-    PlayerName = "Sam";
-    CurrentRoom = Room.YourRoom;
-    Progress = new ProgressSystem();
-    Self = new Personality();
-    Memory = new GallerySystem();
-
-    Progress.SetValue("MasterVolume", 1.0f);
-    Progress.SetValue("BackgroundVolume", 1.0f);
-    Progress.SetValue("SFXVolume", 1.0f);
-    Progress.SetValue("TextSpeed", 1.0f);
-    Progress.SetValue("week", 1);
-    Progress.SetValue("Depression Time Dilation", true);
-
-    Schedule = new Dictionary<string, List<List<Room>>>();
-    SceneList = new Dictionary<string, TimeStamp>();
-    CastCall = new List<CharacterIntermission>();
-
-    var schedulefiller = TextParser.ToJson("Characters");
-
-    foreach (JsonData character in schedulefiller)
+    public Game()
     {
-      var Aday = new List<List<Room>>();
 
-      for (int i = 0; i <= 7; ++i)
-      {
-        var hours = new List<Room>();
-        //var seen = new List<bool>();
-        for (int j = 0; j < 24; ++j)
+        Day = 0;
+        Hour = 0;
+        PlayerName = "Sam";
+        CurrentRoom = Room.YourRoom;
+        Progress = new ProgressSystem();
+        Self = new Personality();
+        Memory = new GallerySystem();
+
+        Progress.SetValue("MasterVolume", 1.0f);
+        Progress.SetValue("BackgroundVolume", 1.0f);
+        Progress.SetValue("SFXVolume", 1.0f);
+        Progress.SetValue("TextSpeed", 1.0f);
+        Progress.SetValue("week", 1);
+        Progress.SetValue("Depression Time Dilation", true);
+
+        Schedule = new List<CharacterSchedule>();
+        SceneList = new Dictionary<string, TimeStamp>();
+        CastCall = new List<CharacterIntermission>();
+        ScenePath = new Dictionary<string, string>();
+
+        var schedulefiller = TextParser.ToJson("Characters");
+
+        foreach (JsonData character in schedulefiller)
         {
-          var lol = (Room)(int)character["Schedule"][i][j];
-          hours.Add(lol);
-          //seen.Add(false);
+            var Aday = new List<DaySchedule>();
+
+            for (int i = 0; i <= 7; ++i)
+            {
+                var hours = new DaySchedule();
+                //var seen = new List<bool>();
+                for (int j = 0; j < 24; ++j)
+                {
+                    var lol = (Room)(int)character["Schedule"][i][j];
+                    hours.Schedule.Add(lol);
+                    //seen.Add(false);
+                }
+
+                Aday.Add(hours);
+            }
+
+            Schedule.Add(new CharacterSchedule((string)character["Name"], Aday));
+
+        }
+        
+    }
+
+    public Game(Game copy_)
+    {
+        Day = copy_.Day;
+        Hour = copy_.Hour;
+        PlayerName = copy_.PlayerName;
+
+        Progress = new ProgressSystem(copy_.Progress);
+        Self = new Personality(copy_.Self);
+        Memory = new GallerySystem (copy_.Memory);
+
+        Schedule = new List<CharacterSchedule>();
+        SceneList = new Dictionary<string, TimeStamp>();
+        CastCall = new List<CharacterIntermission>();
+        ScenePath = new Dictionary<string, string>();
+
+        foreach (CharacterSchedule character in copy_.Schedule)
+        {
+            var Aday = new List<DaySchedule>();
+
+            for (int i = 0; i <= 7; ++i)
+            {
+                var hours = new DaySchedule();
+                for (int j = 0; j < 24; ++j)
+                {
+                    var lol = character.Day[i].Schedule[j];
+                    hours.Schedule.Add(lol);
+                }
+
+                Aday.Add(hours);
+            }
+
+            Schedule.Add(new CharacterSchedule(character.name, Aday));
+
         }
 
-        Aday.Add(hours);
-      }
-
-      Schedule.Add((string)character["Name"], Aday);
-
-    }
-
-
-
-
-
-  }
-
-  public Game(Game copy_)
-  {
-    Day = copy_.Day;
-    Hour = copy_.Hour;
-    PlayerName = copy_.PlayerName;
-
-    Progress = new ProgressSystem(copy_.Progress);
-    Self = new Personality(copy_.Self);
-    Memory = new GallerySystem(copy_.Memory);
-
-    Schedule = new Dictionary<string, List<List<Room>>>();
-    SceneList = new Dictionary<string, TimeStamp>();
-    CastCall = new List<CharacterIntermission>();
-
-    foreach (string character in copy_.Schedule.Keys)
-    {
-      var Aday = new List<List<Room>>();
-
-      for (int i = 0; i <= 7; ++i)
-      {
-        var hours = new List<Room>();
-        for (int j = 0; j < 24; ++j)
+        foreach (string scene in copy_.SceneList.Keys)
         {
-          var lol = copy_.Schedule[character][i][j];
-          hours.Add(lol);
+            SceneList.Add(scene, new TimeStamp(copy_.SceneList[scene]));
+
+        }
+        
+        for(int i = 0; i < copy_.CastCall.Count; ++i)
+        {
+            CastCall.Add(new CharacterIntermission(copy_.CastCall[i]));
         }
 
-        Aday.Add(hours);
-      }
+        foreach (string scene in copy_.ScenePath.Keys)
+        {
+            ScenePath.Add(scene, (copy_.ScenePath[scene]));
 
-      Schedule.Add(character, Aday);
+        }
+
+
+        //StorySave = copy_.StorySave;
+
+        CurrentRoom = copy_.CurrentRoom;
+        CurrentTimeBlock = copy_.CurrentTimeBlock;
+        DrainEnergy = copy_.DrainEnergy;
+        InCurrentStory = copy_.InCurrentStory;
+        CurrentStory = copy_.CurrentStory;
+        CurrentNode = copy_.CurrentNode;
+        CurrentBackdrop = copy_.CurrentBackdrop;
+        CurrentCG = copy_.CurrentCG;
+
+        CGCalls = new List<string>();
+        for(int i = 0; i < copy_.CGCalls.Count; ++i)
+        {
+            CGCalls.Add(copy_.CGCalls[i]);
+        }
+
+        SavedInk = copy_.SavedInk;
+        CurrentTrack = copy_.CurrentTrack;
+        CurrentAmbience = copy_.CurrentAmbience;
+        
+        CurrentHistory = copy_.CurrentHistory;
+        CurrentSpeaker = copy_.CurrentSpeaker;
+
+        SaveStamp = copy_.SaveStamp;
+
 
     }
 
-    foreach (string scene in copy_.SceneList.Keys)
+
+    public void SaveGame()
     {
-      SceneList.Add(scene, new TimeStamp(copy_.SceneList[scene]));
+        if (InCurrentStory)
+        {
+
+        }
+
+        SaveStamp = DateTime.Now;
+        SavedDate = SaveStamp.ToFileTime();
+
+        //MonoBehaviour.print("Save #" + SaveStamp.Hour + SaveStamp.Minute + SaveStamp.Second);
+
+        Self.Save();
+
+        SavedSceneList = new List<TimeStamp>();
+
+        foreach( string scene in SceneList.Keys)
+        {
+            SceneList[scene].Scene = scene;
+            SavedSceneList.Add(new TimeStamp(SceneList[scene]));
+        }
+
+        SavedPathData = new List<SceneData>();
+
+        foreach (string scene in ScenePath.Keys)
+        {
+            SavedPathData.Add(new SceneData(scene, ScenePath[scene]));
+
+        }
 
     }
 
-    for (int i = 0; i < copy_.CastCall.Count; ++i)
+
+    public void LoadGame()
     {
-      CastCall.Add(new CharacterIntermission(copy_.CastCall[i]));
+        Progress.LoadProgress();
+        Self.Load();
+
+        SaveStamp = DateTime.FromFileTime(SavedDate);
+
+        SceneList = new Dictionary<string, TimeStamp>();
+        for (int i = 0; i < SavedSceneList.Count; ++i)
+        {
+            SceneList.Add(SavedSceneList[i].Scene, SavedSceneList[i]);
+        }
+
+        ScenePath = new Dictionary<string, string>();
+        for(int j = 0; j < SavedPathData.Count; ++j)
+        {
+            ScenePath.Add(SavedPathData[j].name, SavedPathData[j].path);
+        }
+
     }
 
-
-    //StorySave = copy_.StorySave;
-
-    CurrentRoom = copy_.CurrentRoom;
-    CurrentTimeBlock = copy_.CurrentTimeBlock;
-    DrainEnergy = copy_.DrainEnergy;
-    InCurrentStory = copy_.InCurrentStory;
-    CurrentStory = copy_.CurrentStory;
-    CurrentNode = copy_.CurrentNode;
-    CurrentBackdrop = copy_.CurrentBackdrop;
-    CurrentCG = copy_.CurrentCG;
-
-    CGCalls = new List<string>();
-    for (int i = 0; i < copy_.CGCalls.Count; ++i)
+    public void SoftReset()
     {
-      CGCalls.Add(copy_.CGCalls[i]);
-    }
+        Day = 0;
 
-    SavedInk = copy_.SavedInk;
-    CurrentTrack = copy_.CurrentTrack;
-    CurrentAmbience = copy_.CurrentAmbience;
+        Progress.ResetBeats();
 
-    CurrentHistory = copy_.CurrentHistory;
-    CurrentSpeaker = copy_.CurrentSpeaker;
-
-    SaveStamp = copy_.SaveStamp;
-    StorySave.Overwrite(copy_.StorySave);
-
+        //add reset tasks
 
     }
 
+    public void HardReset()
+    {
+        PlayerName = "";
 
-  public void SaveGame()
-  {
-    if (InCurrentStory)
+        Day = 0;
+        Progress = new ProgressSystem();
+
+    }
+
+    public void AlterTime()
+    {
+        //Debug.Log(CurrentTimeBlock);
+
+        Hour += CurrentTimeBlock;
+        if (Hour >= 24)
+        {
+            Hour -= 24;
+            NewDay();
+        }
+
+        if (DrainEnergy)
+            Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 10 * CurrentTimeBlock);
+        Self.IncrementWellbeingStat(Personality.Wellbeing.Depression, 1 * CurrentTimeBlock);
+        Space.DispatchEvent(Events.StatChange);
+
+        DrainEnergy = false;
+        CurrentTimeBlock = 0;
+
+        Space.DispatchEvent(Events.TimeChange);
+    }
+
+    public void SetTimeBlock(int Amount)
+    {
+        Debug.Log(Amount);
+        CurrentTimeBlock = Amount;
+        DrainEnergy = true;
+    }
+
+    public void SetTimeBlock(int Amount, bool DrainFatigue)
+    {
+        Debug.Log(Amount);
+        CurrentTimeBlock = Amount;
+        DrainEnergy = DrainFatigue;
+    }
+    public bool HasSeenBeenScene(string scene_name, TimeStamp time_stamp)
+    {
+        if (!SceneList.ContainsKey(scene_name))
+        {
+            return false;
+        }
+
+        return SceneList[scene_name] == time_stamp;
+    }
+
+    public void SetSceneData(string scene_name, TimeStamp time_stamp)
+    {
+        if (!SceneList.ContainsKey(scene_name))
+        {
+            SceneList.Add(scene_name, time_stamp);
+        }
+    }
+    public bool IsSceneUnlocked(string scene_name, TimeStamp time_stamp)
+    {
+        if (!SceneList.ContainsKey(scene_name))
+        {
+            return true;
+        }
+
+        return SceneList[scene_name] == time_stamp;
+    }
+
+    public void NewDay()
     {
 
+        Progress.ResetDay();
+
+        Day += 1;
+        //update the day in the progression system
+        var point = new ProgressPoint("Day", PointTypes.Integer);
+        point.IntValue = Day;
+
+        Progress.UpdateProgress("Day", point);
+
+        //checks if any special conditions have occured, to change rooms or anything.
+        // prolly do this in scene checks, not here
+
+        //cast new day event
+        Space.DispatchEvent(Events.NewDay);
+
     }
 
-    SaveStamp = DateTime.Now;
-    //MonoBehaviour.print("Save #" + SaveStamp.Hour + SaveStamp.Minute + SaveStamp.Second);
-
-  }
-
-
-  public void LoadGame()
-  {
-
-  }
-
-  public void SoftReset()
-  {
-    Day = 0;
-
-    Progress.ResetBeats();
-
-    //add reset tasks
-
-  }
-
-  public void HardReset()
-  {
-    PlayerName = "";
-
-    Day = 0;
-    Progress = new ProgressSystem();
-
-  }
-
-  public void AlterTime()
-  {
-    //Debug.Log(CurrentTimeBlock);
-
-    Hour += CurrentTimeBlock;
-    if (Hour >= 24)
+    public void Slept()
     {
-      Hour -= 24;
-      NewDay();
+        Progress.ResetSleep();
     }
 
-    if (DrainEnergy)
-      Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 10 * CurrentTimeBlock);
-    Self.IncrementWellbeingStat(Personality.Wellbeing.Depression, 1 * CurrentTimeBlock);
-    Space.DispatchEvent(Events.StatChange);
-
-    DrainEnergy = false;
-    CurrentTimeBlock = 0;
-
-    Space.DispatchEvent(Events.TimeChange);
-  }
-
-  public void SetTimeBlock(int Amount)
-  {
-    Debug.Log(Amount);
-    CurrentTimeBlock = Amount;
-    DrainEnergy = true;
-  }
-
-  public void SetTimeBlock(int Amount, bool DrainFatigue)
-  {
-    Debug.Log(Amount);
-    CurrentTimeBlock = Amount;
-    DrainEnergy = DrainFatigue;
-  }
-  public bool HasSeenBeenScene(string scene_name, TimeStamp time_stamp)
-  {
-    if (!SceneList.ContainsKey(scene_name))
+    public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)
     {
-      return false;
+        if (Date == Day)
+        {
+            if (Hour - HourToCheck <= LengthOfTime)
+                return true;
+        }
+        else
+        {
+            if ((Hour * (24 * (Day - Date))) - HourToCheck <= LengthOfTime)
+                return true;
+        }
+
+
+        return false;
     }
 
-    return SceneList[scene_name] == time_stamp;
-  }
-
-  public void SetSceneData(string scene_name, TimeStamp time_stamp)
-  {
-    if (!SceneList.ContainsKey(scene_name))
+    public int GetNewTimeAfterDuration(int InitialHour, int Duration)
     {
-      SceneList.Add(scene_name, time_stamp);
+        var newHour = InitialHour + 1 + Duration;
+        if (newHour >= 24) newHour -= 24;
+        return newHour;
     }
-  }
-  public bool IsSceneUnlocked(string scene_name, TimeStamp time_stamp)
-  {
-    if (!SceneList.ContainsKey(scene_name))
+
+    public int TimeDifference(int time, int Date)
     {
-      return true;
+        var dif = 0;
+
+        dif = (Hour + (Day * 24)) - (time + (Date * 24));
+
+        return dif;
+
     }
 
-    return SceneList[scene_name] == time_stamp;
-  }
-
-  public void NewDay()
-  {
-
-    Progress.ResetDay();
-
-    Day += 1;
-    //update the day in the progression system
-    var point = new ProgressPoint("Day", PointTypes.Integer);
-    point.IntValue = Day;
-
-    Progress.UpdateProgress("Day", point);
-
-    //checks if any special conditions have occured, to change rooms or anything.
-    // prolly do this in scene checks, not here
-
-    //cast new day event
-    Space.DispatchEvent(Events.NewDay);
-
-  }
-
-  public void Slept()
-  {
-    Progress.ResetSleep();
-  }
-
-  public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)
-  {
-    if (Date == Day)
+    public void SetCurrentStory(string name, string path)
     {
-      if (Hour - HourToCheck <= LengthOfTime)
-        return true;
+        if (!ScenePath.ContainsKey(name))
+            ScenePath.Add(name, path);
+        CurrentStory = path;
     }
-    else
+
+    public string GetCurrentStory()
     {
-      if ((Hour * (24 * (Day - Date))) - HourToCheck <= LengthOfTime)
-        return true;
+        return CurrentStory;
     }
-
-
-    return false;
-  }
-
-  public int GetNewTimeAfterDuration(int InitialHour, int Duration)
-  {
-    var newHour = InitialHour + 1 + Duration;
-    if (newHour >= 24) newHour -= 24;
-    return newHour;
-  }
-
-  public int TimeDifference(int time, int Date)
-  {
-    var dif = 0;
-
-    dif = (Hour + (Day * 24)) - (time + (Date * 24));
-
-    return dif;
-
-  }
-
-
+    
 }
 [Serializable]
 public enum Room
 {
-  None,
-  YourRoom,
-  Commons,
-  FrontDesk,
-  Kitchen,
-  Garden,
-  Library,
-  ArtRoom,
-  Store,
-  CharlottesRoom,
-  EduardosRoom,
-  Sleeping
+    None,
+    YourRoom,
+    Commons,
+    FrontDesk,
+    Kitchen,
+    Garden,
+    Library,
+    ArtRoom,
+    Store,
+    CharlottesRoom,
+    EduardosRoom,
+    Sleeping
 }
 
 [Serializable]
 public class TimeStamp
 {
-  public int day;
-  public int hour;
-  public int duration;
+    public string Scene;
+    public int day;
+    public int hour;
+    public int duration;
 
-  public TimeStamp(int _day, int _hour, int _duration)
-  {
-    day = _day;
-    hour = _hour;
-    duration = _duration;
-  }
+    public TimeStamp(int _day, int _hour, int _duration)
+    {
+        day = _day;
+        hour = _hour;
+        duration = _duration;
+    }
 
-  public TimeStamp(TimeStamp copy_)
-  {
-    day = copy_.day;
-    hour = copy_.hour;
-    duration = copy_.duration;
-  }
+    public TimeStamp(TimeStamp copy_)
+    {
+        Scene = copy_.Scene;
+        day = copy_.day;
+        hour = copy_.hour;
+        duration = copy_.duration;
+    }
 
-  public static bool operator ==(TimeStamp x, TimeStamp y)
-  {
-    if (x.day == y.day && x.hour == y.hour && x.duration == y.duration) return true;
-    return false;
-  }
+    public static bool operator ==(TimeStamp x, TimeStamp y)
+    {
+        if (x.day == y.day && x.hour == y.hour && x.duration == y.duration) return true;
+        return false;
+    }
 
-  public static bool operator !=(TimeStamp x, TimeStamp y)
-  {
-    if (x.day != y.day || x.hour != y.hour || x.duration != y.duration) return true;
-    return false;
-  }
+    public static bool operator !=(TimeStamp x, TimeStamp y)
+    {
+        if (x.day != y.day || x.hour != y.hour || x.duration != y.duration) return true;
+        return false;
+    }
 
 
-  public override bool Equals(System.Object obj)
-  {
-    if (obj == null)
-      return false;
-    TimeStamp c = obj as TimeStamp;
-    if ((System.Object)c == null)
-      return false;
-    return (day == c.day && hour == c.hour && duration == c.duration);
-  }
-  public bool Equals(TimeStamp c)
-  {
-    if ((object)c == null)
-      return false;
-    return (day == c.day && hour == c.hour && duration == c.duration);
-  }
+    public override bool Equals(System.Object obj)
+    {
+        if (obj == null)
+            return false;
+        TimeStamp c = obj as TimeStamp;
+        if ((System.Object)c == null)
+            return false;
+        return (day == c.day && hour == c.hour && duration == c.duration);
+    }
+    public bool Equals(TimeStamp c)
+    {
+        if ((object)c == null)
+            return false;
+        return (day == c.day && hour == c.hour && duration == c.duration);
+    }
 
-  public override int GetHashCode()
-  {
-    return this.day.GetHashCode();
-  }
+    public override int GetHashCode()
+    {
+        return this.day.GetHashCode();
+    }
 
+}
+
+[Serializable]
+public class CharacterSchedule
+{
+    public string name;
+
+    [SerializeField]
+    public List<DaySchedule> Day;
+
+    public CharacterSchedule (string name_, List<DaySchedule> schedule_)
+    {
+        name = name_;
+        Day = schedule_;
+    }
+}
+
+[Serializable]
+public class DaySchedule
+{
+    public List<Room> Schedule = new List<Room>();
+}
+
+[Serializable]
+public class SceneData
+{
+    public string name;
+
+    public string path;
+
+    public SceneData(string name_, string path_)
+    {
+        name = name_;
+        path = path_;
+    }
 }
