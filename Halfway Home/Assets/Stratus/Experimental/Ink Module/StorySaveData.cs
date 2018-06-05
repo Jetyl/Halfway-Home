@@ -37,41 +37,65 @@ namespace Stratus
         //------------------------------------------------------------------------------------------/
         protected override void OnSave()
         {
-          storyList.Clear();
-          foreach(var story in stories)
-          {
-            story.Value.filePath = story.Value.name;
-            storyList.Add(story.Value);
-          }
+          //storyList.Clear();
+          //foreach(var story in stories)
+          //{
+          //  story.Value.filePath = story.Value.name;
+          //  storyList.Add(story.Value);
+          //}
 
-          currentStory.filePath = currentStory.file.name;
+          //Resources.
+          //currentStory.filePath = currentStory.file.name;
         }
 
         protected override bool OnLoad()
         {
+          stories = new Dictionary<string, Story>();
           foreach(var story in storyList)
           {
-            story.file = Resources.Load(story.filePath) as TextAsset;
-            stories.Add(story.name, story);
-
+            //story.file = Assets.LoadResource<TextAsset>(story.fileName);
+            story.file = Resources.Load(story.filePath != null ? story.filePath : story.fileName) as TextAsset;
             if (story.file == null)
             {
-              Trace.Error($"Failed to load {story.filePath}");
+              Trace.Error($"Failed to load the story {story.filePath}");
               return false;
             }
+
+            stories.Add(story.fileName, story);
+
           }
 
-          currentStory.file = Resources.Load(currentStory.filePath) as TextAsset;
-          if (currentStory.file == null)
+          // Load the current story file too, if available
+          if (currentStory != null)
           {
-            Trace.Error($"Failed to load {currentStory.filePath}");
-            return false;
+            currentStory.file = Resources.Load(currentStory.filePath) as TextAsset;
+            if (currentStory.file == null)
+            {
+              Trace.Error($"Failed to load {currentStory.filePath}");
+              return false;
+            }
           }
 
           return true;
         }
 
-      } 
+        
+
+        //------------------------------------------------------------------------------------------/
+        // Methods
+        //------------------------------------------------------------------------------------------/
+        public bool HasStory(Story story) => stories.ContainsKey(story.fileName);
+        public bool HasStory(string storyName) => stories.ContainsKey(storyName);
+        public bool HasStory(TextAsset storyFile) => stories.ContainsKey(storyFile.name);
+        public void AddStory(Story story)
+        {
+          story.filePath = story.fileName;
+          storyList.Add(story);
+          stories.Add(story.fileName, story);
+        }
+
+
+      }
 
     }
   }

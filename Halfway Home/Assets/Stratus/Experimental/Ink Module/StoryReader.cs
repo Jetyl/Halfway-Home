@@ -60,13 +60,7 @@ namespace Stratus
         /// The current story being managed by this reader. It encapsulates Ink's runtime story
         /// data structure
         /// </summary>
-        protected Story story { get; private set; }
-        /// <summary>
-        /// All persistent stories are tracked here. When a story that was loaded is marked as persistent,
-        /// once its ended, we will save its state so next time its asked to be loaded, we will
-        /// load from a previous state.
-        /// </summary>
-        private Dictionary<string, Story> stories => storySave.stories;
+        protected Story story { get { return storySave.currentStory; } set { storySave.currentStory = value; } }
         /// <summary>
         /// /The current knot (sub-section) of the story we are on
         /// </summary>
@@ -161,13 +155,13 @@ namespace Stratus
           Story newStory = null;
 
           // If this story has already been loaded, use the previous state
-          bool previouslyLoaded = stories.ContainsKey(storyFile.name);
+          bool previouslyLoaded = storySave.HasStory(storyFile);
 
           if (previouslyLoaded)
           {
             if (debug)
               Trace.Script($"{storyFile.name} has already been loaded! Using the previous state.");
-            newStory = stories[storyFile.name];
+            newStory = storySave.stories[storyFile.name];
             LoadState(newStory);
           }
           // If the story hasn't been loaded yet
@@ -189,7 +183,7 @@ namespace Stratus
               if (automaticRestart)
                 Restart(clearStateOnRestart);
               else
-                Trace.Error($"The story {story.name} has already been ended, thus we can't jump to the knot!", this);
+                Trace.Error($"The story {story.fileName} has already been ended, thus we can't jump to the knot!", this);
             }
             JumpToKnot(knot);
           }
@@ -199,7 +193,7 @@ namespace Stratus
           }
 
 
-          // Announce that we are loding the story
+          // Announce that we are loading the story
           var loadedEvent = new Story.LoadedEvent() { reader = this, story = this.story };
           this.gameObject.Dispatch<Story.LoadedEvent>(loadedEvent);
           Scene.Dispatch<Story.LoadedEvent>(loadedEvent);
@@ -217,11 +211,11 @@ namespace Stratus
         /// </summary>
         Story ConstructStory(TextAsset storyFile)
         {
-          Story newStory = new Story();
-          newStory.file = storyFile;
+          Story newStory = new Story(storyFile);
+
           newStory.runtime = new Ink.Runtime.Story(storyFile.text);
           if (!newStory.runtime)
-            Trace.Error("Failed to load the story", this, true);
+            Trace.Error($"Failed to load the story '{storyFile.name}'", this, true);
 
           // Bind external functions to it
           OnBindExternalFunctions(newStory);
@@ -235,7 +229,7 @@ namespace Stratus
         void GoToStart()
         {
           if (debug)
-            Trace.Script($"Navigating to the start of the story {story.name}", this);
+            Trace.Script($"Navigating to the start of the story {story.fileName}", this);
           story.runtime.state.GoToStart();
         }
 
@@ -245,7 +239,7 @@ namespace Stratus
         void Restart(bool clearState)
         {
           if (debug)
-            Trace.Script("Restarting the state for the story '" + story.name + "'", this);
+            Trace.Script("Restarting the state for the story '" + story.fileName + "'", this);
           if (clearState)
             story.runtime.ResetState();
           else
@@ -259,7 +253,7 @@ namespace Stratus
         /// </summary>
         public void LoadSave()
         {
-          OnLoad(stories);
+          OnLoad();
         }
 
         //------------------------------------------------------------------------------------------/
@@ -401,7 +395,7 @@ namespace Stratus
             SaveState(story);
 
           storySave.currentStory = story;
-          OnSave(stories);
+          OnSave();
         }
 
         /// <summary>
@@ -411,7 +405,7 @@ namespace Stratus
         {
           if (debug)
             Trace.Script("Cleared!", this);
-          stories.Clear();
+          //stories.Clear();
           //storySave.Delete();
           storySave = new StorySave();
           OnClear();
@@ -440,7 +434,7 @@ namespace Stratus
           story = storySave.currentStory;
           LoadState(story);// story.LoadState();
           StartStory(true);
-          Trace.Script($"Resuming {story.name}", this);
+          Trace.Script($"Resuming {story.fileName}", this);
         }
 
         private void LoadState(Story story)
@@ -464,15 +458,19 @@ namespace Stratus
         /// <param name="story"></param>
         private void SaveState(Story story)
         {
-          if (!stories.ContainsKey(story.name))
-            stories.Add(story.name, story);
+          if (!storySave.HasStory(story))
+            storySave.AddStory(story);
+
+          //if (!stories.ContainsKey(story.name))
+          //  stories.Add(story.name, story);
 
           story.timesRead++;
-          stories[story.name].savedState = story.runtime.state.ToJson();
+          story.savedState = story.runtime.state.ToJson();
+          //stories[story.name].savedState = story.runtime.state.ToJson();
           //Trace.Script($"Saving {story.name}");
         }
 
-        protected virtual void OnSave(Dictionary<string, Story> stories)
+        protected virtual void OnSave()
         {
           // From dictionary to list
           //List<Story> storyList = new List<Story>();
@@ -487,7 +485,7 @@ namespace Stratus
             Trace.Script($"Saved {StorySave.ComposePath(saveFileName, saveFolder)}");
         }
 
-        protected virtual void OnLoad(Dictionary<string, Story> stories)
+        protected virtual void OnLoad()
         {
           if (StorySave.Exists(saveFileName, saveFolder))
           {
@@ -554,7 +552,7 @@ namespace Stratus
 
           if (debug)
           {
-            Trace.Script($"The story {story.name} has started at the knot '{latestKnot}'");
+            Trace.Script($"The story {story.fileName} has started at the knot '{latestKnot}'");
           }
         }
 
@@ -610,7 +608,7 @@ namespace Stratus
         void EndStory()
         {
           if (debug)
-            Trace.Script($"The story {story.name} has ended at the knot '{story.latestKnot}'");
+            Trace.Script($"The story {story.fileName} has ended at the knot '{story.latestKnot}'");
 
           // Dispatch the ended event
           var storyEnded = new Story.EndedEvent() { reader = this, story = this.story };

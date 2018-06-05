@@ -49,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         Space.DispatchEvent(Events.Save);
         ReaderReference.Save();
         SaveLoad.SaveAt(slot);
-        ReaderReference.LoadSave();
+        //ReaderReference.LoadSave();
         //Space.DispatchEvent(Events.PostSave, new SaveShotEvent(slot));
         StartCoroutine(
         TextParser.FrameDelay<SaveShotEvent>(Events.PostSave, new SaveShotEvent(slot)));

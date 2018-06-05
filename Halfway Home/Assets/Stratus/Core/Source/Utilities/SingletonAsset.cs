@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using Stratus.Utilities;
-using Stratus.Editor;
+//using Stratus.Editor;
 
 namespace Stratus
 {

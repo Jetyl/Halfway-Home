@@ -107,7 +107,7 @@ namespace Stratus
           if (this.storyFile == null)
             return true;
 
-          bool matchingStory = e.story.name == this.storyFile.name;
+          bool matchingStory = e.story.fileName == this.storyFile.name;
           bool matchingKnot = !string.IsNullOrEmpty(knot) ? knot == e.story.latestKnot : true;          
 
           return matchingStory && matchingKnot;

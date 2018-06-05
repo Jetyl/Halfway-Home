@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using System.Linq;
 
 namespace Stratus
 {
@@ -171,6 +172,13 @@ namespace Stratus
           }
           return parses[label];
         }
+
+        /// <summary>
+        /// Returns true if this tag is present within the line. Not case sensitive.
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <returns></returns>
+        public bool HasTag(string tag, bool caseSensitive = false) => tags.Contains(tag, caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase);
       }
 
     }
