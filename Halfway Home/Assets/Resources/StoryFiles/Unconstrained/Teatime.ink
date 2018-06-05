@@ -30,15 +30,15 @@ Who knows what she would think of me?
 === KickedOut ===
 As I approach, I wonder {GetValue("SeenEmpathy") == false:what Charlotte's room is like. I know it has to be about the same size as mine, but I can't help but picture some Victorian boudoir, decked out in antique furniture and stuff.|if things will go differently this time. She might be the same, but I feel different.}
 Trissa emerges from the door ahead of me, slamming it behind her with a frustrated expression. # Trissa = Angry
-[Trissa] "I don't believe it! Kicked outta my own room! That girl sometimes, I-"
+[Trissa] "I don't believe it! Kicked outta my own room! That girl sometimes, I-" # skip this
 "Oh, hey, {player_name}!" # Trissa = Surprised
 "You headed to the library?" # Trissa = Happy
 [{player_name}] "Actually, I was invited to tea with your roommate."
-[Trissa] "What? You mean [i]you're[/i] the reason I've been given the boot?" # Trissa = Angry
+[Trissa] "What? You mean <i>you're</i> the reason I've been given the boot?" # Trissa = Angry
 [{player_name}] "I, well-"
-[Trissa] "Ha! I'm just playin' wichu again. # Trissa = Happy
-"{player_gender == "M":Man|player_gender == "F":Girl|Yo}, you are too much fun to mess with. You're gonna get us [i]both[/i] in trouble!"
-"Good to know the reason, honestly. Not sure why she didn't just [i]tell[/i] me she had a hot date!" # Trissa = Calm
+[Trissa] "Ha! I'm just playin' wichu again." # Trissa = Happy
+"{player_gender == "M":Man|{player_gender == "F":Girl|Yo}}, you are too much fun to mess with. You're gonna get us <i>both</i> in trouble!"
+"Good to know the reason, honestly. Not sure why she didn't just <i>tell</i> me she had a hot date!" # Trissa = Calm
 Did she actually just wink at me there?
 [{player_gender}] "No, it's not like that! I mean, I'm pretty sure it's not..."
 Trissa starts laughing. # Trissa = Happy
@@ -47,7 +47,8 @@ Trissa starts laughing. # Trissa = Happy
 I can't help but smile at her playfulness.
 [Trissa] "I do kinda wish she had told me, though. She acts nice, but sometimes she can be a real ice queen. Guess that's to be expected, though, given her condition." # Trissa = Sad
 "I just don't know what else I can do, ya know? I'm not hard to get along with or something, am I?"
-{-depression>40:[Voices] "Someone looking to [i]you[/i] for validation? Now [i]that's[/i] precious."}
+{-depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
+->KickedOut.Choice
 =Choice
 *[Explain why Charlotte might be cold towards Trissa.]
 	{
@@ -68,7 +69,7 @@ I can't help but smile at her playfulness.
 			"I kept trying to be extra nice to her 'cause I thought that's what she wanted! Expected, even. What an idiot I've been."
 			"I gotta talk to her, tell her she's the best roommate I ever had. That's the truth, by the way. By miles." # Trissa = Angry
 			She moves to re-enter the room, then stops herself.
-			"Ah- After you guys are done chillin', of course." # Trissa = Calm
+			"Ah. After you guys are done chillin', of course." # Trissa = Calm
 			"I'll catch you around, {player_name}. Thanks again!" # Trissa = Happy
 	}
 *[Don't answer.]
@@ -91,6 +92,7 @@ I tentatively rap my hand against the worn wooden door, suddenly feeling inexpli
 
 === SmallTalk ===
 [Charlotte>Faint Voice] "Please enter! The door is unlocked!"
+
 Charlotte admits you into her room and invites you to take a seat by the window.
 She has already prepared the tea.
 She has a different line if you were invited here from Exile or Lessons.
@@ -98,13 +100,15 @@ She comments about the time of day. She loves the scenery around Sunflower House
 She asks you how you're doing.
 Choose an answer, but Charlotte will know if you're lying based on your stats.
 If you answer her dishonestly, she will be disappointed and won't open up. (courtesy)
-{awareness>2} -> Understanding
+{awareness>2: -> Understanding|->Courtesy}
 
 === Understanding ===
 You try to explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
 You praise her wisdom at having realized the nature of empathy without possessing it. She has attained enlightenment already. There is nothing left for her to gain at Sunflower House.
 You convince her that she is ready to leave.
+-> END
 
 === Courtesy ===
-If you don't have 3+ awareness, you are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
+You are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
 She also laments that you, her student, are certain to surpass her due to her disadvantage. She asks that you remember what she gave you when you're out charming the pants off of everyone.
+-> END

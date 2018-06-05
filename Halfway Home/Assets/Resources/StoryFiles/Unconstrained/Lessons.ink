@@ -246,7 +246,7 @@ Wow. I had no idea Charlotte had changed so much.
 		"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills."
 		+[Yes] 
 			[{player_name}] "I'd love to. Where and when?"
-			[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive."
+			[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetValue("ReadyForTea", 2)}
 			[{player_name}] "I look forward to it."
 		+[No]
 			[{player_name}] "I'd love to, but I can't."
