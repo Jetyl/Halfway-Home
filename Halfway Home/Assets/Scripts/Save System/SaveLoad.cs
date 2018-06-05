@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Linq;
+using LitJson;
 
 public static class SaveLoad
 {
@@ -31,10 +32,13 @@ public static class SaveLoad
         //FileStream file = File.Create (Application.persistentDataPath + "/savedGames.gd");
         //bf.Serialize(file, savedGames);
         //file.Close();
-        Debug.Log("on");
-
+        
         // JSON
-        File.WriteAllText(path, JsonUtility.ToJson(savedGames));
+        Debug.Log(JsonUtility.ToJson(savedGames[0]));
+        var wrap = new SaveWrapper(savedGames);
+        File.WriteAllText(path, JsonUtility.ToJson(wrap));
+
+        
         
     }
 
@@ -49,9 +53,15 @@ public static class SaveLoad
             //savedGames = (List<Game>)bf.Deserialize(file);
             //file.Close();
 
-            // JSON
+            // Unity JSON
             string data = File.ReadAllText(path);
-            JsonUtility.FromJsonOverwrite(data, savedGames);
+            var wrap =JsonUtility.FromJson<SaveWrapper>(data);
+            savedGames = wrap.Savedata;
+            MonoBehaviour.print(savedGames.Count);
+
+            foreach (var game in savedGames)
+                game.LoadGame();
+            
         }
         
     }
@@ -101,6 +111,7 @@ public static class SaveLoad
     public static void Delete()
     {
 
+        MonoBehaviour.print("hello?");
         if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
         {
             File.Delete(Application.persistentDataPath + "/savedGames.gd");
@@ -192,5 +203,16 @@ public static class SaveLoad
                 }
             }
         }
+    }
+}
+
+
+public struct SaveWrapper
+{
+    public List<Game> Savedata;
+
+    public SaveWrapper(List<Game> data)
+    {
+        Savedata = data;
     }
 }

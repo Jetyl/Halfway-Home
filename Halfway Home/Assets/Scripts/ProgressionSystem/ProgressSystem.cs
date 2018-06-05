@@ -14,12 +14,14 @@ using LitJson;
 public class ProgressSystem
 {
 
-
+    
     private Dictionary<string, ProgressPoint> ProgressBook;
+
+    [SerializeField]
     private List<Beat> PlotLines;
-
+    [SerializeField]
     List<Task> Objectives;
-
+    [SerializeField]
     List<Task> ChronologicalObjectives;
 
 
@@ -80,6 +82,14 @@ public class ProgressSystem
 
 
         UpdatePlotLines();
+    }
+
+    public void LoadProgress()
+    {
+        foreach(var beat in PlotLines)
+        {
+            beat.LoadBeat(this);
+        }
     }
 
     public void UpdateProgress(string _key, ProgressPoint change)
@@ -572,6 +582,11 @@ public class Beat
         return true;
     }
     
+    public void LoadBeat(ProgressSystem progress)
+    {
+        foreach (var point in Points)
+            progress.AddPoint(point.ProgressName, point);
+    }
     
 }
 
@@ -597,8 +612,10 @@ public class Task
     public bool AllFail;
     public bool AllSuccess;
 
+    [SerializeField]
     public List<Task> SubTasks;
 
+    [SerializeField]
     private TaskState State;
 
     public Task(int number)

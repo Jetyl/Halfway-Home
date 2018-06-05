@@ -26,7 +26,9 @@ public class Game
 
     public int Hour;
 
+    [SerializeField]
     private int CurrentTimeBlock;
+    [SerializeField]
     private bool DrainEnergy;
 
     public ProgressSystem Progress;
@@ -34,9 +36,13 @@ public class Game
     public Personality Self;
 
     //character name, day of week, the location that hour
-    private Dictionary<string, List<List<Room>>> Schedule;
+    [SerializeField]
+    private List<CharacterSchedule> Schedule;
 
     private Dictionary<string, TimeStamp> SceneList;
+
+    [SerializeField]
+    private List<TimeStamp> SavedSceneList;
 
     public bool InCurrentStory;
 
@@ -57,8 +63,12 @@ public class Game
 
     public string CurrentHistory = "";
     public string CurrentSpeaker = "";
-
+    
     public DateTime SaveStamp;
+
+    [SerializeField]
+    private long SavedDate;
+    
 
     public StorySave StorySave = new StorySave();
 
@@ -81,7 +91,7 @@ public class Game
         Progress.SetValue("week", 1);
         Progress.SetValue("Depression Time Dilation", true);
 
-        Schedule = new Dictionary<string, List<List<Room>>>();
+        Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
 
@@ -89,30 +99,26 @@ public class Game
 
         foreach (JsonData character in schedulefiller)
         {
-            var Aday = new List<List<Room>>();
+            var Aday = new List<DaySchedule>();
 
             for (int i = 0; i <= 7; ++i)
             {
-                var hours = new List<Room>();
+                var hours = new DaySchedule();
                 //var seen = new List<bool>();
                 for (int j = 0; j < 24; ++j)
                 {
                     var lol = (Room)(int)character["Schedule"][i][j];
-                    hours.Add(lol);
+                    hours.Schedule.Add(lol);
                     //seen.Add(false);
                 }
 
                 Aday.Add(hours);
             }
 
-            Schedule.Add((string)character["Name"], Aday);
+            Schedule.Add(new CharacterSchedule((string)character["Name"], Aday));
 
         }
-
-
-
-
-
+        
     }
 
     public Game(Game copy_)
@@ -125,27 +131,27 @@ public class Game
         Self = new Personality(copy_.Self);
         Memory = new GallerySystem (copy_.Memory);
 
-        Schedule = new Dictionary<string, List<List<Room>>>();
+        Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
         
-        foreach (string character in copy_.Schedule.Keys)
+        foreach (CharacterSchedule character in copy_.Schedule)
         {
-            var Aday = new List<List<Room>>();
+            var Aday = new List<DaySchedule>();
 
             for (int i = 0; i <= 7; ++i)
             {
-                var hours = new List<Room>();
+                var hours = new DaySchedule();
                 for (int j = 0; j < 24; ++j)
                 {
-                    var lol = copy_.Schedule[character][i][j];
-                    hours.Add(lol);
+                    var lol = character.Day[i].Schedule[j];
+                    hours.Schedule.Add(lol);
                 }
 
                 Aday.Add(hours);
             }
 
-            Schedule.Add(character, Aday);
+            Schedule.Add(new CharacterSchedule(character.name, Aday));
 
         }
 
@@ -199,13 +205,35 @@ public class Game
         }
 
         SaveStamp = DateTime.Now;
+        SavedDate = SaveStamp.ToFileTime();
+
         //MonoBehaviour.print("Save #" + SaveStamp.Hour + SaveStamp.Minute + SaveStamp.Second);
+
+        Self.Save();
+
+        SavedSceneList = new List<TimeStamp>();
+
+        foreach( string scene in SceneList.Keys)
+        {
+            SceneList[scene].Scene = scene;
+            SavedSceneList.Add(new TimeStamp(SceneList[scene]));
+        }
 
     }
 
 
     public void LoadGame()
     {
+        Progress.LoadProgress();
+        Self.Load();
+
+        SaveStamp = DateTime.FromFileTime(SavedDate);
+
+        SceneList = new Dictionary<string, TimeStamp>();
+        for (int i = 0; i < SavedSceneList.Count; ++i)
+        {
+            SceneList.Add(SavedSceneList[i].Scene, SavedSceneList[i]);
+        }
 
     }
 
@@ -348,8 +376,7 @@ public class Game
         return dif;
 
     }
-
-
+    
 }
 [Serializable]
 public enum Room
@@ -371,6 +398,7 @@ public enum Room
 [Serializable]
 public class TimeStamp
 {
+    public string Scene;
     public int day;
     public int hour;
     public int duration;
@@ -384,6 +412,7 @@ public class TimeStamp
 
     public TimeStamp(TimeStamp copy_)
     {
+        Scene = copy_.Scene;
         day = copy_.day;
         hour = copy_.hour;
         duration = copy_.duration;
@@ -423,4 +452,25 @@ public class TimeStamp
         return this.day.GetHashCode();
     }
 
+}
+
+[Serializable]
+public class CharacterSchedule
+{
+    public string name;
+
+    [SerializeField]
+    public List<DaySchedule> Day;
+
+    public CharacterSchedule (string name_, List<DaySchedule> schedule_)
+    {
+        name = name_;
+        Day = schedule_;
+    }
+}
+
+[Serializable]
+public class DaySchedule
+{
+    public List<Room> Schedule = new List<Room>();
 }
