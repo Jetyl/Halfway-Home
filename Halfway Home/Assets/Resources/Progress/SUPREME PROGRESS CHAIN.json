@@ -1,0 +1,246 @@
+
+[
+ {
+  "title" : "",
+  "ID"    : 0,
+  "TypeID" : 0,
+  "NodePositionX" : -124.623107910156,
+  "NodePositionY" : 133.408477783203,
+  "width"         : 200.0,
+  "height"        : 100.0,
+  "color"         : 1,
+  "NextID"        : 10024,
+  "Disable"       : false
+ },
+ {
+  "title" : "",
+  "ID"    : 10008,
+  "TypeID" : 19,
+  "NodePositionX" : 636.684204101563,
+  "NodePositionY" : 149.880828857422,
+  "width"         : 200.0,
+  "height"        : 90.0,
+  "color"         : 1
+ },
+ {
+  "title" : "Charlotte Day 3 Tea Time",
+  "ID"    : 10009,
+  "TypeID" : 18,
+  "NodePositionX" : -91.3731079101563,
+  "NodePositionY" : 337.146453857422,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10011,
+  "Day"           : 3,
+  "Hour"          : 15
+ },
+ {
+  "title" : "",
+  "ID"    : 10010,
+  "TypeID" : 2,
+  "NodePositionX" : 652.519470214844,
+  "NodePositionY" : 541.503784179688,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "NextID"        : 10013,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "CharlotteDoorClosed",
+    "Type" : 1,
+    "MatchValue" : false
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10011,
+  "TypeID" : 1,
+  "NodePositionX" : 346.450012207031,
+  "NodePositionY" : 598.111083984375,
+  "width"         : 200.0,
+  "height"        : 195.0,
+  "color"         : 4,
+  "PassID"        : 10010,
+  "FailID"        : 10013,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "ReadyForTea",
+    "Type" : 2,
+    "MatchValue" : 1,
+    "Compare"    : 2
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10013,
+  "TypeID" : 19,
+  "NodePositionX" : 876.24951171875,
+  "NodePositionY" : 693.131591796875,
+  "width"         : 200.0,
+  "height"        : 90.0,
+  "color"         : 4
+ },
+ {
+  "title" : "Charlotte Day 4 Tea Time",
+  "ID"    : 10014,
+  "TypeID" : 18,
+  "NodePositionX" : -98.5874633789063,
+  "NodePositionY" : 492.28955078125,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10011,
+  "Day"           : 4,
+  "Hour"          : 15
+ },
+ {
+  "title" : "Charlotte Day 6 Tea Time",
+  "ID"    : 10015,
+  "TypeID" : 18,
+  "NodePositionX" : -101.777893066406,
+  "NodePositionY" : 811.529296875,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10011,
+  "Day"           : 6,
+  "Hour"          : 15
+ },
+ {
+  "title" : "Charlotte Day 5 Tea Time",
+  "ID"    : 10016,
+  "TypeID" : 18,
+  "NodePositionX" : -100.063537597656,
+  "NodePositionY" : 644.719360351563,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10011,
+  "Day"           : 5,
+  "Hour"          : 15
+ },
+ {
+  "title" : "Charlotte Day 6 Door Closed",
+  "ID"    : 10017,
+  "TypeID" : 18,
+  "NodePositionX" : 1093.732421875,
+  "NodePositionY" : 793.282348632813,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10021,
+  "Day"           : 6,
+  "Hour"          : 16
+ },
+ {
+  "title" : "Charlotte Day 5 Door Closed",
+  "ID"    : 10018,
+  "TypeID" : 18,
+  "NodePositionX" : 1091.23217773438,
+  "NodePositionY" : 625.7822265625,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10021,
+  "Day"           : 5,
+  "Hour"          : 16
+ },
+ {
+  "title" : "Charlotte Day 4 Door Closed",
+  "ID"    : 10019,
+  "TypeID" : 18,
+  "NodePositionX" : 1094.56591796875,
+  "NodePositionY" : 456.615112304688,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10021,
+  "Day"           : 4,
+  "Hour"          : 16
+ },
+ {
+  "title" : "Charlotte Day 3 Door Closed",
+  "ID"    : 10020,
+  "TypeID" : 18,
+  "NodePositionX" : 1084.56616210938,
+  "NodePositionY" : 296.614379882813,
+  "width"         : 325.0,
+  "height"        : 150.0,
+  "color"         : 4,
+  "NextID"        : 10021,
+  "Day"           : 3,
+  "Hour"          : 16
+ },
+ {
+  "title" : "",
+  "ID"    : 10021,
+  "TypeID" : 2,
+  "NodePositionX" : 1552.43334960938,
+  "NodePositionY" : 533.376953125,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "NextID"        : 10022,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "CharlotteDoorClosed",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10022,
+  "TypeID" : 19,
+  "NodePositionX" : 1824.146484375,
+  "NodePositionY" : 574.520141601563,
+  "width"         : 200.0,
+  "height"        : 90.0,
+  "color"         : 4
+ },
+ {
+  "title" : "",
+  "ID"    : 10024,
+  "TypeID" : 2,
+  "NodePositionX" : 150.110900878906,
+  "NodePositionY" : 122.222198486328,
+  "width"         : 200.0,
+  "height"        : 170.0,
+  "color"         : 4,
+  "NextID"        : 10025,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "CharlotteDoorClosed",
+    "Type" : 1,
+    "MatchValue" : true
+   }
+  ]
+ },
+ {
+  "title" : "",
+  "ID"    : 10025,
+  "TypeID" : 2,
+  "NodePositionX" : 390.0,
+  "NodePositionY" : 125.0,
+  "width"         : 200.0,
+  "height"        : 175.0,
+  "color"         : 4,
+  "NextID"        : 10008,
+  "TypeOfProgress" : 1,
+  "CheckToMatch"   : [
+   {
+    "Name" : "Manual Charlotte Tooltip",
+    "Type" : 4,
+    "MatchValue" : "I am not about to knock on someone's door unannounced."
+   }
+  ]
+ }
+]
