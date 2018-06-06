@@ -52,7 +52,7 @@ namespace Stratus
     [MenuItem("Edit/Project Settings/Stratus")]
     public static void Open()
     {
-      Selection.activeObject = instance;
+      Selection.activeObject = get;
       
     }
 

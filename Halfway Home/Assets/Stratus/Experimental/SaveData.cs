@@ -51,11 +51,11 @@ namespace Stratus
     protected virtual bool OnLoad() => true;
   }
 
-    /// <summary>
-    /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
-    /// </summary>
-    [Serializable]
-    public abstract class JsonSaveData<T> : JsonSaveData where T : JsonSaveData
+  /// <summary>
+  /// An abstract class for handling runtime save-data. Useful for player profiles, etc...
+  /// </summary>
+  [Serializable]
+  public abstract class JsonSaveData<T> : JsonSaveData where T : JsonSaveData
   {
     //--------------------------------------------------------------------------------------------/
     // Properties
@@ -155,6 +155,23 @@ namespace Stratus
     //  Save(saveData, ComposeName(suffix));
     //}
 
+    //public JsonSaveData(JsonSaveData<T> other)
+    //{
+    //  Overwrite(other);
+    //}    
+
+    /// <summary>
+    /// Overwrites the data of this object with that of another,
+    /// essentially performing a deep copy
+    /// </summary>
+    /// <param name="other"></param>
+    public void Overwrite(JsonSaveData<T> other, bool load = false)
+    {
+      JsonUtility.FromJsonOverwrite(other.json, this);
+      if (load)
+        OnLoad();
+    }
+    
     /// <summary>
     /// Saves the data to the default path in the application's persistent path
     /// using the specified filename
@@ -257,23 +274,7 @@ namespace Stratus
     {
       Delete(name);
     }
-
-
-
-    ///// <summary>
-    ///// Checks whether the specified file exists in the default folder
-    ///// </summary>
-    ///// <param name="path"></param>
-    ///// <returns></returns>
-    //public static bool Exists(string name)
-    //{
-    //  var fileName = name + extension;
-    //  var fullPath = defaultPath + fileName;
-    //  return File.Exists(fullPath);
-    //}
-
     
-
     /// <summary>
     /// Performs the serialization operation
     /// </summary>
@@ -281,14 +282,20 @@ namespace Stratus
     /// <param name="fullPath"></param>
     private static void Serialize(JsonSaveData<T> saveData, string fullPath)
     {
-      // Update the time to save at
-      saveData.time = DateTime.Now.ToString();
-      // Call a customized function before writing to disk
-      saveData.OnSave();
+      // Updates
+      saveData.Save();
       // Write to disk
       File.WriteAllText(fullPath, saveData.json);
       // Note that it has been saved
       saveData.isSaved = true;
+    }
+
+    private void Save()
+    {
+      // Update the time to save at
+      time = DateTime.Now.ToString();
+      // Call a customized function before writing to disk
+      OnSave();
     }
 
     /// <summary>

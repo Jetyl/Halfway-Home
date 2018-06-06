@@ -21,9 +21,14 @@ namespace Stratus
         public List<Story> storyList = new List<Story>();
 
         /// <summary>
+        /// The index of the current story
+        /// </summary>
+        public int currentStoryIndex;
+
+        /// <summary>
         /// The story currently being read
         /// </summary>
-        public Story currentStory;
+        public Story currentStory => storyList.NotEmpty() ? storyList[currentStoryIndex] : null;
 
         /// <summary>
         /// All persistent stories are tracked here. When a story that was loaded is marked as persistent,
@@ -37,41 +42,57 @@ namespace Stratus
         //------------------------------------------------------------------------------------------/
         protected override void OnSave()
         {
-          storyList.Clear();
-          foreach(var story in stories)
-          {
-            story.Value.filePath = story.Value.name;
-            storyList.Add(story.Value);
-          }
+          //storyList.Clear();
+          //foreach(var story in stories)
+          //{
+          //  story.Value.filePath = story.Value.name;
+          //  storyList.Add(story.Value);
+          //}
 
-          currentStory.filePath = currentStory.file.name;
+          //Resources.
+          //currentStory.filePath = currentStory.file.name;
         }
 
         protected override bool OnLoad()
         {
+          stories = new Dictionary<string, Story>();
           foreach(var story in storyList)
           {
-            story.file = Resources.Load(story.filePath) as TextAsset;
-            stories.Add(story.name, story);
-
+            //story.file = Assets.LoadResource<TextAsset>(story.fileName);            
+            story.file = Resources.Load(story.filePath != null ? story.filePath : story.fileName) as TextAsset;
             if (story.file == null)
             {
-              Trace.Error($"Failed to load {story.filePath}");
+              Trace.Error($"Failed to load the story {story.filePath}");
               return false;
             }
-          }
 
-          currentStory.file = Resources.Load(currentStory.filePath) as TextAsset;
-          if (currentStory.file == null)
-          {
-            Trace.Error($"Failed to load {currentStory.filePath}");
-            return false;
+            stories.Add(story.fileName, story);
           }
 
           return true;
         }
 
-      } 
+        
+
+        //------------------------------------------------------------------------------------------/
+        // Methods
+        //------------------------------------------------------------------------------------------/
+        public bool HasStory(Story story) => stories.ContainsKey(story.fileName);
+        public bool HasStory(string storyName) => stories.ContainsKey(storyName);
+        public bool HasStory(TextAsset storyFile) => stories.ContainsKey(storyFile.name);
+        public void AddStory(Story story)
+        {
+          story.filePath = story.fileName;
+          storyList.Add(story);
+          stories.Add(story.fileName, story);
+        }
+        public void SetCurrentStory(Story story)
+        {
+          currentStoryIndex = storyList.FindIndex(x => x.fileName == story.fileName);
+        }
+
+
+      }
 
     }
   }

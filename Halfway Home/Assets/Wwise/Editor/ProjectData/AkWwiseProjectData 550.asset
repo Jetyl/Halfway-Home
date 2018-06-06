@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 550
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
+<<<<<<< HEAD
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  RtpcWwu: []
+  TriggerWwu: []
+=======
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -703,6 +712,7 @@ MonoBehaviour:
     m_lastTimePsrt1: -1506108622
     m_lastTimePart2: -1999302392
     List: []
+>>>>>>> 3c9e68199344d19d46278333c870e20933cb1312
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
