@@ -409,8 +409,6 @@ namespace Stratus
         {
           if (debug)
             Trace.Script("Cleared!", this);
-          //stories.Clear();
-          //storySave.Delete();
           storySave = new StorySave();
           OnClear();
         }
