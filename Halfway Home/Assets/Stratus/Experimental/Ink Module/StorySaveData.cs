@@ -21,9 +21,14 @@ namespace Stratus
         public List<Story> storyList = new List<Story>();
 
         /// <summary>
+        /// The index of the current story
+        /// </summary>
+        public int currentStoryIndex;
+
+        /// <summary>
         /// The story currently being read
         /// </summary>
-        public Story currentStory;
+        public Story currentStory => storyList.NotEmpty() ? storyList[currentStoryIndex] : null;
 
         /// <summary>
         /// All persistent stories are tracked here. When a story that was loaded is marked as persistent,
@@ -53,7 +58,7 @@ namespace Stratus
           stories = new Dictionary<string, Story>();
           foreach(var story in storyList)
           {
-            //story.file = Assets.LoadResource<TextAsset>(story.fileName);
+            //story.file = Assets.LoadResource<TextAsset>(story.fileName);            
             story.file = Resources.Load(story.filePath != null ? story.filePath : story.fileName) as TextAsset;
             if (story.file == null)
             {
@@ -62,18 +67,6 @@ namespace Stratus
             }
 
             stories.Add(story.fileName, story);
-
-          }
-
-          // Load the current story file too, if available
-          if (currentStory != null)
-          {
-            currentStory.file = Resources.Load(currentStory.filePath) as TextAsset;
-            if (currentStory.file == null)
-            {
-              Trace.Error($"Failed to load {currentStory.filePath}");
-              return false;
-            }
           }
 
           return true;
@@ -92,6 +85,10 @@ namespace Stratus
           story.filePath = story.fileName;
           storyList.Add(story);
           stories.Add(story.fileName, story);
+        }
+        public void SetCurrentStory(Story story)
+        {
+          currentStoryIndex = storyList.FindIndex(x => x.fileName == story.fileName);
         }
 
 

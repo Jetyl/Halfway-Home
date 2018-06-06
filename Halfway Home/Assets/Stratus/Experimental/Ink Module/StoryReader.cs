@@ -60,7 +60,10 @@ namespace Stratus
         /// The current story being managed by this reader. It encapsulates Ink's runtime story
         /// data structure
         /// </summary>
-        protected Story story { get { return storySave.currentStory; } set { storySave.currentStory = value; } }
+        protected Story story
+        {
+          get { return storySave.currentStory; }          
+        }
         /// <summary>
         /// /The current knot (sub-section) of the story we are on
         /// </summary>
@@ -170,10 +173,12 @@ namespace Stratus
             if (debug)
               Trace.Script($"{storyFile.name} has not been loaded yet. Constructing a new state.");
             newStory = ConstructStory(storyFile);
+            storySave.AddStory(newStory);
           }
 
           // Assign the story
-          story = newStory;
+          storySave.SetCurrentStory(newStory);
+          //story = newStory;
 
           // If a knot was provided
           if (knot != null && knot.Length > 0)
@@ -394,7 +399,6 @@ namespace Stratus
           if (saveStates)
             SaveState(story);
 
-          storySave.currentStory = story;
           OnSave();
         }
 
@@ -431,7 +435,6 @@ namespace Stratus
             return;
           }
 
-          story = storySave.currentStory;
           LoadState(story);// story.LoadState();
           StartStory(true);
           Trace.Script($"Resuming {story.fileName}", this);

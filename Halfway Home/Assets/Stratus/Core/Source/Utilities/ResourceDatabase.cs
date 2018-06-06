@@ -168,6 +168,7 @@ namespace Stratus
     //--------------------------------------------------------------------/
     // Fields
     //--------------------------------------------------------------------/
+    public bool enabled = true;
     public bool automaticUpdate = false;
     [SerializeField, HideInInspector] internal List<ResourceMetaData> _items = new List<ResourceMetaData>();
     [SerializeField, HideInInspector] private int _fileCount = 0;
@@ -208,7 +209,7 @@ namespace Stratus
     //--------------------------------------------------------------------/
 #if UNITY_EDITOR
     void ScanFolder(DirectoryInfo folder, List<DirectoryInfo> resourceList, bool onlyTopFolders)
-    {
+    {      
       string folderName = folder.Name.ToLower();
       if (folderName == "editor")
         return;
