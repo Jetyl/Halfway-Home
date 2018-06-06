@@ -34,7 +34,7 @@ EXTERNAL SetValue(name, values)
 === Start ===
 //~week = 1
 This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds # All * Hide # 0 & InProgress # 0.0 & Success # 0.1 & InProgress # 0.2 & Failed # 0.3 & InProgress # 0.4 & InProgress
-It's a Halfway House: a place meant to help people like me `transition back into the community`. 
+It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away

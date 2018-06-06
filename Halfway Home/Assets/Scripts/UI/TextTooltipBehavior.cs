@@ -9,16 +9,43 @@ public class TextTooltipBehavior : MonoBehaviour
 {
   public class TooltipLineEvent : Stratus.Event
   {
-    public Color LineColor;
-    public string TooltipText;
+    public string Key;
+    public string TooltipType;
 
-    public TooltipLineEvent(Color lineColor, string tooltipText)
+    public TooltipLineEvent(string key, string type)
     {
-      LineColor = lineColor;
-      TooltipText = tooltipText;
+      Key = key;
+      TooltipType = type;
     }
   };
+  [System.Serializable]
+  public class TooltipInfo
+  {
+    public string Key;
+    public List<TooltipString> Strings;
 
+    public TooltipInfo(string key, Color color, List<TooltipString> strings)
+    {
+      Key = key;
+      Strings = strings;
+    }
+  };
+  [System.Serializable]
+  public class TooltipString
+  {
+    public string Key;
+    public string Text;
+    public Color Color;
+
+    public TooltipString(string key, string text, Color color)
+    {
+      Key = key;
+      Text = text;
+      Color = color;
+    }
+  }
+
+  public List<TooltipInfo> TooltipData;
   private bool TooltipAvailable;
   private string CurrentTooltipText;
   public UIFollowMouse TooltipContent;
@@ -32,9 +59,21 @@ public class TextTooltipBehavior : MonoBehaviour
 
   void OnTooltipLineEvent(TooltipLineEvent e)
   {
-    GetComponent<TextMeshProUGUI>().color = e.LineColor;
-    CurrentTooltipText = e.TooltipText;
-    TooltipAvailable = true;
+    foreach(TooltipInfo t in TooltipData)
+    {
+      if (t.Key == e.Key)
+      {
+        foreach(TooltipString s in t.Strings)
+        {
+          if(s.Key == e.TooltipType)
+          {
+            CurrentTooltipText = s.Text;
+            GetComponent<TextMeshProUGUI>().color = s.Color;
+            TooltipAvailable = true;
+          }
+        }
+      }
+    }
   }
 
   void ResetTooltip(DefaultEvent eventData)
