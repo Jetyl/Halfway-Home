@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 1992478847}
   - component: {fileID: 1992478850}
   - component: {fileID: 1992478851}
+  - component: {fileID: 1992478852}
   m_Layer: 0
   m_Name: TextMeshPro Text
   m_TagString: Untagged
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AngleMultiplier: 1
-  SpeedMultiplier: 1
+  SpeedMultiplier: 0.23
   CurveScale: 1
   JitterScale: 50
 --- !u!114 &1992478848
@@ -551,7 +552,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1992478845}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3eef864a10f51045a7530e2afe7c179, type: 3}
   m_Name: 
@@ -595,6 +596,20 @@ MonoBehaviour:
   AngleMultiplier: 0
   SpeedMultiplier: 0.01
   CurveScale: 1
+--- !u!114 &1992478852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1992478845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46d591fcc207a34fa1513b2175bec9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JitterKey: Jitter
+  PulsateKey: Pulse
+  FlowKey: Flow
 --- !u!1 &2100616305
 GameObject:
   m_ObjectHideFlags: 0

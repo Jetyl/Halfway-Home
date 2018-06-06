@@ -121,6 +121,10 @@ namespace HalfwayHome
       storySave.Overwrite(Game.current.StorySave, true);
     }
 
+    protected override void OnClear()
+    {
+      
+    }
 
     //------------------------------------------------------------------------/
     // Methods
