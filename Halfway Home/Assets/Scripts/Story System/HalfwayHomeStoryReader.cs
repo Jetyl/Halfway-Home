@@ -111,7 +111,7 @@ namespace HalfwayHome
 
     protected override void OnStoryLoaded(Story story)
     {
-
+      story.filePath = Game.current.ScenePath[story.fileName];
     }
 
     protected override void OnSave()

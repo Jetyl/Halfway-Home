@@ -13,7 +13,7 @@ namespace Stratus
   /// https://answers.unity.com/questions/1133078/recover-path-information-for-an-asset-but-at-runti.html
   /// </summary>
   [SingletonAsset("Assets", "Stratus Resource Database")]
-  public class ResourceDatabase : SingletonAsset<ResourceDatabase>
+  public class ResourceDatabase : SingletonAsset<ResourceDatabase>, ISerializationCallbackReceiver
   {
     public enum Type
     {
@@ -49,6 +49,7 @@ namespace Stratus
       public string resourcesPath => string.IsNullOrEmpty(path) ? name : path + "/" + name;
       public Type type => _type;
       public ResourceMetaData parent => _parent;
+      public string description => $"{name} ({_objectTypeName})";
 
       //--------------------------------------------------------------------/
       // CTOR
@@ -149,8 +150,17 @@ namespace Stratus
 
       internal void OnDeserialize()
       {
-        //if (string.IsNullOrEmpty(path))
-        //  parent = ResourceDatabase.instance.
+        if (string.IsNullOrEmpty(path))
+          _parent = ResourceDatabase.get.root;
+        else
+          _parent = ResourceDatabase.GetFolder(path);
+        if (_parent != null)
+          parent.children.Add(name, this);
+        if (type == Type.Folder)
+        {
+          children = new Dictionary<string, ResourceMetaData>();
+        }
+        _objectType = System.Type.GetType(_objectTypeName);
       }
 
     }
@@ -159,9 +169,9 @@ namespace Stratus
     // Fields
     //--------------------------------------------------------------------/
     public bool automaticUpdate = false;
-    [SerializeField] internal List<ResourceMetaData> metadata = new List<ResourceMetaData>();
+    [SerializeField, HideInInspector] internal List<ResourceMetaData> _items = new List<ResourceMetaData>();
     [SerializeField, HideInInspector] private int _fileCount = 0;
-    private int _folderCount = 0;
+    [SerializeField, HideInInspector] private int _folderCount = 0;
     internal ResourceMetaData root = new ResourceMetaData("", "", Type.Folder, "");
 
     //--------------------------------------------------------------------/
@@ -169,6 +179,7 @@ namespace Stratus
     //--------------------------------------------------------------------/
     public int fileCount => _fileCount;
     public int folderCount => _folderCount;
+    public List<ResourceMetaData> items => _items;
 
     //--------------------------------------------------------------------/
     // Methods: Static
@@ -177,7 +188,7 @@ namespace Stratus
     [UnityEditor.MenuItem("Stratus/Update Resource Database")]
     internal static void TriggerUpdate()
     {
-
+      get.UpdateDatabase();
     }
 #endif
 
@@ -185,22 +196,23 @@ namespace Stratus
     // Methods: Public
     //--------------------------------------------------------------------/
     public static ResourceMetaData GetAsset(string name, System.Type assetType = null)
-      => instance.root.GetChildren(name, Type.Asset, true, assetType).FirstOrDefault();
-    public static ResourceMetaData GetFolder(string path) => instance.root.GetChild(path, Type.Folder);
+      => get.root.GetChildren(name, Type.Asset, true, assetType).FirstOrDefault();
+    public static ResourceMetaData GetFolder(string path) => get.root.GetChild(path, Type.Folder);
     public static IEnumerable<ResourceMetaData> GetAllAssets(string name, System.Type assetType = null) =>
-      instance.root.GetChildren(name, Type.Asset, true, assetType);
+      get.root.GetChildren(name, Type.Asset, true, assetType);
     public static IEnumerable<ResourceMetaData> GetAllAssets<T>(string name) => GetAllAssets(name, typeof(T));
     public static string ConvertPath(string path) => path.Replace("\\", "/");
 
     //--------------------------------------------------------------------/
-    // Methods
+    // Methods: Editor
     //--------------------------------------------------------------------/
+#if UNITY_EDITOR
     void ScanFolder(DirectoryInfo folder, List<DirectoryInfo> resourceList, bool onlyTopFolders)
     {
       string folderName = folder.Name.ToLower();
-      if (folderName == "Editor")
+      if (folderName == "editor")
         return;
-      else if (folderName == "Resources")
+      else if (folderName == "resources")
       {
         resourceList.Add(folder);
         if (onlyTopFolders)
@@ -212,25 +224,136 @@ namespace Stratus
       }        
     }
 
-    //List<DirectoryInfo> FindResourcesFolders(bool onlyTopFolders)
-    //{
-    //  var assets = new Directory(Application.dataPath);
-    //  var list = new List<DirectoryInfo>();
-    //}
-
-    //[UnityEditor.MenuItem("Stratus/Generate Resource Database")]
-    public static void Generate()
+    List<DirectoryInfo> FindResourcesFolders(bool onlyTopFolders)
     {
-
+      var assets = new DirectoryInfo(Application.dataPath);
+      var list = new List<DirectoryInfo>();
+      ScanFolder(assets, list, onlyTopFolders);
+      return list;
     }
 
-    public void Process()
+    private void AddFileList(DirectoryInfo resourceFolder, int prefix)
     {
+      string resourceFolderPath = resourceFolder.FullName;
+      if (resourceFolderPath.Length < prefix)
+        resourceFolderPath = "";
+      else
+        resourceFolderPath = resourceFolderPath.Substring(prefix);
+      resourceFolderPath = ConvertPath(resourceFolderPath);
+      
+      // Add directories, recurse
+      foreach(var folder in resourceFolder.GetDirectories())
+      {
+        _items.Add(new ResourceMetaData(folder.Name, resourceFolderPath, Type.Folder, ""));
+        AddFileList(folder, prefix);
+      }
 
+      // Add files
+      foreach(var file in resourceFolder.GetFiles())
+      {
+        string extension = file.Extension.ToLower();
+        if (extension == ".meta")
+          continue;
+
+        string assetPath = "assets/" + file.FullName.Substring(Application.dataPath.Length + 1);
+        assetPath = ConvertPath(assetPath);
+
+        UnityEngine.Object obj = UnityEditor.AssetDatabase.LoadAssetAtPath(assetPath, typeof(UnityEngine.Object));
+        if (obj == null)
+        {
+          Trace.Error($"File at path {assetPath} could not be loaded and is ignored. Probably not an asset?");
+          continue;
+        }
+
+        string type = obj.GetType().AssemblyQualifiedName;
+        _items.Add(new ResourceMetaData(file.Name, resourceFolderPath, Type.Asset, type));
+      }
+
+      // Now unload
+      Resources.UnloadUnusedAssets();
+    }
+    
+    public void UpdateDatabase(bool setDirty = false)
+    {
+      _items.Clear();
+      root.children.Clear();
+      List<DirectoryInfo> topFolders = FindResourcesFolders(true);
+      foreach(var folder in topFolders)
+      {
+        string path = folder.FullName;
+        int prefix = path.Length;
+        if (!path.EndsWith("/"))
+          prefix++;
+        AddFileList(folder, prefix);
+      }
+
+      _folderCount = _fileCount = 0;
+      foreach(var item in _items)
+      {
+        if (item.type == Type.Folder)
+          _folderCount++;
+        else if (item.type == Type.Asset)
+          _fileCount++;
+      }
+
+      if (setDirty)
+      {
+        UnityEditor.EditorUtility.SetDirty(this);
+        UnityEditor.AssetDatabase.SaveAssets();
+      }
+
+      Trace.Script($"Updated! Folders = {folderCount}, Items = {fileCount}");
+    }
+#endif
+
+    public void OnBeforeSerialize()
+    {
+#if UNITY_EDITOR
+      if (_items == null || _items.Count == 0)
+        UpdateDatabase(); 
+#endif
     }
 
+    public void OnAfterDeserialize()
+    {
+      root.children.Clear();
+      foreach(var item in _items)
+      {
+        item?.OnDeserialize();
+      }
+    }
 
 
   }
+
+  public class ResourceDatabasePostProcessor : UnityEditor.AssetPostprocessor
+  {
+    private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
+    {
+      if (!ResourceDatabase.instantiated)
+        return;
+
+      if (!ResourceDatabase.get.automaticUpdate)
+        return;
+
+      var files = importedAssets.Concat(deletedAssets).Concat(movedAssets).Concat(movedFromAssetPaths);
+      bool update = false;
+      foreach (var file in files)
+      {
+        var fn = file.ToLower();
+        if (!fn.Contains("resourcedb.asset") && fn.Contains("/resources/"))
+        {
+          update = true;
+          break;
+        }
+      }
+      if (update)
+      {
+        ResourceDatabase.get.UpdateDatabase();
+      }
+    }
+  }
+
+
 
 }

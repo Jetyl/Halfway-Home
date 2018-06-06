@@ -71,7 +71,7 @@ namespace Stratus
         {
           this.fileName = file.name;
           this.file = file;
-          //this.runtime = new Ink.Runtime.Story(file.text);
+          
         }
 
         //--------------------------------------------------------------------/
