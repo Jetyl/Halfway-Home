@@ -19,6 +19,7 @@ VAR week = 0
 VAR current_room = "unset"
 
 EXTERNAL GetValue(value)
+EXTERNAL SetValue(name, value)
 
 -> Start
 
@@ -50,7 +51,7 @@ I can't help but smile at her playfulness.
 {-depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
 ->KickedOut.Choice
 =Choice
-+[Explain why Charlotte might be cold towards Trissa.]
++[Explain Charlotte's jealousy.]
 	{
 		-GetValue("Know Charlotte Jealous") == false:
 			I can't explain what I don't know.
@@ -71,13 +72,14 @@ I can't help but smile at her playfulness.
 			She moves to re-enter the room, then stops herself.
 			"Ah. After you guys are done chillin', of course." # Trissa = Calm
 			"I'll catch you around, {player_name}. Thanks again!" # Trissa = Happy
+			~SetValue("Told Trissa", true)
 	}
 +[Don't answer.]
 	{
 		-GetValue("Know Charlotte Jealous") == false:
 			I wish I knew, honestly. I had a chance to ask her about it, but I didn't.
 			{-week>1: I expect I'll get my chance to again.}
-		-else
+		-else:
 			I decide it's best not to share what I know.
 	}
 	[{player_name}] "You're not hard to get along with at all! I don't really know why she might be like that."
@@ -87,16 +89,50 @@ I can't help but smile at her playfulness.
 	[Trissa] "I should let you get on with it, then. See you around, {player_name}!"
 -With that, Trissa flashes a smile and strides down the hallway behind me at a modest pace. # Trissa = Exit
 Nothing left now but to knock.
-I tentatively rap my hand against the worn wooden door, suddenly feeling inexplicable nervous. # SFX : play_sfx_human_knock 
+I tentatively rap my hand against the worn wooden door, suddenly feeling nervous. # SFX : play_sfx_human_knock 
 -> SmallTalk
 
 === SmallTalk ===
 [Charlotte>Faint Voice] "Please enter! The door is unlocked!"
 I open the door and step inside. I am greeted by Charlotte's warm smile. At her direction, I take a seat across from her at a small table by the window. # Teatime / Open # Teatime / ArmsD # Teatime / FSmile
-Charlotte admits you into her room and invites you to take a seat by the window.
-She has already prepared the tea.
-She has a different line if you were invited here from Exile or Lessons.
-She comments about the time of day. She loves the scenery around Sunflower House and always tries to take tea at this time. It relaxes her.
+Looks like the tea is already prepared. Should I take a sip or not?
+If I do is there some special way I'm supposed to do it or something?
+Charlotte holds her cup gently with both hands. Her movements demonstrate a practiced ease that make me feel even more self-conscious. # Teatime / ArmsU
+Perhaps sensing my anxiety, she breaks the silence. # Teatime / ArmsD
+{
+	- GetValue("CompletedLessons") == true:
+		[Charlotte] "Perfectly punctual. An excellent start, {player_name}."
+		"I've prepared today as a `final exam` of sorts, to see how much you've learned over the past few days."
+		"Based on yesterday's progress I have high expectations!"
+		[{player_name}] "Thanks!"
+		[Charlotte] "And of course I should thank you for the pleasure of your company today, as well."
+	- else:
+		[Charlotte] "I don't believe I've had the pleasure of entertaining you before. Thank you for the opportunity."
+		Dang, she's smooth.
+}
+[{player_name}]"Oh no, pleasure's all mine! Nothing like free food and good company... if you count tea as food, that is."
+Idiot. Now she's gonna feel bad about not having... what do people eat with tea? Scones?
+[Charlotte] "I'm sorry to say that I'm fresh out of nibbles. I had to postpone my weekly trip to the store." # Teatime / FSad
+[{player_name}] "It's no trouble! I didn't mean to sound ungrateful! This is great, really!"
+Charlotte smiles and turns to face the window. # Teatime / WSmile
+[Charlotte] "It's such a lovely time of day, don't you think?" # Teatime / SSmile
+[{player_name}] "Huh? Oh, yeah."
+It really is nice out. I think photographers call this the "golden hour".
+[Charlotte] "The scenery around Sunflower House is particularly idyllic in this light." # Teatime / WSmile
+"I try and take tea at this time every day. It relaxes me." # Teatime / WCalm
+[{player_name}] "That sounds like a peaceful habit."
+[Charlotte] "Indeed. Often a lonely one, as well." # Teatime / WSad
+I've never thought about before, but I guess it must be lonely for her sometimes having been here for so long. Actually, shouldn't she be getting out of here soon?
+"But not on this occasion." # SSmile
+"How are you finding your last week, {player_name}?"
++ Tiresome
+	It's difficult to keep going. There's so much to do and I feel like I'm getting nowhere.
++ Exciting
+	I keep noticing things I never noticed before. I feel like the world is brand new again.
++ Melancholic
+	I'm having fun, and that makes me kinda sad that I'll be leaving. I didn't what this place meant to me until now that I'm about to leave it behind.
++ Repetetive
+	Hidden first week. My life has become a memorization game. I feel more like I'm studying than living.
 She asks you how you're doing.
 Choose an answer, but Charlotte will know if you're lying based on your stats.
 If you answer her dishonestly, she will be disappointed and won't open up. (courtesy)
