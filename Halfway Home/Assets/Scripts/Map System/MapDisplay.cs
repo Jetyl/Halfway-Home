@@ -194,6 +194,9 @@ namespace HalfwayHome
             Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
             Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
 
+            Game.current.InCurrentStory = true;
+            Game.current.SetCurrentStory(DefaultActions.name, "StoryFiles/Unconstrained/" + DefaultActions.name); //the one hard coded path
+
         }
 
         
