@@ -20654,8 +20654,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Enter Cheat Code...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  m_sharedMaterial: {fileID: 21028330244546432, guid: 18ab9b1c6a21678418e12f17ae22e170,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26156,7 +26157,7 @@ Prefab:
     - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
         type: 2}
       propertyPath: CGList.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
         type: 2}
@@ -26405,6 +26406,17 @@ Prefab:
       propertyPath: CGList.Array.data[3].Graphic
       value: 
       objectReference: {fileID: 1454680618709400, guid: 78ba58805d31d7a4b9e9c9ae89964cae,
+        type: 2}
+    - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: CGList.Array.data[4].Tag
+      value: Teatime
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882403670198374, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: CGList.Array.data[4].Graphic
+      value: 
+      objectReference: {fileID: 1113729422829270, guid: a1e3064737b1d794d9c24775be33f555,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
@@ -37694,7 +37706,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_GlobalFontAsset: {fileID: 0}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -44190,7 +44202,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
@@ -48520,7 +48532,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 0
-  m_GlobalFontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_GlobalFontAsset: {fileID: 0}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 0
   m_RestoreOriginalTextOnEscape: 1
@@ -57983,8 +57995,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  m_sharedMaterial: {fileID: 21028330244546432, guid: 18ab9b1c6a21678418e12f17ae22e170,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -68926,7 +68939,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4039426199608004, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
       propertyPath: m_LocalPosition.x
@@ -68978,7 +68991,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -69053,12 +69066,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].ProgressName
-      value: 
+      value: Know Charlotte Jealous
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].TypeID
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -69074,6 +69087,11 @@ Prefab:
         type: 2}
       propertyPath: DebugValues.Array.data[2].compare
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: StartDay
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
@@ -72163,8 +72181,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Here is a tooltip, yo.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 000133bd9cc3d8841bb3fd250ed167ca, type: 2}
+  m_sharedMaterial: {fileID: 21028330244546432, guid: 000133bd9cc3d8841bb3fd250ed167ca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

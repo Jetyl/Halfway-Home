@@ -70,6 +70,9 @@ namespace HalfwayHome
     protected override void OnStoryUpdate(ParsedLine parse, bool visited)
     {
       Parse dialog = parse.Find(HalfwayHomeStoryReader.dialogLabel);
+
+      if (parse.HasTag("skip")) Space.DispatchEvent(Events.NextLine);
+
       // 1. Monologue
       bool isMonologue = (dialog == null);
       if (isMonologue)
@@ -82,7 +85,7 @@ namespace HalfwayHome
       Parse speaker = parse.Find(HalfwayHomeStoryReader.speakerLabel);
       if (speaker != null)
         currentSpeaker = speaker.value;
-      
+
       Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.value, currentSpeaker));
     }
     

@@ -30,7 +30,7 @@ Who knows what she would think of me?
 === KickedOut ===
 As I approach, I wonder {GetValue("SeenEmpathy") == false:what Charlotte's room is like. I know it has to be about the same size as mine, but I can't help but picture some Victorian boudoir, decked out in antique furniture and stuff.|if things will go differently this time. She might be the same, but I feel different.}
 Trissa emerges from the door ahead of me, slamming it behind her with a frustrated expression. # Trissa = Angry
-[Trissa] "I don't believe it! Kicked outta my own room! That girl sometimes, I-" # skip this
+[Trissa] "I don't believe it! Kicked outta my own room! That girl sometimes, I-" # skip
 "Oh, hey, {player_name}!" # Trissa = Surprised
 "You headed to the library?" # Trissa = Happy
 [{player_name}] "Actually, I was invited to tea with your roommate."
@@ -50,7 +50,7 @@ I can't help but smile at her playfulness.
 {-depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
 ->KickedOut.Choice
 =Choice
-*[Explain why Charlotte might be cold towards Trissa.]
++[Explain why Charlotte might be cold towards Trissa.]
 	{
 		-GetValue("Know Charlotte Jealous") == false:
 			I can't explain what I don't know.
@@ -72,7 +72,7 @@ I can't help but smile at her playfulness.
 			"Ah. After you guys are done chillin', of course." # Trissa = Calm
 			"I'll catch you around, {player_name}. Thanks again!" # Trissa = Happy
 	}
-*[Don't answer.]
++[Don't answer.]
 	{
 		-GetValue("Know Charlotte Jealous") == false:
 			I wish I knew, honestly. I had a chance to ask her about it, but I didn't.
@@ -87,12 +87,12 @@ I can't help but smile at her playfulness.
 	[Trissa] "I should let you get on with it, then. See you around, {player_name}!"
 -With that, Trissa flashes a smile and strides down the hallway behind me at a modest pace. # Trissa = Exit
 Nothing left now but to knock.
-I tentatively rap my hand against the worn wooden door, suddenly feeling inexplicable nervous.
+I tentatively rap my hand against the worn wooden door, suddenly feeling inexplicable nervous. # SFX : play_sfx_human_knock 
 -> SmallTalk
 
 === SmallTalk ===
 [Charlotte>Faint Voice] "Please enter! The door is unlocked!"
-
+I open the door and step inside. I am greeted by Charlotte's warm smile. At her direction, I take a seat across from her at a small table by the window. # Teatime / Open # Teatime / ArmsD # Teatime / FSmile
 Charlotte admits you into her room and invites you to take a seat by the window.
 She has already prepared the tea.
 She has a different line if you were invited here from Exile or Lessons.

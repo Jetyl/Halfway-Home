@@ -126,12 +126,6 @@ namespace HalfwayHome
     // Methods
     //------------------------------------------------------------------------/
 
-    void OnSkip(Parse parse)
-    {
-            print("gerer");
-       Space.DispatchEvent(Events.NextLine);
-    }
-
     void OnUpdateObjectives(Parse parse)
     {
       foreach (var match in parse.matches)
