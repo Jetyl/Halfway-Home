@@ -32,6 +32,8 @@ public class AutoType : MonoBehaviour
 
     private TextMeshProUGUI Text;
 
+    private TMP_Animator Effects;
+
     Dictionary<int, float> UpdateSpeed;
 
     Coroutine typing;
@@ -46,6 +48,7 @@ public class AutoType : MonoBehaviour
     void Start()
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
+        Effects = gameObject.GetComponent<TMP_Animator>();
         //audios = GetComponent<AudioSource>();
         Text.useMaxVisibleDescender = true;
         EventSystem.ConnectEvent<AutoTypeEvent>(gameObject, Events.AutoType, TypingText);

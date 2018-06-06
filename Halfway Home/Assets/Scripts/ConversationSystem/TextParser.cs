@@ -171,7 +171,7 @@ public static class TextParser
 
         return null;
     }
-
+    
     public static Dictionary<int, float> ExtractTextSpeed(ref string text)
     {
 
