@@ -76,7 +76,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 				Yeah, I didn't go to the hangout this week. wonder if there was anything else there I could see or say?
 			-week >=2 :
 				Still, good to know that's where Eduardo and Isaac were late tuesday night/wednesday morning. 
-				I'll have to keep a note of that for next week.
+				I'll have to keep a note of that for next week. //add objective here
 		}
 
 }
@@ -112,13 +112,13 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embaresse
 ===Pulling===
 {
 	-expression < 3:
-		[{player_name}] "I, um, I guess."
+		[{player_name}] "I, um, I guess you can see it that way. but, uh, I doubt its literally perfect you know."
 		[Eduardo] "that a funny joke. anyways, where was I?"
 		[{player_name}] "B-but..."
 		Eduardo isn't listening. he seems far to wrapped up in his passion. I guess I was not <color=color_expression><i>expressive</i></color> enough to get through to him.
 		->Gushing
 	-else:
-		[{player_name}] "Your relationship with Isaac is far from perfect."
+		[{player_name}] "Eduardo, your relationship with Isaac is far from perfect."
 		he beleives you are serious, but doesn't believe you.
 		->Explain
 
@@ -140,6 +140,9 @@ you failed to convince Eduardo of anything.
 ->END
 
 ===Contention===
+[{player_name}] "Isaac Told me."
+Not technical a lie, he did tell me in the past... future.
+
 You confront Eduardo on the true shakeyness of his relationship.
 puzzle be here.
 ->END
