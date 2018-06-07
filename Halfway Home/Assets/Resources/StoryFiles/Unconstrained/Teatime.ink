@@ -117,23 +117,72 @@ Idiot. Now she's gonna feel bad about not having... what do people eat with tea?
 Charlotte smiles and turns to face the window. # Teatime / WSmile
 [Charlotte] "It's such a lovely time of day, don't you think?" # Teatime / SSmile
 [{player_name}] "Huh? Oh, yeah."
-It really is nice out. I think photographers call this the "golden hour".
+It really is nice out. I think photographers call this the `golden hour`.
 [Charlotte] "The scenery around Sunflower House is particularly idyllic in this light." # Teatime / WSmile
 "I try and take tea at this time every day. It relaxes me." # Teatime / WCalm
 [{player_name}] "That sounds like a peaceful habit."
 [Charlotte] "Indeed. Often a lonely one, as well." # Teatime / WSad
 I've never thought about before, but I guess it must be lonely for her sometimes having been here for so long. Actually, shouldn't she be getting out of here soon?
-"But not on this occasion." # SSmile
-"How are you finding your last week, {player_name}?"
-+ Tiresome
+"But not on this occasion." # Teatime / SSmile
+"How are you finding your last week, {player_name}?" # Teatime / FCalm
++[Tiresome]
 	It's difficult to keep going. There's so much to do and I feel like I'm getting nowhere.
-+ Exciting
++[Exciting]
 	I keep noticing things I never noticed before. I feel like the world is brand new again.
-+ Melancholic
++[Melancholic]
 	I'm having fun, and that makes me kinda sad that I'll be leaving. I didn't what this place meant to me until now that I'm about to leave it behind.
-+ Repetetive
++{week>1}[Repetetive]
 	Hidden first week. My life has become a memorization game. I feel more like I'm studying than living.
-She asks you how you're doing.
+- [Charlotte] "And how about your mental state? How are you holding up?" # Teatime / FCalm
++[Well]
+	[{player_name}] "I'm doing pretty well."
+	{
+		- fatigue + stress + depression > 75:
+			Charlotte frowns. # Teatime / FSad
+		- else:
+			Charlotte smiles. # Teatime / FSmile
+	}
++[Poorly]
+	I sigh.
+	[{player_name}] "Not great, actually."
+	{
+		- fatigue + stress + depression < 150:
+			{
+				- fatigue > 75:
+					Charlotte smiles. # Teatime / FSmile
+					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
+				- stress > 75:
+					Charlotte smiles. # Teatime / FSmile
+					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
+				- depression > 75:
+					Charlotte smiles. # Teatime / FSmile
+					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
+				-else:
+					Charlotte frowns. # Teatime / FSad
+					[Charlotte] "Really? You seem to be doing well enough to my eyes."
+					"If your plan is to play for sympathy from a sociopath, you may wish to reconsider your position." # Teatime SSmile
+					She laughs to herself.
+			}
+		- else:
+			Charlotte smiles. # Teatime / FSmile
+	}
++[It's a Mixed Bag]
+	[{player_name}] "Kinda in the middle, honestly. Some good, some bad."
+	{
+		- fatigue + stress + depression < 150:
+			{
+				- fatigue > 75:
+					Charlotte smiles. # Teatime / FSmile
+				- stress > 75:
+					Charlotte smiles. # Teatime / FSmile
+				- depression > 75:
+					Charlotte smiles. # Teatime / FSmile
+				-else:
+					Charlotte frowns. # Teatime / FSad
+			}
+		- else:
+			Charlotte smiles. # Teatime / FSmile
+	}
 Choose an answer, but Charlotte will know if you're lying based on your stats.
 If you answer her dishonestly, she will be disappointed and won't open up. (courtesy)
 {awareness>2: -> Understanding|->Courtesy}
