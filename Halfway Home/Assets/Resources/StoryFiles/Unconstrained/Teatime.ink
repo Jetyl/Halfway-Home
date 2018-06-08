@@ -41,14 +41,14 @@ Trissa emerges from the door ahead of me, slamming it behind her with a frustrat
 "{player_gender == "M":Man|{player_gender == "F":Girl|Yo}}, you are too much fun to mess with. You're gonna get us <i>both</i> in trouble!"
 "Good to know the reason, honestly. Not sure why she didn't just <i>tell</i> me she had a hot date!" # Trissa = Calm
 Did she actually just wink at me there?
-[{player_gender}] "No, it's not like that! I mean, I'm pretty sure it's not..."
+[{player_name}] "No, it's not like that! I mean, I'm pretty sure it's not..."
 Trissa starts laughing. # Trissa = Happy
 "Oh, this is you messing with me again, isn't it?"
 [Trissa] "{player_name}! Too. Much. Fun!"
 I can't help but smile at her playfulness.
 [Trissa] "I do kinda wish she had told me, though. She acts nice, but sometimes she can be a real ice queen. Guess that's to be expected, though, given her condition." # Trissa = Sad
 "I just don't know what else I can do, ya know? I'm not hard to get along with or something, am I?"
-{-depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
+{depression>40}[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."
 ->KickedOut.Choice
 =Choice
 +[Explain Charlotte's jealousy.]
@@ -124,68 +124,121 @@ It really is nice out. I think photographers call this the `golden hour`.
 [Charlotte] "Indeed. Often a lonely one, as well." # Teatime / WSad
 I've never thought about before, but I guess it must be lonely for her sometimes having been here for so long. Actually, shouldn't she be getting out of here soon?
 "But not on this occasion." # Teatime / SSmile
+-> Questioning
+
+=== Questioning ===
 "How are you finding your last week, {player_name}?" # Teatime / FCalm
+Something tells me I shouldn't try to hide anything from Charlotte. 
+Chances are she can probably ready everything I'm feeling without me needing to say anything. Kind spooky to think about, actually.
+But then, why ask me? Is this all a test?
+Crap, what did she just ask me? Oh, right, how my week's been.
 +[Tiresome]
-	It's difficult to keep going. There's so much to do and I feel like I'm getting nowhere.
+	{awareness>1:
+		[{player_name}] "It's difficult to stay positive. There's so much to do and I just feel like I'm getting nowhere." # awareness ^ good
+		For a moment I can spot suprise on Charlotte's face, but she regains her composure almost immediately.
+		[Charlotte] "I regret to say I make for a poor therapist, but I believe the common wisdom is that acknowledging one's problems is the first step towards solving them." # Teatime / FSad
+		"As such, I'm confident you will find the strength you require." # FSmile
+	-else:
+		[{player_name}] "It's been a long week and it's not even over." # awareness ^ poor
+		[Charlotte] "Ah. A sentiment with which I am intimately familiar. # FSmile"
+	}
 +[Exciting]
-	I keep noticing things I never noticed before. I feel like the world is brand new again.
+	{awareness>1:
+		[{player_name}] "I keep noticing things I never noticed before. It's as though the world is brand new again. I feel like an explorer." # awareness ^ good
+		For a moment I can spot suprise on Charlotte's face, but she regains her composure almost immediately.
+		[Charlotte] "I daresay that was rather poetic, {player_name}." # Teatime / FSmile
+		I feel myself start to blush and quickly hide it with a strategic sip of tea.
+		"What I wouldn't give for the feeling which you describe..." # Teatime / WSad
+	-else:
+		[{player_name}] "I can't explain it, but there's something refreshing about this week. It feels different than all the weeks that came before." # awareness ^ poor
+		[Charlotte] "Your positivity is quite charming, {player_name}." # Teatime / FSmile
+	}
 +[Melancholic]
-	I'm having fun, and that makes me kinda sad that I'll be leaving. I didn't what this place meant to me until now that I'm about to leave it behind.
+	{awareness>1:
+		[{player_name}] "It's funny. I didn't realize what this place meant to me until I'm preparing to leave it behind." # awareness ^ good
+		For a moment I can spot suprise on Charlotte's face, but she regains her composure almost immediately.
+		[Charlotte] "I'm impressed by your clarity. You are quite wise for someone your age, you know." # Teatime / FSmile
+		I feel myself start to blush and quickly hide it with a strategic sip of tea.
+		"Certainly wiser than I, in any case." # Teatime / WSad
+	-else:
+		[{player_name}] "It's been fun, but also sad. I wish I had gotten to know everyone more before my last week!" # awareness ^ poor
+
+	}
 +{week>1}[Repetetive]
 	Hidden first week. My life has become a memorization game. I feel more like I'm studying than living.
 - [Charlotte] "And how about your mental state? How are you holding up?" # Teatime / FCalm
 +[Well]
 	[{player_name}] "I'm doing pretty well."
 	{
-		- fatigue + stress + depression > 75:
-			Charlotte frowns. # Teatime / FSad
-		- else:
-			Charlotte smiles. # Teatime / FSmile
+		- AmIFeeling("good") == true:
+			-> Truth.DoingFine
+		-else:
+			-> Lied.DoingFine
 	}
 +[Poorly]
 	I sigh.
 	[{player_name}] "Not great, actually."
 	{
-		- fatigue + stress + depression < 150:
-			{
-				- fatigue > 75:
-					Charlotte smiles. # Teatime / FSmile
-					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
-				- stress > 75:
-					Charlotte smiles. # Teatime / FSmile
-					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
-				- depression > 75:
-					Charlotte smiles. # Teatime / FSmile
-					[Charlotte] "I'm sorry to hear that, but thank you for being honest with me."
-				-else:
-					Charlotte frowns. # Teatime / FSad
-					[Charlotte] "Really? You seem to be doing well enough to my eyes."
-					"If your plan is to play for sympathy from a sociopath, you may wish to reconsider your position." # Teatime SSmile
-					She laughs to herself.
-			}
-		- else:
-			Charlotte smiles. # Teatime / FSmile
+		- AmIFeeling("poor") == true:
+			-> Truth.DoingPoorly
+		-else:
+			-> Lied.DoingPoorly
 	}
 +[It's a Mixed Bag]
 	[{player_name}] "Kinda in the middle, honestly. Some good, some bad."
 	{
-		- fatigue + stress + depression < 150:
-			{
-				- fatigue > 75:
-					Charlotte smiles. # Teatime / FSmile
-				- stress > 75:
-					Charlotte smiles. # Teatime / FSmile
-				- depression > 75:
-					Charlotte smiles. # Teatime / FSmile
-				-else:
-					Charlotte frowns. # Teatime / FSad
-			}
-		- else:
-			Charlotte smiles. # Teatime / FSmile
+		- AmIFeeling("mixed") == true:
+			-> Truth.InTheMiddle
+		-else:
+			-> Lied.InTheMiddle
 	}
-Choose an answer, but Charlotte will know if you're lying based on your stats.
-If you answer her dishonestly, she will be disappointed and won't open up. (courtesy)
-{awareness>2: -> Understanding|->Courtesy}
+
+=== Lied ===
+
+=DoingFine
+Charlotte frowns. # Teatime / FSad
+[Charlotte] "Really? You seem to be doing well enough to my eyes."
+"If your plan is to play for sympathy from a sociopath, you may wish to reconsider." # Teatime SSmile
+She stifles a laugh with a carefully timed sip of tea. # Teatime / ArmsU
+->Courtesy
+
+=DoingPoorly
+Charlotte frowns. # Teatime / FSad
+She probably knows I lied.
+[Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
+She definitely knows I lied.
+->Courtesy
+
+=InTheMiddle
+Charlotte frowns. # Teatime / FSad
+She can probably tell I wasn't entirely honest.
+[Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
+She can definitely tell.
+->Courtesy
+
+=== Truth ===
+
+=DoingFine
+Charlotte smiles warmly. # Teatime / FSmile
+[Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear that <i>someone</i> is still holding fast."
+->Check
+
+=DoingPoorly
+Charlotte gives me a reassuring smile. # Teatime / FSmile
+[Charlotte] "You have my sympathies, {player_name}. I thank you for your honesty all the more for its bitterness."
+"I have the fullest confidence that you will triumph over the obstacles in your path."
+->Check
+
+=InTheMiddle
+Charlotte gives me an amused smile. # Teatime / FSmile
+[Charlotte] "A common reality and an honest answer. I appreciate your candor."
+I always liked that word, `candor`, but I never use it 'cause I'm worried people will think I'm a snob.
+Wait, but I don't think Charlotte is a snob... I bet plenty of other people do, though. She certainly does love complicated words.
+->Check
+
+=== Check ===
+{awareness>2:->Understanding|->Courtesy}
+
 
 === Understanding ===
 You try to explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
@@ -197,3 +250,18 @@ You convince her that she is ready to leave.
 You are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
 She also laments that you, her student, are certain to surpass her due to her disadvantage. She asks that you remember what she gave you when you're out charming the pants off of everyone.
 -> END
+
+=== function AmIFeeling(claim) ===
+{
+	// all stats at least yellow OR at least one red
+	- (fatigue > 40 && stress > 40 && depression > 40) || (fatigue > 70 || stress > 70 || depression > 70):
+		// player is feeling poor, evaluate the truth against their claim
+		~ return claim == "poor"
+	// at least one stat yellow
+	- fatigue > 40 || stress > 40 || depression > 40:
+		// player is feeling mixed, evaluate the truth against their claim
+		~ return claim == "mixed"
+	- else:
+		// player is feeling good, evaluate the truth against their claim
+		~ return claim == "good"
+}
