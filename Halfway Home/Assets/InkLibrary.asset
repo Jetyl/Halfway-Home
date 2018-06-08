@@ -64,13 +64,13 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 5df5c88ecba071e4c9c44eae845b239b, type: 3}
     jsonAsset: {fileID: 4900000, guid: 8f17bf8046812ff48b8c77a6e70a8aa1, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 5c058e51cbffbc7458f3f763e52b869a, type: 3}
+    inkAsset: {fileID: 102900000, guid: 0c1ad3cf52f27bf45a3785e1a54fb612, type: 3}
     jsonAsset: {fileID: 4900000, guid: c4ddc51ea16e4ea468b22a8f7e9c04da, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: d7258b430da5e174492cd5d1721112a4, type: 3}
     jsonAsset: {fileID: 4900000, guid: eede21032990857488f62e3c68a6f360, type: 3}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 7572e13132aa59b418eb952905fef20b, type: 3}
+    inkAsset: {fileID: 102900000, guid: 16f39b5f653207a4981e7a7c796b2695, type: 3}
     jsonAsset: {fileID: 4900000, guid: 5c1af7eb0a352e842b0c5917c94273b6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: a99c661a63430ff45bfd5aee0e7aeef9, type: 3}

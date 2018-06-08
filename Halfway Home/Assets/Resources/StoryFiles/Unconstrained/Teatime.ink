@@ -18,6 +18,8 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 
+VAR lied = false
+
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, value)
 
@@ -200,27 +202,30 @@ Charlotte frowns. # Teatime / FSad
 [Charlotte] "Really? You seem to be doing well enough to my eyes."
 "If your plan is to play for sympathy from a sociopath, you may wish to reconsider." # Teatime SSmile
 She stifles a laugh with a carefully timed sip of tea. # Teatime / ArmsU
-->Courtesy
+~lied = true
+->Check
 
 =DoingPoorly
 Charlotte frowns. # Teatime / FSad
 She probably knows I lied.
 [Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
 She definitely knows I lied.
-->Courtesy
+~lied = true
+->Check
 
 =InTheMiddle
 Charlotte frowns. # Teatime / FSad
 She can probably tell I wasn't entirely honest.
 [Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
 She can definitely tell.
-->Courtesy
+~lied = true
+->Check
 
 === Truth ===
 
 =DoingFine
 Charlotte smiles warmly. # Teatime / FSmile
-[Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear that <i>someone</i> is still holding fast."
+[Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear <i>someone</i> is still holding fast."
 ->Check
 
 =DoingPoorly
