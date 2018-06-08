@@ -2052,7 +2052,7 @@ MonoBehaviour:
   listeningToScene: 0
   automaticRestart: 0
   queueStories: 0
-  debug: 1
+  debug: 0
   saveStates: 1
   saveOnExit: 0
   clearStateOnRestart: 0
