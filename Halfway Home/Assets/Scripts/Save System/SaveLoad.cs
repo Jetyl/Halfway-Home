@@ -22,7 +22,7 @@ public static class SaveLoad
     public static void Save() 
     {
 
-        CheckAddSave();
+        //CheckAddSave();
 
         if(Game.current != null)
             Game.current.SaveGame();
@@ -83,7 +83,7 @@ public static class SaveLoad
 
         var SavedGame = new Game(Game.current);
         Game.current = SavedGame;
-    
+            
     }
 
     public static void DeleteAt(int index)
@@ -93,20 +93,20 @@ public static class SaveLoad
         Save();
 
     }
-
-    public static int GetIndex(Game instance)
-    {
-        for (int i = 0; i < savedGames.Count; ++i)
-        {
-            if (savedGames[i] == instance)
-            {
-                return i;
-            }
-
-
-        }
-        return -1;
-    }
+   
+   //public static int GetIndex(Game instance)
+   //{
+   //    for (int i = 0; i < savedGames.Count; ++i)
+   //    {
+   //        if (savedGames[i] == instance)
+   //        {
+   //            return i;
+   //        }
+   //
+   //
+   //    }
+   //    return -1;
+   //}
 
     public static void Delete()
     {
@@ -137,9 +137,7 @@ public static class SaveLoad
 
         return true;
     }
-
     
-
     public static Game GetSave(int pos)
     {
 
@@ -147,62 +145,17 @@ public static class SaveLoad
             return null;
 
         if (savedGames[pos] != null)
-            return savedGames[pos];
+            return new Game(savedGames[pos]);
 
         return null;
     }
     
-
-    public static bool CanHaveNewSave()
-    {
-        if (savedGames.Count < 17)
-            return true;
-        else
-        {
-            for (int i = 0; i < savedGames.Count; ++i)
-            {
-
-                if (savedGames[i] == null)
-                {
-                    return true;
-                }
-
-            }
-        }
-
-
-        return false;
-    }
-
     public static int GetSize()
     {
         return savedGames.Count;
     }
 
-    private static void CheckAddSave()
-    {
-        if (Game.current == null)
-            return;
-
-        if (!savedGames.Contains(Game.current))
-        {
-            if (savedGames.Count < 17)
-                savedGames.Add(Game.current);
-            else if (CanHaveNewSave())
-            {
-                for (int i = 0; i < savedGames.Count; ++i)
-                {
-
-                    if (savedGames[i] == null)
-                    {
-                        savedGames[i] = Game.current;
-                        break;
-                    }
-
-                }
-            }
-        }
-    }
+    
 }
 
 

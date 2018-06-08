@@ -327,6 +327,10 @@
    {
     "Name" : "Know Charlotte Jealous",
     "Type" : 1
+   },
+   {
+    "Name" : "FoundWound",
+    "Type" : 1
    }
   ]
  }

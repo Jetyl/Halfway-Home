@@ -121,7 +121,6 @@ public class TMP_Animator : MonoBehaviour
         string rawText = textmesh.text;
         string text = textmesh.GetParsedText().ToLower();
 
-        print(text);
 
         segments = new List<TagSegment>();
 

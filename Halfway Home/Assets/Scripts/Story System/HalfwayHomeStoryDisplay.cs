@@ -51,6 +51,8 @@ namespace HalfwayHome
     protected override void OnStart()
     {
       Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
+
+            currentSpeaker = Game.current.CurrentSpeaker;
     }
     void OnFinishedDescription(DefaultEvent eventdata)
     {

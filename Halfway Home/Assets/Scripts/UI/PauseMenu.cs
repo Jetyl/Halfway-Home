@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
 
         if(data != null)
         {
-            Game.current = SaveLoad.GetSave(slot);
+            Game.current = data;
             ReaderReference.Clear();
             //ReaderReference.LoadSave();
             SceneManager.LoadScene(1);

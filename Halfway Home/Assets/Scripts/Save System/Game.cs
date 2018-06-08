@@ -181,7 +181,7 @@ public class Game
         }
 
 
-        //StorySave = copy_.StorySave;
+        StorySave.Overwrite(copy_.StorySave);
 
         CurrentRoom = copy_.CurrentRoom;
         CurrentTimeBlock = copy_.CurrentTimeBlock;

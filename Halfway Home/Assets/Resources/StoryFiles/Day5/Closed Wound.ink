@@ -31,6 +31,7 @@ EXTERNAL SetTimeBlock(time)
 EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
+EXTERNAL SetValue(ValueName, newValue)
 
 -> Start
 
@@ -45,6 +46,7 @@ EXTERNAL CallSleep()
 
 
 ===ClosedWound===
+~SetValue("FoundWound", true)
 You follow Timothy, who heads back to your bedroom #Backgroun = YourRoom
 He's curled up on his bed, the letter he got, opened up on his room
 He looks extremely distrught.
