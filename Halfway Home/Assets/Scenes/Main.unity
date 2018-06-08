@@ -56886,10 +56886,67 @@ MonoBehaviour:
   JitterKey: Jitter
   PulsateKey: Pulse
   FlowKey: Flow
-  JitterIntensity: 1
-  PulseIntensity: 1
-  FlowIntensity: 1
-  FlowSpeed: 1
+  segments: []
+  JitterIntensity: 2.17
+  PulseIntensity: -0.5
+  PulseSpeed: 0.5
+  PulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.009196293
+      inSlope: 0.019306775
+      outSlope: 0.019306775
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.24975352
+      value: 0.0117530525
+      inSlope: 0.055347327
+      outSlope: 0.055347327
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.30147147
+      value: 0.9828707
+      inSlope: 0.004797283
+      outSlope: 0.004797283
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.39602664
+      value: 0.0069150366
+      inSlope: 0.007426205
+      outSlope: 0.007426205
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.46701086
+      value: 0.0056775613
+      inSlope: 0.0028684735
+      outSlope: 0.0028684735
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.56917536
+      value: 1.0170791
+      inSlope: -0.00033527613
+      outSlope: -0.00033527613
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6795921
+      value: 0.0075470433
+      inSlope: -0.0022910535
+      outSlope: -0.0022910535
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9998291
+      value: 0.0051374547
+      inSlope: -0.010174956
+      outSlope: -0.010174956
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  FlowIntensity: 5
+  FlowSpeed: 5
+  t: 0
 --- !u!1 &1599900663
 GameObject:
   m_ObjectHideFlags: 0
@@ -64637,6 +64694,7 @@ MonoBehaviour:
   ScrollArea: {fileID: 534492654}
   Text: {fileID: 1467285924}
   SpeakerColors: {fileID: 568080880}
+  TagRemover: {fileID: 1599244677}
   ButtonsDisabledOnDisplay:
   - {fileID: 1586990783}
   - {fileID: 1916987723}
@@ -69044,7 +69102,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

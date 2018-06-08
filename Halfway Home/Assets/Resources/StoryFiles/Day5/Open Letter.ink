@@ -1,6 +1,6 @@
 ﻿/******************************************************************************/
 /*
-@file   Open Letter, Closed Wound.ink
+@file   Open Letter.ink
 @author Jesse Lozano
 @par    email: jesse.lozano@digipen.edu
 All content © 2017 DigiPen (USA) Corporation, all rights reserved.
@@ -31,17 +31,13 @@ EXTERNAL SetTimeBlock(time)
 EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
+EXTERNAL SetValue(ValueName, newValue)
 
 -> Start
 
 === Start ===
-{
-	-GetValue("GettingMail") == true:
-		->MailCall
-	-else:
-		You remeber last time, that around now Timothy ran off into your shared room to have a breakdown.
-		->ClosedWound
-}
+->MailCall
+	
 
 ===MailCall===
 I walk past the commons area, seeing a decent gathering of people. #Charlotte = calm, right #Trissa = calm, right, #Eduardo = calm, left #Isaac = calm, left
@@ -239,23 +235,5 @@ Charlotte sighes, her eyes wandering off somewhere before returning directly to 
 ->SocialHourOver
 
 ===ClosedWound===
-You follow Timothy, who heads back to your bedroom #Backgroun = YourRoom
-He's curled up on his bed, the letter he got, opened up on his room
-He looks extremely distrught.
-{
-	-awareness > 3:
-		should you try to comfort him, or go get someone more capable?
-		+[Comfort Timothy on Your Own]
-			->ComfortTimothy
-		+[Go Get Max]
-			->PoorStitches
-}
-->PoorStitches
-
-===PoorStitches===
-You do not feel comfortable handling this on your own. best to get Max. Their at least paid for this.
-->END
-
-===ComfortTimothy===
-Comfort Misha! :P
+~SetValue("GettingMail", true)
 ->END

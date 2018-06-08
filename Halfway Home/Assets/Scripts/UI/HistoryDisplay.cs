@@ -15,6 +15,8 @@ public class HistoryDisplay : MonoBehaviour
     public TextMeshProUGUI Text;
 
     public SpeakerDisplay SpeakerColors;
+
+    public TMP_Animator TagRemover;
     
     public Button[] ButtonsDisabledOnDisplay;
     public Image[] ImagesHiddenOnDisplay;
@@ -116,6 +118,8 @@ public class HistoryDisplay : MonoBehaviour
     void UpdateHistory(DescriptionEvent eventdata)
     {
         TextParser.ExtractTextSpeed(ref eventdata.Line);
+
+        TagRemover.KillAllCustomTags(ref eventdata.Line);
 
         if(eventdata.Speaker != CurrentSpeaker)
         {

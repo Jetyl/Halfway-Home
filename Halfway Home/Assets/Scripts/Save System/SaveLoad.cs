@@ -111,7 +111,6 @@ public static class SaveLoad
     public static void Delete()
     {
 
-        MonoBehaviour.print("hello?");
         if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
         {
             File.Delete(Application.persistentDataPath + "/savedGames.gd");

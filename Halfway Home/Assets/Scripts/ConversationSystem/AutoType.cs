@@ -101,12 +101,17 @@ public class AutoType : MonoBehaviour
 
     public void TypingText(AutoTypeEvent eventdata)
     {
-    
+        if(typing != null)
+        {
+            StopCoroutine(typing);
+            typing = null;
+        }
         message = eventdata.text;
         Text.text = "";
         PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");
         letterPause = 1 / (DefaultPauseSpeed * PauseSpeedMultiplier);
         UpdateSpeed = TextParser.ExtractTextSpeed(ref message);
+
         if (!Paused)
             typing = StartCoroutine(TypeText(0));
         else
@@ -116,8 +121,10 @@ public class AutoType : MonoBehaviour
     public void SkipTyping(DefaultEvent eventdata)
     {
         StopCoroutine(typing);
+        Effects.KillAllCustomTags(ref message);
         Text.text = message;
         Text.maxVisibleCharacters = message.Length;
+        typing = StartCoroutine(EffectsActive());
         Space.DispatchEvent(Events.FinishedAutoType);
     }
 
@@ -125,6 +132,9 @@ public class AutoType : MonoBehaviour
     {
         Text.maxVisibleCharacters = visible;
         Text.text = message;
+
+        Effects.DynamicAnimator();
+
         if(!Skipping)
         {
             
@@ -174,6 +184,8 @@ public class AutoType : MonoBehaviour
                 //print(Text.GetParsedText()[vis] + " " + charaPause);
                 Text.maxVisibleCharacters++;
 
+                Effects.AnimateText();
+
                 yield return new WaitForSeconds(charaPause);
             }
         }
@@ -189,9 +201,26 @@ public class AutoType : MonoBehaviour
 
         //audios.Stop();
         Space.DispatchEvent(Events.FinishedAutoType);
+
+        while(true)
+        {
+            Effects.AnimateText();
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
         
     }
+    IEnumerator EffectsActive()
+    {
+        
+        while (true)
+        {
+            Effects.AnimateText();
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
 
+
+    }
 
     float DelayContains(int index, float value)
     {
