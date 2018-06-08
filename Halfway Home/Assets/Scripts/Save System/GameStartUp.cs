@@ -73,9 +73,10 @@ public class GameStartUp : MonoBehaviour
             StartCoroutine(DelayStart(2));
             //print("new");
         }
-        else
+        else //for continuing games
         {
             //print("load");
+            ReaderReference.LoadSave();
             StartCoroutine(DelayStart(2));
         }
 
