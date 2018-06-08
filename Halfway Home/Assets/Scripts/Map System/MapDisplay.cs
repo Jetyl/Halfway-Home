@@ -49,7 +49,7 @@ namespace HalfwayHome
             StatsOffset.x -= SocialStats.GetComponent<RectTransform>().rect.width;
             
             MapOffset = MapRooms.transform.localPosition;
-            MapOffset.x += MapRooms.GetComponent<RectTransform>().rect.width;
+            MapOffset.x += (MapRooms.GetComponent<RectTransform>().rect.width * 1.1f); // added 10% just to make sure border is off screen
 
             Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
             Space.Connect<DefaultEvent>(Events.ReturnToMap, ClockMapDelay);
