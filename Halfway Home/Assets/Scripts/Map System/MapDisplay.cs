@@ -49,7 +49,7 @@ namespace HalfwayHome
             StatsOffset.x -= SocialStats.GetComponent<RectTransform>().rect.width;
             
             MapOffset = MapRooms.transform.localPosition;
-            MapOffset.x += MapRooms.GetComponent<RectTransform>().rect.width;
+            MapOffset.x += (MapRooms.GetComponent<RectTransform>().rect.width * 1.1f); // added 10% just to make sure border is off screen
 
             Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
             Space.Connect<DefaultEvent>(Events.ReturnToMap, ClockMapDelay);
@@ -191,11 +191,14 @@ namespace HalfwayHome
             Game.current.CurrentRoom = eventdata.Destination;
             //gameObject.SetActive(false);
             TurnMapOff();
-            Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
-            Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
+
 
             Game.current.InCurrentStory = true;
             Game.current.SetCurrentStory(DefaultActions.name, "StoryFiles/Unconstrained/" + DefaultActions.name); //the one hard coded path
+
+
+            Game.current.SetTimeBlock(eventdata.Length * multiplier, eventdata.DrainEnergy);
+            Space.DispatchEvent(Events.NewStory, new StoryEvent(DefaultActions));
 
         }
 

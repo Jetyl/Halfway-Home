@@ -265,6 +265,14 @@
    {
     "Name" : "HadMorningMisery",
     "Type" : 1
+   },
+   {
+    "Name" : "Told Trissa",
+    "Type" : 1
+   },
+   {
+    "Name" : "GettingMail",
+    "Type" : 1
    }
   ]
  },
@@ -318,6 +326,10 @@
    },
    {
     "Name" : "Know Charlotte Jealous",
+    "Type" : 1
+   },
+   {
+    "Name" : "FoundWound",
     "Type" : 1
    }
   ]

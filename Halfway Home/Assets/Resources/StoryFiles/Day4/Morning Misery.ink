@@ -76,7 +76,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 				Yeah, I didn't go to the hangout this week. wonder if there was anything else there I could see or say?
 			-week >=2 :
 				Still, good to know that's where Eduardo and Isaac were late tuesday night/wednesday morning. 
-				I'll have to keep a note of that for next week.
+				I'll have to keep a note of that for next week. //add objective here
 		}
 
 }
@@ -112,34 +112,50 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embaresse
 ===Pulling===
 {
 	-expression < 3:
-		[{player_name}] "I, um, I guess."
+		[{player_name}] "I, um, I guess you can see it that way. but, uh, I doubt its literally perfect you know."
 		[Eduardo] "that a funny joke. anyways, where was I?"
 		[{player_name}] "B-but..."
 		Eduardo isn't listening. he seems far to wrapped up in his passion. I guess I was not <color=color_expression><i>expressive</i></color> enough to get through to him.
 		->Gushing
 	-else:
-		[{player_name}] "Your relationship with Isaac is far from perfect."
-		he beleives you are serious, but doesn't believe you.
+		[{player_name}] "Eduardo, your relationship with Isaac is far from perfect."
+		[Eduardo] "..." //Eduardo has an annoyed expression
+		"The hell would you know about our relationship, {player_name}"
+		Wow, Eduardo is suprisngly defensive about their relationship. I probably need to tred carefully.
 		->Explain
 
 }
 
 ===Explain===
-How do you chose to explain yourself?
+I need to think, how to best explain myself?
 +[Hunch]
+	[{player_name}] "Its just a hunch I have."
+	[Eduardo] "yeah, well, keep your hunches to yerself from now on. okay?"
 	->Disbelif
 +[Its Obvious]
+	[{player_name}] "I mean, its kind of obvious, isn't it?"
+	[Eduardo] "no. no it's not."
 	->Disbelif
 +{GetValue("IsaacOpenedUp")}[Isaac told Me]
 	->Contention
 
 
 ===Disbelif===
-Eduardo is not persuaded to any sort of change in his viewpoint, and leaves.
-you failed to convince Eduardo of anything.
+[Eduardo] "whatever {player_gender == "F": girl| man}." #Background = Artroom #Eduardo = Angry
+"I gotta get going. Got stuff to do, and a <i>perfect</i> boyfriend to hang out with."
+"Later." #Eduardo = Exit
+Well, I guess I messed that one up.
+I might need some actual evidence to convince Eduardo that there is any problem in his life.
+Isaac might be able to tell me more about their relationship, if I can find a time when he's alone.
 ->END
 
 ===Contention===
+[{player_name}] "Isaac Told me."
+[Eduardo] "..." //shocked expression
+"Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" //angry expression
+Well, Eduarod is technically correct. Isaac hasn't told me anything yet, but...
+[{player_name}] "it's true. Isaac feels"
+
 You confront Eduardo on the true shakeyness of his relationship.
 puzzle be here.
 ->END

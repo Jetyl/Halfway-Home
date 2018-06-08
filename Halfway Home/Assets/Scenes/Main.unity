@@ -20142,7 +20142,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50.05
+  m_fontSize: 50.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -44202,12 +44202,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_spriteAsset: {fileID: 0}
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 0.5
   m_canvasRenderer: {fileID: 1257068437}
   m_TextComponent: {fileID: 1467285924}
   m_materialReferenceIndex: 1
@@ -44960,7 +44960,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52.95
+  m_fontSize: 53
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -52253,7 +52253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.6088}
+  m_AnchoredPosition: {x: 0, y: 902.80615}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -55289,7 +55289,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 62.15
+  m_fontSize: 62.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -56575,6 +56575,8 @@ GameObject:
   - component: {fileID: 1599244672}
   - component: {fileID: 1599244671}
   - component: {fileID: 1599244675}
+  - component: {fileID: 1599244677}
+  - component: {fileID: 1599244676}
   m_Layer: 5
   m_Name: BodyText
   m_TagString: Untagged
@@ -56837,6 +56839,114 @@ MonoBehaviour:
         supressing the Voices.
       Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   TooltipContent: {fileID: 1367268360}
+--- !u!114 &1599244676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599244669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d7397370f2b354196b0255cbc282aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Characters:
+  - '#PlayerName'
+  - Timothy
+  - Charlotte
+  - Eduardo
+  - Max
+  - Isaac
+  - Trissa
+  - Keyless
+  - Voices
+  Fonts:
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  - {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
+  NoSpeakerFont: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
+  RandomSpeakerFont: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+--- !u!114 &1599244677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599244669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46d591fcc207a34fa1513b2175bec9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JitterKey: Jitter
+  PulsateKey: Pulse
+  FlowKey: Flow
+  segments: []
+  JitterIntensity: 2.17
+  PulseIntensity: -0.5
+  PulseSpeed: 0.5
+  PulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.009196293
+      inSlope: 0.019306775
+      outSlope: 0.019306775
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.24975352
+      value: 0.0117530525
+      inSlope: 0.055347327
+      outSlope: 0.055347327
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.30147147
+      value: 0.9828707
+      inSlope: 0.004797283
+      outSlope: 0.004797283
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.39602664
+      value: 0.0069150366
+      inSlope: 0.007426205
+      outSlope: 0.007426205
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.46701086
+      value: 0.0056775613
+      inSlope: 0.0028684735
+      outSlope: 0.0028684735
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.56917536
+      value: 1.0170791
+      inSlope: -0.00033527613
+      outSlope: -0.00033527613
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6795921
+      value: 0.0075470433
+      inSlope: -0.0022910535
+      outSlope: -0.0022910535
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9998291
+      value: 0.0051374547
+      inSlope: -0.010174956
+      outSlope: -0.010174956
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  FlowIntensity: 5
+  FlowSpeed: 5
+  t: 0
 --- !u!1 &1599900663
 GameObject:
   m_ObjectHideFlags: 0
@@ -64584,6 +64694,7 @@ MonoBehaviour:
   ScrollArea: {fileID: 534492654}
   Text: {fileID: 1467285924}
   SpeakerColors: {fileID: 568080880}
+  TagRemover: {fileID: 1599244677}
   ButtonsDisabledOnDisplay:
   - {fileID: 1586990783}
   - {fileID: 1916987723}
@@ -68991,7 +69102,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

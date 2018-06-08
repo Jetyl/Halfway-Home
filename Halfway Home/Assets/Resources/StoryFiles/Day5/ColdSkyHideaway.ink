@@ -306,7 +306,12 @@ I help Isaac up off the ground. #background = gardens #Isaac = calm
 [Isaac] "Oh, and, um..."
 "I am gunna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
-Isaac then quickly.
+[{player_name}] "That sounds good. I'll be looking forward to hearing how it goes." #Isaac = surprise
+[Isaac] "..." 
+"sure." #Isaac = happy
+Isaac  quickly excuses himself after that, slinking off to bed. #Isaac = exit
+I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it with making a mess of things.
+Maybe I should find a time to chat with Eduardo about their relationship.
 ~SetValue("IsaacOpenedUp", true)
 ->END
 
