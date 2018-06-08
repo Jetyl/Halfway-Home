@@ -196,25 +196,32 @@ This can't be happening. this can't be happening.
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
 [{player_name}] "So, um..." #Timothy = Stage_center
-Oh, man. I did not wake up expecting to be a tour guide today. Whatever.
+Oh, man. I did not wake up expecting to be a tour guide today. Ce la vie.
+I whip out my planner and jot down a reminder to myself, a habit my old therapist encouraged me to follow. # 0 & InProgress
 "Well, this is my room. Although, I guess it'll be <i>our</i> room for the time being."
 "You can come here if you want to just get away from it all and de-stress." # Stress * Show
 "Also, obviously, you can just knock out here if you're too <color=color_wellbeing_penalty>fatigued</color> to do anything else. Or just whenever, really." # Fatigue * Show
-I go over and grab my watch off the desk beside my bed. Max was right, it is almost noon. 
-"So, uh... I don't know what brought you here and you don't have to tell me or anything, but one of the things I've suffered from before was Lost Time."
-[Timothy] "You mean you'd lose track of time? Doesn't everybody do that?"
+"Max'll get mad if you spend too much time loafing around, though, since we're supposed to be `active agents of self-recovery` or whatever."
+I go over and grab my watch off the desk beside my bed. Max was right, it is almost noon. // Show time here?
+"So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
+[Timothy] "Oh, okay. <size=50%>Last roommate?<size=100%>" # Timothy = Surprised
+"I was in Blackwell for a few years before coming here."
+[Timothy] "Me, too." # Timothy = Happy
+[{player_name}] "It's a pretty common story around here, really. We all know what it's like. At least, better than anyone out there."
+"Anyway, I struggled a lot with depression and Lost Time. I still do sometimes." # Timothy = Calm
+Maybe more than sometimes, but he doesn't need to know that.
+[Timothy] "Oh, man. Depression sucks. I've never heard of Lost Time, though." # Timothy = Sad
+"You mean you lose track of time? Doesn't everybody do that?" # Timothy = Calm
 [{player_name}] "No, it's more like..."
-"There would be entire hours where I'm just not home... up here."
-"Hours, maybe days, that I couldn't account for and couldn't remember. As if the time was lost."
+"There are times when I'm not home... up here. It was way worse before, of course."
+That much is true, but it's only gotten a little better, if I'm being honest.
+"There were hours, sometimes days that I couldn't account for and couldn't remember. As if the time was lost."
 "The actual term is dissociative amnesia."
-"It's a type of dissociation, where you lose hours or days of memory."
-"For me, I've found out it tends to flair up when I'm more <color=color_wellbeing_penalty><i>depressed</i></color>." # Depression * Show
+"It tends to flair up when I'm more <color=color_wellbeing_penalty><i>depressed</i></color>." # Depression * Show
 If I get too <color=color_wellbeing_penalty><i>depressed</i></color>, the amount of time it takes to do a task can <color=color_descriptor><i>double</i></color>, or even <color=color_descriptor><i>triple</i></color>.
-"When I was at Blackwell the doctors told me to keep track of my time. I think it was mostly for them, so they'd know how bad things were." 
-"I <i>try</i> to regiment what I do in a very hourly basis."
-I flash Timothy the time on my watch, almost noon.
-"C'mon, I'll show you."
-I am really starting to get hungry, so my first move should be to show Timothy the Cafe area. # Timothy = Exit
+"So if I'm ever late for anything, it's not because I don't care or something..."
+[Timothy] "Right, okay."
+I am really starting to get hungry, so my first move should be to show Timothy the Cafe area. # Timothy = Exit # 0.0 & InProgress
 ~SetValue("Tutorial", true)
 -> END
 

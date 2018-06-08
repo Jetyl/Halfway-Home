@@ -13,6 +13,12 @@
   "Caption" : ""
  },
  {
+  "Name" : "Long Night Hangout",
+  "Slug" : "CGs/Hangout/HangoutGallery",
+  "Set"  : 0,
+  "Caption" : ""
+ },
+ {
   "Name" : "Courtside",
   "Slug" : "CGs/Basketball/CourtsideGallery",
   "Set"  : 0,
@@ -27,12 +33,6 @@
  {
   "Name" : "Tea Time",
   "Slug" : "CGs/Teatime/TeaTime",
-  "Set"  : 0,
-  "Caption" : ""
- },
- {
-  "Name" : "Long Night Hangout",
-  "Slug" : "CGs/Hangman/hopealltogether",
   "Set"  : 0,
   "Caption" : ""
  },
