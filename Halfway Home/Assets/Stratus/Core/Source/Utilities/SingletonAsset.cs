@@ -45,39 +45,7 @@ namespace Stratus
         }
       }
     }
-
-    ///// <summary>
-    ///// Creates an instance of the asset
-    ///// </summary>
-    ///// <returns></returns>
-    //public static T LoadOrCreate<T>(string name, string path, bool hidden, System.Action<T> onCreated = null) where T : ScriptableObject
-    //{
-    //  var type = typeof(T);
-    //
-    //  var folderPath = IO.GetFolderPath(path);
-    //  if (folderPath == null)
-    //    throw new NullReferenceException("The given folder path '" + path + "' to be used for the asset '" + name + "' could not be found!");
-    //
-    //  var fullPath = folderPath + "/" + name + ".asset";
-    //
-    //  // Create an instance if not loaded
-    //  if (!singletons.ContainsKey(type))
-    //  {
-    //    Trace.Script($"Loading {type.Name}");
-    //    T instance = Assets.LoadOrCreateSaveData<T>(fullPath);
-    //    singletons.Add(type, instance);
-    //    if (hidden)
-    //      instance.hideFlags = HideFlags.HideInHierarchy;
-    //    onCreated?.Invoke(instance);
-    //  }
-    //
-    //  // Also create the serialized object      
-    //  //serializedObject_ = new SerializedObject(instance);
-    //
-    //
-    //  return (T)singletons[type];
-    //}
-
+    
   }
 
   /// <summary>
@@ -109,15 +77,7 @@ namespace Stratus
         return _instance;
       }
     }
-
-    //public static SingletonAsset<T> singleton
-    //{ 
-    //  get
-    //  {
-    //    return (SingletonAsset<T>)instance;
-    //  }
-    //}
-
+    
 #if UNITY_EDITOR
     /// <summary>
     /// Used for editing the properties of the asset in a generic way
@@ -176,37 +136,16 @@ namespace Stratus
 
 
 
-#if UNITY_EDITOR
     /// <summary>
     /// Saves this asset
     /// </summary>
     public static void Save()
     {
+#if UNITY_EDITOR
       UnityEditor.EditorUtility.SetDirty(_instance);
       UnityEditor.AssetDatabase.SaveAssets();
-    } 
 #endif
-
-    /// <summary>
-    /// Inspects this asset within an OnGUI method
-    /// </summary>
-    public void Inspect()
-    {
-      var inspector = UnityEditor.Editor.CreateEditor(get);
-      inspector.DrawDefaultInspector();
-      
-      if (GUI.changed)
-        Save();
-    }
-
-    ///// <summary>
-    ///// Reset all of the asset's fields
-    ///// </summary>
-    //public static void Reset()
-    //{
-
-    //}
-
+    } 
 
   }
 }
