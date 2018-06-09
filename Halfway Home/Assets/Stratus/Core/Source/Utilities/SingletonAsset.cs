@@ -136,16 +136,16 @@ namespace Stratus
 
 
 
-#if UNITY_EDITOR
     /// <summary>
     /// Saves this asset
     /// </summary>
     public static void Save()
     {
+#if UNITY_EDITOR
       UnityEditor.EditorUtility.SetDirty(_instance);
       UnityEditor.AssetDatabase.SaveAssets();
-    } 
 #endif
+    } 
 
   }
 }
