@@ -4,12 +4,24 @@ using UnityEngine;
 using UnityEditorInternal;
 using LitJson;
 using UnityEditor;
+using TMPro;
 
 public class CharacterInfo
 {
     public string Name;
 
     public Sprite MapIcon;
+
+    public Color SpeakerColor = Color.white;
+    public TMP_FontAsset Font;
+    public int FontSize = 20;
+
+    bool showSchedule;
+    bool ShowQuirk;
+    public TypingQuirk StartEndQuirk;
+
+    public List<TypingQuirk> ReplacingQuirks;
+    private ReorderableList Quirks;
 
     public List<List<Room>> Schedule;
 
@@ -20,6 +32,7 @@ public class CharacterInfo
         Name = "";
         MapIcon = null;
         Schedule = new List<List<Room>>();
+        ReplacingQuirks = new List<TypingQuirk>();
 
         for(int i = 0; i <= 7; ++i)
         {
@@ -34,6 +47,7 @@ public class CharacterInfo
 
         Day = 0;
 
+        OrganizeLines();
     }
 
 
@@ -48,6 +62,41 @@ public class CharacterInfo
             MapIcon = Resources.Load<Sprite>("Sprites/" + slug);
         }
 
+        if (data["font"] != null)
+        {
+            slug = (string)data["font"];
+            Font = Resources.Load<TMP_FontAsset>(slug);
+        }
+
+        FontSize = (int)data["FontSize"];
+
+
+        float r = (float)(double)data["r"];
+        float g = (float)(double)data["g"];
+        float b = (float)(double)data["b"];
+        float a = (float)(double)data["a"];
+
+        SpeakerColor = new Color(r, g, b, a);
+
+        if (data["FrontQuirk"] != null)
+            StartEndQuirk.NormalText = (string)data["FrontQuirk"];
+        if (data["EndQuirk"] != null)
+            StartEndQuirk.QuirkedText = (string)data["EndQuirk"];
+
+        ReplacingQuirks = new List<TypingQuirk>();
+
+        if (data["Quirks"] != null)
+        {
+            for (int i = 0; i < data["Quirks"].Count; ++i)
+            {
+                TypingQuirk replace;
+                replace.NormalText = (string)data["Quirks"][i]["NormalText"];
+                replace.QuirkedText = (string)data["Quirks"][i]["QuirkText"];
+                
+                ReplacingQuirks.Add(replace);
+            }
+
+        }
 
         Schedule = new List<List<Room>>();
 
@@ -85,6 +134,7 @@ public class CharacterInfo
 
 
         Day = 0;
+        OrganizeLines();
     }
 
     public void Draw()
@@ -92,42 +142,93 @@ public class CharacterInfo
         Name = EditorGUILayout.TextField("Character Name", Name);
 
         MapIcon = EditorGUILayout.ObjectField(MapIcon, typeof(Sprite), allowSceneObjects: true) as Sprite;
-        
 
-        EditorGUILayout.LabelField("Day");
-        Day = EditorGUILayout.IntSlider(Day, 0, 7);
-        
+        SpeakerColor = EditorGUILayout.ColorField("Speaker Color", SpeakerColor);
 
+        Font = EditorGUILayout.ObjectField(Font, typeof(TMP_FontAsset), allowSceneObjects: true) as TMP_FontAsset;
+        FontSize = EditorGUILayout.IntSlider("Default Font Size", FontSize, 8, 108);
 
-        EditorGUILayout.LabelField("Schedule for day " + Day);
-        
-        for (int j = 0; j < 24; ++j)
+        ShowQuirk = EditorGUILayout.Foldout(ShowQuirk, "Show Text Quirks");
+
+        if(ShowQuirk)
         {
-            string Txt = j + ":00";
+            StartEndQuirk.NormalText = EditorGUILayout.TextField("Insert in front of line:", StartEndQuirk.NormalText);
+            StartEndQuirk.QuirkedText = EditorGUILayout.TextField("Insert End of of line:", StartEndQuirk.QuirkedText);
 
-            if (j < 12)
-            {
-                if (j == 0)
-                    Txt = "12:00 AM";
-                else
-                    Txt = j + ":00 AM";
-                
-            }
-            else
-            {
-                if (j == 12)
-                    Txt = "12:00 PM";
-                else
-                    Txt = (j - 12) + ":00 PM";
-            }
-
-            Schedule[Day][j] = (Room)EditorGUILayout.EnumPopup(Txt, Schedule[Day][j]);
+            Quirks.DoLayoutList();
         }
 
+        showSchedule = EditorGUILayout.Foldout(showSchedule, "Show Schedules");
+
+        if(showSchedule)
+        {
+            EditorGUILayout.LabelField("Day");
+            Day = EditorGUILayout.IntSlider(Day, 0, 7);
+            
+            EditorGUILayout.LabelField("Schedule for day " + Day);
+
+            for (int j = 0; j < 24; ++j)
+            {
+                string Txt = j + ":00";
+
+                if (j < 12)
+                {
+                    if (j == 0)
+                        Txt = "12:00 AM";
+                    else
+                        Txt = j + ":00 AM";
+
+                }
+                else
+                {
+                    if (j == 12)
+                        Txt = "12:00 PM";
+                    else
+                        Txt = (j - 12) + ":00 PM";
+                }
+
+                Schedule[Day][j] = (Room)EditorGUILayout.EnumPopup(Txt, Schedule[Day][j]);
+            }
+        }
+        
+    }
 
 
+    void OrganizeLines()
+    {
+
+        Quirks = new ReorderableList(ReplacingQuirks, typeof(TypingQuirk), true, true, true, true);
+
+        Quirks.drawHeaderCallback = (Rect rect) => {
+            EditorGUI.LabelField(rect, "Replacing Text Quirks");
+        };
+
+        Quirks.drawElementCallback =
+    (Rect rect, int index, bool isActive, bool isFocused) => {
+        var element = (TypingQuirk)Quirks.list[index];
+        rect.y += 2;
+
+        element.NormalText = EditorGUI.TextField(new Rect(rect.x, rect.y, (rect.width / 2) - 10, EditorGUIUtility.singleLineHeight),
+            "Base: ", element.NormalText);
+        element.QuirkedText = EditorGUI.TextField(new Rect(rect.x + (rect.width / 2) + 10, rect.y, (rect.width / 2) - 10, EditorGUIUtility.singleLineHeight),
+            "Quirk:", element.QuirkedText);
+
+        Quirks.list[index] = element;
+    };
+
+
+
+
+        // List.onChangedCallback
     }
 
 
 
+
+}
+
+public struct TypingQuirk
+{
+    public string NormalText;
+    public string QuirkedText;
 }

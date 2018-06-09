@@ -3,7 +3,17 @@
  {
   "Name" : "Timothy",
   "slug" : "Chibis/TinyTim",
-  "Schedule" : [
+  "r"    : 0.419607847929001,
+  "g"    : 0.831372559070587,
+  "b"    : 1.0,
+  "a"    : 1.0,
+  "font" : "Fonts/tenderness SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -217,7 +227,17 @@
  {
   "Name" : "Charlotte",
   "slug" : "Chibis/LilCharlotte",
-  "Schedule" : [
+  "r"    : 1.0,
+  "g"    : 0.976470589637756,
+  "b"    : 0.149019613862038,
+  "a"    : 1.0,
+  "font" : "Fonts/tenderness SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -431,7 +451,17 @@
  {
   "Name" : "Eduardo",
   "slug" : "Chibis/Eggplant",
-  "Schedule" : [
+  "r"    : 1.0,
+  "g"    : 0.388235300779343,
+  "b"    : 0.678431391716003,
+  "a"    : 1.0,
+  "font" : "Fonts/tenderness SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -645,7 +675,17 @@
  {
   "Name" : "Max",
   "slug" : "Chibis/MiniMax",
-  "Schedule" : [
+  "r"    : 0.701960802078247,
+  "g"    : 1.0,
+  "b"    : 0.674509823322296,
+  "a"    : 1.0,
+  "font" : "Fonts/tenderness SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -859,7 +899,17 @@
  {
   "Name" : "Isaac",
   "slug" : "Chibis/IttyBittyIsaac",
-  "Schedule" : [
+  "r"    : 0.603921592235565,
+  "g"    : 0.321568638086319,
+  "b"    : 0.949019610881805,
+  "a"    : 1.0,
+  "font" : null,
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -1073,7 +1123,17 @@
  {
   "Name" : "Trissa",
   "slug" : "Chibis/BeebeeTrissa",
-  "Schedule" : [
+  "r"    : 0.898039221763611,
+  "g"    : 0.776470601558685,
+  "b"    : 0.462745100259781,
+  "a"    : 1.0,
+  "font" : "Fonts/tenderness SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -1287,7 +1347,17 @@
  {
   "Name" : "Keyless",
   "slug" : null,
-  "Schedule" : [
+  "r"    : 0.701960802078247,
+  "g"    : 1.0,
+  "b"    : 0.674509823322296,
+  "a"    : 1.0,
+  "font" : "Fonts/IndieFlower SDF",
+  "FontSize" : 20,
+  "FrontQuirk" : null,
+  "EndQuirk"   : null,
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,
@@ -1501,7 +1571,17 @@
  {
   "Name" : "Voices",
   "slug" : null,
-  "Schedule" : [
+  "r"    : 0.737254917621613,
+  "g"    : 0.737254917621613,
+  "b"    : 0.737254917621613,
+  "a"    : 1.0,
+  "font" : "Fonts/quaky",
+  "FontSize" : 20,
+  "FrontQuirk" : "<pulse>",
+  "EndQuirk"   : "</pulse>",
+  "Quirks"     : [
+  ],
+  "Schedule"   : [
    [
     0,
     0,

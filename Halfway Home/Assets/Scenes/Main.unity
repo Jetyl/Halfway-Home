@@ -5898,7 +5898,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -20221,6 +20221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Box: {fileID: 603277534}
+  PlayerColor: {r: 1, g: 1, b: 1, a: 1}
   Characters:
   - '#PlayerName'
   - Timothy
@@ -52253,7 +52254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.80615}
+  m_AnchoredPosition: {x: 0, y: 902.806}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -56871,7 +56872,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
   - {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
   NoSpeakerFont: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
+  NoSpeakerSize: 52
+  PlayerFont: {fileID: 0}
+  PlayerFontSize: 48
   RandomSpeakerFont: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
+  DefaultFontSize: 48
 --- !u!114 &1599244677
 MonoBehaviour:
   m_ObjectHideFlags: 0

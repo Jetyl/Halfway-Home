@@ -20,7 +20,7 @@ public class ScheduleEditor : EditorWindow
     
     private ReorderableList Characters;
 
-    [MenuItem("Window/Halfway Home/Schedule Editor")]
+    [MenuItem("Window/Halfway Home/Character Editor")]
 
     public static void ShowWindow()
     {
@@ -61,7 +61,7 @@ public class ScheduleEditor : EditorWindow
         GUILayout.BeginVertical();
 
         // display for the currently selected beat
-        EditorGUILayout.LabelField("Current Character's Schedule");
+        EditorGUILayout.LabelField("Current Character's info");
 
         if (SelectedBeat >= 0)
         {
@@ -85,7 +85,7 @@ public class ScheduleEditor : EditorWindow
 
         GUILayout.BeginVertical();
         // The actual window code goes here
-        if (GUILayout.Button("Save Schedules"))
+        if (GUILayout.Button("Save Character Info"))
         {
             SaveItemInfo();
 
@@ -166,7 +166,6 @@ public class ScheduleEditor : EditorWindow
             Jwriter.Write(beat.Name);
 
             Jwriter.WritePropertyName("slug");
-
             if (beat.MapIcon != null)
             {
                 string txt = AssetDatabase.GetAssetPath(beat.MapIcon);
@@ -179,6 +178,52 @@ public class ScheduleEditor : EditorWindow
             {
                 Jwriter.Write(null);
             }
+
+            //colors
+            Jwriter.WritePropertyName("r");
+            Jwriter.Write(beat.SpeakerColor.r);
+            Jwriter.WritePropertyName("g");
+            Jwriter.Write(beat.SpeakerColor.g);
+            Jwriter.WritePropertyName("b");
+            Jwriter.Write(beat.SpeakerColor.b);
+            Jwriter.WritePropertyName("a");
+            Jwriter.Write(beat.SpeakerColor.a);
+
+            Jwriter.WritePropertyName("font");
+            if (beat.Font != null)
+            {
+                string txt = AssetDatabase.GetAssetPath(beat.Font);
+                txt = txt.Replace("Assets/Resources/", "");
+                //removes the file extention off the string
+                txt = txt.Remove(txt.Length - 6);
+                Jwriter.Write(txt);
+            }
+            else
+            {
+                Jwriter.Write(null);
+            }
+
+            Jwriter.WritePropertyName("FontSize");
+            Jwriter.Write(beat.FontSize);
+
+            Jwriter.WritePropertyName("FrontQuirk");
+            Jwriter.Write(beat.StartEndQuirk.NormalText);
+            Jwriter.WritePropertyName("EndQuirk");
+            Jwriter.Write(beat.StartEndQuirk.QuirkedText);
+
+            Jwriter.WritePropertyName("Quirks");
+            Jwriter.WriteArrayStart();
+            for (int i = 0; i < beat.ReplacingQuirks.Count; ++i)
+            {
+                Jwriter.WriteObjectStart();
+                Jwriter.WritePropertyName("NormalText");
+                Jwriter.Write(beat.ReplacingQuirks[i].NormalText);
+                Jwriter.WritePropertyName("QuirkText");
+                Jwriter.Write(beat.ReplacingQuirks[i].QuirkedText);
+                Jwriter.WriteObjectEnd();
+            }
+
+            Jwriter.WriteArrayEnd();
 
             Jwriter.WritePropertyName("Schedule");
             Jwriter.WriteArrayStart();

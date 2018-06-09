@@ -5,7 +5,7 @@ using UnityEditorInternal;
 using UnityEditor;
 using LitJson;
 
-[CustomEditor(typeof(FontDisplay))]
+//[CustomEditor(typeof(FontDisplay))]
 public class FontDisplayEditor : Editor
 {
 
