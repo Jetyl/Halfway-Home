@@ -38,6 +38,7 @@ public class TMP_Animator : MonoBehaviour
 
     public float PulseIntensity = 1.0f;
     public float PulseSpeed = 1.0f;
+    public Color PulseColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     public AnimationCurve PulseCurve;
 
     public float FlowIntensity = 1.0f;
@@ -375,6 +376,7 @@ public class TMP_Animator : MonoBehaviour
                 destColors[materialIndex][vertexIndex + 1] = textmesh.color;
                 destColors[materialIndex][vertexIndex + 2] = textmesh.color;
                 destColors[materialIndex][vertexIndex + 3] = textmesh.color;
+                
 
                 //do the thing
                 switch (t)
@@ -383,12 +385,16 @@ public class TMP_Animator : MonoBehaviour
                         Jitter(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
                         break;
                     case AnimType.Pulse:
-                        Pulse(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
-                        {
-                            destColors[materialIndex][vertexIndex] = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-                            destColors[materialIndex][vertexIndex + 1] = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-                            destColors[materialIndex][vertexIndex + 2] = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-                            destColors[materialIndex][vertexIndex + 3] = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+                        { 
+                            float intensity = Pulse(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
+                            
+                            Color textColor = Color.Lerp(textmesh.color, PulseColor, intensity);
+                            //textColor = Color.Lerp();
+
+                            destColors[materialIndex][vertexIndex] = textColor;
+                            destColors[materialIndex][vertexIndex + 1] = textColor;
+                            destColors[materialIndex][vertexIndex + 2] = textColor;
+                            destColors[materialIndex][vertexIndex + 3] = textColor;
                         }
                         break;
                     case AnimType.Flow:
@@ -435,7 +441,7 @@ public class TMP_Animator : MonoBehaviour
         dst[startIndex + 3] = src[startIndex + 3];
     }
 
-    void Pulse(Vector3[] dst, Vector3[] src, int startIndex) //like a heartbeat
+    float Pulse(Vector3[] dst, Vector3[] src, int startIndex) //like a heartbeat
     {
         //I can't think of what things yes off the top of my head and I've got food to go eat so I'm do this later
 
@@ -457,6 +463,8 @@ public class TMP_Animator : MonoBehaviour
         //dst[startIndex + 1] = wew * (src[startIndex + 1] - center) * startIndex / 30.0f + center2;
         //dst[startIndex + 2] = wew * (src[startIndex + 2] - center) * startIndex / 30.0f + center2;
         //dst[startIndex + 3] = wew * (src[startIndex + 3] - center) * startIndex / 30.0f + center2;
+
+        return intensity;
 
     }
 
