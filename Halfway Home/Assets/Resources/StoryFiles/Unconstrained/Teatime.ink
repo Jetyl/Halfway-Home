@@ -253,14 +253,15 @@ Your success is based on your awareness rather than grace. 3+ awareness you can 
 
 
 === Understanding ===
-You try to explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
+You explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
 You praise her wisdom at having realized the nature of empathy without possessing it. She has attained enlightenment already. There is nothing left for her to gain at Sunflower House.
-You convince her that she is ready to leave.
+You convince her that she is ready to leave. This is Charlotte's good ending.
 -> END
 
 === Courtesy ===
 You are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
 She also laments that you, her student, are certain to surpass her due to her disadvantage. She asks that you remember what she gave you when you're out charming the pants off of everyone.
+This is Charlotte's neutral ending.
 -> END
 
 === function AmIFeeling(claim) ===
