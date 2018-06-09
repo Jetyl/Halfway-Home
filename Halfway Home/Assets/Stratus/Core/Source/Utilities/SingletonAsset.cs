@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using Stratus.Utilities;
@@ -119,10 +118,11 @@ namespace Stratus
     //  }
     //}
 
+#if UNITY_EDITOR
     /// <summary>
     /// Used for editing the properties of the asset in a generic way
     /// </summary>
-    public static SerializedObject serializedObject
+    public static UnityEditor.SerializedObject serializedObject
     {
       get
       {
@@ -132,9 +132,10 @@ namespace Stratus
       }
     }
 
-   
+
     // Fields
-    private static SerializedObject serializedObject_;
+    private static UnityEditor.SerializedObject serializedObject_; 
+#endif
 
     /// <summary>
     /// Creates an instance of the asset
@@ -160,8 +161,11 @@ namespace Stratus
       // Now create the proper instance
       _instance = Assets.LoadOrCreateScriptableObject<T>(fullPath);
 
+
+#if UNITY_EDITOR
       // Also create the serialized object      
-      serializedObject_ = new SerializedObject(_instance);
+      serializedObject_ = new UnityEditor.SerializedObject(_instance); 
+#endif
 
       if (hidden)
         _instance.hideFlags = HideFlags.HideInHierarchy;
@@ -172,15 +176,17 @@ namespace Stratus
 
 
 
+#if UNITY_EDITOR
     /// <summary>
     /// Saves this asset
     /// </summary>
     public static void Save()
     {
-      EditorUtility.SetDirty(_instance);
-      AssetDatabase.SaveAssets();
-    }
-    
+      UnityEditor.EditorUtility.SetDirty(_instance);
+      UnityEditor.AssetDatabase.SaveAssets();
+    } 
+#endif
+
     /// <summary>
     /// Inspects this asset within an OnGUI method
     /// </summary>

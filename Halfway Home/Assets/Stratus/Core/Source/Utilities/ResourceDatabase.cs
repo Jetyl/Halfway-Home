@@ -327,6 +327,7 @@ namespace Stratus
 
   }
 
+#if UNITY_EDITOR
   public class ResourceDatabasePostProcessor : UnityEditor.AssetPostprocessor
   {
     private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
@@ -353,7 +354,8 @@ namespace Stratus
         ResourceDatabase.get.UpdateDatabase();
       }
     }
-  }
+  } 
+#endif
 
 
 
