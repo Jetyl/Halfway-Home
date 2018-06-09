@@ -18,6 +18,8 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 
+VAR lied = false
+
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, value)
 
@@ -200,27 +202,30 @@ Charlotte frowns. # Teatime / FSad
 [Charlotte] "Really? You seem to be doing well enough to my eyes."
 "If your plan is to play for sympathy from a sociopath, you may wish to reconsider." # Teatime SSmile
 She stifles a laugh with a carefully timed sip of tea. # Teatime / ArmsU
-->Courtesy
+~lied = true
+->Check
 
 =DoingPoorly
 Charlotte frowns. # Teatime / FSad
 She probably knows I lied.
 [Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
 She definitely knows I lied.
-->Courtesy
+~lied = true
+->Check
 
 =InTheMiddle
 Charlotte frowns. # Teatime / FSad
 She can probably tell I wasn't entirely honest.
 [Charlotte] "I see. Perhaps I have overstepped." # Teatime / WSad
 She can definitely tell.
-->Courtesy
+~lied = true
+->Check
 
 === Truth ===
 
 =DoingFine
 Charlotte smiles warmly. # Teatime / FSmile
-[Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear that <i>someone</i> is still holding fast."
+[Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear <i>someone</i> is still holding fast."
 ->Check
 
 =DoingPoorly
@@ -237,18 +242,26 @@ Wait, but I don't think Charlotte is a snob... I bet plenty of other people do, 
 ->Check
 
 === Check ===
+[{player_name}] "Enough about me, aready. How are <i>you</i> doing, Charlotte?"
+Charlotte is pleased at your question and responds automatically, which you notice.
+When you press her further, she reflects and is sad.
+She says that she does all she can, but that she has accepted her place and her fate.
+Her attitude is grim resolution and guilt for perceived past misdeeds.
+You don't think Charlotte is right, and have to devise a strategy for convincing her.
+Your success is based on your awareness rather than grace. 3+ awareness you can convince her (understanding), otherwise she shrugs off your argument and thanks you for your concern. (courtesy)
 {awareness>2:->Understanding|->Courtesy}
 
 
 === Understanding ===
-You try to explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
+You explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
 You praise her wisdom at having realized the nature of empathy without possessing it. She has attained enlightenment already. There is nothing left for her to gain at Sunflower House.
-You convince her that she is ready to leave.
+You convince her that she is ready to leave. This is Charlotte's good ending.
 -> END
 
 === Courtesy ===
 You are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
 She also laments that you, her student, are certain to surpass her due to her disadvantage. She asks that you remember what she gave you when you're out charming the pants off of everyone.
+This is Charlotte's neutral ending.
 -> END
 
 === function AmIFeeling(claim) ===
