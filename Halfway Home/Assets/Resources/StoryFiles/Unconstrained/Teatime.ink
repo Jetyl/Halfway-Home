@@ -242,6 +242,13 @@ Wait, but I don't think Charlotte is a snob... I bet plenty of other people do, 
 ->Check
 
 === Check ===
+[{player_name}] "Enough about me, aready. How are <i>you</i> doing, Charlotte?"
+Charlotte is pleased at your question and responds automatically, which you notice.
+When you press her further, she reflects and is sad.
+She says that she does all she can, but that she has accepted her place and her fate.
+Her attitude is grim resolution and guilt for perceived past misdeeds.
+You don't think Charlotte is right, and have to devise a strategy for convincing her.
+Your success is based on your awareness rather than grace. 3+ awareness you can convince her (understanding), otherwise she shrugs off your argument and thanks you for your concern. (courtesy)
 {awareness>2:->Understanding|->Courtesy}
 
 
