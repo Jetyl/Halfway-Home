@@ -5,7 +5,7 @@ using UnityEditorInternal;
 using UnityEditor;
 using LitJson;
 
-[CustomEditor(typeof(SpeakerDisplay))]
+//[CustomEditor(typeof(SpeakerDisplay))]
 public class SpeakerDisplayEditor : Editor
 {
 

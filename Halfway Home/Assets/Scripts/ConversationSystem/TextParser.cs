@@ -287,6 +287,13 @@ public static class TextParser
         return text;
     }
 
+
+    public static string AddQuirk(string text, string Speaker)
+    {
+
+
+        return text;
+    }
     
     public static int CheckProgress(JsonData data)
     {
