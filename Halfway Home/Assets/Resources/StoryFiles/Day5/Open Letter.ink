@@ -78,15 +78,18 @@ Max seems to either not notice this, or not care, as they continue handing out l
 Timothy looks at envelope for a bit, not even attempting to open it, before walking away with it in hand. #Timothy = exit
 {
 	-week > 1:
-		because of you know the future, and Timothy's future breakdown, you can choose to follow timothy as he slings away from the conversation
-		Do you follow him?
+		hmmm, wait.
+		Timothy didn't look too good just now.
+		And I know what happens on Sunday with Timothy. Maybe...
+		Maybe that letter is part of why he had a breakdown?
+		I supposeI could follow him, and see whats up?
 		+[Follow Timothy]
 			->ClosedWound
 		+[Let Him Be]
-			You let him be himself
+			On second thought, nah. I'm sure its nothing.
 			->IgnorantBliss
 	-else:
-		You don't notice timothy's quiet sadness, as he slinks off.
+		I wonder whats bothering him?
 		->IgnorantBliss
 }
 
@@ -122,15 +125,15 @@ I walk over towards Trissa, who is leaning by the fireplace, with her nose in th
 [Trissa] "oh, just some garbage that needed express removal. nothing you ned to worry about."
 {
 	-grace < 3:
-		[{player_name}] "well, yeah but, who was it from?"
+		[{player_name}] "well, yeah but, who was it from?" #grace ^ poor
 		[Trissa] "..." #Trissa = angry
 	-else:
-		[{player_name}] "Family Issues?"
+		[{player_name}] "Family Issues?" #grace ^ good
 		[Trissa] "hm... Sort of."
 		[Trissa] "You see, the entirety of my family, save my little bother Spencer, died recently."
 		[{player_name}] "Oh. uh, I'm sorry for your loss."
 		[Trissa] "Oh, don't be."
-		"Their all fine. no one is physically dead. They're just dead to me."
+		"Their all fine. No one is physically dead. They're just dead to me."
 }
 "I'm sorry {player_name}, I suppose I wasn't clear, as I do mind talking about the subject." #Trissa = sad
 [{player_name}] "Oh! Sorry for prying."
@@ -152,7 +155,7 @@ I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Cha
 	-expression < 3:
 		You know, maybe they wouldn't be old if you actually bothered to pick them up when they arrived. but, whatever.
 	-else:
-	[{player_name}] "You know, maybe they wouldn't be old if you actually got them when they got here."
+	[{player_name}] "You know, maybe they wouldn't be old if you actually got them when they got here." #expression ^ good
 	"You know, check the front desk from time to time?"
 	[Eduardo] "hey, I do check the front desk all the time."
 	"I just... <delay=0.5>didn't want to pick them up."
@@ -180,10 +183,10 @@ He looks as though he is going to open one, but then just places it back down in
 Isaac mumbles off, looking off to the side. I follow his line of sight, to Eduardo, who is practically shreding thru his letters. #Eduardo = happy, stage_right, small
 {
 	-grace < 3:
-		[{player_name}] "Well, um..." #Eduardo = exit
+		[{player_name}] "Well, um..." #grace ^ poor #Eduardo = exit
 		I really don't know where Isaac was going his line of thinking. although, really, thats true for like half the time I'm around him.
 	-else:
-		[{player_name}] "Have you told them? about him?"
+		[{player_name}] "Have you told them? about him?" #grace ^ good
 		[Isaac] "Nope." #Eduardo = exit
 		[Isaac] "Scared. I think."
 		[{player_name}] "Afraid they won't approve?"
@@ -218,13 +221,13 @@ Charlotte sighes, her eyes wandering off somewhere before returning directly to 
 		[{player_name}] "I dunno."
 		It seems weird to tell her she looks like she came from a victorian novel, so I don't
 	-else:
-		[{player_name}] "Do you really want my opinion?"
+		[{player_name}] "Do you really want my opinion?" #expression ^ good
 		[Charlotte] "Oh, definetly. Another perspective on myself would be most benifical."
 		[{player_name}] "okay..."
 		I take a moment to breath, before I open the floodgates.
 		".....@@Charlotte."
 		"You dress like you're from a victorian novel, @you act more like you work here than you live here, @And in fact I though you did work here for quite a while."
-		"You have a very distinctly style of speech which is very different from everyone elses, @And I had a dream that you were a robot once and I always remeber that."
+		"You have a very distinctly style of speech which is very different from everyone elses, @And I had a dream that you were a robot once and I always remember that."
 		[Charlotte] "..."
 		"Thank you, {player_name}, for your honesty."
 		"I suppose I still have much work left to do, until I can return to society proper."

@@ -98,6 +98,7 @@ I idly browse the shelves for a book, like normal.
 
 === BrowsingRepeat ===
 I decide it's best not to approach Charlotte.
+->END
 
 === Reading ===
 [Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)}
@@ -251,12 +252,12 @@ Charlotte rises and takes a step toward the door before turning back to me.
 *[Yes]
 	[{player_name}] "I'd be happy to. What time?"
 	[Charlotte] "I usually take tea at 3pm, if that isn't a bother."
-	[{player_name}] "3pm. Got it."
+	[{player_name}] "3pm. Got it." {SetValue("ReadyForTea", 2)}
 *[No]
 	[{player_name}] "Sorry, while ordinarily I would never turn down an invitation for free food, I've got other obligations."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
-I should probably head out as well. {SetValue("ReadyForTea", 2)}
+I should probably head out as well. 
 -> END
 
 === Instruction ===
@@ -269,7 +270,7 @@ I should probably head out as well. {SetValue("ReadyForTea", 2)}
 	[{player_name}] "2pm tomorrow. Got it." {SetValue("ReadyForInstruction", 2)}
 *[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
-	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}." {SetValue("ReadyForInstruction", 2)}
+	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
 Man, Charlotte is seriously living in a different century from anyone I've ever met.
 I should probably head out as well.

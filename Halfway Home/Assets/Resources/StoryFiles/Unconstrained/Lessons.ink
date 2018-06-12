@@ -31,7 +31,7 @@ Splayed out on the table in front of her are a handful of books, some opened to 
 [Charlotte] "Punctuality is a good start. Thank you for meeting me here." # Charlotte = Happy
 [{player_name}] "Yeah, sure."
 [Charlotte] "The polite response would be to thank me for offering my time, {player_name}." # Charlotte = Calm
-[{player_name}] "Shit, right. Thanks for helping me out."
+[{player_name}] "Shit, right. Thanks for helping me out." //is shit pg13?
 [Charlotte] "You are very welcome. It's nice to have the chance to share my knowledge." # Charlotte = Happy
 "Now, let's begin."
 "I have distilled the many lessons I have learned about etiquette over the years into three core ideas: Principles, Protocol, and Behavior." # Charlotte = Calm

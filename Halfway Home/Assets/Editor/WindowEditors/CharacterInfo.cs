@@ -227,8 +227,3 @@ public class CharacterInfo
 
 }
 
-public struct TypingQuirk
-{
-    public string NormalText;
-    public string QuirkedText;
-}

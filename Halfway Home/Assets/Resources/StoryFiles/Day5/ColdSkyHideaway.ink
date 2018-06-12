@@ -310,8 +310,9 @@ I help Isaac up off the ground. #background = gardens #Isaac = calm
 [Isaac] "..." 
 "sure." #Isaac = happy
 Isaac  quickly excuses himself after that, slinking off to bed. #Isaac = exit
-I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it with making a mess of things.
+I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it with making a mess of things. 
 Maybe I should find a time to chat with Eduardo about their relationship.
+I should be able to articlute now, any issues there in, with him. #expression+++
 ~SetValue("IsaacOpenedUp", true)
 ->END
 

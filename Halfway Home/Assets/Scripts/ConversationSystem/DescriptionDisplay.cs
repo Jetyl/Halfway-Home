@@ -26,6 +26,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     public float AutoTimeDelay = 2;
 
+    public QuirkDisplay QuirkControl;
+
     public bool DebugSkipping;
 
     float AutoTimer = 0;
@@ -48,6 +50,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     [HideInInspector]
     public bool NoClick = false;
+
 
     // Use this for initialization
     void Start ()
@@ -190,7 +193,8 @@ public class DescriptionDisplay : MonoBehaviour
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
-        
+        Line = QuirkControl.UpdateText(eventdata.Line, eventdata.TrueSpeaker);
+
         if(!DebugSkipping)
         {
             if (!eventdata.CanSkip && Skipping)
@@ -360,3 +364,4 @@ public struct Line
     public string Dialog;
     public float Pace;
 }
+

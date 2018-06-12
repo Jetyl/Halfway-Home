@@ -1986,6 +1986,7 @@ GameObject:
   - component: {fileID: 60031324}
   - component: {fileID: 60031323}
   - component: {fileID: 60031322}
+  - component: {fileID: 60031326}
   m_Layer: 5
   m_Name: Dialog Display
   m_TagString: Untagged
@@ -2072,8 +2073,20 @@ MonoBehaviour:
   NextLine: {fileID: 2086867357}
   AutoButton: {fileID: 1981507017}
   AutoTimeDelay: 2
+  QuirkControl: {fileID: 60031326}
   DebugSkipping: 1
   NoClick: 0
+--- !u!114 &60031326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60031320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f180500cde4c95845aa1679c15d4fea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60144807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5898,7 +5911,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8615,7 +8628,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.8
+  m_fontSize: 70.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41363,6 +41376,7 @@ GameObject:
   - component: {fileID: 1174770647}
   - component: {fileID: 1174770654}
   - component: {fileID: 1174770653}
+  - component: {fileID: 1174770655}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -41499,6 +41513,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 6fae6941000ba044a8245030d9511220, type: 2}
+--- !u!114 &1174770655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1174770646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b730963815858ee4f9abcfc23725afdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1177578893
 GameObject:
   m_ObjectHideFlags: 0
@@ -48866,7 +48891,7 @@ Canvas:
   m_GameObject: {fileID: 1371098728}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1174770650}
   m_PlaneDistance: 5
   m_PixelPerfect: 0
@@ -52254,7 +52279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.806}
+  m_AnchoredPosition: {x: 0, y: 902.95386}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -56895,6 +56920,7 @@ MonoBehaviour:
   JitterIntensity: 2.17
   PulseIntensity: -0.5
   PulseSpeed: 0.5
+  PulseColor: {r: 1, g: 0, b: 0, a: 1}
   PulseCurve:
     serializedVersion: 2
     m_Curve:

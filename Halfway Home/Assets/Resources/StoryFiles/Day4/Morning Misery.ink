@@ -34,7 +34,7 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-Its a rather sunny morning, and I decide to head into the art room to do some painting, or what have you.
+Its a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
 I'm rather suprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of ceral in his hand, siting on the floor and eating.
 [Eduardo] "Heya {player_name}, how's it going!"
@@ -82,18 +82,30 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 }
 [Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?" #Eduardo = Angry
 "Or maybe this place just reminds me of Isaac." #Eduardo = Calm
-"I Really do love him, you know." //show CG here.
+[{player_name}] "uh-huh."
+[Eduardo]"I Really do love him, you know." //show CG here.
 "Isaac really does complete me."
-Oh dear, Eduardo appears to be going into a gushing fit over his boyfriend.
-And I have no easy way out of listening to his gushing now.
-//more gushing here?
-"I want to be around him all the time, and he wants to be around me all the time."
+[{player_name}] "sure."
+Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
+I'm going to need to say something, and quick, before he just goes on for hours, gushing.
+[Eduardo] "I want to be around him all the time, and he wants to be around me all the time."
 "Its just so... Perfect, you know."
 +[Say nothing]
-	I decide not to challange his view on his own relationship.
+	Yeah, I can't think of anything to say thats going to stop him.
 	->Gushing
 +[Disagree]
 	->Pulling
++[Yeahthatsgreatgottagobye!]
+	[{player_name}] "Yeah, thats great Eduardo, GottaGoBye!"
+	[Eduardo] "wait, wha-" #Skip
+	I book it out of the art room, all the way to the commons before I am out of breath. #Background / commons
+	Wow, I am really out of shape too.
+	{
+		-depression > 50:
+		[Voices] "You really are worthless, aren't you?"
+	}
+	I plop myself on the couch, and watch some TV to take my mind off things.
+	->END
 
 ===Gushing===
 I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom #Eduardo = Calm
@@ -112,13 +124,13 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embaresse
 ===Pulling===
 {
 	-expression < 3:
-		[{player_name}] "I, um, I guess you can see it that way. but, uh, I doubt its literally perfect you know."
+		[{player_name}] "I, um, I guess you can see it that way. but, uh, I doubt its literally perfect you know." #expression ^ poor
 		[Eduardo] "that a funny joke. anyways, where was I?"
 		[{player_name}] "B-but..."
 		Eduardo isn't listening. he seems far to wrapped up in his passion. I guess I was not <color=color_expression><i>expressive</i></color> enough to get through to him.
 		->Gushing
 	-else:
-		[{player_name}] "Eduardo, your relationship with Isaac is far from perfect."
+		[{player_name}] "Eduardo, your relationship with Isaac is far from perfect." #expression ^ good
 		[Eduardo] "..." //Eduardo has an annoyed expression
 		"The hell would you know about our relationship, {player_name}"
 		Wow, Eduardo is suprisngly defensive about their relationship. I probably need to tred carefully.
@@ -145,8 +157,8 @@ I need to think, how to best explain myself?
 "I gotta get going. Got stuff to do, and a <i>perfect</i> boyfriend to hang out with."
 "Later." #Eduardo = Exit
 Well, I guess I messed that one up.
-I might need some actual evidence to convince Eduardo that there is any problem in his life.
-Isaac might be able to tell me more about their relationship, if I can find a time when he's alone.
+I should probably have some actual evidence before I try to convince Eduardo that there is any problem in his life.
+Isaac might be able to tell me more about their relationship, if I can find a time when he's alone. //add objective?
 ->END
 
 ===Contention===
@@ -154,7 +166,14 @@ Isaac might be able to tell me more about their relationship, if I can find a ti
 [Eduardo] "..." //shocked expression
 "Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" //angry expression
 Well, Eduarod is technically correct. Isaac hasn't told me anything yet, but...
-[{player_name}] "it's true. Isaac feels"
+[{player_name}] "it's true. Isaac feels very conflicted about your relationship."
+{
+	-grace < 4:
+	"He probably hasn't mentioned it, given you never let him have an word in edgewise." #grace ^ poor
+	-else:
+	"He's been concerned bringing it up, because you go around telling everyone how perfect you two are together." #grace ^true
+}
+"For example, he..."
 
 You confront Eduardo on the true shakeyness of his relationship.
 puzzle be here.
