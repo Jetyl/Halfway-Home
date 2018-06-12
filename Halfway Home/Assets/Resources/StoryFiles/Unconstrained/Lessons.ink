@@ -140,7 +140,29 @@ My mom used to nail me for that one when I was little.
 "In reality, I was trying to enforce the protocol of a different group and it was <i>I</i> who was behaving improperly." # Charlotte = Happy
 Charlotte laughs a little too hard at that.
 "You could spend a lifetime learning all the details of a particular group's protocol, but still fail because you did not learn to <i>adapt</i>." # Charlotte = Calm
-"Today I would like to spend time discussing how to identify when social rules change as well as methods for learning rules quickly and politely."
+{
+	-expression>0:
+		[{player_name}] "Uh, Charlotte? If etiquette is about adapting to other people then why do you talk like you're from the 19th century?" # Expression ^ Good
+		Charlotte looks taken aback by my comment. # Charlotte = Surprised
+		[Charlotte] "Well, I must admit you are a fast learner. A pertinent question." # Charlotte = Happy
+		Charlotte relaxes her posture and gets an amused look in her eye.
+		"It'd probably be less awkward if I spoke like this, huh?"
+		"Less formal and more familiar. Easier to follow, too, right?"
+		She regains her previous, more rigid posture.
+		"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}."
+		She looks wistfully off into the distance. # Charlotte = Sad
+		"My dear aunt Viola, without whom I would have been wholly lost, spoke in the same manner."
+		"I care not if people think less of me for my speech. I only care for the joy of savoring each elegant word, paid in homage to the wisdom she gave me."
+		"Satisfied?" # Charlotte = Calm
+		Wow, now I feel like garbage for thinking she was weird all that time.
+		[{player_name}] "I'm sorry! I didn't think-" # Skip
+		[Charlotte] "Please, there is no need for an apology. I speak like this knowing full well how it redounds upon my social reception."
+	-else:
+		[{player_name}] "Wait, but then why do you..." # Expression = Poor
+		[Charlotte] "I beg your pardon? I couldn't quite hear you."
+		[{player_name}] "Uh, nevermind."
+}
+[Charlotte] "Today I would like to spend time discussing how to identify when social rules change as well as methods for learning rules quickly and politely." # Charlotte = Calm
 I had no idea Charlotte knew so much about this stuff. I just thought she read a lot and didn't get out much.
 We spend an hour talking about different tactics to adapting to new social rules and whatnot. # Time % 1
 <color=color_descriptor>Charlotte's tutelage has <color=color_grace>improved <b>Grace</b> moderately<color=color_descriptor>.</i></color> # Grace++

@@ -242,20 +242,71 @@ Wait, but I don't think Charlotte is a snob... I bet plenty of other people do, 
 ->Check
 
 === Check ===
+Two can play at this game. If I'm gonna prove myself to Charlotte, I have to try to read her like she can read me!
 [{player_name}] "Enough about me, aready. How are <i>you</i> doing, Charlotte?"
-Charlotte is pleased at your question and responds automatically, which you notice.
-When you press her further, she reflects and is sad.
-She says that she does all she can, but that she has accepted her place and her fate.
-Her attitude is grim resolution and guilt for perceived past misdeeds.
-You don't think Charlotte is right, and have to devise a strategy for convincing her.
-Your success is based on your awareness rather than grace. 3+ awareness you can convince her (understanding), otherwise she shrugs off your argument and thanks you for your concern. (courtesy)
-{awareness>2:->Understanding|->Courtesy}
+[Charlotte] "I am quite well, thank you for asking." # Charlotte = Happy
+Her answer was immediate, which means it wasn't thoughtful. She's happy that I asked, but she didn't think about her state at all.
+I'd better press her a bit more.
+[{player_name}] "No, really. I want to know how you've been."
+{
+	-lied==false:
+		Charlotte sighs. # Teatime / WCalm
+		[Charlotte] "You have been nothing but honest with me up to this point. I suppose it is only proper of me to extend you the same courtesy."
+		"I had rather hoped to avoid burdening you with my affairs." # Teatime / SSad
+		Please. If anything, it'd be the other way around.
+		"I do all that I can to fight my baser instincts, but no matter how long I stay here I never seem to improve." # Teatime / FSad # Teatime / ArmsD
+		"I have accepted my fate. I will be the first Blackwell to return to the old Asylum."
+		"Despite my fruitless years here attempting to resist, it is my just and inevitable penance."
+		"I am thankful that I at least managed to help someone <i>else</i> to leave Sunflower House for the better." # Teatime / FSmile
+		None of that is right! Charlotte is one of the most well-adjusted residents!
+		I have to find a way to get her to understand! But how?
+		{awareness>2:->Understanding|->Courtesy}
+	-else:
+		Charlotte doesn't feel obliged to be honest with you, since you lied.
+		She changes the subject.
+		-> Courtesy
+}
+
+
 
 
 === Understanding ===
-You explain to Charlotte that she's been blind to her own progress. She is ready to leave this place, not go to Blackwell as she fears.
-You praise her wisdom at having realized the nature of empathy without possessing it. She has attained enlightenment already. There is nothing left for her to gain at Sunflower House.
-You convince her that she is ready to leave. This is Charlotte's good ending.
+Oh! The proof that she's wrong has been staring her in the face! Literally. # awareness ^ good
+[{player_name}] "You're wrong, Charlotte!"
+[Charlotte] "Hmm? Oh, please do not waste your concern on me. I'm quite far gone, I'm afraid." # Charlotte = FCalm
+[{player_name}] "Charlotte, please hear me out!"
+[Charlotte] "Very well."
+[{player_name}] "I've been here less time than you and I can tell you I've grown a lot."
+"Even my final week has been eye-opening. You taught me all sorts of things, the other residents, too."
+"But Charlotte, you say you haven't improved in all that time."
+[Charlotte] "I must say I am not terribly impressed with your argument so far."
+Time to drive it home, {player_name}.
+"If you'll allow me a metaphor..."
+Charlotte doesn't say anything, but perks up.
+"I grew because I was small and frail and you and the others gave me the sunlight and water I needed."
+"But you... you haven't grown. Not because you never will, but because you already have."
+"You've filled the soil, and now that you can't grow any more you blame yourself when you should blame the garden."
+[Charlotte] "Have you been reading the Sunflower House literature?"
+[{player_name}] "Well, I used to make fun of it, but now it kinda makes sense, albeit in a cringy way."
+"Look, you taught me about the nature of empathy without even having it normally or whatever! You've obviously got your shit together, pardon my language."
+"You're not going to Blackwell and you don't have anything left to gain from Sunflower House."
+Charlotte is silent for a long time.
+She turns to stare out the window, looking serenely out at the fading sunlight. # Teatime # WCalm
+[Charlotte] "Let me make sure I understand."
+"You think the reason I've failed to improve myself here..."
+"Is because I've been ready to leave all along?"
+[{player_name}] "Yeah, that's pretty much what I'm saying."
+Another long silence follows. The tension is killing me.
+[Charlotte] "This has turned out to be quite the teatime." # Teatime / WSmile
+"I will give some more thought to your words." # Teatime / FSmile
+"Thank you, {player_name}, for your company and for your concern."
+[{player_name}] "Pleasure was all mine."
+[Charlotte] "You are a rare friend, indeed."
+"Now, then. It wouldn't do to keep Trissa out any longer and I should see to cleaning up."
+I stand up and stretch my legs.
+[{player_name}] "See you around!"
+[Charlotte] "Farewell, {player_name}."
+With that, I exit Charlotte's room out into the hallway.
 -> END
 
 === Courtesy ===
