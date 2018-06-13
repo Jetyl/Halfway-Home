@@ -44986,7 +44986,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 53
+  m_fontSize: 52.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -52279,7 +52279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.95386}
+  m_AnchoredPosition: {x: 0, y: 903.0137}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -56898,7 +56898,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
   NoSpeakerFont: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
   NoSpeakerSize: 52
-  PlayerFont: {fileID: 0}
+  PlayerFont: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
   PlayerFontSize: 48
   RandomSpeakerFont: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
   DefaultFontSize: 48
@@ -56918,59 +56918,71 @@ MonoBehaviour:
   FlowKey: Flow
   segments: []
   JitterIntensity: 2.17
-  PulseIntensity: -0.5
-  PulseSpeed: 0.5
-  PulseColor: {r: 1, g: 0, b: 0, a: 1}
+  PulseIntensity: 0.1
+  PulseSpeed: 0.7
+  PulseColor: {r: 1, g: 0.63235295, b: 0.63235295, a: 1}
   PulseCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
-      value: 0.009196293
+      time: -0.0036251163
+      value: 0.003847003
       inSlope: 0.019306775
       outSlope: 0.019306775
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.24975352
-      value: 0.0117530525
+      time: 0.08270381
+      value: 0.0039827824
+      inSlope: 0.012520849
+      outSlope: 0.012520849
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.14399943
+      value: 0.10369283
+      inSlope: -0.02488494
+      outSlope: -0.02488494
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1922642
+      value: -0.09936464
+      inSlope: -0.0032782555
+      outSlope: -0.0032782555
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.24975047
+      value: 0.0029705465
       inSlope: 0.055347327
       outSlope: 0.055347327
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.30147147
-      value: 0.9828707
+      time: 0.32420385
+      value: 0.008239031
+      inSlope: 0.2309291
+      outSlope: 0.2309291
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.4962256
+      value: 0.5018609
       inSlope: 0.004797283
       outSlope: 0.004797283
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.39602664
-      value: 0.0069150366
-      inSlope: 0.007426205
-      outSlope: 0.007426205
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.46701086
-      value: 0.0056775613
-      inSlope: 0.0028684735
-      outSlope: 0.0028684735
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.56917536
-      value: 1.0170791
+      time: 0.6557568
+      value: -0.48765755
       inSlope: -0.00033527613
       outSlope: -0.00033527613
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.6795921
-      value: 0.0075470433
+      time: 0.7954964
+      value: 0.003044635
       inSlope: -0.0022910535
       outSlope: -0.0022910535
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.9998291
-      value: 0.0051374547
-      inSlope: -0.010174956
-      outSlope: -0.010174956
+      time: 1.0038043
+      value: 0.007501483
+      inSlope: 0.020406935
+      outSlope: 0.020406935
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -69133,7 +69145,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

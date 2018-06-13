@@ -50,7 +50,7 @@ Trissa starts laughing. # Trissa = Happy
 I can't help but smile at her playfulness.
 [Trissa] "I do kinda wish she had told me, though. She acts nice, but sometimes she can be a real ice queen. Guess that's to be expected, though, given her condition." # Trissa = Sad
 "I just don't know what else I can do, ya know? I'm not hard to get along with or something, am I?"
-{depression>40}[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."
+{depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
 ->KickedOut.Choice
 =Choice
 +[Explain Charlotte's jealousy.]
@@ -114,8 +114,22 @@ Perhaps sensing my anxiety, she breaks the silence. # Teatime / ArmsD
 }
 [{player_name}]"Oh no, pleasure's all mine! Nothing like free food and good company... if you count tea as food, that is."
 Idiot. Now she's gonna feel bad about not having... what do people eat with tea? Scones?
-[Charlotte] "I'm sorry to say that I'm fresh out of nibbles. I had to postpone my weekly trip to the store." # Teatime / FSad
+[Charlotte] "I'm sorry to say that I am fresh out of nibbles. I had to postpone my weekly trip to the store." # Teatime / FSad
 [{player_name}] "It's no trouble! I didn't mean to sound ungrateful! This is great, really!"
+Charlotte opens a small container and withdraws a dainty spoon. # Teatime / FCalm
+[Charlotte] "How do you take it, dear?"
+[{player_name}] "Huh? Take what?"
+[Charlotte] "Your tea, of course." # Teatime / FSmile
+Oh. Duh. Real quick on the draw there, me.
+[{player_name}] "I dunno, I don't really drink tea very often."
+[Charlotte] "Well, then I shall simply leave the sugar out. I prefer honey, myself, but consequently I am out of that as well."
+I turn my attention to the steaming cup in front of me. I raise it to my lips.
+Even before I can take a sip, my nostrils are filled with a strong, floral aroma.
+It's like no tea I've ever tasted. I don't really know how to describe tea, but I'll do my best for Charlotte's sake.
+[{player_name}] "This is really tasty! It kind of tastes vaguely fruity? I don't think I even need any sugar..."
+[Charlotte] "It's an Indian black tea I discovered last year: A tad more mellow than its Darjeeling cousins, without the bitter aftertaste."
+[{player_name}] "Fancy."
+[Charlotte] "Usually I just stick to Earl Grey, but your visit presented an opportunity to bring out something special."
 Charlotte smiles and turns to face the window. # Teatime / WSmile
 [Charlotte] "It's such a lovely time of day, don't you think?" # Teatime / SSmile
 [{player_name}] "Huh? Oh, yeah."
@@ -226,25 +240,43 @@ She can definitely tell.
 =DoingFine
 Charlotte smiles warmly. # Teatime / FSmile
 [Charlotte] "With all the drama that typically befalls the residents of Sunflower House, it's nice to hear <i>someone</i> is still holding fast."
-->Check
+->Truth.FullDisclosure
 
 =DoingPoorly
 Charlotte gives me a reassuring smile. # Teatime / FSmile
 [Charlotte] "You have my sympathies, {player_name}. I thank you for your honesty all the more for its bitterness."
 "I have the fullest confidence that you will triumph over the obstacles in your path."
-->Check
+->Truth.FullDisclosure
 
 =InTheMiddle
 Charlotte gives me an amused smile. # Teatime / FSmile
 [Charlotte] "A common reality and an honest answer. I appreciate your candor."
 I always liked that word, `candor`, but I never use it 'cause I'm worried people will think I'm a snob.
 Wait, but I don't think Charlotte is a snob... I bet plenty of other people do, though. She certainly does love complicated words.
-->Check
+->Truth.FullDisclosure
+
+= FullDisclosure
+[{player_name}] "Anyway, that's just in terms of my day-to-day. More than that I'm just trying to figure out what I'm supposed to do with this last week."
+"This has been my life for so many years... I don't know anything else."
+"I know when I leave everyone is gonna expect me to be `cured` or `normal` or whatever and I don't know if I can be that."
+"It really stresses me out thinking about it."
+I immediately feel guilty for having laid my burdens on Charlotte like this.
+"Sorry, you don't need to hear about any of that."
+[Charlotte] "Please, you owe no apology to anyone, least of all me."
+"Thank you for sharing this with me, {player_name}. I know I'm far from the most sympathetic soul, but..." # Teatime / FSad
+"Everyone in your life is going to give you advice. Each will be convinced they hold the secret wisdom that will turn the tides in your favor." # Teatime / FCalm
+"If you might pardon the irony of my saying so: Live for yourself, {player_name}, not for them."
+"As you can imagine, I am quite familiar with the destructive nature of selfishness. Do not confuse it with self-care."
+"I've seen the tragedy of selflessness play out, too." # Teatime / WSad
+Charlotte again demonstrates her status as the most senior resident. I actually feel kinda relieved having admitted how I feel.
+I'm not sure what to make of her advice yet, though.
+In any case, having answered her questions as honestly as I could I seem to have passed her test.
+-> Check
 
 === Check ===
 Two can play at this game. If I'm gonna prove myself to Charlotte, I have to try to read her like she can read me!
-[{player_name}] "Enough about me, aready. How are <i>you</i> doing, Charlotte?"
-[Charlotte] "I am quite well, thank you for asking." # Charlotte = Happy
+[{player_name}] "Enough about me, already. How are <i>you</i> doing, Charlotte?"
+[Charlotte] "I am quite well, thank you for asking." # Teatime / FSmile
 Her answer was immediate, which means it wasn't thoughtful. She's happy that I asked, but she didn't think about her state at all.
 I'd better press her a bit more.
 [{player_name}] "No, really. I want to know how you've been."
@@ -260,20 +292,26 @@ I'd better press her a bit more.
 		"I am thankful that I at least managed to help someone <i>else</i> to leave Sunflower House for the better." # Teatime / FSmile
 		None of that is right! Charlotte is one of the most well-adjusted residents!
 		I have to find a way to get her to understand! But how?
-		{awareness>2:->Understanding|->Courtesy}
+		{awareness>2:
+			->Understanding
+		-else:
+			[{player_name}] "Charlotte, none of that is true! You shouldn't give up hope!" # awareness ^ poor
+			[Charlotte] "It really is alright, {player_name}. I am long past the point of grieving over my condition." # Teatime / WCalm
+			"Nevertheless, I appreciate your concern for me." # Teatime / SSmile
+			->Courtesy
+		}
 	-else:
+		A flash of anger flickers on Charlotte's face, but is gone almost as soon as it arrived.
+		[Charlotte] "I have nothing of note to complain about."
 		Charlotte doesn't feel obliged to be honest with you, since you lied.
 		She changes the subject.
 		-> Courtesy
 }
 
-
-
-
 === Understanding ===
 Oh! The proof that she's wrong has been staring her in the face! Literally. # awareness ^ good
 [{player_name}] "You're wrong, Charlotte!"
-[Charlotte] "Hmm? Oh, please do not waste your concern on me. I'm quite far gone, I'm afraid." # Charlotte = FCalm
+[Charlotte] "Hmm? Oh, please do not waste your concern on me. I'm quite far gone, I'm afraid." # Teatime / FCalm
 [{player_name}] "Charlotte, please hear me out!"
 [Charlotte] "Very well."
 [{player_name}] "I've been here less time than you and I can tell you I've grown a lot."
@@ -281,7 +319,7 @@ Oh! The proof that she's wrong has been staring her in the face! Literally. # aw
 "But Charlotte, you say you haven't improved in all that time."
 [Charlotte] "I must say I am not terribly impressed with your argument so far."
 Time to drive it home, {player_name}.
-"If you'll allow me a metaphor..."
+[{player_name}] "If you'll allow me a metaphor..."
 Charlotte doesn't say anything, but perks up.
 "I grew because I was small and frail and you and the others gave me the sunlight and water I needed."
 "But you... you haven't grown. Not because you never will, but because you already have."
@@ -291,7 +329,7 @@ Charlotte doesn't say anything, but perks up.
 "Look, you taught me about the nature of empathy without even having it normally or whatever! You've obviously got your shit together, pardon my language."
 "You're not going to Blackwell and you don't have anything left to gain from Sunflower House."
 Charlotte is silent for a long time.
-She turns to stare out the window, looking serenely out at the fading sunlight. # Teatime # WCalm
+She turns to stare out the window, looking serenely out at the fading sunlight. # Teatime / WCalm
 [Charlotte] "Let me make sure I understand."
 "You think the reason I've failed to improve myself here..."
 "Is because I've been ready to leave all along?"
@@ -303,16 +341,33 @@ Another long silence follows. The tension is killing me.
 [{player_name}] "Pleasure was all mine."
 [Charlotte] "You are a rare friend, indeed."
 "Now, then. It wouldn't do to keep Trissa out any longer and I should see to cleaning up."
+-> Ending
+
+=== Courtesy ===
+[Charlotte] "You have learned much and performed tremendously, {player_name}. With your natural talent, I daresay you are certain to surpass me soon enough."
+"You will try and remember me when you have conquered all the world with your charms, won't you?" # FSmile
+[{player_name}] "Oh, stop!"
+Flatterer. I don't know if I could ever be as smooth as Charlotte, but it's nice to be complemented.
+{depression>40:[Voices] "As if you could ever be better than anyone."}
+[Charlotte] "I am glad to hear that you like the tea. I was briefly worried I might have overdone it."
+[{player_name}] "Oh, absolutely!"
+[Charlotte] "I could send some with you when you depart, if you like."
+Even thinking about what I'm gonna do when I'm out of here stresses me out. Some tea might be just what the doctor ordered.
+[{player_name}] "I'd like that."
+We make small talk for another few minutes, but Charlotte carefully avoids returning to the previous subject, denying me a second chance to change her mind.
+[Charlotte] "Heavens, is that the time? I really ought to clean up and let my roommate back in."
+[{player_name}] "Uh-oh, did I make you late or something?"
+[Charlotte] "Oh, no, it's quite alright. If anything, this is proof of what excellent company you are."
+"However, it does also mean that our teatime has come to a close."
+"I had a wonderful time, {player_name}. Thank you."
+[{player_name}] "The pleasure was all mine, Charlotte."
+-> Ending
+
+=== Ending ===
 I stand up and stretch my legs.
 [{player_name}] "See you around!"
 [Charlotte] "Farewell, {player_name}."
 With that, I exit Charlotte's room out into the hallway.
--> END
-
-=== Courtesy ===
-You are cordial and follow Charlotte's teachings well. She is pleased for your company, but laments that her disability prevents her from truly appreciating it.
-She also laments that you, her student, are certain to surpass her due to her disadvantage. She asks that you remember what she gave you when you're out charming the pants off of everyone.
-This is Charlotte's neutral ending.
 -> END
 
 === function AmIFeeling(claim) ===
