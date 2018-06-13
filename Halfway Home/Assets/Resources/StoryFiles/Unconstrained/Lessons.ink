@@ -149,7 +149,7 @@ Charlotte laughs a little too hard at that.
 		"It'd probably be less awkward if I spoke like this, huh?"
 		"Less formal and more familiar. Easier to follow, too, right?"
 		She regains her previous, more rigid posture.
-		"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}."
+		"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}}."
 		She looks wistfully off into the distance. # Charlotte = Sad
 		"My dear aunt Viola, without whom I would have been wholly lost, spoke in the same manner."
 		"I care not if people think less of me for my speech. I only care for the joy of savoring each elegant word, paid in homage to the wisdom she gave me."
