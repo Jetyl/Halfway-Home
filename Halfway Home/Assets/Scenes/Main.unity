@@ -56897,11 +56897,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
   - {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
   NoSpeakerFont: {fileID: 11400000, guid: ecaf128ba9ac344459c7ade51e748aea, type: 2}
-  NoSpeakerSize: 52
+  NoSpeakerSizeMin: 12
+  NoSpeakerSizeMax: 72
   PlayerFont: {fileID: 0}
-  PlayerFontSize: 48
+  PlayerFontSizeMin: 12
+  PlayerFontSizeMax: 72
   RandomSpeakerFont: {fileID: 11400000, guid: 18ab9b1c6a21678418e12f17ae22e170, type: 2}
-  DefaultFontSize: 48
+  DefaultFontSizeMin: 12
+  DefaultFontSizeMax: 72
 --- !u!114 &1599244677
 MonoBehaviour:
   m_ObjectHideFlags: 0

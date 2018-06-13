@@ -14,7 +14,8 @@ public class CharacterInfo
 
     public Color SpeakerColor = Color.white;
     public TMP_FontAsset Font;
-    public int FontSize = 20;
+    public int FontSizeMin = 20;
+    public int FontSizeMax = 72;
 
     bool showSchedule;
     bool ShowQuirk;
@@ -68,7 +69,8 @@ public class CharacterInfo
             Font = Resources.Load<TMP_FontAsset>(slug);
         }
 
-        FontSize = (int)data["FontSize"];
+        FontSizeMin = (int)data["FontSizeMin"];
+        FontSizeMax = (int)data["FontSizeMax"];
 
 
         float r = (float)(double)data["r"];
@@ -146,7 +148,8 @@ public class CharacterInfo
         SpeakerColor = EditorGUILayout.ColorField("Speaker Color", SpeakerColor);
 
         Font = EditorGUILayout.ObjectField(Font, typeof(TMP_FontAsset), allowSceneObjects: true) as TMP_FontAsset;
-        FontSize = EditorGUILayout.IntSlider("Default Font Size", FontSize, 8, 108);
+        FontSizeMin = EditorGUILayout.IntSlider("Default Font Size Min", FontSizeMin, 8, 108);
+        FontSizeMax = EditorGUILayout.IntSlider("Default Font Size MAx", FontSizeMax, FontSizeMin, 108);
 
         ShowQuirk = EditorGUILayout.Foldout(ShowQuirk, "Show Text Quirks");
 

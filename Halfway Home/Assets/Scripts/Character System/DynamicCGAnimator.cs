@@ -91,8 +91,14 @@ public class DynamicCGAnimator : MonoBehaviour
         //var vis = command.Graphic.GetComponent<SpriteRenderer>();
 
         var col = Color.white;
-        
-        command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+
+        if (CommandSpeed > 0)
+            command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+        else
+        {
+            var vis = command.Graphic.GetComponent<SpriteRenderer>();
+            vis.color = col;
+        }
 
     }
 
@@ -114,7 +120,13 @@ public class DynamicCGAnimator : MonoBehaviour
             var col = Color.white;
             col.a = 0;
 
-            command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+            if (CommandSpeed > 0)
+                command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+            else
+            {
+                var vis = command.Graphic.GetComponent<SpriteRenderer>();
+                vis.color = col;
+            }
         }
     }
 
@@ -128,7 +140,13 @@ public class DynamicCGAnimator : MonoBehaviour
             var col = Color.white;
             col.a = 0;
 
-            command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+            if (CommandSpeed > 0)
+                command.Graphic.DispatchEvent(Events.Fade, new FadeEvent(col, CommandSpeed));
+            else
+            {
+                var vis = command.Graphic.GetComponent<SpriteRenderer>();
+                vis.color = col;
+            }
         }
     }
 

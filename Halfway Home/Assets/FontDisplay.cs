@@ -13,14 +13,18 @@ public class FontDisplay : MonoBehaviour
     public List<TMP_FontAsset> Fonts;
 
     public TMP_FontAsset NoSpeakerFont;
-    public int NoSpeakerSize = 48;
+    public int NoSpeakerSizeMin = 12;
+    public int NoSpeakerSizeMax = 72;
     public TMP_FontAsset PlayerFont;
-    public int PlayerFontSize = 48;
+    public int PlayerFontSizeMin = 12;
+    public int PlayerFontSizeMax = 72;
     public TMP_FontAsset RandomSpeakerFont;
-    public int DefaultFontSize = 48;
+    public int DefaultFontSizeMin = 12;
+    public int DefaultFontSizeMax = 72;
 
     Dictionary<string, TMP_FontAsset> Speakers;
-    Dictionary<string, int> Sizes;
+    Dictionary<string, int> Mins;
+    Dictionary<string, int> Maxs;
 
     TextMeshProUGUI txt;
 
@@ -28,8 +32,8 @@ public class FontDisplay : MonoBehaviour
     void Start ()
     {
         Speakers = new Dictionary<string, TMP_FontAsset>();
-        Sizes = new Dictionary<string, int>();
-
+        Mins = new Dictionary<string, int>();
+        Maxs = new Dictionary<string, int>();
 
         var list = TextParser.ToJson("Characters");
 
@@ -47,7 +51,8 @@ public class FontDisplay : MonoBehaviour
             
             Speakers.Add(Names, Font);
 
-            Sizes.Add(Names, (int)element["FontSize"]);
+            Mins.Add(Names, (int)element["FontSizeMin"]);
+            Maxs.Add(Names, (int)element["FontSizeMax"]);
         }
 
 
@@ -70,15 +75,17 @@ public class FontDisplay : MonoBehaviour
     void OnNewLine(DescriptionEvent eventdata)
     {
         
-        if (eventdata.Speaker == "")
+        if (eventdata.TrueSpeaker == "")
         {
             txt.font = NoSpeakerFont;
-            txt.fontSize = NoSpeakerSize;
+            txt.fontSizeMin = NoSpeakerSizeMin;
+            txt.fontSizeMax = NoSpeakerSizeMax;
             return;
         }
         
-        txt.font = GetFont(eventdata.Speaker);
-        txt.fontSize = GetSize(eventdata.Speaker);
+        txt.font = GetFont(eventdata.TrueSpeaker);
+        txt.fontSizeMin = GetMin(eventdata.TrueSpeaker);
+        txt.fontSizeMax = GetMax(eventdata.TrueSpeaker);
 
     }
 
@@ -95,17 +102,30 @@ public class FontDisplay : MonoBehaviour
             return RandomSpeakerFont;
     }
 
-    public int GetSize(string Speaker)
+    public int GetMin(string Speaker)
     {
         if (Speaker == Game.current.PlayerName)
-            return PlayerFontSize;
+            return PlayerFontSizeMin;
 
-        if (Sizes.ContainsKey(Speaker))
+        if (Mins.ContainsKey(Speaker))
         {
-            return Sizes[Speaker];
+            return Mins[Speaker];
         }
         else
-            return DefaultFontSize;
+            return DefaultFontSizeMin;
+    }
+
+    public int GetMax(string Speaker)
+    {
+        if (Speaker == Game.current.PlayerName)
+            return PlayerFontSizeMax;
+
+        if (Maxs.ContainsKey(Speaker))
+        {
+            return Maxs[Speaker];
+        }
+        else
+            return DefaultFontSizeMax;
     }
 
     void OnDestroy()

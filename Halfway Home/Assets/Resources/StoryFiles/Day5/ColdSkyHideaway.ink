@@ -62,6 +62,7 @@ No response. not surprising
 [{player_name}] "so... um, what'cha looking at?"
 [Isaac] "..."
 "...Hm?" #Isaac = Left
+Still nothing.
 [{player_name}] "I don't usually see you out here."
 [Isaac] "..."
 "I'm hiding"
@@ -130,8 +131,11 @@ No response. not surprising
 ->Talkative
 
 =OpenAnswer
-Isaac seems to appreciate my answer. (awareness up) #awareness+ //edit line latter
+Isaac seems to appreciate my answer. @<color=color_descriptor>Your answer has helped <color=color_awareness>improved your <b>Awareness</b> mildly<color=color_descriptor>.</i></color> # Awareness+
 [Isaac] "..."
+->Talkative
+
+===Talkative===
 "...Does...?"
 "...Does your life feel like its moving too fast for you?"
 [{player_name}] "A bit, yeah."
@@ -157,7 +161,8 @@ I'd think he's been around...
 	I know how long he's been here, because he's told me.
 	[{player_name}] "You've been here for almost 2 and a half years, haven't you?"
 	Isaac nods. not even a little shocked I guessed it correctly.
-	he does smirk for a split second however, so maybe he appericates that i knew? (grace up) #grace+ //edit later
+	he does smirk for a split second however, so maybe he appericates that i knew? 
+	<color=color_descriptor>Your understanding of Isaac's tenure has <color=color_grace>improved <b>Grace</b> mildly<color=color_descriptor>.</i></color> # Grace+
 -[Isaac] "Two years."
 "two years... @and six months..."
 {
@@ -169,10 +174,8 @@ I'd think he's been around...
 }
 [{player_name}] "what's kept you here so long?"
 [Isaac] "..."
-->Talkative
-
-===Talkative===
-[Isaac] "..."
+"...I... I don't... hm."
+"..."
 "...Sorry...."
 "...Sorry I'm bad.... At speaking.... that is."
 "...People think I'm either... @...some Stoic or... @...a Wallflower."
@@ -191,14 +194,17 @@ Isaac looks pained trying to speak as much as he is.
 Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
 And he came to Sunflower House to improve himself, but still isn't any better. How should I help him?
 +[Give Him Advice]
-	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>awareness</i> of your life, as an example.</color>
+	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>Awareness</i> of your life, as an example.</color>
 	->Recoil
 +[Give Him motivation]
-	<color=color_descriptor>You try to motivate Isaac to improve himself with your empassioned <i>expression</i>.</color>
+	<color=color_descriptor>You try to motivate Isaac to improve himself with your empassioned <i>Expression</i>.</color>
 	->Recoil
 +{grace >= 3}[Give Him Time]
 	<color=color_descriptor>With your hightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
 	->Relationships
++{grace < 3}[Give Him Sympathy]
+	<color=color_descriptor>You try to complement Isaac, and placate his fears with <i>Grace</i>.</color>
+	->Recoil
 
 ===Relationships===
 <color=color_descriptor>You sit in silence as time passes, letting Isaac recompose himself.</color> #time %1
@@ -210,6 +216,10 @@ And he came to Sunflower House to improve himself, but still isn't any better. H
 "I was... with someone... so..."
 "...so..."
 "...why am I like this?"
+[{player_name}] "Isaac, You-"
+[Isaac] "And F-<delay=0.5>Freaking Eduardo!"
+"he's just... just..."
+Wow, I don't think I've ever seen Isaac that vocally impassioned. And he seemed angry... at Eduardo?
 [{player_name}] "Is there something going on with you and Eduardo?"
 [Isaac] "..."
 "......yes."
@@ -327,6 +337,12 @@ I keep talking to Isaac for a while longer, but I don't feel like anything I'm s
 after a while, Isaac asks to leave, and we part ways. the biting cold of the night nips at my face. #Isaac = exit
 I guess I screwed that up? I feel like I did, anyways.
 Maybe I should've let Isaac talk more...
+<color=color_descriptor>hindsight on the situation improves your <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
+<color=color_descriptor>However, the hindsight also increases your <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly aswell.</color> #depression += 10
+{
+	-depression > 60: [Voices] "You really can't do anything right, can you?"
+}
+I head back inside. my head low from my failure...
 //failed to listen or help Isaac
 ->END
 

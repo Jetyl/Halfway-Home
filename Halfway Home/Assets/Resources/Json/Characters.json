@@ -8,12 +8,13 @@
   "b"    : 1.0,
   "a"    : 1.0,
   "font" : "Fonts/tenderness SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -232,12 +233,13 @@
   "b"    : 0.149019613862038,
   "a"    : 1.0,
   "font" : "Fonts/tenderness SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -456,12 +458,13 @@
   "b"    : 0.678431391716003,
   "a"    : 1.0,
   "font" : "Fonts/tenderness SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -680,12 +683,13 @@
   "b"    : 0.674509823322296,
   "a"    : 1.0,
   "font" : "Fonts/tenderness SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -904,12 +908,13 @@
   "b"    : 0.949019610881805,
   "a"    : 1.0,
   "font" : null,
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -1128,12 +1133,13 @@
   "b"    : 0.462745100259781,
   "a"    : 1.0,
   "font" : "Fonts/tenderness SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -1352,12 +1358,13 @@
   "b"    : 0.674509823322296,
   "a"    : 1.0,
   "font" : "Fonts/IndieFlower SDF",
-  "FontSize" : 20,
-  "FrontQuirk" : null,
-  "EndQuirk"   : null,
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : null,
+  "EndQuirk"    : null,
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,
@@ -1576,12 +1583,13 @@
   "b"    : 0.737254917621613,
   "a"    : 1.0,
   "font" : "Fonts/quaky",
-  "FontSize" : 20,
-  "FrontQuirk" : "<pulse>",
-  "EndQuirk"   : "</pulse>",
-  "Quirks"     : [
+  "FontSizeMin" : 20,
+  "FontSizeMax" : 72,
+  "FrontQuirk"  : "<pulse>",
+  "EndQuirk"    : "</pulse>",
+  "Quirks"      : [
   ],
-  "Schedule"   : [
+  "Schedule"    : [
    [
     0,
     0,

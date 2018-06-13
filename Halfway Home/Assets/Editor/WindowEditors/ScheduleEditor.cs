@@ -203,8 +203,10 @@ public class ScheduleEditor : EditorWindow
                 Jwriter.Write(null);
             }
 
-            Jwriter.WritePropertyName("FontSize");
-            Jwriter.Write(beat.FontSize);
+            Jwriter.WritePropertyName("FontSizeMin");
+            Jwriter.Write(beat.FontSizeMin);
+            Jwriter.WritePropertyName("FontSizeMax");
+            Jwriter.Write(beat.FontSizeMax);
 
             Jwriter.WritePropertyName("FrontQuirk");
             Jwriter.Write(beat.StartEndQuirk.NormalText);
