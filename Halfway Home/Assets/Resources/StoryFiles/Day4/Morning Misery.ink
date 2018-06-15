@@ -204,7 +204,7 @@ After wallowing for a while internally, I decide to head off to some other part 
 ->END
 
 ===Suffocated===
-[{player_name}] "He said he found you to be suffocating some times. That you're just always around him."
+[{player_name}] "He said he found you to be suffocating some times. That you're just always around him." #expression ^ good
 [Eduardo] "Wha! That, That can't be true?!" //shocked unsure expression
 ~Conviction -= 1
 Eduardo looks shocked. He doesn't believe me, but for once, He looks like he's doubting himself.
@@ -214,13 +214,13 @@ Eduardo looks shocked. He doesn't believe me, but for once, He looks like he's d
 "But Fine, I'll tell ya!" //oddly cheery and almost smug
 Huh, Eduardo's mood seems to have completely shifted. theres a passion in his eyes thats almost scary.
 [{player_name}] "what's gotten into you?"
-[Eduardo] "Well now I gotta prove our perfect love, against these vile rumors you seem caught up in!"
-"So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!"
+[Eduardo] "Well now I gotta prove our perfect love, against these vile rumors you seem caught up in!" //smug explaintory
+"So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!" //cheery
 "Its actually not that long ago. We had our 6 month aniversy last week, to be exact."
 "I had changed rooms, as I was having problems with my roommate at the time."
 "And the new roomie I got was of course, Isaac."
 "Isaac had actually been here..."
-Eduardo stops, just as he is about to get
+Eduardo stops, just as he is about to get //smug
 [Eduardo] "Okay {player_gender == "F": miss| mista} love guru. If you know so much about Isaac, and our relationship, then how long has he been at Sunflower House?"
 Crap, do I know that?
 [{player_name}] "He's been here..."
@@ -270,48 +270,108 @@ Namely that he feels...
 	"I'm sure Isaac feels tired of it all."
 	[Eduardo] "eh, not really."
 	"I think you might be speaking more from your experence that Isaacs."
+	Crap! Am I?
+	Regardless, Eduardo doesn't seem to be convinced about that.
+	"Trust me {player_name}, I know people can be exhusted by my presense, but Isaac, Isaac is different"
 +[Broken]
-	"He's feeling suffocated despite all the love and affection"
+	"He's feeling suffocated despite all the love and affection that he wanted."
+	"And that contradiction, makes him feel broken."
+	[Eduardo] "He feels broken..." //sad
+	~Conviction -=1
+	Eduardo looks a little deflated. Has Isaac spesifically mentioned these `broken` feeling to him before?
+	"Yeah, Isaac's been pressured to be a lot of things he ain't."
+	"But I never pressure him into anything he doesn't want."
+	"<size=50%>D-do I?</size>"
+	"N-No! No I don't. Cuz me and Isaac are perfect together!"
 	->Perfect
 +[Bored]
+	"He's bored out of his mind."
 	[Eduardo] "pffft! yeah right."
 	"See, <b>you</b> might not know this, but Isaac is rarely if ever truely bored."
--more on Issac and Eduardo's relationship. wrapping up with-
-So in colusion, me and Isaac are perfect, thanks for coming to my ted talk.
+	"You could lock him up in a padded cell, and he'd find a way to keep himself going internally."
+	"So, Isaac can't be bored by this place."
+	Jeez really?
+	Regardless, Eduardo believes that, and I don't seem to be convincing him otherwise.
+	"Besides, how can Isaac be bored, when he's got me!"
+-"Me and Isaac, are like two puzzle peices that fit perfectly together."
 ->Perfect
 
 ===Perfect===
-correct answer
-
-[Eduardo] "so as you can see, our relationship is perfect!"
-
-Nothing is perfect
-tell Eduardo about Isaac's stories.
-+[Tell him about the stories]
-	you tell him about Isaac's stories.
-+[Don't Tell him about the stories]
-	you choose to withhold that info.
-
--Eduardo seems to be thinking.
+[{player_name}] "Dude. You are both in a halfway house for societies mental rejects, I doubt `perfection` is the adjective you wanna use."
+[Eduardo] "But thats what makes us so perfect for each other!"
+"We counter each others flaws, making us each better."
+[{player_name}] "so, what you're say is, your codependent on him?"
+[Eduardo] "What? No! This is greater than that!"
+"This is Love!"
+"And thats why our relationship is perfect!"
+I let out a deep sigh.
+[{player_name}] "Eduardo. Nothing is perfect."
+"And just because you two love each other, doesn't mean your relationship's going to be 100% problem free now or forever."
+"I am saying this, as your friend, and Isaac's friend. Stop suffocating Isaac."
+[Eduardo] "Suffocating. <size=80%>suffocating. <size=50%suffocating.</size>" //head down
+"<Shake>WHAT THE HELL DO YOU KNOW!</Shake>" //very angry!
+"You don't Know what we're like! You don't know what Isaac does or Does want!"
+[{player_name}] "Oh, for the love of- Yes! I do!"
+[Eduardo] "Fine, {player_gender == "F": miss| mista} Isaac's apperent new BFF, tell me something about Isaac that even Isaac hasn't told me!"
+Something about Isaac that even Isaac hasn't told him...
++[Tell him about Isaac's internal stories]
+	[{player_name}] "Isaac told me he invents stories involving people we know around us. You, me, anybody."
+	"And while he didn't say this, I got the feeling some of these stories were... `intimate` in nature."
+	[Eduardo] "..." //shocked, blushing
+	[{player_name}] "not that you'd know that, given he spesifically told me he hadn't mentioned it to you."
+	[Eduardo] "Y-yeah, well..."
++[Don't tell him about Isaac's internal stories]
+	"Dude, this isn't a quiz to see who knows you're boyfriend better"
+	Even if that's what you've been treating it as.
+	"I'm trying to tell you that Isaac is hurting, so you'll stop being an idiot and listen to him before either of you do something you'll regret!"
+	[Eduardo] "..." //schocked
+	"..." //sad
+	Wow, is Eduardo actually speachless?
+	[Eduardo] "Y-yeah, well..."
+	welp, nevermind.
+-[{player_name}] "Dude, just stop."
+"Stop talking for like, one minutes, and listen!"
+[Eduardo] "..." //schocked
+[{player_name}] "..." //eduardo sad
 {
 	-Conviction <= 0:
 	->Convinced
 	-else:
-	Unconvinced
+	->Unconvinced
 }
 
 
 ===Unconvinced===
-Eduardo does not believe you.
+[{player_name}] "ugh, sorry, for yelling."
+[Eduardo] "Save it." //angry
+"I'm done here." #Background = Artroom #Eduardo = angry
+"Later." #Eduardo = Exit
+Eduardo leaves in a huff, clearly steamed.
+I don't think I convinced him to look past his idea that their relationship is flawless.
+I probably need to be more accurate to what Isaac said the other night.
+Maybe I should go check up on him again.
 ->END
 
 ===Convinced===
-You have convinced Eduardo on the true shakeyness of his relationship.
-
-Eduardo questions why you didn't just let Isaac to tell him. You mention "would you have listened?"
-[Eduardo] "Og Course I wo-"
+[{player_name}] "ugh, sorry, for yelling."
+"Look, I shouldn't even need to be having this conversation with you right now."
+"Isaac should be the one talking about all this, and well..."
+[Eduardo] "He's not good at talking."
+[{player_name}] "no. He's not. It took a few hours for him to fully get everything out."
+[Eduardo] "Yeah, that... That sounds like him."
+I seem to have finally gotten thru to Eduardo, in some capacity, at least.
+"Okay, you might have a point. maybe."
+"But, even if you are right, and I' not saying you are, why didn't you let Isaac tell me?"
+[{player_name}] "Would you have listened?"
+[Eduardo] "Of Course I wo-"
 "Yeah. Your'e right. I probably wouldn't."
+Eduardo gets up, and begins to pat himself down. #Background = Artroom #Eduardo = sad
+[{player_name}] "You okay?"
+[Eduardo] "huh? yeah, yeah."
 "I'll wait til Isaac brings it up."
-"But I will listen. I promise."
-
+"But I will listen, when he finally speaks. I promise."
+"Oh, and... thanks, I guess."
+"Thanks, for caring about us." #expression+++
+Eduardo leaves, seemingly more tempered that when I walked in. #Eduardo = Exit
+Hopefully I did the right thing. I think I did.
 ->END
