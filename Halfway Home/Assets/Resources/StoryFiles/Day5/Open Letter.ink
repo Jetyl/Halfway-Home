@@ -206,13 +206,13 @@ He left his letters here too.
 I walk over to Charlotte, who seems to be staring intently at the other residents. #Isaac = exit #Trissa = exit #Eduardo = exit
 [{player_name}] "Hey, Charlotte?"
 [Charlotte] "Yes?" #Charlotte = left
-[{player_name}] "how often did you get letters from your family?"
-[Charlotte] "oh, not very often."
-"Usually its my parents who seek to talk with me, and often it's either in person, or over the phone."
+[{player_name}] "How often did you get letters from your family?"
+[Charlotte] "Oh, not very often."
+"Usually it's my parents who seek to talk with me, and often it's either in person, or over the phone."
 "My family does live nearby, afterall."
 "My Grandmother does send me the occasional letter though."
 "I cherish them each time they arrive."
-[{player_name}] "uh huh."
+[{player_name}] "Uh huh."
 Charlotte sighes, her eyes wandering off somewhere before returning directly to me.
 [Charlotte] "{player_name}, do you think I'm old fashioned?"
 {

@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     public void SaveGame(int slot)
     {
         Space.DispatchEvent(Events.Save);
-        ReaderReference.Save();
+        if(Game.current.InCurrentStory)ReaderReference.Save();
         SaveLoad.SaveAt(slot);
         //ReaderReference.LoadSave();
         //Space.DispatchEvent(Events.PostSave, new SaveShotEvent(slot));

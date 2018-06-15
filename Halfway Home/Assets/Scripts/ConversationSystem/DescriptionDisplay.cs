@@ -180,7 +180,7 @@ public class DescriptionDisplay : MonoBehaviour
          // NextLine.Play("LinePlaying");
         
         Active = false;
-        
+
         Space.DispatchEvent(Events.FinishedDescription);
         
 

@@ -63,7 +63,7 @@ public class RoomIconDisplay : MonoBehaviour
         
         foreach(var icon in Eventdata.Icons)
         {
-            print(Location + ": " + icon);
+            //print(Location + ": " + icon);
 
             int i = Random.Range(0, IconSpots.Count);
 
