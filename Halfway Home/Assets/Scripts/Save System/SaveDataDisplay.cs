@@ -63,10 +63,10 @@ public class SaveDataDisplay : MonoBehaviour
     {
 
         Game gameData = SaveLoad.GetSave(DataIndex);
+        Debug.Log($"Save for Slot {DataIndex} is {gameData != null}");
 
         if (gameData != null)
         {
-
             string path = Application.persistentDataPath + "/Games_Saveshot_" + DataIndex + ".png";
 
             if (File.Exists(path))

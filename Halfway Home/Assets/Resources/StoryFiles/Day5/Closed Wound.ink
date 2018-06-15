@@ -18,36 +18,58 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 VAR HoursSpent = 0
+VAR firsttime = false
 
-EXTERNAL PlayMusic(trackName)
-EXTERNAL CharEnter(nameString, poseString)
-EXTERNAL CharExit(nameString)
-EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL GetIntValue(value)
-EXTERNAL AlterTime()
-EXTERNAL SetTimeBlock(time)
-EXTERNAL GetHour()
-EXTERNAL GetSelfStat(stat_name)
-EXTERNAL CallSleep()
 EXTERNAL SetValue(ValueName, newValue)
+EXTERNAL SetTimeBlock(int)
 
 -> Start
 
 === Start ===
+I head to my room, nervously thumbing the key I took from Max's key ring days ago. # Background / Commons
 {
-	-GetValue("GettingMail") == true:
-		->ClosedWound
-	-else:
-		You remeber last time, that around now Timothy ran off into your shared room to have a breakdown.
-		->ClosedWound
+	-TURNS_SINCE(-> Unlocked)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
+		~firsttime = true
+		->Unlocked.First
+	-else: 
+		~firsttime = false
+		-> Unlocked.Again
+	
 }
 
+=== Unlocked ===
+= First
+I stand before the door.
+I don't know why Timothy locked himself in, but I am certain that it's the reason behind his future breakdown.
+And maybe if I can help stop that...
+I can finally escape this dream and leave this place.
+->Unlocked.Enter
+
+= Again
+That damn letter is the root of so much pain.
+{awareness==5:
+	I will help him as many times as he needs...
+	To see that he is loved.
+	To see that he is strong.
+-else:
+	I wasn't able to help you last time...
+	But maybe...
+}
+-> Unlocked.Enter
+
+= Enter
+I slide the key into the lock and the door swings open.
+I step inside, gently nudging the door closed behind me. # Background / Commons
+Timothy is curled up on his bed {firsttime:.|, just like before.}
+~SetTimeBlock(0)
+-> END
 
 ===ClosedWound===
 ~SetValue("FoundWound", true)
-You follow Timothy, who heads back to your bedroom #Backgroun = YourRoom
+You follow Timothy, who heads back to your bedroom # Background / YourRoom
 He's curled up on his bed, the letter he got, opened up on his room
 He looks extremely distrught.
 {

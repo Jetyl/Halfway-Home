@@ -267,12 +267,14 @@ public static class TextParser
         text = text.Replace("@", Environment.NewLine);
         text = text.Replace("<color=", "<color=#");
         
-        var regex = new Regex(Regex.Escape("\""));
-        text = regex.Replace(text, "“", 1);
+        //var regex = new Regex(Regex.Escape("\""));
+        //text = regex.Replace(text, "“", 1);
+
+        text = text.Replace("\"", "");
 
         var regret = new Regex(Regex.Escape("`"));
         text = regret.Replace(text, "“", 1);
-        
+
         text = text.Replace("`", "\"");
 
         

@@ -273,6 +273,10 @@
    {
     "Name" : "GettingMail",
     "Type" : 1
+   },
+   {
+    "Name" : "RoomKey",
+    "Type" : 1
    }
   ]
  },

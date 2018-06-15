@@ -29,15 +29,20 @@ public class TimeDisplay : MonoBehaviour
 
   void UpdateDisplay(DefaultEvent eventdata)
     {
-      if (Game.current.Hour == 12)
+      if (Game.current.Hour == 0)
       {
           TimeText.text = "12:00";
-          AMPMText.text = "PM";
+          AMPMText.text = "AM";
       }
       else if(Game.current.Hour < 12)
       {
           TimeText.text = Game.current.Hour + ":00";
           AMPMText.text = "AM";
+      }
+      else if(Game.current.Hour == 12)
+      {
+          TimeText.text = "12:00";
+          AMPMText.text = "PM";
       }
       else
       {
