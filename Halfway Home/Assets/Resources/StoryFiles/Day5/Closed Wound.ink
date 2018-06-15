@@ -29,7 +29,7 @@ EXTERNAL SetTimeBlock(int)
 -> Start
 
 === Start ===
-I head to my room, nervously thumbing the key I took from Max's key ring days ago. # Background / Commons
+I head to my door, nervously thumbing the key I took from Max's key ring days ago. # Background / Commons
 {
 	-TURNS_SINCE(-> Unlocked)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
 		~firsttime = true
@@ -64,11 +64,12 @@ That damn letter is the root of so much pain.
 I slide the key into the lock and the door swings open.
 I step inside, gently nudging the door closed behind me. # Background / Commons
 Timothy is curled up on his bed {firsttime:.|, just like before.}
-~SetTimeBlock(0)
--> END
+-> ClosedWound
+
+//~SetTimeBlock(0)
+//-> END
 
 ===ClosedWound===
-~SetValue("FoundWound", true)
 You follow Timothy, who heads back to your bedroom # Background / YourRoom
 He's curled up on his bed, the letter he got, opened up on his room
 He looks extremely distrught.
