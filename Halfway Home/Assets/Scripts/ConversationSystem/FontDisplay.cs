@@ -74,23 +74,20 @@ public class FontDisplay : MonoBehaviour
 
     void OnNewLine(DescriptionEvent eventdata)
     {
-        
-        if (eventdata.TrueSpeaker == "")
-        {
-            txt.font = NoSpeakerFont;
-            txt.fontSizeMin = NoSpeakerSizeMin;
-            txt.fontSizeMax = NoSpeakerSizeMax;
-            return;
-        }
+        txt.enabled = false;
         
         txt.font = GetFont(eventdata.TrueSpeaker);
         txt.fontSizeMin = GetMin(eventdata.TrueSpeaker);
         txt.fontSizeMax = GetMax(eventdata.TrueSpeaker);
-
+        
+        txt.enabled = true;
     }
 
     public TMP_FontAsset GetFont(string Speaker)
     {
+        if (Speaker == "")
+            return NoSpeakerFont;
+
         if (Speaker == Game.current.PlayerName)
             return PlayerFont;
 
@@ -104,6 +101,9 @@ public class FontDisplay : MonoBehaviour
 
     public int GetMin(string Speaker)
     {
+        if (Speaker == "")
+            return NoSpeakerSizeMin;
+
         if (Speaker == Game.current.PlayerName)
             return PlayerFontSizeMin;
 
@@ -117,6 +117,9 @@ public class FontDisplay : MonoBehaviour
 
     public int GetMax(string Speaker)
     {
+        if (Speaker == "")
+            return NoSpeakerSizeMax;
+
         if (Speaker == Game.current.PlayerName)
             return PlayerFontSizeMax;
 
