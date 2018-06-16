@@ -104,6 +104,7 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 [Keyless>Max] "Oh crap." # Keyless = Surprised
 [{player_name}] "What?"
 [Keyless>Max] "I can't find my keys! I must have left 'em somewhere..."
+Boy do I know that feeling. I haven't been able to find my own key for months.
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, I'm gonna need you to do me a solid."
 Oh, you don't like the sound of that.
@@ -148,7 +149,7 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 [Keyless>Max] "It would seem I have misplaced my keys."
 [{player_name}] "Again?"
 [Keyless>Max] "Ah! I'm not that forgetful!" #Keyless=Sad
-[{player_name}] "N-no, but, you lost them last week too, remember? they we're stuck in the couch cushions?"
+[{player_name}] "N-no, but, you lost them last week too, remember? They we're stuck in the couch cushions?"
 [Keyless>Max] "Couch cushions? hm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
 And with that Max quickly runs off, leaving me and Timothy alone
@@ -202,7 +203,12 @@ I whip out my planner and jot down a reminder to myself, a habit my old therapis
 "You can come here if you want to just get away from it all and de-stress." # Stress * Show
 "Also, obviously, you can just knock out here if you're too <color=color_wellbeing_penalty>fatigued</color> to do anything else. Or just whenever, really." # Fatigue * Show
 "Max'll get mad if you spend too much time loafing around, though, since we're supposed to be `active agents of self-recovery` or whatever."
-I go over and grab my watch off the desk beside my bed. Max was right, it is almost noon. // Show time here?
+"Oh, and one more thing. I kinda lost my room key a while ago, so if you lock the door I don't really have a way in unless Max is around."
+[Timothy] "Oh, sure. W-wait, couldn't you just ask Max for a new key?" # Timothy = Surprised
+[{player_name}] "Well, ya see... by the time I finally asked Max last week, they said it would take longer to get me a new key than I was even around for."
+"And to be honest, it hasn't a big deal since I've been by myself for a while."
+[Timothy] "Oh." # Timothy = Sad
+I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot. // Show time here?
 "So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
 [Timothy] "Oh, okay. <size=50%>Last roommate?<size=100%>" # Timothy = Surprised
 "I was in Blackwell for a few years before coming here."

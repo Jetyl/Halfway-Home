@@ -63,7 +63,7 @@ Max apperes to be the center of attention, holding a small pile of mail in their
 "Here ya go Eddy!" #Eduardo = Surprised, right
 [Eduardo] "Wah!" #Eduardo = exit
 Max hands off a good chunk of them off to Eduardo, whose letters made up more than 60% of the stack.
-[{player_name}] "What are those letters from?" #Max = exit #Eduardo = Calm #Isaac = calm
+[{player_name}] "What are those letters from?" #Max = exit #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Eh, my family, probably. they are very old fashioned. they have my number. They could just call me."
 [Isaac] "Maybe they don't want to talk with you?"
 [Eduardo] "Isaaaaaac!" #Eduardo = Surprised
@@ -76,7 +76,7 @@ Max hands Isaac about half of the mail that was left.
 "Oh, um... I guess I don't have any mail for you." #Max = Surprised
 [Charlotte] "makes sense. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
 "Besides, my family hasn't attempted to contact me in a while. Not out of disdain, mind you. There is simply nothing left to say at this juncture."
-[Trissa] "That's an rather odd comment to make Lotty." #Trissa = sad, stage_right
+[Trissa] "That's an rather odd comment to make Lotty." #Trissa = Sad, stage_right
 [Charlotte] "It is?" #Charlotte = right
 [Trissa] "Eh, nevermind. It's not my place to pry into your personal life." #Trissa = Calm, stage_center #Charlotte = exit
 [Max] "And Trissa, I've got one letter for you." 
