@@ -34,7 +34,7 @@ public static class SaveLoad
         //file.Close();
         
         // JSON
-        Debug.Log(JsonUtility.ToJson(savedGames[0]));
+        //Debug.Log(JsonUtility.ToJson(savedGames[0]));
         var wrap = new SaveWrapper(savedGames);
         File.WriteAllText(path, JsonUtility.ToJson(wrap));
 
@@ -56,11 +56,23 @@ public static class SaveLoad
             // Unity JSON
             string data = File.ReadAllText(path);
             var wrap =JsonUtility.FromJson<SaveWrapper>(data);
-            savedGames = wrap.Savedata;
+            savedGames = new List<Game>();
+            for (int i = 0; i < wrap.RealData.Count; ++i)
+            {
+                if (wrap.RealData[i] == true)
+                    savedGames.Add(wrap.Savedata[i]);
+                else
+                    savedGames.Add(null);
+                
+            }
             MonoBehaviour.print(savedGames.Count);
 
             foreach (var game in savedGames)
-                game.LoadGame();
+            {
+                if (game != null)
+                    game.LoadGame();
+            }
+                
             
         }
         
@@ -88,9 +100,21 @@ public static class SaveLoad
 
     public static void DeleteAt(int index)
     {
-        savedGames[index] = null;
-        //savedGames.RemoveAt(index);
-        Save();
+
+        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        {
+            File.Delete(Application.persistentDataPath + "/savedGames.gd");
+        }
+
+        if (savedGames.Count > index)
+            savedGames[index] = null;
+        
+        //saving
+        Debug.Log(index + " | " + savedGames[index]);
+        var wrap = new SaveWrapper(savedGames);
+        Debug.Log(index + " | " + savedGames[index]);
+        File.WriteAllText(path, JsonUtility.ToJson(wrap));
+        Debug.Log(index + " | " + savedGames[index]);
 
     }
    
@@ -143,7 +167,7 @@ public static class SaveLoad
 
         if (pos >= savedGames.Count)
             return null;
-
+        Debug.Log(pos + " | " + savedGames[pos]);
         if (savedGames[pos] != null)
             return new Game(savedGames[pos]);
 
@@ -161,10 +185,19 @@ public static class SaveLoad
 
 public struct SaveWrapper
 {
-    public List<Game> Savedata;
+    public Game[] Savedata;
+    public List<bool> RealData;
 
     public SaveWrapper(List<Game> data)
     {
-        Savedata = data;
+        Savedata = data.ToArray();
+        RealData = new List<bool>();
+        foreach(var game in Savedata)
+        {
+            if (game == null)
+                RealData.Add(false);
+            else
+                RealData.Add(true);
+        }
     }
 }
