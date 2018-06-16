@@ -18,6 +18,8 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 VAR HoursSpent = 0
+VAR firsttime = false
+VAR firstfollow = false
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
@@ -36,46 +38,67 @@ EXTERNAL SetValue(ValueName, newValue)
 -> Start
 
 === Start ===
+{
+	-TURNS_SINCE(-> MailCall)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
+		~firsttime = true
+	-else: 
+		~firsttime = false
+}
+{
+	-TURNS_SINCE(-> ClosedWound)==-1:
+		~firstfollow = true
+	-else: 
+		~firstfollow = false
+}
 ->MailCall
 	
 
 ===MailCall===
-I walk past the commons area, seeing a decent gathering of people. #Charlotte = calm, right #Trissa = calm, right, #Eduardo = calm, left #Isaac = calm, left
-Max apperes to be the center of attention, holding a small pile of mail in their hands.#Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = calm
+I walk past the commons area, seeing a decent gathering of people. #Charlotte = Calm, right #Trissa = Calm, right #Eduardo = Calm, left #Isaac = Calm, left
+Max apperes to be the center of attention, holding a small pile of mail in their hands.#Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
 [{player_name}] "What's going on here?"
 [Max] "Ah, {player_name}, there you are. I'm just doin' a mail call." #Charlotte = exit #Trissa = exit #Eduardo = exit #Isaac = exit
 "The front desk has been siting on these letters for a while, and some people haven't been picking there's up, so I'm just handing them all out."
-"Speaking of which," #Eduardo = calm, stage_left, left
-"Here ya go Eddy!" #Eduardo = right, Suprised
+"Speaking of which," #Eduardo = Calm, stage_left, left
+"Here ya go Eddy!" #Eduardo = Surprised, right
 [Eduardo] "Wah!" #Eduardo = exit
 Max hands off a good chunk of them off to Eduardo, whose letters made up more than 60% of the stack.
 [{player_name}] "What are those letters from?" #Max = exit #Eduardo = Calm #Isaac = calm
 [Eduardo] "Eh, my family, probably. they are very old fashioned. they have my number. They could just call me."
 [Isaac] "Maybe they don't want to talk with you?"
-[Eduardo] "Isaaaaaac!" #Eduardo = Suprised
-[Max] "and Isaac, here's yours. they also seem to be from your folks." #Max = calm, stage_right, left #Isaac = Suprised, right #Eduardo = exit
+[Eduardo] "Isaaaaaac!" #Eduardo = Surprised
+[Max] "and Isaac, here's yours. they also seem to be from your folks." #Max = Calm, stage_right, left #Isaac = Surprised, right #Eduardo = exit
 Max hands Isaac about half of the mail that was left.
-[Isaac] "Oh. Um" #Isaac = scared
+[Isaac] "Oh. Um" #Isaac = Afraid
 "Thanks."
 [Max] "No problemo buddy." #Max = Happy
-"Anyways, Charlotte!" #Max = calm, stage_center, right #Charlotte = calm, stage_right, left
-"Oh, um... I guess I don't have any mail for you." #Max = Suprised
-[Charlotte] "makes sense. I check the front desk everyday in my routine." #Max = calm, stage_left #Charlotte = stage_center
+"Anyways, Charlotte!" #Max = Calm, stage_center, right #Charlotte = Calm, stage_right, left
+"Oh, um... I guess I don't have any mail for you." #Max = Surprised
+[Charlotte] "makes sense. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
 "Besides, my family hasn't attempted to contact me in a while. Not out of disdain, mind you. There is simply nothing left to say at this juncture."
 [Trissa] "That's an rather odd comment to make Lotty." #Trissa = sad, stage_right
 [Charlotte] "It is?" #Charlotte = right
-[Trissa] "Eh, nevermind. It's not my place to pry into your personal life." #Trissa = calm, stage_center #Charlotte = exit
+[Trissa] "Eh, nevermind. It's not my place to pry into your personal life." #Trissa = Calm, stage_center #Charlotte = exit
 [Max] "And Trissa, I've got one letter for you." 
 [Trissa] "Oh? Is it from my lil bro Spencer?" #Trissa = Happy
 [Max] "It's from someone named `Maurice`."
-[Trissa] "Oh." #Trissa = Suprised #Max = exit
-"Him." #Trissa = angry
+[Trissa] "Oh." #Trissa = Surprised #Max = exit
+"Him." #Trissa = Angry
 "Thank You Max. I really apperiecate it!" #Trissa = Calm
 Trissa says that as she cherrily takes the letter, and begins tearing it to shreds. @She Tosses the shreads into the lit fireplace for good measure.
-Max seems to either not notice this, or not care, as they continue handing out letters to the residence #Trissa = exit #Max = calm
-[Max] "And, Timothy, we got one letter from your folks that had just came in when I grabbed the mail pile." #Timothy = calm
-[Timothy] "Oh, um... Thank you." #Timothy = sad.
+Max seems to either not notice this, or not care, as they continue handing out letters to the residence #Trissa = exit #Max = Calm
+[Max] "And, Timothy, we got one letter from your folks that had just came in when I grabbed the mail pile." #Timothy = Calm
+[Timothy] "Oh, um... Thank you." #Timothy = Sad.
 Timothy looks at envelope for a bit, not even attempting to open it, before walking away with it in hand. #Timothy = exit
+He looked a little pale there. I wonder if {firsttime:he's okay|this is the cause for the drama later in the week}. // New context for choice
+{firsttime:He probably just prefers opening his letters in privacy. Then again...|The more I think about it the more convinced I am}.
+Should I follow him?
++[Follow Timothy] -> ClosedWound
++[Let Him Be] 
+	{firsttime:Just as I'm about to follow, doubt overwhelms me. }I decide Timothy is better off with some alone time{firsttime: after all}.
+    ->MaxMail->IgnorantBliss
+
+/* Old week-based choice
 {
 	-week > 1:
 		hmmm, wait.
@@ -92,17 +115,10 @@ Timothy looks at envelope for a bit, not even attempting to open it, before walk
 		I wonder whats bothering him?
 		->IgnorantBliss
 }
+*/
 
 ===IgnorantBliss===
-Max stands before me, only a small handful of letters left to hand out. #Max = calm, stage_center
-[Max] "Hmm..." #Max =sad
-"Sorry {player_name}, no letters for you either."
-[{player_name}] "eh."
-[Max] "Oh well, I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
-"All that's left is the weekend, and you'll be out of here. Isn't that exciting?"
-[{player_name}] "hehe, yeah, `exciting`..." #Max = exit
-Max's enthusiasm unfortuanly places some undo stress on me. @<color=color_descriptor><i>(<color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>)</color> #stress += 15
-but off that topic, I look around and see most everyone from the 2nd floor have scattered, just leaving the usuals lounging around. #Charlotte = calm, right #Trissa = calm #Eduardo = angry #Isaac = sad
+Looking around, most everyone from the 2nd floor has scattered, just leaving the regulars lounging around. #Charlotte = calm, right #Trissa = calm #Eduardo = angry #Isaac = sad
 I should got talk to...
 +[Charlotte]
 	->CharlotteTalk
@@ -113,10 +129,22 @@ I should got talk to...
 +[Isaac]
 	->IsaacTalk
 
+=== MaxMail ===
+Before I can do anything, Max strides up to me with a small handful of letters an an eager expression. #Max = calm, stage_center
+[Max] "Hmm..." #Max =sad
+Max's expression fades from anticipation to disappointment.
+"Sorry {player_name}, no letters for you either."
+[{player_name}] "Eh." // I think this line is too Jesse and not enough Sam. Less flippant, more resigned would work better.
+[Max] "Oh well, I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
+"All that's left is the weekend, and you'll be out of here! Isn't that exciting?"
+[{player_name}] "Yeah, exciting..." #Max = exit
+I force a smile. Why am I not happy about this?
+For some reason Max's words stress me out. @<color=color_descriptor><i>(<color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>)</color> #stress += 15
+->->
 
 ===SocialHourOver===
 Well, talking to people has gotten me out of my funk, a little at least.  @<color=color_descriptor><i>(<color=color_wellbeing_relief>decreased <b>depression</b> slightly<color=color_descriptor>)</color> #depression -= 15
-the impromptu social hour here seems to die down, as everyone else scatters, so I scatter too.
+The impromptu social hour seems to die down, as the remaining first-floor residents return to their  else scatters, so I scatter too.
 ->END
 
 ===TrissaTalk===
@@ -135,7 +163,7 @@ I walk over towards Trissa, who is leaning by the fireplace, with her nose in th
 		[Trissa] "Oh, don't be."
 		"Their all fine. No one is physically dead. They're just dead to me."
 }
-"I'm sorry {player_name}, I suppose I wasn't clear, as I do mind talking about the subject." #Trissa = sad
+"I'm sorry {player_name}, I suppose I wasn't clear, as I do mind talking about the subject." #Trissa = Sad
 [{player_name}] "Oh! Sorry for prying."
 [Trissa] "No, it's nothing against you personally. I just have somethings in my past I'd rather not talk about."
 [{player_name}] "I can understand that."
@@ -169,7 +197,7 @@ Eduardo opens the first one, and begins reading thru it.
 His sour mood seems to vanish, as he breaks out into chuckles. #Eduardo = Happy
 [{player_name}] "something funny?"
 [Eduardo] "nah, at least, not you. I'm just laughing at my Ma's quirks."
-When he's done reading, he neatly folds the letter into his jacket pocket, and starts walking off. #Eduardo = calm, right
+When he's done reading, he neatly folds the letter into his jacket pocket, and starts walking off. #Eduardo = Calm, right
 "Catch ya later, {player_name}" #Eduardo = exit
 ->SocialHourOver
 
@@ -231,12 +259,28 @@ Charlotte sighes, her eyes wandering off somewhere before returning directly to 
 		[Charlotte] "..."
 		"Thank you, {player_name}, for your honesty."
 		"I suppose I still have much work left to do, until I can return to society proper."
-		[{player_name}] "I'f you say so."
+		[{player_name}] "If you say so."
 }
 [Charlotte] "Well, I suppose I should be off. Best keep to my routine."
 "Farewell." #Charlotte = exit
 ->SocialHourOver
 
-===ClosedWound===
-~SetValue("GettingMail", true)
-->END
+=== ClosedWound ===
+->MaxMail->
+With Max gone, I can finally go find Timothy. I'm certain I saw him heading in the direction of our room.
+{
+	-GetValue("RoomKey") == true:
+		~SetValue("FollowTimothy", true)
+		-> END
+	-else:
+		I arrive at my door and take a deep breath. I feel oddly nervous.
+		Having calmed my nerves a bit, I reach for the knob and...
+		{firstfollow:It's locked?|Oh, right. It's locked. And I still don't have a key.}
+		{firstfollow:Timothy actually locked me out?|How was I expecting this to go?}
+		I knock on the door.
+		[{player_name}] "Timothy? It's me. I uh... don't have my key, remember?"
+		There's no response.
+		I stand there for a few minutes before giving up. Maybe people are still back in the commons.
+		I head out of the hallway and back out into the main room of the house. # Background / Commons
+		->IgnorantBliss
+}
