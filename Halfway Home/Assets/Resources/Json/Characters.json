@@ -8,8 +8,8 @@
   "b"    : 1.0,
   "a"    : 1.0,
   "font" : "Fonts/Bentham-Regular SDF",
-  "FontSizeMin" : 20,
-  "FontSizeMax" : 72,
+  "FontSizeMin" : 32,
+  "FontSizeMax" : 48,
   "FrontQuirk"  : null,
   "EndQuirk"    : null,
   "Quirks"      : [
@@ -1583,8 +1583,8 @@
   "b"    : 0.737254917621613,
   "a"    : 1.0,
   "font" : "Fonts/quaky",
-  "FontSizeMin" : 20,
-  "FontSizeMax" : 72,
+  "FontSizeMin" : 32,
+  "FontSizeMax" : 48,
   "FrontQuirk"  : "<pulse>",
   "EndQuirk"    : "</pulse>",
   "Quirks"      : [
