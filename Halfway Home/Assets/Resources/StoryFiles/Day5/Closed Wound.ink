@@ -19,6 +19,8 @@ VAR week = 0
 VAR current_room = "unset"
 VAR HoursSpent = 0
 VAR firsttime = false
+VAR readLetter = false
+VAR chickenedOut = false
 
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
@@ -37,7 +39,6 @@ I head to my door, nervously thumbing the key I took from Max's key ring days ag
 	-else: 
 		~firsttime = false
 		-> Unlocked.Again
-	
 }
 
 === Unlocked ===
@@ -62,31 +63,49 @@ That damn letter is the root of so much pain.
 
 = Enter
 I slide the key into the lock and the door swings open.
-I step inside, gently nudging the door closed behind me. # Background / Commons
-Timothy is curled up on his bed {firsttime:.|, just like before.}
+I step inside, gently nudging the door closed behind me. # Background / YourRoom
 -> ClosedWound
 
-//~SetTimeBlock(0)
-//-> END
-
 ===ClosedWound===
-You follow Timothy, who heads back to your bedroom # Background / YourRoom
-He's curled up on his bed, the letter he got, opened up on his room
-He looks extremely distrught.
-{
-	-awareness > 3:
-		should you try to comfort him, or go get someone more capable?
-		+[Comfort Timothy on Your Own]
-			->ComfortTimothy
-		+[Go Get Max]
-			->PoorStitches
-}
-->PoorStitches
+Timothy is curled up on his bed {firsttime:facing away from the door.|, just like before.}
+An open letter rests on the pillow beside a torn envelope.
+Timothy is trembling slightly, but doesn't otherwise react to my entrance.
+~temp lookLetter = false
+->InitialChoice
+=InitialChoice
++{not LookAtLetter}[Look at the letter]
+    ->LookAtLetter
++[Get Timothy's attention]->GetAttention
++[Go get Max] ->GetMax
 
-===PoorStitches===
-You do not feel comfortable handling this on your own. best to get Max. Their at least paid for this.
+=LookAtLetter
+{readLetter == false:
+	From this distance I can't make out what it says, but it looks hand-written.
+	Several dark splotches litter the paper and its sides appear slightly crumpled, as if once tightly clenched.
+	There's no doubt whatever's in that letter is responsible for Timothy's current state.
+-else:
+	It's the letter Timothy's parents sent him.
+	I'm sure they thought of it as a nice gesture, but all it's really done is mess everything up.
+	There are splotches of tears on it and crumpled edges from when Timothy was reading it.
+}
+->InitialChoice
+
+=GetAttention
+{firsttime == true:
+	Getting Max would probably just force Timothy to pretend to be more okay than he actually is.
+-chickenedOut:
+	I'm not making the same mistake as last time. Even if I don't think I can, I have to help him.
+	Not Max. Me.
+-else:
+	I've got to break through to him. Everything is in place.
+}
+
+// you get Timothy's attention
+// Timothy is startled, looks ghostly pale when he looks at you.
+// Has obviously been crying, but isn't now.
 ->END
 
-===ComfortTimothy===
-Comfort Misha! :P
+=GetMax
+If I tried to help him, I'd probably just screw things up. It would be better to get Max.
+At least they're paid to deal with this stuff, not to mention trained.
 ->END
