@@ -76,7 +76,7 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 +{not LookAtLetter}[Look at the letter]
     ->LookAtLetter
 +[Get Timothy's attention]->GetAttention
-+[Go get Max] ->GetMax
++[Go get Max] ->GetMax // TODO: Add section in prior Timothy scene explaining why this is not a good idea
 
 =LookAtLetter
 {readLetter == false:
@@ -91,18 +91,20 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 ->InitialChoice
 
 =GetAttention
-{firsttime == true:
+{
+-firsttime == true:
 	Getting Max would probably just force Timothy to pretend to be more okay than he actually is.
 -chickenedOut:
 	I'm not making the same mistake as last time. Even if I don't think I can, I have to help him.
 	Not Max. Me.
 -else:
-	I've got to break through to him. Everything is in place.
+	Everything is in place. I've got to break through to him.
 }
 
 // you get Timothy's attention
 // Timothy is startled, looks ghostly pale when he looks at you.
 // Has obviously been crying, but isn't now.
+
 ->END
 
 =GetMax

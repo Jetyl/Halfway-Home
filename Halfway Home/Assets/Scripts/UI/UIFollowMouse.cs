@@ -10,18 +10,33 @@ public class UIFollowMouse : MonoBehaviour
 
   public void Start()
   {
-    Vector2 pos;
-
-    RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, Input.mousePosition,
-                                                            parentCanvas.worldCamera, out pos);
+    if(parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+    {
+      Vector3 startPos = Input.mousePosition;
+    }
+    else if (parentCanvas.renderMode == RenderMode.ScreenSpaceCamera)
+    {
+      Vector2 startPos;
+      RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, Input.mousePosition,
+                                                              parentCanvas.worldCamera, out startPos);
+    }
   }
 
   public void Update()
   {
-    Vector2 movePos;
+    if (parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+    {
+      Vector3 newPos = Input.mousePosition;
 
-    RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, Input.mousePosition, parentCanvas.worldCamera, out movePos);
+      transform.position = newPos;
+    }
+    else if (parentCanvas.renderMode == RenderMode.ScreenSpaceCamera)
+    {
+      Vector2 newPos;
 
-    transform.position = parentCanvas.transform.TransformPoint(movePos);
+      RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, Input.mousePosition, parentCanvas.worldCamera, out newPos);
+
+      transform.position = parentCanvas.transform.TransformPoint(newPos);
+    }
   }
 }
