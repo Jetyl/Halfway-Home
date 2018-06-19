@@ -87,6 +87,8 @@ public class ObjectiveEditor : EditorWindow
             
             TiskTask[SelectedTask].Hidden = EditorGUILayout.Toggle("Hidden Objective", TiskTask[SelectedTask].Hidden);
 
+            TiskTask[SelectedTask].RemoveWeekly = EditorGUILayout.Toggle("Remove on Week Reset?", TiskTask[SelectedTask].RemoveWeekly);
+
             ShowSub = EditorGUILayout.Foldout(ShowSub, "Show Sub-Goals");
 
             if(ShowSub)
@@ -247,6 +249,9 @@ public class ObjectiveEditor : EditorWindow
             //Jwriter.Write(task.Objective);
             Jwriter.WritePropertyName("Hidden");
             Jwriter.Write(task.Hidden);
+
+            Jwriter.WritePropertyName("Weekly");
+            Jwriter.Write(task.RemoveWeekly);
 
 
             Jwriter.WritePropertyName("ShowAll");

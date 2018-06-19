@@ -108,11 +108,11 @@ Still nothing.
 	[Isaac] "Hm."
 	->PoorGrip
 +{grace>2}[Whether I am or not, I’m still leaving]
-	[{player_name}] "Whether I am or not, I’m still leaving."
+	[{player_name}] "Whether I am or not, I’m still leaving." #Grace ^ good
 	[Isaac] "Hm... @That's true. Hm..."
 	->OpenAnswer
 +{expression>2} [No, not really]
-	[{player_name}] "No, not really"
+	[{player_name}] "No, not really" #Expression ^ good
 	[Isaac] "Are you scared? To leave?"
 	[{player_name}] "...Yeah."
 	->OpenAnswer
@@ -297,7 +297,7 @@ Something seems to be eating him, but I suppose I've tried to lend an ear.
 maybe he just doesn't trust me?
 {
 	-week >=2:
-		Maybe I should try hanging out with him earlier in the week. that might work. //add objective here
+		Maybe I should try hanging out with him earlier in the week. that might work. #2 & InProgress //add objective here
 }
 Oh well.
 ->END

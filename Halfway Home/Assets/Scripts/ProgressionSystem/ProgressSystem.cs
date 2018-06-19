@@ -468,6 +468,24 @@ public class ProgressSystem
         }
     }
 
+    public void ResetWeekly()
+    {
+
+        ChronologicalObjectives.Clear();
+
+        foreach (var task in Objectives)
+        {
+            task.Reset();
+
+            if (task.GetState() != Task.TaskState.Unstarted)
+            {
+                if (!(task.GetState() == Task.TaskState.InProgress && task.Hidden))
+                    ChronologicalObjectives.Add(task);
+            }
+                
+        }
+
+    }
 
 }
 
@@ -606,7 +624,7 @@ public class Task
 
     public string Name;
     //public string Objective;
-
+    public bool RemoveWeekly = true;
     public bool Hidden;
     public bool AllShow;
     public bool AllFail;
@@ -622,6 +640,7 @@ public class Task
     {
         Number = number;
         Name = "";
+        SubTasks = new List<Task>();
     }
 
     public Task(Task copy)
@@ -645,6 +664,7 @@ public class Task
         AllSuccess = copy.AllSuccess;
         AllFail = copy.AllFail;
         State = copy.State;
+        RemoveWeekly = copy.RemoveWeekly;
     }
 
     public Task(JsonData taskData)
@@ -663,6 +683,7 @@ public class Task
         }
 
         Hidden = (bool)taskData["Hidden"];
+        RemoveWeekly = (bool)taskData["Weekly"];
 
         AllShow = (bool)taskData["ShowAll"];
         AllSuccess = (bool)taskData["GoalAll"];
@@ -721,6 +742,19 @@ public class Task
         }
 
         return false;
+    }
+
+    public void Reset()
+    {
+        if (!RemoveWeekly)
+            return;
+
+        foreach(var sub in SubTasks)
+        {
+            sub.SetState(TaskState.Unstarted);
+        }
+
+        State = TaskState.Unstarted;
     }
 
 }
