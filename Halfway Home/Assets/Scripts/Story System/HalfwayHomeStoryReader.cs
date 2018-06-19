@@ -171,7 +171,7 @@ namespace HalfwayHome
 
 
           Game.current.Progress.UpdateTask(num1, NewTaskState, num2);
-
+          Stratus.Scene.Dispatch(new JournalNotification.JournalNotificationEvent());
         }
       }
 
