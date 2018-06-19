@@ -445,6 +445,12 @@ namespace HalfwayHome
       Game.current.Slept();
     }
 
+    public void NextWeek()
+    {
+      Game.current.Progress.SetValue<int>("week", Game.current.Progress.GetIntValue("week") + 1);
+      Game.current.Progress.ResetWeekly();
+    }
+
     public void SetPlayerGender(string genderPicked)
     {
       Game.current.Progress.SetValue<string>("PlayerGender", genderPicked);

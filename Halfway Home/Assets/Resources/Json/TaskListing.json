@@ -4,6 +4,7 @@
   "Number" : 0,
   "Name"   : "Show Timothy around the house",
   "Hidden" : false,
+  "Weekly" : true,
   "ShowAll" : false,
   "GoalAll" : true,
   "FailAll" : false,
@@ -40,6 +41,43 @@
   "Number" : 1,
   "Name"   : "Go to Timothy's Welcome Dinner",
   "Hidden" : false,
+  "Weekly" : true,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ },
+ {
+  "Number" : 2,
+  "Name"   : "Hangout with Isaac before Friday",
+  "Hidden" : false,
+  "Weekly" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ },
+ {
+  "Number" : 3,
+  "Name"   : "Find Eduardo & Isaac Late Tuesday Night",
+  "Hidden" : false,
+  "Weekly" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ },
+ {
+  "Number" : 4,
+  "Name"   : "Talk to Isaac Alone",
+  "Hidden" : false,
+  "Weekly" : false,
   "ShowAll" : false,
   "GoalAll" : false,
   "FailAll" : false,

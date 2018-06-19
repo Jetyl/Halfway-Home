@@ -78,7 +78,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 				Yeah, I didn't go to the hangout this week. wonder if there was anything else there I could see or say?
 			-week >=2 :
 				Still, good to know that's where Eduardo and Isaac were late tuesday night/wednesday morning. 
-				I'll have to keep a note of that for next week. //add objective here
+				I'll have to keep a note of that for next week. #3 & InProgress //add objective here
 		}
 
 }
@@ -160,7 +160,7 @@ I need to think, how to best explain myself?
 "Later." #Eduardo = Exit
 Well, I guess I messed that one up.
 I should probably have some actual evidence before I try to convince Eduardo that there is any problem in his life.
-Isaac might be able to tell me more about their relationship, if I can find a time when he's alone. //add objective?
+Isaac might be able to tell me more about their relationship, if I can find a time when he's alone. #4 & InProgress//add objective?
 ->END
 
 ===Contention===

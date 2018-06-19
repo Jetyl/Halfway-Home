@@ -24,6 +24,7 @@ EXTERNAL SetTimeBlock(int)
 EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
+EXTERNAL NextWeek()
 
 -> Start
 
@@ -115,7 +116,7 @@ I can feel the whispers before I hear them. I'm not running this time.
 	[{player_name}] "No, I..."
 	[Voices] "This is why you'll never have any real friends." # SFX : play_sfx_human_ghostwhisper
 - [{player_name}] "Shut up!"
-The Voices laugh and howl. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {SetIntValue("week", 2)}# Ambience : play_sfx_ambient_heartbeat
+The Voices laugh and howl. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {NextWeek()}# Ambience : play_sfx_ambient_heartbeat
 I try to shout again, but I can't form the words. {CallSleep()}
 I collapse, clutching my pounding chest as an icy wind whips across my face. {SetValue("Depression Time Dilation", true)}
 The cackling Voices fade into a low rumble that begins toppling the walls around me. {SetTimeBlock(0)}

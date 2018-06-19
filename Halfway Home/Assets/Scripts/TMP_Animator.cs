@@ -19,7 +19,7 @@ public class TMP_Animator : MonoBehaviour
             type = whatkindasegmentthisisupinhere;
         }
     }
-    
+
     public string JitterKey = "Jitter";
 
     public string PulsateKey = "Pulse";
@@ -74,7 +74,7 @@ public class TMP_Animator : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         textmesh = GetComponent<TextMeshProUGUI>();
         JitterKey = JitterKey.ToLower();
@@ -207,7 +207,7 @@ public class TMP_Animator : MonoBehaviour
                     {
                         start = i;
 
-                        
+
                         break;
                     }
 
@@ -251,7 +251,7 @@ public class TMP_Animator : MonoBehaviour
         return end;
     }
 
-    
+
     void ON_TEXT_CHANGED(Object obj)
     {
         if (obj == m_TextComponent)
@@ -264,7 +264,7 @@ public class TMP_Animator : MonoBehaviour
         t += Time.deltaTime;
         //updateDT = 1.0f / UpdateRate;
     }
-    
+
 
     public void AnimateText()
     {
@@ -282,7 +282,7 @@ public class TMP_Animator : MonoBehaviour
         Vector3[][] sourceVertices = new Vector3[1][];
         Vector3[][] destVertices = new Vector3[1][];
         Color[][] destColors = new Color[1][];
-        
+
 
         //infinite loop 
         //while (true)
@@ -310,10 +310,11 @@ public class TMP_Animator : MonoBehaviour
 
                     sourceVertices[i] = new Vector3[numVerts];
                     destVertices[i] = new Vector3[numVerts];
-                    destColors[i] = new Color[numVerts];
+                    destColors[i] = textInfo.meshInfo[i].mesh.colors;
 
                     System.Array.Copy(cachedMeshInfo[i].vertices, sourceVertices[i], numVerts);
                 }
+
                 hasTextChanged = false;
             }
 
@@ -358,7 +359,7 @@ public class TMP_Animator : MonoBehaviour
                 //...If there are any, anyway
 
                 //print("hello?");
-                if(curSegment < segments.Count)
+                if (curSegment < segments.Count)
                 {
                     if (i >= segments[curSegment].stert && i < segments[curSegment].ernd)
                     {
@@ -372,11 +373,13 @@ public class TMP_Animator : MonoBehaviour
                 }
 
                 //we did it
-                destColors[materialIndex][vertexIndex + 0] = textmesh.color;
-                destColors[materialIndex][vertexIndex + 1] = textmesh.color;
-                destColors[materialIndex][vertexIndex + 2] = textmesh.color;
-                destColors[materialIndex][vertexIndex + 3] = textmesh.color;
-                
+
+                //we didn't do it
+                //destColors[materialIndex][vertexIndex + 0] = textmesh.color;
+                //destColors[materialIndex][vertexIndex + 1] = textmesh.color;
+                //destColors[materialIndex][vertexIndex + 2] = textmesh.color;
+                //destColors[materialIndex][vertexIndex + 3] = textmesh.color;
+
 
                 //do the thing
                 switch (t)
@@ -385,9 +388,9 @@ public class TMP_Animator : MonoBehaviour
                         Jitter(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
                         break;
                     case AnimType.Pulse:
-                        { 
+                        {
                             float intensity = Pulse(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
-                            
+
                             Color textColor = Color.Lerp(textmesh.color, PulseColor, intensity);
                             //textColor = Color.Lerp();
 
