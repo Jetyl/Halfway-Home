@@ -104,10 +104,28 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 // you get Timothy's attention
 // Timothy is startled, looks ghostly pale when he looks at you.
 // Has obviously been crying, but isn't now.
-
+// If you have enough Timothy points, Timothy will mention the letter, otherwise he will hide it
+// If you have enough expression and has ever Timothy mentioned the letter, you can convince him to talk about it
+// Doing so will net you a special awareness star as you relate your life to Timothy's
+// Otherwise, you talk about something random to take his mind off things
+// If you have 5 awareness stars, you open up completely to Timothy
+// This is also when the player gets to know who Sam really is, what the voices are, etc.
+// Sam tells Timothy the story of how he created the voices and when the nightmare  began.
+// Timothy is in awe of your self awareness and finally feels like he has a friend he can trust
+// Timothy begins to believe in himself, success -> Timothy is ready for Dye Job
 ->END
 
 =GetMax
 If I tried to help him, I'd probably just screw things up. It would be better to get Max.
 At least they're paid to deal with this stuff, not to mention trained.
+
+// You leave the room and go find Max in the commons
+// You tell him that Timothy isn't doing so well
+// You go back to Timothy with Max in tow
+// Max tries to cheer up Timothy
+// Timothy pretends to be okay
+// Max leaves
+// Timothy shares an awkward silence with you before leaving for the garden
+// End of the scene, failure
+
 ->END

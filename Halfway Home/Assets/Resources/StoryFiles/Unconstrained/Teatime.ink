@@ -171,7 +171,7 @@ Crap, what did she just ask me? Oh, right, how my week's been.
 	}
 +[Melancholic]
 	{awareness>1:
-		[{player_name}] "It's funny. I didn't realize what this place meant to me until I'm preparing to leave it behind." # awareness ^ good
+		[{player_name}] "It's funny. I didn't realize what this place meant to me until started preparing to leave it behind." # awareness ^ good
 		For a moment I can spot suprise on Charlotte's face, but she regains her composure almost immediately.
 		[Charlotte] "I'm impressed by your clarity. You are quite wise for someone your age, you know." # Teatime / FSmile
 		I feel myself start to blush and quickly hide it with a strategic sip of tea.
