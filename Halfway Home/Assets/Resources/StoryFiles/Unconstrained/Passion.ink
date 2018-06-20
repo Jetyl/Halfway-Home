@@ -138,7 +138,9 @@ I think I understand myself better, too.
 "It can probably feel overwhelming at times, but to me it's inspiring."
 "I don't really have a passion for anything like you do. You made me realize that. So thanks."
 [Timothy] "Uh... Wow. I'm glad I could help." # Timothy = Happy
-<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
+{awareness==3:
+	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
+}
 "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "Of course! Anyway, I'll see you around."
 [Timothy] "Yeah!"
