@@ -31,7 +31,7 @@ EXTERNAL NextWeek()
 === Start ===
 Once the dinner has wound down, I quietly head to my room to rest.
 {
-	-GetValue("Saved Self"):
+	-expression == 5 && awareness == 5 && grace == 5:
 		->PrimarySuccess
 	-GetValue("Saved Timothy"):
 		->SecondarySuccess
@@ -44,7 +44,20 @@ Once the dinner has wound down, I quietly head to my room to rest.
 
 ===PrimarySuccess===
 //player has broken timeloop, and is going to end the game
-Success. fill out later
+~SetValue("Saved Self", true)
+For what feels like an eternity, I feel good going to bed today.
+{
+	-GetValue("Saved Timothy"):
+		Timothy walks in and plots down to bed.
+		we chat, and he offers to help me pack my bags, which we do. 
+	-else:
+		I look over at Timothy's vacent bed.
+		I feel a little bad I couldn't help him.
+		I distract myself by packing my bags.
+		No clue if its actually worth it, gien I'll just wake up back at the start of the week, but its good to pretend I'm leaving, at least.
+}
+With that done, I call it a night.
+I sleep more calmly than I've slept in a long while.
 ->END
 
 ===SecondarySuccess===
@@ -126,11 +139,6 @@ The cackling Voices fade into a low rumble that begins toppling the walls around
 I failed... again.
 I let Timothy down.
 I let everybody down.
-there's an evil that is plotting
-faith in man is quickly falling
-cannot stop this painful clotting
-It's not over. They are mocking
-As my soul is slowly rotting
 ->RRR
 
 ==RRR==

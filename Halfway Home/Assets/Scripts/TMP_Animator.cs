@@ -10,7 +10,7 @@ public class TMP_Animator : MonoBehaviour
     {
         public int stert, ernd;
         public AnimType type;
-        public string yes;
+        public string text;
 
         public TagSegment(int start, int end, AnimType whatkindasegmentthisisupinhere)
         {
@@ -26,6 +26,8 @@ public class TMP_Animator : MonoBehaviour
 
     public string FlowKey = "Flow";
 
+    public string GlitchKey = "Glitch";
+
     private TextMeshProUGUI textmesh;
 
     private TMP_Text m_TextComponent;
@@ -35,6 +37,9 @@ public class TMP_Animator : MonoBehaviour
     public List<TagSegment> segments;
 
     public float JitterIntensity = 1.0f;
+
+    public float GlitchJitterIntensity = 30.0f;
+    public float GlitchUVFuckupIntensity = 0.3f;
 
     public float PulseIntensity = 1.0f;
     public float PulseSpeed = 1.0f;
@@ -52,6 +57,7 @@ public class TMP_Animator : MonoBehaviour
         Jitter,
         Pulse,
         Flow,
+        Glitch,
         COUNT,
     }
 
@@ -80,6 +86,7 @@ public class TMP_Animator : MonoBehaviour
         JitterKey = JitterKey.ToLower();
         PulsateKey = PulsateKey.ToLower();
         FlowKey = FlowKey.ToLower();
+        GlitchKey = GlitchKey.ToLower();
         //StartCoroutine(AnimateText());
     }
 
@@ -102,7 +109,7 @@ public class TMP_Animator : MonoBehaviour
             string tag = rawText.Substring(i + 1, j - i - 1);
             string lTag = tag.ToLower();
 
-            if (lTag == FlowKey || lTag == PulsateKey || lTag == JitterKey)
+            if (lTag == FlowKey || lTag == PulsateKey || lTag == JitterKey || lTag == GlitchKey)
             {
                 RemoveFirst(ref rawText, "<" + tag + ">");
                 RemoveFirst(ref rawText, "</" + tag + ">");
@@ -149,7 +156,7 @@ public class TMP_Animator : MonoBehaviour
                 RemoveFirst(ref text, "</" + JitterKey + ">");
 
                 int index = segments.Count - 1;
-                segments[index].yes = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
+                segments[index].text = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
             }
             else if (thisBit == PulsateKey)
             {
@@ -162,7 +169,7 @@ public class TMP_Animator : MonoBehaviour
                 RemoveFirst(ref text, "</" + PulsateKey + ">");
 
                 int index = segments.Count - 1;
-                segments[index].yes = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
+                segments[index].text = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
             }
             else if (thisBit == FlowKey)
             {
@@ -175,7 +182,20 @@ public class TMP_Animator : MonoBehaviour
                 RemoveFirst(ref text, "</" + FlowKey + ">");
 
                 int index = segments.Count - 1;
-                segments[index].yes = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
+                segments[index].text = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
+            }
+            else if (thisBit == GlitchKey)
+            {
+                int segmentEnd = text.IndexOf('<', i + 1);
+                int tagLength = GlitchKey.Length + 2;
+
+                segments.Add(new TagSegment(i, segmentEnd - tagLength, AnimType.Glitch));
+
+                RemoveFirst(ref text, "<" + GlitchKey + ">");
+                RemoveFirst(ref text, "</" + GlitchKey + ">");
+
+                int index = segments.Count - 1;
+                segments[index].text = text.Substring(segments[index].stert, segments[index].ernd - segments[index].stert);
             }
 
             i = text.IndexOf('<');
@@ -281,6 +301,8 @@ public class TMP_Animator : MonoBehaviour
         int numMaterials;
         Vector3[][] sourceVertices = new Vector3[1][];
         Vector3[][] destVertices = new Vector3[1][];
+        Vector2[][] sourceUVs = new Vector2[1][];
+        Vector2[][] destUVs = new Vector2[1][];
         Color[][] destColors = new Color[1][];
 
 
@@ -297,7 +319,9 @@ public class TMP_Animator : MonoBehaviour
                 numMaterials = textInfo.materialCount;
 
                 sourceVertices = new Vector3[numMaterials][];
+                sourceUVs = new Vector2[numMaterials][];
                 destVertices = new Vector3[numMaterials][];
+                destUVs = new Vector2[numMaterials][];
                 destColors = new Color[numMaterials][];
 
                 //Y'see, like
@@ -309,10 +333,13 @@ public class TMP_Animator : MonoBehaviour
                     int numVerts = cachedMeshInfo[i].vertices.Length;
 
                     sourceVertices[i] = new Vector3[numVerts];
+                    sourceUVs[i] = new Vector2[numVerts];
                     destVertices[i] = new Vector3[numVerts];
+                    destUVs[i] = new Vector2[numVerts];
                     destColors[i] = textInfo.meshInfo[i].mesh.colors;
 
                     System.Array.Copy(cachedMeshInfo[i].vertices, sourceVertices[i], numVerts);
+                    System.Array.Copy(cachedMeshInfo[i].uvs0, sourceUVs[i], numVerts);
                 }
 
                 hasTextChanged = false;
@@ -380,6 +407,10 @@ public class TMP_Animator : MonoBehaviour
                 //destColors[materialIndex][vertexIndex + 2] = textmesh.color;
                 //destColors[materialIndex][vertexIndex + 3] = textmesh.color;
 
+                destUVs[materialIndex][vertexIndex + 0] = sourceUVs[materialIndex][vertexIndex + 0];
+                destUVs[materialIndex][vertexIndex + 1] = sourceUVs[materialIndex][vertexIndex + 1];
+                destUVs[materialIndex][vertexIndex + 2] = sourceUVs[materialIndex][vertexIndex + 2];
+                destUVs[materialIndex][vertexIndex + 3] = sourceUVs[materialIndex][vertexIndex + 3];
 
                 //do the thing
                 switch (t)
@@ -403,12 +434,16 @@ public class TMP_Animator : MonoBehaviour
                     case AnimType.Flow:
                         Flow(ref destVertices[materialIndex], ref sourceVertices[materialIndex], vertexIndex);
                         break;
+                    case AnimType.Glitch:
+                        Glitch(ref destVertices[materialIndex], ref sourceVertices[materialIndex], ref destUVs[materialIndex], ref sourceUVs[materialIndex], vertexIndex);
+                        break;
                     default:
                         Nothing(destVertices[materialIndex], sourceVertices[materialIndex], vertexIndex);
                         break;
                 }
 
                 System.Array.Copy(destVertices[materialIndex], textInfo.meshInfo[materialIndex].vertices, destVertices[materialIndex].Length);
+                System.Array.Copy(destUVs[materialIndex], textInfo.meshInfo[materialIndex].uvs0, destUVs[materialIndex].Length);
                 //System.Array.Copy(destColors[materialIndex], textInfo.meshInfo[materialIndex].vertices, destVertices[materialIndex].Length);
                 // vertexAnim[i] = vertAnim; //error, vertexanim[i] does not exist
             }
@@ -416,6 +451,7 @@ public class TMP_Animator : MonoBehaviour
             for (int i = 0; i < textInfo.meshInfo.Length; i++)
             {
                 textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
+                textInfo.meshInfo[i].mesh.uv = textInfo.meshInfo[i].uvs0;
                 if (i < destColors.Length)
                     textInfo.meshInfo[i].mesh.colors = destColors[i];
                 m_TextComponent.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
@@ -482,6 +518,25 @@ public class TMP_Animator : MonoBehaviour
         dst[startIndex + 1] = src[startIndex + 1] + offset;
         dst[startIndex + 2] = src[startIndex + 2] + offset;
         dst[startIndex + 3] = src[startIndex + 3] + offset;
+    }
+
+    void Glitch(ref Vector3[] dst, ref Vector3[] src, ref Vector2[] dstUV, ref Vector2[] srcUV, int startIndex) //jay peg
+    {
+        float tempT = t * FlowSpeed + startIndex * 0.3f;
+        Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0.0f) * GlitchJitterIntensity;
+        Vector2 uvOffset = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)) * GlitchUVFuckupIntensity;
+
+        print(src[startIndex] + offset);
+
+        dst[startIndex] = src[startIndex] + offset;
+        dst[startIndex + 1] = src[startIndex + 1] + offset;
+        dst[startIndex + 2] = src[startIndex + 2] + offset;
+        dst[startIndex + 3] = src[startIndex + 3] + offset;
+
+        dstUV[startIndex] = srcUV[startIndex] + uvOffset;
+        dstUV[startIndex + 1] = srcUV[startIndex + 1] + uvOffset;
+        dstUV[startIndex + 2] = srcUV[startIndex + 2] + uvOffset;
+        dstUV[startIndex + 3] = srcUV[startIndex + 3] + uvOffset;
     }
 
     /// <summary>
