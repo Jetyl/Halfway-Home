@@ -169,6 +169,7 @@ I take the book from her and look it over. It has a very humble appearance, but 
 She shrugs.
 [Charlotte] "When I was little I didn't understand anything about people. And is it not human nature to hate what we do not understand?" # Charlotte = Sad
 "I fear I was quite a horrible, loathsome child. But that's a story for another time."
+That doesn't sound too far off how I was, either.
 "When I matured, I forced myself to care. I resolved to train myself to recognize the physical signs of emotion." # Charlotte = Angry
 "I swore to myself and my family that I would never again act without regard for others."
 "I was prepared to check myself into Blackwell, but my family insisted I come here first. I know it's only a matter of time before I end up there, but I had to honor their wishes." # Charlotte = Sad
