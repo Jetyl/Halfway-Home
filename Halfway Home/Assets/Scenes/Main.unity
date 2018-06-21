@@ -5911,7 +5911,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8628,7 +8628,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.8
+  m_fontSize: 70.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15211,7 +15211,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.1
+  m_fontSize: 57.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41493,6 +41493,7 @@ GameObject:
   - component: {fileID: 1174770654}
   - component: {fileID: 1174770653}
   - component: {fileID: 1174770655}
+  - component: {fileID: 1174770656}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -41635,11 +41636,25 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1174770646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b730963815858ee4f9abcfc23725afdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1174770656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1174770646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04aada51acd7dc64aa79e225c555a469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveTag: Invert On
+  Speakers:
+  - Voices
 --- !u!1 &1177578893
 GameObject:
   m_ObjectHideFlags: 0
@@ -52396,7 +52411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.6089}
+  m_AnchoredPosition: {x: 0, y: 902.9538}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -57036,8 +57051,11 @@ MonoBehaviour:
   JitterKey: Jitter
   PulsateKey: Pulse
   FlowKey: Flow
+  GlitchKey: Glitch
   segments: []
   JitterIntensity: 2.17
+  GlitchJitterIntensity: 30
+  GlitchUVFuckupIntensity: 0.3
   PulseIntensity: 0.1
   PulseSpeed: 0.7
   PulseColor: {r: 1, g: 0.63235295, b: 0.63235295, a: 1}

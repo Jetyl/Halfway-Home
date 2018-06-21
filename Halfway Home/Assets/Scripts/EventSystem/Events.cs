@@ -57,6 +57,7 @@ public class Events
     public static readonly String PostSave = "PostSaveEvent";
     public static readonly String Load = "LoadEvent";
     public static readonly String Debug = "DebugEvent";
+    public static readonly String Progress = "ProgressEvent";
 
 
     //Halfway-Home Custom Events

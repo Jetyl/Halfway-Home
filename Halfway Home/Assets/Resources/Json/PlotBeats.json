@@ -90,6 +90,10 @@
    {
     "Name" : "Depression Time Dilation",
     "Type" : 1
+   },
+   {
+    "Name" : "Invert On",
+    "Type" : 1
    }
   ]
  },
@@ -277,6 +281,18 @@
    {
     "Name" : "RoomKey",
     "Type" : 1
+   },
+   {
+    "Name" : "IsaacOpenedUp",
+    "Type" : 1
+   },
+   {
+    "Name" : "Convinced Eduardo",
+    "Type" : 1
+   },
+   {
+    "Name" : "Isaac's Secret Revealed",
+    "Type" : 1
    }
   ]
  },
@@ -321,10 +337,6 @@
     "Type" : 1
    },
    {
-    "Name" : "IsaacOpenedUp",
-    "Type" : 1
-   },
-   {
     "Name" : "ColdTalkBefore",
     "Type" : 1
    },
@@ -338,6 +350,18 @@
    },
    {
     "Name" : "FoundWound",
+    "Type" : 1
+   },
+   {
+    "Name" : "Know Isaac's Troubles",
+    "Type" : 1
+   },
+   {
+    "Name" : "ConvincedEduardoBefore",
+    "Type" : 1
+   },
+   {
+    "Name" : "Revealed Isaac's Secret Before",
     "Type" : 1
    }
   ]

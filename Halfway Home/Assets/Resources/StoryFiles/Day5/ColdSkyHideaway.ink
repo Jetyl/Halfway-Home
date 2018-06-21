@@ -34,7 +34,7 @@ I step out into the gardens. its rather cold out tonight.
 There isn't a single star in sky tonight.
 { 
 	
-	-GetValue("IsaacOpenedUp") == true:
+	-GetValue("Know Isaac's Troubles") == true:
 		->Recap
 	- GetValue("ColdTalkBefore") == true:
 		->TryAgain
@@ -320,10 +320,15 @@ I help Isaac up off the ground. #background = gardens #Isaac = calm
 [Isaac] "..." 
 "sure." #Isaac = happy
 Isaac  quickly excuses himself after that, slinking off to bed. #Isaac = exit
-I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it with making a mess of things. 
+I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it without making a mess of things. 
 Maybe I should find a time to chat with Eduardo about their relationship.
-I should be able to articlute now, any issues there in, with him. #expression+++
+{
+	-GetValue("Know Isaac's Troubles") ==false:
+		I should be able to articlute Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
+}
+I Get up off the ground and decide to head inside myself, because it is cold tonnight.
 ~SetValue("IsaacOpenedUp", true)
+~SetValue("Know Isaac's Troubles", true)
 ->END
 
 ===Recoil===
@@ -347,5 +352,11 @@ I head back inside. my head low from my failure...
 ->END
 
 === Recap ===
-I go to Isaac's little hideaway, and talk him through his issues like last time.
-->END
+I know where Isaac is hiding, and I know what I can say to help him.
+Should I just go thru and do everything I did before, or try something new?
++[Retry Talking to Him]
+	->StoneGiant
++[Repeat Previous Success]
+	I go to Isaac's little hideaway, and talk him through his issues just like last time.
+	~SetValue("IsaacOpenedUp", true)
+	->END

@@ -135,9 +135,7 @@ public class ProgressSystem
         
         if (!ProgressBook.ContainsKey(key))
             return;
-
         
-
         Type type = typeof(T);
         if (type == typeof(int))
         {
@@ -159,6 +157,8 @@ public class ProgressSystem
             if (ProgressBook[key].TypeID == PointTypes.String)
                 ProgressBook[key].StringValue = Convert.ToString(value);
         }
+
+        UpdatePlotLines();
     }
 
     public void SetValue(string _key, bool change)
@@ -207,8 +207,6 @@ public class ProgressSystem
         
         ProgressBook[_key].FloatValue = change;
         
-
-
         UpdatePlotLines();
 
     }
@@ -223,8 +221,7 @@ public class ProgressSystem
             return;
 
         ProgressBook[_key].StringValue = change;
-
-
+        
         UpdatePlotLines();
 
     }
@@ -254,7 +251,7 @@ public class ProgressSystem
         }
 
         //ProgressBook[_key].BoolValue = _newValue;
-        
+        UpdatePlotLines();
 
     }
 
@@ -384,7 +381,7 @@ public class ProgressSystem
     //updates the plotlines, checkng off beats if they need to be checked off
     void UpdatePlotLines()
     {
-        
+        Space.DispatchEvent(Events.Progress);
     }
 
     public void UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)

@@ -27,6 +27,7 @@ EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL GetIntValue(value)
+EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL AlterTime()
 EXTERNAL SetTimeBlock(time)
 EXTERNAL GetHour()
@@ -36,6 +37,14 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
+{
+	-GetValue("ConvincedEduardoBefore"):
+		->Recap
+	-else:
+		->SunnyMorning
+}
+
+=== SunnyMorning ===
 Its a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
 I'm rather suprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of ceral in his hand, siting on the floor and eating.
@@ -316,12 +325,15 @@ I let out a deep sigh.
 Something about Isaac that even Isaac hasn't told him...
 +[Tell him about Isaac's internal stories]
 	[{player_name}] "Isaac told me he invents stories involving people we know around us. You, me, anybody."
+	~SetValue("Isaac's Secret Revealed", true)
+	~SetValue("Revealed Isaac's Secret Before", true)
 	"And while he didn't say this, I got the feeling some of these stories were... `intimate` in nature."
 	[Eduardo] "..." //shocked, blushing
 	[{player_name}] "not that you'd know that, given he spesifically told me he hadn't mentioned it to you."
 	[Eduardo] "Y-yeah, well..."
 +[Don't tell him about Isaac's internal stories]
-	"Dude, this isn't a quiz to see who knows you're boyfriend better"
+	"Dude, this isn't a quiz to see who knows you're boyfriend better"	
+	~SetValue("Revealed Isaac's Secret Before", false)
 	Even if that's what you've been treating it as.
 	"I'm trying to tell you that Isaac is hurting, so you'll stop being an idiot and listen to him before either of you do something you'll regret!"
 	[Eduardo] "..." //schocked
@@ -371,7 +383,30 @@ Eduardo gets up, and begins to pat himself down. #Background = Artroom #Eduardo 
 "I'll wait til Isaac brings it up."
 "But I will listen, when he finally speaks. I promise."
 "Oh, and... thanks, I guess."
-"Thanks, for caring about us." #expression+++
+{
+	-GetValue("ConvincedEduardoBefore"):
+	"Thanks, for caring about us."
+	-else:
+	"Thanks, for caring about us." #expression+++
+}
 Eduardo leaves, seemingly more tempered that when I walked in. #Eduardo = Exit
+~SetValue("Convinced Eduardo", true)
+~SetValue("ConvincedEduardoBefore", true)
 Hopefully I did the right thing. I think I did.
 ->END
+
+===Recap===
+I've convinced Eduardo once before. I can just repeat what I did last time, or I could try something new, for whatever reason.
++[Retry Convining Him]
+	->SunnyMorning
++[Repeat Previous Success]
+	I just repeat what I did last time, and successfully convince Eduardo the exact same way.
+	~SetValue("Convinced Eduardo", true)
+	{
+		-GetValue("Revealed Isaac's Secret Before"):
+			I also, once again tell Eduardo about Isaac's private stories.
+			~SetValue("Isaac's Secret Revealed", true)
+	}
+	Eduardo leaves, seemingly more tempered that when I walked in.
+	And I head off to my next thing of the day.
+	->END
