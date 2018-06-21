@@ -20,6 +20,7 @@ VAR current_room = "unset"
 VAR ByTimothy = false
 VAR HeardIsaacsStory = false
 
+EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL GetValue(value)
 
 -> Start
@@ -40,7 +41,7 @@ I decide to...
 
 ===NearTimothy===
 ~ByTimothy = true
-I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table.
+I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
 I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy, Stage_Right, Left # Timothy = Happy, Right
 [Timothy] "Hi, {player_name}."
 [Trissa] "Come to see the man of the hour, huh?"

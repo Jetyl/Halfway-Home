@@ -26528,6 +26528,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1113729422829270, guid: a1e3064737b1d794d9c24775be33f555,
         type: 2}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[5].Backdrops.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: c099b968a80329f48a22fc895ef9777d,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
   m_IsPrefabParent: 0

@@ -46,6 +46,7 @@ I decide I'm not interested in pressing Timothy for more.
 Timothy nods and turns back to his drawing. # Timothy = Exit
 I head to the back of the garden and look up at the passing clouds for a while.
 <color=color_descriptor><i>Reflection <color=color_awareness> improved <b>Awareness</b> faintly<color=color_descriptor>, but loneliness <color=color_wellbeing_penalty>increased <b>Depression</b> slightly<color=color_descriptor>.</i></color> # Awareness+ # Depression += 10
+-> END
 
 === Cartography ===
 I decide to try and get Timothy to open up about what he's working on.
@@ -120,7 +121,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad
 	-> Questions
 * ->
-	I feel like I understand Timothy a bit better after listening to him talk about his passions. # Timothy = Calm// Get Timothy points
+	I feel like I understand Timothy a bit better after listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
 		-else: -> Hobbies
@@ -138,11 +139,13 @@ I think I understand myself better, too.
 "It can probably feel overwhelming at times, but to me it's inspiring."
 "I don't really have a passion for anything like you do. You made me realize that. So thanks."
 [Timothy] "Uh... Wow. I'm glad I could help." # Timothy = Happy
-<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
+{awareness==3:
+	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
+}
 "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "Of course! Anyway, I'll see you around."
 [Timothy] "Yeah!"
-I make my way out of the garden feeling somehow wiser.
+I make my way out of the garden feeling somehow wiser. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
 -> END
 
 === Hobbies ===
