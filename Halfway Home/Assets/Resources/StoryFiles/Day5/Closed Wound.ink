@@ -114,20 +114,40 @@ His red-eyed face is ghostly pale.
 "Wait, no I didn't. <size = 60%>That was another time..."
 "<size=100%>Apologies. Guess I'm all turned around today."
 [Timothy] "Heh. I can relate." # Timothy = Happy
+[{player_name}] "So... you doin' okay in here?"
+[Timothy] "Oh. Yeah, I..." # Timothy = Surprised
+{GetValue("TimothyPoints")>=6:
+	Timothy sighs. # Timothy = Sad
+	"I'm trying not to think about it."
+	"It's just this letter... I- I was doing so well!" # Timothy = Angry
+	{expression>2:->TheLetter|->Tangents}
+-else:
+	"I'm fine. You don't need to worry about me." # Timothy = Calm
+	Boy does <i>that</i> tone sound familiar.
+	->Tangents
+}
 
+=TheLetter
+// Timothy lets you read the letter
+// This gives you insight and a special awareness star as you relate your life to Timothy's
+{awareness==5:->Healing|->NotYet}
 
-// Timothy is startled, looks ghostly pale when he looks at you.
-// Has obviously been crying, but isn't now.
-// If you have enough Timothy points, Timothy will mention the letter, otherwise he will hide it
-// If you have enough expression and has ever Timothy mentioned the letter, you can convince him to talk about it
-// Doing so will net you a special awareness star as you relate your life to Timothy's
-// Otherwise, you talk about something random to take his mind off things
-// If you have 5 awareness stars, you open up completely to Timothy
+=Tangents
+// talk about something random to take his mind off things
+{awareness==5:->Healing|->NotYet}
+
+=Healing
+// You open up completely to Timothy
 // This is also when the player gets to know who Sam really is, what the voices are, etc.
 // Sam tells Timothy the story of how he created the voices and when the nightmare  began.
 // Timothy is in awe of your self awareness and finally feels like he has a friend he can trust
 // Timothy begins to believe in himself, success -> Timothy is ready for Dye Job
-->END
+-> END // 1 of 3 (GOOD)
+
+=NotYet
+// You don't have enough awareness to open up to Timothy completely
+// He doesn't fully trust you or believe in himself, and will break down on the last day
+->END // 2 of 3 (BAD)
 
 =GetMax
 ~chickenedOut = true
@@ -168,7 +188,7 @@ I swear I've heard these somewhere. Pretty sure these aren't original. # Timothy
 <size=60%>"Please stop."
 Timothy still doesn't look fine.
 {grace>2:
-	He's pretending to be okay because he feels pressured. grace ^ good
+	He's pretending to be okay because he feels pressured. # grace ^ good
 -else:
 	But maybe bad puns were just the distraction he needed... Maybe. # grace ^ poor
 }
@@ -184,4 +204,4 @@ Nobody has a reponse. An awkward silence fills the void.
 I get the distinct feeling I messed up bringing Max into this. # Max = Exit
 Timothy seems to have withdrawn even further. # Timothy = Sad
 At least I'm pretty sure I'll have another chance.
-->END
+->END // 3 of 3 (BAD)

@@ -224,11 +224,11 @@ Should... Should I question him about that?
 		"OH! uh... S-Sorry f-for interrupting the t-tour.." #Timothy = Surprised
 		[{player_name}] "its okay."
 }
-[{player_name}] "so, what are you doing over here?"
+[{player_name}] "So, what are you doing over here?"
 [Timothy] "I'm not sure..." #Timothy = Calm
 "These gardens are really pretty, and..."
 "I don't know, I guess I'm really bad at putting feelings like that into words?" #Timothy=Sad
-"Game's made sense... to me. @So I, uh, made my feelings a game?"
+"Games make sense to me. @So I, uh, made my feelings a game?"
 "I'm probably not making any sense."
 [{player_name}] "No, no, I think I get it?"
 {
@@ -239,14 +239,14 @@ Should... Should I question him about that?
 	-else:
 		"So, what was the word?"
 		[Timothy] "It's a secret."  #Timothy = Angry
-		"You didn't win, so thats the breaks."
+		"You didn't win, so them's the breaks."
 }
 [Timothy] "..." #Timothy = Afraid
 "I'm sorry. I'm acting weird."
 [{player_name}] "No, no, you're fine."
 [Timothy] "T-Thanks." #Timothy = Happy
 "That really m-m-means a lot."
-Timothy gives me a cute crooked smile, as he gets up from the dirt patch.
+Timothy gives me a cute crooked smile, as he gets up from the dirt patch. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
 {
 	-GetValue("Tutorial"):
 		that little game finished, we head off to the next stop on the tour. #Timothy = Exit
