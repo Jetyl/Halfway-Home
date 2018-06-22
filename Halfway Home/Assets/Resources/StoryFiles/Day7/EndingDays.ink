@@ -38,19 +38,24 @@ EXTERNAL SetValue(name, values)
 I am woken up by an all too familar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
 I let out a small resigned sigh, as I get out of bed and answer the door.
 but when I open the door, Max is alone. #Max = Happy
-[Max] "Hella Yella Morning Fella!"
-[{player_name}] "hey Max. Where's Timothy?"
+[Max] "Hella yella, my {player_name} fella."
+[{player_name}] "Morning Max."
+"Hey, where's Timothy?"
 Max stares at me like I'm a weirdo. #Max = Sad
 {
 	-GetValue("Saved Timothy"):
 		[Max] "Uh, he's right there, in bed?" #Max = Happy
-		Timothy gets out of bed.
-		timothy's goodbyes / ending. god things.
+		I look over to Timothy's bed, and see Timothy, getting out of it.
+		[Timothy] "uh, morning." #Timothy = calm, stage_left
+		Timothy is still here. his hair still dyed from the other day. #Timothy = stage_center #Max = stage_right
+		Did I... Did I break the time loop?
+		[Timothy] "uh... {player_name}? are you o-okay?"
+		Timothy must have noticed I was staring at him.
+		timothy's goodbyes / ending. good things.
 	-else:
 		[Max] "He, um, left, remember?"
-		max is sad. talks about how you either did or didn't help. regardless. theres no changing the past.
+		Max is sad. talks about how you either did or didn't help. regardless. theres no changing the past.
 		[{player_name}] "huh... yeah. Can't change the past."
-
 }
 ->Ready
 
@@ -97,7 +102,7 @@ Charoltte informs you that she is leaving too.
 
 ===EduardoEnd===
 ~TalkE = false
-I walk over to Eduardo who is lying on the couch, looking miserable. #Eduardo = sad
+I walk over to Eduardo who is lying on the couch, looking down. #Eduardo = sad
 {
 	-GetValue("Convinced Eduardo"):
 		->Patches
@@ -246,7 +251,6 @@ We fist bump eachother.
 }
 
 =Psychic
-helped eduardo, but didn't get Isaac to open up. Isaac is suprised you knew so much about him.
 [{player_name}] "hey."
 [Isaac] "hrm." #Isaac = suprised
 Isaac looks at me like I'm some sort of alien.
@@ -256,11 +260,31 @@ Isaac looks at me like I'm some sort of alien.
 [{player_name}] "what?"
 [Isaac] "How did you know. So much. About me?"
 [{player_name}] "oh! uh..."
-Eduardo must have brought me up when they talked about their relationship.
 {
 	-TalkE:
+		Eduardo must have brought me up when they talked about their relationship.
+		"It's like I said, I'm Psychic."
+	-else:
+		"I'm Psychic."
+}
+[Isaac] "Bull."
+I guess I can't convince Isaac about the paranormal.
+[{player_name}] "Well, would you believe I'm a time traveller?"
+[Isaac] "No."
+Well that one was at least true. I don't know what to say here.
+"Whatever."
+Oh, thank goodness, he's dropping it.
+{
+	-TalkE:
+		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = suprised
+		[Eduardo] "hey."
+		[Isaac] "hey." #Isaac = sad
 		->InE
 	-else:
+		"Bye, I guess."
+		[{player_name}] "Oh yeah, see you around Isaac."
+		[Isaac] "hrm." #Isaac = exit
+		I suppose Isaac is not in the mood to be friendly with someone who know way more about him than he is comfortable with.
 		->Ready.Mingling
 }
 
@@ -269,6 +293,11 @@ Eduardo must have brought me up when they talked about their relationship.
 [Eduardo] "..."
 [Isaac] "..."
 man, this is awkward.
+The two kept just giving eachother brief glances before their eyes lock, and they both basheful look away.
+[{player_name}] "Are you two going to be okay?"
+[Eduardo] "Y-Yeah! Of course we are!" #Eduardo = suprised
+"uh, right, Isaac?" #Eduardo = sad
+[Isaac] "Y-Yeah."
 {
 	-GetValue("IsaacOpenedUp"):
 		->Guru
@@ -277,35 +306,95 @@ man, this is awkward.
 }
 
 =Guru
-Additionally, Isaac may come over, having opened up to you.
+[Isaac] "We, um. Talked."
+[Eduardo] "Y-Yeah!"
+"We had a massive feelings jam all up in here, and-"
+"Oh, uh sorry, Isaac."
+[Isaac] "hrm?" #Isaac = suprised
+"N-no. Your fine." #Isaac = sad
+"We, uh, talked about stuff."
+"Boundries. wants. stuff like that."
+[Eduardo] "a whole lot of TMI for you."
+[Isaac] "uh, yeah. Private stuff."
 {
 	-GetValue("Isaac's Secret Revealed"):
-		also, if you had told Eduardo Isaac's secret, it gets revealed here.
+		[Eduardo] "Speaking of private stuff" #Eduardo = calm
+		[Isaac] "Oh no..."
+		[Eduardo] "You really should get the deets on Isaac's storytelling chops."
+		"That stuff is 200% pure sweetness. I love it."
+		[Isaac] "{player_name}, why did you have to tell him about my stories?"
+		Whoops.
+		[{player_name}] "Sorry Isaac. It just sort of came up."
+		[Eduardo] "I would have never known that my Isaac had a saucier side. Mrow!" #Eduardo = happy
+		[Isaac] "<size=50%>I swear am never telling either of you embarressing secrets again.</size>"
+		[{player_name}] "Eduardo, you do know they are just stories right. Fantasies. Its not like Isaac wants-" #Skip
+		[Eduardo] "I know. I know. Jeez. what are you, our relationship counciler?" #Eduardo = angry
+		[{player_name}] "I kind of am, so...."
 }
-->Ready.Mingling
+[Isaac] "Thanks. {player_name}. For helping. You didn't need to do that." #Eduardo = calm #Isaac = calm
+[{player_name}] "No problem."
+"You two play nice now."
+[Eduardo]"You know it!"
+[Isaac]"hrm."
+->OtherOne
 
 =MindReader
-Eduardo is suprised you were right, given Isaac told him he never mentioned these things to you.
+[Eduardo] "It was rather suprising. That advice you gave me."
+"You said you had talked with Isaac, but Isaac said you hadn't."
+[Isaac] "hrm."
+[Eduardo] "Like, I get it {player_name}, I'm hard headed when I get stuck in a mindset, but ya ain't gotta lie to convince me." #Eduardo = angry
+It wasn't really a lie, I just didn't get Isaac to talk to me <i>this</i> week, but whatever. I'll play this one slyly.
+[{player_name}] "Did I Eduardo? Really?"
+[Eduardo] "Eh, you're probably right." #Eduardo = sad
+"s'weird is all. You knowing us better than we do sometimes."
 {
 	-GetValue("Isaac's Secret Revealed"):
-		doubly so that you knew Isaac's secret, given he has never told anyone that.
+		"Isaac found it really creepy when you knew about his stories too."
+		Isaac blushes furiously, only capable of mumbling a little.
+		[Isaac] "<size=50%>I never told anyone that stuff...</size>"
+		[{player_name}] "Eh, what can I say, I'm a mind reader."
+		I shrug, hoping that'll be enough to drop it, or change the subject at least.
 }
-->Ready.Mingling
+[Eduardo] "Well, thanks to you we were able to work things out communicating again. So, thanks for that." #Eduardo = calm
+[{player_name}] "No problem."
+"See you two around."
+[Eduardo]"See ya!"
+[Isaac]"hrm."
+->OtherOne
 
 =OtherOne
-then I go to talk to the other one.
+The two walk their seperate ways. I guess they're trying to give eachother some space. #All = exit
+Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 {
 	-TalkE:
+		I decide I should go talk with Eduardo a bit, and say my goodbyes to him.
 		->EduardoEnd.Patches
-	-GetValue("IsaacOpenedUp"):
-		->IsaacEnd.Thanks
 	-else:
-		->IsaacEnd.Psychic
+		I decide I should go talk with Isaac a bit, and say my goodbyes to him.
+		->IsaacEnd
 }
 
 ===OutsideWorld===
-You head outside, and begin putting the bags into the car. 
-Max asks you some things about what your plans are after this.
-multiple player choices are here.
+[{player_name}] "okay Max, I'm ready." #Max = calm
+[Max] "Well I'm glad you're ready, but ya still gotta wait for your car."
+"Who is picking you up again?"
+[{player_name}] "oh, just my folks."
+[Max] "Cool. Cool."
+"So, got any plans for what your heading off to after this?"
++[College]
+	[{player_name}] "I was thinking of school. another sort of stepping point into the real world."
++[A Job]
+	[{player_name}] "probably going to get a job. then when I can afford it, move out of my parents house."
++[I don't know]
+	[{player_name}] "I'm not entirely sure."
+-[Max] "Well, {player_name}, it was a pleasure meeting you."
+Max extends their hand. I grab their hand and give them a confident handshake.
+[{player_name}] "Thanks for the" 
+And, right on que, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
+I go out, and give my parents a basic greatings.
+They help me with my bags, and we pack them in the car.
+When I get in the back seat, I look back out at the Sunflower House. 
+I see my friends. #Isaac = calm #Eduardo = calm #Max = calm #Charlotte = calm #Trissa = calm
+Their all waving me off.
 then, roll credits
 ->END
