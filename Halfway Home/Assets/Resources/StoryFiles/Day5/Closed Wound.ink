@@ -63,7 +63,7 @@ That damn letter is the root of so much pain.
 
 = Enter
 I slide the key into the lock and the door swings open.
-I step inside, gently nudging the door closed behind me. # Background / YourRoom
+I step inside, gently nudging the door closed behind me. # Background / YourRoom, blackwipe
 -> ClosedWound
 
 ===ClosedWound===
@@ -100,7 +100,7 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 -else:
 	Everything is in place. I've got to break through to him.
 }
-{grace>1:
+{grace<2:
 	[{player_name}] "Uh, hey. There." # grace ^ poor
 	Wow, great start.
 -else:
@@ -111,28 +111,68 @@ His red-eyed face is ghostly pale.
 [Timothy] "O-oh! Hey, {player_name}." # Timothy = Surprised
 "<size=80%>Y-you startled me..." # Timothy = Calm
 [{player_name}] "<size=100%>I wasn't trying too... I did knock!"
-"Wait, no I didn't. <size = 60%>That was another time..."
+"Wait, no I didn't. <size=60%>That was another time..."
 "<size=100%>Apologies. Guess I'm all turned around today."
 [Timothy] "Heh. I can relate." # Timothy = Happy
 [{player_name}] "So... you doin' okay in here?"
 [Timothy] "Oh. Yeah, I..." # Timothy = Surprised
-{GetValue("TimothyPoints")>=6:
+~ temp timPoints = GetValue("TimothyPoints")
+{timPoints>5:
 	Timothy sighs. # Timothy = Sad
 	"I'm trying not to think about it."
 	"It's just this letter... I- I was doing so well!" # Timothy = Angry
-	{expression>2:->TheLetter|->Tangents}
+	I straighten my back and summon all the confidence I can muster.
+	{expression>2:
+		[{player_name}] "Timothy, you need to be honest with me. What was in that letter?" # expression ^ good
+		Timothy nervously scoops the letter up from his pillow. # Timothy = Afraid
+		[Timothy] "But...!"
+		Timothy sighs again. # Timothy = Sad
+		"You've been nothing but nice to me this whole time."
+		"But I can't tell you."
+		I really thought I would be able to break through to him.
+		Slowly, Timothy lowers his head and holds up the letter in his outstretched hand.
+		"So... It'd be better if you just read it for yourself."
+		I try to hide my surprise as I casually take the letter from Timothy.
+		->TheLetter
+	-else:
+		[{player_name}] "Timothy, I- You should... Don't you think you should talk to someone about this?" # expression ^ poor
+		[Timothy] "I can't. I really can't." # Timothy = Afraid
+		"I don't even want to <i>think</i> about it."
+		"I'm sorry, {player_name}. I'm just a huge disappointment to everyone. Even you." # Timothy = Sad
+	    ->Tangents
+	}
 -else:
+	(You have {timPoints} Timothy Points)
 	"I'm fine. You don't need to worry about me." # Timothy = Calm
-	Boy does <i>that</i> tone sound familiar.
 	->Tangents
 }
 
 =TheLetter
+The letter is penned in a neat and steady hand, in contrast to the recently disheveled state of the paper.
+<color=#FF8A2D><i>Dear Timothy,
+It's so cute that Sunflower House has a no-email policy.
+We have been informed that you are adjusting well and we are happy to hear it. Don't get too comfortable, though!
+Your father and I are doing all we can to pull strings like we did at Blackwell.
+We spoke with one of administrators and she said that, assuming all goes well, you could be back home with us within the month!
+I'm sure we would all love nothing more than to put this dark chapter behind us. 
+After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.
+Love, Mom & Dad</i></color>
 // Timothy lets you read the letter
+// Letter is courteous, but cold. Timothy's parents are pressuring him into returning home as soon as possible.
+// They view his time away as wasted potential.
+// You learn that they pressured Blackwell into releasing him early.
+// Timothy's parents are super involved and demanding.
+
 // This gives you insight and a special awareness star as you relate your life to Timothy's
 {awareness==5:->Healing|->NotYet}
 
 =Tangents
+Boy does <i>that</i> tone sound familiar.
+I gotta do something to take his mind off of all this.
+Quick, {player_name}, change the subject!
++[Talk about the other residents]
++[Talk about games]
++[Talk about the weather]
 // talk about something random to take his mind off things
 {awareness==5:->Healing|->NotYet}
 
