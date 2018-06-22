@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="878078161">
+<IncrementalBankBuild Version="6" Flags="1179865962">
 	<Platform GUID="{4ACCCFD1-9CF7-441F-ABC3-CEC0DAAD0441}">
 		<Banks>
 			<Language ID="393239870">
@@ -14,14 +14,39 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="HalfwaySoundbank" Hash="2370182099" Timestamp="131684911386573930"/>
-				<File Name="Init" Hash="4037095673" Timestamp="131684913063807814"/>
+				<File Name="Init" Hash="926691593" Timestamp="131741359884607410"/>
+				<File Name="MainMenu" Hash="2140496195" Timestamp="131741264863224744"/>
+				<File Name="Master" Hash="3403824706" Timestamp="131741264863440487"/>
+				<File Name="MusicMain" Hash="1158886702" Timestamp="131741264863611069"/>
+				<File Name="MusicTension" Hash="3586193123" Timestamp="131741354248887823"/>
+				<File Name="Music_Master" Hash="1327423754" Timestamp="131741071315725364"/>
+				<File Name="Music_Tension" Hash="45720060" Timestamp="131741067829573807"/>
 				<File Name="Test1" Hash="809273639" Timestamp="131656461893352581"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
+			<Language ID="393239870">
+				<File Name="Init" Hash="3752821564" Timestamp="131741359884772965"/>
+				<File Name="MainMenu" Hash="232692043" Timestamp="131741264864152907"/>
+				<File Name="Master" Hash="2640472451" Timestamp="131741264864218136"/>
+				<File Name="MusicMain" Hash="262423648" Timestamp="131741264864283362"/>
+				<File Name="MusicTension" Hash="1952414519" Timestamp="131741354249339362"/>
+			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="478544034" Timestamp="131684913063907808"/>
+				<File Name="" Hash="1394336337" Timestamp="131741359884667607"/>
 			</Language>
 		</XMLInfo>
+		<JSONInfo>
+			<Language ID="393239870">
+				<File Name="Init" Hash="3858238294" Timestamp="131741359884908434"/>
+				<File Name="MainMenu" Hash="1445146449" Timestamp="131741264864559293"/>
+				<File Name="Master" Hash="1147014191" Timestamp="131741264864629534"/>
+				<File Name="MusicMain" Hash="2563680470" Timestamp="131741264864699783"/>
+				<File Name="MusicTension" Hash="1483573168" Timestamp="131741354249685534"/>
+			</Language>
+			<Language ID="-1">
+				<File Name="" Hash="4107893753" Timestamp="131741359884793041"/>
+			</Language>
+		</JSONInfo>
 	</Platform>
 </IncrementalBankBuild>

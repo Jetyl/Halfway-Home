@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" SchemaVersion="80" RootDocumentID="{27633E19-4858-4606-983F-7C034C7283A6}">
+<WwiseDocument Type="WorkUnit" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="play_sfx_ambient" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" OwnerID="{27633E19-4858-4606-983F-7C034C7283A6}" PersistMode="Nested">
+		<WorkUnit Name="play_sfx_ambient" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="play_sfx_ambient_heartbeat" ID="{9407B261-F4FE-4D58-B5CB-380BCA2D2B81}">
+				<Event Name="play_sfx_ambient_heartbeat_01" ID="{608B176C-809A-4291-BDC6-576676A1D786}">
 					<ChildrenList>
-						<Action Name="" ID="{ABD020BA-50A2-4300-A9F2-531C007738D9}" ShortID="269093349">
+						<Action Name="" ID="{08DBEFBC-F92E-4D76-A409-08A7DF13D61A}" ShortID="269093350">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>

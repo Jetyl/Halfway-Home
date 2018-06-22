@@ -3,64 +3,162 @@
 	<Events>
 		<WorkUnit Name="PlaySFX" ID="{27633E19-4858-4606-983F-7C034C7283A6}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}">
+				<Folder Name="sfx_ambient" ID="{E8134382-1786-463C-BE18-16740DDCC168}" ShortID="7159186">
 					<ChildrenList>
-						<Action Name="" ID="{96C17BF7-8734-4679-86E2-686E82B8F221}" ShortID="743260587">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_human_footsteps_approaching" ID="{209CC912-AFBB-4732-BBFE-253B4062549E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="play_sfx_ambient_heartbeat" ID="{9407B261-F4FE-4D58-B5CB-380BCA2D2B81}">
+							<ChildrenList>
+								<Action Name="" ID="{ABD020BA-50A2-4300-A9F2-531C007738D9}" ShortID="269093349">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_ambient_heartbeat" ID="{F9DBE848-54C7-4FE1-BB28-FC69898E79B1}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<WorkUnit Name="play_sfx_menu" ID="{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}" PersistMode="Reference"/>
-				<Event Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}">
+				</Folder>
+				<Folder Name="sfx_menu" ID="{95F40ABC-190F-4DC6-B80F-366EC97824D8}" ShortID="189819598">
 					<ChildrenList>
-						<Action Name="" ID="{23A15D81-7584-4AEE-A5A9-548970F87D40}" ShortID="34131475">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_human_ghostwhisper" ID="{78556E65-9541-49F8-A01B-4B511E2A0177}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}">
+							<ChildrenList>
+								<Action Name="" ID="{D65D101F-7FB0-4997-AC6A-B1A15A7E0366}" ShortID="35164096">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}">
+							<ChildrenList>
+								<Action Name="" ID="{DB6E42C2-10D1-49B8-AFCE-D0C17B47ED09}" ShortID="638288882">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_chime_exitgame" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}">
+							<ChildrenList>
+								<Action Name="" ID="{232897C7-AB9D-46A4-9257-D1D7A258B5FF}" ShortID="886826755">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_menuunpause_01" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}">
+							<ChildrenList>
+								<Action Name="" ID="{911B2070-FE74-42F3-BE35-29E9843ED2D5}" ShortID="574743888">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_menupause_01" ID="{BC91C49B-3644-425C-BB53-559271D437D9}">
+							<ChildrenList>
+								<Action Name="" ID="{55A76322-3267-4961-A970-D8A5627C56B6}" ShortID="97732726">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}">
+				</Folder>
+				<Folder Name="sfx_human" ID="{51EBD2B5-A273-488B-9E6A-B38535DAF098}" ShortID="295266809">
 					<ChildrenList>
-						<Action Name="" ID="{BA340D48-1DAD-408C-AC1D-3E85CFCA48D4}" ShortID="288854344">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}">
+							<ChildrenList>
+								<Action Name="" ID="{96C17BF7-8734-4679-86E2-686E82B8F221}" ShortID="743260587">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_human_footsteps_approaching" ID="{209CC912-AFBB-4732-BBFE-253B4062549E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}">
+							<ChildrenList>
+								<Action Name="" ID="{23A15D81-7584-4AEE-A5A9-548970F87D40}" ShortID="34131475">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_human_ghostwhisper" ID="{78556E65-9541-49F8-A01B-4B511E2A0177}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}">
+							<ChildrenList>
+								<Action Name="" ID="{BA340D48-1DAD-408C-AC1D-3E85CFCA48D4}" ShortID="288854344">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}">
+				</Folder>
+				<Folder Name="sfx_object" ID="{DF9C9F15-B6A4-4B8E-B090-77CD3B85DD47}" ShortID="139018451">
 					<ChildrenList>
-						<Action Name="" ID="{E376016F-EF54-4E4F-A8EA-41383553C0DA}" ShortID="852557167">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}">
+							<ChildrenList>
+								<Action Name="" ID="{E376016F-EF54-4E4F-A8EA-41383553C0DA}" ShortID="852557167">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<WorkUnit Name="play_sfx_ambient" ID="{A85A1477-0869-4B85-B85B-6883C5EA7C89}" PersistMode="Reference"/>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

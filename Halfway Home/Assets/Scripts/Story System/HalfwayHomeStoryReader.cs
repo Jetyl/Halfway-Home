@@ -84,6 +84,10 @@ namespace HalfwayHome
       string playAudio = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
       parser.AddPattern("AudioTrigger", playAudio, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioTrigger);
 
+      // RTPC Change
+      string changeAudioParam = RegexParser.Presets.ComposeBinaryOperation("Param", "value", "!");
+      parser.AddPattern("AudioParamSet", changeAudioParam, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioParamSet);
+
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
@@ -374,7 +378,18 @@ namespace HalfwayHome
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
           }
         }
+      }
+    }
 
+    void OnAudioParamSet(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("Param"))
+        {
+          Trace.Script($"Set {parse.FindFirst("Param").Trim()} parameter to {parse.FindFirst("value").Trim()}");
+          Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(parse.FindFirst("Param").Trim(), float.Parse(parse.FindFirst("value"))));
+        }
       }
     }
     //------------------------------------------------------------------------/

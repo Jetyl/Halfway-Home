@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="80" WwiseVersion="v2017.1.3" WwiseBuild="6377">
+<WwiseDocument Type="Project" SchemaVersion="80" WwiseVersion="v2017.1.5" WwiseBuild="6429">
 	<ProjectInfo>
 		<Project Name="Halfway Home_WwiseProject" ID="{DB9E7F1A-47E5-4CBB-94C7-2F0AA57273EC}">
 			<Platforms>
@@ -27,6 +27,7 @@
 						<Value Platform="Windows">256</Value>
 					</ValueList>
 				</Property>
+				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjQ2OTQiIG1hc2s9IkpDWVQ5NDQ4IiBlbmM9IjAiPjxsaWNl bnNlIGlkPSIxIiBuYW1lPSJXd2lzZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIyLDMs NCwxMCwxMywxNCIgZXhwaXJlcz0iMjAxOC0wNy0zMSIgIC8+PGxpY2Vuc2UgaWQ9 IjIyIiBuYW1lPSJMZXZlbCBBIExpY2Vuc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0i MiwzLDQsMTAsMTMsMTQiIGV4cGlyZXM9IjIwMTgtMDctMzEiICAvPjxsaWNlbnNl IGlkPSIyMSIgbmFtZT0iTWFpbnRlbmFuY2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0i MiwzLDQsMTAsMTMsMTQiIGV4cGlyZXM9IjIwMTgtMDctMzEiICAvPjxsaWNlbnNl IGlkPSIyNSIgbmFtZT0iQWxsIFd3aXNlIFBsdWctSW5zIiB0eXBlPSIzIiAgZXhw aXJlcz0iMjAxOC0wNy0zMSIgIC8+PC9wcm9qZWN0Pg==|0Vs7KouK3KLZInm31Yj 8iC+lHDHPJqq9hg+iMVAQwoYrhbYOy5/kI3cXKznl7qjqcAVBjNBzK8aXxot82fs Ez73KCGH4ZdWQdsgKnRqZPgtP1D46ISwA6ps9pGvbS/yf8w6ZhvSYHWoLocz0LC0 eHH8EYktSFjjW/JO2g2Z7DfljpTfUWUBD8AaqKrWUIW0sRXJhmLXu8B+idlrghw9 VkyA8mb+U+T2CYDUrqI1Bc5DrKOeF0EgS6WwSEc05ZnMkNvBgGq2b5qajpjCx+ty WBpUvICjjg7kWj6kZZrMh6I61czLL5MsyLn36Ahdi6w9TssJwcGUrsxJwRKd/7zx v3g== "/>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True"/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="..\Assets\StreamingAssets\Audio\GeneratedSoundBanks\"/>
@@ -9783,7 +9784,7 @@
 				</ObsOccCurves>
 			</EnvironmentalSettings>
 			<MotionDeviceList/>
-			<DefaultConversion Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}"/>
+			<DefaultConversion Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}"/>
 			<PhysicalFolderList>
 				<PhysicalFolder Path="Actor-Mixer Hierarchy">
 					<WorkUnit Name="Actor-Mixer Hierarchy" ID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" PersistMode="Standalone"/>

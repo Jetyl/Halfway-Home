@@ -31,6 +31,18 @@ public class AudioManager : MonoBehaviour
     }
   };
 
+  public class AudioParamEvent : Stratus.Event
+  {
+    public string ParamName;
+    public float ParamValue;
+
+    public AudioParamEvent(string name, float value)
+    {
+      ParamName = name;
+      ParamValue = value;
+    }
+  }
+
   public AkAmbient SFXPlayer;
   public AkAmbient MusicPlayer;
   public AkAmbient AmbiencePlayer;
@@ -39,6 +51,7 @@ public class AudioManager : MonoBehaviour
 	void Start ()
   {
         Scene.Connect<AudioEvent>(OnAudioEvent);
+        Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
 
@@ -65,6 +78,11 @@ public class AudioManager : MonoBehaviour
     }
 
     AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
+  }
+
+  void OnAudioParamEvent(AudioParamEvent e)
+  {
+    AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
   }
 
   void OnLoad(DefaultEvent eventdata)

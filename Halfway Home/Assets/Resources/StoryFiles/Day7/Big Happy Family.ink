@@ -39,8 +39,11 @@ I fill up my plate up and go to sit down. #fatigue -= 50
 === SadStart ===
 ~tried_grace = false
 ~tried_expression = false
-I spot Timothy sitting at one of the tables alone. #Timothy = Sad # Play : play_music_tension_intro_01
-[{player_name}] "Sup"
+
+// Testing function to set RTPC
+I spot Timothy sitting at one of the tables alone. # Play : play_music_tension
+[{player_name}] "Sup" # music_tension_state ! 2
+
 I sit myself down with my meal.
 [Timothy] "oh.<delay=2> Hi."
 He seems to be in a quiet mood today.<delay=2>@ Whatever.
