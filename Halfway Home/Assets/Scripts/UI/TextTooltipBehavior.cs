@@ -59,17 +59,32 @@ public class TextTooltipBehavior : MonoBehaviour
 
   void OnTooltipLineEvent(TooltipLineEvent e)
   {
+    // For each tooltip key in TooltipData (publicly editable list)...
     foreach(TooltipInfo t in TooltipData)
     {
+      // Compare that key to the event key. When you find a match...
       if (t.Key == e.Key)
       {
-        foreach(TooltipString s in t.Strings)
+        // Create a substring of the content data
+        string[] typeStrings = e.TooltipType.Split(',');
+        // For each string in the publicly editable TooltipString list
+        foreach (TooltipString ts in t.Strings)
         {
-          if(s.Key == e.TooltipType)
+          // Run through each string in the content substring
+          foreach(string s1 in typeStrings)
           {
-            CurrentTooltipText = s.Text;
-            GetComponent<TextMeshProUGUI>().color = s.Color;
-            TooltipAvailable = true;
+            // If one of those is a key that matches a string in the TooltipString list
+            if (ts.Key == s1.Trim())
+            {
+              // Assign the corresponding text
+              CurrentTooltipText = ts.Text;
+              var useColor = true;
+              // Run through the substring list again to see if a no color flag exists
+              foreach (string s2 in typeStrings) if (s2.Trim() == "nocolor") useColor = false;
+              // Override the line color unless such a flag exists
+              if(useColor) GetComponent<TextMeshProUGUI>().color = ts.Color;
+              TooltipAvailable = true;
+            }
           }
         }
       }

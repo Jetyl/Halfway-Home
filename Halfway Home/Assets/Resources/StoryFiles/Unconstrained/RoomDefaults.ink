@@ -216,7 +216,7 @@ My solitude gives me plenty of time to reflect.
 <color=color_descriptor><i>Time alone in the sun <color=color_wellbeing_penalty>increased <b>Fatigue</b> and <b>Depression</b> slightly. # Fatigue += 10 # depression += 10
 {
 	- awareness > 2:
-		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly. # Stress -= 20 # awareness ^ good
+		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly. # Stress -= 20 # awareness ^ good, nocolor
 	- else:
 		<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
 }
@@ -239,7 +239,7 @@ My solitude gives me plenty of time to reflect.
 <color=color_descriptor><i>Time alone under the stars <color=color_wellbeing_penalty>increased <b>Depression</b> slightly. # depression += 10
 {
 	- awareness > 2:
-		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly. # Stress -= 20 # awareness ^ good
+		<>@Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly. # Stress -= 20 # awareness ^ good, nocolor
 	- else:
 		<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
 }
@@ -264,7 +264,7 @@ The book is {~beautifully written and I learn a lot just from the prose.| rather
 
 {
 	- grace > 2:
-		<>@Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b>! # Stress -= 20 # grace ^ good
+		<>@Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b>! # Stress -= 20 # grace ^ good, nocolor
 	- grace > 1:
 		<>@Experience with <color=color_grace><b>Grace</b><color=color_descriptor> has removed the <b>Stress<b> from this activity!
 		<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
@@ -289,7 +289,7 @@ After about an hour, I finish. My digits are starting to ache, but something abo
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>. # Fatigue += 10
 {
 	- expression > 2:
-		<>@Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>! # Depression -= 20 # expression ^ good
+		<>@Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>! # Depression -= 20 # expression ^ good, nocolor
 	- expression > 1:
 		<>@Experience with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor>! # expression ^ good
 		<>@Creativity has <color=color_expression>improved <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
