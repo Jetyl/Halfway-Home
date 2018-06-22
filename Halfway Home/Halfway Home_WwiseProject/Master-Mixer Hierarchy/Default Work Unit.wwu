@@ -66,6 +66,331 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Tension Music Bus" ID="{B74761FD-D557-4671-9216-CC7123930DF3}">
+									<ReferenceList/>
+									<ChildrenList>
+										<Bus Name="Tension Stem 03 Bus" ID="{49544145-6E00-4C1D-89DA-A6B107817974}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{C3FDFBF2-B633-47E9-96DD-12AC217A006F}" ShortID="802484928">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1D95ED0D-5B33-475F-AFAC-5318D5D67074}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>4</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{3C78181A-02F1-4614-9644-CCD80CD2857B}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="55.3971486761711"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 07 Bus" ID="{EFEEF341-9769-4834-A689-238E7F8623E4}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{0873A9E5-7F48-4DCF-93C7-96E4CF8704F3}" ShortID="381702525">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{C336A247-6C78-40E1-92DC-57377B8536A8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{510E76AE-2F48-41D2-A77A-7321F7D763EC}"/>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 04 Bus" ID="{CD4DDC85-39A0-483F-AEAF-4B889FF24DC6}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{9CEC8F6C-05CF-4E43-A4DA-ADB752E41FB7}" ShortID="288374064">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{B21FAF12-7D42-4D6B-90AA-122DFFEE7012}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>4</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{E228B395-6E05-45E4-B89B-F08D24E876DC}"/>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 05 Bus" ID="{C1C6CECC-B8DB-45A4-915F-0ED9FA66DC71}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{2564EA1F-4315-4058-B6AB-0961EAD75DAF}" ShortID="1014156378">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{FD2BECB5-BC4C-45E2-B509-3A87A44B91C4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>4</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{37D5476B-5D5D-4589-AE32-0DDAE7D02059}"/>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 06 Bus" ID="{BD929444-5EF5-40BC-9944-1C6E8312615D}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{B8443834-38C6-4390-879B-BCCAE77790AF}" ShortID="715882159">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5472F75C-26B1-467E-8422-26A11F61F676}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>4</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>2.99999999999997</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{26DDC961-87A5-4251-809B-148CA1E44320}"/>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 01 Bus" ID="{6FC1DD76-AFDC-4CDE-AE9F-D90D13B40F7F}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{AA2DE6B6-EF23-43A0-838C-C066FA872D2E}" ShortID="101093512">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{E131A2B2-906B-46AF-8211-D6CD3B632E91}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>6</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5</XPos>
+																		<YPos>6</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{4A254C97-DE30-4C24-A608-CE1AF563ED4B}"/>
+											</PositioningInfo>
+										</Bus>
+										<Bus Name="Tension Stem 02 Bus" ID="{329F4212-3050-4066-8E6F-FC4AB34ED761}">
+											<PropertyList>
+												<Property Name="EnablePanner" Type="bool" Value="True"/>
+												<Property Name="EnablePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<PositioningInfo>
+												<Panner Name="" ID="{99B931EF-0A01-48E3-8B2E-539BE5232E79}">
+													<PropertyList>
+														<Property Name="PanY" Type="Real64" Value="-3.66373598126302E-15"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
+										</Bus>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}">
 							<PropertyList>

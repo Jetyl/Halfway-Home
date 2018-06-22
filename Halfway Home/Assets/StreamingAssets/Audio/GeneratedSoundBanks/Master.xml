@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="4056684167" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Master</ObjectPath>
+			<ShortName>Master</ShortName>
+			<Path>Master.bnk</Path>
+			<IncludedEvents>
+				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_textscroll"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\Stop_All"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="370198169" Language="SFX">
+					<ShortName>sfx_menu_text_scroll1.wav</ShortName>
+					<Path>SFX\sfx_menu_text_scroll1_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

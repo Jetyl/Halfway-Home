@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	4037201921	empty_event			\TestEvents\empty_event	
-
