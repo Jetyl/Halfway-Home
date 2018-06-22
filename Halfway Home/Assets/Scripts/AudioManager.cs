@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
       Type = type;
       FileName = fileName;
     }
-  };
+  }
 
   public class AudioParamEvent : Stratus.Event
   {
@@ -42,6 +42,23 @@ public class AudioManager : MonoBehaviour
       ParamValue = value;
     }
   }
+  
+  public class AudioBankEvent : Stratus.Event
+  {
+    public enum LoadType
+    {
+      Load,
+      Unload
+    };
+    public LoadType Type;
+    public string BankName;
+    
+    public AudioBankEvent(LoadType type, string bankName)
+    {
+      Type = type;
+      BankName = bankName;
+    }
+  }
 
   public AkAmbient SFXPlayer;
   public AkAmbient MusicPlayer;
@@ -52,6 +69,7 @@ public class AudioManager : MonoBehaviour
   {
         Scene.Connect<AudioEvent>(OnAudioEvent);
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
+        Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
 
@@ -83,6 +101,15 @@ public class AudioManager : MonoBehaviour
   void OnAudioParamEvent(AudioParamEvent e)
   {
     AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
+  }
+  
+  void OnAudioBankEvent(AudioBankEvent e)
+  {
+    AudioBankEvent.LoadType lt = e.Type;
+    if (lt == AudioBankEvent.LoadType.Load)
+      AkBankManager.LoadBankAsync(e.BankName);
+    else if (lt == AudioBankEvent.LoadType.Unload)
+      AkBankManager.UnloadBank(e.BankName);
   }
 
   void OnLoad(DefaultEvent eventdata)
