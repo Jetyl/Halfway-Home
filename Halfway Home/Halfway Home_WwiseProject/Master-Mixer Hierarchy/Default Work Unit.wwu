@@ -10,7 +10,7 @@
 								<RTPC Name="" ID="{7DC64487-E31D-4A68-9ABB-C28F3AD635C2}" ShortID="50041826">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+											<ObjectRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{8886B4FB-BBC2-4FC6-9084-41D84914131D}">
@@ -42,7 +42,7 @@
 										<RTPC Name="" ID="{7779DA3E-5D45-452D-950E-0125840BE16C}" ShortID="792906672">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+													<ObjectRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{300B4933-FA71-4AA1-BE5D-35EC421F82CA}">
@@ -65,10 +65,65 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{0269DCD9-E112-4013-8567-A15C41235B42}" ShortID="1068693775">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{714CBCDF-3160-4056-A81C-B06EF507A8A7}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>100</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{76EB42EF-5C48-40E1-8295-C5F581274759}" ShortID="888553522">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8EB57E56-04B4-4A66-8C0E-70481F4EAC76}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-200</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>200</XPos>
+														<YPos>200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="Tension Music Bus" ID="{B74761FD-D557-4671-9216-CC7123930DF3}">
-									<ReferenceList/>
 									<ChildrenList>
 										<Bus Name="Tension Stem 03 Bus" ID="{49544145-6E00-4C1D-89DA-A6B107817974}">
 											<PropertyList>
@@ -399,7 +454,7 @@
 										<RTPC Name="" ID="{BA8B8B06-1FBD-4D2B-B309-E8001910F5C9}" ShortID="738549202">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+													<ObjectRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{27D82DD3-B0A5-4BE4-A6CC-F9333FE95B7F}">
@@ -431,7 +486,7 @@
 										<RTPC Name="" ID="{E2B320E2-B292-4374-9BC5-C6728FB03643}" ShortID="926828164">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+													<ObjectRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{4FB6E626-D44E-49C2-83D2-732E3E3818C0}">
@@ -447,6 +502,66 @@
 													<Point>
 														<XPos>100</XPos>
 														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{FFDDAC45-9528-4A2B-9000-0127431C8F54}" ShortID="36863359">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8DCDBE31-4396-465A-82CF-1C66B14DD214}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{7975995D-3CEA-46DA-987F-6B692AEB13A5}" ShortID="410577156">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C31E2BE5-ADE8-4D10-BE31-0B2F632341BA}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>100</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

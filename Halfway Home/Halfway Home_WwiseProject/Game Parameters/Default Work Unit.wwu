@@ -3,36 +3,6 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{97E54518-1B72-4813-96CB-8C08A386CD29}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="mainMenuMouseHover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}">
-					<Comment>-1 = Hovering over Quit or while Confirm Quit is open (LPF 1k)
-0 = Hovering over nothing (LPF 4k)
-1 = Hovering over New Game or Resume (LPF off)</Comment>
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-						<Property Name="Min" Type="Real64" Value="-1"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
 				<GameParameter Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
@@ -40,6 +10,28 @@
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
 						<Property Name="SlewRateDown" Type="Real64" Value="1"/>
 						<Property Name="SlewRateUp" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="2"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="2"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="200"/>
+						<Property Name="Min" Type="Real64" Value="-200"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="0.8"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="0.8"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

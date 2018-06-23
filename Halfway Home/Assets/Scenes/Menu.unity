@@ -6365,12 +6365,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  valueGuid: ddfd17346b0a9f4d8ae27ee68e28303b
-  bankName: HalfwaySoundbank
+  valueGuid: 5c36ee1ed5e54f4fa453920b852781b8
+  bankName: MainMenu
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0
-  unloadTriggerList: 
+  unloadTriggerList: 958ca0ea
 --- !u!4 &575751703
 Transform:
   m_ObjectHideFlags: 0
@@ -9505,7 +9505,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40.25
+  m_fontSize: 40.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16767,7 +16767,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1547697622}
-          m_MethodName: setHoverQuit
+          m_MethodName: setHoverStart
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

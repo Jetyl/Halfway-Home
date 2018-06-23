@@ -776,6 +776,11 @@
 								<Action Name="" ID="{F8EE1437-3464-44E2-822E-C0CF8A9D77AB}" ShortID="264263632">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16" Value="53"/>
 									</PropertyList>
 									<ReferenceList>
@@ -893,6 +898,11 @@
 								<Action Name="" ID="{EB3FAD2B-89E5-49F9-B0A3-55B22276E0A8}" ShortID="554326343">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64" Value="-6"/>
 									</PropertyList>
 									<ReferenceList>
@@ -919,7 +929,6 @@
 								<Action Name="" ID="{9B700A7F-4F35-4EA0-95A7-162BE91109DE}" ShortID="745270828">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="12"/>
-										<Property Name="Volume" Type="Real64" Value="-6"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

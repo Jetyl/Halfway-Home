@@ -33,7 +33,23 @@ EXTERNAL SetValue(name, values)
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds # All * Hide
+
+This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience : play_ambience_birds
+
+// TESTING IF MAIN MENU BANK IS UNLOADED
+// Trying to play main menu music... # Play : play_music_mainmenu
+// Loading MainMenu bank... # Load @ MainMenu
+// Trying to play main menu music... # Play : play_music_mainmenu
+// Stopping all music... # Play : Stop_All
+// Unloading MainMenu bank... # Unload @ MainMenu
+
+// TESTING MUSIC FADE PARAM
+// Loading MainMenu bank... # Load @ MainMenu
+// Playing main menu music... # Play : play_music_mainmenu
+// Fading to -200 db... # music_vol ! -200
+// Stopping all music... # Play : Stop_All
+// Unloading MainMenu bank... # Unload @ MainMenu
+
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
@@ -59,7 +75,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # Ambience : lpf_ambience_fireplace
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # ambience_lpf ! 36
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -77,7 +93,7 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe # play : play_music_cafejazz
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week. # play : lpf_music_cafejazz
+What? They're joking, right? I just got here... There's no way I lost a whole week. # music_lpf ! 53
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
 But they're gone...
@@ -85,7 +101,7 @@ A chill runs down my spine. What's going on?
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
+I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02 # music_lpf ! 0
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them. # Max = Calm
 *[Ask what's going on]
@@ -146,8 +162,8 @@ A formless shadow gazes into me from the reflective surface. # Ambience : stop_a
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_with_fade_and_fireplace # Background / YourRoom, EyeOpen # Time * Show
-The whispers fade into the chitter of birdsong.
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen # Time * Show
+The whispers fade into the chitter of birdsong. # music_vol ! -6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

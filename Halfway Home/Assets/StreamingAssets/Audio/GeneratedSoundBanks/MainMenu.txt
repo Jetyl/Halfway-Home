@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1566693136	play_music_mainmenu			\PlayMusic\music_mainmenu\play_music_mainmenu	
+	3152554426	stop_music_mainmenu			\PlayMusic\music_mainmenu\stop_music_mainmenu	
+	3370483183	lpf4k_music_mainmenu			\PlayMusic\music_mainmenu\lpf4k_music_mainmenu	
+	3373299806	lpf1k_music_mainmenu			\PlayMusic\music_mainmenu\lpf1k_music_mainmenu	
+	3897416341	lpfOff_music_mainmenu			\PlayMusic\music_mainmenu\lpfOff_music_mainmenu	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3791118987	Menu_Mouse_Hover			\UI\Main Menu\Menu_Mouse_Hover	-1 = Hovering over Quit or while Confirm Quit is open (LPF 1k) 0 = Hovering over nothing (LPF 4k) 1 = Hovering over New Game or Resume (LPF off)
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	11539498	mainMenu_b1_v0_5	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\mainMenu_b1_v0.5_A51F8DD7.wem	11539498.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_mainmenu\music_mainmenu\mainMenu_b1_v0_5	
+

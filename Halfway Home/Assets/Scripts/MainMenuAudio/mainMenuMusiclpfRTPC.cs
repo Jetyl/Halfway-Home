@@ -23,16 +23,20 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
     public GameObject ClearPanel;
 
     // Current Mouse Position, -1 = Quit, 0 = nothing, 1 = New Game/Resume
-    int hoverQuit = -1;
-    int hoverNothing = 0;
-    int hoverStart = 1;
-    [HideInInspector] public int mousePosition = 0;
+    public enum MousePosition
+    {
+        hoverNothing,
+        hoverQuit,
+        hoverStart
+    };
+
+    [HideInInspector] public MousePosition mousePosition = MousePosition.hoverNothing;
 
     // Check to avoid sending redundant messages
-    int currentRTPCvalue = 0;
+    MousePosition currentRTPCvalue = MousePosition.hoverNothing;
     
     // AkRtpcID  in_rtpcID
-    string rtpcID = "mainMenuMouseHover";
+    string rtpcID = "Menu_Mouse_Hover";
     
     // AkRtpcValue  in_value
     float lpf1k = -1f;
@@ -48,41 +52,41 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
 
     void Update ()
     {
-        if (mousePosition == hoverQuit && currentRTPCvalue != hoverQuit)
+        if (mousePosition == MousePosition.hoverQuit && currentRTPCvalue != MousePosition.hoverQuit)
         {
             AkSoundEngine.SetRTPCValue(rtpcID, lpf1k, gameObjectID, timeMS);
-            currentRTPCvalue = hoverQuit;
+            currentRTPCvalue = MousePosition.hoverQuit;
         }
-        else if (mousePosition == hoverNothing && currentRTPCvalue != hoverNothing)
+        else if (mousePosition == MousePosition.hoverNothing && currentRTPCvalue != MousePosition.hoverNothing)
         {
             AkSoundEngine.SetRTPCValue(rtpcID, lpf4k, gameObjectID, timeMS);
-            currentRTPCvalue = hoverNothing;
+            currentRTPCvalue = MousePosition.hoverNothing;
         }
-        else if (mousePosition == hoverStart && currentRTPCvalue != hoverStart)
+        else if (mousePosition == MousePosition.hoverStart && currentRTPCvalue != MousePosition.hoverStart)
         {
             AkSoundEngine.SetRTPCValue(rtpcID, lpfOff, gameObjectID, timeMS);
-            currentRTPCvalue = hoverStart;
+            currentRTPCvalue = MousePosition.hoverStart;
         }
     }
     
     public void setHoverQuit ()
     {
         if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
-            mousePosition = hoverQuit;
+            mousePosition = MousePosition.hoverQuit;
     }
     public void setHoverNothing ()
     {
         if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
-            mousePosition = hoverNothing;
+            mousePosition = MousePosition.hoverNothing;
     }
     public void setHoverStart ()
     {
         if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
-            mousePosition = hoverStart;
+            mousePosition = MousePosition.hoverStart;
     }
     public void closeQuitDialog ()
     {
-            mousePosition = hoverNothing;
+            mousePosition = MousePosition.hoverNothing;
     }
     
     

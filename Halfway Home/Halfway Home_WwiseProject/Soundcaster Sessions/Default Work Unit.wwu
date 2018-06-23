@@ -44,8 +44,20 @@
 							<Value>1.24389413598938E-315</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}"/>
+							<Value>1.72724108693197E-315</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}"/>
@@ -60,7 +72,11 @@
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="mainMenuMouseHover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}"/>
+							<GameParameterRef Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>

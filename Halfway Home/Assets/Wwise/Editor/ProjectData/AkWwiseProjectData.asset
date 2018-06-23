@@ -19,83 +19,11 @@ MonoBehaviour:
     m_lastTimePsrt1: -1410394924
     m_lastTimePart2: -1999264972
     List: []
-  - PhysicalPath: Events\play_sfx_ambient.wwu
-    ParentPhysicalPath: 
-    Guid: '{A85A1477-0869-4B85-B85B-6883C5EA7C89}'
-    m_lastTimePsrt1: 1209909396
-    m_lastTimePart2: -1999251316
-    List:
-    - Name: play_sfx_ambient_heartbeat_01
-      Path: play_sfx_ambient\play_sfx_ambient_heartbeat_01
-      PathAndIcons:
-      - ElementName: play_sfx_ambient
-        ObjectType: 12
-      - ElementName: play_sfx_ambient_heartbeat_01
-        ObjectType: 3
-      ID: -750218193
-      Guid: 6c178b609a809142bdc6576676a1d786
-      maxAttenuation: 0
-  - PhysicalPath: Events\play_sfx_menu.wwu
-    ParentPhysicalPath: 
-    Guid: '{1FFF1BC8-99B0-4AE7-BED9-6638616A0AFC}'
-    m_lastTimePsrt1: 1209954323
-    m_lastTimePart2: -1999251316
-    List:
-    - Name: play_menuexit_01
-      Path: play_sfx_menu\play_menuexit_01
-      PathAndIcons:
-      - ElementName: play_sfx_menu
-        ObjectType: 12
-      - ElementName: play_menuexit_01
-        ObjectType: 3
-      ID: -787848153
-      Guid: 055f282b3f7ff2408d7f6ae1da4313e0
-      maxAttenuation: 0
-    - Name: play_menumouseover_01
-      Path: play_sfx_menu\play_menumouseover_01
-      PathAndIcons:
-      - ElementName: play_sfx_menu
-        ObjectType: 12
-      - ElementName: play_menumouseover_01
-        ObjectType: 3
-      ID: -431668564
-      Guid: d42555f272fdfe468ba7f12df95ad65b
-      maxAttenuation: 0
-    - Name: play_menupause
-      Path: play_sfx_menu\play_menupause
-      PathAndIcons:
-      - ElementName: play_sfx_menu
-        ObjectType: 12
-      - ElementName: play_menupause
-        ObjectType: 3
-      ID: -698485773
-      Guid: 20defbd38f760540a06ca0518079eb06
-      maxAttenuation: 0
-    - Name: play_menuunpause
-      Path: play_sfx_menu\play_menuunpause
-      PathAndIcons:
-      - ElementName: play_sfx_menu
-        ObjectType: 12
-      - ElementName: play_menuunpause
-        ObjectType: 3
-      ID: -1193233224
-      Guid: b91762cddda75f4293bf0ab09e19d257
-      maxAttenuation: 0
-    - Name: play_textscroll_01
-      Path: play_sfx_menu\play_textscroll_01
-      PathAndIcons:
-      - ElementName: play_sfx_menu
-        ObjectType: 12
-      - ElementName: play_textscroll_01
-        ObjectType: 3
-      ID: -2024540950
-      Guid: 85e953a7dde3d143970d8ac859f46ee8
-      maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1599527936
-    m_lastTimePart2: -1999251489
+    m_lastTimePsrt1: -231339516
+    m_lastTimePart2: -1999251288
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -695,8 +623,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1210273659
-    m_lastTimePart2: -1999251316
+    m_lastTimePsrt1: -1004995047
+    m_lastTimePart2: -1999251288
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -716,9 +644,18 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1210243709
-    m_lastTimePart2: -1999251316
+    m_lastTimePsrt1: 1663324258
+    m_lastTimePart2: -1999251288
     List:
+    - Name: Intro
+      Path: Default Work Unit\Intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Intro
+        ObjectType: 7
+      ID: 1125500713
+      Guid: 5236779d87d1754c8a975281ecf27eef
     - Name: MainMenu
       Path: Default Work Unit\MainMenu
       PathAndIcons:
@@ -761,64 +698,40 @@ MonoBehaviour:
         ObjectType: 7
       ID: 183294232
       Guid: fb1f257e0fbf1d4e8b6ed1b5500cc8ae
-  - PhysicalPath: SoundBanks\TestBanks.wwu
-    ParentPhysicalPath: 
-    Guid: '{DAE520C3-C354-4684-84EE-5AF2B6A0F9B3}'
-    m_lastTimePsrt1: 1210248706
-    m_lastTimePart2: -1999251316
-    List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 1210089027
-    m_lastTimePart2: -1999251316
+    m_lastTimePsrt1: -748847112
+    m_lastTimePart2: -1999251288
     List:
-    - Name: Effects_Slider
-      Path: Default Work Unit\Effects_Slider
+    - Name: ambience_lpf
+      Path: Default Work Unit\ambience_lpf
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Effects_Slider
+      - ElementName: ambience_lpf
         ObjectType: 13
-      ID: -1408592509
-      Guid: 4fd22bb2264af14b914c7f40bd24d5d9
-    - Name: mainMenuMouseHover
-      Path: Default Work Unit\mainMenuMouseHover
+      ID: -247159114
+      Guid: 03c0f20adb51dc4cb958bd875cf0749c
+    - Name: music_fade
+      Path: Default Work Unit\music_fade
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: mainMenuMouseHover
+      - ElementName: music_fade
         ObjectType: 13
-      ID: -1616075682
-      Guid: cf02f5d59ad29e4f8d947837a548a654
-    - Name: Master_Slider
-      Path: Default Work Unit\Master_Slider
+      ID: -1546883821
+      Guid: a489fb984949ee48871fce47af26ae47
+    - Name: music_lpf
+      Path: Default Work Unit\music_lpf
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Master_Slider
+      - ElementName: music_lpf
         ObjectType: 13
-      ID: -1808640863
-      Guid: 9be02610048efe4aa34ac0a88c50bea7
-    - Name: Menu_Slider
-      Path: Default Work Unit\Menu_Slider
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Menu_Slider
-        ObjectType: 13
-      ID: -1392929572
-      Guid: 793ea6e9e4c4484c9091428a37d6d4df
-    - Name: Music_Slider
-      Path: Default Work Unit\Music_Slider
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music_Slider
-        ObjectType: 13
-      ID: 1127857866
-      Guid: 290b0f2bebb61c499ccbe466d41d28a7
+      ID: -1999010443
+      Guid: 9e67d6fd2e83d847a29fad594c11d246
     - Name: music_tension_state
       Path: Default Work Unit\music_tension_state
       PathAndIcons:
@@ -828,6 +741,78 @@ MonoBehaviour:
         ObjectType: 13
       ID: -1505688445
       Guid: 5ee88d58a302c5439e3ecb8b4ba872e6
+  - PhysicalPath: Game Parameters\UI.wwu
+    ParentPhysicalPath: 
+    Guid: '{148E2D9F-E4C9-4433-B2CD-803F3F69A985}'
+    m_lastTimePsrt1: 544537469
+    m_lastTimePart2: -1999251297
+    List:
+    - Name: Ambience_Slider
+      Path: UI\Sliders\Ambience_Slider
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Sliders
+        ObjectType: 4
+      - ElementName: Ambience_Slider
+        ObjectType: 13
+      ID: 129996979
+      Guid: 79f4e401a701dc46a633235ddf2df76c
+    - Name: Effects_Slider
+      Path: UI\Sliders\Effects_Slider
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Sliders
+        ObjectType: 4
+      - ElementName: Effects_Slider
+        ObjectType: 13
+      ID: -1408592509
+      Guid: 4fd22bb2264af14b914c7f40bd24d5d9
+    - Name: Master_Slider
+      Path: UI\Sliders\Master_Slider
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Sliders
+        ObjectType: 4
+      - ElementName: Master_Slider
+        ObjectType: 13
+      ID: -1808640863
+      Guid: 9be02610048efe4aa34ac0a88c50bea7
+    - Name: Menu_Mouse_Hover
+      Path: UI\Main Menu\Menu_Mouse_Hover
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Main Menu
+        ObjectType: 4
+      - ElementName: Menu_Mouse_Hover
+        ObjectType: 13
+      ID: -503848309
+      Guid: cf02f5d59ad29e4f8d947837a548a654
+    - Name: Menu_Slider
+      Path: UI\Sliders\Menu_Slider
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Sliders
+        ObjectType: 4
+      - ElementName: Menu_Slider
+        ObjectType: 13
+      ID: -1392929572
+      Guid: 793ea6e9e4c4484c9091428a37d6d4df
+    - Name: Music_Slider
+      Path: UI\Sliders\Music_Slider
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Sliders
+        ObjectType: 4
+      - ElementName: Music_Slider
+        ObjectType: 13
+      ID: 1127857866
+      Guid: 290b0f2bebb61c499ccbe466d41d28a7
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 

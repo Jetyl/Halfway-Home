@@ -12,6 +12,19 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3373299806" Name="lpf1k_music_mainmenu" ObjectPath="\Events\PlayMusic\music_mainmenu\lpf1k_music_mainmenu"/>
+				<Event Id="3370483183" Name="lpf4k_music_mainmenu" ObjectPath="\Events\PlayMusic\music_mainmenu\lpf4k_music_mainmenu"/>
+				<Event Id="3897416341" Name="lpfOff_music_mainmenu" ObjectPath="\Events\PlayMusic\music_mainmenu\lpfOff_music_mainmenu"/>
+				<Event Id="1566693136" Name="play_music_mainmenu" ObjectPath="\Events\PlayMusic\music_mainmenu\play_music_mainmenu"/>
+				<Event Id="3152554426" Name="stop_music_mainmenu" ObjectPath="\Events\PlayMusic\music_mainmenu\stop_music_mainmenu"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="11539498" Language="SFX">
+					<ShortName>mainMenu_b1_v0.5.wav</ShortName>
+					<Path>SFX\mainMenu_b1_v0.5_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

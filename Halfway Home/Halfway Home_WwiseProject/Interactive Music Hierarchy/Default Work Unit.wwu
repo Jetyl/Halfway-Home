@@ -12,7 +12,7 @@
 							<ObjectRef Name="Ambience" ID="{0495794F-A5E9-40F2-A381-26544F4A39C3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Music Bus" ID="{64C7666D-4B32-4EE5-BFC8-4A6EA7B11E6F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -970,7 +970,7 @@
 												<RTPC Name="" ID="{49777630-BD77-45A7-AD2B-45D6D360D67C}" ShortID="733284251">
 													<ReferenceList>
 														<Reference Name="ControlInput">
-															<ObjectRef Name="mainMenuMouseHover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+															<ObjectRef Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
 														</Reference>
 													</ReferenceList>
 													<Curve Name="" ID="{7E5AE4B9-F19B-4031-8347-0186D1492D3C}">
@@ -1057,7 +1057,7 @@
 										<MusicCue Name="Exit Cue" ID="{B1A7B414-B9B2-43C3-A545-AA5327F71EEC}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="117412.666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="101869.903508772"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>

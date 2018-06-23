@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
+	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
+	1700209709	play_sfx_object_car_away			\PlaySFX\sfx_object\play_sfx_object_car_away	
+	1720799084	stop_ambience_all			\PlayMusic\intro_ambiences\stop_ambience_all	
+	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
+	2319499992	play_sfx_human_knock			\PlaySFX\sfx_human\play_sfx_human_knock	
+	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching	
+	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	318063250	ghostwhisper2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		336220
+	339768715	sfx_human_knock	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_human_knock_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_knock\sfx_human_knock		64704
+	488681583	ghostwhisper1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		397044
+	541036875	sfx_object_car_away1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_car_away1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_object_car_away1		931236
+	541639029	sfx_footsteps_placeholder1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder1		140608
+	865371990	sfx_footsteps_placeholder2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder2		112576
+	1030560068	sfx_ambient_heartbeat	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_heartbeat_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient SFX\sfx_ambient_heartbeat		545856
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
+	1025761080	loop_164661__adam-n__fire	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
+

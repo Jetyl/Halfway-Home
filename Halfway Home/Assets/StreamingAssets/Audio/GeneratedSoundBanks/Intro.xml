@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="1125500713" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Intro</ObjectPath>
+			<ShortName>Intro</ShortName>
+			<Path>Intro.bnk</Path>
+			<IncludedEvents>
+				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
+				<Event Id="2929977910" Name="play_ambience_fireplace" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace"/>
+				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
+				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching"/>
+				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
+				<Event Id="2319499992" Name="play_sfx_human_knock" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_knock"/>
+				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_object_car_away"/>
+				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\intro_ambiences\stop_ambience_all"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="461729800" Language="SFX">
+					<ShortName>loop_hpf_10k_BirdsAmbience 6102_54.wav</ShortName>
+					<Path>SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem</Path>
+				</File>
+				<File Id="1025761080" Language="SFX">
+					<ShortName>loop_164661__adam-n__fire.wav</ShortName>
+					<Path>SFX\loop_164661__adam-n__fire_178D0C9C.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="318063250" Language="SFX">
+					<ShortName>ghostwhisper2.wav</ShortName>
+					<Path>SFX\ghostwhisper2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="339768715" Language="SFX">
+					<ShortName>sfx_human_knock.wav</ShortName>
+					<Path>SFX\sfx_human_knock_1C9C67B2.wem</Path>
+				</File>
+				<File Id="488681583" Language="SFX">
+					<ShortName>ghostwhisper1.wav</ShortName>
+					<Path>SFX\ghostwhisper1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="541036875" Language="SFX">
+					<ShortName>sfx_object_car_away1.wav</ShortName>
+					<Path>SFX\sfx_object_car_away1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="541639029" Language="SFX">
+					<ShortName>sfx_footsteps_placeholder1.wav</ShortName>
+					<Path>SFX\sfx_footsteps_placeholder1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="865371990" Language="SFX">
+					<ShortName>sfx_footsteps_placeholder2.wav</ShortName>
+					<Path>SFX\sfx_footsteps_placeholder2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1030560068" Language="SFX">
+					<ShortName>sfx_object_heartbeat.wav</ShortName>
+					<Path>SFX\sfx_object_heartbeat_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
