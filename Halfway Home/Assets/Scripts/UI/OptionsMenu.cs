@@ -13,18 +13,7 @@ public class OptionsMenu : MonoBehaviour
     public Slider MasterVolumeSlider;
     public Slider MusicVolumeSlider;
     public Slider SFXVolumeSlider;
-
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+    public Slider AmbienceVolumeSlider;
 
     public void UpdateAll()
     {
@@ -35,7 +24,8 @@ public class OptionsMenu : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Music_Slider", MusicVolumeSlider.value * 100);
         SFXVolumeSlider.value = Game.current.Progress.GetFloatValue("SFXVolume");
         AkSoundEngine.SetRTPCValue("Effects_Slider", SFXVolumeSlider.value * 100);
-
+        AmbienceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbienceVolume");
+        AkSoundEngine.SetRTPCValue("Ambience_Slider", AmbienceVolumeSlider.value * 100);
     }
 
     public void UpdateTextSpeed(float newPercent)
@@ -56,5 +46,11 @@ public class OptionsMenu : MonoBehaviour
     {
         Game.current.Progress.SetValue("SFXVolume", newPercent);
         AkSoundEngine.SetRTPCValue("Effects_Slider", newPercent * 100);
+    }
+    
+    public void UpdateAmbienceVolume(float newPercent)
+    {
+        Game.current.Progress.SetValue("AmbienceVolume", newPercent);
+        AkSoundEngine.SetRTPCValue("Ambience_Slider", newPercent * 100);
     }
 }

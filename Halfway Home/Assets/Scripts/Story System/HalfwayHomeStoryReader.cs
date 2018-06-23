@@ -84,10 +84,13 @@ namespace HalfwayHome
       string playAudio = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
       parser.AddPattern("AudioTrigger", playAudio, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioTrigger);
 
+      // RTPC Change
+      string changeAudioParam = RegexParser.Presets.ComposeBinaryOperation("Param", "value", "!");
+      parser.AddPattern("AudioParamSet", changeAudioParam, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioParamSet);
+
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
-
 
       // Time Change
       string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
@@ -101,8 +104,13 @@ namespace HalfwayHome
       string updateTask = RegexParser.Presets.ComposeBinaryOperation("ID", "state", "&");
       parser.AddPattern("UpdateTask", updateTask, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUpdateObjectives);
 
+      // Tooltip Lines
       string tooltipText = RegexParser.Presets.ComposeBinaryOperation("tooltip", "type", "^");
       parser.AddPattern("Tooltip", tooltipText, RegexParser.Target.Tag, RegexParser.Scope.Group, OnTooltip);
+
+      // Tooltip Lines
+      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", ".");
+      parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -374,7 +382,29 @@ namespace HalfwayHome
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
           }
         }
+      }
+    }
 
+    void OnFontOverride(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("override"))
+        {
+          Scene.Dispatch<FontDisplay.OverrideFontEvent>(new FontDisplay.OverrideFontEvent(int.Parse(parse.FindFirst("index"))));
+        }
+      }
+    }
+
+    void OnAudioParamSet(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("Param"))
+        {
+          Trace.Script($"Set {parse.FindFirst("Param").Trim()} parameter to {parse.FindFirst("value").Trim()}");
+          Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(parse.FindFirst("Param").Trim(), float.Parse(parse.FindFirst("value"))));
+        }
       }
     }
     //------------------------------------------------------------------------/

@@ -6,11 +6,13 @@ using LitJson;
 
 public class FontDisplay : MonoBehaviour
 {
-
+    public class OverrideFontEvent : Stratus.Event { public int FontIndex; public OverrideFontEvent(int fontIndex = 0) { FontIndex = fontIndex; } }
     [HideInInspector]
     public List<string> Characters;
     [HideInInspector]
     public List<TMP_FontAsset> Fonts;
+    public List<TMP_FontAsset> OverrideFonts;
+    private int Override = 0;
 
     public TMP_FontAsset NoSpeakerFont;
     public int NoSpeakerSizeMin = 12;
@@ -64,13 +66,13 @@ public class FontDisplay : MonoBehaviour
         txt = GetComponent<TextMeshProUGUI>();
 
         Space.Connect<DescriptionEvent>(Events.Description, OnNewLine);
+        Stratus.Scene.Connect<OverrideFontEvent>(OnOverrideFontEvent);
     }
-	
-	// Update is called once per frame
-	void Update ()
+    
+    void OnOverrideFontEvent(OverrideFontEvent e)
     {
-		
-	}
+        Override = e.FontIndex;
+    }
 
     void OnNewLine(DescriptionEvent eventdata)
     {
@@ -85,6 +87,7 @@ public class FontDisplay : MonoBehaviour
 
     public TMP_FontAsset GetFont(string Speaker)
     {
+        if(Override>0) return OverrideFonts[Override-1];
         if (Speaker == "")
             return NoSpeakerFont;
 

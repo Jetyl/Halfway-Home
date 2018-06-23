@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
+	452547817	Stop_All			\PlayMusic\Stop_All	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	370198169	sfx_menu_text_scroll1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		261136
+

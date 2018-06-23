@@ -1,0 +1,153 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "DialogueEvents": [],
+  "StreamedFiles": [
+   {
+    "Id": "27878858",
+    "Language": "SFX",
+    "ShortName": "tension_stem_03.wav",
+    "Path": "SFX\\tension_stem_03_A51F8DD7.wem"
+   },
+   {
+    "Id": "52885807",
+    "Language": "SFX",
+    "ShortName": "tension_stem_01.wav",
+    "Path": "SFX\\tension_stem_01_A51F8DD7.wem"
+   },
+   {
+    "Id": "108982980",
+    "Language": "SFX",
+    "ShortName": "tension_stem_06.wav",
+    "Path": "SFX\\tension_stem_06_A51F8DD7.wem"
+   },
+   {
+    "Id": "315137795",
+    "Language": "SFX",
+    "ShortName": "tension_stem_04.wav",
+    "Path": "SFX\\tension_stem_04_A51F8DD7.wem"
+   },
+   {
+    "Id": "382105759",
+    "Language": "SFX",
+    "ShortName": "tension_stem_05.wav",
+    "Path": "SFX\\tension_stem_05_A51F8DD7.wem"
+   },
+   {
+    "Id": "497356856",
+    "Language": "SFX",
+    "ShortName": "tension_stem_07.wav",
+    "Path": "SFX\\tension_stem_07_A51F8DD7.wem"
+   },
+   {
+    "Id": "689613253",
+    "Language": "SFX",
+    "ShortName": "tension_stem_02.wav",
+    "Path": "SFX\\tension_stem_02_A51F8DD7.wem"
+   }
+  ],
+  "MediaFilesNotInAnyBank": [],
+  "SoundBanks": [
+   {
+    "Id": "183294232",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Music\\MusicTension",
+    "ShortName": "MusicTension",
+    "Path": "MusicTension.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "4181321930",
+      "Name": "music_loop_test",
+      "ObjectPath": "\\Events\\PlayMusic\\test\\music_loop_test"
+     },
+     {
+      "Id": "1712470628",
+      "Name": "play_music_tension",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "27878858"
+     },
+     {
+      "Id": "52885807"
+     },
+     {
+      "Id": "108982980"
+     },
+     {
+      "Id": "315137795"
+     },
+     {
+      "Id": "382105759"
+     },
+     {
+      "Id": "497356856"
+     },
+     {
+      "Id": "689613253"
+     }
+    ]
+   },
+   {
+    "Id": "374987273",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Music\\MusicMain",
+    "ShortName": "MusicMain",
+    "Path": "MusicMain.bnk"
+   },
+   {
+    "Id": "1355168291",
+    "Language": "SFX",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk"
+   },
+   {
+    "Id": "3604647259",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu",
+    "ShortName": "MainMenu",
+    "Path": "MainMenu.bnk"
+   },
+   {
+    "Id": "4056684167",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
+    "ShortName": "Master",
+    "Path": "Master.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "319656260",
+      "Name": "play_textscroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+     },
+     {
+      "Id": "452547817",
+      "Name": "Stop_All",
+      "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "370198169",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_text_scroll1.wav",
+      "Path": "SFX\\sfx_menu_text_scroll1_1C9C67B2.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

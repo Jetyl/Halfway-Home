@@ -65,6 +65,10 @@
     "Type" : 3
    },
    {
+    "Name" : "AmbienceVolume",
+    "Type" : 3
+   },
+   {
     "Name" : "TextSpeed",
     "Type" : 3
    }
