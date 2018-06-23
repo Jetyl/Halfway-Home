@@ -109,15 +109,14 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 Timothy shoots upright and looks at me, surprised. # Timothy = Afraid
 His red-eyed face is ghostly pale.
 [Timothy] "O-oh! Hey, {player_name}." # Timothy = Surprised
-"<size=80%>Y-you startled me..." # Timothy = Calm
-[{player_name}] "<size=100%>I wasn't trying too... I did knock!"
-"Wait, no I didn't. <size=60%>That was another time..."
-"<size=100%>Apologies. Guess I'm all turned around today."
+"<size=80%>Y-you startled me...<size=100%>" # Timothy = Calm
+[{player_name}] "I wasn't trying too... I did knock!"
+"Wait, no I didn't. <size=60%>That was another time...<size=100%>"
+"Apologies. Guess I'm all turned around today."
 [Timothy] "Heh. I can relate." # Timothy = Happy
 [{player_name}] "So... you doin' okay in here?"
 [Timothy] "Oh. Yeah, I..." # Timothy = Surprised
-~ temp timPoints = GetValue("TimothyPoints")
-{timPoints>5:
+{GetIntValue("TimothyPoints")>5:
 	Timothy sighs. # Timothy = Sad
 	"I'm trying not to think about it."
 	"It's just this letter... I- I was doing so well!" # Timothy = Angry
@@ -142,26 +141,22 @@ His red-eyed face is ghostly pale.
 	    ->Tangents
 	}
 -else:
-	(You have {timPoints} Timothy Points)
+	(You have {GetIntValue("TimothyPoints")} Timothy Points)
 	"I'm fine. You don't need to worry about me." # Timothy = Calm
 	->Tangents
 }
 
 =TheLetter
 The letter is penned in a neat and steady hand, in contrast to the recently disheveled state of the paper.
-<color=#FF8A2D><i>Dear Timothy,
-It's so cute that Sunflower House has a no-email policy.
-We have been informed that you are adjusting well and we are happy to hear it. Don't get too comfortable, though!
-Your father and I are doing all we can to pull strings like we did at Blackwell.
-We spoke with one of administrators and she said that, assuming all goes well, you could be back home with us within the month!
-I'm sure we would all love nothing more than to put this dark chapter behind us. 
-After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.
-Love, Mom & Dad</i></color>
-// Timothy lets you read the letter
-// Letter is courteous, but cold. Timothy's parents are pressuring him into returning home as soon as possible.
-// They view his time away as wasted potential.
-// You learn that they pressured Blackwell into releasing him early.
-// Timothy's parents are super involved and demanding.
+<color=FF8A2D><i>Dear Timothy,</i></color> # override.1
+<color=FF8A2D><i>It's so cute that Sunflower House has a no-email policy.</i></color>
+<color=FF8A2D><i>We have been informed that you are adjusting well and we are happy to hear it. Don't get too comfortable, though!</i></color>
+<color=FF8A2D><i>Your father and I are doing all we can to pull strings like we did at Blackwell.</i></color>
+<color=FF8A2D><i>We spoke with one of administrators and she said that, assuming all goes well, you could be back home with us within the month!</i></color>
+<color=FF8A2D><i>I'm sure we would all love nothing more than to put this dark chapter behind us. </i></color>
+<color=FF8A2D><i>After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.</i></color>
+<color=FF8A2D><i>Love, Mom & Dad</i></color>
+Back to normal # override.0
 
 // This gives you insight and a special awareness star as you relate your life to Timothy's
 {awareness==5:->Healing|->NotYet}

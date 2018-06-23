@@ -92,7 +92,6 @@ namespace HalfwayHome
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
       parser.AddPattern("SetBackground", setBackground, RegexParser.Target.Tag, RegexParser.Scope.Group, OnSetBackground);
 
-
       // Time Change
       string changeTime = RegexParser.Presets.ComposeBinaryOperation("time", "value", "%");
       parser.AddPattern("ChangeTime", changeTime, RegexParser.Target.Tag, RegexParser.Scope.Group, OnChangeTime);
@@ -105,8 +104,13 @@ namespace HalfwayHome
       string updateTask = RegexParser.Presets.ComposeBinaryOperation("ID", "state", "&");
       parser.AddPattern("UpdateTask", updateTask, RegexParser.Target.Tag, RegexParser.Scope.Group, OnUpdateObjectives);
 
+      // Tooltip Lines
       string tooltipText = RegexParser.Presets.ComposeBinaryOperation("tooltip", "type", "^");
       parser.AddPattern("Tooltip", tooltipText, RegexParser.Target.Tag, RegexParser.Scope.Group, OnTooltip);
+
+      // Tooltip Lines
+      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", ".");
+      parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -377,6 +381,17 @@ namespace HalfwayHome
             Game.current.CurrentAmbience = parse.FindFirst("Event");
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
           }
+        }
+      }
+    }
+
+    void OnFontOverride(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("override"))
+        {
+          Scene.Dispatch<FontDisplay.OverrideFontEvent>(new FontDisplay.OverrideFontEvent(int.Parse(parse.FindFirst("index"))));
         }
       }
     }
