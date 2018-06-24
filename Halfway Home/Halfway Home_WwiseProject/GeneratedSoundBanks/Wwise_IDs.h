@@ -19,6 +19,10 @@ namespace AK
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
+        static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
+        static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
+        static const AkUniqueID PLAY_MENUPAUSE_01 = 3827964327U;
+        static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
         static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
@@ -50,6 +54,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID INTRO = 1125500713U;
+        static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSICMAIN = 374987273U;

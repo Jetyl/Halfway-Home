@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4553038	play_menuunpause_01			\PlaySFX\sfx_menu\play_menuunpause_01	
+	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
+	3827964327	play_menupause_01			\PlaySFX\sfx_menu\play_menupause_01	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11926160	sfx_menu_chime_pausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		135144
+	370198169	sfx_menu_text_scroll1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		73584
+	558653419	sfx_menu_chime_unpausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		160704
+

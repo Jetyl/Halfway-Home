@@ -21,6 +21,9 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
     
     // ConfirmClear Dialog
     public GameObject ClearPanel;
+    
+    // LoadGame Dialog
+    public GameObject LoadPanel;
 
     // Current Mouse Position, -1 = Quit, 0 = nothing, 1 = New Game/Resume
     public enum MousePosition
@@ -43,8 +46,9 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
     float lpf4k = 0f;
     float lpfOff = 1f;
     
-    // AkGameObjectID  in_gameObjectID
-    public GameObject gameObjectID;
+    // AkmusicPlayer  in_gameObjectID
+    public GameObject musicPlayer;
+    public GameObject sfxPlayer;
     
     // AkTimeMs  in_uValueChangeDuration
     int timeMS = 300;
@@ -54,37 +58,37 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
     {
         if (mousePosition == MousePosition.hoverQuit && currentRTPCvalue != MousePosition.hoverQuit)
         {
-            AkSoundEngine.SetRTPCValue(rtpcID, lpf1k, gameObjectID, timeMS);
+            AkSoundEngine.SetRTPCValue(rtpcID, lpf1k, musicPlayer, timeMS);
             currentRTPCvalue = MousePosition.hoverQuit;
         }
         else if (mousePosition == MousePosition.hoverNothing && currentRTPCvalue != MousePosition.hoverNothing)
         {
-            AkSoundEngine.SetRTPCValue(rtpcID, lpf4k, gameObjectID, timeMS);
+            AkSoundEngine.SetRTPCValue(rtpcID, lpf4k, musicPlayer, timeMS);
             currentRTPCvalue = MousePosition.hoverNothing;
         }
         else if (mousePosition == MousePosition.hoverStart && currentRTPCvalue != MousePosition.hoverStart)
         {
-            AkSoundEngine.SetRTPCValue(rtpcID, lpfOff, gameObjectID, timeMS);
+            AkSoundEngine.SetRTPCValue(rtpcID, lpfOff, musicPlayer, timeMS);
             currentRTPCvalue = MousePosition.hoverStart;
         }
     }
     
     public void setHoverQuit ()
     {
-        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
+        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy && !LoadPanel.activeInHierarchy)
             mousePosition = MousePosition.hoverQuit;
     }
     public void setHoverNothing ()
     {
-        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
+        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy && !LoadPanel.activeInHierarchy)
             mousePosition = MousePosition.hoverNothing;
     }
     public void setHoverStart ()
     {
-        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy)
+        if (!ConfirmationPanel.activeInHierarchy && !ClearPanel.activeInHierarchy && !LoadPanel.activeInHierarchy)
             mousePosition = MousePosition.hoverStart;
     }
-    public void closeQuitDialog ()
+    public void closeDialog ()
     {
             mousePosition = MousePosition.hoverNothing;
     }
@@ -92,6 +96,11 @@ public class mainMenuMusiclpfRTPC : MonoBehaviour
     
     public void postEvent (string event1)
     {
-        AkSoundEngine.PostEvent( AkSoundEngine.GetIDFromString(event1), gameObjectID);
+        AkSoundEngine.PostEvent( AkSoundEngine.GetIDFromString(event1), musicPlayer);
+    }
+    
+    public void postSFX (string event2)
+    {
+        AkSoundEngine.PostEvent( AkSoundEngine.GetIDFromString(event2), sfxPlayer);
     }
 }

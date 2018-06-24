@@ -14,12 +14,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="HalfwaySoundbank" Hash="2370182099" Timestamp="131684911386573930"/>
-				<File Name="Init" Hash="1554295357" Timestamp="131741916632425382"/>
-				<File Name="Intro" Hash="622338249" Timestamp="131741912378127102"/>
-				<File Name="MainMenu" Hash="816196018" Timestamp="131741916631442293"/>
-				<File Name="Master" Hash="1300314640" Timestamp="131741834978504757"/>
-				<File Name="MusicMain" Hash="1158886702" Timestamp="131741834978549671"/>
-				<File Name="MusicTension" Hash="3586193123" Timestamp="131741834978599442"/>
+				<File Name="Init" Hash="1554295357" Timestamp="131742546562640085"/>
+				<File Name="Intro" Hash="1030342970" Timestamp="131742623290544268"/>
+				<File Name="Main" Hash="1379399573" Timestamp="131742623290950652"/>
+				<File Name="MainMenu" Hash="594126245" Timestamp="131742546562128344"/>
+				<File Name="Master" Hash="1038003163" Timestamp="131742623290760003"/>
+				<File Name="MusicMain" Hash="1158886702" Timestamp="131742546562409295"/>
+				<File Name="MusicTension" Hash="3586193123" Timestamp="131742546562504621"/>
 				<File Name="Music_Master" Hash="1327423754" Timestamp="131741071315725364"/>
 				<File Name="Music_Tension" Hash="45720060" Timestamp="131741067829573807"/>
 				<File Name="Test1" Hash="809273639" Timestamp="131656461893352581"/>
@@ -27,28 +28,30 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="393239870">
-				<File Name="Init" Hash="1724772660" Timestamp="131741916632754809"/>
-				<File Name="Intro" Hash="108959530" Timestamp="131741912378755921"/>
-				<File Name="MainMenu" Hash="3395959242" Timestamp="131741916632600062"/>
-				<File Name="Master" Hash="4166829611" Timestamp="131741834978744176"/>
-				<File Name="MusicMain" Hash="3762154024" Timestamp="131741834978764137"/>
-				<File Name="MusicTension" Hash="1488227839" Timestamp="131741834978789090"/>
+				<File Name="Init" Hash="3752821564" Timestamp="131742546562948398"/>
+				<File Name="Intro" Hash="3822140114" Timestamp="131742623291191477"/>
+				<File Name="Main" Hash="836350207" Timestamp="131742623291306867"/>
+				<File Name="MainMenu" Hash="2548152370" Timestamp="131742546562802887"/>
+				<File Name="Master" Hash="4293809968" Timestamp="131742623291256700"/>
+				<File Name="MusicMain" Hash="262423648" Timestamp="131742546562873139"/>
+				<File Name="MusicTension" Hash="1952414519" Timestamp="131742546562913280"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="2110384499" Timestamp="131741916632560169"/>
+				<File Name="" Hash="3361102140" Timestamp="131742623291136286"/>
 			</Language>
 		</XMLInfo>
 		<JSONInfo>
 			<Language ID="393239870">
-				<File Name="Init" Hash="1987703168" Timestamp="131741916632974423"/>
-				<File Name="Intro" Hash="2523033816" Timestamp="131741912379055382"/>
-				<File Name="MainMenu" Hash="699544225" Timestamp="131741916632834693"/>
-				<File Name="Master" Hash="2075066105" Timestamp="131741834978893899"/>
-				<File Name="MusicMain" Hash="3475378436" Timestamp="131741834978918852"/>
-				<File Name="MusicTension" Hash="4029107902" Timestamp="131741834978943801"/>
+				<File Name="Init" Hash="3858238294" Timestamp="131742546563258966"/>
+				<File Name="Intro" Hash="4133143092" Timestamp="131742623291457378"/>
+				<File Name="Main" Hash="3009670059" Timestamp="131742623291572772"/>
+				<File Name="MainMenu" Hash="1315484139" Timestamp="131742546563098411"/>
+				<File Name="Master" Hash="3052714533" Timestamp="131742623291522599"/>
+				<File Name="MusicMain" Hash="2563680470" Timestamp="131742546563178681"/>
+				<File Name="MusicTension" Hash="1483573168" Timestamp="131742546563218825"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="1613952957" Timestamp="131741916632794694"/>
+				<File Name="" Hash="2233454240" Timestamp="131742623291407208"/>
 			</Language>
 		</JSONInfo>
 	</Platform>

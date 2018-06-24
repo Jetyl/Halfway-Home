@@ -6,7 +6,7 @@
 				<ActorMixer Name="SFX" ID="{D4CBD38C-7A18-4757-96D4-EB154D021898}" ShortID="939546782">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+							<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>

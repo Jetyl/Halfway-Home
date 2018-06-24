@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -231339516
-    m_lastTimePart2: -1999251288
+    m_lastTimePsrt1: -1760666665
+    m_lastTimePart2: -1999251140
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -623,8 +623,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1004995047
-    m_lastTimePart2: -1999251288
+    m_lastTimePsrt1: -1760576473
+    m_lastTimePart2: -1999251140
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -644,8 +644,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1663324258
-    m_lastTimePart2: -1999251288
+    m_lastTimePsrt1: -406531360
+    m_lastTimePart2: -1999251122
     List:
     - Name: Intro
       Path: Default Work Unit\Intro
@@ -656,6 +656,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1125500713
       Guid: 5236779d87d1754c8a975281ecf27eef
+    - Name: Main
+      Path: Default Work Unit\Main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      ID: -1133058374
+      Guid: bc02d61891dd1140b7fa34bf75883cab
     - Name: MainMenu
       Path: Default Work Unit\MainMenu
       PathAndIcons:
@@ -702,8 +711,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -748847112
-    m_lastTimePart2: -1999251288
+    m_lastTimePsrt1: -1760656638
+    m_lastTimePart2: -1999251140
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf
@@ -714,15 +723,6 @@ MonoBehaviour:
         ObjectType: 13
       ID: -247159114
       Guid: 03c0f20adb51dc4cb958bd875cf0749c
-    - Name: music_fade
-      Path: Default Work Unit\music_fade
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: music_fade
-        ObjectType: 13
-      ID: -1546883821
-      Guid: a489fb984949ee48871fce47af26ae47
     - Name: music_lpf
       Path: Default Work Unit\music_lpf
       PathAndIcons:
@@ -741,11 +741,20 @@ MonoBehaviour:
         ObjectType: 13
       ID: -1505688445
       Guid: 5ee88d58a302c5439e3ecb8b4ba872e6
+    - Name: music_vol
+      Path: Default Work Unit\music_vol
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: music_vol
+        ObjectType: 13
+      ID: -2048357752
+      Guid: a489fb984949ee48871fce47af26ae47
   - PhysicalPath: Game Parameters\UI.wwu
     ParentPhysicalPath: 
     Guid: '{148E2D9F-E4C9-4433-B2CD-803F3F69A985}'
-    m_lastTimePsrt1: 544537469
-    m_lastTimePart2: -1999251297
+    m_lastTimePsrt1: -1760646623
+    m_lastTimePart2: -1999251140
     List:
     - Name: Ambience_Slider
       Path: UI\Sliders\Ambience_Slider
@@ -822,6 +831,11 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Halfway Home_WwiseProject
+  - /Halfway Home_WwiseProject/Events
+  - /Halfway Home_WwiseProject/Events/PlayMusic
+  - /Halfway Home_WwiseProject/Events/PlayMusic/music_mainmenu
+  - /Halfway Home_WwiseProject/Events/PlaySFX
+  - /Halfway Home_WwiseProject/Events/PlaySFX/sfx_menu
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

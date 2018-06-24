@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="1125500713" Language="SFX">
@@ -35,31 +35,31 @@
 			<IncludedMemoryFiles>
 				<File Id="318063250" Language="SFX">
 					<ShortName>ghostwhisper2.wav</ShortName>
-					<Path>SFX\ghostwhisper2_1C9C67B2.wem</Path>
+					<Path>SFX\ghostwhisper2_00FA84C2.wem</Path>
 				</File>
 				<File Id="339768715" Language="SFX">
 					<ShortName>sfx_human_knock.wav</ShortName>
-					<Path>SFX\sfx_human_knock_1C9C67B2.wem</Path>
+					<Path>SFX\sfx_human_knock_00FA84C2.wem</Path>
 				</File>
 				<File Id="488681583" Language="SFX">
 					<ShortName>ghostwhisper1.wav</ShortName>
-					<Path>SFX\ghostwhisper1_1C9C67B2.wem</Path>
+					<Path>SFX\ghostwhisper1_00FA84C2.wem</Path>
 				</File>
 				<File Id="541036875" Language="SFX">
 					<ShortName>sfx_object_car_away1.wav</ShortName>
-					<Path>SFX\sfx_object_car_away1_1C9C67B2.wem</Path>
+					<Path>SFX\sfx_object_car_away1_00FA84C2.wem</Path>
 				</File>
 				<File Id="541639029" Language="SFX">
 					<ShortName>sfx_footsteps_placeholder1.wav</ShortName>
-					<Path>SFX\sfx_footsteps_placeholder1_1C9C67B2.wem</Path>
+					<Path>SFX\sfx_footsteps_placeholder1_00FA84C2.wem</Path>
 				</File>
 				<File Id="865371990" Language="SFX">
 					<ShortName>sfx_footsteps_placeholder2.wav</ShortName>
-					<Path>SFX\sfx_footsteps_placeholder2_1C9C67B2.wem</Path>
+					<Path>SFX\sfx_footsteps_placeholder2_00FA84C2.wem</Path>
 				</File>
 				<File Id="1030560068" Language="SFX">
 					<ShortName>sfx_object_heartbeat.wav</ShortName>
-					<Path>SFX\sfx_object_heartbeat_F17FB28C.wem</Path>
+					<Path>SFX\sfx_object_heartbeat_178D0C9C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

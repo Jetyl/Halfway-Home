@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
 	452547817	Stop_All			\PlayMusic\Stop_All	
+	3169174387	play_menuexit			\PlaySFX\sfx_menu\play_menuexit	
+	4008650974	play_menumouseover			\PlaySFX\sfx_menu\play_menumouseover	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	370198169	sfx_menu_text_scroll1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		261136
+	302959056	sfx_menu_chime_exitgame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_exitgame_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_exitgame		160704
+	950120731	sfx_menu_button_mouseover	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_button_mouseover_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_button_mouseover		80424
 
