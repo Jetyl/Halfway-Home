@@ -25,6 +25,7 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
 
 -> Start
 

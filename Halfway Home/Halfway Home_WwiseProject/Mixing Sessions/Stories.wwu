@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BB5BE84F-3442-4FF6-A752-EA12672DC2C5}" SchemaVersion="80">
+	<MixingSessions>
+		<WorkUnit Name="Stories" ID="{BB5BE84F-3442-4FF6-A752-EA12672DC2C5}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="big_happy_family" ID="{AA6D61EE-6D69-4F98-85A0-E34C0FB88DAD}">
+					<ObjectList>
+						<ObjectRef Name="Tension Stem 01 Bus" ID="{6FC1DD76-AFDC-4CDE-AE9F-D90D13B40F7F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 02 Bus" ID="{329F4212-3050-4066-8E6F-FC4AB34ED761}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 03 Bus" ID="{49544145-6E00-4C1D-89DA-A6B107817974}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 04 Bus" ID="{CD4DDC85-39A0-483F-AEAF-4B889FF24DC6}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 05 Bus" ID="{C1C6CECC-B8DB-45A4-915F-0ED9FA66DC71}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 06 Bus" ID="{BD929444-5EF5-40BC-9944-1C6E8312615D}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+						<ObjectRef Name="Tension Stem 07 Bus" ID="{EFEEF341-9769-4834-A689-238E7F8623E4}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="memory" ID="{4D1BC537-56BB-4F2D-B257-06925F38F1F5}">
+					<ObjectList>
+						<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_cafejazz" ID="{FF3E8379-A1EA-4057-967F-26A9D6287B67}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_creepyatmo" ID="{41F2DA1C-10B6-4B62-B482-7638ACD04BE3}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_creepyatmo2" ID="{80226DF0-FF8A-4BE4-BB2F-C3828968731D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="knock_on_the_morning_door" ID="{94D17B5D-AE75-4D44-AB07-2A6A4B705B06}">
+					<ObjectList>
+						<ObjectRef Name="music_placeholder" ID="{93556F48-2D81-4D87-BF4A-B65FB9E723DA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+						<ObjectRef Name="music_dejavu" ID="{9FB2FA38-6E8E-40DD-9E6C-1F7244A9F274}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
+	</MixingSessions>
+</WwiseDocument>

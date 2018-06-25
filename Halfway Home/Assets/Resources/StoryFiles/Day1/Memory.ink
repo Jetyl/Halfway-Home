@@ -29,11 +29,26 @@ EXTERNAL GetIntValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
+// TESTING IF MAIN MENU BANK IS UNLOADED
+// Trying to play main menu music... # Play : play_music_mainmenu
+// Loading MainMenu bank... # Load @ MainMenu
+// Trying to play main menu music... # Play : play_music_mainmenu
+// Stopping all music... # Play : Stop_All
+// Unloading MainMenu bank... # Unload @ MainMenu
+
+// TESTING MUSIC FADE PARAM
+// Loading MainMenu bank... # Load @ MainMenu
+// Playing main menu music... # Play : play_music_mainmenu
+// Fading to -200 db... # music_vol ! -200
+// Stopping all music... # Play : Stop_All
+// Unloading MainMenu bank... # Unload @ MainMenu
+
 -> Start
 
 === Start ===
 //~week = 1
-This is it. Sunflower House. # Background / HouseFront # Ambience : play_ambience_birds # All * Hide
+
+This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience : play_ambience_birds
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
@@ -59,7 +74,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # Ambience : lpf_ambience_fireplace
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # ambience_lpf ! 17
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -70,24 +85,24 @@ They pull out a small bit of paper from their pocket and begin reading aloud.
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
-I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit
+I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit # Load @ room_cafe
 -> Cafe
 
 === Cafe ===
 I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe # play : play_music_cafejazz
 Max is here, mopping lethargically. # Max = Calm
-[Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week. # play : lpf_music_cafejazz
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
-Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
-But they're gone...
-A chill runs down my spine. What's going on?
+[Max] "Yo. Good to see you again. How was your first week?" # ambience_lpf ! 53
+What? They're joking, right? I just got here... There's no way I lost a whole week. # music_lpf ! 60
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # Ambience: Stop_All
+Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max. # play : Stop_All
+But they're gone... # Play : Stop_All_Fast # music_lpf ! 0
+A chill runs down my spine. What's going on? # Ambience : Stop_All_Fast
 -> Commons
 
 === Commons ===
 I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
-When did it get dark out? Is it night already?
-Max is reading by the fireplace. I wander over and join them. # Max = Calm
+When did it get dark out? Is it night already? # ambience_lpf ! 17
+Max is reading by the fireplace. I wander over and join them. # Max = Calm # Ambience : play_ambience_fireplace
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?" # Max = Surprised
@@ -106,10 +121,10 @@ Max is reading by the fireplace. I wander over and join them. # Max = Calm
 -Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
-My body rises from my seat and stumbles toward my bedroom. # Max = Exit
-All sound seems to fall away as my hand pulls open the door.
-Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo # Ambience : stop_ambience_all
-A chorus of whispers rises out of the darkness.
+My body rises from my seat and stumbles toward my bedroom. # Max = Exit # Ambience : Stop_All
+All sound seems to fall away as my hand pulls open the door. # SFX : play_sfx_ambient_deaf
+Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
+A chorus of whispers rises out of the darkness. # ambience_lpf ! 0
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me. # Ambience : play_sfx_ambient_heartbeat
 [Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
@@ -142,12 +157,12 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface. # Ambience : stop_ambience_all
-[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper
+[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper # Load @ story_knock_on_the_morning_door # ambience_vol ! -11
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_with_fade_and_fireplace # Background / YourRoom, EyeOpen # Time * Show
-The whispers fade into the chitter of birdsong.
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_fadein # Background / YourRoom, EyeOpen # Time * Show # Unload @ story_memory
+The whispers fade into the chitter of birdsong. # Ambience : play_ambience_birds # music_vol ! -6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

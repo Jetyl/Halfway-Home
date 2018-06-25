@@ -1,9 +1,15 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1127857866	Music_Slider			\Default Work Unit\Music_Slider	
-	2486326433	Master_Slider			\Default Work Unit\Master_Slider	
+	129996979	Ambience_Slider			\UI\Sliders\Ambience_Slider	
+	1127857866	Music_Slider			\UI\Sliders\Music_Slider	
+	1909810094	text_vol			\Default Work Unit\text_vol	
+	2246609544	music_vol			\Default Work Unit\music_vol	
+	2295956853	music_lpf			\Default Work Unit\music_lpf	
+	2486326433	Master_Slider			\UI\Sliders\Master_Slider	
 	2789278851	music_tension_state			\Default Work Unit\music_tension_state	
-	2886374787	Effects_Slider			\Default Work Unit\Effects_Slider	
-	2902037724	Menu_Slider			\Default Work Unit\Menu_Slider	
+	2886374787	Effects_Slider			\UI\Sliders\Effects_Slider	
+	2902037724	Menu_Slider			\UI\Sliders\Menu_Slider	
+	4035164671	ambience_vol			\Default Work Unit\ambience_vol	
+	4047808182	ambience_lpf			\Default Work Unit\ambience_lpf	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	315519858	Tension Music Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus	
@@ -13,10 +19,15 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1482909111	Tension Stem 05 Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus\Tension Stem 05 Bus	
 	1604779591	Effects Bus			\Default Work Unit\Master Audio Bus\Effects Bus	
 	1759925539	Tension Stem 01 Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus\Tension Stem 01 Bus	
+	1929927065	Text Scroll Bus			\Default Work Unit\Master Audio Bus\Menu Bus\Text Scroll Bus	
 	2721585490	Tension Stem 04 Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus\Tension Stem 04 Bus	
 	3079149437	Tension Stem 03 Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus\Tension Stem 03 Bus	
 	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3212139665	Tension Stem 07 Bus			\Default Work Unit\Master Audio Bus\Music Bus\Tension Music Bus\Tension Stem 07 Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3931159050	Menu Bus			\Default Work Unit\Master Audio Bus\Menu Bus	
+	4202237879	Ambience Bus			\Default Work Unit\Master Audio Bus\Ambience Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 

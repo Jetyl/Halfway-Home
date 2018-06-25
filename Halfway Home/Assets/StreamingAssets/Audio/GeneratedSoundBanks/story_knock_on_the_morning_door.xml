@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="4021864313" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_knock_on_the_morning_door</ObjectPath>
+			<ShortName>story_knock_on_the_morning_door</ShortName>
+			<Path>story_knock_on_the_morning_door.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1829857455" Name="play_music_dejavu" ObjectPath="\Events\PlayMusic\music_dejavu\play_music_dejavu"/>
+				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
+				<Event Id="3941181009" Name="Play_music_placeholder_main_fadein" ObjectPath="\Events\PlayMusic\music_placeholder_main\Play_music_placeholder_main_fadein"/>
+				<Event Id="188792618" Name="play_sfx_bed_creak" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_bed_creak"/>
+				<Event Id="2319499992" Name="play_sfx_human_knock" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_knock"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="178330536" Language="SFX">
+					<ShortName>Music1loop.wav</ShortName>
+					<Path>SFX\Music1loop_A51F8DD7.wem</Path>
+				</File>
+				<File Id="235618933" Language="SFX">
+					<ShortName>barble bapkins 1.6.wav</ShortName>
+					<Path>SFX\barble bapkins 1.6_A51F8DD7.wem</Path>
+				</File>
+				<File Id="1025761080" Language="SFX">
+					<ShortName>loop_164661__adam-n__fire.wav</ShortName>
+					<Path>SFX\loop_164661__adam-n__fire_178D0C9C.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="339768715" Language="SFX">
+					<ShortName>sfx_human_knock.wav</ShortName>
+					<Path>SFX\sfx_human_knock_6D2D20DF.wem</Path>
+				</File>
+				<File Id="741107735" Language="SFX">
+					<ShortName>BedCreak.wav</ShortName>
+					<Path>SFX\BedCreak_00FA84C2.wem</Path>
+				</File>
+				<File Id="917354306" Language="SFX">
+					<ShortName>DejaVu.wav</ShortName>
+					<Path>SFX\DejaVu_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="Stories" ID="{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="story_big_happy_family" ID="{7E251FFB-BF0F-4E1D-8B6E-D1B5500CC8AE}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_tension_intro_02" ID="{E033CD05-24F3-4236-A773-590AFEF23BBB}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_tension" ID="{635B0651-40CB-4826-8EFB-A84713ACCAD8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_music_tension_intro_02" ID="{41A7ED79-D8ED-4C8E-A5FD-777EEDCFC6C8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_tension_intro_04" ID="{9FFE4AA6-D0A8-4CBD-9F48-20C8BBB1C4B3}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_tension_intro_01" ID="{A16EC170-92A7-4DA2-AE76-BC548844626E}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_tension_intro_03" ID="{CE33F42F-6600-4EDF-8F6F-0D05EF146BB7}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_memory" ID="{9D773652-D187-4C75-8A97-5281ECF27EEF}">
+					<Comment>Nightmare scene</Comment>
+					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_ambient_deaf" ID="{2A8A9D72-C0E1-4662-AD52-478F8B16D7B5}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_creepy_atmo" ID="{D156287F-4894-4C1C-BCA7-AF317221DE2D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_creepy_atmo_02" ID="{6F113FA0-8EAD-4C93-8709-E1719973E777}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_ambient_heartbeat" ID="{9407B261-F4FE-4D58-B5CB-380BCA2D2B81}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_knock_on_the_morning_door" ID="{2FB0BFB9-B1C5-48C1-8EF3-01A2E3D0AE66}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_music_placeholder_main_fadein" ID="{CCB4ADE7-C8AA-4A59-8E1E-3A7C32DAF259}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_dejavu" ID="{8DB5E002-D7FB-4A5F-BD04-79618F25E533}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_bed_creak" ID="{79AFBEAF-E089-4B9F-BB69-B792B61FB160}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

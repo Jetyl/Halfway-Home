@@ -20,22 +20,43 @@
     "Path": "Master.bnk",
     "IncludedEvents": [
      {
-      "Id": "319656260",
-      "Name": "play_textscroll",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+      "Id": "2576276897",
+      "Name": "play_menuclick",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuclick"
+     },
+     {
+      "Id": "3169174387",
+      "Name": "play_menuexit",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuexit"
+     },
+     {
+      "Id": "4008650974",
+      "Name": "play_menumouseover",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menumouseover"
      },
      {
       "Id": "452547817",
       "Name": "Stop_All",
       "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+     },
+     {
+      "Id": "3032100830",
+      "Name": "Stop_All_Fast",
+      "ObjectPath": "\\Events\\PlayMusic\\Stop_All_Fast"
      }
     ],
     "IncludedMemoryFiles": [
      {
-      "Id": "370198169",
+      "Id": "302959056",
       "Language": "SFX",
-      "ShortName": "sfx_menu_text_scroll1.wav",
-      "Path": "SFX\\sfx_menu_text_scroll1_1C9C67B2.wem"
+      "ShortName": "sfx_menu_chime_exitgame.wav",
+      "Path": "SFX\\sfx_menu_chime_exitgame_EA8CCDE0.wem"
+     },
+     {
+      "Id": "950120731",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_button_mouseover.wav",
+      "Path": "SFX\\sfx_menu_button_mouseover_00FA84C2.wem"
      }
     ]
    }

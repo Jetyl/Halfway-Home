@@ -64,6 +64,16 @@ public class Game
 
     public string CurrentTrack = "";
     public string CurrentAmbience = "";
+    public string CurrentStorySoundbank = "story_memory";
+    public string CurrentRoomSoundbank = "";
+    
+    // Current RTPC values
+    public float CurrentAmbienceLPF;
+    public float CurrentAmbienceVol;
+    public float CurrentMusicLPF;
+    public float CurrentMusicTensionState;
+    public float CurrentMusicVol;
+    public float CurrentTextVol;
 
     public List<CharacterIntermission> CastCall;
 
@@ -201,6 +211,16 @@ public class Game
         SavedInk = copy_.SavedInk;
         CurrentTrack = copy_.CurrentTrack;
         CurrentAmbience = copy_.CurrentAmbience;
+        CurrentStorySoundbank = copy_.CurrentStorySoundbank;
+        CurrentRoomSoundbank = copy_.CurrentRoomSoundbank;
+        
+        // Current RTPC values
+        CurrentAmbienceLPF = copy_.CurrentAmbienceLPF;
+        CurrentAmbienceVol = copy_.CurrentAmbienceVol;
+        CurrentMusicLPF = copy_.CurrentMusicLPF;
+        CurrentMusicTensionState = copy_.CurrentMusicTensionState;
+        CurrentMusicVol = copy_.CurrentMusicVol;
+        CurrentTextVol = copy_.CurrentTextVol;
         
         CurrentHistory = copy_.CurrentHistory;
         CurrentSpeaker = copy_.CurrentSpeaker;

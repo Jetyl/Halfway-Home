@@ -28,6 +28,9 @@ public class MainMenu : MonoBehaviour
     public StatBasedSpriteChanger FlowerA;
     public StatBasedSpriteChanger FlowerG;
     public StatBasedSpriteChanger FlowerE;
+    
+    public float StartGameFadeTime = 1.0f;
+    public float CreditsFadeTime = 2.1f;
 
   // Use this for initialization
   void Start ()
@@ -57,6 +60,20 @@ public class MainMenu : MonoBehaviour
         ClearSavePanel.SetActive(false);
         LoadPanel.SetActive(false);
         GalleryPanel.SetActive(false);
+        
+        
+    }
+    
+    void Awake()
+    {
+        // Load Soundbanks
+        Debug.Log("MAIN MENU SOUNDBANKS LOADED");
+        AkBankManager.LoadBankAsync("MainMenu");
+        AkBankManager.LoadBankAsync("Master");
+        
+        // Reset RTPCs
+        AkSoundEngine.SetRTPCValue("music_lpf", 0);
+        AkSoundEngine.SetRTPCValue("music_vol", 0);
     }
 
     public void NewGame()
@@ -92,12 +109,26 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-      SceneManager.LoadScene("Credits");
+      AkSoundEngine.PostEvent("Stop_All", GameObject.Find("Music"));
+      StartCoroutine(LoadCredits(CreditsFadeTime));
+    }
+    
+    IEnumerator LoadCredits(float aTime)
+    {
+        GameObject.Find("Fade").DispatchEvent(Events.Fade, new FadeEvent(Color.black, aTime));
+        yield return new WaitForSeconds(aTime);
+        
+        // Unload SoundBanks
+        AkBankManager.UnloadBank("MainMenu");
+        AkBankManager.UnloadBank("Master");
+        
+        SceneManager.LoadScene("Credits");
+
     }
 
     void LoadLevel()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel(StartGameFadeTime));
     }
 
     public void LoadAt(int slot)
@@ -108,8 +139,12 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadLevel(float aTime)
     {
-        Instantiate(FadeScreeen, transform.parent);
+        GameObject.Find("Fade").DispatchEvent(Events.Fade, new FadeEvent(Color.black, aTime));
         yield return new WaitForSeconds(aTime);
+        
+        // Unload SoundBanks
+        AkBankManager.UnloadBank("MainMenu");
+        AkBankManager.UnloadBank("Master");
         
         SceneManager.LoadScene(MainLevel);
 

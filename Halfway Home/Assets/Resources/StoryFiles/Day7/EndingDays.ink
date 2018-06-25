@@ -32,6 +32,8 @@ EXTERNAL GetIntValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> Start
 
 === Start ===
@@ -396,5 +398,5 @@ They help me with my bags, and we pack them in the car.
 When I get in the back seat, I look back out at the Sunflower House. 
 I see my friends. #Isaac = calm #Eduardo = calm #Max = calm #Charlotte = calm #Trissa = calm
 Their all waving me off.
-then, roll credits
+then, roll credits # Play : play_music_farewell # music_vol ! 0
 ->END

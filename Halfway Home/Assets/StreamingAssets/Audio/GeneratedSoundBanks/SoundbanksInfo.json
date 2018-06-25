@@ -14,10 +14,28 @@
   "DialogueEvents": [],
   "StreamedFiles": [
    {
+    "Id": "11539498",
+    "Language": "SFX",
+    "ShortName": "mainMenu_b1_v0.5.wav",
+    "Path": "SFX\\mainMenu_b1_v0.5_A51F8DD7.wem"
+   },
+   {
+    "Id": "12620522",
+    "Language": "SFX",
+    "ShortName": "breakdownIntro2.wav",
+    "Path": "SFX\\breakdownIntro2_A51F8DD7.wem"
+   },
+   {
     "Id": "27878858",
     "Language": "SFX",
     "ShortName": "tension_stem_03.wav",
     "Path": "SFX\\tension_stem_03_A51F8DD7.wem"
+   },
+   {
+    "Id": "44147102",
+    "Language": "SFX",
+    "ShortName": "cafejazz.wav",
+    "Path": "SFX\\cafejazz_A51F8DD7.wem"
    },
    {
     "Id": "52885807",
@@ -32,6 +50,24 @@
     "Path": "SFX\\tension_stem_06_A51F8DD7.wem"
    },
    {
+    "Id": "178330536",
+    "Language": "SFX",
+    "ShortName": "Music1loop.wav",
+    "Path": "SFX\\Music1loop_A51F8DD7.wem"
+   },
+   {
+    "Id": "235618933",
+    "Language": "SFX",
+    "ShortName": "barble bapkins 1.6.wav",
+    "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
+   },
+   {
+    "Id": "297822875",
+    "Language": "SFX",
+    "ShortName": "creepy atmo v0.5.wav",
+    "Path": "SFX\\creepy atmo v0.5_A51F8DD7.wem"
+   },
+   {
     "Id": "315137795",
     "Language": "SFX",
     "ShortName": "tension_stem_04.wav",
@@ -44,6 +80,12 @@
     "Path": "SFX\\tension_stem_05_A51F8DD7.wem"
    },
    {
+    "Id": "461729800",
+    "Language": "SFX",
+    "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+    "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
+   },
+   {
     "Id": "497356856",
     "Language": "SFX",
     "ShortName": "tension_stem_07.wav",
@@ -54,16 +96,540 @@
     "Language": "SFX",
     "ShortName": "tension_stem_02.wav",
     "Path": "SFX\\tension_stem_02_A51F8DD7.wem"
+   },
+   {
+    "Id": "738802588",
+    "Language": "SFX",
+    "ShortName": "fake_it_til_you_break_it.wav",
+    "Path": "SFX\\fake_it_til_you_break_it_A51F8DD7.wem"
+   },
+   {
+    "Id": "825161100",
+    "Language": "SFX",
+    "ShortName": "breakdownIntroPads.wav",
+    "Path": "SFX\\breakdownIntroPads_A51F8DD7.wem"
+   },
+   {
+    "Id": "1025761080",
+    "Language": "SFX",
+    "ShortName": "loop_164661__adam-n__fire.wav",
+    "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
+   },
+   {
+    "Id": "1053142359",
+    "Language": "SFX",
+    "ShortName": "mysterious.wav",
+    "Path": "SFX\\mysterious_A51F8DD7.wem"
    }
   ],
   "MediaFilesNotInAnyBank": [],
   "SoundBanks": [
    {
-    "Id": "183294232",
+    "Id": "374987273",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Music\\MusicTension",
-    "ShortName": "MusicTension",
-    "Path": "MusicTension.bnk",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MusicMain",
+    "ShortName": "MusicMain",
+    "Path": "MusicMain.bnk"
+   },
+   {
+    "Id": "1355168291",
+    "Language": "SFX",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk"
+   },
+   {
+    "Id": "1576038406",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_memory",
+    "ShortName": "story_memory",
+    "Path": "story_memory.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1372805254",
+      "Name": "play_music_creepy_atmo",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo"
+     },
+     {
+      "Id": "2374614039",
+      "Name": "play_music_creepy_atmo_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo_02"
+     },
+     {
+      "Id": "4007606837",
+      "Name": "play_sfx_ambient_deaf",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_deaf"
+     },
+     {
+      "Id": "197627707",
+      "Name": "play_sfx_ambient_heartbeat",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
+     },
+     {
+      "Id": "2653434280",
+      "Name": "play_sfx_human_footsteps_approaching",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_footsteps_approaching"
+     },
+     {
+      "Id": "2124921401",
+      "Name": "play_sfx_human_ghostwhisper",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_ghostwhisper"
+     },
+     {
+      "Id": "1700209709",
+      "Name": "play_sfx_object_car_away",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_object_car_away"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "297822875"
+     },
+     {
+      "Id": "1053142359"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "69318974",
+      "Language": "SFX",
+      "ShortName": "Deaf.wav",
+      "Path": "SFX\\Deaf_CFE8DFE9.wem"
+     },
+     {
+      "Id": "318063250",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper2.wav",
+      "Path": "SFX\\ghostwhisper2_00FA84C2.wem"
+     },
+     {
+      "Id": "488681583",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper1.wav",
+      "Path": "SFX\\ghostwhisper1_00FA84C2.wem"
+     },
+     {
+      "Id": "541036875",
+      "Language": "SFX",
+      "ShortName": "sfx_object_car_away1.wav",
+      "Path": "SFX\\sfx_object_car_away1_00FA84C2.wem"
+     },
+     {
+      "Id": "541639029",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder1.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder1_00FA84C2.wem"
+     },
+     {
+      "Id": "865371990",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder2.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder2_00FA84C2.wem"
+     },
+     {
+      "Id": "1030560068",
+      "Language": "SFX",
+      "ShortName": "sfx_object_heartbeat.wav",
+      "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2201105581",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Credits",
+    "ShortName": "Credits",
+    "Path": "Credits.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2805407838",
+      "Name": "play_music_fakeit",
+      "ObjectPath": "\\Events\\PlayMusic\\music_fakeit\\play_music_fakeit"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "738802588"
+     }
+    ]
+   },
+   {
+    "Id": "2805282872",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_cafe",
+    "ShortName": "room_cafe",
+    "Path": "room_cafe.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "240662438",
+      "Name": "play_music_cafejazz",
+      "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\play_music_cafejazz"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "44147102"
+     }
+    ]
+   },
+   {
+    "Id": "3161908922",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+     },
+     {
+      "Id": "3827964327",
+      "Name": "play_menupause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
+     },
+     {
+      "Id": "4553038",
+      "Name": "play_menuunpause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
+     },
+     {
+      "Id": "319656260",
+      "Name": "play_textscroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800"
+     },
+     {
+      "Id": "1025761080"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "11926160",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_pausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_pausegame_54924078.wem"
+     },
+     {
+      "Id": "370198169",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_text_scroll1.wav",
+      "Path": "SFX\\sfx_menu_text_scroll1_00FA84C2.wem"
+     },
+     {
+      "Id": "558653419",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_unpausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_unpausegame_CC9C6E91.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3190558387",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Temp",
+    "ShortName": "Temp",
+    "Path": "Temp.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2152539480",
+      "Name": "lpf_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\lpf_ambience_fireplace"
+     },
+     {
+      "Id": "1799610860",
+      "Name": "lpf_music_cafejazz",
+      "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\lpf_music_cafejazz"
+     },
+     {
+      "Id": "1029258403",
+      "Name": "lpfOff_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\lpfOff_ambience_fireplace"
+     },
+     {
+      "Id": "3984512074",
+      "Name": "play_ambience_fireplace_with_lpf",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_with_lpf"
+     },
+     {
+      "Id": "2805601783",
+      "Name": "play_music_cafejazz_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\play_music_cafejazz_02"
+     },
+     {
+      "Id": "4092317258",
+      "Name": "play_music_farewell",
+      "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
+     },
+     {
+      "Id": "2156392148",
+      "Name": "play_music_happy_nointro",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy_nointro"
+     },
+     {
+      "Id": "3941181009",
+      "Name": "Play_music_placeholder_main_fadein",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main_fadein"
+     },
+     {
+      "Id": "829505847",
+      "Name": "Play_music_placeholder_main_with_fade",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main_with_fade"
+     },
+     {
+      "Id": "222627597",
+      "Name": "Play_music_placeholder_main_with_fade_and_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main_with_fade_and_fireplace"
+     },
+     {
+      "Id": "3637707742",
+      "Name": "play_music_sad",
+      "ObjectPath": "\\Events\\PlayMusic\\music_sad\\play_music_sad"
+     },
+     {
+      "Id": "1053457280",
+      "Name": "play_music_tension_stem_03",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_stem_03"
+     },
+     {
+      "Id": "1053457287",
+      "Name": "play_music_tension_stem_04",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_stem_04"
+     },
+     {
+      "Id": "1053457286",
+      "Name": "play_music_tension_stem_05",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_stem_05"
+     },
+     {
+      "Id": "1053457285",
+      "Name": "play_music_tension_stem_06",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_stem_06"
+     },
+     {
+      "Id": "1053457284",
+      "Name": "play_music_tension_stem_07",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_stem_07"
+     },
+     {
+      "Id": "3483334370",
+      "Name": "play_music_unfinished_business",
+      "ObjectPath": "\\Events\\PlayMusic\\music_unfinished_business\\play_music_unfinished_business"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "44147102"
+     },
+     {
+      "Id": "178330536"
+     },
+     {
+      "Id": "235618933"
+     },
+     {
+      "Id": "1025761080"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "457042621",
+      "Language": "SFX",
+      "ShortName": "You and I.wav",
+      "Path": "SFX\\You and I_A51F8DD7.wem"
+     },
+     {
+      "Id": "919138064",
+      "Language": "SFX",
+      "ShortName": "Farewell, Part I.wav",
+      "Path": "SFX\\Farewell, Part I_A51F8DD7.wem"
+     },
+     {
+      "Id": "1062005778",
+      "Language": "SFX",
+      "ShortName": "Starfish.wav",
+      "Path": "SFX\\Starfish_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3604647259",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu",
+    "ShortName": "MainMenu",
+    "Path": "MainMenu.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3373299806",
+      "Name": "lpf1k_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpf1k_music_mainmenu"
+     },
+     {
+      "Id": "3370483183",
+      "Name": "lpf4k_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpf4k_music_mainmenu"
+     },
+     {
+      "Id": "3897416341",
+      "Name": "lpfOff_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpfOff_music_mainmenu"
+     },
+     {
+      "Id": "1566693136",
+      "Name": "play_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\play_music_mainmenu"
+     },
+     {
+      "Id": "3152554426",
+      "Name": "stop_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\stop_music_mainmenu"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "11539498"
+     }
+    ]
+   },
+   {
+    "Id": "4021864313",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_knock_on_the_morning_door",
+    "ShortName": "story_knock_on_the_morning_door",
+    "Path": "story_knock_on_the_morning_door.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1829857455",
+      "Name": "play_music_dejavu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_dejavu\\play_music_dejavu"
+     },
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "3941181009",
+      "Name": "Play_music_placeholder_main_fadein",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main_fadein"
+     },
+     {
+      "Id": "188792618",
+      "Name": "play_sfx_bed_creak",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_bed_creak"
+     },
+     {
+      "Id": "2319499992",
+      "Name": "play_sfx_human_knock",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_knock"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536"
+     },
+     {
+      "Id": "235618933"
+     },
+     {
+      "Id": "1025761080"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "339768715",
+      "Language": "SFX",
+      "ShortName": "sfx_human_knock.wav",
+      "Path": "SFX\\sfx_human_knock_6D2D20DF.wem"
+     },
+     {
+      "Id": "741107735",
+      "Language": "SFX",
+      "ShortName": "BedCreak.wav",
+      "Path": "SFX\\BedCreak_00FA84C2.wem"
+     },
+     {
+      "Id": "917354306",
+      "Language": "SFX",
+      "ShortName": "DejaVu.wav",
+      "Path": "SFX\\DejaVu_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "4056684167",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
+    "ShortName": "Master",
+    "Path": "Master.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2576276897",
+      "Name": "play_menuclick",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuclick"
+     },
+     {
+      "Id": "3169174387",
+      "Name": "play_menuexit",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuexit"
+     },
+     {
+      "Id": "4008650974",
+      "Name": "play_menumouseover",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menumouseover"
+     },
+     {
+      "Id": "452547817",
+      "Name": "Stop_All",
+      "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+     },
+     {
+      "Id": "3032100830",
+      "Name": "Stop_All_Fast",
+      "ObjectPath": "\\Events\\PlayMusic\\Stop_All_Fast"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "302959056",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_exitgame.wav",
+      "Path": "SFX\\sfx_menu_chime_exitgame_EA8CCDE0.wem"
+     },
+     {
+      "Id": "950120731",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_button_mouseover.wav",
+      "Path": "SFX\\sfx_menu_button_mouseover_00FA84C2.wem"
+     }
+    ]
+   },
+   {
+    "Id": "4068719739",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_big_happy_family",
+    "ShortName": "story_big_happy_family",
+    "Path": "story_big_happy_family.bnk",
     "IncludedEvents": [
      {
       "Id": "4181321930",
@@ -74,9 +640,37 @@
       "Id": "1712470628",
       "Name": "play_music_tension",
       "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension"
+     },
+     {
+      "Id": "1402380571",
+      "Name": "play_music_tension_intro_01",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_01"
+     },
+     {
+      "Id": "1402380568",
+      "Name": "play_music_tension_intro_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_02"
+     },
+     {
+      "Id": "1402380569",
+      "Name": "play_music_tension_intro_03",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_03"
+     },
+     {
+      "Id": "1402380574",
+      "Name": "play_music_tension_intro_04",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_04"
+     },
+     {
+      "Id": "2883794594",
+      "Name": "stop_music_tension_intro_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\stop_music_tension_intro_02"
      }
     ],
     "ReferencedStreamedFiles": [
+     {
+      "Id": "12620522"
+     },
      {
       "Id": "27878858"
      },
@@ -97,54 +691,23 @@
      },
      {
       "Id": "689613253"
-     }
-    ]
-   },
-   {
-    "Id": "374987273",
-    "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Music\\MusicMain",
-    "ShortName": "MusicMain",
-    "Path": "MusicMain.bnk"
-   },
-   {
-    "Id": "1355168291",
-    "Language": "SFX",
-    "ObjectPath": "Init",
-    "ShortName": "Init",
-    "Path": "Init.bnk"
-   },
-   {
-    "Id": "3604647259",
-    "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu",
-    "ShortName": "MainMenu",
-    "Path": "MainMenu.bnk"
-   },
-   {
-    "Id": "4056684167",
-    "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
-    "ShortName": "Master",
-    "Path": "Master.bnk",
-    "IncludedEvents": [
-     {
-      "Id": "319656260",
-      "Name": "play_textscroll",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
      },
      {
-      "Id": "452547817",
-      "Name": "Stop_All",
-      "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+      "Id": "825161100"
      }
     ],
     "IncludedMemoryFiles": [
      {
-      "Id": "370198169",
+      "Id": "5413151",
       "Language": "SFX",
-      "ShortName": "sfx_menu_text_scroll1.wav",
-      "Path": "SFX\\sfx_menu_text_scroll1_1C9C67B2.wem"
+      "ShortName": "DissonantChords_02.wav",
+      "Path": "SFX\\DissonantChords_02_3A48A259.wem"
+     },
+     {
+      "Id": "792835110",
+      "Language": "SFX",
+      "ShortName": "DissonantChords_01.wav",
+      "Path": "SFX\\DissonantChords_01_3A48A259.wem"
      }
     ]
    }

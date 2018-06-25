@@ -24,10 +24,12 @@ EXTERNAL CharExit(nameString)
 EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> ArtRoomFunction
 
 === ArtRoomFunction ===
-[{player_name}] "So this is the art room." #Timothy = Calm # Play : Play_music_placeholder_main_fadein
+[{player_name}] "So this is the art room." #Timothy = Calm
 "The home puts up these art therapy sessions you can go for, if thats your jam or whatever."
 "In general it's always open to mess with stuff, if you want."
 [Timothy] "They've got a lot of um.... stuff... in here."

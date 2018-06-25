@@ -51,8 +51,8 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
 		What do they want?
 	- week == 2:
-		I wake with a start. # Depression => 25 # Play : Stop_All # Ambience : Stop_All # Background / YourRoom, EyeOpen
-		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
+		I wake with a start. # Depression => 25 # Play : Stop_All # ambience_vol ! -16 # Background / YourRoom, EyeOpen
+		I spend a few confused moments unsure of my reality before I grasp that I'm awake now. # Ambience : play_ambience_birds
 		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
 		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
 		I guess I've got to get ready to leave now, but I'm not really in a rush.
@@ -64,7 +64,7 @@ EXTERNAL SetValue(name, values)
 	-else:
 		The week has begun again.
 }
-I slowly creak out of my bed, and slump and lumber towards the door.
+I slowly creak out of my bed, and slump and lumber towards the door. # SFX : play_sfx_bed_creak
 [{player_name}] "I'm coming, I'm coming..."
 //turn off knocking. door opening sound?
 
@@ -79,7 +79,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.
 }
 
 ===Introductions===
-[Keyless>Max] "Hella yella, my {player_name} fella." # Keyless = Calm
+[Keyless>Max] "Hella yella, my {player_name} fella." # Keyless = Calm # Play : play_music_happy
 What?
 [{player_name}] "Huh?"
 "Ugh... @Morning, Max."
@@ -119,7 +119,7 @@ Timothy sighs dejectedly. Maybe he's used to this? // Could remove line
 -> TakingTimothy
 
 ===Again===
-What? # Keyless = Calm #Timothy=Calm
+What? # Keyless = Calm #Timothy=Calm # Play : play_music_dejavu
 [Keyless>Max] "Hella Yella, my {player_name} fella."
 [{player_name}] "huh?"
 D-didn't Max say that before?
@@ -197,7 +197,7 @@ This can't be happening. this can't be happening.
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
 [{player_name}] "So, um..." #Timothy = Stage_center
-Oh, man. I did not wake up expecting to be a tour guide today. Ce la vie.
+Oh, man. I did not wake up expecting to be a tour guide today. C'est la vie.
 I whip out my planner and jot down a reminder to myself, a habit my old therapist encouraged me to follow. # 0 & InProgress
 "Well, this is my room. Although, I guess it'll be <i>our</i> room for the time being."
 "You can come here if you want to just get away from it all and de-stress." # Stress * Show

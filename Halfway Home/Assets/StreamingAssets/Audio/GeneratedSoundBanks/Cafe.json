@@ -1,0 +1,39 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "3853951854",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\Cafe",
+    "ShortName": "Cafe",
+    "Path": "Cafe.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "240662438",
+      "Name": "play_music_cafejazz",
+      "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\play_music_cafejazz"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "44147102",
+      "Language": "SFX",
+      "ShortName": "cafejazz.wav",
+      "Path": "SFX\\cafejazz_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

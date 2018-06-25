@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}" SchemaVersion="80">
+	<GameParameters>
+		<WorkUnit Name="UI" ID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Sliders" ID="{4E2299DE-CBAC-4D25-ABB9-6C5C6A4FEA96}" ShortID="742602801">
+					<ChildrenList>
+						<GameParameter Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Main Menu" ID="{AE5B0610-C94A-431D-8D5D-24A9357330D4}" ShortID="273103631">
+					<ChildrenList>
+						<GameParameter Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}">
+							<Comment>-1 = Hovering over Quit or while Confirm Quit is open (LPF 1k)
+0 = Hovering over nothing (LPF 4k)
+1 = Hovering over New Game or Resume (LPF off)</Comment>
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+								<Property Name="Min" Type="Real64" Value="-1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -1,0 +1,31 @@
+Event	ID	Name			Wwise Object Path	Notes
+	222627597	Play_music_placeholder_main_with_fade_and_fireplace			\PlayMusic\music_placeholder_main\Play_music_placeholder_main_with_fade_and_fireplace	
+	829505847	Play_music_placeholder_main_with_fade			\PlayMusic\music_placeholder_main\Play_music_placeholder_main_with_fade	
+	1029258403	lpfOff_ambience_fireplace			\PlayMusic\intro_ambiences\lpfOff_ambience_fireplace	
+	1053457280	play_music_tension_stem_03			\PlayMusic\music_tension\play_music_tension_stem_03	
+	1053457284	play_music_tension_stem_07			\PlayMusic\music_tension\play_music_tension_stem_07	
+	1053457285	play_music_tension_stem_06			\PlayMusic\music_tension\play_music_tension_stem_06	
+	1053457286	play_music_tension_stem_05			\PlayMusic\music_tension\play_music_tension_stem_05	
+	1053457287	play_music_tension_stem_04			\PlayMusic\music_tension\play_music_tension_stem_04	
+	1720799084	stop_ambience_all			\PlayMusic\intro_ambiences\stop_ambience_all	
+	1799610860	lpf_music_cafejazz			\PlayMusic\music_cafejazz\lpf_music_cafejazz	
+	2152539480	lpf_ambience_fireplace			\PlayMusic\intro_ambiences\lpf_ambience_fireplace	
+	2156392148	play_music_happy_nointro			\PlayMusic\music_happy\play_music_happy_nointro	
+	2805601783	play_music_cafejazz_02			\PlayMusic\music_cafejazz\play_music_cafejazz_02	
+	3483334370	play_music_unfinished_business			\PlayMusic\music_unfinished_business\play_music_unfinished_business	
+	3637707742	play_music_sad			\PlayMusic\music_sad\play_music_sad	
+	3941181009	Play_music_placeholder_main_fadein			\PlayMusic\music_placeholder_main\Play_music_placeholder_main_fadein	
+	3984512074	play_ambience_fireplace_with_lpf			\PlayMusic\intro_ambiences\play_ambience_fireplace_with_lpf	
+	4092317258	play_music_farewell			\PlayMusic\music_farewell\play_music_farewell	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	457042621	You and I	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\You and I_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_farewell\music_farewell\You and I		1363890
+	919138064	Farewell, Part I	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Farewell, Part I_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_unfinished_business\music_unfinished_business\Farewell, Part I		1303107
+	1062005778	Starfish	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Starfish_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_sad\music_sad\Starfish		1977022
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	44147102	cafejazz	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\cafejazz_A51F8DD7.wem	44147102.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_cafejazz\music_cafejazz\cafejazz	
+	178330536	Music1loop	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy_nointro\music_happy_nointro\Music1loop	
+	235618933	barble bapkins 1_6	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
+	1025761080	loop_164661__adam-n__fire	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
+

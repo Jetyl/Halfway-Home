@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
       Type = type;
       FileName = fileName;
     }
-  };
+  }
 
   public class AudioParamEvent : Stratus.Event
   {
@@ -42,16 +42,35 @@ public class AudioManager : MonoBehaviour
       ParamValue = value;
     }
   }
+  
+  public class AudioBankEvent : Stratus.Event
+  {
+    public enum LoadType
+    {
+      Load,
+      Unload
+    };
+    public LoadType Type;
+    public string BankName;
+    
+    public AudioBankEvent(LoadType type, string bankName)
+    {
+      Type = type;
+      BankName = bankName;
+    }
+  }
 
   public AkAmbient SFXPlayer;
   public AkAmbient MusicPlayer;
   public AkAmbient AmbiencePlayer;
+  public SoundbankManager soundbankManager;
 
 	// Use this for initialization
 	void Start ()
   {
         Scene.Connect<AudioEvent>(OnAudioEvent);
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
+        Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
 
@@ -83,16 +102,52 @@ public class AudioManager : MonoBehaviour
   void OnAudioParamEvent(AudioParamEvent e)
   {
     AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
+    
+    Game currentGame = Game.current;
+    
+    switch (e.ParamName)
+    {
+      case "ambience_lpf":
+        currentGame.CurrentAmbienceLPF = e.ParamValue;
+        return;
+      case "ambience_vol":
+        currentGame.CurrentAmbienceVol = e.ParamValue;
+        return;
+      case "music_lpf":
+        currentGame.CurrentMusicLPF = e.ParamValue;
+        return;
+      case "music_tension_state":
+        currentGame.CurrentMusicTensionState = e.ParamValue;
+        return;
+      case "music_vol":
+        currentGame.CurrentMusicVol = e.ParamValue;
+        return;
+      case "text_vol":
+        currentGame.CurrentTextVol = e.ParamValue;
+        return;
+      default:
+        return;
+    }
+  }
+  
+  void OnAudioBankEvent(AudioBankEvent e)
+  {
+    AudioBankEvent.LoadType lt = e.Type;
+    if (lt == AudioBankEvent.LoadType.Load)
+      soundbankManager.LoadBank(e.BankName, false);
+    else if (lt == AudioBankEvent.LoadType.Unload)
+      soundbankManager.UnloadBank(e.BankName);
   }
 
   void OnLoad(DefaultEvent eventdata)
   {
+    Game currentGame = Game.current;
     
-    if (Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
+    if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
     {
       Trace.Script($"Loading music {Game.current.CurrentTrack}");
       AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-      AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
+      AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
     }
     else
     {
@@ -100,17 +155,25 @@ public class AudioManager : MonoBehaviour
       AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
     }
     
-    if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
+    if (currentGame.CurrentAmbience != "" && currentGame.CurrentAmbience != "Stop_All")
     {
       Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-      AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
+      AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
     }
     else
     {
       Trace.Script("Stopping Ambience");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
     }
+    
+    // Reset RTPC values
+    AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);
+    AkSoundEngine.SetRTPCValue("ambience_vol", currentGame.CurrentAmbienceVol);
+    AkSoundEngine.SetRTPCValue("music_lpf", currentGame.CurrentMusicLPF);
+    AkSoundEngine.SetRTPCValue("music_tension_state", currentGame.CurrentMusicTensionState);
+    AkSoundEngine.SetRTPCValue("music_vol", currentGame.CurrentMusicVol);
+    AkSoundEngine.SetRTPCValue("text_vol", currentGame.CurrentTextVol);
   }
 
   public void StopEverything()

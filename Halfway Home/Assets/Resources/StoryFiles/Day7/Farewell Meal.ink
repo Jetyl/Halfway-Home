@@ -21,10 +21,12 @@ VAR current_room = "unset"
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 
+# Play : Stop_All
+
 -> Start
 
 === Start ===
-I'm called to the kitchen for my farewell meal.
+I'm called to the kitchen for my farewell meal. # Ambience : play_ambience_fireplace # ambience_vol ! 0
 I walk in seeing everyone chatting and having a good time.
 Acting like everything is okay. // Should only happen if Timothy not helped
 Trissa is chatting up Jesse and John at the center table.

@@ -87,6 +87,10 @@ namespace HalfwayHome
       // RTPC Change
       string changeAudioParam = RegexParser.Presets.ComposeBinaryOperation("Param", "value", "!");
       parser.AddPattern("AudioParamSet", changeAudioParam, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioParamSet);
+      
+      // Audio Bank Load/Unload
+      string loadBank = RegexParser.Presets.ComposeBinaryOperation("Mode", "Bank", "@");
+      parser.AddPattern("BankLoad", loadBank, RegexParser.Target.Tag, RegexParser.Scope.Group, OnBankLoad);
 
       // Background Change
       string setBackground = RegexParser.Presets.ComposeBinaryOperation("Background", "Image", "/");
@@ -404,6 +408,23 @@ namespace HalfwayHome
         {
           Trace.Script($"Set {parse.FindFirst("Param").Trim()} parameter to {parse.FindFirst("value").Trim()}");
           Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(parse.FindFirst("Param").Trim(), float.Parse(parse.FindFirst("value"))));
+        }
+      }
+    }
+    
+    void OnBankLoad (Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match["Mode"].Trim().ToLower() == "load")
+        {
+          Trace.Script($"Loading {parse.FindFirst("Bank").Trim()} bank");
+          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, parse.FindFirst("Bank"))); 
+        }
+        else if (match["Mode"].Trim().ToLower() == "unload")
+        {
+          Trace.Script($"Unloading {parse.FindFirst("Bank").Trim()} bank");
+          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, parse.FindFirst("Bank"))); 
         }
       }
     }

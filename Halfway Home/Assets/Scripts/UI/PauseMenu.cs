@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ToDoPage;
     public GameObject SavePage;
     public GameObject LoadPage;
+    public float QuitFadeTime = 2.0f;
 
     bool Quiting;
 
@@ -61,6 +62,8 @@ public class PauseMenu : MonoBehaviour
 
         if(data != null)
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().StopEverything();
+            
             Game.current = data;
             ReaderReference.Clear();
             //ReaderReference.LoadSave();
@@ -157,6 +160,19 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnToMain()
     {
+        StartCoroutine("Quitting");
+    }
+    
+    // For fading out when returning to title
+    IEnumerator Quitting()
+    {
+        GameObject.Find("Fade").DispatchEvent(Events.Fade, new FadeEvent(Color.black, QuitFadeTime));
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().StopEverything();
+        
+        yield return new WaitForSeconds(QuitFadeTime);
+        
+        GameObject.Find("AudioManager").GetComponent<SoundbankManager>().UnloadAllBanks();
+        
         SceneManager.LoadScene(0);
     }
 

@@ -6,7 +6,7 @@
 				<ActorMixer Name="SFX" ID="{D4CBD38C-7A18-4757-96D4-EB154D021898}" ShortID="939546782">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+							<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
@@ -42,7 +42,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -66,6 +66,13 @@
 								</Sound>
 								<Sound Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" ShortID="744289837">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BE679E19-DEC3-4ABA-819A-DD178D939ED0}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
@@ -82,6 +89,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_menu_chime_pausegame" ID="{32864A87-D59A-438F-A15E-9341B2A8BB02}" ShortID="11926160">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="5.73542088397928E-02"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>sfx_menu_chime_pausegame.wav</AudioFile>
 										</AudioFileSource>
@@ -90,11 +100,18 @@
 										<ActiveSource Name="sfx_menu_chime_pausegame" ID="{32864A87-D59A-438F-A15E-9341B2A8BB02}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="sfx_menu_chime_exitgame" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" ShortID="583293960">
+								<Sound Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" ShortID="583293960">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EEC40902-B82A-483A-BB7A-365D766C1006}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -108,6 +125,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_menu_chime_exitgame" ID="{88438FDF-EB7E-4FD3-8779-BDB6229B6DBC}" ShortID="302959056">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.336868167225883"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.44069676327462E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.421275134858629"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>sfx_menu_chime_exitgame.wav</AudioFile>
 										</AudioFileSource>
@@ -146,6 +168,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_menu_chime_unpausegame" ID="{A7BBC937-8086-468D-B85B-A96B21CB82CC}" ShortID="558653419">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="3.13363637013432E-02"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>sfx_menu_chime_unpausegame.wav</AudioFile>
 										</AudioFileSource>
@@ -155,12 +180,27 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" ShortID="835502543">
+									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{60D65194-2119-4677-A0F7-7AE8130C82D4}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -175,6 +215,14 @@
 								</Sound>
 								<Sound Name="sfx_menu_text_scroll" ID="{D9C11BC5-D4F3-4E27-AF4F-22D8BF874C2E}" ShortID="377016742">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9E827777-8EA0-4F46-88CE-4BF893516E23}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-7</Value>
@@ -186,7 +234,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -200,6 +248,45 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_menu_text_scroll" ID="{54EBAD37-6E3F-4E28-902A-3AE02F00C8FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" ShortID="1053965515">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>400</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_menu_chime_exitgame" ID="{1DF8253E-223F-4282-AE07-269D988D4FB9}" ShortID="99140581">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.336868167225883"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.44069676327462E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.421275134858629"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_menu_chime_exitgame.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="302959056"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_menu_chime_exitgame" ID="{1DF8253E-223F-4282-AE07-269D988D4FB9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -295,10 +382,16 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" ShortID="191514378">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>30</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{347C1320-EC3D-4785-86E5-09835D87C2BC}"/>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -308,7 +401,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
@@ -326,6 +419,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sfx_human_knock" ID="{E24B789A-03D1-41E1-B78D-BF9E4572F162}" ShortID="339768715">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.063876488095238"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sfx_human_knock.wav</AudioFile>
 												</AudioFileSource>
@@ -337,6 +433,15 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="sfx_human_ghostwhisper" ID="{78556E65-9541-49F8-A01B-4B511E2A0177}" ShortID="820541996">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3E835E78-D591-439F-A136-24E09223BDE9}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -401,6 +506,14 @@
 								<Sound Name="sfx_ambient_heartbeat" ID="{F9DBE848-54C7-4FE1-BB28-FC69898E79B1}" ShortID="496306924">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1D599A51-235A-47A6-A790-FEDA888EF843}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-4</Value>
@@ -409,7 +522,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
@@ -423,6 +536,33 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_object_heartbeat" ID="{AD13877C-AF71-4846-8995-79B8F6F75A55}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_ambient_deaf" ID="{D695B788-5A5D-4699-92DD-B96EB0DA2707}" ShortID="1034512372">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Deaf" ID="{B174129B-49B6-4790-BCD5-451DAD4CEFBA}" ShortID="69318974">
+											<Language>SFX</Language>
+											<AudioFile>Deaf.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Deaf" ID="{B174129B-49B6-4790-BCD5-451DAD4CEFBA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -439,6 +579,16 @@
 							<ChildrenList>
 								<Sound Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" ShortID="516277094">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{44CF7513-AE13-4B24-8C6B-A513C82AD0DA}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -476,11 +626,39 @@
 										<ActiveSource Name="sfx_object_car_away1" ID="{8278DE30-E32C-4BD9-9EF6-089E57D7AF39}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" ShortID="357545396">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BedCreak" ID="{F8259BB9-068D-4EB0-87EF-BFEAADFC9836}" ShortID="741107735">
+											<Language>SFX</Language>
+											<AudioFile>BedCreak.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BedCreak" ID="{F8259BB9-068D-4EB0-87EF-BFEAADFC9836}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="music_tension" ID="{69C1A8FC-2657-4297-A9D1-BB036A496FD5}" ShortID="48699679">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{658B793E-761F-4FC4-84F4-04AC81A72F32}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Music" ID="{51864662-EB6D-45D8-94ED-B565C2282B21}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
