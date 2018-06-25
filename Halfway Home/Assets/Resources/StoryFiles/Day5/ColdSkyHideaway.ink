@@ -27,10 +27,12 @@ EXTERNAL GetValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(time)
 
+# Play : Stop_All
+
 -> Start
 
 === Start ===
-I step out into the gardens. its rather cold out tonight.
+I step out into the gardens. its rather cold out tonight. # Ambience : play_ambience_fireplace # ambience_lpf ! 0
 There isn't a single star in sky tonight.
 { 
 	

@@ -24,10 +24,12 @@ EXTERNAL CharExit(nameString)
 EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> LibraryFunction
 
 === LibraryFunction ===
-[{player_name}] "And here's the library." #Timothy = Calm # Play : Play_music_placeholder_main_fadein
+[{player_name}] "And here's the library." #Timothy = Calm
 "They have a whole stock of fiction and non-fiction stuff here, for all your literary needs"
 "There's also a book club that meets a few times a week"
 [Timothy] "It's... um... a little claustrophobic in here."

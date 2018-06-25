@@ -19,6 +19,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="play_sfx_ambient_deaf" ID="{2A8A9D72-C0E1-4662-AD52-478F8B16D7B5}">
+							<ChildrenList>
+								<Action Name="" ID="{EEE1A139-545A-451A-8C2F-BD27EB1CBCBB}" ShortID="48032085">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_ambient_deaf" ID="{D695B788-5A5D-4699-92DD-B96EB0DA2707}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="sfx_menu" ID="{95F40ABC-190F-4DC6-B80F-366EC97824D8}" ShortID="189819598">
@@ -166,6 +180,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_bed_creak" ID="{79AFBEAF-E089-4B9F-BB69-B792B61FB160}">
+							<ChildrenList>
+								<Action Name="" ID="{ADA3C7DF-4E7E-4D03-93C9-A4DC295AB4D8}" ShortID="1051776252">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -28,9 +28,40 @@
       "Id": "1712470628",
       "Name": "play_music_tension",
       "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension"
+     },
+     {
+      "Id": "1402380571",
+      "Name": "play_music_tension_intro_01",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_01"
+     },
+     {
+      "Id": "1402380568",
+      "Name": "play_music_tension_intro_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_02"
+     },
+     {
+      "Id": "1402380569",
+      "Name": "play_music_tension_intro_03",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_03"
+     },
+     {
+      "Id": "1402380574",
+      "Name": "play_music_tension_intro_04",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension_intro_04"
+     },
+     {
+      "Id": "2883794594",
+      "Name": "stop_music_tension_intro_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\stop_music_tension_intro_02"
      }
     ],
     "ReferencedStreamedFiles": [
+     {
+      "Id": "12620522",
+      "Language": "SFX",
+      "ShortName": "breakdownIntro2.wav",
+      "Path": "SFX\\breakdownIntro2_A51F8DD7.wem"
+     },
      {
       "Id": "27878858",
       "Language": "SFX",
@@ -72,6 +103,26 @@
       "Language": "SFX",
       "ShortName": "tension_stem_02.wav",
       "Path": "SFX\\tension_stem_02_A51F8DD7.wem"
+     },
+     {
+      "Id": "825161100",
+      "Language": "SFX",
+      "ShortName": "breakdownIntroPads.wav",
+      "Path": "SFX\\breakdownIntroPads_A51F8DD7.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "5413151",
+      "Language": "SFX",
+      "ShortName": "DissonantChords_02.wav",
+      "Path": "SFX\\DissonantChords_02_3A48A259.wem"
+     },
+     {
+      "Id": "792835110",
+      "Language": "SFX",
+      "ShortName": "DissonantChords_01.wav",
+      "Path": "SFX\\DissonantChords_01_3A48A259.wem"
      }
     ]
    }

@@ -41,6 +41,13 @@
 						<Property Name="Min" Type="Real64" Value="-200"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="200"/>
+						<Property Name="Min" Type="Real64" Value="-200"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

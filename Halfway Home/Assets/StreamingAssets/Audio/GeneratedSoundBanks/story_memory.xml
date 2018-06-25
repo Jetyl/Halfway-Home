@@ -13,33 +13,32 @@
 			<ShortName>story_memory</ShortName>
 			<Path>story_memory.bnk</Path>
 			<IncludedEvents>
-				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
-				<Event Id="2929977910" Name="play_ambience_fireplace" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace"/>
+				<Event Id="1372805254" Name="play_music_creepy_atmo" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo"/>
+				<Event Id="2374614039" Name="play_music_creepy_atmo_02" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02"/>
+				<Event Id="4007606837" Name="play_sfx_ambient_deaf" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_deaf"/>
 				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching"/>
 				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
-				<Event Id="2319499992" Name="play_sfx_human_knock" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_knock"/>
 				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_object_car_away"/>
-				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\intro_ambiences\stop_ambience_all"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="461729800" Language="SFX">
-					<ShortName>loop_hpf_10k_BirdsAmbience 6102_54.wav</ShortName>
-					<Path>SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem</Path>
+				<File Id="297822875" Language="SFX">
+					<ShortName>creepy atmo v0.5.wav</ShortName>
+					<Path>SFX\creepy atmo v0.5_A51F8DD7.wem</Path>
 				</File>
-				<File Id="1025761080" Language="SFX">
-					<ShortName>loop_164661__adam-n__fire.wav</ShortName>
-					<Path>SFX\loop_164661__adam-n__fire_178D0C9C.wem</Path>
+				<File Id="1053142359" Language="SFX">
+					<ShortName>mysterious.wav</ShortName>
+					<Path>SFX\mysterious_A51F8DD7.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
+				<File Id="69318974" Language="SFX">
+					<ShortName>Deaf.wav</ShortName>
+					<Path>SFX\Deaf_CFE8DFE9.wem</Path>
+				</File>
 				<File Id="318063250" Language="SFX">
 					<ShortName>ghostwhisper2.wav</ShortName>
 					<Path>SFX\ghostwhisper2_00FA84C2.wem</Path>
-				</File>
-				<File Id="339768715" Language="SFX">
-					<ShortName>sfx_human_knock.wav</ShortName>
-					<Path>SFX\sfx_human_knock_00FA84C2.wem</Path>
 				</File>
 				<File Id="488681583" Language="SFX">
 					<ShortName>ghostwhisper1.wav</ShortName>
@@ -59,7 +58,7 @@
 				</File>
 				<File Id="1030560068" Language="SFX">
 					<ShortName>sfx_object_heartbeat.wav</ShortName>
-					<Path>SFX\sfx_object_heartbeat_178D0C9C.wem</Path>
+					<Path>SFX\sfx_object_heartbeat_FC95F567.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

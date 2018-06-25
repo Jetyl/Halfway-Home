@@ -69,6 +69,7 @@ public class Game
     
     // Current RTPC values
     public float CurrentAmbienceLPF;
+    public float CurrentAmbienceVol;
     public float CurrentMusicLPF;
     public float CurrentMusicTensionState;
     public float CurrentMusicVol;
@@ -215,6 +216,7 @@ public class Game
         
         // Current RTPC values
         CurrentAmbienceLPF = copy_.CurrentAmbienceLPF;
+        CurrentAmbienceVol = copy_.CurrentAmbienceVol;
         CurrentMusicLPF = copy_.CurrentMusicLPF;
         CurrentMusicTensionState = copy_.CurrentMusicTensionState;
         CurrentMusicVol = copy_.CurrentMusicVol;

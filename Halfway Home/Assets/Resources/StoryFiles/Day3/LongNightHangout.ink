@@ -32,12 +32,14 @@ EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 
+# Play : Stop_All
+
 -> Start
 
 === Start ===
 I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
-Walking in, I spy Eduardo and Isaac as the only ones in the room. 
+Walking in, I spy Eduardo and Isaac as the only ones in the room.  # Ambience : play_ambience_fireplace # ambience_lpf ! 0
 [Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, happy_u, hrm_Up
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, You know, chilling, shooting the sh-"

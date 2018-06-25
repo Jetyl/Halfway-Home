@@ -22,11 +22,12 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL CallSleep()
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
 
 -> Start
 
 === Start ===
-[Max] "Are y'all still asleep in there?" //knock noise # Play : Play_music_placeholder_main_fadein
+[Max] "Are y'all still asleep in there?" //knock noise
 uuuugh.... #Background / YourRoom, eyeopen
 Max—and I know its Max—is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "!" #Max = Surprised

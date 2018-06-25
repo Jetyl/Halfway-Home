@@ -134,6 +134,16 @@
 						</Event>
 						<Event Name="play_music_tension" ID="{635B0651-40CB-4826-8EFB-A84713ACCAD8}">
 							<ChildrenList>
+								<Action Name="" ID="{4E4494F7-218A-41BD-A47E-A007F5252B45}" ShortID="189255550">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DissonantChords_02" ID="{8106DA72-0828-4CA9-9299-265EA3760213}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{357B2845-96D9-4230-8373-C875BB80D266}" ShortID="688915872">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -923,21 +933,11 @@
 								<Action Name="" ID="{2C3C7907-4502-4990-A8DA-1C44685C09AA}" ShortID="914581684">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_placeholder" ID="{93556F48-2D81-4D87-BF4A-B65FB9E723DA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{9B700A7F-4F35-4EA0-95A7-162BE91109DE}" ShortID="745270828">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="music_placeholder_main" ID="{0CD7E530-C494-4508-96A4-D677F07CA3CC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1193,6 +1193,92 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_fakeit" ID="{6B673475-2E7C-48B5-90A1-E94AB638347B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Stop_All_Fast" ID="{C6A10C8A-5723-4612-966E-7CC27EA11A98}">
+					<ChildrenList>
+						<Action Name="" ID="{D4382D1E-40F9-41BB-AAB4-BA3375AE3B0C}" ShortID="205728247">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="music_dejavu" ID="{1C17EF6B-476A-4561-9CA8-977C37B2FD6C}" ShortID="279030928">
+					<ChildrenList>
+						<Event Name="play_music_dejavu" ID="{8DB5E002-D7FB-4A5F-BD04-79618F25E533}">
+							<ChildrenList>
+								<Action Name="" ID="{186420B8-BC9B-416B-B25F-303947206751}" ShortID="938527942">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_dejavu" ID="{9FB2FA38-6E8E-40DD-9E6C-1F7244A9F274}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="music_sad" ID="{7C0B2E57-7E1D-4095-9A50-B3729EE852E3}" ShortID="55650948">
+					<ChildrenList>
+						<Event Name="play_music_sad" ID="{E51D4B2F-8A7B-42A7-AE1F-4C1994400B9F}">
+							<ChildrenList>
+								<Action Name="" ID="{BCD95288-2538-4AAC-AC7C-F882198A8FD3}" ShortID="999453915">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_sad" ID="{2B185B87-72A7-49F4-922B-E9E1112BE050}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="music_unfinished_business" ID="{49369296-9CF5-412C-9292-B8D60DCF6CF7}" ShortID="561993569">
+					<ChildrenList>
+						<Event Name="play_music_unfinished_business" ID="{88946199-F2C6-47CA-9949-3EC1F6EE4EFC}">
+							<ChildrenList>
+								<Action Name="" ID="{EFEC765B-D015-4CD8-9BF8-A89399816F3B}" ShortID="250934145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_unfinished_business" ID="{56E0DF1A-0126-47E4-8C3A-219492EF6D02}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="music_farewell" ID="{17F3E550-05B8-4939-B3C3-F2831C6EC7ED}" ShortID="361902154">
+					<ChildrenList>
+						<Event Name="play_music_farewell" ID="{CAEEF854-4D73-47CC-B6D6-0BF31E1FE2D9}">
+							<ChildrenList>
+								<Action Name="" ID="{EE9B877D-7320-40D7-818C-C441DF279CA9}" ShortID="926500850">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_farewell" ID="{AA92E78A-3063-4DBD-811D-A1EB76558783}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

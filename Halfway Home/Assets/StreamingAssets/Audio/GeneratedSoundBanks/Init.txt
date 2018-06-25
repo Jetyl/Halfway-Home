@@ -8,6 +8,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2789278851	music_tension_state			\Default Work Unit\music_tension_state	
 	2886374787	Effects_Slider			\UI\Sliders\Effects_Slider	
 	2902037724	Menu_Slider			\UI\Sliders\Menu_Slider	
+	4035164671	ambience_vol			\Default Work Unit\ambience_vol	
 	4047808182	ambience_lpf			\Default Work Unit\ambience_lpf	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

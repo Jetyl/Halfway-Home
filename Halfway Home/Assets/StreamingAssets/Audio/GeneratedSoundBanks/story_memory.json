@@ -20,14 +20,19 @@
     "Path": "story_memory.bnk",
     "IncludedEvents": [
      {
-      "Id": "285561943",
-      "Name": "play_ambience_birds",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+      "Id": "1372805254",
+      "Name": "play_music_creepy_atmo",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo"
      },
      {
-      "Id": "2929977910",
-      "Name": "play_ambience_fireplace",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+      "Id": "2374614039",
+      "Name": "play_music_creepy_atmo_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo_02"
+     },
+     {
+      "Id": "4007606837",
+      "Name": "play_sfx_ambient_deaf",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_deaf"
      },
      {
       "Id": "197627707",
@@ -45,47 +50,37 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_ghostwhisper"
      },
      {
-      "Id": "2319499992",
-      "Name": "play_sfx_human_knock",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_knock"
-     },
-     {
       "Id": "1700209709",
       "Name": "play_sfx_object_car_away",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_object_car_away"
-     },
-     {
-      "Id": "1720799084",
-      "Name": "stop_ambience_all",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
      }
     ],
     "ReferencedStreamedFiles": [
      {
-      "Id": "461729800",
+      "Id": "297822875",
       "Language": "SFX",
-      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
-      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
+      "ShortName": "creepy atmo v0.5.wav",
+      "Path": "SFX\\creepy atmo v0.5_A51F8DD7.wem"
      },
      {
-      "Id": "1025761080",
+      "Id": "1053142359",
       "Language": "SFX",
-      "ShortName": "loop_164661__adam-n__fire.wav",
-      "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
+      "ShortName": "mysterious.wav",
+      "Path": "SFX\\mysterious_A51F8DD7.wem"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "69318974",
+      "Language": "SFX",
+      "ShortName": "Deaf.wav",
+      "Path": "SFX\\Deaf_CFE8DFE9.wem"
+     },
      {
       "Id": "318063250",
       "Language": "SFX",
       "ShortName": "ghostwhisper2.wav",
       "Path": "SFX\\ghostwhisper2_00FA84C2.wem"
-     },
-     {
-      "Id": "339768715",
-      "Language": "SFX",
-      "ShortName": "sfx_human_knock.wav",
-      "Path": "SFX\\sfx_human_knock_00FA84C2.wem"
      },
      {
       "Id": "488681583",
@@ -115,7 +110,7 @@
       "Id": "1030560068",
       "Language": "SFX",
       "ShortName": "sfx_object_heartbeat.wav",
-      "Path": "SFX\\sfx_object_heartbeat_178D0C9C.wem"
+      "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
      }
     ]
    }

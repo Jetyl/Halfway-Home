@@ -20,6 +20,8 @@ VAR current_room = "unset"
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> Start
 
 === Start ===
@@ -87,7 +89,7 @@ Once we do have all the stuff, we go back to the bathroom to get the hair dying 
 ->TimeToDye
 
 ===TimeToDye===
-I ask Timothy what color he wants. he says blue.
+I ask Timothy what color he wants. he says blue. # Play : play_music_happy # music_vol ! 0
 I help him put the material in his hair, and the sealing.
 Once its in, we have to wait a bit. We have a bit of a heart to heart as to the why he wanted this so badly.
 Time advances #time % 3

@@ -15,9 +15,16 @@
    {
     "Id": "374987273",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Music\\MusicMain",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MusicMain",
     "ShortName": "MusicMain",
-    "Path": "MusicMain.bnk"
+    "Path": "MusicMain.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3032100830",
+      "Name": "Stop_All_Fast",
+      "ObjectPath": "\\Events\\PlayMusic\\Stop_All_Fast"
+     }
+    ]
    }
   ]
  }

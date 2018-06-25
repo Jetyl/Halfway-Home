@@ -93,16 +93,16 @@ I leave to head to the cafe, where Max said they would be. It's not hard to find
 Max is here, mopping lethargically. # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?" # ambience_lpf ! 53
 What? They're joking, right? I just got here... There's no way I lost a whole week. # music_lpf ! 60
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit
-Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.
-But they're gone...
-A chill runs down my spine. What's going on?
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # Ambience: Stop_All
+Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max. # play : Stop_All
+But they're gone... # Play : Stop_All_Fast # music_lpf ! 0
+A chill runs down my spine. What's going on? # Ambience : Stop_All_Fast
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02 # music_lpf ! 0
-When did it get dark out? Is it night already?
-Max is reading by the fireplace. I wander over and join them. # Max = Calm
+I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
+When did it get dark out? Is it night already? # ambience_lpf ! 17
+Max is reading by the fireplace. I wander over and join them. # Max = Calm # Ambience : play_ambience_fireplace
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?" # Max = Surprised
@@ -121,10 +121,10 @@ Max is reading by the fireplace. I wander over and join them. # Max = Calm
 -Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
-My body rises from my seat and stumbles toward my bedroom. # Max = Exit
-All sound seems to fall away as my hand pulls open the door.
-Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo # Ambience : stop_ambience_all
-A chorus of whispers rises out of the darkness.
+My body rises from my seat and stumbles toward my bedroom. # Max = Exit # Ambience : Stop_All
+All sound seems to fall away as my hand pulls open the door. # SFX : play_sfx_ambient_deaf
+Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars. #Background / Dream, Crossfade # Play : play_music_creepy_atmo
+A chorus of whispers rises out of the darkness. # ambience_lpf ! 0
 [Voices] "Pitiful. Powerless. Pointless." # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me. # Ambience : play_sfx_ambient_heartbeat
 [Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
@@ -157,12 +157,12 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface. # Ambience : stop_ambience_all
-[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper # Load @ knock_on_the_morning_door
+[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper # Load @ story_knock_on_the_morning_door # ambience_vol ! -11
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen # Time * Show # Unload @ memory
-The whispers fade into the chitter of birdsong. # music_vol ! -6
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main_fadein # Background / YourRoom, EyeOpen # Time * Show # Unload @ story_memory
+The whispers fade into the chitter of birdsong. # Ambience : play_ambience_birds # music_vol ! -6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

@@ -22,6 +22,8 @@ EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 EXTERNAL SetTimeBlock(int)
 
+# Play : play_music_sad # music_vol ! 0
+
 -> Start
 
 === Start ===

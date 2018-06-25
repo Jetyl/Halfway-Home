@@ -28,6 +28,8 @@ EXTERNAL GetIntValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(int)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> Start
 
 === Start ===

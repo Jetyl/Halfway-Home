@@ -25,10 +25,12 @@ EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 
+# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+
 -> CommonsFunction
 
 === CommonsFunction ===
-[{player_name}] "This is the Commons!" #Timothy = Calm # Play : Play_music_happy_nointro
+[{player_name}] "This is the Commons!" #Timothy = Calm
 "You probably already came through here to get to our room."
 [Timothy] "Yeah..."
 [{player_name}] "Anyway, this is sort of a big hub area."

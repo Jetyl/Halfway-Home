@@ -1,8 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1402380568	play_music_tension_intro_02			\PlayMusic\music_tension\play_music_tension_intro_02	
+	1402380569	play_music_tension_intro_03			\PlayMusic\music_tension\play_music_tension_intro_03	
+	1402380571	play_music_tension_intro_01			\PlayMusic\music_tension\play_music_tension_intro_01	
+	1402380574	play_music_tension_intro_04			\PlayMusic\music_tension\play_music_tension_intro_04	
 	1712470628	play_music_tension			\PlayMusic\music_tension\play_music_tension	
+	2883794594	stop_music_tension_intro_02			\PlayMusic\music_tension\stop_music_tension_intro_02	
 	4181321930	music_loop_test			\PlayMusic\test\music_loop_test	
 
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5413151	DissonantChords_02	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\DissonantChords_02_3A48A259.wem		\Actor-Mixer Hierarchy\Default Work Unit\music_tension\DissonantChords_02		213608
+	792835110	DissonantChords_01	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\DissonantChords_01_3A48A259.wem		\Actor-Mixer Hierarchy\Default Work Unit\music_tension\DissonantChords_01		235581
+
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	12620522	breakdownIntro2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\breakdownIntro2_A51F8DD7.wem	12620522.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension_intro_02\music_tension_intro_02\breakdownIntro2	
 	27878858	tension_stem_03	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_03_A51F8DD7.wem	27878858.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_03	
 	52885807	tension_stem_01	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_01_A51F8DD7.wem	52885807.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_01	
 	108982980	tension_stem_06	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_06_A51F8DD7.wem	108982980.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_06	
@@ -10,4 +20,5 @@ Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	
 	382105759	tension_stem_05	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_05_A51F8DD7.wem	382105759.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_05	
 	497356856	tension_stem_07	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_07_A51F8DD7.wem	497356856.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_07	
 	689613253	tension_stem_02	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\tension_stem_02_A51F8DD7.wem	689613253.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension\music_tension_intro\tension_stem_02	
+	825161100	breakdownIntroPads	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\breakdownIntroPads_A51F8DD7.wem	825161100.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_tension_intro_01\music_tension_intro_01\breakdownIntroPads	
 

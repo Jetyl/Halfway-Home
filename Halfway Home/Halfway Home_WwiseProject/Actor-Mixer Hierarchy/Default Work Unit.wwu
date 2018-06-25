@@ -382,6 +382,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" ShortID="191514378">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>30</Value>
@@ -400,7 +401,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
@@ -418,6 +419,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sfx_human_knock" ID="{E24B789A-03D1-41E1-B78D-BF9E4572F162}" ShortID="339768715">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.063876488095238"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sfx_human_knock.wav</AudioFile>
 												</AudioFileSource>
@@ -502,6 +506,7 @@
 								<Sound Name="sfx_ambient_heartbeat" ID="{F9DBE848-54C7-4FE1-BB28-FC69898E79B1}" ShortID="496306924">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -517,7 +522,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
@@ -531,6 +536,33 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_object_heartbeat" ID="{AD13877C-AF71-4846-8995-79B8F6F75A55}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_ambient_deaf" ID="{D695B788-5A5D-4699-92DD-B96EB0DA2707}" ShortID="1034512372">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Deaf" ID="{B174129B-49B6-4790-BCD5-451DAD4CEFBA}" ShortID="69318974">
+											<Language>SFX</Language>
+											<AudioFile>Deaf.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Deaf" ID="{B174129B-49B6-4790-BCD5-451DAD4CEFBA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -592,6 +624,25 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_object_car_away1" ID="{8278DE30-E32C-4BD9-9EF6-089E57D7AF39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" ShortID="357545396">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BedCreak" ID="{F8259BB9-068D-4EB0-87EF-BFEAADFC9836}" ShortID="741107735">
+											<Language>SFX</Language>
+											<AudioFile>BedCreak.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BedCreak" ID="{F8259BB9-068D-4EB0-87EF-BFEAADFC9836}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

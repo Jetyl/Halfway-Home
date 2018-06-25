@@ -110,6 +110,9 @@ public class AudioManager : MonoBehaviour
       case "ambience_lpf":
         currentGame.CurrentAmbienceLPF = e.ParamValue;
         return;
+      case "ambience_vol":
+        currentGame.CurrentAmbienceVol = e.ParamValue;
+        return;
       case "music_lpf":
         currentGame.CurrentMusicLPF = e.ParamValue;
         return;
@@ -166,6 +169,7 @@ public class AudioManager : MonoBehaviour
     
     // Reset RTPC values
     AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);
+    AkSoundEngine.SetRTPCValue("ambience_vol", currentGame.CurrentAmbienceVol);
     AkSoundEngine.SetRTPCValue("music_lpf", currentGame.CurrentMusicLPF);
     AkSoundEngine.SetRTPCValue("music_tension_state", currentGame.CurrentMusicTensionState);
     AkSoundEngine.SetRTPCValue("music_vol", currentGame.CurrentMusicVol);

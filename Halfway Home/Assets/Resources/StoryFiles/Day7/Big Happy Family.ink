@@ -50,7 +50,7 @@ I fill up my plate up and go to sit down. #fatigue -= 50
 ~tried_grace = false
 ~tried_expression = false
 
-I spot Timothy sitting at one of the tables alone. // # Load @ MusicTension
+I spot Timothy sitting at one of the tables alone. # Load @ story_big_happy_family
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
 [Timothy] "oh.<delay=2> Hi."
@@ -75,13 +75,13 @@ It's... odd.<delay=2>@ Almost like we're a big happy family.
 
 ===Breakdown===
 [Eduardo] "Hey, Tim-Tim! What do you think?" #Max = Exit #Trissa = Exit #Charlotte = Exit #Isaac = Exit #Timothy=Sad # Play : stop_music_tension_intro_02
-Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit
+Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit # music_tension_state ! 0
 [{player_name}] "hey, Timothy."
 + "You okay?"
 + "Ya there?"
 -[Timothy] "..." #Breakdown / Open
 Timothy doesn't respond. # play : play_music_tension_intro_03
-In fact, looking at Timothy, I notice a handful of things off. # play : play_music_tension_intro_04
+In fact, looking at Timothy, I notice a handful of things off. # play : play_music_tension
 He doesn't seem to be looking at anything in particular, and he's shaking slightly.
 [{player_name}] "Man, are you okay?"
 Timothy looks vaguely in my direction, and reaches his hand out. #Breakdown / Next
@@ -94,7 +94,7 @@ all these little tiny actions I pick up, draw my mind to a conclusion that somet
 {	-week >= 2:
 		+Not Again!
 }
--"uh, M-Max? Max?" # play : play_music_tension_stem_03
+-"uh, M-Max? Max?" # music_tension_state ! 1
 no one seems to hear my weak call, over the chatter and laughter.
 I...
 +[Speak Louder]->ACallForHelp
@@ -105,7 +105,7 @@ I...
 ~tried_expression = true
 {
 	-expression <= 2:
-		"M-Max!" # play : play_music_tension_stem_04
+		"M-Max!" # music_tension_state ! 2
 		my voice fails to break over the chatter. @<color=A5C5E3FF><i>(Your Expression is too low)</i></color>
 		I need to speak up more, but...
 		I.... I can't.
@@ -139,7 +139,7 @@ I...
 
 
 ===ForcefulAssistence===
-I begin to move over to get Max, but I'm pulled back by Timothy's grip. # play : play_music_tension_stem_04
+I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
 His grip tightens, as his eyes begin to water. @I can't leave Timothy here.
 I....
 +{tried_expression == false}[Shout to get Max's attention]->ACallForHelp
@@ -148,11 +148,11 @@ I....
 
 
 ===BreakPoint===
-I... I don't know what to do. @I... I can't <i>do</i> anything! # play : play_music_tension_stem_06
-I try to get up, and get Max. @@To get away from all of this. # play : play_music_tension_stem_05
+I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 4
+I try to get up, and get Max. @@To get away from all of this.
 I Pull my arm, to try and free it from Timothy's Vice-like grip, but to no avail.
 He doesn't seem to want to let go.
-To free myself, I pry my finger's underneath his palm, and peel his finger's off me. # play : play_music_tension_stem_06
+To free myself, I pry my finger's underneath his palm, and peel his finger's off me.
 His arms are noticeably shaking now.
 I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Background / Kitchen
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Happy, Stage_right, right 
@@ -167,7 +167,7 @@ Max darts past me to where Timothy is sitting in a speed quite frightening for s
 I choose to stay beside Timothy, and attempt to help him thru this.
 {
 	-grace <= 2:
-		"Um, uh... It... its Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # play : play_music_tension_stem_05
+		"Um, uh... It... its Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3
 		Timothy doesn't respond to my words, only giving a sharp inhale. @<color=A5C5E3FF><i>(Your Grace is too low)</i></color>
 		I... I don't know what I'm doing.
 		I'm not going to be capable of helping Timothy.

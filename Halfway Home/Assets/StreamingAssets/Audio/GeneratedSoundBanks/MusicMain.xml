@@ -9,9 +9,12 @@
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="374987273" Language="SFX">
-			<ObjectPath>\SoundBanks\Music\MusicMain</ObjectPath>
+			<ObjectPath>\SoundBanks\Default Work Unit\MusicMain</ObjectPath>
 			<ShortName>MusicMain</ShortName>
 			<Path>MusicMain.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3032100830" Name="Stop_All_Fast" ObjectPath="\Events\PlayMusic\Stop_All_Fast"/>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

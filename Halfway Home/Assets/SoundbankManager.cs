@@ -11,7 +11,7 @@ public class SoundbankManager : MonoBehaviour {
   {
     LoadBank("Main");
     LoadBank("Master");
-    //LoadBank("story_memory");
+    LoadBank("Temp");
     
     string storyBank = Game.current.CurrentStorySoundbank;
     string roomBank = Game.current.CurrentRoomSoundbank;

@@ -608,6 +608,34 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{C391298F-FFF8-423D-BBF3-4E8A8A51A484}" ShortID="1064197952">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5B541B98-908A-4617-BFFE-F67E7409E35E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-200</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>200</XPos>
+														<YPos>200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 						</Bus>
 					</ChildrenList>

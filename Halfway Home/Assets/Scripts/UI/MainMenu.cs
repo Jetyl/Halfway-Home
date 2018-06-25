@@ -66,9 +66,14 @@ public class MainMenu : MonoBehaviour
     
     void Awake()
     {
+        // Load Soundbanks
         Debug.Log("MAIN MENU SOUNDBANKS LOADED");
         AkBankManager.LoadBankAsync("MainMenu");
         AkBankManager.LoadBankAsync("Master");
+        
+        // Reset RTPCs
+        AkSoundEngine.SetRTPCValue("music_lpf", 0);
+        AkSoundEngine.SetRTPCValue("music_vol", 0);
     }
 
     public void NewGame()

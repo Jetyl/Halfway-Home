@@ -25,11 +25,12 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 
+# Play : Stop_All
 
 -> Start
 
 === Start ===
-I Scamper into bedroom, yawning as I do.
+I Scamper into bedroom, yawning as I do. # Ambience : play_ambience_fireplace # ambience_vol ! 0
 {
 	-fatigue < 50:
 		I'm not particularly tired, but when I hit the bed, my body becomes enraptured in comfort
