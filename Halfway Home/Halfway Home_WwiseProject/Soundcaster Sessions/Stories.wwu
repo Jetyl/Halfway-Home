@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EFC72897-C001-40B5-B7F6-E0F0E2CFC800}" SchemaVersion="80">
+	<SoundcasterSessions>
+		<WorkUnit Name="Stories" ID="{EFC72897-C001-40B5-B7F6-E0F0E2CFC800}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="big_happy_family" ID="{765A6884-3E44-4072-99C3-9E2C3DB16F1D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="music_tension" ID="{82B6C941-67EB-4D64-9877-075D027971A8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 04 Bus" ID="{CD4DDC85-39A0-483F-AEAF-4B889FF24DC6}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 01 Bus" ID="{6FC1DD76-AFDC-4CDE-AE9F-D90D13B40F7F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 05 Bus" ID="{C1C6CECC-B8DB-45A4-915F-0ED9FA66DC71}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 02 Bus" ID="{329F4212-3050-4066-8E6F-FC4AB34ED761}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 06 Bus" ID="{BD929444-5EF5-40BC-9944-1C6E8312615D}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 03 Bus" ID="{49544145-6E00-4C1D-89DA-A6B107817974}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tension Stem 07 Bus" ID="{EFEEF341-9769-4834-A689-238E7F8623E4}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}"/>
+							<Value>1.24389413598938E-315</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}"/>
+							<Value>1.72724108693197E-315</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="text_vol" ID="{09DFFC59-F8BA-4A37-AAA7-BD4576B4BDD3}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="memory" ID="{2B3A9681-3C9A-4E1F-81E0-595BB26F0E72}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_object_car_away1" ID="{82B40603-9DDB-4D35-8AEA-331CB578D732}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="music_creepyatmo" ID="{41F2DA1C-10B6-4B62-B482-7638ACD04BE3}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_human_footsteps_approaching" ID="{209CC912-AFBB-4732-BBFE-253B4062549E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="music_creepyatmo2" ID="{80226DF0-FF8A-4BE4-BB2F-C3828968731D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_human_ghostwhisper" ID="{78556E65-9541-49F8-A01B-4B511E2A0177}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="music_placeholder" ID="{93556F48-2D81-4D87-BF4A-B65FB9E723DA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_ambient_heartbeat" ID="{F9DBE848-54C7-4FE1-BB28-FC69898E79B1}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_human_knock" ID="{8FE8CEAA-9F3E-4D67-9A42-B7231971DF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}"/>
+							<Value>5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="text_vol" ID="{09DFFC59-F8BA-4A37-AAA7-BD4576B4BDD3}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

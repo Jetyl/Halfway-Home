@@ -34,6 +34,11 @@
 							</RTPCList>
 						</Property>
 					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Effect0" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Music Bus" ID="{64C7666D-4B32-4EE5-BFC8-4A6EA7B11E6F}">
 							<PropertyList>
@@ -510,6 +515,40 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{D28BC966-456D-461E-A4C4-58B4059E0F1F}" ShortID="894083441">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="text_vol" ID="{09DFFC59-F8BA-4A37-AAA7-BD4576B4BDD3}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{5DC2DC41-1BDE-4A19-987D-FED7F149D861}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-200</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>200</XPos>
+																<YPos>200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}">
 							<PropertyList>

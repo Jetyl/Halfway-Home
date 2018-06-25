@@ -37,7 +37,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="play_menuexit" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}">
+						<Event Name="play_menuclick" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}">
 							<ChildrenList>
 								<Action Name="" ID="{DB6E42C2-10D1-49B8-AFCE-D0C17B47ED09}" ShortID="638288882">
 									<PropertyList>
@@ -45,7 +45,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_chime_exitgame" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -88,6 +88,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_menuexit" ID="{440839FD-D3DA-4174-A757-20C65AF875A2}">
+							<ChildrenList>
+								<Action Name="" ID="{E7E99C44-23F0-43F4-BD9B-FF382962E1A6}" ShortID="219047518">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

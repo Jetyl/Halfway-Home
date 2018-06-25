@@ -28,6 +28,7 @@
 				<Property Name="Event Action List\{41A7ED79-D8ED-4C8E-A5FD-777EEDCFC6C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{42831FA2-9D06-4A3D-81DC-AE5BA2CCD78B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{432521DD-2C4C-4826-97B0-57B5C816A8F4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{440839FD-D3DA-4174-A757-20C65AF875A2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{442384F8-D322-4599-8A82-0BBCC9D5661D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4CA69516-D2FA-4319-8F0D-8D145F337611}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{527D63B5-0283-49AA-BD7E-7DD5169D1A17}\x64_Expand States" Type="string" Value=""/>
@@ -102,7 +103,7 @@
 				<Property Name="GenerateSoundBankJSON" Type="bool" Value="True"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="5wz9tZ3U9U2dT+HkYMkjWg=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="UjZ3nYfRdUyKl1KB7PJ+71w27h7V5U9PpFOSC4UngbhInRqP573pQ469gYPBZWJdvALWGJHdEUC3+jS/dYg8q/+ww+BSYjhGpO2YDKiT+AD7HyV+D78dTotu0bVQDMiu"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="vALWGJHdEUC3+jS/dYg8q1w27h7V5U9PpFOSC4UngbhInRqP573pQ469gYPBZWJdk/lT+H/v2UuHsqjlNO1mz/sfJX4Pvx1Oi27RtVAMyK5SNnedh9F1TIqXUoHs8n7v"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="Interactive Music\x64_{03D753E4-585A-4BC4-939E-9AE9562C2DD3} - SegmentEditorZoomInfo" Type="string" Value="Ybb+gFb3rT8AAAAAAADwPwAAAAAAgGxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{0CD7E530-C494-4508-96A4-D677F07CA3CC} - SegmentEditorZoomInfo" Type="string" Value="VVVVVVVV5T8AAAAAAADwP28kHLJuSS5AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

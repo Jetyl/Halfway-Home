@@ -20,6 +20,11 @@
     "Path": "Master.bnk",
     "IncludedEvents": [
      {
+      "Id": "2576276897",
+      "Name": "play_menuclick",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuclick"
+     },
+     {
       "Id": "3169174387",
       "Name": "play_menuexit",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuexit"
@@ -40,7 +45,7 @@
       "Id": "302959056",
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_exitgame.wav",
-      "Path": "SFX\\sfx_menu_chime_exitgame_00FA84C2.wem"
+      "Path": "SFX\\sfx_menu_chime_exitgame_EA8CCDE0.wem"
      },
      {
       "Id": "950120731",

@@ -19,10 +19,12 @@ namespace AK
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
+        static const AkUniqueID PLAY_MENUCLICK = 2576276897U;
         static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
         static const AkUniqueID PLAY_MENUPAUSE_01 = 3827964327U;
         static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
+        static const AkUniqueID PLAY_MUSIC_FAKEIT = 2805407838U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
         static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
@@ -48,17 +50,20 @@ namespace AK
         static const AkUniqueID MUSIC_SLIDER = 1127857866U;
         static const AkUniqueID MUSIC_TENSION_STATE = 2789278851U;
         static const AkUniqueID MUSIC_VOL = 2246609544U;
+        static const AkUniqueID TEXT_VOL = 1909810094U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID INTRO = 1125500713U;
+        static const AkUniqueID BIG_HAPPY_FAMILY = 1240010489U;
+        static const AkUniqueID CREDITS = 2201105581U;
+        static const AkUniqueID KNOCK_ON_THE_MORNING_DOOR = 4055988051U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MEMORY = 3509424520U;
         static const AkUniqueID MUSICMAIN = 374987273U;
-        static const AkUniqueID MUSICTENSION = 183294232U;
     } // namespace BANKS
 
     namespace BUSSES
@@ -77,6 +82,7 @@ namespace AK
         static const AkUniqueID TENSION_STEM_05_BUS = 1482909111U;
         static const AkUniqueID TENSION_STEM_06_BUS = 1267988132U;
         static const AkUniqueID TENSION_STEM_07_BUS = 3212139665U;
+        static const AkUniqueID TEXT_SCROLL_BUS = 1929927065U;
     } // namespace BUSSES
 
 }// namespace AK

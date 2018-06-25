@@ -68,6 +68,12 @@
     "Path": "SFX\\tension_stem_02_A51F8DD7.wem"
    },
    {
+    "Id": "738802588",
+    "Language": "SFX",
+    "ShortName": "fake_it_til_you_break_it.wav",
+    "Path": "SFX\\fake_it_til_you_break_it_A51F8DD7.wem"
+   },
+   {
     "Id": "1025761080",
     "Language": "SFX",
     "ShortName": "loop_164661__adam-n__fire.wav",
@@ -77,11 +83,18 @@
   "MediaFilesNotInAnyBank": [],
   "SoundBanks": [
    {
-    "Id": "183294232",
+    "Id": "374987273",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Music\\MusicTension",
-    "ShortName": "MusicTension",
-    "Path": "MusicTension.bnk",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MusicMain",
+    "ShortName": "MusicMain",
+    "Path": "MusicMain.bnk"
+   },
+   {
+    "Id": "1240010489",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\big_happy_family",
+    "ShortName": "big_happy_family",
+    "Path": "big_happy_family.bnk",
     "IncludedEvents": [
      {
       "Id": "4181321930",
@@ -119,18 +132,81 @@
     ]
    },
    {
-    "Id": "374987273",
+    "Id": "1355168291",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Music\\MusicMain",
-    "ShortName": "MusicMain",
-    "Path": "MusicMain.bnk"
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk"
    },
    {
-    "Id": "1125500713",
+    "Id": "2201105581",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Intro",
-    "ShortName": "Intro",
-    "Path": "Intro.bnk",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Credits",
+    "ShortName": "Credits",
+    "Path": "Credits.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2805407838",
+      "Name": "play_music_fakeit",
+      "ObjectPath": "\\Events\\PlayMusic\\music_fakeit\\play_music_fakeit"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "738802588"
+     }
+    ]
+   },
+   {
+    "Id": "3161908922",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3827964327",
+      "Name": "play_menupause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
+     },
+     {
+      "Id": "4553038",
+      "Name": "play_menuunpause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
+     },
+     {
+      "Id": "319656260",
+      "Name": "play_textscroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "11926160",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_pausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_pausegame_54924078.wem"
+     },
+     {
+      "Id": "370198169",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_text_scroll1.wav",
+      "Path": "SFX\\sfx_menu_text_scroll1_00FA84C2.wem"
+     },
+     {
+      "Id": "558653419",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_unpausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_unpausegame_CC9C6E91.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3509424520",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\memory",
+    "ShortName": "memory",
+    "Path": "memory.bnk",
     "IncludedEvents": [
      {
       "Id": "285561943",
@@ -227,57 +303,6 @@
     ]
    },
    {
-    "Id": "1355168291",
-    "Language": "SFX",
-    "ObjectPath": "Init",
-    "ShortName": "Init",
-    "Path": "Init.bnk"
-   },
-   {
-    "Id": "3161908922",
-    "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
-    "ShortName": "Main",
-    "Path": "Main.bnk",
-    "IncludedEvents": [
-     {
-      "Id": "3827964327",
-      "Name": "play_menupause_01",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
-     },
-     {
-      "Id": "4553038",
-      "Name": "play_menuunpause_01",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
-     },
-     {
-      "Id": "319656260",
-      "Name": "play_textscroll",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
-     }
-    ],
-    "IncludedMemoryFiles": [
-     {
-      "Id": "11926160",
-      "Language": "SFX",
-      "ShortName": "sfx_menu_chime_pausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_pausegame_00FA84C2.wem"
-     },
-     {
-      "Id": "370198169",
-      "Language": "SFX",
-      "ShortName": "sfx_menu_text_scroll1.wav",
-      "Path": "SFX\\sfx_menu_text_scroll1_00FA84C2.wem"
-     },
-     {
-      "Id": "558653419",
-      "Language": "SFX",
-      "ShortName": "sfx_menu_chime_unpausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_unpausegame_00FA84C2.wem"
-     }
-    ]
-   },
-   {
     "Id": "3604647259",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu",
@@ -317,12 +342,24 @@
     ]
    },
    {
+    "Id": "4055988051",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\knock_on_the_morning_door",
+    "ShortName": "knock_on_the_morning_door",
+    "Path": "knock_on_the_morning_door.bnk"
+   },
+   {
     "Id": "4056684167",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
     "ShortName": "Master",
     "Path": "Master.bnk",
     "IncludedEvents": [
+     {
+      "Id": "2576276897",
+      "Name": "play_menuclick",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuclick"
+     },
      {
       "Id": "3169174387",
       "Name": "play_menuexit",
@@ -344,7 +381,7 @@
       "Id": "302959056",
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_exitgame.wav",
-      "Path": "SFX\\sfx_menu_chime_exitgame_00FA84C2.wem"
+      "Path": "SFX\\sfx_menu_chime_exitgame_EA8CCDE0.wem"
      },
      {
       "Id": "950120731",

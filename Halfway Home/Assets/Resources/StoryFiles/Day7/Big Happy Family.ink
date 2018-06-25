@@ -24,6 +24,16 @@ VAR tried_grace = false
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
+// TESTING LOAD BANKS FUNCTION
+// Loading MusicTension Bank... # Load @ MusicTension
+// Playing tension music... # Play : play_music_tension
+// Stopping all music... # Play : Stop_All
+
+// Unloading MusicTension Bank... # Unload @ MusicTension
+// Trying to play tension music... # Play : play_music_tension
+// Stopping all music... # Play : Stop_All
+// END TEST
+
 -> Start
 
 === Start ===
@@ -40,18 +50,7 @@ I fill up my plate up and go to sit down. #fatigue -= 50
 ~tried_grace = false
 ~tried_expression = false
 
-// Testing load banks function
-TESTING LOAD BANKS FUNCTION
-Loading MusicTension Bank... # Load @ MusicTension
-Playing tension music... # Play : play_music_tension
-Stopping all music... # Play : Stop_All
-
-Unloading MusicTension Bank... # Unload @ MusicTension
-Trying to play tension music... # Play : play_music_tension
-Stopping all music... # Play : Stop_All
-END TEST
-
-I spot Timothy sitting at one of the tables alone. # Load @ MusicTension
+I spot Timothy sitting at one of the tables alone. // # Load @ MusicTension
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
 [Timothy] "oh.<delay=2> Hi."

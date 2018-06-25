@@ -3,45 +3,25 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{5E5B0DF2-6C62-40CC-817F-D399AA50A375}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="music_tension" ID="{765A6884-3E44-4072-99C3-9E2C3DB16F1D}">
+				<SoundcasterSession Name="MainMenu" ID="{8F7CFDBB-FEDE-414A-AF61-85EDA78FC086}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="music_tension" ID="{82B6C941-67EB-4D64-9877-075D027971A8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+							<ObjectRef Name="music_mainmenu" ID="{436502EC-69ED-45DE-A3AF-5439E92887F8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Tension Stem 04 Bus" ID="{CD4DDC85-39A0-483F-AEAF-4B889FF24DC6}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+							<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 01 Bus" ID="{6FC1DD76-AFDC-4CDE-AE9F-D90D13B40F7F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 05 Bus" ID="{C1C6CECC-B8DB-45A4-915F-0ED9FA66DC71}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 02 Bus" ID="{329F4212-3050-4066-8E6F-FC4AB34ED761}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 06 Bus" ID="{BD929444-5EF5-40BC-9944-1C6E8312615D}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="3" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 03 Bus" ID="{49544145-6E00-4C1D-89DA-A6B107817974}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="4" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tension Stem 07 Bus" ID="{EFEEF341-9769-4834-A689-238E7F8623E4}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
-							<Position X="4" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}"/>
-							<Value>1.24389413598938E-315</Value>
+							<Value>5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
@@ -53,11 +33,15 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}"/>
-							<Value>1.72724108693197E-315</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
 							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="text_vol" ID="{09DFFC59-F8BA-4A37-AAA7-BD4576B4BDD3}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}"/>

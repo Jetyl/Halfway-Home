@@ -13,6 +13,7 @@
 			<ShortName>Master</ShortName>
 			<Path>Master.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2576276897" Name="play_menuclick" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuclick"/>
 				<Event Id="3169174387" Name="play_menuexit" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuexit"/>
 				<Event Id="4008650974" Name="play_menumouseover" ObjectPath="\Events\PlaySFX\sfx_menu\play_menumouseover"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\Stop_All"/>
@@ -20,7 +21,7 @@
 			<IncludedMemoryFiles>
 				<File Id="302959056" Language="SFX">
 					<ShortName>sfx_menu_chime_exitgame.wav</ShortName>
-					<Path>SFX\sfx_menu_chime_exitgame_00FA84C2.wem</Path>
+					<Path>SFX\sfx_menu_chime_exitgame_EA8CCDE0.wem</Path>
 				</File>
 				<File Id="950120731" Language="SFX">
 					<ShortName>sfx_menu_button_mouseover.wav</ShortName>

@@ -29,13 +29,6 @@ EXTERNAL GetIntValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
--> Start
-
-=== Start ===
-//~week = 1
-
-This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience : play_ambience_birds
-
 // TESTING IF MAIN MENU BANK IS UNLOADED
 // Trying to play main menu music... # Play : play_music_mainmenu
 // Loading MainMenu bank... # Load @ MainMenu
@@ -50,6 +43,12 @@ This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience :
 // Stopping all music... # Play : Stop_All
 // Unloading MainMenu bank... # Unload @ MainMenu
 
+-> Start
+
+=== Start ===
+//~week = 1
+
+This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience : play_ambience_birds
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
@@ -75,7 +74,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # ambience_lpf ! 36
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # ambience_lpf ! 17 # text_vol ! -9
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -158,11 +157,11 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface. # Ambience : stop_ambience_all
-[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper
+[Voices] "This is who you are." # SFX : play_sfx_human_ghostwhisper # Load @ knock_on_the_morning_door
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen # Time * Show
+I open my eyes, taking in the morning light streaming through the skinny window of my room. # Play : Play_music_placeholder_main # Background / YourRoom, EyeOpen # Time * Show # Unload @ memory
 The whispers fade into the chitter of birdsong. # music_vol ! -6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

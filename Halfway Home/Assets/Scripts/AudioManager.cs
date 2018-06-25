@@ -63,6 +63,7 @@ public class AudioManager : MonoBehaviour
   public AkAmbient SFXPlayer;
   public AkAmbient MusicPlayer;
   public AkAmbient AmbiencePlayer;
+  public SoundbankManager soundbankManager;
 
 	// Use this for initialization
 	void Start ()
@@ -107,19 +108,20 @@ public class AudioManager : MonoBehaviour
   {
     AudioBankEvent.LoadType lt = e.Type;
     if (lt == AudioBankEvent.LoadType.Load)
-      AkBankManager.LoadBankAsync(e.BankName);
+      soundbankManager.LoadBank(e.BankName);
     else if (lt == AudioBankEvent.LoadType.Unload)
-      AkBankManager.UnloadBank(e.BankName);
+      soundbankManager.UnloadBank(e.BankName);
   }
 
   void OnLoad(DefaultEvent eventdata)
   {
+    Game currentGame = Game.current;
     
     if (Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
     {
       Trace.Script($"Loading music {Game.current.CurrentTrack}");
       AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-      AkSoundEngine.PostEvent(Game.current.CurrentTrack, MusicPlayer.gameObject);
+      AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
     }
     else
     {
@@ -131,13 +133,23 @@ public class AudioManager : MonoBehaviour
     {
       Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-      AkSoundEngine.PostEvent(Game.current.CurrentAmbience, AmbiencePlayer.gameObject);
+      AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
     }
     else
     {
       Trace.Script("Stopping Ambience");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
     }
+    
+    // Load Soundbank
+    soundbankManager.LoadBank(currentGame.CurrentSoundbank);
+    
+    // Reset RTPC values
+    AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);
+    AkSoundEngine.SetRTPCValue("music_lpf", currentGame.CurrentMusicLPF);
+    AkSoundEngine.SetRTPCValue("music_tension_state", currentGame.CurrentMusicTensionState);
+    AkSoundEngine.SetRTPCValue("music_vol", currentGame.CurrentMusicVol);
+    AkSoundEngine.SetRTPCValue("text_vol", currentGame.CurrentTextVol);
   }
 
   public void StopEverything()

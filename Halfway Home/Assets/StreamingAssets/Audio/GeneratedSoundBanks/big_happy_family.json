@@ -1,0 +1,80 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1240010489",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\big_happy_family",
+    "ShortName": "big_happy_family",
+    "Path": "big_happy_family.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "4181321930",
+      "Name": "music_loop_test",
+      "ObjectPath": "\\Events\\PlayMusic\\test\\music_loop_test"
+     },
+     {
+      "Id": "1712470628",
+      "Name": "play_music_tension",
+      "ObjectPath": "\\Events\\PlayMusic\\music_tension\\play_music_tension"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "27878858",
+      "Language": "SFX",
+      "ShortName": "tension_stem_03.wav",
+      "Path": "SFX\\tension_stem_03_A51F8DD7.wem"
+     },
+     {
+      "Id": "52885807",
+      "Language": "SFX",
+      "ShortName": "tension_stem_01.wav",
+      "Path": "SFX\\tension_stem_01_A51F8DD7.wem"
+     },
+     {
+      "Id": "108982980",
+      "Language": "SFX",
+      "ShortName": "tension_stem_06.wav",
+      "Path": "SFX\\tension_stem_06_A51F8DD7.wem"
+     },
+     {
+      "Id": "315137795",
+      "Language": "SFX",
+      "ShortName": "tension_stem_04.wav",
+      "Path": "SFX\\tension_stem_04_A51F8DD7.wem"
+     },
+     {
+      "Id": "382105759",
+      "Language": "SFX",
+      "ShortName": "tension_stem_05.wav",
+      "Path": "SFX\\tension_stem_05_A51F8DD7.wem"
+     },
+     {
+      "Id": "497356856",
+      "Language": "SFX",
+      "ShortName": "tension_stem_07.wav",
+      "Path": "SFX\\tension_stem_07_A51F8DD7.wem"
+     },
+     {
+      "Id": "689613253",
+      "Language": "SFX",
+      "ShortName": "tension_stem_02.wav",
+      "Path": "SFX\\tension_stem_02_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}
