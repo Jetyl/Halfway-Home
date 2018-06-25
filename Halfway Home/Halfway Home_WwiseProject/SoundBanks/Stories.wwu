@@ -3,7 +3,7 @@
 	<SoundBanks>
 		<WorkUnit Name="Stories" ID="{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="big_happy_family" ID="{7E251FFB-BF0F-4E1D-8B6E-D1B5500CC8AE}">
+				<SoundBank Name="story_big_happy_family" ID="{7E251FFB-BF0F-4E1D-8B6E-D1B5500CC8AE}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_music_tension" ID="{635B0651-40CB-4826-8EFB-A84713ACCAD8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
@@ -11,7 +11,7 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="memory" ID="{9D773652-D187-4C75-8A97-5281ECF27EEF}">
+				<SoundBank Name="story_memory" ID="{9D773652-D187-4C75-8A97-5281ECF27EEF}">
 					<Comment>Nightmare scene</Comment>
 					<ObjectInclusionList>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
@@ -26,7 +26,7 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="knock_on_the_morning_door" ID="{2FB0BFB9-B1C5-48C1-8EF3-01A2E3D0AE66}">
+				<SoundBank Name="story_knock_on_the_morning_door" ID="{2FB0BFB9-B1C5-48C1-8EF3-01A2E3D0AE66}">
 					<ObjectInclusionList/>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -8,6 +8,7 @@
 						<ObjectRef Name="music_mainmenu" ID="{436502EC-69ED-45DE-A3AF-5439E92887F8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 						<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 						<ObjectRef Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+						<ObjectRef Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 					</ObjectList>
 				</MixingSession>
 			</ChildrenList>

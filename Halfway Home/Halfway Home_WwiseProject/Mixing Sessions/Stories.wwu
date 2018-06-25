@@ -18,6 +18,9 @@
 					<ObjectList>
 						<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 						<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_cafejazz" ID="{FF3E8379-A1EA-4057-967F-26A9D6287B67}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_creepyatmo" ID="{41F2DA1C-10B6-4B62-B482-7638ACD04BE3}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="music_creepyatmo2" ID="{80226DF0-FF8A-4BE4-BB2F-C3828968731D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 					</ObjectList>
 				</MixingSession>
 			</ChildrenList>

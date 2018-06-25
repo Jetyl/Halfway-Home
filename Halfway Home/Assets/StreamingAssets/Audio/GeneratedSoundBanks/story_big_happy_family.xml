@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="4068719739" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_big_happy_family</ObjectPath>
+			<ShortName>story_big_happy_family</ShortName>
+			<Path>story_big_happy_family.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4181321930" Name="music_loop_test" ObjectPath="\Events\PlayMusic\test\music_loop_test"/>
+				<Event Id="1712470628" Name="play_music_tension" ObjectPath="\Events\PlayMusic\music_tension\play_music_tension"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="27878858" Language="SFX">
+					<ShortName>tension_stem_03.wav</ShortName>
+					<Path>SFX\tension_stem_03_A51F8DD7.wem</Path>
+				</File>
+				<File Id="52885807" Language="SFX">
+					<ShortName>tension_stem_01.wav</ShortName>
+					<Path>SFX\tension_stem_01_A51F8DD7.wem</Path>
+				</File>
+				<File Id="108982980" Language="SFX">
+					<ShortName>tension_stem_06.wav</ShortName>
+					<Path>SFX\tension_stem_06_A51F8DD7.wem</Path>
+				</File>
+				<File Id="315137795" Language="SFX">
+					<ShortName>tension_stem_04.wav</ShortName>
+					<Path>SFX\tension_stem_04_A51F8DD7.wem</Path>
+				</File>
+				<File Id="382105759" Language="SFX">
+					<ShortName>tension_stem_05.wav</ShortName>
+					<Path>SFX\tension_stem_05_A51F8DD7.wem</Path>
+				</File>
+				<File Id="497356856" Language="SFX">
+					<ShortName>tension_stem_07.wav</ShortName>
+					<Path>SFX\tension_stem_07_A51F8DD7.wem</Path>
+				</File>
+				<File Id="689613253" Language="SFX">
+					<ShortName>tension_stem_02.wav</ShortName>
+					<Path>SFX\tension_stem_02_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -102,13 +102,36 @@ public class AudioManager : MonoBehaviour
   void OnAudioParamEvent(AudioParamEvent e)
   {
     AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
+    
+    Game currentGame = Game.current;
+    
+    switch (e.ParamName)
+    {
+      case "ambience_lpf":
+        currentGame.CurrentAmbienceLPF = e.ParamValue;
+        return;
+      case "music_lpf":
+        currentGame.CurrentMusicLPF = e.ParamValue;
+        return;
+      case "music_tension_state":
+        currentGame.CurrentMusicTensionState = e.ParamValue;
+        return;
+      case "music_vol":
+        currentGame.CurrentMusicVol = e.ParamValue;
+        return;
+      case "text_vol":
+        currentGame.CurrentTextVol = e.ParamValue;
+        return;
+      default:
+        return;
+    }
   }
   
   void OnAudioBankEvent(AudioBankEvent e)
   {
     AudioBankEvent.LoadType lt = e.Type;
     if (lt == AudioBankEvent.LoadType.Load)
-      soundbankManager.LoadBank(e.BankName);
+      soundbankManager.LoadBank(e.BankName, false);
     else if (lt == AudioBankEvent.LoadType.Unload)
       soundbankManager.UnloadBank(e.BankName);
   }
@@ -117,7 +140,7 @@ public class AudioManager : MonoBehaviour
   {
     Game currentGame = Game.current;
     
-    if (Game.current.CurrentTrack != "" && Game.current.CurrentTrack != "Stop_All")
+    if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
     {
       Trace.Script($"Loading music {Game.current.CurrentTrack}");
       AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
@@ -129,7 +152,7 @@ public class AudioManager : MonoBehaviour
       AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
     }
     
-    if (Game.current.CurrentAmbience != "" && Game.current.CurrentAmbience != "Stop_All")
+    if (currentGame.CurrentAmbience != "" && currentGame.CurrentAmbience != "Stop_All")
     {
       Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
@@ -140,9 +163,6 @@ public class AudioManager : MonoBehaviour
       Trace.Script("Stopping Ambience");
       AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
     }
-    
-    // Load Soundbank
-    soundbankManager.LoadBank(currentGame.CurrentSoundbank);
     
     // Reset RTPC values
     AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);

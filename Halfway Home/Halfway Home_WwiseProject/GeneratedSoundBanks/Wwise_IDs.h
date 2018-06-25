@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
         static const AkUniqueID PLAY_MENUPAUSE_01 = 3827964327U;
         static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
+        static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
         static const AkUniqueID PLAY_MUSIC_FAKEIT = 2805407838U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
@@ -56,14 +57,15 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID BIG_HAPPY_FAMILY = 1240010489U;
         static const AkUniqueID CREDITS = 2201105581U;
-        static const AkUniqueID KNOCK_ON_THE_MORNING_DOOR = 4055988051U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
-        static const AkUniqueID MEMORY = 3509424520U;
         static const AkUniqueID MUSICMAIN = 374987273U;
+        static const AkUniqueID ROOM_CAFE = 2805282872U;
+        static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
+        static const AkUniqueID STORY_KNOCK_ON_THE_MORNING_DOOR = 4021864313U;
+        static const AkUniqueID STORY_MEMORY = 1576038406U;
     } // namespace BANKS
 
     namespace BUSSES

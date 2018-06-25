@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 412069474
-    m_lastTimePart2: -1999250806
+    m_lastTimePsrt1: -6941273
+    m_lastTimePart2: -1999250801
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -656,8 +656,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 139167451
-    m_lastTimePart2: -1999250806
+    m_lastTimePsrt1: -6866015
+    m_lastTimePart2: -1999250801
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -704,38 +704,53 @@ MonoBehaviour:
         ObjectType: 7
       ID: 374987273
       Guid: ffb0c3e052623846a4ed980ca893f800
+  - PhysicalPath: SoundBanks\Rooms.wwu
+    ParentPhysicalPath: 
+    Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
+    m_lastTimePsrt1: -717534779
+    m_lastTimePart2: -1999250796
+    List:
+    - Name: room_cafe
+      Path: Rooms\room_cafe
+      PathAndIcons:
+      - ElementName: Rooms
+        ObjectType: 12
+      - ElementName: room_cafe
+        ObjectType: 7
+      ID: -1489684424
+      Guid: b219630282ceb14996a99078127708af
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 946067263
-    m_lastTimePart2: -1999250815
+    m_lastTimePsrt1: -717695330
+    m_lastTimePart2: -1999250796
     List:
-    - Name: big_happy_family
-      Path: Stories\big_happy_family
+    - Name: story_big_happy_family
+      Path: Stories\story_big_happy_family
       PathAndIcons:
       - ElementName: Stories
         ObjectType: 12
-      - ElementName: big_happy_family
+      - ElementName: story_big_happy_family
         ObjectType: 7
-      ID: 1240010489
+      ID: -226247557
       Guid: fb1f257e0fbf1d4e8b6ed1b5500cc8ae
-    - Name: knock_on_the_morning_door
-      Path: Stories\knock_on_the_morning_door
+    - Name: story_knock_on_the_morning_door
+      Path: Stories\story_knock_on_the_morning_door
       PathAndIcons:
       - ElementName: Stories
         ObjectType: 12
-      - ElementName: knock_on_the_morning_door
+      - ElementName: story_knock_on_the_morning_door
         ObjectType: 7
-      ID: -238979245
+      ID: -273102983
       Guid: b9bfb02fc5b1c1488ef301a2e3d0ae66
-    - Name: memory
-      Path: Stories\memory
+    - Name: story_memory
+      Path: Stories\story_memory
       PathAndIcons:
       - ElementName: Stories
         ObjectType: 12
-      - ElementName: memory
+      - ElementName: story_memory
         ObjectType: 7
-      ID: -785542776
+      ID: 1576038406
       Guid: 5236779d87d1754c8a975281ecf27eef
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu

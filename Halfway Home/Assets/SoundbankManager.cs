@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Stratus;
 
 public class SoundbankManager : MonoBehaviour {
 
@@ -10,18 +11,37 @@ public class SoundbankManager : MonoBehaviour {
   {
     LoadBank("Main");
     LoadBank("Master");
-    LoadBank("memory");
+    //LoadBank("story_memory");
+    
+    string storyBank = Game.current.CurrentStorySoundbank;
+    string roomBank = Game.current.CurrentRoomSoundbank;
+    
+    if (storyBank != "" && storyBank != null)
+      LoadBank(storyBank, true);
+    if (roomBank != "" && roomBank != null)
+      LoadBank(roomBank, true);
   }
   
-  public void LoadBank(string bank)
+  public void LoadBank(string bank, bool init = false)
   {
     AkBankManager.LoadBankAsync(bank);
     loadedBanks.Add(bank);
     
-    if (bank != "Main" && bank != "Master" && bank != "MusicMain" && bank != "MainMenu")
+    if (init == false)
     {
-      Game.current.CurrentSoundbank = bank;
+      if (bank.StartsWith("story"))
+      {
+        Trace.Script($"SETTING STORY BANK TO {bank}");
+        Game.current.CurrentStorySoundbank = bank;
+      }
+      else if (bank.StartsWith("room"))
+      {
+        Trace.Script($"SETTING ROOM BANK TO {bank}");
+        Game.current.CurrentRoomSoundbank = bank;
+      }
     }
+    
+    Trace.Script($"Loading bank {bank}");
   }
   
   public void UnloadBank(string bank)

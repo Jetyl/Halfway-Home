@@ -64,7 +64,8 @@ public class Game
 
     public string CurrentTrack = "";
     public string CurrentAmbience = "";
-    public string CurrentSoundbank = "memory";
+    public string CurrentStorySoundbank = "story_memory";
+    public string CurrentRoomSoundbank = "";
     
     // Current RTPC values
     public float CurrentAmbienceLPF;
@@ -209,7 +210,8 @@ public class Game
         SavedInk = copy_.SavedInk;
         CurrentTrack = copy_.CurrentTrack;
         CurrentAmbience = copy_.CurrentAmbience;
-        CurrentSoundbank = copy_.CurrentSoundbank;
+        CurrentStorySoundbank = copy_.CurrentStorySoundbank;
+        CurrentRoomSoundbank = copy_.CurrentRoomSoundbank;
         
         // Current RTPC values
         CurrentAmbienceLPF = copy_.CurrentAmbienceLPF;
