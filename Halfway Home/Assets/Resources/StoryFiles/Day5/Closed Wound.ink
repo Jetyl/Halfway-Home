@@ -154,13 +154,22 @@ The letter is penned in a neat and steady hand, in contrast to the recently dish
 <color=FF8A2D><i>It's so cute that Sunflower House has a no-email policy.</i></color>
 <color=FF8A2D><i>We have been informed that you are adjusting well and we are happy to hear it. Don't get too comfortable, though!</i></color>
 <color=FF8A2D><i>Your father and I are doing all we can to pull strings like we did at Blackwell.</i></color>
-<color=FF8A2D><i>We spoke with one of administrators and she said that, assuming all goes well, you could be back home with us within the month!</i></color>
+<color=FF8A2D><i>We spoke with one of the administrators and she said that, assuming all goes well, you could be back home with us within the month!</i></color>
 <color=FF8A2D><i>I'm sure we would all love nothing more than to put this dark chapter behind us. </i></color>
 <color=FF8A2D><i>After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.</i></color>
 <color=FF8A2D><i>Love, Mom & Dad</i></color>
-Back to normal # override.0
-
-// This gives you insight and a special awareness star as you relate your life to Timothy's
+Yikes. They are really putting the pressure on poor Timothy. # override.0
+I'm sure Timothy's parents love him, but...
+Don't they know he has anxiety?! This is the opposite of what he needs!
+Ugh, parents sometimes.
+It kinda makes me think how lucky I am not to have my own family breathing down my neck.
+Anxiety or no, If I'd faced this kind of external pressure I'd have been back in Blackwell in no time flat.
+But left alone, I had time to breathe. Time to grow.
+I think I'm finally beginning to understand what Sunflower House really is...
+And that I've been lying to myself about being ready to leave it behind.
+{GetValue("EarnedWoundStar")==false:
+	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> {SetValue("EarnedWoundStar", true)} # Awareness+++
+}
 {awareness==5:->Healing|->NotYet}
 
 =Tangents
@@ -168,17 +177,53 @@ Boy does <i>that</i> tone sound familiar.
 I gotta do something to take his mind off of all this.
 Quick, {player_name}, change the subject!
 +[Talk about the other residents]
+	[{player_name}] "So, what you think of the other residents so far?"
+	[Timothy] "Oh, uh... everybody is very nice." # Timothy = Surprised
+	"Charlotte is kinda scary. Eduardo, too, but in a different way." # Timothy = Afraid
+	"Trissa is the easiest to talk to." # Timothy = Happy
+	"Isaac is so quiet I feel awkward saying anything." # Timothy = Calm
+	"I don't really know any of the second floor residents all that well, but they seem nice, too."
 +[Talk about games]
+	[{player_name}] "Hey, so what kinda games do you like to play?"
+	[Timothy] "Oh! I like games with a lot of exploration. Or big maps." # Timothy = Happy
+	"But I haven't really been able to play anything for a while..." # Timothy = Sad
+	[{player_name}] "Why not?"
+	[Timothy] "Well, I don't have any of my games with me... my parents said that I needed to focus on recovery."
+	"`No distractions` they said."
+	Timothy's parents sound intense. Not to mention misguided...
+	I'm pretty sure a distraction is just what the doctor ordered.
+	[{player_name}] "That's rough."
+	"You know, the commons has some board games and consoles and stuff. Why don't you check that out some time?" # Timothy = Calm
+	[Timothy] "I saw them, but I... I just feel nervous and awkward playing out in the open like that." # Timothy = Afraid
+	{awareness>1:
+		-That makes a lot of sense. I wouldn't have an easy time with that either. # awareness ^ good
+	}
+	[{player_name}] "I understand. Maybe you'll feel more comfortable after you've been here a while."
+	[Timothy] "Yeah..." # Timothy == Calm
 +[Talk about the weather]
-// talk about something random to take his mind off things
-{awareness==5:->Healing|->NotYet}
+	[{player_name}] "Nice weather we're having, huh?"
+	Nice going, {player_name}, you picked the most cliched change of topic possible.
+	[Timothy] "Yeah, I guess."
+	Crap, I gotta keep this going somehow.
+	[{player_name}] "Not too hot, not too cold."
+	I'm losing him! # Timothy = Sad
+	[{player_name}] "It makes for good cloud-watching."
+	Timothy perks up a little. Phew. # Timothy = Surprised
+	[Timothy] "Cloud-watching?"
+	[{player_name}] "Yeah, you know. Looking up at passing clouds. Maybe imagining them as other things."
+	"I like to do it when I'm out in the garden sometimes. And this weather is perfect for it since there's plenty of clouds but no rain."
+	[Timothy] "That does sound nice. Most of the time when I'm in the garden I'm focused on the ground."
+	"That's kinda f-funny actually." # Timothy = Happy
+	"It's the same garden, but somehow we both see it differently."
+-{awareness==5:->Healing|->NotYet}
 
 =Healing
 // You open up completely to Timothy
 // This is also when the player gets to know who Sam really is, what the voices are, etc.
 // Sam tells Timothy the story of how he created the voices and when the nightmare  began.
 // Timothy is in awe of your self awareness and finally feels like he has a friend he can trust
-// Timothy begins to believe in himself, success -> Timothy is ready for Dye Job
+// Timothy begins to believe in himself and is ready for Dye Job
+{SetValue("ReadyToDye", true)}
 -> END // 1 of 3 (GOOD)
 
 =NotYet

@@ -297,6 +297,10 @@
    {
     "Name" : "Isaac's Secret Revealed",
     "Type" : 1
+   },
+   {
+    "Name" : "ReadyToDye",
+    "Type" : 1
    }
   ]
  },
@@ -367,6 +371,14 @@
    {
     "Name" : "Revealed Isaac's Secret Before",
     "Type" : 1
+   },
+   {
+    "Name" : "EarnedPassionStar",
+    "Type" : 1
+   },
+   {
+    "Name" : "EarnedWoundStar",
+    "Type" : 0
    }
   ]
  }
