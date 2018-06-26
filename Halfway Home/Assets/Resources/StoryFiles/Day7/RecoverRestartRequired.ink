@@ -47,7 +47,7 @@ Once the dinner has wound down, I quietly head to my room to rest.
 ===PrimarySuccess===
 //player has broken timeloop, and is going to end the game
 ~SetValue("Saved Self", true)
-For what feels like an eternity, I feel good going to bed today.
+For in what feels like an eternity, I feel good going to bed today.
 {
 	-GetValue("Saved Timothy"):
 		Timothy walks in and plots down to bed.
@@ -56,7 +56,7 @@ For what feels like an eternity, I feel good going to bed today.
 		I look over at Timothy's vacent bed.
 		I feel a little bad I couldn't help him.
 		I distract myself by packing my bags.
-		No clue if its actually worth it, gien I'll just wake up back at the start of the week, but its good to pretend I'm leaving, at least.
+		No clue if its actually worth it, given I'll just wake up back at the start of the week, but its good to pretend I'm leaving, at least.
 }
 With that done, I call it a night.
 I sleep more calmly than I've slept in a long while.

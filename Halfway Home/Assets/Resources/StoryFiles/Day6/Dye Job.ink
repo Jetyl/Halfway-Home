@@ -20,6 +20,7 @@ VAR current_room = "unset"
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
+EXTERNAL GetIntValue(value)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
@@ -40,7 +41,12 @@ I Scamper into bedroom, yawning as I do.
 I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
 ... //{SetValue("Depression Time Dilation", false)}
 ......{SetTimeBlock(0)} 
-......... {CallSleep()} #set_time%6,8
+{
+	-GetIntValue("Day") > 4:
+		......... {CallSleep()} #set_time%6,8
+	-else:
+		......... {CallSleep()} #set_time%5,8
+}
 [Timothy>Unknown] "...{player_name}."
 huh?
 "{player_name}. Are you awake?."
