@@ -26,6 +26,11 @@ public class BaseNode
     public Action<BaseNode> OnRemoveNode;
     public Action<BaseNode> OnDuplicateNode;
 
+    protected KeyCode MultiSelectLeft = KeyCode.LeftControl;
+    protected KeyCode MultiSelectRight = KeyCode.RightControl;
+    protected bool MultiSelect = false;
+
+
     public BaseNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode) 
     {
         rect = new Rect(position.x, position.y, width, height);
@@ -81,7 +86,7 @@ public class BaseNode
                         isSelected = true;
                         style = selectedNodeStyle;
                     }
-                    else
+                    else if(!MultiSelect)
                     {
                         GUI.changed = true;
                         isSelected = false;
@@ -103,9 +108,27 @@ public class BaseNode
                 if (e.button == 0 && isDragged)
                 {
                     Drag(e.delta);
-                    e.Use();
+                    if(!MultiSelect)
+                        e.Use();
+
                     return true;
                 }
+                break;
+            case EventType.KeyDown:
+
+                if ((e.keyCode == MultiSelectLeft || e.keyCode == MultiSelectRight) && !MultiSelect)
+                {
+                    MultiSelect = true;
+                }
+
+                break;
+            case EventType.KeyUp:
+
+                if ((e.keyCode == MultiSelectLeft || e.keyCode == MultiSelectRight) && MultiSelect)
+                {
+                    MultiSelect = false;
+                }
+
                 break;
         }
 
@@ -130,6 +153,22 @@ public class BaseNode
         genericMenu.ShowAsContext();
     }
 
+    public void ProcessMultiSelect(Rect e)
+    {
+        if (rect.Overlaps(e))
+        {
+            isDragged = true;
+            GUI.changed = true;
+            isSelected = true;
+            style = selectedNodeStyle;
+        }
+        else
+        {
+            GUI.changed = true;
+            isSelected = false;
+            style = defaultNodeStyle;
+        }
+    }
 
     protected void ChangeColor(int number)
     {
