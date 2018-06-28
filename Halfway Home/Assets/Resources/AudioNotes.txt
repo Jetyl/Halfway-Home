@@ -5,9 +5,9 @@ Memory
     vol: 
       base: -6
       cafe, line 1: -8.3 (# ambience_vol ! -2.3)
-      cafe, line "What?": 5.1 (# ambience_vol ! 11.1)
+      cafe, line "What?": 2.8 (# ambience_vol ! 8.8)
       
     lpf:
       base: 14
-      unpack, line 1: 31 (# ambience_vol ! 17)
-      cafe, line "What?": 24 (# ambience_lpf ! 38)
+      unpack, line 1: 31 (# ambience_lpf ! 17)
+      cafe, line "What?": 45 (# ambience_lpf ! 31)

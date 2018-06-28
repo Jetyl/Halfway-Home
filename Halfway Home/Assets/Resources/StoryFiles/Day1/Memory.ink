@@ -89,10 +89,10 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   # ambience_vol ! -2.3
+I leave to head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   //# ambience_vol ! -2.3
 Max is here, mopping lethargically.   # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf ! 60   # ambience_vol ! 11.1   # ambience_lpf ! 38
+What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf ! 60   //# ambience_vol ! 8.8   # ambience_lpf ! 31
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit 
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience: Stop_All
 But they're gone...

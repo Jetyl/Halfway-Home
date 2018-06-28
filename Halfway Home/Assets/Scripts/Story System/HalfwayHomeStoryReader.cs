@@ -113,7 +113,7 @@ namespace HalfwayHome
       parser.AddPattern("Tooltip", tooltipText, RegexParser.Target.Tag, RegexParser.Scope.Group, OnTooltip);
 
       // Tooltip Lines
-      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", ".");
+      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", "~");
       parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
     }
 
