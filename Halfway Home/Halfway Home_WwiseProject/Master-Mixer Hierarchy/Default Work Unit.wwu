@@ -52,7 +52,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{300B4933-FA71-4AA1-BE5D-35EC421F82CA}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -76,7 +76,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{8EB57E56-04B4-4A66-8C0E-70481F4EAC76}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -460,7 +460,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{27D82DD3-B0A5-4BE4-A6CC-F9333FE95B7F}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -492,7 +492,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{4FB6E626-D44E-49C2-83D2-732E3E3818C0}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -524,7 +524,7 @@
 													</ReferenceList>
 													<Curve Name="" ID="{5DC2DC41-1BDE-4A19-987D-FED7F149D861}">
 														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
+															<Property Name="Flags" Type="int32" Value="1"/>
 														</PropertyList>
 														<PointList>
 															<Point>
@@ -549,6 +549,9 @@
 						<Bus Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>1.24437614948345E-02</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{FFDDAC45-9528-4A2B-9000-0127431C8F54}" ShortID="36863359">
 											<ReferenceList>
@@ -558,7 +561,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{8DCDBE31-4396-465A-82CF-1C66B14DD214}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -582,7 +585,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{5B541B98-908A-4617-BFFE-F67E7409E35E}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="1"/>
 												</PropertyList>
 												<PointList>
 													<Point>

@@ -5,6 +5,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2319499992	play_sfx_human_knock			\PlaySFX\sfx_human\play_sfx_human_knock	
 	3941181009	Play_music_placeholder_main_fadein			\PlayMusic\music_placeholder_main\Play_music_placeholder_main_fadein	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	339768715	sfx_human_knock	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_human_knock_0F51AE3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_knock\sfx_human_knock		64704
 	741107735	BedCreak	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BedCreak_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		59896

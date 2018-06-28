@@ -18,6 +18,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3984512074	play_ambience_fireplace_with_lpf			\PlayMusic\intro_ambiences\play_ambience_fireplace_with_lpf	
 	4092317258	play_music_farewell			\PlayMusic\music_farewell\play_music_farewell	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	457042621	You and I	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\You and I_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_farewell\music_farewell\You and I		1363890
 	919138064	Farewell, Part I	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Farewell, Part I_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_unfinished_business\music_unfinished_business\Farewell, Part I		1303107

@@ -39,7 +39,7 @@ EXTERNAL SetValue(name, values)
 // TESTING MUSIC FADE PARAM
 // Loading MainMenu bank... # Load @ MainMenu
 // Playing main menu music... # Play : play_music_mainmenu
-// Fading to -200 db... # music_vol ! -200
+// Fading to -200 db... # music_vol ! -200 //
 // Stopping all music... # Play : Stop_All
 // Unloading MainMenu bank... # Unload @ MainMenu
 
@@ -70,11 +70,11 @@ Some other residents are starting to gather in the hallway. I guess I'm the news
 [Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite."   # Max = Calm
 The other residents begin to whisper to each other.
 [Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
-[Max] "It also means I get to show you to your room! Follow me!" # Max = Happy
+[Max] "It also means I get to show you to your room! Follow me!"   # Max = Happy
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # ambience_lpf ! 17
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # ambience_vol ! -2.1   # ambience_lpf ! 30
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -89,10 +89,10 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   //# ambience_vol ! -2.3
+I leave to head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   # ambience_vol ! -2.3
 Max is here, mopping lethargically.   # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
-What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf ! 60   //# ambience_vol ! 8.8   # ambience_lpf ! 31
+What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf ! 60   # ambience_vol ! 5.6   # ambience_lpf ! 31
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit 
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience: Stop_All
 But they're gone...
@@ -111,7 +111,7 @@ A chill runs down my spine. What's going on?
 
 === Commons ===
 I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02
-When did it get dark out? Is it night already? # ambience_lpf ! 17
+When did it get dark out? Is it night already?   # ambience_lpf ! 17
 Max is reading by the fireplace. I wander over and join them. # Max = Calm # Ambience : play_ambience_fireplace
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"

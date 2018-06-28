@@ -13,6 +13,8 @@ using Stratus;
 
 public class AudioManager : MonoBehaviour
 {
+  float ParamFadeTimer = 0;
+  
   public class AudioEvent : Stratus.Event
   {
     public enum SoundType
@@ -37,6 +39,18 @@ public class AudioManager : MonoBehaviour
     public float ParamValue;
 
     public AudioParamEvent(string name, float value)
+    {
+      ParamName = name;
+      ParamValue = value;
+    }
+  }
+  
+  public class AudioParamFadeEvent : Stratus.Event
+  {
+    public string ParamName;
+    public float ParamValue;
+
+    public AudioParamFadeEvent(string name, float value)
     {
       ParamName = name;
       ParamValue = value;
@@ -70,6 +84,7 @@ public class AudioManager : MonoBehaviour
   {
         Scene.Connect<AudioEvent>(OnAudioEvent);
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
+        Scene.Connect<AudioParamFadeEvent>(OnAudioParamFadeEvent);
         Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 	}
@@ -102,28 +117,51 @@ public class AudioManager : MonoBehaviour
   void OnAudioParamEvent(AudioParamEvent e)
   {
     AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
+    setCurrentGameParam(e.ParamName, e.ParamValue);
+  }
+  
+  void OnAudioParamFadeEvent(AudioParamFadeEvent e)
+  {
+    setCurrentGameParam(e.ParamName, e.ParamValue);
     
+    // Find current value of RTPC
+    float currentParamValue;
+    AkSoundEngine.GetRTPCValue(e.ParamName, GameObject.Find("AkAmbientMusic"), 0, currentParamValue, 1);
+    
+    // Fade the value over 2 seconds
+    StartCoroutine(FadeParam(e.ParamName, currentParamValue, e.ParamValue));
+  }
+  
+  IEnumerator FadeParam (string ParamName, float currentParamValue, float endParamValue)
+  {
+    ParamFadeTimer += Time.deltaTime;
+    //float newParamValue = Mathf.Lerp()
+    yield return null;
+  }
+  
+  void setCurrentGameParam (string ParamName, float ParamValue)
+  {
     Game currentGame = Game.current;
     
-    switch (e.ParamName)
+    switch (ParamName)
     {
       case "ambience_lpf":
-        currentGame.CurrentAmbienceLPF = e.ParamValue;
+        currentGame.CurrentAmbienceLPF = ParamValue;
         return;
       case "ambience_vol":
-        currentGame.CurrentAmbienceVol = e.ParamValue;
+        currentGame.CurrentAmbienceVol = ParamValue;
         return;
       case "music_lpf":
-        currentGame.CurrentMusicLPF = e.ParamValue;
+        currentGame.CurrentMusicLPF = ParamValue;
         return;
       case "music_tension_state":
-        currentGame.CurrentMusicTensionState = e.ParamValue;
+        currentGame.CurrentMusicTensionState = ParamValue;
         return;
       case "music_vol":
-        currentGame.CurrentMusicVol = e.ParamValue;
+        currentGame.CurrentMusicVol = ParamValue;
         return;
       case "text_vol":
-        currentGame.CurrentTextVol = e.ParamValue;
+        currentGame.CurrentTextVol = ParamValue;
         return;
       default:
         return;
