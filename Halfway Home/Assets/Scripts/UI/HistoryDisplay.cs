@@ -117,7 +117,7 @@ public class HistoryDisplay : MonoBehaviour
 
     void UpdateHistory(DescriptionEvent eventdata)
     {
-        TextParser.ExtractTextSpeed(ref eventdata.Line);
+        TextParser.ExtractTextSpeed(ref eventdata.Line, 0);
 
         TagRemover.KillAllCustomTags(ref eventdata.Line);
 
