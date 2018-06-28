@@ -68,6 +68,30 @@
 												</PointList>
 											</Curve>
 										</RTPC>
+										<RTPC Name="" ID="{76EB42EF-5C48-40E1-8295-C5F581274759}" ShortID="888553522">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8EB57E56-04B4-4A66-8C0E-70481F4EAC76}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-200</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>200</XPos>
+														<YPos>200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 									</RTPCList>
 								</Property>
 								<Property Name="Lowpass" Type="int16">
@@ -91,34 +115,6 @@
 													<Point>
 														<XPos>100</XPos>
 														<YPos>100</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{76EB42EF-5C48-40E1-8295-C5F581274759}" ShortID="888553522">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{8EB57E56-04B4-4A66-8C0E-70481F4EAC76}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>-200</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>200</XPos>
-														<YPos>200</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -518,7 +514,7 @@
 							<ChildrenList>
 								<Bus Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
+										<Property Name="BusVolume" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{D28BC966-456D-461E-A4C4-58B4059E0F1F}" ShortID="894083441">
 													<ReferenceList>
@@ -578,6 +574,30 @@
 												</PointList>
 											</Curve>
 										</RTPC>
+										<RTPC Name="" ID="{C391298F-FFF8-423D-BBF3-4E8A8A51A484}" ShortID="1064197952">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5B541B98-908A-4617-BFFE-F67E7409E35E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-200</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>200</XPos>
+														<YPos>200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 									</RTPCList>
 								</Property>
 								<Property Name="Lowpass" Type="int16">
@@ -601,34 +621,6 @@
 													<Point>
 														<XPos>100</XPos>
 														<YPos>100</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{C391298F-FFF8-423D-BBF3-4E8A8A51A484}" ShortID="1064197952">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}" WorkUnitID="{97E54518-1B72-4813-96CB-8C08A386CD29}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{5B541B98-908A-4617-BFFE-F67E7409E35E}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>-200</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>200</XPos>
-														<YPos>200</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

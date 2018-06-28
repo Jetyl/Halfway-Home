@@ -9591,7 +9591,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40.25
+  m_fontSize: 40.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14560,6 +14560,21 @@ Prefab:
         type: 2}
       propertyPath: StartColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389923766354586, guid: 73dde90acc7f8de4fbde33410c6d8186,
+        type: 2}
+      propertyPath: FadeOnInitialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389923766354586, guid: 73dde90acc7f8de4fbde33410c6d8186,
+        type: 2}
+      propertyPath: InitializeFadeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563331295154130, guid: 73dde90acc7f8de4fbde33410c6d8186,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73dde90acc7f8de4fbde33410c6d8186, type: 2}

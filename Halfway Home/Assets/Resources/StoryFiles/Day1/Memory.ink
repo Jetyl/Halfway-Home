@@ -48,13 +48,13 @@ EXTERNAL SetValue(name, values)
 === Start ===
 //~week = 1
 
-This is it. Sunflower House. # Background / HouseFront # All * Hide # Ambience : play_ambience_birds
+This is it. Sunflower House. # Background / HouseFront # All * Hide   # Ambience : play_ambience_birds
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
-The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place. # SFX : play_sfx_object_car_away
+The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away
 I open the heavy oak doors and step inside. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
-I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles. # Max = Happy
+I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles.   # Max = Happy
 [Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
 =NameEntry
@@ -67,14 +67,14 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 =Introductions
 [Max>Janitor?] "{player_name}! That was it!"
 Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
-[Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
+[Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite."   # Max = Calm
 The other residents begin to whisper to each other.
 [Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
 [Max] "It also means I get to show you to your room! Follow me!" # Max = Happy
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe # ambience_lpf ! 17
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # ambience_lpf ! 17
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -85,22 +85,32 @@ They pull out a small bit of paper from their pocket and begin reading aloud.
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
-I don't have much to unpack and the room is already furnished, so it doesn't take long. # Max = Exit # Load @ room_cafe
+I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   # Load @ room_cafe
 -> Cafe
 
 === Cafe ===
-I leave to head to the cafe, where Max said they would be. It's not hard to find. # Background / Kitchen, Blackwipe # play : play_music_cafejazz
-Max is here, mopping lethargically. # Max = Calm
-[Max] "Yo. Good to see you again. How was your first week?" # ambience_lpf ! 53
-What? They're joking, right? I just got here... There's no way I lost a whole week. # music_lpf ! 60
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there. # Max = Exit # Ambience: Stop_All
-Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max. # play : Stop_All
-But they're gone... # Play : Stop_All_Fast # music_lpf ! 0
-A chill runs down my spine. What's going on? # Ambience : Stop_All_Fast
+I leave to head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   # ambience_vol ! -2.3
+Max is here, mopping lethargically.   # Max = Calm
+[Max] "Yo. Good to see you again. How was your first week?"
+What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf ! 60   # ambience_vol ! 11.1   # ambience_lpf ! 38
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit 
+Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience: Stop_All
+But they're gone...
+A chill runs down my spine. What's going on? 
+
+// Hard stop music if player is clicking fast
+# Play : Stop_All_Fast
+# Ambience : Stop_All_Fast
+
+// Reset RTPCs
+# music_lpf ! 0
+# ambience_vol ! 0
+# ambience_lpf ! 0
+
 -> Commons
 
 === Commons ===
-I head out into the common room. # Background / CommonsNight, Blackwipe # play : play_music_creepy_atmo_02
+I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02
 When did it get dark out? Is it night already? # ambience_lpf ! 17
 Max is reading by the fireplace. I wander over and join them. # Max = Calm # Ambience : play_ambience_fireplace
 *[Ask what's going on]

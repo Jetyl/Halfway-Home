@@ -72,8 +72,12 @@ public class MainMenu : MonoBehaviour
         AkBankManager.LoadBankAsync("Master");
         
         // Reset RTPCs
+        AkSoundEngine.SetRTPCValue("ambience_lpf", 0);
+        AkSoundEngine.SetRTPCValue("ambience_vol", 0);
         AkSoundEngine.SetRTPCValue("music_lpf", 0);
+        AkSoundEngine.SetRTPCValue("music_tension_state", 0);
         AkSoundEngine.SetRTPCValue("music_vol", 0);
+        AkSoundEngine.SetRTPCValue("text_vol", 0);
     }
 
     public void NewGame()

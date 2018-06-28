@@ -6,12 +6,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	3941181009	Play_music_placeholder_main_fadein			\PlayMusic\music_placeholder_main\Play_music_placeholder_main_fadein	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	339768715	sfx_human_knock	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_human_knock_0F51AE3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_knock\sfx_human_knock		64704
-	741107735	BedCreak	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BedCreak_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		59896
-	917354306	DejaVu	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\DejaVu_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_dejavu\music_dejavu\DejaVu		318359
+	339768715	sfx_human_knock	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_human_knock_0F51AE3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_knock\sfx_human_knock		64704
+	741107735	BedCreak	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BedCreak_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		59896
+	917354306	DejaVu	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\DejaVu_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_dejavu\music_dejavu\DejaVu		318359
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	178330536	Music1loop	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
-	235618933	barble bapkins 1_6	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
-	1025761080	loop_164661__adam-n__fire	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
+	178330536	Music1loop	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
+	235618933	barble bapkins 1_6	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
+	1025761080	loop_164661__adam-n__fire	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
 

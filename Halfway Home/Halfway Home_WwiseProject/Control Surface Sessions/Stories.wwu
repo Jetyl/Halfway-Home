@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{970D6C7A-FD5C-4398-A406-18B412B81019}" SchemaVersion="80">
+	<ControlSurfaceSessions>
+		<WorkUnit Name="Stories" ID="{970D6C7A-FD5C-4398-A406-18B412B81019}" PersistMode="Standalone">
+			<ChildrenList>
+				<ControlSurfaceSession Name="memory" ID="{5A441D48-AA0F-4888-8AB3-6284F04E3546}">
+					<ChildrenList>
+						<ControlSurfaceBindingGroup Name="Global" ID="{4352AC7A-DD31-456A-9E75-9A62691CC6F6}">
+							<ChildrenList>
+								<ControlSurfaceBinding Name="1-1 ambience_fireplace_vol" ID="{6F827C33-508B-454C-9A35-22615BEB10AE}">
+									<PropertyList>
+										<Property Name="HardwareControllerKey" Type="string" Value="Korg nanoKontrol2~Ch.1~CC~0"/>
+										<Property Name="TargetClassID" Type="int32" Value="3145744"/>
+										<Property Name="TargetName" Type="string" Value="Volume"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="TargetObject">
+											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</ControlSurfaceBinding>
+								<ControlSurfaceBinding Name="1-2 ambience_fireplace_vol" ID="{7A6C832D-513E-4282-AA7C-CF7109698DA2}">
+									<PropertyList>
+										<Property Name="HardwareControllerKey" Type="string" Value="Korg nanoKontrol2~Ch.1~CC~16"/>
+										<Property Name="TargetClassID" Type="int32" Value="2293776"/>
+										<Property Name="TargetName" Type="string" Value="Lowpass"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="TargetObject">
+											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</ControlSurfaceBinding>
+							</ChildrenList>
+						</ControlSurfaceBindingGroup>
+						<ControlSurfaceBindingGroup Name="Current Selection" ID="{BA3D4BAF-D2AF-45D8-956B-492579DC4DAB}">
+							<PropertyList>
+								<Property Name="GroupType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ChildrenList>
+								<ControlSurfaceBinding Name="Binding" ID="{3B2B64C1-A6E5-4EE4-9DDF-A01E707E795A}">
+									<PropertyList>
+										<Property Name="TargetName" Type="string" Value="PassMidiNote"/>
+										<Property Name="TargetType" Type="int16" Value="1"/>
+									</PropertyList>
+								</ControlSurfaceBinding>
+							</ChildrenList>
+						</ControlSurfaceBindingGroup>
+						<ControlSurfaceBindingGroup Name="View Groups" ID="{8210EACE-9192-4E6C-B8FA-892EA4DEFACB}">
+							<PropertyList>
+								<Property Name="GroupType" Type="int16" Value="3"/>
+							</PropertyList>
+						</ControlSurfaceBindingGroup>
+					</ChildrenList>
+				</ControlSurfaceSession>
+			</ChildrenList>
+		</WorkUnit>
+	</ControlSurfaceSessions>
+</WwiseDocument>
