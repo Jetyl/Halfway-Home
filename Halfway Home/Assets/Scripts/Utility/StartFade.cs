@@ -17,7 +17,11 @@ public class StartFade : MonoBehaviour
     {
         gameObject.GetComponent<Image>().color = StartColor;
 
-        gameObject.DispatchEvent(Events.Fade, new FadeEvent(EndColor, FadeTime));
+        StartCoroutine(TextParser.FrameDelay(gameObject, Events.Fade, new FadeEvent(EndColor, FadeTime)));
+
+        //gameObject.DispatchEvent(Events.Fade,);
+
+        StartCoroutine(DelayRaycast(FadeTime));
 	}
 	
 	// Update is called once per frame
@@ -25,4 +29,13 @@ public class StartFade : MonoBehaviour
     {
 		
 	}
+
+    IEnumerator DelayRaycast(float aTime)
+    {
+
+        yield return new WaitForSeconds(aTime);
+
+        gameObject.GetComponent<Image>().raycastTarget = false;
+    }
+
 }
