@@ -717,8 +717,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -352894692
-    m_lastTimePart2: -1999250301
+    m_lastTimePsrt1: -587820625
+    m_lastTimePart2: -1999250120
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
