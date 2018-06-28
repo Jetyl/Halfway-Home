@@ -150,7 +150,7 @@ His red-eyed face is ghostly pale.
 
 =TheLetter
 The letter is penned in a neat and steady hand, in contrast to the recently disheveled state of the paper.
-<color=FF8A2D><i>Dear Timothy,</i></color> # override.1
+<color=FF8A2D><i>Dear Timothy,</i></color> # override~1
 <color=FF8A2D><i>It's so cute that Sunflower House has a no-email policy.</i></color>
 <color=FF8A2D><i>We have been informed that you are adjusting well and we are happy to hear it. Don't get too comfortable, though!</i></color>
 <color=FF8A2D><i>Your father and I are doing all we can to pull strings like we did at Blackwell.</i></color>
@@ -158,7 +158,7 @@ The letter is penned in a neat and steady hand, in contrast to the recently dish
 <color=FF8A2D><i>I'm sure we would all love nothing more than to put this dark chapter behind us. </i></color>
 <color=FF8A2D><i>After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.</i></color>
 <color=FF8A2D><i>Love, Mom & Dad</i></color>
-Yikes. They are really putting the pressure on poor Timothy. # override.0
+Yikes. They are really putting the pressure on poor Timothy. # override~0
 I'm sure Timothy's parents love him, but...
 Don't they know he has anxiety?! This is the opposite of what he needs!
 Ugh, parents sometimes.
