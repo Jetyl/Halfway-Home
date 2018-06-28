@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1735497904
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 630458899
+    m_lastTimePart2: -1999250308
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -538,8 +538,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: -1735507876
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 630473909
+    m_lastTimePart2: -1999250308
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -717,8 +717,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1735278495
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: -352894692
+    m_lastTimePart2: -1999250301
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -738,8 +738,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1734909483
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 667400198
+    m_lastTimePart2: -1999250308
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -798,8 +798,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: -1734959352
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 667415220
+    m_lastTimePart2: -1999250308
     List:
     - Name: room_cafe
       Path: Rooms\room_cafe
@@ -813,8 +813,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1734909483
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 667430176
+    m_lastTimePart2: -1999250308
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
@@ -847,8 +847,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -1735477957
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: 630493870
+    m_lastTimePart2: -1999250308
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf

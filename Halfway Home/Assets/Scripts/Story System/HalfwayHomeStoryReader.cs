@@ -113,7 +113,7 @@ namespace HalfwayHome
       parser.AddPattern("Tooltip", tooltipText, RegexParser.Target.Tag, RegexParser.Scope.Group, OnTooltip);
 
       // Tooltip Lines
-      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", ".");
+      string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", "~");
       parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
     }
 
@@ -402,12 +402,25 @@ namespace HalfwayHome
 
     void OnAudioParamSet(Parse parse)
     {
+ //    foreach (var match in parse.matches)
+ //    {
+ //      if (match.ContainsKey("Param"))
+ //      {
+ //        Trace.Script($"Set {parse.FindFirst("Param").Trim()} parameter to {parse.FindFirst("value").Trim()}");
+ //        Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(parse.FindFirst("Param").Trim(), float.Parse(parse.FindFirst("value"))));
+ //      }
+ //    }
+      
       foreach (var match in parse.matches)
       {
         if (match.ContainsKey("Param"))
         {
-          Trace.Script($"Set {parse.FindFirst("Param").Trim()} parameter to {parse.FindFirst("value").Trim()}");
-          Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(parse.FindFirst("Param").Trim(), float.Parse(parse.FindFirst("value"))));
+          var pose = match["Param"].Trim();
+          var person = match["value"].Trim();
+
+          Trace.Script($"Set {match["Param"].Trim()} parameter to {match["value"].Trim()}");
+
+          Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(match["Param"].Trim(), float.Parse( match["value"].Trim() )));
         }
       }
     }
@@ -418,13 +431,13 @@ namespace HalfwayHome
       {
         if (match["Mode"].Trim().ToLower() == "load")
         {
-          Trace.Script($"Loading {parse.FindFirst("Bank").Trim()} bank");
-          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, parse.FindFirst("Bank"))); 
+          Trace.Script($"Loading {match["Bank"].Trim()} bank");
+          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, match["Bank"].Trim())); 
         }
         else if (match["Mode"].Trim().ToLower() == "unload")
         {
           Trace.Script($"Unloading {parse.FindFirst("Bank").Trim()} bank");
-          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, parse.FindFirst("Bank"))); 
+          Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, match["Bank"].Trim())); 
         }
       }
     }

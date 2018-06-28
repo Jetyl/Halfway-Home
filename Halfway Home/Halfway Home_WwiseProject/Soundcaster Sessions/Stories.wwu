@@ -148,6 +148,10 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
 							<Value>51</Value>
 						</RTPCValue>

@@ -5,11 +5,11 @@
   "SchemaVersion": "11",
   "SoundbankVersion": "125",
   "RootPaths": {
-   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
-   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
-   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
   },
   "SoundBanks": [
    {
@@ -69,7 +69,7 @@
       "Id": "11926160",
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_pausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_pausegame_54924078.wem"
+      "Path": "SFX\\sfx_menu_chime_pausegame_9F6C56D1.wem"
      },
      {
       "Id": "370198169",
@@ -81,7 +81,7 @@
       "Id": "558653419",
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_unpausegame_CC9C6E91.wem"
+      "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
      }
     ]
    }
