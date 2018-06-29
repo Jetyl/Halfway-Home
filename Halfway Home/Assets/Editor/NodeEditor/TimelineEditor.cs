@@ -151,6 +151,9 @@ public class TimelineEditor : BaseNodeEditor
             case NodeTypes.SoundNode:
                 nodes.Add(new SoundNode(mousePosition, 300, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
                 break;
+            case NodeTypes.StampNode:
+                nodes.Add(new SceneStampNode(mousePosition, 325, 185, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, NewID));
+                break;
             default:
                 break;
         }
@@ -269,16 +272,17 @@ public class TimelineEditor : BaseNodeEditor
         else
         {
             genericMenu.AddItem(new GUIContent("Add End node"), false, () => OnClickAddNode(mousePosition, NodeTypes.EndingNode));
-            genericMenu.AddItem(new GUIContent("Add Map node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MapNode));
-            genericMenu.AddItem(new GUIContent("Add Return node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ToMapNode));
             genericMenu.AddItem(new GUIContent("Add Load node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LoadNode));
             genericMenu.AddItem(new GUIContent("Add Loop node"), false, () => OnClickAddNode(mousePosition, NodeTypes.LoopNode));
+            
+            genericMenu.AddItem(new GUIContent("Map/Add Map node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MapNode));
+            genericMenu.AddItem(new GUIContent("Map/Add Return node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ToMapNode));
+            genericMenu.AddItem(new GUIContent("Map/Add Scene Lock node"), false, () => OnClickAddNode(mousePosition, NodeTypes.StampNode));
 
             genericMenu.AddItem(new GUIContent("Display/Add Set Room node"), false, () => OnClickAddNode(mousePosition, NodeTypes.RoomNode));
             genericMenu.AddItem(new GUIContent("Display/Add Ink node"), false, () => OnClickAddNode(mousePosition, NodeTypes.InkNode));
             genericMenu.AddItem(new GUIContent("Display/Add Sound node"), false, () => OnClickAddNode(mousePosition, NodeTypes.SoundNode));
-
-
+            
             genericMenu.AddItem(new GUIContent("Progress/Add Progress node"), false, () => OnClickAddNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Progress/Add Change node"), false, () => OnClickAddNode(mousePosition, NodeTypes.ChangeNode));
             genericMenu.AddItem(new GUIContent("Progress/Add Multi-Progress node"), false, () => OnClickAddNode(mousePosition, NodeTypes.MultiProgressNode));
@@ -376,6 +380,9 @@ public class TimelineEditor : BaseNodeEditor
                     break;
                 case NodeTypes.SoundNode:
                     nodes.Add(new SoundNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
+                    break;
+                case NodeTypes.StampNode:
+                    nodes.Add(new SceneStampNode(pos, (float)width, (float)height, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode, ConversationData[i]));
                     break;
                 default:
                     break;
@@ -835,6 +842,18 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.Write(((SoundNode)node).SoundFile);
                     Jwriter.WritePropertyName("Layer");
                     Jwriter.Write((int)((SoundNode)node).Layer);
+                    break;
+                case NodeTypes.StampNode:
+
+                    Jwriter.WritePropertyName("Tag");
+                    Jwriter.Write(((SceneStampNode)node).Tag);
+
+                    Jwriter.WritePropertyName("Day");
+                    Jwriter.Write(((SceneStampNode)node).Day);
+                    Jwriter.WritePropertyName("Hour");
+                    Jwriter.Write(((SceneStampNode)node).Hour);
+                    Jwriter.WritePropertyName("Length");
+                    Jwriter.Write(((SceneStampNode)node).Length);
                     break;
                 default:
                     break;
