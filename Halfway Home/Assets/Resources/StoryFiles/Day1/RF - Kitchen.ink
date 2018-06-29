@@ -31,6 +31,14 @@ EXTERNAL GetStringValue(value)
 "We've got our very own cook who does a pretty admirable job with everybody's restrictions and whatnot."
 "You can come here for breakfast, lunch, and dinner. Or really anytime you're hungry. There's usually some tidbits left out if you're a midnight snacker." 
 "Eating will rejuvenate you and lower your <color=color_descriptor><i>fatigue</i></color>." # Fatigue * Show
+{
+	-week == 1:
+		->WeekOne
+	-else:
+		->Repeat
+}
+
+=== WeekOne ===
 "You know, all pretty obvious stuff."
 "Unless... Crap, you don't have an eating disorder or something do you?"
 [Timothy] "Um... no.."
@@ -39,6 +47,12 @@ EXTERNAL GetStringValue(value)
 [Timothy] "I-It's okay..."
 [{player_name}] "Uh... cool."
 "Well, uh, lets go see what they got. If I recall, today is pancake day."
+I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
+I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
+-> END
+
+=== Repeat ===
+I look back at Timothy, and see he's mostly just staring at the ground.
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
 -> END

@@ -181,6 +181,9 @@ Okay, some common consonants are...
 "How'd you guess is so quickly?" #Timothy=Sad
 [{player_name}] "Lucky guess?"
 You know, that and weird time travel shenanigans.
+[Timothy] "..."
+Timothy looks a little sad that I immediately got the answer. but then...
+he smiled #Timothy = Happy
 ->GameOver
 
 === YouLose ===
@@ -210,7 +213,21 @@ Should... Should I question him about that?
 +[Question Timothy]
 	{
 		-expression > 2:
-			You question Timothy
+			[{player_name}] "You okay Timothy?" #expression ^ good
+			[Timothy] "huh? yeah? why wouldn't I be?" #Timothy = Surprised
+			[{player_name}] "Oh! its nothing. That joke was just kind of dark is all. I didn't expect that from you."
+			[Timothy] "oh, yeah. sorry..." #Timothy = sad
+			[{player_name}] "I mean, you don't need to apologise. I just want to make sure everything's okay with you."
+			[Timothy] "Oh! uh... thanks?" #Timothy = Surprised
+			"I dunno. I just like dark jokes." #Timothy = Angry
+			"I-is t-that o-okay?" #Timothy = sad
+			Timothy shrives um like I'm going to reprimand him for having a sense of humor.
+			[{player_name}] "Dude, of course its okay." 
+			"Really, I should apologize if I'm making you self consious or anything." #Timothy = Surprised
+			"You just be you." #Timothy = Happy 
+			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
+			Timothy beams more than I'd seen him express all day. I think I might of pressed one of his buttons, but like, in a good way?
+			->WrapUp
 		-else:
 			<color=A5C5E3FF><i>Unfortunately, Your <b>expression</b> is not high enough to successfully ask Timothy this question.</i></color>
 			->QuestionTimothy

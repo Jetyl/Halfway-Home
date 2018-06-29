@@ -34,9 +34,24 @@ EXTERNAL GetStringValue(value)
 "In general it's always open to mess with stuff, if you want."
 [Timothy] "They've got a lot of um.... stuff... in here."
 [{player_name}] "Yeah, they encourage people to get creative and <color=color_expression><i>express</i></color> themselves." # Expression * Show
+{
+	-week == 1:
+		->WeekOne
+	-else:
+		->Repeat
+}
+
+
+=== WeekOne ===
 I'm not super good at <color=color_expression><i>expressing</i></color> myself, so it just kind of <color=color_wellbeing_penalty><i>stresses</i></color> me out. 
 It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
 "But yeah, you wanna try something out?"
+[Timothy] "N-Not right now."
+"Th-thanks though..." #Timothy = Exit #0.3 & Success
+-> END
+
+=== Repeat ===
+
 [Timothy] "N-Not right now."
 "Th-thanks though..." #Timothy = Exit #0.3 & Success
 -> END
