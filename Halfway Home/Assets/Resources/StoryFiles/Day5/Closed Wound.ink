@@ -21,6 +21,9 @@ VAR HoursSpent = 0
 VAR firsttime = false
 VAR readLetter = false
 VAR chickenedOut = false
+VAR walk = false
+VAR movie = false
+VAR game = false
 
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
@@ -33,7 +36,7 @@ EXTERNAL SetTimeBlock(int)
 -> Start
 
 === Start ===
-I head to my door, nervously thumbing the key I took from Max's key ring days ago. # Background / Commons
+I head to my door, nervously thumbing the key I took from Max's key ring days ago.{SetTimeBlock(1)} {SetValue("CompletedClosedWound", true)} # Background / Commons
 {
 	-TURNS_SINCE(-> Unlocked)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
 		~firsttime = true
@@ -170,6 +173,11 @@ And that I've been lying to myself about being ready to leave it behind.
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> {SetValue("EarnedWoundStar", true)} # Awareness+++
 }
+[{player_name}] "I see what you mean."
+"Seems like your parents expect a lot out of you..."
+Timothy wrings his hands nervously. # Timothy = Afraid
+I need to find some way to fix this: To help Timothy relax... # Timothy = Calm
+I rack my brain looking for an answer.
 {awareness==5:->Healing|->NotYet}
 
 =Tangents
@@ -199,7 +207,7 @@ Quick, {player_name}, change the subject!
 		-That makes a lot of sense. I wouldn't have an easy time with that either. # awareness ^ good
 	}
 	[{player_name}] "I understand. Maybe you'll feel more comfortable after you've been here a while."
-	[Timothy] "Yeah..." # Timothy == Calm
+	[Timothy] "Yeah..." # Timothy = Calm
 +[Talk about the weather]
 	[{player_name}] "Nice weather we're having, huh?"
 	Nice going, {player_name}, you picked the most cliched change of topic possible.
@@ -215,9 +223,25 @@ Quick, {player_name}, change the subject!
 	[Timothy] "That does sound nice. Most of the time when I'm in the garden I'm focused on the ground."
 	"That's kinda f-funny actually." # Timothy = Happy
 	"It's the same garden, but somehow we both see it differently."
--{awareness==5:->Healing|->NotYet}
+	I guess that is kinda funny.
+-Timothy takes a deep breath and starts playing with his hands. # Timothy = Calm
+He seems sufficiently distracted now, at least.
+In the silence that follows, I search for a way to help repair the damage of the letter.
+{awareness==5:->Healing|->NotYet}
 
 =Healing
+I understand what I have to do. I need to show him that he's not alone. # awareness ^ good
+The only way I'm truly getting through to Timothy is by opening up to him myself. # awareness ^ good
+I know because I'm the same way. # awareness ^ good
+[{player_name}] "You remember when I was first showing you around and I told you that stuff about my depression?"
+[Timothy] "Oh. Y-yeah." # Timothy = Surprised
+[{player_name}] "Well, I think it's about time you heard the full story."
+"<size=150%>I'll try to keep it short... and if it gets boring, I can stop..."
+[Timothy] "No! I want to hear!"
+I've never told anyone any of this before.
+My psychiatrist back at Blackwell knew a little, but not everything.
+[{player_name}] "When I was a kid, I was pretty different."
+"To be more specific, I was an arrogant jerk."
 // You open up completely to Timothy
 // This is also when the player gets to know who Sam really is, what the voices are, etc.
 // Sam tells Timothy the story of how he created the voices and when the nightmare  began.
@@ -227,9 +251,52 @@ Quick, {player_name}, change the subject!
 -> END // 1 of 3 (GOOD)
 
 =NotYet
-// You don't have enough awareness to open up to Timothy completely
-// He doesn't fully trust you or believe in himself, and will break down on the last day
-->END // 2 of 3 (BAD)
+I wait for a revelation to come, but it never does. # awareness ^ poor
+Why did I think I could even do this? 
+I'm no therapist. @I'm just his roommate.
+The best I can hope for is that spending some time with him will improve his mood a bit.
+Maybe he just needs some company. Maybe he needs to feel less alone.
+[{player_name}] "Hey, why don't we do something?"
+[Timothy] "Like what?"
+Crap, I don't know. I'd better think of something fast.
+->OutOfOptions
+=OutOfOptions
++{walk==false}[Go for a walk]
+	[{player_name}] "It's nice out. How about we go for a walk?"
+	~ walk = true
+	[Timothy] "I-I don't... <speed=60><size=80%>really think I could handle going outside right now.<size=100%><speed=40> Sorry!" # Timothy = Afraid
+	Timothy looks down at the floor. # Timothy = Sad
+	->OutOfOptions
++{game==false}[Play a game]
+	[{player_name}] "The common room has all kinds of games. How about we play one?"
+	~ game = true
+	{movie==false:
+		[Timothy] "Sure!" # Timothy = Happy
+		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid
+	-else:
+		[Timothy] "<size=70%>That's the same problem as watching a movie...<size=100%>" # Timothy = Sad
+		Right, duh.
+	}
+	->OutOfOptions
++{movie==false}[Watch a movie]
+	[{player_name}] "We could watch a movie."
+	~ movie = true
+	{game==false:
+		[Timothy] "That sounds fine." # Timothy = Happy
+		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid
+	-else:
+		[Timothy] "<size=70%>That's the same problem as playing a game...<size=100%>" # Timothy = Sad
+		Right, duh.
+	}
+	->OutOfOptions
+*->
+	I am officially out of ideas.
+	[Voices] "As if you stood a chance at making anything <i>better</i>."
+	"Why don't you try leaving the poor kid alone?"
+	I sigh, defeated. Maybe he does just need some peace and quiet after all.
+	[{player_name}] "Well, another time, then. I should get going."
+	[Timothy] "Y-yeah. See you around." # Timothy = Calm
+	->END // 2 of 3 (BAD)
 
 =GetMax
 ~chickenedOut = true
@@ -247,18 +314,18 @@ Max really is a good R.A., despite how in-your-face they can be.
 "I'm sure if we work together we can cheer him up! Come on!" # Max = Happy
 Max tears through the crowd and I follow through the slipstream. # Max = exit
 When we arrive, Timothy is no longer curled up, but sitting hunched over at the edge of his bed. # Background / YourRoom
-[Max] "Knock knock!" # Max = Calm, right
-Timothy stands and turns around, his face looking somewhat pale. # Timothy = Surprised, left
+[Max] "Knock knock!" # Max = Calm, stage_right
+Timothy stands and turns around, his face looking somewhat pale. # Timothy = Surprised, stage_left
 [Timothy] "Oh, hi guys."
 His voice cracks a little as he speaks. He clears his throat softly.
 [Max] "{player_name} said you might be a little down."
 [Timothy] "{player_gender=="M":He|{player_gender=="F":She|They}} did?" # Timothy = Afraid
 Oh man, outed immediately.
 [Max] "I thought I'd come and try out some of my new puns." # Max = Happy
-[Timothy] "W-wait, puns? # Timothy = Afraid
+[Timothy] "W-wait, puns?" # Timothy = Afraid
 Oh god, this just went from bad to worse.
 Max clears their throat. # Timothy = Calm
-"I wasn't planning on being an R.A. after leaving Sunflower House, ya know."
+[Max]"I wasn't planning on being an R.A. after leaving Sunflower House, ya know."
 "I wanted to be a doctor, but I didn't have the <i>patients</i> for it."
 Timothy visibly winces. Max really can't read a room, huh?
 "Then I tried to be a baker, but I couldn't raise the <i>dough</i>."

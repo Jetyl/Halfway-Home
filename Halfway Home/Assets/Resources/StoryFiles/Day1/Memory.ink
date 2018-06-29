@@ -144,7 +144,7 @@ Fear breaks me from my stupor and I am in control again. I turn to run.
 === Blackwell ===
 Behind me, the friendly hallways of Sunflower House have dissolved into the sickly white corridors of Blackwell Psychiatric.
 I sprint headlong down the sterile hallway. I can feel the darkness closing in behind me. # SFX : play_sfx_human_footsteps_approaching
-<speed=40>It wants to trap me. I can't let that happen. I have to get out!
+<speed=60>It wants to trap me. I can't let that happen. I have to get out!
 The hallway seems to shift in front of me, impeding my escape. # SFX : play_sfx_human_footsteps_approaching
 I dive into a corridor that extends into darkness to my left.
 The corridor seems to go on forever. I don't know how much longer I can keep this up.

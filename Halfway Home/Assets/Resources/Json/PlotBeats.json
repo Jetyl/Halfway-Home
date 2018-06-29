@@ -255,6 +255,10 @@
     "Type" : 1
    },
    {
+    "Name" : "CompletedClosedWound",
+    "Type" : 1
+   },
+   {
     "Name" : "HadLateNightHangout",
     "Type" : 1
    },
