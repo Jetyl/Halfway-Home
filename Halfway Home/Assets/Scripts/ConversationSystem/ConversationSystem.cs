@@ -33,7 +33,8 @@ public enum NodeTypes
     CheatNode = 16,
     RoomNode = 17,
     TimeNode = 18,
-    NullNode = 19
+    NullNode = 19,
+    StampNode = 20
 }
 
 
@@ -134,6 +135,9 @@ public class ConversationSystem
                     break;
                 case NodeTypes.NullNode:
                     Nodes.Add(new ConvNull(conversation[i]));
+                    break;
+                case NodeTypes.StampNode:
+                    Nodes.Add(new ConvStamp(conversation[i]));
                     break;
                 default:
                     break;
@@ -613,6 +617,36 @@ public class ConvMap : ConvNode
 
         return false;
     }
+
+}
+
+
+/**
+    * CLASS NAME: ConvMap
+    * DESCRIPTION  : the start of the conversation
+**/
+public class ConvStamp : ConvNode
+{
+    string Title;
+    TimeStamp time;
+
+    public ConvStamp(JsonData start)
+    {
+        ID = (int)start["ID"];
+        Title = (string)start["Tag"];
+        Destination = (int)start["NextID"];
+        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"]);
+       
+    }
+
+
+    public override void CallAction()
+    {
+
+        Game.current.SetSceneData(Title, time, true);
+
+    }
+    
 
 }
 

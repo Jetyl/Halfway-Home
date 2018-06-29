@@ -349,11 +349,15 @@ public class Game
         return SceneList[scene_name] == time_stamp;
     }
 
-    public void SetSceneData(string scene_name, TimeStamp time_stamp)
+    public void SetSceneData(string scene_name, TimeStamp time_stamp, bool Override = false)
     {
         if (!SceneList.ContainsKey(scene_name))
         {
             SceneList.Add(scene_name, time_stamp);
+        }
+        else if(Override)
+        {
+            SceneList[scene_name] = time_stamp;
         }
     }
     public bool IsSceneUnlocked(string scene_name, TimeStamp time_stamp)

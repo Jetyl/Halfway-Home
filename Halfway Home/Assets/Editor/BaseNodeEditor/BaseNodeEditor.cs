@@ -24,6 +24,12 @@ public class BaseNodeEditor : EditorWindow
     protected Rect _zoomArea = new Rect(0, 0, Screen.width * 2.5f, Screen.height * 2);
     protected Rect ZoomedArea;
 
+    protected KeyCode MultiSelectLeft = KeyCode.LeftControl;
+    protected KeyCode MultiSelectRight = KeyCode.RightControl;
+    protected bool MultiSelect = false;
+    protected Vector2 MultiSelectStart;
+    protected Vector2 MultiSelectedEnd;
+
     [MenuItem("Window/Halfway Home/Base Editor")]
     private static void OpenWindow()
     {
@@ -67,6 +73,9 @@ public class BaseNodeEditor : EditorWindow
 
         DrawConnections();
         DrawNodes();
+
+        if (MultiSelect)
+            DrawSelectRect();
 
         DrawConnectionLine(Event.current);
 
@@ -137,23 +146,42 @@ public class BaseNodeEditor : EditorWindow
                 if (e.button == 0)
                 {
                     ClearConnectionSelection();
-                }
 
+                    if(MultiSelect)
+                    {
+                        MultiSelectStart = GetMousePosition(e);
+                    }
+
+                }
+                
                 if (e.button == 1)
                 {
-                    float ScaledX = e.mousePosition.x * (ZoomedArea.width / position.width);
-                    float ScaledY = e.mousePosition.y * (ZoomedArea.height / position.height);
                     //ScaledY -= 21;
-                    Vector2 scalePos = new Vector2(ScaledX, ScaledY);
+                    Vector2 scalePos = GetMousePosition(e);
 
                     ProcessContextMenu(scalePos);
                 }
                 break;
+            case EventType.MouseUp:
 
+                if(MultiSelect)
+                {
+                    ProcessMultiSelect();
+
+                    MultiSelectedEnd = GetMousePosition(e);
+                    MultiSelectStart = GetMousePosition(e);
+                }
+
+                break;
             case EventType.MouseDrag:
                 if (e.button == 0)
                 {
-                    OnDrag(e.delta * (1/zoomScale));
+                    if (MultiSelect)
+                    {
+                        MultiSelectedEnd = GetMousePosition(e);
+                    }
+                    else
+                        OnDrag(e.delta * (1 / zoomScale));
                 }
                 break;
             case EventType.ScrollWheel:
@@ -175,6 +203,26 @@ public class BaseNodeEditor : EditorWindow
                 }
                 e.Use();
                 break;
+            case EventType.KeyDown:
+
+                if((e.keyCode == MultiSelectLeft || e.keyCode == MultiSelectRight) && !MultiSelect)
+                {
+                    MultiSelect = true;
+
+                    MultiSelectedEnd = GetMousePosition(e);
+                    MultiSelectStart = GetMousePosition(e);
+
+                }
+
+                break;
+            case EventType.KeyUp:
+
+                if ((e.keyCode == MultiSelectLeft || e.keyCode == MultiSelectRight) && MultiSelect)
+                {
+                    MultiSelect = false;
+                }
+
+                break;
         }
     }
 
@@ -182,6 +230,7 @@ public class BaseNodeEditor : EditorWindow
     {
         if (nodes != null)
         {
+
             for (int i = nodes.Count - 1; i >= 0; i--)
             {
                 bool guiChanged = nodes[i].ProcessEvents(e);
@@ -234,6 +283,50 @@ public class BaseNodeEditor : EditorWindow
         genericMenu.ShowAsContext();
     }
 
+    private Vector2 GetMousePosition(Event e)
+    {
+        float ScaledX = e.mousePosition.x * (ZoomedArea.width / position.width);
+        float ScaledY = e.mousePosition.y * (ZoomedArea.height / position.height);
+
+        return new Vector2(ScaledX, ScaledY);
+    }
+
+    protected void DrawSelectRect()
+    {
+        
+        Vector2 pos = new Vector2(Mathf.Min(MultiSelectedEnd.x, MultiSelectStart.x), Mathf.Min(MultiSelectedEnd.y, MultiSelectStart.y));
+        Vector2 size = new Vector2(Mathf.Abs(MultiSelectStart.x - MultiSelectedEnd.x), Mathf.Abs(MultiSelectStart.y - MultiSelectedEnd.y));
+
+        var box = new Rect(pos, size);
+        Handles.DrawSolidRectangleWithOutline(box, Color.clear, Color.white);
+
+
+        GUI.changed = true;
+    }
+
+    protected void ProcessMultiSelect()
+    {
+        if (nodes != null)
+        {
+
+            float startX = MultiSelectStart.x * (ZoomedArea.width / position.width);
+            float startY = MultiSelectStart.y * (ZoomedArea.height / position.height);
+            float EndX = MultiSelectedEnd.x * (ZoomedArea.width / position.width);
+            float EndY = MultiSelectedEnd.y * (ZoomedArea.height / position.height);
+
+            Vector2 pos = new Vector2(Mathf.Min(MultiSelectedEnd.x, MultiSelectStart.x), Mathf.Min(MultiSelectedEnd.y, MultiSelectStart.y));
+            Vector2 size = new Vector2(Mathf.Abs(MultiSelectStart.x - MultiSelectedEnd.x), Mathf.Abs(MultiSelectStart.y - MultiSelectedEnd.y));
+
+            var box = new Rect(pos, size);
+
+            for (int i = nodes.Count - 1; i >= 0; i--)
+            {
+                nodes[i].ProcessMultiSelect(box);
+                
+            }
+        }
+    }
+
     private void OnDrag(Vector2 delta)
     {
         drag = delta;
@@ -247,6 +340,20 @@ public class BaseNodeEditor : EditorWindow
         }
 
         GUI.changed = true;
+    }
+
+    private bool OnNode(Vector2 pos)
+    {
+        if (nodes != null)
+        {
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                if (nodes[i].rect.Contains(pos))
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     virtual protected void OnClickAddNode(Vector2 mousePosition)

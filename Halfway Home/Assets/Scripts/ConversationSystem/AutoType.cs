@@ -110,7 +110,7 @@ public class AutoType : MonoBehaviour
         Text.text = "";
         PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");
         letterPause = 1 / (DefaultPauseSpeed * PauseSpeedMultiplier);
-        UpdateSpeed = TextParser.ExtractTextSpeed(ref message);
+        UpdateSpeed = TextParser.ExtractTextSpeed(ref message, DefaultPauseSpeed);
 
         if (!Paused)
             typing = StartCoroutine(TypeText(0));

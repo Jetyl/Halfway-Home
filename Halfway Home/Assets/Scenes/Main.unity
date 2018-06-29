@@ -8628,7 +8628,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.8
+  m_fontSize: 70.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15211,7 +15211,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.1
+  m_fontSize: 57.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -52277,7 +52277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.744}
+  m_AnchoredPosition: {x: 0, y: 902.95386}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -59332,7 +59332,7 @@ Prefab:
     - target: {fileID: 114389923766354586, guid: 73dde90acc7f8de4fbde33410c6d8186,
         type: 2}
       propertyPath: FadeOnInitialize
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114389923766354586, guid: 73dde90acc7f8de4fbde33410c6d8186,
         type: 2}
@@ -59341,6 +59341,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1940246386859070, guid: 73dde90acc7f8de4fbde33410c6d8186, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563331295154130, guid: 73dde90acc7f8de4fbde33410c6d8186,
+        type: 2}
+      propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

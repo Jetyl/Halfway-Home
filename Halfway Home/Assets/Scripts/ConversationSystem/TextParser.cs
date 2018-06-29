@@ -172,11 +172,11 @@ public static class TextParser
         return null;
     }
     
-    public static Dictionary<int, float> ExtractTextSpeed(ref string text)
+    public static Dictionary<int, float> ExtractTextSpeed(ref string text, float defautSpeed)
     {
 
         Dictionary<int, float> newSpeed = new Dictionary<int, float>();
-        float oldspeed = 20;
+        float oldspeed = defautSpeed;
         int cutback = 0; //for other rich text functions, so they do not get in the way
 
         for (int i = 0; i < text.Length; ++i)
@@ -187,22 +187,36 @@ public static class TextParser
                     continue;
 
                 var check = text.Substring(i, 7);
-                if (check == "<speed=" || check == "<Speed=")
+                if (check.ToLower() == "<speed=")
                 {
                     for (int j = i + 7; j < text.Length; ++j)
                     {
                         if (text[j] == '>')
                         {
-                            float speed = float.Parse(text.Substring(i + 7, j - (i + 7)));
-                            newSpeed.Add(i - cutback, speed);
-                            oldspeed = speed;
+                            string num = text.Substring(i + 7, j - (i + 7));
+
+                            if(num.Contains("%"))
+                            {
+                                float percent = float.Parse(num.Replace("%", ""));
+                                float speed = oldspeed * (percent / 100f);
+                                newSpeed.Add(i - cutback, speed);
+                                oldspeed = speed;
+                            }
+                            else
+                            {
+                                float speed = float.Parse(num);
+                                newSpeed.Add(i - cutback, speed);
+                                oldspeed = speed;
+                            }
+
+
                             text = text.Remove(i, j + 1 - i);
                             break;
                         }
 
                     }
                 }
-                else if (check == "<delay=" || check == "<Delay=")
+                else if (check.ToLower() == "<delay=")
                 {
                     for (int j = i + 7; j < text.Length; ++j)
                     {
