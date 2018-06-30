@@ -1,9 +1,9 @@
 ﻿/******************************************************************************/
 /*
 @file   Closed Wound.ink
-@author Jesse Lozano
-@par    email: jesse.lozano@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+@author John Myres
+@par    email: john.myres@digipen.edu
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 VAR player_name = "tbd"
@@ -171,7 +171,8 @@ But left alone, I had time to breathe. Time to grow.
 I think I'm finally beginning to understand what Sunflower House really is...
 And that I've been lying to myself about being ready to leave it behind.
 {GetValue("EarnedWoundStar")==false:
-	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> {SetValue("EarnedWoundStar", true)} # Awareness+++
+	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
+	~SetValue("EarnedWoundStar", true)
 }
 [{player_name}] "I see what you mean."
 "Seems like your parents expect a lot out of you..."
@@ -238,15 +239,61 @@ I know because I'm the same way. # awareness ^ good
 [{player_name}] "Well, I think it's about time you heard the full story."
 "<size=150%>I'll try to keep it short... and if it gets boring, I can stop..."
 [Timothy] "No! I want to hear!"
-I've never told anyone any of this before.
+I've never told anyone any of this before. # Timothy = Calm
 My psychiatrist back at Blackwell knew a little, but not everything.
 [{player_name}] "When I was a kid, I was pretty different."
-"To be more specific, I was an arrogant jerk."
-// You open up completely to Timothy
-// This is also when the player gets to know who Sam really is, what the voices are, etc.
-// Sam tells Timothy the story of how he created the voices and when the nightmare  began.
-// Timothy is in awe of your self awareness and finally feels like he has a friend he can trust
-// Timothy begins to believe in himself and is ready for Dye Job
+"To be more specific, I was an arrogant jerk." # Timothy = Surprised
+[Timothy] "Really?"
+[{player_name}] "That's what I realized, anyway."
+"I pushed away my best friend. Things didn't turn out well."
+[Timothy] "I'm sorry." # Timothy = Sad
+[{player_name}] "So I started criticizing myself. Only a little at first, whenever I hurt someone or lied or anything."
+"I invented this voice that would bring me back to Earth whenever I flew too high."
+"Only... it didn't stop there."
+"As I got older the voice become a chorus. As they grew louder, they dragged me down further."
+"Any time I failed, the Voices rubbed my face in it."
+"Any time I succeeded, the Voices stole any confidence the victory might have given me."
+"I stopped believing in myself. It was easier to simply accept it."
+"I didn't feel like trying. I didn't feel like doing anything at all."
+"Then I started <i>hearing</i> them. The Voices weren't just in my head any more."
+[Timothy] "W-what?!" # Timothy = Afraid
+Timothy looks around the room nervously.
+[{player_name}] "Well, obviously they weren't real, but I could really hear them."
+[Timothy] "<size=80%>Oh. Good. <size=100%>I mean of course! Yeah..." # Timothy = Calm
+[{player_name}] "I freaked out and spilled the beans to my {GetStringValue("Guardian")}."
+"Obviously, {GetStringValue("Guardian")=="brother":he|{GetStringValue("Guardian")=="sister":she|they}} took me to the hospital immediately."
+"The doctor said that auditory hallucinations were sufficient cause to perform a full mental evaluation."
+"Within a week I was at Blackwell under treatment for major depressive disorder."
+"I was in and out of that place for five years before I finally stopped hearing the Voices." # Timothy = Sad
+"When I told my psychiatrist, she was overjoyed. But... I didn't tell her the whole truth." # Timothy = Surprised
+"I stopped hearing them, that much is true. But they never went away."
+"They never stopped whispering at the back of my mind."
+[Timothy] "Oh no! Are they... Are they talking right now?!" # Timothy = Afraid
+[{player_name}] "Nah. They don't usually bother me while I'm hanging out with people."
+[Timothy] "Oh, good." # Timothy = Happy
+[{player_name}] "Sometimes they come out when I'm feeling really down, but mostly it's when I'm alone."
+"And of course there's the nightmares."
+[Timothy] "N-nightmares?" # Timothy = Surprised
+[{player_name}] "I started having this recurring nightmare where I try to run from them."
+"I can never escape. I guess I never really expect to, though." # Timothy = Sad
+I neglect to mention that my last couple of dreams somehow involved Timothy despite my not having known him at the time.
+[{player_name}] "Anyway, that's pretty much everything. You're up to speed on the life and times of {player_name}."
+Timothy stands silently, kneading his shirt with his hands. After a long pause, he finally breaks the silence.
+[Timothy] "Thanks for sharing all that with me, {player_name}. I-"
+"I really needed a friend I could trust, and you've proven yourself exactly that." # Timothy = Happy
+"I just wish I could help somehow." # Timothy = Sad
+"Wait, you said they don't bother you when you're hanging out, right?" # Timothy = Sad
+[{player_name}] "Well, yeah. Usually."
+[Timothy] "Then we have to keep hanging out!" # Timothy = Happy
+"We'll hang out so hard they won't be able to get a word in!" # Timothy = Angry
+"But... not tonight." # Timothy = Sad
+"S-sorry, but I need to settle my nerves a bit. And I'm really tired." # Timothy = Calm
+[{player_name}] "Whatever you need, man. In that case, I'm going to go finish some things around the house."
+"Thanks for listening."
+[Timothy] "Least I could do. You listened to me plenty." # Timothy = Happy
+"We roommates have to look out for each other, right?"
+[{player_name}] "Ha! Yeah, I think you're right. Rest well, Timothy. See you later."
+Timothy looks a lot more comfortable now than when I walked in, but a lot more tired. He waves goodbye as I slip out of the room. # Timothy = Exit
 {SetValue("ReadyToDye", true)}
 -> END // 1 of 3 (GOOD)
 
