@@ -24,6 +24,7 @@ EXTERNAL CharExit(nameString)
 EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
+EXTERNAL SetValue(name, values)
 
 # Play : Play_music_placeholder_main_fadein # music_vol ! -11
 
@@ -45,16 +46,17 @@ Max, frantically looking for their keys.
 	-week >= 2:
 		It doesn't look like Max has found them yet.
 		But, I know where they are. should I...
-		*[Grab them] ->FindersKeepers
-		*[Leave Max to find them] ->Misgender
+		+[Grab them] ->FindersKeepers
+		+[Leave Max to find them] ->Misgender
 	-else:
 		->Misgender
 }
 
 === FindersKeepers ===
 I sneak away from Timothy for a brief moment to the couch Max had mentioned losing the keys in. #Timothy = Exit #Keyless = Exit
-I fish the keys out of the couch cushion and pocket them. Finders keepers after all.
-I casually walk back to where Timothy is standing.
+I fish the keys out of the couch cushion and find the spare copy for my room, and pocket that one. Finders keepers after all.
+~SetValue("RoomKey", true)
+I stuff the Keys back where I found them, and then casually walk back to where Timothy is standing.
 Timothy seems to be preoccupied watching Max. #Timothy = Calm
 ->Misgender
 

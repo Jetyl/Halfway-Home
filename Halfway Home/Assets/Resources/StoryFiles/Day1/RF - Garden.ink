@@ -36,6 +36,14 @@ EXTERNAL GetStringValue(value)
 "I don't know. I've never actually gone to it."
 [Timothy] "...It's so pretty here." #Timothy = Happy, stage_left, right
 [{player_name}] "Yeah, I suppose it is." #0.2 & Success
+{
+	-week == 1:
+		->WeekOne
+	-else:
+		->Repeat
+}
+
+=== WeekOne ===
 I'll admit it is very nice out here. @The garden is one of the biggest selling points for Sunflower House in their brochure.
 It's a shame I never really made use of it.
 [{player_name}] "But yeah, the garden is a good place to reflect on things." #Timothy = Exit
@@ -47,4 +55,17 @@ Wait a minute. Where's Timothy?
 "Timothy?"
 Oh crap, did I lose him already?
 "Uh, Timothy? Where'd you go?"
+-> END
+
+=== Repeat ===
+It is rather calming, just being out here.
+[{player_name}] "I think you'll really like the garden." #Timothy = Exit
+I kind of mumble that, knowing Timothy isn't really listening to me anymore.
+In fact, he's probably already ran off on his whims.
+I give him some time to enjoy himself before I track him down.
+I just kind of relax and zone out to the cool garden breeze. @<color=A5C5E3FF>(Stress reduced!)</color> #Stress -= 20
+...
+....
+...Okay. thats probably long enough. Any longer here and I'll completely zone out and forget what I'm supposed to be doing.
+"Okay Timothy, lets see where you went."
 -> END
