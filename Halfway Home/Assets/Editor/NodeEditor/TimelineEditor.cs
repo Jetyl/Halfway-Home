@@ -844,7 +844,9 @@ public class TimelineEditor : BaseNodeEditor
                     Jwriter.Write((int)((SoundNode)node).Layer);
                     break;
                 case NodeTypes.StampNode:
-
+                    
+                    Jwriter.WritePropertyName("NextID");
+                    Jwriter.Write(((SceneStampNode)node).NextID);
                     Jwriter.WritePropertyName("Tag");
                     Jwriter.Write(((SceneStampNode)node).Tag);
 

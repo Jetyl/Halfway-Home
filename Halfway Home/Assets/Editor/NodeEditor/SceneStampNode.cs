@@ -32,8 +32,10 @@ public class SceneStampNode : BaseNode
             ChangeColor((int)data["color"]);
 
         ID = (int)data["ID"];
-
-        NextID = (int)data["NextID"];
+        
+        
+        if (data.Keys.Contains("NextID"))
+            NextID = (int)data["NextID"];
 
         title = (string)data["title"];
 
