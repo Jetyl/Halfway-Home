@@ -13,7 +13,8 @@ using Stratus;
 
 public class AudioManager : MonoBehaviour
 {
-  float ParamFadeTimer = 0;
+  float paramFadeTimer = 0;
+  public float paramFadeTime = 2.0f;
   
   public class AudioEvent : Stratus.Event
   {
@@ -122,21 +123,34 @@ public class AudioManager : MonoBehaviour
   
   void OnAudioParamFadeEvent(AudioParamFadeEvent e)
   {
+    // Set game save variables instantly, so that if the game is paused/saved during a fade, it doesn't bug out
     setCurrentGameParam(e.ParamName, e.ParamValue);
     
-    // Find current value of RTPC
-    float currentParamValue;
-    AkSoundEngine.GetRTPCValue(e.ParamName, GameObject.Find("AkAmbientMusic"), 0, currentParamValue, 1);
+    // Reset timer
+    paramFadeTimer = 0;
     
-    // Fade the value over 2 seconds
+    // Find current value of RTPC
+    // 0 is Playing ID
+    int type = 1; // RTPCValue_type.RTPCValue_Global
+    float currentParamValue;
+    AkSoundEngine.GetRTPCValue(e.ParamName, GameObject.Find("AkAmbientMusic"), 0, out currentParamValue, ref type);
+    
+    // Fade the value over fade time
     StartCoroutine(FadeParam(e.ParamName, currentParamValue, e.ParamValue));
   }
   
   IEnumerator FadeParam (string ParamName, float currentParamValue, float endParamValue)
   {
-    ParamFadeTimer += Time.deltaTime;
-    //float newParamValue = Mathf.Lerp()
-    yield return null;
+    while (paramFadeTimer < paramFadeTime)
+    {
+      paramFadeTimer += Time.deltaTime;
+      float newParamValue = Mathf.Lerp(currentParamValue, endParamValue, (paramFadeTimer / paramFadeTime) );
+      AkSoundEngine.SetRTPCValue(ParamName, newParamValue);
+      yield return null;
+    }
+    
+    // Hard set it after the fade is done, to correct overflow
+    AkSoundEngine.SetRTPCValue(ParamName, endParamValue);
   }
   
   void setCurrentGameParam (string ParamName, float ParamValue)
