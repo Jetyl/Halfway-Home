@@ -51,7 +51,8 @@ It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more th
 -> END
 
 === Repeat ===
-
+//temp stuff
+"But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
 "Th-thanks though..." #Timothy = Exit #0.3 & Success
 -> END

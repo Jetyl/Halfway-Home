@@ -54,6 +54,12 @@ Hmm... not sure what that one's about.
 -> END
 
 === Repeat ===
-
-"Th-thanks though..." #Timothy = Exit #0.4 & Success
+//temp stuff
+"what kind of books do you like Timothy?"
+[Timothy] "uh... I like adventure books." #Timothy = surprised
+[{player_name}] "cool, like, choose you own adventure books?"
+[Timothy] "th-those t-too, y-yeah."
+"really, adventure books in general are pretty cool..."
+[{player_name}] "neat. We should see if they have any here."
+"Uh... s-sure..." #Timothy = Exit #0.4 & Success
 -> END
