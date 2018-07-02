@@ -717,8 +717,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -587820625
-    m_lastTimePart2: -1999250120
+    m_lastTimePsrt1: -464960663
+    m_lastTimePart2: -1999250095
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -907,8 +907,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\UI.wwu
     ParentPhysicalPath: 
     Guid: '{148E2D9F-E4C9-4433-B2CD-803F3F69A985}'
-    m_lastTimePsrt1: -1735507876
-    m_lastTimePart2: -1999250719
+    m_lastTimePsrt1: -1418046849
+    m_lastTimePart2: -1999250107
     List:
     - Name: Ambience_Slider
       Path: UI\Sliders\Ambience_Slider

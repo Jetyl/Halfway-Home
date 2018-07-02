@@ -6,6 +6,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
 	3827964327	play_menupause_01			\PlaySFX\sfx_menu\play_menupause_01	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11926160	sfx_menu_chime_pausegame	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
 	370198169	sfx_menu_text_scroll1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		73584

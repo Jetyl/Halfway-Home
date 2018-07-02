@@ -10,12 +10,12 @@
 								<ControlSurfaceBinding Name="1-1 ambience_fireplace_vol" ID="{6F827C33-508B-454C-9A35-22615BEB10AE}">
 									<PropertyList>
 										<Property Name="HardwareControllerKey" Type="string" Value="Korg nanoKontrol2~Ch.1~CC~0"/>
-										<Property Name="TargetClassID" Type="int32" Value="3145744"/>
-										<Property Name="TargetName" Type="string" Value="Volume"/>
+										<Property Name="TargetClassID" Type="int32" Value="1376272"/>
+										<Property Name="TargetName" Type="string" Value="BusVolume"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="TargetObject">
-											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+											<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 								</ControlSurfaceBinding>
@@ -27,7 +27,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="TargetObject">
-											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+											<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 								</ControlSurfaceBinding>

@@ -84,9 +84,13 @@ namespace HalfwayHome
       string playAudio = RegexParser.Presets.ComposeBinaryOperation("Mode", "Event", ":");
       parser.AddPattern("AudioTrigger", playAudio, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioTrigger);
 
-      // RTPC Change
+      // RTPC Set
       string changeAudioParam = RegexParser.Presets.ComposeBinaryOperation("Param", "value", "!");
       parser.AddPattern("AudioParamSet", changeAudioParam, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioParamSet);
+      
+      // RTPC Fade
+      string fadeAudioParam = RegexParser.Presets.ComposeBinaryOperation("Param2", "value2", "|");
+      parser.AddPattern("AudioParamFade", fadeAudioParam, RegexParser.Target.Tag, RegexParser.Scope.Group, OnAudioParamFade);
       
       // Audio Bank Load/Unload
       string loadBank = RegexParser.Presets.ComposeBinaryOperation("Mode", "Bank", "@");
@@ -415,12 +419,20 @@ namespace HalfwayHome
       {
         if (match.ContainsKey("Param"))
         {
-          var pose = match["Param"].Trim();
-          var person = match["value"].Trim();
-
           Trace.Script($"Set {match["Param"].Trim()} parameter to {match["value"].Trim()}");
-
           Scene.Dispatch<AudioManager.AudioParamEvent>(new AudioManager.AudioParamEvent(match["Param"].Trim(), float.Parse( match["value"].Trim() )));
+        }
+      }
+    }
+    
+    void OnAudioParamFade(Parse parse)
+    {
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("Param2"))
+        {
+          Trace.Script($"Set {match["Param2"].Trim()} parameter to {match["value2"].Trim()}");
+          Scene.Dispatch<AudioManager.AudioParamFadeEvent>(new AudioManager.AudioParamFadeEvent(match["Param2"].Trim(), float.Parse( match["value2"].Trim() )));
         }
       }
     }

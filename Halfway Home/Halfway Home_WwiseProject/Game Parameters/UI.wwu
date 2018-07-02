@@ -25,7 +25,11 @@
 								<Property Name="InitialValue" Type="Real64" Value="100"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
+						<GameParameter Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main Menu" ID="{AE5B0610-C94A-431D-8D5D-24A9357330D4}" ShortID="273103631">

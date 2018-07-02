@@ -16,11 +16,7 @@
 				</MixingSession>
 				<MixingSession Name="memory" ID="{4D1BC537-56BB-4F2D-B257-06925F38F1F5}">
 					<ObjectList>
-						<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-						<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-						<ObjectRef Name="music_cafejazz" ID="{FF3E8379-A1EA-4057-967F-26A9D6287B67}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-						<ObjectRef Name="music_creepyatmo" ID="{41F2DA1C-10B6-4B62-B482-7638ACD04BE3}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-						<ObjectRef Name="music_creepyatmo2" ID="{80226DF0-FF8A-4BE4-BB2F-C3828968731D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 					</ObjectList>
 				</MixingSession>
 				<MixingSession Name="knock_on_the_morning_door" ID="{94D17B5D-AE75-4D44-AB07-2A6A4B705B06}">
