@@ -106,6 +106,7 @@ public class Game
         Progress.SetValue("TextSpeed", 1.0f);
         Progress.SetValue("week", 1);
         Progress.SetValue("Depression Time Dilation", true);
+        Progress.SetValue("Guardian", "parents");
 
         Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();

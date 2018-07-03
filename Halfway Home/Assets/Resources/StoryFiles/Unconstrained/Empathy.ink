@@ -20,6 +20,7 @@ VAR current_room = "unset"
 VAR seenBefore = false
 
 EXTERNAL SetValue(name, values)
+EXTERNAL SetStringValue(name, string)
 EXTERNAL GetValue(name)
 
 -> Start
@@ -115,32 +116,32 @@ I decide it's best not to approach Charlotte.
 	Charlotte gains a mischievous look. # Charlotte = Happy
 	[Charlotte] "Or perhaps you prefer Romance?"
 	++[Fantasy]
-	[{player_name}] "I like fantasy worlds a lot, so that probably."
+	[{player_name}] "I like fantasy worlds a lot, so that probably." {SetStringValue("BookGenre", "fantasy")}
 	[Charlotte] "Quite a lot goes into creating such wondrous places. It's a hard genre to dislike, and an even harder genre to disrespect."
 	++[Science Fiction]
-	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy|{player_gender == "F":girl|person}}."
+	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy|{player_gender == "F":girl|person}}." {SetStringValue("BookGenre", "sci-fi")}
 	[Charlotte] "A challenging genre, to be sure. One which asks us questions we are often afraid to ask ourselves."
 	++[Horror]
-	[{player_name}] "I like horror books, actually."
+	[{player_name}] "I like horror books, actually." {SetStringValue("BookGenre", "horror")}
 	[Charlotte] "The most human genre of all, in my humble opinion. A wonderful choice."
 	++[Romance]
-	[{player_name}] "So what if I do like romance novels?"
+	[{player_name}] "So what if I do like romance novels?" {SetStringValue("BookGenre", "romance")}
 	[Charlotte] "Nothing to be ashamed of! Romance is outside my typical choice of material, but I'm sure I can think of something palatable..."
 +[Nonfiction]
 	[{player_name}] "Nonfiction, I think."
 	[Charlotte] "An uncommon preference, but one I think I share."
 	"What sorts of topics do you enjoy reading about? Or perhaps you simply read a variety to learn new things?"
 	++[History]
-	[{player_name}] "I know most people are bored by it, but I find history really interesting."
+	[{player_name}] "I know most people are bored by it, but I find history really interesting." {SetStringValue("BookGenre", "history")}
 	[Charlotte] "You surprise me, {player_name}."
 	++[Natural Science]
-	[{player_name}] "I really like nature, so I guess I like books on plants and animals and stuff."
+	[{player_name}] "I really like nature, so I guess I like books on plants and animals and stuff." {SetStringValue("BookGenre", "natural science")}
 	[Charlotte] "My father loves the natural sciences as well."
 	++[Creative Nonfiction]
-	[{player_name}] "I like reading stories about things that really happened."
+	[{player_name}] "I like reading stories about things that really happened." {SetStringValue("BookGenre", "creative nonfiction")}
 	[Charlotte] "A grounded choice. You know I think you're the first person I've encountered with such a preference."
 	++[I prefer variety]
-	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way."
+	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way." {SetStringValue("BookGenre", "variety")}
 	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart."
 -[Charlotte] "I know just the thing."
 She stands up and walks over to a far shelf. # Charlotte = Exit, StageLeft

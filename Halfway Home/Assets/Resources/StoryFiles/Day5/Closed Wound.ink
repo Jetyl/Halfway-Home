@@ -1,4 +1,4 @@
-﻿/******************************************************************************/
+/******************************************************************************/
 /*
 @file   Closed Wound.ink
 @author John Myres
@@ -282,7 +282,7 @@ Timothy stands silently, kneading his shirt with his hands. After a long pause, 
 [Timothy] "Thanks for sharing all that with me, {player_name}. I-"
 "I really needed a friend I could trust, and you've proven yourself exactly that." # Timothy = Happy
 "I just wish I could help somehow." # Timothy = Sad
-"Wait, you said they don't bother you when you're hanging out, right?" # Timothy = Sad
+"Wait, you said they don't bother you when you're hanging out, right?" # Timothy = Surprised
 [{player_name}] "Well, yeah. Usually."
 [Timothy] "Then we have to keep hanging out!" # Timothy = Happy
 "We'll hang out so hard they won't be able to get a word in!" # Timothy = Angry

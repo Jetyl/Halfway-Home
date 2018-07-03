@@ -309,6 +309,10 @@
    {
     "Name" : "ReadyToDye",
     "Type" : 1
+   },
+   {
+    "Name" : "BookGenre",
+    "Type" : 4
    }
   ]
  },
