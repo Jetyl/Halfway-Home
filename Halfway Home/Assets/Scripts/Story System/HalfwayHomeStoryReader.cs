@@ -374,20 +374,20 @@ namespace HalfwayHome
         {
           if (match["Mode"].Trim().ToLower() == "play")
           {
-            Trace.Script($"Play {parse.FindFirst("Event").Trim()} music");
-            Game.current.CurrentTrack = parse.FindFirst("Event");
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, parse.FindFirst("Event")));
+            Trace.Script($"Play {match["Event"].Trim()} music");
+            Game.current.CurrentTrack = match["Event"].Trim();
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, match["Event"]));
           }
           else if (match["Mode"].Trim().ToLower() == "sfx")
           {
-            Trace.Script($"Play {parse.FindFirst("Event").Trim()} sound effect");
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, parse.FindFirst("Event")));
+            Trace.Script($"Play {match["Event"].Trim()} sound effect");
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.SFX, match["Event"]));
           }
           else if (match["Mode"].Trim().ToLower() == "ambience")
           {
-            Trace.Script($"Play {parse.FindFirst("Event").Trim()} ambience");
-            Game.current.CurrentAmbience = parse.FindFirst("Event");
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, parse.FindFirst("Event")));
+            Trace.Script($"Play {match["Event"].Trim()} ambience");
+            Game.current.CurrentAmbience = match["Event"];
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, match["Event"]));
           }
         }
       }

@@ -31,7 +31,7 @@ EXTERNAL SetValue(name, values)
 -> CommonsFunction
 
 === CommonsFunction ===
-[{player_name}] "This is the Commons!" #Timothy = Calm
+[{player_name}] "This is the Commons!"   #Timothy = Calm
 "You probably already came through here to get to our room."
 [Timothy] "Yeah..."
 [{player_name}] "Anyway, this is sort of a big hub area."
@@ -40,7 +40,7 @@ EXTERNAL SetValue(name, values)
 Which is why it stresses me out. But it does help with my depression.
 [Timothy] "It's pretty empty right now..."
 Huh. Yeah, it is. That's rare.
-The only other person in sight is... #Keyless = Calm
+The only other person in sight is...   #Keyless = Calm
 Max, frantically looking for their keys.
 {
 	-week >= 2:
