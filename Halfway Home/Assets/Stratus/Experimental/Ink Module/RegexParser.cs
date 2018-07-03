@@ -327,7 +327,7 @@ namespace Stratus
           /// <returns></returns>
           public static string ComposeUnaryOperation(string variableLabel, string operatorLabel, char unaryOperator)
           {
-            return $"(?<{variableLabel}>.*)[ ]*(?<{operatorLabel}>[{unaryOperator}]+$)";
+            return $"(?<{variableLabel}>[^{unaryOperator}]*)(?<{operatorLabel}>[{unaryOperator}]+$)";
           }
 
           /// <summary>
