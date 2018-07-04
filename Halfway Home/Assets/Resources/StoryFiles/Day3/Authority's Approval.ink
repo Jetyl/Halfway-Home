@@ -73,7 +73,8 @@ He looks kind of sad. I should...
 	[{player_name}] "Mind if I sit with you?"
 	[Timothy] "...Sure."
 	I Sit down with Timothy, and chat with him while we eat.
-	The food is invigorating and Timothy seems to relax as we talk. 
+	The food is invigorating and Timothy seems to relax as we talk.  
+	~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
 	<color=color_descriptor><i>the meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=20 
 	<color=color_descriptor><i>the chat with Timothy also improved <color=color_awareness><b>Awareness</b>,<color=color_grace><b>Grace</b>, <color=color_descriptor>and <color=color_expression><b>Expression</b> faintly.</i></color> #expression+ #grace+ #awareness+	
 ->END

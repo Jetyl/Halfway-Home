@@ -52,7 +52,10 @@ It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more th
 
 === Repeat ===
 //temp stuff
+[{player_name}] "I'd assume you'd not really be in here much."
+"but hey, they got lots of free paper here to snag if you wanna, I dunno, draw maps or chibi's or something."
+[Timothy] "<size=30%>maps...</size>"
+I threw in Timothy's hobby interest, hoping it might endear him to this place more.
 "But yeah, you wanna try something out?"
-[Timothy] "N-Not right now."
-"Th-thanks though..."   #Timothy = Exit   #0.3 & Success
+[Timothy] "T-thanks, b-but w-we can finish the t-tour first."   #Timothy = Exit   #0.3 & Success
 -> END
