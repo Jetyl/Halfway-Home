@@ -29,12 +29,13 @@ EXTERNAL CallSleep()
 === Start ===
 I walk into my room to go to bed. 
 I hop into the shower real quick. By the time I come out Timothy is already curled up in his bed.
-//if first week
 { 
 	- week == 1:
 		->ContemplateWeek1
+	- week == 2:
+		->ContemplateWeek2
 	- else:
-		->ContemplateWeek1
+		->ContemplateEndlessWeeks
 
 }
 
@@ -45,8 +46,8 @@ I sit there, wavering between consciousness and unconsciousness, when I hear a v
 [Timothy] "Hey,<delay=2> {player_name}?"
 [{player_name}] "Yeah?"
 {
-	- week == 1:
-		-> TalkWeek1
+	-GetValue("Tutorial") == true:
+		-> Thanks
 	- else:
 		-> Start.Question	
 }
@@ -63,7 +64,38 @@ Man, it's going to be a bit weird, having a roommate.
 Eh, its only for one week.
 -> Start.IntoBed
 
-=== TalkWeek1 ==
+=== ContemplateWeek2 ===
+what is happening... how did my week repeat like this?
+Is... Is this just going to happen again when this week is over?
+Why?
+I look over at Timothy.
+Timothy's breakdown the last day.
+Could... could that have been it?
+Honestly... It feels like a weak connection, but I can't think of anything else.
+{
+	-depression >65:
+	[Voices] "You are such an ignorant fool."
+}
+->Start.IntoBed
+
+=== ContemplateEndlessWeeks ===
+I sigh, the quiet mundanity of my enviroment digging into the endlessness I've somehow become trapped in.
+Looping weeks on end. I try to wonder on the reason why.
+{
+	-GetValue("SavedTimothy"):
+		I look over at Timothy.
+		I've got to find some way to save Timothy. That's got to break this loop.
+	-else:
+		I... I saved Timothy, yet...		
+		why are the weeks still repeating?
+}
+{
+	-depression >65:
+	[Voices] "You are such an ignorant fool."
+}
+->Start.IntoBed
+
+=== Thanks ==
 [Timothy] "Th-thank you...<delay=1> for showing me around."
 [{player_name}] "Oh."
 "No problem."
@@ -80,7 +112,7 @@ Eh, its only for one week.
 [Timothy] "Oh... <delay=1> okay."
 {
 	- grace >= 1:
-		[{player_name}] "But you'll get stronger."
+		[{player_name}] "But you'll get stronger." #grace ^ good
 }
 ->Sleep
 
@@ -89,7 +121,7 @@ Eh, its only for one week.
 [{player_name}] "Good night, Timothy."
 {
 	- expression >= 1:
-		"It was nice meeting you."
+		"It was nice meeting you." #expression ^ good
 }
 I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose
 My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%12

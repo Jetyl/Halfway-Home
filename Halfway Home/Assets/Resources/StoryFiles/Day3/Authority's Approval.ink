@@ -26,7 +26,6 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-The player walks into the cafe area for some breakfast. early in the morning
 I head over to the cafe for some breakfast. I could use the meal.
 I spot Max doing their daily mopping. #Max = calm, stage_left
 they're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
@@ -65,7 +64,7 @@ He takes his tray and plops himself at a table across the cafe.
 He looks kind of sad. I should...
 +[Give Him Some Space]
 	I should give the little fella some space. #Timothy = exit
-	I eat my breakfast in quiet comfort. (<i>Fatigue and Stress reduced<i>) #fatigue -=30 #stress -=15
+	I eat my breakfast in quiet comfort. @<color=color_descriptor><i>the relaxing meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> significantly and Stress slightly</i></color> #fatigue -=30 #stress -=15
 	Finished with my meal, I head off, leaving Timothy where he is. 
 +[Move over there, and have breakfast with Timothy]
 	I pick up my meal, and go over to Timothy.
@@ -75,6 +74,6 @@ He looks kind of sad. I should...
 	[Timothy] "...Sure."
 	I Sit down with Timothy, and chat with him while we eat.
 	The food is invigorating and Timothy seems to relax as we talk. 
-	Fatigue reduced! #fatigue -=20 
-	Expression, grace, and awareness all increase! #expression+ #grace+ #awareness+	
+	<color=color_descriptor><i>the meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=20 
+	<color=color_descriptor><i>the chat with Timothy also improved <color=color_awareness><b>Awareness</b>,<color=color_grace><b>Grace</b>, <color=color_descriptor>and <color=color_expression><b>Expression</b> faintly.</i></color> #expression+ #grace+ #awareness+	
 ->END

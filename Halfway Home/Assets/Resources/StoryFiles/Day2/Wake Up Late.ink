@@ -29,7 +29,7 @@ EXTERNAL CallSleep()
 === Start ===
 [Max] "Are y'all still asleep in there?" //knock noise
 uuuugh.... #Background / YourRoom, eyeopen
-Max—and I know its Max—is hollering concerned, as I slink out of my silken cavern to get the door. 
+Max (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "!" #Max = Surprised
 "{player_name}... Did you just get up?" #Max = Sad
 +[Be Honest]
@@ -43,11 +43,17 @@ Max—and I know its Max—is hollering concerned, as I slink out of my silken c
 		Ha! if only you knew Max. If only you knew...
 	}
 +[Lie]
-	[{player_name}] "Whaaat? Nooo..."
-	[Max] "..." #Max = Angry
-	"{player_name}, you are still in your PJs."
-	Oh, right. drat.
-
+{
+	-expression >= 1:
+		[{player_name}] "No, I didn't just get up. Been chilling in my room all day tho." #expression ^ good
+		[Max] "uh<delay=0.25>-huh." #Max = Angry
+		I'm not sure if Max actually bought that or not. However...
+	-else:
+		[{player_name}] "Whaaat? Nooo..." #expression ^ poor
+		[Max] "..." #Max = Angry
+		"{player_name}, you are still in your PJs."
+		Oh, right. drat.
+}
 - Max just shakes their head, brushing off my laziness, to get to a more important point.
 [Max] "Is Timothy still in here too?"
 I look over at his bed, and yep, he is still there, snoozing it up.

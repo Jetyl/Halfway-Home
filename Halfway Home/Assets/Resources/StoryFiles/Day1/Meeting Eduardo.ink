@@ -30,7 +30,7 @@ EXTERNAL GetValue(value)
 		-> MeetWithTimothy
 	- else:
 		-> MeetAlone
-z
+
 }
 
 ===MeetAlone===
@@ -59,7 +59,7 @@ I decide to go over there, and see how they are doing.
 		Actually, should I even bother explaining my situation to them?
 	-else:
 		oh you know, stuck in a timeloop for who knows what reason! nothing major.
-		Actually, should I try to explain things to them again?
+		Actually, should I try to explain things to them?
 
 }
 +[Yes]
@@ -108,7 +108,7 @@ Eduardo either doesn't notice this, or is more focused on that lack of a verbal 
 [Isaac] "..."
 Isaac seems to be lost in his own little world right now.
 [Eduardo] "Isaaacc!" #Eduardo = Exit, stage_right #Isaac = Exit, stage_right
--> Needy
+-> Needy ->ExitSolo
 
 
 ===ExitSolo===
@@ -174,7 +174,7 @@ Eduardo on the other hand...
 [Isaac] "..."
 Isaac seems to be lost in his own little world right now.
 [Eduardo] "Isaaaac!" //#Eduardo = Exit, stage_right #Isaac = Exit, stage_right EXITS REMOVED UNTIL CG IMPLEMENTED
--> Needy
+-> Needy ->ExitWithTimothy
 
 ===ExitWithTimothy===
 [Timothy] "Um..." 
@@ -186,10 +186,7 @@ I...
 
 === Leaving ===
 I let it go. I doubt I could get their attention anyways.
-{
-	- GetValue("Tutorial") == true:
-		I motion for Timothy to follow, leaving the lovebirds to their business.
-}
+I motion for Timothy to follow, leaving the lovebirds to their business.
 Off to do something else, I suppose. #All = Exit
 -> END
 
@@ -221,10 +218,4 @@ Isaac responds as if he can read my mind.
 <i>Yikes</i> that's cheesy.
 Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him. # Isaac = Happy
 Relationships are weird.
-{
-	- GetValue("Tutorial") == true:
-		-> ExitWithTimothy
-	- else:
-		-> ExitSolo
-
-}
+->->
