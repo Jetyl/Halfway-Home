@@ -32,9 +32,9 @@ EXTERNAL SetValue(ValueName, newValue)
 
 # Play : Play_music_placeholder_main_fadein # music_vol ! -11
 
--> UnnatrualSpot
+-> UnnaturalSpot
 
-=== UnnatrualSpot ===
+=== UnnaturalSpot ===
 I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Happy, Stage_left
 He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
@@ -62,7 +62,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 		It's the same scrawled hangman setup as before... with the same 4 letter word in it.
 }
 [Timothy] "W-Want to play?"
-[{player_name}] "uh, sure."
+[{player_name}] "Uh, sure."
 [Timothy] "Guess."
 [{player_name}] "Hm? Oh, uh, okay."
 "Let's see..."
@@ -87,40 +87,40 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	~ VowelGuess += 1
 }
 *[A] 
-	[{player_name}] "how about 'A'?"
+	[{player_name}] "How about 'A'?"
 	->Wrong
 *[E] 
-	[{player_name}] "how about 'E'?"
+	[{player_name}] "How about 'E'?"
 	[Timothy] "There is an 'E'" #Hangman / E
 	-> Correct 
 *[I] 
-	[{player_name}] "how about 'I'?"
+	[{player_name}] "How about 'I'?"
 	-> Wrong
 *[O]
-	[{player_name}] "how about 'O'?"
+	[{player_name}] "How about 'O'?"
 	[Timothy] "There is an 'O'" #Hangman / O
 	-> Correct
 *[U]
-	[{player_name}] "how about 'U'?"
+	[{player_name}] "How about 'U'?"
 	-> Wrong
 
 === Constant ===
 Okay, some common consonants are...
 ~ ConstantGuess += 1
 *[S]
-	[{player_name}] "how about 'S'?"
+	[{player_name}] "How about 'S'?"
 	-> Wrong
 *[T]
-	[{player_name}] "how about 'T'?"
+	[{player_name}] "How about 'T'?"
 	-> Wrong
 *[R]
-	[{player_name}] "how about 'R'?"
+	[{player_name}] "How about 'R'?"
 	-> Wrong
 *[N]
-	[{player_name}] "how about 'N'?"
+	[{player_name}] "How about 'N'?"
 	-> Wrong
 *[H]
-	[{player_name}] "how about 'H'?"
+	[{player_name}] "How about 'H'?"
 	[Timothy] "There is an 'H'." #Hangman / H
 	-> Correct 
 
@@ -132,7 +132,7 @@ Okay, some common consonants are...
 	- GameFails == 6:
 		->YouLose
 	- GameFails == 5:
-		"oh no. one more shot!" #Hangman / 5
+		"Oh, no! Only one more shot!" #Hangman / 5
 		"Next guess?" 
 		->HangMan
 	- GameFails == 4:
@@ -154,7 +154,7 @@ Okay, some common consonants are...
 ~CorrectGuesses += 1
 {
 	- CorrectGuesses == 3:
-		"care to guess the word?"
+		"Care to guess the word?"
 		Hmm....
 		->Guess
 	- else:
@@ -165,32 +165,32 @@ Okay, some common consonants are...
 ===Guess===
 [{player_name}] "Is it..."
 *[Hole] 
-	[{player_name}] "Is it `Hole`?"
+	[{player_name}] "Is it `hole`?"
 	->Wrong
 *[Hope] 
-	[{player_name}] "Is it `Hope`?" 
+	[{player_name}] "Is it `hope`?" 
 	->YouWin 
 *[Home] 
-	[{player_name}] "Is it `Home`?"
+	[{player_name}] "Is it `home`?"
 	->Wrong
 
 
 ===AlreadyKnow===
-[{player_name}] "It's hope."
+[{player_name}] "It's `hope`."
 [Timothy] "What?! No Way!" #Timothy = Surprised
 "How'd you guess is so quickly?" #Timothy=Sad
 [{player_name}] "Lucky guess?"
 You know, that and weird time travel shenanigans.
 [Timothy] "..."
-Timothy looks a little sad that I immediately got the answer. but then...
-he smiled #Timothy = Happy
+Timothy looks a little sad that I immediately got the answer.
+But eventually he shrugs and smiles. #Timothy = Happy
 ->GameOver
 
 === YouLose ===
 [Timothy] "You lose." #Hangman / 6
-[{player_name}] "aw dang."
+[{player_name}] "Aww, dang."
 "Hey Timothy, what was the answer anyways?"
-"oh, nothing important..."
+"Oh, nothing important..."
 ->GameOver
 
 === YouWin ===
@@ -202,34 +202,34 @@ he smiled #Timothy = Happy
 
 === GameOver ===
 [Timothy] "Hehehe.." #Background / Garden, crossfade #Timothy = Happy
-[{player_name}] "what's so funny?" 
-[Timothy] "Oh, nothing... its just..."
+[{player_name}] "Qhat's so funny?" 
+[Timothy] "Oh, nothing... it's just..."
 "Hangman is a good game..." 
 "It teaches you that just by saying a few wrong things, you can end someone’s life..." #Timothy = Sad
-Wow. that was surprisingly dark joke from Timothy.
+Wow. That was surprisingly dark joke from this guy.
 ->QuestionTimothy
 =QuestionTimothy
 Should... Should I question him about that?
 +[Question Timothy]
 	{
 		-expression > 2:
-			[{player_name}] "You okay Timothy?" #expression ^ good
-			[Timothy] "huh? yeah? why wouldn't I be?" #Timothy = Surprised
+			[{player_name}] "You okay, Timothy?" # expression ^ good
+			[Timothy] "Huh? Yeah. Why wouldn't I be?" #Timothy = Surprised
 			[{player_name}] "Oh! its nothing. That joke was just kind of dark is all. I didn't expect that from you."
-			[Timothy] "oh, yeah. sorry..." #Timothy = sad
+			[Timothy] "Oh, yeah. Sorry..." #Timothy = sad
 			[{player_name}] "I mean, you don't need to apologise. I just want to make sure everything's okay with you."
 			[Timothy] "Oh! uh... thanks?" #Timothy = Surprised
 			"I dunno. I just like dark jokes." #Timothy = Angry
-			"I-is t-that o-okay?" #Timothy = sad
-			Timothy shrives um like I'm going to reprimand him for having a sense of humor.
-			[{player_name}] "Dude, of course its okay." 
-			"Really, I should apologize if I'm making you self consious or anything." #Timothy = Surprised
-			"You just be you." #Timothy = Happy 
+			"I-is that okay?" #Timothy = sad
+			Timothy shrivels up. Is he really expecting me to reprimand him for having a sense of humor?
+			[{player_name}] "Dude, of course it's okay." 
+			"I don't mean to make you feel self-conscious or anything!" #Timothy = Surprised
+			"You just be you, okay?" #Timothy = Happy 
 			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
-			Timothy beams more than I'd seen him express all day. I think I might of pressed one of his buttons, but like, in a good way?
+			Timothy seems a lot happier than I've seen him all day. I think I might of pressed one of his buttons, but like, in a good way?
 			->WrapUp
 		-else:
-			<color=A5C5E3FF><i>Unfortunately, Your <b>expression</b> is not high enough to successfully ask Timothy this question.</i></color>
+			<color=color_descriptor><i><b>Expression</b> is not high enough to ask Timothy this question.</i></color>
 			->QuestionTimothy
 	}
 +[Let it Slide]
@@ -240,8 +240,8 @@ Should... Should I question him about that?
 //make this tutorial check instead
 {
 	-GetValue("Tutorial") == true:
-		"OH! uh... S-Sorry f-for interrupting the t-tour.." #Timothy = Surprised
-		[{player_name}] "its okay."
+		"Oh! Uh... S-Sorry f-for interrupting the t-tour.." #Timothy = Surprised
+		[{player_name}] "It's okay."
 }
 [{player_name}] "So, what are you doing over here?"
 [Timothy] "I'm not sure..." #Timothy = Calm
@@ -254,23 +254,24 @@ Should... Should I question him about that?
 	-GameFails < 6:
 		"So, why Hope?"
 		[Timothy] "Oh, uh, um, well..." #Timothy = Happy
-		"It is my first day here. and, I guess, the gardens made me think about word 'Hope'."
+		"It's my first day here. I guess maybe the sunshine made me a little optimistic. // OLD LINE: I guess the gardens made me think about word 'Hope'."
 	-else:
 		"So, what was the word?"
 		[Timothy] "It's a secret."  #Timothy = Angry
-		"You didn't win, so them's the breaks."
+		[{player_name}] "Aww, come on."
+		[Timothy] "Nope. You didn't win, so them's the breaks."
 }
 [Timothy] "..." #Timothy = Afraid
 "I'm sorry. I'm acting weird."
 [{player_name}] "No, no, you're fine."
 [Timothy] "T-Thanks." #Timothy = Happy
-"That really m-m-means a lot."
-Timothy gives me a cute crooked smile, as he gets up from the dirt patch. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
+"That really m-means a lot."
+Timothy gives me a cute, crooked smile as he gets up from the dirt patch. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
 {
 	-GetValue("Tutorial"):
-		that little game finished, we head off to the next stop on the tour. #Timothy = Exit
+		Our little game finished, we head off to the next stop on the tour. #Timothy = Exit
 	-else:
-		I spend the remainder of the hour showing timothy around the gardens, finding more relaxing relaxing little nooks and crannies of the garden. #Timothy = Exit
-		my awareness of my surroundings goes up. #awareness += minor
+		I spend the remainder of the hour showing Timothy around the gardens, thinking about how hectic things are probably going to get soon. #Timothy = Exit
+		<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
 }
 -> END

@@ -44,7 +44,7 @@ EXTERNAL GetStringValue(value)
 
 === WeekOne ===
 I'm not super good at <color=color_expression><i>expressing</i></color> myself, so it just kind of <color=color_wellbeing_penalty><i>stresses</i></color> me out. 
-It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
+It also tends to <color=color_wellbeing_penalty><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
 "Th-thanks though..."   #Timothy = Exit   #0.3 & Success
@@ -53,9 +53,9 @@ It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more th
 === Repeat ===
 //temp stuff
 [{player_name}] "I'd assume you'd not really be in here much."
-"but hey, they got lots of free paper here to snag if you wanna, I dunno, draw maps or chibi's or something."
-[Timothy] "<size=30%>maps...</size>"
+"But hey, they've got lots of free paper here to snag if you wanna, I dunno, draw maps or something."
+[Timothy] "<size=30%>Maps...</size>"
 I threw in Timothy's hobby interest, hoping it might endear him to this place more.
-"But yeah, you wanna try something out?"
-[Timothy] "T-thanks, b-but w-we can finish the t-tour first."   #Timothy = Exit   #0.3 & Success
+"You wanna try something out?"
+[Timothy] "T-thanks, b-but we can finish the tour first."   #Timothy = Exit   #0.3 & Success
 -> END
