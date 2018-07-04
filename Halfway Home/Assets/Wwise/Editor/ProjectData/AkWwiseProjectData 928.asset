@@ -9,21 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c3e4db0df54bc645bbfb87a53f2e8c4, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 928
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: Debug
+  CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -51059714
-    m_lastTimePart2: -1999250750
+    m_lastTimePsrt1: 1329440174
+    m_lastTimePart2: -1999297826
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 630458899
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1735497904
+    m_lastTimePart2: -1999250719
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -538,8 +538,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 630473909
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1735507876
+    m_lastTimePart2: -1999250719
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -700,8 +700,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: 282707479
-    m_lastTimePart2: -1999251320
+    m_lastTimePsrt1: 930381502
+    m_lastTimePart2: -1999271149
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -717,29 +717,29 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 350387565
-    m_lastTimePart2: -1999249664
+    m_lastTimePsrt1: -354255575
+    m_lastTimePart2: -1999248911
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: -1322317401
-    m_lastTimePart2: -1999264972
+    m_lastTimePsrt1: 543502613
+    m_lastTimePart2: -1999302418
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D76E25E5-4DA6-428C-AEEE-5EA048CB1AE6}'
-    m_lastTimePsrt1: -1322282578
-    m_lastTimePart2: -1999264972
+    m_lastTimePsrt1: 543011305
+    m_lastTimePart2: -1999302418
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 667400198
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1734909483
+    m_lastTimePart2: -1999250719
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -798,8 +798,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 667415220
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1734959352
+    m_lastTimePart2: -1999250719
     List:
     - Name: room_cafe
       Path: Rooms\room_cafe
@@ -813,8 +813,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 667430176
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1734909483
+    m_lastTimePart2: -1999250719
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
@@ -847,8 +847,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 630493870
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1735477957
+    m_lastTimePart2: -1999250719
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf
@@ -980,18 +980,10 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{656BCA00-63E9-493E-9FCD-6098BC88697E}'
-    m_lastTimePsrt1: -1322277552
-    m_lastTimePart2: -1999264972
+    m_lastTimePsrt1: 542966181
+    m_lastTimePart2: -1999302418
     List: []
-  ExpandedItems:
-  - /Halfway Home_WwiseProject
-  - /Halfway Home_WwiseProject/Events
-  - /Halfway Home_WwiseProject/Events/PlayMusic
-  - /Halfway Home_WwiseProject/Events/PlayMusic/music_fakeit
-  - /Halfway Home_WwiseProject/SoundBanks
-  - /Halfway Home_WwiseProject/SoundBanks/Default Work Unit
-  - /Halfway Home_WwiseProject/SoundBanks/Rooms
-  - /Halfway Home_WwiseProject/SoundBanks/Stories
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
