@@ -24,16 +24,16 @@ EXTERNAL CharExit(nameString)
 EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Play : Play_music_placeholder_main_fadein   # music_vol ! -11
 
 -> ArtRoomFunction
 
 === ArtRoomFunction ===
-[{player_name}] "So this is the art room." #Timothy = Calm
+[{player_name}] "So this is the art room."   #Timothy = Calm
 "The home puts up these art therapy sessions you can go for, if thats your jam or whatever."
 "In general it's always open to mess with stuff, if you want."
 [Timothy] "They've got a lot of um.... stuff... in here."
-[{player_name}] "Yeah, they encourage people to get creative and <color=color_expression><i>express</i></color> themselves." # Expression * Show
+[{player_name}] "Yeah, they encourage people to get creative and <color=color_expression><i>express</i></color> themselves."   # Expression * Show
 {
 	-week == 1:
 		->WeekOne
@@ -47,12 +47,12 @@ I'm not super good at <color=color_expression><i>expressing</i></color> myself, 
 It also tends to <color=color_wellbeing_relief><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
-"Th-thanks though..." #Timothy = Exit #0.3 & Success
+"Th-thanks though..."   #Timothy = Exit   #0.3 & Success
 -> END
 
 === Repeat ===
 //temp stuff
 "But yeah, you wanna try something out?"
 [Timothy] "N-Not right now."
-"Th-thanks though..." #Timothy = Exit #0.3 & Success
+"Th-thanks though..."   #Timothy = Exit   #0.3 & Success
 -> END

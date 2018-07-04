@@ -96,7 +96,7 @@ What? They're joking, right? I just got here... There's no way I lost a whole we
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit 
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience : Stop_All
 But they're gone...
-A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambience : Stop_All_Fast      # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambience : Stop_All_Fast   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
 
 // Stop_All_Fast: Hard stop music if player is clicking fast
 // Reset RTPCs
@@ -106,7 +106,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambien
 === Commons ===
 I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02
 When did it get dark out? Is it night already?
-Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -6
+Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?"   # Max = Surprised
@@ -131,7 +131,7 @@ Where my room should be there's nothing but the cold void, as if my door opened 
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless."   # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me.   # ambience_lpf ! 0   # Ambience : play_sfx_ambient_heartbeat
-[Voices] "Weak. Wasting. Worthless." # SFX : play_sfx_human_ghostwhisper
+[Voices] "Weak. Wasting. Worthless."   # SFX : play_sfx_human_ghostwhisper
 Fear breaks me from my stupor and I am in control again. I turn to run.
 -> Blackwell
 
@@ -139,8 +139,8 @@ Fear breaks me from my stupor and I am in control again. I turn to run.
 Behind me, the friendly hallways of Sunflower House have dissolved into the sickly white corridors of Blackwell Psychiatric.
 I sprint headlong down the sterile hallway. I can feel the darkness closing in behind me.   # SFX : play_sfx_human_footsteps_approaching
 <speed=40>It wants to trap me. I can't let that happen. I have to get out!
-The hallway seems to shift in front of me, impeding my escape.   # SFX : play_sfx_human_footsteps_approaching
-I dive into a corridor that extends into darkness to my left.
+The hallway seems to shift in front of me, impeding my escape.
+I dive into a corridor that extends into darkness to my left.   # SFX : play_sfx_human_footsteps_approaching
 The corridor seems to go on forever. I don't know how much longer I can keep this up.
 [Voices] "This is pointless."   # SFX : play_sfx_human_ghostwhisper
 In the distance, I notice something new: a faint electric glow.
@@ -149,7 +149,7 @@ In the distance, I notice something new: a faint electric glow.
 === Bathroom ===
 [Voices] "You will fail."   # SFX : play_sfx_human_ghostwhisper
 As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
-I head down the bathroom corridor. Three marked entrances open before me.
+I head down the bathroom corridor. Three marked entrances open before me.   # SFX : play_sfx_human_footsteps_approaching
 On instinct, I rush into the...
 *[Men's Restroom] 
 	~SetPlayerGender("M")
@@ -165,7 +165,7 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen   # Time * Show      # Play : Play_music_placeholder_main_fadein   # Unload @ story_memory
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen   # Time * Show   # Play : Play_music_placeholder_main_fadein   # Unload @ story_memory
 The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
