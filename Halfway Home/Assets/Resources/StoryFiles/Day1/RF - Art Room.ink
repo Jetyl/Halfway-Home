@@ -30,8 +30,8 @@ EXTERNAL GetStringValue(value)
 
 === ArtRoomFunction ===
 [{player_name}] "So this is the art room."   #Timothy = Calm
-"The home puts up these art therapy sessions you can go for, if thats your jam or whatever."
-"In general it's always open to mess with stuff, if you want."
+"The home puts up these art therapy sessions you can go for, if that's your jam or whatever."
+"In general it's always open to mess with stuff if you want."
 [Timothy] "They've got a lot of um.... stuff... in here."
 [{player_name}] "Yeah, they encourage people to get creative and <color=color_expression><i>express</i></color> themselves."   # Expression * Show
 {
