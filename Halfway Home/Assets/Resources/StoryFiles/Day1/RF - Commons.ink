@@ -46,8 +46,8 @@ Max, frantically looking for their keys.
 	-week >= 2:
 		It doesn't look like Max has found them yet.
 		But, I know where they are. should I...
-		+[Grab them] ->FindersKeepers
-		+[Leave Max to find them] ->Misgender
+		+[Grab them] ->FindersKeepers->RepeatedMistakes
+		+[Leave Max to find them] ->RepeatedMistakes
 	-else:
 		->Misgender
 }
@@ -58,7 +58,7 @@ I fish the keys out of the couch cushion and find the spare copy for my room, an
 ~SetValue("RoomKey", true)
 I stuff the Keys back where I found them, and then casually walk back to where Timothy is standing.
 Timothy seems to be preoccupied watching Max.   #Timothy = Calm
-->Misgender
+->->
 
 === Misgender ===
 [Timothy] "I hope he finds his keys."   #Keyless = Exit
@@ -123,3 +123,34 @@ He nods   #Timothy = Calm
 Leaving that awkward conversation behind us, its time to move on!
 I shuffle Timothy off to another part of the building to continue the tour.   #Timothy = Exit   #0.1 & Success
 -> END
+
+=== RepeatedMistakes ===
+[Timothy] "I hope he finds his keys."   #Keyless = Exit
++[Correct Timothy]
+	[{player_name}] "Their keys." #expression+ #expression ^ good
+	I instinctively correct Timothy on Max's pronouns, out of near habit.   #Timothy= Surprised
+	I however, see Timothy begining to retreat inward at that slight mistep. I quickly add- #Timothy = Afraid
++[Let it Slide]
+	[{player_name}] "..." #grace+ #grace ^ good
+	I decide not to correct Timothy, mostly because I don't want to set him off on an anxiety spiral.
+	I, however, don't seem to have to say anything, as Timothy freezes up, seemingly realizing the mistake on his own. #Timothy = Afraid
+-"Don't worry, if you make a mistake like that. It's an honest mistake. Max'll understand."
+Timothy looks at me, as if I've read his mind.
+[Timothy] "Y-you sure?"
+I chuckle a little.
+[{player_name}] "yeah."
+Honestly, I'm pretty sure Max'd be more worried as to why Timothy is having a near breakdown over this mistake than the fact they got misgendered.
+"Timothy, I don't really know what kind of life you've had up til now, but your safe here."
+"its okay to make mistakes."
+[Timothy] "R-really?"
+He asks as if he genuinely hasn't considered that before. @I chuckle again.
+[{player_name}] "Yes."
+[Timothy] "b-but what if they get mad."
+I briefly try to picture max being genuinely angry at someone, and not their motherly play-mad. its about as realistic as an M.C. Esher painting.
+[{player_name}] "people don't get mad at slight slips of the tongue. they get made at being disrespected and invalidated."
+"words can be used to do that, but its the intent. You, Timothy, are fine."
+[Timothy] "okay..." #Timothy = Sad
+I try to word it as confidantly as possible to aswage Timothy's fears. I don't know if I succeeded.
+[{player_name}] "hey, Timothy, are you okay?"
+
+->END
