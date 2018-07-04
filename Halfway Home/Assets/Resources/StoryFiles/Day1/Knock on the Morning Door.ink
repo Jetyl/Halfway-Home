@@ -107,9 +107,10 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 Boy do I know that feeling. I haven't been able to find my own key for months.
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, I'm gonna need you to do me a solid."
-Oh, you don't like the sound of that.
+I get the feeling I'm about to be dragged into something.
 "Well... It's Timothy's first day, so someone's gotta show him the ropes." # Keyless = Happy
 "But I can't have my keys unaccounted for here."
+Called it.
 "So could you be a pal and show him around?"
 [{player_name}] "Uh..."
 [Keyless>Max] "Thanks, buddy!"
@@ -121,9 +122,9 @@ Timothy sighs dejectedly. Maybe he's used to this? // Could remove line
 ===Again===
 What? # Keyless = Calm #Timothy=Calm # Play : play_music_dejavu
 [Keyless>Max] "Hella Yella, my {player_name} fella."
-[{player_name}] "huh?"
+[{player_name}] "Huh?"
 D-didn't Max say that before?
-"uh?... Morning Max." 
+"Uh?... Morning Max." 
 [Keyless>Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "W-What? N-no... @I, uh, was already awake."
 Okay, I'm getting the strangest case of deja vu right now...
@@ -133,8 +134,8 @@ Okay, now its getting weird.
 This doesn't feel real. Besides Max, I see... #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
-[{player_name}] "what are you doing back so soon?" #Timothy=Calm
-"We're you being sent back to Blackwell Hospital?" #Timothy=Afraid
+[{player_name}] "What are you doing back so soon?" #Timothy=Calm
+"Weren't you being sent back to Blackwell?" #Timothy=Afraid
 [Keyless>Max] "Uh, {player_name}, you still dreaming buddy?"
 "Timothy Miyuri is the roommate I told you about."
 Wait...
@@ -150,45 +151,42 @@ Once Max has got all the bags in, they pat themselves down in a brief panic, bef
 [Keyless>Max] "It would seem I have misplaced my keys."
 [{player_name}] "Again?"
 [Keyless>Max] "Ah! I'm not that forgetful!" #Keyless=Sad
-[{player_name}] "N-no, but, you lost them last week too, remember? They we're stuck in the couch cushions in the commons?"
-[Keyless>Max] "Couch cushions? hm..." #Keyless=Calm
+[{player_name}] "N-no, but, you lost them last week too, remember? They were stuck in the couch cushions in the commons."
+[Keyless>Max] "I don't recall losing my keys last week, but... Couch cushions? Hmm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
 And with that Max quickly runs off, leaving me and Timothy alone
-[{player_name}] "Timothy, are getting really weird deja vu today too?"
+[{player_name}] "Timothy, are you getting really weird deja vu today, too?"
 Timothy is just kind of quietly staring at the corner where his bed is.
 "Yo, Timothy, can you hear me?"
-[Timothy] "<jitter><size=50%>I don't know you<size=100%></jitter>"
-[{player_name}] "what?"
-Before I could question further, Max returned like they had never left. Everthying feels too fast.
-[Max] "okay, I'm back!" #Max=Calm
-"Anyways, where we're we Timothy?"
-[Timothy] "You we're showing me around I think..."
+[Timothy] "<jitter><size=50%>I don't know you<size=100%></jitter>..."
+[{player_name}] "What?"
+Before I can question further, Max returns jangling their keys. The world feels like it's on fast forward. // OLD LINE: Before I could question further, Max returned like they had never left. Everthying feels too fast.
+[Max] "Okay, I'm back! Nice call on those couch cushions, {player_name}!" #Max=Calm
+"Anyways, where were we Timothy?"
+[Timothy] "The... The tour?"
 [Max] "Ah, yes."
-"Well lets head off."
-"See you at the welcome dinner {player_name}!" #Max=Exit #Timothy=Exit
-Wait...
-"Thanks again for the tip on the keys!"
-And, they're gone...
-What is even going on?
-I'm left in my room, looking around. all of Timothy's stuff has been packed in the bags they brought in. 
-My bags, on the other hand, have been emptied, and put away, from where I left them last night...
-Last night....
-[{player_name}] "Aggh!"
-My head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
+"Let's head off!"
+"See you at the welcome dinner, {player_name}!" #Max=Exit #Timothy=Exit
+What the heck is going on?!
+Now alone, I look around the room, trying to come to grips with the situation.
+In place of the bags I packed last night, Timothy's meager bags now occupy the floorspace. 
+Last night...
+[{player_name}] "Agh!"
+A flash of pain slices through my brain. My hands jump to my temples, but the sensation dissipates before they reach their destination. //OLD LINE: My head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
 Was last night... really last night?
-the knock on the door.@ Max introducing Timothy as if we never met.@ Timothy even still being here!
-this can't all be just deja vu, can it?
-I think.... I think I'm back on the first day Timothy arrived here.@ But how? why?
-I reach thru my notebook, looking thru to find all the notes I had taken over the week gone. the calander marked showing what I feared.
+The knock on the door.@ Max introducing Timothy as if we'd never met.@ Timothy... here...!
+This can't all be just deja vu, can it?
+I think... I think I'm back on the first day Timothy arrived here.@ But how? why?
+I flip through my notebook, but all the notes I had taken over the week are gone.
 I'm a week in the past.
-"Wh-why is this happening. @HOW did this happen."
-I rattle my brain attampting to think of some sort of explination for what was going on.
-Maybe the whole last week didn't happen? Maybe it was a dream?
-It didn't feel like a dream, but then again, dreams never do when your in them.
-And, I don't remember anything particluarly strange or dreamlike about last week... @remember...
-Dream or no, I decide to refill my notebook of everything I had done last week I could remember.
-It takes some time, and its probably not perfect, but its there. It'll help ground me. #time % 1
-Even after having been up for quite some time, the feeling of dread and surrealness hadn't left, although I was calmer now.
+"W-why is this happening? @<i>How</i> did this happen?!"
+I rack my brain, desperately searching for any explanation.
+Was it all a dream? // OLD LINE: Maybe the whole last week didn't happen? Maybe it was a dream?
+It felt so real... but, then again, dreams often do. // OLD LINE: It didn't feel like a dream, but then again, dreams never do when your in them.
+//And, I don't remember anything particluarly strange or dreamlike about last week... @remember...
+I have to know. I write everything I can remember down in my notebook before I have a chance to forget it. // OLD LINE: Dream or no, I decide to refill my notebook of everything I had done last week I could remember.
+There are some gaps and it's a bit rough, but I manage to record a decent amount. Time to see if I'm crazy or not. # time % 1 // OLD LINE: It takes some time, and its probably not perfect, but its there. It'll help ground me. #time % 1
+I take a deep breath, shaking off some of the existential dread still washing over me. // OLD LINE: Even after having been up for quite some time, the feeling of dread and surrealness hadn't left, although I was calmer now.
 [{player_name}] "I should go looking for someone."
 -> END
 
