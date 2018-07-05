@@ -320,7 +320,7 @@ I let out a deep sigh.
 "And just because you two love each other, doesn't mean your relationship's going to be 100% problem free now or forever."
 "I am saying this, as your friend, and Isaac's friend. Stop suffocating Isaac."
 [Eduardo] "Suffocating. <size=80%>suffocating. <size=50%suffocating.</size>" //head down
-"<Shake>WHAT THE HELL DO YOU KNOW!</Shake>" //very angry!
+"<Jitter>WHAT THE HELL DO YOU KNOW!</Jitter>" //very angry!
 "You don't Know what we're like! You don't know what Isaac does or Does want!"
 [{player_name}] "Oh, for the love of- Yes! I do!"
 [Eduardo] "Fine, {player_gender == "F": miss| mista} Isaac's apperent new BFF, tell me something about Isaac that even Isaac hasn't told me!"
@@ -373,7 +373,7 @@ Maybe I should go check up on him again.
 [Eduardo] "He's not good at talking."
 [{player_name}] "no. He's not. It took a few hours for him to fully get everything out."
 [Eduardo] "Yeah, that... That sounds like him."
-I seem to have finally gotten thru to Eduardo, in some capacity, at least.
+I seem to have finally gotten thru to Eduardo, in some capacity, at least. #6 & Success
 "Okay, you might have a point. maybe."
 "But, even if you are right, and I' not saying you are, why didn't you let Isaac tell me?"
 [{player_name}] "Would you have listened?"

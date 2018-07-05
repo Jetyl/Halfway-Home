@@ -323,12 +323,12 @@ I help Isaac up off the ground. #background = gardens #Isaac = calm
 "sure." #Isaac = happy
 Isaac  quickly excuses himself after that, slinking off to bed. #Isaac = exit
 I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it without making a mess of things. 
-Maybe I should find a time to chat with Eduardo about their relationship.
+Maybe I should find a time to chat with Eduardo about their relationship. #4 & Success #6 & InProgress
 {
 	-GetValue("Know Isaac's Troubles") ==false:
 		I should be able to articlute Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
 }
-I Get up off the ground and decide to head inside myself, because it is cold tonnight.
+I Get up off the ground and decide to head inside myself, because it is cold tonight.
 ~SetValue("IsaacOpenedUp", true)
 ~SetValue("Know Isaac's Troubles", true)
 ->END

@@ -54,7 +54,7 @@ Max, frantically looking for their keys.
 
 === FindersKeepers ===
 I sneak away from Timothy for a brief moment to the couch Max had mentioned losing the keys in.   #Timothy = Exit   #Keyless = Exit
-I fish the keys out of the couch cushion and find the spare copy for my room, and pocket that one. Finders keepers after all.
+I fish the keys out of the couch cushion and find the spare copy for my room, and pocket that one. Finders keepers after all.  #5 & Success
 ~SetValue("RoomKey", true)
 I stuff the Keys back where I found them, and then casually walk back to where Timothy is standing.
 Timothy seems to be preoccupied watching Max.   #Timothy = Calm
@@ -106,20 +106,10 @@ He nods   #Timothy = Calm
 [{player_name}] "Cool. then lets keep going."
 {
 	-player_gender == "N":
-		[Timothy] "Oh, {player_name}?"
-		[{player_name}] "Yeah?"
-		[Timothy] "I..."   #Timothy = Happy
-		Timothy starts shaking, looking away from me in embarrassment, before giving me a wobbly thumbs up.
-		[Timothy] "I-I th-think y-you're v-val-valid."
-		"A-and I-I-I'm s-sorry if I-I sc-screw up, an-and pl-please correct m-me if I do."
-		[{player_name}] "Uh..."
-		"S-SORRY!"   #Timothy = Afraid
-		I hold back a slight chuckle.
-		[{player_name}] "Thanks, I guess?"
-		It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.
-		It does relax me a little, so thats nice. @<color=color_wellbeing_relief><i>Stress decreased slightly!</i></color> # Stress -= 10
-		[Timothy] "I'm sorry..."   #Timothy = Calm
+		->NonBinaryBonus->Awkward
 }
+->Awkward
+=Awkward
 Leaving that awkward conversation behind us, its time to move on!
 I shuffle Timothy off to another part of the building to continue the tour.   #Timothy = Exit   #0.1 & Success
 -> END
@@ -146,11 +136,38 @@ Honestly, I'm pretty sure Max'd be more worried as to why Timothy is having a ne
 He asks as if he genuinely hasn't considered that before. @I chuckle again.
 [{player_name}] "Yes."
 [Timothy] "b-but what if they get mad."
-I briefly try to picture max being genuinely angry at someone, and not their motherly play-mad. its about as realistic as an M.C. Esher painting.
-[{player_name}] "people don't get mad at slight slips of the tongue. they get made at being disrespected and invalidated."
-"words can be used to do that, but its the intent. You, Timothy, are fine."
-[Timothy] "okay..." #Timothy = Sad
+I briefly try to picture max being genuinely angry at someone, and not their usual play-mad. Its about as realistic as an M.C. Esher painting.
+[{player_name}] "People don't get mad at slight slips of the tongue. they get made at being disrespected and invalidated."
+"Words can be used to do that, but its the intent. You, Timothy, are fine."
+[Timothy] "Okay..." #Timothy = Sad
 I try to word it as confidantly as possible to aswage Timothy's fears. I don't know if I succeeded.
-[{player_name}] "hey, Timothy, are you okay?"
+[{player_name}] "Hey, Timothy, are you okay?"
+[Timothy] "...S-sorry... I'm such a mess."
+[{player_name}] "hey, don't worry about it. Your here to heal remember? You've got nothing to apologize for."
+[Timothy] "t-thanks..." #Timothy = Calm
+{
+	-player_gender == "N":
+		->NonBinaryBonus->Calming
+}
+->Calming
+=Calming
+Leaving that awkward conversation behind us, its time to move on!
+I shuffle Timothy off to another part of the building to continue the tour.   #Timothy = Exit   #0.1 & Success
+-> END
 
-->END
+
+===NonBinaryBonus===
+[Timothy] "Oh, {player_name}?"
+[{player_name}] "Yeah?"
+[Timothy] "I..."   #Timothy = Happy
+Timothy starts shaking, looking away from me in embarrassment, before giving me a wobbly thumbs up.
+[Timothy] "I-I th-think y-you're v-val-valid."
+"A-and I-I-I'm s-sorry if I-I sc-screw up, an-and pl-please correct m-me if I do."
+[{player_name}] "Uh..."
+"S-SORRY!"   #Timothy = Afraid
+I hold back a slight chuckle.
+[{player_name}] "Thanks, I guess?"
+It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.
+It does relax me a little, so thats nice. @<color=color_wellbeing_relief><i>Stress decreased slightly!</i></color> # Stress -= 10
+[Timothy] "I'm sorry..."   #Timothy = Calm
+->->

@@ -43,7 +43,7 @@ I decide to...
 
 ===NearTimothy===
 ~ByTimothy = true
-I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
+I guess I must be a bit late since the line for food isn't all that long. I grab a plate and head for the center table. 
 I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming smile. # Trissa = Happy, Stage_Right, Left # Timothy = Happy, Right
 [Timothy] "Hi, {player_name}."
 [Trissa] "Come to see the man of the hour, huh?"
@@ -55,10 +55,10 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 	{
 		-awareness > 1: 
 			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."
-			// Add 2 Timothy Points
+			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)
 		-else : 
 			[{player_name}] "I remember feeling the same way at my welcome dinner. It's okay be to nervous. It'll pass soon."
-			// Add 1 Timothy Point
+			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
 	}
 *[Leave it to Trissa]
 	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"
@@ -85,12 +85,13 @@ As I approach, the two are giggling about something. # Eduardo = Happy, Stage_Le
 [{player_name}] "Mind if I join you?"
 {depression > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
-[Eduardo] "Nah, man. Get in here!"
+[Eduardo] "Nah, {player_gender == "F": girl| man}. Get in here!"
 [Eduardo] "I was just telling my meu bem Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
-[Isaac] "Oh, you have. I just never get tired of it." # Eduardo = Surprised
-[Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game, tesouro."
-[Eduardo] "Hey, {player_name}, you ever heard the story of Isaac's first day?"
-[Isaac] "Oh no..." # Isaac = Surprised
+[Isaac] "You did. Wanted to hear it again." # Eduardo = Surprised
+[Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game."
+Eduardo leans over to me, the most devilish smirk wide across his face.
+[Eduardo] "Hey, {player_name}, you ever heard the story of me and Isaac's first day rooming together?"
+[Isaac] "hrm!" # Isaac = Surprised
 [Eduardo] "It was only a couple of weeks before yours..."
 I spend a few minutes listening to Eduardo tell the tale.
 Eduardo really is a masterful storyteller. His raw charisma is inspiring.
@@ -98,7 +99,9 @@ Eduardo really is a masterful storyteller. His raw charisma is inspiring.
 [Eduardo] "And you know what the most embarrassing part was?"
 Isaac looks deathly pale. # Isaac = Afraid
 As if on cue, Max makes a loud sound from the center of the room and rises to their feet.
-[Eduardo] "Oh, you lucky man. Next time..." # Eduardo = Exit # Isaac = Exit
+Isaac breathes a heavy sigh of relief. #Isaac = Calm
+[Eduardo] "Oh, you lucky man."
+"Next time {player_name}, I'll tell ya the rest..." # Eduardo = Exit # Isaac = Exit
 ->Toast
 
 ===NearCharlotte===
@@ -164,9 +167,17 @@ Max sits back down near Timothy, and the usual chatter of the room resumes. #Max
 [Max] "I'm real sorry about that."
 //make a choice here maybe?
 [{player_name}] "No problem."
+{
+	-week > 1:
+		afterall, technically, I chose this for myself this week. which reminds me, despite already know the answer, I ask-
+}
 [{player_name}] "Did you ever find your keys?"
 [Max] "Oh! yeah... I did."
 [Max] "The little sucker fell between the couch cushions in the commons. Must've been loose on my chain or somethin'."
+{
+	-GetValue("RoomKey"):
+		I breifly check my pocket again, and feel the room key I picked off the key ring. This should be helpful later in the week.
+}
 ->TalkingToTimothy
 
 ===GeneralTalk===
@@ -176,9 +187,12 @@ You have no idea.
 [Max] "Also, thanks with the save with the keys."
 [{player_name}] "no prob."
 [Max] "How'd you even know they were there?"
-//choice here maybe.
-[{player_name}] "lucky guess."
-[Max]"Well that's some fine luck ya got." 
++[Lucky Guess]
+	[{player_name}] "lucky guess."
+	[Max]"Well that's some fine luck ya got." 
++[I saw it in a dream]
+	[{player_name}] "I was having one of those deja vu things? you know, where you feel you saw all this before in a dream."
+	[Max] "Well, that was some real accurate dreaming you got there."
 ->TalkingToTimothy
 
 ===TalkingToTimothy===

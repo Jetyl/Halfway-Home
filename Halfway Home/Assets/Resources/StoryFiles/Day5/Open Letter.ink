@@ -41,7 +41,8 @@ EXTERNAL SetValue(ValueName, newValue)
 
 === Start ===
 {
-	-TURNS_SINCE(-> MailCall)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
+	-TURNS_SINCE(-> MailCall)==-1: 
+	// TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
 		~firsttime = true
 	-else: 
 		~firsttime = false
@@ -136,7 +137,7 @@ Before I can do anything, Max strides up to me with a small handful of letters a
 [Max] "Hmm..." #Max =sad
 Max's expression fades from anticipation to disappointment.
 "Sorry {player_name}, no letters for you either."
-[{player_name}] "Eh." // I think this line is too Jesse and not enough Sam. Less flippant, more resigned would work better.
+[{player_name}] "I figured as much." 
 [Max] "Oh well, I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
 "All that's left is the weekend, and you'll be out of here! Isn't that exciting?"
 [{player_name}] "Yeah, exciting..." #Max = exit
@@ -283,6 +284,7 @@ With Max gone, I can finally go find Timothy. I'm certain I saw him heading in t
 		[{player_name}] "Timothy? It's me. I uh... don't have my key, remember?"
 		There's no response.
 		I stand there for a few minutes before giving up. Maybe people are still back in the commons.
+		If I want to get back into my room, I'm probably going to need to get a key. #5 & InProgress
 		I head out of the hallway and back out into the main room of the house. # Background / Commons
 		->IgnorantBliss
 }

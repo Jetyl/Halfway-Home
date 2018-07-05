@@ -40,7 +40,7 @@ EXTERNAL CallSleep()
 I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
 Walking in, I spy Eduardo and Isaac as the only ones in the room.  # Ambience : play_ambience_fireplace # ambience_lpf ! 0
-[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, happy_u, hrm_Up
+[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, happy_u, hrm_Up #2 &Success
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
 [Isaac] "Eduardo can't sleep." #hangout / hrm_down
@@ -449,17 +449,24 @@ I wonder if Max is up already. probably is.
 [Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
 {
 	-HoursSpent >= 5:
-		[Eduardo] ">Yawns aggressively"
+		Eduardo yawns aggressively
 		"Isaac... Tell me a story."
-		[Isaac] "No."
+		[Isaac] "No." #Hangout / Smile_Down
 		[Eduardo] "Isaaaaaaac!"
-		[Isaac] ">Sighs"
-		"Just go to sleep."
+		Isaac just sighes
+		[Isaac] "Just go to sleep."
 		[Eduardo] "But I'm not..."
 		Eduardo yawns obviously.
 		"... tired."
 		"Zzz..."
 		[Isaac] "He's such a dork."
+		He just pet his boyfriend's hair, absently for a second, before continuing.
+		"Thanks. For hanging out. I guess."
+		"Eduardo doesn't usually get to bounce off someone this much."
+		[{player_name}] "he bounces off you pretty well."
+		[Isaac] "..." #Hangout / Hrm_Up
+		"thanks." #Hangout / Smile_Down
+		Isaac smiles. I don't think I get to see this softer side of him very often. #2 & Success
 
 }
 These two are, really sappy together. It's kind of sweet, in its own way.
