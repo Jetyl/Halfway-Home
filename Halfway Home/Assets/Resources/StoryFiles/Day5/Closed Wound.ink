@@ -38,7 +38,8 @@ EXTERNAL SetTimeBlock(int)
 === Start ===
 I head to my door, nervously thumbing the key I took from Max's key ring days ago.{SetTimeBlock(1)} {SetValue("CompletedClosedWound", true)} # Background / Commons
 {
-	-TURNS_SINCE(-> Unlocked)==-1: // TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
+	-TURNS_SINCE(-> Unlocked)==-1: 
+	// TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
 		~firsttime = true
 		->Unlocked.First
 	-else: 
@@ -81,7 +82,7 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 +{not LookAtLetter}[Look at the letter]
     ->LookAtLetter
 +[Get Timothy's attention]->GetAttention
-+[Go get Max] ->GetMax // TODO: Add section in prior Timothy scene explaining why this is not a good idea
++[Go get Max] ->GetMax // TODO: Add section in prior Timothy scene explaining why this is not a good idea //maybe put in open letter maxmail
 
 =LookAtLetter
 {readLetter == false:

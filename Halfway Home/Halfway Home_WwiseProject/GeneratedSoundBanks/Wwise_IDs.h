@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
         static const AkUniqueID PLAY_MENUPAUSE_01 = 3827964327U;
         static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
+        static const AkUniqueID PLAY_MUSIC_BARDMAN = 3108296289U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ_02 = 2805601783U;
         static const AkUniqueID PLAY_MUSIC_CREEPY_ATMO = 1372805254U;
@@ -38,6 +39,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_HAPPY = 1020080944U;
         static const AkUniqueID PLAY_MUSIC_HAPPY_NOINTRO = 2156392148U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
+        static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_FADEIN = 3941181009U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_WITH_FADE = 829505847U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_WITH_FADE_AND_FIREPLACE = 222627597U;
@@ -64,6 +66,7 @@ namespace AK
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_ALL_FAST = 3032100830U;
         static const AkUniqueID STOP_AMBIENCE_ALL = 1720799084U;
+        static const AkUniqueID STOP_MUSIC_FAKEIT = 4065124416U;
         static const AkUniqueID STOP_MUSIC_MAINMENU = 3152554426U;
         static const AkUniqueID STOP_MUSIC_TENSION_INTRO_02 = 2883794594U;
     } // namespace EVENTS
@@ -88,6 +91,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID CREDITS = 2201105581U;
+        static const AkUniqueID HALFWAYSOUNDBANK = 3658133546U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
