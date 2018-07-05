@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	240662438	play_music_cafejazz			\PlayMusic\music_cafejazz\play_music_cafejazz	
-
-Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	44147102	cafejazz	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\cafejazz_A51F8DD7.wem	44147102.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_cafejazz\music_cafejazz\cafejazz	
-
