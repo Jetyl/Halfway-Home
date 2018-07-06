@@ -28,6 +28,8 @@ public class HistoryDisplay : MonoBehaviour
 
     private bool Displayed;
 
+    public bool SaveOutHistory;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -39,6 +41,7 @@ public class HistoryDisplay : MonoBehaviour
 
         Space.Connect<DefaultEvent>(Events.ReturnToMap, ClearHistory);
 
+        Space.Connect<ChoiceEvent>(Events.ChoiceMade, UpdateHistory);
 
         Space.Connect<DefaultEvent>(Events.Save, OnSave);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
@@ -115,6 +118,15 @@ public class HistoryDisplay : MonoBehaviour
         }
     }
 
+    void UpdateHistory(ChoiceEvent eventdata)
+    {
+        var text = TextParser.DynamicEdit(eventdata.choicedata.text);
+
+        text = "<b></i><size=120%>*" + text + "*</b></i><size=100%>";
+
+        History += Environment.NewLine + text;
+    }
+
     void UpdateHistory(DescriptionEvent eventdata)
     {
         TextParser.ExtractTextSpeed(ref eventdata.Line, 0);
@@ -145,6 +157,18 @@ public class HistoryDisplay : MonoBehaviour
 
     void ClearHistory(DefaultEvent eventdata)
     {
+        if(SaveOutHistory)
+        {
+            var InkData = Resources.Load(Game.current.GetCurrentStory()) as TextAsset;
+            print(Application.persistentDataPath + "/History/" + InkData.name + ".txt");
+            if (!System.IO.Directory.Exists(Application.persistentDataPath + "/History"))
+            {
+                System.IO.Directory.CreateDirectory(Application.persistentDataPath + "/History");
+            }
+            System.IO.File.WriteAllText(Application.persistentDataPath + "/History/" + InkData.name + ".txt", History);
+        }
+        
+
         CurrentSpeaker = "";
         History = "";
     }

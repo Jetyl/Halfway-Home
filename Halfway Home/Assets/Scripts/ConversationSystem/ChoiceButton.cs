@@ -27,9 +27,8 @@ public class ChoiceButton : MonoBehaviour
         //button = GetComponent<Button>();
         txt = GetComponentInChildren<TextMeshProUGUI>();
 
-        EventSystem.ConnectEvent<ChoiceEvent>(gameObject, Events.Choice, ImplementChoice);
+        choiceInfo = new Choices(txt.text);
 
-        Space.Connect<DefaultEvent>(Events.ChoiceMade, CleanUp);
 	}
 	
 	// Update is called once per frame
@@ -38,55 +37,21 @@ public class ChoiceButton : MonoBehaviour
 	
 	}
 
-
-    public void ImplementChoice(ChoiceEvent eventdata)
-    {
-        choiceInfo = eventdata.choicedata;
-        txt.text = choiceInfo.text;
-        Active = true;
-    }
-
+    
     public void ChoiceMade ()
     {
         if (!Active)
             return;
 
         Active = false;
-        //add differnt stuff for conversation mode integration??
-
-
-
-        Space.DispatchEvent(Events.ChoiceMade);
-
-        if (choiceInfo.ConvMode)
-        {
-            Space.DispatchEvent(Events.ConversationChoice, new ChoiceEvent(choiceInfo));
-        }
-        else
-        {
-            if (choiceInfo.CallTo == EventListener.Space)
-                Space.DispatchEvent(choiceInfo.DoOnChose);
-            else if (choiceInfo.CallTo == EventListener.Owner)
-                choiceInfo.OwnerRef.DispatchEvent(choiceInfo.DoOnChose);
-        }
         
-
+        Space.DispatchEvent(Events.ChoiceMade, new ChoiceEvent(choiceInfo));
+        
         
 
     }
-
-    public void CleanUp(DefaultEvent eventdata)
-    {
-        if (Active)
-            Active = false;
-    }
-
-    void OnDestroy()
-    {
-
-        if (Space.Instance != null)
-            EventSystem.DisconnectEvent(Space.Instance.gameObject, Events.ChoiceMade, this);
-    }
+    
+    
 
 
 }
