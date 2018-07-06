@@ -162,12 +162,12 @@ MonoBehaviour:
   - Name: Surprised
     Visual: {fileID: 21300000, guid: 58b1f3632b437a14592e0a2f178a2578, type: 3}
   Distances:
-  - Scale: 0
-    Offset: 0
-  - Scale: 2
-    Offset: -5
+  - Scale: 1.6
+    Offset: -3.5
+  - Scale: 1.6
+    Offset: -3.5
   - Scale: 1
-    Offset: 0
+    Offset: -1
   - Scale: 0.75
     Offset: 0
   Direction: 0
