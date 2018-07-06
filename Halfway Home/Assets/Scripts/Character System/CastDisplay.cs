@@ -133,7 +133,7 @@ public class CastDisplay : MonoBehaviour
             {
 
                 Roll.ChangePose(eventdata.Pose, Skip);
-                Roll.ChangeDistance(eventdata.Distance);
+                if(eventdata.Distance!=StageDistance.Same)Roll.ChangeDistance(eventdata.Distance);
                 Roll.ChangeFacing(eventdata.FacingDirection);
 
                 if (eventdata.Direction != StagePosition.None && eventdata.Direction != Roll.Direction)
@@ -339,13 +339,13 @@ public class CastDirectionEvent : DefaultEvent
     public string character;
     public string Pose;
     public Vector3 Position;
-    public StagePosition Direction;
-    public StagePosition FacingDirection;
-    public StageDistance Distance;
+    public StagePosition Direction = StagePosition.Center;
+    public StagePosition FacingDirection = StagePosition.Right;
+    public StageDistance Distance = StageDistance.Same;
     public bool Exiting;
 
     
-    public CastDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Center, StagePosition Pos = StagePosition.Center, StagePosition face = StagePosition.Right)
+    public CastDirectionEvent(string person, string pose = "", StageDistance Dis = StageDistance.Same, StagePosition Pos = StagePosition.Center, StagePosition face = StagePosition.Right)
     {
         character = person;
         Pose = pose;
@@ -417,7 +417,7 @@ public enum StagePosition
 }
 public enum StageDistance
 {
-    None,
+    Same,
     Close,
     Center,
     Far

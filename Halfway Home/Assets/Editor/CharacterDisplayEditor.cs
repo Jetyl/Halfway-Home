@@ -50,7 +50,7 @@ public class CharacterDisplayEditor : Editor
 
         if (showDistance)
         {
-            EditorGUILayout.LabelField((Distances == null) + ":");
+            //EditorGUILayout.LabelField((Distances == null) + ":");
             Distances.arraySize = Enum.GetValues(typeof(StageDistance)).Length;
             for (var i = 1; i < Enum.GetValues(typeof(StageDistance)).Length; ++i)
             {

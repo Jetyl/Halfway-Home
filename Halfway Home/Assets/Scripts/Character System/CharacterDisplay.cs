@@ -86,7 +86,8 @@ public class CharacterDisplay : MonoBehaviour
 
 
         visual.sprite = GetPose(pose);
-        ChangeDistance(distance);
+        if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center);
+        else ChangeDistance(distance);
         ChangeFacing(facing);
 
 
@@ -224,9 +225,6 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangeDistance(StageDistance distance)
     {
-        if (distance == StageDistance.None)
-            return;
-
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
         transform.localScale = new Vector3(scale, scale, scale);

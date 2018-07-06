@@ -142,16 +142,16 @@ MonoBehaviour:
   - Name: Sad
     Visual: {fileID: 21300000, guid: 90c277a0a4760fa40a28db61a65b07df, type: 3}
   - Name: Afraid
-    Visual: {fileID: 21300000, guid: 8440bbcc426e2d3428001819beed5f7c, type: 3}
+    Visual: {fileID: 21300000, guid: 97251bc790226864387ff42d4107dad7, type: 3}
   - Name: Surprised
     Visual: {fileID: 21300000, guid: ae8976e0b9096b744992d10ff10eaa8b, type: 3}
   Distances:
-  - Scale: 0
-    Offset: 0
-  - Scale: 2
-    Offset: -5
+  - Scale: 1.6
+    Offset: -3.5
+  - Scale: 1.6
+    Offset: -3.5
   - Scale: 1
-    Offset: 0
+    Offset: -1
   - Scale: 0.75
     Offset: 0
   Direction: 0

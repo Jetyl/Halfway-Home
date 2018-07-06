@@ -104,7 +104,7 @@ Max dumps the last of the bags on the floor and puts their hands on their hips.
 [Keyless>Max] "Oh crap."   # Keyless = Surprised
 Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [{player_name}] "What?"
-[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..." # Max = Afraid
+[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..." # Keyless = Afraid
 Boy do I know that feeling. I haven't been able to find my own key for months.
 Max's eyes start darting while they think of what their next action should be.
 "{player_name}, I'm gonna need you to do me a solid."
