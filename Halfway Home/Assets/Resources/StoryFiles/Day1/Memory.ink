@@ -165,7 +165,7 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen   # Time * Show   # Play : Play_music_placeholder_main_fadein   # Unload @ story_memory
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # Unload @ story_memory
 The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

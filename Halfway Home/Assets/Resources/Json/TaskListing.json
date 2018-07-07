@@ -84,5 +84,29 @@
   "SubCount" : 0,
   "SubTasks" : [
   ]
+ },
+ {
+  "Number" : 5,
+  "Name"   : "Get a key for your bedroom",
+  "Hidden" : false,
+  "Weekly" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ },
+ {
+  "Number" : 6,
+  "Name"   : "Convince Eduardo on Thursday Morning",
+  "Hidden" : false,
+  "Weekly" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
  }
 ]

@@ -39,20 +39,33 @@ EXTERNAL GetStringValue(value)
 }
 
 === WeekOne ===
-"You know, all pretty obvious stuff."
-"Unless... Crap, you don't have an eating disorder or something do you?"
-[Timothy] "Um... no.."
-[{player_name}] "Oh, good."
-"I was worried for a sec that I might've said something insensitive."
-[Timothy] "I-It's okay..."
-[{player_name}] "Uh... cool."
-"Well, uh, lets go see what they got. If I recall, today is pancake day."
++[You know, all obvious stuff]
+	"You know, all pretty obvious stuff."
+	"Unless... Crap, you don't have an eating disorder or something do you?"
+	[Timothy] "Um... no.."
+	[{player_name}] "Oh, good."
+	"I was worried for a sec that I might've said something insensitive."
+	[Timothy] "I-It's okay..."
+	[{player_name}] "Uh... cool."
++[Got all that?]
+	"You got all that?"
+	[Timothy] "y-yes?"
+	"so, the Cafe is open whenever to eat then?"
+	[{player_name}] "Uh, yeah. There isn't much of a reason to come here if you aren't hungry though."
+	I remember Max saying that the `optimal` times to eat were, when you woke up, then 3 hours later, than 6 hours after that.
+	Something like that I think. I dunno.
+-"Well, uh, lets go see what they got. If I recall, today is pancake day."
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
 -> END
 
 === Repeat ===
 I look back at Timothy, and see he's mostly just staring at the ground.
++[You okay?]
+	"Hey, are you okay?"
++[You hungry?]
+	"You hungry at all Timothy?"
+-[Timothy] "<jitter><size=50%>I guess...<size=100%></jitter>"
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
 -> END

@@ -62,15 +62,17 @@ Timothy seems to be preoccupied watching Max.   #Timothy = Calm
 
 === Misgender ===
 [Timothy] "I hope he finds his keys."   #Keyless = Exit
-[{player_name}] "Their keys."
-I instinctively correct Timothy on Max's pronouns and move on, showing Timothy around the Commons area.   #Timothy= Surprised
++[<i>Their</i> Keys]
+	[{player_name}] "Their keys."  #Timothy= Surprised
++[I'm sure they will]
+	[{player_name}] "I'm sure they'll find them." #Timothy= Surprised
+-"<speed=50%>Anyways,"
 "If I'm having a bad day, I sometimes come here. Social interaction helps with my uh... <color=color_wellbeing_relief><i>depression</i></color>, but it can be kinda <color=color_wellbeing_penalty><i>stressful</i></color>."   #Timothy=Exit
 "I dunno exactly what your needs are, but the Commons are a good place to go if you want to be around people."
 "Ya got that, Timothy?"
 "Huh?"   #Timothy =Afraid
 Timothy has frozen where I had last looked, and is shaking slightly.
 "Uh, Timothy? you okay?"
-//[{player_name}] "Max is not a guy. Their pronouns are they/them."
 [Timothy] "Oh! Uh I-I..."
 Timothy starts stammering to say, something.
  "S-s-sorry, I-I-I just..."
@@ -78,7 +80,7 @@ Timothy starts stammering to say, something.
 The kid looks like I caught him stealing cookies from a cookie jar, or something.
 [Timothy] "I-I-I'm s-sorry I-I-"
 "I-I'm sorry I insulted Max and mis-gendered th-them!"
-Oh! <delay=1>That's what this is about?
+Oh! <delay=0.5>That's what this is about?
 [{player_name}] "Uh, dude, it's okay."
 [Timothy] "Huh?"   #Timothy = Surprised
 "Y-you mean you're n-not mad at me?"   #Timothy = Afraid
