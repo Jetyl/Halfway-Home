@@ -82,18 +82,27 @@ I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : p
 [Keyless>Max] "Hella yella, my {player_name} fella."   # Keyless = Calm   # Play : play_music_happy
 What?
 [{player_name}] "Huh?"
-"Ugh... @Morning, Max."
-[Keyless>Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
-[{player_name}] "N-no... @I was already awake."
-[Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
-[{player_name}] "Yeah."
-[Timothy>Scrawny looking kid] "..."   # Timothy = Calm   # Timothy = stage_Right
++[Hella yella?]
+	"Hella yella? what does that even mean?"
+	[Keyless>Max] "What, its just something I say sometimes."
+	[{player_name}] "I have literally never heard you say anything remotely like that."
+	Max just shrugs. guess they're just being weird? whatever.
++[Morning...]
+	"Ugh... @Morning, Max."
+	[Keyless>Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
+	[{player_name}] "N-no... @I was already awake."
+	[Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
+	[{player_name}] "Yeah."
+-[Timothy>Scrawny looking kid] "..."   # Timothy = Calm   # Timothy = stage_Right
 [{player_name}] "Who's that?"
 [Keyless>Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah."
 [Keyless>Max] "You don't remember, do you?"
-[{player_name}] "... @No."
-Max looks disappointed in me. It's a sadly common look.   # Keyless = Sad
++[Yes (Lie)]
+	[{player_name}] "uh, y-yeah, I, uh, remember that."
++[No (Honest)]
+	[{player_name}] "... @No."
+-Max looks disappointed in me. It's a sadly common look.   # Keyless = Sad
 [Keyless>Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
 [Timothy] "Nice to meet you." # Timothy = Happy
@@ -113,8 +122,11 @@ I get the feeling I'm about to be dragged into something.
 "But I can't have my keys unaccounted for here."
 Called it.
 "So could you be a pal and show him around?"
-[{player_name}] "Uh..."
-[Keyless>Max] "Thanks, buddy!"
++[Sure]
+	[{player_name}] "sure."
++[Um... no]
+	[{player_name}] "Uh..."
+-[Keyless>Max] "Thanks, buddy!"
 And just like that, Max leaves me all alone with this new stranger.   # Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
 Timothy sighs dejectedly. Maybe he's used to this? // Could remove line
 [{player_name}] "Uh... hey."
@@ -131,7 +143,7 @@ D-didn't Max say that before?
 Okay, I'm getting the strangest case of deja vu right now...
 [Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
 Okay, now its getting weird.
-"Uh, hello? Earth to {player_name}. Ya still there?"
+-"Uh, hello? Earth to {player_name}. Ya still there?"
 This doesn't feel real. Besides Max, I see...   #Timothy=Calm
 [{player_name}] "Timothy!"
 [Timothy] "Meep!" #Timothy=Surprised
@@ -271,7 +283,7 @@ I whip out my planner and jot down a reminder to myself, a habit my old therapis
 "I lost mine, Max can't give theirs away, and since you were coming Max wouldn't give me yours."
 "To be honest, it hasn't been a big deal since I've been by myself for a while."
 [Timothy] "Oh."   # Timothy = Sad
-I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot. // Show time here?
+I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot.  # Time * Show // Show time here?
 "So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
 [Timothy] "Oh, okay. <size=50%>Last roommate?<size=100%>"   # Timothy = Surprised
 "I was in Blackwell for a few years before coming here."
