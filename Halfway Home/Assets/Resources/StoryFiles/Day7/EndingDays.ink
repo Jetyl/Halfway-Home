@@ -6,6 +6,7 @@
 All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
+
 VAR player_name = "tbd"
 VAR player_gender = "tbd"
 VAR grace = 0
@@ -17,10 +18,8 @@ VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
-VAR TalkC = true
 VAR TalkE = true
 VAR TalkI = true
-VAR TalkT = true
 
 EXTERNAL SetPlayerGender(gender)
 EXTERNAL GetPlayerName()
@@ -37,7 +36,7 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-I am woken up by an all too familar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
+I am woken up by an all too familiar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
 I let out a small resigned sigh, as I get out of bed to answer the door.
 But when I open the door, Max is alone. #Max = Happy
 [Max] "Hella yella, my {player_name} fella."
@@ -68,76 +67,77 @@ I think for a minute, looking around the room I've called my home for the past..
 I follow Max down the hall with my stuff. We stop in the commons to wait. #Background / commons
 [Max] "Well, you got a couple o' minutes... Some of the other residents came out to say their goodbyes."
 I look around the commons. The people I've come to know as friends are chatting amicably as the day begins.
-->Ready.Mingling
-/* I think a linear approach like this would work better, but requires minor rewrites. Impact is better if they approach you and I don't like giving players choices that make for an inferior game experience.
-->TrissaEnd->CharlotteEnd->IsaacEnd->EduardoEnd->OutsideWorld
-*/
+->TrissaEnd
 
-=Mingling
-I should talk to...
-+{TalkC}[Charlotte]
-	->CharlotteEnd
-+{TalkE}[Eduardo]
-	->EduardoEnd
-+{TalkI}[Isaac]
-	->IsaacEnd
-+{TalkT}[Trissa]
-	->TrissaEnd
-+[I am ready to leave]
-	->OutsideWorld
+===TrissaEnd===
+[Trissa] "He-ey!"
+Unsurprisingly, Trissa is the first to approach, bursting with energy. # Trissa = Happy, Close
+"It's the {player_gender=="M":man of the hour|{player_gender=="F":woman of the hour| big cheese}}!
+I try to stop myself from blushing, to no avail.
+[{player_name}] "Oh, stop."
+"Aww, I got ya!"
+She gives my shoulder a playful punch.
+"Look at you! All packed and everything! It's so exciting!"
+"How come you don't look that excited?" # Trissa = Surprised
+"Too busy feelin' sorry for the rest of us, huh?" # Trissa = Angry
+I'm about to reply, but stop myself. She's messing with me. Now's my chance. # grace ^ good
+[{player_name}] "Them? Nah. Just you, Miss `I wear my sunglasses indoors`. # expression ^ good
+I give her a smile and a wink for good measure.
+[Trissa] "What kinda-" # Skip
+"Oh, you're good. Guess I can't fool you any more, huh, {player_name}?" # Trissa = Happy
+"You seem like a completely new person this week, {player_gender=="M":man|{player_gender=="F":girl| my friend}}." # Trissa = Calm
+I guess it must seem that way to everyone else. That's what happens when you have to repeat the same week over and over again.
+{GetValue("Told Trissa")==true:
+	"Hey, though, for real... thanks for tellin' me about Charlotte."
+	"I felt like the biggest idiot in the world, but I talked to her about it..."
+	"Long story short, we're cool now. And I have you to thank for that, so..."
+	"Thanks!" # Trissa = Happy
+}
+{GetValue("CompletedTeatime"):
+	"Charlotte told me she's leaving, too."
+	"I don't know what y'all talked about on your little tea date, but whatever it was must have got her thinking."
+	"And with me leaving next week, I guess that means only Eduardo and Isaac are gonna still be around."
+	{GetValue("Saved Timothy"):"And Timothy of course!"}
+}
+[{player_name}] "Thanks for the good times, Trissa."
+"This place isn't gonna be the same without you."
+[Trissa] "Hey, who's saying goodbye to who here?" # Trissa = Surprised
+"But I really appreciate you saying that." # Trissa = Happy
+"It's been real, {player_name}, but I can see Charlotte waiting in the wings to say goodbye."
+"May love find you as surely as the river finds the sea."
+"My momma used to say that before she passed."
+"What your step out there!" # Trissa = Exit
+->CharlotteEnd
 
 ===CharlotteEnd===
-~TalkC = false
-
-[Charlotte] "Good morning, {player_name}. How do you do?" # Charlotte = Happy
+[Charlotte] "Good morning, {player_name}. How do you do?" # Charlotte = Happy, Close
 [{player_name}] "Actually... I'm doing very well, thanks. And you?" # grace ^ good
-{GetValue("CompletedTeatime")==true:->Leaving->Gift|->Polite->Gift}
-
-=Gift
-She turns to open a small bag resting beside her and withdraws a solitary book.
-[Charlotte]"Please accept this parting gift." # Charlotte = Calm
 {
-	-GetStringValue("BookGenre") == "fantasy":
-		She hands me a thick book with a richly illustrated cover featuring an enormous phoenix.
-		The title reads `Empire of Twilight: The Last Phoenix`. Looks like it's the first in a series.
-		"You did say that fantasy was your favorite, yes?"
-		"I never finished this particular series as it isn't my usual fare, but I recall noting that the setting was quite excellently crafted."
-		Empire of Twilight, huh? Wasn't that... yes, that was Timothy's favorite series!
-
-	-GetStringValue("BookGenre") == "sci-fi":
-		Charlotte gives you an anthology book of O.G. sci fi stories.
-
-	-GetStringValue("BookGenre") == "horror":
-		Charlotte gives you her favorite horror book, "The Song From Below", about a man who hears singing coming from the ground
-
-	-GetStringValue("BookGenre") == "romance":
-		Charlotte gives you "The Peak", the romantic story of a couple who meet while hiking the same mountaintop
-
-	-GetStringValue("BookGenre") == "history":
-		Charlotte gives you a detailed history of the Napoleonic Wars.
-
-	-GetStringValue("BookGenre") == "natural science":
-		Charlotte gives you a speculative book on extra-terrestrial colonization.
-
-	-GetStringValue("BookGenre") == "creative nonfiction":
-		Charlotte gives you the true story of a woman whose daughter was kidnapped.
-
-	-GetStringValue("BookGenre") == "variety":
-		Charlotte gives you a list of some of her favorites, curated by genre.
-
+	-GetValue("CompletedTeatime")==true:
+		->Leaving->Gift
+	-GetValue("BookGenre")!="":
+		->Polite->NoGift
 	-else:
-		You skipped Lessons this week. Charlotte doesn't give you anything.
+		->Polite->Gift
 }
-[{player_name}] "Wow, Charlotte! I don't know what to say... besides thanks!"
-[Charlotte] "`Thanks` will do, dear. Take care of yourself out there." # Charlotte = Happy
-
 
 =Polite
-Charlotte is the same as ever, and you didn't really get close to her.
+[Charlotte] "As well as can be expected, I suppose." # Charlotte = Sad
+"You seem to have grown tremendously in a short span, {player_name}." # Charlotte = Happy
+"You must be very proud to have finally found the strength to leave us."
++[I am proud]
+	[{player_name}] "You know what, I am. I did it! But..."
++[I'm more sad]
+	[{player_name}] "I am more sad to leave you all behind than anything, honestly."
+-"I couldn't have done it without all of you."
+[Charlotte] "Please, do not concern yourself with Sunflower House any longer." # Charlotte = Calm
+"Take joy in your triumph today!" # Charlotte = Happy
+"There is no need to feel guilty for those of us who remain here. After all..."
+"No one stays here forever." # Charlotte = Sad
 ->->
 
 =Leaving
-[Charlotte] "Ah, I feel so alive today, {player_name}!"
+[Charlotte] "Ah, I feel so alive today, {player_name}!" # Charlotte = Happy
 "I have decided that you were right about me."
 "I have nothing further to gain from continued residence here."
 "I had been blind for so long..." # Charlotte = Sad
@@ -146,8 +146,86 @@ Charlotte is the same as ever, and you didn't really get close to her.
 [{player_name}] "So... you're gonna leave Sunflower House then?"
 [Charlotte] "I am indeed. Just as soon as I've penned a letter of apology to my family." # Charlotte = Calm
 "I wish you the best of luck in your future endeavors, {player_name}."
-"Oh! I nearly forgot! I have something for you, dear."
 ->->
+
+=Gift
+"Oh! I nearly forgot! I have something for you, dear." # Charlotte = Surprised
+She turns to open a small bag resting beside her and withdraws a solitary book.
+[Charlotte]"Please accept this parting gift." # Charlotte = Calm
+{
+	-GetStringValue("BookGenre") == "fantasy":
+		She hands me a thick book with a richly illustrated cover featuring an enormous phoenix.
+		The title reads `Empire of Twilight: The Last Phoenix`. Looks like it's the first in a series.
+		[Charlotte]"You did say that fantasy was your favorite, yes?"
+		"I never finished this particular series as it isn't my usual fare, but I recall that the setting was quite excellently crafted."
+		Empire of Twilight, huh? Wasn't that... yes, that was Timothy's favorite series!
+
+	-GetStringValue("BookGenre") == "sci-fi":
+		She hands me an enormously thick book with an elegant, silver-bordered black cover.
+		The title reads `An Anthology of Classic and Modern Science Fiction.`
+		[Charlotte] "Earlier this week you informed me that science fiction was your favorite literary genre, but I did not think to inquire as to any specifics."
+		"As such, I had to `play it safe.` I'm absolutely certain you'll find something to your taste in there."
+		"I tend to prefer the early works, myself, when authors were still experimenting with the genre."
+
+	-GetStringValue("BookGenre") == "horror":
+		She hands me a thin, reddish book with a pencil illustration of a house above a swirling black mass.
+		The title reads `The Song From Below`. Looks spooky.
+		[Charlotte] "A classic and one of my personal favorites. You did mention you enjoy horror."
+		"Without spoiling anything, it's about a man who hears singing coming from beneath the ground."
+		"The author's voice is rather old-fashioned, but if <i>I</i> haven't managed to bore you yet I'm certain you'll be just fine."
+
+	-GetStringValue("BookGenre") == "romance":
+		She hands me a sturdy book with a sky-blue cover featuring a cloudy mountaintop.
+		The title reads `The Peak`. Not sure what this is about at first glance.
+		[Charlotte] "You didn't think I would forget, did you?"
+		"Romance is a bit outside my area of expertise, but apparently this title is quite popular."
+		"As I understand it, the story involves a couple who meet at the top of a mountain."
+
+	-GetStringValue("BookGenre") == "history":
+		She hands me a heavy book with a fancy leather cover and gold-embossed lettering.
+		The title reads `An Annotated History of the Napoleonic Wars.`
+		[Charlotte] "I seldom have the patience for historical texts, but this one is an exception."
+		"It is lovingly written and the annotations are both insightful and inspiring."
+		"I hope that a history buff such as yourself will appreciate it all the more."
+
+	-GetStringValue("BookGenre") == "natural science":
+		She hands me a glossy book featuring an illustration of the solar system on the cover.
+		The title reads `Settling the Stars: First Steps`.
+		[Charlotte] "I recall you said that natural science was your favorite genre."
+		"There are many wonderful books on the sciences; I tried to select one with a hopeful tone."
+		"May your curiosity and compassion lead you to greatness, {player_name}."
+
+	-GetStringValue("BookGenre") == "creative nonfiction":
+		She hands me a smooth book with a black and white photo on the cover.
+		The title reads `Mother May I`.
+		[Charlotte] "The true story of a courageous girl who escapes the cult that raised her."
+		"It should be right `up your alley` as a lover of creative nonfiction."
+		"It's a story that speaks to the strength of the human spirit. I hope it inspires you as it inspired me."
+
+	-GetStringValue("BookGenre") == "variety":
+		[Charlotte] "I had planned on giving this to you... before I had a better idea, that is."
+		"You told me you love variety, much as I do. Therefore, in lieu of a specific text I would like you to have this."
+		She opens the book and removes a slip of paper, which she places into my palm with a smile.
+		"A list of my favorite works. I tried to fit as many as I could, but I had only so much room to work with on the paper."
+		"Of course, I would be happy to lend any of them to you if you find the time to visit {GetValue("CompletedTeatime")==true:Blackwell Manor|Sunflower House}."
+}
+[{player_name}] "Wow, Charlotte! I don't know what to say... besides thanks!"
+[Charlotte] "`Thanks` will do nicely, dear. Take care of yourself out there." # Charlotte = Happy
+->EdAndIsaac
+
+=NoGift
+[Charlotte] "Oh, how inconsiderate of me! I've taken up too much of your time." # Charlotte = Surprised
+"The others will want to say their goodbyes as well." # Charlotte = Calm
+"Go and show the world what you are made of, {player_name}." # Charlotte = Happy
+->EdAndIsaac
+
+===EdAndIsaac===
+I turn to look over the commons. Eduardo and Isaac are standing at opposite ends of the room for some reason.
+Guess I'll have to talk to one before the other. Let's start with...
++[Eduardo]
+	->EduardoEnd
++[Isaac]
+	->IsaacEnd
 
 ===EduardoEnd===
 ~TalkE = false
@@ -169,16 +247,16 @@ I walk over to Eduardo who is lying on the couch, looking down. #Eduardo = sad
 [Eduardo] "I-I-I-"
 "ISAAC BROKE UP WITH ME!"
 Eduardo proceeds to bury his head into the couch. #Eduardo = exit
-He starts cry talking thru the cushions, though I can't make out most of it.
-I can make out a very eloungated `whyyyyyyyyyy` before he un-buries his head.
+He starts cry talking through the cushions, though I can't make out most of it.
+I can make out a very elongated `whyyyyyyyyyy` before he un-buries his head.
 [Eduardo] " I thought our relationship was perfect?! How could this have happened. What went wrong?" #Eduardo = sad
-Eduardo seems to immedeatly remember he is in a very public setting, as he poorly attempts to restrain himself.
+Eduardo seems to immediately remember he is in a very public setting, as he poorly attempts to restrain himself.
 "S-sorry, {player_name}. I know this ain't your deal. You're getting out of this dang place today."
 [{player_name}] "Any minute in fact." // This seems a bit too heartless for Sam
 [Eduardo] "Yeah, then, just, go. Don't let me drag you down."
 [{player_name}] "Uh, okay."
 I leave Eduardo to sulk on the couch. #Eduardo = exit
-->Ready.Mingling
+->IsaacEnd
 
 // insert kicking-you-down-a-hole joke here
 =Patches
@@ -206,25 +284,8 @@ Eduardo seems a little petchulent.
 		[{player_name}] "Ha! Yeah, okay."
 		"Catch you around Eduardo."
 		[Eduardo] "You know it!" #Eduardo = exit
-		->Ready.Mingling
+		->OutsideWorld
 }
-
-===TrissaEnd===
-~TalkT = false
-I chat with Trissa. small variations, based on Charlotte's state.
-She's basiaclly always the same. her life is going fine, and you have little control over it to screw it up.
-{
-	-GetValue("Told Trissa"):
-		she does have more to say about Charlotte if you told Trissa she was jealous of her.
-}
-{
-	-GetValue("CompletedTeatime"):
-		in she will also have some varience to if charlotte is leaving.
-}
-
-regardless, you too say your goodbyes, and walk away.
-"May love find you as surely as the river finds the sea. My momma used to say that before she passed."
-->Ready.Mingling
 
 ===IsaacEnd===
 ~TalkI = false
@@ -251,7 +312,7 @@ he shrugs.
 [Isaac] "hrm. Good Luck."
 [{player_name}] "oh, uh, thanks."
 I sort of just walk away after that, given Isaac is not in the mood to talk I suppose. #Isaac = exit
-->Ready.Mingling
+{TalkE:->EduardoEnd|OutsideWorld}
 
 =Outcome
 [{player_name}] "hey."
@@ -272,10 +333,10 @@ We fist bump eachother.
 [{player_name}] "Well, I'd better get going, my car is going to be here any minutes, and I still have some goodbyes to give."
 [Isaac] "Yeah."
 "Later." #Isaac = exit
-->Ready.Mingling
+{TalkE:->EduardoEnd|OutsideWorld}
 
 =Thanks
-[{player_name}] "hey."
+[{player_name}] "Hey."
 [Isaac] "Hrm? oh, {player_name}. hey."
 "I did it. Kept my promise."
 "Talked to Eduardo. Before you left."
@@ -295,10 +356,10 @@ We fist bump eachother.
 		->InE
 	-else:
 		We fist bump eachother.
-		[{player_name}] "Well, I'd better get going, my car is going to be here any minutes, and I still have some goodbyes to give."
+		[{player_name}] "Well, I'd better get going, my car is going to be here any minute." // and I still have some goodbyes to give (Not any more)
 		[Isaac] "Yeah."
 		"Later." #Isaac = exit
-		->Ready.Mingling
+		->OutsideWorld
 }
 
 =Psychic
@@ -326,7 +387,7 @@ Well that one was at least true. I don't know what to say here.
 "Whatever."
 Oh, thank goodness, he's dropping it.
 {
-	-TalkE:
+	-TalkE==true:
 		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = suprised
 		[Eduardo] "hey."
 		[Isaac] "hey." #Isaac = sad
@@ -336,18 +397,18 @@ Oh, thank goodness, he's dropping it.
 		[{player_name}] "Oh yeah, see you around Isaac."
 		[Isaac] "hrm." #Isaac = exit
 		I suppose Isaac is not in the mood to be friendly with someone who know way more about him than he is comfortable with.
-		->Ready.Mingling
+		->OutsideWorld
 }
 
 === InE ===
 //Isaac & Eduardo together ending 
 [Eduardo] "..."
 [Isaac] "..."
-man, this is awkward.
-The two kept just giving eachother brief glances before their eyes lock, and they both basheful look away.
+Man, this is awkward.
+The two kept just giving each other brief glances before their eyes lock, and they both basheful look away.
 [{player_name}] "Are you two going to be okay?"
 [Eduardo] "Y-Yeah! Of course we are!" #Eduardo = suprised
-"uh, right, Isaac?" #Eduardo = sad
+"Uh, right, Isaac?" #Eduardo = sad
 [Isaac] "Y-Yeah."
 {
 	-GetValue("IsaacOpenedUp"):
@@ -426,7 +487,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 }
 
 ===OutsideWorld===
-[{player_name}] "okay Max, I'm ready." #Max = calm
+[{player_name}] "Okay Max, I'm ready." #Max = calm
 [Max] "Well I'm glad you're ready, but ya still gotta wait for your car."
 "Who is picking you up again?"
 [{player_name}] "oh, just my folks."
