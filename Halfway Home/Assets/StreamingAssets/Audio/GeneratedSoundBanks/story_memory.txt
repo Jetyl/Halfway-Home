@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
+	1372805254	play_music_creepy_atmo			\PlayMusic\music_creepyatmo\play_music_creepy_atmo	
+	1700209709	play_sfx_object_car_away			\PlaySFX\sfx_object\play_sfx_object_car_away	
+	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
+	2374614039	play_music_creepy_atmo_02			\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02	
+	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching	
+	4007606837	play_sfx_ambient_deaf			\PlaySFX\sfx_ambient\play_sfx_ambient_deaf	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	69318974	sfx_ambient_deaf	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Deaf_CFE8DFE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient SFX\sfx_ambient_deaf		643208
+	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
+	488681583	ghostwhisper1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
+	541036875	sfx_object_car_away1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_car_away1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_object_car_away1		262000
+	541639029	sfx_footsteps_placeholder1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder1		39592
+	865371990	sfx_footsteps_placeholder2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder2		31708
+	1030560068	sfx_ambient_heartbeat	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_heartbeat_FC95F567.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient SFX\sfx_ambient_heartbeat		545856
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	297822875	creepy atmo v0_5	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\creepy atmo v0.5_A51F8DD7.wem	297822875.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_creepyatmo\music_creepyatmo\creepy atmo v0_5	
+	1053142359	mysterious	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\mysterious_A51F8DD7.wem	1053142359.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_creepyatmo2\music_creepyatmo2\mysterious	
+
