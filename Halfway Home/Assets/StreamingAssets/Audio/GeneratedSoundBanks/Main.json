@@ -1,0 +1,90 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+     },
+     {
+      "Id": "3827964327",
+      "Name": "play_menupause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
+     },
+     {
+      "Id": "4553038",
+      "Name": "play_menuunpause_01",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
+     },
+     {
+      "Id": "319656260",
+      "Name": "play_textscroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
+     },
+     {
+      "Id": "1025761080",
+      "Language": "SFX",
+      "ShortName": "loop_164661__adam-n__fire.wav",
+      "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "11926160",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_pausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_pausegame_9F6C56D1.wem"
+     },
+     {
+      "Id": "370198169",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_text_scroll1.wav",
+      "Path": "SFX\\sfx_menu_text_scroll1_00FA84C2.wem"
+     },
+     {
+      "Id": "558653419",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_unpausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -4018,7 +4018,7 @@
 										<MusicCue Name="Exit Cue" ID="{7CA98ECF-1E7A-46E9-AB03-AADB6CB5A7BF}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												<Property Name="TimeMs" Type="Real64" Value="109969.6875"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>

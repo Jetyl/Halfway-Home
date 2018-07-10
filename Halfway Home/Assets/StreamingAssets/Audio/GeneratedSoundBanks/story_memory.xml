@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="1576038406" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_memory</ObjectPath>
+			<ShortName>story_memory</ShortName>
+			<Path>story_memory.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1372805254" Name="play_music_creepy_atmo" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo"/>
+				<Event Id="2374614039" Name="play_music_creepy_atmo_02" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02"/>
+				<Event Id="4007606837" Name="play_sfx_ambient_deaf" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_deaf"/>
+				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
+				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching"/>
+				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
+				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_object_car_away"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="297822875" Language="SFX">
+					<ShortName>creepy atmo v0.5.wav</ShortName>
+					<Path>SFX\creepy atmo v0.5_A51F8DD7.wem</Path>
+				</File>
+				<File Id="1053142359" Language="SFX">
+					<ShortName>mysterious.wav</ShortName>
+					<Path>SFX\mysterious_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="69318974" Language="SFX">
+					<ShortName>Deaf.wav</ShortName>
+					<Path>SFX\Deaf_CFE8DFE9.wem</Path>
+				</File>
+				<File Id="318063250" Language="SFX">
+					<ShortName>ghostwhisper2.wav</ShortName>
+					<Path>SFX\ghostwhisper2_00FA84C2.wem</Path>
+				</File>
+				<File Id="488681583" Language="SFX">
+					<ShortName>ghostwhisper1.wav</ShortName>
+					<Path>SFX\ghostwhisper1_00FA84C2.wem</Path>
+				</File>
+				<File Id="541036875" Language="SFX">
+					<ShortName>sfx_object_car_away1.wav</ShortName>
+					<Path>SFX\sfx_object_car_away1_00FA84C2.wem</Path>
+				</File>
+				<File Id="541639029" Language="SFX">
+					<ShortName>sfx_footsteps_placeholder1.wav</ShortName>
+					<Path>SFX\sfx_footsteps_placeholder1_00FA84C2.wem</Path>
+				</File>
+				<File Id="865371990" Language="SFX">
+					<ShortName>sfx_footsteps_placeholder2.wav</ShortName>
+					<Path>SFX\sfx_footsteps_placeholder2_00FA84C2.wem</Path>
+				</File>
+				<File Id="1030560068" Language="SFX">
+					<ShortName>sfx_object_heartbeat.wav</ShortName>
+					<Path>SFX\sfx_object_heartbeat_FC95F567.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

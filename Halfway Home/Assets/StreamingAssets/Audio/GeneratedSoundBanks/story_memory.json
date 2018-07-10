@@ -1,0 +1,119 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1576038406",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_memory",
+    "ShortName": "story_memory",
+    "Path": "story_memory.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1372805254",
+      "Name": "play_music_creepy_atmo",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo"
+     },
+     {
+      "Id": "2374614039",
+      "Name": "play_music_creepy_atmo_02",
+      "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo_02"
+     },
+     {
+      "Id": "4007606837",
+      "Name": "play_sfx_ambient_deaf",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_deaf"
+     },
+     {
+      "Id": "197627707",
+      "Name": "play_sfx_ambient_heartbeat",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
+     },
+     {
+      "Id": "2653434280",
+      "Name": "play_sfx_human_footsteps_approaching",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_footsteps_approaching"
+     },
+     {
+      "Id": "2124921401",
+      "Name": "play_sfx_human_ghostwhisper",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_ghostwhisper"
+     },
+     {
+      "Id": "1700209709",
+      "Name": "play_sfx_object_car_away",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_object_car_away"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "297822875",
+      "Language": "SFX",
+      "ShortName": "creepy atmo v0.5.wav",
+      "Path": "SFX\\creepy atmo v0.5_A51F8DD7.wem"
+     },
+     {
+      "Id": "1053142359",
+      "Language": "SFX",
+      "ShortName": "mysterious.wav",
+      "Path": "SFX\\mysterious_A51F8DD7.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "69318974",
+      "Language": "SFX",
+      "ShortName": "Deaf.wav",
+      "Path": "SFX\\Deaf_CFE8DFE9.wem"
+     },
+     {
+      "Id": "318063250",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper2.wav",
+      "Path": "SFX\\ghostwhisper2_00FA84C2.wem"
+     },
+     {
+      "Id": "488681583",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper1.wav",
+      "Path": "SFX\\ghostwhisper1_00FA84C2.wem"
+     },
+     {
+      "Id": "541036875",
+      "Language": "SFX",
+      "ShortName": "sfx_object_car_away1.wav",
+      "Path": "SFX\\sfx_object_car_away1_00FA84C2.wem"
+     },
+     {
+      "Id": "541639029",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder1.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder1_00FA84C2.wem"
+     },
+     {
+      "Id": "865371990",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder2.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder2_00FA84C2.wem"
+     },
+     {
+      "Id": "1030560068",
+      "Language": "SFX",
+      "ShortName": "sfx_object_heartbeat.wav",
+      "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
+     }
+    ]
+   }
+  ]
+ }
+}
