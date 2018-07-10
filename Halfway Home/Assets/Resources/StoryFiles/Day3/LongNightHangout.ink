@@ -25,6 +25,7 @@ EXTERNAL CharExit(nameString)
 EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
+EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL GetIntValue(value)
 EXTERNAL AlterTime()
 EXTERNAL SetTimeBlock(time)
@@ -230,24 +231,23 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 [Eduardo] "Well I'm human. I don't know about Isaac though." #Hangout / smile_I, Hand_Up
 [Isaac] "Hrm." #Hangout / hrm_down
 Isaac slugs Eduardo in the stomach.
-[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}"
+[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}" #Hangout / Sad_U
 [{player_name}] "I was asking about your orientation."
-[Eduardo] "Oh? that? I thought it was obvious for me? I am two ways about everything"
+[Eduardo] "Oh? that? I thought it was obvious for me? I am two ways about everything" #Hangout / smile_u
 huh?
-[Isaac] "He's bisexual."
+[Isaac] "He's bisexual." #Hangout / hrm_Up
 "He does that joke every time anyone asks."
 Eduardo begins laughing like a hyena, as his boyfriend explains his dumb joke.
-[Eduardo]"What can I say? I love being your bipolar bisexual Bro."
+[Eduardo]"What can I say? I love being your bipolar bisexual Bro." #Hangout / smile_u
 Eduardo pokes Isaac's unchanging expression, while he has the derpiest grin on his face.
 [{player_name}] "Isaac, what about you?"
-[Isaac] "Asexual. Androromantic."
+[Isaac] "Asexual. Androromantic." #Hangout / hrm_down
 [{player_name}] "Androromantic?"
 [Isaac] "Attracted to masculinity. @s'what it means."
 [{player_name}] "oh, interesting."
-[Eduardo] "So, {player_name}, what about you? who do you fancy?"
+[Eduardo] "So, {player_name}, what about you? who do you fancy?" #Hangout / happy_u
 [{player_name}] "uh..."
-crap, I didn't expect him to turn this on me.
-I...
+crap, I didn't expect him to turn this on me. I...
 +[answer unabashedly]
 	"well, I..."
 	++[Like Guys]
@@ -260,7 +260,7 @@ I...
 		"I just find people attractive."
 	++[Like No One]
 		"I'm just not into people."
-	--You feel good <i>expressing</i> your interests out loud. #expression++
+	--<color=color_expression><i>expressing</i><color=color_descriptor> your interests out loud improves it greatly.</color> #expression++
 	"I'm not really into labels, tho,"
 	I shrug.
 	[Isaac] "fair."
@@ -276,7 +276,7 @@ I...
 "Life would be simpler without it. Hrm."
 "But... @when you have it, you don't want it gone."
 "You <i>should</i>. Its smart. @But people ain't smart."
-[Eduardo] "<delay=1>...Poke!" //have Eduardo poke Isaac
+[Eduardo] "<delay=1>...Poke!" #Hangout / Leg_Up //have Eduardo poke Isaac
 Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
 [Isaac] "What?"
 [Eduardo] "I love you" //some cheesy line
@@ -287,7 +287,7 @@ Isaac glows a bright red blush.
 ===FourAM===
 //the 4 am hour talk
 //the two talk about why their in the halfway home.
-[Eduardo] "Man, I know I don't say this often enough, but I'm gonna miss you guys when I leave."
+[Eduardo] "Man, I know I don't say this often enough, but I'm gonna miss you guys when I leave." #Hangout / smile_u, hrm_down, Leg_Down, Arm_Down
 [{player_name}] "Are you leaving soon?"
 [Eduardo] "I dunno man. maybe? it ain't on my schedule or nothin'."
 "I just feel, when you start nearing the two-year mark, maybe you've been here too long, ya know?"
@@ -301,7 +301,7 @@ I'm just lucky enough to be leaving here after just over 1 year. I don't want to
 }
 [Eduardo] "I mean, I do love it here. It's way better than where I was before, ya know?"
 "I've dealt with my, ness, since I was real little."
-"Me and my folks knew my brain was borked since I was like, 12 or so, so it wasn't like `oh, he's just that crazy Medina kid`. y'know."
+"Me and my folks knew my brain was borked since I was like, 12 or so, so it wasn't like `oh, he's just that crazy Medina kid`. y'know." #Hangout / Leg_Up
 "I had the words to describe my madness."
 "But that didn't fix nothin'."
 "Didn't stop kids from saying I'mma freak, or whatever."
@@ -310,29 +310,30 @@ I'm just lucky enough to be leaving here after just over 1 year. I don't want to
 "I just kept getting crazier."
 "Smartest move I made was coming here, to get away from that noise."
 "To get all the kinds of help, those pills don't work with."
-"But I'm good now. And I'm getting super antsy. So, I might be leaving soonish."
-"Hey Isaac, wanna come with when I do?"
+"But I'm good now. And I'm getting super antsy. So, I might be leaving soonish." #Hangout / Leg_Down
+"Hey Isaac, wanna come with when I do?" #Hangout / happy_i
 [Isaac] "..."
 [Eduardo] "Ya don't gotta, if ya don't wanna. I live nearby, so I can come see ya from time to time til ya are ready."
 "Prolly not every day, if I leave. `responsibilities` and all that."
-[Isaac] "Thanks. I'd like that."
-[Eduardo] "Balla!"
+[Isaac] "Thanks. I'd like that." #Hangout / Smile_Down
+[Eduardo] "Balla!" #Hangout / smile_I
 look at these two, planning their future, and stuff. I can't look past the next week.
 {
 	-week >= 2:
 	though, these two aren't literally trapped in time like I am, so maybe I should give myself a pass.
+	[Voices] "Excuses, Excuses."
 	{
-		-depression >= 75:
-		[Voices] "Excuses, Excuses."
+		-depression < 50:
+			No. No it's not an excuse.
 	}
 }
-[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when your gone?"
+[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when your gone?" #Hangout / happy_u, hrm_Up
 +[Of course]
 	[{player_name}] "Of course. You guys are my friends."
 	[Eduardo] "Aww! Thanks!"
 +[Not in the slightest]
-	[{player_name}] "eh, not really. I’m spending hours with you guys in the middle of the night."
-	I be completely honest. probably not the polite answer, but whatever. <i>(your expression has increased!)</i> #expression+
+	[{player_name}] "eh, not really. I’m just spending hours with you guys in the middle of the night."
+	I be completely honest. probably not the polite answer, but whatever. #expression+
 	[Eduardo] "Oh! I'm so hurt."
 	[Isaac] "No, you're not."
 	[Eduardo] "eh yeah."
@@ -340,20 +341,43 @@ look at these two, planning their future, and stuff. I can't look past the next 
 +{expression > 1}[Way to put me on the spot!]
 	[{player_name}] "Wow, way to put me on the spot dude!"
 	[Eduardo] "Hehe, sorry!"
-	He's not sorry at all. I can tell.
--[Eduardo] "I know I'll miss ya."
-[Isaac] "Same."
-"Actually. {player_name}. Can I ask you something personal?"
+	[{player_name}] "Your not sorry at all. I can tell."
+	[Eduardo] "Oh wow, someone's an intuitive person."
+	"It's not like I wear my heart on my sleeve or anything."
+	[{player_name}] "Are-are you sassing me with your emotional blatentency?"
+	[Eduardo] "Maybe."
+-[Eduardo] "I know I'll miss ya." #Hangout / smile_u
+[Isaac] "Same." #Hangout/ smile_up
+"Actually. {player_name}. Can I ask you something personal?" #Hangout/smile_I, hrm_Up
 [{player_name}] "uh, sure." 
-[Isaac] "why'd you come here? to Sunflower House. I mean."
+[Isaac] "why'd you come here? To Sunflower House. I mean."
 Uh...
 +[Avoid answering the question]
 	[{player_name}] "I'd rather not talk about that..."
+	[Eduardo] "aww, why not?"
+	[{player_name}] "Because.... @Because I don't want to. Now leave it at that."
+	[Eduardo] "okay okay. @Jeez, <i>touchy</i>."
+	Isaac lightly thwaks Eduardo head.
+	[Isaac] "Eduardo. Stop." #Hangout/ hrm_down
+	[Eduardo] "Okay, okay. @Jeez, I was just poking fun."
+	Isaac seems to ignore Eduardo light jab, seemingly lost in thought.
++[Wax philosphical to avoid answering]
+	[{player_name}] "Why does anyone come here?"
+	"The Sunflower house is a collection of lost souls, bruised and battered by the outside world."
+	"And we are all here for that same reason. To heal. To recover. To leave."
+	[Eduardo] "Nice bullshitting, but what are the spesifics. what are the deets."
+	drat. Eduardo immediatly saw though that.
+	[Voices] "Besides. You? Healing? don't be ridiculous."
+	{
+		-depression < 50:
+		Yeah, shut up. I'm ignoring you.
+	}
+	[Isaac] "Hrm."
 +{expression>2}[Give your backstory]
 	[{player_name}] "Well, um..."
-	"I got recommended here by my Doctors at Blackwell."
+	"I got recommended here by my Doctors at Blackwell." #expression ^ good
 	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
-	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it."
+	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it." #Hangout / hrm_Up, Sad_U
 	"I was so mad at them for trapping me there. Was so mad at myself for being so freaking broken I couldn't survive anywhere else."
 	"5 years of my life wasted away in that building. that’s almost a 4th of my life. it's most of what I remember, anyways."
 	"Sterile rooms. Sterile hallways. Sterile smiles."
@@ -364,9 +388,9 @@ Uh...
 	"Hehe, how sad is that?"
 	I cease my word vomit, and let the awkward silence fill the room.
 	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`s. @Just nothing.
-	It kind of feels good, to get that off my chest. <i>(your expression increased)</i> #expression++
+	It kind of feels good, to get that off my chest. #expression++
 	It takes a minute before either of them respond. It's Isaac, surprisingly, who responds to my sob story.
--[Isaac] "Hrm. @Life is simply unfair...@ Sometimes, I s'pose."
+-[Isaac] "Hrm. @Life is simply unfair...@ Sometimes, I s'pose." #Hangout / hrm_Up, Sad_U
 "Sorry for asking."
 [{player_name}] "Oh, uh, no problem."
 I suppose this topic has been soured.
@@ -376,8 +400,8 @@ I check my watch to see the time.
 ===FiveAM===
 //the 5 am hour talk
 //the two talk about the satire paradox.
-[Eduardo] "oh! Oh! OH!"
-[Isaac] "Hrm?"
+[Eduardo] "oh! Oh! OH!" #Hangout / happy_i, Leg_Up
+[Isaac] "Hrm?" #Hangout / hrm_down
 [Eduardo] "You know what sucks?"
 [Isaac] "Hrm."
 [Eduardo] "You can never change anyone's minds on nothing."
@@ -389,7 +413,7 @@ I check my watch to see the time.
 +[Disagree]
 	[{player_name}] "I Disagree."
 	[Eduardo] "See what I mean? Can't ever convince anybody of anything."
--[Eduardo] "everybody goes into a thing with their own notions on a thing, and never budge."
+-[Eduardo] "Everybody goes into a thing with their own notions on a thing, and never budge."
 "Everythin's gotta conform to their way of seeing the world, or they just reject it as `unnatural` or whatever."
 "It's so stupid."
 [Isaac] "Hrm."
@@ -402,11 +426,11 @@ I check my watch to see the time.
 [Isaac] "'S about how people interpret comedy & satire."
 "Basically... hrm."
 Isaac falls silent, as he seems to be summoning the words.
-"Basically, people will see what they want to see, in satire."
+"Basically, people will see what they want to see, in satire." #Hangout / Arm_Up
 "If someone is satirizing a certain political movement, or cultural norm, the people who support it won't see it as a criticism of them."
-"basically, they don't laugh because of how silly or dumb they are, but because of how <i>right</i> they are."
+"Basically, they don't laugh because of how silly or dumb they are, but because of how <i>right</i> they are."
 "A funny way to tell `the truth`, apparently."
-[Eduardo] "Uh-huh..."
+[Eduardo] "Uh-huh..." #Hangout / Arm_Down
 Eduardo is nodding his head in agreement.
 [Isaac] "A'course, it's not just comedy that applies to."
 "People take the path of least resistance. Always."
@@ -448,7 +472,7 @@ I wonder if Max is up already. probably is.
 [Isaac] "Me too."
 [Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
 {
-	-HoursSpent >= 5:
+	-HoursSpent >= 4:
 		Eduardo yawns aggressively
 		"Isaac... Tell me a story."
 		[Isaac] "No." #Hangout / Smile_Down
@@ -467,7 +491,7 @@ I wonder if Max is up already. probably is.
 		[Isaac] "..." #Hangout / Hrm_Up
 		"thanks." #Hangout / Smile_Down
 		Isaac smiles. I don't think I get to see this softer side of him very often. #2 & Success
-
+		~SetValue("LongNightHangoutComplete", true)
 }
 These two are, really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
@@ -519,10 +543,9 @@ And with that, I get up and leave as well.
 	-depression > 75:
 		Max is right, I shouldn't have done this.
 		[Voices] "You’re so stupid."
-		I'm so stupid.
+		I'm so stupid. 
 	-else:
-		Despite what Max things, I... actually feel very good about the night I spent.
-		<i>Your Expression has increased! </i> #expression++
+		Despite what Max things, I... actually feel very good about the night I spent. #expression++
 }
 ->END
 
