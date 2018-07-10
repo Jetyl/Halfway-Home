@@ -13,7 +13,7 @@ public class OptionsMenu : MonoBehaviour
     public Slider MasterVolumeSlider;
     public Slider MusicVolumeSlider;
     public Slider SFXVolumeSlider;
-    public Slider AmbienceVolumeSlider;
+    public Slider AmbianceVolumeSlider;
     public Slider InterfaceVolumeSlider;
     public Toggle FSToggle;
     public Toggle MTSToggle;
@@ -36,8 +36,8 @@ public class OptionsMenu : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Music_Slider", MusicVolumeSlider.value * 100);
         SFXVolumeSlider.value = Game.current.Progress.GetFloatValue("SFXVolume");
         AkSoundEngine.SetRTPCValue("Effects_Slider", SFXVolumeSlider.value * 100);
-        AmbienceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbianceVolume");
-        AkSoundEngine.SetRTPCValue("Ambience_Slider", AmbienceVolumeSlider.value * 100);
+        AmbianceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbianceVolume");
+        AkSoundEngine.SetRTPCValue("Ambience_Slider", AmbianceVolumeSlider.value * 100);
         InterfaceVolumeSlider.value = Game.current.Progress.GetFloatValue("InterfaceVolume");
         AkSoundEngine.SetRTPCValue("Menu_Slider", InterfaceVolumeSlider.value * 100);
     }
@@ -62,7 +62,7 @@ public class OptionsMenu : MonoBehaviour
     }
     public void UpdateMusicVolume(float newPercent)
     {
-        Game.current.Progress.SetValue("BackgroundVolume", newPercent);
+        Game.current.Progress.SetValue("MusicVolume", newPercent);
         AkSoundEngine.SetRTPCValue("Music_Slider", newPercent * 100);
     }
     public void UpdateSFXVolume(float newPercent)
@@ -73,7 +73,7 @@ public class OptionsMenu : MonoBehaviour
     
     public void UpdateAmbienceVolume(float newPercent)
     {
-        Game.current.Progress.SetValue("AmbienceVolume", newPercent);
+        Game.current.Progress.SetValue("AmbianceVolume", newPercent);
         AkSoundEngine.SetRTPCValue("Ambience_Slider", newPercent * 100);
     }
 
