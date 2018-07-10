@@ -14,6 +14,18 @@ public class OptionsMenu : MonoBehaviour
     public Slider MusicVolumeSlider;
     public Slider SFXVolumeSlider;
     public Slider AmbienceVolumeSlider;
+    public Slider InterfaceVolumeSlider;
+    public Toggle FSToggle;
+    public Toggle MTSToggle;
+
+    public AudioManager AM;
+
+    public void Start()
+    {
+        UpdateAll();
+        FSToggle.isOn = Screen.fullScreen;
+        MTSToggle.isOn = Game.current.Progress.GetBoolValue("MuteTextScroll");
+    }
 
     public void UpdateAll()
     {
@@ -26,11 +38,22 @@ public class OptionsMenu : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Effects_Slider", SFXVolumeSlider.value * 100);
         AmbienceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbienceVolume");
         AkSoundEngine.SetRTPCValue("Ambience_Slider", AmbienceVolumeSlider.value * 100);
+        InterfaceVolumeSlider.value = Game.current.Progress.GetFloatValue("InterfaceVolume");
+        AkSoundEngine.SetRTPCValue("Menu_Slider", InterfaceVolumeSlider.value * 100);
     }
 
     public void UpdateTextSpeed(float newPercent)
     {
         Game.current.Progress.SetValue("TextSpeed", Mathf.Lerp(TextSpeedMin, TextSpeedMax, newPercent));        
+    }
+    public void ToggleFullscreen(bool FSOn)
+    {
+        Screen.fullScreen = FSOn;
+    }
+    public void MuteTextScroll(bool MTSOn)
+    {
+        Game.current.Progress.SetValue("MuteTextScroll", MTSOn);
+        AM.MuteTextScroll = MTSOn;
     }
     public void UpdateMasterVolume(float newPercent)
     {
@@ -52,5 +75,11 @@ public class OptionsMenu : MonoBehaviour
     {
         Game.current.Progress.SetValue("AmbienceVolume", newPercent);
         AkSoundEngine.SetRTPCValue("Ambience_Slider", newPercent * 100);
+    }
+
+    public void UpdateInterfaceVolume(float newPercent)
+    {
+      Game.current.Progress.SetValue("InterfaceVolume", newPercent);
+      AkSoundEngine.SetRTPCValue("Menu_Slider", newPercent * 100);
     }
 }
