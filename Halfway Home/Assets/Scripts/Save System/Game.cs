@@ -101,8 +101,11 @@ public class Game
         Memory = new GallerySystem();
 
         Progress.SetValue("MasterVolume", 1.0f);
-        Progress.SetValue("BackgroundVolume", 1.0f);
+        Progress.SetValue("MusicVolume", 1.0f);
         Progress.SetValue("SFXVolume", 1.0f);
+        Progress.SetValue("AmbianceVolume", 1.0f);
+        Progress.SetValue("InterfaceVolume", 1.0f);
+        Progress.SetValue("MuteTextScroll", false);
         Progress.SetValue("TextSpeed", 1.0f);
         Progress.SetValue("week", 1);
         Progress.SetValue("Depression Time Dilation", true);

@@ -32,11 +32,11 @@ public class OptionsMenu : MonoBehaviour
         TextSlider.value = (Game.current.Progress.GetFloatValue("TextSpeed") - TextSpeedMin) / TextSpeedMax;
         MasterVolumeSlider.value = Game.current.Progress.GetFloatValue("MasterVolume");
         AkSoundEngine.SetRTPCValue("Master_Slider", MasterVolumeSlider.value * 100);
-        MusicVolumeSlider.value = Game.current.Progress.GetFloatValue("BackgroundVolume");
+        MusicVolumeSlider.value = Game.current.Progress.GetFloatValue("MusicVolume");
         AkSoundEngine.SetRTPCValue("Music_Slider", MusicVolumeSlider.value * 100);
         SFXVolumeSlider.value = Game.current.Progress.GetFloatValue("SFXVolume");
         AkSoundEngine.SetRTPCValue("Effects_Slider", SFXVolumeSlider.value * 100);
-        AmbienceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbienceVolume");
+        AmbienceVolumeSlider.value = Game.current.Progress.GetFloatValue("AmbianceVolume");
         AkSoundEngine.SetRTPCValue("Ambience_Slider", AmbienceVolumeSlider.value * 100);
         InterfaceVolumeSlider.value = Game.current.Progress.GetFloatValue("InterfaceVolume");
         AkSoundEngine.SetRTPCValue("Menu_Slider", InterfaceVolumeSlider.value * 100);
