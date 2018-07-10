@@ -79,6 +79,8 @@ public class AudioManager : MonoBehaviour
   public AkAmbient MusicPlayer;
   public AkAmbient AmbiencePlayer;
   public SoundbankManager soundbankManager;
+  [HideInInspector]
+  public bool MuteTextScroll;
 
 	// Use this for initialization
 	void Start ()
@@ -88,10 +90,12 @@ public class AudioManager : MonoBehaviour
         Scene.Connect<AudioParamFadeEvent>(OnAudioParamFadeEvent);
         Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
+        MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
 	}
 
   void OnAudioEvent(AudioEvent e)
   {
+    if (e.FileName == "play_textscroll" && MuteTextScroll) return;
     //christien da sound designer's spaghettiii code: dont stop all if vertical layering is wanted
     if (e.FileName != "play_music_tension_stem_03" &&
         e.FileName != "play_music_tension_stem_04" &&

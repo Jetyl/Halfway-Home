@@ -1,0 +1,59 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "3604647259",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu",
+    "ShortName": "MainMenu",
+    "Path": "MainMenu.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3373299806",
+      "Name": "lpf1k_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpf1k_music_mainmenu"
+     },
+     {
+      "Id": "3370483183",
+      "Name": "lpf4k_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpf4k_music_mainmenu"
+     },
+     {
+      "Id": "3897416341",
+      "Name": "lpfOff_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\lpfOff_music_mainmenu"
+     },
+     {
+      "Id": "1566693136",
+      "Name": "play_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\play_music_mainmenu"
+     },
+     {
+      "Id": "3152554426",
+      "Name": "stop_music_mainmenu",
+      "ObjectPath": "\\Events\\PlayMusic\\music_mainmenu\\stop_music_mainmenu"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "11539498",
+      "Language": "SFX",
+      "ShortName": "mainMenu_b1_v0.5.wav",
+      "Path": "SFX\\mainMenu_b1_v0.5_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

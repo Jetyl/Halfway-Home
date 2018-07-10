@@ -61,7 +61,7 @@
     "Type" : 3
    },
    {
-    "Name" : "BackgroundVolume",
+    "Name" : "MusicVolume",
     "Type" : 3
    },
    {
@@ -69,12 +69,20 @@
     "Type" : 3
    },
    {
-    "Name" : "AmbienceVolume",
+    "Name" : "AmbianceVolume",
+    "Type" : 3
+   },
+   {
+    "Name" : "InterfaceVolume",
     "Type" : 3
    },
    {
     "Name" : "TextSpeed",
     "Type" : 3
+   },
+   {
+    "Name" : "MuteTextScroll",
+    "Type" : 1
    }
   ]
  },

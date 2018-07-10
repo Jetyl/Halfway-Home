@@ -57,7 +57,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{300B4933-FA71-4AA1-BE5D-35EC421F82CA}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
+													<Property Name="Flags" Type="int32" Value="3"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -465,7 +465,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{27D82DD3-B0A5-4BE4-A6CC-F9333FE95B7F}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
+													<Property Name="Flags" Type="int32" Value="3"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -497,7 +497,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{4FB6E626-D44E-49C2-83D2-732E3E3818C0}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
+													<Property Name="Flags" Type="int32" Value="3"/>
 												</PropertyList>
 												<PointList>
 													<Point>
@@ -566,7 +566,7 @@
 											</ReferenceList>
 											<Curve Name="" ID="{8DCDBE31-4396-465A-82CF-1C66B14DD214}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
+													<Property Name="Flags" Type="int32" Value="3"/>
 												</PropertyList>
 												<PointList>
 													<Point>
