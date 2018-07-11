@@ -44,9 +44,10 @@ I...
 
 ===SoloIntroductions===
 I decide to go over there, and see how they are doing.
+[Voices] "You'll be wasting their time."
 {
-	-depression > 85:
-	[Voices] "You'll be wasting their time."
+	-depression < 85:
+	No, I'm not!
 }
 [Eduardo] "I'm telling you, it was hilarious." #Eduardo = Happy
 [Isaac] "Hrm." #Isaac = Calm
@@ -116,7 +117,7 @@ Isaac seems to be lost in his own little world right now.
 I try to speak up, hoping maybe one of them will notice I'm still here, and was still talking to them, but to no avail.
 I decide to leave these two weird lovebirds alone, and get going.
 Still, it was an engaging conversation at least.
-<color=A5C5E3FF><i>Your Depression has Decreased, slightly!</i></color> #depression -= 15
+<color=A5C5E3FF><i>Your Depression has decreased, slightly!</i></color> #depression -= 15
 ->END
 
 ===WorkAlone===
@@ -126,7 +127,7 @@ I ignore the two of them, and work on my own little drawing.
 	[Voices] "They wouldn't want to spend time with you anyways."
 }
 I pull out some of the spare paper the room has stocked, and begin sketching whatever comes to mind.
-<color=A5C5E3FF><i>Your Expression has improved, slightly!</i></color> #expression+
+<color=color_expression><i>Your Expression has improved, slightly!</i></color> #expression+
 ->END
 
 ===MeetWithTimothy===
@@ -139,20 +140,29 @@ As I show Timothy around all the art supplies, a rowdy duo walk in.
 "C'mon, I'll introduce you."
 I walk over to they pair, Timothy in tow.
 "Hey, guys, what's up?" #Timothy = stage_left, Afraid #Eduardo = Calm #Isaac = Calm
-[Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, not much. We're just chilling here."
+[Eduardo] "Hey Hey! {player_name}! Good to see ya!"
+"We're both perfect. Up on cloud nine in this buisness. @I was just telling my bae about this rad dream I had." //not sure if I'm happy with this line.
 "How 'bout you? How's it hangin'?"
-[{player_name}] "Oh, fine."
-"Max asked me to show around the new kid."
-[Eduardo] "Oh, is that who that is?"
++[Its fine]
+	[{player_name}] "Oh, fine."
+	"Max asked me to show around the new kid."
+	[Eduardo] "Oh, is that who that is?"
++[Ehh...]
+	[{player_name}] "Ehh... I exist, I guess."
+	"Max just sorta ploped this kid on me."
++{expression > 1}[Its great]
+	[{player_name}] "Oh, I'm pretty good actually" #expression ^ good
+	"I'm showing Timothy around, since he's new here."
+-[Eduardo] "Oh, is that who that is?"
 "Nice to meet you my man, I'm Eduardo Medina."
 "... And this tub o'love is Isaac." #Isaac = Surprised
 [Isaac] "..." #Isaac = Afraid 
 [Timothy] "Hello<delay=3>, I-I'm Timothy Miyuri..." #Isaac = Exit
 [Eduardo] "So Timmy, what are you in for?"
 [Timothy] "<size=60%> I'd prefer Timothy...<size=100%>"
-[Eduardo] "Quiet guy, huh? I didn't catch that."
+[Eduardo] "You're a Quiet One, aren't ya Tim Tim? I didn't catch that."
 [Timothy] "<size=40%> I said my name is Timothy...<size=100%>"
-[Eduardo] "Yo. Tim, I can't hear you when you're-"
+[Eduardo] "Yo. T-man, I can't hear you when you're-"
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
 [Isaac] "Sorry. Eddy's super manic right now. Makes him kind of a jerk."
@@ -166,8 +176,10 @@ Isaac appears to be able to completely ignore Eduardo in an instant. Instead he 
 [Isaac] "Isaac. Isaac Avidan."
 [Timothy] "Huh?"
 [Isaac] "My name. If it wasn't said already. Which is was. Never mind."
-A potent silence fills the room. Isaac's not much of a conversationalist and, frankly, neither am I.
-Isaac goes back to working on his art piece. I suppose he feels the conversation is over.
+"..."
+[Timothy] "..."
+[{player_name}] "..."
+Isaac just goes back to working on his art piece like we aren't here. I suppose he feels the conversation is over.
 Eduardo on the other hand...
 [Eduardo] "Hey Isaac, you know I was just pulling some fun, right? Isaac?"
 "Hey, Isaac. Isaac?"
