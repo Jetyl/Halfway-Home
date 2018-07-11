@@ -31,14 +31,15 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-I Scamper into bedroom, yawning as I do.
+I stagger into the droom with a yawning.
 {
 	-fatigue < 50:
-		I'm not particularly tired, but when I hit the bed, my body becomes enraptured in comfort
+		I don't feel particularly tired, but the snug comfort of my bed quickly convinces me otherwise.  #Background / Dream, eyeclose// FORMERLY: , but when I hit the bed, my body becomes enraptured in comfort
 	-else:
-		I barely make it onto the bed before I close my eyes to rest.
+		I barely make it onto the bed before sleep takes me. #Background / Dream, eyeclose // FORMERLY: before I close my eyes to rest.
 }
-I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
+// CUT: I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
+/* Elipses imply waiting, not sleeping. Cutting straight to the wake-up, but putting a delay on the next line.
 ... //{SetValue("Depression Time Dilation", false)}
 ......{SetTimeBlock(0)} 
 {
@@ -47,41 +48,62 @@ I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, 
 	-else:
 		......... {CallSleep()} #set_time%5,8
 }
-[Timothy>Unknown] "...{player_name}."
-huh?
-"{player_name}. Are you awake?."
-In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom, eyeopen
+*/
+{GetIntValue("Day")>4:
+	#set_time%6,8
+	[Timothy>???] "<size=40%>...{player_name}."
+	~CallSleep()
+-else:
+	#set_time%5,8
+	[Timothy>???] "<size=40%>...{player_name}."
+	~CallSleep()
+}
+// CUT: huh?
+"<size=60%>{player_name}."
+"<size=80%>Are you awake?."
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = calm
-[Timothy] "Oh! <jitter>uh, s-s-sorry if I woke you up.</jitter>"
-[{player_name}] "No problem dude. What'd you need?"
-[Timothy] "Oh! <jitter>um... well... I was hoping if you could... <size=50%>help me dye my hair</size></jitter>"
-[{player_name}] "You want to dye you hair?"
-[Timothy] "Ye-yeah. I've um... never done something like this, and I-I was wondering if I could get your help on it?"
+[Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
+[{player_name}] "No problem, dude. What'd you need?"
+[Timothy] "Oh! Um... well... you remember what I said yesterday about hanging out..."
+"I was kinda hoping you could... <size=50%>help me dye my hair."
+[{player_name}] "You want to dye your hair?"
+Huh. I didn't expect that.
+Unexpected is good.
+[Timothy] "Ye-yeah. I've um... never done something like this, and I-I was wondering if I could get your help with it?"
 [{player_name}] "Uh, sure."
 [Timothy] "Th-Thank You!" #Timothy = Happy
-with an innocent smile, Timothy leaves me to actually get dressed and ready for the day, before heading off to the commons to meet him. #Timothy = exit
-It really doesn't take me that long, and I catch up with him in no time. #Background / commons #Timothy = calm
+"I'll meet you in the common area when you're ready."
+Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = exit
+It doesn't take me long and I catch up with him in no time. #Background / commons #Timothy = calm // I feel like this line can be improved, but I'm not sure how yet
 ->PinkHairedExpert
 
 ===PinkHairedExpert===
 [{player_name}] "Okay, I'm ready."
-[Timothy] "Again, Thank you {player_name}."
-[{player_name}] "Its no big deal."
-"So, where is the stuff? Are we going to do this in our restroom, or the public bathroom?" #Timothy = surprised
+[Timothy] "Thanks again, {player_name}."
+[{player_name}] "It's no big deal."
+"So, where is the stuff? Are we going to do this in our bathroom or the public restroom?" #Timothy = surprised
 [Timothy] "Oh, uh, I don't have any stuff..."
 "I was hoping you would know where we could get the stuff we need..."
-[{player_name}] "Oh, uh, okay."
-Not sure why Timothy thought I'd be the super knowledgeable on Hairdye products, but luckily I know someone who is.
-I lead Timothy over to Eduardo's room, and knock on it loudly untill I hear some shuffling noises behind the door. #Background / commons
-[Eduardo] "Uuugh. I'm coming! I'm coming!." #Timothy = scared
-Eduardo looks more disheveld than usual, and rather cranky that I woke him up. #Eduardo = Angry, stage_left
-"ugh, {player_name}, do you know what time it is?"
-[{player_name}] "IT's only 8 O'clock Eduardo."
-[Eduardo] "Yeah, and that's like a crime, waking up someone this early."
-+[Its not that Early]
-	[{player_name}] "Its not that early Eduardo."
-	"I'm pretty sure Charlotte has been up for like 2-3 hour already."
-	[Eduardo] "Yeah, but that girl ain't human I tell ya."
+[{player_name}] "Really? Uh, okay."
+I'm not sure why Timothy thought I'd be super knowledgeable about hair products. 
+My only relevant experience was tie-dying a shirt in elementary school.
+"<jitter>Oh, no. I screwed up, didn't I?</jitter>"
+[{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but do know someone who does."
+I lead Timothy over to Eduardo's door.
+I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. #Background / commons
+[Eduardo] "Uugh. I'm coming! I'm coming!." #Timothy = scared
+Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
+"{player_name}, do you know what time it is?!"
+[{player_name}] "Eight in the morning?" // FORMERLY: It's only 8 o'clock Eduardo.
+[Eduardo] "Oh, god, it's worse than I thought!
+"What could you possibly need me for at..." // Eduardo is depressive here, so he is torn between being angry for being woken up and surprise that anyone would care to do so
+Eduardo visibly shudders.
+"`Eight in the morning.`" // FORMERLY: Yeah, and that's like a crime, waking up someone this early."
++[It's not that early]
+	[{player_name}] "It's not <i>that</i> early Eduardo."
+	"I'm pretty sure Charlotte has been up for like... a couple hours already."
+	[Eduardo] "Yeah, but <i>she</i> has her life together." // FORMERLY: that girl ain't human I tell ya. (I want to try a more self-pitying approach)
 +[How has Max not reprimanded you for your sleeping habits?]
 	[{player_name}] "How has Max not reprimanded you for your sleeping habits yet?"
 	[Eduardo] "Oh, they have. I just ignore them." #Eduardo = calm
