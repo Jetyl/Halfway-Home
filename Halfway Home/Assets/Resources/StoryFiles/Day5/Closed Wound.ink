@@ -162,15 +162,24 @@ The letter is penned in a neat and steady hand, in contrast to the recently dish
 <color=FF8A2D><i>I'm sure we would all love nothing more than to put this dark chapter behind us. </i></color>
 <color=FF8A2D><i>After all, college application deadlines are closing in and your father still thinks it would be good for you to get a summer job.</i></color>
 <color=FF8A2D><i>Love, Mom & Dad</i></color>
-Yikes. They are really putting the pressure on poor Timothy. # override~0
-I'm sure Timothy's parents love him, but...
-Don't they know he has anxiety?! This is the opposite of what he needs!
+Yikes. Just... Wow. # override~0
+Like, I'm sure Timothy's parents love him and all, but...
+All a letter like this is going to do is feed into Timothy's anxiety even more!
 Ugh, parents sometimes.
 It kinda makes me think how lucky I am not to have my own family breathing down my neck.
-Anxiety or no, If I'd faced this kind of external pressure I'd have been back in Blackwell in no time flat.
-But left alone, I had time to breathe. Time to grow.
-I think I'm finally beginning to understand what Sunflower House really is...
-And that I've been lying to myself about being ready to leave it behind.
+My family gave me nothing but support and time while I spent those years in Blackwell. @Its the only thing that made it bearable.
+I had time to breathe. Time to grow. I could be alone and safe where I was.
+//inkling of doubt. was that really enough?
+//following this thread of doubt
+//sam pulls the sting and follows it out to the truth
+//which gets to what they really needed. to talk to people. to engage with people
+//and they look on thier growth over the week vs thr year
+//then it flows into "oh god I've been lying to myself havent i" moment
+I came here, to Sunflower House. And I've gotten the support I needed to grow. @To be better. To leave...
+//I think I'm finally beginning to understand what Sunflower House really is... //this revelation feels off
+To leave...
+Thats probably why. Why I've been lying to myself about being ready to leave it behind.
+//And that I've been lying to myself about being ready to leave it behind.
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 	~SetValue("EarnedWoundStar", true)
@@ -280,13 +289,16 @@ Timothy looks around the room nervously.
 I neglect to mention that my last couple of dreams somehow involved Timothy despite my not having known him at the time.
 [{player_name}] "Anyway, that's pretty much everything. You're up to speed on the life and times of {player_name}."
 Timothy stands silently, kneading his shirt with his hands. After a long pause, he finally breaks the silence.
-[Timothy] "Thanks for sharing all that with me, {player_name}. I-"
-"I really needed a friend I could trust, and you've proven yourself exactly that." # Timothy = Happy
+[Timothy] "Thanks for sharing all that with me, {player_name}. I-" #Timothy = happy
+//"I really needed a friend I could trust, and you've proven yourself exactly that." # Timothy = Happy //feels to blatent, too telly
 "I just wish I could help somehow." # Timothy = Sad
 "Wait, you said they don't bother you when you're hanging out, right?" # Timothy = Surprised
 [{player_name}] "Well, yeah. Usually."
 [Timothy] "Then we have to keep hanging out!" # Timothy = Happy
 "We'll hang out so hard they won't be able to get a word in!" # Timothy = Angry
+Timothy holds his fists up like he's ready for a good old fisticuffs. //basic, maybe reword later
+Be both let out a laugh. #Timothy = happy //basic, maybe reword later
+Timothy yawns heavily. //basic, maybe reword later
 "But... not tonight." # Timothy = Sad
 "S-sorry, but I need to settle my nerves a bit. And I'm really tired." # Timothy = Calm
 [{player_name}] "Whatever you need, man. In that case, I'm going to go finish some things around the house."

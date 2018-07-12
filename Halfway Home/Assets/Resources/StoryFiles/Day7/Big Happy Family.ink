@@ -40,11 +40,16 @@ EXTERNAL SetValue(name, values)
 I skipped breakfast today because I wasn't feeling it, but now I feel like getting some grub. # Play : Stop_All
 I fill up my plate up and go to sit down. #fatigue -= 50
 {
-	-GetValue("SavedTimothy"):
-		->SadStart
+	-GetValue("ReadyToDye"):
+		->HappyStart
 	-else:
 		->SadStart
 }
+
+=== HappyStart ===
+a happy scene. everyone comments on Timothy's hair.
+~SetValue("Saved Timothy", true)
+->END
 
 === SadStart ===
 ~tried_grace = false
