@@ -71,7 +71,7 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         if (!Actors.ContainsKey(eventdata.character.ToLower()))
             Actors.Add(eventdata.character.ToLower(), eventdata.Direction);
 
-        if (eventdata.Direction != StagePosition.None)
+        if (eventdata.Direction != StagePosition.Same)
           Actors[eventdata.character.ToLower()] = eventdata.Direction;
 
     }

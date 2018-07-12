@@ -136,7 +136,7 @@ public class CastDisplay : MonoBehaviour
                 if(eventdata.Distance!=StageDistance.Same)Roll.ChangeDistance(eventdata.Distance);
                 Roll.ChangeFacing(eventdata.FacingDirection);
 
-                if (eventdata.Direction != StagePosition.None && eventdata.Direction != Roll.Direction)
+                if (eventdata.Direction != StagePosition.Same && eventdata.Direction != Roll.Direction)
                 {
                     var oldDirections = Roll.Direction;
                     SpotLights[Roll.Direction] -= 1;
@@ -166,13 +166,13 @@ public class CastDisplay : MonoBehaviour
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
-                    if (eventdata.FacingDirection == StagePosition.None)
+                    if (eventdata.FacingDirection == StagePosition.Same)
                         eventdata.FacingDirection = StagePosition.Center;
 
                     directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
                     Actors.Add(directions);
 
-                    if (eventdata.Direction == StagePosition.None)
+                    if (eventdata.Direction == StagePosition.Same)
                         eventdata.Direction = StagePosition.Center;
 
                     directions.Direction = eventdata.Direction;
@@ -339,8 +339,8 @@ public class CastDirectionEvent : DefaultEvent
     public string character;
     public string Pose;
     public Vector3 Position;
-    public StagePosition Direction = StagePosition.Center;
-    public StagePosition FacingDirection = StagePosition.Right;
+    public StagePosition Direction = StagePosition.Same;
+    public StagePosition FacingDirection = StagePosition.Same;
     public StageDistance Distance = StageDistance.Same;
     public bool Exiting;
 
@@ -410,7 +410,7 @@ public class CastDirectionEvent : DefaultEvent
 
 public enum StagePosition
 {
-    None,
+    Same,
     Center,
     Left,
     Right
