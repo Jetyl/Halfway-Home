@@ -216,7 +216,7 @@ We turn over couch cushions, peek under tables, and check every corner {to no av
 ->->
 
 === Garden ===
-Arrive at garden. No one here. # Background / Garden, blackwipe
+{When we step out into the garden, Timothy eagerly runs ahead. There's no one else here but us.|Timothy seems happy to come back to the garden, perhaps especially because it's still empty.} # Background / Garden, blackwipe
 ->GChoice
 =GChoice
 +[Search {Search:again.|the room.}] ->Search->GChoice
@@ -228,8 +228,21 @@ Arrive at garden. No one here. # Background / Garden, blackwipe
 	++[Nevermind]-> GChoice
 
 =Search
-(Clue - Find a receipt from when Eduardo bought the items.)
-~haveReceipt=true
+{Timothy sets about searching the back of the garden while I take the front|The two of us do a second sweep of the area}.
+{I feel like I've turned over every last rock, plant, and clump of grass when I hear Timothy call out from by the bench.|Now I <i>really</i> think I've turned over every rock. And nothing to show for it this time, unfortunately.}
+{Search>1:
+	[Timothy] "I- I think I found something!" # Timothy = Surprised, far
+	He hustles over to me, holding something in his left hand. # Timothy = Exit, stage_right
+	"It looks like a receipt. And it's got a bunch of hair dye stuff on it!" # Timothy = Happy, close
+	He hands the receipt over to me. It's water-damaged in places and dirty everywhere else.
+	I brush it off as best I can and look over the text.
+	Sure enough, it looks like a receipt for hair dye.
+	[{player_name}] "Good find, man!"
+	[Timothy] "Thanks! {Cafe.Max>0&&Cafe.Search>0:Now we can get Max to give us the dyes!|But we still don't know where the dyes are...}"
+	[{player_name}] "We're closing in on the end of our search, I can feel it."
+	I pocket the receipt and look over the garden one more time. # All = Exit
+	~haveReceipt=true
+}
 ->->
 
 === Cafe ===
@@ -246,7 +259,7 @@ Arrive at Cafe. Max here. # Background / Cafe, blackwipe
 	++[Nevermind]-> CaChoice
 
 =Max
-(Before searching the room, Max will tell you that they are always cleaning up after Eduardo, but they don't remember any bottles.)
+(Max will tell you that they are always cleaning up after Eduardo, but they don't remember any bottles. They will unlock the storage closet for you to check.)
 ->->
 
 =Search
@@ -260,7 +273,7 @@ Arrive at Cafe. Max here. # Background / Cafe, blackwipe
 }
 
 === Library ===
-Arrive at Library. Charlotte here. # Background / Library, blackwipe
+Timothy and I shuffle {|back }into the library. Charlotte is {tending to her recommendations in the back corner|reading on the sofa, having apparently finished with her recommendations}. # Background / Library, blackwipe
 ->LChoice
 =LChoice
 +[Talk to {Charlotte:Charlotte again.|Charlotte.}] ->Charlotte->LChoice
@@ -273,12 +286,57 @@ Arrive at Library. Charlotte here. # Background / Library, blackwipe
 	++[Nevermind]-> LChoice
 
 =Charlotte
-(Charlotte will tell you about the supply closet where Max stashes things they don't know what to do with. Unlock cafe)
+{Charlotte==0:
+	[Timothy] "Sh-should we get Charlotte's attention? I don't want to bother her, but Trissa said..." # Timothy = Afraid, close, stage_left
+	[{player_name}] "I hate bothering people, too. But we gotta do what we gotta do."
+}
+[Timothy] "H-hey, Charlotte." # Charlotte = Calm, stage_right # Timothy = Calm, close, stage_left
+[Charlotte] "{Why, hello! It's quite rare that the library gets visitors at this time of day.|Hello again! Is there something else I can assist you two with?}" # Charlotte = Happy
+[{player_name}] "{Heh... We're, uh, not actually here for the library... We came to ask you some questions.|What did you say we should do again?}"
+{Charlotte==0:
+	[Timothy] "We're on a case!" # Timothy = Happy
+	[Charlotte] "Oh, my! Has there been a crime?" # Charlotte = Surprised
+	"Am I a suspect?" # Charlotte = Afraid
+	[{player_name}] "Nothing like that, no. Well... I guess Eduardo's hair dye <i>could</i> have been stolen..."
+	[Charlotte] "Eduardo has lost his hair dye, has he? Why then, pray tell, are <i>you</i> two investigating it and not the troublemaker himself?" # Charlotte = Angry
+	[Timothy] "B-because I want to... uh... use it... to... <size=60%>dye my hair<size=100%>." # Charlotte = Calm
+	[{player_name}] "Trissa said you might have seen it."
+	[Charlotte] "Ah. I see now. I would be happy to help resolve this for you..." # Charlotte = Happy
+	"Alas, I have not seen Eduardo's dying materials." # Charlotte = Sad
+	[Timothy] "Aww, man." # Timothy = Sad
+	[Charlotte] "Don't despair yet, friend. I may not have seen the stuff, but I can certainly predict what has likely happened to it." # Charlotte = Calm
+	Timothy perks up. # Timothy = Surprised
+	"Eduardo has a long-standing habit of leaving his things strewn about the House."
+	"I do not understand how Max has the patience to keep picking up after him, but I must applaud their patience."
+	"Most such items are returned to Eduardo, but on occasion, when the man is unavailable or the items' owner inscrutable, Max locks them up in the storage closet in the cafeteria that acts as Sunflower House's `Lost and Found`"
+	"I would wager said closet is currently home to many of Eduardo's posessions, including the object of your search."
+	[{player_name}] "So you're saying we should go to the cafe?"
+	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our loveable resident assistant for the key."
+	"And I just saw them heading to the cafe mere minutes ago."
+	[Timothy] "Wow, thanks, Charlotte!" # Timothy = Happy
+	[Charlotte] "I am always happy to help."
+	"Happy hunting, you two."
+-else:
+	[Charlotte] "Perhaps you will be more likely to remember if I express myself more simply." # Charlotte = Surprised
+	"Eduardo's hair dye is probably locked in the cafe storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
+	[Timothy] "Thanks again, Charlotte."
+} 
+Timothy and I leave Charlotte to her business and regroup at the front of the library. # All = Exit
 ~unlockedCafe=true
 ->->
 
 =Search
-(find nothing)
+Timothy and I {begin checking behind books, beside shelves, and under the furniture|scour the room another time, but nothing turns up}.
+{Search==1:
+	{Charlotte==0:
+		[Charlotte] "Please be careful, you two." # Charlotte = Afraid, far
+		I don't think we're gonna find anything here. We'd better just talk to Charlotte like Trissa said. # All = Exit
+	-else:
+		[Charlotte] "Your diligence is admirable, but I tidy this place up every evening." # Charlotte = Calm, far
+		"If anything were out of place, I would know."
+		She's probably right. This is a waste of time. # All = Exit
+	}
+}
 ->->
 
 ===TimeToDye===
