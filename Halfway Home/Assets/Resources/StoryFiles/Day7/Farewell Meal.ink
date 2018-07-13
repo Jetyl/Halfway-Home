@@ -52,7 +52,7 @@ Trissa is chatting up Jesse and John at the center table.
 [Max] "We've got your throne all ready, sire." # Max = Happy
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
-[Max] "I'll grab you some food!"
+[Max] "I'll grab you some food! Brb!" #Max = Exit
 ->EduardoUpdate->CharlotteUpdate->GoodEnd
 ->END
 
@@ -111,13 +111,24 @@ Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 
 === EduardoUpdate ===
 {
-	-GetValue("Convinced Eduardo"):
-		Eduardo and Isaac are in their usual corner, giggling.
+	-GetValue("SavedTimothy"):
+	{
+		-GetValue("Convinced Eduardo"):
+			->BrokeUpBad
+		-else:
+			->UnitBad
+	}
 	-else:
-		->BrokeUp
+	{
+		-GetValue("Convinced Eduardo"):
+			->BrokeUpGood
+		-else:
+			->UnitGood
+	}
+	
 }
 
-=BrokeUp
+=BrokeUpBad
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
@@ -132,7 +143,37 @@ Eduardo turns to leave.
 -Next to approach is Charlotte, who seems to have taken a break from her duties. # Eduardo = Exit
 ->->
 
-=Unit
+=BrokeUpGood
+Eduardo is the first to come up. #Eduardo = Sad
+[Eduardo] "Hey, {player_name}. It was great hangin'."
+"With your chill, I'm sure you'll do great out there."
+Eduardo turns to leave.
++[Ask if he's okay.]
+	[{player_name}] "You seem pretty down, man..."
+	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
+	"I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more." # Eduardo = Angry
+	"But this isn't your problem, eh? You've got the whole world waiting for you. Come back and visit, okay?." # Eduardo = Sad
++[Let him be.]
+	I decide he's probably just in his depressive state and needs some time to himself.
+-Next to approach is Charlotte, who seems to have taken a break from her duties. # Eduardo = Exit
+->->
+
+=UnitBad
+Eduardo is the first to come up. #Eduardo = Sad
+[Eduardo] "Hey, {player_name}. It was great hangin'."
+"With your chill, I'm sure you'll do great out there."
+Eduardo turns to leave.
++[Ask if he's okay.]
+	[{player_name}] "You seem pretty down, man..."
+	[Eduardo] "hm? Yeah. Just at the bottom today. complete emotional exhaust, you know?"
+	"But It ain't your problem." #Eduardo = Calm
+	"I might even fill you in when I have the energy. Later." #Eduardo = Sad
++[Let him be.]
+	I decide he's probably just in his depressive state and needs some time to himself.
+-Next to approach is Charlotte, who seems to have taken a break from her duties. # Eduardo = Exit
+->->
+
+=UnitGood
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
@@ -149,13 +190,24 @@ Eduardo turns to leave.
 
 === CharlotteUpdate ===
 {
-	-GetValue("CompletedTeatime"):
-		->Leaving
+	-GetValue("SavedTimothy"):
+	{
+		-GetValue("CompletedTeatime"):
+			->LeavingHappy
+		-else:
+			->StayingHappy
+	}
 	-else:
-		->Staying
+	{
+		-GetValue("CompletedTeatime"):
+			->LeavingSad
+		-else:
+			->StayingSad
+	}
+	
 }
 
-=Staying
+=StayingSad
 [Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."
@@ -172,7 +224,40 @@ Eduardo turns to leave.
 I watch Charlotte stride gracefully toward the serving line as Max emerges with a steaming plate of food. # Charlotte = Exit
 ->->
 
-=Leaving
+=StayingHappy
+[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
++[Yeah.]
+	[{player_name}] "It's fine, I guess."
+	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.
+	[Charlotte] "Well, that's not quite the enthusiasm I have come to expect from outgoing residents." # Charlotte = Calm
+	"Perhaps I am simply too used to Trissa's unwavering excitement. She's leaving two weeks from now and it seems to be her favorite subject of conversation."
+	Charlotte seems to be carrying on without any concern for Timothy's absence.
++[Not really.]
+	[{player_name}] "You're kidding, right? Did you not hear about Timothy?"
+	[Charlotte] "Ah, you refer to the events of earlier today involving Mr. Miyuri." # Charlotte = Calm
+	"These things happen from time to time. The hospital is the best place for him, I'm sure."
+- How is she so unfazed?
+[Charlotte] "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
+I watch Charlotte stride gracefully toward the serving line as Max emerges with a steaming plate of food. # Charlotte = Exit
+->->
+
+=LeavingSad
+[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
++[Yeah.]
+	[{player_name}] "It's fine, I guess."
+	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.
++[Not really.]
+	[{player_name}] "Not really at all. My mind's just on Timothy."
+-[Charlotte] "It's not your fault, You know." # Charlotte = Calm
+"Please don't let the unfortunate event with Mr. Miyuri get you down."
+"You've done great good here for people. Far more than was expected of you."
+"You know, You don't have to be perfect." #Charlotte = happy 
+[{player_name}] "Charlotte, I-" #Skip
+[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celabatory expereince for you. We'll speak later, I'm sure."
+Charlotte bows out of the conversation, before heading to her seat. Max just behind her, holding a steaming plate of food. # Charlotte = Exit
+->->
+
+=LeavingHappy
 [Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."

@@ -52,9 +52,9 @@ Timothy walks in, more confidant than I've seen him in a while.
 I chuckle a little.
 [{player_name}] "Good."
 "Liking the new hair?"
-Timothy nod's vigourously.
+Timothy nod's vigorously.
 [Dyed>Timothy] "I-I'm g-going to go get some food, And I'll be right back."
-Timothy scuddles off to the kitchen proper. @Not two seconds later, I hear a familiarly loud voice from down the halway. #Dyed = Exit
+Timothy scuttles off to the kitchen proper. @Not two seconds later, I hear a familiarly loud voice from down the hallway. #Dyed = Exit
 [Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
 [{player_name}] "Eh. Fine, I guess..."
 + "How about you?"
@@ -75,21 +75,21 @@ The only thing missing is Timothy, who walks back in with his food, surprised by
 	I watch Timothy, as he seems to debate with himself to approach us. #grace+
 -Timothy hesitates for a second, before approaching the group. #Dyed = Stage_center
 [Dyed>Timothy] "H-Hi Everyone!" #Dyed = happy
-Everyone else gets drawn to Timothy's cracling, yet boastful utterance. #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right #Trissa = Calm, Stage_right
+Everyone else gets drawn to Timothy's crackling, yet boastful utterance. #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right #Trissa = Calm, Stage_right
 All eyes are on Timothy, and starts to shrivel slightly. #Dyed = Sad
 "H-How d-d-d-do I look?"
 Eduardo is the first to comment.
 [Eduardo] "Yo! Timothy, my man, You look awesome." #Dyed = happy
 [Trissa] "Oh yeah! That color really suits you." #Trissa = happy
 Isaac just give a thumbs up. #Isaac = happy
-[Charlotte] "I must say, you're immediate presence seems much bolder, and more relaxed than I've seen you." #Charlotte=happy
+[Charlotte] "I must say, your immediate presence seems much bolder, and more relaxed than I've seen you." #Charlotte=happy
 Timothy's smile grows with every complement he gets. He looks to Max, the only one who hasn't said anything. #Charlotte=Exit #Trissa=Exit #Isaac=Exit #Eduardo=Exit #Max=Calm
 [Dyed>Timothy] "M-Max. W-what do you think?" #Dyed=afraid
 [Max] "What do I think?" #Max = Angry
 "I think you look happier than I've ever seen you! and that's the best thing I could see." #Max=happy
 Max jostles Timothy's new blue hair. #Dyed=happy
-[Max] "Did you do the dying and coloring youself?"
-[Dyed>Timothy] "N-no. {player_name} helped me."
+[Max] "How did the dye job go?"
+[Dyed>Timothy] "G-good! {player_name} helped me."
 "I-I probably w-wouldn't have been able to, i-i-if {player_gender=="M":he|{player_gender=="F":she|they}} hadn't h-helped me."
 [Max] "really now?"
 "Well, {player_name}, You've got my thanks, as well as Timothy's, no doubt."
@@ -101,7 +101,7 @@ Max gives a hearty laugh, before quickly turning their mop on me like it was a s
 +[Maybe]
 	[{player_name}] "uh... Maybe?"
 	[Max] "..."
-	"Well, its your last day, plus I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
+	"Well, it’s your last day, plus I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
 -It's times like now I really begin to question if Max is the first floor's RA, or janitor.
 Timothy sits with us, and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
 Well, really, its mostly Eduardo and Trissa talking, with everyone else interjecting periodically, but still.
@@ -191,7 +191,7 @@ I...
 			-else:
 				[{player_name}] "I don't know!"
 		}
-		[Max] "Hey, Timothy. I "m here. whatever's happening, I'm hear to help."
+		[Max] "Hey, Timothy. I "m here. whatever's happening, I'm here to help."
 		"there's nothing to be afraid of. your safe here."
 		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a stuttering inhale.
 		"There there. It's okay. just breath. just breath"
@@ -233,7 +233,7 @@ Max darts past me to where Timothy is sitting in a speed quite frightening for s
 I choose to stay beside Timothy, and attempt to help him thru this.
 {
 	-grace <= 2:
-		"Um, uh... It... its Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3
+		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3
 		Timothy doesn't respond to my words, only giving a sharp inhale. @<color=A5C5E3FF><i>(Your Grace is too low)</i></color>
 		I... I don't know what I'm doing.
 		I'm not going to be capable of helping Timothy.

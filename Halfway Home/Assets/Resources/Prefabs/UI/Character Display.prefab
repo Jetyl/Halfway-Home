@@ -262,12 +262,13 @@ MonoBehaviour:
     Actor: {fileID: 1084522956037128, guid: fd736ba1e38741042aac431366108868, type: 2}
   - Character: Keyless
     Actor: {fileID: 1435825661436478, guid: 61990b8c5ea0e3744ba2fd9969c1fbdb, type: 2}
+  - Character: Dyed
+    Actor: {fileID: 1076685750796010, guid: e92b94ca4cd414f4f998203e24fd19c2, type: 2}
   LeftSpot: {fileID: 1910437319575386}
   RightSpot: {fileID: 1529515766925194}
   Varience: 4
   SpotSize: 12
   StartingRoom: 0
-  BackgroundFadeTime: 2
   SpriteMoveTime: 2
 --- !u!114 &114567418828194960
 MonoBehaviour:
@@ -290,12 +291,12 @@ MonoBehaviour:
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 9e5b2f464cf68cb4ba66953129de4469, type: 3}
-    - {fileID: 21300000, guid: 9e5b2f464cf68cb4ba66953129de4469, type: 3}
+    - {fileID: 21300000, guid: 2f25ea9a43dca054e8dbd7071e22450a, type: 3}
   - ID: 2
     Tag: 
     Backdrops:
-    - {fileID: 21300000, guid: ed888740280d5ea4a98c0d7276098c0b, type: 3}
-    - {fileID: 21300000, guid: ed888740280d5ea4a98c0d7276098c0b, type: 3}
+    - {fileID: 21300000, guid: 9a5057bf525eec846973505e31c65236, type: 3}
+    - {fileID: 21300000, guid: 2045428f9a8781f4e8f318ede9f23890, type: 3}
   - ID: 3
     Tag: 
     Backdrops:
@@ -305,22 +306,22 @@ MonoBehaviour:
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 74cc687f645df454a86ac03591cfb9dc, type: 3}
-    - {fileID: 21300000, guid: 74cc687f645df454a86ac03591cfb9dc, type: 3}
+    - {fileID: 21300000, guid: cfc9cd69be1d3be4f98284a3835de2dd, type: 3}
   - ID: 5
     Tag: 
     Backdrops:
-    - {fileID: 21300000, guid: 92e2e2b3ad1544649ba8040a8e24df74, type: 3}
-    - {fileID: 21300000, guid: 92e2e2b3ad1544649ba8040a8e24df74, type: 3}
+    - {fileID: 21300000, guid: c099b968a80329f48a22fc895ef9777d, type: 3}
+    - {fileID: 21300000, guid: 49197d4e64c76e84f869cf109ee4355c, type: 3}
   - ID: 6
     Tag: 
     Backdrops:
-    - {fileID: 21300000, guid: 68ba4828a76d03b418dd0c4775a81513, type: 3}
-    - {fileID: 21300000, guid: 7bf3afad989a43e4fb525917aec2b516, type: 3}
+    - {fileID: 21300000, guid: f45c555ef020b714abd70c927ede5a59, type: 3}
+    - {fileID: 21300000, guid: 0d2c6179c919aa1438f4168740b1a4a7, type: 3}
   - ID: 7
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 246d69b4745eef942a4cda45f390626d, type: 3}
-    - {fileID: 21300000, guid: 246d69b4745eef942a4cda45f390626d, type: 3}
+    - {fileID: 21300000, guid: bc9de50030c84bc41a684d8c2e25c06c, type: 3}
   - ID: 8
     Tag: 
     Backdrops:
@@ -346,6 +347,14 @@ MonoBehaviour:
     Tag: Dream
     Backdrops:
     - {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
+  - ID: 0
+    Tag: HouseFront
+    Backdrops:
+    - {fileID: 21300000, guid: aa524f55e5cebdf45ad8ebd2d348a50a, type: 3}
+  - ID: 0
+    Tag: CommonsNight
+    Backdrops:
+    - {fileID: 21300000, guid: 2045428f9a8781f4e8f318ede9f23890, type: 3}
   FrontCurtain: {fileID: 212507266546122010}
   BackCuratin: {fileID: 212070676895858708}
   WipeCurtain: {fileID: 114651947331197304}
@@ -353,6 +362,8 @@ MonoBehaviour:
   CurtainDefault: {fileID: 0}
   StartingRoom: 0
   BackgroundFadeTime: 2
+  DayTimeStart: 6
+  DayTimeEnd: 18
 --- !u!114 &114651947331197304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -411,6 +422,16 @@ MonoBehaviour:
   CGList:
   - Tag: Hangman
     Graphic: {fileID: 1288692834534888, guid: 08ff9803d59952e47a8ca1005708a2fb, type: 2}
+  - Tag: Basketball
+    Graphic: {fileID: 1131213278402300, guid: 3373352abcef98e47b653b04d29b1083, type: 2}
+  - Tag: Hangout
+    Graphic: {fileID: 1800139138646580, guid: 78af893713099644fa65a00cb7e7dcc5, type: 2}
+  - Tag: Breakdown
+    Graphic: {fileID: 1454680618709400, guid: 78ba58805d31d7a4b9e9c9ae89964cae, type: 2}
+  - Tag: Teatime
+    Graphic: {fileID: 1113729422829270, guid: a1e3064737b1d794d9c24775be33f555, type: 2}
+  - Tag: Dyed
+    Graphic: {fileID: 1146555503489828, guid: a780e8aa5c0a9e34ebddfd45ef3e241c, type: 2}
   OpenCGTag: Open
   CloseCGTag: Exit
 --- !u!212 &212031393984077694
