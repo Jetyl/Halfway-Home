@@ -171,26 +171,21 @@ I...
 ~tried_expression = true
 {
 	-expression <= 2:
-		"M-Max!" # music_tension_state ! 2
-		my voice fails to break over the chatter. @<color=A5C5E3FF><i>(Your Expression is too low)</i></color>
+		"M-Max!" # music_tension_state ! 2 #Expression ^ poor 
+		my voice fails to break over the chatter.
 		I need to speak up more, but...
 		I.... I can't.
 		I can't get their attention this way.
 		I'm going to need to move over there, and grab them.
 		->ForcefulAssistence
 	-else:
-		"MAX!!" # play : Stop_All
+		"MAX!!" # play : Stop_All #Expression ^ good
 		[Max] "eh? what?" #Max=Calm
 		[{player_name}] "It's Timothy!"
 		[Max] "Yeah? what about-" 
 		in an instant, Max drops their carefree attitude, seeing Timothy in distress.
 		"What's happening"
-		{
-			-awareness>= 1:
-				[{player_name}] "I think he's having a panic attack."
-			-else:
-				[{player_name}] "I don't know!"
-		}
+		[{player_name}] "I think he's having a panic attack." #awareness ^ good
 		[Max] "Hey, Timothy. I "m here. whatever's happening, I'm here to help."
 		"there's nothing to be afraid of. your safe here."
 		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a stuttering inhale.
@@ -233,15 +228,15 @@ Max darts past me to where Timothy is sitting in a speed quite frightening for s
 I choose to stay beside Timothy, and attempt to help him thru this.
 {
 	-grace <= 2:
-		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3
-		Timothy doesn't respond to my words, only giving a sharp inhale. @<color=A5C5E3FF><i>(Your Grace is too low)</i></color>
+		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3 #grace ^ poor
+		Timothy doesn't respond to my words, only giving a sharp inhale.
 		I... I don't know what I'm doing.
 		I'm not going to be capable of helping Timothy.
 		I have no idea what I'm supposed to do. If there is anything to do.
 		I need to get Max. They're actually trained to handle this kind of situation.
 		->ForcefulAssistence
 	-else:
-		"Its okay Timothy. You're going to be okay." # play : Stop_All
+		"Its okay Timothy. You're going to be okay." # play : Stop_All #grace ^ good
 		I put my not-griped hand on his hand, and get him to look at me.
 		"Its okay. Your safe. I'm here for you."
 		he's not breathing.
