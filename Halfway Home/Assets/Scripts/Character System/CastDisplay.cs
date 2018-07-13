@@ -167,8 +167,21 @@ public class CastDisplay : MonoBehaviour
                 else
                 {
                     if (eventdata.FacingDirection == StagePosition.Same)
-                        eventdata.FacingDirection = StagePosition.Center;
-
+                    {
+                        switch(eventdata.Direction)
+                        {
+                            case StagePosition.Left:
+                                eventdata.FacingDirection = StagePosition.Right;
+                                break;
+                            case StagePosition.Right:
+                                eventdata.FacingDirection = StagePosition.Left;
+                                break;
+                            default:
+                                eventdata.FacingDirection = StagePosition.Center;
+                                break;
+                        }
+                    }
+                        
                     directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
                     Actors.Add(directions);
 
