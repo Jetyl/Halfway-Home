@@ -1,9 +1,9 @@
 ﻿/******************************************************************************/
 /*
 @file   Dye Job.ink
-@author Jesse Lozano
-@par    email: jesse.lozano@digipen.edu
-All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+@author Jesse Lozano & John Myres
+@par    email: jesse.lozano@digipen.edu, john.myres@digipen.edu
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 */
 /******************************************************************************/
 VAR player_name = "tbd"
@@ -19,6 +19,7 @@ VAR current_room = "unset"
 VAR unlockedLibrary = false
 VAR unlockedGarden = false
 VAR unlockedCafe = false
+VAR haveReceipt = false
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
@@ -33,7 +34,7 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-I stagger into the droom with a yawning.
+I stagger into the room with a yawn.
 {
 	-fatigue < 50:
 		I don't feel particularly tired, but the snug comfort of my bed quickly convinces me otherwise.  #Background / Dream, eyeclose// FORMERLY: , but when I hit the bed, my body becomes enraptured in comfort
@@ -62,9 +63,9 @@ I stagger into the droom with a yawning.
 }
 // CUT: huh?
 "<size=60%>{player_name}."
-"<size=80%>Are you awake?."
+"<size=80%>Are you awake?"
 In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
-I look around and see Timothy by the side of my bed. #Timothy = calm
+I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"
 [Timothy] "Oh! Um... well... you remember what I said yesterday about hanging out..."
@@ -76,29 +77,29 @@ Unexpected is good.
 [{player_name}] "Uh, sure."
 [Timothy] "Th-Thank You!" #Timothy = Happy
 "I'll meet you in the common area when you're ready."
-Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = exit
-It doesn't take me long and I catch up with him in no time. #Background / commons #Timothy = calm // I feel like this line can be improved, but I'm not sure how yet
+Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = Exit
+It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe #Timothy = Calm // I feel like this line can be improved, but I'm not sure how yet
 ->PinkHairedExpert
 
 ===PinkHairedExpert===
 [{player_name}] "Okay, I'm ready."
 [Timothy] "Thanks again, {player_name}."
 [{player_name}] "It's no big deal."
-"So, where is the stuff? Are we going to do this in our bathroom or the public restroom?" #Timothy = surprised
+"So, where is the stuff? Are we going to do this in our bathroom or the public restroom?" #Timothy = Surprised
 [Timothy] "Oh, uh, I don't have any stuff..."
 "I was hoping you would know where we could get the stuff we need..."
 [{player_name}] "Really? Uh, okay."
 I'm not sure why Timothy thought I'd be super knowledgeable about hair products. 
 My only relevant experience was tie-dying a shirt in elementary school.
-"<jitter>Oh, no. I screwed up, didn't I?</jitter>"
-[{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but do know someone who does."
+[Timothy]"<jitter>Oh, no. I screwed up, didn't I?</jitter>" # Timothy = Afraid
+[{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but do know someone who does." # Timothy = Calm
 I lead Timothy over to Eduardo's door.
 I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. #Background / commons
-[Eduardo] "Uugh. I'm coming! I'm coming!." #Timothy = scared
+[Eduardo] "Uugh. I'm coming! I'm coming!." #Timothy = Afraid
 Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
 "{player_name}, do you know what time it is?!"
 [{player_name}] "Eight in the morning?" // FORMERLY: It's only 8 o'clock Eduardo.
-[Eduardo] "Oh, god, it's worse than I thought! # Timothy = Calm
+[Eduardo] "Oh, god, it's worse than I thought!" # Timothy = Calm
 "What could you possibly need me for at..." // Eduardo is depressive here, so he is torn between being angry for being woken up and surprise that anyone would care to do so
 Eduardo visibly shudders. # Eduardo = Sad
 "`Eight in the morning?`" // FORMERLY: Yeah, and that's like a crime, waking up someone this early."
@@ -112,7 +113,7 @@ Eduardo visibly shudders. # Eduardo = Sad
 -"Anyway, whadya want?" #Eduardo = Angry
 [{player_name}] "Timothy wants to dye his hair. I was hoping we could borrow some of your supplies."
 A brief spark flashes in Eduardo's eyes behind his dreary expression. # Eduardo = Calm
-[Eduardo] "Oh, yeah? Right on!" #Eduardo = calm
+[Eduardo] "Oh, yeah? Right on!"
 Eduardo moves to high five Timothy, who flinches and shrinks back. # Timothy = Afraid// FORMERLY: Eduardo holds out his fist to get a fistbump from Timothy, but Timothy just flinches behind me. he hesitates for a bit before weakly returning the fistbump. (fistbump is too cool, high fives are warm)
 Shaking himself out of it, Timothy launches his own hand up to meet Eduardo's with a determined look. # Timothy = Angry
 "Yeah! That's more like it!" # Timothy = Happy
@@ -121,9 +122,13 @@ Shaking himself out of it, Timothy launches his own hand up to meet Eduardo's wi
 [{player_name}] "Eduardo. Your hair is bright pink."
 [Eduardo] "You got me there." # Eduardo = Calm
 "I <i>did</i> have the stuff... A whole set of stuff, in fact."
-{grace>2:I sense a `but`. # grace ^ good}
+{grace>2:
+	I sense a `but`. # grace ^ good
+}
 "But..."
-{grace>2:There it is.}
+{grace>2:
+	There it is.
+}
 "I lost it." # Eduardo = Sad # Timothy = Surprised
 "I was actually just wondering where it went. It's about time I touched up my mane."
 "If you find it, I'd be happy to lend it to you guys! Just don't use up all the pink, yeah?" # Eduardo = Calm
@@ -132,7 +137,7 @@ It's nice to see Timothy taking a more active role in the conversation. # grace 
 I think he's finally coming into his own. # grace ^ good
 [Eduardo] "Hmm... Sorry, no." # Eduardo = Sad
 "I spend a lot of time in the art room with Isaac... but we also hang out in the commons all the time."
-"When I'm manic I tend to be all over the place, though, and of course it's possible Max or someone has moved it."
+"When I'm manic I tend to be all over the place, though, and of course it's possible someone has moved it."
 [{player_name}] "Thanks, anyway. We'll let you get back to sleep."
 [Timothy] "Don't worry, Eduardo. We're on the case!" # Timothy = Happy
 I guess Timothy fancies us detectives now. I'll play along.
@@ -153,66 +158,136 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 	[Timothy] "Okay!" 
 	-> Commons
 
-= ArtRoom
-{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.}
-+[Talk to Isaac.]
-+[Search the room.]
+=== ArtRoom ===
+{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.} # Background / ArtRoom, blackwipe
+->ARChoice
+=ARChoice
++[Talk to {Isaac:Isaac again.|Isaac.}] ->Isaac->ARChoice
++[Search {Search:again.|the room.}] ->Search->ARChoice
 +[Go to another room.]
-	++[Commons]
-	++{unlockedGarden}[Garden]
-	++{unlockedCafe}[Cafe]
-	++{unlockedLibrary}[Library]
-	++[Nevermind]-> ArtRoom
+	++[Commons] ->Commons
+	++{unlockedGarden}[Garden] ->Garden
+	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedLibrary}[Library] ->Library
+	++[Nevermind]-> ARChoice
 
-= Commons
-+[Talk to ???.]
-+[Search the room.]
+=Isaac
+Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
+~unlockedGarden=true
+->->
+
+=Search
+(Find nothing)
+->->
+
+=== Commons ===
+We {step into the cozy heart of Sunflower House.|return to the common room.} # Background / Commons, blackwipe
+{It looks like Trissa has just finished soundly whooping a second-floor resident at the ping-pong table.|Trissa is still cooling off by the ping-pong table.}
+->CoChoice
+=CoChoice
++[Talk to {Trissa:Trissa again.|Trissa.}] ->Trissa->CoChoice
++[Search {Search:again.|the room.}] ->Search->CoChoice
 +[Go to another room.]
-	++[Art Room]
-	++{unlockedGarden}[Garden]
-	++{unlockedCafe}[Cafe]
-	++{unlockedLibrary}[Library]
-	++[Nevermind]-> Commons
+	++[Art Room] ->ArtRoom
+	++{unlockedGarden}[Garden] ->Garden
+	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedLibrary}[Library] ->Library
+	++[Nevermind]-> CoChoice
 
-= Garden
-+[Talk to ???.]
-+[Search the room.]
+=Trissa
+[Trissa] "{Oh yeah! I am the <i>Master</i>! You better think twice next time you start talkin' a big game!|Oh, y'all are back, huh?}" # Trissa = Happy, stage_left
+{The second-floor resident retreats into the hallway, shaking her head.|There's no sign of her former opponent.}
+"{Hey, y'all! Either of you down for a game?|Something else I can help with?}"
+[Timothy] "{Sorry, no time. We're on a case!|We're still having trouble.}" # Timothy = Calm, close, stage_right
+[Trisa] "{Say what?|No luck, huh?}" # Trissa = Surprised
+[{player_name}] "{We're looking for Eduardo's lost hair dye. Timothy wants to dye his hair and Eduardo said we could use his stuff if we found it.|Afraid not. Any other advice for us?}"
+[Trissa] "{I can't say I've seen it anywhere, no.|Besides talking to Charlotte... nope, sorry.}" # Trissa = Sad
+"{But hey, you should ask Charlotte! That girl doesn't miss a thing!|Don't give up, guys!}" # Trissa = Happy
+"{She's almost always in the library at this time.|Stick with it and I know you'll find what you're lookin' for.}" # Trissa = Calm
+[{player_name}] "Thanks!" # All = Exit
+~unlockedLibrary=true
+->->
+
+=Search
+Timothy and I {begin picking the room apart.|look everything over one more time.} # Timothy = Surprised, far
+We turn over couch cushions, peek under tables, and check every corner {to no avail.|, once again to no avail.}
+[Timothy] "{I haven't found anything interesting.|Nothing new... s-sorry.}"
+[{player_name}] "{Me, neither. Guess we should move on.|Oh, well. It was worth a shot.}"
+->->
+
+=== Garden ===
+Arrive at garden. No one here. # Background / Garden, blackwipe
+->GChoice
+=GChoice
++[Search {Search:again.|the room.}] ->Search->GChoice
 +[Go to another room.]
-	++[Commons]
-	++[Art Room]
-	++{unlockedCafe}[Cafe]
-	++{unlockedLibrary}[Library]
-	++[Nevermind]-> Garden
+	++[Commons] ->Commons
+	++[Art Room] ->ArtRoom
+	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedLibrary}[Library] ->Library
+	++[Nevermind]-> GChoice
 
-= Cafe
-+[Talk to ???.]
-+[Search the room.]
+=Search
+(Clue - Find a receipt from when Eduardo bought the items.)
+~haveReceipt=true
+->->
+
+=== Cafe ===
+Arrive at Cafe. Max here. # Background / Cafe, blackwipe
+->CaChoice
+=CaChoice
++[Talk to {Max:Max again.|Max.}] ->Max->CaChoice
++[Search {Search:again.|the room.}] ->Search
 +[Go to another room.]
-	++[Commons]
-	++[Art Room]
-	++{unlockedGarden}[Garden]
-	++{unlockedLibrary}[Library]
-	++[Nevermind]-> Cafe
+	++[Commons] ->Commons
+	++[Art Room] ->ArtRoom
+	++{unlockedGarden}[Garden] ->Garden
+	++{unlockedLibrary}[Library] ->Library
+	++[Nevermind]-> CaChoice
 
-= Library
-+[Talk to ???.]
-+[Search the room.]
+=Max
+(Before searching the room, Max will tell you that they are always cleaning up after Eduardo, but they don't remember any bottles.)
+->->
+
+=Search
+(The dyes are here in a supply closet, having been moved by Max. When you go to the closet, Max will stop you unless you have the receipt.)
+{haveReceipt:
+	(Sam shows Max the receipt to prove that those items are Eduardo's. Max gives Sam dyes.)
+	-> TimeToDye
+-else:
+	(Max stops Sam from acquiring dyes, claiming they have a policy of proof for lost and found items.)
+	->CaChoice
+}
+
+=== Library ===
+Arrive at Library. Charlotte here. # Background / Library, blackwipe
+->LChoice
+=LChoice
++[Talk to {Charlotte:Charlotte again.|Charlotte.}] ->Charlotte->LChoice
++[Search {Search:again.|the room.}] ->Search->LChoice
 +[Go to another room.]
-	++[Commons]
-	++[Art Room]
-	++{unlockedGarden}[Garden]
-	++{unlockedCafe}[Cafe]
-	++[Nevermind]-> Library
+	++[Commons] ->Commons
+	++[Art Room] ->ArtRoom
+	++{unlockedGarden}[Garden] ->Garden
+	++{unlockedCafe}[Cafe] ->Cafe
+	++[Nevermind]-> LChoice
 
-->TimeToDye
+=Charlotte
+(Charlotte will tell you about the supply closet where Max stashes things they don't know what to do with. Unlock cafe)
+~unlockedCafe=true
+->->
+
+=Search
+(find nothing)
+->->
 
 ===TimeToDye===
-With the supplies in hand, I lead Timothy back to our bathroom to get started. #Background / YourRoom #Timothy = Happy
+With the supplies in hand, I lead Timothy back to our bathroom to get started. #Background / YourRoom, blackwipe #Timothy = Happy
 [{player_name}] "Okay, so, We've got a bunch of crazy color options here. Man, Eduardo really likes neon bright colors."
 "So, Timothy, what color would you like?"
 [Timothy] "Blue! P-please!"
 [{player_name}] "Okay, blue it is."
-I shake the blue bottle, as I direct Timothy where to sit. #Timothy = exit
+I shake the blue bottle, as I direct Timothy where to sit. #Timothy = Exit
 I mix the materials, and begin  lathering it on his hair.
 [{player_name}] "So, it says its going to sting a little, but don't worry."
 [Timothy] "okay."
@@ -260,6 +335,6 @@ Timothy's stomach grumbles.
 [Timothy] "I uh, guess I am hungry. W-want to go grab something to eat?"
 [{player_name}] "In a bit. See you down there."
 [Timothy] "Okay. See ya."
-Timothy runs off, having more of a kick in his step than I've seen from him all week. #Timothy = exit
+Timothy runs off, having more of a kick in his step than I've seen from him all week. #Timothy = Exit
 I think he's going to be all right here. 
 ->END
