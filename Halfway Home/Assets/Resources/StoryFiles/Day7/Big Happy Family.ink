@@ -47,7 +47,67 @@ I fill up my plate up and go to sit down. #fatigue -= 50
 }
 
 === HappyStart ===
-a happy scene. everyone comments on Timothy's hair.
+Timothy walks in, more confidant than I've seen him in a while.
+[Dyed>Timothy] "H-Hi {player_name}! H-how's it going!" #Dyed = Happy
+I chuckle a little.
+[{player_name}] "Good."
+"Liking the new hair?"
+Timothy nod's vigourously.
+[Dyed>Timothy] "I-I'm g-going to go get some food, And I'll be right back."
+Timothy scuddles off to the kitchen proper. @Not two seconds later, I hear a familiarly loud voice from down the halway. #Dyed = Exit
+[Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
+[{player_name}] "Eh. Fine, I guess..."
++ "How about you?"
++ "Where've you two been?"
+-[Eduardo] "Oh, we kinda... just got up."
+[Max] "Again? You two really need to sort out your sleep schedules!" #Max = Calm #Eduardo = Surprised, right
+Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss voice.
+[Eduardo] "H-Hey! We were busy, alright?"
+[Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
+[Eduardo] "Oh don't you start, too!" #Eduardo = Angry
+[Charlotte] "Really now. If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
+In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm 
+It's... odd.<delay=0.5>@ Almost like we're a big happy family.
+The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #All = Exit #Dyed = Calm, Stage_left, right
++[Call Timothy over]
+	[{player_name}] "Hey, Timothy! C'mon over!" #expression+
++[Wait, and see what Timothy does]
+	I watch Timothy, as he seems to debate with himself to approach us. #grace+
+-Timothy hesitates for a second, before approaching the group. #Dyed = Stage_center
+[Dyed>Timothy] "H-Hi Everyone!" #Dyed = happy
+Everyone else gets drawn to Timothy's cracling, yet boastful utterance. #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right #Trissa = Calm, Stage_right
+All eyes are on Timothy, and starts to shrivel slightly. #Dyed = Sad
+"H-How d-d-d-do I look?"
+Eduardo is the first to comment.
+[Eduardo] "Yo! Timothy, my man, You look awesome." #Dyed = happy
+[Trissa] "Oh yeah! That color really suits you." #Trissa = happy
+Isaac just give a thumbs up. #Isaac = happy
+[Charlotte] "I must say, you're immediate presence seems much bolder, and more relaxed than I've seen you." #Charlotte=happy
+Timothy's smile grows with every complement he gets. He looks to Max, the only one who hasn't said anything. #Charlotte=Exit #Trissa=Exit #Isaac=Exit #Eduardo=Exit #Max=Calm
+[Dyed>Timothy] "M-Max. W-what do you think?" #Dyed=afraid
+[Max] "What do I think?" #Max = Angry
+"I think you look happier than I've ever seen you! and that's the best thing I could see." #Max=happy
+Max jostles Timothy's new blue hair. #Dyed=happy
+[Max] "Did you do the dying and coloring youself?"
+[Dyed>Timothy] "N-no. {player_name} helped me."
+"I-I probably w-wouldn't have been able to, i-i-if {player_gender=="M":he|{player_gender=="F":she|they}} hadn't h-helped me."
+[Max] "really now?"
+"Well, {player_name}, You've got my thanks, as well as Timothy's, no doubt."
+Max gives a hearty laugh, before quickly turning their mop on me like it was a sword.
+"You didn't make a mess of your bathroom on your last day, now did you?" #Max = Angry
++[No]
+	[{player_name}] "uh, no?"
+	[Max] "Good." #Max = happy
++[Maybe]
+	[{player_name}] "uh... Maybe?"
+	[Max] "..."
+	"Well, its your last day, plus I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
+-It's times like now I really begin to question if Max is the first floor's RA, or janitor.
+Timothy sits with us, and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
+Well, really, its mostly Eduardo and Trissa talking, with everyone else interjecting periodically, but still.
+I have a good time. #stress -=25 #depression -=25
+Time, however, moves ever onward, and the conversation dies down. #time%1
+I excuse myself first, and head off to my next location... #All=Exit
 ~SetValue("Saved Timothy", true)
 ->END
 
@@ -58,8 +118,8 @@ a happy scene. everyone comments on Timothy's hair.
 I spot Timothy sitting at one of the tables alone. # Load @ story_big_happy_family
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
-[Timothy] "oh.<delay=2> Hi."
-He seems to be in a quiet mood today.<delay=2>@ Whatever.
+[Timothy] "oh.<delay=0.5> Hi."
+He seems to be in a quiet mood today.<delay=0.5>@ Whatever.
 I silently eat with him Timothy for a while, until I hear a loud voice approach. #Timothy = Exit
 [Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
 [{player_name}] "Eh. Fine, I guess..."
@@ -74,7 +134,7 @@ Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss
 [Charlotte] "Really now. If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
 //continue this line of merriment 
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm # Play : play_music_tension_intro_02
-It's... odd.<delay=2>@ Almost like we're a big happy family.
+It's... odd.<delay=0.5>@ Almost like we're a big happy family.
 ->Breakdown
 
 
@@ -94,12 +154,13 @@ His hand clasps onto my arm with a shaky, but intense grip. I feel his heartbeat
 His lips move, as if trying to speak, but no words come from them.
 With his free hand, he clutches onto his shirt.
 all these little tiny actions I pick up, draw my mind to a conclusion that something is happening to Timothy.
-+ What's going on?!
-+a Panic Attack?!
-{	-week >= 2:
-		+Not Again!
+{	
+	-week >= 2:
+		Not Again!
+	-else:
+		a Panic Attack?!
 }
--"uh, M-Max? Max?" # music_tension_state ! 1
+"uh, M-Max? Max?" # music_tension_state ! 1
 no one seems to hear my weak call, over the chatter and laughter.
 I...
 +[Speak Louder]->ACallForHelp
@@ -219,6 +280,6 @@ Isaac drags Eduardo out of the cafe in a huff.
 "I messed up..."
 [Charlotte] "But, what do you mean by that?"
 I walk away from Cafe. #Charlotte=Exit
-It was stupid to think of this unstable place as a family.
+[Voices] "It was stupid to think of this unstable place as a family."
 I'm so stupid. #depression += 5
 ->END

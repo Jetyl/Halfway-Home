@@ -143,7 +143,7 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangePose(string pose, bool Skip)
     {
-        if (pose == "None" || pose == "")
+        if (pose.ToLower() == "none" || pose == "")
             return;
 
         //visual.sprite = GetPose(pose);
@@ -184,7 +184,7 @@ public class CharacterDisplay : MonoBehaviour
 
     public void ChangeFacing(StagePosition pos)
     {
-        if (pos == StagePosition.None)
+        if (pos == StagePosition.Same)
             return;
 
         FacingDirection = pos;
@@ -263,7 +263,7 @@ public class CharacterDisplay : MonoBehaviour
     {
         for(int i = 0; i < Poses.Count; ++i)
         {
-            if(Poses[i].Name == name)
+            if(Poses[i].Name.ToLower() == name.ToLower())
             {
                 Pose = name;
                 return Poses[i].Visual;
