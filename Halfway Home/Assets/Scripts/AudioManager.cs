@@ -199,6 +199,11 @@ public class AudioManager : MonoBehaviour
   {
     Game currentGame = Game.current;
     
+    // Load sound banks for current story and room
+    soundbankManager.InitBanks();
+    
+    Debug.Log("          CURRENT STORY SOUNDBANK:" + currentGame.CurrentStorySoundbank);
+    
     if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
     {
       Trace.Script($"Loading music {Game.current.CurrentTrack}");

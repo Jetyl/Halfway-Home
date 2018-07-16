@@ -57,26 +57,20 @@
       "Language": "SFX",
       "ShortName": "barble bapkins 1.6.wav",
       "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
-     },
-     {
-      "Id": "1025761080",
-      "Language": "SFX",
-      "ShortName": "loop_164661__adam-n__fire.wav",
-      "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "58705680",
+      "Language": "SFX",
+      "ShortName": "263137__tmacroberts__creaking.wav",
+      "Path": "SFX\\263137__tmacroberts__creaking_D02579EE.wem"
+     },
      {
       "Id": "339768715",
       "Language": "SFX",
       "ShortName": "sfx_human_knock.wav",
       "Path": "SFX\\sfx_human_knock_0F51AE3B.wem"
-     },
-     {
-      "Id": "741107735",
-      "Language": "SFX",
-      "ShortName": "BedCreak.wav",
-      "Path": "SFX\\BedCreak_00FA84C2.wem"
      },
      {
       "Id": "917354306",

@@ -5,7 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1402380574	play_music_tension_intro_04			\PlayMusic\music_tension\play_music_tension_intro_04	
 	1712470628	play_music_tension			\PlayMusic\music_tension\play_music_tension	
 	2883794594	stop_music_tension_intro_02			\PlayMusic\music_tension\stop_music_tension_intro_02	
-	4181321930	music_loop_test			\PlayMusic\test\music_loop_test	
+	4181321930	music_loop_test			\TestEvents\music_loop_test	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5413151	DissonantChords_02	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\DissonantChords_02_3A48A259.wem		\Actor-Mixer Hierarchy\Default Work Unit\music_tension\DissonantChords_02		213608

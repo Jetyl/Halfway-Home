@@ -4,6 +4,20 @@
 		<WorkUnit Name="TestEvents" ID="{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="empty_event" ID="{702FC6F3-84A5-4D06-B963-04FA999B2FFF}"/>
+				<Event Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}">
+					<ChildrenList>
+						<Action Name="" ID="{3B2D765F-0BE5-473F-B1DA-7B442485D8C7}" ShortID="373979603">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_loop_test" ID="{8E0B9FCB-ED91-4BE5-B1FE-9CFBC630C8C7}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

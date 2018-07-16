@@ -11,8 +11,10 @@ public class SoundbankManager : MonoBehaviour {
   {
     LoadBank("Main");
     LoadBank("Master");
-    LoadBank("Temp");
-    
+  }
+  
+  public void InitBanks()
+  {
     string storyBank = Game.current.CurrentStorySoundbank;
     string roomBank = Game.current.CurrentRoomSoundbank;
     
@@ -29,12 +31,12 @@ public class SoundbankManager : MonoBehaviour {
     
     if (init == false)
     {
-      if (bank.StartsWith("story"))
+      if (bank.ToLower().StartsWith("story"))
       {
         Trace.Script($"SETTING STORY BANK TO {bank}");
         Game.current.CurrentStorySoundbank = bank;
       }
-      else if (bank.StartsWith("room"))
+      else if (bank.ToLower().StartsWith("room"))
       {
         Trace.Script($"SETTING ROOM BANK TO {bank}");
         Game.current.CurrentRoomSoundbank = bank;

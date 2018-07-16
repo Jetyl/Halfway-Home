@@ -3,31 +3,6 @@
 	<Events>
 		<WorkUnit Name="PlayMusic" ID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}">
-					<ChildrenList>
-						<Action Name="" ID="{2EB34A35-ED3C-425B-85A1-0CAE70C7DD62}" ShortID="116526627">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList/>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}">
-					<ChildrenList>
-						<Action Name="" ID="{8D575403-314F-4363-9F12-A7AC1A6980B5}" ShortID="241306622">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="music_bardman_placeholder" ID="{ED814CE8-74B4-4D63-9462-45949D7251EE}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="music_mainmenu" ID="{27A17E60-91E7-4415-BE7D-D54FB76A866E}" ShortID="102748487">
 					<ChildrenList>
 						<Event Name="play_music_mainmenu" ID="{CF4A563F-94A5-4E84-BC54-7237209990B7}">
@@ -878,24 +853,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="test" ID="{29490FE7-D796-46CA-A2AD-A594880AFDDD}" ShortID="446771457">
-					<ChildrenList>
-						<Event Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}">
-							<ChildrenList>
-								<Action Name="" ID="{3B2D765F-0BE5-473F-B1DA-7B442485D8C7}" ShortID="373979603">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="music_loop_test" ID="{8E0B9FCB-ED91-4BE5-B1FE-9CFBC630C8C7}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="music_placeholder_main" ID="{26CA6EFF-DB1B-4124-BFE4-BC2ED58457A8}" ShortID="607203974">
 					<ChildrenList>
 						<Event Name="Play_music_placeholder_main" ID="{1D05F51F-01CC-469A-9152-B15E852D3C87}">
@@ -1093,28 +1050,6 @@
 					<ChildrenList>
 						<Event Name="play_music_happy_nointro" ID="{CA96AF14-A4CF-4CEA-9DCE-267267D4749E}">
 							<ChildrenList>
-								<Action Name="" ID="{3FF46B10-447C-4655-8BB1-E6362FF6A182}" ShortID="941064812">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
-										<Property Name="Volume" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{1C62F946-2C6A-4C52-913B-C0C0BCFEA831}" ShortID="561325896">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{3FC46FC9-D628-4D15-9B76-0391D0499B3D}" ShortID="465782774">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -1130,28 +1065,6 @@
 						</Event>
 						<Event Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}">
 							<ChildrenList>
-								<Action Name="" ID="{DE2F5925-5EB4-4C4B-BC4A-6ECBD6C09FF6}" ShortID="656211340">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
-										<Property Name="Volume" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{F8C3DB0C-52CE-40C7-9F9D-4AC4FA274189}" ShortID="415260018">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="FadeTime" Type="Real64" Value="6"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{CEF0AD92-4B67-4460-A421-0641AD6E2849}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{718C7135-ED19-4223-968E-2454328A86FF}" ShortID="622960883">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -1200,16 +1113,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Stop_All_Fast" ID="{C6A10C8A-5723-4612-966E-7CC27EA11A98}">
-					<ChildrenList>
-						<Action Name="" ID="{D4382D1E-40F9-41BB-AAB4-BA3375AE3B0C}" ShortID="205728247">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
-							</PropertyList>
-							<ReferenceList/>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="music_dejavu" ID="{1C17EF6B-476A-4561-9CA8-977C37B2FD6C}" ShortID="279030928">
 					<ChildrenList>
 						<Event Name="play_music_dejavu" ID="{8DB5E002-D7FB-4A5F-BD04-79618F25E533}">
@@ -1279,6 +1182,169 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_farewell" ID="{AA92E78A-3063-4DBD-811D-A1EB76558783}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="stop" ID="{D100C3FA-4561-44C2-8941-6D43F4E145B5}" ShortID="25151779">
+					<ChildrenList>
+						<Event Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}">
+							<ChildrenList>
+								<Action Name="" ID="{2EB34A35-ED3C-425B-85A1-0CAE70C7DD62}" ShortID="116526627">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_All_Fast" ID="{C6A10C8A-5723-4612-966E-7CC27EA11A98}">
+							<ChildrenList>
+								<Action Name="" ID="{D4382D1E-40F9-41BB-AAB4-BA3375AE3B0C}" ShortID="205728247">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="play_music_artroom" ID="{DEF509F0-46F3-44E3-BCF5-55A9144122D1}">
+					<ChildrenList>
+						<Action Name="" ID="{1124D25C-0100-4914-8BA0-2315332CD2B6}" ShortID="662639340">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_artroom" ID="{9E0FD2DF-BD8B-495B-906B-C0C48106FE36}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_commons" ID="{32B99AAB-AE17-4A5A-80AF-E29B13B83441}">
+					<ChildrenList>
+						<Action Name="" ID="{B6225FD4-E206-4EE1-9A3E-DAA28610D7E8}" ShortID="192953971">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_commons" ID="{6206F69A-2F0B-4EC0-83EC-1132A24DF09C}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_contemplative" ID="{6E181B92-A89D-4EAD-B7BB-510C08377328}">
+					<ChildrenList>
+						<Action Name="" ID="{F6456911-2391-421F-8146-E4E0F7E16F4B}" ShortID="260239987">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_contemplative" ID="{C96438EA-EF45-431C-AB42-CF4435135F65}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_library" ID="{D34C8965-552B-472B-9C0A-2942ED9D5285}">
+					<ChildrenList>
+						<Action Name="" ID="{244FCB01-90F2-4B50-A0CD-6A19E7BC513C}" ShortID="496749864">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_library" ID="{BCF6A336-4C3D-42F0-AED4-6ED2C58E86AC}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_charlotte_elegant" ID="{2F845C0F-22B9-4AD8-B07B-D0E543A6FEC4}">
+					<ChildrenList>
+						<Action Name="" ID="{5057BB8E-26AC-4855-A99A-C0BB421B8EE6}" ShortID="30344639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_charlotte_elegant" ID="{96744E54-3A1A-455D-80B5-37CA47150EA1}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_eduardo_love" ID="{EE71B394-CFC7-4311-9136-7B83969B961C}">
+					<ChildrenList>
+						<Action Name="" ID="{AAA50002-064E-4155-A014-5F8035B752FC}" ShortID="349295068">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_eduardo_love" ID="{8CFE868C-261C-42A8-A04C-673CFB7D6886}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_garden" ID="{69FCDBB2-EEDB-4145-83D1-D5260CB5AB5A}">
+					<ChildrenList>
+						<Action Name="" ID="{EBA0C7C6-9335-4E06-9A49-DF5568430BB5}" ShortID="50829409">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_garden" ID="{A886376B-9DF7-409E-80D3-B919FE89E2FE}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_emotional_piano" ID="{E65F84EE-7E5E-4B96-AFFC-0F02D975ED58}">
+					<ChildrenList>
+						<Action Name="" ID="{E8B04C25-8671-4991-BA0D-B4969DD53CC6}" ShortID="381533590">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_emotional_piano" ID="{888F38E9-5997-42E1-9258-E0F7B73FE251}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="music_bardman" ID="{479CE7A7-104A-41C6-B216-28E4A4A9C024}" ShortID="421541243">
+					<ChildrenList>
+						<Event Name="play_music_bardman" ID="{EAF8B073-97A4-4B7B-8FB3-23861E08FCC6}">
+							<ChildrenList>
+								<Action Name="" ID="{8D575403-314F-4363-9F12-A7AC1A6980B5}" ShortID="241306622">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_bardman_placeholder" ID="{ED814CE8-74B4-4D63-9462-45949D7251EE}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

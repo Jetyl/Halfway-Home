@@ -37,12 +37,12 @@
      {
       "Id": "452547817",
       "Name": "Stop_All",
-      "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+      "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All"
      },
      {
       "Id": "3032100830",
       "Name": "Stop_All_Fast",
-      "ObjectPath": "\\Events\\PlayMusic\\Stop_All_Fast"
+      "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All_Fast"
      }
     ],
     "IncludedMemoryFiles": [

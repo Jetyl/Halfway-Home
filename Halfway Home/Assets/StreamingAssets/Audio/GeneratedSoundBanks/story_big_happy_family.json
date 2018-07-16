@@ -22,7 +22,7 @@
      {
       "Id": "4181321930",
       "Name": "music_loop_test",
-      "ObjectPath": "\\Events\\PlayMusic\\test\\music_loop_test"
+      "ObjectPath": "\\Events\\TestEvents\\music_loop_test"
      },
      {
       "Id": "1712470628",

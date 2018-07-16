@@ -52,7 +52,7 @@
      {
       "Id": "4181321930",
       "Name": "music_loop_test",
-      "ObjectPath": "\\Events\\PlayMusic\\test\\music_loop_test"
+      "ObjectPath": "\\Events\\TestEvents\\music_loop_test"
      },
      {
       "Id": "285561943",
@@ -95,9 +95,14 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
      },
      {
+      "Id": "1810713724",
+      "Name": "play_music_artroom",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_artroom"
+     },
+     {
       "Id": "3108296289",
       "Name": "play_music_bardman",
-      "ObjectPath": "\\Events\\PlayMusic\\play_music_bardman"
+      "ObjectPath": "\\Events\\PlayMusic\\music_bardman\\play_music_bardman"
      },
      {
       "Id": "240662438",
@@ -108,6 +113,21 @@
       "Id": "2805601783",
       "Name": "play_music_cafejazz_02",
       "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\play_music_cafejazz_02"
+     },
+     {
+      "Id": "2039547829",
+      "Name": "play_music_charlotte_elegant",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_charlotte_elegant"
+     },
+     {
+      "Id": "1005088852",
+      "Name": "play_music_commons",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_commons"
+     },
+     {
+      "Id": "224129391",
+      "Name": "play_music_contemplative",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_contemplative"
      },
      {
       "Id": "1372805254",
@@ -125,6 +145,16 @@
       "ObjectPath": "\\Events\\PlayMusic\\music_dejavu\\play_music_dejavu"
      },
      {
+      "Id": "3687385887",
+      "Name": "play_music_eduardo_love",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_eduardo_love"
+     },
+     {
+      "Id": "2723803496",
+      "Name": "play_music_emotional_piano",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_emotional_piano"
+     },
+     {
       "Id": "2805407838",
       "Name": "play_music_fakeit",
       "ObjectPath": "\\Events\\PlayMusic\\music_fakeit\\play_music_fakeit"
@@ -135,6 +165,11 @@
       "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
      },
      {
+      "Id": "2702884089",
+      "Name": "play_music_garden",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_garden"
+     },
+     {
       "Id": "1020080944",
       "Name": "play_music_happy",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
@@ -143,6 +178,11 @@
       "Id": "2156392148",
       "Name": "play_music_happy_nointro",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy_nointro"
+     },
+     {
+      "Id": "3266052307",
+      "Name": "play_music_library",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_library"
      },
      {
       "Id": "1566693136",
@@ -272,12 +312,12 @@
      {
       "Id": "452547817",
       "Name": "Stop_All",
-      "ObjectPath": "\\Events\\PlayMusic\\Stop_All"
+      "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All"
      },
      {
       "Id": "3032100830",
       "Name": "Stop_All_Fast",
-      "ObjectPath": "\\Events\\PlayMusic\\Stop_All_Fast"
+      "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All_Fast"
      },
      {
       "Id": "1720799084",
@@ -424,10 +464,28 @@
       "Path": "SFX\\sfx_menu_chime_pausegame_9F6C56D1.wem"
      },
      {
-      "Id": "69318974",
+      "Id": "30239752",
       "Language": "SFX",
-      "ShortName": "Deaf.wav",
-      "Path": "SFX\\Deaf_CFE8DFE9.wem"
+      "ShortName": "music_artroom.wav",
+      "Path": "SFX\\music_artroom_A51F8DD7.wem"
+     },
+     {
+      "Id": "58705680",
+      "Language": "SFX",
+      "ShortName": "263137__tmacroberts__creaking.wav",
+      "Path": "SFX\\263137__tmacroberts__creaking_D02579EE.wem"
+     },
+     {
+      "Id": "171907777",
+      "Language": "SFX",
+      "ShortName": "music_commons.wav",
+      "Path": "SFX\\music_commons_A51F8DD7.wem"
+     },
+     {
+      "Id": "220669927",
+      "Language": "SFX",
+      "ShortName": "music_emotional_piano.wav",
+      "Path": "SFX\\music_emotional_piano_A51F8DD7.wem"
      },
      {
       "Id": "302959056",
@@ -442,10 +500,22 @@
       "Path": "SFX\\ghostwhisper2_00FA84C2.wem"
      },
      {
+      "Id": "318975488",
+      "Language": "SFX",
+      "ShortName": "music_garden.wav",
+      "Path": "SFX\\music_garden_A51F8DD7.wem"
+     },
+     {
       "Id": "339768715",
       "Language": "SFX",
       "ShortName": "sfx_human_knock.wav",
       "Path": "SFX\\sfx_human_knock_0F51AE3B.wem"
+     },
+     {
+      "Id": "345863430",
+      "Language": "SFX",
+      "ShortName": "music_contemplative.wav",
+      "Path": "SFX\\music_contemplative_A51F8DD7.wem"
      },
      {
       "Id": "370198169",
@@ -466,6 +536,12 @@
       "Path": "SFX\\ghostwhisper1_00FA84C2.wem"
      },
      {
+      "Id": "527438760",
+      "Language": "SFX",
+      "ShortName": "music_charlotte_elegant.wav",
+      "Path": "SFX\\music_charlotte_elegant_A51F8DD7.wem"
+     },
+     {
       "Id": "541036875",
       "Language": "SFX",
       "ShortName": "sfx_object_car_away1.wav",
@@ -482,12 +558,6 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
       "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
-     },
-     {
-      "Id": "741107735",
-      "Language": "SFX",
-      "ShortName": "BedCreak.wav",
-      "Path": "SFX\\BedCreak_00FA84C2.wem"
      },
      {
       "Id": "792835110",
@@ -514,10 +584,22 @@
       "Path": "SFX\\Farewell, Part I_A51F8DD7.wem"
      },
      {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     },
+     {
       "Id": "950120731",
       "Language": "SFX",
       "ShortName": "sfx_menu_button_mouseover.wav",
       "Path": "SFX\\sfx_menu_button_mouseover_00FA84C2.wem"
+     },
+     {
+      "Id": "977374489",
+      "Language": "SFX",
+      "ShortName": "music_library_2.wav",
+      "Path": "SFX\\music_library_2_A51F8DD7.wem"
      },
      {
       "Id": "1030560068",

@@ -42,7 +42,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -72,11 +72,6 @@
 													<Modifier Name="" ID="{BE679E19-DEC3-4ABA-819A-DD178D939ED0}"/>
 												</ModifierInfo>
 											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -111,7 +106,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -152,11 +147,6 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -191,7 +181,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -225,7 +215,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -259,7 +249,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -318,6 +308,9 @@
 										</Property>
 										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{43FA8CB2-9007-4FFA-B5FB-EFFAD20FC718}">
@@ -395,7 +388,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -440,6 +433,11 @@
 													<Modifier Name="" ID="{3E835E78-D591-439F-A136-24E09223BDE9}"/>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -516,7 +514,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -540,10 +538,15 @@
 								</Sound>
 								<Sound Name="sfx_ambient_deaf" ID="{D695B788-5A5D-4699-92DD-B96EB0DA2707}" ShortID="1034512372">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -604,7 +607,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -627,6 +630,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" ShortID="357545396">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -640,9 +650,17 @@
 											<Language>SFX</Language>
 											<AudioFile>BedCreak.wav</AudioFile>
 										</AudioFileSource>
+										<AudioFileSource Name="263137__tmacroberts__creaking" ID="{91419E08-46BE-4ADE-B97D-91D1BD6E5225}" ShortID="58705680">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.31900322420635"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.54840025111607"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>263137__tmacroberts__creaking.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="BedCreak" ID="{F8259BB9-068D-4EB0-87EF-BFEAADFC9836}" Platform="Linked"/>
+										<ActiveSource Name="263137__tmacroberts__creaking" ID="{91419E08-46BE-4ADE-B97D-91D1BD6E5225}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -669,6 +687,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="DissonantChords_02" ID="{8106DA72-0828-4CA9-9299-265EA3760213}" ShortID="141135973">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -688,6 +713,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="DissonantChords_01" ID="{6512B8F1-01AF-46AF-9765-3E672C87267C}" ShortID="519606979">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>

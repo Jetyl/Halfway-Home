@@ -15,7 +15,6 @@
 			<IncludedEvents>
 				<Event Id="1372805254" Name="play_music_creepy_atmo" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo"/>
 				<Event Id="2374614039" Name="play_music_creepy_atmo_02" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02"/>
-				<Event Id="4007606837" Name="play_sfx_ambient_deaf" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_deaf"/>
 				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching"/>
 				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
@@ -32,10 +31,6 @@
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="69318974" Language="SFX">
-					<ShortName>Deaf.wav</ShortName>
-					<Path>SFX\Deaf_CFE8DFE9.wem</Path>
-				</File>
 				<File Id="318063250" Language="SFX">
 					<ShortName>ghostwhisper2.wav</ShortName>
 					<Path>SFX\ghostwhisper2_00FA84C2.wem</Path>

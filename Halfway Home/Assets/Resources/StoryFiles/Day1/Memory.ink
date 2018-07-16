@@ -104,7 +104,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambien
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02
+I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # Unload @ room_cafe
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
 *[Ask what's going on]
@@ -126,7 +126,7 @@ Max is reading by the fireplace. I wander over and join them.   # Max = Calm   #
 No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
 My body rises from my seat and stumbles toward my bedroom.   # Max = Exit   
-All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # SFX : play_sfx_ambient_deaf
+All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # text_vol ! -200
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade   # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless."   # SFX : play_sfx_human_ghostwhisper
@@ -165,7 +165,7 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # Unload @ story_memory
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # text_vol ! 0   # Unload @ story_memory
 The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

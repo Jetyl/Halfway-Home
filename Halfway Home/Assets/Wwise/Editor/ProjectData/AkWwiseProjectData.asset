@@ -16,14 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -51059714
-    m_lastTimePart2: -1999250750
+    m_lastTimePsrt1: 1127361738
+    m_lastTimePart2: -1999246514
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 630458899
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: 1596559083
+    m_lastTimePart2: -1999246514
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -97,18 +97,6 @@ MonoBehaviour:
       ID: -397550955
       Guid: 192c9a2aab195c4c82e004a15a7685ef
       maxAttenuation: 0
-    - Name: music_loop_test
-      Path: PlayMusic\test\music_loop_test
-      PathAndIcons:
-      - ElementName: PlayMusic
-        ObjectType: 12
-      - ElementName: test
-        ObjectType: 4
-      - ElementName: music_loop_test
-        ObjectType: 3
-      ID: -113645366
-      Guid: 3ffa0f2e80a6e04db51972707d0b98df
-      maxAttenuation: 0
     - Name: play_ambience_birds
       Path: PlayMusic\intro_ambiences\play_ambience_birds
       PathAndIcons:
@@ -145,11 +133,23 @@ MonoBehaviour:
       ID: -310455222
       Guid: 14ef77cc95f92d46bafba30806d20fbc
       maxAttenuation: 0
-    - Name: play_music_bardman
-      Path: PlayMusic\play_music_bardman
+    - Name: play_music_artroom
+      Path: PlayMusic\play_music_artroom
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
+      - ElementName: play_music_artroom
+        ObjectType: 3
+      ID: 1810713724
+      Guid: f009f5def346e344bcf555a9144122d1
+      maxAttenuation: 0
+    - Name: play_music_bardman
+      Path: PlayMusic\music_bardman\play_music_bardman
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: music_bardman
+        ObjectType: 4
       - ElementName: play_music_bardman
         ObjectType: 3
       ID: -1186671007
@@ -178,6 +178,36 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1489365513
       Guid: 5b9b1da7ee70134fb4a4b7c66c40d196
+      maxAttenuation: 0
+    - Name: play_music_charlotte_elegant
+      Path: PlayMusic\play_music_charlotte_elegant
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_charlotte_elegant
+        ObjectType: 3
+      ID: 2039547829
+      Guid: 0f5c842fb922d84ab07bd0e543a6fec4
+      maxAttenuation: 0
+    - Name: play_music_commons
+      Path: PlayMusic\play_music_commons
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_commons
+        ObjectType: 3
+      ID: 1005088852
+      Guid: ab9ab93217ae5a4a80afe29b13b83441
+      maxAttenuation: 0
+    - Name: play_music_contemplative
+      Path: PlayMusic\play_music_contemplative
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_contemplative
+        ObjectType: 3
+      ID: 224129391
+      Guid: 921b186e9da8ad4eb7bb510c08377328
       maxAttenuation: 0
     - Name: play_music_creepy_atmo
       Path: PlayMusic\music_creepyatmo\play_music_creepy_atmo
@@ -215,6 +245,26 @@ MonoBehaviour:
       ID: 1829857455
       Guid: 02e0b58dfbd75f4abd0479618f25e533
       maxAttenuation: 0
+    - Name: play_music_eduardo_love
+      Path: PlayMusic\play_music_eduardo_love
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_eduardo_love
+        ObjectType: 3
+      ID: -607581409
+      Guid: 94b371eec7cf114391367b83969b961c
+      maxAttenuation: 0
+    - Name: play_music_emotional_piano
+      Path: PlayMusic\play_music_emotional_piano
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_emotional_piano
+        ObjectType: 3
+      ID: -1571163800
+      Guid: ee845fe65e7e964baffc0f02d975ed58
+      maxAttenuation: 0
     - Name: play_music_fakeit
       Path: PlayMusic\music_fakeit\play_music_fakeit
       PathAndIcons:
@@ -239,6 +289,16 @@ MonoBehaviour:
       ID: -202650038
       Guid: 54f8eeca734dcc47b6d60bf31e1fe2d9
       maxAttenuation: 0
+    - Name: play_music_garden
+      Path: PlayMusic\play_music_garden
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_garden
+        ObjectType: 3
+      ID: -1592083207
+      Guid: b2dbfc69dbee454183d1d5260cb5ab5a
+      maxAttenuation: 0
     - Name: play_music_happy
       Path: PlayMusic\music_happy\play_music_happy
       PathAndIcons:
@@ -262,6 +322,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -2138575148
       Guid: 14af96cacfa4ea4c9dce267267d4749e
+      maxAttenuation: 0
+    - Name: play_music_library
+      Path: PlayMusic\play_music_library
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_library
+        ObjectType: 3
+      ID: -1028914989
+      Guid: 65894cd32b552b479c0a2942ed9d5285
       maxAttenuation: 0
     - Name: play_music_mainmenu
       Path: PlayMusic\music_mainmenu\play_music_mainmenu
@@ -468,20 +538,24 @@ MonoBehaviour:
       Guid: 99619488c6f2ca4799493ec1f6ee4efc
       maxAttenuation: 0
     - Name: Stop_All
-      Path: PlayMusic\Stop_All
+      Path: PlayMusic\stop\Stop_All
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
+      - ElementName: stop
+        ObjectType: 4
       - ElementName: Stop_All
         ObjectType: 3
       ID: 452547817
       Guid: 112021dd1518b24197dcbbbf570d32e5
       maxAttenuation: 0
     - Name: Stop_All_Fast
-      Path: PlayMusic\Stop_All_Fast
+      Path: PlayMusic\stop\Stop_All_Fast
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
+      - ElementName: stop
+        ObjectType: 4
       - ElementName: Stop_All_Fast
         ObjectType: 3
       ID: -1262866466
@@ -700,8 +774,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: 282707479
-    m_lastTimePart2: -1999251320
+    m_lastTimePsrt1: -1272903928
+    m_lastTimePart2: -1999246846
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -713,12 +787,22 @@ MonoBehaviour:
       ID: -257765375
       Guid: f3c62f70a584064db96304fa999b2fff
       maxAttenuation: 0
+    - Name: music_loop_test
+      Path: TestEvents\music_loop_test
+      PathAndIcons:
+      - ElementName: TestEvents
+        ObjectType: 12
+      - ElementName: music_loop_test
+        ObjectType: 3
+      ID: -113645366
+      Guid: 3ffa0f2e80a6e04db51972707d0b98df
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 350387565
-    m_lastTimePart2: -1999249664
+    m_lastTimePsrt1: 829191154
+    m_lastTimePart2: -1999246520
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -738,8 +822,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 667400198
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: 1884688159
+    m_lastTimePart2: -1999246514
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -750,6 +834,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -2093861715
       Guid: 93f953f87fefd94b87b2a8e534ed66cf
+    - Name: HalfwaySoundbank
+      Path: Default Work Unit\HalfwaySoundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: HalfwaySoundbank
+        ObjectType: 7
+      ID: -636833750
+      Guid: d5ea9b681f2ba146b7269f82c944843a
     - Name: Main
       Path: Default Work Unit\Main
       PathAndIcons:
@@ -813,8 +906,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 667430176
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: 1865041904
+    m_lastTimePart2: -1999246509
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
@@ -907,8 +1000,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\UI.wwu
     ParentPhysicalPath: 
     Guid: '{148E2D9F-E4C9-4433-B2CD-803F3F69A985}'
-    m_lastTimePsrt1: 2139594406
-    m_lastTimePart2: -1999249313
+    m_lastTimePsrt1: 1234319209
+    m_lastTimePart2: -1999249223
     List:
     - Name: Ambience_Slider
       Path: UI\Sliders\Ambience_Slider
