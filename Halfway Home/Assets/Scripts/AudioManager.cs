@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     public enum SoundType
     {
       Music,
+      MLayer,
+      ALayer,
       SFX,
       Ambience
     };
@@ -95,28 +97,30 @@ public class AudioManager : MonoBehaviour
 
   void OnAudioEvent(AudioEvent e)
   {
-    if (e.FileName == "play_textscroll" && MuteTextScroll) return;
+    if (e.FileName == "play_textscroll" && MuteTextScroll) return; // MuteTextScroll set by player in options menu
+    // DEPRECATED
     //christien da sound designer's spaghettiii code: dont stop all if vertical layering is wanted
-    if (e.FileName != "play_music_tension_stem_03" &&
-        e.FileName != "play_music_tension_stem_04" &&
-        e.FileName != "play_music_tension_stem_05" &&
-        e.FileName != "play_music_tension_stem_06" &&
-        e.FileName != "play_music_tension_stem_07" &&
-        e.FileName != "play_music_tension_intro_01" &&
-        e.FileName != "play_music_tension_intro_02" &&
-        e.FileName != "stop_music_tension_intro_02" &&
-        e.FileName != "play_music_tension_intro_03" &&
-        e.FileName != "play_music_tension_intro_04" &&
-        e.FileName != "play_ambience_birds" &&
-        e.FileName != "play_ambience_fireplace" &&
-        e.FileName != "lpf_ambience_fireplace" &&
-        e.FileName != "play_music_cafe_jazz_02"
-       )
+    //if (e.FileName != "play_music_tension_stem_03" &&
+    //    e.FileName != "play_music_tension_stem_04" &&
+    //    e.FileName != "play_music_tension_stem_05" &&
+    //    e.FileName != "play_music_tension_stem_06" &&
+    //    e.FileName != "play_music_tension_stem_07" &&
+    //    e.FileName != "play_music_tension_intro_01" &&
+    //    e.FileName != "play_music_tension_intro_02" &&
+    //    e.FileName != "stop_music_tension_intro_02" &&
+    //    e.FileName != "play_music_tension_intro_03" &&
+    //    e.FileName != "play_music_tension_intro_04" &&
+    //    e.FileName != "play_ambience_birds" &&
+    //    e.FileName != "play_ambience_fireplace" &&
+    //    e.FileName != "lpf_ambience_fireplace" &&
+    //    e.FileName != "play_music_cafe_jazz_02"
+    //   )
+    if(e.Type != AudioEvent.SoundType.MLayer) // Only stop all if file not tagged as layer
     {
-        AkSoundEngine.PostEvent("Stop_All", e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
+        AkSoundEngine.PostEvent("Stop_All", e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Ambience ? AmbiencePlayer.gameObject : MusicPlayer.gameObject));
     }
 
-    AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Music ? MusicPlayer.gameObject : AmbiencePlayer.gameObject));
+    AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Ambience ? AmbiencePlayer.gameObject : MusicPlayer.gameObject));
   }
 
   void OnAudioParamEvent(AudioParamEvent e)

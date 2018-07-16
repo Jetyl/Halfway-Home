@@ -378,6 +378,18 @@ namespace HalfwayHome
             Game.current.CurrentTrack = match["Event"].Trim();
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, match["Event"]));
           }
+          else if (match["Mode"].Trim().ToLower() == "mlayer")
+          {
+            Trace.Script($"Play {match["Event"].Trim()} as music layer");
+            Game.current.CurrentTrack = match["Event"].Trim();
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.MLayer, match["Event"]));
+          }
+          else if (match["Mode"].Trim().ToLower() == "alayer")
+          {
+            Trace.Script($"Play {match["Event"].Trim()} as ambient layer");
+            Game.current.CurrentTrack = match["Event"].Trim();
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.ALayer, match["Event"]));
+          }
           else if (match["Mode"].Trim().ToLower() == "sfx")
           {
             Trace.Script($"Play {match["Event"].Trim()} sound effect");
