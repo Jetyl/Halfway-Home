@@ -224,6 +224,50 @@
     ]
    },
    {
+    "Id": "1577913368",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_your_room",
+    "ShortName": "room_your_room",
+    "Path": "room_your_room.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "224129391",
+      "Name": "play_music_contemplative",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_contemplative"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "345863430",
+      "Language": "SFX",
+      "ShortName": "music_contemplative.wav",
+      "Path": "SFX\\music_contemplative_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "1993474908",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_garden",
+    "ShortName": "room_garden",
+    "Path": "room_garden.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2702884089",
+      "Name": "play_music_garden",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_garden"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "318975488",
+      "Language": "SFX",
+      "ShortName": "music_garden.wav",
+      "Path": "SFX\\music_garden_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "2201105581",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Credits",
@@ -258,6 +302,28 @@
     "ReferencedStreamedFiles": [
      {
       "Id": "44147102"
+     }
+    ]
+   },
+   {
+    "Id": "3114788647",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_commons",
+    "ShortName": "room_commons",
+    "Path": "room_commons.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1005088852",
+      "Name": "play_music_commons",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_commons"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "171907777",
+      "Language": "SFX",
+      "ShortName": "music_commons.wav",
+      "Path": "SFX\\music_commons_A51F8DD7.wem"
      }
     ]
    },
@@ -458,6 +524,50 @@
       "Language": "SFX",
       "ShortName": "Starfish.wav",
       "Path": "SFX\\Starfish_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3332012024",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_art_room",
+    "ShortName": "room_art_room",
+    "Path": "room_art_room.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1810713724",
+      "Name": "play_music_artroom",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_artroom"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "30239752",
+      "Language": "SFX",
+      "ShortName": "music_artroom.wav",
+      "Path": "SFX\\music_artroom_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3564131344",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_library",
+    "ShortName": "room_library",
+    "Path": "room_library.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3266052307",
+      "Name": "play_music_library",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_library"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "977374489",
+      "Language": "SFX",
+      "ShortName": "music_library_2.wav",
+      "Path": "SFX\\music_library_2_A51F8DD7.wem"
      }
     ]
    },
@@ -907,7 +1017,7 @@
       "Id": "58705680",
       "Language": "SFX",
       "ShortName": "263137__tmacroberts__creaking.wav",
-      "Path": "SFX\\263137__tmacroberts__creaking_D02579EE.wem"
+      "Path": "SFX\\263137__tmacroberts__creaking_E381B43F.wem"
      },
      {
       "Id": "171907777",
@@ -1095,7 +1205,7 @@
       "Id": "58705680",
       "Language": "SFX",
       "ShortName": "263137__tmacroberts__creaking.wav",
-      "Path": "SFX\\263137__tmacroberts__creaking_D02579EE.wem"
+      "Path": "SFX\\263137__tmacroberts__creaking_E381B43F.wem"
      },
      {
       "Id": "339768715",

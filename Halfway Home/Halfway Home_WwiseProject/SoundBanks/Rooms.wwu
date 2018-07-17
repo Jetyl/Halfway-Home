@@ -10,6 +10,41 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="room_art_room" ID="{91A26EFC-7CBE-4375-8CC6-F53F946F7EA5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_artroom" ID="{DEF509F0-46F3-44E3-BCF5-55A9144122D1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="room_your_room" ID="{78371995-4D79-4CE8-BDBA-156E2EAA0B83}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_contemplative" ID="{6E181B92-A89D-4EAD-B7BB-510C08377328}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="room_commons" ID="{0A6114E7-9E93-4842-A31E-9411433C83CA}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_commons" ID="{32B99AAB-AE17-4A5A-80AF-E29B13B83441}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="room_garden" ID="{EADB6C8B-04F7-43FF-A347-E8B6DEB569B0}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_garden" ID="{69FCDBB2-EEDB-4145-83D1-D5260CB5AB5A}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="room_library" ID="{635EAE3E-AE5A-4E16-B48D-1D3B10083825}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_library" ID="{D34C8965-552B-472B-9C0A-2942ED9D5285}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
