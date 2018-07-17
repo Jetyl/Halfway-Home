@@ -8849,7 +8849,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.85
+  m_fontSize: 70.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15658,7 +15658,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.05
+  m_fontSize: 57.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26972,6 +26972,36 @@ Prefab:
     - target: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[7].MusicTrack
+      value: play_music_artroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[4].MusicTrack
+      value: play_music_cafejazz_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[2].MusicTrack
+      value: play_music_commons
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[6].MusicTrack
+      value: play_music_library
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[1].MusicTrack
+      value: play_music_contemplative
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[5].MusicTrack
+      value: play_music_garden
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
@@ -53132,7 +53162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.88}
+  m_AnchoredPosition: {x: 0, y: 902.6088}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -70194,7 +70224,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4039426199608004, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
       propertyPath: m_LocalPosition.x
@@ -70251,12 +70281,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70281,7 +70311,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].BoolValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70291,7 +70321,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugAwareness
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70306,7 +70336,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70321,17 +70351,17 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].ProgressName
-      value: TimothyPoints
+      value: ReadyToDye
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].TypeID
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].BoolValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70351,17 +70381,17 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugExpression
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: Timeline
       value: 
-      objectReference: {fileID: 4900000, guid: 4b11795f50a478a49a629b5b9515e9a3, type: 3}
+      objectReference: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[3].ProgressName
-      value: EarnedWoundStar
+      value: ReadyToDye
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70406,6 +70436,11 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[4].BoolValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: DebugWeek
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
