@@ -16892,7 +16892,7 @@ MonoBehaviour:
     Room: 5
     DefaultCondition:
       Conditions: []
-      DescriptorText: Get some fresh air and contemplate your journey.
+      DescriptorText: Get some fresh air and contemplate my journey.
     Conditions:
     - Conditions:
       - ProgressName: Tutorial
@@ -27002,6 +27002,36 @@ Prefab:
         type: 2}
       propertyPath: Backdrop.Array.data[5].MusicTrack
       value: play_music_garden
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[2].Ambience
+      value: play_ambience_fireplace
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[4].Ambience
+      value: play_ambience_fireplace_with_lpf
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[5].Ambience
+      value: play_ambience_birds
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[6].Ambience
+      value: lpf_ambience_fireplace
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[7].Ambience
+      value: stop_ambience_all
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[1].Ambience
+      value: stop_ambience_all
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b21784794667a04aa09eada542517f0, type: 2}
@@ -70276,7 +70306,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70441,7 +70471,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugWeek
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
