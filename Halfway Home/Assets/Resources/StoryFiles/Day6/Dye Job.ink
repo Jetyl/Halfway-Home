@@ -172,7 +172,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 	++[Nevermind]-> ARChoice
 
 =Isaac
-Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
+//Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
 ~unlockedGarden=true
 ->->
 
@@ -246,7 +246,8 @@ We turn over couch cushions, peek under tables, and check every corner {to no av
 ->->
 
 === Cafe ===
-Arrive at Cafe. Max here. # Background / Cafe, blackwipe
+Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet|again}. # Background / Cafe, blackwipe
+{A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} 
 ->CaChoice
 =CaChoice
 +[Talk to {Max:Max again.|Max.}] ->Max->CaChoice
@@ -263,14 +264,32 @@ Arrive at Cafe. Max here. # Background / Cafe, blackwipe
 ->->
 
 =Search
-(The dyes are here in a supply closet, having been moved by Max. When you go to the closet, Max will stop you unless you have the receipt.)
-{haveReceipt:
-	(Sam shows Max the receipt to prove that those items are Eduardo's. Max gives Sam dyes.)
-	-> TimeToDye
+{Max>0:
+	{haveReceipt:
+		(Sam shows Max the receipt to prove that those items are Eduardo's. Max gives Sam dyes.)
+		-> TimeToDye
+	-else:
+		(Max stops Sam from acquiring dyes, claiming they have a policy of proof for lost-and-found items.)
+		->CaChoice
+	}
 -else:
-	(Max stops Sam from acquiring dyes, claiming they have a policy of proof for lost and found items.)
-	->CaChoice
+	{Search==0:
+		We make for the supply closet Charlotte told us about.
+		I remember seeing it when I would eat in the cafe, but I never knew it doubled as a lost-and-found.
+		Probably because I don't have a lot of stuff...
+		[Timothy] "Is this it over here?" # Timothy = Surprised, close, stage_right
+		[{player_name}] "Yep. Let's see what we have here."
+		I step forward to pull the door handle, but it won't budge.
+		[{player_name}] "Locked. The plot thickens."
+		[Timothy] "Didn't Charlotte say that Max has the key?"
+		"W-we should go talk to them, right?"
+	-else:
+		I check the closet again, giving the handle a firm tug.
+		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it.
+	}
 }
+(The dyes are here in a supply closet, having been moved by Max. When you go to the closet, Max will stop you unless you have the receipt.)
+
 
 === Library ===
 Timothy and I shuffle {|back }into the library. Charlotte is {tending to her recommendations in the back corner|reading on the sofa, having apparently finished with her recommendations}. # Background / Library, blackwipe
