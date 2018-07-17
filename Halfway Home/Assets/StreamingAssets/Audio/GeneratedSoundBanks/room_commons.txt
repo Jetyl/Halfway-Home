@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1005088852	play_music_commons			\PlayMusic\play_music_commons	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	171907777	music_commons	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_commons_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_commons\music_commons_intro\music_commons		397477
+

@@ -104,7 +104,12 @@ namespace AK
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSICMAIN = 374987273U;
+        static const AkUniqueID ROOM_ART_ROOM = 3332012024U;
         static const AkUniqueID ROOM_CAFE = 2805282872U;
+        static const AkUniqueID ROOM_COMMONS = 3114788647U;
+        static const AkUniqueID ROOM_GARDEN = 1993474908U;
+        static const AkUniqueID ROOM_LIBRARY = 3564131344U;
+        static const AkUniqueID ROOM_YOUR_ROOM = 1577913368U;
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
         static const AkUniqueID STORY_KNOCK_ON_THE_MORNING_DOOR = 4021864313U;
         static const AkUniqueID STORY_MEMORY = 1576038406U;

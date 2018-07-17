@@ -120,7 +120,7 @@
 				<Property Name="GenerateSoundBankJSON" Type="bool" Value="True"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="5wz9tZ3U9U2dT+HkYMkjWg=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="k/lT+H/v2UuHsqjlNO1mz9Xqm2gfK6FGtyafgslEhDq8AtYYkd0RQLf6NL91iDyrXDbuHtXlT0+kU5ILhSeBuEidGo/nvelDjr2Bg8FlYl3/sMPgUmI4RqTtmAyok/gAshljAoLOsUmWqZB4EncIr/sfJX4Pvx1Oi27RtVAMyK65v7AvxbHBSI7zAaLj0K5mUjZ3nYfRdUyKl1KB7PJ+7w=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="k/lT+H/v2UuHsqjlNO1mz9Xqm2gfK6FGtyafgslEhDq8AtYYkd0RQLf6NL91iDyrXDbuHtXlT0+kU5ILhSeBuEidGo/nvelDjr2Bg8FlYl3/sMPgUmI4RqTtmAyok/gAshljAoLOsUmWqZB4EncIr/xuopG+fHVDjMb1P5RvfqWVGTd4eU3oTL26FW4uqguD5xRhCpOeQkijHpQRQzyDyots2+r3BP9Do0fott61abA+rl5jWq4WTrSNHTsQCDgl+x8lfg+/HU6LbtG1UAzIrrm/sC/FscFIjvMBouPQrmZSNnedh9F1TIqXUoHs8n7v"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{5A441D48-AA0F-4888-8AB3-6284F04E3546}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="y5fT/ZHUB06AJmIbNUy6VgH/////////yHYYG8/7L0ClsMeS9Eq2+wH/////////"/>
 				<Property Name="HardwareController\{5A441D48-AA0F-4888-8AB3-6284F04E3546}\x64_ActiveGroups" Type="string" Value="eqxSQzHdakWedZpiaRzG9gHgFAD/////r0s9uq/S2EWVa0kledxNqwHgFAD/////"/>
