@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Stratus;
 
 public class StageDisplay : MonoBehaviour
 {
@@ -108,6 +109,9 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.Tag.ToLower() == CurrentCG)
                 {
+                    CallSound(room.MusicTrack, false);
+                    CallSound(room.Ambience, true);
+
                     BackdropChange(room.Backdrops[0], eventdata.Transitions);
                     return;
                 }
@@ -126,7 +130,10 @@ public class StageDisplay : MonoBehaviour
                 if (room.ID == CurrentRoom)
                 {
 
-                    if(Game.current.Hour >= DayTimeStart && Game.current.Hour <= DayTimeEnd)
+                    CallSound(room.MusicTrack, false);
+                    CallSound(room.Ambience, true);
+
+                    if (Game.current.Hour >= DayTimeStart && Game.current.Hour <= DayTimeEnd)
                         BackdropChange(room.Backdrops[0], eventdata.Transitions);
                     else
                         BackdropChange(room.Backdrops[1], eventdata.Transitions);
@@ -137,6 +144,26 @@ public class StageDisplay : MonoBehaviour
 
         
         
+    }
+
+    void CallSound(string track, bool Ambience)
+    {
+        if (track == null || track == "")
+            return;
+
+        if(Ambience)
+        {
+            Game.current.CurrentAmbience = track;
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, track));
+        }
+        else
+        {
+            Game.current.CurrentTrack = track;
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, track));
+        }
+
+
+
     }
 
     void ResetBackdrop()
@@ -396,6 +423,8 @@ public class RoomDetails
     public Room ID;
     public string Tag;
     public Sprite[] Backdrops;
+    public string MusicTrack;
+    public string Ambience;
 }
 
 public enum TransitionTypes
