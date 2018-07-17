@@ -79,7 +79,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : p
 }
 
 ===Introductions===
-[Keyless>Max] "Hella yella, my {player_name} fella."   # Keyless = Calm   # Play : play_music_happy
+[Keyless>Max] "Hella yella, my {player_name} fella."   # Keyless = Calm   # Play : play_music_happy   # Ambience : Stop_All
 What?
 [{player_name}] "Huh?"
 +[Hella yella?]

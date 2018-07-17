@@ -10,7 +10,7 @@
 						<ObjectRef Name="stop_music_tension_intro_02" ID="{41A7ED79-D8ED-4C8E-A5FD-777EEDCFC6C8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_04" ID="{9FFE4AA6-D0A8-4CBD-9F48-20C8BBB1C4B3}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_01" ID="{A16EC170-92A7-4DA2-AE76-BC548844626E}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="music_loop_test" ID="{2E0FFA3F-A680-4DE0-B519-72707D0B98DF}" WorkUnitID="{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_tension_intro_03" ID="{CE33F42F-6600-4EDF-8F6F-0D05EF146BB7}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -21,7 +21,6 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_sfx_ambient_deaf" ID="{2A8A9D72-C0E1-4662-AD52-478F8B16D7B5}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_creepy_atmo" ID="{D156287F-4894-4C1C-BCA7-AF317221DE2D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_creepy_atmo_02" ID="{6F113FA0-8EAD-4C93-8709-E1719973E777}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>

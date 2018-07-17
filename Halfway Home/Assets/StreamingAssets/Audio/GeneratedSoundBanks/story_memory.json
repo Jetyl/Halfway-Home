@@ -30,11 +30,6 @@
       "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo_02"
      },
      {
-      "Id": "4007606837",
-      "Name": "play_sfx_ambient_deaf",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_deaf"
-     },
-     {
       "Id": "197627707",
       "Name": "play_sfx_ambient_heartbeat",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
@@ -70,12 +65,6 @@
      }
     ],
     "IncludedMemoryFiles": [
-     {
-      "Id": "69318974",
-      "Language": "SFX",
-      "ShortName": "Deaf.wav",
-      "Path": "SFX\\Deaf_CFE8DFE9.wem"
-     },
      {
       "Id": "318063250",
       "Language": "SFX",

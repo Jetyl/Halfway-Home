@@ -13,7 +13,7 @@
 			<ShortName>story_big_happy_family</ShortName>
 			<Path>story_big_happy_family.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4181321930" Name="music_loop_test" ObjectPath="\Events\PlayMusic\test\music_loop_test"/>
+				<Event Id="4181321930" Name="music_loop_test" ObjectPath="\Events\TestEvents\music_loop_test"/>
 				<Event Id="1712470628" Name="play_music_tension" ObjectPath="\Events\PlayMusic\music_tension\play_music_tension"/>
 				<Event Id="1402380571" Name="play_music_tension_intro_01" ObjectPath="\Events\PlayMusic\music_tension\play_music_tension_intro_01"/>
 				<Event Id="1402380568" Name="play_music_tension_intro_02" ObjectPath="\Events\PlayMusic\music_tension\play_music_tension_intro_02"/>
