@@ -10,36 +10,42 @@
   "Name" : "Hangman",
   "Slug" : "CGs/Hangman/hopealltogether",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "The Hangman Game"
  },
  {
   "Name" : "Long Night Hangout",
   "Slug" : "CGs/Hangout/HangoutGallery",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "Hanging Out With Eduardo & Isaac"
  },
  {
   "Name" : "Courtside",
   "Slug" : "CGs/Basketball/CourtsideGallery",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "Playing Basketball with Timothy"
  },
  {
   "Name" : "Breakdown",
   "Slug" : "CGs/Breakdown/TimothyBreakdown",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "Timothy's Breakdown"
  },
  {
   "Name" : "Tea Time",
   "Slug" : "CGs/Teatime/TeaTime",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "Tea Time With Charlotte"
  },
  {
-  "Name" : "Test",
+  "Name" : "Hideaway",
   "Slug" : "CGs/Memory/houseCG3",
   "Set"  : 0,
-  "Caption" : ""
+  "Caption" : "Isaac in his Hideaway"
+ },
+ {
+  "Name" : "Dye Job",
+  "Slug" : null,
+  "Set"  : 0,
+  "Caption" : "Timothy with his newly dyed hair"
  }
 ]

@@ -12,8 +12,28 @@ public class StageDisplayEditor : Editor
     bool showbackdrops;
     bool showSPbackdrops;
 
+    List<bool> BGFoldouts;
+    List<bool> SPFoldouts;
+
     private void OnEnable()
     {
+        BGFoldouts = new List<bool>();
+
+        for(int i= 0; i < Enum.GetValues(typeof(Room)).Length; ++i)
+        {
+            BGFoldouts.Add(false);
+        }
+
+        int amount = serializedObject.FindProperty("SpecialBackdrops").arraySize;
+
+        SPFoldouts = new List<bool>();
+
+        for (int i = 0; i < amount; ++i)
+        {
+            SPFoldouts.Add(false);
+        }
+
+
     }
 
     public override void OnInspectorGUI()
@@ -46,16 +66,28 @@ public class StageDisplayEditor : Editor
 
             for (var i = 0; i < Backdrop.arraySize; ++i)
             {
-                Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("ID").enumValueIndex = i;
+                BGFoldouts[i] = EditorGUILayout.Foldout(BGFoldouts[i], (Room)i + " Info");
 
-                var back = Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
-                back.arraySize = 2;
+                if(BGFoldouts[i])
+                {
+                    Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("ID").enumValueIndex = i;
 
-                EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(0),
-                    new GUIContent( (Room)i + " Backdrop, day"), true);
+                    var back = Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
+                    back.arraySize = 2;
 
-                EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(1),
-                    new GUIContent((Room)i + " Backdrop, night"), true);
+                    EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(0),
+                        new GUIContent((Room)i + " Backdrop, day"), true);
+
+                    EditorGUILayout.PropertyField(back.GetArrayElementAtIndex(1),
+                        new GUIContent((Room)i + " Backdrop, night"), true);
+
+                    EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("MusicTrack"),
+                        new GUIContent((Room)i + " Music"), true);
+                    EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Ambience"),
+                        new GUIContent((Room)i + " Ambience"), true);
+                }
+
+                
             }
 
             EditorGUILayout.Space();
@@ -70,14 +102,26 @@ public class StageDisplayEditor : Editor
 
             for (var i = 0; i < SpecialBackdrop.arraySize; ++i)
             {
-                SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
+                SPFoldouts[i] = EditorGUILayout.Foldout(SPFoldouts[i], SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Info");
+
+                if(SPFoldouts[i])
+                {
+                    SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
                     SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
 
-                var spec = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
-                spec.arraySize = 1;
+                    var spec = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
+                    spec.arraySize = 1;
 
-                EditorGUILayout.PropertyField(spec.GetArrayElementAtIndex(0),
-                    new GUIContent(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
+                    EditorGUILayout.PropertyField(spec.GetArrayElementAtIndex(0),
+                        new GUIContent(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue + " Backdrop"), true);
+
+                    EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("MusicTrack"),
+                        new GUIContent((Room)i + " Music"), true);
+                    EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Ambience"),
+                        new GUIContent((Room)i + " Ambience"), true);
+                }
+
+                
             }
 
             EditorGUILayout.Space();
