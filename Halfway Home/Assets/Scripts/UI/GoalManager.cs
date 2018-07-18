@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/******************************************************************************/
+/*!
+File:   GoalManager.cs
+Author: John Myres
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
+*/
+/******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

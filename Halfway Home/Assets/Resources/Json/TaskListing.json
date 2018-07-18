@@ -108,5 +108,27 @@
   "SubCount" : 0,
   "SubTasks" : [
   ]
+ },
+ {
+  "Number" : 7,
+  "Name"   : "Help Timoth dye his hair",
+  "Hidden" : false,
+  "Weekly" : true,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 2,
+  "SubTasks" : [
+   {
+    "Number" : 0,
+    "Name"   : "Find Eduardo's hair dye",
+    "Hidden" : false
+   },
+   {
+    "Number" : 1,
+    "Name"   : "Find proof for Max",
+    "Hidden" : false
+   }
+  ]
  }
 ]
