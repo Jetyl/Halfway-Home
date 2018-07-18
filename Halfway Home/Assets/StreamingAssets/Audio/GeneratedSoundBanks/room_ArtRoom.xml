@@ -8,10 +8,19 @@
 		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="374987273" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\MusicMain</ObjectPath>
-			<ShortName>MusicMain</ShortName>
-			<Path>MusicMain.bnk</Path>
+		<SoundBank Id="2842449619" Language="SFX">
+			<ObjectPath>\SoundBanks\Rooms\room_ArtRoom</ObjectPath>
+			<ShortName>room_ArtRoom</ShortName>
+			<Path>room_ArtRoom.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1810713724" Name="play_music_artroom" ObjectPath="\Events\PlayMusic\play_music_artroom"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="30239752" Language="SFX">
+					<ShortName>music_artroom.wav</ShortName>
+					<Path>SFX\music_artroom_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

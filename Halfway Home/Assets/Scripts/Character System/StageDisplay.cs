@@ -151,7 +151,7 @@ public class StageDisplay : MonoBehaviour
 
     void LoadBanks(string NewBank)
     {
-        if(OldBank != null || OldBank != "")
+        if(OldBank != null && OldBank != "")
             Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, OldBank));
         
         Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, NewBank));

@@ -9,9 +9,9 @@
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="3564131344" Language="SFX">
-			<ObjectPath>\SoundBanks\Rooms\room_library</ObjectPath>
-			<ShortName>room_library</ShortName>
-			<Path>room_library.bnk</Path>
+			<ObjectPath>\SoundBanks\Rooms\room_Library</ObjectPath>
+			<ShortName>room_Library</ShortName>
+			<Path>room_Library.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3266052307" Name="play_music_library" ObjectPath="\Events\PlayMusic\play_music_library"/>
 			</IncludedEvents>

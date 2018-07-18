@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour
   // Used to make sure room default tracks are called before normal tracks
   private List<string[]> normalTracks = new List<string[]> {};
   private List<string[]> defaultTracks = new List<string[]> {};
+  private List<string> banksToLoad = new List<string> {};
+  private List<string> banksToUnload = new List<string> {};
   private float dispatchAudioTimer = 0;        // Used to keep track of the intervals at which audio events are dispatched
   private float dispatchAudioInterval = 0.1f;  // The interval between each batch of dispatched audio events
 
@@ -135,9 +137,13 @@ public class AudioManager : MonoBehaviour
       defaultTracks.Add(new string[] {e.FileName, e.Type.ToString()});
   }
 
+  // Making sure audio calls occur in the right order
   void DispatchAudioEvents()
   {
-    // Call default room tracks first
+    // Load banks
+    DispatchLoadBanks();
+    
+    // Call default room tracks
     foreach (string[] e in defaultTracks)
     {
       CallAudioEvent(e);
@@ -151,14 +157,30 @@ public class AudioManager : MonoBehaviour
         OnAudioParamFadeEvent(lpfEvent);
         OnAudioParamFadeEvent(volEvent);
       }
+      
+      // Reset LPF for fireplace in commons
+      else if (e[0] == "play_ambience_fireplace")
+      {
+        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 0);
+        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", 0);
+        
+        OnAudioParamFadeEvent(lpfEvent);
+        OnAudioParamFadeEvent(volEvent);
+      }
     }
 
-    // Then call other events
+    // Call other events
     foreach (string[] e in normalTracks)
       CallAudioEvent(e);
-      
+    
+    // Unload banks
+    DispatchUnloadBanks();
+    
+    // Reset lists
     defaultTracks.Clear();
     normalTracks.Clear();
+    banksToLoad.Clear();
+    banksToUnload.Clear();
   }
 
   void CallAudioEvent(string[] e)
@@ -253,11 +275,26 @@ public class AudioManager : MonoBehaviour
   
   void OnAudioBankEvent(AudioBankEvent e)
   {
+    if (e.BankName == null || e.BankName == "")
+      return;
+    
     AudioBankEvent.LoadType lt = e.Type;
     if (lt == AudioBankEvent.LoadType.Load)
-      soundbankManager.LoadBank(e.BankName, false);
+      banksToLoad.Add(e.BankName);
     else if (lt == AudioBankEvent.LoadType.Unload)
-      soundbankManager.UnloadBank(e.BankName);
+      banksToUnload.Add(e.BankName);
+  }
+  
+  void DispatchLoadBanks()
+  {
+    foreach (string bank in banksToLoad)
+      soundbankManager.LoadBank(bank, false);
+  }
+  
+  void DispatchUnloadBanks()
+  {
+    foreach (string bank in banksToUnload)
+      soundbankManager.UnloadBank(bank);
   }
 
   void OnLoad(DefaultEvent eventdata)

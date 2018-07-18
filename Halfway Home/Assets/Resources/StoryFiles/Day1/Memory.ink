@@ -85,7 +85,7 @@ They pull out a small bit of paper from their pocket and begin reading aloud.
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
-I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   # Load @ room_cafe
+I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   // # Load @ room_Kitchen
 -> Cafe
 
 === Cafe ===
@@ -161,7 +161,7 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.   # Ambience : stop_ambience_all
-[Voices] "This is who you are."   # SFX : play_sfx_human_ghostwhisper   # Load @ story_knock_on_the_morning_door
+[Voices] "This is who you are."   # SFX : play_sfx_human_ghostwhisper   //# Load @ story_knock_on_the_morning_door
 -> Wake
 
 === Wake ===

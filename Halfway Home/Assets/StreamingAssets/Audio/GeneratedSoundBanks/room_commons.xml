@@ -9,9 +9,9 @@
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="3114788647" Language="SFX">
-			<ObjectPath>\SoundBanks\Rooms\room_commons</ObjectPath>
-			<ShortName>room_commons</ShortName>
-			<Path>room_commons.bnk</Path>
+			<ObjectPath>\SoundBanks\Rooms\room_Commons</ObjectPath>
+			<ShortName>room_Commons</ShortName>
+			<Path>room_Commons.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1005088852" Name="play_music_commons" ObjectPath="\Events\PlayMusic\play_music_commons"/>
 			</IncludedEvents>
