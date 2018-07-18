@@ -164,27 +164,25 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 
 ===TwoAM===
 //the 2 am hour talk
-[Eduardo] "Hey Isaac? You know what was a good game? Katawa Shoujo." #Hangout / E_Grin, Eye_I, hrm_down, Leg_Up, Hand_Up
+[Eduardo] "Hey Isaac? You know what was a good game?" #Hangout / E_Happy, Eye_I, hrm_down, Leg_Up, Hand_Up
 [Isaac] "Hrm."
-[Eduardo] "that story was da bomb."
-"Hey, {player_name}, you ever played Katawa Shoujo?" #Hangout / Eye_U
+[Eduardo] "Ka... Kata...@That VN we were readin' all up on the other day."
+"You know, the one with all the disabled girls in it."
+"that story was da bomb."
+[Isaac] "Yet you can't remember the name?"
+[Eduardo] "Look, I'm bad with name aight!" #Hangout / E_Sad
+[Isaac] "Hrm."
+"Hey, {player_name}, you ever played a Visual Novel before?" #Hangout / Eye_U, E_Happy
 +[Yes]
 	[{player_name}] "Yeah, I have."
-	[Eduardo] "That game was tight, right?"
-	"Who was your favorite girl? <Delay=0.75>Wait, no, don't tell me. I know it was Lilly."
-	"Lilly was best girl. Ain't that right Isaac?" #Hangout / Eye_I
-	[Isaac] "Hrm. I liked Rin."
-	[Eduardo] "Oh, a'course you liked Rin."
+	[Eduardo] "Did ya like any of them."
+	I don't know why, but that feels like a loaded question.
+	I give a non-comital shrug.
 +[No]
 	[{player_name}] "No. I haven't."
-	[Eduardo] "Well you should. its <i>really</i> good. Free too."
-	"It’s a visual novel, but I'm sure you'd like those."
-	"It’s about romancing a bunch of girls, each with a different physical disability."
-	"And, despite how skeevy that sounds, its actually really good, and respectful too."
-	"And Its real amazing that it is so good, given where it came from."
-	"B'yeah, I give it the Eduardo Medina seal of approval." #Hangout / E_Happy
--"It’s kinda sad there aren't more works like Katawa Shoujo out there." #Hangout / E_Sad, Eye_U
-"It’s so good, and avoids like, all the annoying tropes I hate about visual novels and anime."
+	[Eduardo] "Well ya should try one some time. I think you'd like the medium."
+-"Now me personally, I got the whole love-hate thing going on with em." #Hangout / E_Sad, Eye_U
+"I like the idea of em, you know. But there are all these annoying tropes I hate about visual novels and anime."
 "Like, you know what trope really bugs the crap outta me in anime lately?" #Hangout / Eye_I
 [Isaac] "Hrm?"
 [Eduardo] "You got all these modern-day stories, with all these fake off-brand references to real world things, instead of just straight up saying, hey yo! this is a thing."
@@ -228,24 +226,24 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 //the 3 am hour talk
 //the two talk about the nature of attraction.
 [{player_name}] "So, random question, but what are you two? if you don't mind me asking?"
-[Eduardo] "Well I'm human. I don't know about Isaac though." #Hangout / smile_I, Hand_Up
+[Eduardo] "Well I'm human. I don't know about Isaac though." #Hangout / E_Grin, Eye_I, Hand_Up
 [Isaac] "Hrm." #Hangout / hrm_down
 Isaac slugs Eduardo in the stomach.
-[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}" #Hangout / Sad_U
+[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}" #Hangout / Eye_U, E_Sad
 [{player_name}] "I was asking about your orientation."
-[Eduardo] "Oh? that? I thought it was obvious for me? I am two ways about everything" #Hangout / smile_u
+[Eduardo] "Oh? that? I thought it was obvious for me? I am two ways about everything" #Hangout / Eye_I, E_Happy
 huh?
 [Isaac] "He's bisexual." #Hangout / hrm_Up
 "He does that joke every time anyone asks."
 Eduardo begins laughing like a hyena, as his boyfriend explains his dumb joke.
-[Eduardo]"What can I say? I love being your bipolar bisexual Bro." #Hangout / smile_u
+[Eduardo]"What can I say? I love being your bipolar bisexual Bro." #Hangout / E_Grin
 Eduardo pokes Isaac's unchanging expression, while he has the derpiest grin on his face.
 [{player_name}] "Isaac, what about you?"
 [Isaac] "Asexual. Androromantic." #Hangout / hrm_down
 [{player_name}] "Androromantic?"
 [Isaac] "Attracted to masculinity. @s'what it means."
 [{player_name}] "oh, interesting."
-[Eduardo] "So, {player_name}, what about you? who do you fancy?" #Hangout / happy_u
+[Eduardo] "So, {player_name}, what about you? who do you fancy?" #Hangout / Eye_U, E_Sad
 [{player_name}] "uh..."
 crap, I didn't expect him to turn this on me. I...
 +[answer unabashedly]
@@ -279,15 +277,15 @@ crap, I didn't expect him to turn this on me. I...
 [Eduardo] "<delay=1>...Poke!" #Hangout / Leg_Up //have Eduardo poke Isaac
 Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
 [Isaac] "What?"
-[Eduardo] "I love you" //some cheesy line
-Isaac glows a bright red blush.
+[Eduardo] "<flow>I love you</flow>" //some cheesy line
+[Isaac] "<speed=50%>...<speed=100%>"
 [Isaac] "Hrm. Attraction is weird."
 ->TimePassing
 
 ===FourAM===
 //the 4 am hour talk
 //the two talk about why their in the halfway home.
-[Eduardo] "Man, I know I don't say this often enough, but I'm gonna miss you guys when I leave." #Hangout / smile_u, hrm_down, Leg_Down, Arm_Down
+[Eduardo] "Man, I know I don't say this often enough, but I'm gonna miss you guys when I leave." #Hangout / E_Grin, Eye_U, hrm_down, Leg_Down, Arm_Down
 [{player_name}] "Are you leaving soon?"
 [Eduardo] "I dunno man. maybe? it ain't on my schedule or nothin'."
 "I just feel, when you start nearing the two-year mark, maybe you've been here too long, ya know?"
@@ -311,12 +309,12 @@ I'm just lucky enough to be leaving here after just over 1 year. I don't want to
 "Smartest move I made was coming here, to get away from that noise."
 "To get all the kinds of help, those pills don't work with."
 "But I'm good now. And I'm getting super antsy. So, I might be leaving soonish." #Hangout / Leg_Down
-"Hey Isaac, wanna come with when I do?" #Hangout / happy_i
+"Hey Isaac, wanna come with when I do?" #Hangout / Eye_I, E_Happy
 [Isaac] "..."
 [Eduardo] "Ya don't gotta, if ya don't wanna. I live nearby, so I can come see ya from time to time til ya are ready."
 "Prolly not every day, if I leave. `responsibilities` and all that."
 [Isaac] "Thanks. I'd like that." #Hangout / Smile_Down
-[Eduardo] "Balla!" #Hangout / smile_I
+[Eduardo] "Balla!" #Hangout / E_Grin
 look at these two, planning their future, and stuff. I can't look past the next week.
 {
 	-week >= 2:
@@ -327,7 +325,7 @@ look at these two, planning their future, and stuff. I can't look past the next 
 			No. No it's not an excuse.
 	}
 }
-[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when your gone?" #Hangout / happy_u, hrm_Up
+[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when your gone?" #Hangout / E_Happy, Eye_I, hrm_Up
 +[Of course]
 	[{player_name}] "Of course. You guys are my friends."
 	[Eduardo] "Aww! Thanks!"
@@ -346,9 +344,9 @@ look at these two, planning their future, and stuff. I can't look past the next 
 	"It's not like I wear my heart on my sleeve or anything."
 	[{player_name}] "Are-are you sassing me with your emotional blatentency?"
 	[Eduardo] "Maybe."
--[Eduardo] "I know I'll miss ya." #Hangout / smile_u
+-[Eduardo] "I know I'll miss ya." #Hangout / E_Grin
 [Isaac] "Same." #Hangout/ smile_up
-"Actually. {player_name}. Can I ask you something personal?" #Hangout/smile_I, hrm_Up
+"Actually. {player_name}. Can I ask you something personal?" #Hangout/Eye_U, hrm_Up
 [{player_name}] "uh, sure." 
 [Isaac] "why'd you come here? To Sunflower House. I mean."
 Uh...
@@ -377,7 +375,7 @@ Uh...
 	[{player_name}] "Well, um..."
 	"I got recommended here by my Doctors at Blackwell." #expression ^ good
 	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
-	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it." #Hangout / hrm_Up, Sad_U
+	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it." #Hangout / hrm_Up, E_Frown
 	"I was so mad at them for trapping me there. Was so mad at myself for being so freaking broken I couldn't survive anywhere else."
 	"5 years of my life wasted away in that building. that’s almost a 4th of my life. it's most of what I remember, anyways."
 	"Sterile rooms. Sterile hallways. Sterile smiles."
@@ -390,7 +388,7 @@ Uh...
 	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`s. @Just nothing.
 	It kind of feels good, to get that off my chest. #expression++
 	It takes a minute before either of them respond. It's Isaac, surprisingly, who responds to my sob story.
--[Isaac] "Hrm. @Life is simply unfair...@ Sometimes, I s'pose." #Hangout / hrm_Up, Sad_U
+-[Isaac] "Hrm. @Life is simply unfair...@ Sometimes, I s'pose." #Hangout / hrm_Up, E_Frown
 "Sorry for asking."
 [{player_name}] "Oh, uh, no problem."
 I suppose this topic has been soured.
@@ -400,42 +398,42 @@ I check my watch to see the time.
 ===FiveAM===
 //the 5 am hour talk
 //the two talk about the satire paradox.
-[Eduardo] "oh! Oh! OH!" #Hangout / happy_i, Leg_Up
+[Eduardo] "oh! Oh! OH!" #Hangout / E_Happy, Eye_I, Leg_Up
 [Isaac] "Hrm?" #Hangout / hrm_down
-[Eduardo] "You know what sucks?"
+[Eduardo] "You know what sucks?" #Hangout / E_Sad
 [Isaac] "Hrm."
 [Eduardo] "You can never change anyone's minds on nothing."
 [{player_name}] "What?"
 "Like, no matter what you do, no matter how you express an opinion, you can't change someone's mind, once they've already decided something."
-"Ya get what I mean?"
+"Ya get what I mean?" #Hangout / Eye_U
 +[Agree]
 	[{player_name}] "Yeah, I agree with the sentiment."
 +[Disagree]
 	[{player_name}] "I Disagree."
-	[Eduardo] "See what I mean? Can't ever convince anybody of anything."
+	[Eduardo] "See what I mean? Can't ever convince anybody of anything." #Eye_I
 -[Eduardo] "Everybody goes into a thing with their own notions on a thing, and never budge."
 "Everythin's gotta conform to their way of seeing the world, or they just reject it as `unnatural` or whatever."
-"It's so stupid."
+"It's so stupid." #Eye_I, E_Frown
 [Isaac] "Hrm."
 [{player_name}] "Isaac, do you got something to say to that?"
 [Isaac] "Hrm? No. Just that..."
 "The satire paradox. @Supports that idea. @To a point."
-[{player_name}] "What's the `satire paradox`?"
+[{player_name}] "What's the `satire paradox`?" #Hangout / Hrm_Up, Eye_U
 [Isaac] "An idea. Heard about it from a podcast. @'S good."
 [{player_name}] "Well, yeah, but what's it about?"
 [Isaac] "'S about how people interpret comedy & satire."
-"Basically... hrm."
+"Basically... hrm." #Hangout / hrm_down
 Isaac falls silent, as he seems to be summoning the words.
-"Basically, people will see what they want to see, in satire." #Hangout / Arm_Up
+"Basically, people will see what they want to see, in satire." #Hangout / Arm_Up, Hrm_Up
 "If someone is satirizing a certain political movement, or cultural norm, the people who support it won't see it as a criticism of them."
 "Basically, they don't laugh because of how silly or dumb they are, but because of how <i>right</i> they are."
 "A funny way to tell `the truth`, apparently."
-[Eduardo] "Uh-huh..." #Hangout / Arm_Down
+[Eduardo] "Uh-huh..." #Hangout / Arm_Down, Eye_I
 Eduardo is nodding his head in agreement.
 [Isaac] "A'course, it's not just comedy that applies to."
 "People take the path of least resistance. Always."
 "So, when media or whatever tries to tell you something you don't wanna hear, you don't hear it."
-[Eduardo] "See? There ain't no point to trying to convince people if they hate ya. @Better to just be yourself, and say `F you` to the haters."
+[Eduardo] "See? There ain't no point to trying to convince people if they hate ya. @Better to just be yourself, and say `F you` to the haters." #Hangout /Eye_U, E_Sad
 +[Agree with the sentiment]
 	[{player_name}] "Yeah, I get that feeling."
 	"It really can suck how stubborn some people can be."
@@ -447,42 +445,42 @@ Eduardo is nodding his head in agreement.
 	"I mean, doesn't most art exists to say <i>something</i>, even if it’s just a feeling or idea."
 	"Saying `You can't convince anyone, so why bother` seems both very defeatist."
 -"But, those are just my feeling."
-[Eduardo] "eh, fair. You do you, and whatever."
+[Eduardo] "eh, fair. You do you, and whatever."  #Hangout / E_Frown
 "Like I said, you can't convince people of nothing, so I don't presume I'll change your opinion, or you'll change mine."
-"Ain't that right Isaac?"
-[Isaac] "...<delay=1>@Hrm."
+"Ain't that right Isaac?" #Hangout / Eye_I
+[Isaac] "...<delay=1>@Hrm." #Hangout / hrm_down
 ->TimePassing
 
 ===SixAM===
 //the 6 am hour talk
 //Eduardo gets drowsy. Isaac admits something personal.
-[Eduardo] "oh, we're past the magic hours."
+[Eduardo] "oh, we're past the magic hours." #Hangout / E_Sad
 [{player_name}] "huh?"
 [Isaac] "The nights almost over."
 Oh yeah. Jeez, its 6!
 I wonder if Max is up already. probably is.
-[Eduardo] "Man, the night is so pretty."
+[Eduardo] "Man, the night is so pretty." #Hangout / Eye_shut, E_Happy
 "All that gentle darkness, mixed with the soft glow of street lights, and 24-hour stores."
-"Man, I miss that, y'know?"
-"Hey Isaac?"
-[Isaac]"Hrm?"
+"Man, I miss that, y'know?" 
+"Hey Isaac?" #Hangout / Eye_I, E_Sad
+[Isaac]"Hrm?" #hrm_down
 [Eduardo]"When we get outta this joint, can we just stay up every night, talking like this?"
 [Isaac] "Sure."
-[Eduardo] "I'd Like that."
-[Isaac] "Me too."
+[Eduardo] "I'd Like that." #Hangout/Eye_shut, E_Grin
+[Isaac] "Me too." #Hangout / Smile_Down
 [Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
 {
 	-HoursSpent >= 4:
 		Eduardo yawns aggressively
-		"Isaac... Tell me a story."
-		[Isaac] "No." #Hangout / Smile_Down
+		"Isaac... Tell me a story." #Hangout / E_Sad
+		[Isaac] "No." 
 		[Eduardo] "Isaaaaaaac!"
 		Isaac just sighes
 		[Isaac] "Just go to sleep."
 		[Eduardo] "But I'm not..."
 		Eduardo yawns obviously.
 		"... tired."
-		"Zzz..."
+		"Zzz..." #Hangout / E_Grin
 		[Isaac] "He's such a dork."
 		He just pet his boyfriend's hair, absently for a second, before continuing.
 		"Thanks. For hanging out. I guess."
