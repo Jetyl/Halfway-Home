@@ -314,22 +314,34 @@ namespace HalfwayHome
 
     void OnWellbeingStatIncrement(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).Trim().ToLower();
-      int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
+      foreach (var match in parse.matches)
+      {
+        if(match.ContainsKey(statLabel))
+        {
+          string stat = match[statLabel].Trim().ToLower();
+          int value = 0;
+          int.TryParse(match[valueLabel].Trim(), out value);
 
-      OnWellbeingStatChange(stat, value);
-      Trace.Script($"{stat} increased by {value}");
+          OnWellbeingStatChange(stat, value);
+          Trace.Script($"{stat} increased by {value}");
+        }
+      }
     }
 
     void OnWellbeingStatDecrement(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).ToLower().Trim();
-      int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey(statLabel))
+        {
+          string stat = match[statLabel].Trim().ToLower();
+          int value = 0;
+          int.TryParse(match[valueLabel].Trim(), out value);
 
-      OnWellbeingStatChange(stat, -value);
-      Trace.Script($"{stat} decreased by {value}");
+          OnWellbeingStatChange(stat, -value);
+          Trace.Script($"{stat} decreased by {value}");
+        }
+      }
     }
 
     void OnWellbeingStatSet(Parse parse)

@@ -52,7 +52,7 @@ public class SocialStatManager : MonoBehaviour
 
     int basicTier = Game.current.Self.GetBasicSocialStat(SocialStat);
     int specialTier = Game.current.Self.GetBonusSocialStat(SocialStat);
-    Debug.Log($"{SocialStat} special star value is {specialTier}");
+    //Debug.Log($"{SocialStat} special star value is {specialTier}");
     int totalTier = basicTier + specialTier;
 
     if (totalTier > PreviousTier) Celebrate();

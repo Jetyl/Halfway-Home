@@ -20,6 +20,7 @@ VAR unlockedLibrary = false
 VAR unlockedGarden = false
 VAR unlockedCafe = false
 VAR haveReceipt = false
+VAR foundBox = false
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
@@ -250,8 +251,8 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 {A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} 
 ->CaChoice
 =CaChoice
-+[Talk to {Max:Max again.|Max.}] ->Max->CaChoice
-+[Search {Search:again.|the room.}] ->Search
++[Talk to {Max:Max again.|Max.}] ->Max
++[Search {Search:again.|the room.}] ->Search->CaChoice
 +[Go to another room.]
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
@@ -260,20 +261,79 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 	++[Nevermind]-> CaChoice
 
 =Max
-(Max will tell you that they are always cleaning up after Eduardo, but they don't remember any bottles. They will unlock the storage closet for you to check.)
-->->
+{Max==1:
+	[{player_name}] "Hey, Max."
+	[Max] "{player_name}?!" # Max = Surprised, stage_right
+	"I gotta say, it's refreshing seein' you up and about this early!" # Max = Calm
+	I swear my own mother never gave me this much trouble about oversleeping.
+	[{player_name}] "You can thank Timothy for that, really."
+	[Max] "Will do! Thanks, Timothy!" # Max = Happy
+	[Timothy] "Heh. It's nothing... I-I just wanted to dye my hair..." # Timothy = Happy, close, stage_left
+	[Max] "Dye your hair? Cool!"
+	[{player_name}] "Yeah... actually, we kinda need your help with that."
+	[Max] "Oh? As much as I'd love to help, I'm actually really behind on cleaning..." # Max = Sad
+	As always.
+	[Timothy] "N-no, not like that. W-we need to find Eduardo's hair dye stuff." # Timothy = Calm # Max = Surprised
+	[{player_name}] "Charlotte said you might have stashed it in the supply closet."
+	[Max] "Hmm... I don't remember puttin' any bottles in there, but... were they all in a box?" # Max = Calm
+	[{player_name}] "We, uh... don't actually know."
+	[Max] "You got me curious. Why don't we take a look!"
+	Max strides casually over to the supply closet, slides a small silver key into the lock, and pulls the swing door open with a creak.
+	"Feel free to have a look, but don't touch, guys!" # Max = Happy
+	Max returns to their spot in the corner and resumes work on their bagel. # All = Exit
+	->CaChoice
+-else:
+	{
+	-foundBox==false:
+		[Max] "Did you two find what you were looking for?" # Max = Calm, stage_right
+		[Timothy] "W-we haven't checked yet." # Max = Calm, close, stage_left
+		[Max] "Ah, well let me know when you have. I'm not supposed to leave the closet unlocked for very long, ya know."
+		Max turns their attention back to their duties. # All = Exit
+		->CaChoice
+	-else:
+		[Max] "{Any luck, friends?|Did you find proof?}" # Max = Calm, stage_right
+		[Timothy] "{Yeah! A b-box on the top shelf.|{haveReceipt:Check this out.|We're still looking.}}" # Timothy = Calm, close, stage_left
+		"{Could you give it to us please?|{haveReceipt:It's a receipt for hair dye. I'm sure it matches the stuff in that box!|But we're not giving up!}}" # Timothy = Happy
+		[Max] "{I would love to! But...|{haveReceipt:Really? That's great! Let me see.|That's the spirit!}}" # Max = Happy
+		{Max sighs.|{haveReceipt:Max takes the receipt from me and nods.|Max nods.} # Max = Sad
+		[Max] "{I can't. I'm really sorry, gang, but Sunflower House has a policy of proof on all lost-and-found items.|{haveReceipt:I'm sorry to have put you through all this.|Again, I wish I could help.}}"
+		"{I know you want to use the hair dye, but unless you can provide some kind of proof of ownership I can't help you.|{haveReceipt:Just give me a moment to get it down for you.|Best of luck to you!}}" # Max = Calm
+		[{player_name}] "{{haveReceipt:You mean like this receipt?|That makes sense, I guess. We'll try and find something like that, then.}|Thanks, Max.}"
+		{{haveReceipt:->GotItFirst|->NoDice}|{haveReceipt:->GotIt|->NoDice}}
+	}
+}
+
+=GotItFirst
+Max takes the receipt from me and looks it over.
+[Max] "Uh, yeah. Wow. That'll do." # Max = Surprised
+->GotIt
+
+=GotIt
+Max walks over to the supply closet and retrieves the box. They bring it back to us and plop it gently down on the table.
+[Max] "Have fun! Just try not to make <i>too</i> much of a mess, okay?" # Max = Happy
+"I'm already behind on cleaning as it is!" # Max = Afraid
+[Timothy] "O-okay! Bye, Max." # Timothy = Happy
+I wave to Max as we exit the cafe. # Max = Exit
+->TimeToDye
+
+=NoDice
+Timothy and I give Max some space and plan our next move by the front of the cafe. # All = Exit
+->CaChoice
 
 =Search
 {Max>0:
-	{haveReceipt:
-		(Sam shows Max the receipt to prove that those items are Eduardo's. Max gives Sam dyes.)
-		-> TimeToDye
-	-else:
-		(Max stops Sam from acquiring dyes, claiming they have a policy of proof for lost-and-found items.)
-		->CaChoice
+	Timothy and I look over the items {in the supply closet|one more time}. {Beside the mundane kitchen supplies, various knick-knacks adorn the shelves|The box marked `Hair Stuff` still seems the most likely culprit}.
+	{A case for what looks like a musical instrument with nothing inside, a bracelet of purple beads, and a worn poncho make up only a small number of these|I wonder who the rest of this stuff belongs to. It can't <i>all</i> be Eduardo's}.
+	{foundBox==false:
+		[Timothy] "There! That's gotta be it!" # Timothy = Surprised
+		Timothy points to a box labeled `Hair Stuff` sitting on the top shelf.
+		[{player_name}] "I dunno if I'll be able to reach it."
+		[Timothy] "Yeah. And Max said not to touch anyway."
+		[{player_name}] "Guess we'll have to ask them to give it to us."
+		~foundBox=true
 	}
 -else:
-	{Search==0:
+	{Search==1:
 		We make for the supply closet Charlotte told us about.
 		I remember seeing it when I would eat in the cafe, but I never knew it doubled as a lost-and-found.
 		Probably because I don't have a lot of stuff...
@@ -283,13 +343,13 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 		[{player_name}] "Locked. The plot thickens."
 		[Timothy] "Didn't Charlotte say that Max has the key?"
 		"W-we should go talk to them, right?"
+		I nod and turn back to face the cafe. # All = Exit
 	-else:
 		I check the closet again, giving the handle a firm tug.
 		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it.
 	}
 }
-(The dyes are here in a supply closet, having been moved by Max. When you go to the closet, Max will stop you unless you have the receipt.)
-
+->->
 
 === Library ===
 Timothy and I shuffle {|back }into the library. Charlotte is {tending to her recommendations in the back corner|reading on the sofa, having apparently finished with her recommendations}. # Background / Library, blackwipe
