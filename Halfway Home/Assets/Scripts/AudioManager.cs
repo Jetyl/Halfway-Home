@@ -275,6 +275,9 @@ public class AudioManager : MonoBehaviour
   
   void OnAudioBankEvent(AudioBankEvent e)
   {
+    if (e.BankName == null || e.BankName == "")
+      return;
+    
     AudioBankEvent.LoadType lt = e.Type;
     if (lt == AudioBankEvent.LoadType.Load)
       banksToLoad.Add(e.BankName);
