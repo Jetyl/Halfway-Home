@@ -43,6 +43,8 @@ public class StageDisplay : MonoBehaviour
     [Range(0, 23)]
     public float DayTimeEnd = 18;
 
+    private string OldBank;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -109,6 +111,7 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.Tag.ToLower() == CurrentCG)
                 {
+                    LoadBanks(room.Bank);
                     CallSound(room.MusicTrack, false);
                     CallSound(room.Ambience, true);
 
@@ -129,7 +132,7 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.ID == CurrentRoom)
                 {
-
+                    LoadBanks(room.Bank);
                     CallSound(room.MusicTrack, false);
                     CallSound(room.Ambience, true);
 
@@ -146,6 +149,16 @@ public class StageDisplay : MonoBehaviour
         
     }
 
+    void LoadBanks(string NewBank)
+    {
+        if(OldBank != null || OldBank != "")
+            Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, OldBank));
+        
+        Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, NewBank));
+        OldBank = NewBank;
+
+    }
+
     void CallSound(string track, bool Ambience)
     {
         if (track == null || track == "")
@@ -154,6 +167,7 @@ public class StageDisplay : MonoBehaviour
         if(Ambience)
         {
             Game.current.CurrentAmbience = track;
+            
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, track, true));
         }
         else
@@ -425,6 +439,7 @@ public class RoomDetails
     public Sprite[] Backdrops;
     public string MusicTrack;
     public string Ambience;
+    public string Bank;
 }
 
 public enum TransitionTypes

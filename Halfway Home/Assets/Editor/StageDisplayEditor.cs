@@ -85,6 +85,8 @@ public class StageDisplayEditor : Editor
                         new GUIContent((Room)i + " Music"), true);
                     EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Ambience"),
                         new GUIContent((Room)i + " Ambience"), true);
+                    EditorGUILayout.PropertyField(Backdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Bank"),
+                        new GUIContent((Room)i + " Bank"), true);
                 }
 
                 
@@ -119,6 +121,8 @@ public class StageDisplayEditor : Editor
                         new GUIContent((Room)i + " Music"), true);
                     EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Ambience"),
                         new GUIContent((Room)i + " Ambience"), true);
+                    EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Bank"),
+                        new GUIContent((Room)i + " Bank"), true);
                 }
 
                 
