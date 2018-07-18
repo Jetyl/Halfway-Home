@@ -94,9 +94,8 @@ Still nothing.
 	}
 
 === PullingTeeth ===
-//show Isaac CG here
 ~SetValue("ColdTalkBefore", true)
-[Isaac] "..." 
+[Isaac] "..." #Hideaway / Open, LookOff
 “...”
 “...”
 “...You...”
@@ -183,7 +182,7 @@ I'd think he's been around...
 "...People think I'm either... @...some Stoic or... @...a Wallflower."
 "...I can't.... Emote.... well."
 "and I don't... say... what I think about all..."
-"hrm..." //Isaac should have a pained, frustrated, expression.
+"hrm..." #Hideaway / Mad 
 Isaac looks pained trying to speak as much as he is.
 "I... Came here... on reccomendation."
 "Because I was... not social... not eating... not... here?"
@@ -209,30 +208,30 @@ And he came to Sunflower House to improve himself, but still isn't any better. H
 	->Recoil
 
 ===Relationships===
-<color=color_descriptor>You sit in silence as time passes, letting Isaac recompose himself.</color> #time %1
-[Isaac] "..."
+I sit in silence as time passes, letting Isaac recompose himself. #time %1
+[Isaac] "..." #Hideaway / LookOff
 ~SetTimeBlock(1)
 "...hrm."
 "...I thought.... I was getting better..."
 "...I was... eating. @I was... painting."
 "I was... with someone... so..."
 "...so..."
-"...why am I like this?"
+"...why am I like this?" #Hideaway / Mad
 [{player_name}] "Isaac, You-"
 [Isaac] "And F-<delay=0.5>Freaking Eduardo!"
 "he's just... just..."
 Wow, I don't think I've ever seen Isaac that vocally impassioned. And he seemed angry... at Eduardo?
 [{player_name}] "Is there something going on with you and Eduardo?"
-[Isaac] "..."
+[Isaac] "..." #Hideaway / Blush
 "......yes."
-"...I@...@...we...@...he..."
+"...I@...@...we...@...he..." #Hideaway / LookOff
 "...I... like him...@ but he...."
 "...he..."
-"He's so suffocating sometimes."
+"He's so suffocating sometimes." #Hideaway / Mad
 "He... he's around me so often and I..."
 "I... I should like that...@ I don't.... @I don't..."
 "...I don't know what to do..."
-Isaac curls up even further into his ball.
+Isaac curls up even further into his ball. #Hideaway / HeadDown
 He seems to be running himself in circles over his conflicted feelings on Eduardo.
 I should....
 +[Give Isaac relationship advice]
@@ -259,7 +258,7 @@ I should probably let Isaac work through his thoughts on his own.
 "don't want to change. @who I am. @to be happy."
 "..."
 "......"
-"... I, uh, spend a lot of time. In my head."
+"... I, uh, spend a lot of time. In my head." #Hideaway / Blush
 "I... make stories... in my head."
 "And... I'm happy there."
 "..."
@@ -271,18 +270,18 @@ Isaac's blushing quite a lot at that admission.
 "haven't even told Eduardo... not really."
 [{player_name}] "Why not?"
 [Isaac] "s'embarressing. cuz..."
-"cuz he's in most of them." //isaac burys his head, blushing profusly
+"cuz he's in most of them." #Hideaway / HeadDownBlush
 "...."
 "I... do like him."
 "but... the Eduardo in my head... and the one out here are..."
 "...too alike."
 "Eduardo's presense. his constant attention. In my head... I like that."
-"But, out here. I don't."
+"But, out here. I don't." #Hideaway / HeadDown
 "He's around me all the time... @Talking all the time."
 "He showers me with affection. It was all I wanted. But..."
 "Now... that I have it... I can't stand it..."
 "...."
-"...I really am a broken human being. huh?" //Isaac looks up, smiling, but crying
+"...I really am a broken human being. huh?" #Hideaway/Sad 
 +[No, you are not]
 	[{player_name}] "No, Isaac. You are not broken."
 	->HelpfulListener
@@ -305,7 +304,7 @@ Oh well.
 ->END
 
 === HelpfulListener ===
-[Isaac] "..." //Isaac blushes
+[Isaac] "..." #Hideaway / Blush //Isaac blushes
 "...what."
 [{player_name}] "Isaac, you are a wonderful person, and you deserve to be happy."
 "and eveything your feeling, just because I or, Eduardo, or anybody can't fully understand it, doesn't mean its not valid."
@@ -334,7 +333,7 @@ I Get up off the ground and decide to head inside myself, because it is cold ton
 ->END
 
 ===Recoil===
-<color=color_descriptor>As you keep talking, you notice Isaac has once again gone unreposnsive.</color>
+As I kep talking, rambling really, I notice Isaac has once again gone unreposnsive. #Hideaway / LookOff
 [{player_name}] "hey, uh, is any of this helping."
 [Isaac] "hrm."
 "..."
@@ -346,8 +345,12 @@ I guess I screwed that up? I feel like I did, anyways.
 Maybe I should've let Isaac talk more...
 <color=color_descriptor>hindsight on the situation improves your <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
 <color=color_descriptor>However, the hindsight also increases your <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly aswell.</color> #depression += 10
+[Voices] "You really can't do anything right, can you?"
 {
-	-depression > 60: [Voices] "You really can't do anything right, can you?"
+	-depression > 60:
+		I can't do anything right...
+	-else:
+		...
 }
 I head back inside. my head low from my failure...
 //failed to listen or help Isaac

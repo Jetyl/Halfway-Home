@@ -50,7 +50,7 @@ EXTERNAL CallSleep()
 Its a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
 I'm rather suprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of ceral in his hand, siting on the floor and eating.
-[Eduardo] "Heya {player_name}, how's it going!"
+[Eduardo] <flow>Heyo {player_name},</flow> how's it going!"
 [{player_name}] "Eh, it going."
 +[How bout you?]
 	"How about you?"
@@ -65,7 +65,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 	"Where's Isaac?"
 	[Eduardo] "Sleeping, probably." #Eduardo = Angry
 -[{player_name}] "I am rather suprised to see you here though. I didn't take you for a morning person." #Eduardo = suprised
-[Eduardo] "Hey, I take offense to that!"
+[Eduardo] "Hey, I take offense to that!" #Eduardo = Angry
 [{player_name}] "Do you? Do you really?"
 [Eduardo] "Haha, no." #Eduardo = Happy
 "My sleep schedule has been all over the place lately."
@@ -94,7 +94,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 
 }
 [Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?" #Eduardo = Angry
-"Or maybe this place just reminds me of Isaac." #Eduardo = Calm
+"Or maybe this place just reminds me of <flow>Isaac.</flow>" #Eduardo = Calm
 [{player_name}] "uh-huh."
 [Eduardo]"I Really do love him, you know." //show CG here.
 "Isaac really does complete me."
@@ -102,20 +102,21 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
 I'm going to need to say something, and quick, before he just goes on for hours, gushing.
 [Eduardo] "I want to be around him all the time, and he wants to be around me all the time."
-"Its just so... Perfect, you know."
+"Its just so... <flow>Perfect,</flow> you know."
 +[Say nothing]
 	Yeah, I can't think of anything to say thats going to stop him.
 	->Gushing
 +[Disagree]
 	->Pulling
 +[Yeahthatsgreatgottagobye!]
-	[{player_name}] "Yeah, thats great Eduardo, GottaGoBye!"
+	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, GottaGoBye!"
 	[Eduardo] "wait, wha-" #Skip
 	I book it out of the art room, all the way to the commons before I am out of breath. #Background / commons
 	Wow, I am really out of shape too.
+	[Voices] "Just another reason why you are worthless"
 	{
-		-depression > 50:
-		[Voices] "You really are worthless, aren't you?"
+		-depression < 50:
+		No, no. I just, haven't been excersising, thats all... thats all...
 	}
 	I plop myself on the couch, and watch some TV to take my mind off things.
 	->END
@@ -128,7 +129,7 @@ Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, st
 [Isaac] "Oh. what are you two doing?"
 [{player_name}] "Oh, nothing. Eduardo's just been talking my ear off about how much he loves you."
 [Isaac] "what." #Isaac = afraid
-[Eduardo] "<i>I WUUUUUVVV YOU<i>" #Eduardo = Exit, left, stage_left #Isaac = Exit
+[Eduardo] "<flow><i>I WUUUUUVVV YOU<i></flow>" #Eduardo = Exit, left, stage_left #Isaac = Exit
 [Isaac] "hrm."
 I use this as the perfect opertunity to leave.
 I slip away without saying goodbye, as Eduardo gushes at a stunned and embaressed Isaac.

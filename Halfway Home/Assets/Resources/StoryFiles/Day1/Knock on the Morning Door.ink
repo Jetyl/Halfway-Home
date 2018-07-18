@@ -105,7 +105,7 @@ What?
 -Max looks disappointed in me. It's a sadly common look.   # Keyless = Sad
 [Keyless>Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
 "Besides, it'll only be for one week."
-[Timothy] "Nice to meet you." # Timothy = Happy
+[Timothy] "<jitter>N-Nice to meet you.</jitter>" # Timothy = Happy
 [Keyless>Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possessive} for the next week."   # Keyless = Calm
 [Timothy] "Okay."   # Timothy = Calm
 Timothy and Max both invite themselves into my room carrying several bags, likely full of Timothy's belongings.
@@ -277,7 +277,7 @@ I whip out my planner and jot down a reminder to myself, a habit my old therapis
 "Also, obviously, you can just knock out here if you're too <color=color_wellbeing_penalty>fatigued</color> to do anything else. Or just whenever, really."   # Fatigue * Show
 "Max'll get mad if you spend too much time loafing around, though, since we're supposed to be `active agents of self-recovery` or whatever."
 "Oh, and one more thing. I kinda lost my room key a while ago, so if you lock the door I don't really have a way in unless Max is around."
-[Timothy] "Oh, sure. W-wait, couldn't you just ask Max for a new key?"   # Timothy = Surprised
+[Timothy] "Oh, sure. <jitter>W-wait,</jitter> couldn't you just ask Max for a new key?"   # Timothy = Surprised
 [{player_name}] "Well, ya see... by the time I finally asked Max last week, they said it would take longer to get me a new key than I was even around for."
 "There's three copies of every room key. One for each roommate and one for the floor R.A. in case of emergencies."
 "I lost mine, Max can't give theirs away, and since you were coming Max wouldn't give me yours."

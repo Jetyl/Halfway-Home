@@ -75,15 +75,15 @@ Timothy has frozen where I had last looked, and is shaking slightly.
 "Uh, Timothy? you okay?"
 [Timothy] "Oh! Uh I-I..."
 Timothy starts stammering to say, something.
- "S-s-sorry, I-I-I just..."
+ "<jitter>S-s-sorry, I-I-I just...</jitter>"
 [{player_name}] "Sorry? what for?"
 The kid looks like I caught him stealing cookies from a cookie jar, or something.
-[Timothy] "I-I-I'm s-sorry I-I-"
-"I-I'm sorry I insulted Max and mis-gendered th-them!"
+[Timothy] "<jitter>I-I-I'm s-sorry I-I-</jitter>"
+"<jitter>I-I'm sorry I insulted Max and mis-gendered th-them!</jitter>"
 Oh! <delay=0.5>That's what this is about?
 [{player_name}] "Uh, dude, it's okay."
 [Timothy] "Huh?"   #Timothy = Surprised
-"Y-you mean you're n-not mad at me?"   #Timothy = Afraid
+"<jitter>Y</jitter>-you mean you're <jitter>n</jitter>-not mad at me?"   #Timothy = Afraid
 [{player_name}] "...Of course not."
 "You said you're sorry, and you didn't mean to be disrespectful or anything. It's no harm, no foul dude."
 Honestly, what kind of life did this kid have where he thinks people would get mad over something like that?
@@ -94,7 +94,7 @@ And Max is the most chill person I know, and has tolerated <i><b>much</i></b> wo
 		As for me? I'm usually too apathetic to care about slight mishaps like that.
 		Again, assuming their not being a jerk about it.
 }
-[Timothy] "O-okay..."
+[Timothy] "<jitter>O-okay...</jitter>"
 {
 	-week == 1:
 		Man, I am going to have to walk on egg shells around this kid, aren't I?
@@ -163,10 +163,10 @@ I shuffle Timothy off to another part of the building to continue the tour.   #T
 [{player_name}] "Yeah?"
 [Timothy] "I..."   #Timothy = Happy
 Timothy starts shaking, looking away from me in embarrassment, before giving me a wobbly thumbs up.
-[Timothy] "I-I th-think y-you're v-val-valid."
-"A-and I-I-I'm s-sorry if I-I sc-screw up, an-and pl-please correct m-me if I do."
+[Timothy] "<jitter>I-I th-think y-you're v-val-valid.</jitter>"
+"<jitter>A-and I-I-I'm s-sorry if I-I sc-screw up, an-and pl-please correct m-me if I do.</jitter>"
 [{player_name}] "Uh..."
-"S-SORRY!"   #Timothy = Afraid
+"<Jitter><size=120%>S-SORRY!</size></jitter>"   #Timothy = Afraid
 I hold back a slight chuckle.
 [{player_name}] "Thanks, I guess?"
 It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.

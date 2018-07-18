@@ -8,9 +8,13 @@ public class InvertScreenControl : MonoBehaviour
 
     public string[] Speakers;
 
+    public string SoundEffectTag; //this really shouldn't be here, generically, but eh. 11th hour development choices!
+
     InvertColorEffect Inverter;
 
     bool Active;
+
+    bool SoundON;
 
 	// Use this for initialization
 	void Start ()
@@ -40,7 +44,19 @@ public class InvertScreenControl : MonoBehaviour
             return;
 
         Inverter.enabled = InvertOn(eventdata.TrueSpeaker);
-        
+
+        if(Inverter.enabled && !SoundON)
+        {
+            SoundON = true;
+            Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.ALayer, SoundEffectTag));
+        }
+
+        if (!Inverter.enabled && SoundON)
+        {
+            SoundON = false;
+            //stop heart beat SFX event here later.
+        }
+
     }
 
     bool InvertOn(string trueSpeaker)

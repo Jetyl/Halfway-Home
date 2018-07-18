@@ -157,11 +157,11 @@ I walk over to they pair, Timothy in tow.
 "Nice to meet you my man, I'm Eduardo Medina."
 "... And this tub o'love is Isaac." #Isaac = Surprised
 [Isaac] "..." #Isaac = Afraid 
-[Timothy] "Hello<delay=3>, I-I'm Timothy Miyuri..." #Isaac = Exit
+[Timothy] "<jitter>Hello<delay=0.5>, I-I'm Timothy Miyuri...</jitter>" #Isaac = Exit
 [Eduardo] "So Timmy, what are you in for?"
-[Timothy] "<size=60%> I'd prefer Timothy...<size=100%>"
+[Timothy] "<jitter><size=60%> I'd prefer Timothy...<size=100%></jitter>"
 [Eduardo] "You're a Quiet One, aren't ya Tim Tim? I didn't catch that."
-[Timothy] "<size=40%> I said my name is Timothy...<size=100%>"
+[Timothy] "<jitter><size=40%> I said my name is Timothy...<size=100%>/jitter>"
 [Eduardo] "Yo. T-man, I can't hear you when you're-"
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
@@ -185,7 +185,7 @@ Eduardo on the other hand...
 "Hey, Isaac. Isaac?"
 [Isaac] "..."
 Isaac seems to be lost in his own little world right now.
-[Eduardo] "Isaaaac!" //#Eduardo = Exit, stage_right #Isaac = Exit, stage_right EXITS REMOVED UNTIL CG IMPLEMENTED
+[Eduardo] "<flow>Isaaaac!</flow>" //#Eduardo = Exit, stage_right #Isaac = Exit, stage_right EXITS REMOVED UNTIL CG IMPLEMENTED
 -> Needy ->ExitWithTimothy
 
 ===ExitWithTimothy===
@@ -226,7 +226,7 @@ Isaac responds as if he can read my mind.
 "Now it's just mine."
 [Eduardo] "What can I say? I'm needy."
 [Isaac] "Hrm."
-[Eduardo] "And I <i>wuv</i> you!" # Eduardo = Happy//make the CG blush
+[Eduardo] "And I <flow><i>wuv</i>,/flow> you!" # Eduardo = Happy//make the CG blush
 <i>Yikes</i> that's cheesy.
 Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him. # Isaac = Happy
 Relationships are weird.

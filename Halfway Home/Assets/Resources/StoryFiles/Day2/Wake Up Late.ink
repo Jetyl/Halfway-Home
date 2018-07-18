@@ -61,10 +61,11 @@ I look over at his bed, and yep, he is still there, snoozing it up.
 "Timothy? Timothy, wake up now." #Max = Calm
 Max instantly switches back to their lax persona as they nudge Timothy awake.
 [Timothy] "H...huh?" #Timothy = Calm
-"Gah! I'm up! I'm up!" #Timothy = Surprised
+"<jitter>Gah! I'm up! I'm up!</jitter>" #Timothy = Surprised
 [Max] "Ha, I gotcha buddy."
-[Timothy] "I am so sorry Max! I promise, I'll never sleep in like this again!"
-[Max] "Its fine, guy."
-Max then directs Timothy for his first actual full day here. #All = exit
+[Timothy] "<jitter>I am so sorry Max! I promise, I'll never sleep in like this again!</jitter>"
+[Max] "Its fine, It's fine Timothy."
+[Timothy] "<jitter> I am so sorry...</jitter>"
+Max directs Timothy for his first full day here. #All = exit
 And, on that note, I should probably head out now, before Max remembers I also slept in way late.
 -> END
