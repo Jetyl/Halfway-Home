@@ -672,26 +672,25 @@ MonoBehaviour:
   Commands:
   - Group: Couch
     CloseTag: Close
+    ActiveTag: 
     Details:
     - Tag: Open
       Graphic: {fileID: 1481762940832064}
-  - Group: Ed's Expression
+  - Group: Ed's Mouth
     CloseTag: Close
+    ActiveTag: 
     Details:
-    - Tag: Smile_I
-      Graphic: {fileID: 1651277203705214}
-    - Tag: Smile_U
-      Graphic: {fileID: 1171588592233312}
-    - Tag: Sad_U
+    - Tag: E_Grin
       Graphic: {fileID: 1162692795611712}
-    - Tag: Sad_I
+    - Tag: E_Happy
       Graphic: {fileID: 1824216773195326}
-    - Tag: Happy_I
+    - Tag: E_Sad
       Graphic: {fileID: 1479093787210124}
-    - Tag: Happy_U
+    - Tag: E_Frown
       Graphic: {fileID: 1699335442964176}
   - Group: Ed's Hand
     CloseTag: Close
+    ActiveTag: 
     Details:
     - Tag: Hand_Up
       Graphic: {fileID: 1847416691730672}
@@ -699,6 +698,7 @@ MonoBehaviour:
       Graphic: {fileID: 1849140708440256}
   - Group: Ed's Leg
     CloseTag: Close
+    ActiveTag: 
     Details:
     - Tag: Leg_Down
       Graphic: {fileID: 1499272030880812}
@@ -706,6 +706,7 @@ MonoBehaviour:
       Graphic: {fileID: 1554656177841288}
   - Group: Isaac's Arm
     CloseTag: Close
+    ActiveTag: 
     Details:
     - Tag: Arm_Up
       Graphic: {fileID: 1712411102299022}
@@ -713,6 +714,7 @@ MonoBehaviour:
       Graphic: {fileID: 1710612830147366}
   - Group: Isaac's Expression
     CloseTag: Close
+    ActiveTag: 
     Details:
     - Tag: Hrm_Down
       Graphic: {fileID: 1730826805701524}
@@ -722,6 +724,14 @@ MonoBehaviour:
       Graphic: {fileID: 1999205331246970}
     - Tag: Smile_Up
       Graphic: {fileID: 1484981750885992}
+  - Group: Ed's Eyes
+    CloseTag: Close
+    ActiveTag: 
+    Details:
+    - Tag: Eye_I
+      Graphic: {fileID: 1651277203705214}
+    - Tag: Eye_U
+      Graphic: {fileID: 1171588592233312}
 --- !u!114 &114326279326770618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -965,7 +975,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c7f034c3a9b024748a8ce0b5ffea4303, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a4f7203195d6eb4eab1b0260fc58e10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1009,7 +1019,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd1c2d672b088ab418b0fbb3d8de3203, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fe52d17f9727014cb00fa840006055e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1141,7 +1151,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3c681d600466344c971b49f5757c4ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d07d5a5e1c5146e49aceb3426798a3ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1317,7 +1327,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b76731fac4ac4b408ca1faee53d19b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea0e9b01351b28541b2e37ef3f35ea57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1537,7 +1547,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ecb058c96c422b449a6b0b97d16bf010, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e4951b5a8dee2c448e7594ab4cdfa54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1625,7 +1635,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df50fdf0402bc7748b9e8f90cc5fbbea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a37991f7699980e48928a11410e36cef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0

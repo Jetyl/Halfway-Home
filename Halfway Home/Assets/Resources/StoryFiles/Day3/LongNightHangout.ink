@@ -41,15 +41,15 @@ EXTERNAL CallSleep()
 I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
 Walking in, I spy Eduardo and Isaac as the only ones in the room.  # Ambience : play_ambience_fireplace # ambience_lpf ! 0
-[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, happy_u, hrm_Up #2 &Success
+[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, Happy, Eye_U, hrm_Up #2 &Success
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
 [Isaac] "Eduardo can't sleep." #hangout / hrm_down
-[Eduardo] "Issaaaaaaac!" #hangout / sad_I
+[Eduardo] "Issaaaaaaac!" #hangout / Sad, Eye_I
 [Isaac] "Hrm. I'm not wrong." #hangout / hrm_down
 "{player_name}. Can't sleep either?" #hangout /hrm_Up
 [{player_name}] "Something like that, yeah."
-[Eduardo] "Well, your free to hang out with us!" #hangout / happy_u, Hand_Up
+[Eduardo] "Well, your free to hang out with us!" #hangout / Happy, Eye_U, Hand_Up
 [{player_name}] "sure."
 I sit down, and hang out with Isaac and Eduardo for a while.
 ->TimePassing.NextHour
@@ -90,49 +90,49 @@ another hour passes with the duo. I get a bit more tired. #time % 1
 ===Midnight===
 //the midnight hour talk
 [{player_name}] "So, are you two always up this late?"
-[Eduardo] "Eh, I'm not really sure always is the best term for it, but-" #hangout / smile_u, Hand_Up
+[Eduardo] "Eh, I'm not really sure always is the best term for it, but-" #hangout / E_Happy, Eye_U, Hand_Up
 [Isaac] "Yes. Always." #hangout / hrm_Up
-[Eduardo] "Issaaaaaaac!" #hangout / Sad_I, Hand_Down
+[Eduardo] "Issaaaaaaac!" #hangout / E_Sad, Eye_I, Hand_Down
 [Isaac] "Always when he's manic like this. to be exact." #Hangout / hrm_down
 [Eduardo] "<size=50%>that's not that much better ya know...<size=100%>"
-"I feel fine. Great even!" #hangout / happy_i, Leg_Up, Hand_Up
+"I feel fine. Great even!" #hangout / E_Happy, Eye_U, Leg_Up, Hand_Up
 [Isaac] "Hrm."
-[Eduardo] "Oh don't `hrm` me! Blame the chemicals in my head!" #hangout / Sad_U
+[Eduardo] "Oh don't `hrm` me! Blame the chemicals in my head!" #hangout / E_Frown, Eye_U
 +[Is that good attitude?]
 	[{player_name}] "Is that really a good way to look at your issues? @Just wash your hands of your responsibilities of them?"
 	[Eduardo] "Hey man, not every issue you have is your own fault, y'know?"
-	"It's not my fault my brain can't run properly without medical assistance." #hangout / smile_u
+	"It's not my fault my brain can't run properly without medical assistance." #hangout / E_Grin
 	[{player_name}] "fair."
 	I don't really have room to talk. I'm on my own doctor prescribed medications to make me sane.
 +[problems with medications?]
 	[{player_name}] "Problems with your medication?"
-	[Eduardo] "Oh hell yeah!" #hangout / smile_u
+	[Eduardo] "Oh hell yeah!" #hangout / E_Grin
 	"My heads a veritable soup of bad juju I can't fix on my own."
 	"Need my crazy pills to keep me stable."
 	"A'course they ain't perfect, or I wouldn't be in this crazy joint!"
-- [Eduardo] "Really, the restlessness has been the most persistent element for me."
+- [Eduardo] "Really, the restlessness has been the most persistent element for me." #Hangout / E_Sad
 "Ain't no perfect pill for my skull I s'pose."
-"Not that I don't mind being up so much. Not while I got ol' Isaac here, a'course."
+"Not that I don't mind being up so much. Not while I got ol' Isaac here, a'course." #Eye_I, E_Happy
 [Isaac] "Not always out here. @Naturally." #Hangout / hrm_Up
 "Usually spend the nights he can't sleep in our bedroom. Or painting"
 [{player_name}] "You actually get anything done this late?"
 [Isaac] "Hrm. Better than doing nothing."
-[Eduardo] "Yeah, this boy here is super focused when he wants to be!" #Hangout / happy_u
-"It’s mesmerizing." #Hangout / Leg_Down, happy_i
+[Eduardo] "Yeah, this boy here is super focused when he wants to be!" #Hangout / Eye_U
+"It’s mesmerizing." #Hangout / Leg_Down, Eye_I
 ->TimePassing
 
 ===OneAM===
 //the 1am hour talk
 //the two talk about how they met.
 [{player_name}] "so, how did you two get together?"
-[Eduardo] "Well, ol' Sunflower house did make us roommates. I s'pose that’s where it started." #Hangout / smile_u, Hand_Up
+[Eduardo] "Well, ol' Sunflower house did make us roommates. I s'pose that’s where it started." #Hangout / E_Grin, Eye_U, Hand_Up
 [Isaac] "Eduardo isn't for personal boundaries." #Hangout / Smile_Down
 I can see that.
 "He's nosy too. Kept following me around. Dragging me places."
-[Eduardo] "Hey! You never said you wanted me to stop." #Hangout / smile_i, Hand_Down
+[Eduardo] "Hey! You never said you wanted me to stop." #Hangout / E_Sad, Eye_I, Hand_Down
 [Isaac] "Hrm." //I didn't mind it. Still don't."
-[Eduardo] "Hehe, yeah. I s'pose other people’s boundaries was one of my issues before coming here." #Hangout / smile_u
-"I dunno, I guess I just need to be really close to people to feel comfortable, y'know?" #Hangout / Sad_U, Hand_Up, Leg_Up
+[Eduardo] "Hehe, yeah. I s'pose other people’s boundaries was one of my issues before coming here." #Hangout / E_Grin, Eye_U
+"I dunno, I guess I just need to be really close to people to feel comfortable, y'know?" #Hangout / E_Sad, Hand_Up, Leg_Up
 "It's caused me problems out there in the real world."
 "In the real world, the closeness of a relationship is defined by whoever's got the higher boundaries."
 "Like, you wanna be friends with someone, but they don't, well, then you ain't friends."
@@ -151,28 +151,28 @@ I can see that.
 -[Eduardo] "I dunno man, just sometimes it feels like I <i><b>need</i><b> all this attention no one is willing to give me." #Hangout / hrm_down
 "And yeah, when I'd get super manic I think they <i>are</i> willing, when really, they’re not."
 "And when I fall off that high, and get all bummed out, I just think that, aw man, I've been such a jerk. and that's why no one cares."
-"But not anymore. Ain't that right Isaac?" #Hangout / Leg_Down, Hand_Down, smile_u
+"But not anymore. Ain't that right Isaac?" #Hangout / Leg_Down, Hand_Down, E_Grin, Eye_I
 [Isaac] "Hrm." #Hangout / Smile_Down
 Isaac does say much, but he plays with Eduardo's hair.
 That seems to satiate Eduardo, who grows oddly quiet, as the two of them just look in each other's eyes.
-[{player_name}] ">Coughs"
-[Eduardo] "Oh, {player_name}, your still here?" #Hangout / Sad_U, hrm_Up
+I let out a fake cough to break the silence.
+[Eduardo] "Oh, {player_name}, your still here?" #Hangout / E_Sad, Eye_U, hrm_Up
 did he literally forget I was here?
-"Oh, uh yeah, where were we." #Hangout / smile_u
+"Oh, uh yeah, where were we." #Hangout / E_Grin
 I deliberately don't remind him of the topic, and let him wander onto something new.
 ->TimePassing
 
 ===TwoAM===
 //the 2 am hour talk
-[Eduardo] "Hey Isaac? You know what was a good game? Katawa Shoujo." #Hangout / smile_I, hrm_down, Leg_Up, Hand_Up
+[Eduardo] "Hey Isaac? You know what was a good game? Katawa Shoujo." #Hangout / E_Grin, Eye_I, hrm_down, Leg_Up, Hand_Up
 [Isaac] "Hrm."
 [Eduardo] "that story was da bomb."
-"Hey, {player_name}, you ever played Katawa Shoujo?" #Hangout / smile_u
+"Hey, {player_name}, you ever played Katawa Shoujo?" #Hangout / Eye_U
 +[Yes]
 	[{player_name}] "Yeah, I have."
 	[Eduardo] "That game was tight, right?"
 	"Who was your favorite girl? <Delay=0.75>Wait, no, don't tell me. I know it was Lilly."
-	"Lilly was best girl. Ain't that right Isaac?" #Hangout / smile_I
+	"Lilly was best girl. Ain't that right Isaac?" #Hangout / Eye_I
 	[Isaac] "Hrm. I liked Rin."
 	[Eduardo] "Oh, a'course you liked Rin."
 +[No]
@@ -182,10 +182,10 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 	"It’s about romancing a bunch of girls, each with a different physical disability."
 	"And, despite how skeevy that sounds, its actually really good, and respectful too."
 	"And Its real amazing that it is so good, given where it came from."
-	"B'yeah, I give it the Eduardo Medina seal of approval." #Hangout / happy_u
--"It’s kinda sad there aren't more works like Katawa Shoujo out there." #Hangout / Sad_U
+	"B'yeah, I give it the Eduardo Medina seal of approval." #Hangout / E_Happy
+-"It’s kinda sad there aren't more works like Katawa Shoujo out there." #Hangout / E_Sad, Eye_U
 "It’s so good, and avoids like, all the annoying tropes I hate about visual novels and anime."
-"Like, you know what trope really bugs the crap outta me in anime lately?" #Hangout / Sad_I
+"Like, you know what trope really bugs the crap outta me in anime lately?" #Hangout / Eye_I
 [Isaac] "Hrm?"
 [Eduardo] "You got all these modern-day stories, with all these fake off-brand references to real world things, instead of just straight up saying, hey yo! this is a thing."
 +[I don't follow]
@@ -219,9 +219,9 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 "Like, I know a lot of tiny internet visual novels all wanting to be like Katawa Shoujo, but about mental issues, rather than physical disabilities."
 "Thou there is no <i>definitive</i> one I can recommend though."
 [Isaac] "Done ranting?" #Hangout / Smile_Down
-[Eduardo] "oh, I am never done ranting." #Hangout / smile_I
-"B'yeah, I kinda lost steam on this topic." #Hangout / smile_u, Leg_Down, Hand_Down
-"We can talk about something else."
+[Eduardo] "oh, I am never done ranting." #Hangout / E_Grin
+"B'yeah, I kinda lost steam on this topic." #Hangout / E_Sad, Eye_U, Leg_Down, Hand_Down
+"We can talk about something else." #Hangout / E_Happy, Eye_I
 ->TimePassing
 
 ===ThreeAM===
