@@ -125,11 +125,11 @@
   "MediaFilesNotInAnyBank": [],
   "SoundBanks": [
    {
-    "Id": "374987273",
+    "Id": "1185539506",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MusicMain",
-    "ShortName": "MusicMain",
-    "Path": "MusicMain.bnk"
+    "ObjectPath": "\\SoundBanks\\Stories\\story_rf_kitchen",
+    "ShortName": "story_rf_kitchen",
+    "Path": "story_rf_kitchen.bnk"
    },
    {
     "Id": "1355168291",
@@ -345,6 +345,11 @@
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
      },
      {
+      "Id": "2798871172",
+      "Name": "play_ambience_fireplace_far",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
+     },
+     {
       "Id": "3827964327",
       "Name": "play_menupause_01",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
@@ -397,7 +402,7 @@
    {
     "Id": "3190558387",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Temp",
+    "ObjectPath": "\\SoundBanks\\Deprecated\\Temp",
     "ShortName": "Temp",
     "Path": "Temp.bnk",
     "IncludedEvents": [
@@ -417,9 +422,9 @@
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\lpfOff_ambience_fireplace"
      },
      {
-      "Id": "3984512074",
-      "Name": "play_ambience_fireplace_with_lpf",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_with_lpf"
+      "Id": "2798871172",
+      "Name": "play_ambience_fireplace_far",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
      },
      {
       "Id": "2805601783",
@@ -613,7 +618,7 @@
    {
     "Id": "3658133546",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\HalfwaySoundbank",
+    "ObjectPath": "\\SoundBanks\\Deprecated\\HalfwaySoundbank",
     "ShortName": "HalfwaySoundbank",
     "Path": "HalfwaySoundbank.bnk",
     "IncludedEvents": [
@@ -663,9 +668,9 @@
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
      },
      {
-      "Id": "3984512074",
-      "Name": "play_ambience_fireplace_with_lpf",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_with_lpf"
+      "Id": "2798871172",
+      "Name": "play_ambience_fireplace_far",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
      },
      {
       "Id": "2576276897",

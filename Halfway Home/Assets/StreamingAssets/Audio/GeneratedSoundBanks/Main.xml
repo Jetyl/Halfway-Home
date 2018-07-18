@@ -15,6 +15,7 @@
 			<IncludedEvents>
 				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
 				<Event Id="2929977910" Name="play_ambience_fireplace" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace"/>
+				<Event Id="2798871172" Name="play_ambience_fireplace_far" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace_far"/>
 				<Event Id="3827964327" Name="play_menupause_01" ObjectPath="\Events\PlaySFX\sfx_menu\play_menupause_01"/>
 				<Event Id="4553038" Name="play_menuunpause_01" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuunpause_01"/>
 				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_textscroll"/>

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
 	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
 	1720799084	stop_ambience_all			\PlayMusic\intro_ambiences\stop_ambience_all	
+	2798871172	play_ambience_fireplace_far			\PlayMusic\intro_ambiences\play_ambience_fireplace_far	
 	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
 	3827964327	play_menupause_01			\PlaySFX\sfx_menu\play_menupause_01	
 

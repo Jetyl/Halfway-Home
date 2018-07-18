@@ -531,27 +531,6 @@
 					<ChildrenList>
 						<Event Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}">
 							<ChildrenList>
-								<Action Name="" ID="{C69C9E00-2C17-4C6C-9312-75B247971362}" ShortID="739626411">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{AE8B8823-56C6-4D74-BF45-689D213555CB}" ShortID="447116822">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="16"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{08EA57C9-3956-4C48-8EFE-8352EF789DCF}" ShortID="192366196">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -563,16 +542,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{73BBC9A5-24F9-4306-B4EA-5A8BD9AE99F7}" ShortID="669674481">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="27"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}">
@@ -580,27 +549,6 @@
 								<Action Name="" ID="{76779821-43BA-47A7-A48E-C38190938AA4}" ShortID="132017201">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{35626CC7-8CD2-4623-8542-F8518A3DF41C}" ShortID="167697263">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
-										<Property Name="Volume" Type="Real64" Value="-96"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{9975E620-0CF5-446D-9B46-4BA62A665371}" ShortID="345263956">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
 										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
 									</PropertyList>
 									<ReferenceList>
@@ -653,41 +601,8 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="play_ambience_fireplace_with_lpf" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}">
+						<Event Name="play_ambience_fireplace_far" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}">
 							<ChildrenList>
-								<Action Name="" ID="{F4196D59-DE41-4F73-B5A8-33505B45EAE5}" ShortID="96701807">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{A2E8484F-CB59-4288-B642-382BD82EF50F}" ShortID="311818583">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="16"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{1AC9CA9A-631C-4DF8-B253-27B72AA2FC4D}" ShortID="983978979">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="26"/>
-										<Property Name="Highpass" Type="int16" Value="41"/>
-										<Property Name="Lowpass" Type="int16" Value="36"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ambience_fireplace" ID="{D3A2FA76-1F17-4161-B996-144B4004FAB8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{7A139282-B5F8-4919-B01A-BF7AB3C75B37}" ShortID="306167156">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>

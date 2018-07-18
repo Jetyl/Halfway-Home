@@ -154,12 +154,12 @@ public class StageDisplay : MonoBehaviour
         if(Ambience)
         {
             Game.current.CurrentAmbience = track;
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, track));
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, track, true));
         }
         else
         {
             Game.current.CurrentTrack = track;
-            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, track));
+            Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, track, true));
         }
 
 

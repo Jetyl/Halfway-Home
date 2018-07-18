@@ -15,7 +15,13 @@ public class AudioManager : MonoBehaviour
 {
   float paramFadeTimer = 0;
   public float paramFadeTime = 2.0f;
-  
+
+  // Used to make sure room default tracks are called before normal tracks
+  private List<string[]> normalTracks = new List<string[]> {};
+  private List<string[]> defaultTracks = new List<string[]> {};
+  private float dispatchAudioTimer = 0;        // Used to keep track of the intervals at which audio events are dispatched
+  private float dispatchAudioInterval = 0.1f;  // The interval between each batch of dispatched audio events
+
   public class AudioEvent : Stratus.Event
   {
     public enum SoundType
@@ -28,11 +34,13 @@ public class AudioManager : MonoBehaviour
     };
     public SoundType Type;
     public string FileName;
+    public bool isDefaultTrack = false;
 
-    public AudioEvent(SoundType type, string fileName)
+    public AudioEvent(SoundType type, string fileName, bool defaultTrack = false)
     {
       Type = type;
       FileName = fileName;
+      isDefaultTrack = defaultTrack;
     }
   }
 
@@ -115,12 +123,65 @@ public class AudioManager : MonoBehaviour
     //    e.FileName != "lpf_ambience_fireplace" &&
     //    e.FileName != "play_music_cafe_jazz_02"
     //   )
-    if(e.Type != AudioEvent.SoundType.MLayer) // Only stop all if file not tagged as layer
+
+    // Post the event immediately if its a sound effect
+    if (e.Type == AudioEvent.SoundType.SFX)
+      AkSoundEngine.PostEvent(e.FileName, SFXPlayer.gameObject);
+
+    // Otherwise, collect the event and dispatch all events after an interval in the right order
+    else if (e.isDefaultTrack == false)
+      normalTracks.Add(new string[] {e.FileName, e.Type.ToString()});
+    else if (e.isDefaultTrack == true)
+      defaultTracks.Add(new string[] {e.FileName, e.Type.ToString()});
+  }
+
+  void DispatchAudioEvents()
+  {
+    // Call default room tracks first
+    foreach (string[] e in defaultTracks)
     {
-        AkSoundEngine.PostEvent("Stop_All", e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Ambience ? AmbiencePlayer.gameObject : MusicPlayer.gameObject));
+      CallAudioEvent(e);
+      
+      // Hard-coded LPF for fireplace ambience far away from Commons
+      if (e[0] == "play_ambience_fireplace_far")
+      {
+        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 30);
+        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", -2.1f);
+        
+        OnAudioParamFadeEvent(lpfEvent);
+        OnAudioParamFadeEvent(volEvent);
+      }
     }
 
-    AkSoundEngine.PostEvent(e.FileName, e.Type == AudioEvent.SoundType.SFX ? SFXPlayer.gameObject : (e.Type == AudioEvent.SoundType.Ambience ? AmbiencePlayer.gameObject : MusicPlayer.gameObject));
+    // Then call other events
+    foreach (string[] e in normalTracks)
+      CallAudioEvent(e);
+      
+    defaultTracks.Clear();
+    normalTracks.Clear();
+  }
+
+  void CallAudioEvent(string[] e)
+  {
+    switch (e[1])
+    {
+      case "Music":
+        AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+        AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        return;
+      case "Ambience":
+        AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+        AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        return;
+      case "MLayer":
+        AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        return;
+      case "ALayer":
+        AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        return;
+      default:
+        return;
+    }
   }
 
   void OnAudioParamEvent(AudioParamEvent e)
@@ -251,6 +312,15 @@ public class AudioManager : MonoBehaviour
   // Update is called once per frame
   void Update ()
   {
+    // Collect incoming audio events, and dispatch them at intervals
+    // to make sure default room tracks are called before normal tracks
+    dispatchAudioTimer += Time.deltaTime;
+    if (dispatchAudioTimer >= dispatchAudioInterval)
+    {
+      dispatchAudioTimer = 0;
+      DispatchAudioEvents();
+    }
+
     AkSoundEngine.RenderAudio();
   }
 }

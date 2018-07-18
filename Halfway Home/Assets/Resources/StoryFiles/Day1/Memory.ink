@@ -52,8 +52,8 @@ This is it. Sunflower House. # Background / HouseFront # All * Hide   # Ambience
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
-The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away
-I open the heavy oak doors and step inside. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
+The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away         
+I open the heavy oak doors and step inside.   # Background / Commons, Blackwipe   # Play : Stop_All_Fast   // # Ambience : play_ambience_fireplace
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles.   # Max = Happy
 [Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
@@ -74,7 +74,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # ambience_vol ! -2.1   # ambience_lpf | 30
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # Play : Stop_All_Fast   // # ambience_vol ! -2.1   # ambience_lpf | 30   
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -89,7 +89,7 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # play : play_music_cafejazz   # ambience_vol ! -2.3
+I head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # ambience_vol ! -2.3
 Max is here, mopping lethargically.   # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
 What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf | 60   # ambience_vol | 5.6   # ambience_lpf | 31

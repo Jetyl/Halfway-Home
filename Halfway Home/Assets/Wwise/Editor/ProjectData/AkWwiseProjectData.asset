@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1866341881
-    m_lastTimePart2: -1999246500
+    m_lastTimePsrt1: 822315022
+    m_lastTimePart2: -1999246197
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -121,16 +121,16 @@ MonoBehaviour:
       ID: -1364989386
       Guid: dd2125434c2c264897b057b5c816a8f4
       maxAttenuation: 0
-    - Name: play_ambience_fireplace_with_lpf
-      Path: PlayMusic\intro_ambiences\play_ambience_fireplace_with_lpf
+    - Name: play_ambience_fireplace_far
+      Path: PlayMusic\intro_ambiences\play_ambience_fireplace_far
       PathAndIcons:
       - ElementName: PlayMusic
         ObjectType: 12
       - ElementName: intro_ambiences
         ObjectType: 4
-      - ElementName: play_ambience_fireplace_with_lpf
+      - ElementName: play_ambience_fireplace_far
         ObjectType: 3
-      ID: -310455222
+      ID: -1496096124
       Guid: 14ef77cc95f92d46bafba30806d20fbc
       maxAttenuation: 0
     - Name: play_music_artroom
@@ -822,8 +822,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1884688159
-    m_lastTimePart2: -1999246514
+    m_lastTimePsrt1: -1976198825
+    m_lastTimePart2: -1999246198
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -834,15 +834,6 @@ MonoBehaviour:
         ObjectType: 7
       ID: -2093861715
       Guid: 93f953f87fefd94b87b2a8e534ed66cf
-    - Name: HalfwaySoundbank
-      Path: Default Work Unit\HalfwaySoundbank
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: HalfwaySoundbank
-        ObjectType: 7
-      ID: -636833750
-      Guid: d5ea9b681f2ba146b7269f82c944843a
     - Name: Main
       Path: Default Work Unit\Main
       PathAndIcons:
@@ -870,19 +861,25 @@ MonoBehaviour:
         ObjectType: 7
       ID: -238283129
       Guid: 489d1a8fe7bde9438ebd8183c165625d
-    - Name: MusicMain
-      Path: Default Work Unit\MusicMain
+  - PhysicalPath: SoundBanks\Deprecated.wwu
+    ParentPhysicalPath: 
+    Guid: '{C1153857-EEE2-4E26-9456-85CD0DF6D8DB}'
+    m_lastTimePsrt1: -679132726
+    m_lastTimePart2: -1999246202
+    List:
+    - Name: HalfwaySoundbank
+      Path: Deprecated\HalfwaySoundbank
       PathAndIcons:
-      - ElementName: Default Work Unit
+      - ElementName: Deprecated
         ObjectType: 12
-      - ElementName: MusicMain
+      - ElementName: HalfwaySoundbank
         ObjectType: 7
-      ID: 374987273
-      Guid: ffb0c3e052623846a4ed980ca893f800
+      ID: -636833750
+      Guid: d5ea9b681f2ba146b7269f82c944843a
     - Name: Temp
-      Path: Default Work Unit\Temp
+      Path: Deprecated\Temp
       PathAndIcons:
-      - ElementName: Default Work Unit
+      - ElementName: Deprecated
         ObjectType: 12
       - ElementName: Temp
         ObjectType: 7
@@ -951,8 +948,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 1865041904
-    m_lastTimePart2: -1999246509
+    m_lastTimePsrt1: -1243526270
+    m_lastTimePart2: -1999246227
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
@@ -981,6 +978,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1576038406
       Guid: 5236779d87d1754c8a975281ecf27eef
+    - Name: story_rf_kitchen
+      Path: Stories\story_rf_kitchen
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_rf_kitchen
+        ObjectType: 7
+      ID: 1185539506
+      Guid: 41f3686d9817bd40b75e43e1a1459f96
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 

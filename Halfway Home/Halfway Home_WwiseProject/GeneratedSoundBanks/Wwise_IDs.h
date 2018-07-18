@@ -22,7 +22,7 @@ namespace AK
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
-        static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_WITH_LPF = 3984512074U;
+        static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_FAR = 2798871172U;
         static const AkUniqueID PLAY_MENUCLICK = 2576276897U;
         static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
@@ -103,7 +103,6 @@ namespace AK
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID MASTER = 4056684167U;
-        static const AkUniqueID MUSICMAIN = 374987273U;
         static const AkUniqueID ROOM_ART_ROOM = 3332012024U;
         static const AkUniqueID ROOM_CAFE = 2805282872U;
         static const AkUniqueID ROOM_COMMONS = 3114788647U;
@@ -113,6 +112,7 @@ namespace AK
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
         static const AkUniqueID STORY_KNOCK_ON_THE_MORNING_DOOR = 4021864313U;
         static const AkUniqueID STORY_MEMORY = 1576038406U;
+        static const AkUniqueID STORY_RF_KITCHEN = 1185539506U;
         static const AkUniqueID TEMP = 3190558387U;
     } // namespace BANKS
 

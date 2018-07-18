@@ -30,6 +30,11 @@
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
      },
      {
+      "Id": "2798871172",
+      "Name": "play_ambience_fireplace_far",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
+     },
+     {
       "Id": "3827964327",
       "Name": "play_menupause_01",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
