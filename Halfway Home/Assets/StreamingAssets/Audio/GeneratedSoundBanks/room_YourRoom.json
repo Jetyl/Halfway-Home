@@ -13,11 +13,11 @@
   },
   "SoundBanks": [
    {
-    "Id": "1577913368",
+    "Id": "474505651",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Rooms\\room_your_room",
-    "ShortName": "room_your_room",
-    "Path": "room_your_room.bnk",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_YourRoom",
+    "ShortName": "room_YourRoom",
+    "Path": "room_YourRoom.bnk",
     "IncludedEvents": [
      {
       "Id": "224129391",

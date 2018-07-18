@@ -302,7 +302,7 @@ That much is true, but it's only gotten a little better, if I'm being honest.
 If I get too <color=color_wellbeing_penalty><i>depressed</i></color>, the amount of time it takes to do a task can <color=color_descriptor><i>double</i></color>, or even <color=color_descriptor><i>triple</i></color>.
 "So if I'm ever late for anything, it's not because I don't care or something..."
 [Timothy] "Right, okay."
-I am really starting to get hungry, so my first move should be to show Timothy the Cafe area.   # Timothy = Exit   # 0.0 & InProgress   # Load @ story_rf_kitchen   # Load @ room_cafe
+I am really starting to get hungry, so my first move should be to show Timothy the Cafe area.   # Timothy = Exit   # 0.0 & InProgress   // # Load @ story_rf_kitchen   # Load @ room_cafe
 ~SetValue("Tutorial", true)
 -> END
 

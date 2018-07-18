@@ -11,6 +11,7 @@ public class SoundbankManager : MonoBehaviour {
   {
     LoadBank("Main");
     LoadBank("Master");
+    InitBanks();
   }
   
   public void InitBanks()

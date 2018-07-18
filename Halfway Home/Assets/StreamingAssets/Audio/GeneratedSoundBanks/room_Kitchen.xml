@@ -8,19 +8,19 @@
 		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="1577913368" Language="SFX">
-			<ObjectPath>\SoundBanks\Rooms\room_your_room</ObjectPath>
-			<ShortName>room_your_room</ShortName>
-			<Path>room_your_room.bnk</Path>
+		<SoundBank Id="265238677" Language="SFX">
+			<ObjectPath>\SoundBanks\Rooms\room_Kitchen</ObjectPath>
+			<ShortName>room_Kitchen</ShortName>
+			<Path>room_Kitchen.bnk</Path>
 			<IncludedEvents>
-				<Event Id="224129391" Name="play_music_contemplative" ObjectPath="\Events\PlayMusic\play_music_contemplative"/>
+				<Event Id="240662438" Name="play_music_cafejazz" ObjectPath="\Events\PlayMusic\music_cafejazz\play_music_cafejazz"/>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="345863430" Language="SFX">
-					<ShortName>music_contemplative.wav</ShortName>
-					<Path>SFX\music_contemplative_A51F8DD7.wem</Path>
+			<ReferencedStreamedFiles>
+				<File Id="44147102" Language="SFX">
+					<ShortName>cafejazz.wav</ShortName>
+					<Path>SFX\cafejazz_A51F8DD7.wem</Path>
 				</File>
-			</IncludedMemoryFiles>
+			</ReferencedStreamedFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

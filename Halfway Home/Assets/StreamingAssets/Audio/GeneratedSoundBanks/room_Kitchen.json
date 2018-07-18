@@ -13,11 +13,26 @@
   },
   "SoundBanks": [
    {
-    "Id": "374987273",
+    "Id": "265238677",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MusicMain",
-    "ShortName": "MusicMain",
-    "Path": "MusicMain.bnk"
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_Kitchen",
+    "ShortName": "room_Kitchen",
+    "Path": "room_Kitchen.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "240662438",
+      "Name": "play_music_cafejazz",
+      "ObjectPath": "\\Events\\PlayMusic\\music_cafejazz\\play_music_cafejazz"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "44147102",
+      "Language": "SFX",
+      "ShortName": "cafejazz.wav",
+      "Path": "SFX\\cafejazz_A51F8DD7.wem"
+     }
+    ]
    }
   ]
  }

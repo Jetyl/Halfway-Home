@@ -861,89 +861,65 @@ MonoBehaviour:
         ObjectType: 7
       ID: -238283129
       Guid: 489d1a8fe7bde9438ebd8183c165625d
-  - PhysicalPath: SoundBanks\Deprecated.wwu
-    ParentPhysicalPath: 
-    Guid: '{C1153857-EEE2-4E26-9456-85CD0DF6D8DB}'
-    m_lastTimePsrt1: -679132726
-    m_lastTimePart2: -1999246202
-    List:
-    - Name: HalfwaySoundbank
-      Path: Deprecated\HalfwaySoundbank
-      PathAndIcons:
-      - ElementName: Deprecated
-        ObjectType: 12
-      - ElementName: HalfwaySoundbank
-        ObjectType: 7
-      ID: -636833750
-      Guid: d5ea9b681f2ba146b7269f82c944843a
-    - Name: Temp
-      Path: Deprecated\Temp
-      PathAndIcons:
-      - ElementName: Deprecated
-        ObjectType: 12
-      - ElementName: Temp
-        ObjectType: 7
-      ID: -1104408909
-      Guid: 55e0ba390791d74db677e6a4df0ed58e
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 741855198
-    m_lastTimePart2: -1999246431
+    m_lastTimePsrt1: 1242894140
+    m_lastTimePart2: -1999246087
     List:
-    - Name: room_art_room
-      Path: Rooms\room_art_room
+    - Name: room_ArtRoom
+      Path: Rooms\room_ArtRoom
       PathAndIcons:
       - ElementName: Rooms
         ObjectType: 12
-      - ElementName: room_art_room
+      - ElementName: room_ArtRoom
         ObjectType: 7
-      ID: -962955272
+      ID: -1452517677
       Guid: fc6ea291be7c75438cc6f53f946f7ea5
-    - Name: room_cafe
-      Path: Rooms\room_cafe
+    - Name: room_Commons
+      Path: Rooms\room_Commons
       PathAndIcons:
       - ElementName: Rooms
         ObjectType: 12
-      - ElementName: room_cafe
-        ObjectType: 7
-      ID: -1489684424
-      Guid: b219630282ceb14996a99078127708af
-    - Name: room_commons
-      Path: Rooms\room_commons
-      PathAndIcons:
-      - ElementName: Rooms
-        ObjectType: 12
-      - ElementName: room_commons
+      - ElementName: room_Commons
         ObjectType: 7
       ID: -1180178649
       Guid: e714610a939e4248a31e9411433c83ca
-    - Name: room_garden
-      Path: Rooms\room_garden
+    - Name: room_Garden
+      Path: Rooms\room_Garden
       PathAndIcons:
       - ElementName: Rooms
         ObjectType: 12
-      - ElementName: room_garden
+      - ElementName: room_Garden
         ObjectType: 7
       ID: 1993474908
       Guid: 8b6cdbeaf704ff43a347e8b6deb569b0
-    - Name: room_library
-      Path: Rooms\room_library
+    - Name: room_Kitchen
+      Path: Rooms\room_Kitchen
       PathAndIcons:
       - ElementName: Rooms
         ObjectType: 12
-      - ElementName: room_library
+      - ElementName: room_Kitchen
+        ObjectType: 7
+      ID: 265238677
+      Guid: b219630282ceb14996a99078127708af
+    - Name: room_Library
+      Path: Rooms\room_Library
+      PathAndIcons:
+      - ElementName: Rooms
+        ObjectType: 12
+      - ElementName: room_Library
         ObjectType: 7
       ID: -730835952
       Guid: 3eae5e635aae164eb48d1d3b10083825
-    - Name: room_your_room
-      Path: Rooms\room_your_room
+    - Name: room_YourRoom
+      Path: Rooms\room_YourRoom
       PathAndIcons:
       - ElementName: Rooms
         ObjectType: 12
-      - ElementName: room_your_room
+      - ElementName: room_YourRoom
         ObjectType: 7
-      ID: 1577913368
+      ID: 474505651
       Guid: 95193778794de84cbdba156e2eaa0b83
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 

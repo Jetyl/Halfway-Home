@@ -18,7 +18,7 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Play : play_music_charlotte_elegant
 
 -> Start
 
