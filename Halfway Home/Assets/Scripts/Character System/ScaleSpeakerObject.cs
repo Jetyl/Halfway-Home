@@ -14,6 +14,8 @@ public class ScaleSpeakerObject : MonoBehaviour
 
     string MCName;
 
+    Vector3 BaseSize;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -43,7 +45,7 @@ public class ScaleSpeakerObject : MonoBehaviour
             {
                 Scaled = false;
                 
-                iTween.ScaleTo(gameObject, Vector3.one, TimeToScale);
+                iTween.ScaleTo(gameObject, BaseSize, TimeToScale);
             }
         }
         else
@@ -52,7 +54,7 @@ public class ScaleSpeakerObject : MonoBehaviour
             if (eventdata.TrueSpeaker == Speaker.Character)
             {
                 Scaled = true;
-                
+                BaseSize = transform.localScale;
                 Vector3 newscale = transform.localScale * ScaleRatio;
                 iTween.ScaleTo(gameObject, newscale, TimeToScale);
             }
