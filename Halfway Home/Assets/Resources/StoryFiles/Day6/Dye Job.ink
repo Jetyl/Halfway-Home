@@ -75,7 +75,7 @@ I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 Huh. I didn't expect that.
 Unexpected is good.
 [Timothy] "Ye-yeah. I've um... never done something like this, and I-I was wondering if I could get your help with it?"
-[{player_name}] "Uh, sure."
+[{player_name}] "Uh, sure." # 7 & InProgress
 [Timothy] "Th-Thank You!" #Timothy = Happy
 "I'll meet you in the common area when you're ready."
 Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = Exit
@@ -93,21 +93,21 @@ It doesn't take me long and I catch up with him in no time. #Background / common
 I'm not sure why Timothy thought I'd be super knowledgeable about hair products. 
 My only relevant experience was tie-dying a shirt in elementary school.
 [Timothy]"<jitter>Oh, no. I screwed up, didn't I?</jitter>" # Timothy = Afraid
-[{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but do know someone who does." # Timothy = Calm
+[{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but I do know someone who does." # Timothy = Calm
 I lead Timothy over to Eduardo's door.
-I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. #Background / commons
-[Eduardo] "Uugh. I'm coming! I'm coming!." #Timothy = Afraid
+I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. #Background / commons # SFX : play_sfx_human_knock
+[Eduardo] "Uugh. I'm coming! I'm coming!" #Timothy = Afraid
 Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
 "{player_name}, do you know what time it is?!"
 [{player_name}] "Eight in the morning?" // FORMERLY: It's only 8 o'clock Eduardo.
-[Eduardo] "Oh, god, it's worse than I thought!" # Timothy = Calm
-"What could you possibly need me for at..." // Eduardo is depressive here, so he is torn between being angry for being woken up and surprise that anyone would care to do so
+[Eduardo] "Oh, god, it's worse than I thought!" # Eduardo = Afraid # Timothy = Calm
+"What could you possibly need me for at..." # Eduardo = Angry// Eduardo is depressive here, so he is torn between being angry for being woken up and surprise that anyone would care to do so
 Eduardo visibly shudders. # Eduardo = Sad
 "`Eight in the morning?`" // FORMERLY: Yeah, and that's like a crime, waking up someone this early."
 +[It's not that early.]
 	[{player_name}] "It's not <i>that</i> early, Eduardo."
 	"I'm pretty sure Charlotte has been up for like... a couple hours already."
-	[Eduardo] "<i>She</i> has her life together." // FORMERLY: that girl ain't human I tell ya. (I want to try a more self-pitying approach)
+	[Eduardo] "<i>She</i>  has her life together." // FORMERLY: that girl ain't human I tell ya. (I want to try a more self-pitying approach)
 +[How has Max let you get away with sleeping in so much?]
 	[{player_name}] "How has Max let you get away with sleeping in so much?" // FORMERLY: "How has Max not reprimanded you for your sleeping habits yet?"
 	[Eduardo] "Oh, they've scolded me plenty. I just ignore them. They're not my mother." #Eduardo = Calm
@@ -122,7 +122,7 @@ Shaking himself out of it, Timothy launches his own hand up to meet Eduardo's wi
 "But what makes ya think I got any hair dye products?" # Eduardo = Angry # Timothy = Calm
 [{player_name}] "Eduardo. Your hair is bright pink."
 [Eduardo] "You got me there." # Eduardo = Calm
-"I <i>did</i> have the stuff... A whole set of stuff, in fact."
+"I <i>did</i>  have the stuff... A whole set of stuff, in fact."
 {grace>2:
 	I sense a `but`. # grace ^ good
 }
@@ -140,7 +140,7 @@ I think he's finally coming into his own. # grace ^ good
 "I spend a lot of time in the art room with Isaac... but we also hang out in the commons all the time."
 "When I'm manic I tend to be all over the place, though, and of course it's possible someone has moved it."
 [{player_name}] "Thanks, anyway. We'll let you get back to sleep."
-[Timothy] "Don't worry, Eduardo. We're on the case!" # Timothy = Happy
+[Timothy] "Don't worry, Eduardo. We're on the case!" # Timothy = Happy # 7.0 & InProgress
 I guess Timothy fancies us detectives now. I'll play along.
 [Eduardo] "Good luck, my friends." # Eduardo = Calm
 Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Eduardo = Exit
@@ -214,6 +214,7 @@ Timothy and I {begin picking the room apart.|look everything over one more time.
 We turn over couch cushions, peek under tables, and check every corner {to no avail.|, once again to no avail.}
 [Timothy] "{I haven't found anything interesting.|Nothing new... s-sorry.}"
 [{player_name}] "{Me, neither. Guess we should move on.|Oh, well. It was worth a shot.}"
+We regroup at the front of the room. # All = Exit
 ->->
 
 === Garden ===
@@ -231,7 +232,7 @@ We turn over couch cushions, peek under tables, and check every corner {to no av
 =Search
 {Timothy sets about searching the back of the garden while I take the front|The two of us do a second sweep of the area}.
 {I feel like I've turned over every last rock, plant, and clump of grass when I hear Timothy call out from by the bench.|Now I <i>really</i> think I've turned over every rock. And nothing to show for it this time, unfortunately.}
-{Search>1:
+{haveReceipt==false:
 	[Timothy] "I- I think I found something!" # Timothy = Surprised, far
 	He hustles over to me, holding something in his left hand. # Timothy = Exit, stage_right
 	"It looks like a receipt. And it's got a bunch of hair dye stuff on it!" # Timothy = Happy, close
@@ -247,7 +248,7 @@ We turn over couch cushions, peek under tables, and check every corner {to no av
 ->->
 
 === Cafe ===
-Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet|again}. # Background / Cafe, blackwipe
+Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet|again}. # Background / Kitchen, blackwipe
 {A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} 
 ->CaChoice
 =CaChoice
@@ -286,7 +287,7 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 	{
 	-foundBox==false:
 		[Max] "Did you two find what you were looking for?" # Max = Calm, stage_right
-		[Timothy] "W-we haven't checked yet." # Max = Calm, close, stage_left
+		[Timothy] "W-we haven't checked yet." # Timothy = Calm, close, stage_left
 		[Max] "Ah, well let me know when you have. I'm not supposed to leave the closet unlocked for very long, ya know."
 		Max turns their attention back to their duties. # All = Exit
 		->CaChoice
@@ -295,13 +296,22 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 		[Timothy] "{Yeah! A b-box on the top shelf.|{haveReceipt:Check this out.|We're still looking.}}" # Timothy = Calm, close, stage_left
 		"{Could you give it to us please?|{haveReceipt:It's a receipt for hair dye. I'm sure it matches the stuff in that box!|But we're not giving up!}}" # Timothy = Happy
 		[Max] "{I would love to! But...|{haveReceipt:Really? That's great! Let me see.|That's the spirit!}}" # Max = Happy
-		{Max sighs.|{haveReceipt:Max takes the receipt from me and nods.|Max nods.} # Max = Sad
-		[Max] "{I can't. I'm really sorry, gang, but Sunflower House has a policy of proof on all lost-and-found items.|{haveReceipt:I'm sorry to have put you through all this.|Again, I wish I could help.}}"
-		"{I know you want to use the hair dye, but unless you can provide some kind of proof of ownership I can't help you.|{haveReceipt:Just give me a moment to get it down for you.|Best of luck to you!}}" # Max = Calm
-		[{player_name}] "{{haveReceipt:You mean like this receipt?|That makes sense, I guess. We'll try and find something like that, then.}|Thanks, Max.}"
-		{{haveReceipt:->GotItFirst|->NoDice}|{haveReceipt:->GotIt|->NoDice}}
+		{Max sighs.|{haveReceipt:Max takes the receipt from me and nods.|Max nods.}} # Max = Sad
+		{->Objective|->Repeat}
 	}
 }
+
+=Objective
+[Max] "I can't. I'm really sorry, gang, but Sunflower House has a policy of proof on all lost-and-found items." 
+I know you want to use the hair dye, but unless you can provide some kind of proof of ownership I can't help you. # 7.1 & InProgress
+[{player_name}] "{haveReceipt:You mean like this receipt?|That makes sense, I guess. We'll try and find something like that, then.}"
+{haveReceipt:->GotItFirst|->NoDice}
+
+=Repeat
+[Max] "{haveReceipt:I'm sorry to have put you through all this.|Again, I wish I could help.}"
+{haveReceipt:Just give me a moment to get it down for you.|Best of luck to you!} # Max = Calm
+[{player_name}] "Thanks, Max."
+{haveReceipt:->GotIt|->NoDice}
 
 =GotItFirst
 Max takes the receipt from me and looks it over.
@@ -309,7 +319,7 @@ Max takes the receipt from me and looks it over.
 ->GotIt
 
 =GotIt
-Max walks over to the supply closet and retrieves the box. They bring it back to us and plop it gently down on the table.
+Max walks over to the supply closet and retrieves the box. They bring it back to us and plop it gently down on the table. # 7.1 & Success
 [Max] "Have fun! Just try not to make <i>too</i> much of a mess, okay?" # Max = Happy
 "I'm already behind on cleaning as it is!" # Max = Afraid
 [Timothy] "O-okay! Bye, Max." # Timothy = Happy
@@ -326,7 +336,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 	{A case for what looks like a musical instrument with nothing inside, a bracelet of purple beads, and a worn poncho make up only a small number of these|I wonder who the rest of this stuff belongs to. It can't <i>all</i> be Eduardo's}.
 	{foundBox==false:
 		[Timothy] "There! That's gotta be it!" # Timothy = Surprised
-		Timothy points to a box labeled `Hair Stuff` sitting on the top shelf.
+		Timothy points to a box labeled `Hair Stuff` sitting on the top shelf. # 7.0 & Success
 		[{player_name}] "I dunno if I'll be able to reach it."
 		[Timothy] "Yeah. And Max said not to touch anyway."
 		[{player_name}] "Guess we'll have to ask them to give it to us."
@@ -365,14 +375,14 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	++[Nevermind]-> LChoice
 
 =Charlotte
-{Charlotte==0:
+{Charlotte==1:
 	[Timothy] "Sh-should we get Charlotte's attention? I don't want to bother her, but Trissa said..." # Timothy = Afraid, close, stage_left
 	[{player_name}] "I hate bothering people, too. But we gotta do what we gotta do."
 }
 [Timothy] "H-hey, Charlotte." # Charlotte = Calm, stage_right # Timothy = Calm, close, stage_left
 [Charlotte] "{Why, hello! It's quite rare that the library gets visitors at this time of day.|Hello again! Is there something else I can assist you two with?}" # Charlotte = Happy
 [{player_name}] "{Heh... We're, uh, not actually here for the library... We came to ask you some questions.|What did you say we should do again?}"
-{Charlotte==0:
+{Charlotte==1:
 	[Timothy] "We're on a case!" # Timothy = Happy
 	[Charlotte] "Oh, my! Has there been a crime?" # Charlotte = Surprised
 	"Am I a suspect?" # Charlotte = Afraid
