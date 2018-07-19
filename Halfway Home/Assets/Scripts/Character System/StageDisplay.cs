@@ -113,7 +113,7 @@ public class StageDisplay : MonoBehaviour
                 {
                     LoadBanks(room.Bank);
                     CallSound(room.MusicTrack, false);
-                    CallSound(room.Ambience, true);
+                    CallSound(room.Ambience[0], true);
 
                     BackdropChange(room.Backdrops[0], eventdata.Transitions);
                     return;
@@ -134,12 +134,17 @@ public class StageDisplay : MonoBehaviour
                 {
                     LoadBanks(room.Bank);
                     CallSound(room.MusicTrack, false);
-                    CallSound(room.Ambience, true);
-
+                    
                     if (Game.current.Hour >= DayTimeStart && Game.current.Hour <= DayTimeEnd)
+                    {
+                        CallSound(room.Ambience[0], true);
                         BackdropChange(room.Backdrops[0], eventdata.Transitions);
+                    }
                     else
+                    {
+                        CallSound(room.Ambience[1], true);
                         BackdropChange(room.Backdrops[1], eventdata.Transitions);
+                    }
                 }
                     
             }
@@ -438,7 +443,7 @@ public class RoomDetails
     public string Tag;
     public Sprite[] Backdrops;
     public string MusicTrack;
-    public string Ambience;
+    public string[] Ambience;
     public string Bank;
 }
 
