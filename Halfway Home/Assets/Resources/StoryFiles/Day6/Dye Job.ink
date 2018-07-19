@@ -107,7 +107,7 @@ Eduardo visibly shudders. # Eduardo = Sad
 +[It's not that early.]
 	[{player_name}] "It's not <i>that</i> early, Eduardo."
 	"I'm pretty sure Charlotte has been up for like... a couple hours already."
-	[Eduardo] "<i>She</i>  has her life together." // FORMERLY: that girl ain't human I tell ya. (I want to try a more self-pitying approach)
+	[Eduardo] "<i>She</i> has her life together." // FORMERLY: that girl ain't human I tell ya. (I want to try a more self-pitying approach)
 +[How has Max let you get away with sleeping in so much?]
 	[{player_name}] "How has Max let you get away with sleeping in so much?" // FORMERLY: "How has Max not reprimanded you for your sleeping habits yet?"
 	[Eduardo] "Oh, they've scolded me plenty. I just ignore them. They're not my mother." #Eduardo = Calm
@@ -174,12 +174,26 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 
 =Isaac
 //Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
+{Isaac is positioned in his usual spot, working on molding out...something, from his clay.| Isaac is still where we last saw him, slowly shaping...something, out of his clay mound.} #Isaac = Calm, stage_right
+[{player_name}] "Hey Isaac."
+[Isaac] "hrm?"
+[Timothy] "W-we're looking for Eduardo's hair dye. Do you know where it is?"
+[Isaac] "hrm..."
+"maybe."
+"Was there. When he bought it."
+[{player_name}] "So, do you know where it is now?"
+[Isaac] "hrm..."
 ~unlockedGarden=true
 ->->
 
 =Search
-(Find nothing)
+Timothy and I {begin picking the room apart.|look everything over one more time.} # Timothy = Surprised, far
+We Look through all of the stored art projects, from paintings to sculptures. {No Hair dye materials, but a lot of neat little half finished sculptures.| Still nothing we were looking for, but we did find a few more neat little statuettes.}
+[Timothy] "{I don't think its here...|I sh-should spend more time here l-later.}"
+[{player_name}] "{Yeah, I'm not seeing it here. Guess we should try elsewhere.|Yeah, that could be fun. But, we should keep going for now.}"
+We regroup at the front of the room. # All = Exit
 ->->
+
 
 === Commons ===
 We {step into the cozy heart of Sunflower House.|return to the common room.} # Background / Commons, blackwipe
