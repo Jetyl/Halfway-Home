@@ -50,23 +50,45 @@ Max stares at me like I'm a weirdo. #Max = Sad
 
 = MaxMelancholy
 [Max] "He, um, left, remember?"
-//Max is sad. talks about how you either did or didn't help. regardless. theres no changing the past.
+Max shuffles around, seeming both surprised that I mentioned Timothy, and wishing I had not. #grace ^ good
+[{player_name}] "Left, but, <size=50%>today's supposed to be his first day again...<size=100%>"
+[Max] "You okay, {player_name}"
+I look over at my calander to see the date. Disbelief washes over me. the loop. its...
+"{player_name}?"
+[{player_name}] "Huh? yeah?"
+[Max] "Are you alright?"
+[{player_name}] "Oh, y-yeah, just... tried."
+[Max] "Yeah, I can understand that. Given what happened yesterday..."
+"Look, {player_name}, I know you didn't know Timothy for very long, but still, don't worry about how it went."
+"You did all you could to be welcoming. We all did."
+"And, he's fine at Blackwell. And hey, who knows, once he gets better, he might come right back." #Max = happy
+Max attempts to drum up enthusiasm, but I think Timothy's depature is actually effecting them a lot more than they want to let on. #Max = sad
+[{player_name}] "Max, how are you doing?" #expression ^ good
+[Max] "Oh, don't go worrying about me now. I'm fine. I'mma adult. I can take of myself?" #Max = happy
+"Its just sad is all. But the feeling will pass. Besides, I can't do anything about it. Can't change the past."
 [{player_name}] "Huh... yeah. Can't change the past."
 ->->
 
 = TimothyBedroom
 [Max] "Uh, he's right there, in bed?" #Max = Happy
 I look over to Timothy's bed, and see Timothy, getting out of it.
-[Timothy] "Uh, morning." #Timothy = calm, stage_left
-Timothy is still here. his hair still dyed from the other day. #Timothy = stage_center #Max = stage_right
+[Dyed>Timothy] "Uh, morning." #Dyed = calm, stage_left
+Timothy is still here. his hair still dyed from the other day. #Dyed = stage_center #Max = stage_right
 It... it's over... I did it!
-[Timothy] "Uh... {player_name}? Are you o-okay?"
+[Dyed>Timothy] "Uh... morning {player_name}? Are you o-okay?"
 Timothy must have noticed me staring at him.
-// Timothy greets you, good morning, etc.
-// Briefly forgets you're leaving
-// Notices signs of leaving, has an "Oh shit" moment
-// Says not to leave without saying goodbye and runs into the bathroom
-// You leave with Max
+"Oh, and Good morning Max."
+[Max] "Morning Timothy."
+Max mosies over to my packed bags, and begins grabing them, throwing them over their sholders. #Max = stage_left
+I go over and help, and as we're about done, I notice Timothy seemes to be in shock. #dyed = Surprised
+[Dyed>Timothy] "Oh shoot!" //oh gosh darm jolly gee
+And then He runs out of the room. #dyed = exit
+Only, to immediately return. #Dyed = Surprised
+"Don't leave without saying goodbye. I n-need to go finish something!"
+And like that, he's gone again. #Dyed = exit
+[{player_name}] "What was that about?"
+[Max] "Not a clue."
+"But, you probably should remember to go say by to him before ya head off."
 ->->
 
 ===Ready===
@@ -500,7 +522,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 [{player_name}] "Okay Max, I'm ready." #Max = calm
 [Max] "Well I'm glad you're ready, but ya still gotta wait for your car."
 "Who is picking you up again?"
-[{player_name}] "Oh, just my folks." // Add check for guardian
+[{player_name}] "Oh, just my {GetStringValue("Guardian")}."
 [Max] "Cool. Cool."
 "So, got any plans for what your heading off to after this?"
 +[College]
@@ -513,11 +535,32 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 Max extends their hand. I grab their hand and give them a confident handshake.
 [{player_name}] "Thanks for the" 
 And, right on que, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
-// This is prob where you want Timothy to come runnin
-I go out, and give my parents a basic greatings.
+{
+	-GetValue("Saved Timothy"): -> TimothyEnd -> END
+	-else: -> OtherEnd -> END
+}
+
+=TimothyEnd
+I pick up all of my bags to head out- #Skip
+[Dyed>Timothy] "Wait!"
+Timothy Runs up behind me, holding onto a peice of paper in his hands. #dyed = Surprised 
+[{player_name}] "Oh, hey Timothy. Where'd did you run off to?"
+[Dyed>Timothy] "I n-needed to f-finish something."
+"H-here!"
+Timothy holds out the peice of paper.
+"I'm n-not a very good a-artist, but I w-wanted to make you something, s-so."
+... //Show the CG here.
+Its not anything amazing, artistically, but heart of it all makes me grin from ear to ear.
+[{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
+[Dyed>Timothy] "R-Really?" #Dyed = Happy
+//have actual ending here
+->->
+
+=OtherEnd
+I go out, and give my {GetStringValue("Guardian")} a basic greatings.
 They help me with my bags, and we pack them in the car.
 When I get in the back seat, I look back out at the Sunflower House. 
 I see my friends. #Isaac = calm #Eduardo = calm #Max = calm #Charlotte = calm #Trissa = calm
 Their all waving me off.
 then, roll credits # Play : play_music_farewell # music_vol ! 0
-->END
+->->
