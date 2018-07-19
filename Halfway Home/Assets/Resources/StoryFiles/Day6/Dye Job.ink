@@ -176,13 +176,35 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 //Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
 {Isaac is positioned in his usual spot, working on molding out...something, from his clay.| Isaac is still where we last saw him, slowly shaping...something, out of his clay mound.} #Isaac = Calm, stage_right
 [{player_name}] "Hey Isaac."
-[Isaac] "hrm?"
-[Timothy] "W-we're looking for Eduardo's hair dye. Do you know where it is?"
-[Isaac] "hrm..."
-"maybe."
-"Was there. When he bought it."
-[{player_name}] "So, do you know where it is now?"
-[Isaac] "hrm..."
+{Isaac==1:
+	[Isaac] "hrm?"
+	[Timothy] "W-we're looking for Eduardo's hair dye. Do you know where it is?" #Timothy = Calm, stage_left
+	[Isaac] "hrm..."
+	"maybe."
+	"Was there. When he bought it."
+	[{player_name}] "So, do you know where it is now?"
+	[Isaac] "hrm..." #Isaac = Afraid
+	"...Garden." #Isaac = Calm
+	[{player_name}] "The garden? why would it be out there?"
+	[Isaac] "was a nice day. Eduardo felt like it."
+	[Timothy] "Well that s-sounds in character."
+	[Isaac] "hrm."
+	[{player_name}] "Well Isaac, thanks for the info. catch ya around!"
+-Isaac == 2:
+	[Isaac] "hrm?"
+	[{player_name}] "Do you know where exactly in the gardens they might be?"
+	[Isaac] "no."
+	[Timothy] "Not even a slight idea?" #Timothy = happy, stage_left
+	[Isaac] "no."
+	"..."
+	[{player_name}] "..."
+	[Timothy] "..."
+	[{player_name}] "well, uh, okay then. catch you later."
+-else:
+	[Isaac] "Gardens."
+	[{player_name}] "Okay then. thanks."
+}
+[Isaac] "hrm." #all = exit
 ~unlockedGarden=true
 ->->
 

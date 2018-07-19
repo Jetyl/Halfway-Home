@@ -180,16 +180,18 @@ A strange sense of doubt washes over me.
 Then I came here... to Sunflower House.
 It was supposed to be my chance to readjust, but...
 I spent all my time here alone, just like I did at Blackwell.
-The sensation grows stronger.
+The sensation grows stronger. // i know this line is ment to follow 179, but it feels weird still
 I think about all the times Max asked me how I was feeling.
 Did I ever tell them the truth?
 I told myself that I was fine. That staying in my room was best for everyone.
 But... This last week... Weeks?
 Everything changed. Timothy. Eduardo. Charlotte. All of these experiences.
-I... I feel so different now. Is <i>this</i> what it feels like to be ready to move on?
+//alternate line if truely ready, here
+I... I feel so different now. Is <i>this</i> what it feels like to be ready to move on? //it is possible to get here and still not break the loop, so...
 If so, then...
 The doubt in the back of my mind turns to dread and sinks into the pit of my stomach.
 Oh. I've been lying to myself this entire time.
+//alternate line if truely ready, here
 I wasn't ready to leave at all. I didn't even know what it <i>meant</i> to be ready.
 //I came here, to Sunflower House. And I've gotten the support I needed to grow. @To be better. To leave...
 //I think I'm finally beginning to understand what Sunflower House really is... //this revelation feels off
