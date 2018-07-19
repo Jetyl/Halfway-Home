@@ -83,28 +83,28 @@ I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : p
 What?
 [{player_name}] "Huh?"
 +[Hella yella?]
-	"Hella yella? what does that even mean?"
-	[Keyless>Max] "What, its just something I say sometimes."
-	[{player_name}] "I have literally never heard you say anything remotely like that."
-	Max just shrugs. guess they're just being weird? whatever.
+	"Hella yella? What does that even mean?"
+	[Keyless>Max] "It's a thing people say. Don't look at me like that!"//"What, its just something I say sometimes."
+	[{player_name}] "I have literally never heard anyone say anything remotely like that." // Formerly "heard you say"
+	Max shrugs.//guess they're just being weird? whatever.
 +[Morning...]
 	"Ugh... @Morning, Max."
 	[Keyless>Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
-	[{player_name}] "N-no... @I was already awake."
-	[Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
-	[{player_name}] "Yeah."
+	[{player_name}] "N-no... I was already awake."
+	[Keyless>Max] "Good. Pretty soon ya won't have the ol' Max alarm to rely on."
+	[{player_name}] "I guess not."
 -[Timothy>Scrawny looking kid] "..."   # Timothy = Calm   # Timothy = stage_Right
 [{player_name}] "Who's that?"
 [Keyless>Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah."
 [Keyless>Max] "You don't remember, do you?"
-+[Yes (Lie)]
-	[{player_name}] "uh, y-yeah, I, uh, remember that."
++[I remember (Lie)]
+	[{player_name}] "Uh, y-yeah, I, uh, remember that."
 +[No (Honest)]
 	[{player_name}] "... @No."
 -Max looks disappointed in me. It's a sadly common look.   # Keyless = Sad
-[Keyless>Max] "Look, I know you'd really prefer not having a roommate, but we're tight on space right now."
-"Besides, it'll only be for one week."
+[Keyless>Max] "Look, I know you'd prefer not having a roommate foisted on you your last week, but we're tight on space right now." // Added reference to it being last week here
+"Besides, I think it'll be good for both of you." // OLD LINE: It'll only be for one week
 [Timothy] "<jitter>N-Nice to meet you.</jitter>" # Timothy = Happy
 [Keyless>Max] "Anyways, Timothy, this is {player_name}, pronouns are {pronouns}. You'll be sharing this room with {possessive} for the next week."   # Keyless = Calm
 [Timothy] "Okay."   # Timothy = Calm
@@ -123,7 +123,7 @@ I get the feeling I'm about to be dragged into something.
 Called it.
 "So could you be a pal and show him around?"
 +[Sure]
-	[{player_name}] "sure."
+	[{player_name}] "Sure."
 +[Um... no]
 	[{player_name}] "Uh..."
 -[Keyless>Max] "Thanks, buddy!"

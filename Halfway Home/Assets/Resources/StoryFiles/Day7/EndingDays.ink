@@ -44,21 +44,30 @@ But when I open the door, Max is alone. #Max = Happy
 "Hey, where's Timothy?"
 Max stares at me like I'm a weirdo. #Max = Sad
 {
-	-GetValue("Saved Timothy"):
-		[Max] "Uh, he's right there, in bed?" #Max = Happy
-		I look over to Timothy's bed, and see Timothy, getting out of it.
-		[Timothy] "Uh, morning." #Timothy = calm, stage_left
-		Timothy is still here. his hair still dyed from the other day. #Timothy = stage_center #Max = stage_right
-		It... it's over... I did it!
-		[Timothy] "Uh... {player_name}? Are you o-okay?"
-		Timothy must have noticed me staring at him.
-		//timothy's goodbyes / ending. good things.
-	-else:
-		[Max] "He, um, left, remember?"
-		//Max is sad. talks about how you either did or didn't help. regardless. theres no changing the past.
-		[{player_name}] "huh... yeah. Can't change the past."
+	-GetValue("Saved Timothy"): -> TimothyBedroom -> Ready
+	-else: -> MaxMelancholy -> Ready
 }
-->Ready
+
+= MaxMelancholy
+[Max] "He, um, left, remember?"
+//Max is sad. talks about how you either did or didn't help. regardless. theres no changing the past.
+[{player_name}] "Huh... yeah. Can't change the past."
+->->
+
+= TimothyBedroom
+[Max] "Uh, he's right there, in bed?" #Max = Happy
+I look over to Timothy's bed, and see Timothy, getting out of it.
+[Timothy] "Uh, morning." #Timothy = calm, stage_left
+Timothy is still here. his hair still dyed from the other day. #Timothy = stage_center #Max = stage_right
+It... it's over... I did it!
+[Timothy] "Uh... {player_name}? Are you o-okay?"
+Timothy must have noticed me staring at him.
+// Timothy greets you, good morning, etc.
+// Briefly forgets you're leaving
+// Notices signs of leaving, has an "Oh shit" moment
+// Says not to leave without saying goodbye and runs into the bathroom
+// You leave with Max
+->->
 
 ===Ready===
 [Max] "Anyways, you ready to leave? Your {GetStringValue("Guardian")} will be here to pick you up soon.
@@ -211,6 +220,7 @@ She turns to open a small bag resting beside her and withdraws a solitary book.
 }
 [{player_name}] "Wow, Charlotte! I don't know what to say... besides thanks!"
 [Charlotte] "`Thanks` will do nicely, dear. Take care of yourself out there." # Charlotte = Happy
+"Go and show the world what you are made of, {player_name}."
 ->EdAndIsaac
 
 =NoGift
@@ -490,7 +500,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 [{player_name}] "Okay Max, I'm ready." #Max = calm
 [Max] "Well I'm glad you're ready, but ya still gotta wait for your car."
 "Who is picking you up again?"
-[{player_name}] "oh, just my folks."
+[{player_name}] "Oh, just my folks." // Add check for guardian
 [Max] "Cool. Cool."
 "So, got any plans for what your heading off to after this?"
 +[College]
@@ -503,6 +513,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 Max extends their hand. I grab their hand and give them a confident handshake.
 [{player_name}] "Thanks for the" 
 And, right on que, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
+// This is prob where you want Timothy to come runnin
 I go out, and give my parents a basic greatings.
 They help me with my bags, and we pack them in the car.
 When I get in the back seat, I look back out at the Sunflower House. 
