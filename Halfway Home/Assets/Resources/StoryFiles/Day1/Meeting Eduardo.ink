@@ -20,8 +20,6 @@ VAR current_room = "unset"
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> Start
 
 === Start ===
@@ -101,7 +99,7 @@ I decide to go over there, and see how they are doing.
 [Isaac] "Eh, wasn't that funny." #Isaac = Calm
 [Eduardo] "Isaac?!" #Eduardo = Surprised
 "If you didn't think it was funny, why didn't you say anything?"
-[Isaac] "..." #Isaac = Afraid
+[Isaac] "..." #Isaac = Afraid   # Play : Stop_All
 Isaac looks like he wants to say something, but either embarrassed, or afraid to. maybe because I'm here?
 Eduardo either doesn't notice this, or is more focused on that lack of a verbal answer, and begins poking Isaac slightly
 [Eduardo] "Isaac, you know if I'm annoying you or something, you can tell me. Right?"
@@ -176,7 +174,7 @@ Isaac appears to be able to completely ignore Eduardo in an instant. Instead he 
 [Isaac] "Isaac. Isaac Avidan."
 [Timothy] "Huh?"
 [Isaac] "My name. If it wasn't said already. Which is was. Never mind."
-"..."
+"..."   # Play : Stop_All
 [Timothy] "..."
 [{player_name}] "..."
 Isaac just goes back to working on his art piece like we aren't here. I suppose he feels the conversation is over.
@@ -217,7 +215,7 @@ And Eduardo goes right back to Isaac, which is my queue to get going.
 -> END
 
 === Needy ===
-Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair. # Eduardo = Happy, stage_right, Right # Isaac = Calm, stage_right, Left//Show the CG
+Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # Eduardo = Happy, stage_right, Right   # Isaac = Calm, stage_right, Left //Show the CG
 Isaac looks off to another part of the room.
 The two are rather well known for the PDA around the home. One of them more so than the other.
 [Isaac] "Used to be worse."

@@ -15,9 +15,9 @@
    {
     "Id": "3564131344",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Rooms\\room_library",
-    "ShortName": "room_library",
-    "Path": "room_library.bnk",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_Library",
+    "ShortName": "room_Library",
+    "Path": "room_Library.bnk",
     "IncludedEvents": [
      {
       "Id": "3266052307",

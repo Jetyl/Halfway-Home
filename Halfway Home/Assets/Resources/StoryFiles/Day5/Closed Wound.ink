@@ -167,7 +167,7 @@ Like, I'm sure Timothy's parents love him and all, but...
 All a letter like this is going to do is feed into Timothy's anxiety even more!
 Ugh, parents sometimes.
 It kinda makes me think how lucky I am not to have my own family breathing down my neck.
-My family gave me nothing but support and time while I spent those years in Blackwell. @Its the only thing that made it bearable.
+My family gave me nothing but support and time while I spent those years in Blackwell. @It's the only thing that made it bearable.
 I had time to breathe. Time to grow. I could be alone and safe where I was.
 //inkling of doubt. was that really enough?
 //following this thread of doubt
@@ -175,19 +175,36 @@ I had time to breathe. Time to grow. I could be alone and safe where I was.
 //which gets to what they really needed. to talk to people. to engage with people
 //and they look on thier growth over the week vs thr year
 //then it flows into "oh god I've been lying to myself havent i" moment
-I came here, to Sunflower House. And I've gotten the support I needed to grow. @To be better. To leave...
+Alone...
+A strange sense of doubt washes over me.
+Then I came here... to Sunflower House.
+It was supposed to be my chance to readjust, but...
+I spent all my time here alone, just like I did at Blackwell.
+The sensation grows stronger.
+I think about all the times Max asked me how I was feeling.
+Did I ever tell them the truth?
+I told myself that I was fine. That staying in my room was best for everyone.
+But... This last week... Weeks?
+Everything changed. Timothy. Eduardo. Charlotte. All of these experiences.
+I... I feel so different now. Is <i>this</i> what it feels like to be ready to move on?
+If so, then...
+The doubt in the back of my mind turns to dread and sinks into the pit of my stomach.
+Oh. I've been lying to myself this entire time.
+I wasn't ready to leave at all. I didn't even know what it <i>meant</i> to be ready.
+//I came here, to Sunflower House. And I've gotten the support I needed to grow. @To be better. To leave...
 //I think I'm finally beginning to understand what Sunflower House really is... //this revelation feels off
-To leave...
-Thats probably why. Why I've been lying to myself about being ready to leave it behind.
+//To leave...
+//Thats probably why. Why I've been lying to myself about being ready to leave it behind.
 //And that I've been lying to myself about being ready to leave it behind.
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 	~SetValue("EarnedWoundStar", true)
 }
-[{player_name}] "I see what you mean."
+I see that now. And I owe it all to the scared, vulnerable human being currently fighting back tears in front of me.
+[{player_name}] "I see what you mean about this letter..."
 "Seems like your parents expect a lot out of you..."
 Timothy wrings his hands nervously. # Timothy = Afraid
-I need to find some way to fix this: To help Timothy relax... # Timothy = Calm
+I need to find some way to fix this: To help Timothy relax... To repay him. # Timothy = Calm
 I rack my brain looking for an answer.
 {awareness==5:->Healing|->NotYet}
 

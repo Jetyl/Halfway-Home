@@ -15,9 +15,9 @@
    {
     "Id": "1993474908",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Rooms\\room_garden",
-    "ShortName": "room_garden",
-    "Path": "room_garden.bnk",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_Garden",
+    "ShortName": "room_Garden",
+    "Path": "room_Garden.bnk",
     "IncludedEvents": [
      {
       "Id": "2702884089",
