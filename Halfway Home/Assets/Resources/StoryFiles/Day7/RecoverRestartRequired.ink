@@ -39,6 +39,8 @@ Once the dinner has wound down, I quietly head to my room to rest.
 		->SecondarySuccess
 	-week == 1:
 		->FirstRRR
+	-week == 2:
+		->SecondRRR
 	-else:
 		->RepeatRRR //debug issue here later (weeks do not update properly)
 }
@@ -47,7 +49,7 @@ Once the dinner has wound down, I quietly head to my room to rest.
 ===PrimarySuccess===
 //player has broken timeloop, and is going to end the game
 ~SetValue("Saved Self", true)
-For in what feels like an eternity, I feel good going to bed today.
+ what feels like an eternity, I feel good going to bed today.
 {
 	-GetValue("Saved Timothy"):
 		Timothy walks in and plots down to bed.
@@ -83,13 +85,13 @@ I look at my bags, half packed with the crap I call my own. Despite all my time 
 With a heavy sigh, I look away and toss myself into my sheets. @One of the last things I can call my own in this space.
 I'm alone in a room meant for no one, and nothing is fine.
 I'm leaving tomorrow...
-I'm leaving tomorrow, and I don't know what to do.
+I'm leaving tomorrow and I don't know what to do.
 I start shaking slightly, as tears bubble in my eyes.
-I'm leaving tomorrow, and I don't know what to do.
+I'm leaving tomorrow and I don't know what to do.
 I don't want to leave. I've been here too long. I don't know what I'll do when I'm gone.
 But I don't want to stay here, in this vacant room. I don't want to waste away.
 I don't want to leave. @I don't want to stay.
-As I drift off to sleep, all I can think is how badly I want this pain to go away. #Background / Dream, eyeclose
+As I drift off to sleep, all I can think about is how badly I want this pain to go away. #Background / Dream, eyeclose
 This is it. Sunflower House. # Background / HouseFront, Crossfade # Ambience : play_ambience_birds
 `A Garden for the Mind` according to the brochure the doctors gave me.
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
@@ -114,7 +116,7 @@ Max departs, leaving me alone in my new room. Why doesn't it feel like the first
 I look over at the other bed and a shiver crawls up my spine. Inexplicable dread overcomes me.
 Wait. I clutch my pounding head.
 I know whose bed this is.
-Timothy Miyuri. # Timothy = Calm
+Timothy Miyuri. # Timothy = Calm # Stress => 100
 This... isn't real. # Timothy = Exit
 The gnawing in my mind transforms into the shock of epiphany as color drains from the world. # Depression => 100
 The room falls away into darkness and I am whisked back to Blackwell. # Background / Dream, Crossfade # Play : play_music_creepy_atmo
@@ -141,6 +143,15 @@ The cackling Voices fade into a low rumble that begins toppling the walls around
 I failed... again.
 I let Timothy down.
 I let everybody down.
+{awareness>2:
+	But I learned new things. I am more than I was. # awareness ^ good
+	That has to count for something.
+}
+// Move this to Knock?
+This week keeps on repeating. I don't understand why, but I've been given a chance to fix this.
+To fix everything.
+Timothy has to be the key. If I can just help him...
+I can finally leave this place.
 ->RRR
 
 ==RRR==

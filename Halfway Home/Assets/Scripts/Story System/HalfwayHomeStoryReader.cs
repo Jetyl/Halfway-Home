@@ -36,7 +36,6 @@ namespace HalfwayHome
     //------------------------------------------------------------------------/
     protected override void OnBindExternalFunctions(Story story)
     {
-
       story.runtime.BindExternalFunction(nameof(PlayMusic), new System.Action<string>(PlayMusic));
       story.runtime.BindExternalFunction(nameof(SetValue), new System.Action<string, bool>(SetValue));
       story.runtime.BindExternalFunction(nameof(SetIntValue), new System.Action<string, int>(SetIntValue));
@@ -51,6 +50,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(AlterTime), new System.Action(AlterTime));
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
       story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
+      story.runtime.BindExternalFunction(nameof(NextWeek), new System.Action(NextWeek));
     }
 
     protected override void OnConfigureParser(RegexParser parser)

@@ -174,37 +174,38 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 
 =Isaac
 //Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
-{Isaac is positioned in his usual spot, working on molding out...something, from his clay.| Isaac is still where we last saw him, slowly shaping...something, out of his clay mound.} #Isaac = Calm, stage_right
+{Isaac is positioned in his usual spot, working on molding out... something, from his clay.| Isaac is still where we last saw him, slowly shaping...something, out of his clay mound.} #Isaac = Calm, stage_right
 [{player_name}] "Hey Isaac."
-{Isaac==1:
-	[Isaac] "hrm?"
+{
+-Isaac==1:
+	[Isaac] "Hrm?"
 	[Timothy] "W-we're looking for Eduardo's hair dye. Do you know where it is?" #Timothy = Calm, stage_left
-	[Isaac] "hrm..."
-	"maybe."
+	[Isaac] "Hrm..."
+	"Maybe."
 	"Was there. When he bought it."
 	[{player_name}] "So, do you know where it is now?"
-	[Isaac] "hrm..." #Isaac = Afraid
+	[Isaac] "Hrm..." #Isaac = Afraid
 	"...Garden." #Isaac = Calm
-	[{player_name}] "The garden? why would it be out there?"
-	[Isaac] "was a nice day. Eduardo felt like it."
+	[{player_name}] "The garden? Why would it be out there?"
+	[Isaac] "Was a nice day. Eduardo felt like it."
 	[Timothy] "Well that s-sounds in character."
-	[Isaac] "hrm."
-	[{player_name}] "Well Isaac, thanks for the info. catch ya around!"
+	[Isaac] "Hrm."
+	[{player_name}] "Well Isaac, thanks for the info. See ya around!"
 -Isaac == 2:
-	[Isaac] "hrm?"
+	[Isaac] "Hrm?"
 	[{player_name}] "Do you know where exactly in the gardens they might be?"
-	[Isaac] "no."
+	[Isaac] "No."
 	[Timothy] "Not even a slight idea?" #Timothy = happy, stage_left
-	[Isaac] "no."
+	[Isaac] "No."
 	"..."
 	[{player_name}] "..."
 	[Timothy] "..."
-	[{player_name}] "well, uh, okay then. catch you later."
+	[{player_name}] "Well, uh, okay then. Catch you later."
 -else:
 	[Isaac] "Gardens."
-	[{player_name}] "Okay then. thanks."
+	[{player_name}] "Okay then. Thanks."
 }
-[Isaac] "hrm." #all = exit
+[Isaac] "Hrm." #all = exit
 ~unlockedGarden=true
 ->->
 
