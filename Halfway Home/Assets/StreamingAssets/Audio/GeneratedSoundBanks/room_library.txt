@@ -1,6 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	2798871172	play_ambience_fireplace_far			\PlayMusic\ambiences\play_ambience_fireplace_far	
 	3266052307	play_music_library			\PlayMusic\play_music_library	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	977374489	music_library_2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_library_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_library\music_library_intro\music_library_2		1159876
+	977374489	music_library_2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_library_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_library\music_library_intro\music_library_2		1159876
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	1025761080	loop_164661__adam-n__fire	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
 

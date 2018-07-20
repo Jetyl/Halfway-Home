@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="4056684167" Language="SFX">
@@ -18,6 +18,7 @@
 				<Event Id="4008650974" Name="play_menumouseover" ObjectPath="\Events\PlaySFX\sfx_menu\play_menumouseover"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\stop\Stop_All"/>
 				<Event Id="3032100830" Name="Stop_All_Fast" ObjectPath="\Events\PlayMusic\stop\Stop_All_Fast"/>
+				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\stop\stop_ambience_all"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="302959056" Language="SFX">

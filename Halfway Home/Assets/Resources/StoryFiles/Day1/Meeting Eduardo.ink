@@ -32,7 +32,7 @@ EXTERNAL GetValue(value)
 }
 
 ===MeetAlone===
-I check around the art room, and spy Eduardo and Isaac hanging out in their little corner.
+I check around the art room, and spy Eduardo and Isaac hanging out in their little corner.   # Load @ story_meeting_eduardo
 Isaac is working on a painting and Eduardo is chatting up a storm.
 Neither of them have noticed me enter the room.
 I suppose I could go over and hang out with them for a while, or I could just go into my own little corner and work on a drawing.

@@ -279,8 +279,24 @@ public class AudioManager : MonoBehaviour
       return;
     
     AudioBankEvent.LoadType lt = e.Type;
+    
     if (lt == AudioBankEvent.LoadType.Load)
+    {
+      // Don't load an already loaded bank
+      if (soundbankManager.loadedBanks.Contains(e.BankName))
+        return;
+      
+      // If loading a story or room bank, unload the previous story or room bank
+      if (e.BankName.StartsWith("story"))
+        banksToUnload.Add(Game.current.CurrentStorySoundbank);
+      
+      else if (e.BankName.StartsWith("room"))
+        banksToUnload.Add(Game.current.CurrentRoomSoundbank);
+      
+      // Finally, load the bank
       banksToLoad.Add(e.BankName);
+    }
+    
     else if (lt == AudioBankEvent.LoadType.Unload)
       banksToUnload.Add(e.BankName);
   }

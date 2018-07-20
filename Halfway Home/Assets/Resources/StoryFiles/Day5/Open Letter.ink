@@ -35,7 +35,7 @@ EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 EXTERNAL SetValue(ValueName, newValue)
 
-# Play : Stop_All
+# Load @ story_open_letter # Play : play_music_happy
 
 -> Start
 
@@ -57,7 +57,7 @@ EXTERNAL SetValue(ValueName, newValue)
 	
 
 ===MailCall===
-I walk past the commons area, seeing a decent gathering of people. #Charlotte = Calm, right #Trissa = Calm, right #Eduardo = Calm, left #Isaac = Calm, left # Ambience : play_ambience_fireplace # ambience_lpf ! 0
+I walk past the commons area, seeing a decent gathering of people. #Charlotte = Calm, right #Trissa = Calm, right #Eduardo = Calm, left #Isaac = Calm, left
 Max apperes to be the center of attention, holding a small pile of mail in their hands.#Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
 [{player_name}] "What's going on here?"
 [Max] "Ah, {player_name}, there you are. I'm just doin' a mail call." #Charlotte = exit #Trissa = exit #Eduardo = exit #Isaac = exit

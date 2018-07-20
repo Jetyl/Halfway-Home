@@ -16,10 +16,13 @@ namespace AK
         static const AkUniqueID LPF1K_MUSIC_MAINMENU = 3373299806U;
         static const AkUniqueID LPF4K_MUSIC_MAINMENU = 3370483183U;
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
-        static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_FAR = 2798871172U;
+        static const AkUniqueID PLAY_AMBIENCE_GARDEN_DAY = 2031313681U;
+        static const AkUniqueID PLAY_AMBIENCE_GARDEN_NIGHT = 815463029U;
+        static const AkUniqueID PLAY_AMBIENCE_YOUR_ROOM_DAY = 3219010317U;
+        static const AkUniqueID PLAY_AMBIENCE_YOUR_ROOM_NIGHT = 1504853633U;
         static const AkUniqueID PLAY_MENUCLICK = 2576276897U;
         static const AkUniqueID PLAY_MENUEXIT = 3169174387U;
         static const AkUniqueID PLAY_MENUMOUSEOVER = 4008650974U;
@@ -27,22 +30,30 @@ namespace AK
         static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
         static const AkUniqueID PLAY_MUSIC_ARTROOM = 1810713724U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
+        static const AkUniqueID PLAY_MUSIC_CHARLOTTE_ELEGANT = 2039547829U;
         static const AkUniqueID PLAY_MUSIC_COMMONS = 1005088852U;
         static const AkUniqueID PLAY_MUSIC_CONTEMPLATIVE = 224129391U;
         static const AkUniqueID PLAY_MUSIC_CREEPY_ATMO = 1372805254U;
         static const AkUniqueID PLAY_MUSIC_CREEPY_ATMO_02 = 2374614039U;
         static const AkUniqueID PLAY_MUSIC_DEJAVU = 1829857455U;
+        static const AkUniqueID PLAY_MUSIC_EDUARDO_LOVE = 3687385887U;
+        static const AkUniqueID PLAY_MUSIC_EDUARDO_LOVE_NO_INTRO = 601166520U;
+        static const AkUniqueID PLAY_MUSIC_EMOTIONAL_PIANO = 2723803496U;
         static const AkUniqueID PLAY_MUSIC_FAKEIT = 2805407838U;
+        static const AkUniqueID PLAY_MUSIC_FAREWELL = 4092317258U;
         static const AkUniqueID PLAY_MUSIC_GARDEN = 2702884089U;
         static const AkUniqueID PLAY_MUSIC_HAPPY = 1020080944U;
         static const AkUniqueID PLAY_MUSIC_LIBRARY = 3266052307U;
         static const AkUniqueID PLAY_MUSIC_MAINMENU = 1566693136U;
+        static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_FADEIN = 3941181009U;
+        static const AkUniqueID PLAY_MUSIC_SAD = 3637707742U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_01 = 1402380571U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_02 = 1402380568U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_03 = 1402380569U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_04 = 1402380574U;
+        static const AkUniqueID PLAY_MUSIC_UNFINISHED_BUSINESS = 3483334370U;
         static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
         static const AkUniqueID PLAY_SFX_BED_CREAK = 188792618U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
@@ -86,10 +97,19 @@ namespace AK
         static const AkUniqueID ROOM_KITCHEN = 265238677U;
         static const AkUniqueID ROOM_LIBRARY = 3564131344U;
         static const AkUniqueID ROOM_YOURROOM = 474505651U;
+        static const AkUniqueID STORY_ALONE_IN_A_DEAD_MANS_ROOM = 609072037U;
+        static const AkUniqueID STORY_AUTHORITYS_APPROVAL = 3786498133U;
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
+        static const AkUniqueID STORY_CLOSED_WOUND = 2826146263U;
+        static const AkUniqueID STORY_DYE_JOB = 1127752803U;
+        static const AkUniqueID STORY_ENDING_DAYS = 2369017504U;
+        static const AkUniqueID STORY_FAREWELL_MEAL = 1928416423U;
         static const AkUniqueID STORY_KNOCK_ON_THE_MORNING_DOOR = 4021864313U;
+        static const AkUniqueID STORY_MEETING_CHARLOTTE = 491544915U;
+        static const AkUniqueID STORY_MEETING_EDUARDO = 65122749U;
         static const AkUniqueID STORY_MEMORY = 1576038406U;
-        static const AkUniqueID STORY_RF_KITCHEN = 1185539506U;
+        static const AkUniqueID STORY_MORNING_MISERY = 4020804685U;
+        static const AkUniqueID STORY_OPEN_LETTER = 3653532294U;
     } // namespace BANKS
 
     namespace BUSSES

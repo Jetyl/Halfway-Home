@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="3786498133" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_authoritys_approval</ObjectPath>
+			<ShortName>story_authoritys_approval</ShortName>
+			<Path>story_authoritys_approval.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\PlayMusic\music_placeholder_main\Play_music_placeholder_main"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="235618933" Language="SFX">
+					<ShortName>barble bapkins 1.6.wav</ShortName>
+					<Path>SFX\barble bapkins 1.6_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -18,12 +18,10 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 
-# Play : play_music_charlotte_elegant
-
 -> Start
 
 === Start ===
-[{player_name}] "Oh, hi Charlotte." # Charlotte = Calm
+[{player_name}] "Oh, hi Charlotte."   # Charlotte = Calm   # Load @ story_meeting_charlotte   # Play : play_music_charlotte_elegant
 [Charlotte] "Ah, yes. {player_name}. How do you do?"
 +[Great (genuine)]
 	[{player_name}] "Great. I've been feeling better recently."

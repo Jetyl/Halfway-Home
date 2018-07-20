@@ -5,11 +5,11 @@
   "SchemaVersion": "11",
   "SoundbankVersion": "125",
   "RootPaths": {
-   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
-   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
-   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
   },
   "SoundBanks": [
    {
@@ -20,9 +20,22 @@
     "Path": "room_Commons.bnk",
     "IncludedEvents": [
      {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace"
+     },
+     {
       "Id": "1005088852",
       "Name": "play_music_commons",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_commons"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "1025761080",
+      "Language": "SFX",
+      "ShortName": "loop_164661__adam-n__fire.wav",
+      "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
      }
     ],
     "IncludedMemoryFiles": [

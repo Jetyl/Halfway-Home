@@ -104,9 +104,9 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambien
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # Unload @ room_cafe
+I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # ambience_vol ! -10.3   // # Unload @ room_cafe
 When did it get dark out? Is it night already?
-Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
+Max is reading by the fireplace. I wander over and join them.   # Max = Calm   // # Ambience : play_ambience_fireplace
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?"   # Max = Surprised
@@ -161,11 +161,11 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.   # Ambience : stop_ambience_all
-[Voices] "This is who you are."   # SFX : play_sfx_human_ghostwhisper   //# Load @ story_knock_on_the_morning_door
+[Voices] "This is who you are."   # SFX : play_sfx_human_ghostwhisper
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # text_vol ! 0   # Unload @ story_memory
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Load @ story_knock_on_the_morning_door   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # text_vol ! 0   // # Unload @ story_memory
 The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

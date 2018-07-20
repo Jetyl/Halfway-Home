@@ -5,7 +5,7 @@ using Stratus;
 
 public class SoundbankManager : MonoBehaviour {
 
-  private List<string> loadedBanks = new List<string> {};
+  public List<string> loadedBanks = new List<string> {};
   
 	void Awake ()
   {

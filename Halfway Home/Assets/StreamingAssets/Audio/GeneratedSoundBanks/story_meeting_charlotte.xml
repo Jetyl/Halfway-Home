@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="491544915" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_meeting_charlotte</ObjectPath>
+			<ShortName>story_meeting_charlotte</ShortName>
+			<Path>story_meeting_charlotte.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2039547829" Name="play_music_charlotte_elegant" ObjectPath="\Events\PlayMusic\play_music_charlotte_elegant"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="527438760" Language="SFX">
+					<ShortName>music_charlotte_elegant.wav</ShortName>
+					<Path>SFX\music_charlotte_elegant_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

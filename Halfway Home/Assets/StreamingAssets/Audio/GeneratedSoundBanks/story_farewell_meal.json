@@ -1,0 +1,52 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1928416423",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_farewell_meal",
+    "ShortName": "story_farewell_meal",
+    "Path": "story_farewell_meal.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "3483334370",
+      "Name": "play_music_unfinished_business",
+      "ObjectPath": "\\Events\\PlayMusic\\music_unfinished_business\\play_music_unfinished_business"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536",
+      "Language": "SFX",
+      "ShortName": "Music1loop.wav",
+      "Path": "SFX\\Music1loop_A51F8DD7.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "919138064",
+      "Language": "SFX",
+      "ShortName": "Farewell, Part I.wav",
+      "Path": "SFX\\Farewell, Part I_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

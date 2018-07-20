@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="room_Kitchen" ID="{026319B2-CE82-49B1-96A9-9078127708AF}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_far" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_cafejazz" ID="{D77CE261-2488-4CD7-AF6D-D446908A628F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -13,12 +14,16 @@
 				<SoundBank Name="room_ArtRoom" ID="{91A26EFC-7CBE-4375-8CC6-F53F946F7EA5}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_music_artroom" ID="{DEF509F0-46F3-44E3-BCF5-55A9144122D1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace_far" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="room_YourRoom" ID="{78371995-4D79-4CE8-BDBA-156E2EAA0B83}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_your_room_night" ID="{4ACF78F9-E6CA-410D-BEBC-3012F77E3FD6}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_your_room_day" ID="{F87181C8-7682-4276-A4DA-A3DFABA91EDD}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_music_placeholder_main" ID="{1D05F51F-01CC-469A-9152-B15E852D3C87}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_contemplative" ID="{6E181B92-A89D-4EAD-B7BB-510C08377328}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -26,6 +31,7 @@
 				</SoundBank>
 				<SoundBank Name="room_Commons" ID="{0A6114E7-9E93-4842-A31E-9411433C83CA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_commons" ID="{32B99AAB-AE17-4A5A-80AF-E29B13B83441}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -34,12 +40,15 @@
 				<SoundBank Name="room_Garden" ID="{EADB6C8B-04F7-43FF-A347-E8B6DEB569B0}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_music_garden" ID="{69FCDBB2-EEDB-4145-83D1-D5260CB5AB5A}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_garden_day" ID="{A76BF7F8-F749-4173-B13B-89FB955BAD03}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_garden_night" ID="{6E3C291A-E3A4-47FA-A56F-500B2F928D75}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="room_Library" ID="{635EAE3E-AE5A-4E16-B48D-1D3B10083825}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_far" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_library" ID="{D34C8965-552B-472B-9C0A-2942ED9D5285}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

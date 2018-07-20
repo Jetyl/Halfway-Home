@@ -5,11 +5,11 @@
   "SchemaVersion": "11",
   "SoundbankVersion": "125",
   "RootPaths": {
-   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
-   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
-   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
   },
   "SoundBanks": [
    {
@@ -19,6 +19,11 @@
     "ShortName": "story_knock_on_the_morning_door",
     "Path": "story_knock_on_the_morning_door.bnk",
     "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_birds"
+     },
      {
       "Id": "1829857455",
       "Name": "play_music_dejavu",
@@ -38,11 +43,6 @@
       "Id": "188792618",
       "Name": "play_sfx_bed_creak",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_bed_creak"
-     },
-     {
-      "Id": "2319499992",
-      "Name": "play_sfx_human_knock",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_knock"
      }
     ],
     "ReferencedStreamedFiles": [
@@ -57,6 +57,12 @@
       "Language": "SFX",
       "ShortName": "barble bapkins 1.6.wav",
       "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
+     },
+     {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
      }
     ],
     "IncludedMemoryFiles": [
@@ -65,12 +71,6 @@
       "Language": "SFX",
       "ShortName": "263137__tmacroberts__creaking.wav",
       "Path": "SFX\\263137__tmacroberts__creaking_E381B43F.wem"
-     },
-     {
-      "Id": "339768715",
-      "Language": "SFX",
-      "ShortName": "sfx_human_knock.wav",
-      "Path": "SFX\\sfx_human_knock_0F51AE3B.wem"
      },
      {
       "Id": "917354306",

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1259498987	Play_music_placeholder_main			\PlayMusic\music_placeholder_main\Play_music_placeholder_main	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	235618933	barble bapkins 1_6	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
+

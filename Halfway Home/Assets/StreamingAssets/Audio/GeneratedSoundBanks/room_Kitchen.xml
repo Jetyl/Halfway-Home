@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="265238677" Language="SFX">
@@ -13,12 +13,17 @@
 			<ShortName>room_Kitchen</ShortName>
 			<Path>room_Kitchen.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2798871172" Name="play_ambience_fireplace_far" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_fireplace_far"/>
 				<Event Id="240662438" Name="play_music_cafejazz" ObjectPath="\Events\PlayMusic\music_cafejazz\play_music_cafejazz"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
 				<File Id="44147102" Language="SFX">
 					<ShortName>cafejazz.wav</ShortName>
 					<Path>SFX\cafejazz_A51F8DD7.wem</Path>
+				</File>
+				<File Id="1025761080" Language="SFX">
+					<ShortName>loop_164661__adam-n__fire.wav</ShortName>
+					<Path>SFX\loop_164661__adam-n__fire_178D0C9C.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
 		</SoundBank>

@@ -30,7 +30,7 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Load @ story_dye_job
 
 -> Start
 
@@ -53,6 +53,9 @@ I stagger into the room with a yawn.
 		......... {CallSleep()} #set_time%5,8
 }
 */
+
+# Play : Stop_All
+
 {GetIntValue("Day")>4:
 	#set_time%6,8
 	[Timothy>???] "<size=40%>...{player_name}."
@@ -65,7 +68,7 @@ I stagger into the room with a yawn.
 // CUT: huh?
 "<size=60%>{player_name}."
 "<size=80%>Are you awake?"
-In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room.   #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"

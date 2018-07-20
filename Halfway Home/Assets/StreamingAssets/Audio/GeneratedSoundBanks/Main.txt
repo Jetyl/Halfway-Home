@@ -1,21 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	4553038	play_menuunpause_01			\PlaySFX\sfx_menu\play_menuunpause_01	
-	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
+	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
 	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
-	1720799084	stop_ambience_all			\PlayMusic\intro_ambiences\stop_ambience_all	
-	2798871172	play_ambience_fireplace_far			\PlayMusic\intro_ambiences\play_ambience_fireplace_far	
-	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
+	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
+	2319499992	play_sfx_human_knock			\PlaySFX\sfx_human\play_sfx_human_knock	
+	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching	
 	3827964327	play_menupause_01			\PlaySFX\sfx_menu\play_menupause_01	
 
-Effect plug-ins	ID	Name	Type				Notes
-	1169110113	New_Wwise_Compressor	Wwise Compressor			
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	11926160	sfx_menu_chime_pausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
-	370198169	sfx_menu_text_scroll1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		73584
-	558653419	sfx_menu_chime_unpausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
-
-Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
-	1025761080	loop_164661__adam-n__fire	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
+	11926160	sfx_menu_chime_pausegame	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
+	318063250	ghostwhisper2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
+	339768715	sfx_human_knock	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_human_knock_0F51AE3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_knock\sfx_human_knock		64704
+	370198169	sfx_menu_text_scroll1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll1		73584
+	488681583	ghostwhisper1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
+	541639029	sfx_footsteps_placeholder1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder1		39592
+	558653419	sfx_menu_chime_unpausegame	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
+	865371990	sfx_footsteps_placeholder2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_footsteps_placeholder2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_footsteps_approaching\sfx_footsteps_placeholder2		31708
+	1030560068	sfx_ambient_heartbeat	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_heartbeat_FC95F567.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient SFX\sfx_ambient_heartbeat		545856
 

@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 822315022
-    m_lastTimePart2: -1999246197
+    m_lastTimePsrt1: 1587367941
+    m_lastTimePart2: -1999245877
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -774,8 +774,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -1272903928
-    m_lastTimePart2: -1999246846
+    m_lastTimePsrt1: -145724458
+    m_lastTimePart2: -1999245889
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -801,8 +801,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 829191154
-    m_lastTimePart2: -1999246520
+    m_lastTimePsrt1: -145654501
+    m_lastTimePart2: -1999245889
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -822,8 +822,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1976198825
-    m_lastTimePart2: -1999246198
+    m_lastTimePsrt1: -1225092017
+    m_lastTimePart2: -1999245874
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -861,11 +861,20 @@ MonoBehaviour:
         ObjectType: 7
       ID: -238283129
       Guid: 489d1a8fe7bde9438ebd8183c165625d
+    - Name: music_placeholder_main
+      Path: Default Work Unit\music_placeholder_main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: music_placeholder_main
+        ObjectType: 7
+      ID: 2030332484
+      Guid: 95640e31053b1c4aa4062597f16f8126
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 1242894140
-    m_lastTimePart2: -1999246087
+    m_lastTimePsrt1: -1225216782
+    m_lastTimePart2: -1999245874
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -924,8 +933,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1243526270
-    m_lastTimePart2: -1999246227
+    m_lastTimePsrt1: -1169445492
+    m_lastTimePart2: -1999245874
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
@@ -945,6 +954,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -273102983
       Guid: b9bfb02fc5b1c1488ef301a2e3d0ae66
+    - Name: story_meeting_charlotte
+      Path: Stories\story_meeting_charlotte
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_meeting_charlotte
+        ObjectType: 7
+      ID: 491544915
+      Guid: 5ffc07cede4462419675b907f2c0e6e3
     - Name: story_memory
       Path: Stories\story_memory
       PathAndIcons:
@@ -954,15 +972,6 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1576038406
       Guid: 5236779d87d1754c8a975281ecf27eef
-    - Name: story_rf_kitchen
-      Path: Stories\story_rf_kitchen
-      PathAndIcons:
-      - ElementName: Stories
-        ObjectType: 12
-      - ElementName: story_rf_kitchen
-        ObjectType: 7
-      ID: 1185539506
-      Guid: 41f3686d9817bd40b75e43e1a1459f96
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 

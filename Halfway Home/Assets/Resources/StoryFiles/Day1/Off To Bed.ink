@@ -22,8 +22,6 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL CallSleep()
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> Start
 
 === Start ===

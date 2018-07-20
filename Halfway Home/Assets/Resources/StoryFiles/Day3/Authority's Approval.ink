@@ -21,12 +21,10 @@ VAR current_room = "unset"
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> Start
 
 === Start ===
-I head over to the cafe for some breakfast. I could use the meal.
+I head over to the cafe for some breakfast. I could use the meal.   # Load @ story_authoritys_approval   # Play : play_music_placeholder_main
 I spot Max doing their daily mopping. #Max = calm, stage_left
 they're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
 {

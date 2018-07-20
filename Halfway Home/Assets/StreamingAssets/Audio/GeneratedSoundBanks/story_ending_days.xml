@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="2369017504" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_ending_days</ObjectPath>
+			<ShortName>story_ending_days</ShortName>
+			<Path>story_ending_days.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4092317258" Name="play_music_farewell" ObjectPath="\Events\PlayMusic\music_farewell\play_music_farewell"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="457042621" Language="SFX">
+					<ShortName>You and I.wav</ShortName>
+					<Path>SFX\You and I_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

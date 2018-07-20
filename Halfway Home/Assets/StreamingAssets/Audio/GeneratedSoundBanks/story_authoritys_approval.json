@@ -1,0 +1,39 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "3786498133",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_authoritys_approval",
+    "ShortName": "story_authoritys_approval",
+    "Path": "story_authoritys_approval.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933",
+      "Language": "SFX",
+      "ShortName": "barble bapkins 1.6.wav",
+      "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}
