@@ -536,11 +536,13 @@ Max extends their hand. I grab their hand and give them a confident handshake.
 [{player_name}] "Thanks for the" 
 And, right on que, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
 {
-	-GetValue("Saved Timothy"): -> TimothyEnd -> END
-	-else: -> OtherEnd -> END
+	-GetValue("Saved Timothy"): -> TimothyGoodbye -> TheEnd -> END
+	-else: 
+		I pick up all of my bags to head out to the car.
+		-> TheEnd -> END
 }
 
-=TimothyEnd
+=TimothyGoodbye
 I pick up all of my bags to head out- #Skip
 [Dyed>Timothy] "Wait!"
 Timothy Runs up behind me, holding onto a peice of paper in his hands. #dyed = Surprised 
@@ -553,14 +555,33 @@ Timothy holds out the peice of paper.
 Its not anything amazing, artistically, but heart of it all makes me grin from ear to ear.
 [{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
 [Dyed>Timothy] "R-Really?" #Dyed = Happy
-//have actual ending here
+Before I can say anymore, Timothy leaps forward, giving me a bear hug. #Dyed = Close
+"Oh, S-sorry!" #Dyed = afraid, center
+[{player_name}] "haha, it's okay man."
+A hold out a hand.
+"It was a pleasure meeting you Timothy Miyuri."
+He reaches out and grabs my hand.
+[Dyed>Timothy] "Thanks for being my friend, {player_name}."
+my {GetStringValue("Guardian")} honks the horn of their car, getting my attention.
+[{player_name}] "I'm coming, I'm coming!" #dyed = Surprised
+"Well, Timothy, I better get going. It was a pleasure meeting you."
+I pick up my bags again, and head out to the car. #all = exit
 ->->
 
-=OtherEnd
-I go out, and give my {GetStringValue("Guardian")} a basic greatings.
-They help me with my bags, and we pack them in the car.
-When I get in the back seat, I look back out at the Sunflower House. 
-I see my friends. #Isaac = calm #Eduardo = calm #Max = calm #Charlotte = calm #Trissa = calm
-Their all waving me off.
-then, roll credits # Play : play_music_farewell # music_vol ! 0
+=TheEnd
+[{GetStringValue("Guardian")}] "Hey!"
+[{player_name}] "hey."
+[{GetStringValue("Guardian")}] "Here, let me help you with those."
+My {GetStringValue("Guardian")} grabs some of my bags, and helps me fit them in the trunk of their car.
+"So, how was it, this whole `halfway house` experience?"
+[{player_name}] "hmm..."
+I think about that question as I get into the back seat of the car. 
+{
+	-GetValue("Saved Timothy"): 
+		I look back out at the Sunflower House, as we begin to drive off. #Isaac = happy, stage_left #Eduardo = calm, stage_left #Dyed = Happy, right #Max = calm #Charlotte = happy, stage_right #Trissa = calm, stage_right
+	-else: 
+		I look back out at the Sunflower House, as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
+}
+"I think it was pretty good."
+"Yeah, I was defiently good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0
 ->->
