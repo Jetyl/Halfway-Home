@@ -26968,12 +26968,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
         type: 2}
+      propertyPath: Backdrop.Array.data[3].Ambience.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
       propertyPath: Backdrop.Array.data[10].Ambience.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
         type: 2}
       propertyPath: Backdrop.Array.data[11].Ambience.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[1].MusicTrack.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
+        type: 2}
+      propertyPath: Backdrop.Array.data[3].MusicTrack.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0, type: 2}
