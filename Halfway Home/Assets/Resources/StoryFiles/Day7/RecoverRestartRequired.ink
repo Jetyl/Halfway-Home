@@ -38,11 +38,11 @@ Once the dinner has wound down, I quietly head to my room to rest.
 	-GetValue("Saved Timothy"):
 		->SecondarySuccess
 	-week == 1:
-		->FirstRRR
+		->FirstRRR->TheDream
 	-week == 2:
-		->SecondRRR
+		->SecondRRR->TheDream
 	-else:
-		->RepeatRRR //debug issue here later (weeks do not update properly)
+		->RepeatRRR->TheDream
 }
 
 
@@ -65,22 +65,27 @@ I sleep more calmly than I've slept in a long while.
 ->END
 
 ===SecondarySuccess===
-//player has saved timothy, but not themselves
-I saved Timothy, and The time loops should be broken!
-//add some details based on how the player "saved" timothy
-Now, All I've got to do is wait, til tomorrow comes...
+I feel a sense of satisfaction as I go about my nightly routine.
+Timothy's sound asleep in the other bed, sporting a wicked new hair color.
+I did it. I helped him...
+Now this nightmare will end and life can go on.
+All I've gotta do is wait 'til tomorrow.
 Tomorrow...
-Its a little weird to even imagine tomorrow coming at all.
-I look at my bags, barely packed, because, well why bother. Time Loop and whatnot. but now...
-Now, I should probably be getting ready for tomorrow.
+It's a little weird to even imagine tomorrow coming at all.
+How strange is it that I've gotten <i>used</i> to this weird repeat stuff?
+I look down at my barely-packed bags. I hadn't put much effort in since I didn't think it would matter, but now...
+I should probably be getting ready for tomorrow.
+I pack the rest of my things and slide into bed.
+Even though things worked out, I can't help but feel like something is wrong.
+I'm probably just being paranoid...
+I'll save my worrying for tomorrow.
+I wrap myself up in the blankets and fall gently to sleep.
+->TheDream
 
-->FirstRRR
 
-
-==FirstRRR==
+===FirstRRR===
 Well, I suppose it’s not going to be my room anymore. Not after today.
-It's Timothy's Room now. But...
-I'm not sure he'll ever return to claim it.
+I guess it's not going to be Timothy's room either.
 I look at my bags, half packed with the crap I call my own. Despite all my time here, it's still not much more than I arrived with.
 With a heavy sigh, I look away and toss myself into my sheets. @One of the last things I can call my own in this space.
 I'm alone in a room meant for no one, and nothing is fine.
@@ -92,35 +97,72 @@ I don't want to leave. I've been here too long. I don't know what I'll do when I
 But I don't want to stay here, in this vacant room. I don't want to waste away.
 I don't want to leave. @I don't want to stay.
 As I drift off to sleep, all I can think about is how badly I want this pain to go away. #Background / Dream, eyeclose
+->->
+
+===SecondRRR===
+I begin my nightly ritual. Despite feeling exhausted, I can't stop myself from thinking...
+The Deja Vu this week has been incredible. It's like... I <i>know</i> I've seen all this before.
+Showing Timothy around. Talking to people. Saying goodbye.
+And... poor Timothy. Gone. Just like I remember...
+I lie down in my bed and stare up at the ceiling.
+It still seems ridiculous to even <i>think</i>, but...
+Could it be that I'm stuck in some kind of... time loop?
+Maybe I'm just losing the last of my marbles. There's only one way to be sure.
+My memory is hazy, but I swear I remember everything until tonight as if it has happened twice.
+So... it all comes down to tonight.
+Will I wake up tomorrow and leave this place? Or will I wake to Timothy's first day.
+These thoughts eat away at my mind. I toss and turn for a while before sleep finally comes.
+->->
+
+===RepeatRRR===
+I failed... again.
+I let Timothy down.
+I let everybody down.
+{awareness>2:
+	But I learned new things. I am more than I was. # awareness ^ good
+	That has to count for something.
+}
+// Move this to Knock?
+This week keeps on repeating. I don't understand why, but I've been given a chance to fix this.
+To fix everything.
+Timothy has to be the key. If I can just help him...
+I can finally leave this place.
+->->
+
+=== TheDream ===
 This is it. Sunflower House. # Background / HouseFront, Crossfade # Ambience : play_ambience_birds
-`A Garden for the Mind` according to the brochure the doctors gave me.
-Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
-The car behind me pulls away. # SFX : play_sfx_object_car_away
-I feel something gnawing at the back of my mind, but I ignore it. I walk up to the building and heave open the large oak doors. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
-The gnawing intensifies as I step inside. It's like an itch in my brain.
-Max rounds the corner, all smiles. Wait, Max? How do I know that name? # Max = Happy
+`A Garden for the Mind` according to the brochure {the doctors gave me.|.}
+Pretty cheesy, but they said I don't really stand much chance in the real world. {Maybe they're right|At least in here there are fewer people for me to disappoint|But this was my choice, not theirs}.
+The car behind me pulls away{.| I wonder if I'll ever see home again.|They'll  be back someday.} # SFX : play_sfx_object_car_away
+I feel something gnawing at the back of my mind{, but I ignore it|. I know this feeling}. I walk up to the building and heave open the large oak doors. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
+The gnawing intensifies as I step inside. It's like an {itch in my brain|anchor weighing down my soul|old friend now}.
+Max rounds the corner, all smiles. {Wait, Max? How do I know that name?|I don't question how I know their name. I just do.} # Max = Happy
 [Max?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? {player_name}, right?"
 [{player_name}] "Yeah, that's me."
-Something feels wrong. My head is pounding now.
+Something feels {wrong|very wrong|strange, yet familiar}. My head is pounding {now.|. When will it end?|, but I expected that.}
 [Max?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite." # Max = Calm
+I clutch my head {to try and contain the writhing within|in a vain attempt to dull the agony| because I must}.
 [Max] "Since your room's here on the first floor, I'll be... your... R.A.
 <> Hey, are you feeling alright?" # Max = Afraid
 I nod. I'd rather not make a scene. # Max = Sad
 [Max] "Why I don't I go ahead and show you to your room?"
-As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of Deja Vu.
+As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {Deja Vu|existential terror|nostalgia}.
 [Max] "Your quarters, your Majesty. Uh, maybe you should lie down or something." # Background / YourRoom, Blackwipe # Ambience : Stop_All
 [{player_name}] "No, I'll be fine."
 [Max] "Okay, then. I've gotta get back to cleaning the cafeteria, so just come and find me whenever you're ready." # Max = Calm
-"Welcome to Sunflower House!"
-Max departs, leaving me alone in my new room. Why doesn't it feel like the first time I've been in here? # Max = Exit
-I look over at the other bed and a shiver crawls up my spine. Inexplicable dread overcomes me.
-Wait. I clutch my pounding head.
-I know whose bed this is.
+"Welcome {to Sunflower House|to eternity|back}!"
+Max departs, leaving me alone in my new room. {Why doesn't it feel like the first time I've been in here?|Somehow I've been here before.|I won't be alone for long.} # Max = Exit
+I look over at the other bed and {a shiver crawls up my spine|a wave of despair washes over me|smile}. {Inexplicable dread overcomes me|Something is missing|It won't be long now}.
+{Wait. I clutch my pounding head|I feel week. I lean against the wall|I have another chance}.
+{I know whose bed this is.|How could I have forgotten?|To make thing right.}
 Timothy Miyuri. # Timothy = Calm # Stress => 100
 This... isn't real. # Timothy = Exit
-The gnawing in my mind transforms into the shock of epiphany as color drains from the world. # Depression => 100
+The gnawing in my mind transforms into {the shock of epiphany|guilt|determination} as color drains from the world. # Depression => 100
 The room falls away into darkness and I am whisked back to Blackwell. # Background / Dream, Crossfade # Play : play_music_creepy_atmo
 I can feel the whispers before I hear them. I'm not running this time.
+{->Accusation1|->Accusation2|->Accusation3}
+
+=Accusation1
 [Voices] "This is your doing. You weren't there for him." # SFX : play_sfx_human_ghostwhisper
 * [You're wrong!]
 	[{player_name}] "I tried to be friendly! I'm not responsible for what happened!"
@@ -139,36 +181,61 @@ I collapse, clutching my pounding chest as an icy wind whips across my face. {Se
 The cackling Voices fade into a low rumble that begins toppling the walls around me. {SetTimeBlock(0)}
 ->END
 
-==RepeatRRR==
-I failed... again.
-I let Timothy down.
-I let everybody down.
-{awareness>2:
-	But I learned new things. I am more than I was. # awareness ^ good
-	That has to count for something.
-}
-// Move this to Knock?
-This week keeps on repeating. I don't understand why, but I've been given a chance to fix this.
-To fix everything.
-Timothy has to be the key. If I can just help him...
-I can finally leave this place.
-->RRR
+=Accusation2
+[Voices] "You had a second chance and you still screwed it up. You're truly worthless."
+*[Object] 
+	[{player_name}] "I don't believe any of this. This is all wrong!"
+	"I didn't do anything!"
+	[Voices] "You're a failure <i>and</i> a liar then."
+	[{player_name}] "I am not a liar! I-" #Skip
+	[Voices] "Idiot! You lie to <i>yourself</i>. Those are the worst lies of all."
+	[{player_name}] "No... I..."
+*[Remain Silent]
+-They're right. I messed up again.
+I didn't understand what was happening, but that's no excuse.
+I failed. I always fail.
+[Voices] "Ha! Now you're getting it."
+I grit my teeth and remember my therapy.
+No. Not always.
+[{player_name}] "No."
+[Voices] "No?!"
+[{player_name}] "I might have failed. And I might fail again."
+"But I won't give up."
+[Voices] "Such naive optimism. You fail because you're a failure. That will never change."
+[{player_name}] "You won't stop me. I'm done listening to you."
+The Voices rage and scream. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {NextWeek()}# Ambience : play_sfx_ambient_heartbeat
+I clench my fists as an icy wind tears at my skin.{CallSleep()}{SetValue("Depression Time Dilation", true)}
+The screaming pitch grows higher and louder until it shatters the floor beneath me and I spiral into darkness. {SetTimeBlock(0)}
+->END
 
-==RRR==
-But its fine.
-I broke the loop.
-I saved Timothy.
-Everything will be turn out okay.
-I tell myself that, over and over, until I fall asleep.
-.....
-.......
-................
-//have this in UI color
-<color=A5C5E3FF>Progress Status: ... DETECTING @ Primary Objective: ... FAILURE @ Secondary Objective: ... SUCCESS </color>
-<color=A5C5E3FF>Determining Following Action: ... COMPLETE</color>
-<color=A5C5E3FF>Reinitializing.... @Reconstructing.... @Resetting....</color>
-<color=A5C5E3FF><b>R</b>ecovery <b>R</b>estart <b>R</b>equired</color>
-<color=A5C5E3FF>Awaiting Further Input....</color>
-{SetTimeBlock(0)}
-//~week += 1
+=Accusation3
+[Voices] "Back again? What a surprise."
+{SecondarySuccess==1:
+	[{player_name}] "I-I don't understand! I saved him! Why is this happening?!"
+	[Voices] "You <i>saved</i> him? Get over yourself."
+	"This was never about <i>him</i>, you piece of trash."
+	[{player_name}] "But..."
+	[Voices] "What could <i>possibly</i> be holding you back?"
+	"Come now, {player_name}, even a moron like you has to realize eventually."
+	Oh god. Of course. It makes sense now.
+	[{player_name}] "It's me."
+	"I'm not ready to leave. That's... that's why."
+	"I never needed to save him. I needed his help to save myself."
+	"This whole time..."
+	[Voices] "Congratulations. You've realized the futility of all this."
+	"You will <i>never</i> be ready. How could <i>you</i> ever be?"
+	[{player_name}] "You're wrong. I know what I have to do now."
+	"And I'm not afraid of failing any more."
+-else:
+	{This time|As before,} I hold my tongue. Nothing good will come of feeding the Voices.
+	"You think you can ignore me?"
+	"You're <i>nothing</i>!"
+	I fake a yawn.
+}
+"Miserable idiot. {I'm only protecting you from yourself|The world doesn't want you. It's better to know that than to subect everyone to your worthlessness|You will never win}!"
+Don't listen to them. I can do this. I just need another chance. 
+The Voices continue to berate me, but grow softer and softer until I can't hear them over the chill wind blowing through my hair.{NextWeek()}
+I wander the silent maze of hallways for what feels like hours.{CallSleep()}
+Ribbons of sunlight begin peeking through the cracks in the ceiling above me.{SetValue("Depression Time Dilation", true)}
+A warm mist fills the corridors and I lose myself in the haze. {SetTimeBlock(0)}
 ->END
