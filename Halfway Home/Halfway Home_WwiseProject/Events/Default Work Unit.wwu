@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="play_music_eduardo_love_no_intro" ID="{CAA025E2-4B91-47E5-A1D2-51C0C2928B41}">
+					<ChildrenList>
+						<Action Name="" ID="{78FD11EB-1EDB-4604-948D-B82D3212B3CB}" ShortID="844541293">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_eduardo_love_no_intro" ID="{CF3FE68D-FF2F-4603-9CDE-4CE9DC81A858}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

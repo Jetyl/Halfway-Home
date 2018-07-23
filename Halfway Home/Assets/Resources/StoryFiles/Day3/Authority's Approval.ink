@@ -21,7 +21,7 @@ VAR current_room = "unset"
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Load @ story_authoritys_approval   # Play : Play_music_placeholder_main
 
 -> Start
 

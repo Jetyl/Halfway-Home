@@ -22,7 +22,7 @@ EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 EXTERNAL SetTimeBlock(int)
 
-# Play : play_music_sad # music_vol ! 0
+# Load @ story_alone_in_a_dead_mans_room   # Play : play_music_sad
 
 -> Start
 

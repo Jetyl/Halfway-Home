@@ -1,10 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
 	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
+	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
 	1372805254	play_music_creepy_atmo			\PlayMusic\music_creepyatmo\play_music_creepy_atmo	
 	1700209709	play_sfx_object_car_away			\PlaySFX\sfx_object\play_sfx_object_car_away	
 	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
 	2374614039	play_music_creepy_atmo_02			\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02	
 	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching	
+	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
@@ -16,5 +21,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	297822875	creepy atmo v0_5	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\creepy atmo v0.5_A51F8DD7.wem	297822875.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_creepyatmo\music_creepyatmo\creepy atmo v0_5	
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
+	1025761080	loop_164661__adam-n__fire	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_164661__adam-n__fire_178D0C9C.wem	1025761080.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace\ambience_fireplace\loop_164661__adam-n__fire	
 	1053142359	mysterious	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\mysterious_A51F8DD7.wem	1053142359.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_creepyatmo2\music_creepyatmo2\mysterious	
 

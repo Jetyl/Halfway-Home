@@ -20,6 +20,8 @@ VAR current_room = "unset"
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 
+# Load @ story_meeting_eduardo
+
 -> Start
 
 === Start ===

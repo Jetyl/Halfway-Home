@@ -33,6 +33,19 @@
       "Id": "224129391",
       "Name": "play_music_contemplative",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_contemplative"
+     },
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933",
+      "Language": "SFX",
+      "ShortName": "barble bapkins 1.6.wav",
+      "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
      }
     ],
     "IncludedMemoryFiles": [

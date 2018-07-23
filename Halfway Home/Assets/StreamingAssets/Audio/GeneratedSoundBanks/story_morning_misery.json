@@ -1,0 +1,39 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "4020804685",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_morning_misery",
+    "ShortName": "story_morning_misery",
+    "Path": "story_morning_misery.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "601166520",
+      "Name": "play_music_eduardo_love_no_intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_eduardo_love_no_intro"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

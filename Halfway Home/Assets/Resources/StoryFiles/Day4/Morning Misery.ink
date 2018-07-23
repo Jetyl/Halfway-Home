@@ -34,7 +34,7 @@ EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Load @ story_morning_misery
 
 -> Start
 

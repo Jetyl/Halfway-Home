@@ -31,7 +31,7 @@ EXTERNAL GetIntValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(int)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Load @ story_closed_wound   # Play : play_music_emotional_piano
 
 -> Start
 

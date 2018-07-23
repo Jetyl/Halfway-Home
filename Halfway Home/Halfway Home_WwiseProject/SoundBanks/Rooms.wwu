@@ -24,6 +24,7 @@
 				<SoundBank Name="room_YourRoom" ID="{78371995-4D79-4CE8-BDBA-156E2EAA0B83}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_ambience_your_room_fireplace_birds_day" ID="{E92C4C51-1033-45F1-B3AC-05C500B67F6C}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_music_placeholder_main" ID="{1D05F51F-01CC-469A-9152-B15E852D3C87}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_ambience_your_room_fireplace_crickets_night" ID="{5EC9D667-4A68-4E79-BFE8-EEE51CD937D4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_contemplative" ID="{6E181B92-A89D-4EAD-B7BB-510C08377328}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

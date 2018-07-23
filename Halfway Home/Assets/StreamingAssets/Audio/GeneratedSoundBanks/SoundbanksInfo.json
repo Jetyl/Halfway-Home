@@ -125,6 +125,28 @@
   "MediaFilesNotInAnyBank": [],
   "SoundBanks": [
    {
+    "Id": "65122749",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_meeting_eduardo",
+    "ShortName": "story_meeting_eduardo",
+    "Path": "story_meeting_eduardo.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3687385887",
+      "Name": "play_music_eduardo_love",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_eduardo_love"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "265238677",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Rooms\\room_Kitchen",
@@ -194,6 +216,16 @@
       "Id": "224129391",
       "Name": "play_music_contemplative",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_contemplative"
+     },
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933"
      }
     ],
     "IncludedMemoryFiles": [
@@ -224,11 +256,48 @@
     ]
    },
    {
-    "Id": "1185539506",
+    "Id": "491544915",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Stories\\story_rf_kitchen",
-    "ShortName": "story_rf_kitchen",
-    "Path": "story_rf_kitchen.bnk"
+    "ObjectPath": "\\SoundBanks\\Stories\\story_meeting_charlotte",
+    "ShortName": "story_meeting_charlotte",
+    "Path": "story_meeting_charlotte.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2039547829",
+      "Name": "play_music_charlotte_elegant",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_charlotte_elegant"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "527438760",
+      "Language": "SFX",
+      "ShortName": "music_charlotte_elegant.wav",
+      "Path": "SFX\\music_charlotte_elegant_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "609072037",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_alone_in_a_dead_mans_room",
+    "ShortName": "story_alone_in_a_dead_mans_room",
+    "Path": "story_alone_in_a_dead_mans_room.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3637707742",
+      "Name": "play_music_sad",
+      "ObjectPath": "\\Events\\PlayMusic\\music_sad\\play_music_sad"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "1062005778",
+      "Language": "SFX",
+      "ShortName": "Starfish.wav",
+      "Path": "SFX\\Starfish_A51F8DD7.wem"
+     }
+    ]
    },
    {
     "Id": "1355168291",
@@ -244,6 +313,16 @@
     "ShortName": "story_memory",
     "Path": "story_memory.bnk",
     "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+     },
      {
       "Id": "1372805254",
       "Name": "play_music_creepy_atmo",
@@ -278,6 +357,12 @@
     "ReferencedStreamedFiles": [
      {
       "Id": "297822875"
+     },
+     {
+      "Id": "461729800"
+     },
+     {
+      "Id": "1025761080"
      },
      {
       "Id": "1053142359"
@@ -319,6 +404,38 @@
       "Language": "SFX",
       "ShortName": "sfx_object_heartbeat.wav",
       "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
+     }
+    ]
+   },
+   {
+    "Id": "1928416423",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_farewell_meal",
+    "ShortName": "story_farewell_meal",
+    "Path": "story_farewell_meal.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "3483334370",
+      "Name": "play_music_unfinished_business",
+      "ObjectPath": "\\Events\\PlayMusic\\music_unfinished_business\\play_music_unfinished_business"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "919138064",
+      "Language": "SFX",
+      "ShortName": "Farewell, Part I.wav",
+      "Path": "SFX\\Farewell, Part I_A51F8DD7.wem"
      }
     ]
    },
@@ -382,6 +499,50 @@
     "ReferencedStreamedFiles": [
      {
       "Id": "738802588"
+     }
+    ]
+   },
+   {
+    "Id": "2369017504",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_ending_days",
+    "ShortName": "story_ending_days",
+    "Path": "story_ending_days.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "4092317258",
+      "Name": "play_music_farewell",
+      "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "457042621",
+      "Language": "SFX",
+      "ShortName": "You and I.wav",
+      "Path": "SFX\\You and I_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2826146263",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_closed_wound",
+    "ShortName": "story_closed_wound",
+    "Path": "story_closed_wound.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2723803496",
+      "Name": "play_music_emotional_piano",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_emotional_piano"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "220669927",
+      "Language": "SFX",
+      "ShortName": "music_emotional_piano.wav",
+      "Path": "SFX\\music_emotional_piano_A51F8DD7.wem"
      }
     ]
    },
@@ -493,21 +654,6 @@
     "Path": "Main.bnk",
     "IncludedEvents": [
      {
-      "Id": "285561943",
-      "Name": "play_ambience_birds",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
-     },
-     {
-      "Id": "2929977910",
-      "Name": "play_ambience_fireplace",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
-     },
-     {
-      "Id": "2798871172",
-      "Name": "play_ambience_fireplace_far",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
-     },
-     {
       "Id": "3827964327",
       "Name": "play_menupause_01",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
@@ -521,19 +667,6 @@
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
-     },
-     {
-      "Id": "1720799084",
-      "Name": "stop_ambience_all",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
-     }
-    ],
-    "ReferencedStreamedFiles": [
-     {
-      "Id": "461729800"
-     },
-     {
-      "Id": "1025761080"
      }
     ],
     "IncludedMemoryFiles": [
@@ -647,6 +780,66 @@
     ]
    },
    {
+    "Id": "3653532294",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_open_letter",
+    "ShortName": "story_open_letter",
+    "Path": "story_open_letter.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536"
+     }
+    ]
+   },
+   {
+    "Id": "3786498133",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_authoritys_approval",
+    "ShortName": "story_authoritys_approval",
+    "Path": "story_authoritys_approval.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933"
+     }
+    ]
+   },
+   {
+    "Id": "4020804685",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_morning_misery",
+    "ShortName": "story_morning_misery",
+    "Path": "story_morning_misery.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "601166520",
+      "Name": "play_music_eduardo_love_no_intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_eduardo_love_no_intro"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "4021864313",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Stories\\story_knock_on_the_morning_door",
@@ -739,6 +932,11 @@
       "Id": "3032100830",
       "Name": "Stop_All_Fast",
       "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All_Fast"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
      }
     ],
     "IncludedMemoryFiles": [

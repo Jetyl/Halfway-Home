@@ -43,6 +43,11 @@
       "Id": "3032100830",
       "Name": "Stop_All_Fast",
       "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All_Fast"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
      }
     ],
     "IncludedMemoryFiles": [

@@ -23,8 +23,6 @@ VAR HeardIsaacsStory = false
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL GetValue(value)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> Start
 
 === Start ===
@@ -130,7 +128,7 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 
 ===Toast===
 [Max] "Can I get everyone's attention!" #Max=Calm
-The whole café quiets a little, as Max speaks up.
+The whole café quiets a little, as Max speaks up.   # Play : Stop_All   # Ambience : play_ambience_fireplace_far_birds_day
 [Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
 [Max] "Now, some of you have already talked with him, but for those that haven't, he's dis guy right here."
@@ -139,7 +137,7 @@ The whole café quiets a little, as Max speaks up.
 [Max] "But we all want to wish him the best of luck."
 [Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
-Max sits back down near Timothy, and the usual chatter of the room resumes. #Max=Calm
+Max sits back down near Timothy, and the usual chatter of the room resumes.   #Max=Calm   # Play : play_music_cafejazz
 {
 	- ByTimothy == false:
 		I get up and move closer to them and Timothy, given Trissa seems to have up and moved.

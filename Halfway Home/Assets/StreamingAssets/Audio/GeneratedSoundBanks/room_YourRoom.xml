@@ -16,7 +16,14 @@
 				<Event Id="208869464" Name="play_ambience_your_room_fireplace_birds_day" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_your_room_fireplace_birds_day"/>
 				<Event Id="3202835318" Name="play_ambience_your_room_fireplace_crickets_night" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_your_room_fireplace_crickets_night"/>
 				<Event Id="224129391" Name="play_music_contemplative" ObjectPath="\Events\PlayMusic\play_music_contemplative"/>
+				<Event Id="1259498987" Name="Play_music_placeholder_main" ObjectPath="\Events\PlayMusic\music_placeholder_main\Play_music_placeholder_main"/>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="235618933" Language="SFX">
+					<ShortName>barble bapkins 1.6.wav</ShortName>
+					<Path>SFX\barble bapkins 1.6_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="345863430" Language="SFX">
 					<ShortName>music_contemplative.wav</ShortName>
