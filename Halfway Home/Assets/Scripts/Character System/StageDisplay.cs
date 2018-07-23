@@ -157,7 +157,7 @@ public class StageDisplay : MonoBehaviour
 
     void LoadBanks(string NewBank)
     {
-        if(OldBank != null && OldBank != "")
+        if(OldBank != null || OldBank != "")
             Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Unload, OldBank));
         
         Scene.Dispatch<AudioManager.AudioBankEvent>(new AudioManager.AudioBankEvent(AudioManager.AudioBankEvent.LoadType.Load, NewBank));
@@ -172,13 +172,13 @@ public class StageDisplay : MonoBehaviour
 
         if(Ambience)
         {
-            Game.current.CurrentAmbience = track;
+            //Game.current.CurrentAmbience = track;
             
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Ambience, track, true));
         }
         else
         {
-            Game.current.CurrentTrack = track;
+            //Game.current.CurrentTrack = track;
             Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.Music, track, true));
         }
 

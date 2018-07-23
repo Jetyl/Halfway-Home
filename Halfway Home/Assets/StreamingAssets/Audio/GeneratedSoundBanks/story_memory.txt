@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	54526557	play_ambience_crowd_whispering			\PlayMusic\ambiences\play_ambience_crowd_whispering	
 	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
 	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
 	1372805254	play_music_creepy_atmo			\PlayMusic\music_creepyatmo\play_music_creepy_atmo	
@@ -12,6 +13,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	1169110113	New_Wwise_Compressor	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	129367464	ambience_crowd_whispering	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crowd_whispering\ambience_crowd_whispering_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_crowd_whispering\ambience_crowd_whispering\ambience_crowd_whispering		2322144
 	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
 	488681583	ghostwhisper1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
 	541036875	sfx_object_car_away1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_car_away1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_object_car_away1		262000

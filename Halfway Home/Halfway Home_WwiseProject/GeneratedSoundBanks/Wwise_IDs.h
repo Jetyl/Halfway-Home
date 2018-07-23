@@ -18,6 +18,8 @@ namespace AK
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
+        static const AkUniqueID PLAY_AMBIENCE_CROWD = 2781780852U;
+        static const AkUniqueID PLAY_AMBIENCE_CROWD_WHISPERING = 54526557U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_BIRDS_DAY = 2897240348U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_CRICKETS_NIGHT = 792462442U;
@@ -33,6 +35,7 @@ namespace AK
         static const AkUniqueID PLAY_MENUPAUSE_01 = 3827964327U;
         static const AkUniqueID PLAY_MENUUNPAUSE_01 = 4553038U;
         static const AkUniqueID PLAY_MUSIC_ARTROOM = 1810713724U;
+        static const AkUniqueID PLAY_MUSIC_ARTROOM_MORNING = 444439289U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
         static const AkUniqueID PLAY_MUSIC_CHARLOTTE_ELEGANT = 2039547829U;
         static const AkUniqueID PLAY_MUSIC_COMMONS = 1005088852U;
@@ -113,6 +116,7 @@ namespace AK
         static const AkUniqueID STORY_MEMORY = 1576038406U;
         static const AkUniqueID STORY_MORNING_MISERY = 4020804685U;
         static const AkUniqueID STORY_OPEN_LETTER = 3653532294U;
+        static const AkUniqueID STORY_WELCOME_DINNER = 2139259380U;
     } // namespace BANKS
 
     namespace BUSSES

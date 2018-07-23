@@ -13,6 +13,7 @@
 			<ShortName>story_farewell_meal</ShortName>
 			<Path>story_farewell_meal.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2781780852" Name="play_ambience_crowd" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_crowd"/>
 				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
 				<Event Id="3483334370" Name="play_music_unfinished_business" ObjectPath="\Events\PlayMusic\music_unfinished_business\play_music_unfinished_business"/>
 			</IncludedEvents>
@@ -26,6 +27,10 @@
 				<File Id="919138064" Language="SFX">
 					<ShortName>Farewell, Part I.wav</ShortName>
 					<Path>SFX\Farewell, Part I_A51F8DD7.wem</Path>
+				</File>
+				<File Id="1039116749" Language="SFX">
+					<ShortName>ambience_crowd\ambience_crowd.wav</ShortName>
+					<Path>SFX\ambience_crowd\ambience_crowd_178D0C9C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

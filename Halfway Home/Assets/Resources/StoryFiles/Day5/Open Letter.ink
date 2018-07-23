@@ -35,7 +35,7 @@ EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 EXTERNAL SetValue(ValueName, newValue)
 
-# Load @ story_open_letter   # Play : play_music_happy
+# Load @ story_open_letter   # Play : play_music_happy   # Ambience : play_ambience_crowd
 
 -> Start
 

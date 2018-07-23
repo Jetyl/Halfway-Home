@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
   private List<string> banksToLoad = new List<string> {};
   private List<string> banksToUnload = new List<string> {};
   private float dispatchAudioTimer = 0;        // Used to keep track of the intervals at which audio events are dispatched
-  private float dispatchAudioInterval = 0.1f;  // The interval between each batch of dispatched audio events
+  private float dispatchAudioInterval = 0.2f;  // The interval between each batch of dispatched audio events
 
   public class AudioEvent : Stratus.Event
   {
@@ -191,16 +191,20 @@ public class AudioManager : MonoBehaviour
       case "Music":
         AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        Game.current.CurrentTrack = e[0];
         return;
       case "Ambience":
         AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        Game.current.CurrentAmbience = e[0];
         return;
       case "MLayer":
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        Game.current.CurrentTrack = e[0];
         return;
       case "ALayer":
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        Game.current.CurrentAmbience = e[0];
         return;
       default:
         return;
@@ -310,8 +314,10 @@ public class AudioManager : MonoBehaviour
     if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
     {
       Trace.Script($"Loading music {Game.current.CurrentTrack}");
-      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-      AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
+      //AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+      //AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
+      string[] newTrack = new string[] {currentGame.CurrentTrack, "Music"};
+      normalTracks.Add(newTrack);
     }
     else
     {
@@ -322,8 +328,10 @@ public class AudioManager : MonoBehaviour
     if (currentGame.CurrentAmbience != "" && currentGame.CurrentAmbience != "Stop_All")
     {
       Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
-      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-      AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
+      //AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+      //AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
+      string[] newAmbience = new string[] {currentGame.CurrentTrack, "Ambience"};
+      normalTracks.Add(newAmbience);
     }
     else
     {

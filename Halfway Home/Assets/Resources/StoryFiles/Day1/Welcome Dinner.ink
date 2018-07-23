@@ -23,6 +23,8 @@ VAR HeardIsaacsStory = false
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL GetValue(value)
 
+# Load @ story_welcome_dinner   # Ambience : play_ambience_crowd
+
 -> Start
 
 === Start ===
@@ -137,7 +139,7 @@ The whole café quiets a little, as Max speaks up.   # Play : Stop_All   # Ambie
 [Max] "But we all want to wish him the best of luck."
 [Max] "And to welcome him to our home."
 [Everyone] "Welcome Timothy!"
-Max sits back down near Timothy, and the usual chatter of the room resumes.   #Max=Calm   # Play : play_music_cafejazz
+Max sits back down near Timothy, and the usual chatter of the room resumes.   #Max=Calm   # Play : play_music_cafejazz   # Ambience : play_ambience_crowd
 {
 	- ByTimothy == false:
 		I get up and move closer to them and Timothy, given Trissa seems to have up and moved.

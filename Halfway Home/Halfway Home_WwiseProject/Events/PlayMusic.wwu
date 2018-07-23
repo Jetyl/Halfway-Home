@@ -1374,8 +1374,83 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}">
+							<ChildrenList>
+								<Action Name="" ID="{24E968B9-AECB-4D86-AFEB-6D93CF03EB3E}" ShortID="673551574">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_crowd" ID="{75CA86EB-14F1-4C75-82BF-7A5E9BB80B8D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_crowd_whispering" ID="{FCD4B7CE-C9EA-4066-9251-C39452BAF404}">
+							<ChildrenList>
+								<Action Name="" ID="{2820AF6F-734A-4965-988E-A813F3EB8F26}" ShortID="902337341">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_crowd_whispering" ID="{86C629FC-DF75-436E-A1BF-2394C57CE68C}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_stormy" ID="{4838B455-16A8-4372-90F0-D48074469BC9}">
+							<ChildrenList>
+								<Action Name="" ID="{712D09F0-0C64-44EA-9569-AB865DD52CCF}" ShortID="542049233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_stormy" ID="{91081113-A96D-48BD-A3FD-69EC049B91F2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="play_music_eduardo_love_no_intro" ID="{CAA025E2-4B91-47E5-A1D2-51C0C2928B41}">
+					<ChildrenList>
+						<Action Name="" ID="{78FD11EB-1EDB-4604-948D-B82D3212B3CB}" ShortID="844541293">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_eduardo_love_no_intro" ID="{CF3FE68D-FF2F-4603-9CDE-4CE9DC81A858}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_artroom_morning" ID="{69163549-238D-4B10-BE70-9ED022538BBB}">
+					<ChildrenList>
+						<Action Name="" ID="{CACF93EA-B2CE-407D-BC4E-40EC1C0076B8}" ShortID="146273776">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_artroom_morning" ID="{37D399AA-087E-492F-8775-3D9C0FE2160A}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

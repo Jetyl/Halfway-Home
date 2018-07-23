@@ -25,6 +25,11 @@
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
      },
      {
+      "Id": "54526557",
+      "Name": "play_ambience_crowd_whispering",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd_whispering"
+     },
+     {
       "Id": "2929977910",
       "Name": "play_ambience_fireplace",
       "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
@@ -87,6 +92,12 @@
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "129367464",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd_whispering\\ambience_crowd_whispering.wav",
+      "Path": "SFX\\ambience_crowd_whispering\\ambience_crowd_whispering_178D0C9C.wem"
+     },
      {
       "Id": "318063250",
       "Language": "SFX",

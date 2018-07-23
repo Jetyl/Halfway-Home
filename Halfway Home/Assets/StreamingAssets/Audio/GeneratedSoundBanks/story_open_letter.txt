@@ -1,5 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1020080944	play_music_happy			\PlayMusic\music_happy\play_music_happy	
+	2781780852	play_ambience_crowd			\PlayMusic\ambiences\play_ambience_crowd	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1039116749	ambience_crowd	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crowd\ambience_crowd_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_crowd\ambience_crowd\ambience_crowd		4752144
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	178330536	Music1loop	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
