@@ -708,6 +708,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
      },
      {
+      "Id": "1091239431",
+      "Name": "play_sfx_human_notebook",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
+     },
+     {
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
@@ -731,6 +736,12 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
       "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     },
+     {
+      "Id": "724131083",
+      "Language": "SFX",
+      "ShortName": "pencil_scribble.wav",
+      "Path": "SFX\\pencil_scribble_00FA84C2.wem"
      }
     ]
    },
@@ -915,6 +926,11 @@
     "Path": "story_knock_on_the_morning_door.bnk",
     "IncludedEvents": [
      {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
       "Id": "1829857455",
       "Name": "play_music_dejavu",
       "ObjectPath": "\\Events\\PlayMusic\\music_dejavu\\play_music_dejavu"
@@ -946,6 +962,9 @@
      },
      {
       "Id": "235618933"
+     },
+     {
+      "Id": "461729800"
      }
     ],
     "IncludedMemoryFiles": [

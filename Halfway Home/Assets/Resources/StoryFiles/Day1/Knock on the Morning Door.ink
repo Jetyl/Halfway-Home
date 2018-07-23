@@ -284,7 +284,7 @@ I whip out my planner and jot down a reminder to myself, a habit my old therapis
 "To be honest, it hasn't been a big deal since I've been by myself for a while."
 [Timothy] "Oh."   # Timothy = Sad
 I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot.  # Time * Show // Show time here?
-"So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
+[{player_name}] "So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
 [Timothy] "Oh, okay. <size=50%>Last roommate?<size=100%>"   # Timothy = Surprised
 "I was in Blackwell for a few years before coming here."
 [Timothy] "Me, too."   # Timothy = Happy

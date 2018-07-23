@@ -30,6 +30,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
      },
      {
+      "Id": "1091239431",
+      "Name": "play_sfx_human_notebook",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
+     },
+     {
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
@@ -53,6 +58,12 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
       "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     },
+     {
+      "Id": "724131083",
+      "Language": "SFX",
+      "ShortName": "pencil_scribble.wav",
+      "Path": "SFX\\pencil_scribble_00FA84C2.wem"
      }
     ]
    }

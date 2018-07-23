@@ -38,6 +38,7 @@
 						<ObjectRef Name="Play_music_placeholder_main_fadein" ID="{CCB4ADE7-C8AA-4A59-8E1E-3A7C32DAF259}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_dejavu" ID="{8DB5E002-D7FB-4A5F-BD04-79618F25E533}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_bed_creak" ID="{79AFBEAF-E089-4B9F-BB69-B792B61FB160}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

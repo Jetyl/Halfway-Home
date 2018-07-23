@@ -96,7 +96,7 @@ What? They're joking, right? I just got here... There's no way I lost a whole we
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit   # ALayer : play_ambience_crowd_whispering
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience : Stop_All
 But they're gone...
-A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambience : Stop_All_Fast   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
 
 // Stop_All_Fast: Hard stop music if player is clicking fast
 // Reset RTPCs
@@ -104,7 +104,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambien
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # Unload @ room_cafe
+I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
 *[Ask what's going on]
@@ -165,8 +165,8 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # text_vol ! 0   // # Unload @ story_memory
-The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # Ambience : play_ambience_birds   # ambience_vol ! -3   # text_vol ! 0   // # Unload @ story_memory
+The whispers fade into the chitter of birdsong.   # music_vol | -6   # ambience_vol | 6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

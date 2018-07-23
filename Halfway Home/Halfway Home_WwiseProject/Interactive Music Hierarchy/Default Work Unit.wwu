@@ -3261,7 +3261,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
