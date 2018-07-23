@@ -21,6 +21,7 @@
 						<ObjectRef Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_All_Fast" ID="{C6A10C8A-5723-4612-966E-7CC27EA11A98}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuclick" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_ambience_all" ID="{35222556-C09F-4F2B-8799-96863F957830}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -31,11 +32,8 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="play_menupause_01" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_ambience_fireplace_far" ID="{CC77EF14-F995-462D-BAFB-A30806D20FBC}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuunpause_01" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="stop_ambience_all" ID="{35222556-C09F-4F2B-8799-96863F957830}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_human_notebook" ID="{F1AAAD28-9659-4E36-9AC1-69B95FA0B2ED}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

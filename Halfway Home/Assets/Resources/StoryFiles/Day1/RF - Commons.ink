@@ -26,8 +26,6 @@ EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> CommonsFunction
 
 === CommonsFunction ===

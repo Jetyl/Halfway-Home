@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	188792618	play_sfx_bed_creak			\PlaySFX\sfx_object\play_sfx_bed_creak	
+	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
 	1020080944	play_music_happy			\PlayMusic\music_happy\play_music_happy	
 	1829857455	play_music_dejavu			\PlayMusic\music_dejavu\play_music_dejavu	
 	2319499992	play_sfx_human_knock			\PlaySFX\sfx_human\play_sfx_human_knock	
@@ -13,4 +14,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	178330536	Music1loop	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
 	235618933	barble bapkins 1_6	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
 

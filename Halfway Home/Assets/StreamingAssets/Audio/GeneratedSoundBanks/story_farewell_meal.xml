@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="1928416423" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_farewell_meal</ObjectPath>
+			<ShortName>story_farewell_meal</ShortName>
+			<Path>story_farewell_meal.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2781780852" Name="play_ambience_crowd" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_crowd"/>
+				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
+				<Event Id="3483334370" Name="play_music_unfinished_business" ObjectPath="\Events\PlayMusic\music_unfinished_business\play_music_unfinished_business"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="178330536" Language="SFX">
+					<ShortName>Music1loop.wav</ShortName>
+					<Path>SFX\Music1loop_A51F8DD7.wem</Path>
+				</File>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="919138064" Language="SFX">
+					<ShortName>Farewell, Part I.wav</ShortName>
+					<Path>SFX\Farewell, Part I_A51F8DD7.wem</Path>
+				</File>
+				<File Id="1039116749" Language="SFX">
+					<ShortName>ambience_crowd\ambience_crowd.wav</ShortName>
+					<Path>SFX\ambience_crowd\ambience_crowd_178D0C9C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

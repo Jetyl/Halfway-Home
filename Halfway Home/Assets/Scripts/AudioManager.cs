@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
   private List<string> banksToLoad = new List<string> {};
   private List<string> banksToUnload = new List<string> {};
   private float dispatchAudioTimer = 0;        // Used to keep track of the intervals at which audio events are dispatched
-  private float dispatchAudioInterval = 0.1f;  // The interval between each batch of dispatched audio events
+  private float dispatchAudioInterval = 0.2f;  // The interval between each batch of dispatched audio events
 
   public class AudioEvent : Stratus.Event
   {
@@ -148,25 +148,26 @@ public class AudioManager : MonoBehaviour
     {
       CallAudioEvent(e);
       
-      // Hard-coded LPF for fireplace ambience far away from Commons
-      if (e[0] == "play_ambience_fireplace_far")
-      {
-        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 30);
-        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", -2.1f);
-        
-        OnAudioParamFadeEvent(lpfEvent);
-        OnAudioParamFadeEvent(volEvent);
-      }
-      
-      // Reset LPF for fireplace in commons
-      else if (e[0] == "play_ambience_fireplace")
-      {
-        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 0);
-        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", 0);
-        
-        OnAudioParamFadeEvent(lpfEvent);
-        OnAudioParamFadeEvent(volEvent);
-      }
+      //DEPRECATED
+      //  // Hard-coded LPF for fireplace ambience far away from Commons
+      //  if (e[0] == "play_ambience_fireplace_far")
+      //  {
+      //    AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 30);
+      //    AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", -2.1f);
+      //    
+      //    OnAudioParamFadeEvent(lpfEvent);
+      //    OnAudioParamFadeEvent(volEvent);
+      //  }
+      //  
+      //  // Reset LPF for fireplace in commons
+      //  else if (e[0] == "play_ambience_fireplace")
+      //  {
+      //    AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 0);
+      //    AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", 0);
+      //    
+      //    OnAudioParamFadeEvent(lpfEvent);
+      //    OnAudioParamFadeEvent(volEvent);
+      //  }
     }
 
     // Call other events
@@ -190,18 +191,27 @@ public class AudioManager : MonoBehaviour
       case "Music":
         AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        Game.current.CurrentTrack = e[0];
+        Trace.Script($"Loading music {Game.current.CurrentTrack}");
         return;
       case "Ambience":
         AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        Game.current.CurrentAmbience = e[0];
+        Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
         return;
       case "MLayer":
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
+        Game.current.CurrentTrack = e[0];
+        Trace.Script($"Loading music {Game.current.CurrentTrack}");
         return;
       case "ALayer":
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
+        Game.current.CurrentAmbience = e[0];
+        Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
         return;
       default:
+        Trace.Script($"Error loading {e[0]}");
         return;
     }
   }
@@ -306,29 +316,17 @@ public class AudioManager : MonoBehaviour
     
     Debug.Log("          CURRENT STORY SOUNDBANK:" + currentGame.CurrentStorySoundbank);
     
-    if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
-    {
-      Trace.Script($"Loading music {Game.current.CurrentTrack}");
-      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-      AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
-    }
-    else
-    {
-      Trace.Script("Stopping Music");
-      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-    }
+    Trace.Script($"Loading music {Game.current.CurrentTrack}");
+    //AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+    //AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
+    string[] newTrack = new string[] {currentGame.CurrentTrack, "Music"};
+    normalTracks.Add(newTrack);
     
-    if (currentGame.CurrentAmbience != "" && currentGame.CurrentAmbience != "Stop_All")
-    {
-      Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
-      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-      AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
-    }
-    else
-    {
-      Trace.Script("Stopping Ambience");
-      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-    }
+    Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
+    //AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+    //AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
+    string[] newAmbience = new string[] {currentGame.CurrentAmbience, "Ambience"};
+    normalTracks.Add(newAmbience);
     
     // Reset RTPC values
     AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);

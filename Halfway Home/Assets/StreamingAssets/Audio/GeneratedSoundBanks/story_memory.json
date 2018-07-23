@@ -20,6 +20,21 @@
     "Path": "story_memory.bnk",
     "IncludedEvents": [
      {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "54526557",
+      "Name": "play_ambience_crowd_whispering",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd_whispering"
+     },
+     {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+     },
+     {
       "Id": "1372805254",
       "Name": "play_music_creepy_atmo",
       "ObjectPath": "\\Events\\PlayMusic\\music_creepyatmo\\play_music_creepy_atmo"
@@ -58,6 +73,18 @@
       "Path": "SFX\\creepy atmo v0.5_A51F8DD7.wem"
      },
      {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
+     },
+     {
+      "Id": "1025761080",
+      "Language": "SFX",
+      "ShortName": "loop_164661__adam-n__fire.wav",
+      "Path": "SFX\\loop_164661__adam-n__fire_178D0C9C.wem"
+     },
+     {
       "Id": "1053142359",
       "Language": "SFX",
       "ShortName": "mysterious.wav",
@@ -65,6 +92,12 @@
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "129367464",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd_whispering\\ambience_crowd_whispering.wav",
+      "Path": "SFX\\ambience_crowd_whispering\\ambience_crowd_whispering_178D0C9C.wem"
+     },
      {
       "Id": "318063250",
       "Language": "SFX",

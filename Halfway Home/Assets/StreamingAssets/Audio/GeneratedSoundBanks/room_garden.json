@@ -20,6 +20,16 @@
     "Path": "room_Garden.bnk",
     "IncludedEvents": [
      {
+      "Id": "1503005308",
+      "Name": "play_ambience_garden_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_garden_birds_day"
+     },
+     {
+      "Id": "561449546",
+      "Name": "play_ambience_garden_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_garden_crickets_night"
+     },
+     {
       "Id": "2702884089",
       "Name": "play_music_garden",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_garden"
@@ -31,6 +41,18 @@
       "Language": "SFX",
       "ShortName": "music_garden.wav",
       "Path": "SFX\\music_garden_A51F8DD7.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    }

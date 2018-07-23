@@ -19,12 +19,15 @@
 				<SoundBank Name="story_memory" ID="{9D773652-D187-4C75-8A97-5281ECF27EEF}">
 					<Comment>Nightmare scene</Comment>
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_crowd_whispering" ID="{FCD4B7CE-C9EA-4066-9251-C39452BAF404}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_footsteps_approaching" ID="{6BBBE98C-9270-43B3-83CA-23591E2B26FC}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace" ID="{432521DD-2C4C-4826-97B0-57B5C816A8F4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_creepy_atmo" ID="{D156287F-4894-4C1C-BCA7-AF317221DE2D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_creepy_atmo_02" ID="{6F113FA0-8EAD-4C93-8709-E1719973E777}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_ambient_heartbeat" ID="{9407B261-F4FE-4D58-B5CB-380BCA2D2B81}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -35,13 +38,83 @@
 						<ObjectRef Name="Play_music_placeholder_main_fadein" ID="{CCB4ADE7-C8AA-4A59-8E1E-3A7C32DAF259}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_dejavu" ID="{8DB5E002-D7FB-4A5F-BD04-79618F25E533}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_bed_creak" ID="{79AFBEAF-E089-4B9F-BB69-B792B61FB160}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="story_rf_kitchen" ID="{6D68F341-1798-40BD-B75E-43E1A1459F96}">
-					<ObjectInclusionList/>
+				<SoundBank Name="story_meeting_charlotte" ID="{C0E852B4-14F0-4950-8445-398E3759C620}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_charlotte_elegant" ID="{2F845C0F-22B9-4AD8-B07B-D0E543A6FEC4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_meeting_eduardo" ID="{67D252F5-A1FE-40A1-8620-DF9F7CCADB6C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_eduardo_love" ID="{EE71B394-CFC7-4311-9136-7B83969B961C}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_authoritys_approval" ID="{C7505C3A-8A63-4164-B1F3-17C3CEA555D8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_music_placeholder_main" ID="{1D05F51F-01CC-469A-9152-B15E852D3C87}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_morning_misery" ID="{5ED3643E-2485-4A03-8D00-52B1E45658A3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_eduardo_love_no_intro" ID="{CAA025E2-4B91-47E5-A1D2-51C0C2928B41}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_artroom_morning" ID="{69163549-238D-4B10-BE70-9ED022538BBB}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_open_letter" ID="{3A80C469-1D83-45AA-BE36-60084BC6F4F8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_closed_wound" ID="{8FF161CC-D232-4A05-B5F4-A3F3337720A9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_emotional_piano" ID="{E65F84EE-7E5E-4B96-AFFC-0F02D975ED58}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_alone_in_a_dead_mans_room" ID="{BD69E764-E2DE-4225-8593-41BB54E2E72F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_sad" ID="{E51D4B2F-8A7B-42A7-AE1F-4C1994400B9F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_ending_days" ID="{7C969C46-867D-4F32-86AD-CE131CE97357}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_farewell" ID="{CAEEF854-4D73-47CC-B6D6-0BF31E1FE2D9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_farewell_meal" ID="{F93DDE22-E106-47B0-8CCE-326D3D693838}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_unfinished_business" ID="{88946199-F2C6-47CA-9949-3EC1F6EE4EFC}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_welcome_dinner" ID="{2D3A9924-8671-414C-84A4-B947011B6C73}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

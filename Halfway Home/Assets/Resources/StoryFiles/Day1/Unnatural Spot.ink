@@ -30,8 +30,6 @@ EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
-
 -> UnnaturalSpot
 
 === UnnaturalSpot ===

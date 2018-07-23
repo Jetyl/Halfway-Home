@@ -13,9 +13,23 @@
 			<ShortName>room_Library</ShortName>
 			<Path>room_Library.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2634641494" Name="play_ambience_fireplace_far_birds_day" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_fireplace_far_birds_day"/>
+				<Event Id="2403255496" Name="play_ambience_fireplace_far_crickets_night" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_fireplace_far_crickets_night"/>
 				<Event Id="3266052307" Name="play_music_library" ObjectPath="\Events\PlayMusic\play_music_library"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="579820900" Language="SFX">
+					<ShortName>fireplace_far.wav</ShortName>
+					<Path>SFX\fireplace_far_178D0C9C.wem</Path>
+				</File>
+				<File Id="692116045" Language="SFX">
+					<ShortName>ambience_birds_day.wav</ShortName>
+					<Path>SFX\ambience_birds_day_178D0C9C.wem</Path>
+				</File>
+				<File Id="905731817" Language="SFX">
+					<ShortName>ambience_crickets_night.wav</ShortName>
+					<Path>SFX\ambience_crickets_night_178D0C9C.wem</Path>
+				</File>
 				<File Id="977374489" Language="SFX">
 					<ShortName>music_library_2.wav</ShortName>
 					<Path>SFX\music_library_2_A51F8DD7.wem</Path>

@@ -1,0 +1,39 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "2369017504",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_ending_days",
+    "ShortName": "story_ending_days",
+    "Path": "story_ending_days.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "4092317258",
+      "Name": "play_music_farewell",
+      "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "457042621",
+      "Language": "SFX",
+      "ShortName": "You and I.wav",
+      "Path": "SFX\\You and I_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

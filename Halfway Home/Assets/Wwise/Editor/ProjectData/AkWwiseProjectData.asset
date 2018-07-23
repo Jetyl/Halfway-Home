@@ -16,14 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 1127361738
-    m_lastTimePart2: -1999246514
+    m_lastTimePsrt1: -258516266
+    m_lastTimePart2: -1999245156
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 822315022
-    m_lastTimePart2: -1999246197
+    m_lastTimePsrt1: -258420945
+    m_lastTimePart2: -1999245156
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -109,6 +109,30 @@ MonoBehaviour:
       ID: 285561943
       Guid: 5a6653fbe297ad4e8fecb9dbf2a2c1fa
       maxAttenuation: 0
+    - Name: play_ambience_crowd
+      Path: PlayMusic\ambiences\play_ambience_crowd
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_crowd
+        ObjectType: 3
+      ID: -1513186444
+      Guid: 5d874841ea9f144fb51faf31e1ac3c93
+      maxAttenuation: 0
+    - Name: play_ambience_crowd_whispering
+      Path: PlayMusic\ambiences\play_ambience_crowd_whispering
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_crowd_whispering
+        ObjectType: 3
+      ID: 54526557
+      Guid: ceb7d4fceac966409251c39452baf404
+      maxAttenuation: 0
     - Name: play_ambience_fireplace
       Path: PlayMusic\intro_ambiences\play_ambience_fireplace
       PathAndIcons:
@@ -120,6 +144,30 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1364989386
       Guid: dd2125434c2c264897b057b5c816a8f4
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_birds_day
+      Path: PlayMusic\ambiences\play_ambience_fireplace_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_birds_day
+        ObjectType: 3
+      ID: -1397726948
+      Guid: 0c1c884d28416245a42aa97770a7b57d
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_fireplace_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_crickets_night
+        ObjectType: 3
+      ID: 792462442
+      Guid: 4b565bda0352934386ed1d203204a347
       maxAttenuation: 0
     - Name: play_ambience_fireplace_far
       Path: PlayMusic\intro_ambiences\play_ambience_fireplace_far
@@ -133,6 +181,90 @@ MonoBehaviour:
       ID: -1496096124
       Guid: 14ef77cc95f92d46bafba30806d20fbc
       maxAttenuation: 0
+    - Name: play_ambience_fireplace_far_birds_day
+      Path: PlayMusic\ambiences\play_ambience_fireplace_far_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_far_birds_day
+        ObjectType: 3
+      ID: -1660325802
+      Guid: 7ecdd3fb4dd72946ba41a91bfc2b4ca4
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_far_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_fireplace_far_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_far_crickets_night
+        ObjectType: 3
+      ID: -1891711800
+      Guid: c516c22ceb362043aee44f014ad3ccf1
+      maxAttenuation: 0
+    - Name: play_ambience_garden_birds_day
+      Path: PlayMusic\ambiences\play_ambience_garden_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_garden_birds_day
+        ObjectType: 3
+      ID: 1503005308
+      Guid: a653569d391be64e9cf5f0f816714567
+      maxAttenuation: 0
+    - Name: play_ambience_garden_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_garden_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_garden_crickets_night
+        ObjectType: 3
+      ID: 561449546
+      Guid: 99fe3ae6cc8dca4fa6a7d20edb5b3296
+      maxAttenuation: 0
+    - Name: play_ambience_stormy
+      Path: PlayMusic\ambiences\play_ambience_stormy
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_stormy
+        ObjectType: 3
+      ID: -648443271
+      Guid: 55b43848a816724390f0d48074469bc9
+      maxAttenuation: 0
+    - Name: play_ambience_your_room_fireplace_birds_day
+      Path: PlayMusic\ambiences\play_ambience_your_room_fireplace_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_your_room_fireplace_birds_day
+        ObjectType: 3
+      ID: 208869464
+      Guid: 514c2ce93310f145b3ac05c500b67f6c
+      maxAttenuation: 0
+    - Name: play_ambience_your_room_fireplace_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_your_room_fireplace_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_your_room_fireplace_crickets_night
+        ObjectType: 3
+      ID: -1092131978
+      Guid: 67d6c95e684a794ebfe8eee51cd937d4
+      maxAttenuation: 0
     - Name: play_music_artroom
       Path: PlayMusic\play_music_artroom
       PathAndIcons:
@@ -142,6 +274,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1810713724
       Guid: f009f5def346e344bcf555a9144122d1
+      maxAttenuation: 0
+    - Name: play_music_artroom_morning
+      Path: PlayMusic\play_music_artroom_morning
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_artroom_morning
+        ObjectType: 3
+      ID: 444439289
+      Guid: 493516698d23104bbe709ed022538bbb
       maxAttenuation: 0
     - Name: play_music_bardman
       Path: PlayMusic\music_bardman\play_music_bardman
@@ -254,6 +396,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -607581409
       Guid: 94b371eec7cf114391367b83969b961c
+      maxAttenuation: 0
+    - Name: play_music_eduardo_love_no_intro
+      Path: PlayMusic\play_music_eduardo_love_no_intro
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_eduardo_love_no_intro
+        ObjectType: 3
+      ID: 601166520
+      Guid: e225a0ca914be547a1d251c0c2928b41
       maxAttenuation: 0
     - Name: play_music_emotional_piano
       Path: PlayMusic\play_music_emotional_piano
@@ -822,8 +974,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1976198825
-    m_lastTimePart2: -1999246198
+    m_lastTimePsrt1: 1661876722
+    m_lastTimePart2: -1999245203
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -864,8 +1016,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 1242894140
-    m_lastTimePart2: -1999246087
+    m_lastTimePsrt1: -293617206
+    m_lastTimePart2: -1999245201
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -924,9 +1076,27 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1243526270
-    m_lastTimePart2: -1999246227
+    m_lastTimePsrt1: -2114707262
+    m_lastTimePart2: -1999245137
     List:
+    - Name: story_alone_in_a_dead_mans_room
+      Path: Stories\story_alone_in_a_dead_mans_room
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_alone_in_a_dead_mans_room
+        ObjectType: 7
+      ID: 609072037
+      Guid: 64e769bddee22542859341bb54e2e72f
+    - Name: story_authoritys_approval
+      Path: Stories\story_authoritys_approval
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_authoritys_approval
+        ObjectType: 7
+      ID: -508469163
+      Guid: 3a5c50c7638a6441b1f317c3cea555d8
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family
       PathAndIcons:
@@ -936,6 +1106,33 @@ MonoBehaviour:
         ObjectType: 7
       ID: -226247557
       Guid: fb1f257e0fbf1d4e8b6ed1b5500cc8ae
+    - Name: story_closed_wound
+      Path: Stories\story_closed_wound
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_closed_wound
+        ObjectType: 7
+      ID: -1468821033
+      Guid: cc61f18f32d2054ab5f4a3f3337720a9
+    - Name: story_ending_days
+      Path: Stories\story_ending_days
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_ending_days
+        ObjectType: 7
+      ID: -1925949792
+      Guid: 469c967c7d86324f86adce131ce97357
+    - Name: story_farewell_meal
+      Path: Stories\story_farewell_meal
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_farewell_meal
+        ObjectType: 7
+      ID: 1928416423
+      Guid: 22de3df906e1b0478cce326d3d693838
     - Name: story_knock_on_the_morning_door
       Path: Stories\story_knock_on_the_morning_door
       PathAndIcons:
@@ -945,6 +1142,24 @@ MonoBehaviour:
         ObjectType: 7
       ID: -273102983
       Guid: b9bfb02fc5b1c1488ef301a2e3d0ae66
+    - Name: story_meeting_charlotte
+      Path: Stories\story_meeting_charlotte
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_meeting_charlotte
+        ObjectType: 7
+      ID: 491544915
+      Guid: b452e8c0f01450498445398e3759c620
+    - Name: story_meeting_eduardo
+      Path: Stories\story_meeting_eduardo
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_meeting_eduardo
+        ObjectType: 7
+      ID: 65122749
+      Guid: f552d267fea1a1408620df9f7ccadb6c
     - Name: story_memory
       Path: Stories\story_memory
       PathAndIcons:
@@ -954,15 +1169,33 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1576038406
       Guid: 5236779d87d1754c8a975281ecf27eef
-    - Name: story_rf_kitchen
-      Path: Stories\story_rf_kitchen
+    - Name: story_morning_misery
+      Path: Stories\story_morning_misery
       PathAndIcons:
       - ElementName: Stories
         ObjectType: 12
-      - ElementName: story_rf_kitchen
+      - ElementName: story_morning_misery
         ObjectType: 7
-      ID: 1185539506
-      Guid: 41f3686d9817bd40b75e43e1a1459f96
+      ID: -274162611
+      Guid: 3e64d35e8524034a8d0052b1e45658a3
+    - Name: story_open_letter
+      Path: Stories\story_open_letter
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_open_letter
+        ObjectType: 7
+      ID: -641435002
+      Guid: 69c4803a831daa45be3660084bc6f4f8
+    - Name: story_welcome_dinner
+      Path: Stories\story_welcome_dinner
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_welcome_dinner
+        ObjectType: 7
+      ID: 2139259380
+      Guid: 24993a2d71864c4184a4b947011b6c73
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 

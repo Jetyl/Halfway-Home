@@ -125,12 +125,44 @@
   "MediaFilesNotInAnyBank": [],
   "SoundBanks": [
    {
+    "Id": "65122749",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_meeting_eduardo",
+    "ShortName": "story_meeting_eduardo",
+    "Path": "story_meeting_eduardo.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3687385887",
+      "Name": "play_music_eduardo_love",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_eduardo_love"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "265238677",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Rooms\\room_Kitchen",
     "ShortName": "room_Kitchen",
     "Path": "room_Kitchen.bnk",
     "IncludedEvents": [
+     {
+      "Id": "2634641494",
+      "Name": "play_ambience_fireplace_far_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_birds_day"
+     },
+     {
+      "Id": "2403255496",
+      "Name": "play_ambience_fireplace_far_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_crickets_night"
+     },
      {
       "Id": "240662438",
       "Name": "play_music_cafejazz",
@@ -140,6 +172,26 @@
     "ReferencedStreamedFiles": [
      {
       "Id": "44147102"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "579820900",
+      "Language": "SFX",
+      "ShortName": "fireplace_far.wav",
+      "Path": "SFX\\fireplace_far_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    },
@@ -151,9 +203,29 @@
     "Path": "room_YourRoom.bnk",
     "IncludedEvents": [
      {
+      "Id": "208869464",
+      "Name": "play_ambience_your_room_fireplace_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_your_room_fireplace_birds_day"
+     },
+     {
+      "Id": "3202835318",
+      "Name": "play_ambience_your_room_fireplace_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_your_room_fireplace_crickets_night"
+     },
+     {
       "Id": "224129391",
       "Name": "play_music_contemplative",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_contemplative"
+     },
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933"
      }
     ],
     "IncludedMemoryFiles": [
@@ -162,15 +234,70 @@
       "Language": "SFX",
       "ShortName": "music_contemplative.wav",
       "Path": "SFX\\music_contemplative_A51F8DD7.wem"
+     },
+     {
+      "Id": "579820900",
+      "Language": "SFX",
+      "ShortName": "fireplace_far.wav",
+      "Path": "SFX\\fireplace_far_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    },
    {
-    "Id": "1185539506",
+    "Id": "491544915",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Stories\\story_rf_kitchen",
-    "ShortName": "story_rf_kitchen",
-    "Path": "story_rf_kitchen.bnk"
+    "ObjectPath": "\\SoundBanks\\Stories\\story_meeting_charlotte",
+    "ShortName": "story_meeting_charlotte",
+    "Path": "story_meeting_charlotte.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2039547829",
+      "Name": "play_music_charlotte_elegant",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_charlotte_elegant"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "527438760",
+      "Language": "SFX",
+      "ShortName": "music_charlotte_elegant.wav",
+      "Path": "SFX\\music_charlotte_elegant_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "609072037",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_alone_in_a_dead_mans_room",
+    "ShortName": "story_alone_in_a_dead_mans_room",
+    "Path": "story_alone_in_a_dead_mans_room.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3637707742",
+      "Name": "play_music_sad",
+      "ObjectPath": "\\Events\\PlayMusic\\music_sad\\play_music_sad"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "1062005778",
+      "Language": "SFX",
+      "ShortName": "Starfish.wav",
+      "Path": "SFX\\Starfish_A51F8DD7.wem"
+     }
+    ]
    },
    {
     "Id": "1355168291",
@@ -186,6 +313,21 @@
     "ShortName": "story_memory",
     "Path": "story_memory.bnk",
     "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "54526557",
+      "Name": "play_ambience_crowd_whispering",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd_whispering"
+     },
+     {
+      "Id": "2929977910",
+      "Name": "play_ambience_fireplace",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
+     },
      {
       "Id": "1372805254",
       "Name": "play_music_creepy_atmo",
@@ -222,10 +364,22 @@
       "Id": "297822875"
      },
      {
+      "Id": "461729800"
+     },
+     {
+      "Id": "1025761080"
+     },
+     {
       "Id": "1053142359"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "129367464",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd_whispering\\ambience_crowd_whispering.wav",
+      "Path": "SFX\\ambience_crowd_whispering\\ambience_crowd_whispering_178D0C9C.wem"
+     },
      {
       "Id": "318063250",
       "Language": "SFX",
@@ -265,12 +419,65 @@
     ]
    },
    {
+    "Id": "1928416423",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_farewell_meal",
+    "ShortName": "story_farewell_meal",
+    "Path": "story_farewell_meal.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2781780852",
+      "Name": "play_ambience_crowd",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
+     },
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "3483334370",
+      "Name": "play_music_unfinished_business",
+      "ObjectPath": "\\Events\\PlayMusic\\music_unfinished_business\\play_music_unfinished_business"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "919138064",
+      "Language": "SFX",
+      "ShortName": "Farewell, Part I.wav",
+      "Path": "SFX\\Farewell, Part I_A51F8DD7.wem"
+     },
+     {
+      "Id": "1039116749",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd\\ambience_crowd.wav",
+      "Path": "SFX\\ambience_crowd\\ambience_crowd_178D0C9C.wem"
+     }
+    ]
+   },
+   {
     "Id": "1993474908",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Rooms\\room_Garden",
     "ShortName": "room_Garden",
     "Path": "room_Garden.bnk",
     "IncludedEvents": [
+     {
+      "Id": "1503005308",
+      "Name": "play_ambience_garden_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_garden_birds_day"
+     },
+     {
+      "Id": "561449546",
+      "Name": "play_ambience_garden_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_garden_crickets_night"
+     },
      {
       "Id": "2702884089",
       "Name": "play_music_garden",
@@ -283,6 +490,40 @@
       "Language": "SFX",
       "ShortName": "music_garden.wav",
       "Path": "SFX\\music_garden_A51F8DD7.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2139259380",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_welcome_dinner",
+    "ShortName": "story_welcome_dinner",
+    "Path": "story_welcome_dinner.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2781780852",
+      "Name": "play_ambience_crowd",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "1039116749",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd\\ambience_crowd.wav",
+      "Path": "SFX\\ambience_crowd\\ambience_crowd_178D0C9C.wem"
      }
     ]
    },
@@ -306,12 +547,66 @@
     ]
    },
    {
+    "Id": "2369017504",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_ending_days",
+    "ShortName": "story_ending_days",
+    "Path": "story_ending_days.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "4092317258",
+      "Name": "play_music_farewell",
+      "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "457042621",
+      "Language": "SFX",
+      "ShortName": "You and I.wav",
+      "Path": "SFX\\You and I_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2826146263",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_closed_wound",
+    "ShortName": "story_closed_wound",
+    "Path": "story_closed_wound.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2723803496",
+      "Name": "play_music_emotional_piano",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_emotional_piano"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "220669927",
+      "Language": "SFX",
+      "ShortName": "music_emotional_piano.wav",
+      "Path": "SFX\\music_emotional_piano_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "2842449619",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Rooms\\room_ArtRoom",
     "ShortName": "room_ArtRoom",
     "Path": "room_ArtRoom.bnk",
     "IncludedEvents": [
+     {
+      "Id": "2634641494",
+      "Name": "play_ambience_fireplace_far_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_birds_day"
+     },
+     {
+      "Id": "2403255496",
+      "Name": "play_ambience_fireplace_far_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_crickets_night"
+     },
      {
       "Id": "1810713724",
       "Name": "play_music_artroom",
@@ -324,6 +619,24 @@
       "Language": "SFX",
       "ShortName": "music_artroom.wav",
       "Path": "SFX\\music_artroom_A51F8DD7.wem"
+     },
+     {
+      "Id": "579820900",
+      "Language": "SFX",
+      "ShortName": "fireplace_far.wav",
+      "Path": "SFX\\fireplace_far_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    },
@@ -334,6 +647,16 @@
     "ShortName": "room_Commons",
     "Path": "room_Commons.bnk",
     "IncludedEvents": [
+     {
+      "Id": "2897240348",
+      "Name": "play_ambience_fireplace_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_birds_day"
+     },
+     {
+      "Id": "792462442",
+      "Name": "play_ambience_fireplace_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_crickets_night"
+     },
      {
       "Id": "1005088852",
       "Name": "play_music_commons",
@@ -346,6 +669,24 @@
       "Language": "SFX",
       "ShortName": "music_commons.wav",
       "Path": "SFX\\music_commons_A51F8DD7.wem"
+     },
+     {
+      "Id": "527464444",
+      "Language": "SFX",
+      "ShortName": "fireplace_close.wav",
+      "Path": "SFX\\fireplace_close_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    },
@@ -357,21 +698,6 @@
     "Path": "Main.bnk",
     "IncludedEvents": [
      {
-      "Id": "285561943",
-      "Name": "play_ambience_birds",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
-     },
-     {
-      "Id": "2929977910",
-      "Name": "play_ambience_fireplace",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace"
-     },
-     {
-      "Id": "2798871172",
-      "Name": "play_ambience_fireplace_far",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_fireplace_far"
-     },
-     {
       "Id": "3827964327",
       "Name": "play_menupause_01",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
@@ -382,22 +708,14 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
      },
      {
+      "Id": "1091239431",
+      "Name": "play_sfx_human_notebook",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
+     },
+     {
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
-     },
-     {
-      "Id": "1720799084",
-      "Name": "stop_ambience_all",
-      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
-     }
-    ],
-    "ReferencedStreamedFiles": [
-     {
-      "Id": "461729800"
-     },
-     {
-      "Id": "1025761080"
      }
     ],
     "IncludedMemoryFiles": [
@@ -418,6 +736,12 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
       "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     },
+     {
+      "Id": "724131083",
+      "Language": "SFX",
+      "ShortName": "pencil_scribble.wav",
+      "Path": "SFX\\pencil_scribble_00FA84C2.wem"
      }
     ]
    },
@@ -429,12 +753,40 @@
     "Path": "room_Library.bnk",
     "IncludedEvents": [
      {
+      "Id": "2634641494",
+      "Name": "play_ambience_fireplace_far_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_birds_day"
+     },
+     {
+      "Id": "2403255496",
+      "Name": "play_ambience_fireplace_far_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_far_crickets_night"
+     },
+     {
       "Id": "3266052307",
       "Name": "play_music_library",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_library"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "579820900",
+      "Language": "SFX",
+      "ShortName": "fireplace_far.wav",
+      "Path": "SFX\\fireplace_far_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
+     },
      {
       "Id": "977374489",
       "Language": "SFX",
@@ -483,12 +835,101 @@
     ]
    },
    {
+    "Id": "3653532294",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_open_letter",
+    "ShortName": "story_open_letter",
+    "Path": "story_open_letter.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2781780852",
+      "Name": "play_ambience_crowd",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
+     },
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "1039116749",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd\\ambience_crowd.wav",
+      "Path": "SFX\\ambience_crowd\\ambience_crowd_178D0C9C.wem"
+     }
+    ]
+   },
+   {
+    "Id": "3786498133",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_authoritys_approval",
+    "ShortName": "story_authoritys_approval",
+    "Path": "story_authoritys_approval.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1259498987",
+      "Name": "Play_music_placeholder_main",
+      "ObjectPath": "\\Events\\PlayMusic\\music_placeholder_main\\Play_music_placeholder_main"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "235618933"
+     }
+    ]
+   },
+   {
+    "Id": "4020804685",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_morning_misery",
+    "ShortName": "story_morning_misery",
+    "Path": "story_morning_misery.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "444439289",
+      "Name": "play_music_artroom_morning",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_artroom_morning"
+     },
+     {
+      "Id": "601166520",
+      "Name": "play_music_eduardo_love_no_intro",
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_eduardo_love_no_intro"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "700649189",
+      "Language": "SFX",
+      "ShortName": "music_artroom_morning\\music_artroom_morning.wav",
+      "Path": "SFX\\music_artroom_morning\\music_artroom_morning_A51F8DD7.wem"
+     },
+     {
+      "Id": "943281855",
+      "Language": "SFX",
+      "ShortName": "music_eduardo_love.wav",
+      "Path": "SFX\\music_eduardo_love_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
     "Id": "4021864313",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Stories\\story_knock_on_the_morning_door",
     "ShortName": "story_knock_on_the_morning_door",
     "Path": "story_knock_on_the_morning_door.bnk",
     "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
      {
       "Id": "1829857455",
       "Name": "play_music_dejavu",
@@ -521,6 +962,9 @@
      },
      {
       "Id": "235618933"
+     },
+     {
+      "Id": "461729800"
      }
     ],
     "IncludedMemoryFiles": [
@@ -575,6 +1019,11 @@
       "Id": "3032100830",
       "Name": "Stop_All_Fast",
       "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All_Fast"
+     },
+     {
+      "Id": "1720799084",
+      "Name": "stop_ambience_all",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\stop_ambience_all"
      }
     ],
     "IncludedMemoryFiles": [

@@ -85,7 +85,7 @@ They pull out a small bit of paper from their pocket and begin reading aloud.
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
-I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   // # Load @ room_Kitchen
+I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   # Ambience : Stop_All
 -> Cafe
 
 === Cafe ===
@@ -93,10 +93,10 @@ I head to the cafe, where Max said they would be. It's not hard to find.   # Bac
 Max is here, mopping lethargically.   # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
 What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf | 60   # ambience_vol | 5.6   # ambience_lpf | 31
-I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit 
+I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit   # ALayer : play_ambience_crowd_whispering
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience : Stop_All
 But they're gone...
-A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambience : Stop_All_Fast   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
 
 // Stop_All_Fast: Hard stop music if player is clicking fast
 // Reset RTPCs
@@ -104,7 +104,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast   # Ambien
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # Unload @ room_cafe
+I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
 *[Ask what's going on]
@@ -161,12 +161,12 @@ On instinct, I rush into the...
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.   # Ambience : stop_ambience_all
-[Voices] "This is who you are."   # SFX : play_sfx_human_ghostwhisper   //# Load @ story_knock_on_the_morning_door
+[Voices] "This is who you are."   # Play : Stop_All   # SFX : play_sfx_human_ghostwhisper   # Load @ story_knock_on_the_morning_door
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # text_vol ! 0   # Unload @ story_memory
-The whispers fade into the chitter of birdsong.   # Ambience : play_ambience_birds   # music_vol | -6   # ambience_vol ! -11
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # Ambience : play_ambience_birds   # ambience_vol ! -3   # text_vol ! 0   // # Unload @ story_memory
+The whispers fade into the chitter of birdsong.   # music_vol | -6   # ambience_vol | 6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

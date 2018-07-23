@@ -20,6 +20,11 @@
     "Path": "story_knock_on_the_morning_door.bnk",
     "IncludedEvents": [
      {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
       "Id": "1829857455",
       "Name": "play_music_dejavu",
       "ObjectPath": "\\Events\\PlayMusic\\music_dejavu\\play_music_dejavu"
@@ -57,6 +62,12 @@
       "Language": "SFX",
       "ShortName": "barble bapkins 1.6.wav",
       "Path": "SFX\\barble bapkins 1.6_A51F8DD7.wem"
+     },
+     {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
      }
     ],
     "IncludedMemoryFiles": [

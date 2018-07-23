@@ -20,6 +20,16 @@
     "Path": "room_Commons.bnk",
     "IncludedEvents": [
      {
+      "Id": "2897240348",
+      "Name": "play_ambience_fireplace_birds_day",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_birds_day"
+     },
+     {
+      "Id": "792462442",
+      "Name": "play_ambience_fireplace_crickets_night",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_fireplace_crickets_night"
+     },
+     {
       "Id": "1005088852",
       "Name": "play_music_commons",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_commons"
@@ -31,6 +41,24 @@
       "Language": "SFX",
       "ShortName": "music_commons.wav",
       "Path": "SFX\\music_commons_A51F8DD7.wem"
+     },
+     {
+      "Id": "527464444",
+      "Language": "SFX",
+      "ShortName": "fireplace_close.wav",
+      "Path": "SFX\\fireplace_close_178D0C9C.wem"
+     },
+     {
+      "Id": "692116045",
+      "Language": "SFX",
+      "ShortName": "ambience_birds_day.wav",
+      "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
+     },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
      }
     ]
    }

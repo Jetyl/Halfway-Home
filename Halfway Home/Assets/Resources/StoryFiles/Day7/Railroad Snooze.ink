@@ -26,12 +26,10 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 
-# Play : Stop_All
-
 -> Start
 
 === Start ===
-I Scamper into bedroom, yawning as I do. # Ambience : play_ambience_fireplace # ambience_vol ! 0
+I Scamper into bedroom, yawning as I do.
 {
 	-fatigue < 50:
 		I'm not particularly tired, but when I hit the bed, my body becomes enraptured in comfort
@@ -47,10 +45,10 @@ I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, 
 	-else:
 		......... {CallSleep()} #set_time%5,9
 }
-[Max 0Unknown] "...{player_name}."
+[Max 0Unknown] "...{player_name}."   # Play : Stop_All
 huh?
 "{player_name}. get up ya silly bum."
-In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, my room is lite with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main
 [Max] "You don't want to be sleeping in on your last day, now do you?" #Max=Calm
 [{player_name}] "oh, uh... morning I guess."
 I give a large yawn as I stretch out of bed.

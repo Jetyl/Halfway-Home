@@ -13,6 +13,7 @@
 			<ShortName>story_knock_on_the_morning_door</ShortName>
 			<Path>story_knock_on_the_morning_door.bnk</Path>
 			<IncludedEvents>
+				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
 				<Event Id="1829857455" Name="play_music_dejavu" ObjectPath="\Events\PlayMusic\music_dejavu\play_music_dejavu"/>
 				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
 				<Event Id="3941181009" Name="Play_music_placeholder_main_fadein" ObjectPath="\Events\PlayMusic\music_placeholder_main\Play_music_placeholder_main_fadein"/>
@@ -27,6 +28,10 @@
 				<File Id="235618933" Language="SFX">
 					<ShortName>barble bapkins 1.6.wav</ShortName>
 					<Path>SFX\barble bapkins 1.6_A51F8DD7.wem</Path>
+				</File>
+				<File Id="461729800" Language="SFX">
+					<ShortName>loop_hpf_10k_BirdsAmbience 6102_54.wav</ShortName>
+					<Path>SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>

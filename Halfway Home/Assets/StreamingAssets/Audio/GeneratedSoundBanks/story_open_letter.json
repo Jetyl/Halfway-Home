@@ -1,0 +1,52 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "3653532294",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_open_letter",
+    "ShortName": "story_open_letter",
+    "Path": "story_open_letter.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2781780852",
+      "Name": "play_ambience_crowd",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
+     },
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536",
+      "Language": "SFX",
+      "ShortName": "Music1loop.wav",
+      "Path": "SFX\\Music1loop_A51F8DD7.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "1039116749",
+      "Language": "SFX",
+      "ShortName": "ambience_crowd\\ambience_crowd.wav",
+      "Path": "SFX\\ambience_crowd\\ambience_crowd_178D0C9C.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

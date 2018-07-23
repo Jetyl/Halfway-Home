@@ -21,7 +21,7 @@ VAR current_room = "unset"
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
 
-# Play : Stop_All
+# Load @ story_farewell_meal   # Ambience : play_ambience_crowd
 
 -> Start
 
@@ -34,7 +34,7 @@ EXTERNAL GetValue(value)
 }
 
 === GoodMeal ===
-I'm called to the kitchen for my farewell meal. # Ambience : play_ambience_fireplace # ambience_vol ! 0
+I'm called to the kitchen for my farewell meal.   # Play : play_music_happy
 I walk in seeing everyone chatting and having a good time.
 Trissa is chatting up Jesse and John at the center table.
 {
@@ -95,7 +95,7 @@ I leave once the major festivities have died down. #All = Exit
 ->END
 
 === BadMeal ===
-I'm called to the kitchen for my farewell meal. # Ambience : play_ambience_fireplace # ambience_vol ! 0
+I'm called to the kitchen for my farewell meal. # Play : play_music_unfinished_business
 I walk in seeing everyone chatting and having a good time.
 Acting like everything is okay.
 Trissa is chatting up Jesse and John at the center table.

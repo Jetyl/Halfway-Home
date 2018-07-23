@@ -34,7 +34,7 @@ EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 
-# Play : Play_music_placeholder_main_fadein # music_vol ! -11
+# Load @ story_morning_misery   # Play : play_music_artroom_morning
 
 -> Start
 
@@ -122,7 +122,7 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 	->END
 
 ===Gushing===
-I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom #Eduardo = Calm
+I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
 His excessive passion is very inspiring and and increase in <color=color_expression>expression considerably</color>, but it <color=color_wellbeing_penalty>signifigantly tires you out</color>. #expression++ #fatigue += 20
 when I check the clock, I realize 3 hours have passed #time % 3
 Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right

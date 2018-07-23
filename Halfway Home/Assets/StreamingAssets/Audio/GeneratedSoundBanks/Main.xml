@@ -13,24 +13,11 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
-				<Event Id="2929977910" Name="play_ambience_fireplace" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace"/>
-				<Event Id="2798871172" Name="play_ambience_fireplace_far" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_fireplace_far"/>
 				<Event Id="3827964327" Name="play_menupause_01" ObjectPath="\Events\PlaySFX\sfx_menu\play_menupause_01"/>
 				<Event Id="4553038" Name="play_menuunpause_01" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuunpause_01"/>
+				<Event Id="1091239431" Name="play_sfx_human_notebook" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_notebook"/>
 				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_textscroll"/>
-				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\intro_ambiences\stop_ambience_all"/>
 			</IncludedEvents>
-			<ReferencedStreamedFiles>
-				<File Id="461729800" Language="SFX">
-					<ShortName>loop_hpf_10k_BirdsAmbience 6102_54.wav</ShortName>
-					<Path>SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem</Path>
-				</File>
-				<File Id="1025761080" Language="SFX">
-					<ShortName>loop_164661__adam-n__fire.wav</ShortName>
-					<Path>SFX\loop_164661__adam-n__fire_178D0C9C.wem</Path>
-				</File>
-			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="11926160" Language="SFX">
 					<ShortName>sfx_menu_chime_pausegame.wav</ShortName>
@@ -43,6 +30,10 @@
 				<File Id="558653419" Language="SFX">
 					<ShortName>sfx_menu_chime_unpausegame.wav</ShortName>
 					<Path>SFX\sfx_menu_chime_unpausegame_78AC25A7.wem</Path>
+				</File>
+				<File Id="724131083" Language="SFX">
+					<ShortName>pencil_scribble.wav</ShortName>
+					<Path>SFX\pencil_scribble_00FA84C2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

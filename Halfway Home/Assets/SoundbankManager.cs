@@ -27,7 +27,7 @@ public class SoundbankManager : MonoBehaviour {
   
   public void LoadBank(string bank, bool init = false)
   {
-    AkBankManager.LoadBankAsync(bank);
+    AkBankManager.LoadBank(bank, true, true);
     loadedBanks.Add(bank);
     
     if (init == false)
@@ -35,11 +35,21 @@ public class SoundbankManager : MonoBehaviour {
       if (bank.ToLower().StartsWith("story"))
       {
         Trace.Script($"SETTING STORY BANK TO {bank}");
+        
+        // Unload previous story bank
+        UnloadBank(Game.current.CurrentStorySoundbank);
+        
+        // Set new story bank
         Game.current.CurrentStorySoundbank = bank;
       }
       else if (bank.ToLower().StartsWith("room"))
       {
         Trace.Script($"SETTING ROOM BANK TO {bank}");
+        
+        // Unload previous room bank
+        UnloadBank(Game.current.CurrentRoomSoundbank);
+        
+        // Set new room bank
         Game.current.CurrentRoomSoundbank = bank;
       }
     }
@@ -49,6 +59,12 @@ public class SoundbankManager : MonoBehaviour {
   
   public void UnloadBank(string bank)
   {
+    StartCoroutine(DelayUnloadBank(bank));
+  }
+  
+  IEnumerator DelayUnloadBank(string bank)
+  {
+    yield return new WaitForSeconds(2.0f);
     AkBankManager.UnloadBank(bank);
     loadedBanks.Remove(bank);
   }
