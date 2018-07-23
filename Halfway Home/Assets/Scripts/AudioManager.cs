@@ -192,21 +192,26 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
         Game.current.CurrentTrack = e[0];
+        Trace.Script($"Loading music {Game.current.CurrentTrack}");
         return;
       case "Ambience":
         AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
         Game.current.CurrentAmbience = e[0];
+        Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
         return;
       case "MLayer":
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
         Game.current.CurrentTrack = e[0];
+        Trace.Script($"Loading music {Game.current.CurrentTrack}");
         return;
       case "ALayer":
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
         Game.current.CurrentAmbience = e[0];
+        Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
         return;
       default:
+        Trace.Script($"Error loading {e[0]}");
         return;
     }
   }
@@ -311,33 +316,17 @@ public class AudioManager : MonoBehaviour
     
     Debug.Log("          CURRENT STORY SOUNDBANK:" + currentGame.CurrentStorySoundbank);
     
-    if (currentGame.CurrentTrack != "" && currentGame.CurrentTrack != "Stop_All")
-    {
-      Trace.Script($"Loading music {Game.current.CurrentTrack}");
-      //AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-      //AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
-      string[] newTrack = new string[] {currentGame.CurrentTrack, "Music"};
-      normalTracks.Add(newTrack);
-    }
-    else
-    {
-      Trace.Script("Stopping Music");
-      AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
-    }
+    Trace.Script($"Loading music {Game.current.CurrentTrack}");
+    //AkSoundEngine.PostEvent("Stop_All", MusicPlayer.gameObject);
+    //AkSoundEngine.PostEvent(currentGame.CurrentTrack, MusicPlayer.gameObject);
+    string[] newTrack = new string[] {currentGame.CurrentTrack, "Music"};
+    normalTracks.Add(newTrack);
     
-    if (currentGame.CurrentAmbience != "" && currentGame.CurrentAmbience != "Stop_All")
-    {
-      Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
-      //AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-      //AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
-      string[] newAmbience = new string[] {currentGame.CurrentTrack, "Ambience"};
-      normalTracks.Add(newAmbience);
-    }
-    else
-    {
-      Trace.Script("Stopping Ambience");
-      AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
-    }
+    Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
+    //AkSoundEngine.PostEvent("Stop_All", AmbiencePlayer.gameObject);
+    //AkSoundEngine.PostEvent(currentGame.CurrentAmbience, AmbiencePlayer.gameObject);
+    string[] newAmbience = new string[] {currentGame.CurrentAmbience, "Ambience"};
+    normalTracks.Add(newAmbience);
     
     // Reset RTPC values
     AkSoundEngine.SetRTPCValue("ambience_lpf", currentGame.CurrentAmbienceLPF);

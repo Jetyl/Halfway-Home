@@ -65,7 +65,7 @@ EXTERNAL SetValue(name, values)
 		The week has begun again.
 }
 I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : play_sfx_bed_creak
-[{player_name}] "I'm coming, I'm coming..."
+[{player_name}] "I'm coming, I'm coming..."   # Play : Stop_All
 //turn off knocking. door opening sound?
 
 { 

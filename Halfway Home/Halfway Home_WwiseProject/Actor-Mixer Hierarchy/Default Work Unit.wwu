@@ -625,13 +625,6 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" ShortID="357545396">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
