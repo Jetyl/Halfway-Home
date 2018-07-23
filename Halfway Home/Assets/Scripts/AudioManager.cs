@@ -148,25 +148,26 @@ public class AudioManager : MonoBehaviour
     {
       CallAudioEvent(e);
       
-      // Hard-coded LPF for fireplace ambience far away from Commons
-      if (e[0] == "play_ambience_fireplace_far")
-      {
-        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 30);
-        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", -2.1f);
-        
-        OnAudioParamFadeEvent(lpfEvent);
-        OnAudioParamFadeEvent(volEvent);
-      }
-      
-      // Reset LPF for fireplace in commons
-      else if (e[0] == "play_ambience_fireplace")
-      {
-        AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 0);
-        AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", 0);
-        
-        OnAudioParamFadeEvent(lpfEvent);
-        OnAudioParamFadeEvent(volEvent);
-      }
+      //DEPRECATED
+      //  // Hard-coded LPF for fireplace ambience far away from Commons
+      //  if (e[0] == "play_ambience_fireplace_far")
+      //  {
+      //    AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 30);
+      //    AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", -2.1f);
+      //    
+      //    OnAudioParamFadeEvent(lpfEvent);
+      //    OnAudioParamFadeEvent(volEvent);
+      //  }
+      //  
+      //  // Reset LPF for fireplace in commons
+      //  else if (e[0] == "play_ambience_fireplace")
+      //  {
+      //    AudioParamFadeEvent lpfEvent = new AudioParamFadeEvent ("ambience_lpf", 0);
+      //    AudioParamFadeEvent volEvent = new AudioParamFadeEvent ("ambience_vol", 0);
+      //    
+      //    OnAudioParamFadeEvent(lpfEvent);
+      //    OnAudioParamFadeEvent(volEvent);
+      //  }
     }
 
     // Call other events

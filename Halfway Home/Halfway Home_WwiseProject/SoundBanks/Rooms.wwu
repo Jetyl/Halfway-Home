@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<SoundBank Name="room_Kitchen" ID="{026319B2-CE82-49B1-96A9-9078127708AF}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_far_crickets_night" ID="{2CC216C5-36EB-4320-AEE4-4F014AD3CCF1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace_far_birds_day" ID="{FBD3CD7E-D74D-4629-BA41-A91BFC2B4CA4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_cafejazz" ID="{D77CE261-2488-4CD7-AF6D-D446908A628F}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -12,13 +14,17 @@
 				</SoundBank>
 				<SoundBank Name="room_ArtRoom" ID="{91A26EFC-7CBE-4375-8CC6-F53F946F7EA5}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_far_crickets_night" ID="{2CC216C5-36EB-4320-AEE4-4F014AD3CCF1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_artroom" ID="{DEF509F0-46F3-44E3-BCF5-55A9144122D1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace_far_birds_day" ID="{FBD3CD7E-D74D-4629-BA41-A91BFC2B4CA4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="room_YourRoom" ID="{78371995-4D79-4CE8-BDBA-156E2EAA0B83}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_your_room_fireplace_birds_day" ID="{E92C4C51-1033-45F1-B3AC-05C500B67F6C}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_your_room_fireplace_crickets_night" ID="{5EC9D667-4A68-4E79-BFE8-EEE51CD937D4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_contemplative" ID="{6E181B92-A89D-4EAD-B7BB-510C08377328}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -26,6 +32,8 @@
 				</SoundBank>
 				<SoundBank Name="room_Commons" ID="{0A6114E7-9E93-4842-A31E-9411433C83CA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_crickets_night" ID="{DA5B564B-5203-4393-86ED-1D203204A347}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace_birds_day" ID="{4D881C0C-4128-4562-A42A-A97770A7B57D}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_commons" ID="{32B99AAB-AE17-4A5A-80AF-E29B13B83441}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -34,12 +42,16 @@
 				<SoundBank Name="room_Garden" ID="{EADB6C8B-04F7-43FF-A347-E8B6DEB569B0}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_music_garden" ID="{69FCDBB2-EEDB-4145-83D1-D5260CB5AB5A}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_garden_birds_day" ID="{9D5653A6-1B39-4EE6-9CF5-F0F816714567}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_garden_crickets_night" ID="{E63AFE99-8DCC-4FCA-A6A7-D20EDB5B3296}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="room_Library" ID="{635EAE3E-AE5A-4E16-B48D-1D3B10083825}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_fireplace_far_crickets_night" ID="{2CC216C5-36EB-4320-AEE4-4F014AD3CCF1}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_fireplace_far_birds_day" ID="{FBD3CD7E-D74D-4629-BA41-A91BFC2B4CA4}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_library" ID="{D34C8965-552B-472B-9C0A-2942ED9D5285}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -1134,7 +1134,7 @@
 						<Action Name="" ID="{1124D25C-0100-4914-8BA0-2315332CD2B6}" ShortID="662639340">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -1260,6 +1260,130 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_bardman_placeholder" ID="{ED814CE8-74B4-4D63-9462-45949D7251EE}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ambiences" ID="{F81BC270-8A15-4D62-86CA-CD0BA10E42C3}" ShortID="40848534">
+					<ChildrenList>
+						<Event Name="play_ambience_garden_birds_day" ID="{9D5653A6-1B39-4EE6-9CF5-F0F816714567}">
+							<ChildrenList>
+								<Action Name="" ID="{5F30469F-9289-446B-8544-87F4EC1B51A5}" ShortID="279696488">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_garden_birds_day" ID="{B9B0DC75-11FD-4089-A1AD-F00D11128DC4}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_garden_crickets_night" ID="{E63AFE99-8DCC-4FCA-A6A7-D20EDB5B3296}">
+							<ChildrenList>
+								<Action Name="" ID="{3ECFBF8E-3A40-444D-88EF-24083D237A87}" ShortID="1028318021">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_garden_crickets_night" ID="{EF91E457-8948-4A5E-9FE2-B05EBD2B9412}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_your_room_fireplace_birds_day" ID="{E92C4C51-1033-45F1-B3AC-05C500B67F6C}">
+							<ChildrenList>
+								<Action Name="" ID="{74D6F207-CA4A-4A3B-9CD8-C0196AA63892}" ShortID="392680173">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_your_room_fireplace_birds_day" ID="{7F504368-606E-43D6-B7DC-1C51F97841CF}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_your_room_fireplace_crickets_night" ID="{5EC9D667-4A68-4E79-BFE8-EEE51CD937D4}">
+							<ChildrenList>
+								<Action Name="" ID="{579D9A7F-E686-48CE-8A14-5F6819071F65}" ShortID="87046785">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_your_room_fireplace_crickets_night" ID="{9AB69635-99CF-4FDE-9588-8CA45365012B}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_fireplace_birds_day" ID="{4D881C0C-4128-4562-A42A-A97770A7B57D}">
+							<ChildrenList>
+								<Action Name="" ID="{B38BE24B-2F24-4944-9F26-DE88C88F3C19}" ShortID="1048737461">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace_birds_day" ID="{8D11B731-B74A-454C-A339-EA11654F248A}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_fireplace_crickets_night" ID="{DA5B564B-5203-4393-86ED-1D203204A347}">
+							<ChildrenList>
+								<Action Name="" ID="{BDB1B7D5-36D6-47B7-8E0D-60504323B142}" ShortID="554236233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace_crickets_night" ID="{E6521E34-5F91-4BFA-9660-343419954554}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_fireplace_far_birds_day" ID="{FBD3CD7E-D74D-4629-BA41-A91BFC2B4CA4}">
+							<ChildrenList>
+								<Action Name="" ID="{6CE402CF-D2EC-40E2-81CA-EBF401A37682}" ShortID="411661696">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace_far_birds_day" ID="{E885D3ED-00B1-46A6-A850-A7B5EFF6F9D0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_ambience_fireplace_far_crickets_night" ID="{2CC216C5-36EB-4320-AEE4-4F014AD3CCF1}">
+							<ChildrenList>
+								<Action Name="" ID="{C2EA0843-6101-43C5-91BE-C1F87E4EB2B0}" ShortID="573328099">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_fireplace_far_crickets_night" ID="{E1296EB6-98E6-4E07-B59B-61CF69E237C2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

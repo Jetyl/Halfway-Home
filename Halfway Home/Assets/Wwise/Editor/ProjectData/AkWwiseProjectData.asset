@@ -16,14 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 1127361738
-    m_lastTimePart2: -1999246514
+    m_lastTimePsrt1: -271055902
+    m_lastTimePart2: -1999245218
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 822315022
-    m_lastTimePart2: -1999246197
+    m_lastTimePsrt1: -948509798
+    m_lastTimePart2: -1999245211
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -121,6 +121,30 @@ MonoBehaviour:
       ID: -1364989386
       Guid: dd2125434c2c264897b057b5c816a8f4
       maxAttenuation: 0
+    - Name: play_ambience_fireplace_birds_day
+      Path: PlayMusic\ambiences\play_ambience_fireplace_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_birds_day
+        ObjectType: 3
+      ID: -1397726948
+      Guid: 0c1c884d28416245a42aa97770a7b57d
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_fireplace_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_crickets_night
+        ObjectType: 3
+      ID: 792462442
+      Guid: 4b565bda0352934386ed1d203204a347
+      maxAttenuation: 0
     - Name: play_ambience_fireplace_far
       Path: PlayMusic\intro_ambiences\play_ambience_fireplace_far
       PathAndIcons:
@@ -132,6 +156,78 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1496096124
       Guid: 14ef77cc95f92d46bafba30806d20fbc
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_far_birds_day
+      Path: PlayMusic\ambiences\play_ambience_fireplace_far_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_far_birds_day
+        ObjectType: 3
+      ID: -1660325802
+      Guid: 7ecdd3fb4dd72946ba41a91bfc2b4ca4
+      maxAttenuation: 0
+    - Name: play_ambience_fireplace_far_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_fireplace_far_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_fireplace_far_crickets_night
+        ObjectType: 3
+      ID: -1891711800
+      Guid: c516c22ceb362043aee44f014ad3ccf1
+      maxAttenuation: 0
+    - Name: play_ambience_garden_birds_day
+      Path: PlayMusic\ambiences\play_ambience_garden_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_garden_birds_day
+        ObjectType: 3
+      ID: 1503005308
+      Guid: a653569d391be64e9cf5f0f816714567
+      maxAttenuation: 0
+    - Name: play_ambience_garden_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_garden_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_garden_crickets_night
+        ObjectType: 3
+      ID: 561449546
+      Guid: 99fe3ae6cc8dca4fa6a7d20edb5b3296
+      maxAttenuation: 0
+    - Name: play_ambience_your_room_fireplace_birds_day
+      Path: PlayMusic\ambiences\play_ambience_your_room_fireplace_birds_day
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_your_room_fireplace_birds_day
+        ObjectType: 3
+      ID: 208869464
+      Guid: 514c2ce93310f145b3ac05c500b67f6c
+      maxAttenuation: 0
+    - Name: play_ambience_your_room_fireplace_crickets_night
+      Path: PlayMusic\ambiences\play_ambience_your_room_fireplace_crickets_night
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_your_room_fireplace_crickets_night
+        ObjectType: 3
+      ID: -1092131978
+      Guid: 67d6c95e684a794ebfe8eee51cd937d4
       maxAttenuation: 0
     - Name: play_music_artroom
       Path: PlayMusic\play_music_artroom
@@ -822,8 +918,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1976198825
-    m_lastTimePart2: -1999246198
+    m_lastTimePsrt1: 1999619603
+    m_lastTimePart2: -1999245619
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -864,8 +960,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 1242894140
-    m_lastTimePart2: -1999246087
+    m_lastTimePsrt1: 624195600
+    m_lastTimePart2: -1999245217
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -924,8 +1020,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1243526270
-    m_lastTimePart2: -1999246227
+    m_lastTimePsrt1: 624321196
+    m_lastTimePart2: -1999245217
     List:
     - Name: story_big_happy_family
       Path: Stories\story_big_happy_family

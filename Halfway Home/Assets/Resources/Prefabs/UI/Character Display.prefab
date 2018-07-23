@@ -287,118 +287,160 @@ MonoBehaviour:
     Backdrops:
     - {fileID: 0}
     - {fileID: 0}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack:
+    - 
+    - 
+    Ambience:
+    - 
+    - 
     Bank: 
   - ID: 1
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 9e5b2f464cf68cb4ba66953129de4469, type: 3}
     - {fileID: 21300000, guid: 2f25ea9a43dca054e8dbd7071e22450a, type: 3}
-    MusicTrack: play_music_contemplative
-    Ambience: play_ambience_fireplace_far
+    MusicTrack:
+    - play_music_contemplative
+    - play_music_contemplative
+    Ambience:
+    - play_ambience_your_room_fireplace_birds_day
+    - play_ambience_your_room_fireplace_crickets_night
     Bank: room_YourRoom
   - ID: 2
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 9a5057bf525eec846973505e31c65236, type: 3}
     - {fileID: 21300000, guid: 2045428f9a8781f4e8f318ede9f23890, type: 3}
-    MusicTrack: play_music_commons
-    Ambience: play_ambience_fireplace
+    MusicTrack:
+    - play_music_commons
+    - play_music_commons
+    Ambience:
+    - play_ambience_fireplace_birds_day
+    - play_ambience_fireplace_crickets_night
     Bank: room_Commons
   - ID: 3
     Tag: 
     Backdrops:
     - {fileID: 0}
     - {fileID: 0}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack:
+    - 
+    - 
+    Ambience:
+    - 
+    - 
     Bank: 
   - ID: 4
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 74cc687f645df454a86ac03591cfb9dc, type: 3}
     - {fileID: 21300000, guid: cfc9cd69be1d3be4f98284a3835de2dd, type: 3}
-    MusicTrack: play_music_cafejazz
-    Ambience: play_ambience_fireplace_far
+    MusicTrack:
+    - play_music_cafejazz
+    - play_music_cafejazz
+    Ambience:
+    - play_ambience_fireplace_far_birds_day
+    - play_ambience_fireplace_far_crickets_night
     Bank: room_Kitchen
   - ID: 5
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: c099b968a80329f48a22fc895ef9777d, type: 3}
     - {fileID: 21300000, guid: 49197d4e64c76e84f869cf109ee4355c, type: 3}
-    MusicTrack: play_music_garden
-    Ambience: 
+    MusicTrack:
+    - play_music_garden
+    - play_music_garden
+    Ambience:
+    - play_ambience_garden_birds_day
+    - play_ambience_garden_crickets_night
     Bank: room_Garden
   - ID: 6
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: f45c555ef020b714abd70c927ede5a59, type: 3}
     - {fileID: 21300000, guid: 0d2c6179c919aa1438f4168740b1a4a7, type: 3}
-    MusicTrack: play_music_library
-    Ambience: play_ambience_fireplace_far
+    MusicTrack:
+    - play_music_library
+    - play_music_library
+    Ambience:
+    - play_ambience_fireplace_far_birds_day
+    - play_ambience_fireplace_far_crickets_night
     Bank: room_Library
   - ID: 7
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 246d69b4745eef942a4cda45f390626d, type: 3}
     - {fileID: 21300000, guid: bc9de50030c84bc41a684d8c2e25c06c, type: 3}
-    MusicTrack: play_music_artroom
-    Ambience: play_ambience_fireplace_far
+    MusicTrack:
+    - play_music_artroom
+    - play_music_artroom
+    Ambience:
+    - play_ambience_fireplace_far_birds_day
+    - play_ambience_fireplace_far_crickets_night
     Bank: room_ArtRoom
   - ID: 8
     Tag: 
     Backdrops:
     - {fileID: 21300000, guid: 7a430e18621e5a54c9bb34f7db6099f6, type: 3}
     - {fileID: 21300000, guid: 7a430e18621e5a54c9bb34f7db6099f6, type: 3}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack:
+    - 
+    - 
+    Ambience:
+    - 
+    - 
     Bank: 
   - ID: 9
     Tag: 
     Backdrops:
     - {fileID: 0}
     - {fileID: 0}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack: []
+    Ambience: []
     Bank: 
   - ID: 10
     Tag: 
     Backdrops:
     - {fileID: 0}
     - {fileID: 0}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack: []
+    Ambience:
+    - 
+    - 
     Bank: 
   - ID: 11
     Tag: 
     Backdrops:
     - {fileID: 0}
     - {fileID: 0}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack:
+    - 
+    - 
+    Ambience:
+    - 
+    - 
     Bank: 
   SpecialBackdrops:
   - ID: 0
     Tag: Dream
     Backdrops:
     - {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack: []
+    Ambience: []
     Bank: 
   - ID: 0
     Tag: HouseFront
     Backdrops:
     - {fileID: 21300000, guid: aa524f55e5cebdf45ad8ebd2d348a50a, type: 3}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack: []
+    Ambience: []
     Bank: 
   - ID: 0
     Tag: CommonsNight
     Backdrops:
     - {fileID: 21300000, guid: 2045428f9a8781f4e8f318ede9f23890, type: 3}
-    MusicTrack: 
-    Ambience: 
+    MusicTrack: []
+    Ambience: []
     Bank: 
   FrontCurtain: {fileID: 212507266546122010}
   BackCuratin: {fileID: 212070676895858708}
