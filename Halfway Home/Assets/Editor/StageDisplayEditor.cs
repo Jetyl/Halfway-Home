@@ -108,7 +108,14 @@ public class StageDisplayEditor : Editor
 
         if (showSPbackdrops)
         {
-            SpecialBackdrop.arraySize = EditorGUILayout.DelayedIntField("Amount", SpecialBackdrop.arraySize);
+            var size = SpecialBackdrop.arraySize;
+
+            size = EditorGUILayout.DelayedIntField("Amount", size);
+
+            SpecialBackdrop.arraySize = size;
+
+            while (size > SPFoldouts.Count)
+                SPFoldouts.Add(false);
 
             for (var i = 0; i < SpecialBackdrop.arraySize; ++i)
             {
@@ -119,6 +126,8 @@ public class StageDisplayEditor : Editor
                     SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue = EditorGUILayout.TextField("Backdrop Tag",
                     SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue);
 
+                    var tag = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Tag").stringValue;
+
                     var spec = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Backdrops");
                     spec.arraySize = 1;
 
@@ -128,14 +137,14 @@ public class StageDisplayEditor : Editor
                     var mus = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("MusicTrack");
                     mus.arraySize = 1;
                     EditorGUILayout.PropertyField(mus.GetArrayElementAtIndex(0),
-                        new GUIContent((Room)i + " Music"), true);
+                        new GUIContent(tag + " Music"), true);
 
                     var amb = SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Ambience");
                     amb.arraySize = 1;
                     EditorGUILayout.PropertyField(amb.GetArrayElementAtIndex(0),
-                        new GUIContent((Room)i + " Ambience"), true);
+                        new GUIContent(tag + " Ambience"), true);
                     EditorGUILayout.PropertyField(SpecialBackdrop.GetArrayElementAtIndex(i).FindPropertyRelative("Bank"),
-                        new GUIContent((Room)i + " Bank"), true);
+                        new GUIContent(tag + " Bank"), true);
                 }
 
                 

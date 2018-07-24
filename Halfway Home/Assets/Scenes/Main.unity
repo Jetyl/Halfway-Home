@@ -5922,7 +5922,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8849,7 +8849,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.85
+  m_fontSize: 70.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15658,7 +15658,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.05
+  m_fontSize: 57.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -20832,7 +20832,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50.05
+  m_fontSize: 50.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26850,36 +26850,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1174770651}
     m_Modifications:
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[0].Ambience.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[1].Ambience.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[2].Ambience.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[0].MusicTrack.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[1].MusicTrack.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567418828194960, guid: 0b21784794667a04aa09eada542517f0,
-        type: 2}
-      propertyPath: SpecialBackdrops.Array.data[2].MusicTrack.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4740660146959848, guid: 0b21784794667a04aa09eada542517f0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -42459,7 +42429,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 51.8
+  m_fontSize: 51.75
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -45708,7 +45678,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52.95
+  m_fontSize: 53
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -48194,7 +48164,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 51.8
+  m_fontSize: 51.75
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -53071,7 +53041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.1289}
+  m_AnchoredPosition: {x: 0, y: 902.7311}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -55085,7 +55055,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.1
+  m_fontSize: 29.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -56082,7 +56052,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 62.15
+  m_fontSize: 62.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -57552,7 +57522,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.9
+  m_fontSize: 66.85
   m_fontSizeBase: 69
   m_fontWeight: 400
   m_enableAutoSizing: 1

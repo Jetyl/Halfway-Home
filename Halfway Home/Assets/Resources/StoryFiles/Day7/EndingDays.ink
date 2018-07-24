@@ -547,11 +547,11 @@ I pick up all of my bags to head out- #Skip
 [Dyed>Timothy] "Wait!"
 Timothy Runs up behind me, holding onto a peice of paper in his hands. #dyed = Surprised 
 [{player_name}] "Oh, hey Timothy. Where'd did you run off to?"
-[Dyed>Timothy] "I n-needed to f-finish something."
-"H-here!"
+[Dyed>Timothy] "I n-needed to f-finish something." #dyed = afraid
+"H-here!" #dyed = happy
 Timothy holds out the peice of paper.
-"I'm n-not a very good a-artist, but I w-wanted to make you something, s-so."
-... //Show the CG here.
+"I'm n-not a very good a-artist, but I w-wanted to make you something, s-so." #dyed =afraid
+... #all = exit #Background / TimothysDrawing, crossfade
 Its not anything amazing, artistically, but heart of it all makes me grin from ear to ear.
 [{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
 [Dyed>Timothy] "R-Really?" #Dyed = Happy

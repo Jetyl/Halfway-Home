@@ -425,22 +425,37 @@ MonoBehaviour:
     Tag: Dream
     Backdrops:
     - {fileID: 21300000, guid: 8854e969e03b59c4b9b6bbb1880df03b, type: 3}
-    MusicTrack: []
-    Ambience: []
+    MusicTrack:
+    - 
+    Ambience:
+    - 
     Bank: 
   - ID: 0
     Tag: HouseFront
     Backdrops:
     - {fileID: 21300000, guid: aa524f55e5cebdf45ad8ebd2d348a50a, type: 3}
-    MusicTrack: []
-    Ambience: []
+    MusicTrack:
+    - 
+    Ambience:
+    - 
     Bank: 
   - ID: 0
     Tag: CommonsNight
     Backdrops:
     - {fileID: 21300000, guid: 2045428f9a8781f4e8f318ede9f23890, type: 3}
-    MusicTrack: []
-    Ambience: []
+    MusicTrack:
+    - 
+    Ambience:
+    - 
+    Bank: 
+  - ID: 0
+    Tag: TimothysDrawing
+    Backdrops:
+    - {fileID: 21300000, guid: ce8e7de12de8aff4eb66a3064b0e0849, type: 3}
+    MusicTrack:
+    - 
+    Ambience:
+    - 
     Bank: 
   FrontCurtain: {fileID: 212507266546122010}
   BackCuratin: {fileID: 212070676895858708}
