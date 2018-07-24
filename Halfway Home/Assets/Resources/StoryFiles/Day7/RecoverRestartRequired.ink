@@ -47,36 +47,85 @@ Once the dinner has wound down, I quietly head to my room to rest.
 ===PrimarySuccess===
 //player has broken timeloop, and is going to end the game
 ~SetValue("Saved Self", true)
- what feels like an eternity, I feel good going to bed today.
+I sit down on my bed and put my head in my hands.
+I inhale and exhale deeply, clearing all the buzzing thoughts from my mind.
+It feels good to take a moment to unwind.
+I don't feel any different, but somehow... I know I am.
+This week has happened {week==3:three times now.|{week==4:four times now.|so many times I've lost count. Was it five?}}
+My head is filled with questions I will never find the answer to.
+Perhaps those are simply the weeks I <i>remember</i>. How many countless paths have I walked?
+Has this ever happened to anyone else?
+Were all those past weeks just one long nightmare? If so, how do I know I'm not still dreaming?
+But none of those questions can distract me from one pleasant truth:
+After what feels like an eternity, I finally feel good going to bed today.
+For the first time in a long time I don't dread what tomorrow brings...
+Whether that be another week at Sunflower House... or my first week leaving it behind.
 {
 	-GetValue("Saved Timothy"):
-		Timothy walks in and plots down to bed.
-		we chat, and he offers to help me pack my bags, which we do. 
+		The sound of the door creaking open pulls me from my thoughts.
+		Timothy walks in and plops down on his bed. # Timothy = Happy, far, stage_right
+		[Timothy] "Hey, {player_name}. Wow, what a day, huh?"
+		[{player_name}] "Yeah."
+		[Timothy] "I can't believe you're leaving. I-I'm gonna miss you, you know." # Timothy = Sad
+		[{player_name}] "That's nice of you to say. I'll miss you, too, man." # Timothy = Calm
+		Or I will when I actually do leave this place.
+		I look at my empty suitcase. It gets harder and harder to convince myself to bother packing it.
+		[Timothy] "Oh! Y-you're not packed yet! Can... can I help?" # Timothy = Surprised
+		[{player_name}] "Sure. I don't have that much, though." # Timothy = Calm
+		I point out a few things to Timothy and start rummaging through my dresser.
+		Divided between the two of us, the already simple task is completed in mere minutes.
+		[Timothy] "Wow, that's it?" # Timothy = Surprised
+		[{player_name}] "Jeez, you don't have to say it like that."
+		[Timothy] "<jitter>Oh no! I-I didn't mean... I'm sorry!</jitter>" # Timothy = Afraid
+		[{player_name}] "No apology needed. You're right... it really isn't a lot."
+		"I guess I just never cared about getting new stuff." # Timothy = Calm
+		[Timothy] "Well, on the bright side: less to pack!" # Timothy = Happy
+		Timothy yawns.
+		"Sorry, {player_name}. I'm really feeling tired. I meant to be asleep by now." # Timothy = Sad
+		[{player_name}] "I should be in bed, too. You can have the bathroom first." # Timothy = Happy
+		Timothy nods and slips into the bathroom. The two of us conduct our nightly routine in silence. # Timothy = Exit
+		I lay myself down onto my mattress and look over at Timothy, who is already fast asleep.
+		Even if I have to do this all again, at least I got to see him happy.
 	-else:
-		I look over at Timothy's vacent bed.
-		I feel a little bad I couldn't help him.
-		I distract myself by packing my bags.
-		No clue if its actually worth it, given I'll just wake up back at the start of the week, but its good to pretend I'm leaving, at least.
+		I look over at Timothy's vacant bed.
+		I feel a little bad that I couldn't help him.
+		But that wasn't really what this was about anyway, was it?
+		And if the week keeps on repeating, who's to say it even matters?
+		Still... the thought of Timothy being carted off to Blackwell weighs heavily on me.
+		I try to distract myself by packing my bags.
+		It's probably futile, but I think I'm long overdue for a little optimism.
+		When I've finished packing, I ready myself for bed and plop down onto my mattress.
 }
-With that done, I call it a night.
-I sleep more calmly than I've slept in a long while.
+As I drift off, I reflect on the choices that led me to this moment.
+I could have done so many things differently...
+I slip into a deep and dreamless slumber.
+I sleep more calmly than I've slept in a long, long time.
 ->END
 
 ===SecondarySuccess===
-I feel a sense of satisfaction as I go about my nightly routine.
+I feel a {sense of satisfaction|nervous} as I go about my nightly routine.
 Timothy's sound asleep in the other bed, sporting a wicked new hair color.
 I did it. I helped him...
-Now this nightmare will end and life can go on.
-All I've gotta do is wait 'til tomorrow.
-Tomorrow...
-It's a little weird to even imagine tomorrow coming at all.
-How strange is it that I've gotten <i>used</i> to this weird repeat stuff?
-I look down at my barely-packed bags. I hadn't put much effort in since I didn't think it would matter, but now...
-I should probably be getting ready for tomorrow.
-I pack the rest of my things and slide into bed.
-Even though things worked out, I can't help but feel like something is wrong.
-I'm probably just being paranoid...
-I'll save my worrying for tomorrow.
+{Now this nightmare will end and life can go on.|But it's not enough, is it?}
+{All I've gotta do is wait 'til tomorrow.|I need to do more than fix things for Timothy. I have to fix them for myself.}
+{SecondarySuccess==1:
+	Tomorrow...
+	It's a little weird to even imagine tomorrow coming at all.
+	How strange is it that I've gotten <i>used</i> to this weird repeat stuff?
+	I look down at my barely-packed bags. I hadn't put much effort in since I didn't think it would matter, but now...
+	I should probably be getting ready for tomorrow.
+	I pack the rest of my things and slide into bed.
+	Even though things worked out, I can't help but feel like something is wrong.
+	I'm probably just being paranoid...
+	I'll save my worrying for tomorrow.
+-else:
+	Maybe the loop will break. Maybe all of this will end.
+	Maybe...
+	But I can't shake the feeling that... this isn't over.
+	That I'm not ready.
+	That I still have more to learn.
+	Whatever the case, I'll deal with it when it comes. For now, I'm too tired to worry.
+}
 I wrap myself up in the blankets and fall gently to sleep.
 ->TheDream
 
@@ -113,17 +162,18 @@ These thoughts eat away at my mind. I toss and turn for a while before sleep fin
 ->->
 
 ===RepeatRRR===
+I sluggishly prepare for bed, feeling defeated.
 I failed... again.
 I let Timothy down.
 I let everybody down.
+I slide under the covers, take a deep breath, and exhale.
 {awareness>2:
 	But I learned new things. I am more than I was. # awareness ^ good
 	That has to count for something.
 }
-// Move this to Knock?
-This week keeps on repeating. I don't understand why, but I've been given a chance to fix this.
+This week keeps on repeating. I don't understand why or how, but I've been given a chance to fix this.
 To fix everything.
-Timothy has to be the key. If I can just help him...
+{SecondarySuccess==0:Timothy has to be the key. If I can just help him...|Not just to help Timothy, but to help myself. Adn when I do...}
 I can finally leave this place.
 ->->
 

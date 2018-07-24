@@ -59,8 +59,10 @@ EXTERNAL SetValue(name, values)
 		I lay staring at the ceiling, as I've done so many times before, wondering what the next roof over my head will look like.
 		A cheerful knock drags me out of my dreary haze.   # SFX : play_sfx_human_knock
 		Must be Max, to take me away from this limbo.
-	- GetValue("FirstRRR"):
-		-> RestartRequired
+	- GetValue("RRRFreakout") && Freakout == 0:
+		-> Freakout
+	- GetValue("RRRFreakout"):
+		-> NotSurprised
 	-else:
 		The week has begun again.
 }
@@ -205,7 +207,7 @@ I take a deep breath, shaking off some of the existential dread still washing ov
 -> END
 
 ===Repeat===
-I open the door, seeing Max's beaming face, and a scared Timothy behind them.   #Keyless = Calm   #Timothy = scared
+I open the door to Max's beaming face. A scared Timothy hides behind them.   #Keyless = Calm   #Timothy = Afraid
 [Keyless>Max] "Hella yella, my {player_name} fella."
 +[Morning Max]
 	[{player_name}] "Ugh... Morning Max."
@@ -258,11 +260,15 @@ Or I could show Timothy around myself and snag the keys from the cushions before
 	He's no stranger to me any more, but I am to him... weird to think about.
 	->TakingTimothy
 
-===RestartRequired===
+===Freakout===
 No no no no!
 I bolt out of bed and sprint for the door.   # SFX : play_sfx_human_footsteps_approaching
 This can't be happening.
 -> Repeat
+
+===NotSurprised===
+// TO DO
+->Repeat
 
 ===TakingTimothy===
 {SetValue("Tutorial", true)}
