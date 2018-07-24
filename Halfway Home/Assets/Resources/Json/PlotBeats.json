@@ -228,15 +228,11 @@
   "BeatName"   : "End Game",
   "Point"      : [
    {
-    "Name" : "Saved Timothy",
-    "Type" : 1
-   },
-   {
     "Name" : "Saved Self",
     "Type" : 1
    },
    {
-    "Name" : "FirstRRR",
+    "Name" : "RRRFreakout",
     "Type" : 1
    }
   ]
@@ -321,6 +317,14 @@
    {
     "Name" : "BookGenre",
     "Type" : 4
+   },
+   {
+    "Name" : "Saved Timothy",
+    "Type" : 1
+   },
+   {
+    "Name" : "RRRFreakout",
+    "Type" : 1
    }
   ]
  },
