@@ -49,14 +49,16 @@ EXTERNAL GetStringValue(value)
 	[{player_name}] "Uh... cool."
 +[Got all that?]
 	"You got all that?"
-	[Timothy] "y-yes?"
-	"so, the Cafe is open whenever to eat then?"
+	[Timothy] "Y-yes?"
+	"So, the cafe is open whenever to eat then?"
 	[{player_name}] "Uh, yeah. There isn't much of a reason to come here if you aren't hungry though."
-	I remember Max saying that the `optimal` times to eat were, when you woke up, then 3 hours later, than 6 hours after that.
-	Something like that I think. I dunno.
+	I remember Max saying that there are `optimal` times to eat, whatever that means.
+	I think it was when you wake up, then 3 hours later, than 6 hours after that.
+	Something like that. I dunno.
 -"Well, uh, lets go see what they got. If I recall, today is pancake day."
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
+Time to show Timothy the rest of the House. # 0.1 & InProgress # 0.2 & InProgress # 0.3 & InProgress # 0.4 & InProgress
 -> END
 
 === Repeat ===
@@ -66,6 +68,7 @@ I look back at Timothy, and see he's mostly just staring at the ground.
 +[You hungry?]
 	"You hungry at all Timothy?"
 -[Timothy] "<jitter><size=50%>I guess...<size=100%></jitter>"
-I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success
+I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit # 0.0 & Success
 I feel refreshed by the delicious meal. @<color=A5C5E3FF>(fatigue reduced!)</color> #Fatigue -= 20
+Time to show Timothy the rest of the House. # 0.1 & InProgress # 0.2 & InProgress # 0.3 & InProgress # 0.4 & InProgress
 -> END
