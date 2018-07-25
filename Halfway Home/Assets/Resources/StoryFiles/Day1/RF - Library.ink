@@ -27,7 +27,7 @@ EXTERNAL GetStringValue(value)
 -> LibraryFunction
 
 === LibraryFunction ===
-[{player_name}] "And here's the library." #Timothy = Calm
+[{player_name}] "And here's the library." #Timothy = Calm, close, stage_left
 "They have a whole stock of fiction and non-fiction stuff here, for all your literary needs"
 "There's also a book club that meets a few times a week"
 [Timothy] "It's... um... a little claustrophobic in here."
@@ -46,20 +46,20 @@ EXTERNAL GetStringValue(value)
 === WeekOne ===
 Hmm... not sure what that one's about.
 "I haven't really spent much time in here, but I probably should..."
-+[browse the selection]
-	"But yeah, you want to browse around the selection?"
-+[Check the recomendation out]
-	"But yeah, you want to check that recomended book out?"
++[Browse the selection]
+	"Do you want to browse the selection?"
++[Check the recomendations out]
+	"How about we check out the recomended books?"
 -[Timothy] "Maybe l-later."
 "Th-thanks though..." #Timothy = Exit #0.4 & Success
 -> END
 
 === Repeat ===
-"what kind of books do you like Timothy?"
-[Timothy] "uh... I like adventure books." #Timothy = surprised
-[{player_name}] "cool, like, choose you own adventure books?"
-[Timothy] "th-those t-too, y-yeah."
-"really, adventure books in general are pretty cool..."
-[{player_name}] "neat. We should see if they have any here."
+"What kind of books do you like Timothy?"
+[Timothy] "Uh... I like adventure books. Fantasy books, too, I guess" #Timothy = surprised
+[{player_name}] "Cool, like, choose your own adventure books?"
+[Timothy] "Th-those t-too, y-yeah, but..."
+"Really, anything with a big map in the front."
+[{player_name}] "Oh, gotcha. I'm sure they've got stuff like that here somewhere. Want to look around?"
 "Uh... s-sure..." #Timothy = Exit #0.4 & Success
 -> END
