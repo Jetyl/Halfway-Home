@@ -149,7 +149,7 @@ I walk over to they pair, Timothy in tow.
 +[Ehh...]
 	[{player_name}] "Ehh... I exist, I guess."
 	"Max just sorta ploped this kid on me."
-+{expression > 1}[Its great]
++{expression > 1}[Its great <expression>]
 	[{player_name}] "Oh, I'm pretty good actually" #expression ^ good
 	"I'm showing Timothy around, since he's new here."
 -[Eduardo] "Oh, is that who that is?"

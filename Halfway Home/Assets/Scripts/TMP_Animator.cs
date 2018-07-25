@@ -139,11 +139,11 @@ public class TMP_Animator : MonoBehaviour
         {
             int j = text.IndexOf('>', i + 1);
 
-            print(j);
+            //print(j);
 
             string thisBit = text.Substring(i + 1, j - i - 1);
 
-            print(thisBit);
+            //print(thisBit);
 
             if (thisBit == JitterKey)
             {

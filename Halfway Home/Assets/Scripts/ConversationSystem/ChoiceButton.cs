@@ -13,23 +13,30 @@ using TMPro;
 public class ChoiceButton : MonoBehaviour
 {
 
-    public Choices choiceInfo;
+    public ChoiceDisplayData[] Tags;
+
+    Choices choiceInfo;
+
+    ChoiceDisplayData Base;
 
     bool Active = true;
 
-    //Button button;
+    Button button;
 
     TextMeshProUGUI txt;
 
 	// Use this for initialization
 	void Start ()
     {
-        //button = GetComponent<Button>();
+        button = GetComponent<Button>();
         txt = GetComponentInChildren<TextMeshProUGUI>();
 
         choiceInfo = new Choices(txt.text);
+        Base.Colors = button.colors;
 
-	}
+        EventSystem.ConnectEvent<ChoiceEvent>(gameObject, Events.Choice, UpdateChoice);
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -37,22 +44,37 @@ public class ChoiceButton : MonoBehaviour
 	
 	}
 
-    
-    public void ChoiceMade ()
+    public void UpdateChoice(ChoiceEvent eventdata)
     {
-        if (!Active)
-            return;
+        button.colors = ExtractChoiceColor(ref eventdata.choicedata.text, Tags, Base.Colors);
 
-        Active = false;
-        
-        Space.DispatchEvent(Events.ChoiceMade, new ChoiceEvent(choiceInfo));
-        
-        
-
+        txt.text = eventdata.choicedata.text.Trim();
     }
     
-    
 
+    public ColorBlock ExtractChoiceColor(ref string text, ChoiceDisplayData[] compare, ColorBlock Base)
+    {
+        if (!text.Contains("<") || !text.Contains(">"))
+            return Base;
+
+
+        int i = text.IndexOf('<');
+        int j = text.IndexOf('>', i + 1);
+
+        string thisBit = text.Substring(i + 1, j - i - 1);
+
+        foreach (var tag in compare)
+        {
+            if (thisBit.ToLower() == tag.tag.ToLower())
+            {
+                text = text.Replace("<" + tag.tag + ">", "");
+                return tag.Colors;
+            }
+        }
+
+        return Base;
+
+    }
 
 }
 
@@ -65,4 +87,11 @@ public class ChoiceEvent : DefaultEvent
     {
         choicedata = choice;
     }
+}
+
+[System.Serializable]
+public struct ChoiceDisplayData
+{
+    public string tag;
+    public ColorBlock Colors;
 }

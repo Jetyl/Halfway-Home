@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114118061972464522}
   - component: {fileID: 114285933882590158}
   - component: {fileID: 114764317690239070}
+  - component: {fileID: 114885179132074898}
   m_Layer: 5
   m_Name: Choice Button
   m_TagString: Untagged
@@ -247,6 +248,42 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114885179132074898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015871394592176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be23d5975d6999f4795ffe7101bede34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tags:
+  - tag: expression
+    Colors:
+      m_NormalColor: {r: 0.859, g: 0.20100603, b: 0.6313343, a: 1}
+      m_HighlightedColor: {r: 0.678, g: 0.15789041, b: 0.49843803, a: 1}
+      m_PressedColor: {r: 0.85882354, g: 0.2, b: 0.6313726, a: 1}
+      m_DisabledColor: {r: 0.85882354, g: 0.52302355, b: 0.7428924, a: 0.466}
+      m_ColorMultiplier: 1
+      m_FadeDuration: 0.1
+  - tag: grace
+    Colors:
+      m_NormalColor: {r: 0.859, g: 0.80504453, b: 0.20100598, a: 1}
+      m_HighlightedColor: {r: 0.678, g: 0.63598555, b: 0.15789045, a: 1}
+      m_PressedColor: {r: 0.85882354, g: 0.8056038, b: 0.2, a: 1}
+      m_DisabledColor: {r: 0.85882354, g: 0.83169764, b: 0.52302355, a: 0.466}
+      m_ColorMultiplier: 1
+      m_FadeDuration: 0.1
+  - tag: awareness
+    Colors:
+      m_NormalColor: {r: 0.20100598, g: 0.84715605, b: 0.859, a: 1}
+      m_HighlightedColor: {r: 0.15789045, g: 0.664961, b: 0.678, a: 1}
+      m_PressedColor: {r: 0.2, g: 0.84230703, b: 0.85882354, a: 1}
+      m_DisabledColor: {r: 0.52302355, g: 0.85040516, b: 0.85882354, a: 0.466}
+      m_ColorMultiplier: 1
+      m_FadeDuration: 0.1
 --- !u!222 &222851101134121984
 CanvasRenderer:
   m_ObjectHideFlags: 1

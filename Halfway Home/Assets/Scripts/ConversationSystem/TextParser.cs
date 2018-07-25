@@ -13,6 +13,7 @@ using LitJson;
 using System.IO;
 using System.Collections;
 using System.Text.RegularExpressions;
+using UnityEngine.UI;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -251,8 +252,7 @@ public static class TextParser
         return newSpeed;
     }
 
-
-
+    
     //dynamically editing any of the changeable things in text, like the player's name
     public static List<Line> DynamicEdit(List<Line> text)
     {
