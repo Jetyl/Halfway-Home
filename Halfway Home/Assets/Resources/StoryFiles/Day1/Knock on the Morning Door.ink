@@ -298,7 +298,7 @@ I whip out my planner and jot down a reminder to myself, {a habit my old therapi
 The skeptical part of me thinks this is so the administrators can save money on oversight, but I don't mention that to the new guy.
 I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot.  # Time * Show
 "This is my room. Although, I guess it'll be <i>our</i> room for the time being."
-"You can come here if you want to just get away from it all and de-stress."   # Stress * Show
+"You can come here if you want to just get away from it all and de-<color=color_wellbeing_penalty>stress</color>."   # Stress * Show
 "Also, obviously, you can just knock out here if you're too <color=color_wellbeing_penalty>fatigued</color> to do anything else. Or just whenever, really."   # Fatigue * Show
 "Max'll get mad if you spend too much time loafing around, though, since we're supposed to be `active agents of self-recovery` or whatever."
 "Oh, and one more thing. I kinda lost my room key a while ago, so if you lock the door I don't really have a way in unless Max is around."
@@ -309,7 +309,7 @@ I go over and grab my watch off the desk beside my bed. Max was right, it's noon
 "To be honest, it hasn't been a big deal since I've been by myself for a while."
 [Timothy] "Oh."   # Timothy = Sad
 [{player_name}] "So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
-[Timothy] "Oh, okay. <size=50%>Last roommate?<size=100%>"   # Timothy = Surprised
+[Timothy] "Oh, okay. @@<size=50%>Last roommate?<size=100%>"   # Timothy = Surprised
 [{player_name}] "I was in Blackwell for a few years before coming here."
 [Timothy] "Me, too."   # Timothy = Happy
 [{player_name}] "It's a pretty common story around here, really. We all know what it's like. At least, better than anyone out there."

@@ -35,7 +35,7 @@ EXTERNAL SetValue(name, values)
 [{player_name}] "Anyway, this is sort of a big hub area."
 "The front desk is nearby, so if you need anything there or are expecting any packages, there's where you go."
 "The Commons is also obviously a big social area."
-Which is why it stresses me out. But it does help with my depression.
+Which is why I tend to avoid it...
 [Timothy] "It's pretty empty right now..."
 Huh. Yeah, it is. That's rare.
 The only other person in sight is...   #Keyless = Calm
@@ -95,9 +95,9 @@ And Max is the most chill person I know, and has tolerated <i><b>much</i></b> wo
 [Timothy] "<jitter>O-okay...</jitter>"
 {
 	-week == 1:
-		Man, I am going to have to walk on egg shells around this kid, aren't I?
+		Man, I am going to have to walk on egg shells around this kid, aren't I? #stress += 5
 	-else:
-		Man, if he's having a freak-out over this, it's no wonder he breaks down by the end of the week.
+		Man, if he's having a freak-out over this, it's no wonder he breaks down by the end of the week. #stress +=5
 }
 I give Timothy a minute to collect himself before continuing the tour.
 [{player_name}] "You okay now?"
