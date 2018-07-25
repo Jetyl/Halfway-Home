@@ -34,7 +34,8 @@ EXTERNAL GetStringValue(value)
 [{player_name}] "Yeah... they fit a lotta books into a small space."
 "They have book recomendations, if you find the selection overwhelming."
 "I know I did."
-"This week's recomendation is... <i>Lessons in <color=color_grace>Grace</i></color> by Tybalt Lyndel." # Grace * Show
+"I find that reading can give me a better perspective on things, which helps me to act with a bit more <color=color_grace>grace</color." # Grace * Show
+"But I'm not a fast reader, so it kinda <color=color_wellbeing_penalty>stresses</color> me out. Reading at night also makes me extra <color=color_wellbeing_penalty>fatigued</color>."
 {
 	-week == 1:
 		->WeekOne
