@@ -223,8 +223,8 @@ public static class TextParser
                         if (text[j] == '>')
                         {
                             float speed = float.Parse(text.Substring(i + 7, j - (i + 7)));
-                            newSpeed.Add(i - cutback, speed);
-                            newSpeed.Add((i + 1) - cutback, oldspeed);
+                            newSpeed.Add(i - cutback - 1, speed);
+                            newSpeed.Add((i) - cutback, oldspeed);
                             text = text.Remove(i, j + 1 - i);
                             break;
                         }

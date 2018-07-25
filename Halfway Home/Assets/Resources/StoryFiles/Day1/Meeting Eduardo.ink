@@ -132,21 +132,20 @@ I pull out some of the spare paper the room has stocked, and begin sketching wha
 
 ===MeetWithTimothy===
 As I show Timothy around all the art supplies, a rowdy duo walk in.
-[Eduardo >The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy
+[Eduardo >The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy, right
 [Isaac >The Quiet One] "Hrm." #Isaac = Calm
-[Timothy] "Uh, who are they?" # Timothy = Calm, stage_left, Left
+[Timothy] "Uh, who are they?" # Timothy = Calm, stage_left, right
 [{player_name}] "That's Eduardo and Isaac." # Timothy = stage_center #Eduardo = Exit #Isaac = Exit
 "They're the couple, like, two doors down from us. @They're nice people."
 "C'mon, I'll introduce you."
 I walk over to they pair, Timothy in tow.
-"Hey, guys, what's up?" #Timothy = stage_left, Afraid #Eduardo = Calm #Isaac = Calm
+"Hey, guys, what's up?" #Timothy = stage_left, Afraid, right #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Hey Hey! {player_name}! Good to see ya!"
-"We're both perfect. Up on cloud nine in this buisness. @I was just telling my bae about this rad dream I had." //not sure if I'm happy with this line.
+"We're both perfectomundo. Up on cloud nine in this buisness. @I was just telling my bae about this rad dream I had." //not sure if I'm happy with this line.
 "How 'bout you? How's it hangin'?"
 +[Its fine]
 	[{player_name}] "Oh, fine."
 	"Max asked me to show around the new kid."
-	[Eduardo] "Oh, is that who that is?"
 +[Ehh...]
 	[{player_name}] "Ehh... I exist, I guess."
 	"Max just sorta ploped this kid on me."
@@ -161,7 +160,7 @@ I walk over to they pair, Timothy in tow.
 [Eduardo] "So Timmy, what are you in for?"
 [Timothy] "<jitter><size=60%> I'd prefer Timothy...<size=100%></jitter>"
 [Eduardo] "You're a Quiet One, aren't ya Tim Tim? I didn't catch that."
-[Timothy] "<jitter><size=40%> I said my name is Timothy...<size=100%>/jitter>"
+[Timothy] "<jitter><size=40%> I said my name is Timothy...<size=100%></jitter>"
 [Eduardo] "Yo. T-man, I can't hear you when you're-"
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
