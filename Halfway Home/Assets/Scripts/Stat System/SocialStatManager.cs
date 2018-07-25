@@ -62,13 +62,13 @@ public class SocialStatManager : MonoBehaviour
     if (ShorthandText != null) ShorthandText.text = totalTier.ToString();
 
     if (basicTier > 0) StarMarker1.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker1.CrossFadeAlpha(0.1f, 0.1f, false);
+    else StarMarker1.CrossFadeAlpha(0.2f, 0.1f, false);
 
     if (basicTier > 1) StarMarker2.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker2.CrossFadeAlpha(0.1f, 0.1f, false);
+    else StarMarker2.CrossFadeAlpha(0.2f, 0.1f, false);
 
     if (basicTier > 2) StarMarker3.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker3.CrossFadeAlpha(0.1f, 0.1f, false);
+    else StarMarker3.CrossFadeAlpha(0.2f, 0.1f, false);
 
     if (SpecialStar1 == null || SpecialStar2 == null) return;
 
