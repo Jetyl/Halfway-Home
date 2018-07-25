@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimeUpdateDisplay : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class TimeUpdateDisplay : MonoBehaviour
     [Range(0, 23)]
     public int DayTimeEnd = 18; //military time
 
-    public Color DayTimeColor;
-    public Color NightTimeColor;
+    public Color NightTimeBacking;
+    public Color NightTimeNumbers;
+
+    Color DayTimeBacking;
+    Color DayTimeNumbers;
 
     public float MultiDayChangeMultiplier = 0.8f;
 
@@ -28,6 +32,9 @@ public class TimeUpdateDisplay : MonoBehaviour
 
     public Image Hand;
     public Image Face;
+    public Image Numbers;
+    public Image Case;
+    public TextMeshProUGUI MeridianText;
 
 	// Use this for initialization
 	void Start ()
@@ -39,6 +46,8 @@ public class TimeUpdateDisplay : MonoBehaviour
         CurRot = -((currentHour + (currentDay * 24)) / 12.0f) * (360);
         transform.eulerAngles = new Vector3(0, 0, CurRot);
 
+        DayTimeBacking = Face.color;
+        DayTimeNumbers = Numbers.color;
 
         Color aHand = Hand.color;
         aHand.a = 0;
@@ -49,6 +58,16 @@ public class TimeUpdateDisplay : MonoBehaviour
         Face.color = aFace;
 
 
+        Color aNum = Numbers.color;
+        aNum.a = 0;
+        Numbers.color = aNum;
+        MeridianText.color = aNum;
+
+        Color aCase = Case.color;
+        aCase.a = 0;
+        Case.color = aCase;
+
+
     }
 	
 	// Update is called once per frame
@@ -57,28 +76,42 @@ public class TimeUpdateDisplay : MonoBehaviour
 		
 	}
 
+    private void CallFade(Image object_, bool NoAlpha = false)
+    {
+        Color  aColor = object_.color;
+
+        if (NoAlpha)
+            aColor.a = 0;
+        else
+            aColor.a = 1;
+
+        object_.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aColor, ClockFadeTime));
+    }
+
     void RemoveClock()
     {
-        Color aHand = Hand.color;
-        aHand.a = 0;
-        Hand.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aHand, ClockFadeTime));
+        CallFade(Hand, true);
+        CallFade(Face, true);
+        CallFade(Numbers, true);
+        CallFade(Case, true);
 
-        Color aFace = Face.color;
-        aFace.a = 0;
-        Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aFace, ClockFadeTime));
-
+        Color aColor = MeridianText.color;
+        aColor.a = 0;
+        MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aColor, ClockFadeTime));
 
     }
 
     void ShowClock()
     {
-        Color aHand = Hand.color;
-        aHand.a = 1;
-        Hand.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aHand, ClockFadeTime));
+        CallFade(Hand);
+        CallFade(Face);
+        CallFade(Numbers);
+        CallFade(Case);
 
-        Color aFace = Face.color;
-        aFace.a = 1;
-        Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aFace, ClockFadeTime));
+
+        Color aColor = MeridianText.color;
+        aColor.a = 1;
+        MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aColor, ClockFadeTime));
     }
 
     void UpdateTime(DefaultEvent eventdata)
@@ -104,13 +137,23 @@ public class TimeUpdateDisplay : MonoBehaviour
                 multiplier = 1;
         }
 
-        
 
+
+        StartCoroutine(FlipMeridian(AnimationTime * multiplier));
 
         StartCoroutine(Swing(AnimationTime * multiplier));
     }
 
+    IEnumerator FlipMeridian(float aTime)
+    {
+        yield return new WaitForSeconds(ClockFadeTime + (aTime/2));
 
+        if (currentHour < 12)
+            MeridianText.text = "AM";
+        else
+            MeridianText.text = "PM";
+
+    }
 
     IEnumerator Swing(float aTime)
     {
@@ -122,11 +165,16 @@ public class TimeUpdateDisplay : MonoBehaviour
         {
 
             //Hand.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aHand, ClockFadeTime));
-            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeColor, aTime/2f));
+            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeBacking, aTime/2f));
+            Numbers.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeNumbers, aTime / 2f));
+
+            MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeNumbers, aTime / 2f));
         }
         else
         {
-            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeColor, aTime/2f));
+            Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeBacking, aTime/2f));
+            Numbers.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeNumbers, aTime / 2f));
+            MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeNumbers, aTime / 2f));
         }
 
 
