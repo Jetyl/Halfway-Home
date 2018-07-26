@@ -336,7 +336,7 @@ look at these two, planning their future, and stuff. I can't look past the next 
 	[Isaac] "No, you're not."
 	[Eduardo] "eh yeah."
 	"Sorry you feel that way though."
-+{expression > 1}[Way to put me on the spot!]
++{expression > 1}[Way to put me on the spot! <expression>]
 	[{player_name}] "Wow, way to put me on the spot dude!"
 	[Eduardo] "Hehe, sorry!"
 	[{player_name}] "Your not sorry at all. I can tell."
@@ -371,7 +371,7 @@ Uh...
 		Yeah, shut up. I'm ignoring you.
 	}
 	[Isaac] "Hrm."
-+{expression>2}[Give your backstory]
++{expression>2}[Give your backstory <expression>]
 	[{player_name}] "Well, um..."
 	"I got recommended here by my Doctors at Blackwell." #expression ^ good
 	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
@@ -531,7 +531,7 @@ Oh boy, here comes the Max talk.
 +[I got Dragged in by Eduardo]
 	[{player_name}] "I got dragged in by Eduardo."
 	[Max] "Yeah, I'm sure you did."
-+{expression >2}[Max stop Micro-Managing Me!]
++{expression >2}[Max stop Micro-Managing Me! <expression>]
 	[{player_name}] "Max, Please, I am an adult. Stop Micro-Managing me!"
 -[Max] "Look, just, go to bed, okay. And get your sleep schedule sorted out before this Monday."
 "I better go make sure everything is in order before everyone else wakes up."

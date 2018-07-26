@@ -67,7 +67,7 @@ I decide to go over there, and see how they are doing.
 	I decided to try and explain the surreal circumstances of my situation to the two of them.
 	{
 		-expression > 5:
-			The two of them are shocked into silence as I recount things I shouldn't know in just vivid detail. #Isaac = Surprised #Eduardo = Surprised
+			The two of them are shocked into silence as I recount things I shouldn't know in just vivid detail. #Isaac = Surprised #Eduardo = Surprised #expression ^ good
 			[Eduardo] "Geez, {player_gender == "F": girl| man}..."
 			Yes! I seem to have gotten thru to them.
 			"Like, I don't know what to say."
@@ -85,7 +85,7 @@ I decide to go over there, and see how they are doing.
 			I mean, yeah, given where we are that makes sense, but I'm not crazy!
 			uuuurrrgh.... I just drop it, and move on with the conversation.
 		-else:
-			Eduardo begins having a giggle fit as I finish my tale. #Eduardo = Happy
+			Eduardo begins having a giggle fit as I finish my tale. #Eduardo = Happy #expression ^ poor
 			[{player_name}] "What's so funny?"
 			[Eduardo] "That story man! It's hilarious!"
 			No! No its not!
@@ -149,7 +149,7 @@ I walk over to they pair, Timothy in tow.
 +[Ehh...]
 	[{player_name}] "Ehh... I exist, I guess."
 	"Max just sorta ploped this kid on me."
-+{expression > 1}[Its great]
++{expression > 1}[Its great <expression>]
 	[{player_name}] "Oh, I'm pretty good actually" #expression ^ good
 	"I'm showing Timothy around, since he's new here."
 -[Eduardo] "Oh, is that who that is?"
