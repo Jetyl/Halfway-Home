@@ -26,35 +26,21 @@ EXTERNAL GetValue(name)
 -> Start
 
 === Start ===
-~seenBefore = GetValue("SeenEmpathy")
-{seenBefore:
-	When I arrive at the library, Charlotte is in the same place as before.
-	She's seated on the sofa, reading to herself.
--else:
-	When I arrive at the library, I discover that I am not alone.
-	Charlotte is here, too. She's seated on the sofa, reading to herself.
-}
-+[Join Her]
-{seenBefore:
-	-> SofaRepeat
--else: ->Sofa
-}
-+[Browse] 
-{seenBefore:
-	-> BrowsingRepeat
--else: ->Browsing
-}
+When I arrive at the library, {I discover that I am not alone|Charlotte is in the same place as {before|always}}.
+{Charlotte is here, too|This must be a regular thing for her|It's a very familiar scene at this point}. She's seated on the sofa, reading to herself.
++[Join Her] -> Sofa
++[Browse] -> Browsing
 
 === Sofa ===
 I decide to take this opportunity to spend some time with Charlotte. # Charlotte = Calm
 {
 	-grace==0:
-		[{player_name}] "Uh... hi, Charlotte. Could I, um, sit there? I mean next to you. I mean, you don't have to move or anything."
+		[{player_name}] "Uh... hi, Charlotte. Could I, um, sit there? I mean next to you. I mean, you don't have to move or anything." # grace ^ poor
 		Jeez that was awkward. Why am I so bad at this?
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "I would be pleased if you would, {player_name}." # Charlotte = Happy
 
-	-grace>2: "Begging your pardon, Charlotte. Would you mind if I joined you on the sofa?"
+	-grace>2: "Begging your pardon, Charlotte. Would you mind if I joined you on the sofa?" # grace ^ good
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "Ah, {player_name}. I would be honored if you would join me." # Charlotte = Happy
 
@@ -63,46 +49,61 @@ I decide to take this opportunity to spend some time with Charlotte. # Charlotte
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "I wouldn't mind at all, {player_name}. In fact, I would be glad for your company." # Charlotte = Happy
 }
-I take a seat on the couch beside her.
+I take a seat on the couch beside her. # Charlotte = close
 [Charlotte] "It's nice to see you in the library, {player_name}. I don't recall you coming in here much before." # Charlotte = Calm
-[{player_name}] "Yeah, I didn't venture out of my room very often before this week. Seeing as I'm leaving soon I figured I'd best try and get out more."
+{week==2:So she really doesn't remember anything either, huh?}
+[{player_name}] "Yeah, I didn't venture out of my room very often before this week."
+{week>1:Assuming you count {this weird repeat|all the repeats} as the same week.}
+"Seeing as I'm leaving soon I figured I'd best try and get out more."
 [Charlotte] "Well, I'm glad to see you here. Perhaps you can make use of my recommendations."
 She nods toward the notes affixed to the shelves.
-[{player_name}] "Wait, you write those?"
-[Charlotte] "Most of them."
-- ->Reading
-
-=== SofaRepeat ===
-low grace: Awkward
-med grace: Polite
-high grace: Pleasant
-- ->Reading
+[{player_name}] "{Wait, you write those?|Maybe so. Thanks for taking the time to write those, by the way.}"
+[Charlotte] "{Most of them.|Oh, thank you! I do enjoy it, but it would be nice to have some help from time to time.}"
+->AskToSkip
 
 === Browsing ===
-I feel a bit awkward approaching her. We don't actually know each other that well.
-I idly browse the shelves for a book, like normal.
+{week==1:I feel a bit awkward approaching her. We don't actually know each other that well.|{week==2:Maybe I shouldn't approach her. What if I slip up and say something that makes me sound crazy?|I'll let Charlotte take the lead.}}
+I idly browse the shelves for a book, {like|trying to look} normal.
 [Charlotte] "I would be pleased to make you a recommendation, if you're having trouble making up your mind." # Charlotte = Calm
-[{player_name}] "Wha- Oh, uh... it's fine. There's already recommendations, anyway."
-[Charlotte] "True, but when I write those recommendations I am unsure as to who the audience is."
-[{player_name}] "Wait, you write those?"
+{
+-week==1:
+	[{player_name}] "Wha- Oh, uh... it's fine. There's already recommendations, anyway."
+	[Charlotte] "True, but when I write those recommendations I am unsure as to who the audience is."
+	[{player_name}] "Wait, you write those?"
+-week==2:
+	I guess I should have figured she would notice me.
+	[{player_name}] "Oh. No. That's okay."
+	[Charlotte] "Are you certain? I so seldom get the opportunity to make a personal recommendation."
+	[{player_name}] "Do you spend a lot of time writing those recommendations?"
+	[Charlotte] "Not more than I enjoy doing so, dear, but..."
+-else:
+	"Oh, I wouldn't want to burden you. Don't you write all these yourself already?"
+}
 [Charlotte] "Usually, yes. Why don't you join me?"
 *[Okay]
 	[{player_name}] "Okay. I just didn't want to disturb you."
 	[Charlotte] "That is very considerate of you, {player_name}, but you needn't worry about that. If I wished not to be disturbed, I would not be out in public."
 	Her wording strikes me as odd, but I guess this is pretty much what constitutes 'in public' for us residents.
 	[Charlotte] "Anyway..."
-	-> Reading
+	-> AskToSkip
 *[No, thanks]
 	[{player_name}] "Uh... no, thanks. I just came here to read. Sorry."
 	[Charlotte] "Of course. Apologies. Do enjoy yourself!" #Charlotte = Sad
-	-> END //Need to load room default here
+	-> JustRead
 
-=== BrowsingRepeat ===
-I decide it's best not to approach Charlotte.
-->END
+=== AskToSkip ===
+~ temp repeating = Trissa>0 && History>0
+{repeating:
+	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	+[Skip]
+		{grace>2:->Invitation|->Instruction}
+	+[Continue] -> Reading
+-else:
+	->Reading
+}
 
 === Reading ===
-[Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)}
+[Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)} # Charlotte = Sad, close
 "Perhaps you would be willing to make one yourself?"
 [{player_name}] "Oh, uh... I don't really read enough to feel like I could."
 [Charlotte] "I see." # Charlotte = Sad
@@ -142,15 +143,16 @@ I decide it's best not to approach Charlotte.
 	[Charlotte] "A grounded choice. You know I think you're the first person I've encountered with such a preference."
 	++[I prefer variety]
 	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way." {SetStringValue("BookGenre", "variety")}
-	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart."
+	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart." # Charlotte = Happy
 -[Charlotte] "I know just the thing."
 She stands up and walks over to a far shelf. # Charlotte = Exit, StageLeft
-She returns holding a thick, nondescript book. # Charlotte = Happy
+She returns holding a thick, nondescript book. # Charlotte = Happy, close
 "Somewhere along the line this fellow lost his jacket, but, I assure you, you will be no less absorbed."
-I take the book from her and look it over. It has a very humble appearance, but I am excited to start on it nonetheless.
+I take the book from her and look it over. {It has a very humble appearance, but I am excited to start on it nonetheless|I never got around to reading it last time. Maybe that will change}.
 -> Confessions
 
 === Confessions ===
+{Confessions>1:I decide it's best to play along and try not to out myself as an involuntary time traveller.}
 [{player_name}] "So you must read a lot to have all these recommendations for people."
 [Charlotte] "Oh, yes. I've been reading since I was quite young. I had quite a sheltered childhood. Books were my only companions until I was older." # Charlotte = Sad
 "I have been a reader my whole life. Although... may I confide something in you, {player_name}?" # Charlotte = Calm
@@ -239,7 +241,7 @@ They worried it would 'reopen old wounds'." # Charlotte = Angry
 Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised
 [Charlotte] "Heavens, how time has passed!"
 "I have a routine to maintain. It has been a pleasure, {player_name}." # Charlotte = Calm
-Charlotte rises and takes a step toward the door before turning back to me.
+Charlotte rises and takes a step toward the door before turning back to me. # Charlotte = center
 {
 	-grace>3: ->Invitation
 	-grace<3: 
@@ -253,8 +255,8 @@ Charlotte rises and takes a step toward the door before turning back to me.
 "Would you be interested in joining me for tea tomorrow?"
 *[Yes]
 	[{player_name}] "I'd be happy to. What time?"
-	[Charlotte] "I usually take tea at 3pm, if that isn't a bother."
-	[{player_name}] "3pm. Got it." {SetValue("ReadyForTea", 2)}
+	[Charlotte] "I usually take tea at three in the afternoon, if that isn't a bother."
+	[{player_name}] "Three p.m. Got it." {SetValue("ReadyForTea", 2)} # 9 & InProgress
 *[No]
 	[{player_name}] "Sorry, while ordinarily I would never turn down an invitation for free food, I've got other obligations."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
@@ -267,9 +269,9 @@ I should probably head out as well.
 "I would be happy to tutor you in etiquette, if that would be something you would be interested in..."
 *[Yes]
 	[{player_name}] "Sure. What time?"
-	[Charlotte] "How about here in the library tomorrow at 2pm?"
-	"I usually take tea at 3, but I shall make an exception so that we have some uninterrupted time."
-	[{player_name}] "2pm tomorrow. Got it." {SetValue("ReadyForInstruction", 2)}
+	[Charlotte] "How about here in the library tomorrow at two o'clock?"
+	"I usually take tea at three, but I shall make an exception so that we have some uninterrupted time."
+	[{player_name}] "Two p.m. tomorrow. Got it." {SetValue("ReadyForInstruction", 2)} # 8 & InProgress
 *[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
@@ -282,10 +284,27 @@ I should probably head out as well.
 [Charlotte] "Ah. Perhaps I have overstepped."
 Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised
 [Charlotte] "Heavens, how time has passed!"
-Charlotte rises to her feet.
+Charlotte rises to her feet. # Charlotte = center
 "Until next we meet, {player_name}."
-She curtsies and strides out of the room.
+She curtsies and strides out of the room. # Charlotte = Exit
 Man, Charlotte is seriously living in a different century from anyone I've ever met.
 She seemed embarrassed. Maybe asking her a question would have been better...
 Oh, well. I guess I'd better head out, too.
+-> END
+
+=== JustRead ===
+I peruse the shelves until a title catches my eye. # Charlotte = Exit
+I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
+The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
+<color=color_descriptor><i>Focusing on the text has taken a toll on your concentration, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> slightly<color=color_descriptor>.</color> # Fatigue += 10
+{
+	- grace > 2:
+		<color=color_descriptor>Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b><color=color_descriptor>!</color> # Stress -= 20 # grace ^ good, nocolor
+	- grace > 1:
+		<color=color_descriptor>Experience with <color=color_grace><b>Grace</b><color=color_descriptor> has removed the <b>Stress<b> from this activity<color=color_descriptor>!</color> # grace ^ good, nocolor
+		<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
+	- else:
+		<color=color_descriptor>Engaging with the material was enlightening, but <color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>.</color> # Stress += 10 # grace ^ poor, nocolor
+		<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
+}
 -> END

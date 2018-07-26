@@ -130,5 +130,29 @@
     "Hidden" : false
    }
   ]
+ },
+ {
+  "Number" : 8,
+  "Name"   : "Meet Charlotte tomorrow at 2pm",
+  "Hidden" : false,
+  "Weekly" : true,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
+ },
+ {
+  "Number" : 9,
+  "Name"   : "Join Charlotte for tea tomorrow at 3pm",
+  "Hidden" : false,
+  "Weekly" : true,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
  }
 ]
