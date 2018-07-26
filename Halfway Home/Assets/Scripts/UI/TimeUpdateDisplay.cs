@@ -125,7 +125,9 @@ public class TimeUpdateDisplay : MonoBehaviour
 
         if (oldHour == currentHour && currentDay == oldday)
         {
-            Space.DispatchEvent(Events.ClockFinished);
+            
+            StartCoroutine(TextParser.FrameDelay(Events.ClockFinished));
+            //Space.DispatchEvent(Events.ClockFinished);
             return;
         }
             
