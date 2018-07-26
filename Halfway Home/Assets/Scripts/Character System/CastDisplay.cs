@@ -396,6 +396,9 @@ public class CastDirectionEvent : DefaultEvent
                 case "center":
                     Distance = StageDistance.Center;
                     break;
+                case "medium":
+                    Distance = StageDistance.Center;
+                    break;
                 case "far":
                     Distance = StageDistance.Far;
                     break;
