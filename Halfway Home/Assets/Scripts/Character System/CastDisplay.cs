@@ -393,7 +393,7 @@ public class CastDirectionEvent : DefaultEvent
                 case "close":
                     Distance = StageDistance.Close;
                     break;
-                case "medium":
+                case "center":
                     Distance = StageDistance.Center;
                     break;
                 case "far":
