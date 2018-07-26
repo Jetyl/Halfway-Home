@@ -87,6 +87,8 @@ public class DescriptionDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        //print("active: " + Active + "| Paused: " + Paused + "| Stop:" + Stop + "| No Click:" + NoClick);
+
         if (!Active)
             return;
 

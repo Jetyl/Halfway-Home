@@ -21,6 +21,7 @@ public class SoundNode : BaseNode
     {
         ID = MyID;
         TypeID = NodeTypes.SoundNode;
+        SoundFile = "";
     }
 
     public SoundNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<BaseNode> OnClickRemoveNode, Action<BaseNode> OnClickDuplicateNode, JsonData data) : base(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, OnClickDuplicateNode)
@@ -44,7 +45,8 @@ public class SoundNode : BaseNode
         if (data.Keys.Contains("color"))
             ChangeColor((int)data["color"]);
 
-        SoundFile = (string)data["Sound"];
+        if (data["Sound"] != null)
+            SoundFile = (string)data["Sound"];
         Layer = (AudioManager.AudioEvent.SoundType)(int)data["Layer"];
 
 
