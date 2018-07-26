@@ -63,7 +63,7 @@ She nods toward the notes affixed to the shelves.
 
 === Browsing ===
 {week==1:I feel a bit awkward approaching her. We don't actually know each other that well.|{week==2:Maybe I shouldn't approach her. What if I slip up and say something that makes me sound crazy?|I'll let Charlotte take the lead.}}
-I idly browse the shelves for a book, {like|trying to look} normal.
+I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 [Charlotte] "I would be pleased to make you a recommendation, if you're having trouble making up your mind." # Charlotte = Calm
 {
 -week==1:
@@ -136,7 +136,7 @@ I idly browse the shelves for a book, {like|trying to look} normal.
 	[{player_name}] "I know most people are bored by it, but I find history really interesting." {SetStringValue("BookGenre", "history")}
 	[Charlotte] "You surprise me, {player_name}."
 	++[Natural Science]
-	[{player_name}] "I really like nature, so I guess I like books on plants and animals and stuff." {SetStringValue("BookGenre", "natural science")}
+	[{player_name}] "I really like nature, so I guess I like books on space and animals and stuff." {SetStringValue("BookGenre", "natural science")}
 	[Charlotte] "My father loves the natural sciences as well."
 	++[Creative Nonfiction]
 	[{player_name}] "I like reading stories about things that really happened." {SetStringValue("BookGenre", "creative nonfiction")}
@@ -160,28 +160,33 @@ I take the book from her and look it over. {It has a very humble appearance, but
 [Charlotte] "I only began reading in public when I realized it would let me... <i>observe</i> people without arousing suspicion."
 [{player_name}] "You observe people?"
 [Charlotte] "Indeed. Well, I more study them, really. I find people fascinating."
-[{player_name}] "Uh..."
-[Charlotte] "I ought to explain myself. You see, I have ASPD."
+[{player_name}] "{Uh|Hmm}..."
+{That's kinda weird.|Charlotte is a very odd person, but I kinda like that.}
+I try to hide the {uncertainty|look} on my face, but Charlotte appears to have picked up on it.
+[Charlotte] "I ought to explain myself. You see, I have ASPD." # Charlotte = Surprised
 [{player_name}] "Antisocial Personality Disorder, right?"
-[Charlotte] "Yes. Though I do try so very hard to be 'pro-social', dear."
+[Charlotte] "Yes. Though I do try so very hard to be 'pro-social', dear." # Charlotte = Calm
 "The crux of it is that I have absolutely no sense of empathy at all."
 [{player_name}] "Really? I mean, you seem nice enough. Certainly not like the psychos you hear about on the news."
-[Charlotte] "I am very happy to hear that. I have made it my goal to construct a behavioral facsimile of it, you see. If you can't tell, then it's working." # Charlotte = Happy
+[Charlotte] "I am very happy to hear that. I have gone to great lengths to construct a believable facade." # Charlotte = Happy
 [{player_name}] "Well you had me fooled. In fact, I thought you worked here for my first few months here."
 [Charlotte] "Ah... Max is always telling me I do too much around here. Maybe they have a point..." # Charlotte = Surprised
 She shrugs.
-[Charlotte] "When I was little I didn't understand anything about people. And is it not human nature to hate what we do not understand?" # Charlotte = Sad
+[Charlotte] "When I was a young girl I simply couldn't understand people." # Charlotte = Sad
+"And, as is human nature, I was <delay=0.3>afraid <delay=0.3>of what I did not understand. That fear became hate, motivating deeds too heinous to recount in civil conversation."
 "I fear I was quite a horrible, loathsome child. But that's a story for another time."
-That was me once, too. Before the Voices.
-"When I matured, I forced myself to care. I resolved to train myself to recognize the physical signs of emotion." # Charlotte = Angry
+That reminds me of how I was- before the Voices.
+"When I matured, I forced myself to care."
 "I swore to myself and my family that I would never again act without regard for others."
+"Having been robbed of an intuitive understanding of emotion, I resolved to train myself to recognize the <i>physical</i> signs of emotion instead." # Charlotte = Angry
 "I was prepared to check myself into Blackwell, but my family insisted I come here first. I know it's only a matter of time before I end up there, but I had to honor their wishes." # Charlotte = Sad
 "But I digress. The point of it all is that I took to watching people in order to better understand them."
 "I strove to memorize every action: to commit to memory every micro-expression, gesticulation, and change in posture." # Charlotte = Angry
 "And that is why I read in public. It's a kind of practice." # Charlotte = Calm
 Charlotte's eyes dart around my face before she breathes a gentle sigh of relief.
-[Charlotte] "My apologies for the monologue. You withstood it with aplomb, I must say. You are an excellent listener, do you know that?" # Charlotte = Happy
-[{player_name}] "Thanks for sharing. But I mean it was no trouble. I just sat here, really."
+[Charlotte] "My apologies for the monologue. You withstood it with aplomb, I must say." # Charlotte = Happy
+"You are an excellent listener, do you know that?" 
+[{player_name}] "Thanks for sharing. But, I mean, it was no trouble. I just sat here, really."
 [Charlotte] "Nonsense. I know quite well the struggle of strapping in while an oblivious associate starts over-sharing."
 -> Questions
 
@@ -253,11 +258,11 @@ Charlotte rises and takes a step toward the door before turning back to me. # Ch
 === Invitation ===
 [Charlotte] "You've impressed me today, {player_name}."
 "Would you be interested in joining me for tea tomorrow?"
-*[Yes]
++[Yes]
 	[{player_name}] "I'd be happy to. What time?"
 	[Charlotte] "I usually take tea at three in the afternoon, if that isn't a bother."
 	[{player_name}] "Three p.m. Got it." {SetValue("ReadyForTea", 2)} # 9 & InProgress
-*[No]
++[No]
 	[{player_name}] "Sorry, while ordinarily I would never turn down an invitation for free food, I've got other obligations."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
@@ -267,12 +272,12 @@ I should probably head out as well.
 === Instruction ===
 [Charlotte] "I just had a thought. Seeing as you're leaving soon, what say I give you some pointers on social protocol on the outside?"
 "I would be happy to tutor you in etiquette, if that would be something you would be interested in..."
-*[Yes]
++[Yes]
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at two o'clock?"
 	"I usually take tea at three, but I shall make an exception so that we have some uninterrupted time."
 	[{player_name}] "Two p.m. tomorrow. Got it." {SetValue("ReadyForInstruction", 2)} # 8 & InProgress
-*[No]
++[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
 -Charlotte smiles, curtsies, and strides out of the room. # Charlotte = Exit
