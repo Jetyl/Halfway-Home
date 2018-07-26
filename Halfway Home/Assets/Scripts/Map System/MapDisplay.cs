@@ -59,6 +59,7 @@ namespace HalfwayHome
             Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
 
             Space.Connect<DefaultEvent>(Events.Load, OnLoad);
+            Space.Connect<DefaultEvent>(Events.Cheat, OnCheat);
 
             StartCoroutine(DelayStart());
 
@@ -73,6 +74,12 @@ namespace HalfwayHome
                 LoadedToMap = true;
             }
         }
+
+        void OnCheat(DefaultEvent eventdata)
+        {
+            TurnMapOff();
+        }
+
 
         IEnumerator DelayStart()
         {

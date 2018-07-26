@@ -59,6 +59,9 @@ public class Events
     public static readonly String Debug = "DebugEvent";
     public static readonly String Progress = "ProgressEvent";
 
+    public static readonly String Cheat = "CheatingEvent";
+    public static readonly String CheatsOpen = "CheatsOpenEvent";
+    public static readonly String CheatsClosed = "CheatsClosedEvent";
 
     //Halfway-Home Custom Events
 

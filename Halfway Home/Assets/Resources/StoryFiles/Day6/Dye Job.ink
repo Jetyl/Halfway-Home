@@ -54,7 +54,8 @@ I stagger into the room with a yawn.
 # Play : Stop_All
 
 */
-{GetIntValue("Day")>4:
+{
+-GetIntValue("Day")>4:
 	#set_time%6,8
 	[Timothy>???] "<size=40%>...{player_name}."
 	~CallSleep()

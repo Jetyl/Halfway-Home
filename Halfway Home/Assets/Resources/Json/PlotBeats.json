@@ -38,6 +38,10 @@
     "Type" : 2
    },
    {
+    "Name" : "Day",
+    "Type" : 2
+   },
+   {
     "Name" : "week",
     "Type" : 2
    },

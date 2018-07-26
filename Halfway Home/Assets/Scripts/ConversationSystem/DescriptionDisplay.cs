@@ -81,6 +81,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.CloseUI, OnStop);
         Space.Connect<DefaultEvent>(Events.TimeChange, OnStop);
         Space.Connect<DefaultEvent>(Events.ClockFinished, OnNonStop);
+        Space.Connect<DefaultEvent>(Events.CheatsOpen, OnStop);
+        Space.Connect<DefaultEvent>(Events.CheatsClosed, OnNonStop);
 
     }
 	
