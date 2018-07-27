@@ -1451,6 +1451,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_music_stormy_relationship" ID="{2EF1D7CF-DFC2-4487-B908-B1034445173B}">
+					<ChildrenList>
+						<Action Name="" ID="{6471CEB0-3BCE-47C4-9B76-9836677459CD}" ShortID="372235101">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_stormy_relationship" ID="{F09838C0-FF43-420E-9411-0C0E4FD727A7}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9EB9CF19-1ADE-4EF8-AD3C-E4FF3C7A01D8}" ShortID="885434688">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_stormy" ID="{91081113-A96D-48BD-A3FD-69EC049B91F2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
