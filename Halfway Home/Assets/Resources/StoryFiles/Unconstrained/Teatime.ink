@@ -42,15 +42,18 @@ Trissa emerges from the door ahead of me, slamming it behind her with a frustrat
 [Trissa] "Ha! I'm just playin' wichu again." # Trissa = Happy
 "{player_gender == "M":Man|{player_gender == "F":Girl|Yo}}, you are too much fun to mess with. You're gonna get us <i>both</i> in trouble!"
 "Good to know the reason, honestly. Not sure why she didn't just <i>tell</i> me she had a hot date!" # Trissa = Calm
-Did she actually just wink at me there?
-[{player_name}] "No, it's not like that! I mean, I'm pretty sure it's not..."
-Trissa starts laughing. # Trissa = Happy
-"Oh, this is you messing with me again, isn't it?"
-[Trissa] "{player_name}! Too. Much. Fun!"
-I can't help but smile at her playfulness.
+{Did she actually|Yep. She definitely} just {wink|winked} at me there{?|.}
+[{player_name}] "{No, it's not like that! I mean, I'm pretty sure it's not...|I'm not falling for it this time, Trissa!}"
+Trissa {starts laughing|shrugs and laughs}. # Trissa = Happy
+{KickedOut>1:
+	[Trissa] "Can't fool you twice, huh?"
+}
+"{Oh, this is you messing with me again, isn't it?|It's not like that, anyway.}"
+[Trissa] "{{player_name}! Too. Much. Fun!|Hey, it's no business of <i>mine</i> what it's like. You just let me know when I can have my room back, yeah?}"
+{I can't help but smile at her playfulness.|She gives my shoulder a playful punch.}
 [Trissa] "I do kinda wish she had told me, though. She acts nice, but sometimes she can be a real ice queen. Guess that's to be expected, though, given her condition." # Trissa = Sad
-"I just don't know what else I can do, ya know? I'm not hard to get along with or something, am I?"
-{depression>40:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
+"I just don't know what else I can do, ya know? I'm not hard to get along with, am I?"
+{depression>30:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
 ->KickedOut.Choice
 =Choice
 +[Explain Charlotte's jealousy.]
@@ -91,15 +94,23 @@ I can't help but smile at her playfulness.
 	[Trissa] "I should let you get on with it, then. See you around, {player_name}!"
 -With that, Trissa flashes a smile and strides down the hallway behind me at a modest pace. # Trissa = Exit
 Nothing left now but to knock.
-I tentatively rap my hand against the worn wooden door, suddenly feeling nervous. # SFX : play_sfx_human_knock 
--> SmallTalk
+I tentatively rap my hand against the worn wooden door{, suddenly feeling nervous|Even though I've done this before, I still feel kinda nervous}. # SFX : play_sfx_human_knock 
+-> CheckRepeat
+
+=== CheckRepeat ===
+{GetValue("EarnedTeatimeStar")==true:
+	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	+[Skip] -> Ending
+	+[Continue] -> SmallTalk
+}
 
 === SmallTalk ===
 [Charlotte>Faint Voice] "Please enter! The door is unlocked!"
 I open the door and step inside. I am greeted by Charlotte's warm smile. At her direction, I take a seat across from her at a small table by the window. # Teatime / Open # Teatime / ArmsD # Teatime / FSmile
-Looks like the tea is already prepared. Should I take a sip or not?
-If I do is there some special way I'm supposed to do it or something?
-Charlotte holds her cup gently with both hands. Her movements demonstrate a practiced ease that make me feel even more self-conscious. # Teatime / ArmsU
+{Looks like|Just as before,} the tea is already prepared. {Oh god, I feel so out of place.|This isn't the first time I've done this; why am I still anxious?}
+{Am I supposed to take a sip or do I wait?|I take a deep breath to settle my nerves.}
+{If I do is there some special way I'm supposed to drink or hold the cup or something?|I still don't know if there's some formal process to this, so I try to act natural.}
+Charlotte holds her cup gently with both hands. Her movements demonstrate a practiced ease that {make|still make} me feel {even more|a little} self-conscious. # Teatime / ArmsU
 Perhaps sensing my anxiety, she breaks the silence. # Teatime / ArmsD
 {
 	- GetValue("CompletedLessons") == true:
@@ -118,36 +129,42 @@ Idiot. Now she's gonna feel bad about not having... what do people eat with tea?
 [{player_name}] "It's no trouble! I didn't mean to sound ungrateful! This is great, really!"
 Charlotte opens a small container and withdraws a dainty spoon. # Teatime / FCalm
 [Charlotte] "How do you take it, dear?"
-[{player_name}] "Huh? Take what?"
-[Charlotte] "Your tea, of course." # Teatime / FSmile
-Oh. Duh. Real quick on the draw there, me.
-[{player_name}] "I dunno, I don't really drink tea very often."
-[Charlotte] "Well, then I shall simply leave the sugar out. I prefer honey, myself, but consequently I am out of that as well."
+[{player_name}] "{Huh? Take what?|I don't drink tea enough to have a preference, but I'd like it black, please.}"
+[Charlotte] "{Your tea, of course.|As you wish. Better to sample the flavor that way, anyway.}" # Teatime / FSmile
+{Oh. Duh. Real quick on the draw there, me.|In reality, I just liked it without sugar last time... but obviously I can't tell her that.}
+[{player_name}] "{I dunno, I don't really drink tea very often.|Thanks!}"
+[Charlotte] "{Well, then I shall simply leave the sugar out|Do say something if you change your mind and would like some sugar}. I prefer honey, myself, but consequently I am out of that as well."
 I turn my attention to the steaming cup in front of me. I raise it to my lips.
-Even before I can take a sip, my nostrils are filled with a strong, floral aroma.
-It's like no tea I've ever tasted. I don't really know how to describe tea, but I'll do my best for Charlotte's sake.
-[{player_name}] "This is really tasty! It kind of tastes vaguely fruity? I don't think I even need any sugar..."
+Even before I can take a sip, my nostrils are filled with {a strong|the familiar}, floral aroma.
+It's like no tea I've ever tasted{. I don't really know how to describe tea, but I'll do my best for Charlotte's sake.|, discounting the same tea I had previously.}
+[{player_name}] "This is really tasty! It kind of tastes vaguely fruity? {I don't think I even need any sugar...|I like it a lot!}"
 [Charlotte] "It's an Indian black tea I discovered last year: A tad more mellow than its Darjeeling cousins, without the bitter aftertaste."
 [{player_name}] "Fancy."
 [Charlotte] "Usually I just stick to Earl Grey, but your visit presented an opportunity to bring out something special."
 Charlotte smiles and turns to face the window. # Teatime / WSmile
 [Charlotte] "It's such a lovely time of day, don't you think?" # Teatime / SSmile
-[{player_name}] "Huh? Oh, yeah."
+[{player_name}] "{Huh? Oh, yeah.|I agree.}"
 It really is nice out. I think photographers call this the `golden hour`.
 [Charlotte] "The scenery around Sunflower House is particularly idyllic in this light." # Teatime / WSmile
 "I try and take tea at this time every day. It relaxes me." # Teatime / WCalm
 [{player_name}] "That sounds like a peaceful habit."
-[Charlotte] "Indeed. Often a lonely one, as well." # Teatime / WSad
+[Charlotte] "Indeed. Often a lonely one, though." # Teatime / WSad
 I've never thought about before, but I guess it must be lonely for her sometimes having been here for so long. Actually, shouldn't she be getting out of here soon?
 "But not on this occasion." # Teatime / SSmile
 -> Questioning
 
 === Questioning ===
 "How are you finding your last week, {player_name}?" # Teatime / FCalm
-Something tells me I shouldn't try to hide anything from Charlotte. 
-Chances are she can probably ready everything I'm feeling without me needing to say anything. Kind spooky to think about, actually.
-But then, why ask me? Is this all a test?
-Crap, what did she just ask me? Oh, right, how my week's been.
+{Lied>0:
+	This time I need to tell the truth.
+	She could definitely tell that I wasn't completely honest last time.
+	So... how am I really feeling?
+-else:
+	Something tells me I shouldn't try to hide anything from Charlotte.
+	Chances are she can probably ready everything I'm feeling without me needing to say anything. Kind spooky to think about, actually.
+	But then, why ask me? Is this all a test?
+	Crap, what did she just ask me? Oh, right, how my week's been.
+}
 +[Tiresome]
 	{awareness>1:
 		[{player_name}] "It's difficult to stay positive. There's so much to do and I just feel like I'm getting nowhere." # awareness ^ good
@@ -181,7 +198,15 @@ Crap, what did she just ask me? Oh, right, how my week's been.
 
 	}
 +{week>1}[Repetetive]
-	Hidden first week. My life has become a memorization game. I feel more like I'm studying than living.
+	[{player_name}] "To be honest, it's getting repetetive."
+	I know I'm playing with fire here, but she <i>asked</i> for honesty.
+	"I do the same things day in and day out. I perform the same actions to the same outcomes."
+	"Even when I try and change them the outcome still ends up similar."
+	"I feel like my life has become a memorization game. It's more like I'm studying than living."
+	[Charlotte] "My, that's quite bleak. Relatably so, in fact." # Teatime / WSad
+	"I often feel the same way..."
+	"I wish I had some sage advice for you, but passing any on would make me quite the hypocrite."
+	"I can tell you one thing, though... and that is to try and find joy in the ritual. As much as you can." # Teatime / FSmile
 - [Charlotte] "And how about your mental state? How are you holding up?" # Teatime / FCalm
 +[Well]
 	[{player_name}] "I'm doing pretty well."
@@ -268,16 +293,16 @@ I immediately feel guilty for having laid my burdens on Charlotte like this.
 "If you might pardon the irony of my saying so: Live for yourself, {player_name}, not for them."
 "As you can imagine, I am quite familiar with the destructive nature of selfishness. Do not confuse it with self-care."
 "I've seen the tragedy of selflessness play out, too." # Teatime / WSad
-Charlotte again demonstrates her status as the most senior resident. I actually feel kinda relieved having admitted how I feel.
+Charlotte again demonstrates her status as the most senior resident. I {actually|still} feel kinda relieved having admitted how I {feel|feel a second time}.
 I'm not sure what to make of her advice yet, though.
-In any case, having answered her questions as honestly as I could I seem to have passed her test.
+In any case, I seem to have passed her test. But...
 -> Check
 
 === Check ===
 Two can play at this game. If I'm gonna prove myself to Charlotte, I have to try to read her like she can read me!
 [{player_name}] "Enough about me, already. How are <i>you</i> doing, Charlotte?"
 [Charlotte] "I am quite well, thank you for asking." # Teatime / FSmile
-Her answer was immediate, which means it wasn't thoughtful. She's happy that I asked, but she didn't think about her state at all.
+Her answer was immediate, which means it wasn't thoughtful. She's happy that I asked, but she didn't think about her state at all. # grace ^ good
 I'd better press her a bit more.
 [{player_name}] "No, really. I want to know how you've been."
 {
@@ -302,9 +327,10 @@ I'd better press her a bit more.
 		}
 	-else:
 		A flash of anger flickers on Charlotte's face, but is gone almost as soon as it arrived.
-		[Charlotte] "I have nothing of note to complain about."
-		Charlotte doesn't feel obliged to be honest with you, since you lied.
-		She changes the subject.
+		[Charlotte] "I have nothing of note to complain about." # Teatime / WCalm
+		"Besides the profound lack of scones, of course, for which I must again apologise." # Teatime / FSmile
+		[{player_name}] "It's fine, really."
+		[Charlotte] "It is natural for you to say so. Alas, I fear you may be a better guest than I am a host." # Teatime / WSad
 		-> Courtesy
 }
 
@@ -337,6 +363,13 @@ She turns to stare out the window, looking serenely out at the fading sunlight. 
 Another long silence follows. The tension is killing me.
 [Charlotte] "This has turned out to be quite the teatime." # Teatime / WSmile
 "I will give some more thought to your words." # Teatime / FSmile
+I'm sure what I said will work. I know it.
+Charlotte taught me that the `heart of etiquette is empathy`. But if empathy is about <i>sharing</i> the feelings of others...
+Then knowing <i>yourself</i> is just as important to good etiquette as knowing them.
+{GetValue("EarnedTeatimeStar")==false:
+	<color=color_descriptor><i>This revelation has <color=color_grace>increased <b>Grace</b> immensely<color=color_descriptor>.</color></i> # Grace+++
+	~SetValue("EarnedTeatimeStar", true)
+}
 "Thank you, {player_name}, for your company and for your concern."
 [{player_name}] "Pleasure was all mine."
 [Charlotte] "You are a rare friend, indeed."

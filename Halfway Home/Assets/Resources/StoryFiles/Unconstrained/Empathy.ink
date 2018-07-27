@@ -194,9 +194,9 @@ Charlotte's eyes dart around my face before she breathes a gentle sigh of relief
 // You get one, you have to loop if you want the other
 [Charlotte] "Perhaps you have some questions for me after all that?" # Charlotte = Calm
 Charlotte looks at me expectantly.
-*[Ask her about Trissa] -> Trissa
-*[Ask her about her Family] -> History
-*[Not really] -> Fail
++[Ask her about Trissa] -> Trissa
++[Ask her about her Family] -> History
++[Not really] -> Fail
 
 === Trissa ===
 [{player_name}] "So I noticed things seem, uh... <i>tense</i> with you and your roommate."
