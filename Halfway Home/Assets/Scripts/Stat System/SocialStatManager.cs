@@ -32,9 +32,11 @@ public class SocialStatManager : MonoBehaviour
 
   private int PreviousTier;
   private float PreviousProgress;
+  private Animator Anime;
 
   void Start ()
   {
+    Anime = GetComponent<Animator>();
     PreviousTier = Game.current.Self.GetBasicSocialStat(SocialStat) + Game.current.Self.GetBonusSocialStat(SocialStat);
     PreviousProgress = Game.current.Self.GetSocialProgress(SocialStat);
     Space.Connect<DefaultEvent>(Events.StatChange, UpdateStats);
@@ -88,4 +90,10 @@ public class SocialStatManager : MonoBehaviour
   {
     Scene.Dispatch(new SocialStatTierUpEvent(SocialStat, PreviousProgress, Game.current.Self.GetSocialProgress(SocialStat)));
   }
+
+    public void BarState(bool Opened)
+    {
+        Anime.SetBool("Open", Opened);
+    }
+
 }

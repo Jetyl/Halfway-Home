@@ -48,10 +48,12 @@ public class CheatCodes : MonoBehaviour
                 if(Screen.activeSelf)
                 {
                     codeBreaker.ActivateInputField();
+                    Space.DispatchEvent(Events.CheatsOpen);
                 }
                 else
                 {
                     codeBreaker.DeactivateInputField();
+                    Space.DispatchEvent(Events.CheatsClosed);
                 }
 
             }
@@ -156,6 +158,8 @@ public class CheatCodes : MonoBehaviour
         {
             Screen.SetActive(false);
             codeBreaker.DeactivateInputField();
+            codeBreaker.text = "";
+            Space.DispatchEvent(Events.CheatsClosed);
         }
 
     }

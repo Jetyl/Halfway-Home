@@ -797,6 +797,7 @@ public class ConvLoop : ConvNode
     public override void CallAction()
     {
         Game.current.Day = Day;
+        Game.current.Progress.SetValue("Day", Day);
         Game.current.Hour = Hour;
         Space.DispatchEvent(Events.TimeChange);
     }
@@ -1272,6 +1273,7 @@ public class ConvCheat : ConvNode
 
     public override void CallAction()
     {
+        Space.DispatchEvent(Events.Cheat);
         Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("all", "exit"));
     }
 
