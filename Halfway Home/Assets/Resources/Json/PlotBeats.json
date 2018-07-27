@@ -403,6 +403,10 @@
    {
     "Name" : "EarnedWoundStar",
     "Type" : 1
+   },
+   {
+    "Name" : "EarnedTeatimeStar",
+    "Type" : 1
    }
   ]
  }
