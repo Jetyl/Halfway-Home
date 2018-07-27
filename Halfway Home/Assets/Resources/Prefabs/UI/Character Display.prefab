@@ -536,6 +536,8 @@ MonoBehaviour:
     Graphic: {fileID: 1146555503489828, guid: a780e8aa5c0a9e34ebddfd45ef3e241c, type: 2}
   - Tag: Hideaway
     Graphic: {fileID: 1246273056585154, guid: 89ebf821b0be4044092f5705709f1ede, type: 2}
+  - Tag: Misery
+    Graphic: {fileID: 1341018616009032, guid: 49560bf728e3ea14ab2431020cb40333, type: 2}
   OpenCGTag: Open
   CloseCGTag: Exit
 --- !u!212 &212031393984077694

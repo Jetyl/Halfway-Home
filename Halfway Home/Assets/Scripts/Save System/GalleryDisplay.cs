@@ -15,6 +15,7 @@ public class GalleryDisplay : MonoBehaviour
     public TextMeshProUGUI PageText;
     public Button NextPage;
     public Button BackPage;
+    public Image FullScreen;
 
     private static GallerySystem Gallery;
 
@@ -26,6 +27,7 @@ public class GalleryDisplay : MonoBehaviour
 	void Awake ()
     {
         Gallery = new GallerySystem();
+        FullScreen.gameObject.SetActive(false);
 
         for (int i = 0; i < SaveLoad.GetSize(); ++i)
         {
@@ -72,7 +74,7 @@ public class GalleryDisplay : MonoBehaviour
             if (art.unlocked)
             {
               frame.sprite = art.GetImage(); //returns the sprite needed
-              frame.gameObject.GetComponent<Button>().interactable = false;
+              frame.gameObject.GetComponent<Button>().interactable = true;
             }
             else
             {
@@ -84,6 +86,7 @@ public class GalleryDisplay : MonoBehaviour
         }
 
         UpdatePageText();
+        CaptionText.text = "";
 
         if (index == 0) BackPage.interactable = false;
         else BackPage.interactable = true;
@@ -95,6 +98,26 @@ public class GalleryDisplay : MonoBehaviour
     public void ExpandPicture(Image picture)
     {
         //makes the big picture via fullscreen
+        for(int i = 0; i < Gallery.GetSize(); ++i)
+        {
+
+            var art = Gallery.GetImage(i);
+
+            if (art.GetImage() == picture.sprite)
+            {
+                if (art.unlocked)
+                {
+                    FullScreen.sprite = picture.sprite;
+                    FullScreen.gameObject.SetActive(true);
+                }
+                break;
+            }
+
+            
+        }
+
+        
+
     }
 
     public void SetCaptionText(Image frame)
@@ -117,7 +140,7 @@ public class GalleryDisplay : MonoBehaviour
                 if (art.unlocked)
                     CaptionText.text = art.Caption;
                 else
-                    CaptionText.text = "???";
+                    CaptionText.text = "Locked";
                 break;
             }
             

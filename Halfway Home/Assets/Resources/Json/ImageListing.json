@@ -25,10 +25,16 @@
   "Caption" : "Playing Basketball with Timothy"
  },
  {
-  "Name" : "Breakdown",
-  "Slug" : "CGs/Breakdown/TimothyBreakdown",
+  "Name" : "Hideaway",
+  "Slug" : "CGs/Hideaway/ColdSky_Gallery",
   "Set"  : 0,
-  "Caption" : "Timothy's Breakdown"
+  "Caption" : "Isaac in his Hideaway"
+ },
+ {
+  "Name" : "Morning Misery",
+  "Slug" : "CGs/Misery/morning_Gallery",
+  "Set"  : 0,
+  "Caption" : "Eduardo in the Art room"
  },
  {
   "Name" : "Tea Time",
@@ -37,15 +43,27 @@
   "Caption" : "Tea Time With Charlotte"
  },
  {
-  "Name" : "Hideaway",
-  "Slug" : "CGs/Memory/houseCG3",
-  "Set"  : 0,
-  "Caption" : "Isaac in his Hideaway"
- },
- {
   "Name" : "Dye Job",
-  "Slug" : "Assets/TextMesh Pro/Examples/Sprites/DropCap Numbers",
+  "Slug" : "CGs/Dye/Dye_Gallery",
   "Set"  : 0,
   "Caption" : "Timothy with his newly dyed hair"
+ },
+ {
+  "Name" : "Breakdown",
+  "Slug" : "CGs/Breakdown/TimothyBreakdown",
+  "Set"  : 0,
+  "Caption" : "Timothy's Breakdown"
+ },
+ {
+  "Name" : "Timothy's Drawing",
+  "Slug" : "CGs/Timothys_drawing",
+  "Set"  : 0,
+  "Caption" : "The Drawing Timothy made of me and everyone else"
+ },
+ {
+  "Name" : "Cast Photo",
+  "Slug" : "cast_photo",
+  "Set"  : 0,
+  "Caption" : "My friends from Sunflower House"
  }
 ]
