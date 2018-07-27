@@ -57,42 +57,46 @@ EXTERNAL SetValue(ValueName, newValue)
 	
 
 ===MailCall===
-I walk past the commons area, seeing a decent gathering of people. #Charlotte = Calm, right #Trissa = Calm, right #Eduardo = Calm, left #Isaac = Calm, left # Ambience : play_ambience_fireplace # ambience_lpf ! 0
-Max apperes to be the center of attention, holding a small pile of mail in their hands.#Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
-[{player_name}] "What's going on here?"
+I walk into the common area, which is currently host to decently sized gathering of people. #Charlotte = Calm, right, far #Trissa = Calm, right, far #Eduardo = Calm, left, far #Isaac = Calm, left, far # Ambience : play_ambience_fireplace # ambience_lpf ! 0
+Max appears to be the center of attention, holding a small stack of envelopes in their hands. #Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
+{Oh, it must be mail call. Max usually does those on weekends.|Mail time again.}
 [Max] "Ah, {player_name}, there you are. I'm just doin' a mail call." #Charlotte = exit #Trissa = exit #Eduardo = exit #Isaac = exit
-"The front desk has been siting on these letters for a while, and some people haven't been picking there's up, so I'm just handing them all out."
-"Speaking of which," #Eduardo = Calm, stage_left, left
+"The front desk has been siting on these letters for a while. Some people haven't been picking up their mail..."
+Max casts an exasperated look at Eduardo. # Max = Angry
+"So I'm just handing them all out now!" # Max = Happy
+"Speaking of which..." #Eduardo = Calm, stage_left, left
 "Here ya go Eddy!" #Eduardo = Surprised, right
 [Eduardo] "Wah!" #Eduardo = exit
-Max hands off a good chunk of them off to Eduardo, whose letters made up more than 60% of the stack.
-[{player_name}] "What are those letters from?" #Max = exit #Eduardo = Calm #Isaac = Calm
-[Eduardo] "Eh, my family, probably. they are very old fashioned. they have my number. They could just call me."
-[Isaac] "Maybe they don't want to talk with you?"
+Max thrusts a heap of letters onto a startled Eduardo. Wow, his mail made up more than 60% of the stack.
+[{player_name}] "Who are those letters from?" #Max = exit #Eduardo = Calm #Isaac = Calm
+[Eduardo] "Eh, my familia, probably. They are very old fashioned. They <i>have</i> my number. They <i>could</i> just call me."
+[Isaac] "Maybe they don't want to listen to you." // Formerly "talk with you"
 [Eduardo] "Isaaaaaac!" #Eduardo = Surprised
-[Max] "and Isaac, here's yours. they also seem to be from your folks." #Max = Calm, stage_right, left #Isaac = Surprised, right #Eduardo = exit
-Max hands Isaac about half of the mail that was left.
+[Max] "And Isaac, here's yours. They also seem to be from your folks." #Max = Calm, stage_right, left #Isaac = Surprised, right #Eduardo = exit
+Max hands Isaac about half of the remaining mail.
 [Isaac] "Oh. Um" #Isaac = Afraid
 "Thanks."
-[Max] "No problemo buddy." #Max = Happy
-"Anyways, Charlotte!" #Max = Calm, stage_center, right #Charlotte = Calm, stage_right, left
+[Max] "No problemo buddy." #Max = Happy # Isaac = Exit
+"Anyways... Charlotte!" #Max = Calm, stage_center, right #Charlotte = Calm, stage_right, left
 "Oh, um... I guess I don't have any mail for you." #Max = Surprised
-[Charlotte] "makes sense. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
-"Besides, my family hasn't attempted to contact me in a while. Not out of disdain, mind you. There is simply nothing left to say at this juncture."
-[Trissa] "That's an rather odd comment to make Lotty." #Trissa = Sad, stage_right
-[Charlotte] "It is?" #Charlotte = right
+[Charlotte] "That is to be expected. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
+"Besides, my family hasn't attempted to contact me for some time."
+"Not out of disdain, mind you. There is simply nothing left to say."
+[Trissa] "That's a somber comment to make, Lotty." #Trissa = Sad, stage_right
+[Charlotte] "Is it?" #Charlotte = right
 [Trissa] "Eh, nevermind. It's not my place to pry into your personal life." #Trissa = Calm, stage_center #Charlotte = exit
 [Max] "And Trissa, I've got one letter for you." 
-[Trissa] "Oh? Is it from my lil bro Spencer?" #Trissa = Happy
+[Trissa] "Really? Is it from my lil' bro Spencer?" #Trissa = Happy
 [Max] "It's from someone named `Maurice`."
 [Trissa] "Oh." #Trissa = Surprised #Max = exit
 "Him." #Trissa = Angry
-"Thank You Max. I really apperiecate it!" #Trissa = Calm
-Trissa says that as she cherrily takes the letter, and begins tearing it to shreds. @She Tosses the shreads into the lit fireplace for good measure.
-Max seems to either not notice this, or not care, as they continue handing out letters to the residence #Trissa = exit #Max = Calm
-[Max] "And, Timothy, we got one letter from your folks that had just came in when I grabbed the mail pile." #Timothy = Calm
+"Thanks, Max. I really appreciate it!" #Trissa = Calm
+Trissa cheerily takes the letter and begins immediately tearing it to shreds.
+She walks over the the fireplace and tosses the scraps into the crackling flames.
+Max either does not notice or does not care to comment, and instead continues handing out letters. #Trissa = exit #Max = Calm
+[Max] "Oh, Timothy. This letter from your folks that just came in when I grabbed the mail pile." #Timothy = Calm
 [Timothy] "Oh, um... Thank you." #Timothy = Sad.
-Timothy looks at envelope for a bit, not even attempting to open it, before walking away with it in hand. #Timothy = exit
+Timothy stares at the envelope, making no attempt to open it before walking away with it in hand. #Timothy = exit
 He looked a little pale there. I wonder if {firsttime:he's okay|this is the cause for the drama later in the week}. // New context for choice
 {firsttime:He probably just prefers opening his letters in privacy. Then again...|The more I think about it the more convinced I am}.
 Should I follow him?
@@ -121,8 +125,8 @@ Should I follow him?
 */
 
 ===IgnorantBliss===
-Looking around, most everyone from the 2nd floor has scattered, just leaving the regulars lounging around. #Charlotte = calm, right #Trissa = calm #Eduardo = angry #Isaac = sad
-I should got talk to...
+Most everyone from the 2nd floor has scattered, leaving the regulars lounging around. #Charlotte = calm, right, far #Trissa = calm, far #Eduardo = angry, far #Isaac = sad, far
+I should go talk to...
 +[Charlotte]
 	->CharlotteTalk
 +[Trissa]
@@ -133,13 +137,13 @@ I should got talk to...
 	->IsaacTalk
 
 === MaxMail ===
-Before I can do anything, Max strides up to me with a small handful of letters an an eager expression. #Max = calm, stage_center
+Before I can do anything, Max strides up to me with a small handful of letters and an eager expression. #Max = calm, stage_center
 [Max] "Hmm..." #Max =sad
 Max's expression fades from anticipation to disappointment.
 "Sorry {player_name}, no letters for you either."
 [{player_name}] "I figured as much." 
 [Max] "Oh well, I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
-"All that's left is the weekend, and you'll be out of here! Isn't that exciting?"
+"All that's left is tomorrow and you'll be out of here! Isn't that exciting?"
 [{player_name}] "Yeah, exciting..." #Max = exit
 I force a smile. Why am I not happy about this?
 For some reason Max's words stress me out. @<color=color_descriptor><i>(<color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>)</color> #stress += 15
@@ -197,9 +201,10 @@ I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Cha
 Eduardo gets up, holding only a single letter in his hand.
 "I'mma read these one, since its the most recent."
 Eduardo opens the first one, and begins reading thru it.
-His sour mood seems to vanish, as he breaks out into chuckles. #Eduardo = Happy
-[{player_name}] "something funny?"
-[Eduardo] "nah, at least, not you. I'm just laughing at my Ma's quirks."
+His sour mood seems to vanish as he breaks out into a chuckle. #Eduardo = Happy
+[{player_name}] "Something funny?"
+[Eduardo] "Nah. At least, not you."
+"I'm just laughing at minha mãe. My mother, she is... quirky." // Trying to inject some Portugese into Eduardo's speech. Formerly "laughing at my Ma's quirks."
 When he's done reading, he neatly folds the letter into his jacket pocket, and starts walking off. #Eduardo = Calm, right
 "Catch ya later, {player_name}" #Eduardo = exit
 ->SocialHourOver
@@ -239,8 +244,8 @@ I walk over to Charlotte, who seems to be staring intently at the other resident
 [Charlotte] "Yes?" #Charlotte = left
 [{player_name}] "How often did you get letters from your family?"
 [Charlotte] "Oh, not very often."
-"Usually it's my parents who seek to talk with me, and often it's either in person, or over the phone."
-"My family does live nearby, afterall."
+"Generally speaking, my parents are the only ones who reach out to me, and they typically do so in person or over the phone."
+"Perhaps it would be different were my family not so close by, as with Eduardo's kin in Brazil."
 "My Grandmother does send me the occasional letter though."
 "I cherish them each time they arrive."
 [{player_name}] "Uh huh."
@@ -253,7 +258,7 @@ Charlotte sighes, her eyes wandering off somewhere before returning directly to 
 		It seems weird to tell her she looks like she came from a victorian novel, so I don't
 	-else:
 		[{player_name}] "Do you really want my opinion?" #expression ^ good
-		[Charlotte] "Oh, definetly. Another perspective on myself would be most benifical."
+		[Charlotte] "Oh, definitely. Another perspective on myself would be most benifical."
 		[{player_name}] "okay..."
 		I take a moment to breath, before I open the floodgates.
 		".....@@Charlotte."
@@ -276,7 +281,7 @@ With Max gone, I can finally go find Timothy. I'm certain I saw him heading in t
 		~SetValue("FollowTimothy", true)
 		-> END
 	-else:
-		I arrive at my door and take a deep breath. I feel oddly nervous.
+		I arrive at my door and take a deep breath. I feel oddly nervous. # Background / HallwayDay, Blackwipe
 		Having calmed my nerves a bit, I reach for the knob and...
 		{firstfollow:It's locked?|Oh, right. It's locked. And I still don't have a key.}
 		{firstfollow:Timothy actually locked me out?|How was I expecting this to go?}

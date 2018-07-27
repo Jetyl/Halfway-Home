@@ -135,7 +135,7 @@ Called it.
 	[{player_name}] "Uh..."
 -[Keyless>Max] "Thanks, buddy!"
 And just like that, Max leaves me all alone with this new stranger.   # Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
-Timothy sighs dejectedly. Maybe he's used to this? // Could remove line
+//Timothy sighs dejectedly. Maybe he's used to this? // Could remove line
 [{player_name}] "Uh... hey."
 -> TakingTimothy
 

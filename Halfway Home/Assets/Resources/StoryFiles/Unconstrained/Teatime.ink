@@ -26,7 +26,7 @@ EXTERNAL SetValue(name, value)
 -> Start
 
 === Start ===
-Making note of the time, I head to Charlotte's room. I would feel bad if I was late. # Background / Commons
+Making note of the time, I head to Charlotte's room. I would feel bad if I was late. # Background / HallwayDay, Blackwipe
 Who knows what she would think of me?
 -> KickedOut
 
