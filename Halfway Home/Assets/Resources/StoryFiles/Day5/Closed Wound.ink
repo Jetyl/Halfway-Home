@@ -36,7 +36,7 @@ EXTERNAL SetTimeBlock(int)
 -> Start
 
 === Start ===
-I head to my door, nervously thumbing the key I took from Max's key ring days ago.{SetTimeBlock(1)} {SetValue("CompletedClosedWound", true)} # Background / Commons
+I head to my door, nervously thumbing the key I took from Max's key ring days ago.{SetTimeBlock(1)} {SetValue("CompletedClosedWound", true)} # Background / HallwayDay, Blackwipe
 {
 	-TURNS_SINCE(-> Unlocked)==-1: 
 	// TURNS_SINCE tells how many knots have been diverted since going to a particular knot, -1 means you've never been there
@@ -381,8 +381,8 @@ Crap, I don't know. I'd better think of something fast.
 ~chickenedOut = true
 If I tried to help him, I'd probably just screw things up. It would be better to get Max.
 They're paid to deal with this stuff, not to mention trained.
-I head back out into the commons. # Background / Commons
-Max is one of the easier people to spot in a crowd.
+I head back out into the hall. # Background / HallwayDay, Blackwipe
+Max is one of the easier people to spot in a crowd. # Background / Commons, Blackwipe
 They're over in the corner chatting with one of the second floor R.A.s # Max = Happy
 Immediately upon seeing me making my way over to them, they nod to the other R.A. and approach me.
 Max really is a good R.A., despite how in-your-face they can be.
