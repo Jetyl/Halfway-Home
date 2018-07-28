@@ -43,6 +43,12 @@
   "Caption" : "Tea Time With Charlotte"
  },
  {
+  "Name" : "Closed Wound",
+  "Slug" : "CGs/Wound Letter/tragic_Gallery",
+  "Set"  : 0,
+  "Caption" : "Timothy, crying after getting a letter from his parents"
+ },
+ {
   "Name" : "Dye Job",
   "Slug" : "CGs/Dye/Dye_Gallery",
   "Set"  : 0,
