@@ -76,9 +76,9 @@ public class ChangeNode : BaseNode
         else
             NoteTitle = "";
         
-        if (data.Keys.Contains("PhoneImageSlug") && data["PhoneImageSlug"] != null)
+        if (data.Keys.Contains("ImageSlug") && data["ImageSlug"] != null)
         {
-            Image = Resources.Load<Sprite>("Sprites/" + (string)data["PhoneImageSlug"]);
+            Image = Resources.Load<Sprite>("Sprites/" + (string)data["ImageSlug"]);
 
         }
 
