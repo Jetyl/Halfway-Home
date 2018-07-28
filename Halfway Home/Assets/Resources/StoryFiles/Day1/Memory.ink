@@ -125,7 +125,7 @@ Max is reading by the fireplace. I wander over and join them.   # Max = Calm   #
 -Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
-My body rises from my seat and stumbles toward my bedroom.   # Max = Exit   
+My body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe # Max = Exit   
 All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # text_vol ! -200
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade   # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
