@@ -264,6 +264,8 @@ MonoBehaviour:
     Actor: {fileID: 1435825661436478, guid: 61990b8c5ea0e3744ba2fd9969c1fbdb, type: 2}
   - Character: Dyed
     Actor: {fileID: 1076685750796010, guid: e92b94ca4cd414f4f998203e24fd19c2, type: 2}
+  - Character: Needy
+    Actor: {fileID: 1810954633969276, guid: 07f94b93ef6423542812e764639283ed, type: 2}
   LeftSpot: {fileID: 1910437319575386}
   RightSpot: {fileID: 1529515766925194}
   Varience: 4
@@ -457,6 +459,24 @@ MonoBehaviour:
     Ambience:
     - 
     Bank: 
+  - ID: 0
+    Tag: HallwayDay
+    Backdrops:
+    - {fileID: 21300000, guid: 5e857ef6378462548aff40b6f87b8835, type: 3}
+    MusicTrack:
+    - 
+    Ambience:
+    - 
+    Bank: 
+  - ID: 0
+    Tag: HallwayNight
+    Backdrops:
+    - {fileID: 21300000, guid: ae8579c5d6456e84f82d211c609f45b0, type: 3}
+    MusicTrack:
+    - 
+    Ambience:
+    - 
+    Bank: 
   FrontCurtain: {fileID: 212507266546122010}
   BackCuratin: {fileID: 212070676895858708}
   WipeCurtain: {fileID: 114651947331197304}
@@ -538,6 +558,8 @@ MonoBehaviour:
     Graphic: {fileID: 1246273056585154, guid: 89ebf821b0be4044092f5705709f1ede, type: 2}
   - Tag: Misery
     Graphic: {fileID: 1341018616009032, guid: 49560bf728e3ea14ab2431020cb40333, type: 2}
+  - Tag: Wound
+    Graphic: {fileID: 1362250940444618, guid: 4648be0931d7c104dab347ee386a2e74, type: 2}
   OpenCGTag: Open
   CloseCGTag: Exit
 --- !u!212 &212031393984077694
