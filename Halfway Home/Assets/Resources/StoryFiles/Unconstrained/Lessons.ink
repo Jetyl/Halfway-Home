@@ -25,13 +25,15 @@ EXTERNAL GetValue(name)
 -> Start
 
 === Start ===
-I arrive at the library on time to meet with Charlotte, which feels like a miracle.
+I arrive at the library on time to meet with Charlotte, which {feels|still feels} like a miracle.
 She's already here, seated at the same sofa as yesterday.
 Splayed out on the table in front of her are a handful of books, some opened to specific chapters and others closed and stacked neatly.
 [Charlotte] "Punctuality is a good start. Thank you for meeting me here." # Charlotte = Happy
-[{player_name}] "Yeah, sure."
-[Charlotte] "The polite response would be to thank me for offering my time, {player_name}." # Charlotte = Calm
-[{player_name}] "Crap, right. Thanks for helping me out." //is shit pg13?
+[{player_name}] "{Yeah, sure.|Thanks for taking the time to do this!}"
+{Start==1:
+	[Charlotte] "The polite response would be to thank me for offering my time, {player_name}." # Charlotte = Calm
+	[{player_name}] "Crap, right. Thanks for helping me out."
+}
 [Charlotte] "You are very welcome. It's nice to have the chance to share my knowledge." # Charlotte = Happy
 "Now, let's begin."
 "I have distilled the many lessons I have learned about etiquette over the years into three core ideas: Principles, Protocol, and Behavior." # Charlotte = Calm
@@ -140,32 +142,34 @@ My mom used to nail me for that one when I was little.
 "In reality, I was trying to enforce the protocol of a different group and it was <i>I</i> who was behaving improperly." # Charlotte = Happy
 Charlotte laughs a little too hard at that.
 "You could spend a lifetime learning all the details of a particular group's protocol, but still fail because you did not learn to <i>adapt</i>." # Charlotte = Calm
-{
-	-expression>0:
-		[{player_name}] "Uh, Charlotte? If etiquette is about adapting to other people then why do you talk like you're from the 19th century?" # Expression ^ Good
-		Charlotte looks taken aback by my comment. # Charlotte = Surprised
-		[Charlotte] "Well, I must admit you are a fast learner. A pertinent question." # Charlotte = Happy
-	-else:
-		[{player_name}] "Wait, but then why do you..." # Expression = Poor
-		[Charlotte] "I beg your pardon? I couldn't quite hear you."
-		[{player_name}] "Uh, nevermind."
-		Charlotte gives me a knowing look.
-		[Charlotte] "Were you going to inquire as to why I speak the way I do when I'm lecturing you about adapting to others?"
-		I can feel myself starting to blush.
-		[{player_name}] "Well... yeah."
+{Protocol==1:
+	{
+		-expression>0:
+			[{player_name}] "Uh, Charlotte? If etiquette is about adapting to other people then why do you talk like you're from the 19th century?" # Expression ^ Good
+			Charlotte looks taken aback by my comment. # Charlotte = Surprised
+			[Charlotte] "Well, I must admit you are a fast learner. A pertinent question." # Charlotte = Happy
+		-else:
+			[{player_name}] "Wait, but then why do you..." # Expression = Poor
+			[Charlotte] "I beg your pardon? I couldn't quite hear you."
+			[{player_name}] "Uh, nevermind."
+			Charlotte gives me a knowing look.
+			[Charlotte] "Were you going to inquire as to why I speak the way I do when I'm lecturing you about adapting to others?"
+			I can feel myself starting to blush.
+			[{player_name}] "Well... yeah."
+	}
+	Charlotte relaxes her posture and gets an amused look in her eye.
+	"It'd probably be less awkward if I talked like this, huh?"
+	"Less formal and more familiar. Easier to follow, too, right?"
+	She regains her previous, more rigid posture.
+	"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}}."
+	She looks wistfully off into the distance. # Charlotte = Sad
+	"My dear aunt Viola, without whom I would have been wholly lost, spoke in the same manner."
+	"I care not if people think less of me for my speech. I only care for the joy of savoring each elegant word, paid in homage to the wisdom she gave me."
+	"Satisfied?" # Charlotte = Calm
+	Wow, now I feel like garbage for thinking she was weird all that time.
+	[{player_name}] "I'm sorry! I didn't think-" # Skip
+	[Charlotte] "Please, there is no need for an apology. I speak like this knowing full well how it redounds upon my social reception."
 }
-Charlotte relaxes her posture and gets an amused look in her eye.
-"It'd probably be less awkward if I spoke like this, huh?"
-"Less formal and more familiar. Easier to follow, too, right?"
-She regains her previous, more rigid posture.
-"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}}."
-She looks wistfully off into the distance. # Charlotte = Sad
-"My dear aunt Viola, without whom I would have been wholly lost, spoke in the same manner."
-"I care not if people think less of me for my speech. I only care for the joy of savoring each elegant word, paid in homage to the wisdom she gave me."
-"Satisfied?" # Charlotte = Calm
-Wow, now I feel like garbage for thinking she was weird all that time.
-[{player_name}] "I'm sorry! I didn't think-" # Skip
-[Charlotte] "Please, there is no need for an apology. I speak like this knowing full well how it redounds upon my social reception."
 [Charlotte] "Today I would like to spend time discussing how to identify when social rules change as well as methods for learning rules quickly and politely." # Charlotte = Calm
 I had no idea Charlotte knew so much about this stuff. I just thought she read a lot and didn't get out much.
 We spend an hour talking about different tactics to adapting to new social rules and whatnot. # Time % 1
@@ -229,21 +233,24 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 "Unique principally in that I understand it to be a disadvantage, where many like me are content torturing small animals... or worse." # Charlotte = Sad
 "It may surprise you to learn that I was not always so committed to the wellbeing of others."
 "It pains me to admit it, but I was a cruel child. Arrogant, abusive, and impulsive. And my wealth served only to exacerbate my vile temperament."
-"I didn't care at all what anyone thought of me. I demanded the finest things and treated with contempt all those I thought of as beneath me."
-"Looking back on it, I believe I didn't care because I was unable to tell what others felt... with one exception. I developed a knack for recognizing pain."
+"I didn't care at all what anyone thought of me."
+"I demanded the finest things and treated with contempt all those I thought of as beneath me. Which was, naturally, everyone."
+"Looking back on it, I believe I didn't care because I was unable to tell what others felt... with one exception."
+"I developed a knack for recognizing pain."
 "I was ruthless. I loved the power I felt dispensing such abuses on others. I loved being able to know that I affected them."
-Wow. I had no idea Charlotte had changed so much.
+{Wow. I had no idea Charlotte had changed so much.|Charlotte is an excellent speaker. Even hearing this story {a second|a third|for the umpteenth} time, it still absorbs me.}
 "I refused to eat for a week just to see the pain and worry on my parents' faces. They only got me to stop by bribing me with my Great Aunt Viola's jewelry box."
 "Goodness, how petty I was back then." # Charlotte = Angry
 "After that I became somewhat obsessed with her. She had the most beautiful old things with such <i>history</i> to them." # Charlotte = Calm
-"I eventually found my way into her old things up in the attic. Among them was her diary, written in her own neat hand."
+"I even ventured into the attic, which terrified me at the time, to look through our family antiques... just for a chance at recovering some of her posessions."
+"I was successful. Among the ancient and dusty relics I discovered her diary, written in her own neat hand."
 "What I read in that diary changed me, {player_name}. She was like me."
-"Not exactly, mind you, but she struggled with the same feeling that I did. She felt the same isolation."
+"Not exactly, mind you, but she struggled with the same <i>feeling</i> that I did. She felt the same <i>isolation</i>."
 "It was the first time I ever truly identified with anyone. It was utterly eye-opening."
 "I read at a fevered pace."
 "I read on as the only person I ever connected with cataloged her own descent into madness."
 "I read on as she wrote of the abuses she suffered at the hands of the orderlies of Blackwell Asylum."
-"My family's asylum." # Charlotte = Angry
+"...My family's asylum." # Charlotte = Angry
 "It was then that I finally understood the price of my actions. I understood how the world sees people like me." # Charlotte = Sad
 "I became terrified of ending up like her. I committed to changing myself."
 "What began out of fear continued out of newfound understanding, as the more I learned the clearer it became that my previous actions were wrong."
@@ -262,7 +269,7 @@ Wow. I had no idea Charlotte had changed so much.
 
 === Farewell ===
 [{player_name}] "Thanks for taking the time to show me all this stuff, Charlotte."
-{-depression>40:[Voices] "You should have told her not to waste her time in the first place."}
+{-depression>35:[Voices] "You should have told her not to waste her time in the first place."}
 [Charlotte] "It was my pleasure, {player_name}. I hope this information serves you well in the trials to come." # Charlotte = Happy
 {
 	-grace>2:

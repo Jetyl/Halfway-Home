@@ -26,13 +26,16 @@ EXTERNAL GetValue(name)
 
 === Start ===
 I find Timothy hunched over a patch of earth in the garden.
-Much like his first day here, he appears to be drawing something in the dirt. It looks like he's also made use of various rocks and leaves in the process, too.
+Much like his first day here, he appears to be drawing something in the dirt. It looks like {Cartography==0:he's also made use of various rocks and leaves in the process, too|his map. So it's time for that already, then..}.
 I wander over and wave to get his attention.
 [Timothy] "Oh! H-hi, {player_name}. I didn't see you coming." # Timothy = Surprised, Stage_Right, Left
 He moves closer to block my view of his work. # Timothy = Stage_Center
 [{player_name}] "Should I leave?"
 [Timothy] "W-what? No! I mean... I just get nervous when people watch me is all."
 [{player_name}] "I wasn't trying to be nosy or anything. I was just curious what you were up to."
+{Start>1:
+	Even though I already know, the words come naturally, as if I'm going with the flow of some cosmic tide.
+}
 [{player_name}] "But if you don't wanna share, that's cool. I mostly wanted to say `hi` anyway."
 Timothy visibly relaxes. # Timothy = Happy
 [Timothy] "Right! Well... hi!"
@@ -41,7 +44,7 @@ Should I leave Timothy be or try to figure out what he's been up to?
 +[Repeat interest] -> Cartography
 
 === Disinterested ===
-I decide I'm not interested in pressing Timothy for more.
+I decide I'm not interested in pressing Timothy {Start==1:for more|this time around}.
 [{player_name}] "Well, good talkin' to ya. See you around."
 Timothy nods and turns back to his drawing. # Timothy = Exit
 I head to the back of the garden and look up at the passing clouds for a while.
@@ -49,7 +52,7 @@ I head to the back of the garden and look up at the passing clouds for a while.
 -> END
 
 === Cartography ===
-I decide to try and get Timothy to open up about what he's working on.
+I decide to try and get Timothy to open up about {what he's working on|his map again}.
 [{player_name}] "This isn't another game of Hangman, is it?"
 Timothy laughs.
 [Timothy] "No."
@@ -60,8 +63,11 @@ Timothy laughs.
 [{player_name}] "Cross my heart."
 [Timothy] "You probably won't care anyway..."
 [Timothy] "Alright, alright. It's a map. I'm drawing a map."
+{Cartography>1:
+	The look of surprise comes to me naturally, despite me having already known. What a weird feeling...
+}
 He backs up timidly so I can get a better look, watching me closely as I scan the markings in the soil. # Timothy = Stage_Right
-Now that I can get a better look at it, I can see the map clearly. He's even used rocks and twigs to provide geographic detail, forming miniature mountains and forests.
+Now that I can get a better look at it, I can see the map clearly{.|again.} He's even used rocks and twigs to provide geographic detail, forming miniature mountains and forests.
 [Timothy] "I would have added some water features, but I didn't want to make a mess..." # Timothy = Happy
 [{player_name}] "This is really detailed, Timothy. How long have you been out here?"
 [Timothy] "Thanks! I've been working on it all day, but I actually scrapped the one I spent most of that time on. This one took me about an hour."
@@ -95,9 +101,9 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	[{player_name}] "So what's this a map of, then?"
 	[Timothy] "Uh! Okay, this is also a bit embarrassing... but you already promised not to laugh, so..."
 	"It's a map of `Miorath`. <size=80%>It's the name of the fantasy world in the... uh...<size=50%> `Empire of Twilight` series... which is...<size=40%> my favorite.<size=100%>
-	[{player_name}] "I've heard of that series. Isn't some company making it into a game?"
-	[Timothy] "Uh. I mean, they did. It came out last year, but it was only okay." # Timothy = Surprised
-	Last year? I can never seem to keep up with the outside.
+	[{player_name}] "I've heard of that series. {Isn't some company making it into a game?|Some company made it into a game, right?}"
+	[Timothy] "{Uh. I mean, they did.|Yeah.} It came out last year, but it was only okay." # Timothy = Surprised
+	{Last year? I can never seem to keep up with the outside.|It's staggering just how much you miss living under a rock for six years.}
 	[Timothy] "It was a pretty bland action game. You never even got to see the map, which is the worst mistake I think." # Timothy = Angry
 	"The coolest part of Empire is the world and they barely showed it at all!"
 	Timothy seems more confident when talking about something he cares about.
@@ -114,14 +120,14 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	Wow, Timothy is really into this.
 	He goes on for another solid minute, diving into the history of each twig and stone.
 	"Anyway, the game totally missed all that and it was tragic." # Timothy = Sad
-	"Oh! Oh, I've totally been ranting, huh?" # Timothy = Afraid
+	"Oh! Oh, <jitter>I've totally been ranting, huh?</jitter>" # Timothy = Afraid
 	Timothy's confidence drains out of him.
 	"S-Sorry."
 	[{player_name}] "Hey, no worries. It's interesting stuff."
 	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad
 	-> Questions
 * ->
-	I feel like I understand Timothy a bit better after listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
+	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
 		-else: -> Hobbies
