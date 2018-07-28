@@ -48,6 +48,7 @@ EXTERNAL CallSleep()
 
 === SunnyMorning ===
 Its a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
+~Conviction = 3
 I'm rather suprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of ceral in his hand, siting on the floor and eating.
 [Eduardo] <flow>Heyo {player_name},</flow> how's it going!"
@@ -96,7 +97,7 @@ He's got a bowl of ceral in his hand, siting on the floor and eating.
 [Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?" #Eduardo = Angry
 "Or maybe this place just reminds me of <flow>Isaac.</flow>" #Eduardo = Calm
 [{player_name}] "uh-huh."
-[Eduardo]"I Really do love him, you know." //show CG here.
+[Eduardo]"I Really do love him, you know." #Misery = Open, relaxed, dreamy //show CG here.
 "Isaac really does complete me."
 [{player_name}] "sure."
 Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
@@ -145,7 +146,7 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embaresse
 		->Gushing
 	-else:
 		[{player_name}] "Eduardo, your relationship with Isaac is far from perfect." #expression ^ good
-		[Eduardo] "..." //Eduardo has an annoyed expression
+		[Eduardo] "..." #Misery = aggressive, annoyed//Eduardo has an annoyed expression
 		"The hell would you know about our relationship, {player_name}"
 		Wow, Eduardo is suprisngly defensive about their relationship. I probably need to tred carefully.
 		->Explain
@@ -177,8 +178,8 @@ Isaac might be able to tell me more about their relationship, if I can find a ti
 
 ===Contention===
 [{player_name}] "Isaac Told me." #expression ^ good
-[Eduardo] "..." //shocked expression
-"Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" //angry expression
+[Eduardo] "..." #Misery = Shocked //shocked expression
+"Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" #Misery = Angry //angry expression
 Well, Eduarod is technically correct. Isaac hasn't told me anything yet, but...
 [{player_name}] "it's true. Acording to Isaac, he doesn't see your guy's relationship as rosy as you do."
 {
@@ -217,22 +218,22 @@ After wallowing for a while internally, I decide to head off to some other part 
 
 ===Suffocated===
 [{player_name}] "He said he found you to be suffocating some times. That you're just always around him." #expression ^ good
-[Eduardo] "Wha! That, That can't be true?!" //shocked unsure expression
+[Eduardo] "Wha! That, That can't be true?!" #Misery = Tense, Unsure //shocked unsure expression
 ~Conviction -= 1
 Eduardo looks shocked. He doesn't believe me, but for once, He looks like he's doubting himself.
-"Isaac said he really liked that... when we..." //looking down, mumbling
+"Isaac said he really liked that... when we..." #Misery = Mumble //looking down, mumbling
 [{player_name}] "When you what?"
-[Eduardo] "Well Aren't you a nosey one!" //Angry eduardo
-"But Fine, I'll tell ya!" //oddly cheery and almost smug
+[Eduardo] "Well Aren't you a nosey one!" #Misery = aggressive, angry //Angry eduardo
+"But Fine, I'll tell ya!" #Misery = relaxed, smug //oddly cheery and almost smug
 Huh, Eduardo's mood seems to have completely shifted. theres a passion in his eyes thats almost scary.
 [{player_name}] "what's gotten into you?"
 [Eduardo] "Well now I gotta prove our perfect love, against these vile rumors you seem caught up in!" //smug explaintory
-"So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!" //cheery
+"So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!" #Misery = dreamy //cheery
 "Its actually not that long ago. We had our 6 month aniversy last week, to be exact."
 "I had changed rooms, as I was having problems with my roommate at the time."
 "And the new roomie I got was of course, Isaac."
 "Isaac had actually been here..."
-Eduardo stops, just as he is about to get //smug
+Eduardo stops, just as he is about to get #Misery = smug
 [Eduardo] "Okay {player_gender == "F": miss| mista} love guru. If you know so much about Isaac, and our relationship, then how long has he been at Sunflower House?"
 Crap, do I know that?
 [{player_name}] "He's been here..."
@@ -249,21 +250,21 @@ Crap, do I know that?
 	"Isaac has been here for 2 years,<delay=0.5> <i>and 6 months<i>."
 	[{player_name}] "eh, thats close enough, right?"
 	[Eduardo] "Nope! @there are no partial credit in this game, buddy."
-	Is this a gameshow now? Eduardo seems to be trating it as such.
+	Is this a gameshow now? Eduardo seems to be treating it as such.
 	Still, I am not doing a good job convincing him at this rate.
 +[2 years, 6 months]
 	"He's been here for 2 years, and 6 months."
-	[Eduardo] "eh- You're-<delay=0.5> You're right."
+	[Eduardo] "eh- You're-<delay=0.5> You're right." #Misery = Tense, unsure
 	~Conviction -= 1
 	Eduardo seems to be actually suprised that I knew that.
 	At the very least he seems a little hesitant now.
--"Well, Anyways, back to the story!"
+-"Well, Anyways, back to the story!" #Misery = relaxed, dreamy
 "So, Me and Isaac were paired up in our room together. @And me, being me, got all up in his business."
 "I wanted to know more about him. you know, what his deal was, why he was here."
 ->Reasons
 
 ===Reasons===
-"And well, I did."
+"And well, I did." #Misery = relaxed, smug
 "see, it turns out unlike yours truely, who came here on his own accord, Isaac less so."
 "I mean, yeah, his family `reccomended` he comes here"
 "But really, I don't think he had a choice."
@@ -275,7 +276,7 @@ Crap, do I know that?
 "But well, he could talk to me just fine, and you know I can talk for days."
 "Really, just a sign we were ment to be together."
 [{player_name}] "But Isaac's not feeling too super right now is he?"
-[Eduardo] "eh?" //shocked.
+[Eduardo] "eh?" #Misery = Tense, unsure
 [{player_name}] "being here, and being with you is bringing up a severe underlying issue Isaac has."
 Namely that he feels...
 +[Tired]
@@ -288,13 +289,13 @@ Namely that he feels...
 +[Broken]
 	"He's feeling suffocated despite all the love and affection that he wanted."
 	"And that contradiction, makes him feel broken."
-	[Eduardo] "He feels broken..." //sad
+	[Eduardo] "He feels broken..." #Misery = sad
 	~Conviction -=1
 	Eduardo looks a little deflated. Has Isaac spesifically mentioned these `broken` feeling to him before?
 	"Yeah, Isaac's been pressured to be a lot of things he ain't."
 	"But I never pressure him into anything he doesn't want."
-	"<size=50%>D-do I?</size>"
-	"N-No! No I don't. Cuz me and Isaac are perfect together!"
+	"<size=50%>D-do I?</size>" #Misery = Mumble
+	"N-No! No I don't. Cuz me and Isaac are perfect together!" #Misery = unsure
 	->Perfect
 +[Bored]
 	"He's bored out of his mind."
@@ -305,23 +306,23 @@ Namely that he feels...
 	Jeez really?
 	Regardless, Eduardo believes that, and I don't seem to be convincing him otherwise.
 	"Besides, how can Isaac be bored, when he's got me!"
--"Me and Isaac, are like two puzzle peices that fit perfectly together."
+-"Me and Isaac, are like two puzzle peices that fit perfectly together." #Misery = relaxed, smug
 ->Perfect
 
 ===Perfect===
 [{player_name}] "Dude. You are both in a halfway house for societies mental rejects, I doubt `perfection` is the adjective you wanna use."
-[Eduardo] "But thats what makes us so perfect for each other!"
+[Eduardo] "But thats what makes us so perfect for each other!" #Misery = relaxed, dreamy
 "We counter each others flaws, making us each better."
 [{player_name}] "so, what you're say is, your codependent on him?"
-[Eduardo] "What? No! This is greater than that!"
+[Eduardo] "What? No! This is greater than that!" #Misery = aggressive, annoyed
 "This is Love!"
 "And thats why our relationship is perfect!"
 I let out a deep sigh.
 [{player_name}] "Eduardo. Nothing is perfect."
 "And just because you two love each other, doesn't mean your relationship's going to be 100% problem free now or forever."
 "I am saying this, as your friend, and Isaac's friend. Stop suffocating Isaac."
-[Eduardo] "Suffocating. <size=80%>suffocating. <size=50%suffocating.</size>" //head down
-"<Jitter>WHAT THE HELL DO YOU KNOW!</Jitter>" //very angry!
+[Eduardo] "Suffocating. <size=80%>suffocating. <size=50%suffocating.</size>" #Misery = Tense, Mumble
+"<Jitter>WHAT THE HELL DO YOU KNOW!</Jitter>" #Misery = aggressive, angry
 "You don't Know what we're like! You don't know what Isaac does or Does want!"
 [{player_name}] "Oh, for the love of- Yes! I do!"
 [Eduardo] "Fine, {player_gender == "F": miss| mista} Isaac's apperent new BFF, tell me something about Isaac that even Isaac hasn't told me!"
@@ -331,23 +332,24 @@ Something about Isaac that even Isaac hasn't told him...
 	~SetValue("Isaac's Secret Revealed", true)
 	~SetValue("Revealed Isaac's Secret Before", true)
 	"And while he didn't say this, I got the feeling some of these stories were... `intimate` in nature."
-	[Eduardo] "..." //shocked, blushing
+	[Eduardo] "..." #Misery = relaxed, blush
 	[{player_name}] "not that you'd know that, given he spesifically told me he hadn't mentioned it to you."
-	[Eduardo] "Y-yeah, well..."
+	[Eduardo] "Y-yeah, well..." #Misery = aggressive, Angry
 +[Don't tell him about Isaac's internal stories]
 	"Dude, this isn't a quiz to see who knows you're boyfriend better"	
 	~SetValue("Revealed Isaac's Secret Before", false)
+	~Conviction -= 1
 	Even if that's what you've been treating it as.
 	"I'm trying to tell you that Isaac is hurting, so you'll stop being an idiot and listen to him before either of you do something you'll regret!"
-	[Eduardo] "..." //schocked
-	"..." //sad
+	[Eduardo] "..." #Misery = Tense, unsure
+	"..." #Misery = sad
 	Wow, is Eduardo actually speachless?
-	[Eduardo] "Y-yeah, well..."
+	[Eduardo] "Y-yeah, well..." #Misery = aggressive, Angry
 	welp, nevermind.
 -[{player_name}] "Dude, just stop."
 "Stop talking for like, one minutes, and listen!"
-[Eduardo] "..." //schocked
-[{player_name}] "..." //eduardo sad
+[Eduardo] "..." #Misery = shocked
+[{player_name}] "..." #Misery = Tense, sad
 {
 	-Conviction <= 0:
 	->Convinced
@@ -358,7 +360,7 @@ Something about Isaac that even Isaac hasn't told him...
 
 ===Unconvinced===
 [{player_name}] "ugh, sorry, for yelling."
-[Eduardo] "Save it." //angry
+[Eduardo] "Save it." #Misery = aggressive, annoyed
 "I'm done here." #Background = Artroom #Eduardo = angry
 "Later." #Eduardo = Exit
 Eduardo leaves in a huff, clearly steamed.
