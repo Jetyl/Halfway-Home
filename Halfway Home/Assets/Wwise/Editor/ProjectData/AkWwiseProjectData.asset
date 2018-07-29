@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -718125532
-    m_lastTimePart2: -1999243882
+    m_lastTimePsrt1: 1576394721
+    m_lastTimePart2: -1999243875
     List:
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
@@ -774,8 +774,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 1753297513
-    m_lastTimePart2: -1999245108
+    m_lastTimePsrt1: 589993040
+    m_lastTimePart2: -1999243876
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -975,15 +975,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -435714774
-    m_lastTimePart2: -1999243879
+    m_lastTimePsrt1: 1576494811
+    m_lastTimePart2: -1999243875
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: -927707742
-    m_lastTimePart2: -1999243879
+    m_lastTimePsrt1: 1578786895
+    m_lastTimePart2: -1999243875
     List:
     - Name: Pause
       Path: Default Work Unit\Pause
@@ -1021,8 +1021,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1753417927
-    m_lastTimePart2: -1999245108
+    m_lastTimePsrt1: 607902266
+    m_lastTimePart2: -1999243876
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1063,8 +1063,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: -293617206
-    m_lastTimePart2: -1999245201
+    m_lastTimePsrt1: 607942143
+    m_lastTimePart2: -1999243876
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -1123,8 +1123,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1978829612
-    m_lastTimePart2: -1999243880
+    m_lastTimePsrt1: 1578766876
+    m_lastTimePart2: -1999243875
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
