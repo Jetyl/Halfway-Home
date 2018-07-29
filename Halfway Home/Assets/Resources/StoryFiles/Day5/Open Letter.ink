@@ -275,7 +275,7 @@ Charlotte sighes, her eyes wandering off somewhere before returning directly to 
 
 === ClosedWound ===
 ->MaxMail->
-With Max gone, I can finally go find Timothy. I'm certain I saw him heading in the direction of our room.
+With Max gone, I can finally go find Timothy. I'm certain I saw him heading in the direction of our room.   # Play : Stop_All   # Ambience : play_ambience_stormy
 {
 	-GetValue("RoomKey") == true:
 		~SetValue("FollowTimothy", true)
@@ -290,6 +290,6 @@ With Max gone, I can finally go find Timothy. I'm certain I saw him heading in t
 		There's no response.
 		I stand there for a few minutes before giving up. Maybe people are still back in the commons.
 		If I want to get back into my room, I'm probably going to need to get a key. #5 & InProgress
-		I head out of the hallway and back out into the main room of the house. # Background / Commons
+		I head out of the hallway and back out into the main room of the house.   # Background / Commons   # Ambience : play_ambience_crowd
 		->IgnorantBliss
 }

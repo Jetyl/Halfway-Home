@@ -370,7 +370,7 @@ Maybe I should go check up on him again.
 ->END
 
 ===Convinced===
-[{player_name}] "ugh, sorry, for yelling."
+[{player_name}] "ugh, sorry, for yelling."   # Play : Stop_All
 "Look, I shouldn't even need to be having this conversation with you right now."
 "Isaac should be the one talking about all this, and well..."
 [Eduardo] "He's not good at talking."

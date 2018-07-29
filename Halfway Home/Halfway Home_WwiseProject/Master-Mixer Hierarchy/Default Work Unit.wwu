@@ -447,6 +447,23 @@
 									</ChildrenList>
 								</Bus>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{2CBE0239-AF38-4836-9E3B-92F4BA876E2A}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Paused" ID="{218D282C-3C91-4A0B-8F81-AB2F3CE14329}"/>
+										<State Name="" ID="{CF2B72D8-E1C5-446C-8DBE-72E956F9B1DC}" ShortID="376900830">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 						<Bus Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}">
 							<PropertyList>
@@ -632,6 +649,23 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{2CBE0239-AF38-4836-9E3B-92F4BA876E2A}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Paused" ID="{218D282C-3C91-4A0B-8F81-AB2F3CE14329}"/>
+										<State Name="" ID="{5DB10AA5-72C6-454E-A12E-4B7A59DFD145}" ShortID="39593341">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 					</ChildrenList>
 				</Bus>

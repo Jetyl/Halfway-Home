@@ -1,3 +1,15 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3092587493	Pause			\Default Work Unit\Pause	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	Pause			
+	748895195	None	Pause			
+	1365518790	Unpaused	Pause			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	39593341	Paused	Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience Bus		
+	376900830	Paused	Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	129996979	Ambience_Slider			\UI\Sliders\Ambience_Slider	
 	1127857866	Music_Slider			\UI\Sliders\Music_Slider	

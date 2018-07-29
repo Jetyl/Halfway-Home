@@ -1,0 +1,39 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1127752803",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_dye_job",
+    "ShortName": "story_dye_job",
+    "Path": "story_dye_job.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1020080944",
+      "Name": "play_music_happy",
+      "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "178330536",
+      "Language": "SFX",
+      "ShortName": "Music1loop.wav",
+      "Path": "SFX\\Music1loop_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -28,6 +28,12 @@
 						<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 					</ObjectList>
 				</MixingSession>
+				<MixingSession Name="morning_misery" ID="{6BE1B8B4-C7A9-41EF-AD95-4786794ABA3B}">
+					<ObjectList>
+						<ObjectRef Name="music_stormy_relationship" ID="{F09838C0-FF43-420E-9411-0C0E4FD727A7}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+						<ObjectRef Name="ambience_stormy" ID="{91081113-A96D-48BD-A3FD-69EC049B91F2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+					</ObjectList>
+				</MixingSession>
 			</ChildrenList>
 		</WorkUnit>
 	</MixingSessions>
