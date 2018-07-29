@@ -16,7 +16,7 @@
 				<File Name="Cafe" Hash="3097323968" Timestamp="131744002378724113"/>
 				<File Name="Credits" Hash="366731275" Timestamp="131773726699076221"/>
 				<File Name="HalfwaySoundbank" Hash="1589447469" Timestamp="131762767825247461"/>
-				<File Name="Init" Hash="711813443" Timestamp="131773726706502825"/>
+				<File Name="Init" Hash="1292553790" Timestamp="131773736162487682"/>
 				<File Name="Intro" Hash="4154770019" Timestamp="131743648226326564"/>
 				<File Name="Main" Hash="2695959338" Timestamp="131773726699466851"/>
 				<File Name="MainMenu" Hash="805770262" Timestamp="131773726699586961"/>
@@ -63,7 +63,7 @@
 				<File Name="Cafe" Hash="52532065" Timestamp="131744002379130502"/>
 				<File Name="Credits" Hash="3538914490" Timestamp="131773726706632944"/>
 				<File Name="HalfwaySoundbank" Hash="2455930418" Timestamp="131762767827038561"/>
-				<File Name="Init" Hash="3752821564" Timestamp="131773726707581216"/>
+				<File Name="Init" Hash="3752821564" Timestamp="131773736163158296"/>
 				<File Name="Intro" Hash="3822140114" Timestamp="131743648226803194"/>
 				<File Name="Main" Hash="3727717130" Timestamp="131773726706672979"/>
 				<File Name="MainMenu" Hash="2548152370" Timestamp="131773726706710418"/>
@@ -102,7 +102,7 @@
 				<File Name="story_welcome_dinner" Hash="3791155504" Timestamp="131773726707491127"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="186217812" Timestamp="131773726706592905"/>
+				<File Name="" Hash="186217812" Timestamp="131773736162567759"/>
 			</Language>
 		</XMLInfo>
 		<JSONInfo>
@@ -110,7 +110,7 @@
 				<File Name="Cafe" Hash="524816174" Timestamp="131744002379376336"/>
 				<File Name="Credits" Hash="959204523" Timestamp="131773726707681488"/>
 				<File Name="HalfwaySoundbank" Hash="2656915326" Timestamp="131762767827701046"/>
-				<File Name="Init" Hash="3858238294" Timestamp="131773726708742346"/>
+				<File Name="Init" Hash="3858238294" Timestamp="131773736163798874"/>
 				<File Name="Intro" Hash="4133143092" Timestamp="131743648227028960"/>
 				<File Name="Main" Hash="3991132809" Timestamp="131773726707731402"/>
 				<File Name="MainMenu" Hash="1315484139" Timestamp="131773726707771441"/>
@@ -149,7 +149,7 @@
 				<File Name="story_welcome_dinner" Hash="870055730" Timestamp="131773726708672248"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="3896172561" Timestamp="131773726707641265"/>
+				<File Name="" Hash="3896172561" Timestamp="131773736163218348"/>
 			</Language>
 		</JSONInfo>
 	</Platform>

@@ -78,6 +78,21 @@ namespace AK
         static const AkUniqueID STOP_MUSIC_TENSION_INTRO_02 = 2883794594U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace PAUSE
+        {
+            static const AkUniqueID GROUP = 3092587493U;
+
+            namespace STATE
+            {
+                static const AkUniqueID PAUSED = 319258907U;
+                static const AkUniqueID UNPAUSED = 1365518790U;
+            } // namespace STATE
+        } // namespace PAUSE
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID AMBIENCE_LPF = 4047808182U;

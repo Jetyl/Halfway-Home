@@ -101,9 +101,21 @@ public class AudioManager : MonoBehaviour
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
         Scene.Connect<AudioParamFadeEvent>(OnAudioParamFadeEvent);
         Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
+        Space.Connect<DefaultEvent>(Events.Pause, OnPause);
+        Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
         MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
 	}
+  
+  void OnPause(DefaultEvent eventdata)
+  {
+    AkSoundEngine.SetState("Pause", "Paused");
+  }
+  
+  void OnUnPause(DefaultEvent eventdata)
+  {
+    AkSoundEngine.SetState("Pause", "Unpaused");
+  }
 
   void OnAudioEvent(AudioEvent e)
   {
