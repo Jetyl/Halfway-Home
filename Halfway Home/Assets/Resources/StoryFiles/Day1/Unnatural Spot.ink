@@ -200,7 +200,7 @@ But eventually he shrugs and smiles. #Timothy = Happy
 
 === GameOver ===
 [Timothy] "Hehehe.." #Background / Garden, crossfade #Timothy = Happy
-[{player_name}] "Qhat's so funny?" 
+[{player_name}] "What's so funny?" 
 [Timothy] "Oh, nothing... it's just..."
 "Hangman is a good game..." 
 "It teaches you that just by saying a few wrong things, you can end someone’s life..." #Timothy = Sad
@@ -215,7 +215,7 @@ Should... Should I question him about that?
 			[Timothy] "Huh? Yeah. Why wouldn't I be?" #Timothy = Surprised
 			[{player_name}] "Oh! its nothing. That joke was just kind of dark is all. I didn't expect that from you."
 			[Timothy] "Oh, yeah. Sorry..." #Timothy = sad
-			[{player_name}] "I mean, you don't need to apologise. I just want to make sure everything's okay with you."
+			[{player_name}] "I mean, you don't need to apologize. I just want to make sure everything's okay with you."
 			[Timothy] "Oh! uh... thanks?" #Timothy = Surprised
 			"I dunno. I just like dark jokes." #Timothy = Angry
 			"I-is that okay?" #Timothy = sad

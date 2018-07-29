@@ -45,7 +45,7 @@ EXTERNAL GetStringValue(value)
 I'll admit it is very nice out here. @The garden is one of the biggest selling points for Sunflower House in their brochure.
 It's a shame I never really made use of it.
 [{player_name}] "But yeah, the garden is a good place to reflect on things." #Timothy = Exit
-"You can just sort of zen out. Be <color=color_awareness><i>aware</i></color> of the life around you... and yourself, I suppose." # Awareness * Show
+"You can just sort of 'zen' out. Be <color=color_awareness><i>aware</i></color> of the life around you... and yourself, I suppose." # Awareness * Show
 "It can be enlightening, but I try not to be alone with my thoughts too much."
 "It's, uh... sorta caused problems in my life."
 Being alone with my thoughts too long <color=color_descriptor><i>depresses</i></color> me.

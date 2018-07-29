@@ -56,10 +56,10 @@ I decide to go over there, and see how they are doing.
 "How bout you? how's it hangin'?"
 {
 	-week == 2:
-		Oh you know, fine. Just having the freakiest case of Deja vu in my life! nothing major.
+		Oh you know, fine. Just having the freakiest case of 'déjà vu' in my life! nothing major.
 		Actually, should I even bother explaining my situation to them?
 	-else:
-		oh you know, stuck in a timeloop for who knows what reason! nothing major.
+		oh you know, stuck in a time loop for who knows what reason! nothing major.
 		Actually, should I try to explain things to them?
 
 }
@@ -69,7 +69,7 @@ I decide to go over there, and see how they are doing.
 		-expression > 5:
 			The two of them are shocked into silence as I recount things I shouldn't know in just vivid detail. #Isaac = Surprised #Eduardo = Surprised #expression ^ good
 			[Eduardo] "Geez, {player_gender == "F": girl| man}..."
-			Yes! I seem to have gotten thru to them.
+			Yes! I seem to have gotten through to them.
 			"Like, I don't know what to say."
 			Good! I don't know what's happening
 			"Isaac? how bout you?"
@@ -141,14 +141,14 @@ As I show Timothy around all the art supplies, a rowdy duo walk in.
 I walk over to they pair, Timothy in tow.
 "Hey, guys, what's up?" #Timothy = stage_left, Afraid, right #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Hey Hey! {player_name}! Good to see ya!"
-"We're both perfectomundo. Up on cloud nine in this buisness. @I was just telling my bae about this rad dream I had." //not sure if I'm happy with this line.
+"We're both perfectomundo. Up on cloud nine in this business. @I was just telling my 'bae about this rad dream I had." //not sure if I'm happy with this line.
 "How 'bout you? How's it hangin'?"
 +[Its fine]
 	[{player_name}] "Oh, fine."
 	"Max asked me to show around the new kid."
 +[Ehh...]
 	[{player_name}] "Ehh... I exist, I guess."
-	"Max just sorta ploped this kid on me."
+	"Max just sorta plopped this kid on me."
 +{expression > 1}[Its great <expression>]
 	[{player_name}] "Oh, I'm pretty good actually" #expression ^ good
 	"I'm showing Timothy around, since he's new here."

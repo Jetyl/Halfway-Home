@@ -194,7 +194,7 @@ I...
 		[Timothy] "S-S-S-SORRRRRRYY!!!"
 		[Max] "hehe, Its okay. you've done nothing wrong."
 		"We don't have to stay here if you don't want to."
-		He nods his head, and Max quickly walks Timothy out of the Cafe to a more comfortable place.
+		He nods his head, and Max quickly walks Timothy out of the café to a more comfortable place.
 	->MoodKiller
 }
 
@@ -225,7 +225,7 @@ Max darts past me to where Timothy is sitting in a speed quite frightening for s
 
 ===HowDoIComfort===
 ~tried_grace = true
-I choose to stay beside Timothy, and attempt to help him thru this.
+I choose to stay beside Timothy, and attempt to help him through this.
 {
 	-grace <= 2:
 		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3 #grace ^ poor
@@ -249,9 +249,9 @@ I choose to stay beside Timothy, and attempt to help him thru this.
 		"Buddy, you alright?"
 		[Timothy] "*hic* N-N-*hic*n-n-no, *hic*"
 		[Max] "Do you want to go someplace quiet?"
-		Timothy nods thru the tears and shivering.
-		Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like their thanking me.
-		And like that, Max and Timothy left the cafe. #Max=Exit #Timothy=Exit
+		Timothy nods through the tears and shivering.
+		Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like they're thanking me.
+		And like that, Max and Timothy left the café. #Max=Exit #Timothy=Exit
 	->MoodKiller
 	
 }
@@ -263,7 +263,7 @@ My attention draws back to crowd of people around me. # play : Stop_All #Trissa=
 [Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-"
 Isaac jabs his boyfriend in the gut. #Isaac=Angry
 [Isaac] "We're going. Gotta talk." #Isaac=Exit #Eduardo=Exit
-Isaac drags Eduardo out of the cafe in a huff.
+Isaac drags Eduardo out of the café in a huff.
 [Trissa] "man, that sucks." #Trissa=Sad
 "Well. I'm out. See you at dinner." #Trissa=Exit
 [Charlotte] "But, what... what just happened?"
@@ -274,7 +274,7 @@ Isaac drags Eduardo out of the cafe in a huff.
 -I slump, as I get up out of my chair, and towards the door.
 "I messed up..."
 [Charlotte] "But, what do you mean by that?"
-I walk away from Cafe. #Charlotte=Exit
+I walk away from café. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family."
 I'm so stupid. #depression += 5
 ->END

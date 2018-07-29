@@ -49,7 +49,7 @@ Walking in, I spy Eduardo and Isaac as the only ones in the room.  # Ambience : 
 [Isaac] "Hrm. I'm not wrong." #hangout / hrm_down
 "{player_name}. Can't sleep either?" #hangout /hrm_Up
 [{player_name}] "Something like that, yeah."
-[Eduardo] "Well, your free to hang out with us!" #hangout / Happy, Eye_U, Hand_Up
+[Eduardo] "Well, you're free to hang out with us!" #hangout / Happy, Eye_U, Hand_Up
 [{player_name}] "sure."
 I sit down, and hang out with Isaac and Eduardo for a while.
 ->TimePassing.NextHour
@@ -146,7 +146,7 @@ I can see that.
 	[{player_name}] "Eduardo, if you don't mind me asking, how many relationships have you had before you two were a thing?"
 	[Eduardo] "Of course I don’t mind. I’ve had lots of relationships before my wubable Isaac."
 	"And I ruined every one of em."
-	"Usually cuz I couldn't get enough."
+	"Usually 'cause I couldn't get enough."
 	"I was just a dumb kid who wanted attention."
 -[Eduardo] "I dunno man, just sometimes it feels like I <i><b>need</i><b> all this attention no one is willing to give me." #Hangout / hrm_down
 "And yeah, when I'd get super manic I think they <i>are</i> willing, when really, they’re not."
@@ -156,7 +156,7 @@ I can see that.
 Isaac does say much, but he plays with Eduardo's hair.
 That seems to satiate Eduardo, who grows oddly quiet, as the two of them just look in each other's eyes.
 I let out a fake cough to break the silence.
-[Eduardo] "Oh, {player_name}, your still here?" #Hangout / E_Sad, Eye_U, hrm_Up
+[Eduardo] "Oh, {player_name}, you're still here?" #Hangout / E_Sad, Eye_U, hrm_Up
 did he literally forget I was here?
 "Oh, uh yeah, where were we." #Hangout / E_Grin
 I deliberately don't remind him of the topic, and let him wander onto something new.
@@ -170,14 +170,14 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 "You know, the one with all the disabled girls in it."
 "that story was da bomb."
 [Isaac] "Yet you can't remember the name?"
-[Eduardo] "Look, I'm bad with name aight!" #Hangout / E_Sad
+[Eduardo] "Look, I'm bad with name 'aight!" #Hangout / E_Sad
 [Isaac] "Hrm."
 "Hey, {player_name}, you ever played a Visual Novel before?" #Hangout / Eye_U, E_Happy
 +[Yes]
 	[{player_name}] "Yeah, I have."
 	[Eduardo] "Did ya like any of them."
 	I don't know why, but that feels like a loaded question.
-	I give a non-comital shrug.
+	I give a non-committing shrug.
 +[No]
 	[{player_name}] "No. I haven't."
 	[Eduardo] "Well ya should try one some time. I think you'd like the medium."
@@ -194,15 +194,15 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 	[{player_name}] "Fair."
 -[Eduardo] "Like, it just really destroys the immersion, for one."
 "Second, it makes real world conversation like, near impossible."
-"Cuz like, in the real world, we reference real world stuff all the time."
-"Hell, half the things me and Isaac talk about is just whatever weeb trash is on currently."
+"'Cause like, in the real world, we reference real world stuff all the time."
+"Hell, half the things me and Isaac talk about is just whatever "weeb trash" is on currently."
 "And you just don't see that in fiction."
 [{player_name}] "That might be because people don't want to watch fiction complaining about other fiction."
 "Nah, I don't think so."
 "Like, you know what I think it is?"
 "You know how everyone will talk about or reference, or allude to <i>Alice in Wonderland</i>, right?"
 [{player_name}] "Because its good?"
-[Eduardo]"Cuz that work ain't under copyright."
+[Eduardo]"'Cause that work ain't under copyright."
 "No suits gonna get mad if ya talk about a girl falling down no rabbit hole."
 "But they'll get all up in arms if you reference a work past 1937 or something."
 [Isaac] "Copyright protects artists."
@@ -284,7 +284,7 @@ Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle dist
 
 ===FourAM===
 //the 4 am hour talk
-//the two talk about why their in the halfway home.
+//the two talk about why they're in the halfway home.
 [Eduardo] "Man, I know I don't say this often enough, but I'm gonna miss you guys when I leave." #Hangout / E_Grin, Eye_U, hrm_down, Leg_Down, Arm_Down
 [{player_name}] "Are you leaving soon?"
 [Eduardo] "I dunno man. maybe? it ain't on my schedule or nothin'."
@@ -298,7 +298,7 @@ I'm just lucky enough to be leaving here after just over 1 year. I don't want to
 	Ugh... that's a depressing thought. #depression += 2
 }
 [Eduardo] "I mean, I do love it here. It's way better than where I was before, ya know?"
-"I've dealt with my, ness, since I was real little."
+"I've dealt with my... my "weirdness" since I was real little."
 "Me and my folks knew my brain was borked since I was like, 12 or so, so it wasn't like `oh, he's just that crazy Medina kid`. y'know." #Hangout / Leg_Up
 "I had the words to describe my madness."
 "But that didn't fix nothin'."
@@ -311,7 +311,7 @@ I'm just lucky enough to be leaving here after just over 1 year. I don't want to
 "But I'm good now. And I'm getting super antsy. So, I might be leaving soonish." #Hangout / Leg_Down
 "Hey Isaac, wanna come with when I do?" #Hangout / Eye_I, E_Happy
 [Isaac] "..."
-[Eduardo] "Ya don't gotta, if ya don't wanna. I live nearby, so I can come see ya from time to time til ya are ready."
+[Eduardo] "Ya don't gotta, if ya don't wanna. I live nearby, so I can come see ya from time to time 'til ya are ready."
 "Prolly not every day, if I leave. `responsibilities` and all that."
 [Isaac] "Thanks. I'd like that." #Hangout / Smile_Down
 [Eduardo] "Balla!" #Hangout / E_Grin
@@ -325,7 +325,7 @@ look at these two, planning their future, and stuff. I can't look past the next 
 			No. No it's not an excuse.
 	}
 }
-[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when your gone?" #Hangout / E_Happy, Eye_I, hrm_Up
+[Eduardo] "B'yeah, {player_name}. Ya gonna miss us when you're gone?" #Hangout / E_Happy, Eye_I, hrm_Up
 +[Of course]
 	[{player_name}] "Of course. You guys are my friends."
 	[Eduardo] "Aww! Thanks!"
@@ -339,10 +339,10 @@ look at these two, planning their future, and stuff. I can't look past the next 
 +{expression > 1}[Way to put me on the spot! <expression>]
 	[{player_name}] "Wow, way to put me on the spot dude!"
 	[Eduardo] "Hehe, sorry!"
-	[{player_name}] "Your not sorry at all. I can tell."
+	[{player_name}] "You're not sorry at all. I can tell."
 	[Eduardo] "Oh wow, someone's an intuitive person."
 	"It's not like I wear my heart on my sleeve or anything."
-	[{player_name}] "Are-are you sassing me with your emotional blatentency?"
+	[{player_name}] "Are-are you sassing me with your emotional blatancy?"
 	[Eduardo] "Maybe."
 -[Eduardo] "I know I'll miss ya." #Hangout / E_Grin
 [Isaac] "Same." #Hangout/ smile_up
@@ -355,23 +355,23 @@ Uh...
 	[Eduardo] "aww, why not?"
 	[{player_name}] "Because.... @Because I don't want to. Now leave it at that."
 	[Eduardo] "okay okay. @Jeez, <i>touchy</i>."
-	Isaac lightly thwaks Eduardo head.
+	Isaac lightly thwacks Eduardo head.
 	[Isaac] "Eduardo. Stop." #Hangout/ hrm_down
 	[Eduardo] "Okay, okay. @Jeez, I was just poking fun."
 	Isaac seems to ignore Eduardo light jab, seemingly lost in thought.
-+[Wax philosphical to avoid answering]
++[Act philosophical to avoid answering]
 	[{player_name}] "Why does anyone come here?"
 	"The Sunflower house is a collection of lost souls, bruised and battered by the outside world."
 	"And we are all here for that same reason. To heal. To recover. To leave."
-	[Eduardo] "Nice bullshitting, but what are the spesifics. what are the deets."
-	drat. Eduardo immediatly saw though that.
+	[Eduardo] "Nice bullshitting, but what are the specifics. what are the 'deets."
+	drat. Eduardo immediately saw though that.
 	[Voices] "Besides. You? Healing? don't be ridiculous."
 	{
 		-depression < 50:
 		Yeah, shut up. I'm ignoring you.
 	}
 	[Isaac] "Hrm."
-+{expression>2}[Give your backstory <expression>]
++{expression>2}[Give your back story <expression>]
 	[{player_name}] "Well, um..."
 	"I got recommended here by my Doctors at Blackwell." #expression ^ good
 	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
@@ -464,7 +464,7 @@ I wonder if Max is up already. probably is.
 "Man, I miss that, y'know?" 
 "Hey Isaac?" #Hangout / Eye_I, E_Sad
 [Isaac]"Hrm?" #hrm_down
-[Eduardo]"When we get outta this joint, can we just stay up every night, talking like this?"
+[Eduardo]"When we get 'outta this joint, can we just stay up every night, talking like this?"
 [Isaac] "Sure."
 [Eduardo] "I'd Like that." #Hangout/Eye_shut, E_Grin
 [Isaac] "Me too." #Hangout / Smile_Down
@@ -475,7 +475,7 @@ I wonder if Max is up already. probably is.
 		"Isaac... Tell me a story." #Hangout / E_Sad
 		[Isaac] "No." 
 		[Eduardo] "Isaaaaaaac!"
-		Isaac just sighes
+		Isaac just sighs
 		[Isaac] "Just go to sleep."
 		[Eduardo] "But I'm not..."
 		Eduardo yawns obviously.
@@ -517,15 +517,15 @@ The second sign, is Max, who comes in for their morning mopping, and is rather s
 [Max] "Wowie! Y'all are up early."
 [{player_name}] "Hehe, yeah..."
 [Isaac] "We stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left
-[Eduardo] "Zzz"
+[Eduardo] "Zzz..."
 [Max] "Oh, for the love of..." #Max = Angry
 "Isaac, take Eduardo back to your guy's room, and go to bed."
 [Isaac] "Hrm. K." #Isaac = Exit
 [Max] "And as for you, {player_name}."
 Oh boy, here comes the Max talk.
-"You shouldn't be throwing your sleep schedule outta wack like this." #Max = Sad
+"You shouldn't be throwing your sleep schedule 'outta wack like this." #Max = Sad
 "I know you're an adult, and you're leaving in just a few days, but..."
-"It's because of that, you really outta know better."
+"It's because of that, you really 'ought to know better."
 +[I'm sorry Max]
 	[{player_name}] "I'm sorry Max."
 +[I got Dragged in by Eduardo]

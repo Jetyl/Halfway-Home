@@ -49,7 +49,7 @@ I don't really have a reason to be strolling out here at this time of night, but
 Walking around the beaten path, I spot an unusual sight.
 It's Isaac, sitting in a little hidden patch of grass, staring up at the sky. #Isaac = Sad, right
 He is almost motionless, like a stone giant silently protecting the guardians.
-He is, however, noticably perturbed. @I walk over to see how he's doing.
+He is, however, noticeably perturbed. @I walk over to see how he's doing.
 ->Quiet
 
 === TryAgain ===
@@ -162,7 +162,7 @@ I'd think he's been around...
 	I know how long he's been here, because he's told me.
 	[{player_name}] "You've been here for almost 2 and a half years, haven't you?"
 	Isaac nods. not even a little shocked I guessed it correctly.
-	he does smirk for a split second however, so maybe he appericates that i knew? 
+	he does smirk for a split second however, so maybe he appreciates that i knew? 
 	<color=color_descriptor>Your understanding of Isaac's tenure has <color=color_grace>improved <b>Grace</b> mildly<color=color_descriptor>.</i></color> # Grace+
 -[Isaac] "Two years."
 "two years... @and six months..."
@@ -184,7 +184,7 @@ I'd think he's been around...
 "and I don't... say... what I think about all..."
 "hrm..." #Hideaway / Mad 
 Isaac looks pained trying to speak as much as he is.
-"I... Came here... on reccomendation."
+"I... Came here... on recommendation."
 "Because I was... not social... not eating... not... here?"
 "I..."
 "......"
@@ -198,10 +198,10 @@ And he came to Sunflower House to improve himself, but still isn't any better. H
 	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>Awareness</i> of your life, as an example.</color>
 	->Recoil
 +[Give Him motivation]
-	<color=color_descriptor>You try to motivate Isaac to improve himself with your empassioned <i>Expression</i>.</color>
+	<color=color_descriptor>You try to motivate Isaac to improve himself with your impassioned <i>Expression</i>.</color>
 	->Recoil
 +{grace >= 3}[Give Him Time]
-	<color=color_descriptor>With your hightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
+	<color=color_descriptor>With your heightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
 	->Relationships
 +{grace < 3}[Give Him Sympathy]
 	<color=color_descriptor>You try to complement Isaac, and placate his fears with <i>Grace</i>.</color>
@@ -250,7 +250,7 @@ I should probably let Isaac work through his thoughts on his own.
 "broken. broken. broken."
 "..."
 "they said so too.... that I was broken."
-"Broken cuz I was quiet. Broken cuz I didn't want... and..."
+"Broken 'cause I was quiet. Broken 'cause I didn't want... and..."
 "....and I don't..."
 "...I don't want."
 "Don't want what they said was wanted."
@@ -269,13 +269,13 @@ Isaac's blushing quite a lot at that admission.
 "s'weird."
 "haven't even told Eduardo... not really."
 [{player_name}] "Why not?"
-[Isaac] "s'embarressing. cuz..."
+[Isaac] "s'embarrassing. cuz..."
 "cuz he's in most of them." #Hideaway / HeadDownBlush
 "...."
 "I... do like him."
 "but... the Eduardo in my head... and the one out here are..."
 "...too alike."
-"Eduardo's presense. his constant attention. In my head... I like that."
+"Eduardo's presence. his constant attention. In my head... I like that."
 "But, out here. I don't." #Hideaway / HeadDown
 "He's around me all the time... @Talking all the time."
 "He showers me with affection. It was all I wanted. But..."
@@ -289,7 +289,7 @@ Isaac's blushing quite a lot at that admission.
 	[{player_name}] "No, Isaac. You aren't broken."
 	->HelpfulListener
 +[Nah Fam]
-	[{player_name}] "Nah Fam, You ain't broken."
+	[{player_name}] "Nah fam, you ain't broken."
 	->HelpfulListener
 
 === GivenUp ===
@@ -307,7 +307,7 @@ Oh well.
 [Isaac] "..." #Hideaway / Blush //Isaac blushes
 "...what."
 [{player_name}] "Isaac, you are a wonderful person, and you deserve to be happy."
-"and eveything your feeling, just because I or, Eduardo, or anybody can't fully understand it, doesn't mean its not valid."
+"and everything you're feeling, just because I or, Eduardo, or anybody can't fully understand it, doesn't mean its not valid."
 "And if you're not happy with Isaac, you gotta tell him, man. people ain't psychic, Eduardo especially."
 [Isaac] "..."
 "t-thanks."
@@ -325,7 +325,7 @@ I feel that went well. At the very least, I now know what's been eating Isaac. H
 Maybe I should find a time to chat with Eduardo about their relationship. #4 & Success #6 & InProgress
 {
 	-GetValue("Know Isaac's Troubles") ==false:
-		I should be able to articlute Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
+		I should be able to articulate Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
 }
 I Get up off the ground and decide to head inside myself, because it is cold tonight.
 ~SetValue("IsaacOpenedUp", true)
@@ -333,7 +333,7 @@ I Get up off the ground and decide to head inside myself, because it is cold ton
 ->END
 
 ===Recoil===
-As I kep talking, rambling really, I notice Isaac has once again gone unreposnsive. #Hideaway / LookOff
+As I keep talking, rambling really, I notice Isaac has once again gone unresponsive. #Hideaway / LookOff
 [{player_name}] "hey, uh, is any of this helping."
 [Isaac] "hrm."
 "..."
@@ -344,7 +344,7 @@ after a while, Isaac asks to leave, and we part ways. the biting cold of the nig
 I guess I screwed that up? I feel like I did, anyways.
 Maybe I should've let Isaac talk more...
 <color=color_descriptor>hindsight on the situation improves your <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
-<color=color_descriptor>However, the hindsight also increases your <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly aswell.</color> #depression += 10
+<color=color_descriptor>However, the hindsight also increases your <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly as well.</color> #depression += 10
 [Voices] "You really can't do anything right, can you?"
 {
 	-depression > 60:
@@ -358,7 +358,7 @@ I head back inside. my head low from my failure...
 
 === Recap ===
 I know where Isaac is hiding, and I know what I can say to help him.
-Should I just go thru and do everything I did before, or try something new?
+Should I just go through and do everything I did before, or try something new?
 +[Retry Talking to Him]
 	->StoneGiant
 +[Repeat Previous Success]

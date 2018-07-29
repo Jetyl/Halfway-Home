@@ -54,7 +54,7 @@ Timothy is sitting eagerly by the side of the center table, just one seat over f
 [Dyed>Timothy] "H-hi {player_name}!" #Dyed = happy
 Timothy has been very giddy all day today. Its nice.
 [{player_name}] "Hi Timothy."
-[Max] "You get all cozy now. I'll grab you some food! Brb!" #Max = Exit
+[Max] "You get all cozy now. I'll grab you some food! Be right back!" #Max = Exit
 [Dyed>Timothy] "Oh! I-I'll help you Max!" #Dyed = Exit
 ->EduardoUpdate->CharlotteUpdate->GoodEnd
 ->END
@@ -72,7 +72,7 @@ Timothy has been very giddy all day today. Its nice.
 "Thanks, for getting my food, by the way." #Dyed = stage_left
 [Max] "Oh c'mon {player_name}. It's your special occasion. We should be the one thanking you." #Max = surprised
 "Speaking of that." # Max Calm
-Max stands fully staight up, letting out the full volume of his voice over the surrounding shatter. #Max = happy
+Max stands fully straight up, letting out the full volume of his voice over the surrounding shatter. #Max = happy
 "Ladies, gentlemen, and everyone in between, may I have your attention?"
 The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
 [Max] "today we say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!"
@@ -80,7 +80,7 @@ The cafeteria's ambient babble slowly subsides into silence. Max looks over an i
 With his introductions out of the way, Max hands over the metaphorical stage to Timothy of all people. What does Timothy have to say? #Max = Stage_right #Dyed = Stage_Center
 [Dyed>Timothy] "Uh, H-Hi everyone. I'm, um, Timothy Miyuri."
 "<jitter>You, uh, all p-probably remember me fr-from the meal last m-m-monday. hehe...</jitter>"
-Timothy is clearly super nevous with everyone's attention up on him. So why did he want to get up and speak?
+Timothy is clearly super nervous with everyone's attention up on him. So why did he want to get up and speak?
 "<jitter>N-now I w-was r-really n-nervous c-coming here.</jitter>"
 "<jitter>A-afraid o-of having to deal with anything. Afraid of p-people expectations of m-me a-an-and stuff.</jitter>" #Dyed = Afraid
 "<jitter>B-but I've m-met people h-here w-who helped me b-be a little l-less afraid of e-everything.</jitter>"
@@ -88,7 +88,7 @@ Timothy is clearly super nevous with everyone's attention up on him. So why did 
 Timothy turns directly to me. #Dyed = happy
 "Thank You {player_name}. Thank you so much for being my friend."
 "This toast is to you. May you're future be as warm as you've made our present."
-Timothy raises his cup. Max follows suit, then 2 more people. then 2 more people. Until the entire room is singing my praise. //a bit too chessey
+Timothy raises his cup. Max follows suit, then 2 more people. then 2 more people. Until the entire room is singing my praise. //a bit too cheesy
 I just start laughing in shock of everything around me.
 The Dinner goes down without incident, and made me feel amazing. #stress -= 50 #depression -=50
 I leave once the major festivities have died down. #All = Exit
@@ -213,7 +213,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 -[{player_name}] "Hey, you going to be okay?"
 [Eduardo] "Eh. prolly." #Eduardo = Sad
 "I don't feel to hot now though. Was up, now I'm down, and all that."
-Eduardo shrugs, then turns to leave. The week sounds like it was a rollercoaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
+Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
 ->->
 
 =UnitGood
@@ -225,10 +225,10 @@ Eduardo is the first to come up. #Eduardo = Sad
 	[{player_name}] "Thanks for what?"
 	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, Don't make me say it out loud." #Eduardo = Angry
 	"I am just done with today, alright? complete emotional exhaust, you know?"
-	"Timothy's dye job is nice, btw."
+	"Timothy's dye job is nice, by the way."
 	"I, uh, kind of blew up at him the other day." # Eduardo = Sad
 	"I was so stuck up in my own feeling, I didn't think how it'd affect 'em, and well..."
-	"I'm glad he didn't ake what I said to heart." #Eduardo = Calm
+	"I'm glad he didn't take what I said to heart." #Eduardo = Calm
 	"<size=50%>I should prolly apologize to him or whatever too. ugh...<size=100%>."
 +[No problem.]
 	[{player_name}] "No problem man."
@@ -236,7 +236,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 -[{player_name}] "Hey, you going to be okay?"
 [Eduardo] "Eh. prolly." #Eduardo = Sad
 "I don't feel to hot now though. Was up, now I'm down, and all that."
-Eduardo shrugs, then turns to leave. The week sounds like it was a rollercoaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
+Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
 ->->
 
 === CharlotteUpdate ===
@@ -278,16 +278,16 @@ I watch Charlotte stride gracefully toward the serving line as Max emerges with 
 
 =StayingHappy
 Next to approach is Charlotte, who seems to have taken a break from her duties
-[Charlotte] "Congradulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
+[Charlotte] "Congratulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, Thank you Charlotte."
 [Charlotte] "<size=50%>It good some people can leave...<size=100%>" #Charlotte = Sad
 +[Ask about Timothy]
 	[{player_name}] "So, Charlotte, what do you think of Timothy's new look?"
 	[Charlotte] "hm? I believe I said earlier that it suit him much more than before." #Charlotte = Calm
-	"Although, That is likly less to do with the change in hair color, than the change in attitude it has given him."
+	"Although, That is likely less to do with the change in hair color, than the change in attitude it has given him."
 	"I do wonder, with you leaving, who will assist him on reapplication of the die once it grows out?"
 	"he might ask me. Though I sadly know little about exotic hair care solutions. I suppose that is another thing I should look into."
-	"So many things to be done before I can rejoin pleasent society..."
+	"So many things to be done before I can rejoin pleasant society..."
 +[Ask about Charlotte]
 	[{player_name}] "Charlotte, how are you doing?"
 	[Charlotte] "Me? Fine, as usual." # Charlotte = Calm
@@ -301,7 +301,7 @@ I watch Charlotte stride gracefully toward the serving line as Max & Timothy eme
 
 =LeavingHappy
 Next to approach is Charlotte
-[Charlotte] "Congradulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
+[Charlotte] "Congratulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, Thank you Charlotte."
 [Charlotte] "And, {player_name}, I put some thought into what you said earlier."
 +[Yeah, and?]
@@ -315,7 +315,7 @@ Next to approach is Charlotte
 "You've done great good here for people. Far more than was expected of you."
 "And you have my deepest thanks for that." #Charlotte = happy 
 [{player_name}] "Charlotte, I-" #Skip
-[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celabatory expereince for you. We'll speak later, I'm sure."
+[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celebratory experience for you. We'll speak later, I'm sure."
 Charlotte bows out of the conversation, before heading to her seat. Max & Timothy emerge just behind her, holding a steaming plate of food. # Charlotte = Exit
 ->->
 
@@ -332,6 +332,6 @@ Next to approach is Charlotte
 "You've done great good here for people. Far more than was expected of you."
 "You know, You don't have to be perfect." #Charlotte = happy 
 [{player_name}] "Charlotte, I-" #Skip
-[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celabatory expereince for you. We'll speak later, I'm sure."
+[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celebratory experience for you. We'll speak later, I'm sure."
 Charlotte bows out of the conversation, before heading to her seat. Max just behind her, holding a steaming plate of food. # Charlotte = Exit
 ->->

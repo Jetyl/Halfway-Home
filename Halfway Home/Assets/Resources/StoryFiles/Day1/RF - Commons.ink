@@ -90,7 +90,7 @@ And Max is the most chill person I know, and has tolerated <i><b>much</i></b> wo
 {
 	-player_gender == "N":
 		As for me? I'm usually too apathetic to care about slight mishaps like that.
-		Again, assuming their not being a jerk about it.
+		Again, assuming they're not being a jerk about it.
 }
 [Timothy] "<jitter>O-okay...</jitter>"
 {
@@ -119,7 +119,7 @@ I shuffle Timothy off to another part of the building to continue the tour.   #T
 +[Correct Timothy]
 	[{player_name}] "Their keys." #expression+ #expression ^ good
 	I instinctively correct Timothy on Max's pronouns, out of near habit.   #Timothy= Surprised
-	I however, see Timothy begining to retreat inward at that slight mistep. I quickly add- #Timothy = Afraid
+	I however, see Timothy beginning to retreat inward at that slight misstep. I quickly add- #Timothy = Afraid
 +[Let it Slide]
 	[{player_name}] "..." #grace+ #grace ^ good
 	I decide not to correct Timothy, mostly because I don't want to set him off on an anxiety spiral.
@@ -129,8 +129,8 @@ Timothy looks at me, as if I've read his mind.
 [Timothy] "Y-you sure?"
 I chuckle a little.
 [{player_name}] "yeah."
-Honestly, I'm pretty sure Max'd be more worried as to why Timothy is having a near breakdown over this mistake than the fact they got misgendered.
-"Timothy, I don't really know what kind of life you've had up til now, but your safe here."
+Honestly, I'm pretty sure Max'd be more worried as to why Timothy is having a near breakdown over this mistake than the fact they got mis-gendered.
+"Timothy, I don't really know what kind of life you've had up 'til now, but you're safe here."
 "its okay to make mistakes."
 [Timothy] "R-really?"
 He asks as if he genuinely hasn't considered that before. @I chuckle again.
@@ -140,10 +140,10 @@ I briefly try to picture max being genuinely angry at someone, and not their usu
 [{player_name}] "People don't get mad at slight slips of the tongue. they get made at being disrespected and invalidated."
 "Words can be used to do that, but its the intent. You, Timothy, are fine."
 [Timothy] "Okay..." #Timothy = Sad
-I try to word it as confidantly as possible to aswage Timothy's fears. I don't know if I succeeded.
+I try to word it as confidently as possible to assuage Timothy's fears. I don't know if I succeeded.
 [{player_name}] "Hey, Timothy, are you okay?"
 [Timothy] "...S-sorry... I'm such a mess."
-[{player_name}] "hey, don't worry about it. Your here to heal remember? You've got nothing to apologize for."
+[{player_name}] "hey, don't worry about it. You're here to heal remember? You've got nothing to apologize for."
 [Timothy] "t-thanks..." #Timothy = Calm
 {
 	-player_gender == "N":

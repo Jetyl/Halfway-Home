@@ -76,7 +76,7 @@ Max thrusts a heap of letters onto a startled Eduardo. Wow, his mail made up mor
 Max hands Isaac about half of the remaining mail.
 [Isaac] "Oh. Um" #Isaac = Afraid
 "Thanks."
-[Max] "No problemo buddy." #Max = Happy # Isaac = Exit
+[Max] "No problem-o buddy." #Max = Happy # Isaac = Exit
 "Anyways... Charlotte!" #Max = Calm, stage_center, right #Charlotte = Calm, stage_right, left
 "Oh, um... I guess I don't have any mail for you." #Max = Surprised
 [Charlotte] "That is to be expected. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
@@ -151,7 +151,7 @@ For some reason Max's words stress me out. @<color=color_descriptor><i>(<color=c
 
 ===SocialHourOver===
 Well, talking to people has gotten me out of my funk, a little at least.  @<color=color_descriptor><i>(<color=color_wellbeing_relief>decreased <b>depression</b> slightly<color=color_descriptor>)</color> #depression -= 15
-The impromptu social hour seems to die down, as the remaining first-floor residents return to their  else scatters, so I scatter too.
+The impromptu social hour seems to die down, as the remaining first-floor residents return to their lives. //else scatters, so I scatter too.
 ->END
 
 ===TrissaTalk===
@@ -168,7 +168,7 @@ I walk over towards Trissa, who is leaning by the fireplace, with her nose in th
 		[Trissa] "You see, the entirety of my family, save my little bother Spencer, died recently."
 		[{player_name}] "Oh. uh, I'm sorry for your loss."
 		[Trissa] "Oh, don't be."
-		"Their all fine. No one is physically dead. They're just dead to me."
+		"They're all fine. No one is physically dead. They're just dead to me."
 }
 "I'm sorry {player_name}, I suppose I wasn't clear, as I do mind talking about the subject." #Trissa = Sad
 [{player_name}] "Oh! Sorry for prying."
@@ -195,16 +195,16 @@ I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Cha
 	[Eduardo] "hey, I do check the front desk all the time."
 	"I just... <delay=0.5>didn't want to pick them up."
 	"Look, the sucky part of familia is  you can't approach it at your own pace, its gotta be at their pace."
-	"Or at least, my family's lke that. I dunno."
+	"Or at least, my family's like that. I dunno."
 }
 [Eduardo] "There, that's all of them."
 Eduardo gets up, holding only a single letter in his hand.
 "I'mma read these one, since its the most recent."
-Eduardo opens the first one, and begins reading thru it.
+Eduardo opens the first one, and begins reading through it.
 His sour mood seems to vanish as he breaks out into a chuckle. #Eduardo = Happy
 [{player_name}] "Something funny?"
 [Eduardo] "Nah. At least, not you."
-"I'm just laughing at minha mãe. My mother, she is... quirky." // Trying to inject some Portugese into Eduardo's speech. Formerly "laughing at my Ma's quirks."
+"I'm just laughing at 'minha mãe.' My mother, she is... quirky." // Trying to inject some Portugese into Eduardo's speech. Formerly "laughing at my Ma's quirks."
 When he's done reading, he neatly folds the letter into his jacket pocket, and starts walking off. #Eduardo = Calm, right
 "Catch ya later, {player_name}" #Eduardo = exit
 ->SocialHourOver
@@ -216,7 +216,7 @@ He looks as though he is going to open one, but then just places it back down in
 [Isaac] "hm. Something. Like that."
 "There all from my parents."
 "Haven't talked them for months. not since..."
-Isaac mumbles off, looking off to the side. I follow his line of sight, to Eduardo, who is practically shreding thru his letters. #Eduardo = happy, stage_right, small
+Isaac mumbles off, looking off to the side. I follow his line of sight, to Eduardo, who is practically shredding through his letters. #Eduardo = happy, stage_right, small
 {
 	-grace < 3:
 		[{player_name}] "Well, um..." #grace ^ poor #Eduardo = exit
@@ -249,21 +249,21 @@ I walk over to Charlotte, who seems to be staring intently at the other resident
 "My Grandmother does send me the occasional letter though."
 "I cherish them each time they arrive."
 [{player_name}] "Uh huh."
-Charlotte sighes, her eyes wandering off somewhere before returning directly to me.
+Charlotte sighs, her eyes wandering off somewhere before returning directly to me.
 [Charlotte] "{player_name}, do you think I'm old fashioned?"
 {
 	-expression < 3:
 		I shrug.
 		[{player_name}] "I dunno."
-		It seems weird to tell her she looks like she came from a victorian novel, so I don't
+		It seems weird to tell her she looks like she came from a Victorian novel, so I don't
 	-else:
 		[{player_name}] "Do you really want my opinion?" #expression ^ good
-		[Charlotte] "Oh, definitely. Another perspective on myself would be most benifical."
+		[Charlotte] "Oh, definitely. Another perspective on myself would be most beneficial."
 		[{player_name}] "okay..."
 		I take a moment to breath, before I open the floodgates.
 		".....@@Charlotte."
-		"You dress like you're from a victorian novel, @you act more like you work here than you live here, @And in fact I though you did work here for quite a while."
-		"You have a very distinctly style of speech which is very different from everyone elses, @And I had a dream that you were a robot once and I always remember that."
+		"You dress like you're from a Victorian novel, @you act more like you work here than you live here, @And in fact I though you did work here for quite a while."
+		"You have a very distinctly style of speech which is very different from everyone else's, @And I had a dream that you were a robot once and I always remember that."
 		[Charlotte] "..."
 		"Thank you, {player_name}, for your honesty."
 		"I suppose I still have much work left to do, until I can return to society proper."

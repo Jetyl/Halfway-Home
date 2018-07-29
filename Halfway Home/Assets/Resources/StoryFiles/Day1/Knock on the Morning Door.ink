@@ -147,7 +147,7 @@ D-didn't Max say that before?
 "Uh?... Morning Max." 
 [Keyless>Max] "Morning? It's almost noon! Don't tell me, I was your alarm clock this morning?"
 [{player_name}] "W-What? N-no... @I, uh, was already awake."
-Okay, I'm getting the strangest case of deja vu right now...
+Okay, I'm getting the strangest case of 'déjà vu' right now...
 [Keyless>Max] "That's good. Pretty soon ya won't have the ol' Max alarm to rely on."
 Okay, now its getting weird.
 -"Uh, hello? Earth to {player_name}. Ya still there?"
@@ -176,12 +176,12 @@ Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [Keyless>Max] "I don't recall losing my keys last week, but... Couch cushions? Hmm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
 And with that Max quickly runs off, leaving me and Timothy alone
-[{player_name}] "Timothy, are you getting really weird deja vu today, too?"
+[{player_name}] "Timothy, are you getting really weird 'déjà vu' today, too?"
 Timothy is just kind of quietly staring at the corner where his bed is.
 "Yo, Timothy, can you hear me?"
 [Timothy] "<jitter><size=50%>I don't know you<size=100%></jitter>..."
 [{player_name}] "What?"
-Before I can question further, Max returns jangling their keys. The world feels like it's on fast forward. // OLD LINE: Before I could question further, Max returned like they had never left. Everthying feels too fast.
+Before I can question further, Max returns jangling their keys. The world feels like it's on fast forward. // OLD LINE: Before I could question further, Max returned like they had never left. Everything feels too fast.
 [Max] "Okay, I'm back! Nice call on those couch cushions, {player_name}!" #Max=Calm
 "Anyways, where were we Timothy?"
 [Timothy] "The... The tour?"
@@ -196,15 +196,15 @@ Last night...
 A flash of pain slices through my brain. My hands jump to my temples, but the sensation dissipates before they reach their destination. //OLD LINE: My head hurts, as if for a second I brain formed a splinting migraine, but I continue to follow the strangeness around me.
 Was last night... really last night?
 The knock on the door.@ Max introducing Timothy as if we'd never met.@ Timothy... here...!
-This can't all be just deja vu, can it?
+This can't all be just 'déjà vu', can it?
 I think... I think I'm back on the first day Timothy arrived here.@ But how? why?
 I flip through my notebook, but all the notes I had taken over the week are gone.
 I'm a week in the past.
 "W-why is this happening? @<i>How</i> did this happen?!"
 I rack my brain, desperately searching for any explanation.
 Was it all a dream? // OLD LINE: Maybe the whole last week didn't happen? Maybe it was a dream?
-It felt so real... but, then again, dreams often do. // OLD LINE: It didn't feel like a dream, but then again, dreams never do when your in them.
-//And, I don't remember anything particluarly strange or dreamlike about last week... @remember...
+It felt so real... but, then again, dreams often do. // OLD LINE: It didn't feel like a dream, but then again, dreams never do when you're in them.
+//And, I don't remember anything particularly strange or dreamlike about last week... @remember...
 I have to know. I write everything I can remember down in my notebook before I have a chance to forget it. // OLD LINE: Dream or no, I decide to refill my notebook of everything I had done last week I could remember.
 There are some gaps and it's a bit rough, but I manage to record a decent amount. Time to see if I'm crazy or not. # time % 1 // OLD LINE: It takes some time, and its probably not perfect, but its there. It'll help ground me. #time % 1
 I take a deep breath, shaking off some of the existential dread still washing over me. // OLD LINE: Even after having been up for quite some time, the feeling of dread and surrealness hadn't left, although I was calmer now.
@@ -326,7 +326,7 @@ That much is true, but it's only gotten a little better, if I'm being honest.
 If I get too <color=color_wellbeing_penalty><i>depressed</i></color>, the amount of time it takes to do a task can <color=color_descriptor><i>double</i></color>, or even <color=color_descriptor><i>triple</i></color>.
 "So if I'm ever late for anything, it's not because I don't care or something..."
 [Timothy] "Right, okay."
-I am really starting to get hungry, so my first move should be to show Timothy the Cafe area.   # Timothy = Exit   # 0.0 & InProgress   // # Load @ story_rf_kitchen   # Load @ room_cafe
+I am really starting to get hungry, so my first move should be to show Timothy the café area.   # Timothy = Exit   # 0.0 & InProgress   // # Load @ story_rf_kitchen   # Load @ room_cafe
 ~SetValue("Tutorial", true)
 -> END
 

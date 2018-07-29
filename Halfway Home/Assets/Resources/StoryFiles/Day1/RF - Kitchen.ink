@@ -27,7 +27,7 @@ EXTERNAL GetStringValue(value)
 -> KitchenFunction
 
 === KitchenFunction ===
-[{player_name}] "So this is the cafe."   #Timothy = Calm   # ambience_vol | 0   # music_vol ! 0
+[{player_name}] "So this is the café."   #Timothy = Calm   # ambience_vol | 0   # music_vol ! 0
 "We've got our very own cook who does a pretty admirable job with everybody's restrictions and whatnot."
 "You can come here for breakfast, lunch, and dinner. Or really anytime you're hungry. There's usually some tidbits left out if you're a midnight snacker." 
 "Eating will rejuvenate you and lower your <color=color_descriptor><i>fatigue</i></color>." # Fatigue * Show
@@ -50,7 +50,7 @@ EXTERNAL GetStringValue(value)
 +[Got all that?]
 	"You got all that?"
 	[Timothy] "Y-yes?"
-	"So, the cafe is open whenever to eat then?"
+	"So, the café is open whenever to eat then?"
 	[{player_name}] "Uh, yeah. There isn't much of a reason to come here if you aren't hungry though."
 	I remember Max saying that there are `optimal` times to eat, whatever that means.
 	I think it was when you wake up, then 3 hours later, than 6 hours after that.

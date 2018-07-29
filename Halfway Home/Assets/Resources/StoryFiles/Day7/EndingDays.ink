@@ -53,7 +53,7 @@ Max stares at me like I'm a weirdo. #Max = Sad
 Max shuffles around, seeming both surprised that I mentioned Timothy, and wishing I had not. #grace ^ good
 [{player_name}] "Left, but, <size=50%>today's supposed to be his first day again...<size=100%>"
 [Max] "You okay, {player_name}"
-I look over at my calander to see the date. Disbelief washes over me. the loop. its...
+I look over at my calendar to see the date. Disbelief washes over me. the loop. its...
 "{player_name}?"
 [{player_name}] "Huh? yeah?"
 [Max] "Are you alright?"
@@ -62,7 +62,7 @@ I look over at my calander to see the date. Disbelief washes over me. the loop. 
 "Look, {player_name}, I know you didn't know Timothy for very long, but still, don't worry about how it went."
 "You did all you could to be welcoming. We all did."
 "And, he's fine at Blackwell. And hey, who knows, once he gets better, he might come right back." #Max = happy
-Max attempts to drum up enthusiasm, but I think Timothy's depature is actually effecting them a lot more than they want to let on. #Max = sad
+Max attempts to drum up enthusiasm, but I think Timothy's departure is actually effecting them a lot more than they want to let on. #Max = sad
 [{player_name}] "Max, how are you doing?" #expression ^ good
 [Max] "Oh, don't go worrying about me now. I'm fine. I'mma adult. I can take of myself?" #Max = happy
 "Its just sad is all. But the feeling will pass. Besides, I can't do anything about it. Can't change the past."
@@ -79,9 +79,9 @@ It... it's over... I did it!
 Timothy must have noticed me staring at him.
 "Oh, and Good morning Max."
 [Max] "Morning Timothy."
-Max mosies over to my packed bags, and begins grabing them, throwing them over their sholders. #Max = stage_left
-I go over and help, and as we're about done, I notice Timothy seemes to be in shock. #dyed = Surprised
-[Dyed>Timothy] "Oh shoot!" //oh gosh darm jolly gee
+Max moseys over to my packed bags, and begins grabbing them, throwing them over their shoulders. #Max = stage_left
+I go over and help, and as we're about done, I notice Timothy seems to be in shock. #dyed = Surprised
+[Dyed>Timothy] "Oh shoot!" //oh gosh darn jolly gee
 And then He runs out of the room. #dyed = exit
 Only, to immediately return. #Dyed = Surprised
 "Don't leave without saying goodbye. I n-need to go finish something!"
@@ -294,10 +294,10 @@ I leave Eduardo to sulk on the couch. #Eduardo = exit
 =Patches
 [{player_name}] "Hey man, how you doing?"
 [Eduardo] "Hrm? Oh. Fine."
-"Kinda Bummed out, tbh."
+"Kinda Bummed out, to be honest."
 [{player_name}] "Oh? why?"
 [Eduardo] "Eh, well, I'm kinda coming down from the mania I've been riding most of the week, and... you know..."
-Eduardo seems a little petchulent.
+Eduardo seems a little petulant.
 [{player_name}] "I know what?"
 [Eduardo] "You were right."
 "Isaac and I had a rather long, and mostly miserable talk about our relationship."
@@ -361,7 +361,7 @@ I sort of just walk away after that, given Isaac is not in the mood to talk I su
 [{player_name}] "Well it still sucks man. If you ever want to talk about it, or just get something off your chest. Just hit me up."
 [Isaac] "..."
 "Thanks. Will do."
-We fist bump eachother.
+We fist bump each other.
 [{player_name}] "Well, I'd better get going, my car is going to be here any minutes, and I still have some goodbyes to give."
 [Isaac] "Yeah."
 "Later." #Isaac = exit
@@ -387,7 +387,7 @@ We fist bump eachother.
 		[Isaac] "hey." #Isaac = sad
 		->InE
 	-else:
-		We fist bump eachother.
+		We fist bump each other.
 		[{player_name}] "Well, I'd better get going, my car is going to be here any minute." // and I still have some goodbyes to give (Not any more)
 		[Isaac] "Yeah."
 		"Later." #Isaac = exit
@@ -413,7 +413,7 @@ Isaac looks at me like I'm some sort of alien.
 }
 [Isaac] "Bull."
 I guess I can't convince Isaac about the paranormal.
-[{player_name}] "Well, would you believe I'm a time traveller?"
+[{player_name}] "Well, would you believe I'm a time traveler?"
 [Isaac] "No."
 Well that one was at least true. I don't know what to say here.
 "Whatever."
@@ -437,7 +437,7 @@ Oh, thank goodness, he's dropping it.
 [Eduardo] "..."
 [Isaac] "..."
 Man, this is awkward.
-The two kept just giving each other brief glances before their eyes lock, and they both basheful look away.
+The two kept just giving each other brief glances before their eyes lock, and they both bashful look away.
 [{player_name}] "Are you two going to be okay?"
 [Eduardo] "Y-Yeah! Of course we are!" #Eduardo = suprised
 "Uh, right, Isaac?" #Eduardo = sad
@@ -455,24 +455,24 @@ The two kept just giving each other brief glances before their eyes lock, and th
 "We had a massive feelings jam all up in here, and-"
 "Oh, uh sorry, Isaac."
 [Isaac] "hrm?" #Isaac = suprised
-"N-no. Your fine." #Isaac = sad
+"N-no. You're fine." #Isaac = sad
 "We, uh, talked about stuff."
-"Boundries. wants. stuff like that."
+"Boundaries. wants. stuff like that."
 [Eduardo] "a whole lot of TMI for you."
 [Isaac] "uh, yeah. Private stuff."
 {
 	-GetValue("Isaac's Secret Revealed"):
 		[Eduardo] "Speaking of private stuff" #Eduardo = calm
 		[Isaac] "Oh no..."
-		[Eduardo] "You really should get the deets on Isaac's storytelling chops."
+		[Eduardo] "You really should get the 'deets' on Isaac's storytelling chops."
 		"That stuff is 200% pure sweetness. I love it."
 		[Isaac] "{player_name}, why did you have to tell him about my stories?"
 		Whoops.
 		[{player_name}] "Sorry Isaac. It just sort of came up."
 		[Eduardo] "I would have never known that my Isaac had a saucier side. Mrow!" #Eduardo = happy
-		[Isaac] "<size=50%>I swear am never telling either of you embarressing secrets again.</size>"
+		[Isaac] "<size=50%>I swear am never telling either of you embarrassing secrets again.</size>"
 		[{player_name}] "Eduardo, you do know they are just stories right. Fantasies. Its not like Isaac wants-" #Skip
-		[Eduardo] "I know. I know. Jeez. what are you, our relationship counciler?" #Eduardo = angry
+		[Eduardo] "I know. I know. Jeez. what are you, our relationship counselor?" #Eduardo = angry
 		[{player_name}] "I kind of am, so...."
 }
 [Isaac] "Thanks. {player_name}. For helping. You didn't need to do that." #Eduardo = calm #Isaac = calm
@@ -483,7 +483,7 @@ The two kept just giving each other brief glances before their eyes lock, and th
 ->OtherOne
 
 =MindReader
-[Eduardo] "It was rather suprising. That advice you gave me."
+[Eduardo] "It was rather surprising. That advice you gave me."
 "You said you had talked with Isaac, but Isaac said you hadn't."
 [Isaac] "hrm."
 [Eduardo] "Like, I get it {player_name}, I'm hard headed when I get stuck in a mindset, but ya ain't gotta lie to convince me." #Eduardo = angry
@@ -507,7 +507,7 @@ It wasn't really a lie, I just didn't get Isaac to talk to me <i>this</i> week, 
 ->OtherOne
 
 =OtherOne
-The two walk their seperate ways. I guess they're trying to give eachother some space. #All = exit
+The two walk their separate ways. I guess they're trying to give each other some space. #All = exit
 Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 {
 	-TalkE:
@@ -524,7 +524,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 "Who is picking you up again?"
 [{player_name}] "Oh, just my {GetStringValue("Guardian")}."
 [Max] "Cool. Cool."
-"So, got any plans for what your heading off to after this?"
+"So, got any plans for what you're heading off to after this?"
 +[College]
 	[{player_name}] "I was thinking of school. another sort of stepping point into the real world."
 +[A Job]
@@ -534,7 +534,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 -[Max] "Well, {player_name}, it was a pleasure meeting you."
 Max extends their hand. I grab their hand and give them a confident handshake.
 [{player_name}] "Thanks for the" 
-And, right on que, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
+And, right on cue, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
 {
 	-GetValue("Saved Timothy"): -> TimothyGoodbye -> TheEnd -> END
 	-else: 
@@ -545,11 +545,11 @@ And, right on que, I see the car roll up to the halfway house. #Background / Hou
 =TimothyGoodbye
 I pick up all of my bags to head out- #Skip
 [Dyed>Timothy] "Wait!"
-Timothy Runs up behind me, holding onto a peice of paper in his hands. #dyed = Surprised 
+Timothy Runs up behind me, holding onto a piece of paper in his hands. #dyed = Surprised 
 [{player_name}] "Oh, hey Timothy. Where'd did you run off to?"
 [Dyed>Timothy] "I n-needed to f-finish something." #dyed = afraid
 "H-here!" #dyed = happy
-Timothy holds out the peice of paper.
+Timothy holds out the piece of paper.
 "I'm n-not a very good a-artist, but I w-wanted to make you something, s-so." #dyed =afraid
 ... #all = exit #Background / TimothysDrawing, crossfade
 Its not anything amazing, artistically, but heart of it all makes me grin from ear to ear.
@@ -583,5 +583,5 @@ I think about that question as I get into the back seat of the car.
 		I look back out at the Sunflower House, as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
 }
 "I think it was pretty good."
-"Yeah, I was defiently good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0
+"Yeah, I was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0
 ->->

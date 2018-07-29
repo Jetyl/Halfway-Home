@@ -170,7 +170,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 +[Go to another room.]
 	++[Commons] ->Commons
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedCafe}[Café] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> ARChoice
 
@@ -230,7 +230,7 @@ We {step into the cozy heart of Sunflower House.|return to the common room.} # B
 +[Go to another room.]
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedCafe}[Café] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> CoChoice
 
@@ -239,7 +239,7 @@ We {step into the cozy heart of Sunflower House.|return to the common room.} # B
 {The second-floor resident retreats into the hallway, shaking her head.|There's no sign of her former opponent.}
 "{Hey, y'all! Either of you down for a game?|Something else I can help with?}"
 [Timothy] "{Sorry, no time. We're on a case!|We're still having trouble.}" # Timothy = Calm, close, stage_right
-[Trisa] "{Say what?|No luck, huh?}" # Trissa = Surprised
+[Trissa] "{Say what?|No luck, huh?}" # Trissa = Surprised
 [{player_name}] "{We're looking for Eduardo's lost hair dye. Timothy wants to dye his hair and Eduardo said we could use his stuff if we found it.|Afraid not. Any other advice for us?}"
 [Trissa] "{I can't say I've seen it anywhere, no.|Besides talking to Charlotte... nope, sorry.}" # Trissa = Sad
 "{But hey, you should ask Charlotte! That girl doesn't miss a thing!|Don't give up, guys!}" # Trissa = Happy
@@ -264,7 +264,7 @@ We regroup at the front of the room. # All = Exit
 +[Go to another room.]
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
-	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedCafe}[Café] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> GChoice
 
@@ -362,11 +362,11 @@ Max walks over to the supply closet and retrieves the box. They bring it back to
 [Max] "Have fun! Just try not to make <i>too</i> much of a mess, okay?" # Max = Happy
 "I'm already behind on cleaning as it is!" # Max = Afraid
 [Timothy] "O-okay! Bye, Max." # Timothy = Happy
-I wave to Max as we exit the cafe. # Max = Exit
+I wave to Max as we exit the café. # Max = Exit
 ->TimeToDye
 
 =NoDice
-Timothy and I give Max some space and plan our next move by the front of the cafe. # All = Exit
+Timothy and I give Max some space and plan our next move by the front of the café. # All = Exit
 ->CaChoice
 
 =Search
@@ -384,7 +384,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 -else:
 	{Search==1:
 		We make for the supply closet Charlotte told us about.
-		I remember seeing it when I would eat in the cafe, but I never knew it doubled as a lost-and-found.
+		I remember seeing it when I would eat in the café, but I never knew it doubled as a lost-and-found.
 		Probably because I don't have a lot of stuff...
 		[Timothy] "Is this it over here?" # Timothy = Surprised, close, stage_right
 		[{player_name}] "Yep. Let's see what we have here."
@@ -392,7 +392,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 		[{player_name}] "Locked. The plot thickens."
 		[Timothy] "Didn't Charlotte say that Max has the key?"
 		"W-we should go talk to them, right?"
-		I nod and turn back to face the cafe. # All = Exit
+		I nod and turn back to face the café. # All = Exit
 	-else:
 		I check the closet again, giving the handle a firm tug.
 		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it.
@@ -410,7 +410,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Cafe] ->Cafe
+	++{unlockedCafe}[Café] ->Cafe
 	++[Nevermind]-> LChoice
 
 =Charlotte
@@ -437,16 +437,16 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	"Eduardo has a long-standing habit of leaving his things strewn about the House."
 	"I do not understand how Max has the patience to keep picking up after him, but I must applaud their patience."
 	"Most such items are returned to Eduardo, but on occasion, when the man is unavailable or the items' owner inscrutable, Max locks them up in the storage closet in the cafeteria that acts as Sunflower House's `Lost and Found`"
-	"I would wager said closet is currently home to many of Eduardo's posessions, including the object of your search."
-	[{player_name}] "So you're saying we should go to the cafe?"
-	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our loveable resident assistant for the key."
-	"And I just saw them heading to the cafe mere minutes ago."
+	"I would wager said closet is currently home to many of Eduardo's possessions, including the object of your search."
+	[{player_name}] "So you're saying we should go to the café?"
+	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our lovable resident assistant for the key."
+	"And I just saw them heading to the café mere minutes ago."
 	[Timothy] "Wow, thanks, Charlotte!" # Timothy = Happy
 	[Charlotte] "I am always happy to help."
 	"Happy hunting, you two."
 -else:
 	[Charlotte] "Perhaps you will be more likely to remember if I express myself more simply." # Charlotte = Surprised
-	"Eduardo's hair dye is probably locked in the cafe storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
+	"Eduardo's hair dye is probably locked in the café storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
 	[Timothy] "Thanks again, Charlotte."
 } 
 Timothy and I leave Charlotte to her business and regroup at the front of the library. # All = Exit
@@ -485,7 +485,7 @@ I mix the materials, and begin  lathering it on his hair.
 "With my hair a cool color, i can express myself naturally, and if i get stressed, I can just n-not think about it."
 "out of sight, out of mind. Y-you know."
 "I D-did something like this b-before. @A l-long long time ago. @I p-painted my nails once."
-"I h-had to look at them too o-often, and I g-got self consious."
+"I h-had to look at them too o-often, and I g-got self conscious."
 "A-and..."
 He was starting to shiver quite a lot, so, I stopped applying to dye for a second.
 [{player_name}] "Its okay Timothy. You're okay. You want me to stop. We can wash it out right now if you want?"
@@ -493,7 +493,7 @@ He stops shivering, before taking a deep breath.
 [Timothy] "No. I'm okay. I... want this."
 [{player_name}] "Okay."
 I resume applying the hair dye.
-Dying somones hair is actually a fairly time extensive process, and before I know it, a few hours have gone by before we're done. #time %3
+Dying someones hair is actually a fairly time extensive process, and before I know it, a few hours have gone by before we're done. #time %3
 "Okay Timothy, it should be good now, you can wash out your hair, and see what it looks like."
 [Timothy] "okay."
 "..." #Dyed / Open, ArmsU, MShock, ArmsL
@@ -513,7 +513,7 @@ It doesn't take long for him to come out good as new. #Timothy / Happy
 [{player_name}] "That's good."
 [Timothy] "Th-Thank you {player_name}. Thank you soooooo much."
 "Y-you know, I was really scared coming here after Blackwell, but now, I am really glad I did."
-"I-I know we've only known eachother a few days, and your leaving soon, b-but."
+"I-I know we've only known each other a few days, and your leaving soon, b-but."
 "I-I really do think of you as a friend. I-I-I hope you do too."
 [{player_name}] "Of course Timothy."
 Timothy gives me a hug.

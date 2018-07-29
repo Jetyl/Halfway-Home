@@ -149,7 +149,7 @@ As I drift off to sleep, all I can think about is how badly I want this pain to 
 
 ===SecondRRR===
 I begin my nightly ritual. Despite feeling exhausted, I can't stop myself from thinking...
-The Deja Vu this week has been incredible. It's like... I <i>know</i> I've seen all this before.
+The 'Déjà vu' this week has been incredible. It's like... I <i>know</i> I've seen all this before.
 Showing Timothy around. Talking to people. Saying goodbye.
 And... poor Timothy. Gone. Just like I remember...
 I lie down in my bed and stare up at the ceiling.
@@ -174,7 +174,7 @@ I slide under the covers, take a deep breath, and exhale.
 }
 This week keeps on repeating. I don't understand why or how, but I've been given a chance to fix this.
 To fix everything.
-{SecondarySuccess==0:Timothy has to be the key. If I can just help him...|Not just to help Timothy, but to help myself. Adn when I do...}
+{SecondarySuccess==0:Timothy has to be the key. If I can just help him...|Not just to help Timothy, but to help myself. And when I do...}
 I can finally leave this place.
 ->->
 
@@ -195,7 +195,7 @@ I clutch my head {to try and contain the writhing within|in a vain attempt to du
 <> Hey, are you feeling alright?" # Max = Afraid
 I nod. I'd rather not make a scene. # Max = Sad
 [Max] "Why I don't I go ahead and show you to your room?"
-As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {Deja Vu|existential terror|nostalgia}.
+As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {'Déjà vu'|existential terror|nostalgia}.
 [Max] "Your quarters, your Majesty. Uh, maybe you should lie down or something." # Background / YourRoom, Blackwipe # Ambience : Stop_All
 [{player_name}] "No, I'll be fine."
 [Max] "Okay, then. I've gotta get back to cleaning the cafeteria, so just come and find me whenever you're ready." # Max = Calm
@@ -281,7 +281,7 @@ The screaming pitch grows higher and louder until it shatters the floor beneath 
 	"You're <i>nothing</i>!"
 	I fake a yawn.
 }
-"Miserable idiot. {I'm only protecting you from yourself|The world doesn't want you. It's better to know that than to subect everyone to your worthlessness|You will never win}!"
+"Miserable idiot. {I'm only protecting you from yourself|The world doesn't want you. It's better to know that than to subject everyone to your worthlessness|You will never win}!"
 Don't listen to them. I can do this. I just need another chance. 
 The Voices continue to berate me, but grow softer and softer until I can't hear them over the chill wind blowing through my hair.{NextWeek()}
 I wander the silent maze of hallways for what feels like hours.{CallSleep()}

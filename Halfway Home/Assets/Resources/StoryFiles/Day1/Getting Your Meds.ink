@@ -40,7 +40,7 @@ which, happens semi-often
 "How's the hunt for the keys going?"
 [Max] "Still looking."
 "Anyways, here are yer pills."
-"*erhm* do either of you need an explination about your medication?"
+"*erhm* do either of you need an explanation about your medication?"
 [{player_name}] "Nope."
 [Max] "Okey-dokey. Timothy, how bout you?"
 //timothy starts looking uncomfortable
@@ -60,10 +60,10 @@ This is why I take my meds.
 === Okay ===
 [{player_name}] "You okay?"
 [Timothy] "I-I-I lied..."
-"These aren't the pills I took in the hosptial."
+"These aren't the pills I took in the hospital."
 "I don't know what I need to do with these."
 [{player_name}] "Oh, well."
-"I don't know about your specifics, butI can tell you how I handle mine, and that should get you by til we run into Max again."
+"I don't know about your specifics, butI can tell you how I handle mine, and that should get you by 'til we run into Max again."
 [Timothy] "<delay=2> Okay."
 //explain the pill mechanics here
 [{player_name}] "Okay, you good"

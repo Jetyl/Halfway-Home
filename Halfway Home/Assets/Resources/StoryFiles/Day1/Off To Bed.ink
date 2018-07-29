@@ -77,7 +77,7 @@ Honestly... It feels like a weak connection, but I can't think of anything else.
 ->Start.IntoBed
 
 === ContemplateEndlessWeeks ===
-I sigh, the quiet mundanity of my enviroment digging into the endlessness I've somehow become trapped in.
+I sigh, the quiet mundanity of my environment digging into the endlessness I've somehow become trapped in.
 Looping weeks on end. I try to wonder on the reason why.
 {
 	-GetValue("SavedTimothy"):

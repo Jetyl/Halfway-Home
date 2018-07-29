@@ -50,7 +50,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 [{player_name}] "Sure did."
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
-[Timothy] "That's kind of a lotta pressure." # Timothy = Afraid
+[Timothy] "That's kind of a 'lotta pressure." # Timothy = Afraid
 *[Reassure Him]
 	{
 		-awareness > 1: 
@@ -86,7 +86,7 @@ As I approach, the two are giggling about something. # Eduardo = Happy, Stage_Le
 {depression > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
 [Eduardo] "Nah, {player_gender == "F": girl| man}. Get in here!"
-[Eduardo] "I was just telling my meu bem Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
+[Eduardo] "I was just telling my 'meu bem' Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
 [Isaac] "You did. Wanted to hear it again." # Eduardo = Surprised
 [Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game."
 Eduardo leans over to me, the most devilish smirk wide across his face.
@@ -169,14 +169,14 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 [{player_name}] "No problem."
 {
 	-week > 1:
-		afterall, technically, I chose this for myself this week. which reminds me, despite already know the answer, I ask-
+		After all, technically, I chose this for myself this week. which reminds me, despite already know the answer, I ask-
 }
 [{player_name}] "Did you ever find your keys?"
 [Max] "Oh! yeah... I did."
 [Max] "The little sucker fell between the couch cushions in the commons. Must've been loose on my chain or somethin'."
 {
 	-GetValue("RoomKey"):
-		I breifly check my pocket again, and feel the room key I picked off the key ring. This should be helpful later in the week.
+		I briefly check my pocket again, and feel the room key I picked off the key ring. This should be helpful later in the week.
 }
 ->TalkingToTimothy
 
@@ -191,7 +191,7 @@ You have no idea.
 	[{player_name}] "lucky guess."
 	[Max]"Well that's some fine luck ya got." 
 +[I saw it in a dream]
-	[{player_name}] "I was having one of those deja vu things? you know, where you feel you saw all this before in a dream."
+	[{player_name}] "I was having one of those 'déjà vu' things? you know, where you feel you saw all this before in a dream."
 	[Max] "Well, that was some real accurate dreaming you got there."
 ->TalkingToTimothy
 
