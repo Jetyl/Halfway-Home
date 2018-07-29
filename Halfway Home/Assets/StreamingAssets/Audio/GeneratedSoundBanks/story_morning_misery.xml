@@ -13,13 +13,23 @@
 			<ShortName>story_morning_misery</ShortName>
 			<Path>story_morning_misery.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3646524025" Name="play_ambience_stormy" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_stormy"/>
 				<Event Id="444439289" Name="play_music_artroom_morning" ObjectPath="\Events\PlayMusic\play_music_artroom_morning"/>
 				<Event Id="601166520" Name="play_music_eduardo_love_no_intro" ObjectPath="\Events\PlayMusic\play_music_eduardo_love_no_intro"/>
+				<Event Id="3620952831" Name="play_music_stormy_relationship" ObjectPath="\Events\PlayMusic\play_music_stormy_relationship"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="700649189" Language="SFX">
 					<ShortName>music_artroom_morning\music_artroom_morning.wav</ShortName>
 					<Path>SFX\music_artroom_morning\music_artroom_morning_A51F8DD7.wem</Path>
+				</File>
+				<File Id="710471171" Language="SFX">
+					<ShortName>ambience_stormy\ambience_stormy.wav</ShortName>
+					<Path>SFX\ambience_stormy\ambience_stormy_178D0C9C.wem</Path>
+				</File>
+				<File Id="819541419" Language="SFX">
+					<ShortName>music_stormy_relationship\music_stormy_relationship.wav</ShortName>
+					<Path>SFX\music_stormy_relationship\music_stormy_relationship_A51F8DD7.wem</Path>
 				</File>
 				<File Id="943281855" Language="SFX">
 					<ShortName>music_eduardo_love.wav</ShortName>

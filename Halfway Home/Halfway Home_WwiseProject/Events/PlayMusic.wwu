@@ -1464,17 +1464,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{9EB9CF19-1ADE-4EF8-AD3C-E4FF3C7A01D8}" ShortID="885434688">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ambience_stormy" ID="{91081113-A96D-48BD-A3FD-69EC049B91F2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE_FAR_CRICKETS_NIGHT = 2403255496U;
         static const AkUniqueID PLAY_AMBIENCE_GARDEN_BIRDS_DAY = 1503005308U;
         static const AkUniqueID PLAY_AMBIENCE_GARDEN_CRICKETS_NIGHT = 561449546U;
+        static const AkUniqueID PLAY_AMBIENCE_STORMY = 3646524025U;
         static const AkUniqueID PLAY_AMBIENCE_YOUR_ROOM_FIREPLACE_BIRDS_DAY = 208869464U;
         static const AkUniqueID PLAY_AMBIENCE_YOUR_ROOM_FIREPLACE_CRICKETS_NIGHT = 3202835318U;
         static const AkUniqueID PLAY_MENUCLICK = 2576276897U;
@@ -55,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_FADEIN = 3941181009U;
         static const AkUniqueID PLAY_MUSIC_SAD = 3637707742U;
+        static const AkUniqueID PLAY_MUSIC_STORMY_RELATIONSHIP = 3620952831U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_01 = 1402380571U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_02 = 1402380568U;
@@ -109,6 +111,7 @@ namespace AK
         static const AkUniqueID STORY_AUTHORITYS_APPROVAL = 3786498133U;
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
         static const AkUniqueID STORY_CLOSED_WOUND = 2826146263U;
+        static const AkUniqueID STORY_DYE_JOB = 1127752803U;
         static const AkUniqueID STORY_ENDING_DAYS = 2369017504U;
         static const AkUniqueID STORY_FAREWELL_MEAL = 1928416423U;
         static const AkUniqueID STORY_KNOCK_ON_THE_MORNING_DOOR = 4021864313U;

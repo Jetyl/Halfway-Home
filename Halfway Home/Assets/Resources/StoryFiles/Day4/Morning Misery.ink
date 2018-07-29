@@ -176,7 +176,7 @@ Isaac might be able to tell me more about their relationship, if I can find a ti
 ->END
 
 ===Contention===
-[{player_name}] "Isaac Told me." #expression ^ good
+[{player_name}] "Isaac Told me." #expression ^ good   # Play : play_music_stormy_relationship   # Ambience : play_ambience_stormy
 [Eduardo] "..." //shocked expression
 "Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" //angry expression
 Well, Eduarod is technically correct. Isaac hasn't told me anything yet, but...
@@ -220,9 +220,9 @@ After wallowing for a while internally, I decide to head off to some other part 
 [Eduardo] "Wha! That, That can't be true?!" //shocked unsure expression
 ~Conviction -= 1
 Eduardo looks shocked. He doesn't believe me, but for once, He looks like he's doubting himself.
-"Isaac said he really liked that... when we..." //looking down, mumbling
+"Isaac said he really liked that... when we..."   # Play : Stop_All //looking down, mumbling
 [{player_name}] "When you what?"
-[Eduardo] "Well Aren't you a nosey one!" //Angry eduardo
+[Eduardo] "Well Aren't you a nosey one!"   # Play : play_music_eduardo_love_no_intro //Angry eduardo
 "But Fine, I'll tell ya!" //oddly cheery and almost smug
 Huh, Eduardo's mood seems to have completely shifted. theres a passion in his eyes thats almost scary.
 [{player_name}] "what's gotten into you?"
@@ -263,7 +263,7 @@ Crap, do I know that?
 ->Reasons
 
 ===Reasons===
-"And well, I did."
+"And well, I did."   # Play : Stop_All   # Ambience : play_ambience_stormy
 "see, it turns out unlike yours truely, who came here on his own accord, Isaac less so."
 "I mean, yeah, his family `reccomended` he comes here"
 "But really, I don't think he had a choice."
@@ -357,7 +357,7 @@ Something about Isaac that even Isaac hasn't told him...
 
 
 ===Unconvinced===
-[{player_name}] "ugh, sorry, for yelling."
+[{player_name}] "ugh, sorry, for yelling."   # Play : Stop_All
 [Eduardo] "Save it." //angry
 "I'm done here." #Background = Artroom #Eduardo = angry
 "Later." #Eduardo = Exit
@@ -368,7 +368,7 @@ Maybe I should go check up on him again.
 ->END
 
 ===Convinced===
-[{player_name}] "ugh, sorry, for yelling."
+[{player_name}] "ugh, sorry, for yelling."   # Play : Stop_All
 "Look, I shouldn't even need to be having this conversation with you right now."
 "Isaac should be the one talking about all this, and well..."
 [Eduardo] "He's not good at talking."

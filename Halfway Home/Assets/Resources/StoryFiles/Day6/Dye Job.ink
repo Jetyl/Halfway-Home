@@ -85,7 +85,7 @@ It doesn't take me long and I catch up with him in no time. #Background / common
 ->PinkHairedExpert
 
 ===PinkHairedExpert===
-[{player_name}] "Okay, I'm ready."
+[{player_name}] "Okay, I'm ready."   # Play : play_music_happy
 [Timothy] "Thanks again, {player_name}."
 [{player_name}] "It's no big deal."
 "So, where is the stuff? Are we going to do this in our bathroom or the public restroom?" #Timothy = Surprised

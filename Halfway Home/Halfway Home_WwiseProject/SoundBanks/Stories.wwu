@@ -67,6 +67,8 @@
 				</SoundBank>
 				<SoundBank Name="story_morning_misery" ID="{5ED3643E-2485-4A03-8D00-52B1E45658A3}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_stormy" ID="{4838B455-16A8-4372-90F0-D48074469BC9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_music_stormy_relationship" ID="{2EF1D7CF-DFC2-4487-B908-B1034445173B}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_eduardo_love_no_intro" ID="{CAA025E2-4B91-47E5-A1D2-51C0C2928B41}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_artroom_morning" ID="{69163549-238D-4B10-BE70-9ED022538BBB}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
@@ -75,6 +77,7 @@
 				</SoundBank>
 				<SoundBank Name="story_open_letter" ID="{3A80C469-1D83-45AA-BE36-60084BC6F4F8}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_stormy" ID="{4838B455-16A8-4372-90F0-D48074469BC9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
@@ -114,6 +117,13 @@
 				<SoundBank Name="story_welcome_dinner" ID="{2D3A9924-8671-414C-84A4-B947011B6C73}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_dye_job" ID="{A55581F1-1FF2-4959-84EE-AD3D4D96B476}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

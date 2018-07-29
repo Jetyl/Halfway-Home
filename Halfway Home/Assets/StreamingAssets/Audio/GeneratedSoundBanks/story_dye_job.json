@@ -13,22 +13,12 @@
   },
   "SoundBanks": [
    {
-    "Id": "3653532294",
+    "Id": "1127752803",
     "Language": "SFX",
-    "ObjectPath": "\\SoundBanks\\Stories\\story_open_letter",
-    "ShortName": "story_open_letter",
-    "Path": "story_open_letter.bnk",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_dye_job",
+    "ShortName": "story_dye_job",
+    "Path": "story_dye_job.bnk",
     "IncludedEvents": [
-     {
-      "Id": "2781780852",
-      "Name": "play_ambience_crowd",
-      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
-     },
-     {
-      "Id": "3646524025",
-      "Name": "play_ambience_stormy",
-      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_stormy"
-     },
      {
       "Id": "1020080944",
       "Name": "play_music_happy",
@@ -41,20 +31,6 @@
       "Language": "SFX",
       "ShortName": "Music1loop.wav",
       "Path": "SFX\\Music1loop_A51F8DD7.wem"
-     }
-    ],
-    "IncludedMemoryFiles": [
-     {
-      "Id": "710471171",
-      "Language": "SFX",
-      "ShortName": "ambience_stormy\\ambience_stormy.wav",
-      "Path": "SFX\\ambience_stormy\\ambience_stormy_178D0C9C.wem"
-     },
-     {
-      "Id": "1039116749",
-      "Language": "SFX",
-      "ShortName": "ambience_crowd\\ambience_crowd.wav",
-      "Path": "SFX\\ambience_crowd\\ambience_crowd_178D0C9C.wem"
      }
     ]
    }

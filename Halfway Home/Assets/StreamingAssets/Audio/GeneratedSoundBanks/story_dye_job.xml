@@ -8,13 +8,11 @@
 		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="3653532294" Language="SFX">
-			<ObjectPath>\SoundBanks\Stories\story_open_letter</ObjectPath>
-			<ShortName>story_open_letter</ShortName>
-			<Path>story_open_letter.bnk</Path>
+		<SoundBank Id="1127752803" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_dye_job</ObjectPath>
+			<ShortName>story_dye_job</ShortName>
+			<Path>story_dye_job.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2781780852" Name="play_ambience_crowd" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_crowd"/>
-				<Event Id="3646524025" Name="play_ambience_stormy" ObjectPath="\Events\PlayMusic\ambiences\play_ambience_stormy"/>
 				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -23,16 +21,6 @@
 					<Path>SFX\Music1loop_A51F8DD7.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
-			<IncludedMemoryFiles>
-				<File Id="710471171" Language="SFX">
-					<ShortName>ambience_stormy\ambience_stormy.wav</ShortName>
-					<Path>SFX\ambience_stormy\ambience_stormy_178D0C9C.wem</Path>
-				</File>
-				<File Id="1039116749" Language="SFX">
-					<ShortName>ambience_crowd\ambience_crowd.wav</ShortName>
-					<Path>SFX\ambience_crowd\ambience_crowd_178D0C9C.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
