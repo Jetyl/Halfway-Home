@@ -451,15 +451,15 @@ The two kept just giving each other brief glances before their eyes lock, and th
 
 =Guru
 [Isaac] "We, um. Talked."
-[Eduardo] "Y-Yeah!"
-"We had a massive feelings jam all up in here, and-"
+[Eduardo] "Y-Yeah!" #Isaac = Exit #Eduardo = Exit 
+"We had a massive feelings jam all up in here, and-" #Needy = Bored
 "Oh, uh sorry, Isaac."
-[Isaac] "hrm?" #Isaac = suprised
-"N-no. You're fine." #Isaac = sad
+[Isaac] "hrm?" 
+"N-no. You're fine." #Needy = Smile
 "We, uh, talked about stuff."
 "Boundaries. wants. stuff like that."
-[Eduardo] "a whole lot of TMI for you."
-[Isaac] "uh, yeah. Private stuff."
+[Eduardo] "a whole lot of TMI for you." #Needy = Exit 
+[Isaac] "uh, yeah. Private stuff."#Eduardo = sad #Isaac = Calm
 {
 	-GetValue("Isaac's Secret Revealed"):
 		[Eduardo] "Speaking of private stuff" #Eduardo = calm
