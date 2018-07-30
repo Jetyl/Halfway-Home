@@ -975,16 +975,41 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1305590170
-    m_lastTimePart2: -1999243859
+    m_lastTimePsrt1: -1743043596
+    m_lastTimePart2: -1999243852
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 1578786895
-    m_lastTimePart2: -1999243875
+    m_lastTimePsrt1: 2047598980
+    m_lastTimePart2: -1999243852
     List:
+    - Name: Game_State
+      Path: Default Work Unit\Game_State
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Game_State
+        ObjectType: 9
+      ID: 766723505
+      Guid: 61b6a7779b81d44a9af5af3bc5873c71
+      values:
+      - In_Game
+      - Main_Menu
+      - None
+      ValueIcons:
+      - ElementName: In_Game
+        ObjectType: 8
+      - ElementName: Main_Menu
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 892ae1b0fc9d8c77db3ba32c
+      ValueGuids:
+      - bytes: 7d9cb3b1ffda464ab6441cd2daed63ee
+      - bytes: 4ae9f7fb81b6614c85fbb0e39543ec47
+      - bytes: af3e4d600eafec478026f4d218d795e4
     - Name: Pause
       Path: Default Work Unit\Pause
       PathAndIcons:

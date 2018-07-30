@@ -215,7 +215,7 @@
 				<Property Name="Interactive Music\x64_{FDAFE428-B72C-4FF8-AA36-1ABC4652C62A} - SegmentEditorZoomInfo" Type="string" Value="HrGIBuhr5D8AAAAAAADwP1VVVVVVRVdAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
-				<Property Name="Mixing Desk\CurrentStates\{2CBE0239-AF38-4836-9E3B-92F4BA876E2A}" Type="string" Value="{218D282C-3C91-4A0B-8F81-AB2F3CE14329}"/>
+				<Property Name="Mixing Desk\CurrentStates\{2CBE0239-AF38-4836-9E3B-92F4BA876E2A}" Type="string" Value="{FF773DA1-7DCA-4875-A742-F928CE085354}"/>
 				<Property Name="Mixing Desk\LastSession" Type="string" Value="{6BE1B8B4-C7A9-41EF-AD95-4786794ABA3B}"/>
 				<Property Name="MonitoringManager\WatchMgr\WatchesVersion" Type="int32" Value="6"/>
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>

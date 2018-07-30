@@ -78,8 +78,9 @@ public class MainMenu : MonoBehaviour
         AkSoundEngine.SetRTPCValue("music_vol", 0);
         AkSoundEngine.SetRTPCValue("text_vol", 0);
         
-        // Reset 'pause' game state
+        // Reset game states
         AkSoundEngine.SetState("Pause", "Unpaused");
+        AkSoundEngine.SetState("Game_State", "Main_Menu");
     }
 
     public void NewGame()

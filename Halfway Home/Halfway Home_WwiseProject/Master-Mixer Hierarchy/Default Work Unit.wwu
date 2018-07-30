@@ -501,7 +501,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-2</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{E2B320E2-B292-4374-9BC5-C6728FB03643}" ShortID="926828164">
@@ -563,6 +563,32 @@
 											</RTPCList>
 										</Property>
 									</PropertyList>
+								</Bus>
+								<Bus Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Game_State" ID="{77A7B661-819B-4AD4-9AF5-AF3BC5873C71}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Game" ID="{B1B39C7D-DAFF-4A46-B644-1CD2DAED63EE}"/>
+												<State Name="" ID="{A496A48F-823E-406A-8012-C63467757462}" ShortID="335875508">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-9"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</Bus>
 							</ChildrenList>
 						</Bus>

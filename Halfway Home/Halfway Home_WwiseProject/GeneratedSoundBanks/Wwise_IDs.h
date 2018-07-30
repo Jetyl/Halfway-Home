@@ -80,6 +80,17 @@ namespace AK
 
     namespace STATES
     {
+        namespace GAME_STATE
+        {
+            static const AkUniqueID GROUP = 766723505U;
+
+            namespace STATE
+            {
+                static const AkUniqueID IN_GAME = 2967546505U;
+                static const AkUniqueID MAIN_MENU = 2005704188U;
+            } // namespace STATE
+        } // namespace GAME_STATE
+
         namespace PAUSE
         {
             static const AkUniqueID GROUP = 3092587493U;
@@ -145,6 +156,7 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MENU_BUS = 3931159050U;
+        static const AkUniqueID MENU_HOVER_BUS = 238729384U;
         static const AkUniqueID MUSIC_BUS = 3127962312U;
         static const AkUniqueID TENSION_MUSIC_BUS = 315519858U;
         static const AkUniqueID TENSION_STEM_01_BUS = 1759925539U;

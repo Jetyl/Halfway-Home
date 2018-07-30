@@ -40,6 +40,7 @@
 							<ChildrenList>
 								<Sound Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" ShortID="118499955">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-3</Value>
@@ -51,7 +52,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -66,6 +67,7 @@
 								</Sound>
 								<Sound Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" ShortID="744289837">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -79,7 +81,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -97,6 +99,7 @@
 								</Sound>
 								<Sound Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" ShortID="583293960">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -115,7 +118,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -135,6 +138,7 @@
 								</Sound>
 								<Sound Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" ShortID="249208614">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -153,7 +157,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -242,6 +246,7 @@
 								</Sound>
 								<Sound Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" ShortID="1053965515">
 									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>400</Value>
@@ -258,7 +263,7 @@
 											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Effects Bus" ID="{F2AE1E3E-521E-4567-8E4A-8625D668E406}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Menu Hover Bus" ID="{AA9BE8E8-B314-4754-B908-D06B6FE220FB}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -645,7 +650,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

@@ -107,6 +107,11 @@ public class AudioManager : MonoBehaviour
         MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
 	}
   
+  void Awake ()
+  {
+    AkSoundEngine.SetState("Game_State", "In_Game");
+  }
+  
   void OnPause(DefaultEvent eventdata)
   {
     AkSoundEngine.SetState("Pause", "Paused");
