@@ -500,6 +500,9 @@
 						<Bus Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-17</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{E2B320E2-B292-4374-9BC5-C6728FB03643}" ShortID="926828164">
 											<ReferenceList>

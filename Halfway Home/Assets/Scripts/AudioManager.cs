@@ -370,4 +370,14 @@ public class AudioManager : MonoBehaviour
 
     AkSoundEngine.RenderAudio();
   }
+  
+  public void PlayMenuHoverSFX()
+  {
+    AkSoundEngine.PostEvent("play_menumouseover", SFXPlayer.gameObject);
+  }
+  
+  public void PlayMenuClickSFX()
+  {
+    AkSoundEngine.PostEvent("play_menuclick", SFXPlayer.gameObject);
+  }
 }
