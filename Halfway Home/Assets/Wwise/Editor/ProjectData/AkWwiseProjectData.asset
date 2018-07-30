@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 1753212222
-    m_lastTimePart2: -1999245108
+    m_lastTimePsrt1: -1081466827
+    m_lastTimePart2: -1999243844
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
@@ -774,8 +774,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 589993040
-    m_lastTimePart2: -1999243876
+    m_lastTimePsrt1: 795947382
+    m_lastTimePart2: -1999243834
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -813,28 +813,28 @@ MonoBehaviour:
       ID: -286316322
       Guid: 1325d90f3ad6b04fa5bd9e0d9ec74850
       maxAttenuation: 0
-    - Name: play_menupause_01
-      Path: PlaySFX\sfx_menu\play_menupause_01
+    - Name: play_menupause
+      Path: PlaySFX\sfx_menu\play_menupause
       PathAndIcons:
       - ElementName: PlaySFX
         ObjectType: 12
       - ElementName: sfx_menu
         ObjectType: 4
-      - ElementName: play_menupause_01
+      - ElementName: play_menupause
         ObjectType: 3
-      ID: -467002969
+      ID: -698485773
       Guid: 9bc491bc44365c42bb53559271d437d9
       maxAttenuation: 0
-    - Name: play_menuunpause_01
-      Path: PlaySFX\sfx_menu\play_menuunpause_01
+    - Name: play_menuunpause
+      Path: PlaySFX\sfx_menu\play_menuunpause
       PathAndIcons:
       - ElementName: PlaySFX
         ObjectType: 12
       - ElementName: sfx_menu
         ObjectType: 4
-      - ElementName: play_menuunpause_01
+      - ElementName: play_menuunpause
         ObjectType: 3
-      ID: 4553038
+      ID: -1193233224
       Guid: f1c8b32eb669524d8097bf63f61c9c4a
       maxAttenuation: 0
     - Name: play_sfx_ambient_deaf
@@ -921,6 +921,78 @@ MonoBehaviour:
       ID: 1091239431
       Guid: 28adaaf15996364e9ac169b95fa0b2ed
       maxAttenuation: 0
+    - Name: play_sfx_menu_ambience_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_ambience_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_ambience_slider_scroll
+        ObjectType: 3
+      ID: 1234546846
+      Guid: a0ccdc13ff3cbe4f8991ff86e16c28f0
+      maxAttenuation: 0
+    - Name: play_sfx_menu_effects_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_effects_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_effects_slider_scroll
+        ObjectType: 3
+      ID: 1732677584
+      Guid: 2bfa1dc7abc31b4db2d69eb1175159c4
+      maxAttenuation: 0
+    - Name: play_sfx_menu_interface_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_interface_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_interface_slider_scroll
+        ObjectType: 3
+      ID: -2108071441
+      Guid: f0d519b3ac71c341a15928e2cd9853ed
+      maxAttenuation: 0
+    - Name: play_sfx_menu_master_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_master_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_master_slider_scroll
+        ObjectType: 3
+      ID: -1546001364
+      Guid: 3b99ebdd01c34245b0c400bc39ee8c3a
+      maxAttenuation: 0
+    - Name: play_sfx_menu_music_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_music_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_music_slider_scroll
+        ObjectType: 3
+      ID: 174248703
+      Guid: e7e0326ea8257f418e92723f346c9fe8
+      maxAttenuation: 0
+    - Name: play_sfx_menu_slider_scroll
+      Path: PlaySFX\sfx_menu\play_sfx_menu_slider_scroll
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_slider_scroll
+        ObjectType: 3
+      ID: -304996049
+      Guid: bf0d07e0d066b84d995f4dcca2372bc6
+      maxAttenuation: 0
     - Name: play_sfx_object_car_away
       Path: PlaySFX\sfx_object\play_sfx_object_car_away
       PathAndIcons:
@@ -975,15 +1047,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1743043596
-    m_lastTimePart2: -1999243852
+    m_lastTimePsrt1: 1475719003
+    m_lastTimePart2: -1999243851
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 2047598980
-    m_lastTimePart2: -1999243852
+    m_lastTimePsrt1: 1874936424
+    m_lastTimePart2: -1999243834
     List:
     - Name: Game_State
       Path: Default Work Unit\Game_State
@@ -1035,6 +1107,35 @@ MonoBehaviour:
       - bytes: 9f0672d933276945b0c697e0920d5ab7
       - bytes: 2c288d21913c0b4a8f81ab2f3ce14329
       - bytes: a13d77ffca7d7548a742f928ce085354
+    - Name: Text_Type
+      Path: Default Work Unit\Text_Type
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Text_Type
+        ObjectType: 9
+      ID: 557060015
+      Guid: 7016ad174dd41f45946e631bdfec430b
+      values:
+      - Monologue
+      - None
+      - Other
+      - Player
+      ValueIcons:
+      - ElementName: Monologue
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Other
+        ObjectType: 8
+      - ElementName: Player
+        ObjectType: 8
+      valueIDs: 1034c5c8db3ba32cb9ffa58d2a3cbe3f
+      ValueGuids:
+      - bytes: ceb7299ff2fb2d4c8a7318085d14965d
+      - bytes: d0b70584a5483642824651514700e0e9
+      - bytes: b03bd42f96057f47b4ded62fe9e61ebd
+      - bytes: 065f0683a115f4408eadf7c2d09cc459
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -1046,8 +1147,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 607902266
-    m_lastTimePart2: -1999243876
+    m_lastTimePsrt1: -1081206583
+    m_lastTimePart2: -1999243844
     List:
     - Name: Credits
       Path: Default Work Unit\Credits

@@ -67,19 +67,39 @@
 						</Event>
 						<Event Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}">
 							<ChildrenList>
+								<Action Name="" ID="{A4708C7B-C1F4-4308-A640-6987AC8A7164}" ShortID="821608472">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_text_scroll_monologue" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{232897C7-AB9D-46A4-9257-D1D7A258B5FF}" ShortID="886826755">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_menu_text_scroll_other" ID="{AD7E9E5D-533F-4808-8071-41975284DB18}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2FE3CC18-E744-435D-ABF5-88A6304D7B40}" ShortID="951994715">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_text_scroll_player" ID="{B1DE9955-9EEC-4009-AA65-9402E8E9DBF7}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="play_menuunpause_01" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}">
+						<Event Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}">
 							<ChildrenList>
 								<Action Name="" ID="{911B2070-FE74-42F3-BE35-29E9843ED2D5}" ShortID="574743888">
 									<PropertyList>
@@ -93,7 +113,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="play_menupause_01" ID="{BC91C49B-3644-425C-BB53-559271D437D9}">
+						<Event Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}">
 							<ChildrenList>
 								<Action Name="" ID="{55A76322-3267-4961-A970-D8A5627C56B6}" ShortID="97732726">
 									<PropertyList>
@@ -116,6 +136,90 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_slider_scroll" ID="{E0070DBF-66D0-4DB8-995F-4DCCA2372BC6}">
+							<ChildrenList>
+								<Action Name="" ID="{9C597810-A0EA-497F-A97E-7A093D74C253}" ShortID="309082276">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_slider_scroll" ID="{A0873FF3-6F4A-461E-81C3-DBAD3966B328}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_music_slider_scroll" ID="{6E32E0E7-25A8-417F-8E92-723F346C9FE8}">
+							<ChildrenList>
+								<Action Name="" ID="{CB5EB1BA-9155-408E-94CC-629DB43F9AF7}" ShortID="1056902831">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_music_slider_scroll" ID="{F4254037-341C-4FD1-9889-DB48DA56B7DF}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_ambience_slider_scroll" ID="{13DCCCA0-3CFF-4FBE-8991-FF86E16C28F0}">
+							<ChildrenList>
+								<Action Name="" ID="{BD8DE239-5B66-48FD-911E-E03EED27F957}" ShortID="396651523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_ambience_slider_scroll" ID="{677BBAA0-6459-4EF9-A863-59AC7C9C8E52}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_master_slider_scroll" ID="{DDEB993B-C301-4542-B0C4-00BC39EE8C3A}">
+							<ChildrenList>
+								<Action Name="" ID="{432B47C5-BDD1-46A9-8543-E23ABF3D9B80}" ShortID="483359828">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_master_slider_scroll" ID="{807AE7AE-07C0-4349-A7F0-2C00510008C8}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_interface_slider_scroll" ID="{B319D5F0-71AC-41C3-A159-28E2CD9853ED}">
+							<ChildrenList>
+								<Action Name="" ID="{D556D895-8BD0-4C7F-B840-242457A8B84A}" ShortID="519401255">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_interface_slider_scroll" ID="{4C1DE6BE-FA71-4A6C-AFFF-D62794D6983F}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_menu_effects_slider_scroll" ID="{C71DFA2B-C3AB-4D1B-B2D6-9EB1175159C4}">
+							<ChildrenList>
+								<Action Name="" ID="{B7A1B17A-DCBD-4163-A041-F8CE57B92641}" ShortID="489958375">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_effects_slider_scroll" ID="{C54C5B4F-E077-4919-B943-D1F250BCDA17}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

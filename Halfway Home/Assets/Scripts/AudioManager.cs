@@ -101,6 +101,7 @@ public class AudioManager : MonoBehaviour
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
         Scene.Connect<AudioParamFadeEvent>(OnAudioParamFadeEvent);
         Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
+        Space.Connect<DescriptionEvent>(Events.Description, OnDescriptionEvent);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
@@ -112,13 +113,32 @@ public class AudioManager : MonoBehaviour
     AkSoundEngine.SetState("Game_State", "In_Game");
   }
   
+  void OnDescriptionEvent(DescriptionEvent e)
+  {
+    string sp = e.Speaker;
+    
+    // If it's monologue
+    if (sp == "")
+      AkSoundEngine.SetState("Text_Type", "Monologue");
+
+    // If the player is speaking
+    else if (sp == Game.current.PlayerName)
+      AkSoundEngine.SetState("Text_Type", "Player");
+    
+    // If someone else is speaking
+    else
+      AkSoundEngine.SetState("Text_Type", "Other");
+  }
+  
   void OnPause(DefaultEvent eventdata)
   {
+    AkSoundEngine.PostEvent("play_menupause", SFXPlayer.gameObject);
     AkSoundEngine.SetState("Pause", "Paused");
   }
   
   void OnUnPause(DefaultEvent eventdata)
   {
+    AkSoundEngine.PostEvent("play_menuunpause", SFXPlayer.gameObject);
     AkSoundEngine.SetState("Pause", "Unpaused");
   }
 
@@ -326,6 +346,9 @@ public class AudioManager : MonoBehaviour
 
   void OnLoad(DefaultEvent eventdata)
   {
+    // Reset pause menu mute
+    AkSoundEngine.SetState("Pause", "Unpaused");
+    
     Game currentGame = Game.current;
     
     // Load sound banks for current story and room
@@ -384,5 +407,32 @@ public class AudioManager : MonoBehaviour
   public void PlayMenuClickSFX()
   {
     AkSoundEngine.PostEvent("play_menuclick", SFXPlayer.gameObject);
+  }
+  
+  public void PlayMenuSliderScrollSFX(string slider)
+  {
+    switch (slider.ToLower())
+    {
+      case "ambience":
+        AkSoundEngine.PostEvent("play_sfx_menu_ambience_slider_scroll", SFXPlayer.gameObject);
+        return;
+      case "sfx":
+      case "effects":
+        AkSoundEngine.PostEvent("play_sfx_menu_effects_slider_scroll", SFXPlayer.gameObject);
+        return;
+      case "menu":
+      case "interface":
+        AkSoundEngine.PostEvent("play_sfx_menu_interface_slider_scroll", SFXPlayer.gameObject);
+        return;
+      case "master":
+        AkSoundEngine.PostEvent("play_sfx_menu_master_slider_scroll", SFXPlayer.gameObject);
+        return;
+      case "music":
+        AkSoundEngine.PostEvent("play_sfx_menu_music_slider_scroll", SFXPlayer.gameObject);
+        return;
+      default:
+        AkSoundEngine.PostEvent("play_sfx_menu_slider_scroll", SFXPlayer.gameObject);
+        return;
+    }
   }
 }

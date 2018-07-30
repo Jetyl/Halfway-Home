@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{129BB844-131B-4EF4-AA3E-9F1D0C27769B}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="Pause" ID="{2CBE0239-AF38-4836-9E3B-92F4BA876E2A}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.3"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{D972069F-2733-4569-B0C6-97E0920D5AB7}"/>
 						<State Name="Paused" ID="{218D282C-3C91-4A0B-8F81-AB2F3CE14329}"/>
@@ -18,6 +21,17 @@
 						<State Name="None" ID="{604D3EAF-AF0E-47EC-8026-F4D218D795E4}"/>
 						<State Name="Main_Menu" ID="{FBF7E94A-B681-4C61-85FB-B0E39543EC47}"/>
 						<State Name="In_Game" ID="{B1B39C7D-DAFF-4A46-B644-1CD2DAED63EE}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Text_Type" ID="{17AD1670-D44D-451F-946E-631BDFEC430B}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{8405B7D0-48A5-4236-8246-51514700E0E9}"/>
+						<State Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
+						<State Name="Other" ID="{2FD43BB0-0596-477F-B4DE-D62FE9E61EBD}"/>
+						<State Name="Player" ID="{83065F06-15A1-40F4-8EAD-F7C2D09CC459}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

@@ -20,14 +20,14 @@
     "Path": "Main.bnk",
     "IncludedEvents": [
      {
-      "Id": "3827964327",
-      "Name": "play_menupause_01",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause_01"
+      "Id": "3596481523",
+      "Name": "play_menupause",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause"
      },
      {
-      "Id": "4553038",
-      "Name": "play_menuunpause_01",
-      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause_01"
+      "Id": "3101734072",
+      "Name": "play_menuunpause",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause"
      },
      {
       "Id": "1091239431",
@@ -58,6 +58,12 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_unpausegame.wav",
       "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     },
+     {
+      "Id": "605418621",
+      "Language": "SFX",
+      "ShortName": "BlipBurstingS GFX018902.wav",
+      "Path": "SFX\\BlipBurstingS GFX018902_036F45F0.wem"
      },
      {
       "Id": "724131083",

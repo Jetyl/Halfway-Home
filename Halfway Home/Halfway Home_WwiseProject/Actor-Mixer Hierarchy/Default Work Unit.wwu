@@ -173,7 +173,7 @@
 										<ActiveSource Name="sfx_menu_chime_unpausegame" ID="{A7BBC937-8086-468D-B85B-A96B21CB82CC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" ShortID="835502543">
+								<Sound Name="sfx_menu_text_scroll_monologue" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" ShortID="835502543">
 									<PropertyList>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -203,6 +203,31 @@
 											<AudioFile>sfx_menu_text_scroll1.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Text_Type" ID="{17AD1670-D44D-451F-946E-631BDFEC430B}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Player" ID="{83065F06-15A1-40F4-8EAD-F7C2D09CC459}"/>
+												<State Name="" ID="{25E26645-57E1-486B-B9CB-2BD2EFDFBD8A}" ShortID="602026039">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Other" ID="{2FD43BB0-0596-477F-B4DE-D62FE9E61EBD}"/>
+												<State Name="" ID="{4E6ED70D-7FEB-4BAD-8965-2D7335912F20}" ShortID="789436446">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_menu_text_scroll1" ID="{6966250B-1AE4-432B-A2E9-22CA279B9BA4}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -282,6 +307,828 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="sfx_menu_chime_exitgame" ID="{1DF8253E-223F-4282-AE07-269D988D4FB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="sfx_menu_slider_scroll" ID="{A0873FF3-6F4A-461E-81C3-DBAD3966B328}" ShortID="597254514">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{91495A8C-9661-4A85-9333-4885E25162FA}" ShortID="78033925">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6754B9E1-1263-4CF7-BB44-115534F7A433}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{E7D19C2C-DCB6-45A0-A622-BFB98C2D344A}" ShortID="605418621">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{E7D19C2C-DCB6-45A0-A622-BFB98C2D344A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{E44C24A3-77E1-4362-98BF-2CF14E27923A}" ShortID="675183196">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{114D22E7-06FB-49EE-84BA-89EA04E1F100}" ShortID="816303251">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{114D22E7-06FB-49EE-84BA-89EA04E1F100}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{E44C24A3-77E1-4362-98BF-2CF14E27923A}"/>
+										<ItemRef Name="empty" ID="{E44C24A3-77E1-4362-98BF-2CF14E27923A}"/>
+										<ItemRef Name="empty" ID="{E44C24A3-77E1-4362-98BF-2CF14E27923A}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{91495A8C-9661-4A85-9333-4885E25162FA}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_menu_ambience_slider_scroll" ID="{677BBAA0-6459-4EF9-A863-59AC7C9C8E52}" ShortID="54628980">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{4A3254D6-197A-46F9-ADE3-9FC6D0AE634A}" ShortID="963236684">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{5B69F5E2-943C-4DBB-B511-EC28E2B561CE}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{395A3FA6-11E3-4822-9424-8D6C52910B9C}" ShortID="120882377">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D7B98844-5023-42C0-9ED1-94DA369CEA97}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{A50E7FBF-CED0-425E-ADC2-AD203838A27C}" ShortID="921415206">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="605418621"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{A50E7FBF-CED0-425E-ADC2-AD203838A27C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{8CC24CDB-9DDD-4E0D-8E4D-4821B34BD7D3}" ShortID="182906687">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{FCC1888A-88EF-4418-A5FB-3A106D78E080}" ShortID="259419749">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="816303251"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{FCC1888A-88EF-4418-A5FB-3A106D78E080}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{8CC24CDB-9DDD-4E0D-8E4D-4821B34BD7D3}"/>
+										<ItemRef Name="empty" ID="{8CC24CDB-9DDD-4E0D-8E4D-4821B34BD7D3}"/>
+										<ItemRef Name="empty" ID="{8CC24CDB-9DDD-4E0D-8E4D-4821B34BD7D3}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{395A3FA6-11E3-4822-9424-8D6C52910B9C}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_menu_interface_slider_scroll" ID="{4C1DE6BE-FA71-4A6C-AFFF-D62794D6983F}" ShortID="876078437">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{B46A961D-E74D-404D-B99F-1F9E1DDB99D5}" ShortID="950289909">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{A3234E94-ECE2-40C9-AC3D-4900B9ACDA1F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{79D6561C-330C-43BF-A80D-BDD9A9DAA91C}" ShortID="273042580">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{61A48A82-A242-447C-92CC-4E6A98EEE183}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{EF43AF9F-82DD-44B6-B51D-9030476D7ADB}" ShortID="467852281">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="605418621"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{EF43AF9F-82DD-44B6-B51D-9030476D7ADB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{B908FA36-C6F9-44B3-A550-EE25BF842ABF}" ShortID="72849473">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{292177D5-1D31-407E-9666-CFC3BBB9EB4D}" ShortID="14253939">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="816303251"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{292177D5-1D31-407E-9666-CFC3BBB9EB4D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{B908FA36-C6F9-44B3-A550-EE25BF842ABF}"/>
+										<ItemRef Name="empty" ID="{B908FA36-C6F9-44B3-A550-EE25BF842ABF}"/>
+										<ItemRef Name="empty" ID="{B908FA36-C6F9-44B3-A550-EE25BF842ABF}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{79D6561C-330C-43BF-A80D-BDD9A9DAA91C}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_menu_effects_slider_scroll" ID="{C54C5B4F-E077-4919-B943-D1F250BCDA17}" ShortID="486121879">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{FBB2259A-D503-4710-BFE7-2505EE952B3B}" ShortID="598584975">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{89502460-96DE-4D7B-BF58-3EEBB5B1A847}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{2E4D66B8-BF8A-438F-8603-790BCDB1714C}" ShortID="103150136">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B46B7AAC-57A4-4A31-B9E7-31AD73041C7A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{1D1C0C33-F481-4AA2-AE56-D5AAEF177CD8}" ShortID="532029570">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="605418621"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{1D1C0C33-F481-4AA2-AE56-D5AAEF177CD8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{B6695C3B-D1B0-413F-B78E-E2E1200D5CAD}" ShortID="145231647">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{F260E39C-6280-415C-B068-08C5BA8FD75D}" ShortID="745064702">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="816303251"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{F260E39C-6280-415C-B068-08C5BA8FD75D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{B6695C3B-D1B0-413F-B78E-E2E1200D5CAD}"/>
+										<ItemRef Name="empty" ID="{B6695C3B-D1B0-413F-B78E-E2E1200D5CAD}"/>
+										<ItemRef Name="empty" ID="{B6695C3B-D1B0-413F-B78E-E2E1200D5CAD}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{2E4D66B8-BF8A-438F-8603-790BCDB1714C}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_menu_master_slider_scroll" ID="{807AE7AE-07C0-4349-A7F0-2C00510008C8}" ShortID="298466609">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{2F48140D-6388-4D17-9907-834F0CC07EF7}" ShortID="410950539">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{38FCC60B-8F92-4A23-83C6-A860CC643720}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{BEF1D01F-C599-42BD-9DAA-2769F73AA178}" ShortID="925050339">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{34A786F0-9C0E-47EA-9A68-AA6A7906E58C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{765D61EB-086F-4695-AAC8-D3E15344BA28}" ShortID="433157080">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="605418621"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{765D61EB-086F-4695-AAC8-D3E15344BA28}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{F7B42952-4B48-410B-A7E4-DC32CC1285A8}" ShortID="146636067">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{4581A174-BA31-4DD0-86A3-898729739C95}" ShortID="645814002">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="816303251"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{4581A174-BA31-4DD0-86A3-898729739C95}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{F7B42952-4B48-410B-A7E4-DC32CC1285A8}"/>
+										<ItemRef Name="empty" ID="{F7B42952-4B48-410B-A7E4-DC32CC1285A8}"/>
+										<ItemRef Name="empty" ID="{F7B42952-4B48-410B-A7E4-DC32CC1285A8}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{BEF1D01F-C599-42BD-9DAA-2769F73AA178}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_menu_music_slider_scroll" ID="{F4254037-341C-4FD1-9889-DB48DA56B7DF}" ShortID="462723890">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{A653DB0B-1AE1-4B71-B89C-095F33A4F5A9}" ShortID="925558604">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}" WorkUnitID="{148E2D9F-E4C9-4433-B2CD-803F3F69A985}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{DA76E96A-94CE-4979-8BCF-F632FE78BAD5}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_menu_slider_scroll" ID="{6D83826E-1E1C-4FD0-9ECF-FF95681B2838}" ShortID="88819351">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F7D1FFCF-4CF7-4F1E-82E7-F5436608768A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="70"/>
+																	<Property Name="Min" Type="Real64" Value="-70"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Menu Bus" ID="{2A0D334F-8C08-4AED-B1D9-C691078365E1}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BlipBurstingS GFX018902" ID="{4AFF5E33-BE5D-4F7F-80C6-69A12F7FE504}" ShortID="159534879">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="605418621"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BlipBurstingS GFX018902" ID="{4AFF5E33-BE5D-4F7F-80C6-69A12F7FE504}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="empty" ID="{6A9F270B-14AA-411B-8F75-4FDE28312889}" ShortID="87399309">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="empty" ID="{9CB25E5C-E9D1-4558-AAA1-33FC004D9999}" ShortID="159173625">
+													<Language>SFX</Language>
+													<AudioFile>empty.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="816303251"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="empty" ID="{9CB25E5C-E9D1-4558-AAA1-33FC004D9999}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="empty" ID="{6A9F270B-14AA-411B-8F75-4FDE28312889}"/>
+										<ItemRef Name="empty" ID="{6A9F270B-14AA-411B-8F75-4FDE28312889}"/>
+										<ItemRef Name="empty" ID="{6A9F270B-14AA-411B-8F75-4FDE28312889}"/>
+										<ItemRef Name="sfx_menu_slider_scroll" ID="{6D83826E-1E1C-4FD0-9ECF-FF95681B2838}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<Sound Name="sfx_menu_text_scroll_other" ID="{AD7E9E5D-533F-4808-8071-41975284DB18}" ShortID="677650413">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FA954A39-0220-4107-897F-79CB9283F04B}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{21403BB6-82B0-4F8B-8C9F-03F3168FF80C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="70"/>
+															<Property Name="Min" Type="Real64" Value="-70"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5B03EDEC-0C64-4DB8-8D18-29048F45F7F2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BlipBurstingS GFX018902" ID="{C221B0F5-D030-43A6-AB07-DA9272E51A4B}" ShortID="490604235">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="605418621"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Text_Type" ID="{17AD1670-D44D-451F-946E-631BDFEC430B}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Player" ID="{83065F06-15A1-40F4-8EAD-F7C2D09CC459}"/>
+												<State Name="" ID="{7243A8E7-06E1-418D-B5D5-7CB0B75754F7}" ShortID="419567236">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
+												<State Name="" ID="{744B47E5-3095-4189-99E3-9E1A3CD58C6A}" ShortID="178461644">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="BlipBurstingS GFX018902" ID="{C221B0F5-D030-43A6-AB07-DA9272E51A4B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_menu_text_scroll_player" ID="{B1DE9955-9EEC-4009-AA65-9402E8E9DBF7}" ShortID="633381234">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-700</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6DD46114-61DD-407D-8956-4D06833511D0}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="70"/>
+															<Property Name="Min" Type="Real64" Value="-70"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C499EF9C-71C5-4501-85A7-EAEA6BDAF520}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Text Scroll Bus" ID="{6C7ECC3D-D65B-4E22-9B21-36338DABCB14}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BlipBurstingS GFX018902" ID="{04660F41-3117-449E-BA00-FB4FFF31DA0E}" ShortID="720484773">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.71375262526252E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.01482335733573E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>BlipBurstingS GFX018902.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="605418621"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Text_Type" ID="{17AD1670-D44D-451F-946E-631BDFEC430B}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Other" ID="{2FD43BB0-0596-477F-B4DE-D62FE9E61EBD}"/>
+												<State Name="" ID="{3FDA4945-48BD-4A9E-95CA-C7334DC8694A}" ShortID="655913789">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
+												<State Name="" ID="{E390C419-1B68-415C-B58A-870F108E6336}" ShortID="537353831">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="BlipBurstingS GFX018902" ID="{04660F41-3117-449E-BA00-FB4FFF31DA0E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -650,7 +1497,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-11</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

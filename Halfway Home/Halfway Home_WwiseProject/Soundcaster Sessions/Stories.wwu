@@ -102,7 +102,7 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="sfx_menu_text_scroll1" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<ObjectRef Name="sfx_menu_text_scroll_monologue" ID="{4518CA78-0A88-478A-900F-03B0FAF4DFD4}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
@@ -330,6 +330,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Unpaused" ID="{FF773DA1-7DCA-4875-A742-F928CE085354}"/>
+						<CurrentStateRef Name="In_Game" ID="{B1B39C7D-DAFF-4A46-B644-1CD2DAED63EE}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

@@ -1,12 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
+	174248703	play_sfx_menu_music_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_music_slider_scroll	
 	452547817	Stop_All			\PlayMusic\stop\Stop_All	
+	1234546846	play_sfx_menu_ambience_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_ambience_slider_scroll	
 	1720799084	stop_ambience_all			\PlayMusic\intro_ambiences\stop_ambience_all	
+	1732677584	play_sfx_menu_effects_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_effects_slider_scroll	
+	2186895855	play_sfx_menu_interface_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_interface_slider_scroll	
 	2576276897	play_menuclick			\PlaySFX\sfx_menu\play_menuclick	
+	2748965932	play_sfx_menu_master_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_master_slider_scroll	
 	3032100830	Stop_All_Fast			\PlayMusic\stop\Stop_All_Fast	
+	3101734072	play_menuunpause			\PlaySFX\sfx_menu\play_menuunpause	
 	3169174387	play_menuexit			\PlaySFX\sfx_menu\play_menuexit	
+	3596481523	play_menupause			\PlaySFX\sfx_menu\play_menupause	
+	3989971247	play_sfx_menu_slider_scroll			\PlaySFX\sfx_menu\play_sfx_menu_slider_scroll	
 	4008650974	play_menumouseover			\PlaySFX\sfx_menu\play_menumouseover	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	129996979	Ambience_Slider			\UI\Sliders\Ambience_Slider	
+	1127857866	Music_Slider			\UI\Sliders\Music_Slider	
+	2486326433	Master_Slider			\UI\Sliders\Master_Slider	
+	2886374787	Effects_Slider			\UI\Sliders\Effects_Slider	
+	2902037724	Menu_Slider			\UI\Sliders\Menu_Slider	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11926160	sfx_menu_chime_pausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
 	302959056	sfx_menu_chime_exitgame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_exitgame_52423389.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_exitgame		18280
+	558653419	sfx_menu_chime_unpausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
+	605418621	sfx_menu_slider_scroll	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_036F45F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\sfx_menu_slider_scroll		1000
+	816303251	empty	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\empty_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\empty		1324
 	950120731	sfx_menu_button_mouseover	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_button_mouseover_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_button_mouseover		80424
 

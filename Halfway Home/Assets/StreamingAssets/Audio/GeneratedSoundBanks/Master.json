@@ -35,6 +35,46 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menumouseover"
      },
      {
+      "Id": "3596481523",
+      "Name": "play_menupause",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause"
+     },
+     {
+      "Id": "3101734072",
+      "Name": "play_menuunpause",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause"
+     },
+     {
+      "Id": "1234546846",
+      "Name": "play_sfx_menu_ambience_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_ambience_slider_scroll"
+     },
+     {
+      "Id": "1732677584",
+      "Name": "play_sfx_menu_effects_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_effects_slider_scroll"
+     },
+     {
+      "Id": "2186895855",
+      "Name": "play_sfx_menu_interface_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_interface_slider_scroll"
+     },
+     {
+      "Id": "2748965932",
+      "Name": "play_sfx_menu_master_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_master_slider_scroll"
+     },
+     {
+      "Id": "174248703",
+      "Name": "play_sfx_menu_music_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_music_slider_scroll"
+     },
+     {
+      "Id": "3989971247",
+      "Name": "play_sfx_menu_slider_scroll",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_slider_scroll"
+     },
+     {
       "Id": "452547817",
       "Name": "Stop_All",
       "ObjectPath": "\\Events\\PlayMusic\\stop\\Stop_All"
@@ -52,10 +92,34 @@
     ],
     "IncludedMemoryFiles": [
      {
+      "Id": "11926160",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_pausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_pausegame_9F6C56D1.wem"
+     },
+     {
       "Id": "302959056",
       "Language": "SFX",
       "ShortName": "sfx_menu_chime_exitgame.wav",
       "Path": "SFX\\sfx_menu_chime_exitgame_52423389.wem"
+     },
+     {
+      "Id": "558653419",
+      "Language": "SFX",
+      "ShortName": "sfx_menu_chime_unpausegame.wav",
+      "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+     },
+     {
+      "Id": "605418621",
+      "Language": "SFX",
+      "ShortName": "BlipBurstingS GFX018902.wav",
+      "Path": "SFX\\BlipBurstingS GFX018902_036F45F0.wem"
+     },
+     {
+      "Id": "816303251",
+      "Language": "SFX",
+      "ShortName": "empty.wav",
+      "Path": "SFX\\empty_00FA84C2.wem"
      },
      {
       "Id": "950120731",

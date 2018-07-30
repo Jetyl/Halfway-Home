@@ -16,14 +16,38 @@
 				<Event Id="2576276897" Name="play_menuclick" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuclick"/>
 				<Event Id="3169174387" Name="play_menuexit" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuexit"/>
 				<Event Id="4008650974" Name="play_menumouseover" ObjectPath="\Events\PlaySFX\sfx_menu\play_menumouseover"/>
+				<Event Id="3596481523" Name="play_menupause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menupause"/>
+				<Event Id="3101734072" Name="play_menuunpause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuunpause"/>
+				<Event Id="1234546846" Name="play_sfx_menu_ambience_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_ambience_slider_scroll"/>
+				<Event Id="1732677584" Name="play_sfx_menu_effects_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_effects_slider_scroll"/>
+				<Event Id="2186895855" Name="play_sfx_menu_interface_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_interface_slider_scroll"/>
+				<Event Id="2748965932" Name="play_sfx_menu_master_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_master_slider_scroll"/>
+				<Event Id="174248703" Name="play_sfx_menu_music_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_music_slider_scroll"/>
+				<Event Id="3989971247" Name="play_sfx_menu_slider_scroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_slider_scroll"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\PlayMusic\stop\Stop_All"/>
 				<Event Id="3032100830" Name="Stop_All_Fast" ObjectPath="\Events\PlayMusic\stop\Stop_All_Fast"/>
 				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\intro_ambiences\stop_ambience_all"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="11926160" Language="SFX">
+					<ShortName>sfx_menu_chime_pausegame.wav</ShortName>
+					<Path>SFX\sfx_menu_chime_pausegame_9F6C56D1.wem</Path>
+				</File>
 				<File Id="302959056" Language="SFX">
 					<ShortName>sfx_menu_chime_exitgame.wav</ShortName>
 					<Path>SFX\sfx_menu_chime_exitgame_52423389.wem</Path>
+				</File>
+				<File Id="558653419" Language="SFX">
+					<ShortName>sfx_menu_chime_unpausegame.wav</ShortName>
+					<Path>SFX\sfx_menu_chime_unpausegame_78AC25A7.wem</Path>
+				</File>
+				<File Id="605418621" Language="SFX">
+					<ShortName>BlipBurstingS GFX018902.wav</ShortName>
+					<Path>SFX\BlipBurstingS GFX018902_036F45F0.wem</Path>
+				</File>
+				<File Id="816303251" Language="SFX">
+					<ShortName>empty.wav</ShortName>
+					<Path>SFX\empty_00FA84C2.wem</Path>
 				</File>
 				<File Id="950120731" Language="SFX">
 					<ShortName>sfx_menu_button_mouseover.wav</ShortName>

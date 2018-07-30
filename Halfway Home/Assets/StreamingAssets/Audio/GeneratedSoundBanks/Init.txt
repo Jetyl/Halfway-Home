@@ -1,8 +1,12 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	557060015	Text_Type			\Default Work Unit\Text_Type	
 	766723505	Game_State			\Default Work Unit\Game_State	
 	3092587493	Pause			\Default Work Unit\Pause	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Text_Type			
+	3368367120	Monologue	Text_Type			
+	3930136735	Dialogue	Text_Type			
 	748895195	None	Game_State			
 	2005704188	Main_Menu	Game_State			
 	2967546505	In_Game	Game_State			

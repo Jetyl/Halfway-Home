@@ -18,11 +18,19 @@
 					<Comment>Loaded at all times</Comment>
 					<ObjectInclusionList>
 						<ObjectRef Name="play_menuexit" ID="{440839FD-D3DA-4174-A757-20C65AF875A2}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_music_slider_scroll" ID="{6E32E0E7-25A8-417F-8E92-723F346C9FE8}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_All" ID="{DD212011-1815-41B2-97DC-BBBF570D32E5}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_interface_slider_scroll" ID="{B319D5F0-71AC-41C3-A159-28E2CD9853ED}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_master_slider_scroll" ID="{DDEB993B-C301-4542-B0C4-00BC39EE8C3A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_All_Fast" ID="{C6A10C8A-5723-4612-966E-7CC27EA11A98}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuclick" ID="{527D63B5-0283-49AA-BD7E-7DD5169D1A17}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_effects_slider_scroll" ID="{C71DFA2B-C3AB-4D1B-B2D6-9EB1175159C4}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_slider_scroll" ID="{E0070DBF-66D0-4DB8-995F-4DCCA2372BC6}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stop_ambience_all" ID="{35222556-C09F-4F2B-8799-96863F957830}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menumouseover" ID="{0FD92513-D63A-4FB0-A5BD-9E0D9EC74850}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_ambience_slider_scroll" ID="{13DCCCA0-3CFF-4FBE-8991-FF86E16C28F0}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -30,9 +38,9 @@
 				<SoundBank Name="Main" ID="{18D602BC-DD91-4011-B7FA-34BF75883CAB}">
 					<Comment>Loaded after the main menu</Comment>
 					<ObjectInclusionList>
-						<ObjectRef Name="play_menupause_01" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_menuunpause_01" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_notebook" ID="{F1AAAD28-9659-4E36-9AC1-69B95FA0B2ED}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
