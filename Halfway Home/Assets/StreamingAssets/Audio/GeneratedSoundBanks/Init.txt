@@ -5,8 +5,9 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	Text_Type			
+	1069431850	Player	Text_Type			
+	2376466361	Other	Text_Type			
 	3368367120	Monologue	Text_Type			
-	3930136735	Dialogue	Text_Type			
 	748895195	None	Game_State			
 	2005704188	Main_Menu	Game_State			
 	2967546505	In_Game	Game_State			

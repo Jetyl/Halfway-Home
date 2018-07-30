@@ -184,7 +184,7 @@ Eduardo on the other hand...
 "Hey, Isaac. Isaac?"
 [Isaac] "..."
 Isaac seems to be lost in his own little world right now.
-[Eduardo] "<flow>Isaaaac!</flow>" //#Eduardo = Exit, stage_right #Isaac = Exit, stage_right EXITS REMOVED UNTIL CG IMPLEMENTED
+[Eduardo] "<flow>Isaaaac!</flow>" #Eduardo = Exit, stage_right #Isaac = Exit, stage_right //EXITS REMOVED UNTIL CG IMPLEMENTED
 -> Needy ->ExitWithTimothy
 
 ===ExitWithTimothy===
@@ -216,17 +216,17 @@ And Eduardo goes right back to Isaac, which is my queue to get going.
 -> END
 
 === Needy ===
-Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # Eduardo = Happy, stage_right, Right   # Isaac = Calm, stage_right, Left //Show the CG
+Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # Needy = Bored, stage_right //Show the CG
 Isaac looks off to another part of the room.
 The two are rather well known for the PDA around the home. One of them more so than the other.
 [Isaac] "Used to be worse."
 Isaac responds as if he can read my mind.
-"Eduardo used to have no respect for <i>anyone's</i> boundaries." # Isaac = Calm
+"Eduardo used to have no respect for <i>anyone's</i> boundaries."
 "Now it's just mine."
 [Eduardo] "What can I say? I'm needy."
 [Isaac] "Hrm."
-[Eduardo] "And I <flow><i>wuv</i>,/flow> you!" # Eduardo = Happy//make the CG blush
+[Eduardo] "And I <flow><i>wuv</i>,/flow> you!" # Needy = blush
 <i>Yikes</i> that's cheesy.
-Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him. # Isaac = Happy
-Relationships are weird.
+Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him.
+Relationships are weird. #Needy = Exit
 ->->
