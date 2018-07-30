@@ -67,9 +67,8 @@ public class MainMenu : MonoBehaviour
     void Awake()
     {
         // Load Soundbanks
-        Debug.Log("MAIN MENU SOUNDBANKS LOADED");
-        AkBankManager.LoadBankAsync("MainMenu");
-        AkBankManager.LoadBankAsync("Master");
+        //AkBankManager.LoadBankAsync("MainMenu");
+        AkBankManager.LoadBank("Master", true, true);
         
         // Reset RTPCs
         AkSoundEngine.SetRTPCValue("ambience_lpf", 0);
@@ -78,6 +77,9 @@ public class MainMenu : MonoBehaviour
         AkSoundEngine.SetRTPCValue("music_tension_state", 0);
         AkSoundEngine.SetRTPCValue("music_vol", 0);
         AkSoundEngine.SetRTPCValue("text_vol", 0);
+        
+        // Reset 'pause' game state
+        AkSoundEngine.SetState("Pause", "Unpaused");
     }
 
     public void NewGame()
