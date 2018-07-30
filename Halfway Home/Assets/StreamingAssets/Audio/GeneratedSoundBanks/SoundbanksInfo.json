@@ -717,6 +717,11 @@
     "Path": "Main.bnk",
     "IncludedEvents": [
      {
+      "Id": "1078840671",
+      "Name": "Heartattack",
+      "ObjectPath": "\\Events\\PlayMusic\\stop\\Heartattack"
+     },
+     {
       "Id": "3596481523",
       "Name": "play_menupause",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menupause"
