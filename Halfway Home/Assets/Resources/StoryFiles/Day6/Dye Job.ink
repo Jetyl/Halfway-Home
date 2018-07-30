@@ -40,20 +40,6 @@ I stagger into the room with a yawn.
 	-else:
 		I barely make it onto the bed before sleep takes me. #Background / Dream, eyeclose // FORMERLY: before I close my eyes to rest.
 }
-// CUT: I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, eyeclose
-/* Elipses imply waiting, not sleeping. Cutting straight to the wake-up, but putting a delay on the next line.
-... //{SetValue("Depression Time Dilation", false)}
-......{SetTimeBlock(0)} 
-{
-	-GetIntValue("Day") > 4:
-		......... {CallSleep()} #set_time%6,8
-	-else:
-		......... {CallSleep()} #set_time%5,8
-}
-
-# Play : Stop_All
-
-*/
 {
 -GetIntValue("Day")>4:
 	#set_time%6,8
@@ -74,7 +60,7 @@ I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! Um... well... you remember what I said yesterday about hanging out..."
 "I was kinda hoping you could... <size=50%>help me dye my hair."
 [{player_name}] "You want to dye your hair?"
-Huh. I didn't expect that.
+{Huh. I didn't expect that.|Even though I'm not surprised like I was the first time, I still play my part.}
 Unexpected is good.
 [Timothy] "Ye-yeah. I've um... never done something like this, and I-I was wondering if I could get your help with it?"
 [{player_name}] "Uh, sure." # 7 & InProgress
@@ -82,15 +68,29 @@ Unexpected is good.
 "I'll meet you in the common area when you're ready."
 Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = Exit
 It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe #Timothy = Calm // I feel like this line can be improved, but I'm not sure how yet
-->PinkHairedExpert
+->InTheCommons
 
-===PinkHairedExpert===
+===InTheCommons===
 [{player_name}] "Okay, I'm ready."   # Play : play_music_happy
 [Timothy] "Thanks again, {player_name}."
 [{player_name}] "It's no big deal."
-"So, where is the stuff? Are we going to do this in our bathroom or the public restroom?" #Timothy = Surprised
-[Timothy] "Oh, uh, I don't have any stuff..."
+"{So, where is the stuff? Are we going to do this in our bathroom or the public restroom?|Do you <i>have</i> any hair dye, man?}" #Timothy = Surprised
+{InTheCommons>1:I ask despite knowing the answer already.}
+[Timothy] "Oh, uh, {I don't have any stuff|no}..."
 "I was hoping you would know where we could get the stuff we need..."
+{->PinkHairedExpert|->Prescience}
+
+= Prescience
+[{player_name}] "You're in luck. As it happens, I know exactly where to get some." # Timothy = Surprised
+[Timothy] "Wha- really?"
+[{player_name}] "If you want to prepare the bathroom, I'll be right back..."
+[Timothy] "Okay!" # Timothy = Happy
+Using what I remember from last time, I manage to get the receipt and the hair dye box in less than ten minutes.
+Being stuck in a perpetual time loop has its moments, I guess.
+While doing things over and over again can get old, I don't think I'll ever get tired of this feeling.
+-> TimeToDye
+
+= PinkHairedExpert
 [{player_name}] "Really? Uh, okay."
 I'm not sure why Timothy thought I'd be super knowledgeable about hair products. 
 My only relevant experience was tie-dying a shirt in elementary school.
@@ -469,58 +469,64 @@ Timothy and I {begin checking behind books, beside shelves, and under the furnit
 
 ===TimeToDye===
 With the supplies in hand, I lead Timothy back to our bathroom to get started. #Background / YourRoom, blackwipe #Timothy = Happy
-[{player_name}] "Okay, so, We've got a bunch of crazy color options here. Man, Eduardo really likes neon bright colors."
+[{player_name}] "We've got a bunch of crazy color options here. Man, Eduardo really likes neon bright colors."
 "So, Timothy, what color would you like?"
 [Timothy] "Blue! P-please!"
 [{player_name}] "Okay, blue it is."
-I shake the blue bottle, as I direct Timothy where to sit. #Timothy = Exit
-I mix the materials, and begin  lathering it on his hair.
-[{player_name}] "So, it says its going to sting a little, but don't worry."
-[Timothy] "okay."
+I {start reading|look over} the directions on the side of the bottle.
+{I've never done this before, but how hard could it be?|After almost botching it up last time, I'm careful to follow the directions more carefully this time.|I've got this. No sweat.}
+I shake the blue bottle as I direct Timothy where to sit. #Timothy = Exit
+{I start mixing the materials, but I put way too much color in and have to dilute it.|I very carefully mix the materials, taking care not to use too much color.|I confidently mix the materials in the correct proportions.}
+{We've got more than we need now, but Eduardo never uses blue anyway.|It takes a bit longer, but I think I've got it right this time.|It looks good. Just gotta apply it now.}
+[{player_name}] "So... it says it's going to sting a little, {just warning you|but don't worry. It's not bad}."
+[Timothy] "Okay."
 [{player_name}] "So, why did you want to dye you hair all of a sudden?"
 [Timothy] "W-well..."
 "I wanted to... do something to ex-express myself."
-"I-I'm really bad at t-t-talking, s-so."
-"And, I don't really like my hair color. It-it's just boring black, and I thought,"
-"With my hair a cool color, i can express myself naturally, and if i get stressed, I can just n-not think about it."
-"out of sight, out of mind. Y-you know."
-"I D-did something like this b-before. @A l-long long time ago. @I p-painted my nails once."
-"I h-had to look at them too o-often, and I g-got self conscious."
+"I-I'm really bad at t-talking..."
+"And I don't really like my hair color. It's just boring black, and I thought..."
+"Since I always get stressed out thinking about ex-expressing myself..."
+"E-even now. But..."
+"With my hair a cool color, I can express myself and n-not think about it."
+"Out of sight, out of mind. Y-you know."
+"I did something like this b-before. @A long long time ago. @I... <size=80%>painted my nails once.<size=100%>"
+"I had to look at them too o-often, and I got self-conscious."
 "A-and..."
-He was starting to shiver quite a lot, so, I stopped applying to dye for a second.
-[{player_name}] "Its okay Timothy. You're okay. You want me to stop. We can wash it out right now if you want?"
-He stops shivering, before taking a deep breath.
+He starts shivering. Alarmed, I stop applying the dye.
+[{player_name}] "It's okay Timothy. You're okay. You want me to stop? We can wash it out right now if you want."
+He stops shivering and takes a deep breath.
 [Timothy] "No. I'm okay. I... want this."
 [{player_name}] "Okay."
 I resume applying the hair dye.
-Dying someones hair is actually a fairly time extensive process, and before I know it, a few hours have gone by before we're done. #time %3
+Dying someones hair is actually a fairly time-consuming process and it's a few hours before we're done. #time %3
 "Okay Timothy, it should be good now, you can wash out your hair, and see what it looks like."
-[Timothy] "okay."
+[Timothy] "Okay. I kept waiting for it to sting real bad, but it never really did."
 "..." #Dyed / Open, ArmsU, MShock, ArmsL
 "..." #Dyed / ArmsD, YShock
 "...I..." #Dyed / MShock
 "...I...Like it!" #Dyed / MHappy
 [{player_name}] "Awesome."
-"though, you might want to finish washing the dye out before you claim success. its still wet, and coming off in your hands." #Dyed / YSad
-"right now it looks like you killed a smurf."
+"Though you might want to finish washing the dye out before you claim success. It's still wet and coming off in your hands." #Dyed / YSad
+"It looks like you murdered a smurf."
 [Timothy] "Oh! Okay."
-I leave Timothy to finish cleaning himself up, wait out on my bed. #background / YourRoom, crossfade
-It doesn't take long for him to come out good as new. #Timothy / Happy
+I leave Timothy to finish cleaning himself up and wait on my bed. #Background / YourRoom, crossfade
+I don't have to wait long. #Timothy / Happy //It doesn't take long for him to come out good as new.
 "H-h-how do I look?"
-[{player_name}] "Good. How do you feel."
+[{player_name}] "Good! How do you feel?"
 [Timothy] "I feel... really giddy."
 "I think... I like it!"
 [{player_name}] "That's good."
-[Timothy] "Th-Thank you {player_name}. Thank you soooooo much."
-"Y-you know, I was really scared coming here after Blackwell, but now, I am really glad I did."
-"I-I know we've only known each other a few days, and your leaving soon, b-but."
-"I-I really do think of you as a friend. I-I-I hope you do too."
-[{player_name}] "Of course Timothy."
-Timothy gives me a hug.
-Timothy's stomach grumbles.
-[Timothy] "I uh, guess I am hungry. W-want to go grab something to eat?"
+[Timothy] "Th-Thank you. {player_name}. Thank you soooooo much!"
+"Y-you know, I was really scared coming here after Blackwell, but now... I'm really glad I did."
+"I-I know we've only known each other a few days... and you're leaving soon, b-but."
+I guess it really has been only a few days for him. I feel like I've known him for weeks at this point.
+"I-I really do think of you as a friend. I-I hope you do too."
+[{player_name}] "Of course, Timothy."
+Timothy gives me a hug. # Timothy = Close
+The moment is interrupted by a low growl from Timothy's stomach. # Timothy = Center
+[Timothy] "I uh, guess I'm hungry. W-want to go grab something to eat?"
 [{player_name}] "In a bit. See you down there."
 [Timothy] "Okay. See ya."
-Timothy runs off, having more of a kick in his step than I've seen from him all week. #Timothy = Exit
-I think he's going to be all right here. 
+Timothy practically skips out of the room. He's got more spring in his step than I've seen from him all week. #Timothy = Exit //REVISED from "Timothy runs off, having more of a kick in his step than I've seen from him all week.""
+I think he's going to be alright here. 
 ->END
