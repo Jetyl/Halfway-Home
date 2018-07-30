@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
+	1078840671	Heartattack			\PlayMusic\stop\Heartattack	
 	1091239431	play_sfx_human_notebook			\PlaySFX\sfx_human\play_sfx_human_notebook	
 	3101734072	play_menuunpause			\PlaySFX\sfx_menu\play_menuunpause	
 	3596481523	play_menupause			\PlaySFX\sfx_menu\play_menupause	

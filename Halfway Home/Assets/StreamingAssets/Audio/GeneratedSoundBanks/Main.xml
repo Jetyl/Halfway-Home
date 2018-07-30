@@ -13,6 +13,7 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1078840671" Name="Heartattack" ObjectPath="\Events\PlayMusic\stop\Heartattack"/>
 				<Event Id="3596481523" Name="play_menupause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menupause"/>
 				<Event Id="3101734072" Name="play_menuunpause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuunpause"/>
 				<Event Id="1091239431" Name="play_sfx_human_notebook" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_notebook"/>
