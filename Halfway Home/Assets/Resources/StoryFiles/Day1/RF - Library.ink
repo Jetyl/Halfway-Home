@@ -34,7 +34,7 @@ EXTERNAL GetStringValue(value)
 [{player_name}] "Yeah... they fit a 'lotta books into a small space."
 "They have book recommendations, if you find the selection overwhelming."
 "I know I did."
-"I find that reading can give me a better perspective on things, which helps me to act with a bit more <color=color_grace>grace</color." # Grace * Show
+"I find that reading can give me a better perspective on things, which helps me to act with a bit more <color=color_grace>grace</color>." # Grace * Show
 "But I'm not a fast reader, so it kinda <color=color_wellbeing_penalty>stresses</color> me out. Reading at night also makes me extra <color=color_wellbeing_penalty>fatigued</color>."
 {
 	-week == 1:
