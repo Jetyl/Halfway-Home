@@ -8,6 +8,8 @@ public class SFXOnSpeaker : MonoBehaviour
     public string Speaker;
 
     public string SoundEffectTag;
+
+    public string StopSoundTag;
     
     bool SoundON;
 
@@ -39,7 +41,7 @@ public class SFXOnSpeaker : MonoBehaviour
         if (!Active && SoundON)
         {
             SoundON = false;
-            //stop heart beat SFX event here later.
+            Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.ALayer, StopSoundTag));
         }
 
     }

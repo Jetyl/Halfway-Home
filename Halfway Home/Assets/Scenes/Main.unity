@@ -6034,8 +6034,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.845109
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9093,7 +9093,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.8
+  m_fontSize: 70.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16072,7 +16072,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.1
+  m_fontSize: 57.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -42529,6 +42529,7 @@ GameObject:
   - component: {fileID: 1174770653}
   - component: {fileID: 1174770655}
   - component: {fileID: 1174770656}
+  - component: {fileID: 1174770657}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42690,6 +42691,20 @@ MonoBehaviour:
   ActiveTag: Invert On
   Speakers:
   - Voices
+--- !u!114 &1174770657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1174770646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9221ebd6e1e0df343bbcd9c872c82c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: Voices
+  SoundEffectTag: play_sfx_ambient_heartbeat
+  StopSoundTag: Heartattack
 --- !u!1 &1177578893
 GameObject:
   m_ObjectHideFlags: 0
@@ -53787,7 +53802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.7311}
+  m_AnchoredPosition: {x: 0, y: 903.01373}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -58268,7 +58283,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.85
+  m_fontSize: 66.9
   m_fontSizeBase: 69
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -58445,74 +58460,74 @@ MonoBehaviour:
   JitterIntensity: 2.17
   GlitchJitterIntensity: 30
   GlitchUVFuckupIntensity: 0.3
-  PulseIntensity: 0.1
-  PulseSpeed: 0.7
-  PulseColor: {r: 1, g: 0.63235295, b: 0.63235295, a: 1}
+  PulseIntensity: 0.15
+  PulseSpeed: 1.05
+  PulseColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
   PulseCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: -0.0036251163
+      time: -0.5017701
       value: 0.003847003
       inSlope: 0.019306775
       outSlope: 0.019306775
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.08270381
+      time: -0.4154412
       value: 0.0039827824
       inSlope: 0.012520849
       outSlope: 0.012520849
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.14399943
+      time: -0.35414556
       value: 0.10369283
       inSlope: -0.02488494
       outSlope: -0.02488494
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.1922642
+      time: -0.30588078
       value: -0.09936464
       inSlope: -0.0032782555
       outSlope: -0.0032782555
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.24975047
+      time: -0.24839452
       value: 0.0029705465
       inSlope: 0.055347327
       outSlope: 0.055347327
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.32420385
+      time: -0.17394114
       value: 0.008239031
       inSlope: 0.2309291
       outSlope: 0.2309291
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.4962256
+      time: -0.0019193888
       value: 0.5018609
       inSlope: 0.004797283
       outSlope: 0.004797283
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.6557568
+      time: 0.15761179
       value: -0.48765755
       inSlope: -0.00033527613
       outSlope: -0.00033527613
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.7954964
+      time: 0.29735142
       value: 0.003044635
       inSlope: -0.0022910535
       outSlope: -0.0022910535
       tangentMode: 0
     - serializedVersion: 2
-      time: 1.0038043
+      time: 0.50565934
       value: 0.007501483
       inSlope: 0.020406935
       outSlope: 0.020406935
       tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+    m_PreInfinity: 1
+    m_PostInfinity: 1
     m_RotationOrder: 0
   FlowIntensity: 5
   FlowSpeed: 5

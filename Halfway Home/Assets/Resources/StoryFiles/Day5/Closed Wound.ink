@@ -58,9 +58,14 @@ I can finally escape this dream and leave this place.
 = Again
 That damn letter is the root of so much pain.
 {awareness==5:
-	I will help him as many times as he needs...
-	To see that he is loved.
-	To see that he is strong.
+	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	+[Skip] 
+		I step into the room and submit myself to the flood of memories. It plays out exactly as before... # Background / YourRoom, Blackwipe
+	    -> ClosedWound.Understanding
+	+[Continue]
+		I will help him as many times as he needs...
+		To see that he is loved.
+		To see that he is strong.
 -else:
 	I wasn't able to help you last time...
 	But maybe...
@@ -69,12 +74,12 @@ That damn letter is the root of so much pain.
 
 = Enter
 I slide the key into the lock and the door swings open.
-I step inside, gently nudging the door closed behind me. # Background / YourRoom, blackwipe
+I step inside, gently nudging the door closed behind me. # Wound / Down, Blackwipe
 -> ClosedWound
 
 ===ClosedWound===
-Timothy is curled up on his bed {firsttime:facing away from the door.|, just like before.}
-An open letter rests on the pillow beside a torn envelope.
+Timothy is curled up on his bed {firsttime:with his head buried in his arms.|, just like before.}
+An open letter rests on the foot of the bed beside a torn envelope.
 Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 ~temp lookLetter = false
 ->InitialChoice
@@ -112,16 +117,17 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance.
 -else:
 	[{player_name}] "Sorry for intruding, but you look like you could use some company." # grace ^ good
 }
-Timothy shoots upright and looks at me, surprised. # Timothy = Afraid
+Timothy's head shoots upright, a look of surprise clear on his face. # Timothy = Afraid # Wound / Up
 His red-eyed face is ghostly pale.
-[Timothy] "O-oh! Hey, {player_name}." # Timothy = Surprised
-"<size=80%>Y-you startled me...<size=100%>" # Timothy = Calm
+[Timothy] "O-oh! Hey, {player_name}." //# Timothy = Surprised
+"<size=80%>Y-you startled me...<size=100%>" //# Timothy = Calm
 [{player_name}] "I wasn't trying too... I did knock!"
 "Wait, no I didn't. <size=60%>That was another time...<size=100%>"
 "Apologies. Guess I'm all turned around today."
-[Timothy] "Heh. I can relate." # Timothy = Happy
+[Timothy] "Heh. I can relate." //# Timothy = Happy
 [{player_name}] "So... you doin' okay in here?"
-[Timothy] "Oh. Yeah, I..." # Timothy = Surprised
+[Timothy] "Oh. Yeah, I..." //# Timothy = Surprised
+Timothy stretches and clambers off the bed. # Background / YourRoom
 {GetIntValue("TimothyPoints")>5:
 	Timothy sighs. # Timothy = Sad
 	"I'm trying not to think about it."
@@ -147,8 +153,9 @@ His red-eyed face is ghostly pale.
 	    ->Tangents
 	}
 -else:
-	(You have {GetIntValue("TimothyPoints")} Timothy Points)
+	//(You have {GetIntValue("TimothyPoints")} Timothy Points)
 	"I'm fine. You don't need to worry about me." # Timothy = Calm
+	I probably haven't spent enough time with Timothy this week for him to feel like he can open up to me...
 	->Tangents
 }
 
@@ -169,18 +176,12 @@ Ugh, parents sometimes.
 It kinda makes me think how lucky I am not to have my own family breathing down my neck.
 My family gave me nothing but support and time while I spent those years in Blackwell. @It's the only thing that made it bearable.
 I had time to breathe. Time to grow. I could be alone and safe where I was.
-//inkling of doubt. was that really enough?
-//following this thread of doubt
-//sam pulls the sting and follows it out to the truth
-//which gets to what they really needed. to talk to people. to engage with people
-//and they look on thier growth over the week vs thr year
-//then it flows into "oh god I've been lying to myself havent i" moment
 Alone...
 A strange sense of doubt washes over me.
 Then I came here... to Sunflower House.
 It was supposed to be my chance to readjust, but...
 I spent all my time here alone, just like I did at Blackwell.
-The sensation grows stronger. // i know this line is ment to follow 179, but it feels weird still
+The gnawing doubt grows stronger.
 I think about all the times Max asked me how I was feeling.
 Did I ever tell them the truth?
 I told myself that I was fine. That staying in my room was best for everyone.
@@ -188,16 +189,12 @@ But... This last week... Weeks?
 Everything changed. Timothy. Eduardo. Charlotte. All of these experiences.
 //alternate line if truely ready, here
 I... I feel so different now. Is <i>this</i> what it feels like to be ready to move on? //it is possible to get here and still not break the loop, so...
-If so, then...
+Or at least to be close? If so, then...
 The doubt in the back of my mind turns to dread and sinks into the pit of my stomach.
 Oh. I've been lying to myself this entire time.
 //alternate line if truely ready, here
 I wasn't ready to leave at all. I didn't even know what it <i>meant</i> to be ready.
-//I came here, to Sunflower House. And I've gotten the support I needed to grow. @To be better. To leave...
-//I think I'm finally beginning to understand what Sunflower House really is... //this revelation feels off
-//To leave...
-//Thats probably why. Why I've been lying to myself about being ready to leave it behind.
-//And that I've been lying to myself about being ready to leave it behind.
+{grace==5 && expression == 5 && awareness >= 4: But I think I do now.}
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 	~SetValue("EarnedWoundStar", true)
@@ -308,6 +305,9 @@ Timothy looks around the room nervously.
 I neglect to mention that my last couple of dreams somehow involved Timothy despite my not having known him at the time.
 [{player_name}] "Anyway, that's pretty much everything. You're up to speed on the life and times of {player_name}."
 Timothy stands silently, kneading his shirt with his hands. After a long pause, he finally breaks the silence.
+-> Understanding
+
+= Understanding
 [Timothy] "Thanks for sharing all that with me, {player_name}. I-" #Timothy = happy
 //"I really needed a friend I could trust, and you've proven yourself exactly that." # Timothy = Happy //feels to blatent, too telly
 "I just wish I could help somehow." # Timothy = Sad
