@@ -165,11 +165,11 @@ I walk over to they pair, Timothy in tow.
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
 [Isaac] "Sorry. Eddy's super manic right now. Makes him kind of a jerk."
-[Eduardo] "...Eddy?" #Eduardo = Afraid
+[Eduardo>Eddy] "...Eddy?" #Eduardo = Afraid
 [Isaac] "Some people don't like nicknames." #Isaac = Left
 [Eduardo>Eddy] "C'mon Isaac, you know I didn't mean it!"
 [Isaac] "Hrm."
-Isaac appears to be able to completely ignore Eduardo in an instant. Instead he looks back at Timothy.
+Isaac appears to be able to completely ignore Eduardo in an instant. Instead he looks back at Timothy. #Eduardo = Exit
 [Isaac] "Sorry... About that."
 [Timothy] "It's okay."
 [Isaac] "Isaac. Isaac Avidan."
@@ -178,8 +178,8 @@ Isaac appears to be able to completely ignore Eduardo in an instant. Instead he 
 "..."   # Play : Stop_All
 [Timothy] "..."
 [{player_name}] "..."
-Isaac just goes back to working on his art piece like we aren't here. I suppose he feels the conversation is over.
-Eduardo on the other hand...
+Isaac just goes back to working on his art piece like we aren't here. I suppose he feels the conversation is over. #Isaac = right, stage_right
+Eduardo on the other hand... #Eduardo = Calm, right
 [Eduardo] "Hey Isaac, you know I was just pulling some fun, right? Isaac?"
 "Hey, Isaac. Isaac?"
 [Isaac] "..."
@@ -225,7 +225,7 @@ Isaac responds as if he can read my mind.
 "Now it's just mine."
 [Eduardo] "What can I say? I'm needy."
 [Isaac] "Hrm."
-[Eduardo] "And I <flow><i>wuv</i>,/flow> you!" # Needy = blush
+[Eduardo] "And I <flow><i>wuv</i>,</flow> you!" # Needy = blush
 <i>Yikes</i> that's cheesy.
 Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him.
 Relationships are weird. #Needy = Exit
