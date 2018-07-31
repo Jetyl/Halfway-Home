@@ -108,7 +108,7 @@ What?
 +[I remember (Lie)]
 	[{player_name}] "Uh, y-yeah, I, uh, remember that."
 +[No (Honest)]
-	[{player_name}] "... @No."
+	[{player_name}] "...No."
 -Max looks disappointed in me. It's a sadly common look.   # Keyless = Sad
 [Keyless>Max] "Look, I know you'd prefer not having a roommate foisted on you your last week, but we're tight on space right now." // Added reference to it being last week here
 "Besides, I think it'll be good for both of you." // OLD LINE: It'll only be for one week
