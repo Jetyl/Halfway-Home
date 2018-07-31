@@ -111,9 +111,13 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.Tag.ToLower() == CurrentCG)
                 {
-                    LoadBanks(room.Bank);
-                    CallSound(room.MusicTrack[0], false);
-                    CallSound(room.Ambience[0], true);
+                    if(!eventdata.AudioOverride)
+                    {
+                        LoadBanks(room.Bank);
+                        CallSound(room.MusicTrack[0], false);
+                        CallSound(room.Ambience[0], true);
+                    }
+                    
 
                     BackdropChange(room.Backdrops[0], eventdata.Transitions);
                     return;
@@ -132,20 +136,18 @@ public class StageDisplay : MonoBehaviour
             {
                 if (room.ID == CurrentRoom)
                 {
-                    LoadBanks(room.Bank);
-                    
+                    int day = 1;
                     if (Game.current.Hour >= DayTimeStart && Game.current.Hour <= DayTimeEnd)
+                        day = 0;
+                    
+                    if(!eventdata.AudioOverride)
                     {
-                        CallSound(room.MusicTrack[0], false);
-                        CallSound(room.Ambience[0], true);
-                        BackdropChange(room.Backdrops[0], eventdata.Transitions);
+                        LoadBanks(room.Bank);
+                        CallSound(room.MusicTrack[day], false);
+                        CallSound(room.Ambience[day], true);
                     }
-                    else
-                    {
-                        CallSound(room.MusicTrack[1], false);
-                        CallSound(room.Ambience[1], true);
-                        BackdropChange(room.Backdrops[1], eventdata.Transitions);
-                    }
+
+                    BackdropChange(room.Backdrops[day], eventdata.Transitions);
                 }
                     
             }
@@ -380,12 +382,14 @@ public class StageDirectionEvent : DefaultEvent
     public string character;
     public Room Backdrop;
     public TransitionTypes Transitions;
+    public bool AudioOverride;
     
     public StageDirectionEvent(Room scenery, string tag = "", TransitionTypes move = TransitionTypes.CrossFade)
     {
         Backdrop = scenery;
         character = tag;
         Transitions = move;
+        AudioOverride = false;
     }
     
     public StageDirectionEvent(string data)
@@ -426,6 +430,12 @@ public class StageDirectionEvent : DefaultEvent
 
             if (stop)
                 continue;
+
+            if(directions.ToLower() == "audiooverride" || directions.ToLower() == "nodefaults")
+            {
+                AudioOverride = true;
+                continue;
+            }
             
             character = directions.ToLower();
                 
