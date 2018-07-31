@@ -165,7 +165,7 @@ I walk over to they pair, Timothy in tow.
 "Oof!" #Eduardo = Surprised
 Isaac jabs him in the stomach. #Eduardo = Left #Isaac = Angry
 [Isaac] "Sorry. Eddy's super manic right now. Makes him kind of a jerk."
-[Eduardo>Eddy] "...Eddy?" #Eduardo = Afraid
+[Eduardo>Eddy] "...Eddy?" #Eduardo = Afraid, right
 [Isaac] "Some people don't like nicknames." #Isaac = Left
 [Eduardo>Eddy] "C'mon Isaac, you know I didn't mean it!"
 [Isaac] "Hrm."
@@ -208,16 +208,16 @@ Off to do something else, I suppose. #All = Exit
 [Eduardo>Eddy] "Oh, yeah. Shit, man. Sorry. Didn't mean to make you uncomfortable." # Eduardo = Surprised, Left
 [Timothy] "It's<delay=2> okay."
 [{player_name}] "I'm sorry, too. For calling you Eddy."
-[Isaac] "He deserved it."
-[Eduardo] "Isaac!"
+[Isaac] "He deserved it." #Isaac = Calm, right
+[Eduardo] "Isaac!" #Eduardo = right
 And Eduardo goes right back to Isaac, which is my queue to get going.
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
 [Isaac] "Hrm." #All = Exit
 -> END
 
 === Needy ===
-Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # Needy = Bored, stage_right //Show the CG
-Isaac looks off to another part of the room.
+Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love # Needy = Bored, stage_right #Eduardo = stage_right #Isaac = stage_right
+Isaac looks off to another part of the room. 
 The two are rather well known for the PDA around the home. One of them more so than the other.
 [Isaac] "Used to be worse."
 Isaac responds as if he can read my mind.
