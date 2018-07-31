@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID HEARTATTACK = 1078840671U;
         static const AkUniqueID LPF1K_MUSIC_MAINMENU = 3373299806U;
         static const AkUniqueID LPF4K_MUSIC_MAINMENU = 3370483183U;
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
