@@ -446,7 +446,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	"Happy hunting, you two."
 -else:
 	[Charlotte] "Perhaps you will be more likely to remember if I express myself more simply." # Charlotte = Surprised
-	"Eduardo's hair dye is probably locked in the café storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
+	"Eduardo's hair dye is probably locked in the cafe storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
 	[Timothy] "Thanks again, Charlotte."
 } 
 Timothy and I leave Charlotte to her business and regroup at the front of the library. # All = Exit

@@ -38,9 +38,9 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-I walk down the halls of the home, and here some commotion happening in the commons area. {SetTimeBlock(1)}
+I walk down the halls of the home, and hear some commotion happening in the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
-Walking in, I spy Eduardo and Isaac as the only ones in the room.  # Ambience : play_ambience_fireplace # ambience_lpf ! 0
+Walking in, I spy Eduardo and Isaac as the only ones in the room.
 [Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, Happy, Eye_U, hrm_Up #2 &Success
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
@@ -504,7 +504,7 @@ I could do to be a little more like that. @only a little. @<i>(Your Expression h
 ===TooTired===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means it’s probably a good time to call it a night.
 I decide to leave the two to their chatting, and head to bed. #background / commons, crossfade, NoDefaults
-I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe, NoDefaults
+I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 It doesn't take long for me to lose consciousness. #background / dream, eyeclose
 ... {CallSleep()} #sleep %12
 ..... #fatigue => 0
