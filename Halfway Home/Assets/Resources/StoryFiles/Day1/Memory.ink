@@ -74,7 +74,7 @@ The other residents begin to whisper to each other.
 ->Unpack
 
 === Unpack ===
-The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe   # Play : Stop_All_Fast   // # ambience_vol ! -2.1   # ambience_lpf | 30   
+The room is smaller than my room at Blackwell was, but much cozier. I feel almost immediately at home here. # Background / YourRoom, Blackwipe, NoDefaults # Play : Stop_All_Fast   // # ambience_vol ! -2.1   # ambience_lpf | 30   
 "Your quarters, your Majesty. I hope you find them to your liking."
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
@@ -89,7 +89,7 @@ I don't have much to unpack and the room is already furnished, so it doesn't tak
 -> Cafe
 
 === Cafe ===
-I head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe   # ambience_vol ! -2.3
+I head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe, NoDefaults # ambience_vol ! -2.3
 Max is here, mopping lethargically.   # Max = Calm
 [Max] "Yo. Good to see you again. How was your first week?"
 What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf | 60   # ambience_vol | 5.6   # ambience_lpf | 31
@@ -104,7 +104,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe   # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+I head out into the common room.   # Background / CommonsNight, Blackwipe, NoDefaults # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
 When did it get dark out? Is it night already?
 Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
 *[Ask what's going on]
@@ -125,9 +125,9 @@ Max is reading by the fireplace. I wander over and join them.   # Max = Calm   #
 -Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb and a ghostlike sense of disembodiment sweeps over me.
-My body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe # Max = Exit   
+My body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe, NoDefaults # Max = Exit   
 All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # text_vol ! -200
-Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade   # Play : play_music_creepy_atmo
+Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade, NoDefaults # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless."   # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me.   # ambience_lpf ! 0
@@ -165,7 +165,7 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 -> Wake
 
 === Wake ===
-I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen    # Play : Play_music_placeholder_main_fadein   # Ambience : play_ambience_birds   # ambience_vol ! -3   # text_vol ! 0   // # Unload @ story_memory
+I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen, NoDefaults # Play : Play_music_placeholder_main_fadein   # Ambience : play_ambience_birds   # ambience_vol ! -3   # text_vol ! 0   // # Unload @ story_memory
 The whispers fade into the chitter of birdsong.   # music_vol | -6   # ambience_vol | 6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.

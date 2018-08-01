@@ -199,7 +199,7 @@ But eventually he shrugs and smiles. #Timothy = Happy
 
 
 === GameOver ===
-[Timothy] "Hehehe.." #Background / Garden, crossfade #Timothy = Happy
+[Timothy] "Hehehe.." #Background / Garden, crossfade, NoDefaults #Timothy = Happy
 [{player_name}] "What's so funny?" 
 [Timothy] "Oh, nothing... it's just..."
 "Hangman is a good game..." 

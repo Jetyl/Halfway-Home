@@ -509,7 +509,7 @@ Dying someones hair is actually a fairly time-consuming process and it's a few h
 "Though you might want to finish washing the dye out before you claim success. It's still wet and coming off in your hands." #Dyed / YSad
 "It looks like you murdered a smurf."
 [Timothy] "Oh! Okay."
-I leave Timothy to finish cleaning himself up and wait on my bed. #Background / YourRoom, crossfade
+I leave Timothy to finish cleaning himself up and wait on my bed. #Background / YourRoom, crossfade, NoDefaults
 I don't have to wait long. #Timothy / Happy //It doesn't take long for him to come out good as new.
 "H-h-how do I look?"
 [{player_name}] "Good! How do you feel?"

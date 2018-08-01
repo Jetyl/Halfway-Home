@@ -127,7 +127,7 @@ His red-eyed face is ghostly pale.
 [Timothy] "Heh. I can relate." //# Timothy = Happy
 [{player_name}] "So... you doin' okay in here?"
 [Timothy] "Oh. Yeah, I..." //# Timothy = Surprised
-Timothy stretches and clambers off the bed. # Background / YourRoom
+Timothy stretches and clambers off the bed. # Background / YourRoom, NoDefaults
 {GetIntValue("TimothyPoints")>5:
 	Timothy sighs. # Timothy = Sad
 	"I'm trying not to think about it."

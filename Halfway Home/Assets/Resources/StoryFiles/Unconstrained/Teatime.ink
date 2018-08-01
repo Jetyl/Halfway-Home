@@ -400,7 +400,7 @@ We make small talk for another few minutes, but Charlotte carefully avoids retur
 I stand up and stretch my legs.
 [{player_name}] "See you around!"
 [Charlotte] "Farewell, {player_name}."
-With that, I exit Charlotte's room out into the hallway.
+With that, I exit Charlotte's room out into the hallway. # Background / HallwayDay, Blackwipe, NoDefaults
 -> END
 
 === function AmIFeeling(claim) ===
