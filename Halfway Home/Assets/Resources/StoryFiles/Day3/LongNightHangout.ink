@@ -503,8 +503,8 @@ I could do to be a little more like that. @only a little. @<i>(Your Expression h
 
 ===TooTired===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means it’s probably a good time to call it a night.
-I decide to leave the two to their chatting, and head to bed. #background / commons, crossfade
-I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
+I decide to leave the two to their chatting, and head to bed. #background / commons, crossfade, NoDefaults
+I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe, NoDefaults
 It doesn't take long for me to lose consciousness. #background / dream, eyeclose
 ... {CallSleep()} #sleep %12
 ..... #fatigue => 0
@@ -512,7 +512,7 @@ I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @who
 ->END
 
 ===MorningMax===
-The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade #time%1
+The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1
 The second sign, is Max, who comes in for their morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
 [{player_name}] "Hehe, yeah..."
