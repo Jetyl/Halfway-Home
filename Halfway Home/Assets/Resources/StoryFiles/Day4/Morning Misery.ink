@@ -112,7 +112,7 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 +[Yeahthatsgreatgottagobye!]
 	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, GottaGoBye!"
 	[Eduardo] "wait, wha-" #Skip
-	I book it out of the art room, all the way to the commons before I am out of breath. #Background / commons
+	I book it out of the art room, all the way to the commons before I am out of breath. #Background / commons, NoDefaults
 	Wow, I am really out of shape too.
 	[Voices] "Just another reason why you are worthless"
 	{
@@ -123,7 +123,7 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 	->END
 
 ===Gushing===
-I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
+I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom, NoDefaults #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
 His excessive passion is very inspiring and and increase in <color=color_expression>expression considerably</color>, but it <color=color_wellbeing_penalty>significantly tires you out</color>. #expression++ #fatigue += 20
 when I check the clock, I realize 3 hours have passed #time % 3
 Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right
@@ -168,7 +168,7 @@ I need to think, how to best explain myself?
 
 
 ===Disbelif===
-[Eduardo] "whatever {player_gender == "F": girl| man}." #Background = Artroom #Eduardo = Angry
+[Eduardo] "whatever {player_gender == "F": girl| man}." #Background = Artroom, NoDefaults #Eduardo = Angry
 "I gotta get going. Got stuff to do, and a <i>perfect</i> boyfriend to hang out with."
 "Later." #Eduardo = Exit
 Well, I guess I messed that one up.
@@ -202,7 +202,7 @@ Well, Eduardo is technically correct. Isaac hasn't told me anything yet, but...
 	->Failure
 
 ===Failure===
-Before I can say anything else, Eduardo gets up from his spot, and begins to leave. #Background = Artroom #Eduardo = angry
+Before I can say anything else, Eduardo gets up from his spot, and begins to leave. #Background = Artroom, NoDefaults #Eduardo = angry
 [{player_name}]"Yeah, I ain't bothering to listen to you pedal your BS anymore, {player_name}"
 [{player_name}] "But-"
 [Eduardo] "Just save it."
