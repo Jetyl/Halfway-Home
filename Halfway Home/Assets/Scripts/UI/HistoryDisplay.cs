@@ -152,7 +152,7 @@ public class HistoryDisplay : MonoBehaviour
 
         }
 
-        History += Environment.NewLine + TextParser.DynamicEdit(eventdata.Line);
+        History += Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(eventdata.Line);
   }
 
     void ClearHistory(DefaultEvent eventdata)

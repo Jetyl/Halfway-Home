@@ -37,7 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4559618791119428}
   - component: {fileID: 114436012824126240}
-  - component: {fileID: 114073430541728044}
+  - component: {fileID: 114097370163370814}
+  - component: {fileID: 114372902468713586}
   m_Layer: 0
   m_Name: Isaac
   m_TagString: Untagged
@@ -103,7 +104,7 @@ Transform:
   m_Father: {fileID: 4559618791119428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114073430541728044
+--- !u!114 &114097370163370814
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -111,14 +112,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241828928622914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288af69128d17934d869f46663053a03, type: 3}
+  m_Script: {fileID: 11500000, guid: 2307a317f6eea764890f629290c65ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speaker:
-    Character: Isaac
-    Actor: {fileID: 0}
-  ScaleRatio: 1.04
-  TimeToScale: 0.5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  moveOnInitialize: 0
+  currentEndPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114139620927140818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +165,37 @@ MonoBehaviour:
   InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
   InitializeFadeTime: 2
   IsFading: 0
+--- !u!114 &114372902468713586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241828928622914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800bd2df650cf2542b523be525cc4450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  actOnInitialize: 0
+  currentEnd: {x: 0, y: 0, z: 0}
 --- !u!114 &114436012824126240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +223,8 @@ MonoBehaviour:
     Visual: {fileID: 21300000, guid: 7c886b23ccab4dd439fc18107a90213e, type: 3}
   - Name: Surprised
     Visual: {fileID: 21300000, guid: f94c00d9172322e4eb1b19adf566c59f, type: 3}
+  - Name: Invisible
+    Visual: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
   Distances:
   - Scale: 1.6
     Offset: -3.5
@@ -192,6 +241,7 @@ MonoBehaviour:
   BackSprite: {fileID: 212549528819510172}
   SpriteSwitchSpeed: 0.5
   FlipOnLeft: 0
+  ScaleRatio: 1.04
 --- !u!212 &212549528819510172
 SpriteRenderer:
   m_ObjectHideFlags: 1

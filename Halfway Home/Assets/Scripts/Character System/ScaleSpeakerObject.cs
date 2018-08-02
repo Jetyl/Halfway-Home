@@ -45,7 +45,7 @@ public class ScaleSpeakerObject : MonoBehaviour
             {
                 Scaled = false;
                 
-                iTween.ScaleTo(gameObject, BaseSize, TimeToScale);
+                //iTween.ScaleTo(gameObject, BaseSize, TimeToScale);
             }
         }
         else
@@ -56,10 +56,11 @@ public class ScaleSpeakerObject : MonoBehaviour
                 Scaled = true;
                 BaseSize = transform.localScale;
                 Vector3 newscale = transform.localScale * ScaleRatio;
-                iTween.ScaleTo(gameObject, newscale, TimeToScale);
+                //iTween.ScaleTo(gameObject, newscale, TimeToScale);
             }
         }
     }
+    
 
     void OnDestroy()
     {

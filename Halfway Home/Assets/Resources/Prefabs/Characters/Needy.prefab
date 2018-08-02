@@ -37,8 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4767296517521262}
   - component: {fileID: 114039672622230616}
-  - component: {fileID: 114758539360479940}
-  - component: {fileID: 114835128286999778}
+  - component: {fileID: 114085521949958050}
+  - component: {fileID: 114523539270017002}
   m_Layer: 0
   m_Name: Needy
   m_TagString: Untagged
@@ -141,6 +141,38 @@ MonoBehaviour:
   BackSprite: {fileID: 212164670019890576}
   SpriteSwitchSpeed: 0.5
   FlipOnLeft: 1
+  ScaleRatio: 1.04
+--- !u!114 &114085521949958050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1810954633969276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800bd2df650cf2542b523be525cc4450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  actOnInitialize: 0
+  currentEnd: {x: 0, y: 0, z: 0}
 --- !u!114 &114188643553051942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +203,7 @@ MonoBehaviour:
   InitilazeFadeColor: {r: 1, g: 1, b: 1, a: 1}
   InitializeFadeTime: 1
   IsFading: 0
---- !u!114 &114758539360479940
+--- !u!114 &114523539270017002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -179,30 +211,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810954633969276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288af69128d17934d869f46663053a03, type: 3}
+  m_Script: {fileID: 11500000, guid: 2307a317f6eea764890f629290c65ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speaker:
-    Character: Isaac
-    Actor: {fileID: 0}
-  ScaleRatio: 1.04
-  TimeToScale: 0.5
---- !u!114 &114835128286999778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810954633969276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288af69128d17934d869f46663053a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speaker:
-    Character: Eduardo
-    Actor: {fileID: 0}
-  ScaleRatio: 1.04
-  TimeToScale: 0.5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  moveOnInitialize: 0
+  currentEndPos: {x: 0, y: 0, z: 0}
 --- !u!212 &212164670019890576
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -37,15 +37,23 @@ public class CharacterDisplay : MonoBehaviour
     Vector3 Destination;
 
     Coroutine Expressing;
-    
-	// Use this for initialization
-	void Start ()
+
+    bool Scaled;
+
+    string MCName;
+
+    public float ScaleRatio = 1.2f;
+
+    // Use this for initialization
+    void Start ()
     {
 
         //visual = GetComponentInChildren<SpriteRenderer>();
-        
 
-	}
+        MCName = Game.current.PlayerName;
+        Space.Connect<DescriptionEvent>(Events.Description, OnScale);
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -85,11 +93,15 @@ public class CharacterDisplay : MonoBehaviour
         
 
 
-        visual.sprite = GetPose(pose);
         if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center);
         else ChangeDistance(distance);
+
         ChangeFacing(facing);
 
+        if (pose.ToLower() == "none" || pose == "") 
+            pose = Poses[0].Name;
+
+        visual.sprite = GetPose(pose);
 
         var awhite = Color.white;
         awhite.a = 0;
@@ -109,6 +121,40 @@ public class CharacterDisplay : MonoBehaviour
             
 
 
+    }
+
+    void OnScale(DescriptionEvent eventdata)
+    {
+
+        if (this == null)
+            return;
+
+
+        if (eventdata.TrueSpeaker == "")
+            return;
+
+        if (Scaled)
+        {
+            if (eventdata.TrueSpeaker != Character.Character && eventdata.TrueSpeaker != MCName)
+            {
+                Scaled = false;
+
+                float scale = Distances[(int)Distance].Scale;
+                gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+
+            }
+        }
+        else
+        {
+
+            if (eventdata.TrueSpeaker == Character.Character)
+            {
+                Scaled = true;
+                float scale = Distances[(int)Distance].Scale;
+                var scalevec = new Vector3(scale, scale, scale) * ScaleRatio;
+                gameObject.DispatchEvent(Events.Scale, new TransformEvent(scalevec, SpriteSwitchSpeed));
+            }
+        }
     }
 
     public void MoveOnStage(Vector3 newPosition, float time)
@@ -136,8 +182,7 @@ public class CharacterDisplay : MonoBehaviour
             
         }
 
-
-        iTween.MoveTo(gameObject, Destination, time);
+        gameObject.DispatchEvent(Events.Translate, new TransformEvent(Destination, time));
         
     }
 
@@ -227,8 +272,11 @@ public class CharacterDisplay : MonoBehaviour
     {
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
-        transform.localScale = new Vector3(scale, scale, scale);
-        transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
+        //transform.localScale = new Vector3(scale, scale, scale);
+        gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+        var newpos = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
+        gameObject.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
+
     }
     public void ExitStage(StagePosition direction, bool Skip)
     {
@@ -254,7 +302,9 @@ public class CharacterDisplay : MonoBehaviour
         {
             pos.x += 2.5f;
         }
-        iTween.MoveTo(gameObject, pos, 2);
+
+        gameObject.DispatchEvent(Events.Translate, new TransformEvent(pos, 2));
+
         Destroy(gameObject, 5);
     }
 

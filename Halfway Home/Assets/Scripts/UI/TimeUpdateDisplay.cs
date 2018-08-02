@@ -34,7 +34,8 @@ public class TimeUpdateDisplay : MonoBehaviour
     public Image Face;
     public Image Numbers;
     public Image Case;
-    public TextMeshProUGUI MeridianText;
+    public Sprite AMSprite;
+    public Sprite PMSprite;
 
 	// Use this for initialization
 	void Start ()
@@ -61,7 +62,6 @@ public class TimeUpdateDisplay : MonoBehaviour
         Color aNum = Numbers.color;
         aNum.a = 0;
         Numbers.color = aNum;
-        MeridianText.color = aNum;
 
         Color aCase = Case.color;
         aCase.a = 0;
@@ -94,10 +94,7 @@ public class TimeUpdateDisplay : MonoBehaviour
         CallFade(Face, true);
         CallFade(Numbers, true);
         CallFade(Case, true);
-
-        Color aColor = MeridianText.color;
-        aColor.a = 0;
-        MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aColor, ClockFadeTime));
+        
 
     }
 
@@ -107,11 +104,7 @@ public class TimeUpdateDisplay : MonoBehaviour
         CallFade(Face);
         CallFade(Numbers);
         CallFade(Case);
-
-
-        Color aColor = MeridianText.color;
-        aColor.a = 1;
-        MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aColor, ClockFadeTime));
+        
     }
 
     void UpdateTime(DefaultEvent eventdata)
@@ -151,9 +144,9 @@ public class TimeUpdateDisplay : MonoBehaviour
         yield return new WaitForSeconds(ClockFadeTime + (aTime/2));
 
         if (currentHour < 12)
-            MeridianText.text = "AM";
+            Numbers.sprite = AMSprite;
         else
-            MeridianText.text = "PM";
+            Numbers.sprite = PMSprite;
 
     }
 
@@ -169,14 +162,12 @@ public class TimeUpdateDisplay : MonoBehaviour
             //Hand.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aHand, ClockFadeTime));
             Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeBacking, aTime/2f));
             Numbers.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeNumbers, aTime / 2f));
-
-            MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(DayTimeNumbers, aTime / 2f));
+            
         }
         else
         {
             Face.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeBacking, aTime/2f));
             Numbers.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeNumbers, aTime / 2f));
-            MeridianText.gameObject.DispatchEvent(Events.Fade, new FadeEvent(NightTimeNumbers, aTime / 2f));
         }
 
 

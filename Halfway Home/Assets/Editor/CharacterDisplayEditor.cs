@@ -31,6 +31,7 @@ public class CharacterDisplayEditor : Editor
         SerializedProperty visual = serializedObject.FindProperty("visual");
         SerializedProperty BackSprite = serializedObject.FindProperty("BackSprite");
         SerializedProperty SpriteSwitchSpeed = serializedObject.FindProperty("SpriteSwitchSpeed");
+        SerializedProperty ScaleRatio = serializedObject.FindProperty("ScaleRatio");
 
         EditorGUILayout.Space();
 
@@ -38,6 +39,7 @@ public class CharacterDisplayEditor : Editor
         EditorGUILayout.PropertyField(visual, new GUIContent("Main Sprite"), true);
         EditorGUILayout.PropertyField(BackSprite, new GUIContent("Back Sprite"), true);
         EditorGUILayout.PropertyField(SpriteSwitchSpeed, new GUIContent("Sprite Switch Speed"), true);
+        EditorGUILayout.PropertyField(ScaleRatio, new GUIContent("Speaking Scale Ratio"), true);
 
 
 
