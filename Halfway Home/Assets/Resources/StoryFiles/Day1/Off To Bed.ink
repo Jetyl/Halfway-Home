@@ -94,7 +94,7 @@ Looping weeks on end. I try to wonder on the reason why.
 ->Start.IntoBed
 
 === Thanks ==
-[Timothy] "Th-thank you...<delay=1> for showing me around."
+[Timothy] "Th-thank you... for showing me around."
 [{player_name}] "Oh."
 "No problem."
 ->Start.Question
@@ -106,8 +106,8 @@ Looping weeks on end. I try to wonder on the reason why.
 ->Sleep
 
 === Cold ===
-[{player_name}] "No.<delay=1> Not really."
-[Timothy] "Oh... <delay=1> okay."
+[{player_name}] "No. Not really."
+[Timothy] "Oh... okay."
 {
 	- grace >= 1:
 		[{player_name}] "But you'll get stronger." #grace ^ good
@@ -121,9 +121,9 @@ Looping weeks on end. I try to wonder on the reason why.
 	- expression >= 1:
 		"It was nice meeting you." #expression ^ good
 }
-I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose
+I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose, NoDefaults
 My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%12
-I toss and turn, pained to be awake. #Background / YourRoom, eyeopen
+I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.
 Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
@@ -131,7 +131,7 @@ Slumberland beckons me back to it, but I should be getting up about now.{SetTime
 	 I sigh, getting out of my cloth cocoon and quickly  readying myself for the day. 
 	 In no time I'm ready to head out. I'm a little more tired than I'd have liked, though. #fatigue -= 40
 +[Stay in Bed]
-	 I curl even deeper into lethargic bliss and welcome sweet unconsciousness again. #Background / Dream, eyeclose
+	 I curl even deeper into lethargic bliss and welcome sweet unconsciousness again. #Background / Dream, eyeclose, NoDefaults
 	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
 	 That loud knocking noise wakes me up again... #fatigue -= 80
 -> END
