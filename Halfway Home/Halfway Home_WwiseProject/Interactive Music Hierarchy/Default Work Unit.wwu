@@ -6679,7 +6679,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<ChildrenList>
 								<MusicSegment Name="music_charlotte_elegant" ID="{E0D65A62-5973-46F5-AFBC-273A7F58537F}" ShortID="151599249">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="21843.3125"/>
+										<Property Name="EndPosition" Type="Real64" Value="20000"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6718,11 +6718,70 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 													<ClipList>
 														<MusicClip Name="music_charlotte_elegant" ID="{BA6EDE4D-36E8-4BC9-955A-17D352E7ECB7}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="21843.3125"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
 															<AudioSourceRef Name="music_charlotte_elegant" ID="{5009771A-FDEE-4D62-8324-50BB3C18980C}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{0B23A2C4-9436-4830-A9D0-C753D397F2C4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>20</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{622E6F97-8620-4DB3-A3DB-D929321FC66D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>20</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{9C64DFA6-4180-40A6-9B54-D1953EBF06E1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>20</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -8892,6 +8951,242 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="music_stormy_relationship_loop" ID="{11057B03-0085-4B04-A789-20E629F2F40D}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="music_charlotte_2" ID="{57A78456-26B0-46A7-9B2A-03E543D5101D}" ShortID="820273023">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="90"/>
+								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="music_charlotte_2_intro" ID="{2DE1BA4B-55FB-4AEB-86F7-7CEFB94639D4}" ShortID="470666757">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="144362.370086924"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{51864662-EB6D-45D8-94ED-B565C2282B21}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music Bus" ID="{64C7666D-4B32-4EE5-BFC8-4A6EA7B11E6F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="charlotte_2" ID="{B2CDDDE4-1CF5-4D1D-A027-A99F1A43286A}" ShortID="840749426">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="charlotte_2" ID="{71497247-D784-46E0-8AB8-CAA131B3882C}" ShortID="404818876">
+													<Language>SFX</Language>
+													<AudioFile>music_charlotte_2\charlotte_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E87B473B-D137-4D86-998F-588797D9CDFF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{670969A1-3E79-406D-900C-8BB640A08A00}">
+													<ClipList>
+														<MusicClip Name="charlotte_2" ID="{02BFF616-4450-4221-82FC-595B20540640}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="115998.662131519"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="charlotte_2" ID="{71497247-D784-46E0-8AB8-CAA131B3882C}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{DA24B5F7-9CD4-4F64-B060-A9AFA00EC76C}"/>
+										<MusicCue Name="Exit Cue" ID="{973F5442-CCB2-47C1-ADCA-63F45B0040F4}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="113000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="music_charlotte_2_loop" ID="{CB60D56D-77B4-4454-A825-056A20F0384C}" ShortID="1070139379">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="144362.370086924"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{51864662-EB6D-45D8-94ED-B565C2282B21}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music Bus" ID="{64C7666D-4B32-4EE5-BFC8-4A6EA7B11E6F}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="charlotte_2" ID="{D4925B89-21A0-4D4C-BC1D-06E39BDB0B2C}" ShortID="317471100">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="charlotte_2" ID="{43A4525B-C299-4310-AC29-BE5724980177}" ShortID="272163836">
+													<Language>SFX</Language>
+													<AudioFile>music_charlotte_2\charlotte_2.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="404818876"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{105FB906-47F3-4502-B768-41B7C38E5C75}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{19417563-66FC-425D-AB61-081C08359477}">
+													<ClipList>
+														<MusicClip Name="charlotte_2" ID="{ECE9C459-CD46-4FB7-97FE-D452CADDE7CB}">
+															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="65012.9493829404"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="114012.94938294"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="-1.33786848103045"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="-1.33786848103045"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="-65012.9493829404"/>
+															</PropertyList>
+															<AudioSourceRef Name="charlotte_2" ID="{43A4525B-C299-4310-AC29-BE5724980177}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{BAE261ED-A069-40CE-8605-6B7ABAE1312F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>65.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>114.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{57D4D4D5-B73E-487A-8043-DD51E8EE6B62}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>65.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>114.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{59AD7D79-3D1C-40F2-A285-BC78EFC647D7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>65.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>114.01295</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{3470FEEC-38D1-4364-8A11-7D4B42B067C3}"/>
+										<MusicCue Name="Exit Cue" ID="{A4C38B7D-DA82-4919-A5D5-CA1C098FB48C}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="48000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{54520D38-B305-4A6E-A491-2F7088DBCE48}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{AC031C19-2048-4130-8137-78A5CE020292}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{4BFCB8B3-670A-4CA1-9DAE-3140A2624A35}" ShortID="979744078">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{24448DDA-89A5-4B48-BF4E-4165F6F020E9}" ShortID="412306482">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="music_charlotte_2_intro" ID="{2DE1BA4B-55FB-4AEB-86F7-7CEFB94639D4}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{F6533363-1A10-4612-93BE-D78E854DF2D3}" ShortID="718450205">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="music_charlotte_2_loop" ID="{CB60D56D-77B4-4454-A825-056A20F0384C}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>

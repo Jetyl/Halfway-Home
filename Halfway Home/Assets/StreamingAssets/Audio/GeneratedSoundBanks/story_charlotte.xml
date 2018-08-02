@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="2790364613" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_charlotte</ObjectPath>
+			<ShortName>story_charlotte</ShortName>
+			<Path>story_charlotte.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3914743577" Name="play_music_charlotte_2" ObjectPath="\Events\Default Work Unit\play_music_charlotte_2"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="404818876" Language="SFX">
+					<ShortName>music_charlotte_2\charlotte_2.wav</ShortName>
+					<Path>SFX\music_charlotte_2\charlotte_2_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

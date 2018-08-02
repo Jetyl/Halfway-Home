@@ -53,7 +53,7 @@ It's a Halfway House: a place meant to help people like me `transition back into
 `A Garden for the Mind` according to the brochure the doctors gave me. 
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away         
-I open the heavy oak doors and step inside.   # Background / Commons, Blackwipe   # Play : Stop_All_Fast   // # Ambience : play_ambience_fireplace
+I open the heavy oak doors and step inside.   # Background / Commons, Blackwipe   # Play : Stop_All_Fast # SFX : play_sfx_bed_creak  // # Ambience : play_ambience_fireplace
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles.   # Max = Happy
 [Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
 ->Start.NameEntry
