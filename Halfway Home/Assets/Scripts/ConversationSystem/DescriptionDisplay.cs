@@ -14,8 +14,6 @@ using System;
 
 public class DescriptionDisplay : MonoBehaviour
 {
-    
-    
     Animator anime;
     AutoType Description;
     public GameObject Speaker;
@@ -26,11 +24,14 @@ public class DescriptionDisplay : MonoBehaviour
 
     public float AutoTimeDelay = 2;
 
+    public float SkipTimeDelay = 0.1f;
+
     public QuirkDisplay QuirkControl;
 
     public bool DebugSkipping;
 
     float AutoTimer = 0;
+    float SkipTimer = 0;
 
     bool Auto = false;
 
@@ -113,7 +114,17 @@ public class DescriptionDisplay : MonoBehaviour
         if (Skipping)
         {
             if (isFinished)
-                Finished();
+            {
+                if (SkipTimer > SkipTimeDelay)
+                {
+                    SkipTimer = 0;
+                    Finished();
+                }
+                else
+                    SkipTimer += Time.deltaTime;
+            }
+                
+           
         }
         else if(Auto)
         {
@@ -167,6 +178,7 @@ public class DescriptionDisplay : MonoBehaviour
     public void ToggleSkip()
     {
         Skipping = !Skipping;
+        SkipTimer = SkipTimeDelay;
 
         if (Skipping)
             Space.DispatchEvent(Events.SkipTyping);
