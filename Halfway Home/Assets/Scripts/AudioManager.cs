@@ -93,6 +93,7 @@ public class AudioManager : MonoBehaviour
   public SoundbankManager soundbankManager;
   [HideInInspector]
   public bool MuteTextScroll;
+  private bool Skipping;
 
 	// Use this for initialization
 	void Start ()
@@ -105,12 +106,25 @@ public class AudioManager : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
+        Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
+        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
         MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
+        Skipping = false;
 	}
   
   void Awake ()
   {
     AkSoundEngine.SetState("Game_State", "In_Game");
+  }
+
+  void OnSkipTyping(DefaultEvent e)
+  {
+    Skipping = true;
+  }
+
+  void OnStopSkipTyping(DefaultEvent e)
+  {
+    Skipping = false;
   }
   
   void OnDescriptionEvent(DescriptionEvent e)
@@ -163,8 +177,8 @@ public class AudioManager : MonoBehaviour
     //    e.FileName != "play_music_cafe_jazz_02"
     //   )
 
-    // Post the event immediately if its a sound effect
-    if (e.Type == AudioEvent.SoundType.SFX)
+    // Post the event immediately if its a sound effect (ignore if skipping)
+    if (e.Type == AudioEvent.SoundType.SFX && !Skipping)
       AkSoundEngine.PostEvent(e.FileName, SFXPlayer.gameObject);
 
     // Otherwise, collect the event and dispatch all events after an interval in the right order

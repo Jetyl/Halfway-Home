@@ -58,7 +58,7 @@ I sit there, wavering between consciousness and unconsciousness, when I hear a v
 
 
 === ContemplateWeek1 ===
-Man, it's going to be a bit weird, having a roommate.
+Man, it's going to be a bit weird, having a roommate again.
 Eh, its only for one week.
 -> Start.IntoBed
 
@@ -101,7 +101,7 @@ Looping weeks on end. I try to wonder on the reason why.
 
 === Comfort ===
 [{player_name}] "Yeah."
-"Yeah.<delay=1> It does."
+"Yeah. It does."
 [Timothy] "Th-that's good..."
 ->Sleep
 

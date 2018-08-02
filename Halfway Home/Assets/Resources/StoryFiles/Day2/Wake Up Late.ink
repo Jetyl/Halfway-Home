@@ -27,15 +27,15 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-[Max] "Are y'all still asleep in there?" //knock noise
-uuuugh.... #Background / YourRoom, eyeopen, NoDefaults
+[Max] "Are y'all still asleep in there?" # SFX : play_sfx_human_knock
+Uuuugh.... #Background / YourRoom, eyeopen, NoDefaults
 Max (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
-[Max] "!" #Max = Surprised
+[Max] "...!" #Max = Surprised
 "{player_name}... Did you just get up?" #Max = Sad
 +[Be Honest]
-	[{player_name}] "yeah..."
+	[{player_name}] "Yeah..."
 	Max sighs exasperatedly. #Max = Angry
-	[Max] "{player_name}! You're leaving this place in less than a week now."
+	[Max] "{player_name}You're leaving this place in less than a week now."
 	{
 		- week == 1:
 		I know, I know. I'm just bad.
