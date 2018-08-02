@@ -53,6 +53,9 @@ public class CharacterDisplay : MonoBehaviour
         MCName = Game.current.PlayerName;
         Space.Connect<DescriptionEvent>(Events.Description, OnScale);
 
+        GetComponent<Scale>().Start();
+        GetComponent<Translate>().Start();
+
     }
 	
 	// Update is called once per frame
@@ -276,6 +279,7 @@ public class CharacterDisplay : MonoBehaviour
         gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
         var newpos = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
         gameObject.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
+        //transform.localPosition = newpos;
 
     }
     public void ExitStage(StagePosition direction, bool Skip)

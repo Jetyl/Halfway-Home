@@ -17,7 +17,7 @@ public class Translate : MonoBehaviour
     public Vector3 currentEndPos;
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
         
         tangle = gameObject.GetComponent<RectTransform>();

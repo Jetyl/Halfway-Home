@@ -16,7 +16,7 @@ public class Scale : MonoBehaviour
     public Vector3 currentEnd;
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
 
         tangle = gameObject.GetComponent<RectTransform>();
