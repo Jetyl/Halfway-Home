@@ -14,13 +14,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Cafe" Hash="3097323968" Timestamp="131744002378724113"/>
-				<File Name="Credits" Hash="366731275" Timestamp="131774633010531231"/>
+				<File Name="Credits" Hash="366731275" Timestamp="131776527386023106"/>
 				<File Name="HalfwaySoundbank" Hash="1589447469" Timestamp="131762767825247461"/>
-				<File Name="Init" Hash="1749386001" Timestamp="131774633013103827"/>
+				<File Name="Init" Hash="1749386001" Timestamp="131776527391792591"/>
 				<File Name="Intro" Hash="4154770019" Timestamp="131743648226326564"/>
-				<File Name="Main" Hash="1766713495" Timestamp="131774652465329165"/>
-				<File Name="MainMenu" Hash="172948730" Timestamp="131774633011040441"/>
-				<File Name="Master" Hash="1374650353" Timestamp="131774633011090352"/>
+				<File Name="Main" Hash="3904420139" Timestamp="131776527386273508"/>
+				<File Name="MainMenu" Hash="172948730" Timestamp="131776527386393439"/>
+				<File Name="Master" Hash="3313895949" Timestamp="131776527386583615"/>
 				<File Name="MusicMain" Hash="1158886702" Timestamp="131756504175315808"/>
 				<File Name="MusicTension" Hash="3586193123" Timestamp="131742546562504621"/>
 				<File Name="Music_Master" Hash="1327423754" Timestamp="131741071315725364"/>
@@ -29,127 +29,130 @@
 				<File Name="Test1" Hash="809273639" Timestamp="131656461893352581"/>
 				<File Name="big_happy_family" Hash="3984543765" Timestamp="131743873137209329"/>
 				<File Name="memory" Hash="1974348553" Timestamp="131743946403719339"/>
-				<File Name="room_ArtRoom" Hash="1706820361" Timestamp="131774633011250055"/>
-				<File Name="room_Commons" Hash="598890442" Timestamp="131774633011364836"/>
-				<File Name="room_Garden" Hash="3531586432" Timestamp="131774633011449688"/>
-				<File Name="room_Kitchen" Hash="873893612" Timestamp="131774633011534528"/>
-				<File Name="room_Library" Hash="1038609342" Timestamp="131774633011715510"/>
-				<File Name="room_YourRoom" Hash="1554548287" Timestamp="131774633011875213"/>
+				<File Name="room_ArtRoom" Hash="2425094120" Timestamp="131776527386803818"/>
+				<File Name="room_Commons" Hash="2678019009" Timestamp="131776527387014005"/>
+				<File Name="room_Garden" Hash="3329034118" Timestamp="131776527387244215"/>
+				<File Name="room_Kitchen" Hash="3270194491" Timestamp="131776527387434386"/>
+				<File Name="room_Library" Hash="2303073506" Timestamp="131776527387744669"/>
+				<File Name="room_YourRoom" Hash="1348575563" Timestamp="131776527387974890"/>
 				<File Name="room_art_room" Hash="1136398302" Timestamp="131764221330534034"/>
 				<File Name="room_cafe" Hash="2731293949" Timestamp="131764221330664475"/>
 				<File Name="room_commons" Hash="2031006409" Timestamp="131764221330955468"/>
 				<File Name="room_garden" Hash="3774038537" Timestamp="131764221331221375"/>
 				<File Name="room_library" Hash="1540542831" Timestamp="131764221331442142"/>
 				<File Name="room_your_room" Hash="4265673166" Timestamp="131764221331703017"/>
-				<File Name="story_alone_in_a_dead_mans_room" Hash="3328790020" Timestamp="131774633011935099"/>
-				<File Name="story_authoritys_approval" Hash="4102913727" Timestamp="131774633011970197"/>
-				<File Name="story_big_happy_family" Hash="3168636715" Timestamp="131774633012039892"/>
-				<File Name="story_closed_wound" Hash="2368943017" Timestamp="131774633012094803"/>
-				<File Name="story_dye_job" Hash="1503318033" Timestamp="131774633012124777"/>
-				<File Name="story_ending_days" Hash="2960999020" Timestamp="131774633012325358"/>
-				<File Name="story_farewell_meal" Hash="1434332135" Timestamp="131774633012415104"/>
-				<File Name="story_knock_on_the_morning_door" Hash="2039002654" Timestamp="131774633012499956"/>
-				<File Name="story_meeting_charlotte" Hash="1738050120" Timestamp="131774633012544862"/>
-				<File Name="story_meeting_eduardo" Hash="168269430" Timestamp="131774633012589784"/>
-				<File Name="story_memory" Hash="1355074833" Timestamp="131774633012709557"/>
-				<File Name="story_morning_misery" Hash="422767272" Timestamp="131774633012849299"/>
-				<File Name="story_open_letter" Hash="1025016452" Timestamp="131774633012974143"/>
+				<File Name="story_alone_in_a_dead_mans_room" Hash="2925721226" Timestamp="131776527388197061"/>
+				<File Name="story_authoritys_approval" Hash="4102913727" Timestamp="131776527388327171"/>
+				<File Name="story_big_happy_family" Hash="1825447379" Timestamp="131776527388557557"/>
+				<File Name="story_charlotte" Hash="686163222" Timestamp="131776527391632443"/>
+				<File Name="story_closed_wound" Hash="410203418" Timestamp="131776527388977769"/>
+				<File Name="story_dye_job" Hash="1503318033" Timestamp="131776527389136094"/>
+				<File Name="story_ending_days" Hash="421970192" Timestamp="131776527389386308"/>
+				<File Name="story_farewell_meal" Hash="2234135377" Timestamp="131776527389736633"/>
+				<File Name="story_knock_on_the_morning_door" Hash="2929199892" Timestamp="131776527389986853"/>
+				<File Name="story_meeting_charlotte" Hash="3885225977" Timestamp="131776527390307146"/>
+				<File Name="story_meeting_eduardo" Hash="1365082904" Timestamp="131776527390487310"/>
+				<File Name="story_memory" Hash="641632355" Timestamp="131776527390707507"/>
+				<File Name="story_morning_misery" Hash="3082845409" Timestamp="131776527390947729"/>
+				<File Name="story_open_letter" Hash="1396654215" Timestamp="131776527391212063"/>
 				<File Name="story_rf_kitchen" Hash="451809248" Timestamp="131767990845247355"/>
-				<File Name="story_welcome_dinner" Hash="3787410685" Timestamp="131774633013058929"/>
+				<File Name="story_welcome_dinner" Hash="3899558478" Timestamp="131776527391442275"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="393239870">
 				<File Name="Cafe" Hash="52532065" Timestamp="131744002379130502"/>
-				<File Name="Credits" Hash="3476933154" Timestamp="131774633013158631"/>
+				<File Name="Credits" Hash="3538914490" Timestamp="131776527391952733"/>
 				<File Name="HalfwaySoundbank" Hash="2455930418" Timestamp="131762767827038561"/>
-				<File Name="Init" Hash="1724772660" Timestamp="131774633013348407"/>
+				<File Name="Init" Hash="3752821564" Timestamp="131776527393163837"/>
 				<File Name="Intro" Hash="3822140114" Timestamp="131743648226803194"/>
-				<File Name="Main" Hash="1055768928" Timestamp="131774652465997923"/>
-				<File Name="MainMenu" Hash="3395959242" Timestamp="131774633013173599"/>
-				<File Name="Master" Hash="3018213291" Timestamp="131774633013183580"/>
+				<File Name="Main" Hash="3455426664" Timestamp="131776527392022812"/>
+				<File Name="MainMenu" Hash="2548152370" Timestamp="131776527392062836"/>
+				<File Name="Master" Hash="544457507" Timestamp="131776527392112881"/>
 				<File Name="MusicMain" Hash="1224974533" Timestamp="131756504176380955"/>
 				<File Name="MusicTension" Hash="1952414519" Timestamp="131742546562913280"/>
 				<File Name="Temp" Hash="201078451" Timestamp="131746995981202157"/>
 				<File Name="big_happy_family" Hash="2427341233" Timestamp="131743873137846502"/>
 				<File Name="memory" Hash="801669585" Timestamp="131743946403930070"/>
-				<File Name="room_ArtRoom" Hash="1618883482" Timestamp="131774633013188568"/>
-				<File Name="room_Commons" Hash="1050508592" Timestamp="131774633013193560"/>
-				<File Name="room_Garden" Hash="2044251371" Timestamp="131774633013203541"/>
-				<File Name="room_Kitchen" Hash="2345092099" Timestamp="131774633013208533"/>
-				<File Name="room_Library" Hash="2851589717" Timestamp="131774633013218669"/>
-				<File Name="room_YourRoom" Hash="2721789157" Timestamp="131774633013223637"/>
+				<File Name="room_ArtRoom" Hash="647350626" Timestamp="131776527392162926"/>
+				<File Name="room_Commons" Hash="3872018040" Timestamp="131776527392202962"/>
+				<File Name="room_Garden" Hash="2338247731" Timestamp="131776527392263016"/>
+				<File Name="room_Kitchen" Hash="195819531" Timestamp="131776527392323071"/>
+				<File Name="room_Library" Hash="2729731693" Timestamp="131776527392373116"/>
+				<File Name="room_YourRoom" Hash="4191529053" Timestamp="131776527392423164"/>
 				<File Name="room_art_room" Hash="1370815599" Timestamp="131764221333418869"/>
 				<File Name="room_cafe" Hash="3271240834" Timestamp="131764221333479075"/>
 				<File Name="room_commons" Hash="533197553" Timestamp="131764221333534263"/>
 				<File Name="room_garden" Hash="2268240917" Timestamp="131764221333594465"/>
 				<File Name="room_library" Hash="3667592916" Timestamp="131764221333649653"/>
 				<File Name="room_your_room" Hash="1263092767" Timestamp="131764221333714879"/>
-				<File Name="story_alone_in_a_dead_mans_room" Hash="577045802" Timestamp="131774633013228642"/>
-				<File Name="story_authoritys_approval" Hash="596122947" Timestamp="131774633013238622"/>
-				<File Name="story_big_happy_family" Hash="360156846" Timestamp="131774633013243598"/>
-				<File Name="story_closed_wound" Hash="937722997" Timestamp="131774633013253586"/>
-				<File Name="story_dye_job" Hash="3308527758" Timestamp="131774633013258587"/>
-				<File Name="story_ending_days" Hash="4195936804" Timestamp="131774633013263563"/>
-				<File Name="story_farewell_meal" Hash="3788771793" Timestamp="131774633013273543"/>
-				<File Name="story_knock_on_the_morning_door" Hash="205514348" Timestamp="131774633013283433"/>
-				<File Name="story_meeting_charlotte" Hash="2601231755" Timestamp="131774633013293414"/>
-				<File Name="story_meeting_eduardo" Hash="437994170" Timestamp="131774633013303370"/>
-				<File Name="story_memory" Hash="1784390477" Timestamp="131774633013318346"/>
-				<File Name="story_morning_misery" Hash="1279311159" Timestamp="131774633013328446"/>
-				<File Name="story_open_letter" Hash="1815600921" Timestamp="131774633013333381"/>
+				<File Name="story_alone_in_a_dead_mans_room" Hash="1242780914" Timestamp="131776527392473209"/>
+				<File Name="story_authoritys_approval" Hash="3176151963" Timestamp="131776527392513242"/>
+				<File Name="story_big_happy_family" Hash="2536682806" Timestamp="131776527392573300"/>
+				<File Name="story_charlotte" Hash="4083983216" Timestamp="131776527393123802"/>
+				<File Name="story_closed_wound" Hash="3540297789" Timestamp="131776527392623368"/>
+				<File Name="story_dye_job" Hash="47452582" Timestamp="131776527392673390"/>
+				<File Name="story_ending_days" Hash="1531180172" Timestamp="131776527392723603"/>
+				<File Name="story_farewell_meal" Hash="1811642457" Timestamp="131776527392773486"/>
+				<File Name="story_knock_on_the_morning_door" Hash="978159892" Timestamp="131776527392823525"/>
+				<File Name="story_meeting_charlotte" Hash="1261172067" Timestamp="131776527392873571"/>
+				<File Name="story_meeting_eduardo" Hash="1127559362" Timestamp="131776527392913609"/>
+				<File Name="story_memory" Hash="717859029" Timestamp="131776527392963654"/>
+				<File Name="story_morning_misery" Hash="4277625775" Timestamp="131776527393003690"/>
+				<File Name="story_open_letter" Hash="20164241" Timestamp="131776527393043725"/>
 				<File Name="story_rf_kitchen" Hash="414062658" Timestamp="131767990845723976"/>
-				<File Name="story_welcome_dinner" Hash="287084536" Timestamp="131774633013343414"/>
+				<File Name="story_welcome_dinner" Hash="3791155504" Timestamp="131776527393093770"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="1160829186" Timestamp="131774652465982946"/>
+				<File Name="" Hash="1562404659" Timestamp="131776527391902699"/>
 			</Language>
 		</XMLInfo>
 		<JSONInfo>
 			<Language ID="393239870">
 				<File Name="Cafe" Hash="524816174" Timestamp="131744002379376336"/>
-				<File Name="Credits" Hash="3771412257" Timestamp="131774633013373356"/>
+				<File Name="Credits" Hash="959204523" Timestamp="131776527393253918"/>
 				<File Name="HalfwaySoundbank" Hash="2656915326" Timestamp="131762767827701046"/>
-				<File Name="Init" Hash="1987703168" Timestamp="131774633013557979"/>
+				<File Name="Init" Hash="3858238294" Timestamp="131776527394314879"/>
 				<File Name="Intro" Hash="4133143092" Timestamp="131743648227028960"/>
-				<File Name="Main" Hash="1532456574" Timestamp="131774652466177714"/>
-				<File Name="MainMenu" Hash="699544225" Timestamp="131774633013383336"/>
-				<File Name="Master" Hash="884545386" Timestamp="131774633013393321"/>
+				<File Name="Main" Hash="3621333412" Timestamp="131776527393293954"/>
+				<File Name="MainMenu" Hash="1315484139" Timestamp="131776527393343999"/>
+				<File Name="Master" Hash="1223177200" Timestamp="131776527393394041"/>
 				<File Name="MusicMain" Hash="3470999985" Timestamp="131756504176877647"/>
 				<File Name="MusicTension" Hash="1483573168" Timestamp="131742546563218825"/>
 				<File Name="Temp" Hash="1292893609" Timestamp="131746995981296829"/>
 				<File Name="big_happy_family" Hash="2856304892" Timestamp="131743873138162577"/>
 				<File Name="memory" Hash="3628994501" Timestamp="131743946404065522"/>
-				<File Name="room_ArtRoom" Hash="2687253209" Timestamp="131774633013398317"/>
-				<File Name="room_Commons" Hash="432032641" Timestamp="131774633013408293"/>
-				<File Name="room_Garden" Hash="1541652155" Timestamp="131774633013413286"/>
-				<File Name="room_Kitchen" Hash="335653458" Timestamp="131774633013423266"/>
-				<File Name="room_Library" Hash="406990716" Timestamp="131774633013428258"/>
-				<File Name="room_YourRoom" Hash="561166645" Timestamp="131774633013438239"/>
+				<File Name="room_ArtRoom" Hash="1750510271" Timestamp="131776527393434080"/>
+				<File Name="room_Commons" Hash="3851199411" Timestamp="131776527393474115"/>
+				<File Name="room_Garden" Hash="1261790557" Timestamp="131776527393514151"/>
+				<File Name="room_Kitchen" Hash="4052317708" Timestamp="131776527393554189"/>
+				<File Name="room_Library" Hash="216306094" Timestamp="131776527393594225"/>
+				<File Name="room_YourRoom" Hash="1541582075" Timestamp="131776527393634263"/>
 				<File Name="room_art_room" Hash="614988091" Timestamp="131764221334286827"/>
 				<File Name="room_cafe" Hash="3217338931" Timestamp="131764221334347033"/>
 				<File Name="room_commons" Hash="2251924795" Timestamp="131764221334387171"/>
 				<File Name="room_garden" Hash="1116404843" Timestamp="131764221334432323"/>
 				<File Name="room_library" Hash="962384000" Timestamp="131764221334482494"/>
 				<File Name="room_your_room" Hash="1350668117" Timestamp="131764221334532664"/>
-				<File Name="story_alone_in_a_dead_mans_room" Hash="555842682" Timestamp="131774633013448112"/>
-				<File Name="story_authoritys_approval" Hash="2146035812" Timestamp="131774633013458253"/>
-				<File Name="story_big_happy_family" Hash="3377046330" Timestamp="131774633013468053"/>
-				<File Name="story_closed_wound" Hash="2641740629" Timestamp="131774633013473143"/>
-				<File Name="story_dye_job" Hash="2092419861" Timestamp="131774633013483132"/>
-				<File Name="story_ending_days" Hash="3788434298" Timestamp="131774633013493006"/>
-				<File Name="story_farewell_meal" Hash="370608797" Timestamp="131774633013497998"/>
-				<File Name="story_knock_on_the_morning_door" Hash="2313273927" Timestamp="131774633013507974"/>
-				<File Name="story_meeting_charlotte" Hash="67763773" Timestamp="131774633013512962"/>
-				<File Name="story_meeting_eduardo" Hash="4043173254" Timestamp="131774633013522947"/>
-				<File Name="story_memory" Hash="2507777759" Timestamp="131774633013527939"/>
-				<File Name="story_morning_misery" Hash="2856475724" Timestamp="131774633013538018"/>
-				<File Name="story_open_letter" Hash="477790365" Timestamp="131774633013543006"/>
+				<File Name="story_alone_in_a_dead_mans_room" Hash="3601084036" Timestamp="131776527393684308"/>
+				<File Name="story_authoritys_approval" Hash="1621698250" Timestamp="131776527393724344"/>
+				<File Name="story_big_happy_family" Hash="1150714048" Timestamp="131776527393764379"/>
+				<File Name="story_charlotte" Hash="4023862836" Timestamp="131776527394274846"/>
+				<File Name="story_closed_wound" Hash="3438533935" Timestamp="131776527393804418"/>
+				<File Name="story_dye_job" Hash="3973348267" Timestamp="131776527393844453"/>
+				<File Name="story_ending_days" Hash="3418045900" Timestamp="131776527393884492"/>
+				<File Name="story_farewell_meal" Hash="3227390803" Timestamp="131776527393934534"/>
+				<File Name="story_knock_on_the_morning_door" Hash="747197605" Timestamp="131776527393984582"/>
+				<File Name="story_meeting_charlotte" Hash="714811827" Timestamp="131776527394024617"/>
+				<File Name="story_meeting_eduardo" Hash="3313426396" Timestamp="131776527394064653"/>
+				<File Name="story_memory" Hash="3319695261" Timestamp="131776527394104691"/>
+				<File Name="story_morning_misery" Hash="1574668158" Timestamp="131776527394144727"/>
+				<File Name="story_open_letter" Hash="3983831211" Timestamp="131776527394184765"/>
 				<File Name="story_rf_kitchen" Hash="3606916144" Timestamp="131767990846180535"/>
-				<File Name="story_welcome_dinner" Hash="3889260260" Timestamp="131774633013547999"/>
+				<File Name="story_welcome_dinner" Hash="870055730" Timestamp="131776527394234810"/>
 			</Language>
 			<Language ID="-1">
-				<File Name="" Hash="224379636" Timestamp="131774652466167734"/>
+				<File Name="" Hash="628781400" Timestamp="131776527393213883"/>
 			</Language>
 		</JSONInfo>
 	</Platform>

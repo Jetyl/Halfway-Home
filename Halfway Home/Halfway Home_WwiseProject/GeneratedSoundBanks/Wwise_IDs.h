@@ -39,6 +39,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_ARTROOM = 1810713724U;
         static const AkUniqueID PLAY_MUSIC_ARTROOM_MORNING = 444439289U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
+        static const AkUniqueID PLAY_MUSIC_CHARLOTTE_2 = 3914743577U;
         static const AkUniqueID PLAY_MUSIC_CHARLOTTE_ELEGANT = 2039547829U;
         static const AkUniqueID PLAY_MUSIC_COMMONS = 1005088852U;
         static const AkUniqueID PLAY_MUSIC_CONTEMPLATIVE = 224129391U;
@@ -155,6 +156,7 @@ namespace AK
         static const AkUniqueID STORY_ALONE_IN_A_DEAD_MANS_ROOM = 609072037U;
         static const AkUniqueID STORY_AUTHORITYS_APPROVAL = 3786498133U;
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
+        static const AkUniqueID STORY_CHARLOTTE = 2790364613U;
         static const AkUniqueID STORY_CLOSED_WOUND = 2826146263U;
         static const AkUniqueID STORY_DYE_JOB = 1127752803U;
         static const AkUniqueID STORY_ENDING_DAYS = 2369017504U;

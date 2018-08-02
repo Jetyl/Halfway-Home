@@ -16,15 +16,37 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -1081466827
-    m_lastTimePart2: -1999243844
-    List: []
+    m_lastTimePsrt1: -1968453115
+    m_lastTimePart2: -1999243228
+    List:
+    - Name: play_music_charlotte_2
+      Path: Default Work Unit\play_music_charlotte_2
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_music_charlotte_2
+        ObjectType: 3
+      ID: -380223719
+      Guid: 2d07caf3f59611428b4e02570098cad5
+      maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1576394721
-    m_lastTimePart2: -1999243875
+    m_lastTimePsrt1: 1406202615
+    m_lastTimePart2: -1999243465
     List:
+    - Name: Heartattack
+      Path: PlayMusic\stop\Heartattack
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: stop
+        ObjectType: 4
+      - ElementName: Heartattack
+        ObjectType: 3
+      ID: 1078840671
+      Guid: d6c7792ed9712a4587ee7cb30e788a33
+      maxAttenuation: 0
     - Name: lpf_ambience_fireplace
       Path: PlayMusic\intro_ambiences\lpf_ambience_fireplace
       PathAndIcons:
@@ -774,8 +796,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 795947382
-    m_lastTimePart2: -1999243834
+    m_lastTimePsrt1: 234541282
+    m_lastTimePart2: -1999243714
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -1047,15 +1069,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1475719003
-    m_lastTimePart2: -1999243851
+    m_lastTimePsrt1: 234891601
+    m_lastTimePart2: -1999243714
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 1874936424
-    m_lastTimePart2: -1999243834
+    m_lastTimePsrt1: 235437492
+    m_lastTimePart2: -1999243714
     List:
     - Name: Game_State
       Path: Default Work Unit\Game_State
@@ -1147,8 +1169,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1081206583
-    m_lastTimePart2: -1999243844
+    m_lastTimePsrt1: 1406277406
+    m_lastTimePart2: -1999243465
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1249,8 +1271,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 1578766876
-    m_lastTimePart2: -1999243875
+    m_lastTimePsrt1: -776375616
+    m_lastTimePart2: -1999243228
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1279,6 +1301,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -226247557
       Guid: fb1f257e0fbf1d4e8b6ed1b5500cc8ae
+    - Name: story_charlotte
+      Path: Stories\story_charlotte
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_charlotte
+        ObjectType: 7
+      ID: -1504602683
+      Guid: 2dd0382241cddd41ad62a525f0abca7e
     - Name: story_closed_wound
       Path: Stories\story_closed_wound
       PathAndIcons:
