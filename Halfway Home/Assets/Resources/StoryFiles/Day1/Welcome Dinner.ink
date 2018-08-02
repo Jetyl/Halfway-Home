@@ -129,7 +129,7 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 ->Toast
 
 ===Toast===
-[Max] "Can I get everyone's attention!" #Max=Calm
+[Max] "Can I get everyone's attention!" #Max=happy
 The whole café quiets a little, as Max speaks up.   # Play : Stop_All   # Ambience : play_ambience_fireplace_far_birds_day
 [Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
@@ -196,7 +196,7 @@ You have no idea.
 ->TalkingToTimothy
 
 ===TalkingToTimothy===
-[{player_name}] "Hey, Timothy. How's the dinner?"
+[{player_name}] "Hey, Timothy. How's the dinner?" #Timothy = Calm
 [Timothy] "It's nice. Uh, sorry again for taking the other bed. I'm sure you were enjoying the extra space."
 {
 		-awareness > 1: 
@@ -209,5 +209,5 @@ You have no idea.
 We spend the next hour or so talking about our interests and such.
 It's mostly small talk, but Timothy relaxes more the longer we chat.
 Some others join in and in no time a few hours have passed. # Time % 3
-When it's finally time to head to bed, he seems almost comfortable. #Trissa=Exit #Eduardo=Exit #Charlotte=Exit #Isaac=Exit #Max=Exit #Timothy=Exit
+When it's finally time to head to bed, he seems almost comfortable. #All=Exit
 -> END

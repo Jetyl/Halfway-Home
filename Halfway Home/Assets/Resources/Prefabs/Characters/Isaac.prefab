@@ -176,6 +176,8 @@ MonoBehaviour:
     Visual: {fileID: 21300000, guid: 7c886b23ccab4dd439fc18107a90213e, type: 3}
   - Name: Surprised
     Visual: {fileID: 21300000, guid: f94c00d9172322e4eb1b19adf566c59f, type: 3}
+  - Name: Invisible
+    Visual: {fileID: 21300000, guid: 0fd38221fe9aba84d9dd642d4633c179, type: 3}
   Distances:
   - Scale: 1.6
     Offset: -3.5

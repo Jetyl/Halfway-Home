@@ -58,7 +58,7 @@ I sit there, wavering between consciousness and unconsciousness, when I hear a v
 
 
 === ContemplateWeek1 ===
-Man, it's going to be a bit weird, having a roommate.
+Man, it's going to be a bit weird, having a roommate again.
 Eh, its only for one week.
 -> Start.IntoBed
 
@@ -121,8 +121,8 @@ Looping weeks on end. I try to wonder on the reason why.
 	- expression >= 1:
 		"It was nice meeting you." #expression ^ good
 }
-I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose
-My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%12
+I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose, noDefault
+My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%10
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.

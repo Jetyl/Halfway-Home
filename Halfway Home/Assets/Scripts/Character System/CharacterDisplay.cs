@@ -85,11 +85,14 @@ public class CharacterDisplay : MonoBehaviour
         
 
 
-        visual.sprite = GetPose(pose);
         if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center);
         else ChangeDistance(distance);
         ChangeFacing(facing);
 
+        if (pose.ToLower() == "none" || pose == "") 
+            pose = Poses[0].Name;
+
+        visual.sprite = GetPose(pose);
 
         var awhite = Color.white;
         awhite.a = 0;
@@ -227,8 +230,11 @@ public class CharacterDisplay : MonoBehaviour
     {
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
-        transform.localScale = new Vector3(scale, scale, scale);
-        transform.position = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
+        //transform.localScale = new Vector3(scale, scale, scale);
+        gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), 1));
+        var newpos = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
+        gameObject.DispatchEvent(Events.Translate, new TransformEvent(newpos, 1));
+
     }
     public void ExitStage(StagePosition direction, bool Skip)
     {
