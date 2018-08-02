@@ -104,7 +104,7 @@ I get an uncharacteristic hint of annoyance from Charlotte as she beckons to her
 <> who's leaving this week." # Trissa = Happy
 "When Max introduced you, you were wearing that shirt with the polar bear on it."
 {I hate that shirt.|I don't even really like polar bears.}
-[Trissa] "Then you must be the new guy! You can call me Trissa!" # Trissa = Happy
+[Trissa] "Then you must be the new guy! You can call me Trissa!" # Trissa = Happy, Stage_Center # Charlotte = Stage_Right
 [Timothy] "Hi. I'm... Timothy." # Timothy = Afraid
 [Trissa] "No need to act so scared, my man. I don't bite! Not often, anyway..."
 Timothy looks like he might not believe her.
@@ -114,7 +114,7 @@ Timothy looks like he might not believe her.
 Trissa turns to look at me and lowers her voice to speak privately. # Trissa = close
 [Trissa] "You take care of this one, alright? Let's make sure to give Timothy a good home."
 "Anyways, I gotta run. Take care y'all!" # Trissa = center
-[Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit # Charlotte = Left
+[Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
 [Timothy] "Uh... where to next?" # Charlotte = Exit # Timothy = Exit
 -> END
