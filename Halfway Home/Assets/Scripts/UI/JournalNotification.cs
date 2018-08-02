@@ -44,4 +44,9 @@ public class JournalNotification : MonoBehaviour
   {
     Animating = !Animating;
   }
+
+  public void PauseGame()
+  {
+    Space.DispatchEvent(Events.Pause);
+  }
 }
