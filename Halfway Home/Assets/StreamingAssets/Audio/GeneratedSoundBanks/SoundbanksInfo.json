@@ -5,11 +5,11 @@
   "SchemaVersion": "11",
   "SoundbankVersion": "125",
   "RootPaths": {
-   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
-   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
-   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
   },
   "DialogueEvents": [],
   "StreamedFiles": [
@@ -584,6 +584,28 @@
       "Language": "SFX",
       "ShortName": "You and I.wav",
       "Path": "SFX\\You and I_A51F8DD7.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2790364613",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_charlotte",
+    "ShortName": "story_charlotte",
+    "Path": "story_charlotte.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "3914743577",
+      "Name": "play_music_charlotte_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_charlotte_2"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "404818876",
+      "Language": "SFX",
+      "ShortName": "music_charlotte_2\\charlotte_2.wav",
+      "Path": "SFX\\music_charlotte_2\\charlotte_2_A51F8DD7.wem"
      }
     ]
    },

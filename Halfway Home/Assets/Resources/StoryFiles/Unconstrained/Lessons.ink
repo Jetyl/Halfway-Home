@@ -22,6 +22,8 @@ VAR topicsDiscussed = 0
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
 
+# Load @ story_charlotte   # Play : play_music_charlotte_2
+
 -> Start
 
 === Start ===

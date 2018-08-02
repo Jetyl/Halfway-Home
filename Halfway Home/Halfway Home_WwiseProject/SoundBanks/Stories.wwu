@@ -128,6 +128,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="story_charlotte" ID="{2238D02D-CD41-41DD-AD62-A525F0ABCA7E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_charlotte_2" ID="{F3CA072D-96F5-4211-8B4E-02570098CAD5}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

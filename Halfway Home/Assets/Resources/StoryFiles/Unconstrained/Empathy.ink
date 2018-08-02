@@ -23,6 +23,8 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetStringValue(name, string)
 EXTERNAL GetValue(name)
 
+# Load @ story_charlotte   # Play : play_music_charlotte_2
+
 -> Start
 
 === Start ===

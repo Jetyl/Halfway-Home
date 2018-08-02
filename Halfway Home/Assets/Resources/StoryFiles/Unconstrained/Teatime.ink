@@ -23,6 +23,8 @@ VAR lied = false
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, value)
 
+# Load @ story_charlotte   # Play : play_music_charlotte_2
+
 -> Start
 
 === Start ===
