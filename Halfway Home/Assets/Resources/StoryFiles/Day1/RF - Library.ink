@@ -45,7 +45,6 @@ EXTERNAL GetStringValue(value)
 
 
 === WeekOne ===
-Hmm... not sure what that one's about.
 "I haven't really spent much time in here, but I probably should..."
 +[Browse the selection]
 	"Do you want to browse the selection?"
