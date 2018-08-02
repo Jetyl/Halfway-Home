@@ -28,8 +28,8 @@ EXTERNAL GetStringValue(value)
 
 === LibraryFunction ===
 [{player_name}] "And here's the library." #Timothy = Calm, close, stage_left
-"They have a whole stock of fiction and non-fiction stuff here, for all your literary needs"
-"There's also a book club that meets a few times a week"
+"They have a whole stock of fiction and non-fiction stuff here, for all your literary needs."
+"There's also a book club that meets a few times a week."
 [Timothy] "It's... um... a little claustrophobic in here."
 [{player_name}] "Yeah... they fit a 'lotta books into a small space."
 "They have book recommendations, if you find the selection overwhelming."
