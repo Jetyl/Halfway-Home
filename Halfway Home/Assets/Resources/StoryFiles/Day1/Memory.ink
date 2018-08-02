@@ -50,7 +50,7 @@ EXTERNAL SetValue(name, values)
 
 This is it. Sunflower House. # Background / HouseFront # All * Hide   # Ambience : play_ambience_birds
 It's a Halfway House: a place meant to help people like me `transition back into the community`.
-`A Garden for the Mind` according to the brochure the doctors gave me.
+`A Garden for the Mind` according to the brochure the doctors gave me. 
 Pretty cheesy, but they said I don't really stand much chance in the real world. Maybe they're right.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away         
 I open the heavy oak doors and step inside.   # Background / Commons, Blackwipe   # Play : Stop_All_Fast   // # Ambience : play_ambience_fireplace

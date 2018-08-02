@@ -149,6 +149,19 @@ public class SaveDataDisplay : MonoBehaviour
 
     }
 
+    public void PleaseWork()
+    {
+        StartCoroutine(ScreenshotUpdate());
+    }
+
+    // For fading out when returning to title
+    IEnumerator ScreenshotUpdate()
+    {
+        yield return new WaitForSeconds(Time.deltaTime);
+        Screenshot.enabled = false;
+        Screenshot.enabled = true;
+    }
+
     void SetChildAlpha(float alpha)
     {
       foreach(Graphic g in GetComponentsInChildren<Graphic>())
