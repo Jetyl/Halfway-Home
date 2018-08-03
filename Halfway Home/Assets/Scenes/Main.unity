@@ -2115,6 +2115,7 @@ MonoBehaviour:
   NextLine: {fileID: 2086867357}
   AutoButton: {fileID: 1981507017}
   AutoTimeDelay: 2
+  SkipTimeDelay: 0.1
   QuirkControl: {fileID: 60031326}
   DebugSkipping: 1
   NoClick: 0
@@ -71471,7 +71472,7 @@ Prefab:
         type: 2}
       propertyPath: Timeline
       value: 
-      objectReference: {fileID: 4900000, guid: dbcc8188efaef354db06c6d15cb1d85b, type: 3}
+      objectReference: {fileID: 4900000, guid: 4b11795f50a478a49a629b5b9515e9a3, type: 3}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[3].ProgressName
