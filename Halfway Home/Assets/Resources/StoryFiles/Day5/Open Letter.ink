@@ -242,7 +242,8 @@ He left his letters here too.
 I walk over to Charlotte, who seems to be staring intently at the other residents. #Isaac = exit #Trissa = exit #Eduardo = exit
 [{player_name}] "Hey, Charlotte?"
 {
-- GetValue("MissedTea"):
+- GetValue("MissedTea")==true:
+	~SetValue("MissedTea", false)
 	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
 	<Speed=200%>Oh god, I forgot to meet her for tea!
@@ -258,17 +259,22 @@ I walk over to Charlotte, who seems to be staring intently at the other resident
 	+ [Accept]
 		[{player_name}] "I'll be there. I promise."
 		[Charlotte] "I look forward to it."
+		"Now was there something you wanted?"
+		[{player_name}] "Oh. I was just curious..."
 	+ [Decline]
 		[{player_name}] "As much as I'd like to redeem myself... Sorry, but I can't."
 		[Charlotte] "Ah, well. I respect a lesson learned."
 		"It's wiser to decline an invitation than miss it."
-	-"Now was there something you wanted?"
-	[{player_name}] "Oh. I was just curious..."
--GetValue("MissedLesson:
+		"Now was there something you wanted?"
+		[{player_name}] "Oh. I was just curious..."
+-GetValue("MissedLesson")==true:
+	~SetValue("MissedLesson", false)
 	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
-	<Speed=200%>Oh god, I forgot to meet her for tea!
+	<Speed=200%>Oh god, I forgot to meet her in the library!
 	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	[{player_name}] "I'm so sorry... I messed up."
+	Charlotte sighs and regains her composure.
 	"But I recognize you are no expert at these sorts of things." # Charlotte = Calm
 	"Ironically, had you not been absent for our meeting I would have passed that information along to you."
 	"Now was there something you wanted?"

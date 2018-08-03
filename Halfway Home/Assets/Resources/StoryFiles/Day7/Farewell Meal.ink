@@ -36,7 +36,7 @@ EXTERNAL GetValue(value)
 === GoodMeal ===
 I'm called to the kitchen for my farewell meal.   # Play : play_music_happy
 I walk in seeing everyone chatting and having a good time.
-Trissa is chatting up Jesse and John at the center table.
+Trissa is chatting up the other two ruclusive first-floor residents at the center table. {I|Still} can't remember their names...
 {
 	-GetValue("CompletedTeatime"):
 		I see Charlotte, over in her usual chair, relaxing of all things.
@@ -259,7 +259,33 @@ Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaste
 }
 
 =StayingSad
-Next to approach is Charlotte, who seems to have taken a break from her duties
+Next to approach is Charlotte, who seems to have taken a break from her duties.
+{
+- GetValue("MissedTea")==true:
+	[Charlotte] "Greetings, {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her for tea!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	"And to think I was so impressed with your progress..."
+	[{player_name}] "I'm so sorry, Charlotte! It just slipped my mind... I..."
+	"I made a grave mistake. I didn't mean to hurt you..." # grace ^ good
+	"Would you accept an honest apology from a forgetful idiot?" # grace ^ good
+	[Charlotte] "Perhaps you are not as entirely bereft of courtesy as I had surmised." # Charlotte = Calm
+	"I suppose I can forgive you, {player_name}..."
+	"I would extend a new invitation, only... it seems you wouldn't be around to take advantage of it." # Charlotte = Happy
+	"Speaking of which..."
+-GetValue("MissedLesson")==true:
+	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her in the library!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	[{player_name}] "I'm so sorry... I messed up."
+	Charlotte sighs and regains her composure.
+	[Charlotte] "But I recognize you are no expert at these sorts of things." # Charlotte = Calm
+	"Ironically, had you not been absent for our meeting I would have passed that information along to you."
+	"I suppose you will have to do your best to learn `on the fly`, then."
+	"Speaking of which..."
+}
 [Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."
@@ -277,46 +303,77 @@ I watch Charlotte stride gracefully toward the serving line as Max emerges with 
 ->->
 
 =StayingHappy
-Next to approach is Charlotte, who seems to have taken a break from her duties
-[Charlotte] "Congratulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
+Next to approach is Charlotte, who seems to have taken a break from her duties.
+{
+- GetValue("MissedTea")==true:
+	[Charlotte] "Greetings, {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her for tea!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	"And to think I was so impressed with your progress..."
+	[{player_name}] "I'm so sorry, Charlotte! It just slipped my mind... I..."
+	"I made a grave mistake. I didn't mean to hurt you..." # grace ^ good
+	"Would you accept an honest apology from a forgetful idiot?" # grace ^ good
+	[Charlotte] "Perhaps you are not as entirely bereft of courtesy as I had surmised." # Charlotte = Calm
+	"I suppose I can forgive you, {player_name}..."
+	"I would extend a new invitation, only... it seems you wouldn't be around to take advantage of it." # Charlotte = Happy
+	"Speaking of which..."
+-GetValue("MissedLesson")==true:
+	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her in the library!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	[{player_name}] "I'm so sorry... I messed up."
+	Charlotte sighs and regains her composure.
+	[Charlotte] "But I recognize you are no expert at these sorts of things." # Charlotte = Calm
+	"Ironically, had you not been absent for our meeting I would have passed that information along to you."
+	"I suppose you will have to do your best to learn `on the fly`, then."
+	"Speaking of which..."
+}
+[Charlotte] "Congratulations on completing your tenure at Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, Thank you Charlotte."
-[Charlotte] "<size=50%>It good some people can leave...<size=100%>" #Charlotte = Sad
+[Charlotte] "<size=50%>It's always a joy to see others move on to bigger and better things...<size=100%>" #Charlotte = Sad
 +[Ask about Timothy]
 	[{player_name}] "So, Charlotte, what do you think of Timothy's new look?"
-	[Charlotte] "hm? I believe I said earlier that it suit him much more than before." #Charlotte = Calm
-	"Although, That is likely less to do with the change in hair color, than the change in attitude it has given him."
-	"I do wonder, with you leaving, who will assist him on reapplication of the die once it grows out?"
-	"he might ask me. Though I sadly know little about exotic hair care solutions. I suppose that is another thing I should look into."
-	"So many things to be done before I can rejoin pleasant society..."
+	[Charlotte] "Hm? I believe I said earlier that I feel it suits him nicely." #Charlotte = Calm
+	"Although, that is less to do with the change in hair color and more to do with the change in attitude that has accompanied it."
+	Charlotte gives me a knowing look.
+	"I trust he has you to thank for both." # Charlotte = Happy
+	"I do wonder... with you leaving, who will assist him with the reapplication of the dye once his hair grows out?"
+	"Oh, dear! What if he asks me?!" # Charlotte = Surprised
+	"I know precious little about exotic hair care solutions..." # Charlotte = Afraid
+	"I had best prepare with rigorous study!" # Charlotte = Angry
+	"So many things to be done before I can rejoin society..." # Charlotte = Sad
 +[Ask about Charlotte]
 	[{player_name}] "Charlotte, how are you doing?"
-	[Charlotte] "Me? Fine, as usual." # Charlotte = Calm
-	"My studies continue to be fruitful. Soon I should be able to..."
+	[Charlotte] "Me? I am well, as usual." # Charlotte = Calm
+	"My studies continue to be fruitful. Perhaps soon I should be able to..."
 	"<size=50%>No, no. I'm not quite ready yet. Another year, at least.<size=100%>"
-	"These things happen from time to time. The hospital is the best place for him, I'm sure."
 - [{player_name}] "Charlotte..."
 [Charlotte] "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
-I watch Charlotte stride gracefully toward the serving line as Max & Timothy emerge with a steaming plate of food. # Charlotte = Exit
+I watch Charlotte stride gracefully toward the serving line as Max and Timothy emerge with steaming plates of food. # Charlotte = Exit
 ->->
 
 =LeavingHappy
 Next to approach is Charlotte
-[Charlotte] "Congratulations of leaving your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
-[{player_name}] "Well, Thank you Charlotte."
-[Charlotte] "And, {player_name}, I put some thought into what you said earlier."
-+[Yeah, and?]
+[Charlotte] "Congratulations on completing your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
+[{player_name}] "Well, thank you Charlotte."
+[Charlotte] "I have put a great deal of thought into what you said earlier."
++[Did you decide?]
 	[{player_name}] "And...?"
-	[Charlotte] "And, I have not quite reached a conclusion just yet."
+	[Charlotte] "And... I have not quite reached a conclusion just yet."
+	"I am realizing a lot of things I thought I knew are wrong. It's difficult for someone like me, but..."
 +[Thats good.]
 	[{player_name}] "That's good."
-	[Charlotte] "Yes. I've even mentioned it to Trissa, at least a little, to get more external input."
--"I wanted to bring it up, in case I reach my conclusion before you leave." # Charlotte = Calm
-"I feel you should know how I am doing, after having put so much concern in for me."
-"You've done great good here for people. Far more than was expected of you."
-"And you have my deepest thanks for that." #Charlotte = happy 
+	[Charlotte] "Yes. I've even mentioned a few things to Trissa to get a second opinion."
+-"I wanted to bring it up in case I come to a decision before you leave." # Charlotte = Calm
+"I feel you should know how I am doing, after demonstrating so much concern for me."
+"You've done great good here for the residents... And for me. You've done far more than was expected of you."
+"You have my deepest and sincerest gratitude for that." #Charlotte = happy 
 [{player_name}] "Charlotte, I-" #Skip
-[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celebratory experience for you. We'll speak later, I'm sure."
-Charlotte bows out of the conversation, before heading to her seat. Max & Timothy emerge just behind her, holding a steaming plate of food. # Charlotte = Exit
+[Charlotte] "Please, there is no need for modesty. This evening is dedicated in your honor, after all."
+"It would be rude to keep you from your meal any longer. We will speak later, I'm sure."
+Charlotte bows out of the conversation, before heading to her seat. Max and Timothy emerge just behind her, holding steaming plates of food. # Charlotte = Exit
 ->->
 
 =LeavingSad
@@ -327,11 +384,12 @@ Next to approach is Charlotte
 	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.
 +[Not really.]
 	[{player_name}] "Not really at all. My mind's just on Timothy."
--[Charlotte] "It's not your fault, You know." # Charlotte = Calm
-"Please don't let the unfortunate event with Mr. Miyuri get you down."
-"You've done great good here for people. Far more than was expected of you."
-"You know, You don't have to be perfect." #Charlotte = happy 
+-[Charlotte] "It's not your fault, you know." # Charlotte = Calm
+"Please don't let the unfortunate event with Mr. Miyuri dampen your spirits."
+"You've done great good here for the residents... And for me. You've done far more than was expected of you."
+"You don't have to be perfect." #Charlotte = happy 
 [{player_name}] "Charlotte, I-" #Skip
-[Charlotte] "Oh come now. Speak nothing of it. Right now is supposed to be a celebratory experience for you. We'll speak later, I'm sure."
-Charlotte bows out of the conversation, before heading to her seat. Max just behind her, holding a steaming plate of food. # Charlotte = Exit
+[Charlotte] "Please, try to enjoy yourself. This evening is dedicated in your honor, after all."
+"It would be rude to keep you from your meal any longer. We will speak later, I'm sure."
+Charlotte bows out of the conversation, before heading to her seat. Max and Timothy emerge just behind her, holding steaming plates of food. # Charlotte = Exit
 ->->

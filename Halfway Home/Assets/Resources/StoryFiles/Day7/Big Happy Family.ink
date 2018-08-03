@@ -96,10 +96,10 @@ Max jostles Timothy's new blue hair. #Dyed=happy
 Max gives a hearty laugh, before quickly turning their mop on me like it was a sword.
 "You didn't make a mess of your bathroom on your last day, now did you?" #Max = Angry
 +[No]
-	[{player_name}] "uh, no?"
+	[{player_name}] "Uh, no?"
 	[Max] "Good." #Max = happy
 +[Maybe]
-	[{player_name}] "uh... Maybe?"
+	[{player_name}] "Uh... Maybe?"
 	[Max] "..."
 	"Well, it’s your last day, plus I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
 -It's times like now I really begin to question if Max is the first floor's RA, or janitor.
@@ -114,27 +114,30 @@ I excuse myself first, and head off to my next location... #All=Exit
 === SadStart ===
 ~tried_grace = false
 ~tried_expression = false
-
 I spot Timothy sitting at one of the tables alone. # Load @ story_big_happy_family
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
-[Timothy] "oh.<delay=0.5> Hi."
-He seems to be in a quiet mood today.<delay=0.5>@ Whatever.
-I silently eat with him Timothy for a while, until I hear a loud voice approach. #Timothy = Exit
+[Timothy] "Oh.<delay=0.5> Hi."
+{He seems to be in a quiet mood today.|He's quiet again. Am I too late to help him?}
+{I silently eat with him for a while until I hear a loud voice approach.|I search for something to say to break the silence. Anything. But before I find the words, a loud voice approaches.} #Timothy = Exit
 [Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
 [{player_name}] "Eh. Fine, I guess..."
-+ "How about you?"
-+ "Where've you two been?"
++ [How about you?]
+	"How about you?"
++ [Where've you two been?]
+	"Where've you two been?"
 -[Eduardo] "Oh, we kinda... just got up."
 [Max] "Again? You two really need to sort out your sleep schedules!" #Max = Calm #Eduardo = Surprised, right
-Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss voice.
-[Eduardo] "H-Hey! We were busy, alright?"
+//Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss voice. (Seems unnecessary. We are already showing this.)
+[Eduardo] "Hey! We were busy, alright?"
 [Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
 [Eduardo] "Oh don't you start, too!" #Eduardo = Angry
-[Charlotte] "Really now. If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
-//continue this line of merriment 
-In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm # Play : play_music_tension_intro_02
-It's... odd.<delay=0.5>@ Almost like we're a big happy family.
+[Charlotte] "If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
+Eduardo throws his arms in the air in surrender. A smile cracks Isaac's stoney facade. # Isaac = Happy
+//continue this line of merriment
+Trissa and Max start laughing. {I can't help but chuckle a bit, too.|I can't laugh at a time like this.}
+This {warm|cold} feeling... seeing everyone laughing {together|innocently, unaware of the coming storm}. #Eduardo = Calm # Play : play_music_tension_intro_02 //In an instant, the table I was sitting at was surrounded by the people I know, laughing. (Wrong tense, incorrectly implies a sudden change, confusing structure)
+It's{... different... from what my life has been these past many years|surreal and horrible}. {It's like|I can't believe I was naive enough to think} we're a big happy family.
 ->Breakdown
 
 
@@ -145,23 +148,23 @@ Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit # music_t
 + "You okay?"
 + "Ya there?"
 -[Timothy] "..." #Breakdown / Open
-Timothy doesn't respond. # play : play_music_tension_intro_03
-In fact, looking at Timothy, I notice a handful of things off. # play : play_music_tension
-He doesn't seem to be looking at anything in particular, and he's shaking slightly.
+Timothy doesn't respond. I turn to face him. # play : play_music_tension_intro_03
+//In fact, looking at Timothy, I notice a handful of things off.  (Do-nothing sentence)
+He doesn't seem to be looking at anything in particular and he's visibly shaking slightly. # play : play_music_tension
 [{player_name}] "Man, are you okay?"
-Timothy looks vaguely in my direction, and reaches his hand out. #Breakdown / Next
-His hand clasps onto my arm with a shaky, but intense grip. I feel his heartbeat, racing insanely fast.
-His lips move, as if trying to speak, but no words come from them.
-With his free hand, he clutches onto his shirt.
-all these little tiny actions I pick up, draw my mind to a conclusion that something is happening to Timothy.
+Timothy looks vaguely in my direction and outstretches his hand. #Breakdown / Next
+His hand clasps onto my arm with the shaky, ironclad grip of desperation. I feel his racing heartbeat through his palm.
+His lips move as if trying to speak, but no words escape them.
+With his free hand he clutches onto his shirt.
+/*all these little tiny actions I pick up, draw my mind to a conclusion that */{Something is happening to Timothy|It's happening again}.
 {	
 	-week >= 2:
 		Not Again!
 	-else:
-		a Panic Attack?!
+		A Panic Attack?!
 }
-"uh, M-Max? Max?" # music_tension_state ! 1
-no one seems to hear my weak call, over the chatter and laughter.
+"Uh, M-Max? Max?" # music_tension_state ! 1
+No one seems to hear my weak call over the chatter and laughter.
 I...
 +[Speak Louder]->ACallForHelp
 +[Go Up and Grab Max] ->ForcefulAssistence
