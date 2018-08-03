@@ -134,7 +134,7 @@ public class CastDisplay : MonoBehaviour
 
                 Roll.ChangePose(eventdata.Pose, Skip);
 
-                if(eventdata.Distance!=StageDistance.Same)Roll.ChangeDistance(eventdata.Distance);
+                if(eventdata.Distance!=StageDistance.Same)Roll.ChangeDistance(eventdata.Distance, Skip);
                 Roll.ChangeFacing(eventdata.FacingDirection);
 
                 if (eventdata.Direction != StagePosition.Same && eventdata.Direction != Roll.Direction)

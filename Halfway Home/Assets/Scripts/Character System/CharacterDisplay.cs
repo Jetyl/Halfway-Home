@@ -44,10 +44,12 @@ public class CharacterDisplay : MonoBehaviour
 
     public float ScaleRatio = 1.2f;
 
+    GameObject ChildTransform;
+
     // Use this for initialization
     void Start ()
     {
-
+        ChildTransform = transform.GetChild(0).gameObject;
         //visual = GetComponentInChildren<SpriteRenderer>();
 
         MCName = Game.current.PlayerName;
@@ -85,7 +87,7 @@ public class CharacterDisplay : MonoBehaviour
         visual.color = Color.white;
         BackSprite.color = awhite;
 
-        ChangeDistance(chara.Dis);
+        ChangeDistance(chara.Dis, true);
         ChangeFacing(chara.face);
         transform.position = new Vector3(chara.PosX, chara.PosY, transform.position.z);
     }
@@ -96,8 +98,8 @@ public class CharacterDisplay : MonoBehaviour
         
 
 
-        if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center);
-        else ChangeDistance(distance);
+        if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center, true);
+        else ChangeDistance(distance, true);
 
         ChangeFacing(facing);
 
@@ -143,7 +145,7 @@ public class CharacterDisplay : MonoBehaviour
                 Scaled = false;
 
                 float scale = Distances[(int)Distance].Scale;
-                gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+                ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
 
             }
         }
@@ -155,7 +157,7 @@ public class CharacterDisplay : MonoBehaviour
                 Scaled = true;
                 float scale = Distances[(int)Distance].Scale;
                 var scalevec = new Vector3(scale, scale, scale) * ScaleRatio;
-                gameObject.DispatchEvent(Events.Scale, new TransformEvent(scalevec, SpriteSwitchSpeed));
+                ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(scalevec, SpriteSwitchSpeed));
             }
         }
     }
@@ -271,15 +273,25 @@ public class CharacterDisplay : MonoBehaviour
     }
     
 
-    public void ChangeDistance(StageDistance distance)
+    public void ChangeDistance(StageDistance distance, bool skip)
     {
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
-        //transform.localScale = new Vector3(scale, scale, scale);
-        gameObject.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
         var newpos = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
-        gameObject.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
-        //transform.localPosition = newpos;
+
+        if (skip)
+        {
+            ChildTransform.transform.localScale = new Vector3(scale, scale, scale);
+            ChildTransform.transform.localPosition = newpos;
+        }
+        else
+        {
+            ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+
+            ChildTransform.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
+        }
+        
+        //
 
     }
     public void ExitStage(StagePosition direction, bool Skip)
