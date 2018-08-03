@@ -337,6 +337,14 @@
    {
     "Name" : "Played Hangman",
     "Type" : 1
+   },
+   {
+    "Name" : "MissedLesson",
+    "Type" : 1
+   },
+   {
+    "Name" : "MissedTea",
+    "Type" : 1
    }
   ]
  },

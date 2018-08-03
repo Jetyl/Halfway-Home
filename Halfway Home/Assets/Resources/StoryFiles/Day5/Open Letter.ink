@@ -241,7 +241,41 @@ He left his letters here too.
 ===CharlotteTalk===
 I walk over to Charlotte, who seems to be staring intently at the other residents. #Isaac = exit #Trissa = exit #Eduardo = exit
 [{player_name}] "Hey, Charlotte?"
-[Charlotte] "Yes?" #Charlotte = left
+{
+- GetValue("MissedTea"):
+	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her for tea!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	"And to think I was so impressed with your progress..."
+	[{player_name}] "I'm so sorry, Charlotte! It just slipped my mind... I..."
+	"I made a grave mistake. I didn't mean to hurt you..." # grace ^ good
+	"Would you accept an honest apology from a forgetful idiot?" # grace ^ good
+	[Charlotte] "Perhaps you are not as entirely bereft of courtesy as I had surmised." # Charlotte = Calm
+	"I suppose I can forgive you, {player_name}... on one condition."
+	"Join me for tea tomorrow at the same time!" # Charlotte = Happy
+	"Do you think you can manage that, {player_gender=="M":Mr.|{player_gender=="F":Ms.|my good}} Forgetful Idiot?"
+	+ [Accept]
+		[{player_name}] "I'll be there. I promise."
+		[Charlotte] "I look forward to it."
+	+ [Decline]
+		[{player_name}] "As much as I'd like to redeem myself... Sorry, but I can't."
+		[Charlotte] "Ah, well. I respect a lesson learned."
+		"It's wiser to decline an invitation than miss it."
+	-"Now was there something you wanted?"
+	[{player_name}] "Oh. I was just curious..."
+-GetValue("MissedLesson:
+	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
+	Uh oh. She looks pissed. What did I- # Skip
+	<Speed=200%>Oh god, I forgot to meet her for tea!
+	"It is quite rude to accept an invitation and then fail to keep the appointment, you know."
+	"But I recognize you are no expert at these sorts of things." # Charlotte = Calm
+	"Ironically, had you not been absent for our meeting I would have passed that information along to you."
+	"Now was there something you wanted?"
+	[{player_name}] "Oh. I was just curious..."
+-else:
+	[Charlotte] "Yes?" #Charlotte = left
+}
 [{player_name}] "How often did you get letters from your family?"
 [Charlotte] "Oh, not very often."
 "Generally speaking, my parents are the only ones who reach out to me, and they typically do so in person or over the phone."
