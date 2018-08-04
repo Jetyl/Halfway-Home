@@ -138,7 +138,7 @@ As I show Timothy around all the art supplies, a rowdy duo walk in.
 [{player_name}] "That's Eduardo and Isaac." # Timothy = stage_center #Eduardo = Exit #Isaac = Exit
 "They're the couple, like, two doors down from us. @They're nice people."
 "C'mon, I'll introduce you."
-I walk over to they pair, Timothy in tow.
+I walk over to the pair, Timothy in tow.
 "Hey, guys, what's up?" #Timothy = stage_left, Afraid, right #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Hey Hey! {player_name}! Good to see ya!"
 "We're both perfectomundo. Up on cloud nine in this business. @I was just telling my 'bae about this rad dream I had." //not sure if I'm happy with this line.
@@ -210,7 +210,7 @@ Off to do something else, I suppose. #All = Exit
 [{player_name}] "I'm sorry, too. For calling you Eddy."
 [Isaac] "He deserved it." #Isaac = Calm, right
 [Eduardo] "Isaac!" #Eduardo = right
-And Eduardo goes right back to Isaac, which is my queue to get going.
+And Eduardo goes right back to Isaac, which is my cue to get going.
 [{player_name}] "Anyways, I gotta finish showing Timothy around. We'll see you two later."
 [Isaac] "Hrm." #All = Exit
 -> END

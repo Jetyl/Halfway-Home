@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -1968453115
-    m_lastTimePart2: -1999243228
+    m_lastTimePsrt1: -85886770
+    m_lastTimePart2: -1999242830
     List:
     - Name: play_music_charlotte_2
       Path: Default Work Unit\play_music_charlotte_2
@@ -1271,8 +1271,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -776375616
-    m_lastTimePart2: -1999243228
+    m_lastTimePsrt1: -81866476
+    m_lastTimePart2: -1999242830
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
