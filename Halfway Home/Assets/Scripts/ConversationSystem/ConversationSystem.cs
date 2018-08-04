@@ -747,17 +747,17 @@ public class ConvInk : ConvNode
 
 public class ConvLoad : ConvNode
 {
-
     
     public ConvLoad(JsonData data)
     {
         ID = (int)data["ID"];
-
     }
 
     public override void CallAction()
     {
-        Space.DispatchEvent(Events.Load);
+        if(ID == -1)
+            Space.DispatchEvent(Events.Load);
+        
         //Debug.Log(Game.current.InCurrentStory);
         if(Game.current.InCurrentStory)
         {
@@ -767,6 +767,7 @@ public class ConvLoad : ConvNode
         }
         else
         {
+            Destination = ID;
             Space.DispatchEvent(Events.ReturnToMap);
         }
 

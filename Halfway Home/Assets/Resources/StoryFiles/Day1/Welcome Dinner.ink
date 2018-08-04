@@ -130,7 +130,7 @@ The moment I finish dishing them up a sizable portion, Max takes off towards the
 
 ===Toast===
 [Max] "Can I get everyone's attention!" #Max=happy
-The whole café quiets a little, as Max speaks up.   # Play : Stop_All   # Ambience : play_ambience_fireplace_far_birds_day
+The whole cafe quiets a little, as Max speaks up.   # Play : Stop_All   # Ambience : play_ambience_fireplace_far_birds_day
 [Max] "Thanks everybody for showing yourselves!"
 [Max] "Today we're welcoming our newest family member, Timothy Miyuri."
 [Max] "Now, some of you have already talked with him, but for those that haven't, he's dis guy right here."

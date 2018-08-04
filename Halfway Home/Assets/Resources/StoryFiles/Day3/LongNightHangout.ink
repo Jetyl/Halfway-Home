@@ -41,7 +41,7 @@ EXTERNAL CallSleep()
 I walk down the halls of the home, and hear some commotion happening in the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
 Walking in, I spy Eduardo and Isaac as the only ones in the room.
-[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, Happy, Eye_U, hrm_Up #2 &Success
+[Eduardo] "Hey! {player_name}! how's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, E_Happy, Eye_U, hrm_Up #2 &Success
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, You know, chilling, shooting the sh-"
 [Isaac] "Eduardo can't sleep." #hangout / hrm_down
