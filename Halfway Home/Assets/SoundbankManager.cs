@@ -27,6 +27,13 @@ public class SoundbankManager : MonoBehaviour {
   
   public void LoadBank(string bank, bool init = false)
   {
+    // Don't load the bank if it's already loaded
+    if (loadedBanks.Contains(bank))
+    {
+      Debug.Log("CONTAINS" + bank);
+      return;
+    }
+    
     AkBankManager.LoadBank(bank, true, true);
     loadedBanks.Add(bank);
     
@@ -59,14 +66,29 @@ public class SoundbankManager : MonoBehaviour {
   
   public void UnloadBank(string bank)
   {
+    // Don't unload the bank if it's not loaded
+    if (!(loadedBanks.Contains(bank)))
+    {
+      Debug.Log("DOESNT CONTAIN" + bank);
+      return;
+    }
+    
     StartCoroutine(DelayUnloadBank(bank));
   }
   
   IEnumerator DelayUnloadBank(string bank)
   {
     yield return new WaitForSeconds(2.0f);
+    
+    // Bandaid fix to visiting the same room twice (until I remove unload banks from elsewhere)
+    // If the bank is equal to the current Room bank, don't unload it
+    if (bank == Game.current.CurrentRoomSoundbank)
+      yield break;
+    
     AkBankManager.UnloadBank(bank);
     loadedBanks.Remove(bank);
+    
+    Debug.Log("UNLOADED BANK" + bank);
   }
   
   public void UnloadAllBanks()
