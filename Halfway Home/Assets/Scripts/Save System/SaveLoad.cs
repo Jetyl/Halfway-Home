@@ -101,9 +101,9 @@ public static class SaveLoad
     public static void DeleteAt(int index)
     {
 
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(path))
         {
-            File.Delete(Application.persistentDataPath + "/savedGames.gd");
+            File.Delete(path);
         }
 
         if (savedGames.Count > index)
@@ -115,6 +115,8 @@ public static class SaveLoad
         Debug.Log(index + " | " + savedGames[index]);
         File.WriteAllText(path, JsonUtility.ToJson(wrap));
         Debug.Log(index + " | " + savedGames[index]);
+
+        //Load();
 
     }
    
@@ -135,9 +137,9 @@ public static class SaveLoad
     public static void Delete()
     {
 
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(path))
         {
-            File.Delete(Application.persistentDataPath + "/savedGames.gd");
+            File.Delete(path);
         }
 
         savedGames = new List<Game>();
@@ -176,7 +178,14 @@ public static class SaveLoad
     
     public static int GetSize()
     {
-        return savedGames.Count;
+        int Count = 0;
+        foreach (var game in savedGames)
+        {
+            if (game != null)
+                Count += 1;
+        }
+
+        return Count;
     }
 
     

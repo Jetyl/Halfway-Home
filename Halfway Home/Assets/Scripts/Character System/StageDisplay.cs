@@ -88,7 +88,7 @@ public class StageDisplay : MonoBehaviour
     void OnLoad(DefaultEvent eventdata)
     {
         Load = true;
-        
+
         SceneryChange(new StageDirectionEvent(Game.current.CurrentRoom, Game.current.CurrentBackdrop, TransitionTypes.None));
     }
 

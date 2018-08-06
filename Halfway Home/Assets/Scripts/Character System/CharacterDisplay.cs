@@ -81,6 +81,8 @@ public class CharacterDisplay : MonoBehaviour
 
     public void OnLoad(CharacterIntermission chara)
     {
+        Start();
+
         visual.sprite = GetPose(chara.Name);
         var awhite = Color.white;
         awhite.a = 0;
