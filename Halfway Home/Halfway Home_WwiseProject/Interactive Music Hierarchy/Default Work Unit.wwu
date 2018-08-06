@@ -660,6 +660,11 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="80"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7.04996282490622</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2358,6 +2363,13 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="ambience_crowd" ID="{75CA86EB-14F1-4C75-82BF-7A5E9BB80B8D}" ShortID="365723949">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -3268,7 +3280,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -4049,7 +4061,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6667,6 +6679,11 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="Tempo" Type="Real64" Value="60"/>
 								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
 								<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16.0821309340008</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6829,6 +6846,13 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="music_artroom" ID="{9E0FD2DF-BD8B-495B-906B-C0C48106FE36}" ShortID="832837629">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -7121,7 +7145,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7431,6 +7455,11 @@ x = 13 / (90 / (60 * 4)) = 34 and 2/3 seconds
 End is 26 measures, which is 69 1/3 seconds</Comment>
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="90"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10.0299893649127</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -7666,6 +7695,11 @@ End is 26 measures, which is 69 1/3 seconds</Comment>
 						<MusicPlaylistContainer Name="music_garden" ID="{A886376B-9DF7-409E-80D3-B919FE89E2FE}" ShortID="1048636749">
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="60"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13.6609438973126</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -8005,6 +8039,11 @@ End is 26 measures, which is 69 1/3 seconds</Comment>
 x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="80"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10.0299893649127</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -8108,6 +8147,13 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="music_eduardo_love" ID="{8CFE868C-261C-42A8-A04C-673CFB7D6886}" ShortID="442491368">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -8962,6 +9008,11 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="Tempo" Type="Real64" Value="90"/>
 								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
 								<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

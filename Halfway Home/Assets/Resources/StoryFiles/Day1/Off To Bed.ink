@@ -123,7 +123,7 @@ Looping weeks on end. I try to wonder on the reason why.
 }
 I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose, NoDefaults
 My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%12
-I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults
+I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults   # Play : play_music_placeholder_main   # Ambience: play_ambience_your_room_fireplace_birds_day
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.
 Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)}

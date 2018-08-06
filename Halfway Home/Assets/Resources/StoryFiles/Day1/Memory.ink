@@ -104,9 +104,9 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
 -> Commons
 
 === Commons ===
-I head out into the common room.   # Background / CommonsNight, Blackwipe, NoDefaults # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
-When did it get dark out? Is it night already?
-Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3
+I head out into the common room.   # Background / CommonsNight, Blackwipe, NoDefaults   # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+When did it get dark out? Is it night already?   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
+Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3   # music_lpf ! 0   # ambience_lpf ! 0
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?"   # Max = Surprised
