@@ -329,6 +329,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
 						<CurrentStateRef Name="Unpaused" ID="{FF773DA1-7DCA-4875-A742-F928CE085354}"/>
 						<CurrentStateRef Name="In_Game" ID="{B1B39C7D-DAFF-4A46-B644-1CD2DAED63EE}"/>
 					</CurrentStateList>

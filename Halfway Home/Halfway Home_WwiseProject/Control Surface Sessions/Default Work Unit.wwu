@@ -17,6 +17,13 @@
 										<Property Name="TargetType" Type="int16" Value="1"/>
 									</PropertyList>
 								</ControlSurfaceBinding>
+								<ControlSurfaceBinding Name="Binding" ID="{80B8F9B5-B57F-45EB-96CA-6F68431CFBA4}">
+									<PropertyList>
+										<Property Name="HardwareControllerKey" Type="string" Value="nanoKontrol2~Ch.1~CC~0"/>
+										<Property Name="TargetClassID" Type="int32" Value="3080208"/>
+										<Property Name="TargetName" Type="string" Value="Volume"/>
+									</PropertyList>
+								</ControlSurfaceBinding>
 							</ChildrenList>
 						</ControlSurfaceBindingGroup>
 						<ControlSurfaceBindingGroup Name="View Groups" ID="{F8C727C2-3D0A-4FC3-9105-3288ED6FE1D7}">
