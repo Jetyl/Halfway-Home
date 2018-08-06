@@ -50,8 +50,8 @@ public class HistoryDisplay : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
-    {
-		if(Input.GetButtonDown("History"))
+  {
+		if(Input.GetButtonDown("History") || (Input.GetAxis("Mouse ScrollWheel") >0f && !Displayed))
         {
             ToggleHistory();
         }
