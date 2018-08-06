@@ -44,6 +44,8 @@ public class MainMenu : MonoBehaviour
         if (SaveLoad.GetSize() == 0)
         {
             ContinueButton.interactable = false;
+            ContinueButton.image.raycastTarget = false;
+
             FlowerA.SetState(0);
             FlowerG.SetState(0);
             FlowerE.SetState(0);
