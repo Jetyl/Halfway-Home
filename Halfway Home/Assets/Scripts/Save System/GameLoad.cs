@@ -32,12 +32,12 @@ public class GameLoad : MonoBehaviour
 		
 	}
 
-    public void LoadAt(int slot)
+    public static void LoadAt(int slot)
     {
         Game.current = SaveLoad.GetSave(slot);
     }
     
-    public void LoadMostRecent()
+    public static void LoadMostRecent()
     {
         DateTime recent = SaveLoad.GetSave(0).SaveStamp;
         Game.current = SaveLoad.GetSave(0);

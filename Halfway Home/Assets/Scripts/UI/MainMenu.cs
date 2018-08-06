@@ -90,6 +90,8 @@ public class MainMenu : MonoBehaviour
     }
     public void ContinueGame()
     {
+        GameLoad.LoadMostRecent();
+
         LoadLevel();
     }
 

@@ -52,6 +52,7 @@ public class DescriptionDisplay : MonoBehaviour
     [HideInInspector]
     public bool NoClick = false;
 
+    bool CanSkip = false;
 
     // Use this for initialization
     void Start ()
@@ -92,6 +93,21 @@ public class DescriptionDisplay : MonoBehaviour
     {
         //print("active: " + Active + "| Paused: " + Paused + "| Stop:" + Stop + "| No Click:" + NoClick);
 
+
+        if (Input.GetButtonDown("Skip") && (CanSkip || DebugSkipping))
+            OnSkip();
+        else if(Input.GetButtonDown("Skip") && !(CanSkip || DebugSkipping))
+        {
+            //john put some info here, i guess, as player is trying to skip, but cannot
+        }
+        else if (Skipping && (Input.GetButtonUp("Skip") || !Input.GetButton("Skip")))
+            Space.DispatchEvent(Events.StopSkipTyping);
+
+
+        if (Input.GetButtonDown("Auto"))
+            ToggleAuto();
+
+
         if (!Active)
             return;
 
@@ -104,11 +120,6 @@ public class DescriptionDisplay : MonoBehaviour
         if (NoClick)
             return;
 
-        if(Input.GetButtonDown("Skip"))
-            ToggleSkip();
-            
-        if (Input.GetButtonDown("Auto"))
-            ToggleAuto();
         
         
         if (Skipping)
@@ -211,11 +222,13 @@ public class DescriptionDisplay : MonoBehaviour
         Line = TextParser.DynamicEdit(eventdata.Line);
         Line = QuirkControl.UpdateText(Line, eventdata.TrueSpeaker);
 
-        if(!DebugSkipping)
+        if (!DebugSkipping)
         {
-            if (!eventdata.CanSkip && Skipping)
+            CanSkip = eventdata.CanSkip;
+
+            if (!CanSkip && Skipping)
             {
-                ToggleSkip();
+                Space.DispatchEvent(Events.StopSkipTyping);
             }
         }
         
@@ -296,9 +309,20 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
+    void OnSkip()
+    {
+        //Space.DispatchEvent(Events.SkipTyping);
+        Skipping = true;
+        SkipTimer = SkipTimeDelay;
+
+        Space.DispatchEvent(Events.SkipTyping);
+        
+        Description.SetSkipping(Skipping);
+    }
+
     void OnNext(DefaultEvent eventdata)
     {
-    Debug.Log("Skip");
+        Debug.Log("Skip");
         Next = true;
     }
 

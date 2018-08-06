@@ -755,7 +755,7 @@ public class ConvLoad : ConvNode
 
     public override void CallAction()
     {
-        if(ID == -1)
+        if(Destination == -1)
             Space.DispatchEvent(Events.Load);
         
         //Debug.Log(Game.current.InCurrentStory);
