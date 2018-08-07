@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using System.IO;
 
 public class HistoryDisplay : MonoBehaviour
 {
@@ -27,8 +28,12 @@ public class HistoryDisplay : MonoBehaviour
     string CurrentSpeaker = "";
 
     private bool Displayed;
+    
+    bool Active;
 
-    public bool SaveOutHistory;
+    string PreviousHistory = "";
+
+    string BreakLine = " -----------------------------";
 
 	// Use this for initialization
 	void Start ()
@@ -46,16 +51,47 @@ public class HistoryDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Save, OnSave);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 
+        Space.Connect<HalfwayHome.StoryEvent>(Events.NewStory, OnActivate);
+
     }
 	
 	// Update is called once per frame
 	void Update ()
   {
+        if (!Active)
+            return;
+
 		if(Input.GetButtonDown("History") || (Input.GetAxis("Mouse ScrollWheel") >0f && !Displayed))
         {
             ToggleHistory();
         }
 	}
+
+
+    public void OnActivate(HalfwayHome.StoryEvent eventdata)
+    {
+        if (Active)
+            SaveOutHistory();
+
+        Active = true;
+
+        var path = Application.persistentDataPath + "/History/" + eventdata.storyFile.name + ".txt";
+
+        if (File.Exists(path))
+        {
+            PreviousHistory = File.ReadAllText(path);
+        }
+        print("heeeeeeeeeeeeeyyyyyyyyyyyooooooooooo");
+
+        CurrentSpeaker = "";
+        History = "";
+
+    }
+    
+    public bool HasSceneLine(string Line)
+    {
+        return PreviousHistory.Contains(Line);
+    }
 
   public void ToggleHistory()
   {
@@ -157,17 +193,9 @@ public class HistoryDisplay : MonoBehaviour
 
     void ClearHistory(DefaultEvent eventdata)
     {
-        if(SaveOutHistory)
-        {
-            var InkData = Resources.Load(Game.current.GetCurrentStory()) as TextAsset;
-            print(Application.persistentDataPath + "/History/" + InkData.name + ".txt");
-            if (!System.IO.Directory.Exists(Application.persistentDataPath + "/History"))
-            {
-                System.IO.Directory.CreateDirectory(Application.persistentDataPath + "/History");
-            }
-            System.IO.File.WriteAllText(Application.persistentDataPath + "/History/" + InkData.name + ".txt", History);
-        }
-        
+        SaveOutHistory();
+
+        Active = false;
 
         CurrentSpeaker = "";
         History = "";
@@ -186,5 +214,19 @@ public class HistoryDisplay : MonoBehaviour
         CurrentSpeaker = Game.current.CurrentSpeaker;
     }
 
+
+    public void SaveOutHistory()
+    {
+        var InkData = Resources.Load(Game.current.GetCurrentStory()) as TextAsset;
+        print(Application.persistentDataPath + "/History/" + InkData.name + ".txt");
+        if (!Directory.Exists(Application.persistentDataPath + "/History"))
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + "/History");
+        }
+
+        string CompleteHistory = PreviousHistory + Environment.NewLine + BreakLine + Environment.NewLine + History;
+
+        File.WriteAllText(Application.persistentDataPath + "/History/" + InkData.name + ".txt", CompleteHistory);
+    }
 
 }

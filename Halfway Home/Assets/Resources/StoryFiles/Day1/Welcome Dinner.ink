@@ -89,11 +89,11 @@ Isaac is too busy cracking up to respond, but Eduardo is able to compose himself
 [Eduardo] "I was just telling my 'meu bem' Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
 [Isaac] "You did. Wanted to hear it again." # Eduardo = Surprised
 [Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game."
-Eduardo leans over to me, the most devilish smirk wide across his face.
+Eduardo leans over to me, the most devilish smirk wide across his face. #Eduardo = close, Calm
 [Eduardo] "Hey, {player_name}, you ever heard the story of me and Isaac's first day rooming together?"
 [Isaac] "hrm!" # Isaac = Surprised
-[Eduardo] "It was only a couple of weeks before yours..."
-I spend a few minutes listening to Eduardo tell the tale.
+[Eduardo] "It was only a couple of weeks before your came here..."
+I spend a few minutes listening to Eduardo tell the tale. #Eduardo = center
 Eduardo really is a masterful storyteller. His raw charisma is inspiring.
 <color=color_descriptor><i>Inspiration has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 [Eduardo] "And you know what the most embarrassing part was?"

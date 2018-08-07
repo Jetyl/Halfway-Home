@@ -2117,9 +2117,11 @@ MonoBehaviour:
   AutoTimeDelay: 2
   SkipTimeDelay: 0.1
   QuirkControl: {fileID: 60031326}
+  SkipCheck: {fileID: 1829547510}
   DebugSkipping: 1
   SkipSprite: {fileID: 230512701}
   NoSkipSprite: {fileID: 821354700}
+  SkipEffects: {fileID: 1174770658}
   NoClick: 0
 --- !u!114 &60031326
 MonoBehaviour:
@@ -6037,7 +6039,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9177,7 +9179,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.85
+  m_fontSize: 70.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16156,7 +16158,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.05
+  m_fontSize: 57.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -43032,6 +43034,7 @@ GameObject:
   - component: {fileID: 1174770655}
   - component: {fileID: 1174770656}
   - component: {fileID: 1174770657}
+  - component: {fileID: 1174770658}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -43207,6 +43210,27 @@ MonoBehaviour:
   Speaker: Voices
   SoundEffectTag: play_sfx_ambient_heartbeat
   StopSoundTag: Heartattack
+--- !u!114 &1174770658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1174770646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7bd66757da6c842ae43efcb01ac763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorBleedDistortAmount: 3
+  curvyDistortion: 0.05
+  curvyDistortionSpeed: 3
+  colorDull: 1
+  lineStaticIntensity: 2
+  scanLineDistortion: 1
+  blurRadius: 1
+  downscaleScalar: 0.25
+  smallTex: {fileID: 0}
+  screenSize: {x: 0, y: 0}
 --- !u!1 &1177578893
 GameObject:
   m_ObjectHideFlags: 0
@@ -54192,7 +54216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.0138}
+  m_AnchoredPosition: {x: 0, y: 902.5818}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -58673,7 +58697,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.9
+  m_fontSize: 66.85
   m_fontSizeBase: 69
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -66998,7 +67022,6 @@ MonoBehaviour:
   TextHiddenOnDisplay:
   - {fileID: 1599244673}
   - {fileID: 568080879}
-  SaveOutHistory: 0
 --- !u!224 &1829547511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70876,7 +70899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.108, y: 0.28500003}
   m_AnchorMax: {x: 0.2112345, y: 0.41000003}
-  m_AnchoredPosition: {x: -14.399872, y: 0}
+  m_AnchoredPosition: {x: -14.399902, y: 0}
   m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934580289

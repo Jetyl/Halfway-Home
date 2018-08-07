@@ -79,7 +79,7 @@ namespace HalfwayHome
       bool isMonologue = (dialog == null);
       if (isMonologue)
       {
-        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line, ""));
+        Space.DispatchEvent(Events.Description, new DescriptionEvent(parse.line, "", visited));
         return;
       }
 
@@ -88,7 +88,7 @@ namespace HalfwayHome
       if (speaker != null)
         currentSpeaker = speaker.value;
 
-      Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.value, currentSpeaker));
+      Space.DispatchEvent(Events.Description, new DescriptionEvent(dialog.value, currentSpeaker, visited));
     }
     
     protected override void OnPresentChoices(List<Choice> choices)

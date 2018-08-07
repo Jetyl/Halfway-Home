@@ -28,10 +28,14 @@ public class DescriptionDisplay : MonoBehaviour
 
     public QuirkDisplay QuirkControl;
 
+    public HistoryDisplay SkipCheck;
+
     public bool DebugSkipping;
 
     public UIFader SkipSprite;
     public UIFader NoSkipSprite;
+
+    public FastForwardEffect SkipEffects;
 
     float AutoTimer = 0;
     float SkipTimer = 0;
@@ -63,7 +67,7 @@ public class DescriptionDisplay : MonoBehaviour
         anime = gameObject.GetComponent<Animator>();
         Description = gameObject.GetComponentInChildren<AutoType>();
         //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
-        
+        SkipEffects.enabled = false;
 
         Speaker.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
@@ -101,19 +105,19 @@ public class DescriptionDisplay : MonoBehaviour
             OnSkip();
         else if(Input.GetButtonDown("Skip") && !(CanSkip || DebugSkipping))
         {
-            NoSkipSprite.Show();
+            NoSkipSprite.Show(0.1f);
         }
         else if(Input.GetButtonUp("Skip") && !(CanSkip || DebugSkipping))
         {
-            NoSkipSprite.Hide();
+            NoSkipSprite.Hide(0.1f);
         }
         else if (Skipping && (Input.GetButtonUp("Skip") || !Input.GetButton("Skip")))
         {
             Space.DispatchEvent(Events.StopSkipTyping);
-            SkipSprite.Hide();
+            SkipSprite.Hide(0.1f);
+            SkipEffects.enabled = false;
         }
             
-
 
         if (Input.GetButtonDown("Auto"))
             ToggleAuto();
@@ -233,10 +237,10 @@ public class DescriptionDisplay : MonoBehaviour
         Line = TextParser.DynamicEdit(eventdata.Line);
         Line = QuirkControl.UpdateText(Line, eventdata.TrueSpeaker);
 
+        CanSkip = SkipCheck.HasSceneLine(Line);
+        print("Can Skip? " + CanSkip);
         if (!DebugSkipping)
         {
-            CanSkip = eventdata.CanSkip;
-
             if (!CanSkip && Skipping)
             {
                 Space.DispatchEvent(Events.StopSkipTyping);
@@ -317,6 +321,9 @@ public class DescriptionDisplay : MonoBehaviour
 
     void OnSkipOff(DefaultEvent eventdata)
     {
+        NoSkipSprite.Hide(0.1f);
+        SkipSprite.Hide(0.1f);
+
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
@@ -329,7 +336,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.SkipTyping);
         
         Description.SetSkipping(Skipping);
-        SkipSprite.Show();
+        SkipSprite.Show(0.1f);
+        SkipEffects.enabled = true;
     }
 
     void OnNext(DefaultEvent eventdata)
