@@ -42,6 +42,7 @@
 			float4 _MainTex_TexelSize;
 			float4 _SmallTex_TexelSize;
 
+			float _intensity;
 			float _colorBleedDistortAmount;
 			float _curvyDistortionSpeed;
 			float _curvyDistortion;
@@ -159,9 +160,17 @@
 
 				float staticYes = rand(i.uv + _Time.y);
 
-				float4 c = VHSSample(_MainTex, distortedUV + float2(distortOffset * 0.05f * _scanlineDistortion, 0.0f));
+				float sIntensity = saturate(_intensity);
 
-				return c + totalVHSLineStatic + staticYes * 0.05f;
+				distortedUV = lerp(i.uv, distortedUV + float2(distortOffset * 0.05f * _scanlineDistortion, 0.0f), sIntensity);
+
+				float4 c = VHSSample(_MainTex, distortedUV);
+
+				float4 unmodified = tex2D(_MainTex, distortedUV);
+
+				//return c + totalVHSLineStatic + staticYes * 0.05f;
+
+				return lerp(unmodified, c + totalVHSLineStatic + staticYes * 0.05f, sIntensity);
 			}
 			ENDCG
 		}

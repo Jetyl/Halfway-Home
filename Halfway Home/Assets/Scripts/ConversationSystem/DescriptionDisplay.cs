@@ -67,7 +67,7 @@ public class DescriptionDisplay : MonoBehaviour
         anime = gameObject.GetComponent<Animator>();
         Description = gameObject.GetComponentInChildren<AutoType>();
         //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
-        SkipEffects.enabled = false;
+        SkipEffects.EndEffect(0.0001f);
 
         Speaker.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
@@ -115,7 +115,7 @@ public class DescriptionDisplay : MonoBehaviour
         {
             Space.DispatchEvent(Events.StopSkipTyping);
             SkipSprite.Hide(0.1f);
-            SkipEffects.enabled = false;
+            SkipEffects.EndEffect(0.1f);
         }
             
 
@@ -337,7 +337,7 @@ public class DescriptionDisplay : MonoBehaviour
         
         Description.SetSkipping(Skipping);
         SkipSprite.Show(0.1f);
-        SkipEffects.enabled = true;
+        SkipEffects.StartEffect(0.1f);
     }
 
     void OnNext(DefaultEvent eventdata)

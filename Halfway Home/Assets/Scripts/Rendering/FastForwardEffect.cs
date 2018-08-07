@@ -8,6 +8,8 @@ public class FastForwardEffect : MonoBehaviour
     Shader effectShader;
     Material effectMaterial;
 
+    float intensity = 1.0f;
+
     //Offset for color bleeding to the side
     public float colorBleedDistortAmount = 5.0f;
 
@@ -40,8 +42,61 @@ public class FastForwardEffect : MonoBehaviour
     //Downscales the texture so we can blur for less computation
     //Requires a shutdown and re-enabling to work
     public float downscaleScalar = 0.25f;
-    public RenderTexture smallTex;
-    public Vector2Int screenSize;
+
+
+    RenderTexture smallTex;
+    Vector2Int screenSize;
+    
+    float t = 0.0f;
+    float maxT = 5.0f;
+    float tDir = 1.0f;
+    public void StartEffect(float rampUpTime)
+    {
+        tDir = 1.0f;
+        maxT = rampUpTime;
+        t = 0.0f;
+
+        enabled = true;
+    }
+
+    public void EndEffect(float rampDownTime)
+    {
+        tDir = -1.0f;
+        t = rampDownTime;
+        maxT = rampDownTime;
+
+        enabled = true;
+    }
+    
+    private void Update()
+    {
+        if (tDir > 0.0f)
+        {
+            if (t  < maxT)
+            {
+                t += Time.deltaTime;
+
+                if (t > maxT)
+                    t = maxT;
+            }
+        }
+        else
+        {
+            if (t > 0.0f)
+            {
+                t -= Time.deltaTime;
+
+                if (t < 0.0f)
+                {
+                    t = 0.0f;
+                    enabled = false;
+                }
+            }
+        }
+
+        intensity = t / maxT;
+    }
+
 
     private void OnEnable()
     {
@@ -59,6 +114,7 @@ public class FastForwardEffect : MonoBehaviour
         effectMaterial.SetFloat("_curvyDistortionSpeed", curvyDistortionSpeed);
         effectMaterial.SetFloat("_scanlineDistortion", scanLineDistortion);
         effectMaterial.SetInt("_blurRadius", blurRadius);
+        effectMaterial.SetFloat("_intensity", intensity);
     }
 
     private void OnDisable()
@@ -79,6 +135,10 @@ public class FastForwardEffect : MonoBehaviour
         effectMaterial.SetFloat("_curvyDistortionSpeed", curvyDistortionSpeed);
         effectMaterial.SetFloat("_scanlineDistortion", scanLineDistortion);
         effectMaterial.SetInt("_blurRadius", blurRadius);
+
+
+        //But not this one. Keep this one.
+        effectMaterial.SetFloat("_intensity", intensity);
 
 
         Graphics.Blit(source, smallTex);
