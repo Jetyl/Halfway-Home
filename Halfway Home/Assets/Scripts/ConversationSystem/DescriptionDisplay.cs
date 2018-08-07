@@ -30,6 +30,9 @@ public class DescriptionDisplay : MonoBehaviour
 
     public bool DebugSkipping;
 
+    public UIFader SkipSprite;
+    public UIFader NoSkipSprite;
+
     float AutoTimer = 0;
     float SkipTimer = 0;
 
@@ -98,10 +101,18 @@ public class DescriptionDisplay : MonoBehaviour
             OnSkip();
         else if(Input.GetButtonDown("Skip") && !(CanSkip || DebugSkipping))
         {
-            //john put some info here, i guess, as player is trying to skip, but cannot
+            NoSkipSprite.Show();
+        }
+        else if(Input.GetButtonUp("Skip") && !(CanSkip || DebugSkipping))
+        {
+            NoSkipSprite.Hide();
         }
         else if (Skipping && (Input.GetButtonUp("Skip") || !Input.GetButton("Skip")))
+        {
             Space.DispatchEvent(Events.StopSkipTyping);
+            SkipSprite.Hide();
+        }
+            
 
 
         if (Input.GetButtonDown("Auto"))
@@ -318,6 +329,7 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DispatchEvent(Events.SkipTyping);
         
         Description.SetSkipping(Skipping);
+        SkipSprite.Show();
     }
 
     void OnNext(DefaultEvent eventdata)
