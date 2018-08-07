@@ -4,7 +4,7 @@
   "Name" : "Memory",
   "Slug" : "CGs/Memory/houseCG2fix",
   "Set"  : 0,
-  "Caption" : "a memory i had"
+  "Caption" : "A Dream and a Memory"
  },
  {
   "Name" : "Hangman",
@@ -28,48 +28,48 @@
   "Name" : "Hideaway",
   "Slug" : "CGs/Hideaway/ColdSky_Gallery",
   "Set"  : 0,
-  "Caption" : "Isaac in his Hideaway"
+  "Caption" : "Isaac Hiding Away"
  },
  {
   "Name" : "Morning Misery",
   "Slug" : "CGs/Misery/morning_Gallery",
   "Set"  : 0,
-  "Caption" : "Eduardo in the Art room"
+  "Caption" : "Eduardo's Art Room Breakfast"
  },
  {
   "Name" : "Tea Time",
   "Slug" : "CGs/Teatime/TeaTime",
   "Set"  : 0,
-  "Caption" : "Tea Time With Charlotte"
+  "Caption" : "Tea Time with Charlotte"
  },
  {
   "Name" : "Closed Wound",
   "Slug" : "CGs/Wound Letter/tragic_Gallery",
   "Set"  : 0,
-  "Caption" : "Timothy, crying after getting a letter from his parents"
+  "Caption" : "After the Letter"
  },
  {
   "Name" : "Dye Job",
   "Slug" : "CGs/Dye/Dye_Gallery",
   "Set"  : 0,
-  "Caption" : "Timothy with his newly dyed hair"
+  "Caption" : "Timothy's New Look"
  },
  {
   "Name" : "Breakdown",
   "Slug" : "CGs/Breakdown/TimothyBreakdown",
   "Set"  : 0,
-  "Caption" : "Timothy's Breakdown"
+  "Caption" : "Panic"
  },
  {
   "Name" : "Timothy's Drawing",
   "Slug" : "CGs/Timothys_drawing",
   "Set"  : 0,
-  "Caption" : "The Drawing Timothy made of me and everyone else"
+  "Caption" : "Timothy's Drawing"
  },
  {
   "Name" : "Cast Photo",
   "Slug" : "cast_photo",
   "Set"  : 0,
-  "Caption" : "My friends from Sunflower House"
+  "Caption" : "My Friends at Sunflower House"
  }
 ]
