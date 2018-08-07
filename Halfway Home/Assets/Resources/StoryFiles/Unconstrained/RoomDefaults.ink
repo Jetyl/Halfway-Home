@@ -264,7 +264,7 @@ The book is {~beautifully written and I learn a lot just from the prose.| rather
 
 {
 	- grace > 2:
-		<color=color_descriptor>Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b><color=color_descriptor>!</color> # Stress -= 20 # grace ^ good, nocolor
+		<color=color_descriptor>Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b><color=color_descriptor>!</color> # Stress -= 25 # grace ^ good, nocolor
 	- grace > 1:
 		<color=color_descriptor>Experience with <color=color_grace><b>Grace</b><color=color_descriptor> has removed the <b>Stress<b> from this activity<color=color_descriptor>!</color> # grace ^ good, nocolor
 		<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
@@ -289,7 +289,8 @@ After about an hour, I finish. My digits are starting to ache, but something abo
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 {
 	- expression > 2:
-		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>!</color> # Depression -= 20 # expression ^ good, nocolor
+		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor></color> and relieved Depression. # expression ^ good, nocolor
+		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>!</color> # Depression -= 25 # expression ^ good, nocolor
 	- expression > 1:
 		<color=color_descriptor>Experience with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor>!</color> # expression ^ good, nocolor
 		<color=color_descriptor>Creativity has <color=color_expression>improved <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+

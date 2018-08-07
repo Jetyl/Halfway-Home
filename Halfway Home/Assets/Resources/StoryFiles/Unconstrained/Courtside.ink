@@ -343,9 +343,9 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 
 =PlayerTurn
 He recovers the ball and passes it to me. My turn.
-+[Easy Shot (My Odds: Good, Timothy's Odds: Fair)]
++[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=green>Good<color=color_descriptor>, Timothy's Odds: <color=yellow>Fair<color=color_descriptor>)</color>]
 	I walk up close to the basket.
-	++[Normal Throw (85%)]
+	++[Normal Throw<size=60%><color=color_descriptor> (85%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
 			-It's a perfect shot!
@@ -363,7 +363,7 @@ He recovers the ball and passes it to me. My turn.
 			-Despite making it as easy as possible for myself, I still missed.
 				->GameTime.TimothyTurn
 		}
-	++[Call Shot (71%)]
+	++[Call Shot<size=60%><color=color_descriptor> (71%)</color>]
 		I can probably manage something fancy from this distance.
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -383,9 +383,9 @@ He recovers the ball and passes it to me. My turn.
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
-+[Normal Shot (My Odds: Fair, Timothy's Odds: Poor)]
++[Normal Shot<size=50%><color=color_descriptor> (My Odds: <color=yellow>Fair<color=color_descriptor>, Timothy's Odds: <color=orange>Poor<color=color_descriptor>)</color>]
 	I get a good distance from the basket.
-	++[Normal Throw (57%)]
+	++[Normal Throw<size=60%><color=color_descriptor> (57%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
 			-It's a perfect shot!
@@ -403,7 +403,7 @@ He recovers the ball and passes it to me. My turn.
 			-A complete miss. I must really be out of practice.
 				->GameTime.TimothyTurn
 		}
-	++[Call Shot (43%)]
+	++[Call Shot<size=60%><color=color_descriptor> (43%)</color>]
 		I may be getting overconfident, but I'll try something tricky.
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -423,9 +423,9 @@ He recovers the ball and passes it to me. My turn.
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
-+[Distant Shot (My Odds: Poor, Timothy's Odds: Dismal)]
++[Distant Shot<size=50%><color=color_descriptor> (My Odds: <color=orange>Poor<color=color_descriptor>, Timothy's Odds: <color=red>Dismal<color=color_descriptor>)</color>]
 	I step back to the edge of the concrete.
-	++[Normal Throw (29%)]
+	++[Normal Throw<size=60%><color=color_descriptor> (29%)</color>]
 		It's probably best if I don't try anything fancy from this distance.
 		{shuffle:
 			-It's a perfect shot!
@@ -443,7 +443,7 @@ He recovers the ball and passes it to me. My turn.
 			-A complete miss. I must really be out of practice.
 				->GameTime.TimothyTurn
 		}
-	++[Call Shot (14%)]
+	++[Call Shot<size=60%><color=color_descriptor> (14%)</color>]
 		I'm already taking a hard shot, why not double down?
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -610,7 +610,7 @@ Nothing can be done about it now. I should get going as well.
 
 === Break ===
 [{player_name}] "Sure, Timothy. It makes no difference to me." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 3)} // +3 TP
-[Timothy] "Thanks." # Basketball / Exit # Timothy = Happy
+[Timothy] "Thanks." # Basketball / Exit # Background / Garden, blackwipe, NoDefaults # Timothy = Happy
 [{player_name}] "I can't believe I never noticed this was here..."
 [Timothy] "I didn't notice it either."
 [{player_name}] "Yeah, but you've got an excuse. I've been here almost a year."
