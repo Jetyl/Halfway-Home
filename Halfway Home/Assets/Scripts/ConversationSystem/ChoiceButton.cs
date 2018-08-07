@@ -48,7 +48,7 @@ public class ChoiceButton : MonoBehaviour
     {
         button.colors = ExtractChoiceColor(ref eventdata.choicedata.text, Tags, Base.Colors);
 
-        txt.text = eventdata.choicedata.text.Trim();
+        txt.text = TextParser.DynamicEdit( eventdata.choicedata.text.Trim());
     }
     
 
