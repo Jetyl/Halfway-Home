@@ -22,7 +22,7 @@
      {
       "Id": "3914743577",
       "Name": "play_music_charlotte_2",
-      "ObjectPath": "\\Events\\Default Work Unit\\play_music_charlotte_2"
+      "ObjectPath": "\\Events\\PlayMusic\\play_music_charlotte_2"
      }
     ],
     "IncludedMemoryFiles": [

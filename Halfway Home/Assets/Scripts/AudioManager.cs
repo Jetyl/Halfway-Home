@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using AK;
 using Stratus;
+using Stratus.Modules.InkModule;
+using HalfwayHome;
 
 public class AudioManager : MonoBehaviour
 {
@@ -102,12 +104,17 @@ public class AudioManager : MonoBehaviour
         Scene.Connect<AudioParamEvent>(OnAudioParamEvent);
         Scene.Connect<AudioParamFadeEvent>(OnAudioParamFadeEvent);
         Scene.Connect<AudioBankEvent>(OnAudioBankEvent);
+        
+        HalfwayHomeStoryLoader hhsl = GameObject.Find("Dialog Display").GetComponent<HalfwayHomeStoryLoader>();
+        hhsl.reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
+        
         Space.Connect<DescriptionEvent>(Events.Description, OnDescriptionEvent);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
         Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+        
         MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
         Skipping = false;
 	}
@@ -115,6 +122,18 @@ public class AudioManager : MonoBehaviour
   void Awake ()
   {
     AkSoundEngine.SetState("Game_State", "In_Game");
+  }
+  
+  void OnStoryStartedEvent(Story.StartedEvent e)
+  {
+    Trace.Script($"-----STORY STARTED: Resetting RTPC values-----");
+    
+    AkSoundEngine.SetRTPCValue("ambience_lpf", 0);
+    AkSoundEngine.SetRTPCValue("ambience_vol", 0);
+    AkSoundEngine.SetRTPCValue("music_lpf", 0);
+    AkSoundEngine.SetRTPCValue("music_tension_state", 0);
+    AkSoundEngine.SetRTPCValue("music_vol", 0);
+    AkSoundEngine.SetRTPCValue("text_vol", 0);
   }
 
   void OnSkipTyping(DefaultEvent e)
@@ -269,6 +288,8 @@ public class AudioManager : MonoBehaviour
 
   void OnAudioParamEvent(AudioParamEvent e)
   {
+    Trace.Script($"Setting {e.ParamName} to {e.ParamValue}");
+    
     AkSoundEngine.SetRTPCValue(e.ParamName, e.ParamValue);
     setCurrentGameParam(e.ParamName, e.ParamValue);
   }

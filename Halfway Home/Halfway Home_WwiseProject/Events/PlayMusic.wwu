@@ -1481,6 +1481,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_music_charlotte_2" ID="{F3CA072D-96F5-4211-8B4E-02570098CAD5}">
+					<ChildrenList>
+						<Action Name="" ID="{194549A3-D032-41E6-8359-CABA9944B7F2}" ShortID="289347204">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_charlotte_2" ID="{57A78456-26B0-46A7-9B2A-03E543D5101D}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

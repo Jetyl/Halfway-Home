@@ -71,7 +71,7 @@ EXTERNAL GetHour()
 		I feel hopeful as I surrender myself to sleep.
 	}
 	~CallSleep()
-	I wake up feeling <># Play : Play_music_placeholder_main
+	I wake up feeling <># Play : Play_music_placeholder_main   # music_vol | -6
 	{shuffle:
 		-completely reinvigorated.
 		-groggy.

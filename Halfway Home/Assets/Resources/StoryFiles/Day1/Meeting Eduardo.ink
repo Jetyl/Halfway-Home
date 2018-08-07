@@ -216,7 +216,7 @@ And Eduardo goes right back to Isaac, which is my cue to get going.
 -> END
 
 === Needy ===
-Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love # Needy = Bored, stage_right #Eduardo = invisible, stage_right #Isaac = invisible, stage_right
+Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # ambience_vol | -4   # Needy = Bored, stage_right   #Eduardo = invisible, stage_right   #Isaac = invisible, stage_right
 Isaac looks off to another part of the room. 
 The two are rather well known for the PDA around the home. One of them more so than the other.
 [Isaac] "Used to be worse."
