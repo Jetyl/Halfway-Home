@@ -101,7 +101,7 @@ And Max is the most chill person I know, and has tolerated <i><b>much</i></b> wo
 }
 I give Timothy a minute to collect himself before continuing the tour.
 [{player_name}] "You okay now?"
-He nods   #Timothy = Calm
+He nods.   #Timothy = Calm
 [Timothy] "Y-yeah. I-I'm okay."
 [{player_name}] "Cool. then lets keep going."
 {

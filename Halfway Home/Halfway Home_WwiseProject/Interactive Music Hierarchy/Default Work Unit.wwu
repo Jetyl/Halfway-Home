@@ -276,7 +276,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<ChildrenList>
 								<MusicSegment Name="ambience_your_room_fireplace_birds_day" ID="{F9BC2C2B-6D13-4996-A2CA-B03722019E1A}" ShortID="807994502">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="72000"/>
+										<Property Name="EndPosition" Type="Real64" Value="75087.3333333333"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -299,6 +299,13 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 													<AudioFile>fireplace_far.wav</AudioFile>
 													<ConvertedFileIDList>
 														<File ID="579820900"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="ambience_birds_day" ID="{4832CC19-8FDE-4A57-AB53-3BF9F10D8EB6}" ShortID="502710525">
+													<Language>SFX</Language>
+													<AudioFile>ambience_birds_day.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="692116045"/>
 													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -348,17 +355,17 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 															</PropertyList>
 															<AudioSourceRef Name="fireplace_far" ID="{4F24BEAF-0FCE-4377-AA20-52BEFAAD3E1A}"/>
 														</MusicClip>
-														<MusicClip Name="fireplace_far" ID="{56939074-3DCB-4D04-B0DC-B9010FECE9C6}">
+														<MusicClip Name="fireplace_far" ID="{61A9CF92-0F0A-43AB-92FF-05E936DD3282}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="2021.21980171757"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8263.27848329778"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1835.75031591822"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																<Property Name="PlayAt" Type="Real64" Value="48000"/>
 															</PropertyList>
 															<AudioSourceRef Name="fireplace_far" ID="{4F24BEAF-0FCE-4377-AA20-52BEFAAD3E1A}"/>
 															<PropertyCurveList>
 																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{75B867A7-C0B8-49D5-9A96-BE0F728DAB36}">
+																	<Curve Name="" ID="{9E18ECC0-3686-4AD1-AE34-016359888515}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="1"/>
 																		</PropertyList>
@@ -369,7 +376,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>2.02122</XPos>
+																				<XPos>8.26328</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -377,7 +384,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																	</Curve>
 																</PropertyCurve>
 																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{79B60DC3-30FE-4EC6-831A-00A0BD00B867}">
+																	<Curve Name="" ID="{0B64E025-EF29-478F-B049-A03093635CBE}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="1"/>
 																		</PropertyList>
@@ -388,7 +395,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>2.02122</XPos>
+																				<XPos>8.26328</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -396,7 +403,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																	</Curve>
 																</PropertyCurve>
 																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{4DEDA91E-2A45-44F6-927F-8BB3EFBDA367}">
+																	<Curve Name="" ID="{4637BFB3-A1F7-4084-B840-5CF3E6047632}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -407,8 +414,8 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>2.02122</XPos>
-																				<YPos>0</YPos>
+																				<XPos>8.26328</XPos>
+																				<YPos>-29.82723</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -535,67 +542,58 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_birds_day" ID="{D1FC7F55-DBD4-4F57-A84D-678CCE9DBAE2}"/>
 														</MusicClip>
-														<MusicClip Name="ambience_birds_day" ID="{CCC663AC-1AB5-4894-A749-AD45DA42AE01}">
+														<MusicClip Name="ambience_birds_day" ID="{89CDF877-78FD-49BC-BAA2-B306653FE4C6}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="3146.227433829"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="4687.5"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1803.17795959826"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																<Property Name="PlayAt" Type="Real64" Value="46875"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_birds_day" ID="{D1FC7F55-DBD4-4F57-A84D-678CCE9DBAE2}"/>
 															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{72C63CA6-3953-4707-867D-B61F89A2713C}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>3.14623</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{62E71420-DF98-4150-BAAD-D15BF4970991}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>3.14623</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
 																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{2918C006-5560-4F64-9A14-06B1BA0022F0}">
+																	<Curve Name="" ID="{D7A2861F-96E4-44AE-87D1-50E73F465988}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>3.14623</XPos>
-																				<YPos>0</YPos>
+																				<XPos>4.6875</XPos>
+																				<YPos>-6.11451</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+														<MusicClip Name="ambience_birds_day" ID="{96992C33-A8C9-4183-9699-68CD80CFA2E1}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="4687.5"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="51562.5"/>
+															</PropertyList>
+															<AudioSourceRef Name="ambience_birds_day" ID="{D1FC7F55-DBD4-4F57-A84D-678CCE9DBAE2}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{62E15D71-883E-4FC3-8A81-686E242083E3}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-6.1145</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>4.6875</XPos>
+																				<YPos>-29.82723</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -677,7 +675,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<ChildrenList>
 								<MusicSegment Name="ambience_your_room_fireplace_crickets_night" ID="{20225E8C-D776-44FD-A1FB-A37C15CED50D}" ShortID="629130384">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="72000"/>
+										<Property Name="EndPosition" Type="Real64" Value="75087.3333333333"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -749,55 +747,17 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 															</PropertyList>
 															<AudioSourceRef Name="fireplace_far" ID="{B0E3C215-BF74-4E0B-9628-6F6924A4AD28}"/>
 														</MusicClip>
-														<MusicClip Name="fireplace_far" ID="{7C3B7B33-3500-4FD7-B547-CF77027111B7}">
+														<MusicClip Name="fireplace_far" ID="{945A6BD4-FC9C-4BAA-9E3B-FBD42E4DBA99}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="2021.21980171757"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1835.75031591822"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																<Property Name="PlayAt" Type="Real64" Value="48000"/>
 															</PropertyList>
 															<AudioSourceRef Name="fireplace_far" ID="{B0E3C215-BF74-4E0B-9628-6F6924A4AD28}"/>
 															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{A1DB11ED-98C3-415A-A378-96FC5E13F523}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2.02122</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{9AFB33A1-9794-4CDD-894B-750AEAD2E6D0}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2.02122</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
 																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{E97200C0-80FA-4880-ABA8-ABBDFDD5289E}">
+																	<Curve Name="" ID="{D90735B7-9A45-4DE5-BC40-F70A6786DDB5}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -808,8 +768,8 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>2.02122</XPos>
-																				<YPos>0</YPos>
+																				<XPos>12</XPos>
+																				<YPos>-29.82723</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -882,55 +842,17 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_crickets_night" ID="{5972D244-9538-40C9-8BFC-E2C0C6447493}"/>
 														</MusicClip>
-														<MusicClip Name="ambience_crickets_night" ID="{385321CA-8DD6-4D6D-AB0A-60E5CB5C80D0}">
+														<MusicClip Name="ambience_crickets_night" ID="{C5A700FA-B9A5-496D-895A-84E220E2AD4E}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="2017.70615736597"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1667.95981299115"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																<Property Name="PlayAt" Type="Real64" Value="48000"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_crickets_night" ID="{5972D244-9538-40C9-8BFC-E2C0C6447493}"/>
 															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{65FD95F4-B8B8-4B88-B1FC-7EA1CA557BDB}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2.01771</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{D87A6503-8D3F-4AEE-9D1C-C681AAE3B730}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2.01771</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
 																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{9F81A668-DE94-4DB1-9C65-36A14D90C2C2}">
+																	<Curve Name="" ID="{099C2C19-A6C7-4BA6-AE72-571E12B8525A}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -941,8 +863,8 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>2.01771</XPos>
-																				<YPos>0</YPos>
+																				<XPos>12</XPos>
+																				<YPos>-29.82723</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -1564,12 +1486,32 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																<Property Name="PlayAt" Type="Real64" Value="81625"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_birds_day" ID="{7B1E6C80-8574-40B5-B857-862D2F43E896}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{A855879A-EECB-4F02-BF47-5E1307865E7D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>4.6875</XPos>
+																				<YPos>-16.4471</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
 														</MusicClip>
 														<MusicClip Name="ambience_birds_day" ID="{0F549206-065E-4785-BD96-20C98893B60F}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="1687.5"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="873.552571371722"/>
 																<Property Name="PlayAt" Type="Real64" Value="86312.5"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_birds_day" ID="{7B1E6C80-8574-40B5-B857-862D2F43E896}"/>
@@ -1620,12 +1562,12 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-16.44711</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>1.6875</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-29.82722</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -1774,12 +1716,32 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																<Property Name="PlayAt" Type="Real64" Value="64000"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_crickets_night" ID="{411455EA-6843-4A3C-92CA-852E060F2CF2}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{43E2FB28-2EA9-443E-A77D-9DAAE2D7A1D4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>12</XPos>
+																				<YPos>-16.4471</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
 														</MusicClip>
 														<MusicClip Name="ambience_crickets_night" ID="{D5F5B8F2-8C6B-46F8-AE41-80C4BBF52DFE}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="848.415332892051"/>
 																<Property Name="PlayAt" Type="Real64" Value="76000"/>
 															</PropertyList>
 															<AudioSourceRef Name="ambience_crickets_night" ID="{411455EA-6843-4A3C-92CA-852E060F2CF2}"/>
@@ -1830,12 +1792,12 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-16.4471</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>12</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-29.82723</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -8150,7 +8112,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8256,6 +8218,13 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="music_eduardo_love_no_intro" ID="{CF3FE68D-FF2F-4603-9CDE-4CE9DC81A858}" ShortID="215511761">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
