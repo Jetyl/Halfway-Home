@@ -31,6 +31,8 @@ public class HistoryDisplay : MonoBehaviour
     
     bool Active;
 
+    public bool SaveHistoryExternally = false;
+
     string PreviousHistory = "";
 
     string BreakLine = " -----------------------------";
@@ -71,17 +73,24 @@ public class HistoryDisplay : MonoBehaviour
     public void OnActivate(HalfwayHome.StoryEvent eventdata)
     {
         if (Active)
-            SaveOutHistory();
+        {
+            string CompleteHistory = PreviousHistory + Environment.NewLine + BreakLine + Environment.NewLine + History;
+            Game.current.UpdateHistory(CompleteHistory);
+
+            if (SaveHistoryExternally)
+                SaveOutHistory();
+        }
 
         Active = true;
 
-        var path = Application.persistentDataPath + "/History/" + eventdata.storyFile.name + ".txt";
+        //var path = Application.persistentDataPath + "/History/" + eventdata.storyFile.name + ".txt";
 
-        if (File.Exists(path))
-        {
-            PreviousHistory = File.ReadAllText(path);
-        }
-        print("heeeeeeeeeeeeeyyyyyyyyyyyooooooooooo");
+        //if (File.Exists(path))
+        //{
+        //    PreviousHistory = File.ReadAllText(path);
+        //}
+
+        PreviousHistory = Game.current.GetHistory();
 
         CurrentSpeaker = "";
         History = "";
@@ -194,7 +203,13 @@ public class HistoryDisplay : MonoBehaviour
     void ClearHistory(DefaultEvent eventdata)
     {
         if (Active)
-            SaveOutHistory();
+        {
+            string CompleteHistory = PreviousHistory + Environment.NewLine + BreakLine + Environment.NewLine + History;
+            Game.current.UpdateHistory(CompleteHistory);
+
+            if (SaveHistoryExternally)
+                SaveOutHistory();
+        }
 
         Active = false;
 

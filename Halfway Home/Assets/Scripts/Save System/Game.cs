@@ -17,7 +17,7 @@ public class Game
 {
 
     public static Game current { get; set; }
-
+    
     public string PlayerName;
 
     public Room CurrentRoom;
@@ -84,14 +84,17 @@ public class Game
 
     [SerializeField]
     private long SavedDate;
-    
+
+    public Dictionary<string, string> AllHistories;
+
+    [SerializeField]
+    private List<SceneHistory> SavedHistoryData;
 
     public StorySave StorySave = new StorySave();
 
 
     public Game()
     {
-
         Day = 0;
         Hour = 0;
         PlayerName = "Sam";
@@ -115,6 +118,7 @@ public class Game
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
         ScenePath = new Dictionary<string, string>();
+        AllHistories = new Dictionary<string, string>();
 
         var schedulefiller = TextParser.ToJson("Characters");
 
@@ -156,6 +160,7 @@ public class Game
         SceneList = new Dictionary<string, TimeStamp>();
         CastCall = new List<CharacterIntermission>();
         ScenePath = new Dictionary<string, string>();
+        AllHistories = new Dictionary<string, string>();
 
         foreach (CharacterSchedule character in copy_.Schedule)
         {
@@ -194,6 +199,11 @@ public class Game
 
         }
 
+        foreach (string scene in copy_.AllHistories.Keys)
+        {
+            AllHistories.Add(scene, (copy_.AllHistories[scene]));
+
+        }
 
         StorySave.Overwrite(copy_.StorySave);
 
@@ -265,6 +275,14 @@ public class Game
 
         }
 
+        SavedHistoryData = new List<SceneHistory>();
+
+        foreach (string scene in AllHistories.Keys)
+        {
+            SavedHistoryData.Add(new SceneHistory(scene, AllHistories[scene]));
+
+        }
+
     }
 
 
@@ -285,6 +303,12 @@ public class Game
         for(int j = 0; j < SavedPathData.Count; ++j)
         {
             ScenePath.Add(SavedPathData[j].name, SavedPathData[j].path);
+        }
+
+        AllHistories = new Dictionary<string, string>();
+        for (int j = 0; j < SavedHistoryData.Count; ++j)
+        {
+            AllHistories.Add(SavedHistoryData[j].name, SavedHistoryData[j].History);
         }
 
     }
@@ -343,7 +367,7 @@ public class Game
         CurrentTimeBlock = Amount;
         DrainEnergy = DrainFatigue;
     }
-    public bool HasSeenBeenScene(string scene_name, TimeStamp time_stamp)
+    public bool HasSceneBeenSeen(string scene_name, TimeStamp time_stamp)
     {
         if (!SceneList.ContainsKey(scene_name))
         {
@@ -443,6 +467,23 @@ public class Game
     public string GetCurrentStory()
     {
         return CurrentStory;
+    }
+
+
+    public void UpdateHistory(string history)
+    {
+        if (AllHistories.ContainsKey(CurrentStory))
+            AllHistories[CurrentStory] = history;
+        else
+            AllHistories.Add(CurrentStory, history);
+    }
+
+    public string GetHistory()
+    {
+        if (AllHistories.ContainsKey(CurrentStory))
+            return AllHistories[CurrentStory];
+        else
+            return "";
     }
     
 }
@@ -554,5 +595,19 @@ public class SceneData
     {
         name = name_;
         path = path_;
+    }
+}
+
+[Serializable]
+public class SceneHistory
+{
+    public string name;
+
+    public string History;
+
+    public SceneHistory(string name_, string history_)
+    {
+        name = name_;
+        History = history_;
     }
 }

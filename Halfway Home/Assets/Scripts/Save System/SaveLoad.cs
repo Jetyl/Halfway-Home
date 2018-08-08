@@ -89,7 +89,7 @@ public static class SaveLoad
         {
             savedGames.Add(null);
         }
-
+        
         savedGames[index] = Game.current;
         Save();
 

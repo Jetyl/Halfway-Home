@@ -199,6 +199,12 @@ public class StageDisplay : MonoBehaviour
         EyeCurtain.Progress = 1;
 
         FrontCurtain.sprite = CurrentBackdrop;
+        FrontCurtain.color = Color.white;
+
+        var Awhite = Color.white;
+        Awhite.a = 0;
+
+        BackCuratin.color = Awhite;
     }
 
     public void BackdropChange(Sprite newbackdrop, TransitionTypes transition)
@@ -213,6 +219,12 @@ public class StageDisplay : MonoBehaviour
             FrontCurtain.sprite = newbackdrop;
 
             FrontCurtain.color = Color.white;
+
+            var Awhite = Color.white;
+            Awhite.a = 0;
+
+            BackCuratin.color = Awhite;
+
 
             return;
         }
