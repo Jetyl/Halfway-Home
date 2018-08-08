@@ -17,10 +17,7 @@ public class Game
 {
 
     public static Game current { get; set; }
-
-    [SerializeField]
-    public int Slot;
-
+    
     public string PlayerName;
 
     public Room CurrentRoom;
@@ -98,7 +95,6 @@ public class Game
 
     public Game()
     {
-        Slot = -1;
         Day = 0;
         Hour = 0;
         PlayerName = "Sam";

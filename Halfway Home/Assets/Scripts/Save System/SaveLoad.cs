@@ -89,8 +89,7 @@ public static class SaveLoad
         {
             savedGames.Add(null);
         }
-
-        Game.current.Slot = index;
+        
         savedGames[index] = Game.current;
         Save();
 

@@ -91,7 +91,6 @@ public class HistoryDisplay : MonoBehaviour
         //}
 
         PreviousHistory = Game.current.GetHistory();
-        print(PreviousHistory);
 
         CurrentSpeaker = "";
         History = "";

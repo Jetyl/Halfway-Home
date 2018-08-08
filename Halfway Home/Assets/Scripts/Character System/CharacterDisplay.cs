@@ -289,7 +289,6 @@ public class CharacterDisplay : MonoBehaviour
         else
         {
             ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
-
             ChildTransform.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
         }
         
