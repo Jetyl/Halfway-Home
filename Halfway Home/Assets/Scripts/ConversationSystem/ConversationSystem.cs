@@ -554,7 +554,7 @@ public class ConvMap : ConvNode
 
     public bool WatchedScene()
     {
-        return Game.current.HasSeenBeenScene(Title, time);
+        return Game.current.HasSceneBeenSeen(Title, time);
     }
 
     public void SetSceneTime()

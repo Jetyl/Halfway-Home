@@ -323,6 +323,7 @@ public class DescriptionDisplay : MonoBehaviour
     {
         NoSkipSprite.Hide(0.1f);
         SkipSprite.Hide(0.1f);
+        SkipEffects.EndEffect(0.1f);
 
         Space.DispatchEvent(Events.StopSkipTyping);
     }
