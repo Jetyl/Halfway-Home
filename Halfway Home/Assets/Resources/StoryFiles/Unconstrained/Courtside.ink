@@ -343,7 +343,7 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 
 =PlayerTurn
 He recovers the ball and passes it to me. My turn.
-+[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=green>Good<color=color_descriptor>, Timothy's Odds: <color=yellow>Fair<color=color_descriptor>)</color>]
++[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=0AC41C>Good<color=color_descriptor>, Timothy's Odds: <color=EDAF00>Fair<color=color_descriptor>)</color>]
 	I walk up close to the basket.
 	++[Normal Throw<size=60%><color=color_descriptor> (85%)</color>]
 		I decide not to try anything fancy.
@@ -383,7 +383,7 @@ He recovers the ball and passes it to me. My turn.
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
-+[Normal Shot<size=50%><color=color_descriptor> (My Odds: <color=yellow>Fair<color=color_descriptor>, Timothy's Odds: <color=orange>Poor<color=color_descriptor>)</color>]
++[Normal Shot<size=50%><color=color_descriptor> (My Odds: <color=EDAF00>Fair<color=color_descriptor>, Timothy's Odds: <color=FF6900>Poor<color=color_descriptor>)</color>]
 	I get a good distance from the basket.
 	++[Normal Throw<size=60%><color=color_descriptor> (57%)</color>]
 		I decide not to try anything fancy.
@@ -423,7 +423,7 @@ He recovers the ball and passes it to me. My turn.
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
-+[Distant Shot<size=50%><color=color_descriptor> (My Odds: <color=orange>Poor<color=color_descriptor>, Timothy's Odds: <color=red>Dismal<color=color_descriptor>)</color>]
++[Distant Shot<size=50%><color=color_descriptor> (My Odds: <color=FF6900>Poor<color=color_descriptor>, Timothy's Odds: <color=E51900>Dismal<color=color_descriptor>)</color>]
 	I step back to the edge of the concrete.
 	++[Normal Throw<size=60%><color=color_descriptor> (29%)</color>]
 		It's probably best if I don't try anything fancy from this distance.
