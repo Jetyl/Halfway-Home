@@ -193,7 +193,8 @@ public class HistoryDisplay : MonoBehaviour
 
     void ClearHistory(DefaultEvent eventdata)
     {
-        SaveOutHistory();
+        if (Active)
+            SaveOutHistory();
 
         Active = false;
 
