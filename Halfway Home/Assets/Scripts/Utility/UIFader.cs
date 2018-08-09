@@ -36,10 +36,11 @@ public class UIFader : MonoBehaviour
 
   private void Update()
   {
-    if(GetComponent<Graphic>() && GetComponent<Graphic>().color.a != 0 && IsHidden)
-    {
-      Hide();
-    }
+    // This hotfix was causing Hide to be called per frame.
+    //if(GetComponent<Graphic>() && GetComponent<Graphic>().color.a != 0 && IsHidden)
+    //{
+    //  Hide();
+    //}
   }
 
   public void ResetChildren()
@@ -53,6 +54,7 @@ public class UIFader : MonoBehaviour
 
   public void Hide(float fadeTime = DefaultFadeTime)
   {
+    Debug.Log($"Hiding {gameObject.name}");
     ResetChildren();
     if(GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(0f, fadeTime, true);
     foreach(UIChild c in UIChildren)
@@ -65,6 +67,7 @@ public class UIFader : MonoBehaviour
 
   public void Show(float fadeTime = DefaultFadeTime)
   {
+    Debug.Log($"Showing {gameObject.name}");
     ResetChildren();
     if (GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(1f, fadeTime, true);
     foreach (UIChild c in UIChildren)
