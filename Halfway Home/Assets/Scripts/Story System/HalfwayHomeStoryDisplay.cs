@@ -107,7 +107,9 @@ namespace HalfwayHome
         
         //added by jesse
         button.StartCoroutine(TextParser.FrameDelay(
-            button.gameObject, Events.Choice, new ChoiceEvent(new Choices(choices[i].text.Trim())))); 
+            button.gameObject, Events.Choice, new ChoiceEvent(new Choices(choices[i].text.Trim()))));
+
+                Space.DispatchEvent(Events.ConversationChoice);
       }
     }
 
