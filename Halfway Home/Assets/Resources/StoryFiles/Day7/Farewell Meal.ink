@@ -60,38 +60,48 @@ Timothy has been very giddy all day today. Its nice.
 ->END
 
 === GoodEnd ===
-[Dyed>Timothy] "w-we're back!" #Dyed = happy #Max =Calm
+[Dyed>Timothy] "W-we're back!" #Dyed = happy #Max =Calm
 [Max] "Sorry that took so long! Timothy was just asking if he-" #Skip #Dyed=Angry
 "You know what, it's not important."  #Dyed = happy
 +[Say Something]
-	[{player_name}] "Oh? now I'm curious?" #expression+ #expression ^ good
+	[{player_name}] "Oh? Now I'm curious?" #expression+ #expression ^ good
 	[Max] "Sorry, {player_name}. No Spoilers."
 +[Let it slide]
 	I let the slip up Max made slide. Obviously Timothy wants it to be a secret. #grace+ #grace ^ good
 -[{player_name}] "Okay then."
 "Thanks, for getting my food, by the way." #Dyed = stage_left
-[Max] "Oh c'mon {player_name}. It's your special occasion. We should be the one thanking you." #Max = surprised
+[Max] "Oh c'mon {player_name}. It's your special occasion. We should be the ones thanking you!" #Max = surprised
 "Speaking of that." # Max Calm
-Max stands fully straight up, letting out the full volume of his voice over the surrounding shatter. #Max = happy
+Max stands fully straight up, letting the full volume of their voice boom over the chatter. #Max = happy
 "Ladies, gentlemen, and everyone in between, may I have your attention?"
 The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
-[Max] "today we say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!"
-"And while normally I or one of the other RAs gives these toasts, a certain new resident has asked if he can speak, and well, How can I say no to that."
-With his introductions out of the way, Max hands over the metaphorical stage to Timothy of all people. What does Timothy have to say? #Max = Stage_right #Dyed = Stage_Center
-[Dyed>Timothy] "Uh, H-Hi everyone. I'm, um, Timothy Miyuri."
-"<jitter>You, uh, all p-probably remember me fr-from the meal last m-m-monday. hehe...</jitter>"
+[Max] "Today we say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!"
+"And while normally one of us RAs gives these toasts, a new resident has asked if he can speak and well... I just couldn't say no."
+An extremely shaky Timothy rises from his seat and shuffles over to Max. #Max = Stage_right #Dyed = Stage_Center//With his introductions out of the way, Max hands over the metaphorical stage to Timothy of all people. What does Timothy have to say? 
+[Dyed>Timothy] "<jitter>Uh, h-hi everyone. I'm, um, Timothy Miyuri.</jitter>"
+"<jitter>You, uh, all p-probably remember me fr-from the meal last Monday. Heh...</jitter>"
 Timothy is clearly super nervous with everyone's attention up on him. So why did he want to get up and speak?
 "<jitter>N-now I w-was r-really n-nervous c-coming here.</jitter>"
-"<jitter>A-afraid o-of having to deal with anything. Afraid of p-people expectations of m-me a-an-and stuff.</jitter>" #Dyed = Afraid
-"<jitter>B-but I've m-met people h-here w-who helped me b-be a little l-less afraid of e-everything.</jitter>"
-"<jitter> A-and the person w-who I think has helped me the m-most was my r-roommate,</jitter><delay=0.25> {player_name}"
+"<jitter>A-afraid o-of having to deal with everything. Afraid of p-people's expectations of me and stuff.</jitter>" #Dyed = Afraid
+"<jitter>B-but I've m-met people here who helped me be a little less afraid of everything.</jitter>"
+"<jitter> A-and the person who I think has helped me the m-most was my roommate,</jitter><delay=0.25> {player_name}!"
 Timothy turns directly to me. #Dyed = happy
-"Thank You {player_name}. Thank you so much for being my friend."
-"This toast is to you. May you're future be as warm as you've made our present."
-Timothy raises his cup. Max follows suit, then 2 more people. then 2 more people. Until the entire room is singing my praise. //a bit too cheesy
-I just start laughing in shock of everything around me.
-The Dinner goes down without incident, and made me feel amazing. #stress -= 50 #depression -=50
-I leave once the major festivities have died down. #All = Exit
+"Thank you, {player_name}. Thank you so much for being my friend."
+"This toast is to you. May your life on the outside be as warm as you've made ours here in Sunflower House./*Revised from: May your future be as warm as you've made our present.*/"
+Timothy raises his cup. Max quickly follows suit, flashing me a beaming grin. 
+I glance across the room as cups slowly start to rise. // Revised to have each character lift their cup on their own line.
+Charlotte daintily lifts her cup with a flowing, deliberate wrist motion.
+Trissa raises her glass with a cheerful whoop.
+Eduardo's cup rockets vigorously into the air, sending some of its contents splashing onto his head.
+Isaac cracks a smile and lifts his cup cautiously, accompanied by a nod of approval.
+All the residents of Sunflower House are raising their cups for me.
+I've been on the other end of this so many times, I didn't think I would find it so overwhelming...
+I start laughing, in shock of everything around me.
+[{player_name}] "Thanks, everyone! I... don't know what to say. Except thanks."
+I've never done well under a spotlight, but I get the sense that no one expects me to.
+I take my seat and everyone starts digging into their food. # time%3
+The rest of the evening goes without incident, and it's really put me in a good mood. #stress -= 50 #depression -=50
+As things wind down, I make my way back out into the House. #All = Exit
 ->END
 
 === BadMeal ===
@@ -127,10 +137,12 @@ I take my seat at the center table, remembering how, less than a week ago, Timot
 The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
 "It's been a rough week for many of us, I know."
 "Today we said goodbye to our newest resident, Timothy Miyuri, who I have received word is safe and comfortable at Blackwell. It wasn't what we all hoped for, but I'm sure we'll see him again when he's ready." # Max = Sad
-"But today we also say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!" # Max = Happy
+"But today we <i>also</i> say farewell to one of our more established residents, {player_name}, who is finally ready to go back out into the real world!" # Max = Happy
 "This toast is to both of you. May you find happiness and good fortune as you face the challenges ahead."
 Max raises their cup and the room follows suit. A small applause follows the toast and the murmur of conversation returns.
+Despite everything, it does feel nice to be appreciated and Max's words are a small comfort. # stress -= 20 # depression -= 20
 A few more residents come up to say goodbye, but they're not really people I knew that well.
+I hang out eating and chatting for a while. # time%3
 Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 -> END
 
