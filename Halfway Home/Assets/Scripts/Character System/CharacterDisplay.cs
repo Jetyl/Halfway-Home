@@ -54,8 +54,7 @@ public class CharacterDisplay : MonoBehaviour
 
         MCName = Game.current.PlayerName;
         Space.Connect<DescriptionEvent>(Events.Description, OnScale);
-
-        GetComponent<Scale>().Start();
+        
         GetComponent<Translate>().Start();
 
     }

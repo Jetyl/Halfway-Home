@@ -9179,7 +9179,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 70.85
+  m_fontSize: 70.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16158,7 +16158,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.05
+  m_fontSize: 57.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -54214,7 +54214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.0137}
+  m_AnchoredPosition: {x: 0, y: 902.58203}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -58695,7 +58695,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.9
+  m_fontSize: 66.85
   m_fontSizeBase: 69
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -67020,6 +67020,7 @@ MonoBehaviour:
   TextHiddenOnDisplay:
   - {fileID: 1599244673}
   - {fileID: 568080879}
+  SaveHistoryExternally: 0
 --- !u!224 &1829547511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71609,12 +71610,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -71664,7 +71665,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
