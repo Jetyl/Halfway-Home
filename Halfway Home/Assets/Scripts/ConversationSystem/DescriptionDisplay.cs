@@ -76,8 +76,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
-        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
+        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnMapEvent);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
         Space.Connect<DefaultEvent>(Events.NextLine, OnNext);
 
@@ -99,25 +99,9 @@ public class DescriptionDisplay : MonoBehaviour
 	void Update ()
     {
         //print("active: " + Active + "| Paused: " + Paused + "| Stop:" + Stop + "| No Click:" + NoClick);
-
-
-        if (Input.GetButtonDown("Skip") && (CanSkip || DebugSkipping))
-            OnSkip();
-        else if(Input.GetButtonDown("Skip") && !(CanSkip || DebugSkipping))
-        {
-            NoSkipSprite.Show(0.1f);
-        }
-        else if(Input.GetButtonUp("Skip") && !(CanSkip || DebugSkipping))
-        {
-            NoSkipSprite.Hide(0.1f);
-        }
-        else if (Skipping && (Input.GetButtonUp("Skip") || !Input.GetButton("Skip")))
-        {
-            Space.DispatchEvent(Events.StopSkipTyping);
-            SkipSprite.Hide(0.1f);
-            SkipEffects.EndEffect(0.1f);
-        }
-            
+        if (Input.GetButtonDown("Skip")) RequestSkip();         
+        
+        if (Input.GetButtonUp("Skip")) RequestStopSkip();
 
         if (Input.GetButtonDown("Auto"))
             ToggleAuto();
@@ -194,6 +178,22 @@ public class DescriptionDisplay : MonoBehaviour
 
     }
 
+    public void RequestSkip()
+    {
+        bool SkipAllowed = CanSkip || DebugSkipping;
+        if (SkipAllowed && !Skipping) OnSkip();
+        else if(!SkipAllowed)
+        {
+            NoSkipSprite.Show(0.1f);
+        }
+    }
+
+    public void RequestStopSkip()
+    {
+        if(Skipping) Space.DispatchEvent(Events.StopSkipTyping);
+        else NoSkipSprite.Hide(0.1f);
+  }
+
     public void ToggleAuto()
     {
         Auto = !Auto;
@@ -201,18 +201,18 @@ public class DescriptionDisplay : MonoBehaviour
         AutoButton.Swap();
     }
 
-    public void ToggleSkip()
-    {
-        Skipping = !Skipping;
-        SkipTimer = SkipTimeDelay;
+    //public void ToggleSkip()
+    //{
+    //    Skipping = !Skipping;
+    //    SkipTimer = SkipTimeDelay;
 
-        if (Skipping)
-            Space.DispatchEvent(Events.SkipTyping);
-        else
-            Space.DispatchEvent(Events.StopSkipTyping);
+    //    if (Skipping)
+    //        Space.DispatchEvent(Events.SkipTyping);
+    //    else
+    //        Space.DispatchEvent(Events.StopSkipTyping);
 
-        Description.SetSkipping(Skipping);
-    }
+    //    Description.SetSkipping(Skipping);
+    //}
 
     public void Finished()
     {
@@ -312,19 +312,17 @@ public class DescriptionDisplay : MonoBehaviour
         Stop = false;
     }
 
-    void OnStopSkipping(DefaultEvent eventdata)
+    void OnStopSkipTyping(DefaultEvent eventdata)
     {
         Skipping = false;
         Description.SetSkipping(Skipping);
-        
-    }
-
-    void OnSkipOff(DefaultEvent eventdata)
-    {
-        NoSkipSprite.Hide(0.1f);
         SkipSprite.Hide(0.1f);
         SkipEffects.EndEffect(0.1f);
+    }
 
+    void OnMapEvent(DefaultEvent eventdata)
+    {
+        // Stop skipping upon going to map
         Space.DispatchEvent(Events.StopSkipTyping);
     }
 
@@ -369,8 +367,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DisConnect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.DisConnect<DefaultEvent>(Events.Pause, OnPause);
         Space.DisConnect<DefaultEvent>(Events.UnPause, OnUnPause);
-        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipping);
-        Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnSkipOff);
+        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+        Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnMapEvent);
         Space.DisConnect<DefaultEvent>(Events.Debug, OnDebug);
         Space.DisConnect<DefaultEvent>(Events.NextLine, OnNext);
 
