@@ -132,6 +132,7 @@ public class PauseMenu : MonoBehaviour
         Confirm.SetActive(true);
 
     }
+    
 
     public void OnConfirmed()
     {

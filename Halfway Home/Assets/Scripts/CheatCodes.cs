@@ -5,9 +5,9 @@ using TMPro;
 
 public class CheatCodes : MonoBehaviour
 {
-
+    public bool AllowCheats;
     public bool Active;
-    public DescriptionDisplay DebugSkipping;
+    public SkipControl DebugSkipping;
     public GameObject Screen;
     TMP_InputField codeBreaker;
     public TextMeshProUGUI CheatsStateText;
@@ -29,6 +29,9 @@ public class CheatCodes : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (!AllowCheats)
+            return;
+
         // Toggle cheat mode
         if (Input.GetButtonDown("Cheats"))
         {

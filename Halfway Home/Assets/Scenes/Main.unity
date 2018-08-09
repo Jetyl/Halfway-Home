@@ -2029,6 +2029,7 @@ GameObject:
   - component: {fileID: 60031323}
   - component: {fileID: 60031322}
   - component: {fileID: 60031326}
+  - component: {fileID: 60031327}
   m_Layer: 5
   m_Name: Dialog Display
   m_TagString: Untagged
@@ -2117,11 +2118,6 @@ MonoBehaviour:
   AutoTimeDelay: 2
   SkipTimeDelay: 0.1
   QuirkControl: {fileID: 60031326}
-  SkipCheck: {fileID: 1829547510}
-  DebugSkipping: 1
-  SkipSprite: {fileID: 230512701}
-  NoSkipSprite: {fileID: 821354700}
-  SkipEffects: {fileID: 1174770658}
   NoClick: 0
 --- !u!114 &60031326
 MonoBehaviour:
@@ -2134,6 +2130,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f180500cde4c95845aa1679c15d4fea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &60031327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60031320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd072d084f4a2e244887936dc6f84fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugSkipping: 1
+  SkipCheck: {fileID: 1829547510}
+  QuirkControl: {fileID: 60031326}
+  SkipSprite: {fileID: 230512701}
+  NoSkipSprite: {fileID: 821354700}
+  SkipEffects: {fileID: 1174770658}
 --- !u!1 &60144807
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,7 +6052,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7684,8 +7697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288740e3af2d14a4aaef43cb2464ae6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllowCheats: 1
   Active: 1
-  DebugSkipping: {fileID: 60031325}
+  DebugSkipping: {fileID: 60031327}
   Screen: {fileID: 1139390439}
   CheatsStateText: {fileID: 443707927}
   QuickJumpScene1: Restart
@@ -54214,7 +54228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.58203}
+  m_AnchoredPosition: {x: 0, y: 902.5818}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -69835,7 +69849,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 60031325}
+        - m_Target: {fileID: 60031327}
           m_MethodName: RequestSkip
           m_Mode: 1
           m_Arguments:
@@ -69852,7 +69866,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 60031325}
+        - m_Target: {fileID: 60031327}
           m_MethodName: RequestStopSkip
           m_Mode: 1
           m_Arguments:

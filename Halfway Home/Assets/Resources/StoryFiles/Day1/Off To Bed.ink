@@ -133,5 +133,5 @@ Slumberland beckons me back to it, but I should be getting up about now.{SetTime
 +[Stay in Bed]
 	 I curl even deeper into lethargic bliss and welcome sweet unconsciousness again. #Background / Dream, eyeclose, NoDefaults
 	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
-	 That loud knocking noise wakes me up again... #fatigue -= 80
+	 ... #fatigue -= 80
 -> END

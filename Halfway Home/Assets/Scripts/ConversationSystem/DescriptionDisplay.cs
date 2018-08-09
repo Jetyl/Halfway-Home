@@ -27,16 +27,7 @@ public class DescriptionDisplay : MonoBehaviour
     public float SkipTimeDelay = 0.1f;
 
     public QuirkDisplay QuirkControl;
-
-    public HistoryDisplay SkipCheck;
-
-    public bool DebugSkipping;
-
-    public UIFader SkipSprite;
-    public UIFader NoSkipSprite;
-
-    public FastForwardEffect SkipEffects;
-
+        
     float AutoTimer = 0;
     float SkipTimer = 0;
 
@@ -67,8 +58,7 @@ public class DescriptionDisplay : MonoBehaviour
         anime = gameObject.GetComponent<Animator>();
         Description = gameObject.GetComponentInChildren<AutoType>();
         //Speaker = gameObject.transform.Find("DialogBox").Find("Speaker").gameObject;
-        SkipEffects.EndEffect(0.0001f);
-
+        
         Speaker.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
         Space.Connect<DescriptionEvent>(Events.Description, UpdateDescription);
@@ -76,9 +66,8 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
+        Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkip);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnMapEvent);
-        Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
         Space.Connect<DefaultEvent>(Events.NextLine, OnNext);
 
         //events that activate/deactivate the text box
@@ -99,14 +88,7 @@ public class DescriptionDisplay : MonoBehaviour
 	void Update ()
     {
         //print("active: " + Active + "| Paused: " + Paused + "| Stop:" + Stop + "| No Click:" + NoClick);
-        if (Input.GetButtonDown("Skip")) RequestSkip();         
         
-        if (Input.GetButtonUp("Skip")) RequestStopSkip();
-
-        if (Input.GetButtonDown("Auto"))
-            ToggleAuto();
-
-
         if (!Active)
             return;
 
@@ -119,8 +101,9 @@ public class DescriptionDisplay : MonoBehaviour
         if (NoClick)
             return;
 
-        
-        
+        if (Input.GetButtonDown("Auto"))
+            ToggleAuto();
+
         if (Skipping)
         {
             if (isFinished)
@@ -177,22 +160,7 @@ public class DescriptionDisplay : MonoBehaviour
         
 
     }
-
-    public void RequestSkip()
-    {
-        bool SkipAllowed = CanSkip || DebugSkipping;
-        if (SkipAllowed && !Skipping) OnSkip();
-        else if(!SkipAllowed)
-        {
-            NoSkipSprite.Show(0.1f);
-        }
-    }
-
-    public void RequestStopSkip()
-    {
-        if(Skipping) Space.DispatchEvent(Events.StopSkipTyping);
-        else NoSkipSprite.Hide(0.1f);
-  }
+    
 
     public void ToggleAuto()
     {
@@ -236,17 +204,7 @@ public class DescriptionDisplay : MonoBehaviour
         //dynamically edit the lines so they adhere to certain parameters
         Line = TextParser.DynamicEdit(eventdata.Line);
         Line = QuirkControl.UpdateText(Line, eventdata.TrueSpeaker);
-
-        CanSkip = SkipCheck.HasSceneLine(Line);
-        print("Can Skip? " + CanSkip);
-        if (!DebugSkipping)
-        {
-            if (!CanSkip && Skipping)
-            {
-                Space.DispatchEvent(Events.StopSkipTyping);
-            }
-        }
-        
+                
         Active = true;
         Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
         isFinished = false;
@@ -261,10 +219,7 @@ public class DescriptionDisplay : MonoBehaviour
         Description.Clear();
         StartCoroutine(WaitTilClosed());
     }
-
     
-
-
     IEnumerator WaitTilClosed()
     {
 
@@ -276,10 +231,8 @@ public class DescriptionDisplay : MonoBehaviour
 
     IEnumerator WaitTilOpened()
     {
-
         Description.Clear();
-
-
+        
         yield return new WaitForSeconds(1.5f);
         
         Active = true;
@@ -316,27 +269,14 @@ public class DescriptionDisplay : MonoBehaviour
     {
         Skipping = false;
         Description.SetSkipping(Skipping);
-        SkipSprite.Hide(0.1f);
-        SkipEffects.EndEffect(0.1f);
     }
 
-    void OnMapEvent(DefaultEvent eventdata)
+    void OnSkip(DefaultEvent eventdata)
     {
-        // Stop skipping upon going to map
-        Space.DispatchEvent(Events.StopSkipTyping);
-    }
-
-    void OnSkip()
-    {
-        //Space.DispatchEvent(Events.SkipTyping);
         Skipping = true;
         SkipTimer = SkipTimeDelay;
-
-        Space.DispatchEvent(Events.SkipTyping);
-        
+                
         Description.SetSkipping(Skipping);
-        SkipSprite.Show(0.1f);
-        SkipEffects.StartEffect(0.1f);
     }
 
     void OnNext(DefaultEvent eventdata)
@@ -344,12 +284,7 @@ public class DescriptionDisplay : MonoBehaviour
         Debug.Log("Skip");
         Next = true;
     }
-
-    void OnDebug(DefaultEvent eventdata)
-    {
-        DebugSkipping = true;
-    }
-
+    
     public void ClickableOff()
     {
         NoClick = true;
@@ -368,8 +303,6 @@ public class DescriptionDisplay : MonoBehaviour
         Space.DisConnect<DefaultEvent>(Events.Pause, OnPause);
         Space.DisConnect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
-        Space.DisConnect<DefaultEvent>(Events.ReturnToMap, OnMapEvent);
-        Space.DisConnect<DefaultEvent>(Events.Debug, OnDebug);
         Space.DisConnect<DefaultEvent>(Events.NextLine, OnNext);
 
         //events that activate/deactivate the text box

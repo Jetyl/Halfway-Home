@@ -48,7 +48,7 @@ public class GameStartUp : MonoBehaviour
 
         if (DebugMode)
         {
-            SaveLoad.Delete();
+            //SaveLoad.Delete();
             ReaderReference.Clear();
             
             TestingAndDebugging();

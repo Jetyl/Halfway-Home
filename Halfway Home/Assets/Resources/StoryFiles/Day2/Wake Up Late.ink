@@ -27,7 +27,9 @@ EXTERNAL CallSleep()
 -> Start
 
 === Start ===
-[Max] "Are y'all still asleep in there?" # SFX : play_sfx_human_knock
+...
+That loud knocking noise wakes me up again... # SFX : play_sfx_human_knock
+[Max] "Are y'all still asleep in there?" 
 Uuuugh.... #Background / YourRoom, eyeopen, NoDefaults
 Max (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "...!" #Max = Surprised
@@ -35,7 +37,7 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 +[Be Honest]
 	[{player_name}] "Yeah..."
 	Max sighs exasperatedly. #Max = Angry
-	[Max] "{player_name}You're leaving this place in less than a week now."
+	[Max] "{player_name}, you're leaving this place in less than a week now."
 	{
 		- week == 1:
 		I know, I know. I'm just bad.
@@ -46,7 +48,7 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 {
 	-expression >= 1:
 		[{player_name}] "No, I didn't just get up. Been chilling in my room all day tho." #expression ^ good
-		[Max] "uh<delay=0.25>-huh." #Max = Angry
+		[Max] "uh<delay=0.15>-huh." #Max = Angry
 		I'm not sure if Max actually bought that or not. However...
 	-else:
 		[{player_name}] "Whaaat? Nooo..." #expression ^ poor
@@ -58,7 +60,7 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 [Max] "Is Timothy still in here too?"
 I look over at his bed, and yep, he is still there, snoozing it up.
 "Hrm..."
-"Timothy? Timothy, wake up now." #Max = Calm
+"Timothy? Timothy, wake up now." #Max = Calm, right
 Max instantly switches back to their lax persona as they nudge Timothy awake.
 [Timothy] "H...huh?" #Timothy = Calm
 "<jitter>Gah! I'm up! I'm up!</jitter>" #Timothy = Surprised
