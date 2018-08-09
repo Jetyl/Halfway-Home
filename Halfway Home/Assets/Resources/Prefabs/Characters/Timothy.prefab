@@ -269,6 +269,8 @@ MonoBehaviour:
     Visual: {fileID: 21300000, guid: 73d86a8fdf2741f42877c0168bc8c5b4, type: 3}
   - Name: Surprised
     Visual: {fileID: 21300000, guid: 58b1f3632b437a14592e0a2f178a2578, type: 3}
+  - Name: CrookedSmile
+    Visual: {fileID: 21300000, guid: b96b8c07afb44b24393c65c35149441e, type: 3}
   Distances:
   - Scale: 1.6
     Offset: -3.5

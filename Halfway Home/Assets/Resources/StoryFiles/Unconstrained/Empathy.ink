@@ -106,7 +106,7 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 
 === Reading ===
 [Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)} # Charlotte = Sad, close
-"Perhaps you would be willing to make one yourself?"
+"Perhaps you would be willing to make one yourself?" #Charlotte = Calm
 [{player_name}] "Oh, uh... I don't really read enough to feel like I could."
 [Charlotte] "I see." # Charlotte = Sad
 "Well, if you come across a work you like before you leave and change your mind, just let me know." # Charlotte = Calm
@@ -160,7 +160,7 @@ I take the book from her and look it over. {It has a very humble appearance, but
 "I have been a reader my whole life. Although... may I confide something in you, {player_name}?" # Charlotte = Calm
 [{player_name}] "Uh, sure."
 [Charlotte] "I only began reading in public when I realized it would let me... <i>observe</i> people without arousing suspicion."
-[{player_name}] "You observe people?"
+[{player_name}] "You... <i>observe</i> people?"
 [Charlotte] "Indeed. Well, I more study them, really. I find people fascinating."
 [{player_name}] "{Uh|Hmm}..."
 {That's kinda weird.|Charlotte is a very odd person, but I kinda like that.}
@@ -171,7 +171,7 @@ I try to hide the {uncertainty|look} on my face, but Charlotte appears to have p
 "The crux of it is that I have absolutely no sense of empathy at all."
 [{player_name}] "Really? I mean, you seem nice enough. Certainly not like the psychos you hear about on the news."
 [Charlotte] "I am very happy to hear that. I have gone to great lengths to construct a believable facade." # Charlotte = Happy
-[{player_name}] "Well you had me fooled. In fact, I thought you worked here for my first few months here."
+[{player_name}] "Well you had me fooled. In fact, I thought you worked here for my first few months."
 [Charlotte] "Ah... Max is always telling me I do too much around here. Maybe they have a point..." # Charlotte = Surprised
 She shrugs.
 [Charlotte] "When I was a young girl I simply couldn't understand people." # Charlotte = Sad
@@ -245,7 +245,7 @@ They worried it would 'reopen old wounds'." # Charlotte = Angry
 }
 
 === OutOfTime ===
-Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised
+Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised #time % 1
 [Charlotte] "Heavens, how time has passed!"
 "I have a routine to maintain. It has been a pleasure, {player_name}." # Charlotte = Calm
 Charlotte rises and takes a step toward the door before turning back to me. # Charlotte = center
@@ -289,8 +289,8 @@ I should probably head out as well.
 
 === Fail ===
 [Charlotte] "Ah. Perhaps I have overstepped."
-Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised
-[Charlotte] "Heavens, how time has passed!"
+Charlotte glances as the wall clock above the door and exclaims. # Charlotte = Surprised #time % 1
+[Charlotte] "Heavens, how time has passed!" 
 Charlotte rises to her feet. # Charlotte = center
 "Until next we meet, {player_name}."
 She curtsies and strides out of the room. # Charlotte = Exit

@@ -301,7 +301,7 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 {
 	-timLetters == 0:
 		Timothy looks tense.
-		[Timothy] "Oh no! I couldn't do it!" # Basketball / HeadVeryNervous
+		[Timothy] "<jitter>Oh no! I couldn't do it!</jitter>" # Basketball / HeadVeryNervous
 		[{player_name}] "Take it easy, man. It just means you get a letter. In this case, <>
 			{
 				-gameName=="PIG":`P
