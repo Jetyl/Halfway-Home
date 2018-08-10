@@ -39,6 +39,7 @@ namespace HalfwayHome
     public int DepressionCloseLimit = 100;
     public string DepressionCloseTooltip = "I'm too tired for this";
 
+        public List<ModularLocker> Modularity;
 
         [HideInInspector]
     public int LimitedAccessNextAvailableTime;
@@ -78,10 +79,9 @@ namespace HalfwayHome
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnLoad()
     {
-            
+        
     }
         
     void CheckAccess(DefaultEvent Eventdata)
@@ -222,4 +222,16 @@ namespace HalfwayHome
     }
 
   } 
+}
+
+[System.Serializable]
+public class ModularLocker
+{
+    public Personality.Social Soc;
+    public int Level;
+    public Personality.Wellbeing Well;
+    public int NewCloseLimit;
+    public string ToolTipInfo;
+
+   
 }

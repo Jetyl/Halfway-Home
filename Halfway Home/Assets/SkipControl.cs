@@ -88,9 +88,13 @@ public class SkipControl : MonoBehaviour
 
     void OnStopSkipTyping(DefaultEvent eventdata)
     {
+        if(Skipping)
+        {
+            SkipSprite.Hide(0.1f);
+            SkipEffects.EndEffect(0.1f);
+        }
+
         Skipping = false;
-        SkipSprite.Hide(0.1f);
-        SkipEffects.EndEffect(0.1f);
     }
 
     void OnMapEvent(DefaultEvent eventdata)
