@@ -39,9 +39,11 @@
 					<Comment>Loaded after the main menu</Comment>
 					<ObjectInclusionList>
 						<ObjectRef Name="play_menupause" ID="{BC91C49B-3644-425C-BB53-559271D437D9}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_sfx_menu_skip" ID="{C36C11B4-B482-4337-A13B-2A289251B02A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Heartattack" ID="{2E79C7D6-71D9-452A-87EE-7CB30E788A33}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_textscroll" ID="{741DFBC2-78E1-4617-9A2D-8453C9DDBB3A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_menuunpause" ID="{2EB3C8F1-69B6-4D52-8097-BF63F61C9C4A}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_menu_skip" ID="{3E260EE5-52BB-4D85-9515-20F15C382D9F}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_sfx_human_notebook" ID="{F1AAAD28-9659-4E36-9AC1-69B95FA0B2ED}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

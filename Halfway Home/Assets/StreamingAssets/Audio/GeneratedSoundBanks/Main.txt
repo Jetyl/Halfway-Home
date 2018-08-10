@@ -2,8 +2,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
 	1078840671	Heartattack			\PlayMusic\stop\Heartattack	
 	1091239431	play_sfx_human_notebook			\PlaySFX\sfx_human\play_sfx_human_notebook	
+	1366361591	play_sfx_menu_skip			\PlaySFX\sfx_menu\play_sfx_menu_skip	
 	3101734072	play_menuunpause			\PlaySFX\sfx_menu\play_menuunpause	
 	3596481523	play_menupause			\PlaySFX\sfx_menu\play_menupause	
+	4059471133	stop_sfx_menu_skip			\PlaySFX\sfx_menu\stop_sfx_menu_skip	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	557060015	Text_Type			\Default Work Unit\Text_Type	
@@ -25,6 +27,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11926160	sfx_menu_chime_pausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
 	370198169	sfx_menu_text_scroll_monologue	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		73584
+	516739460	sfx_menu_skip	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\skip_sound_178D0C9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_skip		520984
 	558653419	sfx_menu_chime_unpausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
 	605418621	sfx_menu_text_scroll_other	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_other		1000
 	724131083	pencil_scribble	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\pencil_scribble_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_notebook\pencil_scribble		65584

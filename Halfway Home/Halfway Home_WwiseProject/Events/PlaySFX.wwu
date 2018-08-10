@@ -225,6 +225,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="play_sfx_menu_skip" ID="{3E260EE5-52BB-4D85-9515-20F15C382D9F}">
+							<ChildrenList>
+								<Action Name="" ID="{0BF3EC76-3BE0-4CBC-B358-9BACA82FCC7A}" ShortID="997775661">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_skip" ID="{13312830-5A92-4308-B8FB-01F02340CE25}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stop_sfx_menu_skip" ID="{C36C11B4-B482-4337-A13B-2A289251B02A}">
+							<ChildrenList>
+								<Action Name="" ID="{6F787806-CB91-47EC-80B5-6BB7D47162E5}" ShortID="186819251">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_skip" ID="{13312830-5A92-4308-B8FB-01F02340CE25}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="sfx_human" ID="{51EBD2B5-A273-488B-9E6A-B38535DAF098}" ShortID="295266809">
@@ -308,6 +336,21 @@
 								<Action Name="" ID="{ADA3C7DF-4E7E-4D03-93C9-A4DC295AB4D8}" ShortID="1051776252">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BedCreak" ID="{A9E99625-BBB4-4F27-8FF0-EBF4C138E21E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_sfx_door_creak" ID="{628C5B81-CF8A-43EB-82CF-9BFBC8406E71}">
+							<ChildrenList>
+								<Action Name="" ID="{62E42D17-CB06-49B0-9462-7C00B54DAE21}" ShortID="282041060">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

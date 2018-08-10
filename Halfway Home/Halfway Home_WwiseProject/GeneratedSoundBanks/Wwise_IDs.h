@@ -67,6 +67,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_UNFINISHED_BUSINESS = 3483334370U;
         static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
         static const AkUniqueID PLAY_SFX_BED_CREAK = 188792618U;
+        static const AkUniqueID PLAY_SFX_DOOR_CREAK = 3759803571U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
         static const AkUniqueID PLAY_SFX_HUMAN_GHOSTWHISPER = 2124921401U;
         static const AkUniqueID PLAY_SFX_HUMAN_KNOCK = 2319499992U;
@@ -76,6 +77,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_MENU_INTERFACE_SLIDER_SCROLL = 2186895855U;
         static const AkUniqueID PLAY_SFX_MENU_MASTER_SLIDER_SCROLL = 2748965932U;
         static const AkUniqueID PLAY_SFX_MENU_MUSIC_SLIDER_SCROLL = 174248703U;
+        static const AkUniqueID PLAY_SFX_MENU_SKIP = 1366361591U;
         static const AkUniqueID PLAY_SFX_MENU_SLIDER_SCROLL = 3989971247U;
         static const AkUniqueID PLAY_SFX_OBJECT_CAR_AWAY = 1700209709U;
         static const AkUniqueID PLAY_TEXTSCROLL = 319656260U;
@@ -84,6 +86,7 @@ namespace AK
         static const AkUniqueID STOP_AMBIENCE_ALL = 1720799084U;
         static const AkUniqueID STOP_MUSIC_MAINMENU = 3152554426U;
         static const AkUniqueID STOP_MUSIC_TENSION_INTRO_02 = 2883794594U;
+        static const AkUniqueID STOP_SFX_MENU_SKIP = 4059471133U;
     } // namespace EVENTS
 
     namespace STATES

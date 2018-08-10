@@ -50,6 +50,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
      },
      {
+      "Id": "3759803571",
+      "Name": "play_sfx_door_creak",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_door_creak"
+     },
+     {
       "Id": "2653434280",
       "Name": "play_sfx_human_footsteps_approaching",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_footsteps_approaching"
@@ -92,6 +97,12 @@
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "58705680",
+      "Language": "SFX",
+      "ShortName": "263137__tmacroberts__creaking.wav",
+      "Path": "SFX\\263137__tmacroberts__creaking_E381B43F.wem"
+     },
      {
       "Id": "129367464",
       "Language": "SFX",
