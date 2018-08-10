@@ -313,7 +313,7 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 		[Timothy] "Of course. Sorry." # Basketball / HeadCalm
 		[{player_name}] "Hey, no worries! It's your turn now, so you get your chance for revenge."
 		~timLetters = timLetters + 1
-		I collect the ball and pass it to him.
+		I collect the ball and pass it to him. # Basketball / ArmBall
 		->GameTime.TimothyTurn
 	-timLetters == 1:
 		~timLetters = timLetters + 1
@@ -330,7 +330,7 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 				[{player_name}] "We're both one away. I guess that means we're in sudden death."
 				[Timothy] "Ah! That's a lot of pressure!" # Basketball / HeadVeryNervous
 				I pass the ball back to him.
-				[{player_name}] "You're up!"
+				[{player_name}] "You're up!" # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-else:
 				[{player_name}] "You haven't lost yet. Although if you miss again..."
@@ -378,8 +378,10 @@ He recovers the ball and passes it to me. My turn.
 			-Success!
 				->GameTime.TimothyTestMedium
 			-I made it in, but not the way I called!
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice.
+			-A complete miss. I must really be out of practice. # Basketball / ArmBall
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
@@ -397,10 +399,13 @@ He recovers the ball and passes it to me. My turn.
 			-Success!
 				->GameTime.TimothyTestHard
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The angle was too far to the {&left|right}.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-A complete miss. I must really be out of practice.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 		}
 	++[Call Shot<size=60%><color=color_descriptor> (43%)</color>]
@@ -414,12 +419,16 @@ He recovers the ball and passes it to me. My turn.
 			-Success!
 				->GameTime.TimothyTestHarder
 			-I made it in, but not the way I called!
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The angle was too far to the {&left|right}.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-A complete miss. I must really be out of practice.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
@@ -433,14 +442,19 @@ He recovers the ball and passes it to me. My turn.
 			-Success!
 				->GameTime.TimothyTestHopeless
 			-The ball bounced off the rim.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The trajectory was right, but I didn't give it enough power and it fell short of the basket.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The angle was too far to the {&left|right}.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-A complete miss. I must really be out of practice.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 		}
 	++[Call Shot<size=60%><color=color_descriptor> (14%)</color>]
@@ -450,16 +464,22 @@ He recovers the ball and passes it to me. My turn.
 			-Holy crap, I actually did it!
 				->GameTime.TimothyJawDrop
 			-I actually made it in from this distance, but not the way I called!
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The ball bounces off the rim.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The trajectory was right, but I didn't give it enough power and it fell short of the basket.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-The angle was too far to the {&left|right}.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 			-A complete miss. I must really be out of practice.
+				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
 		}
 	++[Back]-> PlayerTurn
