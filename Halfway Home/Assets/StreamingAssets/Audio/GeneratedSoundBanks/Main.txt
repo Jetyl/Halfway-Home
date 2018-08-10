@@ -25,10 +25,10 @@ Custom State	ID	Name	State Group	Owner		Notes
 	789436446	Other	Text_Type	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	11926160	sfx_menu_chime_pausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
-	370198169	sfx_menu_text_scroll_monologue	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		73584
-	516739460	sfx_menu_skip	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\skip_sound_178D0C9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_skip		520984
-	558653419	sfx_menu_chime_unpausegame	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
-	605418621	sfx_menu_text_scroll_other	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_other		1000
-	724131083	pencil_scribble	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\pencil_scribble_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_notebook\pencil_scribble		65584
+	11926160	sfx_menu_chime_pausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
+	370198169	sfx_menu_text_scroll_monologue	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		73584
+	516739460	sfx_menu_skip	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\skip_sound_178D0C9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_skip		520984
+	558653419	sfx_menu_chime_unpausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
+	605418621	sfx_menu_text_scroll_other	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_other		1000
+	724131083	pencil_scribble	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\pencil_scribble_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_notebook\pencil_scribble		65584
 
