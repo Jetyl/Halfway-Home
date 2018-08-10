@@ -3737,7 +3737,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8, g: 0.5882353, b: 0.36078432, a: 1}
     m_HighlightedColor: {r: 0.9558824, g: 0.69833636, b: 0.42171282, a: 1}
     m_PressedColor: {r: 0.6911765, g: 0.59071267, b: 0.4828071, a: 1}
-    m_DisabledColor: {r: 0.58823526, g: 0.5298443, b: 0.467128, a: 0.684}
+    m_DisabledColor: {r: 0.5882353, g: 0.5411765, b: 0.34901962, a: 0.68235296}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3819,8 +3819,8 @@ MonoBehaviour:
     ProgressKey: Tutorial
     ToolTipInfo: I don't want to miss Timothy's Welcome Dinner.
   - Day: 1
-    starttime: 12
-    endTime: 12
+    starttime: 20
+    endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
     ToolTipInfo: Best to get an early night tonight.
@@ -3856,6 +3856,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too tired for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114107635229765222
 MonoBehaviour:
@@ -4445,6 +4446,12 @@ MonoBehaviour:
     ToolTipInfo: I'll show Timothy the art room after we've eaten.
   - Day: 1
     starttime: 17
+    endTime: 19
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+    ToolTipInfo: I don't want to miss Timothy's Welcome Dinner.
+  - Day: 1
+    starttime: 20
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
@@ -4481,6 +4488,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114172572591907558
 MonoBehaviour:
@@ -4543,41 +4551,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClosedTimeContainer:
   - Day: 1
-    starttime: 0
-    endTime: 11
-    ProgressLocked: 1
-    ProgressKey: Tutorial
-    ToolTipInfo: No point in going back to the cafe right now.
-  - Day: 1
     starttime: 13
     endTime: 16
     ProgressLocked: 1
     ProgressKey: Tutorial
-    ToolTipInfo: Best to stay out until the big Welcome Dinner tonight.
+    ToolTipInfo: I should stay out until the big Welcome Dinner tonight.
   - Day: 1
     starttime: 18
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
-    ToolTipInfo: 
+    ToolTipInfo: They're still cleaning up in there.
   - Day: 5
     starttime: 0
     endTime: 11
     ProgressLocked: 0
     ProgressKey: Tutorial
-    ToolTipInfo: 
-  - Day: 7
+    ToolTipInfo: I think I'll stay out of the cafe until it's time to meet Max.
+  - Day: 5
     starttime: 13
     endTime: 16
     ProgressLocked: 0
     ProgressKey: Tutorial
-    ToolTipInfo: 
-  - Day: 7
+    ToolTipInfo: Not hungry.
+  - Day: 5
     starttime: 18
     endTime: 23
     ProgressLocked: 0
     ProgressKey: Tutorial
-    ToolTipInfo: 
+    ToolTipInfo: They'll still be cleaning up in there.
   LimitedDailyAccess: 1
   AccessPoint: KitchenVisists
   VisitMulitplier: 3
@@ -4592,6 +4594,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114186412407269526
 MonoBehaviour:
@@ -5109,7 +5112,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6741609, g: 0.56244594, b: 0.75735295, a: 1}
     m_HighlightedColor: {r: 0.78658533, g: 0.5, b: 1, a: 1}
     m_PressedColor: {r: 0.5913922, g: 0.4573962, b: 0.6911765, a: 1}
-    m_DisabledColor: {r: 0.67505497, g: 0.5842885, b: 0.74264705, a: 0.641}
+    m_DisabledColor: {r: 0.41370973, g: 0.31758216, b: 0.4852941, a: 0.641}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5159,10 +5162,16 @@ MonoBehaviour:
     ToolTipInfo: I'll show Timothy the Common Room after we've eaten.
   - Day: 1
     starttime: 17
+    endTime: 19
+    ProgressLocked: 1
+    ProgressKey: Tutorial
+    ToolTipInfo: I don't want to miss Timothy's Welcome Dinner.
+  - Day: 1
+    starttime: 20
     endTime: 23
     ProgressLocked: 1
     ProgressKey: Tutorial
-    ToolTipInfo: 
+    ToolTipInfo: Not tonight.
   - Day: 3
     starttime: 1
     endTime: 7
@@ -5201,6 +5210,7 @@ MonoBehaviour:
   StressCloseTooltip: I need some time to myself right now.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114295727843384270
 MonoBehaviour:
@@ -6575,7 +6585,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.7647059, g: 0.4117647, b: 0.4117647, a: 1}
     m_HighlightedColor: {r: 1, g: 0.375, b: 0.375, a: 1}
     m_PressedColor: {r: 0.64705884, g: 0.38062283, b: 0.38062283, a: 1}
-    m_DisabledColor: {r: 0.7058823, g: 0.57093424, b: 0.57093424, a: 0.609}
+    m_DisabledColor: {r: 0.44852942, g: 0.313311, b: 0.313311, a: 0.609}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6764,7 +6774,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.4343642, g: 0.74398786, b: 0.75735295, a: 1}
     m_HighlightedColor: {r: 0.60445505, g: 0.9430253, b: 0.9558824, a: 1}
     m_PressedColor: {r: 0.41392735, g: 0.6314457, b: 0.6397059, a: 1}
-    m_DisabledColor: {r: 0.5676903, g: 0.7291623, b: 0.7352941, a: 0.641}
+    m_DisabledColor: {r: 0.28114188, g: 0.36448222, b: 0.36764705, a: 0.641}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7756,10 +7766,16 @@ MonoBehaviour:
     ToolTipInfo: I'll show Timothy the library after we've eaten.
   - Day: 1
     starttime: 17
-    endTime: 23
+    endTime: 19
     ProgressLocked: 1
     ProgressKey: Tutorial
-    ToolTipInfo: I just want to go to bed right now...
+    ToolTipInfo: I don't want to miss Timothy's Welcome Dinner.
+  - Day: 1
+    starttime: 20
+    endTime: 23
+    ProgressLocked: 0
+    ProgressKey: Tutorial
+    ToolTipInfo: I'd rather just go to bed tonight.
   - Day: 5
     starttime: 12
     endTime: 12
@@ -7793,6 +7809,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too tired for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114608128412042198
 MonoBehaviour:
@@ -7841,7 +7858,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.3
+  m_fontSize: 54.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8402,6 +8419,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114658234649182372
 MonoBehaviour:
@@ -8893,7 +8911,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.4509804, g: 0.5137255, b: 0.7294118, a: 1}
     m_HighlightedColor: {r: 0.46739832, g: 0.58245033, b: 0.97794116, a: 1}
     m_PressedColor: {r: 0.44117644, g: 0.47431648, b: 0.58823526, a: 1}
-    m_DisabledColor: {r: 0.47199395, g: 0.51475924, b: 0.66176474, a: 0.603}
+    m_DisabledColor: {r: 0.2634083, g: 0.30015475, b: 0.42647058, a: 0.603}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9122,6 +9140,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too tired for this
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114713455047287820
 MonoBehaviour:
@@ -10032,7 +10051,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.83137256, g: 0.81960785, b: 0.47843137, a: 1}
     m_HighlightedColor: {r: 0.97794116, g: 0.9606834, b: 0.46020758, a: 1}
     m_PressedColor: {r: 0.6691177, g: 0.66157377, b: 0.44279847, a: 1}
-    m_DisabledColor: {r: 0.6397059, g: 0.63672686, b: 0.5503352, a: 0.641}
+    m_DisabledColor: {r: 0.45588237, g: 0.45398286, b: 0.39889708, a: 0.641}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10423,7 +10442,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.38039216, g: 0.6392157, b: 0.44705883, a: 1}
     m_HighlightedColor: {r: 0.44852942, g: 0.89705884, b: 0.56405973, a: 1}
     m_PressedColor: {r: 0.322394, g: 0.49264705, b: 0.3662471, a: 1}
-    m_DisabledColor: {r: 0.42766005, g: 0.5147059, b: 0.45008096, a: 0.659}
+    m_DisabledColor: {r: 0.27768165, g: 0.35294116, b: 0.29706672, a: 0.659}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11045,7 +11064,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9044118, g: 0.61180794, b: 0.8741424, a: 1}
     m_HighlightedColor: {r: 1, g: 0.7352941, b: 0.9726166, a: 1}
     m_PressedColor: {r: 0.7794118, g: 0.6475995, b: 0.76577604, a: 1}
-    m_DisabledColor: {r: 0.7794118, g: 0.63613755, b: 0.7645903, a: 0.691}
+    m_DisabledColor: {r: 0.42647058, g: 0.34180364, b: 0.4177119, a: 0.691}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11328,6 +11347,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too stressed for this.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114932675279255194
 MonoBehaviour:
@@ -11775,6 +11795,7 @@ MonoBehaviour:
   StressCloseTooltip: I'm too wound up to even think about leaving.
   DepressionCloseLimit: 100
   DepressionCloseTooltip: I'm too depressed for this.
+  Modularity: []
   LimitedAccessNextAvailableTime: 0
 --- !u!114 &114969841700582280
 MonoBehaviour:
@@ -13740,7 +13761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.34500003}
   m_AnchorMax: {x: 1, y: 0.9127397}
-  m_AnchoredPosition: {x: 0, y: -30.99656}
+  m_AnchoredPosition: {x: 0, y: -43.853577}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224281089782899980
@@ -13907,7 +13928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3}
   m_AnchorMax: {x: 0.2, y: 0.7}
-  m_AnchoredPosition: {x: -717.084, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224330761116744478
@@ -15402,8 +15423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 0.3}
-  m_AnchoredPosition: {x: -627.4485, y: 280.3099}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224879160545525836
 RectTransform:
