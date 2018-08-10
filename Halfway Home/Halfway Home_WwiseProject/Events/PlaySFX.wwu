@@ -239,6 +239,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="stop_sfx_menu_skip" ID="{C36C11B4-B482-4337-A13B-2A289251B02A}">
+							<ChildrenList>
+								<Action Name="" ID="{6F787806-CB91-47EC-80B5-6BB7D47162E5}" ShortID="186819251">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_menu_skip" ID="{13312830-5A92-4308-B8FB-01F02340CE25}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="sfx_human" ID="{51EBD2B5-A273-488B-9E6A-B38535DAF098}" ShortID="295266809">

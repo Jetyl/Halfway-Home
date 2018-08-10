@@ -778,6 +778,11 @@
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
+     },
+     {
+      "Id": "4059471133",
+      "Name": "stop_sfx_menu_skip",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\stop_sfx_menu_skip"
      }
     ],
     "IncludedMemoryFiles": [

@@ -19,6 +19,7 @@
 				<Event Id="1091239431" Name="play_sfx_human_notebook" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_notebook"/>
 				<Event Id="1366361591" Name="play_sfx_menu_skip" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_skip"/>
 				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_textscroll"/>
+				<Event Id="4059471133" Name="stop_sfx_menu_skip" ObjectPath="\Events\PlaySFX\sfx_menu\stop_sfx_menu_skip"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11926160" Language="SFX">

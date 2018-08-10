@@ -86,6 +86,7 @@ namespace AK
         static const AkUniqueID STOP_AMBIENCE_ALL = 1720799084U;
         static const AkUniqueID STOP_MUSIC_MAINMENU = 3152554426U;
         static const AkUniqueID STOP_MUSIC_TENSION_INTRO_02 = 2883794594U;
+        static const AkUniqueID STOP_SFX_MENU_SKIP = 4059471133U;
     } // namespace EVENTS
 
     namespace STATES

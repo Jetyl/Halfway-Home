@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1366361591	play_sfx_menu_skip			\PlaySFX\sfx_menu\play_sfx_menu_skip	
 	3101734072	play_menuunpause			\PlaySFX\sfx_menu\play_menuunpause	
 	3596481523	play_menupause			\PlaySFX\sfx_menu\play_menupause	
+	4059471133	stop_sfx_menu_skip			\PlaySFX\sfx_menu\stop_sfx_menu_skip	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	557060015	Text_Type			\Default Work Unit\Text_Type	
