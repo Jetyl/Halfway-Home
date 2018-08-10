@@ -76,13 +76,33 @@ namespace HalfwayHome
       self = GetComponent<Button>();
       Space.Connect<DefaultEvent>(Events.TimeChange, CheckAccess);
       Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
+      Space.Connect<DefaultEvent>(Events.StatChange, OnStatUpdate);
+      Space.Connect<DefaultEvent>(Events.Load, OnStatUpdate);
 
     }
 
-    public void OnLoad()
+    public void OnStatUpdate(DefaultEvent eventdata)
     {
-        
+        foreach(var Locks in Modularity)
+        {
+            if(Game.current.Self.GetTrueSocialStat(Locks.Soc) >= Locks.Level)
+            {
+                switch(Locks.Well)
+                {
+                    case Personality.Wellbeing.Fatigue:
+                        FatigueCloseLimit = Locks.NewCloseLimit;
+                        break;
+                    case Personality.Wellbeing.Stress:
+                        StressCloseLimit = Locks.NewCloseLimit;
+                        break;
+                    case Personality.Wellbeing.Depression:
+                        DepressionCloseLimit = Locks.NewCloseLimit;
+                        break;
+                }
+            }
+        }
     }
+    
         
     void CheckAccess(DefaultEvent Eventdata)
     {
@@ -228,10 +248,10 @@ namespace HalfwayHome
 public class ModularLocker
 {
     public Personality.Social Soc;
+    [Range(1, 5)]
     public int Level;
     public Personality.Wellbeing Well;
+    [Range(0, 100)]
     public int NewCloseLimit;
-    public string ToolTipInfo;
-
    
 }

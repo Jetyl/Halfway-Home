@@ -154,6 +154,12 @@ public class ChangeNode : BaseNode
                 Image = EditorGUI.ObjectField(new Rect(rect.position + new Vector2(25, 115), new Vector2(150, 50)), Image, typeof(Sprite), allowSceneObjects: true) as Sprite;
                 //SendNoification = EditorGUI.ToggleLeft(new Rect(rect.position + new Vector2(25, 170), new Vector2(150, 15)), "Send Notification Event", SendNoification);
                 break;
+            case ProgressType.Wellbeing:
+                TypeOfProgress = ProgressType.None;
+                break;
+            case ProgressType.Socials:
+                TypeOfProgress = ProgressType.None;
+                break;
             default:
                 Debug.LogError("Unrecognized Option");
                 break;

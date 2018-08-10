@@ -151,7 +151,9 @@ public enum ProgressType
     None,
     ProgressPoint,
     Objective,
-    CG
+    CG,
+    Socials,
+    Wellbeing
 }
 
 

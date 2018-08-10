@@ -13,6 +13,7 @@ namespace HalfwayHome
     private ReorderableList list;
 
     bool ShowTimesClosed;
+    bool ShowModules;
 
     private void OnEnable()
     {
@@ -42,7 +43,8 @@ namespace HalfwayHome
       SerializedProperty FatigueCloseTooltip = serializedObject.FindProperty("FatigueCloseTooltip");
       SerializedProperty StressCloseTooltip = serializedObject.FindProperty("StressCloseTooltip");
       SerializedProperty DepressionCloseTooltip = serializedObject.FindProperty("DepressionCloseTooltip");
-
+            
+      SerializedProperty Modules = serializedObject.FindProperty("Modularity");
       
       SerializedProperty DynamicTooltip = serializedObject.FindProperty("DynamicTooltip");
       SerializedProperty DailyAccessTooltip = serializedObject.FindProperty("DailyAccessTooltip");
@@ -57,6 +59,8 @@ namespace HalfwayHome
       EditorGUILayout.IntSlider(DepressionCloseLimit, 0, 100, "Depression Percent Close");
       EditorGUILayout.PropertyField(DepressionCloseTooltip, new GUIContent("Depression Closed Tooltip"), true);
             
+      EditorGUILayout.PropertyField(Modules, new GUIContent("Modules Stat closes"), true);
+        
       EditorGUILayout.Space();
 
       EditorGUILayout.PropertyField(ManualAccess, new GUIContent("Manual Turn Off Flag"), true);

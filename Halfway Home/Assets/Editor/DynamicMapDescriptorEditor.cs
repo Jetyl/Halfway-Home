@@ -64,7 +64,7 @@ namespace HalfwayHome
                 SerializedProperty defaultCondition = serializedObject.FindProperty("Descriptors").GetArrayElementAtIndex((int)CheckRoom).FindPropertyRelative("DefaultCondition");
 
                 EditorGUILayout.PropertyField(name, new GUIContent("Room Name"), true);
-                EditorGUILayout.PropertyField(defaultCondition, new GUIContent("Default Condition"), true);
+                EditorGUILayout.PropertyField(defaultCondition.FindPropertyRelative("DescriptorText"), new GUIContent("Default ToolTip"), true);
 
                 listList[CheckRoom].DoLayoutList();
             }
@@ -108,7 +108,7 @@ namespace HalfwayHome
                     EditorGUI.PropertyField(new Rect(rect.x, rect.y + (EditorGUIUtility.singleLineHeight * 3) + 
                         (EditorGUIUtility.singleLineHeight * i * 2) + j, rect.width, EditorGUIUtility.singleLineHeight),
                       element.FindPropertyRelative("Conditions").GetArrayElementAtIndex(i), new GUIContent("Condition"));
-                    j += 8;
+                    j += 20;
                 }
                 
                 
@@ -119,7 +119,7 @@ namespace HalfwayHome
                 list.elementHeightCallback = (index) =>
                 {
                     var element = list.serializedProperty.GetArrayElementAtIndex(index);
-                    return EditorGUIUtility.singleLineHeight * (4 + (element.FindPropertyRelative("Conditions").arraySize * 2.3f));
+                    return EditorGUIUtility.singleLineHeight * (4 + (element.FindPropertyRelative("Conditions").arraySize * 3.25f));
                 };
 
 
