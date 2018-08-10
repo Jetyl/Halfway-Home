@@ -40,6 +40,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
      },
      {
+      "Id": "1366361591",
+      "Name": "play_sfx_menu_skip",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_sfx_menu_skip"
+     },
+     {
       "Id": "319656260",
       "Name": "play_textscroll",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_textscroll"
@@ -57,6 +62,12 @@
       "Language": "SFX",
       "ShortName": "sfx_menu_text_scroll1.wav",
       "Path": "SFX\\sfx_menu_text_scroll1_00FA84C2.wem"
+     },
+     {
+      "Id": "516739460",
+      "Language": "SFX",
+      "ShortName": "skip_sound.wav",
+      "Path": "SFX\\skip_sound_178D0C9C.wem"
      },
      {
       "Id": "558653419",

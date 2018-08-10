@@ -8,11 +8,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	2374614039	play_music_creepy_atmo_02			\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02	
 	2653434280	play_sfx_human_footsteps_approaching			\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching	
 	2929977910	play_ambience_fireplace			\PlayMusic\intro_ambiences\play_ambience_fireplace	
+	3759803571	play_sfx_door_creak			\PlaySFX\sfx_object\play_sfx_door_creak	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1169110113	New_Wwise_Compressor	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	58705680	BedCreak	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\263137__tmacroberts__creaking_E381B43F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		68896
 	129367464	ambience_crowd_whispering	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crowd_whispering\ambience_crowd_whispering_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_crowd_whispering\ambience_crowd_whispering\ambience_crowd_whispering		2322144
 	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
 	488681583	ghostwhisper1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816

@@ -19,6 +19,7 @@
 				<Event Id="1372805254" Name="play_music_creepy_atmo" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo"/>
 				<Event Id="2374614039" Name="play_music_creepy_atmo_02" ObjectPath="\Events\PlayMusic\music_creepyatmo\play_music_creepy_atmo_02"/>
 				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
+				<Event Id="3759803571" Name="play_sfx_door_creak" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_door_creak"/>
 				<Event Id="2653434280" Name="play_sfx_human_footsteps_approaching" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_footsteps_approaching"/>
 				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
 				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_object_car_away"/>
@@ -42,6 +43,10 @@
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
+				<File Id="58705680" Language="SFX">
+					<ShortName>263137__tmacroberts__creaking.wav</ShortName>
+					<Path>SFX\263137__tmacroberts__creaking_E381B43F.wem</Path>
+				</File>
 				<File Id="129367464" Language="SFX">
 					<ShortName>ambience_crowd_whispering\ambience_crowd_whispering.wav</ShortName>
 					<Path>SFX\ambience_crowd_whispering\ambience_crowd_whispering_178D0C9C.wem</Path>
