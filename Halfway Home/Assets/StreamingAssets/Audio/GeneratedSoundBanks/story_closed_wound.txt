@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	2723803496	play_music_emotional_piano			\PlayMusic\play_music_emotional_piano	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	220669927	music_emotional_piano	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_emotional_piano_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_emotional_piano\music_emotional_piano\music_emotional_piano		1399544
+	220669927	music_emotional_piano	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_emotional_piano_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_emotional_piano\music_emotional_piano\music_emotional_piano		1399544
 

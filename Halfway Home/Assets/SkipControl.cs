@@ -15,6 +15,9 @@ public class SkipControl : MonoBehaviour
 
     public FastForwardEffect SkipEffects;
 
+    public string SkipSoundPlayEvent;
+    public string SkipSoundStopEvent;
+
     bool Skipping = false;
     bool CanSkip = false;
 
@@ -84,6 +87,7 @@ public class SkipControl : MonoBehaviour
         
         SkipSprite.Show(0.1f);
         SkipEffects.StartEffect(0.1f);
+        Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.ALayer, SkipSoundPlayEvent));
     }
 
     void OnStopSkipTyping(DefaultEvent eventdata)
@@ -92,6 +96,7 @@ public class SkipControl : MonoBehaviour
         {
             SkipSprite.Hide(0.1f);
             SkipEffects.EndEffect(0.1f);
+            Stratus.Scene.Dispatch<AudioManager.AudioEvent>(new AudioManager.AudioEvent(AudioManager.AudioEvent.SoundType.ALayer, SkipSoundStopEvent));
         }
 
         Skipping = false;

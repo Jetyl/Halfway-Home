@@ -1131,6 +1131,33 @@
 										<ActiveSource Name="BlipBurstingS GFX018902" ID="{04660F41-3117-449E-BA00-FB4FFF31DA0E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="sfx_menu_skip" ID="{13312830-5A92-4308-B8FB-01F02340CE25}" ShortID="756874161">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="skip_sound" ID="{7F5FF4F7-FB17-411B-9628-13D246CC00E6}" ShortID="516739460">
+											<Language>SFX</Language>
+											<AudioFile>skip_sound.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="skip_sound" ID="{7F5FF4F7-FB17-411B-9628-13D246CC00E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Human SFX" ID="{C34856DB-B6A5-4EB7-AC72-3519D56FDBA6}" ShortID="62421968">

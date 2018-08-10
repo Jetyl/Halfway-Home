@@ -16,24 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -85886770
-    m_lastTimePart2: -1999242830
-    List:
-    - Name: play_music_charlotte_2
-      Path: Default Work Unit\play_music_charlotte_2
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: play_music_charlotte_2
-        ObjectType: 3
-      ID: -380223719
-      Guid: 2d07caf3f59611428b4e02570098cad5
-      maxAttenuation: 0
+    m_lastTimePsrt1: -1205680291
+    m_lastTimePart2: -1999242072
+    List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 1313364706
-    m_lastTimePart2: -1999242823
+    m_lastTimePsrt1: -1205660348
+    m_lastTimePart2: -1999242072
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -342,6 +332,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1489365513
       Guid: 5b9b1da7ee70134fb4a4b7c66c40d196
+      maxAttenuation: 0
+    - Name: play_music_charlotte_2
+      Path: PlayMusic\play_music_charlotte_2
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: play_music_charlotte_2
+        ObjectType: 3
+      ID: -380223719
+      Guid: 2d07caf3f59611428b4e02570098cad5
       maxAttenuation: 0
     - Name: play_music_charlotte_elegant
       Path: PlayMusic\play_music_charlotte_elegant
@@ -796,8 +796,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 234541282
-    m_lastTimePart2: -1999243714
+    m_lastTimePsrt1: 1596327777
+    m_lastTimePart2: -1999241455
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -894,6 +894,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 188792618
       Guid: afbeaf7989e09f4bbb69b792b61fb160
+      maxAttenuation: 0
+    - Name: play_sfx_door_creak
+      Path: PlaySFX\sfx_object\play_sfx_door_creak
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_object
+        ObjectType: 4
+      - ElementName: play_sfx_door_creak
+        ObjectType: 3
+      ID: -535163725
+      Guid: 815b8c628acfeb4382cf9bfbc8406e71
       maxAttenuation: 0
     - Name: play_sfx_human_footsteps_approaching
       Path: PlaySFX\sfx_human\play_sfx_human_footsteps_approaching
@@ -1003,6 +1015,18 @@ MonoBehaviour:
       ID: 174248703
       Guid: e7e0326ea8257f418e92723f346c9fe8
       maxAttenuation: 0
+    - Name: play_sfx_menu_skip
+      Path: PlaySFX\sfx_menu\play_sfx_menu_skip
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: play_sfx_menu_skip
+        ObjectType: 3
+      ID: 1366361591
+      Guid: e50e263ebb52854d951520f15c382d9f
+      maxAttenuation: 0
     - Name: play_sfx_menu_slider_scroll
       Path: PlaySFX\sfx_menu\play_sfx_menu_slider_scroll
       PathAndIcons:
@@ -1039,11 +1063,23 @@ MonoBehaviour:
       ID: 319656260
       Guid: c2fb1d74e17817469a2d8453c9ddbb3a
       maxAttenuation: 0
+    - Name: stop_sfx_menu_skip
+      Path: PlaySFX\sfx_menu\stop_sfx_menu_skip
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_menu
+        ObjectType: 4
+      - ElementName: stop_sfx_menu_skip
+        ObjectType: 3
+      ID: -235496163
+      Guid: b4116cc382b43743a13b2a289251b02a
+      maxAttenuation: 0
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -1272903928
-    m_lastTimePart2: -1999246846
+    m_lastTimePsrt1: 2004351536
+    m_lastTimePart2: -1999246469
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -1069,15 +1105,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 234891601
-    m_lastTimePart2: -1999243714
+    m_lastTimePsrt1: 1982278273
+    m_lastTimePart2: -1999243683
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 235437492
-    m_lastTimePart2: -1999243714
+    m_lastTimePsrt1: 1982537576
+    m_lastTimePart2: -1999243683
     List:
     - Name: Game_State
       Path: Default Work Unit\Game_State
@@ -1169,8 +1205,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1406277406
-    m_lastTimePart2: -1999243465
+    m_lastTimePsrt1: 1596507297
+    m_lastTimePart2: -1999241455
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1271,8 +1307,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -81866476
-    m_lastTimePart2: -1999242830
+    m_lastTimePsrt1: 1596507297
+    m_lastTimePart2: -1999241455
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room

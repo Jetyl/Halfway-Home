@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	3687385887	play_music_eduardo_love			\PlayMusic\play_music_eduardo_love	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	943281855	music_eduardo_love	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_eduardo_love_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_eduardo_love\music_eduardo_love\music_eduardo_love		302195
+	943281855	music_eduardo_love	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_eduardo_love_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_eduardo_love\music_eduardo_love\music_eduardo_love		302195
 
