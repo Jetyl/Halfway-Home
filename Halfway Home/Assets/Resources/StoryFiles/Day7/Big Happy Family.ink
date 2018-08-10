@@ -37,8 +37,30 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-I skipped breakfast today because I wasn't feeling it, but now I feel like getting some grub. # Play : Stop_All
-I fill up my plate up and go to sit down. #fatigue -= 50
+Max asked me to meet them to talk about {something|my experience at the House}. # Play : Stop_All
+Plus, after skipping breakfast I feel like getting some grub.
+Max is sitting at a table in the middle of the room.
+I fill up my plate up and sit down to join them. #fatigue -= 50
+[Max] "Hey, you." # Max = Calm
+[{player_name}] "So, uh... what was that thing you wanted to talk about?"
+[Max] "Straight to business! That would be the `exit survey`."
+"Sunflower House collects data on all outgoing residents in order to improve."
+"You <i>can</i> opt out, but I'd appreciate it if you could answer a few questions about your time here."
+"Whaddya say? Willing to help out?" # Skip
++ [Take Survey]
+	[{player_name}] "Sure, I'll answer some questions."
+	[Max] "Great! But first!" # Max = Happy
+	// TO DO: Add actual survey here
++ [Opt Out]
+	[{player_name}] "Uh... I'm gonna have to give that a pass."
+	"Sorry..."
+	Max gives me a disappointed look. How rare. # Max = Sad
+	[Max] "Oh, well."
+	"If you change your mind, I'll be around!" # Max = Calm
+-"I need to go check on something. I'll be back soon." # Max = Exit
+->EvaluateTone
+
+=== EvaluateTone ===
 {
 	-GetValue("ReadyToDye"):
 		->HappyStart
@@ -47,7 +69,7 @@ I fill up my plate up and go to sit down. #fatigue -= 50
 }
 
 === HappyStart ===
-Timothy walks in, more confidant than I've seen him in a while.
+Timothy walks in, more confident than I've seen him in a while.
 [Dyed>Timothy] "H-Hi {player_name}! H-how's it going!" #Dyed = Happy
 I chuckle a little.
 [{player_name}] "Good."
