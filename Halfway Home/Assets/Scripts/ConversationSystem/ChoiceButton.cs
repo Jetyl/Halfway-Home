@@ -20,7 +20,7 @@ public class ChoiceButton : MonoBehaviour
 
     ChoiceDisplayData Base;
 
-    bool Active = true;
+    bool Selected = false;
     int slot;
 
     Button button;
@@ -58,17 +58,18 @@ public class ChoiceButton : MonoBehaviour
 
     public void ChoiceSelected()
     {
-        Active = true;
-        
-        StartCoroutine(RemoveButton(DelayTime));
+        Selected = true;
 
         Space.DispatchEvent(Events.ChoiceMade, new ChoiceEvent(choiceInfo, slot));
+
+        StartCoroutine(RemoveButton(DelayTime));
+
         
     }
 
     public void RemoveChoice(ChoiceEvent eventdata)
     {
-        if (Active)
+        if (Selected)
             return;
 
         StartCoroutine(RemoveButton(0));
@@ -113,8 +114,10 @@ public class ChoiceButton : MonoBehaviour
         gameObject.DispatchEvent(Events.Fade, new FadeEvent(aWhite, ScaleTime));
 
         txt.gameObject.DispatchEvent(Events.Fade, new FadeEvent(aWhite, ScaleTime));
+        
+        yield return new WaitForSeconds(ScaleTime);
 
-        if(Active)
+        if (Selected)
             Space.DispatchEvent(Events.ChoicesFinished, new ChoiceEvent(choiceInfo, slot));
 
     }
