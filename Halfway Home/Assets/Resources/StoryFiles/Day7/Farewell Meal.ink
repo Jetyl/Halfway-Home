@@ -62,7 +62,7 @@ Timothy has been very giddy all day today. Its nice.
 === GoodEnd ===
 [Dyed>Timothy] "W-we're back!" #Dyed = happy #Max =Calm
 [Max] "Sorry that took so long! Timothy was just asking if he-" #Skip #Dyed=Angry
-"You know what, it's not important."  #Dyed = happy
+"You know what, it's not important."  #Dyed = happy #Skip
 +[Say Something]
 	[{player_name}] "Oh? Now I'm curious?" #expression+ #expression ^ good
 	[Max] "Sorry, {player_name}. No Spoilers."
@@ -171,7 +171,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
 <speed=10%>...<speed=100%>
-Eduardo just sort of shuffles around, not sure what else to say.
+Eduardo just sort of shuffles around, not sure what else to say. #Skip
 +[Ask if he's okay.]
 	[{player_name}] "You seem pretty down, man..."
 	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
@@ -190,7 +190,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
 <speed=10%>...<speed=100%>
-Eduardo just sort of shuffles around, not sure what else to say.
+Eduardo just sort of shuffles around, not sure what else to say. #Skip
 +[Ask if he's okay.]
 	[{player_name}] "You seem pretty down, man..."
 	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
@@ -210,7 +210,7 @@ Eduardo just sort of shuffles around, not sure what else to say.
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
-"Oh yeah, and uh, Thanks?" #Eduardo =afraid
+"Oh yeah, and uh, Thanks?" #Eduardo =afraid #Skip
 +[Thanks for what?]
 	[{player_name}] "Thanks for what?"
 	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, Don't make me say it out loud." #Eduardo = Angry
@@ -232,7 +232,7 @@ Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaste
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
 "With your chill, I'm sure you'll do great out there."
-"Oh yeah, and uh, Thanks?" #Eduardo =afraid
+"Oh yeah, and uh, Thanks?" #Eduardo =afraid #Skip
 +[Thanks for what?]
 	[{player_name}] "Thanks for what?"
 	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, Don't make me say it out loud." #Eduardo = Angry
@@ -298,7 +298,7 @@ Next to approach is Charlotte, who seems to have taken a break from her duties.
 	"I suppose you will have to do your best to learn `on the fly`, then."
 	"Speaking of which..."
 }
-[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
+[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy #Skip
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."
 	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.
@@ -344,7 +344,7 @@ Next to approach is Charlotte, who seems to have taken a break from her duties.
 }
 [Charlotte] "Congratulations on completing your tenure at Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, Thank you Charlotte."
-[Charlotte] "<size=50%>It's always a joy to see others move on to bigger and better things...<size=100%>" #Charlotte = Sad
+[Charlotte] "<size=50%>It's always a joy to see others move on to bigger and better things...<size=100%>" #Charlotte = Sad #Skip
 +[Ask about Timothy]
 	[{player_name}] "So, Charlotte, what do you think of Timothy's new look?"
 	[Charlotte] "Hm? I believe I said earlier that I feel it suits him nicely." #Charlotte = Calm
@@ -370,7 +370,7 @@ I watch Charlotte stride gracefully toward the serving line as Max and Timothy e
 Next to approach is Charlotte
 [Charlotte] "Congratulations on completing your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, thank you Charlotte."
-[Charlotte] "I have put a great deal of thought into what you said earlier."
+[Charlotte] "I have put a great deal of thought into what you said earlier." #Skip
 +[Did you decide?]
 	[{player_name}] "And...?"
 	[Charlotte] "And... I have not quite reached a conclusion just yet."
@@ -390,7 +390,7 @@ Charlotte bows out of the conversation, before heading to her seat. Max and Timo
 
 =LeavingSad
 Next to approach is Charlotte
-[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy
+[Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy #Skip
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."
 	To be honest, I'm not really okay after earlier. But I figure it'd be kinder to put on a good face.

@@ -90,7 +90,7 @@ Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss
 [Charlotte] "Really now. If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm 
 It's... odd.<delay=0.5>@ Almost like we're a big happy family.
-The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #All = Exit #Dyed = Calm, Stage_left, right
+The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #Skip #All = Exit #Dyed = Calm, Stage_left, right
 +[Call Timothy over]
 	[{player_name}] "Hey, Timothy! C'mon over!" #expression+
 +[Wait, and see what Timothy does]
@@ -116,7 +116,7 @@ Max jostles Timothy's new blue hair. #Dyed=happy
 [Max] "really now?"
 "Well, {player_name}, You've got my thanks, as well as Timothy's, no doubt."
 Max gives a hearty laugh, before quickly turning their mop on me like it was a sword.
-"You didn't make a mess of your bathroom on your last day, now did you?" #Max = Angry
+"You didn't make a mess of your bathroom on your last day, now did you?" #Max = Angry #Skip
 +[No]
 	[{player_name}] "Uh, no?"
 	[Max] "Good." #Max = happy
@@ -143,7 +143,7 @@ I sit myself down with my meal. # Play : Stop_All
 {He seems to be in a quiet mood today.|He's quiet again. Am I too late to help him?}
 {I silently eat with him for a while until I hear a loud voice approach.|I search for something to say to break the silence. Anything. But before I find the words, a loud voice approaches.} #Timothy = Exit
 [Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
-[{player_name}] "Eh. Fine, I guess..."
+[{player_name}] "Eh. Fine, I guess..." #Skip
 + [How about you?]
 	"How about you?"
 + [Where've you two been?]
@@ -187,7 +187,7 @@ With his free hand he clutches onto his shirt.
 }
 "Uh, M-Max? Max?" # music_tension_state ! 1
 No one seems to hear my weak call over the chatter and laughter.
-I...
+I... #Skip
 +[Speak Louder]->ACallForHelp
 +[Go Up and Grab Max] ->ForcefulAssistence
 +[Help Timothy Yourself] ->HowDoIComfort
@@ -227,7 +227,7 @@ I...
 ===ForcefulAssistence===
 I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
 His grip tightens, as his eyes begin to water. @I can't leave Timothy here.
-I....
+I... #Skip
 +{tried_expression == false}[Shout to get Max's attention]->ACallForHelp
 +[Force Timothy to Let Go]->BreakPoint
 +{tried_grace == false}[Stay Beside Timothy] ->HowDoIComfort

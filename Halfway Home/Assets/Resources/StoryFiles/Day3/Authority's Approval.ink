@@ -61,7 +61,7 @@ He looks happy, but also nervous. wonder what's up?
 "..." #Timothy = sad
 Timothy seems to deflate, as he goes off to get his breakfast.
 He takes his tray and plops himself at a table across the café.
-He looks kind of sad. I should...
+He looks kind of sad. I should... #Skip
 +[Give Him Some Space]
 	I should give the little fella some space. #Timothy = exit
 	I eat my breakfast in quiet comfort. @<color=color_descriptor><i>the relaxing meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> significantly and Stress slightly</i></color> #fatigue -=30 #stress -=15

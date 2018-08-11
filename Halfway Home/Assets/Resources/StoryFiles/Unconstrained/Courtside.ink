@@ -65,7 +65,7 @@ Max lobs a large ball at my chest. My hands {instinctively raise|are already rai
 	[Timothy] "<size=80%>My parents have a tennis court.<size=100%>" # Timothy = Surprised
 	[Max] "Oh, neat! I always wanted to play tennis. It seems like something I would be good at..."
 }
-[Max] "Anyways, it's a nice day out! Why not play some b-ball?"
+[Max] "Anyways, it's a nice day out! Why not play some b-ball?" #Skip
 +[Agree]
 	[{player_name}] "Why not? You game, Timothy?"
 	[Timothy] "I-I'm down..." # Timothy = Afraid
@@ -110,7 +110,7 @@ That was so long ago. I feel like a completely different person now.
 [Timothy] "I don't know if I can even make it in at all..."# Basketball / HeadVeryNervous
 [{player_name}] "That's okay. How about we play a shorter version? We can do a three-letter word instead."
 [Timothy] "Yeah, that sounds good." # Basketball / HeadCalm
-[{player_name}] "Okay, how about..."
+[{player_name}] "Okay, how about..." #Skip
 +[PIG]
 	[{player_name}] "PIG? I think that's the most common choice for shorter games."
 	~gameName = "PIG"
@@ -334,7 +334,7 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 				->GameTime.TimothyTurn
 			-else:
 				[{player_name}] "You haven't lost yet. Although if you miss again..."
-				[Timothy] "It's too much! Could we... uh... M-maybe stop playing now?" # Basketball / HeadVeryNervous
+				[Timothy] "It's too much! Could we... uh... M-maybe stop playing now?" #Skip # Basketball / HeadVeryNervous
 				->GameTime.BreakRequestPlayerAdvantage
 		}
 	-else:
@@ -342,9 +342,9 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 }
 
 =PlayerTurn
-He recovers the ball and passes it to me. My turn.
+He recovers the ball and passes it to me. My turn. #Skip
 +[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=0AC41C>Good<color=color_descriptor>, Timothy's Odds: <color=EDAF00>Fair<color=color_descriptor>)</color>]
-	I walk up close to the basket.
+	I walk up close to the basket. #Skip
 	++[Normal Throw<size=60%><color=color_descriptor> (85%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
@@ -386,7 +386,7 @@ He recovers the ball and passes it to me. My turn.
 		}
 	++[Back]-> PlayerTurn
 +[Normal Shot<size=50%><color=color_descriptor> (My Odds: <color=EDAF00>Fair<color=color_descriptor>, Timothy's Odds: <color=FF6900>Poor<color=color_descriptor>)</color>]
-	I get a good distance from the basket.
+	I get a good distance from the basket. #Skip
 	++[Normal Throw<size=60%><color=color_descriptor> (57%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
@@ -433,7 +433,7 @@ He recovers the ball and passes it to me. My turn.
 		}
 	++[Back]-> PlayerTurn
 +[Distant Shot<size=50%><color=color_descriptor> (My Odds: <color=FF6900>Poor<color=color_descriptor>, Timothy's Odds: <color=E51900>Dismal<color=color_descriptor>)</color>]
-	I step back to the edge of the concrete.
+	I step back to the edge of the concrete. #Skip
 	++[Normal Throw<size=60%><color=color_descriptor> (29%)</color>]
 		It's probably best if I don't try anything fancy from this distance.
 		{shuffle:
@@ -572,7 +572,8 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 				He moves to get the ball, but stops himself and turns back to me.
 				[Timothy] "Would it... I-I hate to ask, but would it be awful if we stopped playing now?"
 				[{player_name}] "We're nearing the end of the game, man."
-				[Timothy] "I know! I mean... it's dumb, but I don't think I can win and I'm getting pretty tired."
+				[Timothy] "I know! I mean... it's dumb... I'm doing better than I thought...
+				"But I still don't think I can win and I'm getting pretty tired." #Skip
 				->GameTime.BreakRequestTimAdvantage
 		}
 	-else: 

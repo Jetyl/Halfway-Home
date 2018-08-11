@@ -63,7 +63,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 [{player_name}] "Uh, sure."
 [Timothy] "Guess."
 [{player_name}] "Hm? Oh, uh, okay."
-"Let's see..."
+"Let's see..." #Skip
 +[Common consonants] -> Constant
 +[Can I buy a vowel?] -> Vowel
 +{GetValue("SolvedHangman")}[It's Hope] -> AlreadyKnow
@@ -78,10 +78,10 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 {VowelGuess < 1:
 	[{player_name}] "Can I buy a vowel?"
 	[Timothy] "Hehehe... yeah."
-	[{player_name}] "Okay, then..."
+	[{player_name}] "Okay, then..." #Skip
 	~ VowelGuess += 1
 -else:
-	[Timothy] "Go for it."
+	[Timothy] "Go for it." #Skip
 	~ VowelGuess += 1
 }
 *[A] 
@@ -103,7 +103,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	-> Wrong
 
 === Constant ===
-Okay, some common consonants are...
+Okay, some common consonants are... #Skip
 ~ ConstantGuess += 1
 *[S]
 	[{player_name}] "How about 'S'?"
@@ -131,19 +131,19 @@ Okay, some common consonants are...
 		->YouLose
 	- GameFails == 5:
 		"Oh, no! Only one more shot!" #Hangman / 5
-		"Next guess?" 
+		"Next guess?" #Skip
 		->HangMan
 	- GameFails == 4:
-		"Next guess?" #Hangman / 4
+		"Next guess?" #Skip #Hangman / 4
 		->HangMan
 	- GameFails == 3:
-		"Next guess?" #Hangman / 3
+		"Next guess?" #Skip #Hangman / 3
 		->HangMan
 	- GameFails == 2:
-		"Next guess?" #Hangman / 2
+		"Next guess?" #Skip #Hangman / 2
 		->HangMan
 	- else:
-		"Next guess?" #Hangman / 1
+		"Next guess?" #Skip #Hangman / 1
 		->HangMan
 }
 
@@ -156,12 +156,12 @@ Okay, some common consonants are...
 		Hmm....
 		->Guess
 	- else:
-		"Next guess?"
+		"Next guess?" #Skip
 		->HangMan
 }
 
 ===Guess===
-[{player_name}] "Is it..."
+[{player_name}] "Is it..." #Skip
 *[Hole] 
 	[{player_name}] "Is it `hole`?"
 	->Wrong
@@ -207,7 +207,7 @@ But eventually he shrugs and smiles. #Timothy = Happy
 Wow. That was surprisingly dark joke from this guy.
 ->QuestionTimothy
 =QuestionTimothy
-Should... Should I question him about that?
+Should... Should I question him about that? #Skip
 +[Question Timothy]
 	{
 		-expression > 2:

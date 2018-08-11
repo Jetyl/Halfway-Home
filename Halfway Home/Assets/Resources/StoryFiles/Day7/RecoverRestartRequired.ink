@@ -212,7 +212,7 @@ I can feel the whispers before I hear them. I'm not running this time.
 {->Accusation1|->Accusation2|->Accusation3}
 
 =Accusation1
-[Voices] "This is your doing. You weren't there for him." # SFX : play_sfx_human_ghostwhisper
+[Voices] "This is your doing. You weren't there for him." # SFX : play_sfx_human_ghostwhisper #Skip
 * [You're wrong!]
 	[{player_name}] "I tried to be friendly! I'm not responsible for what happened!"
 	[Voices] "Idiot! Your selfishness has not even benefited you. Now you have nothing." # SFX : play_sfx_human_ghostwhisper
@@ -231,7 +231,7 @@ The cackling Voices fade into a low rumble that begins toppling the walls around
 ->END
 
 =Accusation2
-[Voices] "You had a second chance and you still screwed it up. You're truly worthless."
+[Voices] "You had a second chance and you still screwed it up. You're truly worthless." #Skip
 *[Object] 
 	[{player_name}] "I don't believe any of this. This is all wrong!"
 	"I didn't do anything!"

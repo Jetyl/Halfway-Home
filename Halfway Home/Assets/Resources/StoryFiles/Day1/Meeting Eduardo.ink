@@ -38,7 +38,7 @@ I check around the art room, and spy Eduardo and Isaac hanging out in their litt
 Isaac is working on a painting and Eduardo is chatting up a storm.
 Neither of them have noticed me enter the room.
 I suppose I could go over and hang out with them for a while, or I could just go into my own little corner and work on a drawing.
-I...
+I... #Skip
 +[Work on my own thing] -> WorkAlone
 +[Go over and talk with them] -> SoloIntroductions
 
@@ -57,11 +57,10 @@ I decide to go over there, and see how they are doing.
 {
 	-week == 2:
 		Oh you know, fine. Just having the freakiest case of 'déjà vu' in my life! nothing major.
-		Actually, should I even bother explaining my situation to them?
+		Actually, should I even bother explaining my situation to them? #Skip
 	-else:
 		oh you know, stuck in a time loop for who knows what reason! nothing major.
-		Actually, should I try to explain things to them?
-
+		Actually, should I try to explain things to them? #Skip
 }
 +[Yes]
 	I decided to try and explain the surreal circumstances of my situation to the two of them.
@@ -142,7 +141,7 @@ I walk over to the pair, Timothy in tow.
 "Hey, guys, what's up?" #Timothy = stage_left, Afraid, right #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Hey Hey! {player_name}! Good to see ya!"
 "We're both perfectomundo. Up on cloud nine in this business. @I was just telling my 'bae about this rad dream I had." //not sure if I'm happy with this line.
-"How 'bout you? How's it hangin'?"
+"How 'bout you? How's it hangin'?" #Skip
 +[Its fine]
 	[{player_name}] "Oh, fine."
 	"Max asked me to show around the new kid."
@@ -191,7 +190,7 @@ Isaac seems to be lost in his own little world right now.
 [Timothy] "Um..." 
 Timothy taps my side slightly to get my attention, probably feeling as awkward as I do.
 I suppose we should get going on the tour. Although, Eduardo never actually apologized to Timothy.
-I...
+I... #Skip
 +[Get Eduardo's Attention] -> HeyEddy
 +[Let it slide, and get going] -> Leaving
 

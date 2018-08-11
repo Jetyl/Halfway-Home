@@ -39,7 +39,7 @@ He moves closer to block my view of his work. # Timothy = Stage_Center
 [{player_name}] "But if you don't wanna share, that's cool. I mostly wanted to say `hi` anyway."
 Timothy visibly relaxes. # Timothy = Happy
 [Timothy] "Right! Well... hi!"
-Should I leave Timothy be or try to figure out what he's been up to?
+Should I leave Timothy be or try to figure out what he's been up to? #Skip
 +[Leave him to his drawing] -> Disinterested
 +[Repeat interest] -> Cartography
 
@@ -73,7 +73,7 @@ Now that I can get a better look at it, I can see the map clearly{.|again.} He's
 [Timothy] "Thanks! I've been working on it all day, but I actually scrapped the one I spent most of that time on. This one took me about an hour."
 [{player_name}] "Cool. That seems fast, but I don't actually know how long this stuff takes."
 I don't think I've played around with rocks and stuff since I was a kid...
-[Timothy] "Well, it takes me a long time to make my own maps... but this one isn't mine. I'm just recreating it."
+[Timothy] "Well, it takes me a long time to make my own maps... but this one isn't mine. I'm just recreating it." #Skip
 -> Questions
 
 === Questions ===
@@ -95,7 +95,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	"It's a lot less exciting now days, but you can feel that history when you look at a map, ya know? I do, anyway..."
 	"Next to them, my maps are really inconsequential. I mostly just make stuff up."
 	"It takes a lot to do that, too, but it's not the same."
-	"Although I like to practice by recreating maps other people made. Like this one."
+	"Although I like to practice by recreating maps other people made. Like this one." #Skip
 	-> Questions
 *[Ask what place this is a map of]
 	[{player_name}] "So what's this a map of, then?"
@@ -124,7 +124,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	Timothy's confidence drains out of him.
 	"S-Sorry."
 	[{player_name}] "Hey, no worries. It's interesting stuff."
-	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad
+	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad #Skip
 	-> Questions
 * ->
 	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP

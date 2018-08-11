@@ -105,7 +105,7 @@ Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
 [Eduardo] "Oh, god, it's worse than I thought!" # Eduardo = Afraid # Timothy = Calm
 "What could you possibly need me for at..." # Eduardo = Angry// Eduardo is depressive here, so he is torn between being angry for being woken up and surprise that anyone would care to do so
 Eduardo visibly shudders. # Eduardo = Sad
-"`Eight in the morning?`" // FORMERLY: Yeah, and that's like a crime, waking up someone this early."
+"`Eight in the morning?`" #Skip// FORMERLY: Yeah, and that's like a crime, waking up someone this early."
 +[It's not that early.]
 	[{player_name}] "It's not <i>that</i> early, Eduardo."
 	"I'm pretty sure Charlotte has been up for like... a couple hours already."
@@ -151,7 +151,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 === WantToDye ===
 [{player_name}] "Where to first, partner?"
 [Timothy] "Hmm... Seems like we should start with either the Art Room or the Commons."
-"What do you think?"
+"What do you think?" #Skip
 +[Art Room] 
 	[{player_name}] "Let's start with the art room." 
 	[Timothy] "Okay!" 
@@ -162,7 +162,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 	-> Commons
 
 === ArtRoom ===
-{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.} # Background / ArtRoom, blackwipe
+{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.} # Background / ArtRoom, blackwipe #Skip
 ->ARChoice
 =ARChoice
 +[Talk to {Isaac:Isaac again.|Isaac.}] ->Isaac->ARChoice
@@ -222,7 +222,7 @@ We regroup at the front of the room. # All = Exit
 
 === Commons ===
 We {step into the cozy heart of Sunflower House.|return to the common room.} # Background / Commons, blackwipe
-{It looks like Trissa has just finished soundly whooping a second-floor resident at the ping-pong table.|Trissa is still cooling off by the ping-pong table.}
+{It looks like Trissa has just finished soundly whooping a second-floor resident at the ping-pong table.|Trissa is still cooling off by the ping-pong table.} #Skip
 ->CoChoice
 =CoChoice
 +[Talk to {Trissa:Trissa again.|Trissa.}] ->Trissa->CoChoice
@@ -244,7 +244,7 @@ We {step into the cozy heart of Sunflower House.|return to the common room.} # B
 [Trissa] "{I can't say I've seen it anywhere, no.|Besides talking to Charlotte... nope, sorry.}" # Trissa = Sad
 "{But hey, you should ask Charlotte! That girl doesn't miss a thing!|Don't give up, guys!}" # Trissa = Happy
 "{She's almost always in the library at this time.|Stick with it and I know you'll find what you're lookin' for.}" # Trissa = Calm
-[{player_name}] "Thanks!" # All = Exit
+[{player_name}] "Thanks!" # All = Exit #Skip
 ~unlockedLibrary=true
 ->->
 
@@ -253,11 +253,11 @@ Timothy and I {begin picking the room apart.|look everything over one more time.
 We turn over couch cushions, peek under tables, and check every corner {to no avail.|, once again to no avail.}
 [Timothy] "{I haven't found anything interesting.|Nothing new... s-sorry.}"
 [{player_name}] "{Me, neither. Guess we should move on.|Oh, well. It was worth a shot.}"
-We regroup at the front of the room. # All = Exit
+We regroup at the front of the room. # All = Exit #Skip
 ->->
 
 === Garden ===
-{When we step out into the garden, Timothy eagerly runs ahead. There's no one else here but us.|Timothy seems happy to come back to the garden, perhaps especially because it's still empty.} # Background / Garden, blackwipe
+{When we step out into the garden, Timothy eagerly runs ahead. There's no one else here but us.|Timothy seems happy to come back to the garden, perhaps especially because it's still empty.} # Background / Garden, blackwipe #Skip
 ->GChoice
 =GChoice
 +[Search {Search:again.|the room.}] ->Search->GChoice
@@ -281,14 +281,14 @@ We regroup at the front of the room. # All = Exit
 	[{player_name}] "Good find, man!"
 	[Timothy] "Thanks! {Cafe.Max>0&&Cafe.Search>0:Now we can get Max to give us the dyes!|But we still don't know where the dyes are...}"
 	[{player_name}] "We're closing in on the end of our search, I can feel it."
-	I pocket the receipt and look over the garden one more time. # All = Exit
+	I pocket the receipt and look over the garden one more time. # All = Exit #Skip
 	~haveReceipt=true
 }
 ->->
 
 === Cafe ===
 Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet|again}. # Background / Kitchen, blackwipe
-{A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} 
+{A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} #Skip
 ->CaChoice
 =CaChoice
 +[Talk to {Max:Max again.|Max.}] ->Max
@@ -320,7 +320,7 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 	[Max] "You got me curious. Why don't we take a look!"
 	Max strides casually over to the supply closet, slides a small silver key into the lock, and pulls the swing door open with a creak.
 	"Feel free to have a look, but don't touch, guys!" # Max = Happy
-	Max returns to their spot in the corner and resumes work on their bagel. # All = Exit
+	Max returns to their spot in the corner and resumes work on their bagel. # All = Exit #Skip
 	->CaChoice
 -else:
 	{
@@ -328,7 +328,7 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 		[Max] "Did you two find what you were looking for?" # Max = Calm, stage_right
 		[Timothy] "W-we haven't checked yet." # Timothy = Calm, close, stage_left
 		[Max] "Ah, well let me know when you have. I'm not supposed to leave the closet unlocked for very long, ya know."
-		Max turns their attention back to their duties. # All = Exit
+		Max turns their attention back to their duties. # All = Exit #Skip
 		->CaChoice
 	-else:
 		[Max] "{Any luck, friends?|Did you find proof?}" # Max = Calm, stage_right
@@ -366,7 +366,7 @@ I wave to Max as we exit the café. # Max = Exit
 ->TimeToDye
 
 =NoDice
-Timothy and I give Max some space and plan our next move by the front of the café. # All = Exit
+Timothy and I give Max some space and plan our next move by the front of the café. # All = Exit #Skip
 ->CaChoice
 
 =Search
@@ -378,7 +378,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 		Timothy points to a box labeled `Hair Stuff` sitting on the top shelf. # 7.0 & Success
 		[{player_name}] "I dunno if I'll be able to reach it."
 		[Timothy] "Yeah. And Max said not to touch anyway."
-		[{player_name}] "Guess we'll have to ask them to give it to us."
+		[{player_name}] "Guess we'll have to ask them to give it to us." #Skip
 		~foundBox=true
 	}
 -else:
@@ -392,10 +392,10 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 		[{player_name}] "Locked. The plot thickens."
 		[Timothy] "Didn't Charlotte say that Max has the key?"
 		"W-we should go talk to them, right?"
-		I nod and turn back to face the café. # All = Exit
+		I nod and turn back to face the café. # All = Exit #Skip
 	-else:
 		I check the closet again, giving the handle a firm tug.
-		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it.
+		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it. #Skip
 	}
 }
 ->->
@@ -449,7 +449,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	"Eduardo's hair dye is probably locked in the cafe storage closet, but you need Max to unlock it for you to check." # Charlotte = Calm
 	[Timothy] "Thanks again, Charlotte."
 } 
-Timothy and I leave Charlotte to her business and regroup at the front of the library. # All = Exit
+Timothy and I leave Charlotte to her business and regroup at the front of the library. # All = Exit #Skip
 ~unlockedCafe=true
 ->->
 
@@ -458,11 +458,11 @@ Timothy and I {begin checking behind books, beside shelves, and under the furnit
 {Search==1:
 	{Charlotte==0:
 		[Charlotte] "Please be careful, you two." # Charlotte = Afraid, far
-		I don't think we're gonna find anything here. We'd better just talk to Charlotte like Trissa said. # All = Exit
+		I don't think we're gonna find anything here. We'd better just talk to Charlotte like Trissa said. # All = Exit #Skip
 	-else:
 		[Charlotte] "Your diligence is admirable, but I tidy this place up every evening." # Charlotte = Calm, far
 		"If anything were out of place, I would know."
-		She's probably right. This is a waste of time. # All = Exit
+		She's probably right. This is a waste of time. # All = Exit #Skip
 	}
 }
 ->->

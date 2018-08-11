@@ -55,7 +55,7 @@ Pretty cheesy, but they said I don't really stand much chance in the real world.
 The car behind me pulls away. No going back now, not that I'd want to. I've had enough of that place.   # SFX : play_sfx_object_car_away         
 I open the heavy oak doors and step inside.   # Background / Commons, Blackwipe   # Play : Stop_All_Fast # SFX : play_sfx_door_creak  // # Ambience : play_ambience_fireplace
 I don't have to wait long before someone notices my entrance. A tall redhead rounds the corner, all smiles.   # Max = Happy
-[Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..."
+[Max>Janitor?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? What was the name again..." #Skip
 ->Start.NameEntry
 =NameEntry
 *[Help Them Out] {GetPlayerName()}
@@ -106,7 +106,7 @@ A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
 === Commons ===
 I head out into the common room.   # Background / CommonsNight, Blackwipe, NoDefaults   # Play : play_music_creepy_atmo_02   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
 When did it get dark out? Is it night already?   # music_lpf ! 0   # ambience_vol ! 0   # ambience_lpf ! 0
-Max is reading by the fireplace. I wander over and join them.   # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3   # music_lpf ! 0   # ambience_lpf ! 0
+Max is reading by the fireplace. I wander over and join them.   #Skip # Max = Calm   # Ambience : play_ambience_fireplace   # ambience_vol ! -10.3   # music_lpf ! 0   # ambience_lpf ! 0
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?"   # Max = Surprised
@@ -150,7 +150,7 @@ In the distance, I notice something new: a faint electric glow.
 [Voices] "You will fail."   # SFX : play_sfx_human_ghostwhisper
 As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
 I head down the bathroom corridor. Three marked entrances open before me.   # SFX : play_sfx_human_footsteps_approaching
-On instinct, I rush into the...
+On instinct, I rush into the... #Skip
 *[Men's Restroom] 
 	~SetPlayerGender("M")
 *[Lady's Restroom] 

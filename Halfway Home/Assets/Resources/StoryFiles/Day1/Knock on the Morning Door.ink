@@ -88,7 +88,7 @@ I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : p
 ===Introductions===
 [Keyless>Max] "Hella yella, my {player_name} fella."   # Keyless = Calm   # Play : play_music_happy   # Ambience : Stop_All
 What?
-[{player_name}] "Huh?"
+[{player_name}] "Huh?" #Skip
 +[Hella yella?]
 	"Hella yella? What does that even mean?"
 	[Keyless>Max] "It's a thing people say. Don't look at me like that!"//"What, its just something I say sometimes."
@@ -104,7 +104,7 @@ What?
 [{player_name}] "Who's that?"
 [Keyless>Max] "This is Timothy Miyuri. He's the new resident I told you about, remember?"
 [{player_name}] "Uh... yeah."
-[Keyless>Max] "You don't remember, do you?"
+[Keyless>Max] "You don't remember, do you?" #Skip
 +[I remember (Lie)]
 	[{player_name}] "Uh, y-yeah, I, uh, remember that."
 +[No (Honest)]
@@ -128,7 +128,7 @@ I get the feeling I'm about to be dragged into something.
 "Well... It's Timothy's first day, so someone's gotta show him the ropes." # Keyless = Happy
 "But I can't have my keys unaccounted for here."
 Called it.
-"So could you be a pal and show him around?"
+"So could you be a pal and show him around?" #Skip
 +[Sure]
 	[{player_name}] "Sure."
 +[Um... no]
@@ -218,7 +218,7 @@ I open the door to Max's beaming face. A scared Timothy hides behind them.   #Ke
 	{I try to hide my disappointment.|One more time from the top.}
 	~SetValue("RRRFreakout", false)
 }
-[Keyless>Max] "Hella yella, my {player_name} fella."
+[Keyless>Max] "Hella yella, my {player_name} fella." #Skip
 +[Morning Max]
 	[{player_name}] "Ugh... Morning Max."
 	[Keyless>Max] "Morning? It's almost noon! Don't tell me I was your alarm clock this morning!"
@@ -229,7 +229,7 @@ I open the door to Max's beaming face. A scared Timothy hides behind them.   #Ke
 	[{player_name}] "Ugh... Mor- I mean, good afternoon Max."
 	[Keyless>Max] "It ain't quite afternoon yet, buddy. But good to see ya too."
 	I roll my eyes at Max's pedantry. You can never win with them sometimes.
--[Timothy] "..."
+-[Timothy] "..." #Skip
 +[Who's That?]
 	I decide it's best if I just play along.
 	[{player_name}] "Who's that?"
@@ -254,7 +254,7 @@ Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [Keyless>Max] "Oh crap."   # Keyless = Surprised
 Max must be realizing they don't have their keys.
 I could tell Max where there keys are themselves and have the day to myself...
-Or I could show Timothy around myself and snag the keys from the cushions before they can.
+Or I could show Timothy around myself and snag the keys from the cushions before they can. #Skip
 +[Tell Max where the keys are] 
 	->Day1Alone
 +[Withhold that information] 

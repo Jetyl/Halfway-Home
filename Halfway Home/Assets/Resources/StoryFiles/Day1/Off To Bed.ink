@@ -52,7 +52,7 @@ I sit there, wavering between consciousness and unconsciousness, when I hear a v
 =Question
 [Timothy] "D-d-does it ever get easier?"
 "Being here, I-I mean."
-[{player_name}] "..."
+[{player_name}] "..." #Skip
 +[Yes] -> Comfort
 +[No] -> Cold
 
@@ -126,7 +126,7 @@ My dreams, if I had any, escape my memory, and the next thing I know, the sun's 
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults   # Play : play_music_placeholder_main   # Ambience: play_ambience_your_room_fireplace_birds_day   # music_vol | -6
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.
-Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)}
+Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)} #Skip
 +[Get Up]
 	 I sigh, getting out of my cloth cocoon and quickly  readying myself for the day. 
 	 In no time I'm ready to head out. I'm a little more tired than I'd have liked, though. #fatigue -= 40

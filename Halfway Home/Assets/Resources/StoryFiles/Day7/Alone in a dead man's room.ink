@@ -32,7 +32,7 @@ Well, I suppose it's not my room anymore. not after today.
 It's Timothy's Room now. But...
 I'm not sure he'll ever return to claim it.
 I look at my bags, half packed with the crap I call my own.
-with a heavy sigh, I look away, and toss myself into my sheets. one of the last things I can call my own in this space.
+With a heavy sigh, I look away, and toss myself into my sheets. one of the last things I can call my own in this space.
 I'm alone in a dead man's room, and nothing is fine.
 {
 	-week == 1: 

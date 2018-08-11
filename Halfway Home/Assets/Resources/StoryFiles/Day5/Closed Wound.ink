@@ -58,7 +58,7 @@ I can finally escape this dream and leave this place.
 = Again
 That damn letter is the root of so much pain.
 {awareness==5:
-	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	<color=color_descriptor>I already know how this plays out. Skip ahead? #Skip
 	+[Skip] 
 		I step into the room and submit myself to the flood of memories. It plays out exactly as before... # Background / YourRoom, Blackwipe
 	    -> ClosedWound.Understanding
@@ -80,7 +80,7 @@ I step inside, gently nudging the door closed behind me. # Wound / Down, Blackwi
 ===ClosedWound===
 Timothy is curled up on his bed {firsttime:with his head buried in his arms.|, just like before.}
 An open letter rests on the foot of the bed beside a torn envelope.
-Timothy is trembling slightly, but doesn't otherwise react to my entrance.
+Timothy is trembling slightly, but doesn't otherwise react to my entrance. #Skip
 ~temp lookLetter = false
 ->InitialChoice
 =InitialChoice
@@ -210,7 +210,7 @@ I rack my brain looking for an answer.
 =Tangents
 Boy does <i>that</i> tone sound familiar.
 I gotta do something to take his mind off of all this.
-Quick, {player_name}, change the subject!
+Quick, {player_name}, change the subject! #Skip
 +[Talk about the other residents]
 	[{player_name}] "So, what you think of the other residents so far?"
 	[Timothy] "Oh, uh... everybody is very nice." # Timothy = Surprised
@@ -337,24 +337,24 @@ The best I can hope for is that spending some time with him will improve his moo
 Maybe he just needs some company. Maybe he needs to feel less alone.
 [{player_name}] "Hey, why don't we do something?"
 [Timothy] "Like what?"
-Crap, I don't know. I'd better think of something fast.
+Crap, I don't know. I'd better think of something fast. #Skip
 ->OutOfOptions
 =OutOfOptions
 +{walk==false}[Go for a walk]
 	[{player_name}] "It's nice out. How about we go for a walk?"
 	~ walk = true
 	[Timothy] "I-I don't... <speed=60><size=80%>really think I could handle going outside right now.<size=100%><speed=40> Sorry!" # Timothy = Afraid
-	Timothy looks down at the floor. # Timothy = Sad
+	Timothy looks down at the floor. # Timothy = Sad #Skip
 	->OutOfOptions
 +{game==false}[Play a game]
 	[{player_name}] "The common room has all kinds of games. How about we play one?"
 	~ game = true
 	{movie==false:
 		[Timothy] "Sure!" # Timothy = Happy
-		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid
+		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid #Skip
 	-else:
 		[Timothy] "<size=70%>That's the same problem as watching a movie...<size=100%>" # Timothy = Sad
-		Right, duh.
+		Right, duh. #Skip
 	}
 	->OutOfOptions
 +{movie==false}[Watch a movie]
@@ -362,10 +362,10 @@ Crap, I don't know. I'd better think of something fast.
 	~ movie = true
 	{game==false:
 		[Timothy] "That sounds fine." # Timothy = Happy
-		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid
+		"But wait... Isn't the commons... <size=80%>full of people?<size=100%>" # Timothy = Afraid #Skip
 	-else:
 		[Timothy] "<size=70%>That's the same problem as playing a game...<size=100%>" # Timothy = Sad
-		Right, duh.
+		Right, duh. #Skip
 	}
 	->OutOfOptions
 *->

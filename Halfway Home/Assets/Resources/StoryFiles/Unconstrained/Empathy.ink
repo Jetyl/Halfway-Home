@@ -29,7 +29,7 @@ EXTERNAL GetValue(name)
 
 === Start ===
 When I arrive at the library, {I discover that I am not alone|Charlotte is in the same place as {before|always}}.
-{Charlotte is here, too|This must be a regular thing for her|It's a very familiar scene at this point}. She's seated on the sofa, reading to herself.
+{Charlotte is here, too|This must be a regular thing for her|It's a very familiar scene at this point}. She's seated on the sofa, reading to herself. #Skip
 +[Join Her] -> Sofa
 +[Browse] -> Browsing
 
@@ -81,7 +81,7 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 -else:
 	"Oh, I wouldn't want to burden you. Don't you write all these yourself already?"
 }
-[Charlotte] "Usually, yes. Why don't you join me?"
+[Charlotte] "Usually, yes. Why don't you join me?" #Skip
 *[Okay]
 	[{player_name}] "Okay. I just didn't want to disturb you."
 	[Charlotte] "That is very considerate of you, {player_name}, but you needn't worry about that. If I wished not to be disturbed, I would not be out in public."
@@ -96,7 +96,7 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 === AskToSkip ===
 ~ temp repeating = Trissa>0 && History>0
 {repeating:
-	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	<color=color_descriptor>I already know how this plays out. Skip ahead? #Skip
 	+[Skip]
 		{grace>2:->Invitation|->Instruction}
 	+[Continue] -> Reading
@@ -112,12 +112,12 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 "Well, if you come across a work you like before you leave and change your mind, just let me know." # Charlotte = Calm
 [{player_name}] "Sure. I <i>have</i> been trying to read more."
 [Charlotte] "That's nice to hear. As I said before, I would be pleased to offer you a recommendation."
-"Do you generally prefer fiction or nonfiction?"
+"Do you generally prefer fiction or nonfiction?" #Skip
 +[Fiction]
 	[{player_name}] "Fiction, I guess."
 	[Charlotte] "And how about genre? Fantasy? Science Fiction? Horror?"
 	Charlotte gains a mischievous look. # Charlotte = Happy
-	[Charlotte] "Or perhaps you prefer Romance?"
+	[Charlotte] "Or perhaps you prefer Romance?" #Skip
 	++[Fantasy]
 	[{player_name}] "I like fantasy worlds a lot, so that probably." {SetStringValue("BookGenre", "fantasy")}
 	[Charlotte] "Quite a lot goes into creating such wondrous places. It's a hard genre to dislike, and an even harder genre to disrespect."
@@ -133,7 +133,7 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 +[Nonfiction]
 	[{player_name}] "Nonfiction, I think."
 	[Charlotte] "An uncommon preference, but one I think I share."
-	"What sorts of topics do you enjoy reading about? Or perhaps you simply read a variety to learn new things?"
+	"What sorts of topics do you enjoy reading about? Or perhaps you simply read a variety to learn new things?" #Skip
 	++[History]
 	[{player_name}] "I know most people are bored by it, but I find history really interesting." {SetStringValue("BookGenre", "history")}
 	[Charlotte] "You surprise me, {player_name}."
@@ -195,7 +195,7 @@ Charlotte's eyes dart around my face before she breathes a gentle sigh of relief
 === Questions ===
 // You get one, you have to loop if you want the other
 [Charlotte] "Perhaps you have some questions for me after all that?" # Charlotte = Calm
-Charlotte looks at me expectantly.
+Charlotte looks at me expectantly. #Skip
 +[Ask her about Trissa] -> Trissa
 +[Ask her about her Family] -> History
 +[Not really] -> Fail
@@ -259,7 +259,7 @@ Charlotte rises and takes a step toward the door before turning back to me. # Ch
 
 === Invitation ===
 [Charlotte] "You've impressed me today, {player_name}."
-"Would you be interested in joining me for tea tomorrow?"
+"Would you be interested in joining me for tea tomorrow?" #Skip
 +[Yes]
 	[{player_name}] "I'd be happy to. What time?"
 	[Charlotte] "I usually take tea at three in the afternoon, if that isn't a bother."
@@ -273,7 +273,7 @@ I should probably head out as well.
 
 === Instruction ===
 [Charlotte] "I just had a thought. Seeing as you're leaving soon, what say I give you some pointers on social protocol on the outside?"
-"I would be happy to tutor you in etiquette, if that would be something you would be interested in..."
+"I would be happy to tutor you in etiquette, if that would be something you would be interested in..." #Skip
 +[Yes]
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at two o'clock?"
