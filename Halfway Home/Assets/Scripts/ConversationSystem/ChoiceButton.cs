@@ -21,6 +21,7 @@ public class ChoiceButton : MonoBehaviour
     ChoiceDisplayData Base;
 
     bool Selected = false;
+    bool SelectionMade = false;
     int slot;
 
     Button button;
@@ -58,8 +59,11 @@ public class ChoiceButton : MonoBehaviour
 
     public void ChoiceSelected()
     {
-        Selected = true;
+        if (SelectionMade)
+            return;
 
+        Selected = true;
+        SelectionMade = true;
         Space.DispatchEvent(Events.ChoiceMade, new ChoiceEvent(choiceInfo, slot));
 
         StartCoroutine(RemoveButton(DelayTime));
@@ -72,6 +76,7 @@ public class ChoiceButton : MonoBehaviour
         if (Selected)
             return;
 
+        SelectionMade = true;
         StartCoroutine(RemoveButton(0));
 
     }
@@ -102,8 +107,6 @@ public class ChoiceButton : MonoBehaviour
 
     IEnumerator RemoveButton(float aTime)
     {
-        button.interactable = false;
-
         yield return new WaitForSeconds(aTime);
 
         gameObject.DispatchEvent(Events.Scale, new TransformEvent(Vector3.zero, ScaleTime));

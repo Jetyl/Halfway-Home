@@ -152,7 +152,6 @@ public class DescriptionDisplay : MonoBehaviour
         {
             if (isFinished)
             {
-                Next = false;
                 Finished();
             }
             
@@ -185,8 +184,8 @@ public class DescriptionDisplay : MonoBehaviour
     public void Finished()
     {
         isFinished = false;
-
-         NextLine.SetBool("Play", false);
+        Next = false;
+        NextLine.SetBool("Play", false);
          // NextLine.Play("LinePlaying");
         
         Active = false;
