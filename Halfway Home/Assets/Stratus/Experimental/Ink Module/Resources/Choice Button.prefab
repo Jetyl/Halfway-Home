@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114285933882590158}
   - component: {fileID: 114764317690239070}
   - component: {fileID: 114885179132074898}
+  - component: {fileID: 114978665511157486}
+  - component: {fileID: 114139450246814332}
   m_Layer: 5
   m_Name: Choice Button
   m_TagString: Untagged
@@ -41,6 +43,7 @@ GameObject:
   - component: {fileID: 224092847236813364}
   - component: {fileID: 222851101134121984}
   - component: {fileID: 114556500741660718}
+  - component: {fileID: 114984235175571434}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -75,6 +78,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114139450246814332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015871394592176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 0
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
+  IsFading: 0
 --- !u!114 &114285933882590158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +164,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -259,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be23d5975d6999f4795ffe7101bede34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScaleTime: 0.3
+  DelayTime: 0.3
   Tags:
   - tag: expression
     Colors:
@@ -284,6 +304,52 @@ MonoBehaviour:
       m_DisabledColor: {r: 0.52302355, g: 0.85040516, b: 0.85882354, a: 0.466}
       m_ColorMultiplier: 1
       m_FadeDuration: 0.1
+--- !u!114 &114978665511157486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015871394592176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800bd2df650cf2542b523be525cc4450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  actOnInitialize: 0
+  currentEnd: {x: 0, y: 0, z: 0}
+--- !u!114 &114984235175571434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762176664347572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33127ef9899c6f94ca0c72dd8dfc69df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOnInitialize: 0
+  InitilazeFadeColor: {r: 0, g: 0, b: 0, a: 0}
+  InitializeFadeTime: 1
+  IsFading: 0
 --- !u!222 &222851101134121984
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -322,7 +388,7 @@ RectTransform:
   m_GameObject: {fileID: 1015871394592176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224092847236813364}
   m_Father: {fileID: 0}

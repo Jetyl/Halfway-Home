@@ -12,7 +12,8 @@ using TMPro;
 
 public class ChoiceButton : MonoBehaviour
 {
-
+    public float ScaleTime;
+    public float DelayTime;
     public ChoiceDisplayData[] Tags;
 
     Choices choiceInfo;
@@ -23,6 +24,8 @@ public class ChoiceButton : MonoBehaviour
 
     Button button;
 
+    Color BaseColor;
+
     TextMeshProUGUI txt;
 
 	// Use this for initialization
@@ -30,6 +33,14 @@ public class ChoiceButton : MonoBehaviour
     {
         button = GetComponent<Button>();
         txt = GetComponentInChildren<TextMeshProUGUI>();
+
+        var imgur = GetComponent<Image>();
+        BaseColor = imgur.color;
+
+        var aWhite = Color.white;
+        aWhite.a = 0;
+
+        imgur.color = aWhite;
 
         choiceInfo = new Choices(txt.text);
         Base.Colors = button.colors;
@@ -49,8 +60,22 @@ public class ChoiceButton : MonoBehaviour
         button.colors = ExtractChoiceColor(ref eventdata.choicedata.text, Tags, Base.Colors);
 
         txt.text = TextParser.DynamicEdit( eventdata.choicedata.text.Trim());
+
+        StartCoroutine(ShowButton(eventdata.ChoiceNumber * DelayTime));
     }
-    
+
+    IEnumerator ShowButton(float aTime)
+    {
+        yield return new WaitForSeconds(aTime);
+
+        gameObject.DispatchEvent(Events.Scale, new TransformEvent(Vector3.one, ScaleTime));
+
+        gameObject.DispatchEvent(Events.Fade, new FadeEvent(BaseColor, ScaleTime));
+
+        txt.gameObject.DispatchEvent(Events.Fade, new FadeEvent(Color.white, ScaleTime));
+
+    }
+
 
     public ColorBlock ExtractChoiceColor(ref string text, ChoiceDisplayData[] compare, ColorBlock Base)
     {
@@ -82,10 +107,12 @@ public class ChoiceButton : MonoBehaviour
 public class ChoiceEvent : DefaultEvent
 {
     public Choices choicedata;
+    public int ChoiceNumber;
 
-    public ChoiceEvent(Choices choice)
+    public ChoiceEvent(Choices choice, int num)
     {
         choicedata = choice;
+        ChoiceNumber = num;
     }
 }
 

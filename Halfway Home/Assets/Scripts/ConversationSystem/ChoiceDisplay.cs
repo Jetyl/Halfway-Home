@@ -69,7 +69,7 @@ public class ChoiceDisplay : MonoBehaviour
         {
             for (int i = choices.Length - 1; i >= 0; --i)
             {
-                buttons[i].DispatchEvent(Events.Choice, new ChoiceEvent(choices[choices.Length - 1 - i]));
+                buttons[i].DispatchEvent(Events.Choice, new ChoiceEvent(choices[choices.Length - 1 - i], i));
                 buttons[i].GetComponent<Animator>().SetBool("Open", true);
             }
         }
