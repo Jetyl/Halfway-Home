@@ -40,7 +40,7 @@ Splayed out on the table in front of her are a handful of books, some opened to 
 "Now, let's begin."
 "I have distilled the many lessons I have learned about etiquette over the years into three core ideas: Principles, Protocol, and Behavior." # Charlotte = Calm
 "I tried thinking of another word that starts with `P`, but, alas, not everything fits into the creative molds that we would prefer." # Charlotte = Sad
-"I would like you to decide which to begin with." # Charlotte = Happy
+"I would like you to decide which to begin with." # Charlotte = Happy #Skip
 -> Topic
 
 === Behavior ===
@@ -77,10 +77,10 @@ We spend an hour going over the basics of psychology, anthropology, and body lan
 <color=color_descriptor>Charlotte's tutelage has <color=color_grace>improved <b>Grace</b> moderately<color=color_descriptor>.</i></color> # Grace++
 {
 	-topicsDiscussed == 3:
-		[Charlotte] "That's all the time I allocated for today. Do you have any final questions?"
+		[Charlotte] "That's all the time I allocated for today. Do you have any final questions?" #Skip
 		
 	-else:
-		[Charlotte] "I think we've spent enough time on this for now. How about we move on to another topic?"
+		[Charlotte] "I think we've spent enough time on this for now. How about we move on to another topic?" #Skip
 }
 {
 	-topicsDiscussed==2:->Trissa
@@ -115,10 +115,10 @@ We spend the next hour talking about different tips and tricks for changing your
 <color=color_descriptor>Charlotte's tutelage has <color=color_grace>improved <b>Grace</b> moderately<color=color_descriptor>.</i></color> # Grace++
 {
 	-topicsDiscussed == 3:
-		"That's all the time I allocated for today. Do you have any final questions?"
+		"That's all the time I allocated for today. Do you have any final questions?" #Skip
 		
 	-else:
-		[Charlotte] "Let's move on."
+		[Charlotte] "Let's move on." #Skip
 }
 {
 	-topicsDiscussed==2:->Trissa
@@ -178,10 +178,10 @@ We spend an hour talking about different tactics to adapting to new social rules
 <color=color_descriptor>Charlotte's tutelage has <color=color_grace>improved <b>Grace</b> moderately<color=color_descriptor>.</i></color> # Grace++
 {
 	-topicsDiscussed == 3:
-		[Charlotte] "That's all the time I allocated for today. Do you have any final questions?"
+		[Charlotte] "That's all the time I allocated for today. Do you have any final questions?" #Skip
 		
 	-else:
-		[Charlotte] "I think you grasp the important concepts. Shall we continue on to the next topic?"
+		[Charlotte] "I think you grasp the important concepts. Shall we continue on to the next topic?" #Skip
 }
 {
 	-topicsDiscussed==2:->Trissa
@@ -223,7 +223,7 @@ Trissa strides confidently out of the room, throwing a thumbs up behind her as s
 [Charlotte] "She's just... too... perfect!"
 Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 "Sorry about that. Now where were we?"
-"Ah, yes. You were about to choose another topic..."
+"Ah, yes. You were about to choose another topic..." #Skip
 ->Topic
 
 === Motivation ===
@@ -265,7 +265,7 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 {
 	-topicsDiscussed==3:->Farewell
 	-else:
-	[Charlotte] "Thank you. Now where were we?"
+	[Charlotte] "Thank you. Now where were we?" #Skip
 	->Topic
 }
 
@@ -278,7 +278,7 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 		[{player_name}] "I assure you, the pleasure was all mine. If nothing else, I am glad for your company."
 		[Charlotte] "My you <i>have</i> learned quickly, haven't you? You seem like an entirely different person this week."
 		"I daresay I'm quite proud."
-		"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills."
+		"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills." #Skip
 		+[Yes] 
 			[{player_name}] "I'd love to. Where and when?"
 			[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetValue("ReadyForTea", 2)}

@@ -33,7 +33,7 @@ That loud knocking noise wakes me up again... # SFX : play_sfx_human_knock
 Uuuugh.... #Background / YourRoom, eyeopen, NoDefaults
 Max (and I know its Max) is hollering concerned, as I slink out of my silken cavern to get the door. 
 [Max] "...!" #Max = Surprised
-"{player_name}... Did you just get up?" #Max = Sad
+"{player_name}... Did you just get up?" #Max = Sad #Skip
 +[Be Honest]
 	[{player_name}] "Yeah..."
 	Max sighs exasperatedly. #Max = Angry

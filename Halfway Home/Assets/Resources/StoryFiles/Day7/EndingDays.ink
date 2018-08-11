@@ -160,7 +160,7 @@ I guess it must seem that way to everyone else. That's what happens when you hav
 =Polite
 [Charlotte] "As well as can be expected, I suppose." # Charlotte = Sad
 "You seem to have grown tremendously in a short span, {player_name}." # Charlotte = Happy
-"You must be very proud to have finally found the strength to leave us."
+"You must be very proud to have finally found the strength to leave us." #Skip
 +[I am proud]
 	[{player_name}] "You know what, I am. I did it! But..."
 +[I'm more sad]
@@ -258,7 +258,7 @@ She turns to open a small bag resting beside her and withdraws a solitary book.
 
 ===EdAndIsaac===
 I turn to look over the commons. Eduardo and Isaac are standing at opposite ends of the room for some reason.
-Guess I'll have to talk to one before the other. Let's start with...
+Guess I'll have to talk to one before the other. Let's start with... #Skip
 +[Eduardo]
 	->EduardoEnd
 +[Isaac]
@@ -531,7 +531,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 [{player_name}] "Oh, just my {GetStringValue("Guardian")}."
 [Max] "Cool. Cool."
 */
-[Max] "So, got any plans for what's next after this?"
+[Max] "So, got any plans for what's next after this?" #Skip
 +[College]
 	[{player_name}] "I was thinking of school. Another sort of stepping-stone into the real world."
 +[A Job]

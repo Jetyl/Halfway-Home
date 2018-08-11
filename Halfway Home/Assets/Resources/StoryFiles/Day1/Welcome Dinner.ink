@@ -35,7 +35,7 @@ I actually barely remember my own welcome dinner. I think there were beans? That
 Timothy, the star of this show, gets the center seat, so he can meet everybody. Currently, he seems to be talking with Trissa.
 Eduardo and Isaac are off in their own little corner, giggling to themselves. 
 Charlotte and Max are helping serve food at the front of the line.
-I decide to...
+I decide to... #Skip
 *[Sit near Timothy] ->NearTimothy
 *[Sit near Eduardo] ->NearEduardo
 *[Offer help to Charlotte] ->NearCharlotte
@@ -50,7 +50,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 [{player_name}] "Sure did."
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
-[Timothy] "That's kind of a 'lotta pressure." # Timothy = Afraid
+[Timothy] "That's kind of a 'lotta pressure." # Timothy = Afraid #Skip
 *[Reassure Him]
 	{
 		-awareness > 1: 
@@ -186,7 +186,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 You have no idea.
 [Max] "Also, thanks with the save with the keys."
 [{player_name}] "no prob."
-[Max] "How'd you even know they were there?"
+[Max] "How'd you even know they were there?" #Skip
 +[Lucky Guess]
 	[{player_name}] "lucky guess."
 	[Max]"Well that's some fine luck ya got." 

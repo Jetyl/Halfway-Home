@@ -99,7 +99,7 @@ Max either does not notice or does not care to comment, and instead continues ha
 Timothy stares at the envelope, making no attempt to open it before walking away with it in hand. #Timothy = exit
 He looked a little pale there. I wonder if {firsttime:he's okay|this is the cause for the drama later in the week}. // New context for choice
 {firsttime:He probably just prefers opening his letters in privacy. Then again...|The more I think about it the more convinced I am}.
-Should I follow him?
+Should I follow him? #Skip
 +[Follow Timothy] -> ClosedWound
 +[Let Him Be] 
 	{firsttime:Just as I'm about to follow, doubt overwhelms me. }I decide Timothy is better off with some alone time{firsttime: after all}.
@@ -126,7 +126,7 @@ Should I follow him?
 
 ===IgnorantBliss===
 Most everyone from the 2nd floor has scattered, leaving the regulars lounging around. #Charlotte = calm, right, far #Trissa = calm, far #Eduardo = angry, far #Isaac = sad, far
-I should go talk to...
+I should go talk to... #Skip
 +[Charlotte]
 	->CharlotteTalk
 +[Trissa]
@@ -255,7 +255,7 @@ I walk over to Charlotte, who seems to be staring intently at the other resident
 	[Charlotte] "Perhaps you are not as entirely bereft of courtesy as I had surmised." # Charlotte = Calm
 	"I suppose I can forgive you, {player_name}... on one condition."
 	"Join me for tea tomorrow at the same time!" # Charlotte = Happy
-	"Do you think you can manage that, {player_gender=="M":Mr.|{player_gender=="F":Ms.|my good}} Forgetful Idiot?"
+	"Do you think you can manage that, {player_gender=="M":Mr.|{player_gender=="F":Ms.|my good}} Forgetful Idiot?" #Skip
 	+ [Accept]
 		[{player_name}] "I'll be there. I promise."
 		[Charlotte] "I look forward to it."

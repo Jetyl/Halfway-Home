@@ -43,7 +43,7 @@ Max, frantically looking for their keys.
 {
 	-week >= 2:
 		It doesn't look like Max has found them yet.
-		But, I know where they are. should I...
+		But, I know where they are. should I... #Skip
 		+[Grab them] ->FindersKeepers->RepeatedMistakes
 		+[Leave Max to find them] ->RepeatedMistakes
 	-else:
@@ -59,7 +59,7 @@ Timothy seems to be preoccupied watching Max.   #Timothy = Calm
 ->->
 
 === Misgender ===
-[Timothy] "I hope he finds his keys."   #Keyless = Exit
+[Timothy] "I hope he finds his keys." #Skip #Keyless = Exit
 +[<i>Their</i> Keys]
 	[{player_name}] "Their keys."  #Timothy= Surprised
 +[I'm sure they will]
@@ -115,7 +115,7 @@ I shuffle Timothy off to another part of the building to continue the tour.   #T
 -> END
 
 === RepeatedMistakes ===
-[Timothy] "I hope he finds his keys."   #Keyless = Exit
+[Timothy] "I hope he finds his keys." #Skip #Keyless = Exit
 +[Correct Timothy]
 	[{player_name}] "Their keys." #expression+ #expression ^ good
 	I instinctively correct Timothy on Max's pronouns, out of near habit.   #Timothy= Surprised

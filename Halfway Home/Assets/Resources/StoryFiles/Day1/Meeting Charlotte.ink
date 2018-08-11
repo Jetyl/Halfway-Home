@@ -27,7 +27,7 @@ VAR current_room = "unset"
 {week==2:
 	I don't believe it... Things are playing out exactly the same way they did last time.
 }
-[Charlotte] "Ah, yes. {player_name}. How do you do?"
+[Charlotte] "Ah, yes. {player_name}. How do you do?" #Skip
 +[Great (genuine)]
 	[{player_name}] "Great. I've been feeling better recently."
 	[Charlotte]	"I am glad to hear it. I’ve heard it rumored that you are to seek your fortunes outside the House soon." # Charlotte = Happy

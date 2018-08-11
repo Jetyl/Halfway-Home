@@ -39,6 +39,7 @@ EXTERNAL GetStringValue(value)
 }
 
 === WeekOne ===
+I feel like I might be over-explaining a bit. But maybe not. #Skip
 +[You know, all obvious stuff]
 	"You know, all pretty obvious stuff."
 	"Unless... Crap, you don't have an eating disorder or something do you?"
@@ -62,7 +63,7 @@ Time to show Timothy the rest of the House. # 0.1 & InProgress # 0.2 & InProgres
 -> END
 
 === Repeat ===
-I look back at Timothy, and see he's mostly just staring at the ground.
+I look back at Timothy, and see he's mostly just staring at the ground. #Skip
 +[You okay?]
 	"Hey, are you okay?"
 +[You hungry?]

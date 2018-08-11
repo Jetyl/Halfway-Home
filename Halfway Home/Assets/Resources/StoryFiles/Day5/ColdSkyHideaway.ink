@@ -67,10 +67,10 @@ No response. not surprising
 Still nothing.
 [{player_name}] "I don't usually see you out here."
 [Isaac] "..."
-"I'm hiding"
+"I'm hiding." #Skip
 {
 	-GetValue("ColdTalkBefore") == false:
-		Hiding? why would he be hiding from out here?
+		Hiding? why would he be hiding from out here? #Skip
 }
 +[Leave him be]
 	[{player_name}] "Oh! um, want to be left alone then?"
@@ -99,7 +99,7 @@ Still nothing.
 “...”
 “...”
 “...You...”
-“...You ready...? @To leave? @Here... I mean.”
+“...You ready...? @To leave? @Here... I mean.” #Skip
 +[Yeah]
 	[{player_name}] "Y-yeah. I am."
 	[Isaac] "Hm."
@@ -149,7 +149,7 @@ After a few quiet seconds, Isaac nods, slightly.
 "...I've...been...here...?"
 How long he's been here?
 I don't really recall seeing Isaac until he and Eduardo we dating, some six months ago.
-I'd think he's been around...
+I'd think he's been around... #Skip
 +[6 Months]
 	6 months makes sense. 
 	[{player_name}] "You've only been here about six months right?"
@@ -193,7 +193,7 @@ Isaac looks pained trying to speak as much as he is.
 "..."
 "..."
 Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
-And he came to Sunflower House to improve himself, but still isn't any better. How should I help him?
+And he came to Sunflower House to improve himself, but still isn't any better. How should I help him? #Skip
 +[Give Him Advice]
 	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>Awareness</i> of your life, as an example.</color>
 	->Recoil
@@ -233,7 +233,7 @@ Wow, I don't think I've ever seen Isaac that vocally impassioned. And he seemed 
 "...I don't know what to do..."
 Isaac curls up even further into his ball. #Hideaway / HeadDown
 He seems to be running himself in circles over his conflicted feelings on Eduardo.
-I should....
+I should... #Skip
 +[Give Isaac relationship advice]
 	<color=color_descriptor>You try give Isaac some relationship advice, based on your limited experiences, and what you've seen in media.</color>
 	->Recoil
@@ -244,10 +244,10 @@ I should....
 ===Faulty===
 I should probably let Isaac work through his thoughts on his own.
 [Isaac] "..."
-"such a screw up..."
-"can't live correctly. can't heal correctly."
+"Such a screw up..."
+"Ccan't live correctly. Can't `heal` correctly."
 "Just... broken."
-"broken. broken. broken."
+"<speed=150%>Broken. Broken. Broken.<speed=100%>"
 "..."
 "they said so too.... that I was broken."
 "Broken 'cause I was quiet. Broken 'cause I didn't want... and..."
@@ -257,8 +257,8 @@ I should probably let Isaac work through his thoughts on his own.
 "Don't need what they said was needed."
 "don't want to change. @who I am. @to be happy."
 "..."
-"......"
-"... I, uh, spend a lot of time. In my head." #Hideaway / Blush
+"..."
+"... I, uh, spend a lot of time... In my head." #Hideaway / Blush
 "I... make stories... in my head."
 "And... I'm happy there."
 "..."
@@ -266,22 +266,22 @@ I should probably let Isaac work through his thoughts on his own.
 "Acting out, uh... stories."
 Isaac's blushing quite a lot at that admission.
 "I... um... don't really... tell people that."
-"s'weird."
+"S'weird."
 "haven't even told Eduardo... not really."
 [{player_name}] "Why not?"
-[Isaac] "s'embarrassing. cuz..."
-"cuz he's in most of them." #Hideaway / HeadDownBlush
-"...."
+[Isaac] "S'embarrassing. Cuz..."
+"Cuz he's in most of them." #Hideaway / HeadDownBlush
+"..."
 "I... do like him."
 "but... the Eduardo in my head... and the one out here are..."
 "...too alike."
-"Eduardo's presence. his constant attention. In my head... I like that."
+"Eduardo's presence. His constant attention. In my head... I like that."
 "But, out here. I don't." #Hideaway / HeadDown
 "He's around me all the time... @Talking all the time."
 "He showers me with affection. It was all I wanted. But..."
 "Now... that I have it... I can't stand it..."
-"...."
-"...I really am a broken human being. huh?" #Hideaway/Sad 
+"..."
+"...I really am a broken human being, huh?" #Hideaway/Sad #Skip
 +[No, you are not]
 	[{player_name}] "No, Isaac. You are not broken."
 	->HelpfulListener
@@ -306,28 +306,28 @@ Oh well.
 === HelpfulListener ===
 [Isaac] "..." #Hideaway / Blush //Isaac blushes
 "...what."
-[{player_name}] "Isaac, you are a wonderful person, and you deserve to be happy."
-"and everything you're feeling, just because I or, Eduardo, or anybody can't fully understand it, doesn't mean its not valid."
+[{player_name}] "Isaac, you are a good person and you deserve to be happy."
+"And everything you're feeling, just because I or Eduardo or anybody can't fully understand it, doesn't mean it's not valid."
 "And if you're not happy with Isaac, you gotta tell him, man. people ain't psychic, Eduardo especially."
 [Isaac] "..."
-"t-thanks."
-"and... thanks. for, uh, letting me ramble."
-[{player_name}] "No Problem Isaac."
-I help Isaac up off the ground. #background = gardens #Isaac = calm
+"T-thanks."
+"And... thanks. For, uh, letting me ramble."
+[{player_name}] "No problem, Isaac."
+I help him up off the ground. #background = gardens #Isaac = calm
 [Isaac] "Oh, and, um..."
 "I am gunna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
 [{player_name}] "That sounds good. I'll be looking forward to hearing how it goes." #Isaac = surprise
 [Isaac] "..." 
-"sure." #Isaac = happy
-Isaac  quickly excuses himself after that, slinking off to bed. #Isaac = exit
+"Sure." #Isaac = happy
+Isaac  quickly excuses himself and slinks off to bed. #Isaac = exit
 I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it without making a mess of things. 
 Maybe I should find a time to chat with Eduardo about their relationship. #4 & Success #6 & InProgress
 {
 	-GetValue("Know Isaac's Troubles") ==false:
 		I should be able to articulate Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
 }
-I Get up off the ground and decide to head inside myself, because it is cold tonight.
+I get up off the ground and decide to head inside myself. I've had enough of this chilly night air.// edited from ", because it is cold tonight.""
 ~SetValue("IsaacOpenedUp", true)
 ~SetValue("Know Isaac's Troubles", true)
 ->END
@@ -340,11 +340,11 @@ As I keep talking, rambling really, I notice Isaac has once again gone unrespons
 "sure."
 [{player_name}] "Um, Okay."
 I keep talking to Isaac for a while longer, but I don't feel like anything I'm saying is helpful. #background / gardens, crossfade #Isaac = sad
-after a while, Isaac asks to leave, and we part ways. the biting cold of the night nips at my face. #Isaac = exit
+After a while, Isaac asks to leave, and we part ways. The biting cold of the night breeze nips at my face. #Isaac = exit
 I guess I screwed that up? I feel like I did, anyways.
 Maybe I should've let Isaac talk more...
-<color=color_descriptor>hindsight on the situation improves your <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
-<color=color_descriptor>However, the hindsight also increases your <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly as well.</color> #depression += 10
+<color=color_descriptor>Hindsight on the situation improves <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
+<color=color_descriptor>However, hindsight also increases <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly as well.</color> #depression += 10
 [Voices] "You really can't do anything right, can you?"
 {
 	-depression > 60:
@@ -352,13 +352,13 @@ Maybe I should've let Isaac talk more...
 	-else:
 		...
 }
-I head back inside. my head low from my failure...
+I head back inside, my head low from my failure...
 //failed to listen or help Isaac
 ->END
 
 === Recap ===
-I know where Isaac is hiding, and I know what I can say to help him.
-Should I just go through and do everything I did before, or try something new?
+I know where Isaac is hiding and I know what I can say to help him.
+Should I just go through and do everything I did before, or try something new? #Skip
 +[Retry Talking to Him]
 	->StoneGiant
 +[Repeat Previous Success]

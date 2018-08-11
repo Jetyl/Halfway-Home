@@ -55,7 +55,7 @@ Trissa {starts laughing|shrugs and laughs}. # Trissa = Happy
 {I can't help but smile at her playfulness.|She gives my shoulder a playful punch.}
 [Trissa] "I do kinda wish she had told me, though. She acts nice, but sometimes she can be a real ice queen. Guess that's to be expected, though, given her condition." # Trissa = Sad
 "I just don't know what else I can do, ya know? I'm not hard to get along with, am I?"
-{depression>30:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."}
+{depression>30:[Voices] "Someone looking to <i>you</i> for validation? Now <i>that's</i> precious."} #Skip
 ->KickedOut.Choice
 =Choice
 +[Explain Charlotte's jealousy.]
@@ -101,7 +101,7 @@ I tentatively rap my hand against the worn wooden door{, suddenly feeling nervou
 
 === CheckRepeat ===
 {GetValue("EarnedTeatimeStar")==true:
-	<color=color_descriptor>I already know how this plays out. Skip ahead?
+	<color=color_descriptor>I already know how this plays out. Skip ahead? #Skip
 	+[Skip] -> Ending
 	+[Continue] -> SmallTalk
 }
@@ -160,12 +160,12 @@ I've never thought about before, but I guess it must be lonely for her sometimes
 {Lied>0:
 	This time I need to tell the truth.
 	She could definitely tell that I wasn't completely honest last time.
-	So... how am I really feeling?
+	So... how am I really feeling? #Skip
 -else:
 	Something tells me I shouldn't try to hide anything from Charlotte.
 	Chances are she can probably ready everything I'm feeling without me needing to say anything. Kind spooky to think about, actually.
 	But then, why ask me? Is this all a test?
-	Crap, what did she just ask me? Oh, right, how my week's been.
+	Crap, what did she just ask me? Oh, right, how my week's been. #Skip
 }
 +[Tiresome]
 	{awareness>1:
@@ -209,7 +209,7 @@ I've never thought about before, but I guess it must be lonely for her sometimes
 	"I often feel the same way..."
 	"I wish I had some sage advice for you, but passing any on would make me quite the hypocrite."
 	"I can tell you one thing, though... and that is to try and find joy in the ritual. As much as you can." # Teatime / FSmile
-- [Charlotte] "And how about your mental state? How are you holding up?" # Teatime / FCalm
+- [Charlotte] "And how about your mental state? How are you holding up?" # Teatime / FCalm #Skip
 +[Well]
 	[{player_name}] "I'm doing pretty well."
 	{

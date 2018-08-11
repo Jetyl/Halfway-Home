@@ -52,8 +52,8 @@ Its a rather sunny morning, and I decide to head into the art room grab some spa
 I'm rather surprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of cereal in his hand, siting on the floor and eating.
 [Eduardo] <flow>Heyo {player_name},</flow> how's it going!"
-[{player_name}] "Eh, it going."
-+[How bout you?]
+[{player_name}] "Eh, it going." #Skip
++[How about you?]
 	"How about you?"
 	[Eduardo] "Freaking fantastic." #Eduardo = Angry
 	[{player_name}] "That's good."
@@ -103,18 +103,18 @@ He's got a bowl of cereal in his hand, siting on the floor and eating.
 Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
 I'm going to need to say something, and quick, before he just goes on for hours, gushing.
 [Eduardo] "I want to be around him all the time, and he wants to be around me all the time."
-"Its just so... <flow>Perfect,</flow> you know."
+"Its just so... <flow>Perfect,</flow> you know." #Skip
 +[Say nothing]
 	Yeah, I can't think of anything to say thats going to stop him.
 	->Gushing
 +[Disagree]
 	->Pulling
-+[Yeahthatsgreatgottagobye!]
-	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, GottaGoBye!"
++[Book it out of the room]
+	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, gotta-go-bye!"
 	[Eduardo] "wait, wha-" #Skip
-	I book it out of the art room, all the way to the commons before I am out of breath. #Background / commons, NoDefaults
-	Wow, I am really out of shape too.
-	[Voices] "Just another reason why you are worthless"
+	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults
+	Wow, I am really out of shape.
+	[Voices] "Just another reason why you are worthless."
 	{
 		-depression < 50:
 		No, no. I just, haven't been exercising, thats all... thats all...
@@ -154,7 +154,7 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrass
 }
 
 ===Explain===
-I need to think, how to best explain myself?
+I need to think, how to best explain myself? #Skip
 +[Hunch]
 	[{player_name}] "Its just a hunch I have."
 	[Eduardo] "yeah, well, keep your hunches to yerself from now on. okay?"
@@ -189,7 +189,7 @@ Well, Eduardo is technically correct. Isaac hasn't told me anything yet, but...
 	"He's been concerned bringing it up, because you go around telling everyone how perfect you two are together." #grace ^ good
 	~Conviction -= 1
 }
-"In fact, what he said specifically was..."
+"In fact, what he said specifically was..." #Skip
 +[Feels Suffocated by you]
 	->Suffocated
 +[Feels Sorry for You]
@@ -236,7 +236,7 @@ Huh, Eduardo's mood seems to have completely shifted. theres a passion in his ey
 Eduardo stops, just as he is about to get #Misery = smug
 [Eduardo] "Okay {player_gender == "F": miss| mista} love guru. If you know so much about Isaac, and our relationship, then how long has he been at Sunflower House?"
 Crap, do I know that?
-[{player_name}] "He's been here..."
+[{player_name}] "He's been here..." #Skip
 +[1 year, 6 months]
 	"He's been here about a year and a half right."
 	[Eduardo] "<flow><b>ENHT!!</b></flow> @Wrongo!"
@@ -278,7 +278,7 @@ Crap, do I know that?
 [{player_name}] "But Isaac's not feeling too super right now is he?"
 [Eduardo] "eh?" #Misery = Tense, unsure
 [{player_name}] "being here, and being with you is bringing up a severe underlying issue Isaac has."
-Namely that he feels...
+Namely that he feels... #Skip
 +[Tired]
 	"I'm sure Isaac feels tired of it all."
 	[Eduardo] "eh, not really."
@@ -326,7 +326,7 @@ I let out a deep sigh.
 "You don't Know what we're like! You don't know what Isaac does or Does want!"
 [{player_name}] "Oh, for the love of- Yes! I do!"
 [Eduardo] "Fine, {player_gender == "F": miss| mista} Isaac's apparent new BFF, tell me something about Isaac that even Isaac hasn't told me!"
-Something about Isaac that even Isaac hasn't told him...
+Something about Isaac that even Isaac hasn't told him... #Skip
 +[Tell him about Isaac's internal stories]
 	[{player_name}] "Isaac told me he invents stories involving people we know around us. You, me, anybody."
 	~SetValue("Isaac's Secret Revealed", true)
@@ -401,7 +401,7 @@ Hopefully I did the right thing. I think I did.
 ->END
 
 ===Recap===
-I've convinced Eduardo once before. I can just repeat what I did last time, or I could try something new, for whatever reason.
+I've convinced Eduardo once before. I can just repeat what I did last time, or I could try something new, for whatever reason. #Skip
 +[Retry Convincing Him]
 	->SunnyMorning
 +[Repeat Previous Success]
