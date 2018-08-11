@@ -51,7 +51,7 @@ namespace HalfwayHome
     protected override void OnStart()
     {
       Space.Connect<DefaultEvent>(Events.FinishedDescription, OnFinishedDescription);
-
+            Space.Connect<ChoiceEvent>(Events.ChoicesFinished, OnChoiceMade);
             currentSpeaker = Game.current.CurrentSpeaker;
     }
     void OnFinishedDescription(DefaultEvent eventdata)
@@ -100,17 +100,22 @@ namespace HalfwayHome
       {
         Choice choice = choices[i];
         Button button = CreateChoiceView(choicePrefab, choicesPanel, choices[i].text.Trim());
-        button.onClick.AddListener(delegate
-        {
-          SelectChoice(choice);
-        });
+        //button.onClick.AddListener(delegate
+        //{
+        //  SelectChoice(choice);
+       // });
         
         //added by jesse
         button.StartCoroutine(TextParser.FrameDelay(
-            button.gameObject, Events.Choice, new ChoiceEvent(new Choices(choices[i].text.Trim()), i)));
+            button.gameObject, Events.Choice, new ChoiceEvent(new Choices(choices[i]), i)));
 
                 Space.DispatchEvent(Events.ConversationChoice);
       }
+    }
+
+    void OnChoiceMade(ChoiceEvent eventdata)
+    {
+         SelectChoice(eventdata.choicedata.ChoiceData);
     }
 
     protected override void OnChoiceSelected()

@@ -106,9 +106,10 @@ public class Events
     //choice system
     public static readonly String Choice = "ChoiceEvent";
     public static readonly String ChoiceMade = "ChoiceMadeEvent";
+    public static readonly String ChoicesFinished = "ChoicesFinshiedEvent";
 
-    
-    
+
+
     //conversation system
     public static readonly String StartConversation = "StartConversationEvent";
     public static readonly String ConversationChoice = "ConversationChoiceEvent";

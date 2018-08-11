@@ -9,6 +9,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
+using Ink.Runtime;
 
 public class ChoiceDisplay : MonoBehaviour
 {
@@ -98,6 +99,7 @@ public class ChoiceDisplayEvent : DefaultEvent
 public class Choices
 {
     public string text;
+    public Choice ChoiceData;
 
     public EventListener CallTo;
     public Events DoOnChose = Events.ChoiceMade;
@@ -128,6 +130,12 @@ public class Choices
     {
         text = text_;
         ConvMode = Conv_;
+    }
+
+    public Choices(Choice data)
+    {
+        ChoiceData = data;
+        text = data.text.Trim();
     }
 
     
