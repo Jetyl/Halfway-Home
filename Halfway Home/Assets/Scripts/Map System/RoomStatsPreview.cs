@@ -24,7 +24,8 @@ public class RoomStatsPreview : MonoBehaviour
       {
         foreach(Image i in r.DisplayImages)
         {
-          Instantiate(i, transform);
+          Image im = Instantiate(i, transform);
+          im.tag = "NotHideable";
         }
       }
     }

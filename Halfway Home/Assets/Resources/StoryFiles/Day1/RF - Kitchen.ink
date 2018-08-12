@@ -54,7 +54,7 @@ I feel like I might be over-explaining a bit. But maybe not. #Skip
 	"So, the cafe is open whenever to eat then?"
 	[{player_name}] "Uh, yeah. There isn't much of a reason to come here if you aren't hungry though."
 	I remember Max saying that there are `optimal` times to eat, whatever that means.
-	I think it was when you wake up, then 3 hours later, than 6 hours after that.
+	I think it was when you wake up, then 3 hours later, then 6 hours after that.
 	Something like that. I dunno.
 -"Well, uh, let's go see what they got. If I recall, today is pancake day."
 I spend the morning having a quiet, awkward meal with Timothy. #Timothy = Exit #0.0 & Success

@@ -43,7 +43,7 @@ EXTERNAL GetStringValue(value)
 === WeekOne ===
 I'm not super good at <color=color_expression><i>expressing</i></color> myself, so it just kind of <color=color_wellbeing_penalty><i>stresses</i></color> me out. 
 It also tends to <color=color_wellbeing_penalty><i>fatigue</i></color> me more than usual. The tax for creativity, I guess.
-I look over at Timothy, whose just kind of staring at the ground. #Skip
+I look over at Timothy, who's staring at the ground. #Skip
 +[Want to try making something?]
 	"But yeah, you wanna try something out?"
 +[Want to check out the art pieces]
