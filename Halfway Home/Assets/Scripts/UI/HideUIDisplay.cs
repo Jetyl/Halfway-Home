@@ -8,6 +8,8 @@ public class HideUIDisplay : MonoBehaviour
   bool UIOn = true;
   private bool OnMap;
   public GameObject[] IgnoredObjects;
+  public string IgnoredTag;
+
   private List<Graphic> activeUIElements = new List<Graphic>();
 
 	// Use this for initialization
@@ -72,7 +74,7 @@ public class HideUIDisplay : MonoBehaviour
           {
             if(g == obj.gameObject) ignore = true;
           }
-          if (obj.gameObject.activeSelf && obj.enabled && !ignore)
+          if (obj.gameObject.activeSelf && obj.enabled && !ignore && !(obj.tag == IgnoredTag))
           {
             obj.enabled = false;
             if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = false;

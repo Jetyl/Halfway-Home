@@ -572,7 +572,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 				He moves to get the ball, but stops himself and turns back to me.
 				[Timothy] "Would it... I-I hate to ask, but would it be awful if we stopped playing now?"
 				[{player_name}] "We're nearing the end of the game, man."
-				[Timothy] "I know! I mean... it's dumb... I'm doing better than I thought...
+				[Timothy] "I know! I mean... it's dumb... I'm doing better than I thought..."
 				"But I still don't think I can win and I'm getting pretty tired." #Skip
 				->GameTime.BreakRequestTimAdvantage
 		}
