@@ -59,12 +59,12 @@ public class StatUpdateText : MonoBehaviour
             if (eventdata.Assign)
             {
                 var value = Game.current.Self.GetWellbingStat(eventdata.WellnessStat);
-                if (value < eventdata.Value)
+                if (value > eventdata.Value)
                 {
                     Addative = "-";
                     nextColor = WellnessDown;
                 }
-
+                print(value + Addative + eventdata.Value);
                 Text.text = Addative + " " + (Mathf.Abs(value - eventdata.Value)) + " " + eventdata.WellnessStat;
             }
             else

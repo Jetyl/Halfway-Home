@@ -65,19 +65,19 @@ He's got a bowl of cereal in his hand, siting on the floor and eating.
 +[Where's Isaac?]
 	"Where's Isaac?"
 	[Eduardo] "Sleeping, probably." #Eduardo = Angry
--[{player_name}] "I am rather surprised to see you here though. I didn't take you for a morning person." #Eduardo = suprised
+-[{player_name}] "I am rather surprised to see you here though. I didn't take you for a morning person." #Eduardo = surprised
 [Eduardo] "Hey, I take offense to that!" #Eduardo = Angry
 [{player_name}] "Do you? Do you really?"
 [Eduardo] "Haha, no." #Eduardo = Happy
 "My sleep schedule has been all over the place lately."
 {
 	-GetValue("HadLateNightHangout"):
-		 "That all-nighter we pulled the other day really put it in a twist." #Eduardo = suprised
+		 "That all-nighter we pulled the other day really put it in a twist." #Eduardo = surprised
 		 "I slept most of the day, and today I got up before the sun."
 		 "It's weird, {player_gender == "F": girl| man}. So weird."
 	-else:
 		"Me and Isaac stay up all night the other day, so it kind threw everything off."
-		"Crap, was it even yesterday, or two days ago? What day is it, anyways?" #Eduardo = suprised
+		"Crap, was it even yesterday, or two days ago? What day is it, anyways?" #Eduardo = surprised
 		[{player_name}] "Thursday."
 		[Eduardo] "Okay then yeah, it was yesterday. Or, I guess it started Tuesday night?"
 		"Time is weird, okay." #Eduardo = Angry

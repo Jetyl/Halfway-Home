@@ -128,8 +128,7 @@ public class TMP_Animator : MonoBehaviour
         textmesh.ForceMeshUpdate();
         string rawText = textmesh.text;
         string text = textmesh.GetParsedText().ToLower();
-
-
+        
         segments = new List<TagSegment>();
 
         int limit = 0;
@@ -175,7 +174,7 @@ public class TMP_Animator : MonoBehaviour
             {
                 int segmentEnd = text.IndexOf('<', i + 1);
                 int tagLength = FlowKey.Length + 2;
-
+                
                 segments.Add(new TagSegment(i, segmentEnd - tagLength, AnimType.Flow));
 
                 RemoveFirst(ref text, "<" + FlowKey + ">");
@@ -512,7 +511,7 @@ public class TMP_Animator : MonoBehaviour
         float tempT = t * FlowSpeed + startIndex * 0.3f;
         Vector3 offset = new Vector3(Mathf.Cos(tempT), Mathf.Sin(tempT), 0.0f) * FlowIntensity;
 
-        print(src[startIndex] + offset);
+        //print(src[startIndex] + offset);
 
         dst[startIndex] = src[startIndex] + offset;
         dst[startIndex + 1] = src[startIndex + 1] + offset;
