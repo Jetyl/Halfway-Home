@@ -82,9 +82,9 @@ Timothy peeks out from his hiding place in the shadows behind me. # Timothy = Ca
 -> Trissa
 
 === Trissa ===
-[Timothy] "Uh... hi." # Timothy = Afraid, Stage_Left, Right
+[Timothy] "Uh... hi." # Timothy = Afraid, Stage_Left, Right, Close
 [Charlotte] "It is a pleasure to meet you, Timothy. Welcome to our home." # Charlotte = Happy
-[Timothy] "Th-<delay=1>thanks." # timothy=happy # Timothy = Happy
+[Timothy] "Th-<delay=1>thanks." # Timothy = Happy
 [Charlotte] "My roommate is here, too. Doubtless she'll be overjoyed to make your acquaintance." # Charlotte = Angry
 I get an uncharacteristic hint of annoyance from Charlotte as she beckons to her.
 "Trissa, dear, come and meet the new arrival!" # Charlotte = Calm, Right
@@ -104,7 +104,7 @@ I get an uncharacteristic hint of annoyance from Charlotte as she beckons to her
 <> who's leaving this week." # Trissa = Happy
 "When Max introduced you, you were wearing that shirt with the polar bear on it."
 {I hate that shirt.|I don't even really like polar bears.}
-[Trissa] "Then you must be the new guy! You can call me Trissa!" # Trissa = Happy, Stage_Center # Charlotte = Stage_Right
+[Trissa] "Then you must be the new guy! You can call me Trissa!" # Trissa = Happy, Stage_Center # Charlotte = Stage_Right, left
 [Timothy] "Hi. I'm... Timothy." # Timothy = Afraid
 [Trissa] "No need to act so scared, my man. I don't bite! Not often, anyway..."
 Timothy looks like he might not believe her.

@@ -230,13 +230,13 @@ Charlotte recoils as if stung by her own words.
 "When he returned home, he married and had a few children. One such child, my great aunt Viola, suffered from what we now understand to be schizophrenia."
 "My great grandfather opened Blackwell Asylum to care for her and any others from the community who similarly suffered."
 "Regrettably, my great grandfather gave his life in the war a few years later. Blackwell Asylum atrophied without his guidance."
-"It became a cruel place for the discarded. I fear it was not longer a place of medicine and hospice, but something far darker."
+"It became a cruel place for the discarded. I fear it was no longer a place of medicine and hospice, but something far darker."
 "When my great aunt Viola died, it was a wake-up call for my grandparents. They shut down Blackwell and vowed only to reopen it when they were prepared to run it properly and the necessary restitutions had been made."
 "Blackwell did indeed reopen a decade later as Blackwell Psychiatric Hospital. It is, thankfully, a very different sort of place, where care for its patients is paramount."
 I might not like the place, but Blackwell never abused anyone that I saw.
 {-awareness>2:Looking back on it, I think what I really hated about Blackwell was who I was while I was there.}
-"My family is very touchy about this legacy. When I confronted them about my own condition, they refused to allow me to go to Blackwell.
-They worried it would 'reopen old wounds'." # Charlotte = Angry
+"My family is very touchy about this legacy. When I confronted them about my own condition, they refused to allow me to go to Blackwell."
+"They worried it would 'reopen old wounds'." # Charlotte = Angry
 "So they sent me here to Sunflower House. If you ask me, they are simply delaying the inevitable. But I have honored their wishes thus far."
 "Thanks for taking such an interest, {player_name}!." # Charlotte = Happy
 {grace>2:
@@ -273,7 +273,7 @@ I should probably head out as well.
 
 === Instruction ===
 [Charlotte] "I just had a thought. Seeing as you're leaving soon, what say I give you some pointers on social protocol on the outside?"
-"I would be happy to tutor you in etiquette, if that would be something you would be interested in..." #Skip
+"I would be happy to tutor you in etiquette, if you would be interested in such an arrangement..." #Skip
 +[Yes]
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at two o'clock?"

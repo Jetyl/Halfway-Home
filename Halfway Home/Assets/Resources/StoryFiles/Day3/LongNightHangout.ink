@@ -421,7 +421,7 @@ I check my watch to see the time.
 [{player_name}] "What's the `satire paradox`?" #Hangout / Hrm_Up, Eye_U
 [Isaac] "An idea. Heard about it from a podcast. @'S good."
 [{player_name}] "Well, yeah, but what's it about?"
-[Isaac] "'S about how people interpret comedy & satire."
+[Isaac] "'S about how people interpret comedy and satire."
 "Basically... hrm." #Hangout / hrm_down
 Isaac falls silent, as he seems to be summoning the words.
 "Basically, people will see what they want to see, in satire." #Hangout / Arm_Up, Hrm_Up
@@ -444,7 +444,7 @@ Eduardo is nodding his head in agreement.
 	"I admit persuading people can be hard, but you shouldn't just not try."
 	"I mean, doesn't most art exists to say <i>something</i>, even if it’s just a feeling or idea."
 	"Saying `You can't convince anyone, so why bother` seems both very defeatist."
--"But, those are just my feeling."
+-"But, those are just my feelings."
 [Eduardo] "eh, fair. You do you, and whatever."  #Hangout / E_Frown
 "Like I said, you can't convince people of nothing, so I don't presume I'll change your opinion, or you'll change mine."
 "Ain't that right Isaac?" #Hangout / Eye_I
@@ -454,17 +454,17 @@ Eduardo is nodding his head in agreement.
 ===SixAM===
 //the 6 am hour talk
 //Eduardo gets drowsy. Isaac admits something personal.
-[Eduardo] "oh, we're past the magic hours." #Hangout / E_Sad
-[{player_name}] "huh?"
-[Isaac] "The nights almost over."
-Oh yeah. Jeez, its 6!
-I wonder if Max is up already. probably is.
+[Eduardo] "Oh, we're past the magic hours." #Hangout / E_Sad
+[{player_name}] "Huh?"
+[Isaac] "The night's almost over."
+Oh yeah. Jeez, it's 6!
+I wonder if Max is up already. Probably.
 [Eduardo] "Man, the night is so pretty." #Hangout / Eye_shut, E_Happy
-"All that gentle darkness, mixed with the soft glow of street lights, and 24-hour stores."
-"Man, I miss that, y'know?" 
+"All that gentle darkness, mixed with the soft glow of street lights and 24-hour stores."
+"I miss that, y'know?" 
 "Hey Isaac?" #Hangout / Eye_I, E_Sad
 [Isaac]"Hrm?" #hrm_down
-[Eduardo]"When we get 'outta this joint, can we just stay up every night, talking like this?"
+[Eduardo]"When we get outta this joint, can we just stay up every night, talking like this?"
 [Isaac] "Sure."
 [Eduardo] "I'd Like that." #Hangout/Eye_shut, E_Grin
 [Isaac] "Me too." #Hangout / Smile_Down
@@ -507,7 +507,7 @@ I decide to leave the two to their chatting, and head to bed. #background / comm
 I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 It doesn't take long for me to lose consciousness. #background / dream, eyeclose
 ... {CallSleep()} #sleep %12
-..... #fatigue => 0
+... #fatigue => 0
 I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops. #background/YourRoom, eyeopen
 ->END
 
@@ -525,7 +525,7 @@ The second sign, is Max, who comes in for their morning mopping, and is rather s
 Oh boy, here comes the Max talk.
 "You shouldn't be throwing your sleep schedule 'outta wack like this." #Max = Sad
 "I know you're an adult, and you're leaving in just a few days, but..."
-"It's because of that, you really 'ought to know better." #Skip
+"It's because of that, you really ought to know better." #Skip
 +[I'm sorry Max]
 	[{player_name}] "I'm sorry Max."
 +[I got Dragged in by Eduardo]

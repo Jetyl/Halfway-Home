@@ -601,7 +601,7 @@ Max looks disappointed. Again. # Max = Sad
 [Max] "Oh, well. You do you, then. Why don't you come hang out with me, Timothy?" # Max = Calm
 Timothy nods.
 [Max] "See you around, {player_name}."
-Max and Timothy head into the building, leaving me alone in the garden.
+Max and Timothy head into the building, leaving me alone in the garden. # All = Exit
 I sit alone for a while, replaying the conversation in my mind.
 <color=color_descriptor><i>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly<color=color_descriptor>.</i></color> # depression += 5
 -> END
@@ -660,9 +660,9 @@ Timothy laughs. # Timothy = Happy
 I laugh, too.
 The two of us share a comfortable silence for a few minutes, before Timothy finally speaks up.
 [Timothy] "I'm getting hungry, so I'm off to get something to eat. It was nice hanging out with you, {player_name}."
-Timothy rises, smiles, and strides off at a relaxed pace.
+Timothy rises, smiles, and strides off at a relaxed pace. # All = Exit
 I think Timothy will feel more comfortable here after our conversation.
-I rest for a few more minutes, thinking about what Timothy said about me being "laid back." {I've never thought of that as a strength before.|It's funny how subjective these things are. I always got criticized for not being passionate enough.}
+I rest for a few more minutes, thinking about what Timothy said about me being `laid back.` {I've never thought of that as a strength before.|It's funny how subjective these things are. I always got criticized for not being passionate enough.}
 <color=color_descriptor><i>Spending time with Timothy has <color=color_awareness>improved <b>Awareness</b> considerably<color=color_descriptor>!</i></color> # Awareness++
 I'd better get going, too.
 -> END
