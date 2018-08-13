@@ -85,7 +85,7 @@ The concrete half-court has a few weeds growing out of the cracks, but is otherw
 [{player_name}] "I played a bit as a kid. My dad kinda forced me, really, but I had fun anyway."
 That was so long ago. I feel like a completely different person now.
 [Timothy] "Okay, so what do I do?" # Basketball / HeadHappy
-[{player_name}] "Well, you've got two teams, right? Pretty standard. Usually you have two baskets, too, and each time tries to get the ball in the other team's hoop."
+[{player_name}] "Well, you've got two teams, right? Pretty standard. Usually you have two baskets, too, and each team tries to get the ball in the other team's hoop."
 [Timothy] "Okay ." # Basketball / HeadCalm
 {Ballin==1:
 	[{player_name}] "And the game is played over... some amount of time, broken into... was it quarters? Oh, man, I don't actually remember any of the specifics."
