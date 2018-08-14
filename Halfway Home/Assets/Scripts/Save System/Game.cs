@@ -425,19 +425,7 @@ public class Game
 
     public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)
     {
-        if (Date == Day)
-        {
-            if (Hour - HourToCheck <= LengthOfTime)
-                return true;
-        }
-        else
-        {
-            if ((Hour * (24 * (Day - Date))) - HourToCheck <= LengthOfTime)
-                return true;
-        }
-
-
-        return false;
+        return ((Hour + (24 * Day)) - (HourToCheck + (24 * Date)) <= LengthOfTime);
     }
 
     public int GetNewTimeAfterDuration(int InitialHour, int Duration)
