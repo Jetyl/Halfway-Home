@@ -5,11 +5,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3202835318	play_ambience_your_room_fireplace_crickets_night			\PlayMusic\ambiences\play_ambience_your_room_fireplace_crickets_night	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	345863430	music_contemplative	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_contemplative_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_contemplative\music_contemplative\music_contemplative		1048411
-	579820900	fireplace_far	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fireplace_far_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_birds_day\ambience_your_room_fireplace_birds_day\fireplace_far		648144
-	692116045	fireplace_far	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_birds_day_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_birds_day\ambience_your_room_fireplace_birds_day\fireplace_far		253296
-	905731817	ambience_crickets_night	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crickets_night_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_crickets_night\ambience_your_room_fireplace_crickets_night\ambience_crickets_night		648144
+	345863430	music_contemplative	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_contemplative_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_contemplative\music_contemplative\music_contemplative		1048411
+	579820900	fireplace_far	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fireplace_far_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_birds_day\ambience_your_room_fireplace_birds_day\fireplace_far		648144
+	692116045	fireplace_far	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_birds_day_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_birds_day\ambience_your_room_fireplace_birds_day\fireplace_far		253296
+	905731817	ambience_crickets_night	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crickets_night_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_your_room_fireplace_crickets_night\ambience_your_room_fireplace_crickets_night\ambience_crickets_night		648144
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	235618933	barble bapkins 1_6	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
+	235618933	barble bapkins 1_6	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\barble bapkins 1.6_A51F8DD7.wem	235618933.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_placeholder\music_placeholder_main\barble bapkins 1_6	
 

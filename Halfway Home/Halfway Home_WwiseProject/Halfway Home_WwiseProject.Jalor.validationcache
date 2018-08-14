@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1018073731" DateHigh="30683386"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="393493623" DateHigh="30684177"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="4259289612" DateHigh="30622422"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="4259314742" DateHigh="30622422"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="864410253" DateHigh="30682567"/>
@@ -14,7 +14,7 @@
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\play_sfx_ambient.wwu" DateLow="352112254" DateHigh="30653692"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\play_sfx_menu.wwu" DateLow="3971523704" DateHigh="30656603"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\PlayMusic.wwu" DateLow="2511082820" DateHigh="30682769"/>
-	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\PlaySFX.wwu" DateLow="1018103649" DateHigh="30683386"/>
+	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\PlaySFX.wwu" DateLow="393513574" DateHigh="30684177"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Events\TestEvents.wwu" DateLow="1426127408" DateHigh="30678372"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1981265211" DateHigh="30674122"/>
 	<ValidationCacheItem File="C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\Game Parameters\UI.wwu" DateLow="1561370278" DateHigh="30675528"/>
