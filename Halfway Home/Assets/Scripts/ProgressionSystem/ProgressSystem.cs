@@ -490,8 +490,8 @@ public class ProgressSystem
 public class Beat
 {
     
-    public string PlotName;
-    public string BeatName;
+    public string PlotName = "";
+    public string BeatName = "";
 
     public int BeatNumber; //number the beat is in the plotline
 
@@ -506,6 +506,10 @@ public class Beat
 
     public Beat (Beat copy, ProgressSystem progress)
     {
+        PlotName = copy.PlotName;
+        BeatName = copy.BeatName;
+        BeatNumber = copy.BeatNumber;
+
         Points = new List<ProgressPoint>();
 
         for (int i = 0; i < copy.Points.Count; ++i)
