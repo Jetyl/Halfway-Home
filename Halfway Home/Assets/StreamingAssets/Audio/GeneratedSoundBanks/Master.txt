@@ -22,10 +22,10 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2902037724	Menu_Slider			\UI\Sliders\Menu_Slider	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	11926160	sfx_menu_chime_pausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_pausegame_9F6C56D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_pausegame		131968
-	302959056	sfx_menu_chime_exitgame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_exitgame_52423389.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_exitgame		18280
-	558653419	sfx_menu_chime_unpausegame	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_chime_unpausegame_78AC25A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_chime_unpausegame		158896
-	605418621	sfx_menu_slider_scroll	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\sfx_menu_slider_scroll		1000
-	816303251	empty	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\empty_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\empty		1324
-	950120731	sfx_menu_button_mouseover	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_button_mouseover_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_button_mouseover		80424
+	8468394	sfx_book_close_pause_menu	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_close_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_close_pause_menu		43336
+	364102561	sfx_paper_button_click	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_paper_button_click_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_paper_button_click		9136
+	544459174	sfx_paper_button_hover	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_paper_button_hover_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_paper_button_hover		18208
+	605418621	sfx_menu_slider_scroll	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\sfx_menu_slider_scroll		1000
+	816303251	empty	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\empty_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_music_slider_scroll\empty		1324
+	873914021	sfx_book_open_pause_menu	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_open_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_open_pause_menu		32536
 
