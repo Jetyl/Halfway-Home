@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	3637707742	play_music_sad			\PlayMusic\music_sad\play_music_sad	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1062005778	Starfish	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Starfish_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_sad\music_sad\Starfish		1977022
+	1062005778	Starfish	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Starfish_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_sad\music_sad\Starfish		1977022
 

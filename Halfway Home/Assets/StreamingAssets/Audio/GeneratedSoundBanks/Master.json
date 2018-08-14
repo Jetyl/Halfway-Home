@@ -5,11 +5,11 @@
   "SchemaVersion": "11",
   "SoundbankVersion": "125",
   "RootPaths": {
-   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
-   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
-   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ProjectRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+   "ExternalSourcesOutputRoot": "D:\\Projects\\Halfway-Home\\repo\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
   },
   "SoundBanks": [
    {
@@ -92,22 +92,22 @@
     ],
     "IncludedMemoryFiles": [
      {
-      "Id": "11926160",
+      "Id": "8468394",
       "Language": "SFX",
-      "ShortName": "sfx_menu_chime_pausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_pausegame_9F6C56D1.wem"
+      "ShortName": "sfx_book_close_pause_menu.wav",
+      "Path": "SFX\\sfx_book_close_pause_menu_00FA84C2.wem"
      },
      {
-      "Id": "302959056",
+      "Id": "364102561",
       "Language": "SFX",
-      "ShortName": "sfx_menu_chime_exitgame.wav",
-      "Path": "SFX\\sfx_menu_chime_exitgame_52423389.wem"
+      "ShortName": "sfx_paper_button_click.wav",
+      "Path": "SFX\\sfx_paper_button_click_00FA84C2.wem"
      },
      {
-      "Id": "558653419",
+      "Id": "544459174",
       "Language": "SFX",
-      "ShortName": "sfx_menu_chime_unpausegame.wav",
-      "Path": "SFX\\sfx_menu_chime_unpausegame_78AC25A7.wem"
+      "ShortName": "sfx_paper_button_hover.wav",
+      "Path": "SFX\\sfx_paper_button_hover_00FA84C2.wem"
      },
      {
       "Id": "605418621",
@@ -122,10 +122,10 @@
       "Path": "SFX\\empty_00FA84C2.wem"
      },
      {
-      "Id": "950120731",
+      "Id": "873914021",
       "Language": "SFX",
-      "ShortName": "sfx_menu_button_mouseover.wav",
-      "Path": "SFX\\sfx_menu_button_mouseover_00FA84C2.wem"
+      "ShortName": "sfx_book_open_pause_menu.wav",
+      "Path": "SFX\\sfx_book_open_pause_menu_00FA84C2.wem"
      }
     ]
    }

@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1020080944	play_music_happy			\PlayMusic\music_happy\play_music_happy	
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	178330536	Music1loop	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
+	178330536	Music1loop	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\Music1loop_A51F8DD7.wem	178330536.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_happy\music_happy\Music1loop	
 

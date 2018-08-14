@@ -4,8 +4,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	3266052307	play_music_library			\PlayMusic\play_music_library	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	579820900	fireplace_far	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fireplace_far_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_crickets_night\ambience_fireplace_far_crickets_night\fireplace_far		648144
-	692116045	ambience_birds_day	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_birds_day_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_birds_day\ambience_fireplace_far_birds_day\ambience_birds_day		253296
-	905731817	ambience_crickets_night	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crickets_night_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_crickets_night\ambience_fireplace_far_crickets_night\ambience_crickets_night		648144
-	977374489	music_library_2	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_library_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_library\music_library_intro\music_library_2		1159876
+	579820900	fireplace_far	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fireplace_far_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_crickets_night\ambience_fireplace_far_crickets_night\fireplace_far		648144
+	692116045	ambience_birds_day	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_birds_day_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_birds_day\ambience_fireplace_far_birds_day\ambience_birds_day		253296
+	905731817	ambience_crickets_night	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crickets_night_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_fireplace_far_crickets_night\ambience_fireplace_far_crickets_night\ambience_crickets_night		648144
+	977374489	music_library_2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_library_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_library\music_library_intro\music_library_2		1159876
 
