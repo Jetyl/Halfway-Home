@@ -112,7 +112,7 @@ namespace HalfwayHome
         ClosedReason = Game.current.Progress.GetStringValue(DynamicTooltip);
         self.interactable = false;
       }
-      if (LimitedDailyAccess)
+      if (LimitedDailyAccess && HoldsScene() == false)
       {
         int hour = Game.current.Progress.GetIntValue(HourVisited);
         int day = Game.current.Progress.GetIntValue(DayVisited);
@@ -157,6 +157,21 @@ namespace HalfwayHome
       }
 
     }
+        bool HoldsScene()
+        {
+            var scenes = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
+
+            for (int i = 0; i < scenes.Count; ++i)
+            {
+                if (scenes[i].RoomLocation == gameObject.GetComponent<MapButton>().Location)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+
+        }
 
 
     void MapChoice(MapEvent eventdata)
