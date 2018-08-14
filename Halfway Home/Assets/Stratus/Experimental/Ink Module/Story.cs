@@ -198,6 +198,11 @@ namespace Stratus
         /// </summary>
         public class EndedEvent : ReaderEvent
         {
+          /// <summary>
+          /// Whether the story ended naturally, or if it was interrupted
+          /// by another story being loaded
+          /// </summary>
+          public bool interrupt;
         }
 
         /// <summary>

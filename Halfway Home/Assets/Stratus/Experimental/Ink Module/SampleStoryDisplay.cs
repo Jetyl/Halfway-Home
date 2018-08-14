@@ -98,9 +98,11 @@ namespace Stratus
         displayChoices = false;
         RemoveChoices(choicesPanel);
       }
-      
 
-
+      protected override void RemoveChoices()
+      {
+        RemoveChoices(choicesPanel);
+      }
     }
 
   }

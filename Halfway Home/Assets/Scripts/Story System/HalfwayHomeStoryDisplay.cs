@@ -66,7 +66,7 @@ namespace HalfwayHome
 
     protected override void OnStoryEnded()
     {
-      RemoveChoices(choicesPanel);
+
     }
 
     protected override void OnStoryUpdate(ParsedLine parse, bool visited)
@@ -123,9 +123,11 @@ namespace HalfwayHome
       displayChoices = false;
       RemoveChoices(choicesPanel);
     }
-    
 
-
+    protected override void RemoveChoices()
+    {
+      RemoveChoices(choicesPanel);
+    }
   }
 
 }

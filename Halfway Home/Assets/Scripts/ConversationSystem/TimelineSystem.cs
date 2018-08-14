@@ -77,7 +77,6 @@ public class TimelineSystem : MonoBehaviour
     {
         Game.current.InCurrentStory = false;
         NextNode(CurrentNode.Destination);
-
     }
 
     public void NextAction()

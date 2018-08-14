@@ -151,7 +151,8 @@ namespace HalfwayHome
     /// <param name="e"></param>
     void OnStoryEndedEvent(Story.EndedEvent e)
     {
-      Space.DispatchEvent(Events.FinishedStory);
+      if (!e.interrupt)
+        Space.DispatchEvent(Events.FinishedStory);
     }
 
     //void OnStorySavedEvent(Story.SavedEvent e)

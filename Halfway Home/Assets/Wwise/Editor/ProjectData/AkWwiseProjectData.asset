@@ -16,14 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -1205680291
-    m_lastTimePart2: -1999242072
+    m_lastTimePsrt1: -802529200
+    m_lastTimePart2: -1999241033
     List: []
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1205660348
-    m_lastTimePart2: -1999242072
+    m_lastTimePsrt1: -802484566
+    m_lastTimePart2: -1999241033
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -796,8 +796,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 1596327777
-    m_lastTimePart2: -1999241455
+    m_lastTimePsrt1: -802454814
+    m_lastTimePart2: -1999241033
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -1078,8 +1078,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: 2004351536
-    m_lastTimePart2: -1999246469
+    m_lastTimePsrt1: -1303875200
+    m_lastTimePart2: -1999242863
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -1105,15 +1105,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: 1982278273
-    m_lastTimePart2: -1999243683
+    m_lastTimePsrt1: -1303741273
+    m_lastTimePart2: -1999242863
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{129BB844-131B-4EF4-AA3E-9F1D0C27769B}'
-    m_lastTimePsrt1: 1982537576
-    m_lastTimePart2: -1999243683
+    m_lastTimePsrt1: -1262378149
+    m_lastTimePart2: -1999242863
     List:
     - Name: Game_State
       Path: Default Work Unit\Game_State
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: 1596507297
-    m_lastTimePart2: -1999241455
+    m_lastTimePsrt1: -801849161
+    m_lastTimePart2: -1999241033
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1247,8 +1247,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: 607942143
-    m_lastTimePart2: -1999243876
+    m_lastTimePsrt1: -1262417829
+    m_lastTimePart2: -1999242863
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -1307,8 +1307,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 1596507297
-    m_lastTimePart2: -1999241455
+    m_lastTimePsrt1: -801819402
+    m_lastTimePart2: -1999241033
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1449,8 +1449,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: 630493870
-    m_lastTimePart2: -1999250308
+    m_lastTimePsrt1: -1303855346
+    m_lastTimePart2: -1999242863
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf
@@ -1509,8 +1509,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\UI.wwu
     ParentPhysicalPath: 
     Guid: '{148E2D9F-E4C9-4433-B2CD-803F3F69A985}'
-    m_lastTimePsrt1: 1234319209
-    m_lastTimePart2: -1999249223
+    m_lastTimePsrt1: -1303850384
+    m_lastTimePart2: -1999242863
     List:
     - Name: Ambience_Slider
       Path: UI\Sliders\Ambience_Slider

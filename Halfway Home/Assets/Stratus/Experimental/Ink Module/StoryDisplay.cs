@@ -36,6 +36,7 @@ namespace Stratus
         protected abstract void OnStoryUpdate(ParsedLine parse, bool visited);
         protected abstract void OnPresentChoices(List<Choice> choices);
         protected abstract void OnChoiceSelected();
+        protected abstract void RemoveChoices();
 
         /// <summary>
         /// Initializes the script
@@ -69,6 +70,7 @@ namespace Stratus
         /// <param name="e"></param>
         void OnStoryEndedEvent(Story.EndedEvent e)
         {
+          this.RemoveChoices();
           OnStoryEnded();
         }
 

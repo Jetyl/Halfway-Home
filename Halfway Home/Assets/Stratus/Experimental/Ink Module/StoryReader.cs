@@ -157,6 +157,10 @@ namespace Stratus
         {
           Story newStory = null;
 
+          // If there's a running story, end it
+          if (currentlyReading)
+            this.EndStory(true);
+
           // If this story has already been loaded, use the previous state
           bool previouslyLoaded = storySave.HasStory(storyFile);
 
@@ -164,7 +168,7 @@ namespace Stratus
           {
             if (debug)
               Trace.Script($"{storyFile.name} has already been loaded! Using the previous state.");
-            newStory = storySave.stories[storyFile.name];
+            newStory = storySave.stories[storyFile.name];            
             LoadState(newStory);
           }
           // If the story hasn't been loaded yet
@@ -194,6 +198,7 @@ namespace Stratus
           }
           else if (restart || automaticRestart)
           {
+            // Restart the state if it's the default or if we were interrupted
             Restart(clearStateOnRestart);
           }
 
@@ -246,9 +251,16 @@ namespace Stratus
           if (debug)
             Trace.Script("Restarting the state for the story '" + story.fileName + "'", this);
           if (clearState)
+          {
             story.runtime.ResetState();
+          }
           else
+          {
+            // Choose a random path before restarting to clear choices
+            if (story.runtime.currentChoices.NotEmpty())
+              story.runtime.ChooseChoiceIndex(0);
             story.runtime.state.GoToStart();
+          }
 
           story.started = false;
         }
@@ -418,7 +430,7 @@ namespace Stratus
         /// </summary>
         public void Stop()
         {
-          EndStory();
+          this.EndStory();
         }
 
         /// <summary>
@@ -606,13 +618,13 @@ namespace Stratus
         /// <summary>
         /// Ends the dialog.
         /// </summary>
-        void EndStory()
+        void EndStory(bool interrupt = false)
         {
           if (debug)
             Trace.Script($"The story {story.fileName} has ended at the knot '{story.latestKnot}'");
 
           // Dispatch the ended event
-          var storyEnded = new Story.EndedEvent() { reader = this, story = this.story };
+          var storyEnded = new Story.EndedEvent() { reader = this, story = this.story, interrupt = interrupt };
           this.gameObject.Dispatch<Story.EndedEvent>(storyEnded);
           Scene.Dispatch<Story.EndedEvent>(storyEnded);
 
