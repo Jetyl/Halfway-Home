@@ -526,7 +526,7 @@ public class ConvMap : ConvNode
         ID = (int)start["ID"];
         Title = (string)start["Tag"];
         Destination = (int)start["NextID"];
-        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"]);
+        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"], false);
         RoomLocation = (Room)(int)start["Room"];
 
         Locks = new List<ProgressPoint>();
@@ -635,7 +635,7 @@ public class ConvStamp : ConvNode
         ID = (int)start["ID"];
         Title = (string)start["Tag"];
         Destination = (int)start["NextID"];
-        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"]);
+        time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"], true);
        
     }
 

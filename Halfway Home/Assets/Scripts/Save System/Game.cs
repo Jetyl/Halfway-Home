@@ -374,7 +374,10 @@ public class Game
             return false;
         }
 
-        return SceneList[scene_name] == time_stamp;
+        if (SceneList[scene_name].Exclusive == false)
+            return true;
+        else
+            return SceneList[scene_name] == time_stamp;
     }
 
     public void SetSceneData(string scene_name, TimeStamp time_stamp, bool Override = false)
@@ -499,12 +502,14 @@ public class TimeStamp
     public int day;
     public int hour;
     public int duration;
+    public bool Exclusive = false;
 
-    public TimeStamp(int _day, int _hour, int _duration)
+    public TimeStamp(int _day, int _hour, int _duration, bool _Exclusive)
     {
         day = _day;
         hour = _hour;
         duration = _duration;
+        Exclusive = _Exclusive;
     }
 
     public TimeStamp(TimeStamp copy_)
@@ -513,6 +518,7 @@ public class TimeStamp
         day = copy_.day;
         hour = copy_.hour;
         duration = copy_.duration;
+        Exclusive = copy_.Exclusive;
     }
 
     public static bool operator ==(TimeStamp x, TimeStamp y)
