@@ -29,7 +29,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void UpdateAll()
     {
-        TextSlider.value = (Game.current.Progress.GetFloatValue("TextSpeed") - TextSpeedMin) / TextSpeedMax;
+        TextSlider.value = (Game.current.Progress.GetFloatValue("TextSpeed") - TextSpeedMin) / (TextSpeedMax - TextSpeedMin);
         MasterVolumeSlider.value = Game.current.Progress.GetFloatValue("MasterVolume");
         AkSoundEngine.SetRTPCValue("Master_Slider", MasterVolumeSlider.value * 100);
         MusicVolumeSlider.value = Game.current.Progress.GetFloatValue("MusicVolume");
