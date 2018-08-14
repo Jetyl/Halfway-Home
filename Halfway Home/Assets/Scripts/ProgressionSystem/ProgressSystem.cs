@@ -401,7 +401,13 @@ public class ProgressSystem
         }
         else
         {
-            if(newState != Task.TaskState.Unstarted && Objectives[Number].GetState() == Task.TaskState.Unstarted)
+            if(Objectives[Number].GetState() == Task.TaskState.Unstarted && newState != Task.TaskState.InProgress)
+            {
+                //you cannot succeed a task you didn't know existed. //this is kind of a janky quick fix, but whatev
+                return;
+            }
+
+            if (newState != Task.TaskState.Unstarted && Objectives[Number].GetState() == Task.TaskState.Unstarted)
             {
                 if (!(newState == Task.TaskState.InProgress && Objectives[Number].Hidden))
                     ChronologicalObjectives.Add(Objectives[Number]);

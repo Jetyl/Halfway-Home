@@ -63,7 +63,7 @@ public class HistoryDisplay : MonoBehaviour
         if (!Active)
             return;
 
-		if(Input.GetButtonDown("History") || (Input.GetAxis("Mouse ScrollWheel") >0f && !Displayed))
+		if((Input.GetAxis("Mouse ScrollWheel") >0f && !Displayed))
         {
             ToggleHistory();
         }

@@ -112,6 +112,13 @@ public class MainMenu : MonoBehaviour
       Buttons.SetActive(false);
     }
 
+    public void CloseLoad()
+    {
+        LoadPanel.SetActive(false);
+        Buttons.SetActive(true);
+        
+    }
+
     public void OpenGallery()
     {
       GalleryPanel.SetActive(true);
