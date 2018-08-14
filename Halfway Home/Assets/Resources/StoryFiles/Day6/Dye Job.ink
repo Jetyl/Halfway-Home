@@ -170,7 +170,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 +[Go to another room.]
 	++[Commons] ->Commons
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Café] ->Cafe
+	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> ARChoice
 
@@ -230,7 +230,7 @@ We {step into the cozy heart of Sunflower House.|return to the common room.} # B
 +[Go to another room.]
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Café] ->Cafe
+	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> CoChoice
 
@@ -264,7 +264,7 @@ We regroup at the front of the room. # All = Exit #Skip
 +[Go to another room.]
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
-	++{unlockedCafe}[Café] ->Cafe
+	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
 	++[Nevermind]-> GChoice
 
@@ -362,11 +362,11 @@ Max walks over to the supply closet and retrieves the box. They bring it back to
 [Max] "Have fun! Just try not to make <i>too</i> much of a mess, okay?" # Max = Happy
 "I'm already behind on cleaning as it is!" # Max = Afraid
 [Timothy] "O-okay! Bye, Max." # Timothy = Happy
-I wave to Max as we exit the café. # Max = Exit
+I wave to Max as we exit the cafe. # Max = Exit
 ->TimeToDye
 
 =NoDice
-Timothy and I give Max some space and plan our next move by the front of the café. # All = Exit #Skip
+Timothy and I give Max some space and plan our next move by the front of the cafe. # All = Exit #Skip
 ->CaChoice
 
 =Search
@@ -384,7 +384,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 -else:
 	{Search==1:
 		We make for the supply closet Charlotte told us about.
-		I remember seeing it when I would eat in the café, but I never knew it doubled as a lost-and-found.
+		I remember seeing it when I would eat in the cafe, but I never knew it doubled as a lost-and-found.
 		Probably because I don't have a lot of stuff...
 		[Timothy] "Is this it over here?" # Timothy = Surprised, close, stage_right
 		[{player_name}] "Yep. Let's see what we have here."
@@ -392,7 +392,7 @@ Timothy and I give Max some space and plan our next move by the front of the caf
 		[{player_name}] "Locked. The plot thickens."
 		[Timothy] "Didn't Charlotte say that Max has the key?"
 		"W-we should go talk to them, right?"
-		I nod and turn back to face the café. # All = Exit #Skip
+		I nod and turn back to face the cafe. # All = Exit #Skip
 	-else:
 		I check the closet again, giving the handle a firm tug.
 		No dice. Darn thing's locked up tight. We'll need to get the key from Max to open it. #Skip
@@ -410,7 +410,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
-	++{unlockedCafe}[Café] ->Cafe
+	++{unlockedCafe}[Cafe] ->Cafe
 	++[Nevermind]-> LChoice
 
 =Charlotte
@@ -438,9 +438,9 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	"I do not understand how Max has the patience to keep picking up after him, but I must applaud their patience."
 	"Most such items are returned to Eduardo, but on occasion, when the man is unavailable or the items' owner inscrutable, Max locks them up in the storage closet in the cafeteria that acts as Sunflower House's `Lost and Found`"
 	"I would wager said closet is currently home to many of Eduardo's possessions, including the object of your search."
-	[{player_name}] "So you're saying we should go to the café?"
+	[{player_name}] "So you're saying we should go to the cafe?"
 	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our lovable resident assistant for the key."
-	"And I just saw them heading to the café mere minutes ago."
+	"And I just saw them heading to the cafe mere minutes ago."
 	[Timothy] "Wow, thanks, Charlotte!" # Timothy = Happy
 	[Charlotte] "I am always happy to help."
 	"Happy hunting, you two."

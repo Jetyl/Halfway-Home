@@ -149,7 +149,7 @@ As I drift off to sleep, all I can think about is how badly I want this pain to 
 
 ===SecondRRR===
 I begin my nightly ritual. Despite feeling exhausted, I can't stop myself from thinking...
-The 'Déjà vu' this week has been incredible. It's like... I <i>know</i> I've seen all this before.
+The 'deja vu' this week has been incredible. It's like... I <i>know</i> I've seen all this before.
 Showing Timothy around. Talking to people. Saying goodbye.
 And... poor Timothy. Gone. Just like I remember...
 I lie down in my bed and stare up at the ceiling.
