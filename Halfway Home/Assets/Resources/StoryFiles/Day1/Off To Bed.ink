@@ -57,13 +57,13 @@ I sit there, wavering between consciousness and unconsciousness, when I hear a v
 
 
 === ContemplateWeek1 ===
-Man, it's going to be a bit weird, having a roommate again.
-Eh, its only for one week.
+Man, it's going to be a bit weird having a roommate again.
+Eh, it's only for one week.
 -> Start.IntoBed
 
 === ContemplateWeek2 ===
-what is happening... how did my week repeat like this?
-Is... Is this just going to happen again when this week is over?
+What is happening... How did my week repeat like this?
+Is... is this just going to happen again when this week is over?
 Why?
 I look over at Timothy.
 Timothy's breakdown the last day.

@@ -51,7 +51,7 @@ Its a rather sunny morning, and I decide to head into the art room grab some spa
 ~Conviction = 3
 I'm rather surprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
 He's got a bowl of cereal in his hand, siting on the floor and eating.
-[Eduardo] <flow>Heyo {player_name},</flow> how's it going!"
+[Eduardo] "<flow>Heyo {player_name}</flow>, how's it going!"
 [{player_name}] "Eh, it going." #Skip
 +[How about you?]
 	"How about you?"
