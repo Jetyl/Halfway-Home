@@ -217,6 +217,10 @@ namespace HalfwayHome
           if (match["time"].ToLower().Trim() == "set_time" || match["time"].ToLower().Trim() == "time_set")
           {
             string[] set = match["value"].Replace(" ", "").Split(',');
+
+            if(Game.current.Day != int.Parse(set[0]))                            
+                Game.current.NewDay();
+            
             Game.current.Day = int.Parse(set[0]);
             Game.current.Hour = int.Parse(set[1]);
             Space.DispatchEvent(Events.TimeChange);
