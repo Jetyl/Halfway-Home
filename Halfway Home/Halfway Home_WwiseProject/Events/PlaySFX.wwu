@@ -45,7 +45,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_button_mouseover" ID="{C90A94D0-1FE4-4FA6-8F56-97DD663F2E0C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_paper_button_hover" ID="{4FD8C906-97ED-4B64-A404-9468A2C8FF10}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -59,7 +59,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_chime_click" ID="{4D0FD10A-2DDF-41BF-A4B0-6737DF15297C}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_paper_button_click" ID="{8693191D-7B22-4975-AEDF-10B308AE0A68}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -107,7 +107,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_chime_unpausegame" ID="{D43104BA-2129-4B5C-807A-FB51F1A0D45E}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_book_close_pause_menu" ID="{93606A08-4E15-4021-88FD-AB7F88D80C12}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -121,7 +121,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_chime_pausegame" ID="{C0DB6342-3C83-4D1A-9EAA-746442FDE5DB}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_book_open_pause_menu" ID="{2D96172B-3D69-41EA-A04E-EF8FE720D8E6}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -135,7 +135,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="sfx_menu_chime_exitgame" ID="{6E200610-C3BF-4685-9EB7-DB66899B8F6A}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+											<ObjectRef Name="sfx_book_open_pause_menu" ID="{2D96172B-3D69-41EA-A04E-EF8FE720D8E6}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

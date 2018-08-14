@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
 		<SoundBank Id="4056684167" Language="SFX">
@@ -29,17 +29,17 @@
 				<Event Id="1720799084" Name="stop_ambience_all" ObjectPath="\Events\PlayMusic\intro_ambiences\stop_ambience_all"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="11926160" Language="SFX">
-					<ShortName>sfx_menu_chime_pausegame.wav</ShortName>
-					<Path>SFX\sfx_menu_chime_pausegame_9F6C56D1.wem</Path>
+				<File Id="8468394" Language="SFX">
+					<ShortName>sfx_book_close_pause_menu.wav</ShortName>
+					<Path>SFX\sfx_book_close_pause_menu_00FA84C2.wem</Path>
 				</File>
-				<File Id="302959056" Language="SFX">
-					<ShortName>sfx_menu_chime_exitgame.wav</ShortName>
-					<Path>SFX\sfx_menu_chime_exitgame_52423389.wem</Path>
+				<File Id="364102561" Language="SFX">
+					<ShortName>sfx_paper_button_click.wav</ShortName>
+					<Path>SFX\sfx_paper_button_click_00FA84C2.wem</Path>
 				</File>
-				<File Id="558653419" Language="SFX">
-					<ShortName>sfx_menu_chime_unpausegame.wav</ShortName>
-					<Path>SFX\sfx_menu_chime_unpausegame_78AC25A7.wem</Path>
+				<File Id="544459174" Language="SFX">
+					<ShortName>sfx_paper_button_hover.wav</ShortName>
+					<Path>SFX\sfx_paper_button_hover_00FA84C2.wem</Path>
 				</File>
 				<File Id="605418621" Language="SFX">
 					<ShortName>BlipBurstingS GFX018902.wav</ShortName>
@@ -49,9 +49,9 @@
 					<ShortName>empty.wav</ShortName>
 					<Path>SFX\empty_00FA84C2.wem</Path>
 				</File>
-				<File Id="950120731" Language="SFX">
-					<ShortName>sfx_menu_button_mouseover.wav</ShortName>
-					<Path>SFX\sfx_menu_button_mouseover_00FA84C2.wem</Path>
+				<File Id="873914021" Language="SFX">
+					<ShortName>sfx_book_open_pause_menu.wav</ShortName>
+					<Path>SFX\sfx_book_open_pause_menu_00FA84C2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
