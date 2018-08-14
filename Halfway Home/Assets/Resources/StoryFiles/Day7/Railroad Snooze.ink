@@ -41,14 +41,14 @@ I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, 
 ...{SetTimeBlock(0)} 
 {
 	-GetIntValue("Day") > 5:
-		......... {CallSleep()} #set_time%7,9
+		... {CallSleep()} #set_time%7,9
 	-else:
-		......... {CallSleep()} #set_time%5,9
+		... {CallSleep()} #set_time%5,9
 }
-[Max 0Unknown] "...{player_name}."   # Play : Stop_All
+[Max>???] "...{player_name}."   # Play : Stop_All
 Huh?
 "{player_name}. Get up, ya silly bum."
-In what felt like a blink of an eye, my room is lit with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main
+In what feels like the blink of an eye, my room is lit with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main
 [Max] "You don't want to sleep in on your last day, now do you?" #Max=Calm
 [{player_name}] "Oh, uh... morning I guess."
 I give a large yawn as I stretch out of bed.

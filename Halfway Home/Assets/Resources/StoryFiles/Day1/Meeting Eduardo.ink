@@ -56,7 +56,7 @@ I decide to go over there, and see how they are doing.
 "How bout you? how's it hangin'?"
 {
 	-week == 2:
-		Oh you know, fine. Just having the freakiest case of 'déjà vu' in my life! nothing major.
+		Oh you know, fine. Just having the freakiest case of 'deja vu' in my life! nothing major.
 		Actually, should I even bother explaining my situation to them? #Skip
 	-else:
 		oh you know, stuck in a time loop for who knows what reason! nothing major.

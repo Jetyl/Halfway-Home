@@ -151,7 +151,7 @@ I think I understand myself better, too.
 "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "Of course! Anyway, I'll see you around."
 [Timothy] "Yeah!"
-I make my way out of the garden feeling somehow wiser. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
+I make my way out of the garden feeling somehow wiser. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} # Timothy = Exit // +1 TP 
 -> END
 
 === Hobbies ===
@@ -162,6 +162,6 @@ Maybe I should get a hobby... It would at least give me something to do to occup
 [{player_name}] "Thanks for sharing, Timothy."
 [Timothy] "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "I'll see you around."
-[Timothy] "See you."
+[Timothy] "See you." # Timothy = Exit
 I make my way out of the garden feeling like I have more to learn from Timothy.
 -> END

@@ -20,7 +20,6 @@ VAR current_room = "unset"
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 EXTERNAL SetTimeBlock(int)
-EXTERNAL CallSleep()
 
 -> Start
 
@@ -122,7 +121,7 @@ Looping weeks on end. I try to wonder on the reason why.
 		"It was nice meeting you." #expression ^ good
 }
 I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose, NoDefaults
-My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. {CallSleep()} #sleep%10
+My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. #sleep%10
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults   # Play : play_music_placeholder_main   # Ambience: play_ambience_your_room_fireplace_birds_day   # music_vol | -6
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.

@@ -29,6 +29,8 @@ namespace HalfwayHome
 
     public bool DrainFatigue = true;
 
+        bool Active = false;
+
     // Use this for initialization
     void Start()
     {
@@ -37,7 +39,9 @@ namespace HalfwayHome
       DefaultColors = Body.colors;
 
       //Space.Connect<MapEvent>(Events.MapChoiceMade, OnSelectedRoom);
-
+      
+            Space.Connect<DefaultEvent>(Events.ReturnToMap, TurnMapOn);
+            Space.Connect<MapEvent>(Events.MapChoiceConfirmed, MapChoice);
       //Space.Connect<DefaultEvent>(Events.LeaveMap, Reset);
     }
 
@@ -45,6 +49,15 @@ namespace HalfwayHome
     void Update()
     {
 
+    }
+    void TurnMapOn(DefaultEvent Eventdata)
+    {
+        Active = true;
+    }
+
+    void MapChoice(MapEvent eventdata)
+    {
+            Active = false;    
     }
 
     public void HoverOverRoom()
@@ -54,6 +67,7 @@ namespace HalfwayHome
 
     public void SelectRoom()
     {
+            if(Active)
       Space.DispatchEvent(Events.MapChoiceMade, new MapEvent(Location, TimeSpending, DrainFatigue));
     }
 

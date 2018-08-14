@@ -174,9 +174,12 @@ public class HistoryDisplay : MonoBehaviour
 
     void UpdateHistory(DescriptionEvent eventdata)
     {
-        TextParser.ExtractTextSpeed(ref eventdata.Line, 0);
+        
+        var TheLine = eventdata.Line;
 
-        TagRemover.KillAllCustomTags(ref eventdata.Line);
+        TextParser.ExtractTextSpeed(ref TheLine, 0);
+
+        TagRemover.KillAllCustomTags(ref TheLine);
 
         if(eventdata.Speaker != CurrentSpeaker)
         {
@@ -197,7 +200,7 @@ public class HistoryDisplay : MonoBehaviour
 
         }
 
-        History += Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(eventdata.Line);
+        History += Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(TheLine);
   }
 
     void ClearHistory(DefaultEvent eventdata)

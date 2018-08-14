@@ -149,7 +149,7 @@ As I drift off to sleep, all I can think about is how badly I want this pain to 
 
 ===SecondRRR===
 I begin my nightly ritual. Despite feeling exhausted, I can't stop myself from thinking...
-The 'Déjà vu' this week has been incredible. It's like... I <i>know</i> I've seen all this before.
+The 'deja vu' this week has been incredible. It's like... I <i>know</i> I've seen all this before.
 Showing Timothy around. Talking to people. Saying goodbye.
 And... poor Timothy. Gone. Just like I remember...
 I lie down in my bed and stare up at the ceiling.
@@ -195,7 +195,7 @@ I clutch my head {to try and contain the writhing within|in a vain attempt to du
 <> Hey, are you feeling alright?" # Max = Afraid
 I nod. I'd rather not make a scene. # Max = Sad
 [Max] "Why I don't I go ahead and show you to your room?"
-As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {'Déjà vu'|existential terror|nostalgia}.
+As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {'deja vu'|existential terror|nostalgia}.
 [Max] "Your quarters, your Majesty. Uh, maybe you should lie down or something." # Background / YourRoom, Blackwipe # Ambience : Stop_All
 [{player_name}] "No, I'll be fine."
 [Max] "Okay, then. I've gotta get back to cleaning the cafeteria, so just come and find me whenever you're ready." # Max = Calm

@@ -169,7 +169,7 @@ Max dumps the last of the bags on the floor and puts their hands on their hips.
 [Keyless>Max] "Oh crap."   # Keyless = Surprised
 Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [{player_name}] "What?"
-[Keyless>Max] "It would seem I have misplaced my keys." # Max = Afraid
+[Keyless>Max] "It would seem I have misplaced my keys." # Keyless = Afraid
 [{player_name}] "Again?"
 [Keyless>Max] "Ah! I'm not that forgetful!" #Keyless=Sad
 [{player_name}] "N-no, but, you lost them last week too, remember? They were stuck in the couch cushions in the commons."
@@ -259,7 +259,7 @@ Or I could show Timothy around myself and snag the keys from the cushions before
 	->Day1Alone
 +[Withhold that information] 
 	[{player_name}] "What?"
-	[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..." # Max = Afraid
+	[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..." # Keyless = Afraid
 	"{player_name}, I'm gonna need you to do me a solid."
 	"Well... It's Timothy's first day, so someone's gotta show him the ropes."   # Keyless = Happy
 	"But I can't have my keys unaccounted for here."
@@ -333,7 +333,7 @@ I am really starting to get hungry, so my first move should be to show Timothy t
 ===Day1Alone===
 {SetValue("Tutorial", false)}
 [{player_name}] "What?"
-[Keyless>Max] "It would seem I have misplaced my keys." # Max = Afraid
+[Keyless>Max] "It would seem I have misplaced my keys." # Keyless = Afraid
 [{player_name}] "They probably just fell into the couch cushions in the commons."
 [Keyless>Max] "Oh, don't be silly {player_name}, I-"
 "Actually, that's entirely plausible. Don't move, I'll be right back!"

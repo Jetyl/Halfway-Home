@@ -169,6 +169,10 @@ namespace HalfwayHome
           Game.current.Progress.SetValue<int>(DayVisited, Game.current.Day);
           Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
         }
+
+        print("cafe vsited at " + GetTime(Game.current.Progress.GetIntValue(HourVisited)) + " on day " + Game.current.Progress.GetIntValue(DayVisited)
+                        + " and this was visit #" + Game.current.Progress.GetIntValue(AccessPoint));
+
       }
     }
 

@@ -54,7 +54,7 @@ public class UIFader : MonoBehaviour
 
   public void Hide(float fadeTime = DefaultFadeTime)
   {
-    Debug.Log($"Hiding {gameObject.name}");
+    //Debug.Log($"Hiding {gameObject.name}");
     ResetChildren();
     if(GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(0f, fadeTime, true);
     foreach(UIChild c in UIChildren)

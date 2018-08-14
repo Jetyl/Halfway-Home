@@ -86,13 +86,13 @@ As I approach, the two are giggling about something. # Eduardo = Happy, Stage_Le
 {depression > 40: [Voices] "Of course they mind. Why would anyone want <i>you</i> around?"}
 Isaac is too busy cracking up to respond, but Eduardo is able to compose himself. Briefly.
 [Eduardo] "Nah, {player_gender == "F": girl| man}. Get in here!"
-[Eduardo] "I was just telling my 'meu bem' Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though."
+[Eduardo] "I was just telling meu bem Isaac here the story about <i>my</i> first day. I could have sworn I already told it to him, though." // meu bem means `my love`. "My `meu bem` would be "my my love"
 [Isaac] "You did. Wanted to hear it again." # Eduardo = Surprised
 [Eduardo] "You sneaky devil, you. Taking advantage of my poor memory, will you? TWO can play at that game."
-Eduardo leans over to me, the most devilish smirk wide across his face. #Eduardo = close, Calm
+Eduardo leans over to me, the most devilish smirk widening across his face. #Eduardo = close, Calm
 [Eduardo] "Hey, {player_name}, you ever heard the story of me and Isaac's first day rooming together?"
-[Isaac] "hrm!" # Isaac = Surprised
-[Eduardo] "It was only a couple of weeks before your came here..."
+[Isaac] "Hrm!" # Isaac = Surprised
+[Eduardo] "It was only a couple of weeks before you arrived..."
 I spend a few minutes listening to Eduardo tell the tale. #Eduardo = center
 Eduardo really is a masterful storyteller. His raw charisma is inspiring.
 <color=color_descriptor><i>Inspiration has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
@@ -191,7 +191,7 @@ You have no idea.
 	[{player_name}] "lucky guess."
 	[Max]"Well that's some fine luck ya got." 
 +[I saw it in a dream]
-	[{player_name}] "I was having one of those 'déjà vu' things? you know, where you feel you saw all this before in a dream."
+	[{player_name}] "I was having one of those 'deja vu' things? you know, where you feel you saw all this before in a dream."
 	[Max] "Well, that was some real accurate dreaming you got there."
 ->TalkingToTimothy
 
