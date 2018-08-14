@@ -237,7 +237,7 @@ Quick, {player_name}, change the subject! #Skip
 	[Timothy] "Yeah..." # Timothy = Calm
 +[Talk about the weather]
 	[{player_name}] "Nice weather we're having, huh?"
-	Nice going, {player_name}, you picked the most clichéd change of topic possible.
+	Nice going, {player_name}, you picked the most cliched change of topic possible.
 	[Timothy] "Yeah, I guess."
 	Crap, I gotta keep this going somehow.
 	[{player_name}] "Not too hot, not too cold."
@@ -410,7 +410,7 @@ Timothy visibly winces. Max really can't read a room, huh?
 "Then I tried to be a baker, but I couldn't raise the <i>dough</i>."
 Please. Bring me death.
 "Oh! And then I switched to juggling, but I didn't have the-" # Skip
-"Actually, that one might be a bit too risqué..." # Max = Surprised
+"Actually, that one might be a bit too risque..." # Max = Surprised
 I swear I've heard these somewhere. Pretty sure these aren't original. # Timothy = Angry
 [Timothy] "R-really, Max, I'm fine." # Timothy = Happy
 <size=60%>"Please stop."

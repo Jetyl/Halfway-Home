@@ -191,7 +191,7 @@ You have no idea.
 	[{player_name}] "lucky guess."
 	[Max]"Well that's some fine luck ya got." 
 +[I saw it in a dream]
-	[{player_name}] "I was having one of those 'déjà vu' things? you know, where you feel you saw all this before in a dream."
+	[{player_name}] "I was having one of those 'deja vu' things? you know, where you feel you saw all this before in a dream."
 	[Max] "Well, that was some real accurate dreaming you got there."
 ->TalkingToTimothy
 

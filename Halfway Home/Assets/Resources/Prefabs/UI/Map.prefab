@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 114328957686625336}
   m_Layer: 5
   m_Name: DataPanel
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 114186412407269526}
   m_Layer: 5
   m_Name: RoomText
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1628,7 +1628,7 @@ GameObject:
   - component: {fileID: 114313455858475988}
   m_Layer: 5
   m_Name: DescriptionPanel
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2157,7 +2157,7 @@ GameObject:
   - component: {fileID: 114010591847967052}
   m_Layer: 5
   m_Name: InfoArea
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2617,7 +2617,7 @@ GameObject:
   - component: {fileID: 114447979935497566}
   m_Layer: 5
   m_Name: EffectText
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2672,7 +2672,7 @@ GameObject:
   - component: {fileID: 114771749904098850}
   m_Layer: 5
   m_Name: StatGroup
-  m_TagString: Untagged
+  m_TagString: NotHideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2861,13 +2861,19 @@ MonoBehaviour:
       DescriptorText: Sleep if I'm tired. Chill out if I'm stressed.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: It's been a long day. Time to get some sleep.
   - name: Commons
     Room: 2
@@ -2876,13 +2882,19 @@ MonoBehaviour:
       DescriptorText: Ground yourself in the cozy heart of the House.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Common Room.
   - name: N/A
     Room: 3
@@ -2897,13 +2909,19 @@ MonoBehaviour:
       DescriptorText: Have a meal to keep up my strength.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Cafeteria.
   - name: Garden
     Room: 5
@@ -2912,13 +2930,19 @@ MonoBehaviour:
       DescriptorText: Get some fresh air and contemplate my journey.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Garden.
   - name: Library
     Room: 6
@@ -2927,13 +2951,19 @@ MonoBehaviour:
       DescriptorText: Study the world, its people, and its myths.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Library.
   - name: Art Room
     Room: 7
@@ -2942,13 +2972,19 @@ MonoBehaviour:
       DescriptorText: Create something.
     Conditions:
     - Conditions:
-      - ProgressName: Tutorial
-        TypeID: 1
-        BoolValue: 1
-        IntValue: 0
-        FloatValue: 0
-        StringValue: 
-        compare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Art Room.
   - name: Store
     Room: 8
@@ -8393,13 +8429,13 @@ MonoBehaviour:
     ProgressLocked: 1
     ProgressKey: Tutorial
     ToolTipInfo: As much as I'd like to go back to bed, I've got to play tour guide.
-  - Day: 7
+  - Day: 5
     starttime: 17
-    endTime: 17
+    endTime: 18
     ProgressLocked: 0
     ProgressKey: Tutorial
-    ToolTipInfo: I need to go to my own Farewell Dinner
-  - Day: 7
+    ToolTipInfo: I can't miss my own Farewell Dinner.
+  - Day: 5
     starttime: 12
     endTime: 17
     ProgressLocked: 0

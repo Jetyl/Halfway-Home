@@ -26,7 +26,7 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-I head over to the café for some breakfast. I could use the meal.
+I head over to the cafe for some breakfast. I could use the meal.
 I spot Max doing their daily mopping. #Max = calm, stage_left
 they're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
 {
@@ -60,7 +60,7 @@ He looks happy, but also nervous. wonder what's up?
 "Oh, okay..." #Timothy = surprised
 "..." #Timothy = sad
 Timothy seems to deflate, as he goes off to get his breakfast.
-He takes his tray and plops himself at a table across the café.
+He takes his tray and plops himself at a table across the cafe.
 He looks kind of sad. I should... #Skip
 +[Give Him Some Space]
 	I should give the little fella some space. #Timothy = exit
