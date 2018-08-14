@@ -19,7 +19,8 @@ VAR week = 0
 VAR current_room = "unset"
 VAR seenBefore = false
 
-EXTERNAL SetValue(name, values)
+EXTERNAL SetValue(name,value)
+EXTERNAL SetIntValue(name, value)
 EXTERNAL SetStringValue(name, string)
 EXTERNAL GetValue(name)
 
@@ -263,7 +264,7 @@ Charlotte rises and takes a step toward the door before turning back to me. # Ch
 +[Yes]
 	[{player_name}] "I'd be happy to. What time?"
 	[Charlotte] "I usually take tea at three in the afternoon, if that isn't a bother."
-	[{player_name}] "Three p.m. Got it." {SetValue("ReadyForTea", 2)} # 9 & InProgress
+	[{player_name}] "Three p.m. Got it." {SetIntValue("ReadyForTea", 2)} # 9 & InProgress
 +[No]
 	[{player_name}] "Sorry, while ordinarily I would never turn down an invitation for free food, I've got other obligations."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
@@ -278,7 +279,7 @@ I should probably head out as well.
 	[{player_name}] "Sure. What time?"
 	[Charlotte] "How about here in the library tomorrow at two o'clock?"
 	"I usually take tea at three, but I shall make an exception so that we have some uninterrupted time."
-	[{player_name}] "Two p.m. tomorrow. Got it." {SetValue("ReadyForInstruction", 2)} # 8 & InProgress
+	[{player_name}] "Two p.m. tomorrow. Got it." {SetIntValue("ReadyForInstruction", 2)} # 8 & InProgress
 +[No]
 	[{player_name}] "Uh... sorry, I don't really feel comfortable committing to that right now."
 	[Charlotte] "That's a shame, but I understand. Thank you for your company today, {player_name}."
