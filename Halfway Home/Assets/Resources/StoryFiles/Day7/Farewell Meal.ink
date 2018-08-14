@@ -152,16 +152,16 @@ Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 	-GetValue("SavedTimothy"):
 	{
 		-GetValue("Convinced Eduardo"):
-			->BrokeUpBad
+			->UnitGood
 		-else:
-			->UnitBad
+			->BrokeUpGood
 	}
 	-else:
 	{
 		-GetValue("Convinced Eduardo"):
-			->BrokeUpGood
+			->UnitBad
 		-else:
-			->UnitGood
+			->BrokeUpBad
 	}
 	
 }

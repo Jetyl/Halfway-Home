@@ -262,6 +262,9 @@ public class ProgressSystem
 
         switch (ProgressBook[_key].TypeID)
         {
+            case PointTypes.Flag:
+                ProgressBook[_key].BoolValue = false;
+                break;
             case PointTypes.Float:
                 ProgressBook[_key].FloatValue -= 1;
                 if (ProgressBook[_key].FloatValue < 0)
@@ -447,8 +450,7 @@ public class ProgressSystem
                 beat.ResetBeat();
                 return;
             }
-                
-
+              
         }
     }
 
@@ -473,6 +475,17 @@ public class ProgressSystem
 
     public void ResetWeekly()
     {
+
+        foreach (var beat in PlotLines)
+        {
+            //reset the weekly grind
+            if (beat.BeatName == "Weekly")
+            {
+                beat.ResetBeat();
+                return;
+            }
+
+        }
 
         ChronologicalObjectives.Clear();
 

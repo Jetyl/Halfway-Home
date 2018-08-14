@@ -166,16 +166,19 @@ public class HistoryDisplay : MonoBehaviour
     void UpdateHistory(ChoiceEvent eventdata)
     {
         var text = TextParser.DynamicEdit(eventdata.choicedata.text);
+        
+        text = text.Trim();
 
         text = "<b></i><size=120%>*" + text + "*</b></i><size=100%>";
 
-        History += Environment.NewLine + text;
+        History += Environment.NewLine + Environment.NewLine + text;
     }
 
     void UpdateHistory(DescriptionEvent eventdata)
     {
         
         var TheLine = eventdata.Line;
+        TheLine = TheLine.Trim();
 
         TextParser.ExtractTextSpeed(ref TheLine, 0);
 
@@ -185,19 +188,27 @@ public class HistoryDisplay : MonoBehaviour
         {
             CurrentSpeaker = eventdata.Speaker;
 
-            Color col = SpeakerColors.GetColor(eventdata.TrueSpeaker);
-
-            string Speaker = eventdata.Speaker;
-
-            if(col != Text.color)
+            if (eventdata.Speaker == "")
             {
-                var add = "<#" + ColorUtility.ToHtmlStringRGBA(col) + ">";
-
-                Speaker = add + eventdata.Speaker + "</color>";
+                History += Environment.NewLine;
+                TheLine = "<i>" + TheLine + "</i>";
             }
+            else
+            {
+                Color col = SpeakerColors.GetColor(eventdata.TrueSpeaker);
 
-            History += Environment.NewLine + TextParser.DynamicEdit(Speaker);
+                string Speaker = eventdata.Speaker;
 
+                if (col != Text.color)
+                {
+                    var add = "<#" + ColorUtility.ToHtmlStringRGBA(col) + ">";
+
+                    Speaker = add + eventdata.Speaker + "</color>";
+                }
+                
+                History += Environment.NewLine + Environment.NewLine + TextParser.DynamicEdit(Speaker);
+            }
+            
         }
 
         History += Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(TheLine);
