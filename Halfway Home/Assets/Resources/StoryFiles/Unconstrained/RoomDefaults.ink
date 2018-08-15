@@ -53,25 +53,47 @@ EXTERNAL GetHour()
 === YourRoom ===
 // Reduce Stress, Remove Fatigue, Increase depression
 // Recover for the next day. The isolation reminds you of a darker time.
-~ temp new_fatigue = "none"
-{fatigue > 40:
+In need of a break, I stumble into my room. #Skip // It would be great to have choice locks here
++[Relax]
+I'm not ready to sleep. I just need a moment to myself to... #Skip
+	++[Read]
+		I take out <>
+		{GetStringValue("BookGenre")!="":
+			the book Charlotte gave me.
+			I {start reading and it's actually pretty good so far|continue reading where I left off|think I'm getting close to the end now|finally finish it. She wasn't kidding. It was one of the better {GetStringValue("BookGenre")} works I've read. Not that I'm an expert}.
+		-else:
+			a book from the library. I spend a while reading it, but eventually lose interest.
+			I guess I'll try a new one next time I feel like reading.
+		} 
+	++[Zone Out]
+		I lie down on my bed and stare up at the ceiling, thinking about nothing in particular.
+		And nothing in particular is just what my brain needed.
+	++[Listen to Music]
+		I retrive the small pair of earphones I keep in my dresser drawer and plug them into my phone.
+		I don't actually have service on this thing any more, but it's still got a bunch of songs on it.
+		I put it on shuffle and lean back on my bed.
+	--<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. {SetTimeBlock(1)} # Stress -= 20
+	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
+	<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
++[Sleep]
+	I decide I might as well hit the hay.
+	~ temp new_fatigue = "none"
 	{
-	- fatigue > 80:
-		I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
-		I feel myself begin to drift off almost immediately. {CallSleep()}
+		- fatigue > 80:
+			I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
+			I feel myself begin to drift off almost immediately. # Sleep % 8
 
-	- fatigue < 70: 
-		I don't feel quite tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
-		I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
-		I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
-		After what seems timeless eternity, sleep finally takes me. {CallSleep()}
-	- else:
-		I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
-		I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
-		I feel hopeful as I surrender myself to sleep. {CallSleep()}
+		- fatigue < 70: 
+			I don't feel quite tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
+			I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
+			I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
+			After what seems like a timeless eternity, sleep finally takes me. # Sleep % 8
+		- else:
+			I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
+			I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
+			I feel hopeful as I surrender myself to sleep. # Sleep % 8
 	}
-	//~CallSleep()
-	I wake up feeling <># Play : Play_music_placeholder_main   # music_vol | -6
+	I wake up feeling <> # Play : Play_music_placeholder_main   # music_vol | -6
 	{shuffle:
 		-completely reinvigorated.
 		-groggy.
@@ -79,27 +101,18 @@ EXTERNAL GetHour()
 		-reasonably rested.
 		~new_fatigue = "medium"
 	}
--else:
-	I'm not tired enough to sleep, so I just relax for a bit. {SetTimeBlock(1)}
-	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
-}
-
-// external function to bring up stats summary
-<color=color_descriptor><i>Rest <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. # Stress -= 20
-{
-	-fatigue > 50:
-		<>@<color=color_descriptor>Sleep <>
-		{
-			- new_fatigue == "none":
-				<color=color_wellbeing_relief>removed all <b>Fatigue</b>! # Fatigue => 0
-			- new_fatigue == "low":
-				<color=color_wellbeing_relief>reduced <b>Fatigue</b>. # Fatigue => 40
-			- new_fatigue == "medium":
-				<color=color_wellbeing_relief>reduced <b>Fatigue</b> significantly. # Fatigue => 20
-		}
-}
-<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
--> END
+	<color=color_descriptor><i>Rest <color=color_wellbeing_relief>relieved a small amount of <b>Stress</b>. # Stress -= 10
+	<>@<color=color_descriptor>Sleep <>
+	{
+		- new_fatigue == "none":
+			<color=color_wellbeing_relief>removed all <b>Fatigue</b>! # Fatigue => 0
+		- new_fatigue == "low":
+			<color=color_wellbeing_relief>reduced <b>Fatigue</b>. # Fatigue => 30
+		- new_fatigue == "medium":
+			<color=color_wellbeing_relief>reduced <b>Fatigue</b> significantly. # Fatigue => 15
+	}
+	//<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5 (WAIVING DEPRESSION DURING SLEEP)
+--> END
 
 === Commons ===
 // Reduce depression, increase stress
