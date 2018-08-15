@@ -36,9 +36,9 @@ Timothy, the star of this show, gets the center seat, so he can meet everybody. 
 Eduardo and Isaac are off in their own little corner, giggling to themselves. 
 Charlotte and Max are helping serve food at the front of the line.
 I decide to... #Skip
-*[Sit near Timothy] ->NearTimothy
-*[Sit near Eduardo] ->NearEduardo
-*[Offer help to Charlotte] ->NearCharlotte
++[Sit near Timothy] ->NearTimothy
++[Sit near Eduardo] ->NearEduardo
++[Offer help to Charlotte] ->NearCharlotte
 
 
 ===NearTimothy===
@@ -51,7 +51,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
 [Timothy] "That's kind of a 'lotta pressure." # Timothy = Afraid #Skip
-*[Reassure Him]
++[Reassure Him]
 	{
 		-awareness > 1: 
 			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."
@@ -60,7 +60,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 			[{player_name}] "I remember feeling the same way at my welcome dinner. It's okay be to nervous. It'll pass soon."
 			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
 	}
-*[Leave it to Trissa]
++[Leave it to Trissa]
 	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"
 	[Trissa] "You're talking to me, aren't ya?"
 	[Timothy] "Uh, yeah?"
@@ -193,7 +193,7 @@ You have no idea.
 +[I saw it in a dream]
 	[{player_name}] "I was having one of those 'deja vu' things? you know, where you feel you saw all this before in a dream."
 	[Max] "Well, that was some real accurate dreaming you got there."
-->TalkingToTimothy
+-->TalkingToTimothy
 
 ===TalkingToTimothy===
 [{player_name}] "Hey, Timothy. How's the dinner?" #Timothy = Calm
