@@ -278,7 +278,7 @@ public class CharacterDisplay : MonoBehaviour
     {
         Distance = distance;
         float scale = Distances[(int)distance].Scale;
-        var newpos = new Vector3(transform.position.x, Distances[(int)distance].Offset, transform.position.z);
+        var newpos = new Vector3(0, Distances[(int)distance].Offset, transform.position.z);
 
         if (skip)
         {
