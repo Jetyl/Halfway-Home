@@ -402,9 +402,9 @@ I check my watch to see the time.
 [Isaac] "Hrm?" #Hangout / hrm_down
 [Eduardo] "You know what sucks?" #Hangout / E_Sad
 [Isaac] "Hrm."
-[Eduardo] "You can never change anyone's minds on nothing."
+[Eduardo] "You can never change anyone's minds about anything."
 [{player_name}] "What?"
-"Like, no matter what you do, no matter how you express an opinion, you can't change someone's mind, once they've already decided something."
+[Eduardo] "Like, no matter what you do, no matter how you express an opinion, you can't change someone's mind, once they've already decided something."
 "Ya get what I mean?" #Hangout / Eye_U #Skip
 +[Agree]
 	[{player_name}] "Yeah, I agree with the sentiment."
@@ -424,8 +424,8 @@ I check my watch to see the time.
 [Isaac] "'S about how people interpret comedy and satire."
 "Basically... hrm." #Hangout / hrm_down
 Isaac falls silent, as he seems to be summoning the words.
-"Basically, people will see what they want to see, in satire." #Hangout / Arm_Up, Hrm_Up
-"If someone is satirizing a certain political movement, or cultural norm, the people who support it won't see it as a criticism of them."
+"Basically, people will see what they want to see. In satire." #Hangout / Arm_Up, Hrm_Up
+"If someone is satirizing a certain political movement or cultural norm, the people who support it won't see it as a criticism of them."
 "Basically, they don't laugh because of how silly or dumb they are, but because of how <i>right</i> they are."
 "A funny way to tell `the truth`, apparently."
 [Eduardo] "Uh-huh..." #Hangout / Arm_Down, Eye_I
@@ -445,8 +445,8 @@ Eduardo is nodding his head in agreement.
 	"I mean, doesn't most art exists to say <i>something</i>, even if it’s just a feeling or idea."
 	"Saying `You can't convince anyone, so why bother` seems both very defeatist."
 -"But, those are just my feelings."
-[Eduardo] "eh, fair. You do you, and whatever."  #Hangout / E_Frown
-"Like I said, you can't convince people of nothing, so I don't presume I'll change your opinion, or you'll change mine."
+[Eduardo] "Eh, fair. You do you or whatever."  #Hangout / E_Frown
+"Like I said, you can't convince people of anything, so I don't presume I'll change your opinion or you'll change mine."
 "Ain't that right Isaac?" #Hangout / Eye_I
 [Isaac] "...<delay=1>@Hrm." #Hangout / hrm_down
 ->TimePassing
@@ -519,30 +519,31 @@ The second sign, is Max, who comes in for their morning mopping, and is rather s
 [Isaac] "We stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left
 [Eduardo] "Zzz..."
 [Max] "Oh, for the love of..." #Max = Angry
-"Isaac, take Eduardo back to your guy's room, and go to bed."
+"Isaac, take Eduardo back to your room and go to bed!"
 [Isaac] "Hrm. K." #Isaac = Exit
 [Max] "And as for you, {player_name}."
 Oh boy, here comes the Max talk.
+Why are they always so concerned about when people sleep?
 "You shouldn't be throwing your sleep schedule 'outta wack like this." #Max = Sad
-"I know you're an adult, and you're leaving in just a few days, but..."
-"It's because of that, you really ought to know better." #Skip
-+[I'm sorry Max]
-	[{player_name}] "I'm sorry Max."
-+[I got Dragged in by Eduardo]
-	[{player_name}] "I got dragged in by Eduardo."
+"I know you're an adult and you're leaving in just a few days, but..."
+"It's <i>because</i> of that you really ought to know better." #Skip
++[Apologize]
+	[{player_name}] "I'm sorry, Max."
++[Blame Eduardo]
+	[{player_name}] "I got dragged into it by Eduardo."
 	[Max] "Yeah, I'm sure you did."
-+{expression >2}[Max stop Micro-Managing Me! <expression>]
-	[{player_name}] "Max, Please, I am an adult. Stop Micro-Managing me!"
--[Max] "Look, just, go to bed, okay. And get your sleep schedule sorted out before this Monday."
-"I better go make sure everything is in order before everyone else wakes up."
-And Max leaves me, alone in the commons, as they get to work. #Max = Exit
-And with that, I get up and leave as well.
++{expression >2}[Stand My Ground<expression>]
+	[{player_name}] "Max, please. I am an adult. Stop micro-managing me!" # Expression ^ good
+-[Max] "Look, just... go to bed, okay? And get your sleep schedule sorted out before you leave!"
+"I'd better go make sure everything is in order before everyone else wakes up."
+Max leaves me alone in the commons as they get to work. #Max = Exit
+With a yawn, I get up and leave as well.
 {
 	-depression > 75:
 		Max is right, I shouldn't have done this.
 		[Voices] "You’re so stupid."
 		I'm so stupid. 
 	-else:
-		Despite what Max things, I... actually feel very good about the night I spent. #expression++
+		Despite what Max thinks, I... actually feel very good about the how I spent my time. #expression++
 }
 ->END

@@ -59,11 +59,11 @@ Oh crap, did I lose him already?
 It is rather calming, just being out here.
 [{player_name}] "I think you'll really like the garden." #Timothy = Exit
 I kind of mumble that, knowing Timothy isn't really listening to me anymore.
-In fact, he's probably already ran off on his whims.
-I give him some time to enjoy himself before I track him down.
-I just kind of relax and zone out to the cool garden breeze. @<color=A5C5E3FF>(Stress reduced!)</color> #Stress -= 20
+In fact, he's probably already run off.
+I'll give him some time to enjoy himself before I track him down.
+I relax my shoulders and zone out in the cool garden breeze. @<color=A5C5E3FF>(Stress reduced!)</color> #Stress -= 20
 ...
-....
-...Okay. thats probably long enough. Any longer here and I'll completely zone out and forget what I'm supposed to be doing.
-"Okay Timothy, lets see where you went."
+...
+...Okay, that's probably long enough. Any longer here and I'll completely zone out and forget what I'm supposed to be doing.
+"Okay Timothy, let's see where you went."
 -> END

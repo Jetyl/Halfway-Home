@@ -351,12 +351,18 @@ namespace HalfwayHome
 
     void OnWellbeingStatSet(Parse parse)
     {
-      string stat = parse.FindFirst(statLabel).Trim().ToLower();
-      int value = 0;
-      int.TryParse(parse.FindFirst(valueLabel).Trim(), out value);
+      foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey(statLabel))
+        {
+          string stat = match[statLabel].Trim().ToLower();
+          int value = 0;
+          int.TryParse(match[valueLabel].Trim(), out value);
 
-      OnWellbeingStatChange(stat, value, true);
-      Trace.Script($"{stat} set to {value}");
+          OnWellbeingStatChange(stat, value, true);
+          Trace.Script($"{stat} set to {value}");
+        }
+      }
     }
 
     void OnWellbeingStatChange(string stat, int value, bool assign = false)
