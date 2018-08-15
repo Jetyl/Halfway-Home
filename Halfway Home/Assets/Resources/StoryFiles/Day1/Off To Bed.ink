@@ -121,16 +121,16 @@ Looping weeks on end. I try to wonder on the reason why.
 		"It was nice meeting you." #expression ^ good
 }
 I start to drift off from there, my thoughts slow and hazy. #Background / Dream , eyeclose, NoDefaults
-My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. #sleep%10
+My dreams, if I had any, escape my memory, and the next thing I know, the sun's in my eyes. #sleep%10 #fatigue -= 40
 I toss and turn, pained to be awake. #Background / YourRoom, eyeopen, NoDefaults   # Play : play_music_placeholder_main   # Ambience: play_ambience_your_room_fireplace_birds_day   # music_vol | -6
 I look over at my spare bed. Timothy's still there, breathing softly.
 I guess it's his bed now.
 Slumberland beckons me back to it, but I should be getting up about now.{SetTimeBlock(0)} #Skip
 +[Get Up]
 	 I sigh, getting out of my cloth cocoon and quickly  readying myself for the day. 
-	 In no time I'm ready to head out. I'm a little more tired than I'd have liked, though. #fatigue -= 40
+	 In no time I'm ready to head out. I'm a little more tired than I'd have liked, though. 
 +[Stay in Bed]
 	 I curl even deeper into lethargic bliss and welcome sweet unconsciousness again. #Background / Dream, eyeclose, NoDefaults
 	 I guess I was really tired, because I'm out like a light again in an instant.{SetValue("Slept In Day 2", true)} 
-	 ... #fatigue -= 80
+	 ... #fatigue -= 40
 --> END

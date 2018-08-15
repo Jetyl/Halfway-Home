@@ -41,9 +41,9 @@ public class Personality
     [SerializeField]
     List<int> SavedBonusStars;
 
-    int StressThreshold1 = 20; //value of stress, where it will begin decrimetting social stats by 1
-    int StressThreshold2 = 50; //value of stress, where it will begin decrimetting social stats by 2
-    int StressThreshold3 = 80; //value of stress, where it will begin decrimetting social stats by 3
+    int StressThreshold1 = 50; //value of stress, where it will begin decrimetting social stats by 1
+    int StressThreshold2 = 75; //value of stress, where it will begin decrimetting social stats by 2
+    //int StressThreshold3 = 99; //value of stress, where it will begin decrimetting social stats by 3
 
 
     public int SocialThreshold = 50;
@@ -237,10 +237,10 @@ public class Personality
             return 0;
         else if (StressValue < StressThreshold2)
             return 1;
-        else if (StressValue < StressThreshold3)
-            return 2;
+       // else if (StressValue < StressThreshold3)
+       //     return 2;
         else
-            return 3;
+            return 2;
     }
 
     public int GetWellbingStat(Wellbeing stat)

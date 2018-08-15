@@ -67,7 +67,7 @@ public class UIFader : MonoBehaviour
 
   public void Show(float fadeTime = DefaultFadeTime)
   {
-    Debug.Log($"Showing {gameObject.name}");
+    //Debug.Log($"Showing {gameObject.name}");
     ResetChildren();
     if (GetComponent<Graphic>() != null) GetComponent<Graphic>().CrossFadeAlpha(1f, fadeTime, true);
     foreach (UIChild c in UIChildren)
