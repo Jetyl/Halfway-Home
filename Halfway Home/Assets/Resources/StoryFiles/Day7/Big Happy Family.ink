@@ -166,9 +166,11 @@ It's{... different... from what my life has been these past many years|surreal a
 ===Breakdown===
 [Eduardo] "Hey, Tim-Tim! What do you think?" #Max = Exit #Trissa = Exit #Charlotte = Exit #Isaac = Exit #Timothy=Sad # Play : stop_music_tension_intro_02
 Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit # music_tension_state ! 0
-[{player_name}] "hey, Timothy."
-+ "You okay?"
-+ "Ya there?"
+[{player_name}] "Hey, Timothy." #Skip
++ [You okay?]
+	"You okay?"
++ [You there?]
+	"You there?"
 -[Timothy] "..." #Breakdown / Open
 Timothy doesn't respond. I turn to face him. # play : play_music_tension_intro_03
 //In fact, looking at Timothy, I notice a handful of things off.  (Do-nothing sentence)
@@ -197,29 +199,30 @@ I... #Skip
 {
 	-expression <= 2:
 		"M-Max!" # music_tension_state ! 2 #Expression ^ poor 
-		my voice fails to break over the chatter.
+		My voice fails to break over the chatter.
 		I need to speak up more, but...
-		I.... I can't.
+		I... I can't.
 		I can't get their attention this way.
 		I'm going to need to move over there, and grab them.
 		->ForcefulAssistence
 	-else:
-		"MAX!!" # play : Stop_All #Expression ^ good
-		[Max] "eh? what?" #Max=Calm
+		I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid
+		"MAX!" # play : Stop_All #Expression ^ good
+		[Max] "Eh? what?" #Max=Calm
 		[{player_name}] "It's Timothy!"
 		[Max] "Yeah? what about-" 
-		in an instant, Max drops their carefree attitude, seeing Timothy in distress.
+		In an instant, Max drops their carefree attitude, seeing Timothy in distress.
 		"What's happening"
-		[{player_name}] "I think he's having a panic attack." #awareness ^ good
-		[Max] "Hey, Timothy. I "m here. whatever's happening, I'm here to help."
-		"there's nothing to be afraid of. your safe here."
-		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a stuttering inhale.
-		"There there. It's okay. just breath. just breath"
-		As Timothy begins to breathe again, the tears begin to flow. @He's balling up a storm.
-		[Timothy] "S-S-S-SORRRRRRYY!!!"
-		[Max] "hehe, Its okay. you've done nothing wrong."
+		[{player_name}] "I think he's having a panic attack."
+		[Max] "Hey, Timothy. I "m here. Whatever's happening, I'm here to help."
+		"There's nothing to be afraid of. You're safe here."
+		I feel Timothy's grip on my arm loosen, as his breath finally breaks into a stuttering inhale. # Timothy = Sad
+		"There, there. It's okay. Just breathe. Just breathe."
+		As Timothy begins to breathe again, tears begin to flow. @He's balling up a storm.
+		[Timothy] "S-S-S-SORRRRRRY!!!"
+		[Max] "Hehe, It's okay. You've done nothing wrong."
 		"We don't have to stay here if you don't want to."
-		He nods his head, and Max quickly walks Timothy out of the cafe to a more comfortable place.
+		He nods his head and Max quickly walks Timothy out of the cafe. # Timothy = Exit # Max = Exit
 	->MoodKiller
 }
 
@@ -250,33 +253,34 @@ Max darts past me to where Timothy is sitting in a speed quite frightening for s
 
 ===HowDoIComfort===
 ~tried_grace = true
-I choose to stay beside Timothy, and attempt to help him through this.
+I choose to stay beside Timothy and attempt to help him through this.
 {
 	-grace <= 2:
-		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. it's going to be okay. uh-uh." # music_tension_state ! 3 #grace ^ poor
-		Timothy doesn't respond to my words, only giving a sharp inhale.
+		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." # music_tension_state ! 3 #grace ^ poor
+		Timothy doesn't respond to my words and inhales sharply.
 		I... I don't know what I'm doing.
 		I'm not going to be capable of helping Timothy.
-		I have no idea what I'm supposed to do. If there is anything to do.
+		I have no idea what I'm supposed to do. I'm powerless.
 		I need to get Max. They're actually trained to handle this kind of situation.
 		->ForcefulAssistence
 	-else:
-		"Its okay Timothy. You're going to be okay." # play : Stop_All #grace ^ good
-		I put my not-griped hand on his hand, and get him to look at me.
-		"Its okay. Your safe. I'm here for you."
-		he's not breathing.
-		"It's okay, you can breathe. there there."
-		and like that, the floodgates open. He exhales a sputter of air, as tears fall across his face.
-		[Timothy] "I-I-I'm sorry. I'm sorry."
-		[{player_name}] "It's okay. let it out. Your safe here. it’s okay."
+		"Its okay Timothy. You're going to be okay." # play : Stop_All #grace ^ good # Background / Kitchen # Timothy = afraid
+		I put my not-gripped hand on his and pull his gaze.
+		"It's okay. You are safe. I'm here for you."
+		He's not breathing.
+		"It's okay, you can breathe. Easy peezy."
+		He expels a sputter of air as tears begin to spill across his face. # Timothy = Sad
+		[Timothy] "<jitter>I-I-I'm sorry. I'm sorry.</jitter>"
+		I just repeat the only words that seem to have worked.
+		[{player_name}] "It's okay. Let it out. You're safe here."
 		[Max] "Hey Timothy."
-		as if by magic, Max appears beside me. I guess they noticed what had been happening over hear. #Max=Calm
+		Max appears beside me. I guess they noticed what had been happening. #Max=Calm
 		"Buddy, you alright?"
 		[Timothy] "*hic* N-N-*hic*n-n-no, *hic*"
 		[Max] "Do you want to go someplace quiet?"
-		Timothy nods through the tears and shivering.
-		Max takes his hands, and begins to take Timothy away. We share a glance, as I feel like they're thanking me.
-		And like that, Max and Timothy left the cafe. #Max=Exit #Timothy=Exit
+		Timothy nods, shivering.
+		Max takes his hands and begins to take Timothy away. We share a glance and I feel like they're thanking me.
+		The two move carefully out of the room. #Max=Exit #Timothy=Exit
 	->MoodKiller
 	
 }
@@ -293,12 +297,14 @@ Isaac drags Eduardo out of the cafe in a huff.
 "Well. I'm out. See you at dinner." #Trissa=Exit
 [Charlotte] "But, what... what just happened?"
 "{player_name}, Tell me what just happened?" #Charlotte = left
-[{player_name}] "..."
-+"I messed up."
-+"Timothy Broke."
+[{player_name}] "..." #Skip
++[I messed up.]
+	"I messed up. I messed everything up."
++[Timothy broke.]
+	"Timothy broke."
 -I slump, as I get up out of my chair, and towards the door.
 "I messed up..."
-[Charlotte] "But, what do you mean by that?"
+[Charlotte] "Sorry, what do you mean by that?"
 I walk away from cafe. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family."
 I'm so stupid. #depression += 5
