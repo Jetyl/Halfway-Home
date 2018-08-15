@@ -252,7 +252,7 @@ Should... Should I question him about that? #Skip
 	-GameFails < 6:
 		"So, why Hope?"
 		[Timothy] "Oh, uh, um, well..." #Timothy = Happy
-		"It's my first day here. I guess maybe the sunshine made me a little optimistic. // OLD LINE: I guess the gardens made me think about word 'Hope'."
+		"It's my first day here. I guess maybe the sunshine made me a little optimistic." // OLD LINE: I guess the gardens made me think about word 'Hope'."
 	-else:
 		"So, what was the word?"
 		[Timothy] "It's a secret."  #Timothy = Angry
