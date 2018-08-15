@@ -4201,7 +4201,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.84541994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8557,22 +8557,22 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 289.95734
+      value: 246.91533
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -32.4048
+      value: -37.412292
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 479.91467
+      value: 393.83066
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 54.8096
+      value: 64.824585
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8587,12 +8587,12 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 549.9147
+      value: 463.83066
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -39.8096
+      value: -49.824585
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -17141,7 +17141,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50.1
+  m_fontSize: 50.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -34389,7 +34389,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 51.75
+  m_fontSize: 51.8
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -39181,7 +39181,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 51.75
+  m_fontSize: 51.8
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -42890,7 +42890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.01373}
+  m_AnchoredPosition: {x: 0, y: 903.3556}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -44326,7 +44326,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.05
+  m_fontSize: 29.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -45101,7 +45101,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 62.2
+  m_fontSize: 62.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -56911,17 +56911,17 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -57076,7 +57076,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugWeek
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114602336194486026, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -61551,7 +61551,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 31.65
+  m_fontSize: 31.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -62308,7 +62308,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.25
+  m_fontSize: 34.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

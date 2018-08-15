@@ -144,7 +144,7 @@ public class CharacterDisplay : MonoBehaviour
             if (eventdata.TrueSpeaker != Character.Character && eventdata.TrueSpeaker != MCName)
             {
                 Scaled = false;
-
+                
                 float scale = Distances[(int)Distance].Scale;
                 ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
 
@@ -291,9 +291,8 @@ public class CharacterDisplay : MonoBehaviour
             ChildTransform.DispatchEvent(Events.Translate, new TransformEvent(newpos, SpriteSwitchSpeed));
         }
         
-        //
-
     }
+
     public void ExitStage(StagePosition direction, bool Skip)
     {
         //visual.sprite = Poses[pose];
