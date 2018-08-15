@@ -2922,7 +2922,35 @@ MonoBehaviour:
         Wellbeing: 0
         SocCompare: 0
         WellCompare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Been to Cafe
+          TypeID: 1
+          BoolValue: 0
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
       DescriptorText: Show Timothy the Cafeteria.
+    - Conditions:
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
+      DescriptorText: Time for Timothy's Welcome Dinner
   - name: Garden
     Room: 5
     DefaultCondition:
