@@ -51,7 +51,7 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   #Background / YourRoom, eyeopen   # SFX : play_sfx_human_knock
 		What do they want?
 	- week == 2:
-		I wake with a start.   # Depression => 25  # Fatigue => 25 # Stress => 10 # Background / YourRoom, EyeOpen
+		I wake with a start.   # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
 		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
 		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
 		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
@@ -60,14 +60,14 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   # SFX : play_sfx_human_knock
 		Must be Max, to take me away from this limbo.
 	- GetValue("RRRFreakout"):
-		I wake slowly, only dimly aware of the reality around me as I return to consciousness. # Depression => 25  # Fatigue => 25 # Stress => 10 # Background / YourRoom, EyeOpen
+		I wake slowly, only dimly aware of the reality around me as I return to consciousness. # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
 		That dream again... I can't quite remember...
 		I stretch and turn over to face Timothy's bed. {My heart sinks to the floor.|I sigh lightly.}
 		He's gone. {Why is he gone?!|It wasn't enough.}
 		There's a knock on the door. # SFX : play_sfx_human_knock
 		{-> Freakout|->NotSurprised}
 	-else:
-		I blearily open my eyes. # Depression => 25  # Fatigue => 25 # Stress => 10 # Background / YourRoom, EyeOpen
+		I blearily open my eyes. # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
 		I'm not holding out any hope that things are back to normal.
 		There's a knock on the door. # SFX : play_sfx_human_knock
 }
