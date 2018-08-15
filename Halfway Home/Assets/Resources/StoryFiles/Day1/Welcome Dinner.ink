@@ -111,17 +111,17 @@ I duck past the line to where Charlotte stands behind the serving area, busily r
 {depression > 40: [Voices] "She'd have to be a miracle worker to do <i>that</i>."}
 [Charlotte] "Heavens, that was curt of me. Allow me to try that again." # Charlotte = Sad
 [Charlotte] "That is very generous of you. I can't think of anything at the moment, but..."
-[Charlotte] "On second thought, there actually is a task for which I could benefit from your assistance. Or, more accurately, Max could."
+[Charlotte] "On second thought, there actually is a task for which I could benefit from your assistance. Or, more accurately, Max could." #Charlotte = Calm
 [Max] "Say what now? Did I hear my name?" # Max = Calm
-[Charlotte] "It is my understanding that you're about to make the preparations for Timothy's toast. Is that correct?"
+[Charlotte] "It is my understanding that you're about to make the preparations for Timothy's toast. Is that correct?" #Charlotte = Right
 [Max] "Heh. Yeah, that's right."
 [Charlotte] "Would {player_name} make for a suitable second to perform your duties while you are thusly occupied?"
-[Max] "Uh. Yeah, {player_name} could totally cover for me. I'd actually really appreciate that!"
+[Max] "Uh. Yeah, {player_name} could totally cover for me. I'd actually really appreciate that!" #Max = happy
 [Charlotte] "It's settled, then."
 [Max] "Thanks a bunch, {player_name}, I owe you one!"
 Max hustles toward the kitchen and out of sight. # Max = Exit
-I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal.
-Charlotte serves each portion with a smile. Her graceful demeanor is inspiring.
+I spend the next few minutes dishing up food and replacing trays. It's nice to see how happy people look to get a good meal. #Charlotte = Left
+Charlotte serves each portion with a smile. Her graceful demeanor is inspiring. #Charlotte = happy
 <color=color_descriptor><i>Inspiration has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 Max returns with a plate of their own. # Max = Calm
 [Max] "Everything's set. Hit me up with some grub, {player_name}! Oh, and you're good to eat with us as soon as I've done the toast."

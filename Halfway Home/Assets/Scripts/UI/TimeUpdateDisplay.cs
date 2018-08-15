@@ -113,7 +113,7 @@ public class TimeUpdateDisplay : MonoBehaviour
         currentHour = Game.current.Hour;
         var oldday = currentDay;
         currentDay = Game.current.Day;
-        print("whhhhhhhhhhhhyyyyy");
+
         float multiplier = 1;
 
         if (oldHour == currentHour && currentDay == oldday)

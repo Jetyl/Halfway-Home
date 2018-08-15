@@ -46,6 +46,8 @@ public class CharacterDisplay : MonoBehaviour
 
     GameObject ChildTransform;
 
+    bool Skipping = false;
+
     // Use this for initialization
     void Start ()
     {
@@ -55,6 +57,9 @@ public class CharacterDisplay : MonoBehaviour
         MCName = Game.current.PlayerName;
         Space.Connect<DescriptionEvent>(Events.Description, OnScale);
         
+        Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+        Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
+
         GetComponent<Translate>().Start();
 
     }
@@ -64,7 +69,15 @@ public class CharacterDisplay : MonoBehaviour
     {
 	}
 
-    
+    void OnSkipTyping(DefaultEvent eventdata)
+    {
+        Skipping = true;
+    }
+    void OnStopSkipTyping(DefaultEvent eventdata)
+    {
+        Skipping = false;
+    }
+
     public void OnSave()
     {
         var data = new CharacterIntermission();
@@ -96,8 +109,8 @@ public class CharacterDisplay : MonoBehaviour
     public void EnterStage(string pose, StageDistance distance, StagePosition facing,  bool Skip)
     {
         Start(); // just incase this gets called before start, somehow;
-        
 
+        Skipping = Skip;
 
         if(distance == StageDistance.Same) ChangeDistance(StageDistance.Center, true);
         else ChangeDistance(distance, true);
@@ -146,7 +159,11 @@ public class CharacterDisplay : MonoBehaviour
                 Scaled = false;
                 
                 float scale = Distances[(int)Distance].Scale;
-                ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+
+                if (!Skipping)
+                    ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(new Vector3(scale, scale, scale), SpriteSwitchSpeed));
+                else
+                    ChildTransform.transform.localScale = new Vector3(scale, scale, scale);
 
             }
         }
@@ -158,7 +175,11 @@ public class CharacterDisplay : MonoBehaviour
                 Scaled = true;
                 float scale = Distances[(int)Distance].Scale;
                 var scalevec = new Vector3(scale, scale, scale) * ScaleRatio;
-                ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(scalevec, SpriteSwitchSpeed));
+
+                if (!Skipping)
+                    ChildTransform.DispatchEvent(Events.Scale, new TransformEvent(scalevec, SpriteSwitchSpeed));
+                else
+                    ChildTransform.transform.localScale = scalevec;
             }
         }
     }
@@ -343,6 +364,11 @@ public class CharacterDisplay : MonoBehaviour
     void OnDestroy()
     {
         //Space.DisConnect<DefaultEvent>(Events.FinishedDescription, EndTransitions);
+
+        Space.DisConnect<DescriptionEvent>(Events.Description, OnScale);
+
+        Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
+        Space.DisConnect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
     }
 
 }
