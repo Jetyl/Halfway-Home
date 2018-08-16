@@ -151,7 +151,7 @@ I guess it must seem that way to everyone else. That's what happens when you hav
 {
 	-GetValue("CompletedTeatime")==true:
 		->Leaving->Gift
-	-GetValue("BookGenre")!="":
+	-GetStringValue("BookGenre")!="":
 		->Polite->NoGift
 	-else:
 		->Polite->Gift

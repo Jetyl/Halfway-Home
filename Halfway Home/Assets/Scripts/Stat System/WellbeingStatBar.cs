@@ -12,6 +12,12 @@ public class WellbeingStatBar : MonoBehaviour
   public TextMeshProUGUI StatText;
   public TextMeshProUGUI DescText;
   public TextMeshProUGUI FeelingText;
+  public Image Penalty1;
+  public Image Penalty2;
+  public Sprite DepressionPenalty1;
+  public Sprite DepressionPenalty2;
+  public Sprite StressPenalty1;
+  public Sprite StressPenalty2;
 
   public List<UIStatDescriptions> TextAndColorChanges;
 
@@ -40,6 +46,26 @@ public class WellbeingStatBar : MonoBehaviour
   {
     DisplayedStat = (Personality.Wellbeing)stat;
     UpdateDisplay();
+
+    if (DisplayedStat == Personality.Wellbeing.Depression)
+    {
+      Penalty1.gameObject.SetActive(true);
+      Penalty2.gameObject.SetActive(true);
+      Penalty1.sprite = DepressionPenalty1;
+      Penalty2.sprite = DepressionPenalty2;
+    }
+    else if (DisplayedStat == Personality.Wellbeing.Stress)
+    {
+      Penalty1.gameObject.SetActive(true);
+      Penalty2.gameObject.SetActive(true);
+      Penalty1.sprite = StressPenalty1;
+      Penalty2.sprite = StressPenalty2;
+    }
+    else
+    {
+      Penalty1.gameObject.SetActive(false);
+      Penalty2.gameObject.SetActive(false);
+    }
   }
 
   void UpdateDisplay()
