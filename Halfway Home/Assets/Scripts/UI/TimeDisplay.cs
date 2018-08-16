@@ -16,6 +16,7 @@ public class TimeDisplay : MonoBehaviour
   public TextMeshProUGUI TimeText;
   public TextMeshProUGUI AMPMText;
   public Image Day;
+  public Image Loop;
 
   public Sprite[] Days;
 
@@ -29,6 +30,7 @@ public class TimeDisplay : MonoBehaviour
 
   void UpdateDisplay(DefaultEvent eventdata)
     {
+      // Time Display
       if (Game.current.Hour == 0)
       {
           TimeText.text = "12:00";
@@ -50,8 +52,15 @@ public class TimeDisplay : MonoBehaviour
           AMPMText.text = "PM";
 
       }
-
+      // Day Display
       Day.sprite = Days[Game.current.Day  - 1];
+      // Week Display
+      if(Game.current.Progress.GetIntValue("week")==1) Loop.gameObject.SetActive(false);
+      else
+      {
+        Loop.gameObject.SetActive(true);
+        Loop.GetComponentInChildren<TextMeshProUGUI>().text = (Game.current.Progress.GetIntValue("week") - 1).ToString();
+      }
     }
 
 }
