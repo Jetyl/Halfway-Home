@@ -108,7 +108,7 @@ public class AutoType : MonoBehaviour
         }
         message = eventdata.text;
         Text.text = "";
-        PauseSpeedMultiplier = Game.current.Progress.GetFloatValue("TextSpeed");
+        PauseSpeedMultiplier = OptionsData.current.TextSpeed;
         letterPause = 1 / (DefaultPauseSpeed * PauseSpeedMultiplier);
         UpdateSpeed = TextParser.ExtractTextSpeed(ref message, DefaultPauseSpeed);
 

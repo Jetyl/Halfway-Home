@@ -114,8 +114,8 @@ public class AudioManager : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
         Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkipTyping);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
-        
-        MuteTextScroll = Game.current.Progress.GetBoolValue("MuteTextScroll");
+
+        MuteTextScroll = OptionsData.current.MuteTextScroll; //Game.current.Progress.GetBoolValue("MuteTextScroll");
         Skipping = false;
 	}
   

@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
     public GameObject ClearSavePanel;
     public GameObject LoadPanel;
     public GameObject GalleryPanel;
+    public GameObject OptionsPanel;
 
     public GameObject FadeScreeen;
 
@@ -110,6 +111,17 @@ public class MainMenu : MonoBehaviour
     {
       LoadPanel.SetActive(true);
       Buttons.SetActive(false);
+    }
+
+    public void OpenOptions()
+    {
+        OptionsPanel.SetActive(true);
+        Buttons.SetActive(false);
+    }
+    public void CloseOptions()
+    {
+        OptionsPanel.SetActive(false);
+        Buttons.SetActive(true);
     }
 
     public void CloseLoad()

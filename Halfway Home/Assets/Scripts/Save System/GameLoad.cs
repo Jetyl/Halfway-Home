@@ -19,6 +19,9 @@ public class GameLoad : MonoBehaviour
         {
             _instance = this;
             SaveLoad.Load(); //loads the game file
+
+            if (!OptionsData.LoadOptions())
+                OptionsData.current = new OptionsData();
         }
 
         

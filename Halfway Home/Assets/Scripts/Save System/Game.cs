@@ -103,13 +103,13 @@ public class Game
         Self = new Personality();
         Memory = new GallerySystem();
 
-        Progress.SetValue("MasterVolume", 1.0f);
-        Progress.SetValue("MusicVolume", 1.0f);
-        Progress.SetValue("SFXVolume", 1.0f);
-        Progress.SetValue("AmbianceVolume", 1.0f);
-        Progress.SetValue("InterfaceVolume", 1.0f);
-        Progress.SetValue("MuteTextScroll", false);
-        Progress.SetValue("TextSpeed", 1.0f);
+        //Progress.SetValue("MasterVolume", 1.0f);
+        //Progress.SetValue("MusicVolume", 1.0f);
+        //Progress.SetValue("SFXVolume", 1.0f);
+        //Progress.SetValue("AmbianceVolume", 1.0f);
+        //Progress.SetValue("InterfaceVolume", 1.0f);
+        //Progress.SetValue("MuteTextScroll", false);
+        //Progress.SetValue("TextSpeed", 1.0f);
         Progress.SetValue("week", 1);
         Progress.SetValue("Depression Time Dilation", true);
         Progress.SetValue("Guardian", "parents");
@@ -320,7 +320,6 @@ public class Game
         Progress.ResetBeats();
 
         //add reset tasks
-
     }
 
     public void HardReset()
@@ -475,6 +474,12 @@ public class Game
             return AllHistories[CurrentStory];
         else
             return "";
+    }
+
+    public bool UnlockAchievment(string Achievment_ID)
+    {
+        Steamworks.SteamUserStats.SetAchievement(Achievment_ID);
+        return Steamworks.SteamUserStats.StoreStats();
     }
     
 }
