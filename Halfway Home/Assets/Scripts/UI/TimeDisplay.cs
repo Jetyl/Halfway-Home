@@ -14,7 +14,6 @@ using TMPro;
 public class TimeDisplay : MonoBehaviour
 {
   public TextMeshProUGUI TimeText;
-  public TextMeshProUGUI AMPMText;
   public Image Day;
   public Image Loop;
 
@@ -33,24 +32,19 @@ public class TimeDisplay : MonoBehaviour
       // Time Display
       if (Game.current.Hour == 0)
       {
-          TimeText.text = "12:00";
-          AMPMText.text = "AM";
+          TimeText.text = "12:00<sub>AM</sub>";
       }
       else if(Game.current.Hour < 12)
       {
-          TimeText.text = Game.current.Hour + ":00";
-          AMPMText.text = "AM";
+          TimeText.text = Game.current.Hour + ":00<sub>AM</sub>";
       }
       else if(Game.current.Hour == 12)
       {
-          TimeText.text = "12:00";
-          AMPMText.text = "PM";
+          TimeText.text = "12:00<sub>PM</sub>";
       }
       else
       {
-          TimeText.text = (Game.current.Hour - 12) + ":00";
-          AMPMText.text = "PM";
-
+          TimeText.text = (Game.current.Hour - 12) + ":00<sub>PM</sub>";
       }
       // Day Display
       Day.sprite = Days[Game.current.Day  - 1];
