@@ -30,6 +30,12 @@ public class SocialStatManager : MonoBehaviour
 
   public TextMeshProUGUI ShorthandText;
 
+  public Color NormalColorText;
+  public Color LoweredColorText;
+
+  public Color NormalColorStar;
+  public Color LoweredColorStar;
+
   private int PreviousTier;
   private float PreviousProgress;
   private Animator Anime;
@@ -53,32 +59,64 @@ public class SocialStatManager : MonoBehaviour
     StatBar.value = barStat;
 
     int basicTier = Game.current.Self.GetBasicSocialStat(SocialStat);
+    
     int specialTier = Game.current.Self.GetBonusSocialStat(SocialStat);
     //Debug.Log($"{SocialStat} special star value is {specialTier}");
     int totalTier = basicTier + specialTier;
+    int realTier = Game.current.Self.GetModifiedSocialStat(SocialStat);
 
     if (totalTier > PreviousTier) Celebrate();
     PreviousProgress = barStat;
     PreviousTier = totalTier;
 
-    if (ShorthandText != null) ShorthandText.text = totalTier.ToString();
+    if (ShorthandText != null)
+    {
+      ShorthandText.text = realTier.ToString();
+      if (realTier < totalTier) ShorthandText.color = LoweredColorText;
+      else ShorthandText.color = NormalColorText;
+    }
 
-    if (basicTier > 0) StarMarker1.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker1.CrossFadeAlpha(0.2f, 0.1f, false);
+    if (basicTier > 0)
+    {
+      StarMarker1.CrossFadeAlpha(1.0f, 0f, false);
+      if (realTier < 1) StarMarker1.color = LoweredColorStar;
+      else StarMarker1.color = NormalColorStar;
+    }
+    else StarMarker1.CrossFadeAlpha(0.2f, 0f, false);
 
-    if (basicTier > 1) StarMarker2.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker2.CrossFadeAlpha(0.2f, 0.1f, false);
+    if (basicTier > 1)
+    {
+      StarMarker2.CrossFadeAlpha(1.0f, 0f, false);
+      if (realTier < 2) StarMarker2.color = LoweredColorStar;
+      else StarMarker2.color = NormalColorStar;
+    }
+    else StarMarker2.CrossFadeAlpha(0.2f, 0f, false);
 
-    if (basicTier > 2) StarMarker3.CrossFadeAlpha(1.0f, 0.1f, false);
-    else StarMarker3.CrossFadeAlpha(0.2f, 0.1f, false);
+    if (basicTier > 2)
+    {
+      StarMarker3.CrossFadeAlpha(1.0f, 0f, false);
+      if (realTier < 3) StarMarker3.color = LoweredColorStar;
+      else StarMarker3.color = NormalColorStar;
+    }
+    else StarMarker3.CrossFadeAlpha(0.2f, 0f, false);
 
     if (SpecialStar1 == null || SpecialStar2 == null) return;
 
-    if (specialTier > 0) SpecialStar1.CrossFadeAlpha(1.0f, 0.1f, false);
-    else SpecialStar1.CrossFadeAlpha(0.0f, 0.1f, false);
+    if (specialTier > 0)
+    {
+      SpecialStar1.CrossFadeAlpha(1.0f, 0f, false);
+      if (realTier < 4) SpecialStar1.color = LoweredColorStar;
+      else SpecialStar1.color = NormalColorStar;
+    }
+    else SpecialStar1.CrossFadeAlpha(0.0f, 0f, false);
 
-    if (specialTier > 1) SpecialStar2.CrossFadeAlpha(1.0f, 0.1f, false);
-    else SpecialStar2.CrossFadeAlpha(0.0f, 0.1f, false);
+    if (specialTier > 1)
+    {
+      SpecialStar2.CrossFadeAlpha(1.0f, 0f, false);
+      if (realTier < 5) SpecialStar2.color = LoweredColorStar;
+      else SpecialStar2.color = NormalColorStar;
+    }
+    else SpecialStar2.CrossFadeAlpha(0.0f, 0f, false);
   }
 	
 	void UpdateStats (DefaultEvent e)
