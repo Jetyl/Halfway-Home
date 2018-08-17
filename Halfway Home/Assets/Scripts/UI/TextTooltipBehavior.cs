@@ -52,6 +52,7 @@ public class TextTooltipBehavior : MonoBehaviour
   private bool TooltipAvailable;
   private string CurrentTooltipText;
   public UIFollowMouse TooltipContent;
+  private bool IsChoiceTooltip;
 
 	// Use this for initialization
 	void Start ()
@@ -60,6 +61,9 @@ public class TextTooltipBehavior : MonoBehaviour
     Space.Connect<DescriptionEvent>(Events.Description, ResetTooltip);
     Stratus.Scene.Connect<TooltipActivateEvent>(OnTooltipActivateEvent);
     Stratus.Scene.Connect<TooltipDeactivateEvent>(OnTooltipDeactivateEvent);
+    Space.Connect<DefaultEvent>(Events.ConversationChoice, OnChoiceBegin);
+    Space.Connect<DefaultEvent>(Events.ChoicesFinished, OnChoiceEnd);
+    IsChoiceTooltip = false;
   }
 
   void OnTooltipLineEvent(TooltipLineEvent e)
@@ -96,6 +100,16 @@ public class TextTooltipBehavior : MonoBehaviour
     }
   }
 
+  void OnChoiceBegin(DefaultEvent e)
+  {
+    IsChoiceTooltip = true;
+  }
+
+  void OnChoiceEnd(DefaultEvent e)
+  {
+    IsChoiceTooltip = false;
+  }
+
     void OnTooltipActivateEvent(TooltipActivateEvent e)
     {
         CheckActivation();
@@ -114,6 +128,16 @@ public class TextTooltipBehavior : MonoBehaviour
       GetComponent<TextMeshProUGUI>().color = Color.white;
       CurrentTooltipText = "";
     }
+  }
+
+  public void TextHoverEnter()
+  {
+    if (!IsChoiceTooltip) CheckActivation();
+  }
+
+  public void TextHoverExit()
+  {
+    if (!IsChoiceTooltip) DeActivate();
   }
 
   public void CheckActivation()
