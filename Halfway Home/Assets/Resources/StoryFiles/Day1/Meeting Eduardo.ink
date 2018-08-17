@@ -62,7 +62,7 @@ I decide to go over there, and see how they are doing.
 		oh you know, stuck in a time loop for who knows what reason! nothing major.
 		Actually, should I try to explain things to them? #Skip
 }
-+[Yes]
++[Yes <Expression>]
 	I decided to try and explain the surreal circumstances of my situation to the two of them.
 	{
 		-expression > 5:
@@ -148,7 +148,7 @@ I walk over to the pair, Timothy in tow.
 +[Ehh...]
 	[{player_name}] "Ehh... I exist, I guess."
 	"Max just sorta plopped this kid on me."
-+{expression > 1}[Its great <expression>]
++[Its great <(expression > 1)>]
 	[{player_name}] "Oh, I'm pretty good actually" #expression ^ good
 	"I'm showing Timothy around, since he's new here."
 -[Eduardo] "Oh, is that who that is?"

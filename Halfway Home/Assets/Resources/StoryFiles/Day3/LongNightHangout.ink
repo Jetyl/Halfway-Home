@@ -252,7 +252,7 @@ Eduardo pokes Isaac's unchanging expression, while he has the derpiest grin on h
 [Eduardo] "So, {player_name}, what about you? who do you fancy?" #Hangout / Eye_U, E_Sad
 [{player_name}] "uh..."
 crap, I didn't expect him to turn this on me. I... #Skip
-+[Answer Unabashedly]
++[Answer Unabashedly <expression>]
 	"Well, I..." #Skip
 	++[Like Guys]
 		"I think guys are really attractive."
@@ -342,7 +342,7 @@ Look at these two, planning their future, and stuff. I can't look past the next 
 	[Isaac] "No, you're not."
 	[Eduardo] "eh yeah."
 	"Sorry you feel that way though."
-+{expression > 1}[Way to put me on the spot! <expression>]
++{expression > 1}[Way to put me on the spot! <(expression>1)>]
 	[{player_name}] "Wow, way to put me on the spot dude!"
 	[Eduardo] "Hehe, sorry!"
 	[{player_name}] "You're not sorry at all. I can tell."
@@ -377,7 +377,7 @@ Uh... #Skip
 		Yeah, shut up. I'm ignoring you.
 	}
 	[Isaac] "Hrm."
-+{expression>2}[Give your back story <expression>]
++[Give your back story <(expression>2)>]
 	[{player_name}] "Well, um..."
 	"I got recommended here by my Doctors at Blackwell." #expression ^ good
 	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
@@ -539,7 +539,7 @@ Why are they always so concerned about when people sleep?
 +[Blame Eduardo]
 	[{player_name}] "I got dragged into it by Eduardo."
 	[Max] "Yeah, I'm sure you did."
-+{expression >2}[Stand My Ground<expression>]
++[Stand My Ground<(expression >2)>]
 	[{player_name}] "Max, please. I am an adult. Stop micro-managing me!" # Expression ^ good
 -[Max] "Look, just... go to bed, okay? And get your sleep schedule sorted out before you leave!"
 "I'd better go make sure everything is in order before everyone else wakes up."

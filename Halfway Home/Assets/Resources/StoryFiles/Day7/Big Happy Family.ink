@@ -91,9 +91,9 @@ Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm 
 It's... odd.<delay=0.5>@ Almost like we're a big happy family.
 The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #Skip #All = Exit #Dyed = Calm, Stage_left, right
-+[Call Timothy over]
++[Call Timothy over <Expression>]
 	[{player_name}] "Hey, Timothy! C'mon over!" #expression+
-+[Wait, and see what Timothy does]
++[Wait, and see what Timothy does <grace>]
 	I watch Timothy, as he seems to debate with himself to approach us. #grace+
 -Timothy hesitates for a second, before approaching the group. #Dyed = Stage_center
 [Dyed>Timothy] "H-Hi Everyone!" #Dyed = happy
@@ -190,9 +190,9 @@ With his free hand he clutches onto his shirt.
 "Uh, M-Max? Max?" # music_tension_state ! 1
 No one seems to hear my weak call over the chatter and laughter.
 I... #Skip
-+[Speak Louder]->ACallForHelp
++[Speak Louder<Expression>]->ACallForHelp
 +[Go Up and Grab Max] ->ForcefulAssistence
-+[Help Timothy Yourself] ->HowDoIComfort
++[Help Timothy Yourself<grace>] ->HowDoIComfort
 
 ===ACallForHelp===
 ~tried_expression = true
@@ -231,9 +231,9 @@ I... #Skip
 I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
 His grip tightens, as his eyes begin to water. @I can't leave Timothy here.
 I... #Skip
-+{tried_expression == false}[Shout to get Max's attention]->ACallForHelp
++{tried_expression == false}[Shout to get Max's attention<expression>]->ACallForHelp
 +[Force Timothy to Let Go]->BreakPoint
-+{tried_grace == false}[Stay Beside Timothy] ->HowDoIComfort
++{tried_grace == false}[Stay Beside Timothy<grace>] ->HowDoIComfort
 
 
 ===BreakPoint===
