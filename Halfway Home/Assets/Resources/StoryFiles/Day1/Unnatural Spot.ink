@@ -22,6 +22,20 @@ VAR CorrectGuesses = 0
 VAR ConstantGuess = 0
 VAR VowelGuess = 0
 
+VAR Guess_A = false
+VAR Guess_E = false
+VAR Guess_I = false
+VAR Guess_O = false
+VAR Guess_U = false
+VAR Guess_S = false
+VAR Guess_T = false
+VAR Guess_R = false
+VAR Guess_N = false
+VAR Guess_H = false
+VAR Guess_P = false
+VAR Guess_M = false
+VAR Guess_L = false
+
 EXTERNAL PlayMusic(trackName)
 EXTERNAL CharEnter(nameString, poseString)
 EXTERNAL CharExit(nameString)
@@ -33,6 +47,23 @@ EXTERNAL SetValue(ValueName, newValue)
 -> UnnaturalSpot
 
 === UnnaturalSpot ===
+~GameFails = 0
+~CorrectGuesses = 0
+~ConstantGuess = 0
+~VowelGuess = 0
+~Guess_A = false
+~Guess_E = false
+~Guess_I = false
+~Guess_O = false
+~Guess_U = false
+~Guess_S = false
+~Guess_T = false
+~Guess_R = false
+~Guess_N = false
+~Guess_H = false
+~Guess_P = false
+~Guess_M = false
+~Guess_L = false
 I wander around the gardens for a bit until I spot Timothy in an unusual opening of shrubbery by the building. #Timothy=Happy, Stage_left
 He's crouched over a small patch of dirt in the grass, with a stick in hand.
 [{player_name}] "Hey, there you are."
@@ -79,48 +110,71 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	[{player_name}] "Can I buy a vowel?"
 	[Timothy] "Hehehe... yeah."
 	[{player_name}] "Okay, then..." #Skip
-	~ VowelGuess += 1
 -else:
-	[Timothy] "Go for it." #Skip
-	~ VowelGuess += 1
+	Let's see, vowel's I haven't guessed yet... #Skip
 }
-*[A] 
++{Guess_A == false}[A] 
 	[{player_name}] "How about 'A'?"
+	~Guess_A = true
+	~ VowelGuess += 1
 	->Wrong
-*[E] 
++{Guess_E == false}[E] 
 	[{player_name}] "How about 'E'?"
+	~Guess_E = true
+	~ VowelGuess += 1
 	[Timothy] "There is an 'E'" #Hangman / E
 	-> Correct 
-*[I] 
++{Guess_I == false}[I] 
 	[{player_name}] "How about 'I'?"
+	~Guess_I = true
+	~ VowelGuess += 1
 	-> Wrong
-*[O]
++{Guess_O == false}[O]
 	[{player_name}] "How about 'O'?"
+	~Guess_O = true
+	~ VowelGuess += 1
 	[Timothy] "There is an 'O'" #Hangman / O
 	-> Correct
-*[U]
++{Guess_U == false}[U]
 	[{player_name}] "How about 'U'?"
+	~Guess_U = true
+	~ VowelGuess += 1
 	-> Wrong
++{VowelGuess >= 1}[Back]
+	[{player_name}] "Hm..." #Skip
+	->HangMan
 
 === Constant ===
 Okay, some common consonants are... #Skip
-~ ConstantGuess += 1
-*[S]
++{Guess_S == false}[S]
 	[{player_name}] "How about 'S'?"
+	~Guess_S = true
+	~ ConstantGuess += 1
 	-> Wrong
-*[T]
++{Guess_T == false}[T]
 	[{player_name}] "How about 'T'?"
+	~Guess_T = true
+	~ ConstantGuess += 1
 	-> Wrong
-*[R]
++{Guess_R == false}[R]
 	[{player_name}] "How about 'R'?"
+	~Guess_R = true
+	~ ConstantGuess += 1
 	-> Wrong
-*[N]
++{Guess_N == false}[N]
 	[{player_name}] "How about 'N'?"
+	~Guess_N = true
+	~ ConstantGuess += 1
 	-> Wrong
-*[H]
++{Guess_H == false}[H]
 	[{player_name}] "How about 'H'?"
+	~Guess_H = true
+	~ ConstantGuess += 1
 	[Timothy] "There is an 'H'." #Hangman / H
 	-> Correct 
++[Back]
+	[{player_name}] "Hm..." #Skip
+	->HangMan
 
 === Wrong ===
 ~GameFails += 1
@@ -162,15 +216,21 @@ Okay, some common consonants are... #Skip
 
 ===Guess===
 [{player_name}] "Is it..." #Skip
-*[Hole] 
++{Guess_L == false}[Hole] 
 	[{player_name}] "Is it `hole`?"
+	~Guess_L = true
 	->Wrong
-*[Hope] 
++{Guess_P == false}[Hope] 
 	[{player_name}] "Is it `hope`?" 
+	~Guess_P = true
 	->YouWin 
-*[Home] 
++{Guess_M == false}[Home] 
 	[{player_name}] "Is it `home`?"
+	~Guess_M = true
 	->Wrong
++[...nevermind]
+	[{player_name}] "Hm..." #Skip
+	->HangMan
 
 
 ===AlreadyKnow===
@@ -205,31 +265,23 @@ But eventually he shrugs and smiles. #Timothy = Happy
 "Hangman is a good game..." 
 "It teaches you that just by saying a few wrong things, you can end someone’s life..." #Timothy = Sad
 Wow. That was surprisingly dark joke from this guy.
-->QuestionTimothy
-=QuestionTimothy
 Should... Should I question him about that? #Skip
-+[Question Timothy]
-	{
-		-expression > 2:
-			[{player_name}] "You okay, Timothy?" # expression ^ good
-			[Timothy] "Huh? Yeah. Why wouldn't I be?" #Timothy = Surprised
-			[{player_name}] "Oh! its nothing. That joke was just kind of dark is all. I didn't expect that from you."
-			[Timothy] "Oh, yeah. Sorry..." #Timothy = sad
-			[{player_name}] "I mean, you don't need to apologize. I just want to make sure everything's okay with you."
-			[Timothy] "Oh! uh... thanks?" #Timothy = Surprised
-			"I dunno. I just like dark jokes." #Timothy = Angry
-			"I-is that okay?" #Timothy = sad
-			Timothy shrivels up. Is he really expecting me to reprimand him for having a sense of humor?
-			[{player_name}] "Dude, of course it's okay." 
-			"I don't mean to make you feel self-conscious or anything!" #Timothy = Surprised
-			"You just be you, okay?" #Timothy = Happy 
-			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
-			Timothy seems a lot happier than I've seen him all day. I think I might of pressed one of his buttons, but like, in a good way?
-			->WrapUp
-		-else:
-			<color=color_descriptor><i><b>Expression</b> is not high enough to ask Timothy this question.</i></color>
-			->QuestionTimothy
-	}
++[Question Timothy <(expression > 2)>]
+	[{player_name}] "You okay, Timothy?" # expression ^ good
+	[Timothy] "Huh? Yeah. Why wouldn't I be?" #Timothy = Surprised
+	[{player_name}] "Oh! its nothing. That joke was just kind of dark is all. I didn't expect that from you."
+	[Timothy] "Oh, yeah. Sorry..." #Timothy = sad
+	[{player_name}] "I mean, you don't need to apologize. I just want to make sure everything's okay with you."
+	[Timothy] "Oh! uh... thanks?" #Timothy = Surprised
+	"I dunno. I just like dark jokes." #Timothy = Angry
+	"I-is that okay?" #Timothy = sad
+	Timothy shrivels up. Is he really expecting me to reprimand him for having a sense of humor?
+	[{player_name}] "Dude, of course it's okay." 
+	"I don't mean to make you feel self-conscious or anything!" #Timothy = Surprised
+	"You just be you, okay?" #Timothy = Happy 
+	~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
+	Timothy seems a lot happier than I've seen him all day. I think I might of pressed one of his buttons, but like, in a good way?
+	->WrapUp
 +[Let it Slide]
 	Eh, I'll let it slide. It's probably nothing.
 	->WrapUp
