@@ -30,7 +30,7 @@ I head over to the cafe for some breakfast. I could use the meal.
 I spot Max doing their daily mopping. #Max = calm, stage_left
 they're as carefree as ever doing that, and only notice me as I start to sit down with my meal. #Max = stage_center
 {
-	-GetValue("LongNightHangoutCompleted"):
+	-GetValue("Max Finds You up"):
 		[Max] "{player_name}, didn't I tell ya to go to bed?" #Max = angry
 		[{player_name}] "I'm not tired."
 		I shrug. I'm not <i>that</i> fatigued. at least, I won't be after I eat.
@@ -71,10 +71,10 @@ He looks kind of sad. I should... #Skip
 	[{player_name}] "Hey Timothy!"
 	[Timothy] "Hey..."
 	[{player_name}] "Mind if I sit with you?"
-	[Timothy] "...Sure."
+	[Timothy] "...Sure." 
 	I Sit down with Timothy, and chat with him while we eat.
-	The food is invigorating and Timothy seems to relax as we talk.  
+	The food is invigorating and Timothy seems to relax as we talk.  #Timothy = happy
 	~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
-	<color=color_descriptor><i>the meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=20 
+	<color=color_descriptor><i>the meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=20  #all = exit
 	<color=color_descriptor><i>the chat with Timothy also improved <color=color_awareness><b>Awareness</b>,<color=color_grace><b>Grace</b>, <color=color_descriptor>and <color=color_expression><b>Expression</b> faintly.</i></color> #expression+ #grace+ #awareness+	
 ->END

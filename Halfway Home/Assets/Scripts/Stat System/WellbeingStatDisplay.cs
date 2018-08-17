@@ -56,28 +56,37 @@ public class WellbeingStatDisplay : MonoBehaviour
         {
             float percentagepoint = Mathf.Lerp(startVal, Percentage, t);
             FrontGauge.fillAmount = percentagepoint;
-            var newFrontColor = FrontGauge.color;
-            var newBackColor = BackGauge.color;
-            foreach(var color in ColorChanges)
-            {
-                if (percentagepoint >= color.PercentagePastPoint)
-                    newFrontColor = color.statColor;
-            }
-            FrontGauge.color = newFrontColor;
 
-            foreach(var color in BackColorChanges)
-            {
-                if (percentagepoint >= color.PercentagePastPoint)
-                    newBackColor = color.statColor;
-            }
-            FrontGauge.color = newFrontColor;
-            BackGauge.color = newBackColor;
+            UpdateColor(percentagepoint);
 
             yield return null;
         }
 
         FrontGauge.fillAmount = Percentage;
+        UpdateColor(Percentage);
+
     }
+
+    public void UpdateColor(float percentagepoint)
+    {
+        var newFrontColor = FrontGauge.color;
+        var newBackColor = BackGauge.color;
+        foreach (var color in ColorChanges)
+        {
+            if (percentagepoint >= color.PercentagePastPoint)
+                newFrontColor = color.statColor;
+        }
+        FrontGauge.color = newFrontColor;
+
+        foreach (var color in BackColorChanges)
+        {
+            if (percentagepoint >= color.PercentagePastPoint)
+                newBackColor = color.statColor;
+        }
+        FrontGauge.color = newFrontColor;
+        BackGauge.color = newBackColor;
+    }
+
 }
 
 [System.Serializable]

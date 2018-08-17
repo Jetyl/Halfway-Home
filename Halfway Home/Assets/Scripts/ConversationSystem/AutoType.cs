@@ -61,6 +61,10 @@ public class AutoType : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.GetPlayerInfo, OnPause);
         Space.Connect<DefaultEvent>(Events.GetPlayerInfoFinished, OnUnPause);
 
+
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnPause);
+        Space.Connect<DefaultEvent>(Events.ClockFinished, OnUnPause);
+
     }
 
     public void SetSkipping(bool SetSkip)

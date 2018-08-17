@@ -55,7 +55,13 @@ I take a seat on the couch and get comfortable.
 ->TimePassing.NextHour
 
 ===TimePassing===
-Another hour passes with the duo. I get a bit more tired. #time % 1
+{
+	-HoursSpent == 0:
+		an hour goes by as I hangout with the duo. #time % 1
+	-else:
+		Another hour passes with the duo. #time % 1
+}
+-Its rather fun, but I get a bit more tired. #depression -= 10
 {
 	-GetSelfStat("fatigue") > 90:
 		->TooTired
@@ -470,7 +476,7 @@ I wonder if Max is up already. Probably.
 [Isaac] "Me too." #Hangout / Smile_Down
 [Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
 {
-	-HoursSpent >= 4:
+	-HoursSpent >= 3:
 		Eduardo yawns aggressively
 		"Isaac... Tell me a story." #Hangout / E_Sad
 		[Isaac] "No." 
@@ -498,7 +504,7 @@ These two are, really sappy together. It's kind of sweet, in its own way.
 I decide now is a good time to head off from this conversation. #background / commons, crossfade
 I wave off to the other two as I leave. they seem to be set to keep talking for hours. 
 I'm almost jealous of Eduardo. So free to express himself, and to do what he wants.
-I could do to be a little more like that. @only a little. @<i>(Your Expression has increased)</i> #expression++
+I could do to be a little more like that. @only a little. #expression++
 ->END
 
 ===TooTired===
@@ -515,6 +521,7 @@ I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @who
 The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1
 The second sign, is Max, who comes in for their morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
+~SetValue("Max Finds You Up", true)
 [{player_name}] "Hehe, yeah..."
 [Isaac] "We stayed up all night. <delay=1>@@<space=50>...Again." #Isaac = Afraid, stage_left
 [Eduardo] "Zzz..."

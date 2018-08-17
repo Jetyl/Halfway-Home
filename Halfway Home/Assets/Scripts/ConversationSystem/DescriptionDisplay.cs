@@ -198,6 +198,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     void UpdateDescription(DescriptionEvent eventdata)
     {
+        print("please happen 2nd");
         gameObject.SetActive(true);
         //Space.DispatchEvent(Events.OpenUI, new UIEvent(this));
         //dynamically edit the lines so they adhere to certain parameters
@@ -337,7 +338,7 @@ public class DescriptionEvent : DefaultEvent
 
         string[] calls = Speaker.Split('>');
 
-        TrueSpeaker = calls[0].Replace(" ", "");
+        TrueSpeaker = calls[0].Trim();
         if (calls.Length > 1)
             Speaker = calls[1];
         else

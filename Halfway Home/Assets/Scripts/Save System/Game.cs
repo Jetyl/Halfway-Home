@@ -75,6 +75,7 @@ public class Game
     public float CurrentMusicVol;
     public float CurrentTextVol;
 
+    [SerializeField]
     public List<CharacterIntermission> CastCall;
 
     public string CurrentHistory = "";

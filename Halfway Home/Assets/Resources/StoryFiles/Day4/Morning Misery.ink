@@ -130,7 +130,7 @@ Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, st
 [Isaac] "Oh. what are you two doing?"
 [{player_name}] "Oh, nothing. Eduardo's just been talking my ear off about how much he loves you."
 [Isaac] "what." #Isaac = afraid
-[Eduardo] "<flow><i>I WUUUUUVVV YOU<i></flow>" #Eduardo = Exit, left, stage_left #Isaac = Exit
+[Eduardo] "<flow><i>I WUUUUUVVV YOU<i></flow>" #Eduardo = invisible, left, stage_left #Isaac = invisible # Needy = blush
 [Isaac] "hrm."
 I use this as the perfect opportunity to leave.
 I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrassed Isaac.

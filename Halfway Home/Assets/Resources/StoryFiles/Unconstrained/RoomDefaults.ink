@@ -196,12 +196,12 @@ I head to the small cafeteria to get some grub.
 }
 =Day
 I help myself to one of the {~sandwiches|sliced fruits|large bowls of soup} left out by the cook.
-<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> moderately.</i></color> # Fatigue -= 20
+<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> significantly.</i></color> # Fatigue -= 40
 -> END
 =Night
 The cook here is awesome and always leaves out some snacks for the more restless residents.
 There's a {~basket full of apples|plate of cookies|a few stacks of crackers next to some peanut butter} left out on the counter. Don't mind if I do.
-<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> moderately.</i></color> # Fatigue -= 20
+<color=color_descriptor><i>Eating has <color=color_wellbeing_relief>reduced <b>Fatigue</b> significantly.</i></color> # Fatigue -= 40
 -> END
 
 === Garden ===

@@ -345,6 +345,14 @@
    {
     "Name" : "MissedTea",
     "Type" : 1
+   },
+   {
+    "Name" : "LongNightHangoutComplete",
+    "Type" : 1
+   },
+   {
+    "Name" : "Max Finds You Up",
+    "Type" : 1
    }
   ]
  },

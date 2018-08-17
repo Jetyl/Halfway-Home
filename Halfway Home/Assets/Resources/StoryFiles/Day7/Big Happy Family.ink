@@ -307,5 +307,5 @@ Isaac drags Eduardo out of the cafe in a huff.
 [Charlotte] "Sorry, what do you mean by that?"
 I walk away from cafe. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family."
-I'm so stupid. #depression += 5
+I'm so stupid. #depression += 25
 ->END

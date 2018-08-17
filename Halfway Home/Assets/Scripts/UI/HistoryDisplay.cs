@@ -95,10 +95,21 @@ public class HistoryDisplay : MonoBehaviour
         CurrentSpeaker = "";
         History = "";
 
+        print(PreviousHistory);
+
     }
     
-    public bool HasSceneLine(string Line)
+    public bool HasSeenLine(string Line)
     {
+
+        var testline = Line.Trim();
+
+        TextParser.ExtractTextSpeed(ref testline, 0);
+
+        TagRemover.KillAllCustomTags(ref testline);
+
+        testline = Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(testline);
+        print(testline + PreviousHistory.Contains(testline));
         return PreviousHistory.Contains(Line);
     }
 

@@ -67,8 +67,8 @@ public class SkipControl : MonoBehaviour
         var Line = TextParser.DynamicEdit(eventdata.Line);
         Line = QuirkControl.UpdateText(Line, eventdata.TrueSpeaker);
 
-        CanSkip = SkipCheck.HasSceneLine(Line);
-        //print("Can Skip? " + CanSkip);
+        CanSkip = SkipCheck.HasSeenLine(eventdata.Line);
+        print("Can Skip? " + CanSkip);
         if (!DebugSkipping)
         {
             if (!CanSkip && Skipping)

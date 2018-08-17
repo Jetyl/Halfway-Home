@@ -124,7 +124,7 @@ Trissa is chatting up Jesse and John at the center table.
 [Max] "We've got your throne all ready, sire." # Max = Happy
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
-[Max] "I'll grab you some food!"
+[Max] "I'll grab you some food!" #Max = Exit
 ->EduardoUpdate->CharlotteUpdate->BadEnd
 
 === BadEnd===
@@ -309,8 +309,8 @@ Next to approach is Charlotte, who seems to have taken a break from her duties.
 	[{player_name}] "You're kidding, right? Did you not hear about Timothy?"
 	[Charlotte] "Ah, you refer to the events of earlier today involving Mr. Miyuri." # Charlotte = Calm
 	"These things happen from time to time. The hospital is the best place for him, I'm sure."
-- How is she so unfazed?
-[Charlotte] "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
+	Charlotte is characteristically unfazed by today's events.
+- "I should return to my post, now. The line is starting to grow to an uncomfortable size. We'll speak later, I'm sure."
 I watch Charlotte stride gracefully toward the serving line as Max emerges with a steaming plate of food. # Charlotte = Exit
 ->->
 
