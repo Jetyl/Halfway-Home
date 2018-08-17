@@ -218,9 +218,9 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 if (int.TryParse(cutz[1], out val))
                 {
                     if (CheckCondition(encoded, comps, val))
-                        ChoiceUnlocked(encoded, TooLowerTooHigh(encoded, comps));
+                        ChoiceUnlocked(encoded, TooLowerTooHigh(encoded, true));
                     else
-                        ChoiceLocked(encoded, TooLowerTooHigh(encoded, comps));
+                        ChoiceLocked(encoded, TooLowerTooHigh(encoded, false));
 
                     return encoded;
                 }
@@ -231,30 +231,30 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         return encoded;
     }
 
-    string TooLowerTooHigh(string key, string comp)
+    string TooLowerTooHigh(string key, bool comp)
     {
 
         for (var i = 0; i < Enum.GetValues(typeof(Personality.Social)).Length; ++i)
         {
             if (Enum.GetName(typeof(Personality.Social), (Personality.Social)i).ToLower() == key.ToLower())
             {
-                if (comp == "<" || comp == "<=")
+                if (comp)
                 {
-                    return "poor";
+                    return "good";
                 }
                 else
-                    return "good";
+                    return "poor";
             }
 
         }
 
 
-        if (comp == "<" || comp == "<=")
+        if (comp)
         {
-            return "low";
+            return "high";
         }
         else
-            return "high";
+            return "low";
 
     }
 
