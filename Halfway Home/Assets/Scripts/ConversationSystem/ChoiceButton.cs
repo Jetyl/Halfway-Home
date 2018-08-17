@@ -240,10 +240,10 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 if (comp == "<" || comp == "<=")
                 {
-                    return "poor";
+                    return "poor, nocolor";
                 }
                 else
-                    return "good";
+                    return "good, nocolor";
             }
 
         }
@@ -251,10 +251,10 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         if (comp == "<" || comp == "<=")
         {
-            return "low";
+            return "low, nocolor";
         }
         else
-            return "high";
+            return "high, nocolor";
 
     }
 
