@@ -90,7 +90,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 	"If you're mapping a real place you have to collect a ton of data!"
 	"You have to survey the land and measure distances. It takes rigorous calculation!"
 	"And that doesn't even begin to capture the spirit of it! Old school cartographers were scouts and adventurers!"
-	"They sailed the oceans just to be the first to chart a course from one land to the next! # Timothy = Happy
+	"They sailed the oceans just to be the first to chart a course from one land to the next!" # Timothy = Happy
 	"They climbed mountains for the honor of recording the view for all time."
 	"It's a lot less exciting now days, but you can feel that history when you look at a map, ya know? I do, anyway..."
 	"Next to them, my maps are really inconsequential. I mostly just make stuff up."

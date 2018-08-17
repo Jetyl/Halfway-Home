@@ -18,7 +18,7 @@ MonoBehaviour:
   m_fontInfo:
     Name: Dadhand
     PointSize: 51
-    Scale: 1
+    Scale: 0.8
     CharacterCount: 162
     LineHeight: 69.6875
     Baseline: 0

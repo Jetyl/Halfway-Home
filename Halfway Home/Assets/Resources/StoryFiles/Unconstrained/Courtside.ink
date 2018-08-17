@@ -130,6 +130,7 @@ I gently bounce-pass the ball to Timothy. # Basketball / ArmBall
 Timothy exhales. # Basketball / HeadCalm
 [Timothy] "Okay. I just have to throw it in, right?"
 ~timLetters = 0
+~playerLetters = 0
 [{player_name}] "Yup."
 -> GameTime.TimothyTurn
 
