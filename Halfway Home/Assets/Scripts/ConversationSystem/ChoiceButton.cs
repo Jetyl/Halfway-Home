@@ -61,13 +61,15 @@ public class ChoiceButton : MonoBehaviour
 	
 	}
 
-    void ChoiceUnlocked()
+    //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was successfull
+    void ChoiceUnlocked(string type, string high_low)
     {
         //turn on unlock icon
         //turn on tooltip
     }
 
-    void ChoiceLocked()
+    //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was unsuccessful
+    void ChoiceLocked(string type, string high_low)
     {
         //turn on lock icon
         button.interactable = false;
@@ -183,9 +185,9 @@ public class ChoiceButton : MonoBehaviour
                 if (int.TryParse(cutz[1], out val))
                 {
                     if (CheckCondition(encoded, comps, val))
-                        ChoiceUnlocked();
+                        ChoiceUnlocked(encoded, TooLowerTooHigh(comps));
                     else
-                        ChoiceLocked();
+                        ChoiceLocked(encoded, TooLowerTooHigh(comps));
 
                     return encoded;
                 }
@@ -195,6 +197,18 @@ public class ChoiceButton : MonoBehaviour
 
         return encoded;
     }
+
+    string TooLowerTooHigh(string comp)
+    {
+        if (comp == "<" || comp == "<=")
+        {
+            return "Lower";
+        }
+        else
+            return "Higher";
+
+    }
+
 
     bool CheckCondition(string encoded, string condition, int value)
     {
