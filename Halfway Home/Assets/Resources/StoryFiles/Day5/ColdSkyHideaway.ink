@@ -194,13 +194,13 @@ Isaac looks pained trying to speak as much as he is.
 "..."
 Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
 And he came to Sunflower House to improve himself, but still isn't any better. How should I help him? #Skip
-+[Give Him Advice]
++[Give Him Advice <awareness>]
 	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>Awareness</i> of your life, as an example.</color>
 	->Recoil
-+[Give Him motivation]
++[Give Him motivation <expression>]
 	<color=color_descriptor>You try to motivate Isaac to improve himself with your impassioned <i>Expression</i>.</color>
 	->Recoil
-+{grace >= 3}[Give Him Time]
++{grace >= 3}[Give Him Time <(grace >= 3)>]
 	<color=color_descriptor>With your heightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
 	->Relationships
 +{grace < 3}[Give Him Sympathy]

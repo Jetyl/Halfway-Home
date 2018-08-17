@@ -45,13 +45,13 @@ VAR current_room = "unset"
 	{grace>2:->Formal_Introduce_Timothy}
 	Charlotte glances at Timothy.
 	"Where are my manners? You must properly introduce this new face." # Charlotte = Surprised
-+{grace<2}[Great (rude)]
++[Great (rude) <(grace<2)>]
 	[{player_name}] "Just great. Nothing beats wasting my life in a box with a bunch of fellow crazies." # grace ^ poor
 	[Charlotte] "Mind your manners! I’ve heard it rumored that you are to rejoin polite society soon. Such churlish elocution will do you no favors there."" # Charlotte = Angry
 	[{player_name}] "Sorry, Charlotte. I'm just frustrated is all.""
 	Charlotte glances at Timothy.
 	[Charlotte] "How hypocritical of me. Here I am lecturing you on manners, meanwhile failing to request an introduction to your associate." # Charlotte = Surprised
-+{grace > 2}[Well, thanks (formal)<grace>]
++[Well, thanks (formal)<(grace>2)>]
 	[{player_name}] "I am doing well, thank you. And how are you? As well as you look, I hope." # Charlotte = Surprised # grace ^ good
 	[Charlotte] "When did you acquire such charm? I must say it is a special joy to find a kindred spirit with whom I may hold a proper conversation!" # Charlotte=happy 
 	"Oh dear, that sounded terribly callous, didn’t it? Your eloquence may have caught me off-guard, {player_gender=="M":sir|{player_gender=="F":madam|friend}}." # Charlotte = Afraid
