@@ -581,13 +581,12 @@ I pick up my bags again, and head out to the car. #all = exit
 [{GetStringValue("Guardian")}] "Here, let me help you with those."
 My {GetStringValue("Guardian")} {GetStringValue("Guardian")=="sister":helps|{GetStringValue("Guardian")=="brother":helps|help}} me fit my bags into the trunk.
 "So, how was it? This whole `halfway house` experience?"
-[{player_name}] "hmm..."
 I think about that question as I get into the back seat of the car. 
 {
 	-GetValue("Saved Timothy"): 
-		I look back out at the Sunflower House, as we begin to drive off. #Isaac = happy, stage_left #Eduardo = calm, stage_left #Dyed = Happy, right #Max = calm #Charlotte = happy, stage_right #Trissa = calm, stage_right
+		I look back out at the Sunflower House as we begin to drive off. #Isaac = happy, stage_left #Eduardo = calm, stage_left #Dyed = Happy, right #Max = calm #Charlotte = happy, stage_right #Trissa = calm, stage_right
 	-else: 
-		I look back out at the Sunflower House, as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
+		I look back out at the Sunflower House as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
 }
 "It wasn't exactly what I expected, but... I think it was pretty good." // Could we give the player a choice here?
 "Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0
