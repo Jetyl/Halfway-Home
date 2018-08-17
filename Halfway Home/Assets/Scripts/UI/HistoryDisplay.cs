@@ -101,16 +101,15 @@ public class HistoryDisplay : MonoBehaviour
     
     public bool HasSeenLine(string Line)
     {
+        var TheLine = Line.Trim();
 
-        var testline = Line.Trim();
+        TextParser.ExtractTextSpeed(ref TheLine, 0);
 
-        TextParser.ExtractTextSpeed(ref testline, 0);
+        TagRemover.KillAllCustomTags(ref TheLine);
 
-        TagRemover.KillAllCustomTags(ref testline);
+        TheLine = TextParser.DynamicEdit(TheLine);
 
-        testline = Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(testline);
-        print(testline + PreviousHistory.Contains(testline));
-        return PreviousHistory.Contains(Line);
+        return PreviousHistory.Contains(TheLine);
     }
 
   public void ToggleHistory()
