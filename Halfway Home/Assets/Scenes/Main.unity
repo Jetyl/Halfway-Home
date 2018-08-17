@@ -8653,7 +8653,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -32.395126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8663,7 +8663,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 54.790253
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8683,7 +8683,7 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -39.790253
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8693,7 +8693,7 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224870789203492988, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -46723,26 +46723,26 @@ MonoBehaviour:
   - Key: depression
     Strings:
     - Key: high
-      Text: ' Your depression is too high for this'
-      Color: {r: 0.8161765, g: 0.2640571, b: 0.2640571, a: 1}
+      Text: <color=#FD5959FF>Your depression is too high for this
+      Color: {r: 0.9852941, g: 0.39846456, b: 0.39846456, a: 1}
     - Key: low
-      Text: ' Your depression is too low for this'
+      Text: <color=#FD5959FF>Your depression is too low for this
       Color: {r: 0.8235294, g: 0.30276817, b: 0.30276817, a: 1}
   - Key: fatigue
     Strings:
     - Key: high
-      Text: ' Your fatigue is too high for this'
+      Text: <color=#FD5959FF>Your fatigue is too high for this
       Color: {r: 0.8161765, g: 0.2640571, b: 0.2640571, a: 1}
     - Key: low
-      Text: ' Your fatigue is too low for this'
+      Text: <color=#FD5959FF>Your fatigue is too low for this
       Color: {r: 0.8235294, g: 0.30276817, b: 0.30276817, a: 1}
   - Key: stress
     Strings:
     - Key: high
-      Text: ' Your stress is too high for this'
+      Text: <color=#FD5959FF>Your stress is too high for this
       Color: {r: 0.8161765, g: 0.2640571, b: 0.2640571, a: 1}
     - Key: low
-      Text: ' Your stress is too low for this'
+      Text: <color=#FD5959FF>Your stress is too low for this
       Color: {r: 0.8235294, g: 0.30276817, b: 0.30276817, a: 1}
   TooltipContent: {fileID: 1367268360}
 --- !u!114 &1599244676
