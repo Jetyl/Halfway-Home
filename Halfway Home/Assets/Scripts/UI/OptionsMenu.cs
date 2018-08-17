@@ -32,7 +32,8 @@ public class OptionsMenu : MonoBehaviour
     public void UpdateAll()
     {
         Data = new OptionsData(OptionsData.current);
-
+        
+        MTSToggle.isOn = Data.MuteTextScroll;
         TextSlider.value = (Data.TextSpeed - TextSpeedMin) / (TextSpeedMax - TextSpeedMin);
         MasterVolumeSlider.value = Data.MasterVolume;
         AkSoundEngine.SetRTPCValue("Master_Slider", MasterVolumeSlider.value * 100);
@@ -91,6 +92,12 @@ public class OptionsMenu : MonoBehaviour
     {
         OptionsData.current = Data;
         OptionsData.SaveOptions();
+        Space.DispatchEvent(Events.OptionsUpdated);
+    }
+
+    public void CancelChanges()
+    {
+        Space.DispatchEvent(Events.OptionsUpdated);
     }
 
 }

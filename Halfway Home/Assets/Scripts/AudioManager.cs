@@ -108,6 +108,9 @@ public class AudioManager : MonoBehaviour
         HalfwayHomeStoryLoader hhsl = GameObject.Find("Dialog Display").GetComponent<HalfwayHomeStoryLoader>();
         hhsl.reader.gameObject.Connect<Story.StartedEvent>(this.OnStoryStartedEvent);
         
+        Space.Connect<ConversationEvent>(Events.StartGame, OnStart);
+        Space.Connect<DefaultEvent>(Events.OptionsUpdated, OnOptionsUpdate);
+
         Space.Connect<DescriptionEvent>(Events.Description, OnDescriptionEvent);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
@@ -123,8 +126,30 @@ public class AudioManager : MonoBehaviour
   {
     AkSoundEngine.SetState("Game_State", "In_Game");
   }
-  
-  void OnStoryStartedEvent(Story.StartedEvent e)
+
+    public void OnStart(ConversationEvent eventdata)
+    {
+        RefreshingOptionsData();
+    }
+
+    public void OnOptionsUpdate(DefaultEvent eventdata)
+    {
+        RefreshingOptionsData();
+    }
+
+    public void RefreshingOptionsData()
+    {
+        var Data = new OptionsData(OptionsData.current);
+
+        MuteTextScroll = Data.MuteTextScroll;
+        AkSoundEngine.SetRTPCValue("Master_Slider", Data.MasterVolume * 100);
+        AkSoundEngine.SetRTPCValue("Music_Slider", Data.MusicVolume * 100);
+        AkSoundEngine.SetRTPCValue("Effects_Slider", Data.SFXVolume * 100);
+        AkSoundEngine.SetRTPCValue("Ambience_Slider", Data.AmbianceVolume * 100);
+        AkSoundEngine.SetRTPCValue("Menu_Slider", Data.InterfaceVolume * 100);
+    }
+
+    void OnStoryStartedEvent(Story.StartedEvent e)
   {
     Trace.Script($"-----STORY STARTED: Resetting RTPC values-----");
     

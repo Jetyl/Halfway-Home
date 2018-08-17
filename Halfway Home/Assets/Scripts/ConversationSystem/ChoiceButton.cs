@@ -10,20 +10,30 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
-public class ChoiceButton : MonoBehaviour
+public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public float ScaleTime;
     public float DelayTime;
+
+
+    public Sprite lockedImage;
+    public Sprite UnlockedImage;
+    public Image LockSprite;
+
     public ChoiceDisplayData[] Tags;
 
     Choices choiceInfo;
+
 
     ChoiceDisplayData Base;
 
     bool Selected = false;
     bool SelectionMade = false;
     int slot;
+
+    bool LockingActive;
 
     Button button;
 
@@ -61,19 +71,42 @@ public class ChoiceButton : MonoBehaviour
 	
 	}
 
+    public void OnPointerEnter(PointerEventData e)
+    {
+        if(LockingActive)
+            Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipActivateEvent>(new TextTooltipBehavior.TooltipActivateEvent());
+    }
+    public void OnPointerExit(PointerEventData e)
+    {
+        if (LockingActive)
+            Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipDeactivateEvent>(new TextTooltipBehavior.TooltipDeactivateEvent());
+    }
+    
     //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was successfull
     void ChoiceUnlocked(string type, string high_low)
     {
         //turn on unlock icon
+        LockSprite.sprite = UnlockedImage;
         //turn on tooltip
+        LockingActive = true;
+
+
+
+        Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
     }
 
     //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was unsuccessful
     void ChoiceLocked(string type, string high_low)
     {
         //turn on lock icon
+        LockSprite.sprite = lockedImage;
+
         button.interactable = false;
         //turn on tooltip
+        LockingActive = true;
+
+        Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
+
     }
 
     public void ChoiceSelected()
@@ -185,9 +218,9 @@ public class ChoiceButton : MonoBehaviour
                 if (int.TryParse(cutz[1], out val))
                 {
                     if (CheckCondition(encoded, comps, val))
-                        ChoiceUnlocked(encoded, TooLowerTooHigh(comps));
+                        ChoiceUnlocked(encoded, TooLowerTooHigh(encoded, comps));
                     else
-                        ChoiceLocked(encoded, TooLowerTooHigh(comps));
+                        ChoiceLocked(encoded, TooLowerTooHigh(encoded, comps));
 
                     return encoded;
                 }
@@ -198,14 +231,30 @@ public class ChoiceButton : MonoBehaviour
         return encoded;
     }
 
-    string TooLowerTooHigh(string comp)
+    string TooLowerTooHigh(string key, string comp)
     {
+
+        for (var i = 0; i < Enum.GetValues(typeof(Personality.Social)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Personality.Social), (Personality.Social)i).ToLower() == key.ToLower())
+            {
+                if (comp == "<" || comp == "<=")
+                {
+                    return "poor";
+                }
+                else
+                    return "good";
+            }
+
+        }
+
+
         if (comp == "<" || comp == "<=")
         {
-            return "Lower";
+            return "low";
         }
         else
-            return "Higher";
+            return "high";
 
     }
 

@@ -62,6 +62,8 @@ public class Events
     public static readonly String Cheat = "CheatingEvent";
     public static readonly String CheatsOpen = "CheatsOpenEvent";
     public static readonly String CheatsClosed = "CheatsClosedEvent";
+    
+    public static readonly String OptionsUpdated = "OptionsEvent";
 
     //Halfway-Home Custom Events
 

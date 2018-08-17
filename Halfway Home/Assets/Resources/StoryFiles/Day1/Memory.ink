@@ -61,7 +61,7 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 *[Help Them Out] {GetPlayerName()}
 	[{player_name}] "It's {player_name}. And yeah, that's me."
 	->Start.Introductions
-+[Wait]
++[Wait <(expression>2)>]
 	[Max>Janitor?] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}" # Skip
 	->Start.NameEntry
 =Introductions

@@ -95,7 +95,7 @@ Trissa cheerily takes the letter and begins immediately tearing it to shreds.
 She walks over the the fireplace and tosses the scraps into the crackling flames.
 Max either does not notice or does not care to comment, and instead continues handing out letters. #Trissa = exit #Max = Calm
 [Max] "Oh, Timothy. This letter from your folks that just came in when I grabbed the mail pile." #Timothy = Calm
-[Timothy] "Oh, um... Thank you." #Timothy = Sad.
+[Timothy] "Oh, um... Thank you." #Timothy = Sad
 Timothy stares at the envelope, making no attempt to open it before walking away with it in hand. #Timothy = exit
 He looked a little pale there. I wonder if {firsttime:he's okay|this is the cause for the drama later in the week}. // New context for choice
 {firsttime:He probably just prefers opening his letters in privacy. Then again...|The more I think about it the more convinced I am}.

@@ -18,7 +18,10 @@ public class TextTooltipBehavior : MonoBehaviour
       TooltipType = type;
     }
   };
-  [System.Serializable]
+
+    public class TooltipActivateEvent : Stratus.Event { };
+    public class TooltipDeactivateEvent : Stratus.Event { };
+    [System.Serializable]
   public class TooltipInfo
   {
     public string Key;
@@ -55,6 +58,8 @@ public class TextTooltipBehavior : MonoBehaviour
   {
     Stratus.Scene.Connect<TooltipLineEvent>(OnTooltipLineEvent);
     Space.Connect<DescriptionEvent>(Events.Description, ResetTooltip);
+    Stratus.Scene.Connect<TooltipActivateEvent>(OnTooltipActivateEvent);
+    Stratus.Scene.Connect<TooltipDeactivateEvent>(OnTooltipDeactivateEvent);
   }
 
   void OnTooltipLineEvent(TooltipLineEvent e)
@@ -91,7 +96,16 @@ public class TextTooltipBehavior : MonoBehaviour
     }
   }
 
-  void ResetTooltip(DefaultEvent eventData)
+    void OnTooltipActivateEvent(TooltipActivateEvent e)
+    {
+        CheckActivation();
+    }
+
+    void OnTooltipDeactivateEvent(TooltipDeactivateEvent e)
+    {
+        DeActivate();
+    }
+    void ResetTooltip(DefaultEvent eventData)
   {
     DeActivate();
     if (TooltipAvailable) TooltipAvailable = false;
