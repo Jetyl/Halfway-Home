@@ -18,12 +18,12 @@ MonoBehaviour:
   m_fontInfo:
     Name: Tenderness
     PointSize: 83
-    Scale: 0
+    Scale: 1
     CharacterCount: 100
     LineHeight: 99.625
     Baseline: 0
     Ascender: 60.375
-    CapHeight: 0
+    CapHeight: 51.5625
     Descender: -22.6875
     CenterLine: 0
     SuperscriptOffset: 60.375
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 4.15
     strikethrough: 13.704545
     strikethroughThickness: 4.15
-    TabWidth: 0
+    TabWidth: 155
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 15.5
+    height: 83.0625
     xOffset: 0
-    yOffset: 0
+    yOffset: 60.375
     xAdvance: 15.5
     scale: 1
   - id: 33

@@ -9,6 +9,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class ChoiceButton : MonoBehaviour
 {
@@ -29,10 +30,13 @@ public class ChoiceButton : MonoBehaviour
     Color BaseColor;
 
     TextMeshProUGUI txt;
+    
+    string[] Comparisons = { ">", "<", ">=", "<=", "==", "!="};
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
+
         button = GetComponent<Button>();
         txt = GetComponentInChildren<TextMeshProUGUI>();
 
@@ -56,6 +60,19 @@ public class ChoiceButton : MonoBehaviour
     {
 	
 	}
+
+    void ChoiceUnlocked()
+    {
+        //turn on unlock icon
+        //turn on tooltip
+    }
+
+    void ChoiceLocked()
+    {
+        //turn on lock icon
+        button.interactable = false;
+        //turn on tooltip
+    }
 
     public void ChoiceSelected()
     {
@@ -83,8 +100,7 @@ public class ChoiceButton : MonoBehaviour
 
     public void UpdateChoice(ChoiceEvent eventdata)
     {
-        button.colors = ExtractChoiceColor(ref eventdata.choicedata.text, Tags, Base.Colors);
-
+        button.colors = ExtractChoiceColor(ref eventdata.choicedata.text, Base.Colors);
         txt.text = TextParser.DynamicEdit( eventdata.choicedata.text.Trim());
 
         slot = eventdata.ChoiceNumber;
@@ -125,22 +141,24 @@ public class ChoiceButton : MonoBehaviour
 
     }
 
-    public ColorBlock ExtractChoiceColor(ref string text, ChoiceDisplayData[] compare, ColorBlock Base)
+    public ColorBlock ExtractChoiceColor(ref string text, ColorBlock Base)
     {
-        if (!text.Contains("<") || !text.Contains(">"))
+        if (!text.Contains("<(") || !text.Contains(")>"))
             return Base;
 
 
-        int i = text.IndexOf('<');
-        int j = text.IndexOf('>', i + 1);
+        int i = text.IndexOf("<(");
+        int j = text.IndexOf(")>", i + 1);
 
-        string thisBit = text.Substring(i + 1, j - i - 1);
+        string thisBit = text.Substring(i + 2, j - i - 2);
+        
+        var colorKey = Decode(thisBit);
 
-        foreach (var tag in compare)
+        foreach (var tag in Tags)
         {
-            if (thisBit.ToLower() == tag.tag.ToLower())
+            if (colorKey.ToLower() == tag.tag.ToLower())
             {
-                text = text.Replace("<" + tag.tag + ">", "");
+                text = text.Replace("<(" + thisBit + ")>", "");
                 return tag.Colors;
             }
         }
@@ -149,6 +167,94 @@ public class ChoiceButton : MonoBehaviour
 
     }
 
+    string Decode(string encoded)
+    {
+
+        foreach(var comps in Comparisons)
+        {
+            if(encoded.Contains(comps))
+            {
+                string[] stringSeparators = new string[] { comps };
+                var cutz = encoded.Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
+                encoded = cutz[0].Trim();
+
+                int val = 0;
+
+                if (int.TryParse(cutz[1], out val))
+                {
+                    if (CheckCondition(encoded, comps, val))
+                        ChoiceUnlocked();
+                    else
+                        ChoiceLocked();
+
+                    return encoded;
+                }
+
+            }
+        }
+
+        return encoded;
+    }
+
+    bool CheckCondition(string encoded, string condition, int value)
+    {
+        for (var i = 0; i < Enum.GetValues(typeof(Personality.Wellbeing)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Personality.Wellbeing), (Personality.Wellbeing)i).ToLower() == encoded.ToLower())
+            {
+
+                switch(condition)
+                {
+                    case "<":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) < value;
+                    case ">":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) > value;
+                    case ">=":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) >= value;
+                    case "<=":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) <= value;
+                    case "==":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) == value;
+                    case "!=":
+                        return Game.current.Self.GetWellbingStat((Personality.Wellbeing)i) != value;
+                    default:
+                        return false;
+                }
+                
+
+
+            }
+
+        }
+
+        for (var i = 0; i < Enum.GetValues(typeof(Personality.Social)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Personality.Social), (Personality.Social)i).ToLower() == encoded.ToLower())
+            {
+                switch (condition)
+                {
+                    case "<":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) < value;
+                    case ">":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) > value;
+                    case ">=":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) >= value;
+                    case "<=":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) <= value;
+                    case "==":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) == value;
+                    case "!=":
+                        return Game.current.Self.GetModifiedSocialStat((Personality.Social)i) != value;
+                    default:
+                        return false;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    
     void OnDestroy()
     {
         EventSystem.DisconnectEvent<ChoiceEvent>(gameObject, Events.Choice, UpdateChoice);

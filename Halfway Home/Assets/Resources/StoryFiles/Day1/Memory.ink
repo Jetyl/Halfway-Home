@@ -151,11 +151,11 @@ In the distance, I notice something new: a faint electric glow.
 As I draw near, I can make out the detail of the glow. It's a bathroom sign pointing down a lean corridor to the left.
 I head down the bathroom corridor. Three marked entrances open before me.   # SFX : play_sfx_human_footsteps_approaching
 On instinct, I rush into the... #Skip
-*[Men's Restroom] 
++[Men's Restroom] 
 	~SetPlayerGender("M")
-*[Lady's Restroom] 
++[Lady's Restroom] 
 	~SetPlayerGender("F")
-*[All-Gender Restroom] 
++[All-Gender Restroom] 
 	~SetPlayerGender("N")
 - The bathroom is clean and well-lit, but so cold that I can see my breath fogging the air in front of me.
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
