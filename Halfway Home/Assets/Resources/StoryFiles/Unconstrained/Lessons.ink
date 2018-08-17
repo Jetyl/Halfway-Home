@@ -160,7 +160,7 @@ Charlotte laughs a little too hard at that.
 			[{player_name}] "Well... yeah."
 	}
 	Charlotte relaxes her posture and gets an amused look in her eye.
-	"It'd probably be less awkward if I talked like this, huh?"
+	[Charlotte] "It'd probably be less awkward if I talked like this, huh?"
 	"Less formal and more familiar. Easier to follow, too, right?"
 	She regains her previous, more rigid posture.
 	"I would thank you to not mistake my chosen diction for ignorant hypocrisy, {player_gender=="M":sir|{player_gender=="F":madam|friend}}."

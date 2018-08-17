@@ -116,7 +116,7 @@ Isaac seems to be lost in his own little world right now.
 I try to speak up, hoping maybe one of them will notice I'm still here, and was still talking to them, but to no avail.
 I decide to leave these two weird lovebirds alone, and get going.
 Still, it was an engaging conversation at least.
-<color=A5C5E3FF><i>Your Depression has decreased, slightly!</i></color> #depression -= 15
+<color=A5C5E3FF><i>Your Depression has decreased, slightly!</i></color> #depression -= 15 # All = Exit
 ->END
 
 ===WorkAlone===
@@ -126,7 +126,7 @@ I ignore the two of them, and work on my own little drawing.
 	[Voices] "They wouldn't want to spend time with you anyways."
 }
 I pull out some of the spare paper the room has stocked, and begin sketching whatever comes to mind.
-<color=color_expression><i>Your Expression has improved, slightly!</i></color> #expression+
+<color=color_expression><i>Your Expression has improved, slightly!</i></color> #expression+ # All = Exit
 ->END
 
 ===MeetWithTimothy===

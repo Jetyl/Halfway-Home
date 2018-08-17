@@ -112,7 +112,7 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 +[Book it out of the room]
 	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, gotta-go-bye!"
 	[Eduardo] "wait, wha-" #Skip
-	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults
+	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults # All = Exit
 	Wow, I am really out of shape.
 	[Voices] "Just another reason why you are worthless."
 	{
@@ -133,7 +133,7 @@ Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, st
 [Eduardo] "<flow><i>I WUUUUUVVV YOU<i></flow>" #Eduardo = invisible, left, stage_left #Isaac = invisible # Needy = blush
 [Isaac] "hrm."
 I use this as the perfect opportunity to leave.
-I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrassed Isaac.
+I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrassed Isaac. # All = Exit
 ->END
 
 ===Pulling===
