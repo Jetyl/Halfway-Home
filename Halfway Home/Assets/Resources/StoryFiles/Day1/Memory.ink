@@ -171,5 +171,31 @@ I thought the nightmares would go away on their own, but if anything they're bec
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.
 I lay awake. My mind begins to wander aimlessly, carving out rivers and hills from the spackle of my ceiling.
+This has been my life for more than six years.
+When I was a kid I thought depression just meant being sad a lot.
+I found out how wrong I was in my early teens.
+My friends and family attributed my change in attitude to puberty.
+But then I started hearing <i>them</i>. The Voices.
+I panicked and told my... # Skip
+*[Parents]
+	My parents freaked out, obviously, and took me to the doctor. {SetStringValue("Guardian", "parents")}
+*[Brother]
+	My brother freaked out, obviously, and took me to the doctor. {SetStringValue("Guardian", "brother")}
+*[Sister]
+	My sister freaked out, obviously, and took me to the doctor. {SetStringValue("Guardian", "sister")}
+-...which became a <i>series</i> of doctors, psychologists, and psychiatrists.
+When they had sufficiently deemed me `in need of intensive care` I ended up at Blackwell Psychiatric Hospital.
+I spent more than four years there. Enough time for me to wonder if my life would ever change. If I would ever go home.
+But then, about a year ago, things got a little better. I stopped hearing the Voices... out loud, anyway.
+After a bunch of evaluations and several prescriptions, I was released. I was finally going home... or so I thought.
+In reality, I only made it halfway.
+That midpoint is this place: Sunflower House. It's a limbo for people like me...
+People in-between `sickness` and `health`. People judged to be <i>almost</i> ready, but not quite.
+Some of those people go back out into the world. Others, like my roommate, wind up back at Blackwell.
+My scheduled exit time is this Friday, so I guess I fall into the former camp.
+It's really not so bad here, but I've spent most of the time hiding in my room.
+I barely know anyone here.
+I know the names of the other residents on the first floor, but that's about it.
+And Max, of course. Everybody knows Max.
 // This is the beginning of KNOCK »
 -> END
