@@ -172,7 +172,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 		After all, technically, I chose this for myself this week. which reminds me, despite already know the answer, I ask-
 }
 [{player_name}] "Did you ever find your keys?"
-[Max] "Oh! yeah... I did."
+[Max] "Oh! Yeah... I did."
 [Max] "The little sucker fell between the couch cushions in the commons. Must've been loose on my chain or somethin'."
 {
 	-GetValue("RoomKey"):
@@ -185,10 +185,10 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 [Max] "I know you don't want another thing on your plate for this week."
 You have no idea.
 [Max] "Also, thanks with the save with the keys."
-[{player_name}] "no prob."
+[{player_name}] "No prob."
 [Max] "How'd you even know they were there?" #Skip
 +[Lucky Guess]
-	[{player_name}] "lucky guess."
+	[{player_name}] "Lucky guess."
 	[Max]"Well that's some fine luck ya got." 
 +[I saw it in a dream]
 	[{player_name}] "I was having one of those 'deja vu' things? you know, where you feel you saw all this before in a dream."

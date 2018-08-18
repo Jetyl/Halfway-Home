@@ -44,7 +44,7 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 		-else:
 		Ha! if only you knew Max. If only you knew...
 	}
-+[Lie <expression>]
++[Lie <(expression)>]
 {
 	-expression >= 1:
 		[{player_name}] "No, I didn't just get up. Been chilling in my room all day tho." #expression ^ good

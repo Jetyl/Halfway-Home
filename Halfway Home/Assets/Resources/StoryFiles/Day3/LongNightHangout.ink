@@ -32,6 +32,7 @@ EXTERNAL SetTimeBlock(time)
 EXTERNAL GetHour()
 EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
+EXTERNAL UnlockAchievement(tag)
 
 # Play : Stop_All
 
@@ -62,17 +63,18 @@ I take a seat on the couch and get comfortable.
 		Another hour passes with the duo. #time % 1
 }
 -Its rather fun, but I get a bit more tired. #depression -= 10
+~HoursSpent = HoursSpent + 1
+I suppose I could go another hour, but should I? #Skip
++[Stay another hour <(fatigue<=90)>]
+	->NextHour
++[Call it a night, and head off]
 {
 	-GetSelfStat("fatigue") > 90:
 		->TooTired
 	-else:
-		~HoursSpent = HoursSpent + 1
-		I suppose I could go another hour, but should I? #Skip
-		+[Stay another hour]
-			->NextHour
-		+[Call it a night, and head off]
-			->LeaveEarly
+		->LeaveEarly
 }
+
 =NextHour
 {
 	-GetHour() == 0:
@@ -252,7 +254,7 @@ Eduardo pokes Isaac's unchanging expression, while he has the derpiest grin on h
 [Eduardo] "So, {player_name}, what about you? who do you fancy?" #Hangout / Eye_U, E_Sad
 [{player_name}] "uh..."
 crap, I didn't expect him to turn this on me. I... #Skip
-+[Answer Unabashedly <expression>]
++[Answer Unabashedly <(expression)>]
 	"Well, I..." #Skip
 	++[Like Guys]
 		"I think guys are really attractive."
@@ -510,6 +512,8 @@ I could do to be a little more like that. @only a little. #expression++
 ===TooTired===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means it’s probably a good time to call it a night.
 I decide to leave the two to their chatting, and head to bed. #background / commons, crossfade, NoDefaults
+I'm almost jealous of Eduardo. So free to express himself, and to do what he wants.
+I could do to be a little more like that. @only a little. #expression++
 I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 It doesn't take long for me to lose consciousness. #background / dream, eyeclose
 ... {CallSleep()} #sleep %12
@@ -518,7 +522,12 @@ I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @who
 ->END
 
 ===MorningMax===
-The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1
+{
+	-HoursSpent == 6:
+	The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1 #Achievement *ACH_LONG_NIGHT
+	-else:
+	The sun actually begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1
+}
 The second sign, is Max, who comes in for their morning mopping, and is rather surprised to see us up so early. #Max = Surprised
 [Max] "Wowie! Y'all are up early."
 ~SetValue("Max Finds You Up", true)

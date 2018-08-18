@@ -51,6 +51,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(SetPlayerGender), new System.Action<string>(SetPlayerGender));
       story.runtime.BindExternalFunction(nameof(GetPlayerName), new System.Action(GetPlayerName));
       story.runtime.BindExternalFunction(nameof(NextWeek), new System.Action(NextWeek));
+      story.runtime.BindExternalFunction(nameof(UnlockAchievement), new System.Action<string>(UnlockAchievement));
     }
 
     protected override void OnConfigureParser(RegexParser parser)
@@ -119,6 +120,9 @@ namespace HalfwayHome
       // Tooltip Lines
       string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", "~");
       parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
+      // achivements
+      string Achievement = RegexParser.Presets.ComposeBinaryOperation("Achievement", "Tag", "*");
+      parser.AddPattern("Achievment", Achievement, RegexParser.Target.Tag, RegexParser.Scope.Group, UnlockAchievement);
     }
 
     protected override void OnStoryLoaded(Story story)
@@ -266,6 +270,20 @@ namespace HalfwayHome
 
       }
     }
+    
+    public void UnlockAchievement(Parse parse)
+    {
+        foreach (var match in parse.matches)
+      {
+        if (match.ContainsKey("Tag"))
+        {
+            var Tag = match["Tag"].Trim();
+                    
+            Game.current.UnlockAchievement(Tag);
+        }
+      }
+    }
+
 
     void OnPoseChange(Parse parse)
     {
@@ -571,6 +589,11 @@ namespace HalfwayHome
     {
       var nameInfo = new IdentityDisplay.PlayerGetInfoEvent();
       Space.DispatchEvent(Events.GetPlayerInfo, nameInfo);
+    }
+    
+    public void UnlockAchievement(string Tag)
+    {
+       Game.current.UnlockAchievement(Tag);
     }
 
   }

@@ -111,7 +111,7 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	[Timothy] "Hehehe... yeah."
 	[{player_name}] "Okay, then..." #Skip
 -else:
-	Let's see, vowel's I haven't guessed yet... #Skip
+	Let's see, vowels I haven't guessed yet... #Skip
 }
 +{Guess_A == false}[A] 
 	[{player_name}] "How about 'A'?"
@@ -253,7 +253,7 @@ But eventually he shrugs and smiles. #Timothy = Happy
 
 === YouWin ===
 [Timothy] "Yep!" #Hangman / P
-"It's Hope." 
+"It's Hope." #Acheivment * ACH_HANGMAN
 ~SetValue("SolvedHangman", true)
 ->GameOver
 
