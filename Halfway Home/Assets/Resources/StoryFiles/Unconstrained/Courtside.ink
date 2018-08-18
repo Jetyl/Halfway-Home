@@ -55,9 +55,9 @@ Max lobs a large ball at my chest. My hands {instinctively raise|are already rai
 	[{player_name}] "Where would we even play?"
 	[Max] "The basketball court, silly!"
 	[{player_name}] "We have a basketball court?!"
-	Max shakes their head and turns to point behind the fence. # Max = Sad
+	Max shakes their head and turns to point off to the right. # Max = Sad
 	[Max] "Well, technically it's not a full court. We've only got one basket, but there's not much call for a tournament-regulation setup."
-	Sure enough, I can see the hoop affixed to the building behind the library. # Max = Calm
+	Sure enough, I can see the hoop standing by the fence off to the right of the garden behind the art room. # Max = Calm
 	[Max] "I figured people didn't use it because a lot of our residents tend not to be athletic types, but if you didn't even know we <i>had</i> one maybe I should include it in the tour..."
 -else:
 	[{player_name}] "Yeah, basketball isn't really my thing..."

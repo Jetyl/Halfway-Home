@@ -21,6 +21,7 @@ VAR topicsDiscussed = 0
 
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
+EXTERNAL GetStringValue(name)
 
 # Load @ story_charlotte   # Play : play_music_charlotte_2
 
@@ -137,7 +138,7 @@ We spend the next hour talking about different tips and tricks for changing your
 }
 [Charlotte] "When I refer to protocol, I refer to the set of social rules by which a given group operates." # Charlotte = Calm
 [{player_name}] "Like `Don't chew with your mouth open` and stuff?"
-My mom used to nail me for that one when I was little.
+My {GetStringValue("Guardian")=="parents":mom|{GetStringValue("Guardian")=="brother":brother|sister}} used to nail me for that one when I was little.
 [Charlotte] "Exactly. I imagine most groups share that particular rule."
 "The most significant `rookie mistake` is to treat etiquette as a monolith, when in actuality protocol shifts between different environments."
 "In the early years of my own etiquette training, I would chastise others for disregarding rules that I believed to be protocol."

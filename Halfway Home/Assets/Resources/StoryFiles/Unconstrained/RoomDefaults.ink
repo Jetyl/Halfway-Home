@@ -54,7 +54,7 @@ EXTERNAL GetHour()
 // Reduce Stress, Remove Fatigue, Increase depression
 // Recover for the next day. The isolation reminds you of a darker time.
 In need of a break, I stumble into my room. #Skip // It would be great to have choice locks here
-+[Relax]
++[Relax<(fatigue<80)>]
 I'm not ready to sleep. I just need a moment to myself to... #Skip
 	++[Read]
 		I take out <>
@@ -75,25 +75,25 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 	--<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. {SetTimeBlock(1)} # Stress -= 20
 	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
 	<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
-+[Sleep]
++[Sleep<(fatigue>50)>]
 	I decide I might as well hit the hay.
 	~ temp new_fatigue = "none"
 	{
 		- fatigue > 80:
 			I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
-			I feel myself begin to drift off almost immediately. # Sleep % 8
+			I feel myself begin to drift off almost immediately. # Background / Dream, EyeClose # Sleep % 8
 
 		- fatigue < 70: 
 			I don't feel quite tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
 			I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
 			I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
-			After what seems like a timeless eternity, sleep finally takes me. # Sleep % 8
+			After what seems like a timeless eternity, sleep finally takes me. # Background / Dream, EyeClose # Sleep % 8
 		- else:
 			I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
 			I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
-			I feel hopeful as I surrender myself to sleep. # Sleep % 8
+			I feel hopeful as I surrender myself to sleep. # Background / Dream, EyeClose # Sleep % 8
 	}
-	I wake up feeling <> # Play : Play_music_placeholder_main   # music_vol | -6
+	I wake up feeling <> # Background / YourRoom, EyeOpen # Play : Play_music_placeholder_main   # music_vol | -6
 	{shuffle:
 		-completely reinvigorated.
 		-groggy.
@@ -141,8 +141,8 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 				The Voices have left me alone for a while. 
 				I intend to keep it that way.
 			- else:
-				My dad used to tell me that if you want something to become a habit you have to do it even when it doesn't seem necessary.
-				I'm pretty sure he was talking about car maintenance, but I feel like it applies to socializing, too.
+				My {GetStringValue("Guardian")=="parents":dad|{GetStringValue("Guardian")=="brother":brother|sister}} used to tell me that if you want something to become a habit you have to do it even when it doesn't seem necessary.
+				I'm pretty sure {GetStringValue("Guardian")=="sister":she|he} was talking about car maintenance, but I feel like it applies to socializing, too.
 		}
 }
 {
