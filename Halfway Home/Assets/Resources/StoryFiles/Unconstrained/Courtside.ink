@@ -611,7 +611,7 @@ I sit alone for a while, replaying the conversation in my mind.
 === Ignored ===
 =TimWon
 [Timothy] "I... I actually did it!" # Basketball / HeadHappy
-[{player_name}] "You actually did. I told you you could do it."
+[{player_name}] "You actually did. I told you you could do it." #Acheivment * ACH_LOSE
 {-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
 [Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} // +2 TP
 ->Ignored.Conclusion

@@ -392,7 +392,7 @@ Eduardo gets up, and begins to pat himself down. #Background / Artroom #Eduardo 
 	-GetValue("ConvincedEduardoBefore"):
 	"Thanks, for caring about us."
 	-else:
-	"Thanks, for caring about us." #expression+++ #Acheivment * ACH_EDUARDO
+	"Thanks, for caring about us." #expression+++ 
 }
 Eduardo leaves, seemingly more tempered that when I walked in. #Eduardo = Exit
 ~SetValue("Convinced Eduardo", true)

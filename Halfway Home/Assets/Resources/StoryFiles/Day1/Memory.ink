@@ -17,7 +17,7 @@ VAR depression = 0
 VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
-VAR Test = false
+VAR Help = 0
 
 EXTERNAL SetPlayerGender(gender)
 EXTERNAL GetPlayerName()
@@ -28,6 +28,7 @@ EXTERNAL SetIntValue(name, int)
 EXTERNAL GetIntValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
+EXTERNAL UnlockAchievement(tag)
 
 // TESTING IF MAIN MENU BANK IS UNLOADED
 // Trying to play main menu music... # Play : play_music_mainmenu
@@ -63,6 +64,11 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 	->Start.Introductions
 +[Wait]
 	[Max>Janitor?] "{Hang on, I'll get it...|It'll come to me...|I was JUST looking at it...|It's on the tip of my tongue...|I remember it started with... wait, or did it?|...}" # Skip
+	~Help += 1
+	{
+		-Help == 5:
+			~UnlockAchievement("ACH_HELP")
+	}
 	->Start.NameEntry
 =Introductions
 [Max>Janitor?] "{player_name}! That was it!"

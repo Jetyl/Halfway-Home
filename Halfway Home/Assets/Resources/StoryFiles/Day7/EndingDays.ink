@@ -589,5 +589,5 @@ I think about that question as I get into the back seat of the car.
 		I look back out at the Sunflower House as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
 }
 "It wasn't exactly what I expected, but... I think it was pretty good." // Could we give the player a choice here?
-"Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0
+"Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0 #Acheivment * ACH_END
 ->->

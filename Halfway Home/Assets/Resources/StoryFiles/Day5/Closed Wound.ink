@@ -73,7 +73,7 @@ That damn letter is the root of so much pain.
 -> Unlocked.Enter
 
 = Enter
-I slide the key into the lock and the door swings open.
+I slide the key into the lock and the door swings open. #Acheivment * ACH_KEY
 I step inside, gently nudging the door closed behind me. # Wound / Down, Blackwipe
 -> ClosedWound
 

@@ -51,7 +51,7 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   #Background / YourRoom, eyeopen   # SFX : play_sfx_human_knock
 		What do they want?
 	- week == 2:
-		I wake with a start. # Stress => 10  # Depression => 25  # Fatigue => 15 # Background / YourRoom, EyeOpen
+		I wake with a start. # Stress => 10  # Depression => 25  # Fatigue => 15 # Background / YourRoom, EyeOpen #Acheivement * ACH_WEEK
 		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
 		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
 		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
