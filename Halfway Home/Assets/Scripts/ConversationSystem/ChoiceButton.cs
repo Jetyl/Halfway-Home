@@ -85,13 +85,23 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was successfull
     void ChoiceUnlocked(string type, string high_low)
     {
-        //turn on unlock icon
-        LockSprite.sprite = UnlockedImage;
         //turn on tooltip
         LockingActive = true;
 
+        for (var i = 0; i < Enum.GetValues(typeof(Personality.Wellbeing)).Length; ++i)
+        {
+            if (Enum.GetName(typeof(Personality.Wellbeing), (Personality.Wellbeing)i).ToLower() == type.ToLower())
+            {
+                LockingActive = false;
+                break;
+            }
 
+        }
 
+        //turn on unlock icon
+        if (LockingActive)
+            LockSprite.sprite = UnlockedImage;
+        
         Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
     }
 
@@ -218,9 +228,9 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 if (int.TryParse(cutz[1], out val))
                 {
                     if (CheckCondition(encoded, comps, val))
-                        ChoiceUnlocked(encoded, TooLowerTooHigh(encoded, true));
+                        ChoiceUnlocked(encoded, TooLowerTooHigh(encoded, true, comps));
                     else
-                        ChoiceLocked(encoded, TooLowerTooHigh(encoded, false));
+                        ChoiceLocked(encoded, TooLowerTooHigh(encoded, false, comps));
 
                     return encoded;
                 }
@@ -231,8 +241,12 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         return encoded;
     }
 
-    string TooLowerTooHigh(string key, bool comp)
+    string TooLowerTooHigh(string key, bool comp, string tag)
     {
+        bool lessthan = false;
+
+        if (tag == "<" || tag == "<=")
+            lessthan = true;
 
         for (var i = 0; i < Enum.GetValues(typeof(Personality.Social)).Length; ++i)
         {
@@ -248,13 +262,24 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         }
 
-
-        if (comp)
+        if(lessthan)
         {
-            return "high, nocolor";
+            if (comp)
+            {
+                return "low, nocolor";
+            }
+            else
+                return "high, nocolor";
         }
         else
-            return "low, nocolor";
+        {
+            if (comp)
+            {
+                return "high, nocolor";
+            }
+            else
+                return "low, nocolor";
+        }
 
     }
 
