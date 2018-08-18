@@ -477,7 +477,7 @@ public class Game
             return "";
     }
 
-    public bool UnlockAchievment(string Achievment_ID)
+    public bool UnlockAchievement(string Achievment_ID)
     {
         Steamworks.SteamUserStats.SetAchievement(Achievment_ID);
         return Steamworks.SteamUserStats.StoreStats();

@@ -62,7 +62,7 @@ I decide to go over there, and see how they are doing.
 		oh you know, stuck in a time loop for who knows what reason! nothing major.
 		Actually, should I try to explain things to them? #Skip
 }
-+[Yes <Expression>]
++[Yes <(Expression)>]
 	I decided to try and explain the surreal circumstances of my situation to the two of them.
 	{
 		-expression > 5:
@@ -173,7 +173,7 @@ Isaac appears to be able to completely ignore Eduardo in an instant. Instead he 
 [Timothy] "It's okay."
 [Isaac] "Isaac. Isaac Avidan."
 [Timothy] "Huh?"
-[Isaac] "My name. If it wasn't said already. Which is was. Never mind."
+[Isaac] "My name. If it wasn't said already. Which it was. Never mind."
 "..."   # Play : Stop_All
 [Timothy] "..."
 [{player_name}] "..."

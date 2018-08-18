@@ -559,7 +559,7 @@ Timothy Runs up behind me, waving a piece of paper in his hands. #dyed = Surpris
 Timothy holds out the piece of paper.
 "I'm n-not a very good artist, but I w-wanted to make you something, so..." #dyed =afraid
 ... #all = exit #Background / TimothysDrawing, crossfade
-Its not anything amazing, artistically speaking, but that doesn't matter. I can't help but grin from ear to ear.
+Its not anything amazing, artistically speaking, but that doesn't matter. I can't help but grin from ear to ear. #Acheivment * ACH_DRAW
 [{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
 [Dyed>Timothy] "R-Really?" #Dyed = Happy
 Before I can say anymore, Timothy leaps forward, giving me a bear hug. #Dyed = Close

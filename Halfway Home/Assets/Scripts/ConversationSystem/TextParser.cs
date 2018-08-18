@@ -291,6 +291,11 @@ public static class TextParser
 
         text = text.Replace("`", "\"");
 
+        var relive = new Regex(Regex.Escape("'"));
+        text = relive.Replace(text, "‘", 1);
+        
+        
+
         
         //color stuff
         text = text.Replace("color_wellbeing_relief", "1FD118");
