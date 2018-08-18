@@ -228,4 +228,5 @@ Isaac responds as if he can read my mind.
 <i>Yikes</i> that's cheesy.
 Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him.
 Relationships are weird. #Needy = Exit
+<color=color_descriptor><i>See such an open display of affection has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 ->->

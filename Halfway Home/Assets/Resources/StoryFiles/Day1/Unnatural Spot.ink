@@ -320,6 +320,7 @@ Timothy gives me a cute, crooked smile as he gets up from the dirt patch. {SetVa
 {
 	-GetValue("Tutorial"):
 		Our little game finished, we head off to the next stop on the tour. #Timothy = Exit
+		<>@The brief stop to reflect has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
 	-else:
 		I spend the remainder of the hour showing Timothy around the gardens, thinking about how hectic things are probably going to get soon. #Timothy = Exit
 		<>@Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
