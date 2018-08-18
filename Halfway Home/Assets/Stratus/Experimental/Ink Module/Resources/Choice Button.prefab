@@ -343,7 +343,7 @@ MonoBehaviour:
       m_NormalColor: {r: 0.859, g: 0.20100603, b: 0.6313343, a: 1}
       m_HighlightedColor: {r: 0.678, g: 0.15789041, b: 0.49843803, a: 1}
       m_PressedColor: {r: 0.85882354, g: 0.2, b: 0.6313726, a: 1}
-      m_DisabledColor: {r: 0.85882354, g: 0.52302355, b: 0.7428924, a: 0.8235294}
+      m_DisabledColor: {r: 0.85882354, g: 0.52156866, b: 0.52156866, a: 0.8235294}
       m_ColorMultiplier: 1
       m_FadeDuration: 0.1
   - tag: grace
@@ -351,7 +351,7 @@ MonoBehaviour:
       m_NormalColor: {r: 0.859, g: 0.80504453, b: 0.20100598, a: 1}
       m_HighlightedColor: {r: 0.678, g: 0.63598555, b: 0.15789045, a: 1}
       m_PressedColor: {r: 0.85882354, g: 0.8056038, b: 0.2, a: 1}
-      m_DisabledColor: {r: 0.85882354, g: 0.83169764, b: 0.52302355, a: 0.8235294}
+      m_DisabledColor: {r: 0.85882354, g: 0.52156866, b: 0.52156866, a: 0.8235294}
       m_ColorMultiplier: 1
       m_FadeDuration: 0.1
   - tag: awareness
@@ -359,7 +359,7 @@ MonoBehaviour:
       m_NormalColor: {r: 0.20100598, g: 0.84715605, b: 0.859, a: 1}
       m_HighlightedColor: {r: 0.15789045, g: 0.664961, b: 0.678, a: 1}
       m_PressedColor: {r: 0.2, g: 0.84230703, b: 0.85882354, a: 1}
-      m_DisabledColor: {r: 0.52302355, g: 0.85040516, b: 0.85882354, a: 0.8235294}
+      m_DisabledColor: {r: 0.85882354, g: 0.52156866, b: 0.52156866, a: 0.8235294}
       m_ColorMultiplier: 1
       m_FadeDuration: 0.1
   - tag: fatigue
