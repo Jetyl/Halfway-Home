@@ -121,7 +121,9 @@ Trissa turns to look at me and lowers her voice to speak privately. # Trissa = c
 "Anyways, I gotta run. Take care y'all!" # Trissa = center
 [Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
-[Timothy] "Uh... where to next?" # Charlotte = Exit # Timothy = Exit
+I can't help but be impressed by Charlotte's etiquette. I need to get better at that. # Charlotte = Exit
+<color=color_descriptor>Charlotte's example has <color=grace>increased grace faintly<color=color_descriptor>.</color># grace+
+[Timothy] "Uh... where to next?" # Timothy = Exit
 -> END
 
 === NoTimothy ===

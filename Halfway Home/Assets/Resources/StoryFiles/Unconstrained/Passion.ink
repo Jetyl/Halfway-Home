@@ -77,61 +77,73 @@ I don't think I've played around with rocks and stuff since I was a kid...
 -> Questions
 
 === Questions ===
-*[Ask about Timothy's maps]
-	[{player_name}] "You make your own maps? That's really cool."
-	[Timothy] "You think so?" # Timothy = Happy
-	[{player_name}] "Yeah. I've never heard of anybody doing that, really."
-	"I mean, I know people make maps. Like, obviously somebody does. Just no one I've ever met."
-	[Timothy] "I guess I'm pretty weird." # Timothy = Sad
-	"But I'm glad to hear you think it's cool! I'm kind of really into cartography." # Timothy = Happy
-	"It takes a lot to make a good map, you know."
-	Timothy gains confidence as he speaks.
-	"A lot of people think it's just drawing some lines on paper and... well, technically it is, but..." # Timothy = Angry
-	"If you're mapping a real place you have to collect a ton of data!"
-	"You have to survey the land and measure distances. It takes rigorous calculation!"
-	"And that doesn't even begin to capture the spirit of it! Old school cartographers were scouts and adventurers!"
-	"They sailed the oceans just to be the first to chart a course from one land to the next!" # Timothy = Happy
-	"They climbed mountains for the honor of recording the view for all time."
-	"It's a lot less exciting now days, but you can feel that history when you look at a map, ya know? I do, anyway..."
-	"Next to them, my maps are really inconsequential. I mostly just make stuff up."
-	"It takes a lot to do that, too, but it's not the same."
-	"Although I like to practice by recreating maps other people made. Like this one." #Skip
-	-> Questions
-*[Ask what place this is a map of]
-	[{player_name}] "So what's this a map of, then?"
-	[Timothy] "Uh! Okay, this is also a bit embarrassing... but you already promised not to laugh, so..."
-	"It's a map of `Miorath`. <size=80%>It's the name of the fantasy world in the... uh...<size=50%> `Empire of Twilight` series... which is...<size=40%> my favorite.<size=100%>
-	[{player_name}] "I've heard of that series. {Isn't some company making it into a game?|Some company made it into a game, right?}"
-	[Timothy] "{Uh. I mean, they did.|Yeah.} It came out last year, but it was only okay." # Timothy = Surprised
-	{Last year? I can never seem to keep up with the outside.|It's staggering just how much you miss living under a rock for six years.}
-	[Timothy] "It was a pretty bland action game. You never even got to see the map, which is the worst mistake I think." # Timothy = Angry
-	"The coolest part of Empire is the world and they barely showed it at all!"
-	Timothy seems more confident when talking about something he cares about.
-	"Like, see this mountain here?"
-	He gestures to a pointy rock on a raised mound of dirt.
-	"That's Ironcrown Peak. It was raised from the earth by the Forge God in ancient times to shelter and provide raw materials for his worshipers." # Timothy = Happy
-	"The top was sheared clean off by the Sky Dragon in the second book, so the Forge God's disciples rebuilt the peak out of solid iron."
-	[{player_name}] "Cool."
-	[Timothy] "Or this valley..."
-	He points to a patch of grass between three piles of pebbles.
-	"In the first age it was known as Alessa's Field after the conquerer who subdued the surrounding tribes."
-	"When her nation fell apart in civil war it became known as the Crimson Field for all the fighting that took place there."
-	"Now it's called the Field of the Fallen, where every full moon the ghosts of a dozen armies reenact battles long past."
-	Wow, Timothy is really into this.
-	He goes on for another solid minute, diving into the history of each twig and stone.
-	"Anyway, the game totally missed all that and it was tragic." # Timothy = Sad
-	"Oh! Oh, <jitter>I've totally been ranting, huh?</jitter>" # Timothy = Afraid
-	Timothy's confidence drains out of him.
-	"S-Sorry."
-	[{player_name}] "Hey, no worries. It's interesting stuff."
-	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad #Skip
-	-> Questions
++{Maps<Cartography}[Ask about Timothy's maps] -> Maps -> Questions
++{Empire<Cartography}[Ask what place this is a map of] -> Empire -> Questions
 * ->
 	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
 		-else: -> Hobbies
 	}
+
+= Maps
+[{player_name}] "You make your own maps? That's really cool."
+[Timothy] "You think so?" # Timothy = Happy
+[{player_name}] "Yeah. I've never heard of anybody doing that, really."
+"I mean, I know people make maps. Like, obviously somebody does. Just no one I've ever met."
+[Timothy] "I guess I'm pretty weird." # Timothy = Sad
+"But I'm glad to hear you think it's cool! I'm kind of really into cartography." # Timothy = Happy
+"It takes a lot to make a good map, you know."
+Timothy gains confidence as he speaks.
+"A lot of people think it's just drawing some lines on paper and... well, technically it is, but..." # Timothy = Angry
+"If you're mapping a real place you have to collect a ton of data!"
+"You have to survey the land and measure distances. It takes rigorous calculation!"
+"And that doesn't even begin to capture the spirit of it! Old school cartographers were scouts and adventurers!"
+"They sailed the oceans just to be the first to chart a course from one land to the next!" # Timothy = Happy
+"They climbed mountains for the honor of recording the view for all time."
+"It's a lot less exciting now days, but you can feel that history when you look at a map, ya know? I do, anyway..."
+"Next to them, my maps are really inconsequential. I mostly just make stuff up."
+"It takes a lot to do that, too, but it's not the same."
+{Maps == Empire:
+	"Although I like to practice by recreating maps other people made. Like this one."
+-else:
+	"Although I like to practice by recreating maps other people made. Like this one." #Skip
+}
+->->
+
+= Empire
+[{player_name}] "So what's this a map of, then?"
+[Timothy] "Uh! Okay, this is also a bit embarrassing... but you already promised not to laugh, so..."
+"It's a map of `Miorath`. <size=80%>It's the name of the fantasy world in the... uh...<size=50%> `Empire of Twilight` series... which is...<size=40%> my favorite.<size=100%>
+[{player_name}] "I've heard of that series. {Isn't some company making it into a game?|Some company made it into a game, right?}"
+[Timothy] "{Uh. I mean, they did.|Yeah.} It came out last year, but it was only okay." # Timothy = Surprised
+{Last year? I can never seem to keep up with the outside.|It's staggering just how much you miss living under a rock for six years.}
+[Timothy] "It was a pretty bland action game. You never even got to see the map, which is the worst mistake I think." # Timothy = Angry
+"The coolest part of Empire is the world and they barely showed it at all!"
+Timothy seems more confident when talking about something he cares about.
+"Like, see this mountain here?"
+He gestures to a pointy rock on a raised mound of dirt.
+"That's Ironcrown Peak. It was raised from the earth by the Forge God in ancient times to shelter and provide raw materials for his worshipers." # Timothy = Happy
+"The top was sheared clean off by the Sky Dragon in the second book, so the Forge God's disciples rebuilt the peak out of solid iron."
+[{player_name}] "Cool."
+[Timothy] "Or this valley..."
+He points to a patch of grass between three piles of pebbles.
+"In the first age it was known as Alessa's Field after the conquerer who subdued the surrounding tribes."
+"When her nation fell apart in civil war it became known as the Crimson Field for all the fighting that took place there."
+"Now it's called the Field of the Fallen, where every full moon the ghosts of a dozen armies reenact battles long past."
+Wow, Timothy is really into this.
+He goes on for another solid minute, diving into the history of each twig and stone.
+"Anyway, the game totally missed all that and it was tragic." # Timothy = Sad
+"Oh! Oh, <jitter>I've totally been ranting, huh?</jitter>" # Timothy = Afraid
+Timothy's confidence drains out of him.
+"S-Sorry."
+[{player_name}] "Hey, no worries. It's interesting stuff."
+{Maps == Empire:
+	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad
+-else:
+	[Timothy] "Yeah. I wish the maps I made were half as good." # Timothy = Sad #Skip
+}
+->->
 
 === Conviction ===
 There's something else...
