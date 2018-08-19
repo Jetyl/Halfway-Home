@@ -60,7 +60,7 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 		I take out <>
 		{GetStringValue("BookGenre")!="":
 			the book Charlotte gave me.
-			I {start reading and it's actually pretty good so far|continue reading where I left off|think I'm getting close to the end now|finally finish it. She wasn't kidding. It was one of the better {GetStringValue("BookGenre")} works I've read. Not that I'm an expert}.
+			I {start reading and it's actually pretty good so far|continue reading where I left off|think I'm getting close to the end now|finally finish it. She wasn't kidding. It was one of the better {GetStringValue("BookGenre")} works I've read. Not that I'm an expert|Then I remember that I already finished it and start another book instead}.
 		-else:
 			a book from the library. I spend a while reading it, but eventually lose interest.
 			I guess I'll try a new one next time I feel like reading.

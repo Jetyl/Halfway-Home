@@ -122,7 +122,7 @@ Trissa turns to look at me and lowers her voice to speak privately. # Trissa = c
 [Charlotte] "It would be wise for me to take my leave as well." # Trissa = Exit
 [Charlotte] "I am very pleased to have made your acquaintance, Timothy. It was nice to see you as well, {player_name}."
 I can't help but be impressed by Charlotte's etiquette. I need to get better at that. # Charlotte = Exit
-<color=color_descriptor>Charlotte's example has <color=grace>increased grace faintly<color=color_descriptor>.</color># grace+
+<color=color_descriptor>Charlotte's example has <color=color_grace>increased grace faintly<color=color_descriptor>.</color># grace+
 [Timothy] "Uh... where to next?" # Timothy = Exit
 -> END
 
@@ -155,5 +155,6 @@ Charlotte exhales gently and her demeanor relaxes considerably. # Charlotte = Ca
 She really doesn't remember, huh?
 [{player_name}] "Yeah. Nice seeing you, too. Bye!"
 Charlotte exits the room gracefully. # Charlotte = Exit
+<color=color_descriptor>Charlotte's example has <color=color_grace>increased grace faintly<color=color_descriptor>.</color># grace+
 I don't have any reason to be in here either. I wait a minute so it doesn't seem like I'm following her and then walk out of the room.
 -> END
