@@ -306,10 +306,10 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 		[Timothy] "<jitter>Oh no! I couldn't do it!</jitter>" # Basketball / HeadVeryNervous
 		[{player_name}] "Take it easy, man. It just means you get a letter. In this case, <>
 			{
-				-gameName=="PIG":`P
-				-gameName=="DOG":`D
-				-gameName=="CAT":`C
-				-gameName=="RAT":`R
+				-gameName=="PIG":`P`
+				-gameName=="DOG":`D`
+				-gameName=="CAT":`C`
+				-gameName=="RAT":`R`
 			}
 			<>."
 		[Timothy] "Of course. Sorry." # Basketball / HeadCalm
@@ -321,10 +321,10 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 		~timLetters = timLetters + 1
 		[Timothy] "Not again! Now I've got <> # Basketball / HeadVeryNervous
 			{
-				-gameName=="PIG":`PI
-				-gameName=="DOG":`DO
-				-gameName=="CAT":`CA
-				-gameName=="RAT":`RA
+				-gameName=="PIG":`PI`
+				-gameName=="DOG":`DO`
+				-gameName=="CAT":`CA`
+				-gameName=="RAT":`RA`
 			}
 			<>!"
 		{
@@ -544,10 +544,10 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 				[Timothy] "So do I win?"
 				[{player_name}] "You win this round, yeah. But not the game. I've only got one letter:<>
 				{
-					-gameName=="PIG":`P
-					-gameName=="DOG":`D
-					-gameName=="CAT":`C
-					-gameName=="RAT":`R
+					-gameName=="PIG":`P`
+					-gameName=="DOG":`D`
+					-gameName=="CAT":`C`
+					-gameName=="RAT":`R`
 				}
 				<>."
 				[Timothy] "Oh, right."

@@ -121,7 +121,7 @@ Trissa is chatting up Jesse and John at the center table.
 	-else:
 		Eduardo and Isaac are surprisingly not sitting nearby each other, but on near opposite ends of the room.
 }
-[Max] "We've got your throne all ready, sire." # Max = Happy
+[Max] "We've got your throne all ready, your majesty." # Max = Happy
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
 [Max] "I'll grab you some food!" #Max = Exit
@@ -132,7 +132,7 @@ I take my seat at the center table, remembering how, less than a week ago, Timot
 [{player_name}] "I don't mind at all."
 [Max] "Thanks for being so cool about... well, everything." # Max = Happy
  "Timothy might not have had the chance to thank you today, but I know he appreciated what you did for him." # Max = Sad
-"Anyway, time for the toast." # Max Calm
+"Anyway, time for the toast." # Max = Calm
 "Ladies, gentlemen, and everyone in between, may I have your attention?"
 The cafeteria's ambient babble slowly subsides into silence. Max looks over an index card before shoving it in their pocket.
 "It's been a rough week for many of us, I know."
@@ -176,7 +176,7 @@ Eduardo just sort of shuffles around, not sure what else to say. #Skip
 	[{player_name}] "You seem pretty down, man..."
 	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
 	"I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more." # Eduardo = Angry
-	"And ole' Timmy I..."
+	"And ole' Timmy, I..."
 	"I kind of blew up at him the other day." # Eduardo = Sad
 	"I can't really do anythin' right."
 	"But this isn't your problem, eh? You've got the whole world waiting for you. Come back and visit, okay?." 

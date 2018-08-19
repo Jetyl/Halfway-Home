@@ -165,7 +165,7 @@ It's{... different... from what my life has been these past many years|surreal a
 
 ===Breakdown===
 [Eduardo] "Hey, Tim-Tim! What do you think?" #Max = Exit #Trissa = Exit #Charlotte = Exit #Isaac = Exit #Timothy=Sad # Play : stop_music_tension_intro_02
-Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit # music_tension_state ! 0
+Timothy stays quiet, but Eduardo doesn't seem to notice. #Eduardo=Exit # music_tension_state ! 0
 [{player_name}] "Hey, Timothy." #Skip
 + [You okay?]
 	"You okay?"
@@ -174,7 +174,7 @@ Timothy stays quiet, But Eduardo doesn't seem to notice. #Eduardo=Exit # music_t
 -[Timothy] "..." #Breakdown / Open
 Timothy doesn't respond. I turn to face him. # play : play_music_tension_intro_03
 //In fact, looking at Timothy, I notice a handful of things off.  (Do-nothing sentence)
-He doesn't seem to be looking at anything in particular and he's visibly shaking slightly. # play : play_music_tension
+He doesn't seem to be looking at anything in particular and he's visibly shaking. # play : play_music_tension
 [{player_name}] "Man, are you okay?"
 Timothy looks vaguely in my direction and outstretches his hand. #Breakdown / Next
 His hand clasps onto my arm with the shaky, ironclad grip of desperation. I feel his racing heartbeat through his palm.
@@ -183,16 +183,16 @@ With his free hand he clutches onto his shirt.
 /*all these little tiny actions I pick up, draw my mind to a conclusion that */{Something is happening to Timothy|It's happening again}.
 {	
 	-week >= 2:
-		Not Again!
+		Not again!
 	-else:
-		A Panic Attack?!
+		Is this a panic attack?!
 }
 "Uh, M-Max? Max?" # music_tension_state ! 1
 No one seems to hear my weak call over the chatter and laughter.
 I... #Skip
-+[Speak Louder<Expression>]->ACallForHelp
++[Speak Louder<(Expression)>]->ACallForHelp
 +[Go Up and Grab Max] ->ForcefulAssistence
-+[Help Timothy Yourself<grace>] ->HowDoIComfort
++[Help Timothy Yourself<(grace)>] ->HowDoIComfort
 
 ===ACallForHelp===
 ~tried_expression = true
@@ -229,26 +229,26 @@ I... #Skip
 
 ===ForcefulAssistence===
 I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
-His grip tightens, as his eyes begin to water. @I can't leave Timothy here.
+His grip tightens as his eyes begin to water. @I can't leave Timothy here.
 I... #Skip
-+{tried_expression == false}[Shout to get Max's attention<expression>]->ACallForHelp
++{tried_expression == false}[Shout to get Max's attention<(expression)>]->ACallForHelp
 +[Force Timothy to Let Go]->BreakPoint
-+{tried_grace == false}[Stay Beside Timothy<grace>] ->HowDoIComfort
++{tried_grace == false}[Stay Beside Timothy<(grace)>] ->HowDoIComfort
 
 
 ===BreakPoint===
 I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 4
 I try to get up, and get Max. @@To get away from all of this.
-I Pull my arm, to try and free it from Timothy's Vice-like grip, but to no avail.
+I pull my arm, to try and free it from Timothy's Vice-like grip to no avail.
 He doesn't seem to want to let go.
-To free myself, I pry my finger's underneath his palm, and peel his finger's off me.
+To free myself, I pry my fingers underneath his palm, and peel his fingers off me.
 His arms are noticeably shaking now.
 I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Background / Kitchen
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Happy, Stage_right, right 
-[Max] "yo! {player_name}, what's up?"
-[{player_name}] "It's Timothy. He-He's acting weird, and not responding. I-I think something wrong!"
+[Max] "Yo! {player_name}, what's up?"
+[{player_name}] "It's Timothy. He-He's acting weird... and not responding. I-I think something wrong!"
 [Max] "What?!" #Max=Surprised
-Max darts past me to where Timothy is sitting in a speed quite frightening for someone their size. #Max=Exit
+Max darts past me to where Timothy is sitting at a speed quite frightening for someone their size. #Max=Exit
 ->MoodKiller
 
 ===HowDoIComfort===
@@ -287,22 +287,22 @@ I choose to stay beside Timothy and attempt to help him through this.
 
 ===MoodKiller===
 My attention draws back to crowd of people around me. # play : Stop_All #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy, Stage_center
-[Charlotte] "It was a rather humorous endeavor. hm?" #Charlotte=Calm
+[Charlotte] "It was a rather humorous endeavor. Hm?" #Charlotte=Calm
 "Why'd everyone get so quiet?"
-[Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-"
+[Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-" #skip
 Isaac jabs his boyfriend in the gut. #Isaac=Angry
 [Isaac] "We're going. Gotta talk." #Isaac=Exit #Eduardo=Exit
 Isaac drags Eduardo out of the cafe in a huff.
-[Trissa] "man, that sucks." #Trissa=Sad
-"Well. I'm out. See you at dinner." #Trissa=Exit
+[Trissa] "Man, that sucks." #Trissa=Sad
+"I'm out. See you at dinner." #Trissa=Exit
 [Charlotte] "But, what... what just happened?"
-"{player_name}, Tell me what just happened?" #Charlotte = left
+"{player_name}, tell me... what just happened?" #Charlotte = left
 [{player_name}] "..." #Skip
 +[I messed up.]
 	"I messed up. I messed everything up."
 +[Timothy broke.]
 	"Timothy broke."
--I slump, as I get up out of my chair, and towards the door.
+-I slump forward out of my chain and stagger towards the door.
 "I messed up..."
 [Charlotte] "Sorry, what do you mean by that?"
 I walk away from cafe. #Charlotte=Exit

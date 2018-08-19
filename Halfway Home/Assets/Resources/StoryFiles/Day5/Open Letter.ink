@@ -61,22 +61,22 @@ I walk into the common area, which is currently host to decently sized gathering
 Max appears to be the center of attention, holding a small stack of envelopes in their hands. #Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
 {Oh, it must be mail call. Max usually does those on weekends.|Mail time again.}
 [Max] "Ah, {player_name}, there you are. I'm just doin' a mail call." #Charlotte = exit #Trissa = exit #Eduardo = exit #Isaac = exit
-"The front desk has been siting on these letters for a while. Some people haven't been picking up their mail..."
+"The front desk has been sitting on these letters for a while. Some people haven't been picking up their mail..."
 Max casts an exasperated look at Eduardo. # Max = Angry
 "So I'm just handing them all out now!" # Max = Happy
 "Speaking of which..." #Eduardo = Calm, stage_left, left
-"Here ya go Eddy!" #Eduardo = Surprised, right
+"Here ya go, Eddy!" #Eduardo = Surprised, right
 [Eduardo] "Wah!" #Eduardo = exit
 Max thrusts a heap of letters onto a startled Eduardo. Wow, his mail made up more than 60% of the stack.
 [{player_name}] "Who are those letters from?" #Max = exit #Eduardo = Calm #Isaac = Calm
 [Eduardo] "Eh, my familia, probably. They are very old fashioned. They <i>have</i> my number. They <i>could</i> just call me."
 [Isaac] "Maybe they don't want to listen to you." // Formerly "talk with you"
-[Eduardo] "Isaaaaaac!" #Eduardo = Surprised
+[Eduardo] "<flow>Isaaaaaac!</flow>" #Eduardo = Surprised
 [Max] "And Isaac, here's yours. They also seem to be from your folks." #Max = Calm, stage_right, left #Isaac = Surprised, right #Eduardo = exit
 Max hands Isaac about half of the remaining mail.
-[Isaac] "Oh. Um" #Isaac = Afraid
+[Isaac] "Oh. Um." #Isaac = Afraid
 "Thanks."
-[Max] "No problem-o buddy." #Max = Happy # Isaac = Exit
+[Max] "No problemo, buddy." #Max = Happy # Isaac = Exit
 "Anyways... Charlotte!" #Max = Calm, stage_center, right #Charlotte = Calm, stage_right, left
 "Oh, um... I guess I don't have any mail for you." #Max = Surprised
 [Charlotte] "That is to be expected. I check the front desk everyday in my routine." #Max = Calm, stage_left #Charlotte = stage_center
@@ -125,7 +125,7 @@ Should I follow him? #Skip
 */
 
 ===IgnorantBliss===
-Most everyone from the 2nd floor has scattered, leaving the regulars lounging around. #Charlotte = calm, right, far #Trissa = calm, far #Eduardo = angry, far #Isaac = sad, far
+Most everyone from the second floor has scattered, leaving the regulars lounging around. #Charlotte = calm, right, far #Trissa = calm, far #Eduardo = angry, far #Isaac = sad, far
 I should go talk to... #Skip
 +[Charlotte]
 	->CharlotteTalk
@@ -142,15 +142,15 @@ Before I can do anything, Max strides up to me with a small handful of letters a
 Max's expression fades from anticipation to disappointment.
 "Sorry {player_name}, no letters for you either."
 [{player_name}] "I figured as much." 
-[Max] "Oh well, I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
+[Max] "Oh, well. I suppose your friends and family won't be needing to write you letters anymore anyways." #Max = Happy
 "All that's left is tomorrow and you'll be out of here! Isn't that exciting?"
 [{player_name}] "Yeah, exciting..." #Max = exit
 I force a smile. Why am I not happy about this?
-For some reason Max's words stress me out. @<color=color_descriptor><i>(<color=color_wellbeing_penalty>increased <b>Stress</b> slightly<color=color_descriptor>)</color> #stress += 15
+For some reason Max's words stress me out. @<color=color_descriptor><i>(<color=color_wellbeing_penalty>Increased <b>Stress</b> slightly<color=color_descriptor>)</color> #stress += 15
 ->->
 
 ===SocialHourOver===
-Well, talking to people has gotten me out of my funk, a little at least.  @<color=color_descriptor><i>(<color=color_wellbeing_relief>decreased <b>depression</b> slightly<color=color_descriptor>)</color> #depression -= 15
+Well, talking to people has gotten me out of my funk a little at least.  @<color=color_descriptor><i>(<color=color_wellbeing_relief>decreased <b>depression</b> slightly<color=color_descriptor>)</color> #depression -= 15
 The impromptu social hour seems to die down, as the remaining first-floor residents return to their lives. //else scatters, so I scatter too.
 ->END
 
@@ -182,13 +182,13 @@ I don't really like talking about my past either, so its only fair  @<color=colo
 
 ===EduardoTalk===
 I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Charlotte = exit #Trissa = exit #Isaac = exit
-[Eduardo] "Old, Old, Old."
+[Eduardo] "Old, old, old."
 [{player_name}] "Eduardo are you even reading the letters you got?"
 [Eduardo] "Pfft, no." #Eduardo = Happy
-"most of these are freaking ancient." #Eduardo = angry 
+"Most of these are freaking ancient." #Eduardo = angry 
 {
 	-expression < 3:
-		You know, maybe they wouldn't be old if you actually bothered to pick them up when they arrived. but, whatever.
+		You know, maybe they wouldn't be old if you actually bothered to pick them up when they arrived.
 	-else:
 	[{player_name}] "You know, maybe they wouldn't be old if you actually got them when they got here." #expression ^ good
 	"You know, check the front desk from time to time?"
@@ -199,14 +199,14 @@ I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Cha
 }
 [Eduardo] "There, that's all of them."
 Eduardo gets up, holding only a single letter in his hand.
-"I'mma read these one, since its the most recent."
-Eduardo opens the first one, and begins reading through it.
+"I'mma read this one, since it's the most recent."
+Eduardo opens the first one and begins reading through it.
 His sour mood seems to vanish as he breaks out into a chuckle. #Eduardo = Happy
 [{player_name}] "Something funny?"
 [Eduardo] "Nah. At least, not you."
 "I'm just laughing at 'minha mãe.' My mother, she is... quirky." // Trying to inject some Portugese into Eduardo's speech. Formerly "laughing at my Ma's quirks."
-When he's done reading, he neatly folds the letter into his jacket pocket, and starts walking off. #Eduardo = Calm, right
-"Catch ya later, {player_name}" #Eduardo = exit
+When he's done reading he neatly folds the letter into his jacket pocket and starts walking off. #Eduardo = Calm, right
+"Catch ya later, {player_name}." #Eduardo = exit
 ->SocialHourOver
 
 ===IsaacTalk===

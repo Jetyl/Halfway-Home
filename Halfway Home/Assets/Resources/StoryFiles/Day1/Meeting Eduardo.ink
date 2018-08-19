@@ -89,7 +89,7 @@ I decide to go over there, and see how they are doing.
 			[Eduardo] "That story man! It's hilarious!"
 			No! No its not!
 			"Oh man, thats some grade A material? right Isaac?"
-			[Isaac] "hrm. eh. 7, maybe 8, out of 10. @nothing special."
+			[Isaac] "Hrm. Eh. Seven, maybe eight out of ten. @Nothing special."
 			[Eduardo] "Aw man" #Eduardo = Surprised
 	}
 +[No]
@@ -101,8 +101,11 @@ I decide to go over there, and see how they are doing.
 [Eduardo] "Isaac?!" #Eduardo = Surprised
 "If you didn't think it was funny, why didn't you say anything?"
 [Isaac] "..." #Isaac = Afraid   # Play : Stop_All
-Isaac looks like he wants to say something, but either embarrassed, or afraid to. maybe because I'm here?
-Eduardo either doesn't notice this, or is more focused on that lack of a verbal answer, and begins poking Isaac slightly
+{
+	-grace >= 1:
+		Isaac looks like he wants to say something, but is either embarrassed or afraid to. Maybe because I'm here? #grace ^ good
+		Eduardo either doesn't notice this or is more focused on that lack of a verbal answer and begins poking Isaac slightly.
+}
 [Eduardo] "Isaac, you know if I'm annoying you or something, you can tell me. Right?"
 "Hey, Isaac. Isaac. Isaac?"
 [Isaac] "..."
@@ -116,7 +119,7 @@ Isaac seems to be lost in his own little world right now.
 I try to speak up, hoping maybe one of them will notice I'm still here, and was still talking to them, but to no avail.
 I decide to leave these two weird lovebirds alone, and get going.
 Still, it was an engaging conversation at least.
-<color=A5C5E3FF><i>Your Depression has decreased, slightly!</i></color> #depression -= 15 # All = Exit
+<color=A5C5E3FF><i>Your Depression has decreased slightly!</i></color> #depression -= 15 # All = Exit
 ->END
 
 ===WorkAlone===

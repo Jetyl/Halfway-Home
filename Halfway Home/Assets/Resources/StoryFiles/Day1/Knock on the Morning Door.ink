@@ -197,9 +197,9 @@ A flash of pain slices through my brain. My hands jump to my temples, but the se
 Was last night... really last night?
 The knock on the door.@ Max introducing Timothy as if we'd never met.@ Timothy... here...!
 This can't all be just 'deja vu', can it?
-I think... I think I'm back on the first day Timothy arrived here.@ But how? why?
+I think... I think I'm back on the first day Timothy arrived here.@ But how? Why?
 I flip through my notebook, but all the notes I had taken over the week are gone.
-I'm a week in the past.
+I'm a week in the past!
 "W-why is this happening? @<i>How</i> did this happen?!"
 I rack my brain, desperately searching for any explanation.
 Was it all a dream? // OLD LINE: Maybe the whole last week didn't happen? Maybe it was a dream?
