@@ -47,19 +47,19 @@ EXTERNAL CallSleep()
 }
 
 === SunnyMorning ===
-Its a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
+It's a rather sunny morning, and I decide to head into the art room grab some spare papers to doodle on.
 ~Conviction = 3
 I'm rather surprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
-He's got a bowl of cereal in his hand, siting on the floor and eating.
+He's got a bowl of cereal in his hand, eating on one of the table meant for art.
 [Eduardo] "<flow>Heyo {player_name}</flow>, how's it going!"
-[{player_name}] "Eh, it going." #Skip
+[{player_name}] "Eh, it's going." #Skip
 +[How about you?]
 	"How about you?"
 	[Eduardo] "Freaking fantastic." #Eduardo = Angry
 	[{player_name}] "That's good."
 +[Why are you eating breakfast here?]
 	"Why are you eating breakfast here?"
-	[Eduardo] "eh. do I need a reason?" #Eduardo = Angry
+	[Eduardo] "Eh. Do I need a reason?" #Eduardo = Angry
 	[{player_name}] "I guess not. just weird is all."
 	[Eduardo] "{player_gender == "F": Girl| Man}, I live to be weird!" #Eduardo = Calm
 +[Where's Isaac?]
@@ -96,10 +96,10 @@ He's got a bowl of cereal in his hand, siting on the floor and eating.
 }
 [Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why really. to admire the view of the garden?" #Eduardo = Angry
 "Or maybe this place just reminds me of <flow>Isaac.</flow>" #Eduardo = Calm
-[{player_name}] "uh-huh."
-[Eduardo]"I Really do love him, you know." #Misery / Open, relaxed, dreamy //show CG here.
-"Isaac really does complete me."
-[{player_name}] "sure."
+[{player_name}] "Uh-huh."
+[Eduardo]"I really do love him, you know." #Misery / Open, relaxed, dreamy //show CG here.
+"Isaac just completes me."
+[{player_name}] "Sure."
 Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
 I'm going to need to say something, and quick, before he just goes on for hours, gushing.
 [Eduardo] "I want to be around him all the time, and he wants to be around me all the time."
@@ -125,13 +125,13 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 ===Gushing===
 I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom, NoDefaults #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
 His excessive passion is very inspiring and and increase in <color=color_expression>expression considerably</color>, but it <color=color_wellbeing_penalty>significantly tires you out</color>. #expression++ #fatigue += 20
-when I check the clock, I realize 3 hours have passed #time % 3
-Luckily Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right
-[Isaac] "Oh. what are you two doing?"
+When I check the clock, I realize 3 hours have passed #time % 3
+Luckily, Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right
+[Isaac] "Oh. What are you two doing?"
 [{player_name}] "Oh, nothing. Eduardo's just been talking my ear off about how much he loves you."
-[Isaac] "what." #Isaac = afraid
+[Isaac] "What." #Isaac = afraid
 [Eduardo] "<flow><i>I WUUUUUVVV YOU<i></flow>" #Eduardo = invisible, left, stage_left #Isaac = invisible # Needy = blush
-[Isaac] "hrm."
+[Isaac] "Hrm."
 I use this as the perfect opportunity to leave.
 I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrassed Isaac. # All = Exit
 ->END

@@ -353,6 +353,10 @@
    {
     "Name" : "Max Finds You Up",
     "Type" : 1
+   },
+   {
+    "Name" : "Completed Authority",
+    "Type" : 1
    }
   ]
  },

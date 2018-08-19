@@ -50,14 +50,14 @@ Huh?
 "{player_name}. Get up, ya silly bum."
 In what feels like the blink of an eye, my room is lit with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main
 [Max] "You don't want to sleep in on your last day, now do you?" #Max=Calm
-[{player_name}] "Oh, uh... morning I guess."
+[{player_name}] "Oh, uh... morning, I guess."
 I give a large yawn as I stretch out of bed.
 [Max] "Sleep well? Ya look tired."
 [{player_name}] "Actually... yeah. I think I slept really well." #fatigue => 0
 Not that I wouldn't like to go <i>back</i> to sleep, mind you. 
 Still, I feel very refreshed.
 [Max] "That's great!" #Max=Happy
-"Timothy, how bout you? you sleep well?"
+"Timothy, how 'bout you? You sleep well?"
 Timothy looks dead tired. #Timothy=Sad
 [Timothy] "...Uuuugh"
 [Max] "Oh, sorry little dude."

@@ -47,8 +47,8 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 +[Lie <(expression)>]
 {
 	-expression >= 1:
-		[{player_name}] "No, I didn't just get up. Been chilling in my room all day tho." #expression ^ good
-		[Max] "uh<delay=0.15>-huh." #Max = Angry
+		[{player_name}] "No, I didn't just get up. Been chilling in my room all day though." #expression ^ good
+		[Max] "Uh<delay=0.15>-huh." #Max = Angry
 		I'm not sure if Max actually bought that or not. However...
 	-else:
 		[{player_name}] "Whaaat? Nooo..." #expression ^ poor
@@ -56,9 +56,9 @@ Max (and I know its Max) is hollering concerned, as I slink out of my silken cav
 		"{player_name}, you are still in your PJs."
 		Oh, right. drat.
 }
-- Max just shakes their head, brushing off my laziness, to get to a more important point.
-[Max] "Is Timothy still in here too?"
-I look over at his bed, and yep, he is still there, snoozing it up.
+- Max just shakes their head, brushing off my laziness.
+[Max] "Is Timothy still in here, too?"
+I look over at his bed. @Yep, he's still there, snoozing it up.
 "Hrm..."
 "Timothy? Timothy, wake up now." #Max = Calm, right
 Max instantly switches back to their lax persona as they nudge Timothy awake.
@@ -66,7 +66,7 @@ Max instantly switches back to their lax persona as they nudge Timothy awake.
 "<jitter>Gah! I'm up! I'm up!</jitter>" #Timothy = Surprised
 [Max] "Ha, I gotcha buddy."
 [Timothy] "<jitter>I am so sorry Max! I promise, I'll never sleep in like this again!</jitter>"
-[Max] "Its fine, It's fine Timothy."
+[Max] "It's fine, it's fine."
 [Timothy] "<jitter> I am so sorry...</jitter>"
 Max directs Timothy for his first full day here. #All = exit
 And, on that note, I should probably head out now, before Max remembers I also slept in way late.
