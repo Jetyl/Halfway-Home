@@ -197,8 +197,8 @@ public class HistoryDisplay : MonoBehaviour
         if(eventdata.Speaker != CurrentSpeaker)
         {
             CurrentSpeaker = eventdata.Speaker;
-
-            if (eventdata.Speaker == "")
+            
+            if (eventdata.Speaker.Trim() == "")
             {
                 History += Environment.NewLine;
                 TheLine = "<i>" + TheLine + "</i>";
@@ -219,6 +219,10 @@ public class HistoryDisplay : MonoBehaviour
                 History += Environment.NewLine + Environment.NewLine + TextParser.DynamicEdit(Speaker);
             }
             
+        }
+        if(CurrentSpeaker.Trim() == "")
+        {
+            TheLine = "<i>" + TheLine + "</i>";
         }
 
         History += Environment.NewLine + "<#" + ColorUtility.ToHtmlStringRGBA(Text.color) + ">" + TextParser.DynamicEdit(TheLine);
