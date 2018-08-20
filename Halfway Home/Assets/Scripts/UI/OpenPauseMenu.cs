@@ -17,17 +17,26 @@ public class OpenPauseMenu : MonoBehaviour
     public Button SaveButton;
     public Button LoadButton;
 
+    bool Disabled;
+
 	// Use this for initialization
 	void Start ()
     {
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
+
+        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnDisablePause);
+        Space.Connect<DefaultEvent>(Events.UpdateMap, OnEnablePause);
+
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (Disabled)
+            return;
+
 		  if(Input.GetButtonDown("Pause") && !Paused)
         {
             Space.DispatchEvent(Events.Pause);
@@ -51,6 +60,16 @@ public class OpenPauseMenu : MonoBehaviour
     {
         this.Paused = false;
         this.MenuObject.gameObject.SetActive(false);
+    }
+
+    void OnDisablePause(DefaultEvent eventdata)
+    {
+        this.Disabled = true;
+    }
+
+    void OnEnablePause(DefaultEvent eventdata)
+    {
+        this.Disabled = false;
     }
 
     void OnDebug(EventData eventdata)
