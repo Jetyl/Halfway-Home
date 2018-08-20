@@ -136,6 +136,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="story_courtside" ID="{DDBF6D13-E566-40AD-BDA0-C52706A21F16}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_music_game_day" ID="{C07D7487-0975-4CF9-94BB-60398EFC2C21}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

@@ -25,6 +25,8 @@ VAR playerLetters = 0
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
 
+# Load @ story_courtside
+
 -> Start
 
 === Start ===
@@ -77,7 +79,7 @@ Max lobs a large ball at my chest. My hands {instinctively raise|are already rai
 +[Pass] -> Refuse
 
 === Ballin ===
-When we reach the court I practice dribbling the ball around a little. {It's been a long time since I last played basketball.|I feel slightly less rusty this time, but by no means comfortable.} # Basketball / Open # Basketball / HeadCalm # Basketball / ArmNoBall
+When we reach the court I practice dribbling the ball around a little. {It's been a long time since I last played basketball.|I feel slightly less rusty this time, but by no means comfortable.} # Basketball / Open # Basketball / HeadCalm # Basketball / ArmNoBall # Play : play_music_game_day # Ambience : Stop_All
 {Actually, it's been a long time since I played any sport at all.|I haven't really been the most physical person for the last six years.}
 The concrete half-court has a few weeds growing out of the cracks, but is otherwise in good condition considering it never gets used.
 [{player_name}] "You seemed kinda hesitant before. You sure you want to do this?" 
@@ -597,7 +599,7 @@ Oof. That was actually a really good shot. This one might be tough. I arc the ba
 	->GameTime.PlayerTurn
 
 === Refuse ===
-I pass the ball back to Max.
+I pass the ball back to Max. # Play : Stop_All
 [{player_name}] "Sorry, I'm not really feeling it."
 Max looks disappointed. Again. # Max = Sad
 [Max] "Oh, well. You do you, then. Why don't you come hang out with me, Timothy?" # Max = Calm
@@ -610,21 +612,21 @@ I sit alone for a while, replaying the conversation in my mind.
 
 === Ignored ===
 =TimWon
-[Timothy] "I... I actually did it!" # Basketball / HeadHappy
+[Timothy] "I... I actually did it!" # Basketball / HeadHappy # Play : Stop_All
 [{player_name}] "You actually did. I told you you could do it." #Acheivment * ACH_LOSE
 {-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
 [Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} // +2 TP
 ->Ignored.Conclusion
 
 =PlayerWon
-[Timothy] "I f-failed!" # Basketball / HeadNervousAway
+[Timothy] "I f-failed!" # Basketball / HeadNervousAway # Play : Stop_All
 [{player_name}] "It's no big deal, man."
 [Timothy] "I need to get some water and lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
 ->Ignored.Conclusion
 
 
 =Conclusion
-"Thanks for playing with me." # Basketball / HeadCalm
+"Thanks for playing with me." # Basketball / HeadCalm # Play : Stop_All
 [{player_name}] "Yeah, of course."
 Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the building. # Basketball / Exit
 I had fun, but I didn't really get to talk to Timothy one on one. Maybe I should have stopped the game when he asked...
@@ -632,8 +634,8 @@ Nothing can be done about it now. I should get going as well.
 -> END
 
 === Break ===
-[{player_name}] "Sure, Timothy. It makes no difference to me." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 3)} // +3 TP
-[Timothy] "Thanks." # Basketball / Exit # Background / Garden, blackwipe, NoDefaults # Timothy = Happy
+[{player_name}] "Sure, Timothy. It makes no difference to me." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 3)} # Play : Stop_All // +3 TP
+[Timothy] "Thanks." # Basketball / Exit # Background / Garden, blackwipe, NoDefaults # Timothy = Happy # Play : play_music_garden # Ambience : play_ambience_garden_birds_day
 [{player_name}] "I can't believe I never noticed this was here..."
 [Timothy] "I didn't notice it either."
 [{player_name}] "Yeah, but you've got an excuse. I've been here almost a year."
