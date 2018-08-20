@@ -447,8 +447,9 @@ public class ProgressSystem
         foreach (var beat in PlotLines)
         {
             //reset the daily grind
-            if (beat.BeatName == "Sleepy")
+            if (beat.BeatName.ToLower() == "sleepy")
             {
+                Debug.Log("why");
                 beat.ResetBeat();
                 return;
             }

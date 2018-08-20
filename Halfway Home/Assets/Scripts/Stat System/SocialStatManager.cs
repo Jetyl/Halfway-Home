@@ -132,6 +132,7 @@ public class SocialStatManager : MonoBehaviour
     public void BarState(bool Opened)
     {
         Anime.SetBool("Open", Opened);
+        UpdateDisplay();
     }
 
 }

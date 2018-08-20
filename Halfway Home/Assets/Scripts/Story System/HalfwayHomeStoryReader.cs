@@ -234,7 +234,7 @@ namespace HalfwayHome
             int hour = int.Parse(match["value"].Trim());
             Game.current.SetTimeBlock(hour, false);
             Game.current.AlterTime();
-                        CallSleep();
+            CallSleep();
           }
           else
           {

@@ -349,7 +349,7 @@ Look at these two, planning their future and stuff. I can't look past the next w
 	"Sorry you feel that way though."
 +{expression > 1}[Way to put me on the spot! <(expression>1)>]
 	[{player_name}] "Wow, way to put me on the spot dude!"
-	[Eduardo] "Hehe, sorry!"
+	[Eduardo] "Hehe, sorry!" #Hangout / Eye_U
 	[{player_name}] "You're not sorry at all. I can tell."
 	[Eduardo] "Oh wow, someone's an intuitive person."
 	"It's not like I wear my heart on my sleeve or anything."
@@ -384,18 +384,18 @@ Uh... #Skip
 	[Isaac] "Hrm."
 +[Give your back story <(expression>2)>]
 	[{player_name}] "Well, um..."
-	"I got recommended here by my Doctors at Blackwell." #expression ^ good
-	"It wasn't much of a choice. @It was either that or stay there, Which I <b><i>definitely</i></b> didn't want."
-	"I had been there, in `intensive` care for near on 5 years. I hated it. Still hate it." #Hangout / hrm_Up, E_Frown
-	"I was so mad at them for trapping me there. Was so mad at myself for being so freaking broken I couldn't survive anywhere else."
-	"5 years of my life wasted away in that building. that’s almost a 4th of my life. it's most of what I remember, anyways."
-	"Sterile rooms. Sterile hallways. Sterile smiles."
-	"I remember even thinking they were sending me here, not because I was `ready`, or anything like that. but because they wanted to get rid of me."
-	"I mean, I took it anyways. so maybe I shouldn't be mad."
+	"I got recommended here by my doctors at Blackwell." #expression ^ good
+	"It wasn't much of a choice. @It was either that or stay there, which I <b><i>definitely</i></b> didn't want."
+	"I had been there in `intensive` care for nigh on five years. I hated it. Still hate it." #Hangout / hrm_Up, E_Frown
+	"I was so mad at them for trapping me there. I was so mad at myself for being so freaking broken I couldn't survive anywhere else."
+	"Five years of my life wasted away in that building. That’s almost a fourth of my life. It's most of what I remember, anyways."
+	"Sterile rooms.@ Sterile hallways.@ Sterile smiles."
+	"I remember even thinking they were sending me here, not because I was `ready` or anything like that, but because they wanted to get rid of me."
+	"I mean, I took their suggestion anyways. So maybe I shouldn't be mad."
 	"I do like it here much better than Blackwell."
 	"As is, this place is basically my home."
-	"Hehe, how sad is that?"
-	I cease my word vomit, and let the awkward silence fill the room.
+	"Hehe, how sad is that?" #expression ^ good
+	I cease my word vomit and let the awkward silence fill the room.
 	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`s. @Just nothing.
 	It kind of feels good, to get that off my chest. #expression++
 	It takes a minute before either of them respond. It's Isaac, surprisingly, who responds to my sob story.
