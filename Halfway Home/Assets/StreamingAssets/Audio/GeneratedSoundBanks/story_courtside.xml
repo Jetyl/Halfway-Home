@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="817531469" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_courtside</ObjectPath>
+			<ShortName>story_courtside</ShortName>
+			<Path>story_courtside.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2946895563" Name="play_music_game_day" ObjectPath="\Events\Default Work Unit\play_music_game_day"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="872125381" Language="SFX">
+					<ShortName>game_day_2\game_day_2.wav</ShortName>
+					<Path>SFX\game_day_2\game_day_2_A51F8DD7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

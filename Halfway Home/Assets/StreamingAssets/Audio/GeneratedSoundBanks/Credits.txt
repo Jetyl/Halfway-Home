@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	2805407838	play_music_fakeit			\PlayMusic\music_fakeit\play_music_fakeit	
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	738802588	fake_it_til_you_break_it	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fake_it_til_you_break_it_A51F8DD7.wem	738802588.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_fakeit\music_fakeit_62bpm\fake_it_til_you_break_it	
+	738802588	fake_it_til_you_break_it	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\fake_it_til_you_break_it_A51F8DD7.wem	738802588.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_fakeit\music_fakeit_62bpm\fake_it_til_you_break_it	
 

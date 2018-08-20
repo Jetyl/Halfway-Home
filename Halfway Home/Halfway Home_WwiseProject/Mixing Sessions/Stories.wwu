@@ -34,6 +34,7 @@
 						<ObjectRef Name="ambience_stormy" ID="{91081113-A96D-48BD-A3FD-69EC049B91F2}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 					</ObjectList>
 				</MixingSession>
+				<MixingSession Name="courtside" ID="{486CFED1-1203-461D-AA6C-31354667B630}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</MixingSessions>
