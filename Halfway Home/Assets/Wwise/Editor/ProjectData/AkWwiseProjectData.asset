@@ -16,14 +16,24 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -802529200
-    m_lastTimePart2: -1999241033
-    List: []
+    m_lastTimePsrt1: -1109838069
+    m_lastTimePart2: -1999239450
+    List:
+    - Name: play_music_game_day
+      Path: Default Work Unit\play_music_game_day
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_music_game_day
+        ObjectType: 3
+      ID: -1348071733
+      Guid: 87747dc07509f94c94bb60398efc2c21
+      maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -802484566
-    m_lastTimePart2: -1999241033
+    m_lastTimePsrt1: -1773241451
+    m_lastTimePart2: -1999240833
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -1078,8 +1088,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TestEvents.wwu
     ParentPhysicalPath: 
     Guid: '{A24878B5-CE28-4487-A8A3-BA8CC0F1160C}'
-    m_lastTimePsrt1: -1303875200
-    m_lastTimePart2: -1999242863
+    m_lastTimePsrt1: -1328316901
+    m_lastTimePart2: -1999239450
     List:
     - Name: empty_event
       Path: TestEvents\empty_event
@@ -1205,8 +1215,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -801849161
-    m_lastTimePart2: -1999241033
+    m_lastTimePsrt1: -1772902113
+    m_lastTimePart2: -1999240833
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1307,8 +1317,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -801819402
-    m_lastTimePart2: -1999241033
+    m_lastTimePsrt1: -1106918487
+    m_lastTimePart2: -1999239450
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1355,6 +1365,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1468821033
       Guid: cc61f18f32d2054ab5f4a3f3337720a9
+    - Name: story_courtside
+      Path: Stories\story_courtside
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_courtside
+        ObjectType: 7
+      ID: 817531469
+      Guid: 136dbfdd66e5ad40bda0c52706a21f16
     - Name: story_dye_job
       Path: Stories\story_dye_job
       PathAndIcons:

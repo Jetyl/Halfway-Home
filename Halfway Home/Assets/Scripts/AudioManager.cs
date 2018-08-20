@@ -220,7 +220,7 @@ public class AudioManager : MonoBehaviour
     //    e.FileName != "lpf_ambience_fireplace" &&
     //    e.FileName != "play_music_cafe_jazz_02"
     //   )
-
+    
     // Post the event immediately if its a sound effect (ignore if skipping)
     if (e.Type == AudioEvent.SoundType.SFX && !Skipping)
       AkSoundEngine.PostEvent(e.FileName, SFXPlayer.gameObject);
