@@ -428,7 +428,7 @@ public class Game
 
     public bool WithinTimeDifference(int HourToCheck, int Date, int LengthOfTime)
     {
-        return (Mathf.Abs((Hour + (24 * Day)) - (HourToCheck + (24 * Date))) <= LengthOfTime);
+        return ((Hour + (24 * Day)) - (HourToCheck + (24 * Date)) <= LengthOfTime);
     }
 
     public int GetNewTimeAfterDuration(int InitialHour, int Duration)

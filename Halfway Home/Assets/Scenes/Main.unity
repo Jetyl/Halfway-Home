@@ -8405,6 +8405,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1371098736}
     m_Modifications:
+    - target: {fileID: 114734688042214090, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: TimeDilation.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 114783830900918542, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: Rooms.Array.data[6].DisplayImages.Array.size
@@ -8658,7 +8663,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.389343
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8668,7 +8673,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 54.778687
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8688,7 +8693,7 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -39.778687
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8698,7 +8703,7 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224870789203492988, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8819,6 +8824,26 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734688042214090, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: TimeDilation.Array.data[3].DepressionValue
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734688042214090, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: TimeDilation.Array.data[3].Multiplier
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734688042214090, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: TimeDilation.Array.data[1].DepressionValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734688042214090, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: TimeDilation.Array.data[2].DepressionValue
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
