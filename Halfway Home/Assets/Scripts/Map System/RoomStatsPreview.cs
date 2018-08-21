@@ -9,7 +9,17 @@ public class RoomStatsPreview : MonoBehaviour
   public class RoomPreview
   {
     public string Name;
-    public List<Image> DisplayImages;
+    public List<StatIcon> StatIcons;
+  }
+  [System.Serializable]
+  public class StatIcon
+  {
+    public bool DayOnly;
+    public bool NightOnly;
+    public Personality.Social Social;
+    public int SocialMin;
+    public int SocialMax;
+    public Image Icon;
   }
   public List<RoomPreview> Rooms = new List<RoomPreview>(0);
 
@@ -22,9 +32,10 @@ public class RoomStatsPreview : MonoBehaviour
     {
       if(r.Name == room)
       {
-        foreach(Image i in r.DisplayImages)
+        foreach(StatIcon s in r.StatIcons)
         {
-          Image im = Instantiate(i, transform);
+          // additional logic here
+          Image im = Instantiate(s.Icon, transform);
           im.tag = "NotHideable";
         }
       }

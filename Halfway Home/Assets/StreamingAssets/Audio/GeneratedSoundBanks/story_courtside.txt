@@ -1,6 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
+	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
 	2946895563	play_music_game_day			\Default Work Unit\play_music_game_day	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	872125381	game_day_2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\game_day_2\game_day_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_game_day\music_game_day\game_day_2		1806007
+	872125381	game_day_2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\game_day_2\game_day_2_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_game_day\music_game_day_intro\game_day_2		1806007
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
 

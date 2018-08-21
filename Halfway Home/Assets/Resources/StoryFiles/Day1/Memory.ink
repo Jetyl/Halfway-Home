@@ -172,7 +172,7 @@ A formless shadow gazes into me from the reflective surface.   # Ambience : stop
 
 === Wake ===
 I open my eyes, taking in the morning light streaming through the skinny window of my room.   # Background / YourRoom, EyeOpen, NoDefaults # Play : Play_music_placeholder_main_fadein   # Ambience : play_ambience_birds   # ambience_vol ! -3   # text_vol ! 0   // # Unload @ story_memory
-The whispers fade into the chitter of birdsong.   # music_vol | -6   # ambience_vol | 6
+The whispers fade into the chitter of birdsong.   # music_vol | -6
 I thought the nightmares would go away on their own, but if anything they're becoming more frequent.
 They always feel so real, like I'm actually back at my first day here.
 Only one week left in Sunflower House... Best I can hope for is that they won't follow me out of this place.

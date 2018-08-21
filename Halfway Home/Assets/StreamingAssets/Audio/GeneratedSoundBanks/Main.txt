@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	197627707	play_sfx_ambient_heartbeat			\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat	
 	319656260	play_textscroll			\PlaySFX\sfx_menu\play_textscroll	
 	1078840671	Heartattack			\PlayMusic\stop\Heartattack	
 	1091239431	play_sfx_human_notebook			\PlaySFX\sfx_human\play_sfx_human_notebook	
@@ -25,10 +26,11 @@ Custom State	ID	Name	State Group	Owner		Notes
 	789436446	Other	Text_Type	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	8468394	sfx_book_close_pause_menu	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_close_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_close_pause_menu		43336
-	370198169	sfx_menu_text_scroll_monologue	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		73584
-	516739460	sfx_menu_skip	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\skip_sound_178D0C9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_skip		520984
-	605418621	sfx_menu_text_scroll_other	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_other		1000
-	724131083	pencil_scribble	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\pencil_scribble_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_notebook\pencil_scribble		65584
-	873914021	sfx_book_open_pause_menu	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_open_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_open_pause_menu		32536
+	8468394	sfx_book_close_pause_menu	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_close_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_close_pause_menu		43336
+	370198169	sfx_menu_text_scroll_monologue	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_menu_text_scroll1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_monologue		73584
+	516739460	sfx_menu_skip	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\skip_sound_178D0C9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_skip		520984
+	605418621	sfx_menu_text_scroll_other	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\BlipBurstingS GFX018902_CB99AA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_menu_text_scroll_other		1000
+	724131083	pencil_scribble	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\pencil_scribble_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_notebook\pencil_scribble		65584
+	873914021	sfx_book_open_pause_menu	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_book_open_pause_menu_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu SFX\sfx_book_open_pause_menu		32536
+	1030560068	sfx_ambient_heartbeat	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_heartbeat_FC95F567.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient SFX\sfx_ambient_heartbeat		545856
 
