@@ -293,7 +293,7 @@ The book is {~beautifully written and I learn a lot just from the prose.| rather
 The Art Room is <>
 {
 	- currentHour > 18: empty, but there are telltale signs of recent activity.
-	- currentHour < 7: completely dead, which doesn't come us a surprise at this time of night. Or morning, rather.
+	- currentHour < 7: completely dead, which doesn't come as a surprise at this time of night. Or morning, rather.
 	-else: {~practically empty|occupied by a few of its regulars|bustling}.
 }
 I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.

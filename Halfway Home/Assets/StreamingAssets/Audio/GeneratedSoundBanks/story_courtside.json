@@ -20,9 +20,22 @@
     "Path": "story_courtside.bnk",
     "IncludedEvents": [
      {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
       "Id": "2946895563",
       "Name": "play_music_game_day",
       "ObjectPath": "\\Events\\Default Work Unit\\play_music_game_day"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
      }
     ],
     "IncludedMemoryFiles": [

@@ -73,7 +73,7 @@ Max lobs a large ball at my chest. My hands {instinctively raise|are already rai
 	[Timothy] "I-I'm down..." # Timothy = Afraid
 	Despite agreeing, Timothy seems apprehensive. # Timothy = Calm
 	[Max] "Awesome. I'll catch you guys later, then! Have fun and don't forget to stay hydrated!" # Max	= Happy
-	I wave goodbye to Max and walk over to the court with Timothy. # Max = Exit
+	I wave goodbye to Max and walk over to the court with Timothy. # Max = Exit # Play : Stop_All # Ambience : play_ambience_birds # ambience_vol | -13
 -> Ballin
 
 +[Pass] -> Refuse
@@ -88,7 +88,7 @@ The concrete half-court has a few weeds growing out of the cracks, but is otherw
 That was so long ago. I feel like a completely different person now.
 [Timothy] "Okay, so what do I do?" # Basketball / HeadHappy
 [{player_name}] "Well, you've got two teams, right? Pretty standard. Usually you have two baskets, too, and each team tries to get the ball in the other team's hoop."
-[Timothy] "Okay ." # Basketball / HeadCalm
+[Timothy] "Okay." # Basketball / HeadCalm
 {Ballin==1:
 	[{player_name}] "And the game is played over... some amount of time, broken into... was it quarters? Oh, man, I don't actually remember any of the specifics."
 	"Also, you have to keep moving or else you have to stop. And you can't carry the ball, you have to bounce it on the ground."

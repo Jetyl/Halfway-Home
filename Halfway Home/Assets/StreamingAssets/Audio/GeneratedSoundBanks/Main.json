@@ -35,6 +35,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause"
      },
      {
+      "Id": "197627707",
+      "Name": "play_sfx_ambient_heartbeat",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
+     },
+     {
       "Id": "1091239431",
       "Name": "play_sfx_human_notebook",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
@@ -91,6 +96,12 @@
       "Language": "SFX",
       "ShortName": "sfx_book_open_pause_menu.wav",
       "Path": "SFX\\sfx_book_open_pause_menu_00FA84C2.wem"
+     },
+     {
+      "Id": "1030560068",
+      "Language": "SFX",
+      "ShortName": "sfx_object_heartbeat.wav",
+      "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
      }
     ]
    }

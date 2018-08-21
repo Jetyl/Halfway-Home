@@ -16,6 +16,7 @@
 				<Event Id="1078840671" Name="Heartattack" ObjectPath="\Events\PlayMusic\stop\Heartattack"/>
 				<Event Id="3596481523" Name="play_menupause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menupause"/>
 				<Event Id="3101734072" Name="play_menuunpause" ObjectPath="\Events\PlaySFX\sfx_menu\play_menuunpause"/>
+				<Event Id="197627707" Name="play_sfx_ambient_heartbeat" ObjectPath="\Events\PlaySFX\sfx_ambient\play_sfx_ambient_heartbeat"/>
 				<Event Id="1091239431" Name="play_sfx_human_notebook" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_notebook"/>
 				<Event Id="1366361591" Name="play_sfx_menu_skip" ObjectPath="\Events\PlaySFX\sfx_menu\play_sfx_menu_skip"/>
 				<Event Id="319656260" Name="play_textscroll" ObjectPath="\Events\PlaySFX\sfx_menu\play_textscroll"/>
@@ -45,6 +46,10 @@
 				<File Id="873914021" Language="SFX">
 					<ShortName>sfx_book_open_pause_menu.wav</ShortName>
 					<Path>SFX\sfx_book_open_pause_menu_00FA84C2.wem</Path>
+				</File>
+				<File Id="1030560068" Language="SFX">
+					<ShortName>sfx_object_heartbeat.wav</ShortName>
+					<Path>SFX\sfx_object_heartbeat_FC95F567.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

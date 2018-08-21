@@ -29,7 +29,7 @@ EXTERNAL GetValue(value)
 
 === Start ===
 I shuffle into the kitchen, which is much more packed than usual, with everybody showing up for the celebratory Welcome Dinner.
-The Halfway Home has these big get together dinners whenever we get someone new, or someone leaves.
+The Halfway Home has these big  get-together dinners whenever we get someone new, or someone leaves.
 It's supposed to be a big bonding moment. Or something like that.
 I actually barely remember my own welcome dinner. I think there were beans? That's about all I got.
 Timothy, the star of this show, gets the center seat, so he can meet everybody. Currently, he seems to be talking with Trissa.

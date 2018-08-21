@@ -139,6 +139,14 @@
 				<SoundBank Name="story_courtside" ID="{DDBF6D13-E566-40AD-BDA0-C52706A21F16}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_music_game_day" ID="{C07D7487-0975-4CF9-94BB-60398EFC2C21}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="story_recover_restart_required" ID="{C3B9F27D-16DF-4509-94A5-A09C0B43B62B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

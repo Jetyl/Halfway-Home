@@ -307,9 +307,19 @@
     "Path": "story_courtside.bnk",
     "IncludedEvents": [
      {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
       "Id": "2946895563",
       "Name": "play_music_game_day",
       "ObjectPath": "\\Events\\Default Work Unit\\play_music_game_day"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800"
      }
     ],
     "IncludedMemoryFiles": [
@@ -787,6 +797,11 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_menu\\play_menuunpause"
      },
      {
+      "Id": "197627707",
+      "Name": "play_sfx_ambient_heartbeat",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
+     },
+     {
       "Id": "1091239431",
       "Name": "play_sfx_human_notebook",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
@@ -843,6 +858,12 @@
       "Language": "SFX",
       "ShortName": "sfx_book_open_pause_menu.wav",
       "Path": "SFX\\sfx_book_open_pause_menu_00FA84C2.wem"
+     },
+     {
+      "Id": "1030560068",
+      "Language": "SFX",
+      "ShortName": "sfx_object_heartbeat.wav",
+      "Path": "SFX\\sfx_object_heartbeat_FC95F567.wem"
      }
     ]
    },
@@ -994,6 +1015,34 @@
     "ReferencedStreamedFiles": [
      {
       "Id": "235618933"
+     }
+    ]
+   },
+   {
+    "Id": "3861464175",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_recover_restart_required",
+    "ShortName": "story_recover_restart_required",
+    "Path": "story_recover_restart_required.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "2124921401",
+      "Name": "play_sfx_human_ghostwhisper",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_ghostwhisper"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "318063250",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper2.wav",
+      "Path": "SFX\\ghostwhisper2_00FA84C2.wem"
+     },
+     {
+      "Id": "488681583",
+      "Language": "SFX",
+      "ShortName": "ghostwhisper1.wav",
+      "Path": "SFX\\ghostwhisper1_00FA84C2.wem"
      }
     ]
    },
