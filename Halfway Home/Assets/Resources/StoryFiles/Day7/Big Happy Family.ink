@@ -159,7 +159,7 @@ Eduardo throws his arms in the air in surrender. A smile cracks Isaac's stoney f
 //continue this line of merriment
 Trissa and Max start laughing. {I can't help but chuckle a bit, too.|I can't laugh at a time like this.}
 This {warm|cold} feeling... seeing everyone laughing {together|innocently, unaware of the coming storm}. #Eduardo = Calm # Play : play_music_tension_intro_02 //In an instant, the table I was sitting at was surrounded by the people I know, laughing. (Wrong tense, incorrectly implies a sudden change, confusing structure)
-It's{... different... from what my life has been these past many years|surreal and horrible}. {It's like|I can't believe I was naive enough to think} we're a big happy family.
+It's{... different... from what my life has been these past many years| surreal and horrible}. {It's like|I can't believe I was naive enough to think} we're a big happy family.
 ->Breakdown
 
 

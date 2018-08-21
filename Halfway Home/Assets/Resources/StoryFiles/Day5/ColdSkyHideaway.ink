@@ -59,27 +59,28 @@ I go to where I know Isaac is hiding, to talk to him about what is bothering him
 
 === Quiet ===
 [{player_name}] "Hey, Isaac. What's up?" 
-[Isaac] "...."
-No response. not surprising
-[{player_name}] "so... um, what'cha looking at?"
+[Isaac] "..."
+No response. Not surprising
+[{player_name}] "So... um, what'cha looking at?"
 [Isaac] "..."
 "...Hm?" #Isaac = Left
 Still nothing.
 [{player_name}] "I don't usually see you out here."
 [Isaac] "..."
-"I'm hiding." #Skip
-{
-	-GetValue("ColdTalkBefore") == false:
-		Hiding? why would he be hiding from out here? #Skip
+{GetValue("ColdTalkBefore") == false:
+	"I'm hiding."
+	Hiding? Why would he be hiding out here? #Skip
+- else:
+	"I'm hiding." # Skip
 }
 +[Leave him be]
-	[{player_name}] "Oh! um, want to be left alone then?"
+	[{player_name}] "Oh! Um, want to be left alone, then?"
 	[Isaac] "..."
 	"Yeah."
 	[{player_name}] "Uh, okay. See you later then."
 	->GivenUp
 +[Try talking about it]
-	[{player_name}] "Do you.. want to talk about it?"
+	[{player_name}] "Do you... want to talk about it?"
 	{
 		-GetValue("LongNightHangoutComplete") == true:
 			->PullingTeeth
@@ -96,24 +97,23 @@ Still nothing.
 === PullingTeeth ===
 ~SetValue("ColdTalkBefore", true)
 [Isaac] "..." #Hideaway / Open, LookOff
-“...”
-“...”
-“...You...”
-“...You ready...? @To leave? @Here... I mean.” #Skip
+"... @... @..."
+"...You..."
+"...You ready...? @To leave? @Here... I mean." #Skip
 +[Yeah]
 	[{player_name}] "Y-yeah. I am."
 	[Isaac] "Hm."
 	->PoorGrip
-+[....]
++[...]
 	[{player_name}] "..."
 	[Isaac] "Hm."
 	->PoorGrip
-+[Whether I am or not, I’m still leaving <(grace>2)>]
++[Whether I am or not, I’m still leaving <(expression>2)>]
 	[{player_name}] "Whether I am or not, I’m still leaving." #Grace ^ good
 	[Isaac] "Hm... @That's true. Hm..."
 	->OpenAnswer
-+[No, not really <(expression>2)>]
-	[{player_name}] "No, not really" #Expression ^ good
++[No, not really <(awareness>2)>]
+	[{player_name}] "No, not really." #Expression ^ good
 	[Isaac] "Are you scared? To leave?"
 	[{player_name}] "...Yeah."
 	->OpenAnswer
@@ -121,12 +121,10 @@ Still nothing.
 
 =PoorGrip 
 [Isaac] "..."
-"..."
-"......."
-"......................."
-[{player_name}] "when...@ if you don't mind me asking,@ are you leaving, Isaac?"
-[Isaac] "...."
-"...... @.......... @............"
+"... @... @..."
+[{player_name}] "If you don't mind me asking, when are you leaving, Isaac?"
+[Isaac] "..."
+"... @... @..."
 "...I don't know."
 "I... try not to think about it..."
 ->Talkative
@@ -138,104 +136,99 @@ Isaac seems to appreciate my answer. @<color=color_descriptor>Your answer has he
 
 ===Talkative===
 "...Does...?"
-"...Does your life feel like its moving too fast for you?"
+"...Does your life feel like it's moving too fast for you?"
 [{player_name}] "A bit, yeah."
 "Do, uh, do you feel that way too?"
 [Isaac] "..."
 After a few quiet seconds, Isaac nods, slightly.
 "How...?"
 "How long... do you...?"
-"...Think...I...I...?"
+"...Think... I... I...?"
 "...I've...been...here...?"
 How long he's been here?
 I don't really recall seeing Isaac until he and Eduardo we dating, some six months ago.
 I'd think he's been around... #Skip
-+[6 Months]
-	6 months makes sense. 
++[Six months]
+	Six months makes sense. 
 	[{player_name}] "You've only been here about six months right?"
-+[1 Year]
-	probably not been here <i>just</i> 6 months. maybe he got here soon after I did?
-	[{player_name}] "You've only been here about a year right?"
++[A year]
+	I feel like I saw him when I was first moving in, so he's probably been around for more than six months.
+	[{player_name}] "You've been here about a year right?"
 +[I don't know]
-	[{player_name}] "I don't know."
-+{GetValue("Knows Isaac's Tenure") == true}[2 Years, and 6 months]
-	I know how long he's been here, because he's told me.
-	[{player_name}] "You've been here for almost 2 and a half years, haven't you?"
-	Isaac nods. not even a little shocked I guessed it correctly.
-	he does smirk for a split second however, so maybe he appreciates that i knew? 
+	[{player_name}] "I honestly don't know."
++{GetValue("Knows Isaac's Tenure") == true}[Two years and six months]
+	I know how long he's been here because he told me.
+	[{player_name}] "You've been here for almost two and a half years, haven't you?"
+	Isaac nods. He's not even a little shocked I guessed it correctly.
+	He does smirk for a split second however, so maybe he appreciates that I knew? 
 	<color=color_descriptor>Your understanding of Isaac's tenure has <color=color_grace>improved <b>Grace</b> mildly<color=color_descriptor>.</i></color> # Grace+
 -[Isaac] "Two years."
-"two years... @and six months..."
+"Two years... @and six months..."
 {
 	-GetValue("Knows Isaac's Tenure") == false:
 		Over two years!
-		Jeez! what's been keeping him here this long?
+		Jeez! What's been keeping him here this long?
 		~SetValue("Knows Isaac's Tenure", true)
-		I spent 5 years in a literal psych ward, and I'm getting out after only a year.
+		I spent five years in a literal psych ward and I'm getting out after only a year.
 }
-[{player_name}] "what's kept you here so long?"
+[{player_name}] "What's kept you here so long?"
 [Isaac] "..."
 "...I... I don't... hm."
-"..."
-"...Sorry...."
-"...Sorry I'm bad.... At speaking.... that is."
-"...People think I'm either... @...some Stoic or... @...a Wallflower."
-"...I can't.... Emote.... well."
-"and I don't... say... what I think about all..."
-"hrm..." #Hideaway / Mad 
+"... @... @..."
+"...Sorry. I'm bad.... At speaking.... that is."
+"...People think I'm either... @...some stoic or... @a wallflower."
+"...I can't.... emote.... well."
+"And I don't... say... what I think about all the time..."
+"Hrm..." #Hideaway / Mad 
 Isaac looks pained trying to speak as much as he is.
-"I... Came here... on recommendation."
+"I... came here... on a recommendation."
 "Because I was... not social... not eating... not... here?"
 "I..."
-"......"
-"....I don't know. I just..."
-"..."
-"..."
-"..."
-Man, Isaac really does have trouble expressing himself. I guess I never notice when his boyfriends always around him.
-And he came to Sunflower House to improve himself, but still isn't any better. How should I help him? #Skip
-+[Give Him Advice <awareness>]
-	<color=color_descriptor> You give Isaac advice to improve himself, using your own <i>Awareness</i> of your life, as an example.</color>
+"...I don't know. I just..."
+"... @... @..."
+Man, Isaac really does have trouble expressing himself. I guess I never noticed with his boyfriend always around.
+He came to Sunflower House to improve himself, but still isn't any better. How should I help him? #Skip
++[Give him advice <(awareness)>]
+	I give Isaac advice, using my own life as an example.
 	->Recoil
-+[Give Him motivation <expression>]
-	<color=color_descriptor>You try to motivate Isaac to improve himself with your impassioned <i>Expression</i>.</color>
++[Give him motivation <(expression)>]
+	I try to motivate Isaac to improve himself with a pep talk.
 	->Recoil
-+{grace >= 3}[Give Him Time <(grace >= 3)>]
-	<color=color_descriptor>With your heightened <i>Grace</i>, You know you need to just give Isaac time to collect himself.</color>
++{grace >= 3}[Give him time <(grace>2)>]
+	What Isaac really needs is time to collect himself, so that's what I give him.
 	->Relationships
-+{grace < 3}[Give Him Sympathy]
-	<color=color_descriptor>You try to complement Isaac, and placate his fears with <i>Grace</i>.</color>
++{grace < 3}[Give him sympathy<(grace)>]
+	I try to complement Isaac and tell him that I understand what he's dealing with.
 	->Recoil
 
 ===Relationships===
-I sit in silence as time passes, letting Isaac recompose himself. #time %1
+I sit in silence as time passes, letting Isaac compose himself. #time %1
 [Isaac] "..." #Hideaway / LookOff
 ~SetTimeBlock(1)
-"...hrm."
-"...I thought.... I was getting better..."
-"...I was... eating. @I was... painting."
+"...Hrm."
+"...I thought... I was getting better..."
+"...I was... eating. @I was... sculpting."
 "I was... with someone... so..."
-"...so..."
-"...why am I like this?" #Hideaway / Mad
-[{player_name}] "Isaac, You-"
-[Isaac] "And F-<delay=0.5>Freaking Eduardo!"
-"he's just... just..."
-Wow, I don't think I've ever seen Isaac that vocally impassioned. And he seemed angry... at Eduardo?
+"...Why am I like this?" #Hideaway / Mad
+[{player_name}] "Isaac, you-"
+[Isaac] "And f-<delay=0.5>freaking Eduardo!"
+"He's just... just..."
+Wow, I don't think I've ever seen Isaac so vocally impassioned. And he seems angry... at Eduardo?
 [{player_name}] "Is there something going on with you and Eduardo?"
 [Isaac] "..." #Hideaway / Blush
-"......yes."
-"...I@...@...we...@...he..." #Hideaway / LookOff
-"...I... like him...@ but he...."
+"...yes."
+"...I@we...@he..." #Hideaway / LookOff
+"I... like him...@ But, he...."
 "...he..."
 "He's so suffocating sometimes." #Hideaway / Mad
-"He... he's around me so often and I..."
+"He's around me so often and I..."
 "I... I should like that...@ I don't.... @I don't..."
 "...I don't know what to do..."
-Isaac curls up even further into his ball. #Hideaway / HeadDown
-He seems to be running himself in circles over his conflicted feelings on Eduardo.
+Isaac curls up even further. #Hideaway / HeadDown
+He seems to be running in circles over his conflicted feelings on Eduardo.
 I should... #Skip
 +[Give Isaac relationship advice]
-	<color=color_descriptor>You try give Isaac some relationship advice, based on your limited experiences, and what you've seen in media.</color>
+	I try to give Isaac some relationship advice based on my limited experience and what I've seen in media.
 	->Recoil
 +[Let Isaac keep venting]
 	->Faulty
@@ -245,19 +238,16 @@ I should... #Skip
 I should probably let Isaac work through his thoughts on his own.
 [Isaac] "..."
 "Such a screw up..."
-"Ccan't live correctly. Can't `heal` correctly."
+"Can't live correctly. Can't `heal` correctly."
 "Just... broken."
 "<speed=150%>Broken. Broken. Broken.<speed=100%>"
 "..."
-"they said so too.... that I was broken."
-"Broken 'cause I was quiet. Broken 'cause I didn't want... and..."
-"....and I don't..."
-"...I don't want."
-"Don't want what they said was wanted."
-"Don't need what they said was needed."
-"don't want to change. @who I am. @to be happy."
-"..."
-"..."
+"They said so.... that I was broken."
+"Broken 'cause I was quiet. Broken 'cause I didn't want..."
+"Didn't want what they said I should want."
+"Didn't need what they said I should need."
+"I don't want to change. @Who I am. @To be happy."
+"... @... @..."
 "... I, uh, spend a lot of time... In my head." #Hideaway / Blush
 "I... make stories... in my head."
 "And... I'm happy there."
@@ -267,65 +257,65 @@ I should probably let Isaac work through his thoughts on his own.
 Isaac's blushing quite a lot at that admission.
 "I... um... don't really... tell people that."
 "S'weird."
-"haven't even told Eduardo... not really."
+"Haven't even told Eduardo... not really."
 [{player_name}] "Why not?"
 [Isaac] "S'embarrassing. Cuz..."
 "Cuz he's in most of them." #Hideaway / HeadDownBlush
 "..."
 "I... do like him."
-"but... the Eduardo in my head... and the one out here are..."
+"But... the Eduardo in my head... and the one out here are..."
 "...too alike."
 "Eduardo's presence. His constant attention. In my head... I like that."
-"But, out here. I don't." #Hideaway / HeadDown
+"But out here. I don't." #Hideaway / HeadDown
 "He's around me all the time... @Talking all the time."
 "He showers me with affection. It was all I wanted. But..."
 "Now... that I have it... I can't stand it..."
 "..."
 "...I really am a broken human being, huh?" #Hideaway/Sad #Skip
-+[No, you are not]
-	[{player_name}] "No, Isaac. You are not broken."
++[No, you aren't]
+	[{player_name}] "No, Isaac. You aren't broken."
 	->HelpfulListener
 +[No, you aren't]
 	[{player_name}] "No, Isaac. You aren't broken."
 	->HelpfulListener
-+[Nah Fam]
-	[{player_name}] "Nah fam, you ain't broken."
++[No, you aren't]
+	[{player_name}] "No, Isaac. You aren't broken."
 	->HelpfulListener
 
 === GivenUp ===
 I head off, leaving Isaac to stew in his hideaway. #Isaac = exit
 Something seems to be eating him, but I suppose I've tried to lend an ear.
-maybe he just doesn't trust me?
+Maybe he just doesn't trust me.
 {
 	-week >=2:
-		Maybe I should try hanging out with him earlier in the week. that might work. #2 & InProgress //add objective here
+		Maybe I should try hanging out with him earlier in the week... That might work. #2 & InProgress //add objective here
 }
-Oh well.
+Oh, well.
 ->END
 
 === HelpfulListener ===
 [Isaac] "..." #Hideaway / Blush //Isaac blushes
-"...what."
+"...What."
 [{player_name}] "Isaac, you are a good person and you deserve to be happy."
 "And everything you're feeling, just because I or Eduardo or anybody can't fully understand it, doesn't mean it's not valid."
-"And if you're not happy with Isaac, you gotta tell him, man. people ain't psychic, Eduardo especially."
+"And if you're not happy with Isaac, you gotta tell him, man. People aren't psychic, Eduardo especially."
 [Isaac] "..."
-"T-thanks."
-"And... thanks. For, uh, letting me ramble."
+"Thanks."
+"And... thanks again. For, uh, letting me ramble."
 [{player_name}] "No problem, Isaac."
-I help him up off the ground. #background = gardens #Isaac = calm
+I help him up off the ground. #background / garden #Isaac = calm
 [Isaac] "Oh, and, um..."
-"I am gunna talk to Eduardo about... all this sometime soon."
+"I am gonna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
 [{player_name}] "That sounds good. I'll be looking forward to hearing how it goes." #Isaac = surprise
 [Isaac] "..." 
 "Sure." #Isaac = happy
 Isaac  quickly excuses himself and slinks off to bed. #Isaac = exit
-I feel that went well. At the very least, I now know what's been eating Isaac. Hopefully Eduardo can handle it without making a mess of things. 
-Maybe I should find a time to chat with Eduardo about their relationship. #4 & Success #6 & InProgress
+I feel that went well. At the very least I now know what's been eating Isaac. Hopefully Eduardo can handle it without making a mess of things. 
+I should find a time to chat with Eduardo about their relationship. #4 & Success #6 & InProgress
 {
 	-GetValue("Know Isaac's Troubles") ==false:
-		I should be able to articulate Isaac's feelings now, and any issues there in, with Eduardo. #expression+++
+		I should be able to articulate Isaac's feelings to Eduardo now. #expression+++
 }
 I get up off the ground and decide to head inside myself. I've had enough of this chilly night air.// edited from ", because it is cold tonight.""
 ~SetValue("IsaacOpenedUp", true)
@@ -334,14 +324,14 @@ I get up off the ground and decide to head inside myself. I've had enough of thi
 
 ===Recoil===
 As I keep talking, rambling really, I notice Isaac has once again gone unresponsive. #Hideaway / LookOff
-[{player_name}] "hey, uh, is any of this helping."
-[Isaac] "hrm."
+[{player_name}] "Hey, uh, is any of this helping?"
+[Isaac] "Hrm."
 "..."
-"sure."
-[{player_name}] "Um, Okay."
-I keep talking to Isaac for a while longer, but I don't feel like anything I'm saying is helpful. #background / gardens, crossfade #Isaac = sad
+"Sure."
+[{player_name}] "Um, okay."
+I keep talking to Isaac for a while longer, but despite what he said I don't feel like anything I'm saying is helpful. #background / garden, crossfade #Isaac = sad
 After a while, Isaac asks to leave, and we part ways. The biting cold of the night breeze nips at my face. #Isaac = exit
-I guess I screwed that up? I feel like I did, anyways.
+I guess I screwed that up. I feel like I did, anyways.
 Maybe I should've let Isaac talk more...
 <color=color_descriptor>Hindsight on the situation improves <color=color_grace><b>Grace</b><color=color_descriptor> mildly.</color> #grace+
 <color=color_descriptor>However, hindsight also increases <color=color_wellbeing_penalty>depression<color=color_descriptor> slightly as well.</color> #depression += 10
@@ -352,16 +342,16 @@ Maybe I should've let Isaac talk more...
 	-else:
 		...
 }
-I head back inside, my head low from my failure...
+I wander back indoors, my head low...
 //failed to listen or help Isaac
 ->END
 
 === Recap ===
 I know where Isaac is hiding and I know what I can say to help him.
-Should I just go through and do everything I did before, or try something new? #Skip
-+[Retry Talking to Him]
+Should I do everything I did before or try something new? #Skip
++[Retry talking to him]
 	->StoneGiant
-+[Repeat Previous Success]
-	I go to Isaac's little hideaway, and talk him through his issues just like last time.
++[Repeat previous success]
+	I go to Isaac's little hideaway and talk him through his issues just like last time.
 	~SetValue("IsaacOpenedUp", true)
 	->END

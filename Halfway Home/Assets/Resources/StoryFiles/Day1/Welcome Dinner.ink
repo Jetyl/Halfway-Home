@@ -51,7 +51,7 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 {depression > 40: [Voices] "As if he wants to see you."}
 [Trissa] "Like I was saying. You've got nothing to worry about! Everybody here is excited to meet you!"
 [Timothy] "That's kind of a 'lotta pressure." # Timothy = Afraid #Skip
-+[Reassure Him <awareness>]
++[Reassure Him <(awareness)>]
 	{
 		-awareness > 1: 
 			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."
