@@ -27,7 +27,7 @@ public class OpenPauseMenu : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
 
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnDisablePause);
-        Space.Connect<DefaultEvent>(Events.UpdateMap, OnEnablePause);
+        Space.Connect<DefaultEvent>(Events.MapTransitionInCompleted, OnEnablePause);
 
     }
 	

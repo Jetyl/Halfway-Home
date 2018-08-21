@@ -127,20 +127,18 @@ namespace HalfwayHome
                 return;
 
             Active = false;
-            //print("here");
-            //Game.current.AlterTime();
-
-            //psudo code time!
-            //grab the transitions script, and put it on the map object.
-            //call it here, to pull the map and stats onto the screen.
             MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
             SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
+            
 
-            //gameObject.SetActive(true);
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
             AllowTimeDilation = Game.current.Progress.GetBoolValue("Depression Time Dilation");
 
             StartCoroutine(TextParser.FrameDelay(Events.UpdateMap));
+
+            var delaySeq = Actions.Sequence(this);
+            Actions.Call(delaySeq, () => Space.DispatchEvent(Events.MapTransitionInCompleted, new DefaultEvent()), MapTransitionDuration * 2);
+
 
         }
 
