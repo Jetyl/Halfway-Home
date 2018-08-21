@@ -29,6 +29,14 @@ public class OptionsMenu : MonoBehaviour
         MTSToggle.isOn = Data.MuteTextScroll;
     }
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Pause"))
+        {
+            CancelChanges();
+        }
+    }
+
     public void UpdateAll()
     {
         Data = new OptionsData(OptionsData.current);

@@ -26,7 +26,9 @@ public class GoalManager : MonoBehaviour
   void RefreshObjectives()
   {
     Objectives = Game.current.Progress.GetObjectives();
-    
+
+        print(Objectives.Count);
+
     foreach(Transform child in GoalParent.transform)
     {
       GameObject.Destroy(child.gameObject);
@@ -34,8 +36,11 @@ public class GoalManager : MonoBehaviour
 
     foreach (Task objective in Objectives)
     {
+            print(objective.GetState());
+
       // If the task is unstarted or an incomplete hidden objective, return
-      if (objective.GetState() == Task.TaskState.Unstarted || (objective.GetState() == Task.TaskState.InProgress && objective.Hidden)) return;
+      if (objective.GetState() == Task.TaskState.Unstarted || (objective.GetState() == Task.TaskState.InProgress && objective.Hidden))
+                continue;
       else // Otherwise, present and color text appropriate to its state
       {
         var newGoal = GameObject.Instantiate(MainGoal, GoalParent);
@@ -66,7 +71,8 @@ public class GoalManager : MonoBehaviour
         foreach (Task subgoal in objective.SubTasks)
         {
           // If the subgoal is unstarted or an incomplete hidden objective, return
-          if (subgoal.GetState() == Task.TaskState.Unstarted || (subgoal.GetState() == Task.TaskState.InProgress && objective.Hidden)) return;
+          if (subgoal.GetState() == Task.TaskState.Unstarted || (subgoal.GetState() == Task.TaskState.InProgress && objective.Hidden))
+                        continue;
           else // Otherwise, complete same operation as above
           {
             var newSubgoal = GameObject.Instantiate(SubGoal, FindComponentInChildWithTag(newGoal, "SubGoalParent").transform);

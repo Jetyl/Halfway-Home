@@ -44,6 +44,7 @@ namespace HalfwayHome
       story.runtime.BindExternalFunction(nameof(GetIntValue), (string valueName) => GetIntValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetStringValue), (string valueName) => GetStringValue(valueName));
       story.runtime.BindExternalFunction(nameof(GetSelfStat), (string stat_name) => GetSelfStat(stat_name));
+      story.runtime.BindExternalFunction(nameof(GetTrueSocial), (string valueName) => GetTrueSocial(valueName));
       story.runtime.BindExternalFunction(nameof(GetHour), () => GetHour());
       story.runtime.BindExternalFunction(nameof(SetTimeBlock), new System.Action<int>(SetTimeBlock));
       story.runtime.BindExternalFunction(nameof(CallSleep), new System.Action(CallSleep));
@@ -531,6 +532,12 @@ namespace HalfwayHome
     public bool GetValue(string ValueName)
     {
       return Game.current.Progress.GetBoolValue(ValueName);
+
+    }
+    
+    public int GetTrueSocial(string ValueName)
+    {
+      return Game.current.Self.GetTrueSocialStat((Personality.Social)Enum.Parse(typeof(Personality.Social), ValueName));
 
     }
 

@@ -280,7 +280,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     void OnNext(DefaultEvent eventdata)
     {
-        Debug.Log("Skip");
+        //Debug.Log("Skip");
         Next = true;
     }
     

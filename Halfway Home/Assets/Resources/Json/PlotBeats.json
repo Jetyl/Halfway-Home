@@ -114,6 +114,10 @@
    {
     "Name" : "Invert On",
     "Type" : 1
+   },
+   {
+    "Name" : "Is Night",
+    "Type" : 1
    }
   ]
  },
