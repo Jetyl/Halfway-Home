@@ -74,7 +74,7 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData e)
     {
         if(LockingActive)
-            Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipActivateEvent>(new TextTooltipBehavior.TooltipActivateEvent());
+            Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipActivateEvent>(new TextTooltipBehavior.TooltipActivateEvent(GetComponent<TooltipElement>()));
     }
     public void OnPointerExit(PointerEventData e)
     {
@@ -102,7 +102,9 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (LockingActive)
             LockSprite.sprite = UnlockedImage;
         
-        Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
+        //Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
+        GetComponent<TooltipElement>().TooltipKey = type;
+        GetComponent<TooltipElement>().TooltipType = high_low;
     }
 
     //you get the type, and if the condtion checked was "Higher" or "Lower" than the value it was to compare. it was unsuccessful
@@ -115,9 +117,11 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         //turn on tooltip
         LockingActive = true;
 
-        Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
+        //Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
+        GetComponent<TooltipElement>().TooltipKey = type;
+        GetComponent<TooltipElement>().TooltipType = high_low;
 
-    }
+  }
 
     public void ChoiceSelected()
     {
