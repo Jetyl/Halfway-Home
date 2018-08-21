@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114885179132074898}
   - component: {fileID: 114978665511157486}
   - component: {fileID: 114139450246814332}
+  - component: {fileID: 114524552971331126}
   m_Layer: 5
   m_Name: Choice Button
   m_TagString: Untagged
@@ -162,6 +163,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114524552971331126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015871394592176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d25e68204bff439b0cc2918b972d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  TooltipKey: 
+  TooltipType: 
 --- !u!114 &114556500741660718
 MonoBehaviour:
   m_ObjectHideFlags: 1

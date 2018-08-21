@@ -19,7 +19,15 @@ public class TextTooltipBehavior : MonoBehaviour
     }
   };
 
-    public class TooltipActivateEvent : Stratus.Event { };
+    public class TooltipActivateEvent : Stratus.Event
+    {
+      public TooltipElement ActivatingElement;
+
+      public TooltipActivateEvent(TooltipElement tooltipElement)
+      {
+        ActivatingElement = tooltipElement;
+      }
+    };
     public class TooltipDeactivateEvent : Stratus.Event { };
     [System.Serializable]
   public class TooltipInfo
@@ -52,7 +60,6 @@ public class TextTooltipBehavior : MonoBehaviour
   private bool TooltipAvailable;
   private string CurrentTooltipText;
   public UIFollowMouse TooltipContent;
-  private bool IsChoiceTooltip;
 
 	// Use this for initialization
 	void Start ()
@@ -61,17 +68,15 @@ public class TextTooltipBehavior : MonoBehaviour
     Space.Connect<DescriptionEvent>(Events.Description, ResetTooltip);
     Stratus.Scene.Connect<TooltipActivateEvent>(OnTooltipActivateEvent);
     Stratus.Scene.Connect<TooltipDeactivateEvent>(OnTooltipDeactivateEvent);
-    Space.Connect<DefaultEvent>(Events.ConversationChoice, OnChoiceBegin);
-    Space.Connect<DefaultEvent>(Events.ChoicesFinished, OnChoiceEnd);
-    IsChoiceTooltip = false;
   }
 
   void OnTooltipLineEvent(TooltipLineEvent e)
   {
+    // JUST FOR COLOR NOW
     // For each tooltip key in TooltipData (publicly editable list)...
-    foreach(TooltipInfo t in TooltipData)
+    foreach (TooltipInfo t in TooltipData)
     {
-      // Compare that key to the event key. When you find a match...
+      // Compare that key to the element's key. When you find a match...
       if (t.Key == e.Key)
       {
         // Create a substring of the content data
@@ -80,19 +85,17 @@ public class TextTooltipBehavior : MonoBehaviour
         foreach (TooltipString ts in t.Strings)
         {
           // Run through each string in the content substring
-          foreach(string s1 in typeStrings)
+          foreach (string s1 in typeStrings)
           {
             // If one of those is a key that matches a string in the TooltipString list
             if (ts.Key == s1.Trim())
             {
-              // Assign the corresponding text
-              CurrentTooltipText = ts.Text;
               var useColor = true;
+              TooltipAvailable = true;
               // Run through the substring list again to see if a no color flag exists
               foreach (string s2 in typeStrings) if (s2.Trim() == "nocolor") useColor = false;
               // Override the line color unless such a flag exists
-              if(useColor) GetComponent<TextMeshProUGUI>().color = ts.Color;
-              TooltipAvailable = true;
+              if (useColor) GetComponent<TextMeshProUGUI>().color = ts.Color;
             }
           }
         }
@@ -100,19 +103,9 @@ public class TextTooltipBehavior : MonoBehaviour
     }
   }
 
-  void OnChoiceBegin(DefaultEvent e)
-  {
-    IsChoiceTooltip = true;
-  }
-
-  void OnChoiceEnd(DefaultEvent e)
-  {
-    IsChoiceTooltip = false;
-  }
-
     void OnTooltipActivateEvent(TooltipActivateEvent e)
     {
-        CheckActivation();
+        CheckActivation(e.ActivatingElement);
     }
 
     void OnTooltipDeactivateEvent(TooltipDeactivateEvent e)
@@ -120,7 +113,7 @@ public class TextTooltipBehavior : MonoBehaviour
         DeActivate();
     }
     void ResetTooltip(DefaultEvent eventData)
-  {
+    {
     DeActivate();
     if (TooltipAvailable) TooltipAvailable = false;
     else
@@ -130,22 +123,35 @@ public class TextTooltipBehavior : MonoBehaviour
     }
   }
 
-  public void TextHoverEnter()
+  public void CheckActivation(TooltipElement element)
   {
-    if (!IsChoiceTooltip) CheckActivation();
-  }
-
-  public void TextHoverExit()
-  {
-    if (!IsChoiceTooltip) DeActivate();
-  }
-
-  public void CheckActivation()
-  {
-    if(TooltipContent != null && CurrentTooltipText != "")
+    if(element.TooltipKey!=null && element.TooltipType != null)
     {
-      TooltipContent.GetComponent<UIFader>().Show(0.1f);
-      TooltipContent.GetComponentInChildren<TextMeshProUGUI>().text = CurrentTooltipText;
+      // For each tooltip key in TooltipData (publicly editable list)...
+      foreach (TooltipInfo t in TooltipData)
+      {
+        // Compare that key to the element's key. When you find a match...
+        if (t.Key == element.TooltipKey)
+        {
+          // Create a substring of the content data
+          string[] typeStrings = element.TooltipType.Split(',');
+          // For each string in the publicly editable TooltipString list
+          foreach (TooltipString ts in t.Strings)
+          {
+            // Run through each string in the content substring
+            foreach (string s1 in typeStrings)
+            {
+              // If one of those is a key that matches a string in the TooltipString list
+              if (ts.Key == s1.Trim())
+              {
+                // Assign the corresponding text
+                TooltipContent.GetComponent<UIFader>().Show(0.1f);
+                TooltipContent.GetComponentInChildren<TextMeshProUGUI>().text = ts.Text;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
