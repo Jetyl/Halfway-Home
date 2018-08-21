@@ -172,6 +172,7 @@ namespace AK
         static const AkUniqueID STORY_MEMORY = 1576038406U;
         static const AkUniqueID STORY_MORNING_MISERY = 4020804685U;
         static const AkUniqueID STORY_OPEN_LETTER = 3653532294U;
+        static const AkUniqueID STORY_RECOVER_RESTART_REQUIRED = 3861464175U;
         static const AkUniqueID STORY_WELCOME_DINNER = 2139259380U;
     } // namespace BANKS
 

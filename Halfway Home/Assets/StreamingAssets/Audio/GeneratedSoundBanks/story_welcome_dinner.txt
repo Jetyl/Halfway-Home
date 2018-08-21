@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	2781780852	play_ambience_crowd			\PlayMusic\ambiences\play_ambience_crowd	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1039116749	ambience_crowd	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crowd\ambience_crowd_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_crowd\ambience_crowd\ambience_crowd		4752144
+	1039116749	ambience_crowd	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_crowd\ambience_crowd_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_crowd\ambience_crowd\ambience_crowd		4752144
 

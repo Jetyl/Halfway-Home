@@ -9,5 +9,5 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3791118987	Menu_Mouse_Hover			\UI\Main Menu\Menu_Mouse_Hover	-1 = Hovering over Quit or while Confirm Quit is open (LPF 1k) 0 = Hovering over nothing (LPF 4k) 1 = Hovering over New Game or Resume (LPF off)
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	11539498	mainMenu_b1_v0_5	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\mainMenu_b1_v0.5_A51F8DD7.wem	11539498.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_mainmenu\music_mainmenu\mainMenu_b1_v0_5	
+	11539498	mainMenu_b1_v0_5	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\mainMenu_b1_v0.5_A51F8DD7.wem	11539498.wem	\Interactive Music Hierarchy\Default Work Unit\Music\music_mainmenu\music_mainmenu\mainMenu_b1_v0_5	
 

@@ -178,7 +178,7 @@ She shrugs.
 [Charlotte] "When I was a young girl I simply couldn't understand people." # Charlotte = Sad
 "And, as is human nature, I was <delay=0.3>afraid <delay=0.3>of what I did not understand. That fear became hate, motivating deeds too heinous to recount in civil conversation."
 "I fear I was quite a horrible, loathsome child. But that's a story for another time."
-That reminds me of how I was- before the Voices.
+That reminds me of how I was—before the Voices.
 "When I matured, I forced myself to care."
 "I swore to myself and my family that I would never again act without regard for others."
 "Having been robbed of an intuitive understanding of emotion, I resolved to train myself to recognize the <i>physical</i> signs of emotion instead." # Charlotte = Angry

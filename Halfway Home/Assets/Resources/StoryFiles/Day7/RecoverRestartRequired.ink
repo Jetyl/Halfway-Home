@@ -26,6 +26,8 @@ EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 EXTERNAL NextWeek()
 
+# Load @ story_recover_restart_required
+
 -> Start
 
 === Start ===

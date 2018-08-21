@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="SFX" ID="{D4CBD38C-7A18-4757-96D4-EB154D021898}" ShortID="939546782">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="SFX" ID="{2096332D-6A02-4934-BCF7-DFA7F927DD18}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
@@ -1499,6 +1506,16 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="sfx_human_notebook" ID="{2B7FA475-7EE8-4D8D-862D-BF1441B0D5CF}" ShortID="18632505">
 									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
