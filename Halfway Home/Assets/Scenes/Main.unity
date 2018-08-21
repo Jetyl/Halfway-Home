@@ -34383,6 +34383,7 @@ MonoBehaviour:
   ActiveTag: Invert On
   Speakers:
   - Voices
+  InvertSpeed: 0.5
 --- !u!114 &1174770657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58141,6 +58142,11 @@ Prefab:
       propertyPath: LoadButton
       value: 
       objectReference: {fileID: 324036958}
+    - target: {fileID: 114583930868255730, guid: da58951615f3dea4e99f6768a7fe1743,
+        type: 2}
+      propertyPath: IncrementValues.Array.data[1].value
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
   m_IsPrefabParent: 0
