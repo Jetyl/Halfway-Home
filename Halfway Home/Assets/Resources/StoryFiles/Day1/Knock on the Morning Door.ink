@@ -79,10 +79,10 @@ I slowly creak out of my bed, and slump and lumber towards the door.   # SFX : p
 	
 	-week == 1:
 		->Introductions
-	//- week == 2:
-	//	->Again
-	-else:
+	- week == 2:
 		->Again
+	-else:
+		->Repeat
 }
 
 ===Introductions===
