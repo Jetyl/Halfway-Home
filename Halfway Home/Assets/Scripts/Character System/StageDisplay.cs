@@ -57,6 +57,8 @@ public class StageDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.Save, OnSave);
         Space.Connect<DefaultEvent>(Events.Load, OnLoad);
 
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnTimeChange);
+
         if (Load == false)
             SceneryChange(new StageDirectionEvent(StartingRoom));
 
@@ -67,6 +69,15 @@ public class StageDisplay : MonoBehaviour
     {
 		
 	}
+
+
+    void OnTimeChange(DefaultEvent eventdata)
+    {
+        //night is true, day is false
+        bool time = Game.current.Hour < DayTimeStart || Game.current.Hour > DayTimeEnd;
+
+        Game.current.Progress.SetValue("Is Night", time);
+    }
 
     void OnSkip(DefaultEvent eventdata)
     {

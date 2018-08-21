@@ -78,6 +78,8 @@ public class ProgressSystem
         for(int ima = 0; ima < copy_.ChronologicalObjectives.Count; ++ima)
         {
             ChronologicalObjectives.Add(Objectives[copy_.ChronologicalObjectives[ima].Number]);
+
+            MonoBehaviour.print(ChronologicalObjectives[ima].GetState());
         }
 
 
@@ -395,6 +397,8 @@ public class ProgressSystem
         if (Objectives.Count <= Number)
             return;
 
+        //Debug.Log("Task #" + Number + " (subtask:" + SubTask + ") is in state: " + newState);
+
         if (SubTask != -1 && Objectives[Number].SubTasks.Count > SubTask)
         {
             Objectives[Number].SubTasks[SubTask].SetState(newState);
@@ -449,7 +453,6 @@ public class ProgressSystem
             //reset the daily grind
             if (beat.BeatName.ToLower() == "sleepy")
             {
-                Debug.Log("why");
                 beat.ResetBeat();
                 return;
             }
@@ -672,17 +675,17 @@ public class Task
         Name = copy.Name;
         //Objective = (string)taskData["Objective"];
         SubTasks = new List<Task>();
-        //MonoBehaviour.print((int)taskData["SubCount"]);
+        //MonoBehaviour.print(copy.SubTasks.Count);
         for (int i = 0; i < copy.SubTasks.Count; ++i)
         {
             var sub = new Task(copy.SubTasks[i].Number);
             sub.Name = copy.SubTasks[i].Name;
             sub.Hidden = copy.SubTasks[i].Hidden;
+            sub.SetState(copy.SubTasks[i].State);
             SubTasks.Add(sub);
         }
 
         Hidden = copy.Hidden;
-
         AllShow = copy.AllShow;
         AllSuccess = copy.AllSuccess;
         AllFail = copy.AllFail;

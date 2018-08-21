@@ -78,45 +78,45 @@ public class SocialStatManager : MonoBehaviour
 
     if (basicTier > 0)
     {
-      StarMarker1.CrossFadeAlpha(1.0f, 0f, false);
+      StarMarker1.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 1) StarMarker1.color = LoweredColorStar;
       else StarMarker1.color = NormalColorStar;
     }
-    else StarMarker1.CrossFadeAlpha(0.2f, 0f, false);
+    else StarMarker1.CrossFadeAlpha(0.2f, 0.001f, false);
 
     if (basicTier > 1)
     {
-      StarMarker2.CrossFadeAlpha(1.0f, 0f, false);
+      StarMarker2.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 2) StarMarker2.color = LoweredColorStar;
       else StarMarker2.color = NormalColorStar;
     }
-    else StarMarker2.CrossFadeAlpha(0.2f, 0f, false);
+    else StarMarker2.CrossFadeAlpha(0.2f, 0.001f, false);
 
     if (basicTier > 2)
     {
-      StarMarker3.CrossFadeAlpha(1.0f, 0f, false);
+      StarMarker3.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 3) StarMarker3.color = LoweredColorStar;
       else StarMarker3.color = NormalColorStar;
     }
-    else StarMarker3.CrossFadeAlpha(0.2f, 0f, false);
+    else StarMarker3.CrossFadeAlpha(0.2f, 0.001f, false);
 
     if (SpecialStar1 == null || SpecialStar2 == null) return;
 
     if (specialTier > 0)
     {
-      SpecialStar1.CrossFadeAlpha(1.0f, 0f, false);
+      SpecialStar1.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 4) SpecialStar1.color = LoweredColorStar;
       else SpecialStar1.color = NormalColorStar;
     }
-    else SpecialStar1.CrossFadeAlpha(0.0f, 0f, false);
+    else SpecialStar1.CrossFadeAlpha(0.0f, 0.001f, false);
 
     if (specialTier > 1)
     {
-      SpecialStar2.CrossFadeAlpha(1.0f, 0f, false);
+      SpecialStar2.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 5) SpecialStar2.color = LoweredColorStar;
       else SpecialStar2.color = NormalColorStar;
     }
-    else SpecialStar2.CrossFadeAlpha(0.0f, 0f, false);
+    else SpecialStar2.CrossFadeAlpha(0.0f, 0.001f, false);
   }
 	
 	void UpdateStats (DefaultEvent e)
