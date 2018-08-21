@@ -296,7 +296,7 @@ The Art Room is <>
 	- currentHour < 7: completely dead, which doesn't come us a surprise at this time of night. Or morning, rather.
 	-else: {~practically empty|occupied by a few of its regulars|bustling}.
 }
-I get a {~set of brushes, paint, and a canvas|lump of clay and a sculpting wheel|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
+I get a {~set of brushes, paint, and a canvas|lump of air-dry clay and some water|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
 Time to make something!
 After about an hour, I finish. My digits are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
