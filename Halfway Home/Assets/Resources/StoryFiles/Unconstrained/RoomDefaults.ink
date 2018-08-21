@@ -22,6 +22,7 @@ EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
 EXTERNAL SetTimeBlock(int)
+EXTERNAL GetTrueSocial(name)
 EXTERNAL CallSleep()
 EXTERNAL GetHour()
 
@@ -228,7 +229,7 @@ My solitude gives me plenty of time to reflect.
 }
 <color=color_descriptor><i>Time alone in the sun <color=color_wellbeing_penalty>increased <b>Fatigue</b> and <b>Depression</b> slightly<color=color_descriptor>.</color> # Fatigue += 10 # Depression += 10
 {
-	- awareness > 2:
+	- GetTrueSocial("Awareness") > 2:
 		<color=color_descriptor>Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly<color=color_descriptor>.</color> # Stress -= 20 # awareness ^ good, nocolor
 	- else:
 		<color=color_descriptor>Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
@@ -251,7 +252,7 @@ My solitude gives me plenty of time to reflect.
 }
 <color=color_descriptor><i>Time alone under the stars <color=color_wellbeing_penalty>increased <b>Depression</b> slightly<color=color_descriptor>.</color> # Depression += 10
 {
-	- awareness > 2:
+	- GetTrueSocial("Awareness") > 2:
 		<color=color_descriptor>Proficiency with introspection <color=color_wellbeing_relief>reduced <b>Stress<b> significantly<color=color_descriptor>.</color> # Stress -= 20 # awareness ^ good, nocolor
 	- else:
 		<color=color_descriptor>Reflection has <color=color_awareness>improved <b>Awareness</b> faintly.</i></color> # Awareness+
@@ -270,15 +271,15 @@ I peruse the shelves until a title catches my eye.
 I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
 {currentHour > 18 || currentHour < 7:
-	<color=color_descriptor><i>Reading at this late hour has taken even more out of you than normal, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> significantly<color=color_descriptor>.</color> # Fatigue += 20
+	<color=color_descriptor><i>Reading at this late hour has taken even more out of me than normal, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> significantly<color=color_descriptor>.</color> # Fatigue += 20
 -else:
-	<color=color_descriptor><i>Focusing on the text has taken a toll on your concentration, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> slightly<color=color_descriptor>.</color> # Fatigue += 10
+	<color=color_descriptor><i>Focusing on the text has taken a toll on my concentration, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 }
 
 {
-	- grace > 2:
+	- GetTrueSocial("Grace") > 2:
 		<color=color_descriptor>Competency with <color=color_grace><b>Grace</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Stress</b><color=color_descriptor>!</color> # Stress -= 25 # grace ^ good, nocolor
-	- grace > 1:
+	- GetTrueSocial("Grace") > 1:
 		<color=color_descriptor>Experience with <color=color_grace><b>Grace</b><color=color_descriptor> has removed the <b>Stress<b> from this activity<color=color_descriptor>!</color> # grace ^ good, nocolor
 		<color=color_descriptor>New knowledge has <color=color_grace>improved <b>Grace</b> faintly<color=color_descriptor>.</i></color> # Grace+
 	- else:
@@ -301,10 +302,10 @@ Time to make something!
 After about an hour, I finish. My digits are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 {
-	- expression > 2:
+	- GetTrueSocial("Expression") > 2:
 		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor></color> and relieved Depression. # expression ^ good, nocolor
 		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>!</color> # Depression -= 25 # expression ^ good, nocolor
-	- expression > 1:
+	- GetTrueSocial("Expression") > 1:
 		<color=color_descriptor>Experience with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor>!</color> # expression ^ good, nocolor
 		<color=color_descriptor>Creativity has <color=color_expression>improved <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 	- else:
