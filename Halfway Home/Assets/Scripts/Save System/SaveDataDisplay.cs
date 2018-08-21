@@ -144,6 +144,10 @@ public class SaveDataDisplay : MonoBehaviour
             else Icon.sprite = Save;
 
             SetChildAlpha(EmptyAlpha);
+
+            FSlider.value = 0;
+            SSlider.value = 0;
+            DSlider.value = 0;
         }
 
 

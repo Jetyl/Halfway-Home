@@ -33,6 +33,8 @@ public class MainMenu : MonoBehaviour
     public float StartGameFadeTime = 1.0f;
     public float CreditsFadeTime = 2.1f;
 
+    int index;
+
   // Use this for initialization
   void Start ()
     {
@@ -180,9 +182,20 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void OpenDeleteConfirmation(int number)
+    {
+        index = number;
+        ClearSavePanel.SetActive(true);
+    }
+
     public void DeleteSaveSlot(int slot)
     {
       SaveLoad.DeleteAt(slot);
+    }
+    public void DeleteSaveSlot()
+    {
+        SaveLoad.DeleteAt(index);
+        ClearSavePanel.SetActive(false);
     }
 
     public int GetStateLevel(Personality.Social stat)

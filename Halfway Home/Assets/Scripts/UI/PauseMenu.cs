@@ -22,6 +22,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject ToDoPage;
     public GameObject SavePage;
     public GameObject LoadPage;
+    public GameObject DeleteConfirm;
+    public GameObject OverwriteConfirm;
+
+    int index;
+
     public float QuitFadeTime = 2.0f;
 
     bool Quiting;
@@ -31,6 +36,8 @@ public class PauseMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         Confirm.SetActive(false);
+        DeleteConfirm.SetActive(false);
+        OverwriteConfirm.SetActive(false);
     }
 
     public void Continue()
@@ -45,6 +52,18 @@ public class PauseMenu : MonoBehaviour
         SavePage.SetActive(true);
     }
     
+    public void SaveOrOverwrite(int slot)
+    {
+        if (SaveLoad.GetSave(slot) == null)
+            SaveGame(slot);
+        else
+        {
+            index = slot;
+            OverwriteConfirm.SetActive(true);
+        }
+    }
+
+
     public void SaveGame(int slot)
     {
         Space.DispatchEvent(Events.Save);
@@ -76,6 +95,19 @@ public class PauseMenu : MonoBehaviour
     public void DeleteSaveSlot(int slot)
     {
         SaveLoad.DeleteAt(slot);
+    }
+
+
+    public void DeleteSaveSlot()
+    {
+        SaveLoad.DeleteAt(index);
+        DeleteConfirm.SetActive(false);
+    }
+
+    public void OverwriteSaveSlot()
+    {
+        SaveGame(index);
+        OverwriteConfirm.SetActive(false);
     }
 
     public void OldSaveGame()
@@ -132,7 +164,11 @@ public class PauseMenu : MonoBehaviour
         Confirm.SetActive(true);
 
     }
-    
+    public void OpenDeleteConfirmation(int number)
+    {
+        index = number;
+        DeleteConfirm.SetActive(true);
+    }
 
     public void OnConfirmed()
     {
