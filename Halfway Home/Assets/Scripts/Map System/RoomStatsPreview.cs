@@ -35,8 +35,16 @@ public class RoomStatsPreview : MonoBehaviour
         foreach(StatIcon s in r.StatIcons)
         {
           // additional logic here
-          Image im = Instantiate(s.Icon, transform);
-          im.tag = "NotHideable";
+          bool nighttime = Game.current.Progress.GetBoolValue("Is Night");
+          if (s.DayOnly && nighttime) continue;
+          else if (s.NightOnly && !nighttime) continue;
+          else if (Game.current.Self.GetTrueSocialStat(s.Social) < s.SocialMin) continue;
+          else if (Game.current.Self.GetTrueSocialStat(s.Social) > s.SocialMax) continue;
+          else
+          {
+            Image im = Instantiate(s.Icon, transform);
+            im.tag = "NotHideable";
+          }
         }
       }
     }
