@@ -12,12 +12,16 @@ public class InvertScreenControl : MonoBehaviour
 
     bool Active;
 
+    bool Inverted;
+
+    public float InvertSpeed = 0.5f;
 
 	// Use this for initialization
 	void Start ()
     {
 
         Inverter = GetComponent<InvertColorEffect>();
+        Inverter.SetInvertAmount(0);
         Inverter.enabled = false;
 
         if (Game.current != null)
@@ -40,8 +44,14 @@ public class InvertScreenControl : MonoBehaviour
         if (!Active)
             return;
 
-        Inverter.enabled = InvertOn(eventdata.TrueSpeaker);
+        bool On = InvertOn(eventdata.TrueSpeaker);
         
+        if(On && !Inverter.enabled)
+            StartCoroutine(InvertFade(InvertSpeed));
+        else if(!On && Inverter.enabled)
+            StartCoroutine(InvertFade(InvertSpeed));
+
+
 
     }
 
@@ -61,4 +71,36 @@ public class InvertScreenControl : MonoBehaviour
     {
         Active = Game.current.Progress.GetBoolValue(ActiveTag);
     }
+
+
+    IEnumerator InvertFade(float aTime)
+    {
+        if(Inverted)
+        {
+            for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+            {
+                Inverter.SetInvertAmount(1 - t);
+                yield return null;
+            }
+
+            Inverter.SetInvertAmount(0);
+            Inverter.enabled = false;
+        }
+        else
+        {
+            Inverter.enabled = true;
+            for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+            {
+                Inverter.SetInvertAmount(t);
+                yield return null;
+            }
+
+            Inverter.SetInvertAmount(1);
+        }
+
+        Inverted = !Inverted;
+
+    }
+
+
 }
