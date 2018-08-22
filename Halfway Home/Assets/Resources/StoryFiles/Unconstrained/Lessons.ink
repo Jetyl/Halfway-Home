@@ -277,25 +277,32 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 [Charlotte] "It was my pleasure, {player_name}. I hope this information serves you well in the trials to come." # Charlotte = Happy
 {
 	-grace>2:
-		[{player_name}] "I assure you, the pleasure was all mine. If nothing else, I am glad for your company."
-		{GetValue("EarnedLessonsStar")==false:
-			<color=color_descriptor><i>Charlotte's tutelage has <color=color_grace>increased <b>Grace</b> immensely<color=color_descriptor>.</color></i> # Grace+++
-			~SetValue("EarnedLessonsStar", true)
-		}
-		[Charlotte] "My you <i>have</i> learned quickly, haven't you? You seem like an entirely different person this week."
-		"I daresay I'm quite proud."
-		"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills." #Skip
-		+[Yes] 
-			[{player_name}] "I'd love to. Where and when?"
-			[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetValue("ReadyForTea", 2)}
-			[{player_name}] "I look forward to it."
-		+[No]
-			[{player_name}] "I'd love to, but I can't."
-			[Charlotte] "I see." # Charlotte = Sad
+		->Invitation
 	-else:
 		I stand awkwardly for a few moments before Charlotte breaks the silence.
 		[Charlotte] "Make sure to keep studying, {player_name}. I'm sure all of this will be second-nature to you soon enough."
+		-> Last
 }
+
+= Invitation
+[{player_name}] "I assure you, the pleasure was all mine. If nothing else, I am glad for your company."
+{GetValue("EarnedLessonsStar")==false:
+	<color=color_descriptor><i>Charlotte's tutelage has <color=color_grace>increased <b>Grace</b> immensely<color=color_descriptor>.</color></i> # Grace+++
+	~SetValue("EarnedLessonsStar", true)
+}
+[Charlotte] "My you <i>have</i> learned quickly, haven't you? You seem like an entirely different person this week."
+"I daresay I'm quite proud."
+"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills." #Skip
++[Yes] 
+	[{player_name}] "I'd love to. Where and when?"
+	[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetValue("ReadyForTea", 2)} # 9 & InProgress
+	[{player_name}] "I look forward to it."
++[No]
+	[{player_name}] "I'd love to, but I can't."
+	[Charlotte] "I see." # Charlotte = Sad
+- -> Last
+
+= Last
 "Now then, I should return to my routine. Have a wonderful evening." # Charlotte = Calm
 Charlotte gracefully exits the room. # Charlotte = Exit
 I look over the books on the table one more time before heading out myself.
