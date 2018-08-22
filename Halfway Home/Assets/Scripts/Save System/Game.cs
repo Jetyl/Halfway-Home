@@ -343,10 +343,15 @@ public class Game
             NewDay();
         }
 
-        if (DrainEnergy)
-            Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 10 * CurrentTimeBlock);
         Self.IncrementWellbeingStat(Personality.Wellbeing.Depression, 1 * CurrentTimeBlock);
-        Space.DispatchEvent(Events.StatChange);
+
+        if (DrainEnergy)
+        {
+            //Self.IncrementWellbeingStat(Personality.Wellbeing.Fatigue, 10 * CurrentTimeBlock);
+            Space.DispatchEvent(Events.AddStat, new ChangeStatEvent(10 * CurrentTimeBlock, Personality.Wellbeing.Fatigue));
+        }
+        
+        //Space.DispatchEvent(Events.StatChange);
 
         DrainEnergy = false;
         CurrentTimeBlock = 0;

@@ -111,7 +111,9 @@ public class TMP_Animator : MonoBehaviour
                 }
                 else if (end == findIt.Length - 1)
                 {
-                    return start + end;
+                    //print("Match found at " + start);
+                    //print("String is " + text.Length + " long, word is " + findIt.Length);
+                    return start;
                 }
             }
         }
