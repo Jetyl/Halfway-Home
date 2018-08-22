@@ -8508,6 +8508,56 @@ Prefab:
       propertyPath: Rooms.Array.data[5].StatIcons.Array.data[1].Social
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114780348253456686, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.g
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 114780348253456686, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 114780348253456686, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338863395622336, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.r
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338863395622336, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338863395622336, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114526465115732116, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114526465115732116, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.g
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 114526465115732116, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.b
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 114526465115732116, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
   m_IsPrefabParent: 0

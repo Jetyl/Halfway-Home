@@ -42,6 +42,7 @@ EXTERNAL UnlockAchievement(tag)
 I walk down the halls of the home and hear some commotion coming from the commons area. {SetTimeBlock(1)}
 ~HoursSpent = 0
 Walking in, I spy Eduardo and Isaac giggling on the couch, the sole occupants of the room.
+~SetValue("FoundLongNightHangout", true)
 [Eduardo] "Hey! {player_name}! How's it hanging?!" #Hangout / Open, Leg_Down, Arm_Down, Hand_Up, E_Happy, Eye_U, hrm_Up #2 &Success
 [{player_name}] "What are you guys still doing up?" #Hangout / Hand_Down
 [Eduardo] "Oh, you know, chilling, shooting the sh-" #Skip

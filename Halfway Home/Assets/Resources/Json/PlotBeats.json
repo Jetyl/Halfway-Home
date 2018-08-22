@@ -401,6 +401,10 @@
     "Type" : 1
    },
    {
+    "Name" : "FoundLongNightHangout",
+    "Type" : 1
+   },
+   {
     "Name" : "LongNightHangoutComplete",
     "Type" : 1
    },
