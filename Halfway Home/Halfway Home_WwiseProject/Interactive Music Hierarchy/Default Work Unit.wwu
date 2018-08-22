@@ -8662,9 +8662,6 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							</TransitionList>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{97AF380E-F002-44A0-8B4D-E1B863D1485F}" ShortID="845123207">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{19F681DB-6D71-41D7-AC40-B873846AA23B}" ShortID="891787375">
 											<PropertyList>
@@ -8674,6 +8671,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{E948D800-C757-4E57-946D-5EA58583451D}" ShortID="398169106">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="music_artroom_morning_loop" ID="{B4A9B796-A622-4246-A8A0-D7C7CAC4D129}"/>
