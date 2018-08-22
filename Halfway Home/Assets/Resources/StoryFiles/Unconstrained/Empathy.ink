@@ -43,7 +43,8 @@ I decide to take this opportunity to spend some time with Charlotte. # Charlotte
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "I would be pleased if you would, {player_name}." # Charlotte = Happy
 
-	-grace>2: "Begging your pardon, Charlotte. Would you mind if I joined you on the sofa?" # grace ^ good
+	-grace>2: 
+		[{player_name}] "Begging your pardon, Charlotte. Would you mind if I joined you on the sofa?" # grace ^ good
 		Charlotte looks up from her book and smiles.
 		[Charlotte] "Ah, {player_name}. I would be honored if you would join me." # Charlotte = Happy
 

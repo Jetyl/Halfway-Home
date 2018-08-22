@@ -90,9 +90,39 @@ public class TMP_Animator : MonoBehaviour
         //StartCoroutine(AnimateText());
     }
 
+    int IndexOfThatDoesntCareAboutCapitalization(string text, string findIt)
+    {
+        string t = findIt.ToLower();
+
+        //Check all characters in the string
+        for (int start = 0; start < text.Length; start++)
+        {
+            //Check all characters starting at this position until we hit a no match
+            for (int end = 0; end < findIt.Length && end + start < text.Length; end++)
+            {
+                //char c = ("" + text[start + end]).ToLower()[0];
+                //why is this a function on the type and not a member function
+                //why tho
+                char c = char.ToLower(text[start + end]);
+                
+                if (c != t[end])
+                {
+                    break;
+                }
+                else if (end == findIt.Length - 1)
+                {
+                    return start + end;
+                }
+            }
+        }
+
+        return -1;
+    }
+
     void RemoveFirst(ref string baseText, string thingToHuntDownAndKill)
     {
-        int index = baseText.IndexOf(thingToHuntDownAndKill);
+        //int index = baseText.IndexOf(thingToHuntDownAndKill);
+        int index = IndexOfThatDoesntCareAboutCapitalization(baseText, thingToHuntDownAndKill);
 
         baseText = baseText.Substring(0, index) + baseText.Substring(index + thingToHuntDownAndKill.Length);
     }
