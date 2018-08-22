@@ -109,11 +109,11 @@ Still nothing.
 	[Isaac] "Hm."
 	->PoorGrip
 +[Whether I am or not, I’m still leaving <(expression>2)>]
-	[{player_name}] "Whether I am or not, I’m still leaving." #Grace ^ good
+	[{player_name}] "Whether I am or not, I’m still leaving." #expression ^ good
 	[Isaac] "Hm... @That's true. Hm..."
 	->OpenAnswer
 +[No, not really <(awareness>2)>]
-	[{player_name}] "No, not really." #Expression ^ good
+	[{player_name}] "No, not really." #awareness ^ good
 	[Isaac] "Are you scared? To leave?"
 	[{player_name}] "...Yeah."
 	->OpenAnswer
@@ -307,7 +307,7 @@ I help him up off the ground. #background / garden #Isaac = calm
 [Isaac] "Oh, and, um..."
 "I am gonna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
-[{player_name}] "That sounds good. I'll be looking forward to hearing how it goes." #Isaac = surprise
+[{player_name}] "That sounds good. I'll be looking forward to hearing how it goes." #Isaac = surprised
 [Isaac] "..." 
 "Sure." #Isaac = happy
 Isaac  quickly excuses himself and slinks off to bed. #Isaac = exit

@@ -23452,7 +23452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConfirmationPanel: {fileID: 498120686}
-  ClearPanel: {fileID: 0}
+  ClearPanel: {fileID: 1737694017}
   LoadPanel: {fileID: 1600617010}
   mousePosition: 0
   musicPlayer: {fileID: 1547697618}

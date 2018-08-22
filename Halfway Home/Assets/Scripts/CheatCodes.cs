@@ -136,6 +136,10 @@ public class CheatCodes : MonoBehaviour
                 Space.DispatchEvent(Events.AddStat,
                     new ChangeStatEvent("major", Personality.Social.Awareness));
                 break;
+            case "awareness+++":
+                Game.current.Self.AddBonusSocialStar(Personality.Social.Awareness);
+                Space.DispatchEvent(Events.StatChange);
+                break;
             case "grace+":
                 Space.DispatchEvent(Events.AddStat,
                     new ChangeStatEvent("minor", Personality.Social.Grace));
@@ -144,6 +148,10 @@ public class CheatCodes : MonoBehaviour
                 Space.DispatchEvent(Events.AddStat,
                     new ChangeStatEvent("major", Personality.Social.Grace));
                 break;
+            case "grace+++":
+                Game.current.Self.AddBonusSocialStar(Personality.Social.Grace);
+                Space.DispatchEvent(Events.StatChange);
+                break;
             case "expression+":
                 Space.DispatchEvent(Events.AddStat,
                     new ChangeStatEvent("minor", Personality.Social.Expression));
@@ -151,6 +159,10 @@ public class CheatCodes : MonoBehaviour
             case "expression++":
                 Space.DispatchEvent(Events.AddStat,
                     new ChangeStatEvent("major", Personality.Social.Expression));
+                break;
+            case "expression+++":
+                Game.current.Self.AddBonusSocialStar(Personality.Social.Expression);
+                Space.DispatchEvent(Events.StatChange);
                 break;
             default:
                 close = TimelineSystem.Current.TryCheatCode(code);
