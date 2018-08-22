@@ -685,7 +685,7 @@ MonoBehaviour:
       Graphic: {fileID: 1090401161705184}
     - Tag: Shock
       Graphic: {fileID: 1215906374164492}
-    - Tag: Sug
+    - Tag: Smug
       Graphic: {fileID: 1419869608529150}
     - Tag: Unsure
       Graphic: {fileID: 1429607159506384}

@@ -157,13 +157,13 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrass
 I need to think... How to best explain myself? #Skip
 +[Hunch]
 	[{player_name}] "It's just a hunch I have."
-	[Eduardo] "yeah, well, keep your hunches to yerself from now on. okay?"
+	[Eduardo] "Yeah, well, keep your hunches to yerself from now on. okay?"
 	->Disbelif
-+[Its Obvious]
++[Its obvious]
 	[{player_name}] "I mean, its kind of obvious, isn't it?"
-	[Eduardo] "no. no it's not."
+	[Eduardo] "No. No it's not."
 	->Disbelif
-+{GetValue("Know Isaac's Troubles")}[Isaac told Me]
++{GetValue("Know Isaac's Troubles")}[Isaac told me]
 	->Contention
 
 
@@ -231,7 +231,7 @@ Eduardo looks shocked. <>
 [Eduardo] "Well aren't you a nosy one!"   # Play : play_music_eduardo_love_no_intro   # Ambience : Stop_All   #Misery / aggressive, angry //Angry eduardo
 "But fine, I'll tell ya!" #Misery / relaxed, smug //oddly cheery and almost smug
 Eduardo's mood seems to have completely shifted. There's a passion in his eyes that's almost scary.
-[{player_name}] "what's gotten into you?"
+[{player_name}] "What's gotten into you?"
 [Eduardo] "Well now I gotta prove our perfect love, against these vile rumors you seem caught up in!" //smug explanatory
 "So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!" #Misery / dreamy //cheery
 "It was not long ago, actually. We had our six month anniversary last week, to be exact."
@@ -327,7 +327,7 @@ I let out a deep sigh.
 [{player_name}] "Eduardo. Nothing is perfect."
 "And just because you two love each other doesn't mean your relationship's going to be one hundred percent problem free now and forever."
 "I am saying this as your friend... and Isaac's friend. Stop suffocating him."
-[Eduardo] "Suffocating. <size=80%>Suffocating. <size=50%Suffocating.</size>" #Misery / Tense, Mumble
+[Eduardo] "Suffocating. <size=80%>Suffocating. <size=50%>Suffocating.</size>" #Misery / Tense, Mumble
 "<Jitter>WHAT THE HELL DO YOU KNOW?!</Jitter>" #Misery / aggressive, angry
 "You don't know what we're like! You don't know what Isaac does or doesn't want!"
 [{player_name}] "Oh, for the love of- Yes! I do!"
