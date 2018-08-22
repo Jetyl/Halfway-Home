@@ -112,20 +112,20 @@ I'm going to need to say something, and quick, before he just goes on for hours,
 +[Book it out of the room]
 	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, gotta-go-bye!"
 	[Eduardo] "wait, wha-" #Skip
-	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults # All = Exit
+	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults # All = Exit # Play : Stop_All
 	Wow, I am really out of shape.
-	[Voices] "Just another reason why you are worthless."
+	[Voices] "Just another reason why you are worthless." # ambience_vol | -10
 	{
 		-depression < 50:
-		No, no. I just, haven't been exercising, thats all... thats all...
+		No, no. I just, haven't been exercising, thats all... thats all... # ambience_vol | 0
 	}
-	I plop myself on the couch, and watch some TV to take my mind off things.
+	I plop myself on the couch, and watch some TV to take my mind off things. # ambience_vol | 0
 	->END
 
 ===Gushing===
 I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom, NoDefaults #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
 His excessive passion is very inspiring and <color=color_expression>your expression increases considerably</color>, but it <color=color_wellbeing_penalty>significantly tires you out</color>. #expression++ #fatigue += 20
-When I check the clock, I realize 3 hours have passed #time % 3
+When I check the clock, I realize 3 hours have passed. #time % 3
 Luckily, Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right
 [Isaac] "Oh. What are you two doing?"
 [{player_name}] "Oh, nothing. Eduardo's just been talking my ear off about how much he loves you."
