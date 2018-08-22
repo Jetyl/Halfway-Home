@@ -82,17 +82,20 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 	{
 		- fatigue > 80:
 			I feel exhausted! I stumble narrow-mindedly through my pre-sleep ritual and flop down onto the comfortable mattress.
-			I feel myself begin to drift off almost immediately. # Background / Dream, EyeClose # Sleep % 8
+			I feel myself begin to drift off almost immediately. # Background / Dream, EyeClose 
+			... # Sleep % 8
 
 		- fatigue < 70: 
 			I don't feel quite tired enough to fall asleep yet, but I also don't feel like I've got enough energy to do much else.
 			I stare at the ceiling for a while, tracing the ridges of spackle as I've always done.
 			I wonder if I see more of this ceiling than the rest of the house. Kind of an amusing thought.
-			After what seems like a timeless eternity, sleep finally takes me. # Background / Dream, EyeClose # Sleep % 8
+			After what seems like a timeless eternity, sleep finally takes me. # Background / Dream, EyeClose 
+			... # Sleep % 8
 		- else:
 			I'm starting to feel pretty tired and don't feel like ignoring that fact for the sake of a few more hours of activity.
 			I find myself wondering what I'll do tomorrow. The thought excites me a little. I never felt that at Blackwell.
-			I feel hopeful as I surrender myself to sleep. # Background / Dream, EyeClose # Sleep % 8
+			I feel hopeful as I surrender myself to sleep. # Background / Dream, EyeClose 
+			... # Sleep % 8
 	}
 	I wake up feeling <> # Background / YourRoom, EyeOpen # Play : Play_music_placeholder_main   # music_vol | -6
 	{shuffle:
