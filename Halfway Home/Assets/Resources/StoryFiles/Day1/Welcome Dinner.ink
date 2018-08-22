@@ -155,8 +155,7 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 } 
 <> I was lookin' for."
 {
-	//-GetValue("Tutorial"):
-	-week == 1:
+	-GetValue("Tutorial"):
 		->TutorialTalk
 	-else:
 		->GeneralTalk

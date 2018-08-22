@@ -241,7 +241,7 @@ I open the door to Max's beaming face. A scared Timothy hides behind them.   #Ke
 	It hurts to lie to Max, but it's better than the alternative.
 	[{player_name}] "... No."
 	Max looks disappointed in me, but I'd prefer that to them suspecting I'd gone off the deep end.   # Keyless = Sad
-+[Hi, Timothy]
++[Hi, Timothy <(expression > 0)>]
 	[{player_name}] "Hi, Timothy".
 	[Timothy] "Meep!"   #Timothy=Surprised
 	[Keyless>Max] "Ah, good, you remembered. And here I was worried you forgot."
@@ -258,19 +258,27 @@ Max must be realizing they don't have their keys.
 I could tell Max where there keys are themselves and have the day to myself...
 Or I could show Timothy around myself and snag the keys from the cushions before they can. #Skip
 +[Tell Max where the keys are] 
+	[{player_name}] "What?"
+	[Keyless>Max] "It would seem I have misplaced my keys." # Keyless = Afraid
 	->Day1Alone
-+[Withhold that information] 
++[Withhold that information <(expression > 1)>] 
 	[{player_name}] "What?"
 	[Keyless>Max] "I can't find my keys! I must have left 'em somewhere..." # Keyless = Afraid
 	"{player_name}, I'm gonna need you to do me a solid."
 	"Well... It's Timothy's first day, so someone's gotta show him the ropes."   # Keyless = Happy
 	"But I can't have my keys unaccounted for here."
 	"So could you be a pal and show him around?"
-	[{player_name}] "Sure."
-	[Keyless>Max] "Thanks, buddy!"
-	And just like before, Max leaves me with Timothy.   # Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
-	He's no stranger to me any more, but I am to him... weird to think about.
-	->TakingTimothy
+	++[Sure]
+		[{player_name}] "Sure." #Grace ^ Good
+		[Keyless>Max] "Thanks, buddy!"
+		And just like before, Max leaves me with Timothy.   # Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
+		He's no stranger to me any more, but I am to him... weird to think about.
+		->TakingTimothy
+	++[Actually, I remember where you lost your keys]
+		[{player_name}] "Actually, I think I remember where you lost your keys!" #expression ^ Good
+		[Keyless>Max] "Wait, really? where?"
+		->Day1Alone
+	
 
 ===Freakout===
 No no no no!
@@ -334,8 +342,6 @@ I am really starting to get hungry, so my first move should be to show Timothy t
 
 ===Day1Alone===
 {SetValue("Tutorial", false)}
-[{player_name}] "What?"
-[Keyless>Max] "It would seem I have misplaced my keys." # Keyless = Afraid
 [{player_name}] "They probably just fell into the couch cushions in the commons."
 [Keyless>Max] "Oh, don't be silly {player_name}, I-"
 "Actually, that's entirely plausible. Don't move, I'll be right back!"

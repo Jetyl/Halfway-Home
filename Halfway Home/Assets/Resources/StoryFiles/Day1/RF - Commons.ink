@@ -115,11 +115,11 @@ I shuffle Timothy off to another part of the building to continue the tour.   #T
 
 === RepeatedMistakes ===
 [Timothy] "I hope he finds his keys." #Skip #Keyless = Exit
-+[Correct Timothy <expression>]
++[Correct Timothy <(expression)>]
 	[{player_name}] "Their keys." #expression+ #expression ^ good
 	I instinctively correct Timothy on Max's pronouns out of habit.   #Timothy= Surprised
 	As Timothy begins to retreat inward I quickly add... #Timothy = Afraid
-+[Let it Slide <grace>]
++[Let it Slide <(grace)>]
 	[{player_name}] "..." #grace+ #grace ^ good
 	I decide not to correct Timothy, mostly because I don't want to set him off.
 	Unfortunately, Timothy freezes up anyway, seemingly realizing the mistake on his own. #Timothy = Afraid
