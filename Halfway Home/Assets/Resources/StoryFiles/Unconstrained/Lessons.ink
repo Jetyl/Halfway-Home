@@ -20,6 +20,7 @@ VAR current_room = "unset"
 VAR topicsDiscussed = 0
 
 EXTERNAL SetValue(name, values)
+EXTERNAL SetIntValue(name, values)
 EXTERNAL GetValue(name)
 EXTERNAL GetStringValue(name)
 
@@ -295,7 +296,7 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 "Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills." #Skip
 +[Yes] 
 	[{player_name}] "I'd love to. Where and when?"
-	[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetValue("ReadyForTea", 2)} # 9 & InProgress
+	[Charlotte] "Three in the afternoon tomorrow in my room. I'll have everything ready. Simply knock when you arrive." {SetIntValue("ReadyForTea", 2)} # 9 & InProgress
 	[{player_name}] "I look forward to it."
 +[No]
 	[{player_name}] "I'd love to, but I can't."
