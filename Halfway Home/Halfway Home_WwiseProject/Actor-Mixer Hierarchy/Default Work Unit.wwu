@@ -1575,6 +1575,7 @@
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1593,7 +1594,7 @@
 											<ObjectRef Name="SFX2" ID="{04D7BD75-C520-44FB-AD50-2901ADD8B4A3}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+											<ObjectRef Name="Ambience Bus" ID="{8BDE45FD-AD4B-4E91-8446-16329E51AA78}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>

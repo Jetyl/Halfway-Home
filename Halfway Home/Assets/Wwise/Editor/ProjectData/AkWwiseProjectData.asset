@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -1109838069
-    m_lastTimePart2: -1999239450
+    m_lastTimePsrt1: -314117988
+    m_lastTimePart2: -1999239251
     List:
     - Name: play_music_game_day
       Path: Default Work Unit\play_music_game_day
@@ -806,8 +806,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: 543077901
-    m_lastTimePart2: -1999239808
+    m_lastTimePsrt1: -314107975
+    m_lastTimePart2: -1999239251
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -1215,8 +1215,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1772902113
-    m_lastTimePart2: -1999240833
+    m_lastTimePsrt1: -314017900
+    m_lastTimePart2: -1999239251
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1317,8 +1317,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1106918487
-    m_lastTimePart2: -1999239450
+    m_lastTimePsrt1: -314007888
+    m_lastTimePart2: -1999239251
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1455,6 +1455,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -641435002
       Guid: 69c4803a831daa45be3660084bc6f4f8
+    - Name: story_recover_restart_required
+      Path: Stories\story_recover_restart_required
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_recover_restart_required
+        ObjectType: 7
+      ID: -433503121
+      Guid: 7df2b9c3df16094594a5a09c0b43b62b
     - Name: story_welcome_dinner
       Path: Stories\story_welcome_dinner
       PathAndIcons:
