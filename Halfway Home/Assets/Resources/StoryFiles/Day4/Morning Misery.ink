@@ -163,7 +163,7 @@ I need to think... How to best explain myself? #Skip
 	[{player_name}] "I mean, its kind of obvious, isn't it?"
 	[Eduardo] "no. no it's not."
 	->Disbelif
-+{GetValue("IsaacOpenedUp")}[Isaac told Me]
++{GetValue("Know Isaac's Troubles")}[Isaac told Me]
 	->Contention
 
 
