@@ -79,7 +79,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 === Questions ===
 +{Maps<Cartography}[Ask about Timothy's maps] -> Maps -> Questions
 +{Empire<Cartography}[Ask what place this is a map of] -> Empire -> Questions
-* ->
++ ->
 	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
@@ -114,7 +114,7 @@ Timothy gains confidence as he speaks.
 = Empire
 [{player_name}] "So what's this a map of, then?"
 [Timothy] "Uh! Okay, this is also a bit embarrassing... but you already promised not to laugh, so..."
-"It's a map of `Miorath`. <size=80%>It's the name of the fantasy world in the... uh...<size=50%> `Empire of Twilight` series... which is...<size=40%> my favorite.<size=100%>
+"It's a map of `Miorath`. <size=80%>It's the name of the fantasy world in the... uh...<size=50%> `Empire of Twilight` series... which is...<size=40%> my favorite.<size=100%>"
 [{player_name}] "I've heard of that series. {Isn't some company making it into a game?|Some company made it into a game, right?}"
 [Timothy] "{Uh. I mean, they did.|Yeah.} It came out last year, but it was only okay." # Timothy = Surprised
 {Last year? I can never seem to keep up with the outside.|It's staggering just how much you miss living under a rock for six years.}
