@@ -79,7 +79,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 === Questions ===
 +{Maps<Cartography}[Ask about Timothy's maps] -> Maps -> Questions
 +{Empire<Cartography}[Ask what place this is a map of] -> Empire -> Questions
-+ ->
+* ->
 	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
@@ -101,7 +101,7 @@ Timothy gains confidence as he speaks.
 "And that doesn't even begin to capture the spirit of it! Old school cartographers were scouts and adventurers!"
 "They sailed the oceans just to be the first to chart a course from one land to the next!" # Timothy = Happy
 "They climbed mountains for the honor of recording the view for all time."
-"It's a lot less exciting now days, but you can feel that history when you look at a map, ya know? I do, anyway..."
+"It's a lot less exciting nowadays, but you can feel that history when you look at a map, ya know? I do, anyway..."
 "Next to them, my maps are really inconsequential. I mostly just make stuff up."
 "It takes a lot to do that, too, but it's not the same."
 {Maps == Empire:

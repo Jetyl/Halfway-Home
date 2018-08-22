@@ -2,6 +2,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	318063250	ghostwhisper2	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
-	488681583	ghostwhisper1	D:\Projects\Halfway-Home\repo\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
+	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
+	488681583	ghostwhisper1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
 
