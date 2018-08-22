@@ -282,6 +282,7 @@ public class ProgressSystem
             default:
                 break;
         }
+
     }
 
     public bool CheckProgress(ProgressPoint key)
