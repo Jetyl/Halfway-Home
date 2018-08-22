@@ -42,6 +42,7 @@ Splayed out on the table in front of her are a handful of books, some opened to 
 "I have distilled the many lessons I have learned about etiquette over the years into three core ideas: Principles, Protocol, and Behavior." # Charlotte = Calm
 "I tried thinking of another word that starts with `P`, but, alas, not everything fits into the creative molds that we would prefer." # Charlotte = Sad
 "I would like you to decide which to begin with." # Charlotte = Happy #Skip
+~topicsDiscussed = 0
 -> Topic
 
 === Behavior ===
@@ -190,11 +191,11 @@ We spend an hour talking about different tactics to adapting to new social rules
 }
 
 === Topic ===
-*[Principles] -> Principles
-*[Protocol] -> Protocol
-*[Behavior] -> Behavior
-*{topicsDiscussed>0}[Ask Why She Cares] -> Motivation
-*{topicsDiscussed == 3}[Thank Her For Her Time] -> Farewell
++{Principles<Start}[Principles] -> Principles
++{Protocol<Start}[Protocol] -> Protocol
++{Behavior<Start}[Behavior] -> Behavior
++{Motivation<Start && topicsDiscussed>0}[Ask Why She Cares] -> Motivation
++{topicsDiscussed == 3}[Thank Her For Her Time] -> Farewell
 
 === Trissa ===
 Before Charlotte can continue, the door to the library swings open with a cheerful creak. # Charlotte = Calm, stage_Right
@@ -277,6 +278,10 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 {
 	-grace>2:
 		[{player_name}] "I assure you, the pleasure was all mine. If nothing else, I am glad for your company."
+		{GetValue("EarnedLessonsStar")==false:
+			<color=color_descriptor><i>Charlotte's tutelage has <color=color_grace>increased <b>Grace</b> immensely<color=color_descriptor>.</color></i> # Grace+++
+			~SetValue("EarnedLessonsStar", true)
+		}
 		[Charlotte] "My you <i>have</i> learned quickly, haven't you? You seem like an entirely different person this week."
 		"I daresay I'm quite proud."
 		"Would you do me the kindness of joining me for tea tomorrow? It would be an excellent opportunity to test your skills." #Skip
