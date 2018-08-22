@@ -55,7 +55,7 @@ EXTERNAL GetHour()
 // Reduce Stress, Remove Fatigue, Increase depression
 // Recover for the next day. The isolation reminds you of a darker time.
 In need of a break, I stumble into my room. #Skip // It would be great to have choice locks here
-+[Relax<(fatigue<80)>]
++[Relax<(fatigue<75)>]
 I'm not ready to sleep. I just need a moment to myself to... #Skip
 	++[Read]
 		I take out <>
@@ -76,7 +76,7 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 	--<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. {SetTimeBlock(1)} # Stress -= 20
 	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
 	<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
-+[Sleep<(fatigue>50)>]
++[Sleep<(fatigue>49)>]
 	I decide I might as well hit the hay.
 	~ temp new_fatigue = "none"
 	{
