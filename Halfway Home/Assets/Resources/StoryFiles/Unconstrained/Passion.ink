@@ -79,7 +79,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 === Questions ===
 +{Maps<Cartography}[Ask about Timothy's maps] -> Maps -> Questions
 +{Empire<Cartography}[Ask what place this is a map of] -> Empire -> Questions
-* ->
++ ->
 	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
