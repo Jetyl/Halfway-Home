@@ -15,7 +15,8 @@ public class SimpleSliderColor : MonoBehaviour
 
   public void Start()
   {
-    //WatchSlider.onValueChanged.AddListener(delegate { UpdateColor(); });
+        //WatchSlider.onValueChanged.AddListener(delegate { UpdateColor(); });
+        UpdateColor();
   }
   public void UpdateColor()
   {

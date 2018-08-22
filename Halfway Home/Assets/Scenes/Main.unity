@@ -56786,6 +56786,56 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleHistory
       objectReference: {fileID: 0}
+    - target: {fileID: 114805865283180002, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.g
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805865283180002, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805865283180002, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288537354877190, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.r
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288537354877190, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288537354877190, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937539925905464, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937539925905464, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.g
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937539925905464, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.b
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937539925905464, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+        type: 2}
+      propertyPath: SpecialColorStar.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_IsPrefabParent: 0

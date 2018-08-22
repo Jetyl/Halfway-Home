@@ -35,6 +35,7 @@ public class SocialStatManager : MonoBehaviour
 
   public Color NormalColorStar;
   public Color LoweredColorStar;
+  public Color SpecialColorStar;
 
   private int PreviousTier;
   private float PreviousProgress;
@@ -106,7 +107,7 @@ public class SocialStatManager : MonoBehaviour
     {
       SpecialStar1.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 4) SpecialStar1.color = LoweredColorStar;
-      else SpecialStar1.color = NormalColorStar;
+      else SpecialStar1.color = SpecialColorStar;
     }
     else SpecialStar1.CrossFadeAlpha(0.0f, 0.001f, false);
 
@@ -114,7 +115,7 @@ public class SocialStatManager : MonoBehaviour
     {
       SpecialStar2.CrossFadeAlpha(1.0f, 0.001f, false);
       if (realTier < 5) SpecialStar2.color = LoweredColorStar;
-      else SpecialStar2.color = NormalColorStar;
+      else SpecialStar2.color = SpecialColorStar;
     }
     else SpecialStar2.CrossFadeAlpha(0.0f, 0.001f, false);
   }
