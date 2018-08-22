@@ -86,9 +86,13 @@ He's got a bowl of cereal in his hand, eating on one of the tables meant for art
 			-week == 1:
 				Still, spending the entire night hanging out with someone sounds nice. Wish I had known about that. I might have stopped by for a while.
 				Oh well.
-			-GetValue("FoundLateNightHangout"):
-				Yeah, I didn't go to the hangout this week. wonder if there was anything else there I could see or say?
-			-week >=2 :
+			-GetValue("FoundLongNightHangout"):
+				Yeah, I didn't go to the hangout this week. Wonder if there was anything else there I could see or say?
+			-week ==2 :
+				Still, spending the entire night hanging out with someone sounds nice. Wish I had known about that. I might have stopped by for a while.
+				Actually, wait, I can! If...
+				If time loops again I could go see them then. I'll have to make a note of that for later. #3 & InProgress
+			-week >2 :
 				Still, good to know that's where Eduardo and Isaac were late Tuesday night/Wednesday morning. 
 				I'll have to keep a note of that for next week. #3 & InProgress //add objective here
 		}

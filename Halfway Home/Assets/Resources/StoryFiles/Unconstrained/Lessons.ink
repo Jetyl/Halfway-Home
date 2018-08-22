@@ -29,7 +29,7 @@ EXTERNAL GetStringValue(name)
 -> Start
 
 === Start ===
-I arrive at the library on time to meet with Charlotte, which {feels|still feels} like a miracle.
+I arrive at the library on time to meet with Charlotte, which {feels|still feels} like a miracle. #8 & Success
 She's already here, seated at the same sofa as yesterday.
 Splayed out on the table in front of her are a handful of books, some opened to specific chapters and others closed and stacked neatly.
 [Charlotte] "Punctuality is a good start. Thank you for meeting me here." # Charlotte = Happy
