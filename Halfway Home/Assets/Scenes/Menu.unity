@@ -2472,9 +2472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1304029043}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &176961782
@@ -6423,9 +6423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 83379451}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &442699176
@@ -6491,9 +6491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1263346401}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &452911250
@@ -9876,9 +9876,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1304029043}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &680206320
@@ -12356,9 +12356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1815807623}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &807408921
@@ -14869,9 +14869,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 862064368}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1020250177
@@ -19616,9 +19616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 60270837}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &1342950573
@@ -20556,9 +20556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1815807623}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1434971494
@@ -23735,9 +23735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 2048927601}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &1566666442
@@ -24647,9 +24647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1894344645}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1631149480
@@ -25659,9 +25659,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 2098723883}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &1662400745
@@ -26007,9 +26007,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 2048927601}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1699265332
@@ -26770,9 +26770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 2098723883}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1732833287
@@ -28495,9 +28495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1894344645}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &1854144654
@@ -30045,9 +30045,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 83379451}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &1956906449
@@ -30237,9 +30237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 60270837}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &1965397689
@@ -30719,9 +30719,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 1263346401}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.34901962, g: 0.99215686, b: 0.39215687, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.99215686, g: 0.93333334, b: 0.34901962, a: 1}
   HighColor: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
 --- !u!114 &2001047761
@@ -32305,9 +32305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchSlider: {fileID: 862064368}
-  LowThreshold: 40
+  LowThreshold: 50
   LowColor: {r: 0.3882353, g: 0.49411765, b: 0.42745098, a: 1}
-  MidThreshold: 70
+  MidThreshold: 75
   MidColor: {r: 0.49411765, g: 0.49019608, b: 0.3882353, a: 1}
   HighColor: {r: 0.49411765, g: 0.3882353, b: 0.3882353, a: 1}
 --- !u!114 &2099764005
