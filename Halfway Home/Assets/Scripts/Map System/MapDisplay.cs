@@ -130,6 +130,7 @@ namespace HalfwayHome
             MapRooms.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
             SocialStats.DispatchEvent(Events.Translate, new TransformEvent(Vector3.zero, MapTransitionDuration));
             
+            Space.DispatchEvent(Events.CharacterCall, new CastDirectionEvent("All", "Exit"));
 
             ChoicesAvalible = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
             AllowTimeDilation = Game.current.Progress.GetBoolValue("Depression Time Dilation");
