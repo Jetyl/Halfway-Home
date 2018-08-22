@@ -82,6 +82,7 @@ public class StatUpdateText : MonoBehaviour
         }
         else
         {
+            
             switch(eventdata.SocialStat)
             {
                 case Personality.Social.Awareness:
@@ -95,7 +96,10 @@ public class StatUpdateText : MonoBehaviour
                     break;
             }
 
-            Text.text = eventdata.SocialStat + " Up";
+            if (Game.current.Self.GetBasicSocialStat(eventdata.SocialStat) >= 3)
+                Text.text = eventdata.SocialStat + "Maxed!";
+            else
+                Text.text = eventdata.SocialStat + " Up";
         }
 
         StartCoroutine(Animate(Text, nextColor));
