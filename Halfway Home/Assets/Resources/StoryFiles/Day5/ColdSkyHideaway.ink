@@ -79,10 +79,11 @@ Still nothing.
 	"Yeah."
 	[{player_name}] "Uh, okay. See you later then."
 	->GivenUp
-+[Try talking about it]
++[Try talking about it <(grace > 0)>]
 	[{player_name}] "Do you... want to talk about it?"
 	{
 		-GetValue("LongNightHangoutComplete") == true:
+			"I'm here, if you need someone to listen, at least." #grace ^ good
 			->PullingTeeth
 		-else:
 			[Isaac] "..."

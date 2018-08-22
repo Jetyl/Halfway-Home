@@ -351,10 +351,6 @@
     "Type" : 1
    },
    {
-    "Name" : "LongNightHangoutComplete",
-    "Type" : 1
-   },
-   {
     "Name" : "Max Finds You Up",
     "Type" : 1
    },
@@ -405,6 +401,10 @@
     "Type" : 1
    },
    {
+    "Name" : "LongNightHangoutComplete",
+    "Type" : 1
+   },
+   {
     "Name" : "ColdTalkBefore",
     "Type" : 1
    },
@@ -442,6 +442,10 @@
    },
    {
     "Name" : "EarnedTeatimeStar",
+    "Type" : 1
+   },
+   {
+    "Name" : "EarnedLessonsStar",
     "Type" : 1
    }
   ]
