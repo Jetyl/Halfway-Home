@@ -20,6 +20,8 @@ VAR current_room = "unset"
 
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
+EXTERNAL GetIntValue(value)
+EXTERNAL SetIntValue(name, values)
 
 # Load @ story_authoritys_approval   # Play : Play_music_placeholder_main
 
@@ -74,7 +76,7 @@ He looks kind of sad. I should... #Skip
 	[Timothy] "...Sure." 
 	I sit down with Timothy and chat with him while we eat.
 	The food is invigorating and Timothy seems to relax as we talk.  #Timothy = happy
-	~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
+	~SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)
 	<color=color_descriptor><i>The meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=20  #all = exit
 	<color=color_descriptor><i>The chat with Timothy also improved <color=color_awareness><b>Awareness</b>, <color=color_grace><b>Grace</b>, <color=color_descriptor>and <color=color_expression><b>Expression</b> faintly.</i></color> #expression+ #grace+ #awareness+	
 ->END

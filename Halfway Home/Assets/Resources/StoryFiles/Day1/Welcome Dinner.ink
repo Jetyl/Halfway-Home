@@ -22,6 +22,8 @@ VAR HeardIsaacsStory = false
 
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL GetValue(value)
+EXTERNAL SetIntValue(ValueName, newValue)
+EXTERNAL GetIntValue(value)
 
 # Load @ story_welcome_dinner   # Ambience : play_ambience_crowd
 
@@ -55,10 +57,10 @@ I pull up a chair next to Timothy and take a seat. Trissa gives me a welcoming s
 	{
 		-awareness > 1: 
 			[{player_name}] "You're a nice guy, Timothy. Just be yourself and if anybody has a problem with that their opinion shouldn't matter to you."
-			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)
+			~SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 2)
 		-else : 
 			[{player_name}] "I remember feeling the same way at my welcome dinner. It's okay be to nervous. It'll pass soon."
-			~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
+			~SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)
 	}
 +[Leave it to Trissa]
 	[Trissa] "I get it. Meeting new people can be hard, but we're all nice!"

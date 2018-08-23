@@ -184,7 +184,7 @@ I can finally leave this place.
 This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : play_ambience_birds
 `A Garden for the Mind` according to the brochure {the doctors gave me.|.}
 Pretty cheesy, but they said I don't really stand much chance in the real world. {Maybe they're right|At least in here there are fewer people for me to disappoint|But this was my choice, not theirs}.
-The car behind me pulls away{.| I wonder if I'll ever see home again.|They'll  be back someday.} # SFX : play_sfx_object_car_away
+The car behind me pulls away{.|. I wonder if I'll ever see home again.|. They'll  be back someday.} # SFX : play_sfx_object_car_away
 I feel something gnawing at the back of my mind{, but I ignore it|. I know this feeling}. I walk up to the building and heave open the large oak doors. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
 The gnawing intensifies as I step inside. It's like an {itch in my brain|anchor weighing down my soul|old friend now}.
 Max rounds the corner, all smiles. {Wait, Max? How do I know that name?|I don't question how I know their name. I just do.} # Max = Happy
