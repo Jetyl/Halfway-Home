@@ -77,47 +77,77 @@ public class SocialStatManager : MonoBehaviour
       else ShorthandText.color = NormalColorText;
     }
 
-    if (basicTier > 0)
-    {
-      StarMarker1.CrossFadeAlpha(1.0f, 0.001f, false);
-      if (realTier < 1) StarMarker1.color = LoweredColorStar;
-      else StarMarker1.color = NormalColorStar;
-    }
-    else StarMarker1.CrossFadeAlpha(0.2f, 0.001f, false);
+        if (basicTier > 0)
+        {
+            StarMarker1.CrossFadeAlpha(1.0f, 0.001f, false);
+            if (realTier < 1) StarMarker1.color = LoweredColorStar;
+            else StarMarker1.color = NormalColorStar;
+        }
+        else
+        {
+            var col1 = StarMarker1.color;
+            col1.a = 0.2f;
+            StarMarker1.color = col1;
+            //StarMarker1.CrossFadeAlpha(0.2f, 0.001f, false);
+        }
 
-    if (basicTier > 1)
-    {
-      StarMarker2.CrossFadeAlpha(1.0f, 0.001f, false);
-      if (realTier < 2) StarMarker2.color = LoweredColorStar;
-      else StarMarker2.color = NormalColorStar;
-    }
-    else StarMarker2.CrossFadeAlpha(0.2f, 0.001f, false);
 
-    if (basicTier > 2)
-    {
-      StarMarker3.CrossFadeAlpha(1.0f, 0.001f, false);
-      if (realTier < 3) StarMarker3.color = LoweredColorStar;
-      else StarMarker3.color = NormalColorStar;
-    }
-    else StarMarker3.CrossFadeAlpha(0.2f, 0.001f, false);
+        if (basicTier > 1)
+        {
+            //StarMarker2.CrossFadeAlpha(1.0f, 0.001f, false);
+            if (realTier < 2) StarMarker2.color = LoweredColorStar;
+            else StarMarker2.color = NormalColorStar;
+        }
+        else
+        {
+            var col2 = StarMarker2.color;
+            col2.a = 0.2f;
+            StarMarker2.color = col2;
+            //StarMarker2.CrossFadeAlpha(0.2f, 0.001f, false);
+        }
+
+        if (basicTier > 2)
+        {
+            //StarMarker3.CrossFadeAlpha(1.0f, 0.001f, false);
+            if (realTier < 3) StarMarker3.color = LoweredColorStar;
+            else StarMarker3.color = NormalColorStar;
+            
+        }
+        else
+        {
+            var col3 = StarMarker3.color;
+            col3.a = 0.2f;
+            StarMarker3.color = col3;
+            //StarMarker3.CrossFadeAlpha(0.2f, 0.001f, false);
+        }
 
     if (SpecialStar1 == null || SpecialStar2 == null) return;
 
-    if (specialTier > 0)
-    {
-      SpecialStar1.CrossFadeAlpha(1.0f, 0.001f, false);
-      if (realTier < 4) SpecialStar1.color = LoweredColorStar;
-      else SpecialStar1.color = SpecialColorStar;
-    }
-    else SpecialStar1.CrossFadeAlpha(0.0f, 0.001f, false);
+        if (specialTier > 0)
+        {
+            SpecialStar1.enabled = true;
+            SpecialStar1.CrossFadeAlpha(1.0f, 0.001f, false);
+            if (realTier < 4) SpecialStar1.color = LoweredColorStar;
+            else SpecialStar1.color = SpecialColorStar;
+        }
+        else
+        {
+            SpecialStar1.CrossFadeAlpha(0.0f, 0.001f, false);
+            SpecialStar1.enabled = false;
+        }
 
-    if (specialTier > 1)
-    {
-      SpecialStar2.CrossFadeAlpha(1.0f, 0.001f, false);
-      if (realTier < 5) SpecialStar2.color = LoweredColorStar;
-      else SpecialStar2.color = SpecialColorStar;
-    }
-    else SpecialStar2.CrossFadeAlpha(0.0f, 0.001f, false);
+        if (specialTier > 1)
+        {
+            SpecialStar2.enabled = true;
+            SpecialStar2.CrossFadeAlpha(1.0f, 0.001f, false);
+            if (realTier < 5) SpecialStar2.color = LoweredColorStar;
+            else SpecialStar2.color = SpecialColorStar;
+        }
+        else
+        {
+            SpecialStar2.enabled = false;
+            SpecialStar2.CrossFadeAlpha(0.0f, 0.001f, false);
+        }
   }
 	
 	void UpdateStats (DefaultEvent e)
