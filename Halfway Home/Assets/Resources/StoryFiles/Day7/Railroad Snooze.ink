@@ -48,7 +48,7 @@ I ride the railroad to dreamland in a flash, and I am out. #Background / Dream, 
 [Max>???] "...{player_name}."   # Play : Stop_All
 Huh?
 "{player_name}. Get up, ya silly bum."
-In what feels like the blink of an eye, my room is lit with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main
+In what feels like the blink of an eye, my room is lit with morning sunlight. #Background / YourRoom, eyeopen   # Play : Play_music_placeholder_main   # music_vol | -6
 [Max] "You don't want to sleep in on your last day, now do you?" #Max=Calm
 [{player_name}] "Oh, uh... morning, I guess."
 I give a large yawn as I stretch out of bed.
@@ -59,7 +59,7 @@ Still, I feel very refreshed.
 [Max] "That's great!" #Max=Happy
 "Timothy, how 'bout you? You sleep well?"
 Timothy looks dead tired. #Timothy=Sad
-[Timothy] "...Uuuugh"
+[Timothy] "...Uuuugh."
 [Max] "Oh, sorry little dude."
 "Don't worry, I'm sure today will be nice and easy."
 "Just make sure you're all packed and ready to go for tomorrow, okay?"
