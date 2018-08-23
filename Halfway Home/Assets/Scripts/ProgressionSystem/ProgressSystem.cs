@@ -455,7 +455,7 @@ public class ProgressSystem
             if (beat.BeatName.ToLower() == "sleepy")
             {
                 beat.ResetBeat();
-                return;
+                break;
             }
               
         }
@@ -473,10 +473,9 @@ public class ProgressSystem
                     DegradeProgress(point.ProgressName);
                 }
                 //beat.ResetBeat();
-                return;
+                break;
             }
-
-
+            
         }
     }
 
@@ -489,7 +488,7 @@ public class ProgressSystem
             if (beat.BeatName == "Weekly")
             {
                 beat.ResetBeat();
-                return;
+                break;
             }
 
         }
@@ -502,6 +501,7 @@ public class ProgressSystem
 
             if (task.GetState() != Task.TaskState.Unstarted)
             {
+                MonoBehaviour.print(task.Name);
                 if (!(task.GetState() == Task.TaskState.InProgress && task.Hidden))
                     ChronologicalObjectives.Add(task);
             }
@@ -773,15 +773,18 @@ public class Task
 
     public void Reset()
     {
+
+        var resetState = TaskState.Unstarted;
+
         if (!RemoveWeekly)
-            return;
+            resetState = TaskState.InProgress;
 
         foreach(var sub in SubTasks)
         {
-            sub.SetState(TaskState.Unstarted);
+            sub.SetState(resetState);
         }
 
-        State = TaskState.Unstarted;
+        State = resetState;
     }
 
 }

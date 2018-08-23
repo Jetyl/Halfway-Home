@@ -269,7 +269,7 @@ Or I could show Timothy around myself and snag the keys from the cushions before
 	"But I can't have my keys unaccounted for here."
 	"So could you be a pal and show him around?"
 	++[Sure]
-		[{player_name}] "Sure." #Grace ^ Good
+		[{player_name}] "Sure."
 		[Keyless>Max] "Thanks, buddy!"
 		And just like before, Max leaves me with Timothy.   # Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
 		He's no stranger to me any more, but I am to him... weird to think about.
