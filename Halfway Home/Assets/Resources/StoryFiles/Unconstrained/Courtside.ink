@@ -21,6 +21,7 @@ VAR seenBefore = false
 VAR gameName = "PIG"
 VAR timLetters = 0
 VAR playerLetters = 0
+VAR firstTurn = false
 
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
@@ -84,18 +85,26 @@ Max lobs a large ball at my chest. My hands {instinctively raise|are already rai
 When we reach the court I practice dribbling the ball around a little. {It's been a long time since I last played basketball.|I feel slightly less rusty this time, but by no means comfortable.} # Basketball / Open # Basketball / HeadCalm # Basketball / ArmNoBall # Play : play_music_game_day # Ambience : Stop_All
 {Actually, it's been a long time since I played any sport at all.|I haven't really been the most physical person for the last six years.}
 The concrete half-court has a few weeds growing out of the cracks, but is otherwise in good condition considering it never gets used.
-[{player_name}] "You seemed kinda hesitant before. You sure you want to do this?" 
+[{player_name}] "You seemed kinda hesitant before. You sure you want to do this?"
+{awareness>1:
+	I'm not feeling particularly enthusiastic about it myself, but I try to push past that. On the surface, at least.
+-else:
+	I feel like I'm asking this question for myself more than for him. Why do I always have to give myself an out? # awareness ^ good
+}
 [Timothy] "I do! I mean, it sounds fun... I just... I don't a-actually know how."
 [{player_name}] "I played a bit as a kid. My dad kinda forced me, really, but I had fun anyway."
-That was so long ago. I feel like a completely different person now.
+{That was so long ago. I feel like a completely different person now.|I guess I also played a bit last week. Or... I remember playing with him, anyway.}
 [Timothy] "Okay, so what do I do?" # Basketball / HeadHappy
+{Right, I have to explain the rules. This week is really demanding a lot more of me socially than I bargained for.|I guess he doesn't remember the rules. Was before all a dream?|I never thought attempting to explain basketball to someone would become a thing I did so frequently.}
 [{player_name}] "Well, you've got two teams, right? Pretty standard. Usually you have two baskets, too, and each team tries to get the ball in the other team's hoop."
 [Timothy] "Okay." # Basketball / HeadCalm
 {Ballin==1:
-	[{player_name}] "And the game is played over... some amount of time, broken into... was it quarters? Oh, man, I don't actually remember any of the specifics."
+	[{player_name}] "And the game is played over... some amount of time, broken into... was it quarters? I don't actually remember any of the specifics."
 	"Also, you have to keep moving or else you have to stop. And you can't carry the ball, you have to bounce it on the ground."
-	"Oh, and if you do stop, you can pass the ball, but... well, we don't have any team members so I guess just don't?"
+	I am really flubbing this explanation. Not a big surprise, I guess.
+	"Oh, and if you do stop you can pass the ball, but... well, we don't have any team members so I guess just don't?"
 	Timothy looks completely lost. # Basketball / HeadVeryNervous
+	A thought occurs to me. I remember a variant I used to play when I was young.
 	"You know what, don't worry about all that. I know a much simpler way to play."
 	Timothy breathes a sigh of relief. # Basketball / HeadCalm
 -else:
@@ -103,15 +112,16 @@ That was so long ago. I feel like a completely different person now.
 	[{player_name}] "But... rather that worry you with all the complicated stuff, I think we should play a simpler variant of the game."
 	"It'll work a lot better since it's just the two of us, anyway."
 }
-
-[{player_name}] "It's called HORSE. We take turns trying to get the ball in the basket. When one of us does, the other has to try to make it in from the same place."
-[{player_name}] "If that person fails, then it becomes their turn and they get a letter. H, then O, and so on until they have the whole word. If that happens, they lose."
-[{player_name}] "If they succeed, though, the person who made the original shot gets to go again."
+[{player_name}] "It's called HORSE, but the name really doesn't matter."
+"We take turns trying to get the ball in the basket. When one of us does, the other has to try to make it in from the same place."
+"If that person fails, then it becomes their turn and they get a penalty in the form of a letter. 'H', then 'O', and so on until they have the whole word. If that happens, they lose."
+"If they succeed, though, the person who made the original shot gets to go again until <i>they</i> fail."
 [Timothy] "That seems easier to remember."
-[{player_name}] "There's something else, too. When you go to make a basket, you can make a called shot. Like `backboard` or `swish`..."
+[{player_name}] "There's something else, too. When you go to make a basket you can make a called shot. Like `backboard` or `swish`..."
 [Timothy] "So then the other person has to do that, too?"
 [{player_name}] "Assuming they do it, yeah. You have to match your boast. If I say I'm gonna `swish`, but the ball hits the rim, it doesn't count... even if it goes in."
 [Timothy] "I don't know if I can even make it in at all..."# Basketball / HeadVeryNervous
+{He seems even less enthused than I am. How did Max talk us into this again?|That lack of confidence is really familiar.}
 [{player_name}] "That's okay. How about we play a shorter version? We can do a three-letter word instead."
 [Timothy] "Yeah, that sounds good." # Basketball / HeadCalm
 [{player_name}] "Okay, how about..." #Skip
@@ -128,15 +138,17 @@ That was so long ago. I feel like a completely different person now.
 	[{player_name}] "RAT? Rats don't usually get a lotta love."
 	~gameName = "RAT"
 -[Timothy] "Yeah, sure."
-I gently bounce-pass the ball to Timothy. # Basketball / ArmBall
-[{player_name}] "Why don't you start?"
-[Timothy] "Ah! But, I..." # Basketball / HeadNervousAway
-Timothy exhales. # Basketball / HeadCalm
-[Timothy] "Okay. I just have to throw it in, right?"
+//I gently bounce-pass the ball to Timothy. # Basketball / ArmBall
+[{player_name}] "You wanna go first?"
+[Timothy] "Oh! Uh... <jitter>c-could you maybe go first</jitter>?" # Basketball / HeadVeryNervous
+"I-I don't want to m-mess up. You can show me how it's done, right?"
+I don't think of myself as a good model for others' behavior, but...
+[{player_name}] "Sure."
+Timothy breathes a sigh of relief. # Basketball / HeadCalm
 ~timLetters = 0
 ~playerLetters = 0
-[{player_name}] "Yup."
--> GameTime.TimothyTurn
+~firstTurn = true
+-> GameTime.PlayerTurn
 
 === GameTime ===
 
@@ -348,7 +360,12 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 }
 
 =PlayerTurn
-He recovers the ball and passes it to me. My turn. #Skip
+{firstTurn==true:
+	Now... how should I start? #Skip
+	~firstTurn = false
+-else:
+	He recovers the ball and passes it to me. My turn. #Skip
+}
 +[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=0AC41C>Good<color=color_descriptor>, Timothy's Odds: <color=EDAF00>Fair<color=color_descriptor>)</color>]
 	I walk up close to the basket. #Skip
 	++[Normal Throw<size=60%><color=color_descriptor> (85%)</color>]
@@ -631,8 +648,8 @@ I sit alone for a while, replaying the conversation in my mind.
 "Thanks for playing with me." # Basketball / HeadCalm # Play : Stop_All
 [{player_name}] "Yeah, of course."
 Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the building. # Basketball / Exit
-I had fun, but I didn't really get to talk to Timothy one on one. Maybe I should have stopped the game when he asked...
-Nothing can be done about it now. I should get going as well.
+I had fun, but Timothy seemed kinda disappointed that we kept playing. Maybe I should have stopped the game when he asked...
+{Nothing can be done about it now.|If all this happens again, maybe I should try that.} I should get going as well.
 -> END
 
 === Break ===
