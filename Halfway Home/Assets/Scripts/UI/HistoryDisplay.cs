@@ -95,7 +95,7 @@ public class HistoryDisplay : MonoBehaviour
         CurrentSpeaker = "";
         History = "";
 
-        print(PreviousHistory);
+        //print(PreviousHistory);
 
     }
     

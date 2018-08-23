@@ -111,6 +111,7 @@ namespace HalfwayHome
       {
         ClosedReason = Game.current.Progress.GetStringValue(DynamicTooltip);
         self.interactable = false;
+                print(ManualAccess + " is true");
       }
       if (LimitedDailyAccess && HoldsScene() == false)
       {
@@ -185,8 +186,8 @@ namespace HalfwayHome
           Game.current.Progress.SetValue<int>(AccessPoint, Game.current.Progress.GetIntValue(AccessPoint) + 1);
         }
 
-        print("cafe vsited at " + GetTime(Game.current.Progress.GetIntValue(HourVisited)) + " on day " + Game.current.Progress.GetIntValue(DayVisited)
-                        + " and this was visit #" + Game.current.Progress.GetIntValue(AccessPoint));
+        //print("cafe vsited at " + GetTime(Game.current.Progress.GetIntValue(HourVisited)) + " on day " + Game.current.Progress.GetIntValue(DayVisited)
+         //               + " and this was visit #" + Game.current.Progress.GetIntValue(AccessPoint));
 
       }
     }

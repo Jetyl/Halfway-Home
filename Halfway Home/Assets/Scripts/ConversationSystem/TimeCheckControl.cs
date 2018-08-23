@@ -20,11 +20,13 @@ public class TimeCheckControl : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        CurrentDay = Game.current.Day;
-        CurrentHour = Game.current.Hour;
+        //CurrentDay = Game.current.Day;
+        //CurrentHour = Game.current.Hour;
         OnStart(new ConversationEvent(Progress));
 
         Space.Connect<DefaultEvent>(Events.TimeChange, OnChangedTime);
+
+        OnChangedTime(new DefaultEvent());
     }
 	
 	// Update is called once per frame
@@ -44,7 +46,7 @@ public class TimeCheckControl : MonoBehaviour
     {
 
         CurrentNode.CallAction();
-
+        print("an action occured now");
 
         if (CallNext())
             NextNode(CurrentNode.Destination);
