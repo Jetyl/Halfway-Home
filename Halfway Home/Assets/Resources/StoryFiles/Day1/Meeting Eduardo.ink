@@ -227,9 +227,10 @@ Isaac responds as if he can read my mind.
 "Now it's just mine."
 [Eduardo] "What can I say? I'm needy."
 [Isaac] "Hrm."
+Eduardo being all over Isaac seems to do nothing to Isaac's usual pokerface.
 [Eduardo] "And I <flow><i>wuv</i>,</flow> you!" # Needy = blush
 <i>Yikes</i> that's cheesy.
-Despite Isaac's complete poker face at Eduardo being all over him, a line like that seems to break him.
+It seems that line finally breaks down Isaac's pokerface like it was nothing.
 Relationships are weird. #Needy = Exit
 <color=color_descriptor><i>Seeing such an open display of affection has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 ->->

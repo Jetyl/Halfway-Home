@@ -105,6 +105,7 @@ I tentatively rap my hand against the worn wooden door{, suddenly feeling nervou
 	+[Skip] -> Ending
 	+[Continue] -> SmallTalk
 }
+->SmallTalk
 
 === SmallTalk ===
 [Charlotte>Faint Voice] "Please enter! The door is unlocked!"
