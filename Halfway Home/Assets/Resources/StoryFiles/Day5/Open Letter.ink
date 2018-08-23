@@ -35,7 +35,7 @@ EXTERNAL GetSelfStat(stat_name)
 EXTERNAL CallSleep()
 EXTERNAL SetValue(ValueName, newValue)
 
-# Load @ story_open_letter   # Play : play_music_happy   # Ambience : play_ambience_crowd
+# Load @ story_open_letter   # Play : play_music_happy   # Ambience : play_ambience_crowd   # music_vol | -3
 
 -> Start
 
@@ -57,7 +57,7 @@ EXTERNAL SetValue(ValueName, newValue)
 	
 
 ===MailCall===
-I walk into the common area, which is currently host to decently sized gathering of people. #Charlotte = Calm, right, far #Trissa = Calm, right, far #Eduardo = Calm, left, far #Isaac = Calm, left, far # Ambience : play_ambience_fireplace # ambience_lpf ! 0
+I walk into the common area, which is currently host to a decently sized gathering of people. #Charlotte = Calm, right, far #Trissa = Calm, right, far #Eduardo = Calm, left, far #Isaac = Calm, left, far
 Max appears to be the center of attention, holding a small stack of envelopes in their hands. #Charlotte = stage_left #Trissa = stage_left #Eduardo = stage_right #Isaac = stage_right #Max = Calm
 {Oh, it must be mail call. Max usually does those on weekends.|Mail time again.}
 [Max] "Ah, {player_name}, there you are. I'm just doin' a mail call." #Charlotte = exit #Trissa = exit #Eduardo = exit #Isaac = exit
@@ -295,7 +295,7 @@ Charlotte sighs, her eyes wandering off somewhere before returning directly to m
 	-expression < 3:
 		I shrug.
 		[{player_name}] "I dunno."
-		It seems weird to tell her she looks like she came from a Victorian novel, so I don't
+		It seems weird to tell her she looks like she came from a Victorian novel, so I don't.
 	-else:
 		[{player_name}] "Do you really want my opinion?" #expression ^ good
 		[Charlotte] "Oh, definitely. Another perspective on myself would be most beneficial."
