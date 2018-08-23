@@ -43,6 +43,8 @@ EXTERNAL GetPlayerData()
 EXTERNAL GetStringValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(ValueName, newValue)
+EXTERNAL GetIntValue(value)
+EXTERNAL SetIntValue(ValueName, newValue)
 
 -> UnnaturalSpot
 
@@ -279,7 +281,7 @@ Should... Should I question him about that? #Skip
 	[{player_name}] "Dude, of course it's okay." 
 	"I don't mean to make you feel self-conscious or anything!" #Timothy = Surprised
 	"You just be you, okay?" #Timothy = Happy 
-	~SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)
+	~SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)
 	Timothy seems a lot happier than I've seen him all day. I think I might of pressed one of his buttons, but like, in a good way?
 	->WrapUp
 +[Let it Slide]
@@ -316,7 +318,7 @@ Should... Should I question him about that? #Skip
 [{player_name}] "No, no, you're fine."
 [Timothy] "T-Thanks." #Timothy = Happy
 "That really m-means a lot."
-Timothy gives me a cute, crooked smile as he gets up from the dirt patch. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
+Timothy gives me a cute, crooked smile as he gets up from the dirt patch. {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)} // +1 TP
 {
 	-GetValue("Tutorial"):
 		Our little game finished, we head off to the next stop on the tour. #Timothy = Exit

@@ -74,7 +74,7 @@ That damn letter is the root of so much pain.
 
 = Enter
 I slide the key into the lock and the door swings open. #Acheivment * ACH_KEY
-I step inside, gently nudging the door closed behind me. # Wound / Down, Blackwipe
+I step inside, gently nudging the door closed behind me. # Wound / Open, Down, Blackwipe
 -> ClosedWound
 
 ===ClosedWound===
@@ -117,11 +117,11 @@ Timothy is trembling slightly, but doesn't otherwise react to my entrance. #Skip
 -else:
 	[{player_name}] "Sorry for intruding, but you look like you could use some company." # grace ^ good
 }
-Timothy's head shoots upright, a look of surprise clear on his face. # Timothy = Afraid # Wound / Up
+Timothy's head shoots upright, a look of surprise clear on his face. # Wound / Up
 His red-eyed face is ghostly pale.
 [Timothy] "O-oh! Hey, {player_name}." //# Timothy = Surprised
 "<size=80%>Y-you startled me...<size=100%>" //# Timothy = Calm
-[{player_name}] "I wasn't trying too... I did knock!"
+[{player_name}] "I wasn't trying to... I did knock!"
 "Wait, no I didn't. <size=60%>That was another time...<size=100%>"
 "Apologies. Guess I'm all turned around today."
 [Timothy] "Heh. I can relate." //# Timothy = Happy

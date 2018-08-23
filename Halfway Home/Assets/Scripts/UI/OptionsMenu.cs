@@ -66,7 +66,7 @@ public class OptionsMenu : MonoBehaviour
     public void MuteTextScroll(bool MTSOn)
     {
         Data.MuteTextScroll = MTSOn;
-        AM.MuteTextScroll = MTSOn;
+        //AM.MuteTextScroll = MTSOn;
     }
     public void UpdateMasterVolume(float newPercent)
     {

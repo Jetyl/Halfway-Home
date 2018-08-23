@@ -21,6 +21,8 @@ VAR seenBefore = false
 
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
+EXTERNAL GetIntValue(value)
+EXTERNAL SetIntValue(name, values)
 
 -> Start
 
@@ -80,7 +82,7 @@ I don't think I've played around with rocks and stuff since I was a kid...
 +{Maps<Cartography}[Ask about Timothy's maps] -> Maps -> Questions
 +{Empire<Cartography}[Ask what place this is a map of] -> Empire -> Questions
 + ->
-	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
+	I feel like {I understand|I'm getting closer to} Timothy {a bit better after|after} listening to him talk about his passions. {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 2)} # Timothy = Calm // +2 TP
 	{
 		-awareness > 2: -> Conviction
 		-else: -> Hobbies
@@ -163,7 +165,7 @@ I think I understand myself better, too.
 "Thanks for not laughing or anything." # Timothy = Happy
 [{player_name}] "Of course! Anyway, I'll see you around."
 [Timothy] "Yeah!"
-I make my way out of the garden feeling somehow wiser. {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} # Timothy = Exit // +1 TP 
+I make my way out of the garden feeling somehow wiser. {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)} # Timothy = Exit // +1 TP 
 -> END
 
 === Hobbies ===

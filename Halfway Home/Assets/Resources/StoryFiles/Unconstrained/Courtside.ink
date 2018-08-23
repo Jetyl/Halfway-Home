@@ -24,6 +24,8 @@ VAR playerLetters = 0
 
 EXTERNAL SetValue(name, values)
 EXTERNAL GetValue(name)
+EXTERNAL GetIntValue(value)
+EXTERNAL SetIntValue(name, values)
 
 # Load @ story_courtside
 
@@ -615,13 +617,13 @@ I sit alone for a while, replaying the conversation in my mind.
 [Timothy] "I... I actually did it!" # Basketball / HeadHappy # Play : Stop_All
 [{player_name}] "You actually did. I told you you could do it." #Acheivment * ACH_LOSE
 {-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
-[Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 2)} // +2 TP
+[Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 2)} // +2 TP
 ->Ignored.Conclusion
 
 =PlayerWon
 [Timothy] "I f-failed!" # Basketball / HeadNervousAway # Play : Stop_All
 [{player_name}] "It's no big deal, man."
-[Timothy] "I need to get some water and lie down." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 1)} // +1 TP
+[Timothy] "I need to get some water and lie down." {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 1)} // +1 TP
 ->Ignored.Conclusion
 
 
@@ -634,7 +636,7 @@ Nothing can be done about it now. I should get going as well.
 -> END
 
 === Break ===
-[{player_name}] "Sure, Timothy. It makes no difference to me." {SetValue("TimothyPoints", GetValue("TimothyPoints") + 3)} # Play : Stop_All // +3 TP
+[{player_name}] "Sure, Timothy. It makes no difference to me." {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 3)} # Play : Stop_All // +3 TP
 [Timothy] "Thanks." # Basketball / Exit # Background / Garden, blackwipe, NoDefaults # Timothy = Happy # Play : play_music_garden # Ambience : play_ambience_garden_birds_day
 [{player_name}] "I can't believe I never noticed this was here..."
 [Timothy] "I didn't notice it either."

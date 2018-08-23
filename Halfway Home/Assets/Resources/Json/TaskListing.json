@@ -154,5 +154,17 @@
   "SubCount" : 0,
   "SubTasks" : [
   ]
+ },
+ {
+  "Number" : 10,
+  "Name"   : "Hangout More with Timothy",
+  "Hidden" : false,
+  "Weekly" : false,
+  "ShowAll" : false,
+  "GoalAll" : false,
+  "FailAll" : false,
+  "SubCount" : 0,
+  "SubTasks" : [
+  ]
  }
 ]
