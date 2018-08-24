@@ -32,8 +32,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1773241451
-    m_lastTimePart2: -1999240833
+    m_lastTimePsrt1: 591753346
+    m_lastTimePart2: -1999239081
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
