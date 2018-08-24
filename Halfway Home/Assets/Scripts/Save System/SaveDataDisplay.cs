@@ -63,7 +63,7 @@ public class SaveDataDisplay : MonoBehaviour
     {
 
         Game gameData = SaveLoad.GetSave(DataIndex);
-        Debug.Log($"Save for Slot {DataIndex} is {gameData != null}");
+        //Debug.Log($"Save for Slot {DataIndex} is {gameData != null}");
 
         if (gameData != null)
         {

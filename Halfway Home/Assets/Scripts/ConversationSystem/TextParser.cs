@@ -376,7 +376,7 @@ public static class TextParser
                 {
                     Image = Resources.Load<Sprite>("Sprites/" + (string)data["ImageSlug"]);
 
-                    Game.current.Memory.UnlockImage(Image);
+                    GallerySystem.current.UnlockImage(Image);
                 }
                 break;
             case ProgressType.Objective:

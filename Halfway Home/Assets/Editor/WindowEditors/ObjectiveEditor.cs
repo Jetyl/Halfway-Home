@@ -180,10 +180,10 @@ public class ObjectiveEditor : EditorWindow
 
     }
 
-    void OrganizeSublist(List<Task> list)
+    void OrganizeSublist(List<SubTask> list)
     {
         
-        SubList = new ReorderableList(list, typeof(Task), true, true, true, true);
+        SubList = new ReorderableList(list, typeof(SubTask), true, true, true, true);
 
         SubList.drawHeaderCallback = (Rect rect) => {
             EditorGUI.LabelField(rect, "Sub Goals");
@@ -191,7 +191,7 @@ public class ObjectiveEditor : EditorWindow
 
         SubList.drawElementCallback =
     (Rect rect, int index, bool isActive, bool isFocused) => {
-        var element = (Task)SubList.list[index];
+        var element = (SubTask)SubList.list[index];
         rect.y += 2;
         element.Number = index;
         element.Name = GUI.TextField(new Rect(rect.x, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.Name);
@@ -201,7 +201,7 @@ public class ObjectiveEditor : EditorWindow
     };
 
         SubList.onAddCallback = (ReorderableList l) => {
-            SubList.list.Add(new Task(TiskTask[SelectedTask].SubTasks.Count));
+            SubList.list.Add(new SubTask(TiskTask[SelectedTask].SubTasks.Count));
         };
 
         // List.onChangedCallback
@@ -266,7 +266,7 @@ public class ObjectiveEditor : EditorWindow
 
             Jwriter.WritePropertyName("SubTasks");
             Jwriter.WriteArrayStart();
-            foreach(Task sub in task.SubTasks)
+            foreach(SubTask sub in task.SubTasks)
             {
                 Jwriter.WriteObjectStart();
                 Jwriter.WritePropertyName("Number");

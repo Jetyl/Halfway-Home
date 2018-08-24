@@ -65,7 +65,7 @@ public static class SaveLoad
                     savedGames.Add(null);
                 
             }
-            MonoBehaviour.print(savedGames.Count);
+            //MonoBehaviour.print(savedGames.Count);
 
             foreach (var game in savedGames)
             {
@@ -169,7 +169,7 @@ public static class SaveLoad
 
         if (pos >= savedGames.Count)
             return null;
-        Debug.Log(pos + " | " + savedGames[pos]);
+        //Debug.Log(pos + " | " + savedGames[pos]);
         if (savedGames[pos] != null)
             return new Game(savedGames[pos]);
 

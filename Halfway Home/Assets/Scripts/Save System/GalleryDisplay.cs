@@ -16,9 +16,7 @@ public class GalleryDisplay : MonoBehaviour
     public Button NextPage;
     public Button BackPage;
     public Image FullScreen;
-
-    private static GallerySystem Gallery;
-
+    
     private int index = 0;
 
     public bool DebugMode;
@@ -26,27 +24,14 @@ public class GalleryDisplay : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
     {
-        Gallery = new GallerySystem();
         FullScreen.gameObject.SetActive(false);
-
-        for (int i = 0; i < SaveLoad.GetSize(); ++i)
-        {
-            var data = SaveLoad.GetSave(i);
-
-            for (int j = 0; j < Gallery.GetSize(); ++j)
-            {
-                var art = data.Memory.GetImage(j);
-
-                if (art.unlocked)
-                    Gallery.UnlockImage(j);
-            }
-        }
+        
 
         if(DebugMode)
         {
-            for (int j = 0; j < Gallery.GetSize(); ++j)
+            for (int j = 0; j < GallerySystem.current.GetSize(); ++j)
             {
-                Gallery.UnlockImage(j);
+                GallerySystem.current.UnlockImage(j);
             }
         }
 
@@ -60,7 +45,7 @@ public class GalleryDisplay : MonoBehaviour
 
         foreach(Image frame in GalleryPanels)
         {
-            if(j >= Gallery.GetSize())
+            if(j >= GallerySystem.current.GetSize())
             {
                 frame.sprite = null;
                 frame.enabled = false;
@@ -68,7 +53,7 @@ public class GalleryDisplay : MonoBehaviour
                 continue;
             }
 
-            var art = Gallery.GetImage(j);
+            var art = GallerySystem.current.GetImage(j);
             frame.enabled = true;
 
             if (art.unlocked)
@@ -91,17 +76,17 @@ public class GalleryDisplay : MonoBehaviour
         if (index == 0) BackPage.interactable = false;
         else BackPage.interactable = true;
 
-        if (index >= Gallery.GetSize() - GalleryPanels.Length) NextPage.interactable = false;
+        if (index >= GallerySystem.current.GetSize() - GalleryPanels.Length) NextPage.interactable = false;
         else NextPage.interactable = true;
     }
 
     public void ExpandPicture(Image picture)
     {
         //makes the big picture via fullscreen
-        for(int i = 0; i < Gallery.GetSize(); ++i)
+        for(int i = 0; i < GallerySystem.current.GetSize(); ++i)
         {
 
-            var art = Gallery.GetImage(i);
+            var art = GallerySystem.current.GetImage(i);
 
             if (art.GetImage() == picture.sprite)
             {
@@ -127,7 +112,7 @@ public class GalleryDisplay : MonoBehaviour
 
         foreach (Image isme in GalleryPanels)
         {
-            if (j >= Gallery.GetSize())
+            if (j >= GallerySystem.current.GetSize())
             {
                 ++j;
                 continue;
@@ -135,7 +120,7 @@ public class GalleryDisplay : MonoBehaviour
 
             if(isme == frame)
             {
-                var art = Gallery.GetImage(j);
+                var art = GallerySystem.current.GetImage(j);
 
                 if (art.unlocked)
                     CaptionText.text = art.Caption;
@@ -158,7 +143,7 @@ public class GalleryDisplay : MonoBehaviour
 
     public int GetPageCount()
     {
-      return Mathf.CeilToInt((float)Gallery.GetSize() / (float)GalleryPanels.Length);
+      return Mathf.CeilToInt((float)GallerySystem.current.GetSize() / (float)GalleryPanels.Length);
     }
 
     public int GetCurrentPage()

@@ -22,6 +22,10 @@ public class GameLoad : MonoBehaviour
 
             if (!OptionsData.LoadOptions())
                 OptionsData.current = new OptionsData();
+
+            if (!GallerySystem.LoadGallery())
+                GallerySystem.current = new GallerySystem();
+
         }
 
         

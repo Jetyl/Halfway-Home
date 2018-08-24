@@ -33,7 +33,7 @@ public class SpeakerDisplayEditor : Editor
     {
         serializedObject.Update();
 
-        SerializedProperty Speakers = serializedObject.FindProperty("Speakers");
+        //SerializedProperty Speakers = serializedObject.FindProperty("Speakers");
         SerializedProperty Characters = serializedObject.FindProperty("Characters");
         SerializedProperty Colors = serializedObject.FindProperty("Colors");
 

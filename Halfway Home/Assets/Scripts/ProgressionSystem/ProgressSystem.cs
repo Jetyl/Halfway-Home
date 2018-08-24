@@ -79,7 +79,7 @@ public class ProgressSystem
         {
             ChronologicalObjectives.Add(Objectives[copy_.ChronologicalObjectives[ima].Number]);
 
-            MonoBehaviour.print(ChronologicalObjectives[ima].GetState());
+            //MonoBehaviour.print(ChronologicalObjectives[ima].GetState());
         }
 
 
@@ -658,7 +658,7 @@ public class Task
     public bool AllSuccess;
 
     [SerializeField]
-    public List<Task> SubTasks;
+    public List<SubTask> SubTasks;
 
     [SerializeField]
     private TaskState State;
@@ -667,7 +667,7 @@ public class Task
     {
         Number = number;
         Name = "";
-        SubTasks = new List<Task>();
+        SubTasks = new List<SubTask>();
     }
 
     public Task(Task copy)
@@ -675,14 +675,11 @@ public class Task
         Number = copy.Number;
         Name = copy.Name;
         //Objective = (string)taskData["Objective"];
-        SubTasks = new List<Task>();
+        SubTasks = new List<SubTask>();
         //MonoBehaviour.print(copy.SubTasks.Count);
         for (int i = 0; i < copy.SubTasks.Count; ++i)
         {
-            var sub = new Task(copy.SubTasks[i].Number);
-            sub.Name = copy.SubTasks[i].Name;
-            sub.Hidden = copy.SubTasks[i].Hidden;
-            sub.SetState(copy.SubTasks[i].State);
+            var sub = new SubTask(copy.SubTasks[i]);
             SubTasks.Add(sub);
         }
 
@@ -699,13 +696,11 @@ public class Task
         Number = (int)taskData["Number"];
         Name = (string)taskData["Name"];
         //Objective = (string)taskData["Objective"];
-        SubTasks = new List<Task>();
+        SubTasks = new List<SubTask>();
         //MonoBehaviour.print((int)taskData["SubCount"]);
         for(int i = 0; i < (int)taskData["SubCount"]; ++i)
         {
-            var sub = new Task((int)taskData["SubTasks"][i]["Number"]);
-            sub.Name = (string)taskData["SubTasks"][i]["Name"];
-            sub.Hidden = (bool)taskData["SubTasks"][i]["Hidden"];
+            var sub = new SubTask(taskData["SubTasks"][i]);
             SubTasks.Add(sub);
         }
 
@@ -729,18 +724,10 @@ public class Task
 
         if(State == TaskState.InProgress && AllShow)
         {
-            foreach (Task sub in SubTasks)
+            foreach (SubTask sub in SubTasks)
                 sub.SetState(State);
         }
-
-        if(State == TaskState.Success)
-        {
-            //need to add reward
-        }
-        if (State == TaskState.Failed)
-        {
-            //maybe add a failure reward?
-        }
+        
     }
 
     public bool SubtasksComplete()
@@ -787,4 +774,53 @@ public class Task
         State = resetState;
     }
 
+}
+
+
+[System.Serializable]
+public class SubTask
+{
+    public int Number;
+
+    public string Name;
+    public bool Hidden;
+    
+    [SerializeField]
+    private Task.TaskState State;
+
+    public SubTask(int number)
+    {
+        Number = number;
+        Name = "";
+    }
+
+    public SubTask(SubTask copy)
+    {
+        Number = copy.Number;
+        Name = copy.Name;
+        
+        Hidden = copy.Hidden;
+        State = copy.State;
+    }
+
+    public SubTask(JsonData taskData)
+    {
+        Number = (int)taskData["Number"];
+        Name = (string)taskData["Name"];
+
+        Hidden = (bool)taskData["Hidden"];
+        State = Task.TaskState.Unstarted;
+    }
+
+    public Task.TaskState GetState()
+    {
+        return State;
+    }
+
+    public void SetState(Task.TaskState newState)
+    {
+        State = newState;
+        
+    }
+    
 }
