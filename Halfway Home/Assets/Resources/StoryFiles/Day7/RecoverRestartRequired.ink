@@ -181,7 +181,7 @@ I can finally leave this place.
 ->->
 
 === TheDream ===
-This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : play_ambience_birds
+This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : play_ambience_birds # Time * Hide
 `A Garden for the Mind` according to the brochure {the doctors gave me.|.}
 Pretty cheesy, but they said I don't really stand much chance in the real world. {Maybe they're right|At least in here there are fewer people for me to disappoint|But this was my choice, not theirs}.
 The car behind me pulls away{.|. I wonder if I'll ever see home again.|. They'll  be back someday.} # SFX : play_sfx_object_car_away
@@ -226,33 +226,33 @@ I can feel the whispers before I hear them. I'm not running this time.
 	[{player_name}] "No, I..."
 	[Voices] "This is why you'll never have any real friends." # SFX : play_sfx_human_ghostwhisper
 - [{player_name}] "Shut up!"
-The Voices laugh and howl. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {NextWeek()}# Ambience : play_sfx_ambient_heartbeat
+The Voices laugh and howl. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {NextWeek()}
 I try to shout again, but I can't form the words. {CallSleep()}
 I collapse, clutching my pounding chest as an icy wind whips across my face. {SetValue("Depression Time Dilation", true)}
 The cackling Voices fade into a low rumble that begins toppling the walls around me. {SetTimeBlock(0)}
 ->END
 
 =Accusation2
-[Voices] "You had a second chance and you still screwed it up. You're truly worthless." #Skip
+[Voices] "You had a second chance and you still screwed it up. You're truly worthless." # SFX : play_sfx_human_ghostwhisper #Skip
 *[Object] 
 	[{player_name}] "I don't believe any of this. This is all wrong!"
 	"I didn't do anything!"
-	[Voices] "You're a failure <i>and</i> a liar then."
+	[Voices] "You're a failure <i>and</i> a liar then." # SFX : play_sfx_human_ghostwhisper
 	[{player_name}] "I am not a liar! I-" #Skip
-	[Voices] "Idiot! You lie to <i>yourself</i>. Those are the worst lies of all."
+	[Voices] "Idiot! You lie to <i>yourself</i>. Those are the worst lies of all." # SFX : play_sfx_human_ghostwhisper
 	[{player_name}] "No... I..."
 *[Remain Silent]
 -They're right. I messed up again.
 I didn't understand what was happening, but that's no excuse.
 I failed. I always fail.
-[Voices] "Ha! Now you're getting it."
+[Voices] "Ha! Now you're getting it." # SFX : play_sfx_human_ghostwhisper
 I grit my teeth and remember my therapy.
 No. Not always.
 [{player_name}] "No."
-[Voices] "No?!"
+[Voices] "No?!" # SFX : play_sfx_human_ghostwhisper
 [{player_name}] "I might have failed. And I might fail again."
 "But I won't give up."
-[Voices] "Such naive optimism. You fail because you're a failure. That will never change."
+[Voices] "Such naive optimism. You fail because you're a failure. That will never change." # SFX : play_sfx_human_ghostwhisper
 [{player_name}] "You won't stop me. I'm done listening to you."
 The Voices rage and scream. The walls of Blackwell pulse unnaturally, faster and faster as my heartbeat quickens. {NextWeek()}# Ambience : play_sfx_ambient_heartbeat
 I clench my fists as an icy wind tears at my skin.{CallSleep()}{SetValue("Depression Time Dilation", true)}
@@ -260,21 +260,21 @@ The screaming pitch grows higher and louder until it shatters the floor beneath 
 ->END
 
 =Accusation3
-[Voices] "Back again? What a surprise."
+[Voices] "Back again? What a surprise." # SFX : play_sfx_human_ghostwhisper
 {SecondarySuccess==1:
 	[{player_name}] "I-I don't understand! I saved him! Why is this happening?!"
-	[Voices] "You <i>saved</i> him? Get over yourself."
-	"This was never about <i>him</i>, you piece of trash."
+	[Voices] "You <i>saved</i> him? Get over yourself." # SFX : play_sfx_human_ghostwhisper
+	"This was never about <i>him</i>, you piece of trash." # SFX : play_sfx_human_ghostwhisper
 	[{player_name}] "But..."
-	[Voices] "What could <i>possibly</i> be holding you back?"
-	"Come now, {player_name}, even a moron like you has to realize eventually."
+	[Voices] "What could <i>possibly</i> be holding you back?" # SFX : play_sfx_human_ghostwhisper
+	"Come now, {player_name}, even a moron like you has to realize eventually." # SFX : play_sfx_human_ghostwhisper
 	Oh god. Of course. It makes sense now.
 	[{player_name}] "It's me."
 	"I'm not ready to leave. That's... that's why."
 	"I never needed to save him. I needed his help to save myself."
 	"This whole time..."
-	[Voices] "Congratulations. You've realized the futility of all this."
-	"You will <i>never</i> be ready. How could <i>you</i> ever be?"
+	[Voices] "Congratulations. You've realized the futility of all this." # SFX : play_sfx_human_ghostwhisper
+	"You will <i>never</i> be ready. How could <i>you</i> ever be?" # SFX : play_sfx_human_ghostwhisper
 	[{player_name}] "You're wrong. I know what I have to do now."
 	"And I'm not afraid of failing any more."
 -else:
@@ -283,7 +283,7 @@ The screaming pitch grows higher and louder until it shatters the floor beneath 
 	"You're <i>nothing</i>!"
 	I fake a yawn.
 }
-"Miserable idiot. {I'm only protecting you from yourself|The world doesn't want you. It's better to know that than to subject everyone to your worthlessness|You will never win}!"
+"Miserable idiot. {I'm only protecting you from yourself|The world doesn't want you. It's better to know that than to subject everyone to your worthlessness|You will never win}!" # SFX : play_sfx_human_ghostwhisper
 Don't listen to them. I can do this. I just need another chance. 
 The Voices continue to berate me, but grow softer and softer until I can't hear them over the chill wind blowing through my hair.{NextWeek()}
 I wander the silent maze of hallways for what feels like hours.{CallSleep()}
