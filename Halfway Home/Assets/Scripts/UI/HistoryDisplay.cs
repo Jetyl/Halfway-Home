@@ -37,6 +37,9 @@ public class HistoryDisplay : MonoBehaviour
 
     string BreakLine = " -----------------------------";
 
+    bool Loaded;
+    bool Loadline;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -91,6 +94,12 @@ public class HistoryDisplay : MonoBehaviour
         //}
 
         PreviousHistory = Game.current.GetHistory();
+
+        if(Loaded)
+        {
+            Loaded = false;
+            return;
+        }
 
         CurrentSpeaker = "";
         History = "";
@@ -187,6 +196,13 @@ public class HistoryDisplay : MonoBehaviour
     void UpdateHistory(DescriptionEvent eventdata)
     {
         
+        if(Loadline)
+        {
+            CurrentSpeaker = eventdata.Speaker;
+            Loadline = false;
+            return;
+        }
+
         var TheLine = eventdata.Line;
         TheLine = TheLine.Trim();
 
@@ -254,6 +270,8 @@ public class HistoryDisplay : MonoBehaviour
 
     public void OnLoad(DefaultEvent eventdata)
     {
+        Loaded = true;
+        Loadline = true;
         History = Game.current.CurrentHistory;
         CurrentSpeaker = Game.current.CurrentSpeaker;
     }

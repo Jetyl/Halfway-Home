@@ -453,5 +453,48 @@
     "Type" : 1
    }
   ]
+ },
+ {
+  "PlotName" : "UI",
+  "BeatNumber" : 0,
+  "BeatName"   : "UI",
+  "Point"      : [
+   {
+    "Name" : "Status Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Wellbeing Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Fatigue Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Stress Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Depression Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Time Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Awareness Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Grace Panel",
+    "Type" : 1
+   },
+   {
+    "Name" : "Expression Panel",
+    "Type" : 1
+   }
+  ]
  }
 ]
