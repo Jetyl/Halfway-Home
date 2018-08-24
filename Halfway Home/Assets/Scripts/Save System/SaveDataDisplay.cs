@@ -148,6 +148,22 @@ public class SaveDataDisplay : MonoBehaviour
             FSlider.value = 0;
             SSlider.value = 0;
             DSlider.value = 0;
+
+            for (int i = 0; i < AStars.Length; i++)
+            {
+                AStars[i].color = EmptyStar;
+            }
+
+            for (int i = 0; i < GStars.Length; i++)
+            {
+                GStars[i].color = EmptyStar;
+            }
+
+            for (int i = 0; i < EStars.Length; i++)
+            {
+                EStars[i].color = EmptyStar;
+            }
+
         }
 
 
