@@ -18,6 +18,7 @@ VAR doubt = 0
 VAR week = 0
 VAR current_room = "unset"
 VAR seenBefore = false
+VAR bookGenre = ""
 
 EXTERNAL SetValue(name,value)
 EXTERNAL SetIntValue(name, value)
@@ -70,24 +71,27 @@ She nods toward the notes affixed to the shelves.
 I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 [Charlotte] "I would be pleased to make you a recommendation, if you're having trouble making up your mind." # Charlotte = Calm
 {
--week==1:
+-Browsing==1:
 	[{player_name}] "Wha- Oh, uh... it's fine. There's already recommendations, anyway."
 	[Charlotte] "True, but when I write those recommendations I am unsure as to who the audience is."
 	[{player_name}] "Wait, you write those?"
--week==2:
+-Browsing==2:
 	I guess I should have figured she would notice me.
 	[{player_name}] "Oh. No. That's okay."
 	[Charlotte] "Are you certain? I so seldom get the opportunity to make a personal recommendation."
 	[{player_name}] "Do you spend a lot of time writing those recommendations?"
+	I know the answer already, but I find myself asking anyway. It's strange... like it just feels right to do things how they happened before.
 	[Charlotte] "Not more than I enjoy doing so, dear, but..."
 -else:
 	"Oh, I wouldn't want to burden you. Don't you write all these yourself already?"
+	The more I have this conversation, the less I feel compelled to keep up the charade.
+	As long as I don't make it too obvious, it should be fine, right?
 }
 [Charlotte] "Usually, yes. Why don't you join me?" #Skip
 *[Okay]
 	[{player_name}] "Okay. I just didn't want to disturb you."
 	[Charlotte] "That is very considerate of you, {player_name}, but you needn't worry about that. If I wished not to be disturbed, I would not be out in public."
-	Her wording strikes me as odd, but I guess this is pretty much what constitutes 'in public' for us residents.
+	Her wording {Browsing>1:still strikes|strikes} me as odd, but I guess this is pretty much what constitutes 'in public' for us residents.
 	[Charlotte] "Anyway..."
 	-> AskToSkip
 *[No, thanks]
@@ -100,6 +104,8 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 {repeating:
 	<color=color_descriptor>I already know how this plays out. Skip ahead? #Skip
 	+[Skip]
+		I sit down to talk with Charlotte. Repeating my previous behavior feels strangely effortless.
+		When she asks what my favorite genre is I give her the same answer I gave before, {bookGenre}.
 		{grace>2:->Invitation|->Instruction}
 	+[Continue] -> Reading
 -else:
@@ -109,11 +115,26 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 === Reading ===
 [Charlotte] "Sometimes I can get another resident to recommend a favorite, but such occurrences are rarer than I would like." {SetValue("SeenEmpathy", true)} # Charlotte = Sad, close
 "Perhaps you would be willing to make one yourself?" #Charlotte = Calm
-[{player_name}] "Oh, uh... I don't really read enough to feel like I could."
-[Charlotte] "I see." # Charlotte = Sad
-"Well, if you come across a work you like before you leave and change your mind, just let me know." # Charlotte = Calm
-[{player_name}] "Sure. I <i>have</i> been trying to read more."
-[Charlotte] "That's nice to hear. As I said before, I would be pleased to offer you a recommendation."
+{
+	-grace>2: 
+		[{player_name}] "I think that would be fun. But I doubt anything I write could approach <i>your</i> eloquence, Charlotte." # grace ^ good
+		[Charlotte] "Such flattery! <> # Charlotte = Surprised
+		I must say, it does feel nice to be appreciated." # Charlotte = Happy
+		[{player_name}] "I've used your recommendations more than once, as a matter of fact."
+		[Charlotte] "That's nice to hear. As I said before, I would be pleased to offer you a personal one."
+	-grace==2:
+		[{player_name}] "Maybe once I've read a bit more. I'm not an expert like you."
+		[Charlotte] "That's kind of you to say, but I believe you have more to offer than you realize." # Charlotte = Calm
+		"In any case, if you come across a work you like before you leave and change your mind, just let me know."
+		"At least allow to to offer you a personal recommendation."
+		[{player_name}] "Sure."
+	-else: 
+		[{player_name}] "Oh, uh... I don't really read enough to feel like I could."
+		[Charlotte] "I see." # Charlotte = Sad
+		"Well, if you come across a work you like before you leave and change your mind, just let me know." # Charlotte = Calm
+		[{player_name}] "Sure. I <i>have</i> been trying to read more."
+		[Charlotte] "That's nice to hear. As I said before, I would be pleased to offer you a personal recommendation."
+}
 "Do you generally prefer fiction or nonfiction?" #Skip
 +[Fiction]
 	[{player_name}] "Fiction, I guess."
@@ -122,15 +143,19 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 	[Charlotte] "Or perhaps you prefer Romance?" #Skip
 	++[Fantasy]
 	[{player_name}] "I like fantasy worlds a lot, so that probably." {SetStringValue("BookGenre", "fantasy")}
+	~bookGenre = "fantasy"
 	[Charlotte] "Quite a lot goes into creating such wondrous places. It's a hard genre to dislike, and an even harder genre to disrespect."
 	++[Science Fiction]
 	[{player_name}] "I'm kind of a sci-fi {player_gender == "M":guy|{player_gender == "F":girl|person}}." {SetStringValue("BookGenre", "sci-fi")}
+	~bookGenre = "sci-fi"
 	[Charlotte] "A challenging genre, to be sure. One which asks us questions we are often afraid to ask ourselves."
 	++[Horror]
 	[{player_name}] "I like horror books, actually." {SetStringValue("BookGenre", "horror")}
+	~bookGenre = "horror"
 	[Charlotte] "The most human genre of all, in my humble opinion. A wonderful choice."
 	++[Romance]
 	[{player_name}] "So what if I do like romance novels?" {SetStringValue("BookGenre", "romance")}
+	~bookGenre = "romance"
 	[Charlotte] "Nothing to be ashamed of! Romance is outside my typical choice of material, but I'm sure I can think of something palatable..."
 +[Nonfiction]
 	[{player_name}] "Nonfiction, I think."
@@ -138,15 +163,19 @@ I idly browse the shelves for a book, {week==1:like|trying to look} normal.
 	"What sorts of topics do you enjoy reading about? Or perhaps you simply read a variety to learn new things?" #Skip
 	++[History]
 	[{player_name}] "I know most people are bored by it, but I find history really interesting." {SetStringValue("BookGenre", "history")}
+	~bookGenre = "history"
 	[Charlotte] "You surprise me, {player_name}."
 	++[Natural Science]
 	[{player_name}] "I really like nature, so I guess I like books on space and animals and stuff." {SetStringValue("BookGenre", "natural science")}
+	~bookGenre = "natural science"
 	[Charlotte] "My father loves the natural sciences as well."
 	++[Creative Nonfiction]
 	[{player_name}] "I like reading stories about things that really happened." {SetStringValue("BookGenre", "creative nonfiction")}
+	~bookGenre = "creative nonfiction"
 	[Charlotte] "A grounded choice. You know I think you're the first person I've encountered with such a preference."
 	++[I prefer variety]
 	[{player_name}] "I don't really have a favorite topic, so variety I guess. I do like learning new things, but I never thought about it that way." {SetStringValue("BookGenre", "variety")}
+	~bookGenre = "variety"
 	[Charlotte] "{player_gender == "M":A man|{player_gender == "F" :A woman|Someone}} after my own heart." # Charlotte = Happy
 -[Charlotte] "I know just the thing."
 She stands up and walks over to a far shelf. # Charlotte = Exit, StageLeft
@@ -156,7 +185,7 @@ I take the book from her and look it over. {It has a very humble appearance, but
 -> Confessions
 
 === Confessions ===
-{Confessions>1:I decide it's best to play along and try not to out myself as an involuntary time traveller.}
+{Confessions>1:I decide it's best to play along and try not to out myself as an involuntary time traveller.|Charlotte sure does know a lot about books.}
 [{player_name}] "So you must read a lot to have all these recommendations for people."
 [Charlotte] "Oh, yes. I've been reading since I was quite young. I had quite a sheltered childhood. Books were my only companions until I was older." # Charlotte = Sad
 "I have been a reader my whole life. Although... may I confide something in you, {player_name}?" # Charlotte = Calm

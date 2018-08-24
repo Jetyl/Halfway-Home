@@ -53,7 +53,7 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   #Background / YourRoom, eyeopen   # SFX : play_sfx_human_knock
 		What do they want?
 	- week == 2:
-		I wake with a start. # Stress => 10  # Depression => 25  # Fatigue => 15 # Background / YourRoom, EyeOpen #Acheivement * ACH_WEEK
+		I wake with a start. # Stress => 10  # Depression => 25  # Fatigue => 15 # Background / YourRoom, EyeOpen #Acheivement $ ACH_WEEK
 		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
 		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
 		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
@@ -201,7 +201,7 @@ The knock on the door.@ Max introducing Timothy as if we'd never met.@ Timothy..
 This can't all be just 'deja vu', can it?
 I think... I think I'm back on the first day Timothy arrived here.@ But how? Why?
 I flip through my notebook, but all the notes I had taken over the week are gone.
-I'm a week in the past!
+I'm a week in the past! # Time * Show
 "W-why is this happening? @<i>How</i> did this happen?!"
 I rack my brain, desperately searching for any explanation.
 Was it all a dream? // OLD LINE: Maybe the whole last week didn't happen? Maybe it was a dream?
@@ -214,7 +214,7 @@ I take a deep breath, shaking off some of the existential dread still washing ov
 -> END
 
 ===Repeat===
-I open the door to Max's beaming face. A scared Timothy hides behind them.   #Keyless = Calm   #Timothy = Afraid
+I open the door to Max's beaming face. A scared Timothy hides behind them.   #Keyless = Calm   #Timothy = Afraid # Time * Show
 {GetValue("RRRFreakout")==true:
 	{I was wrong. Looks like I'm in for another repeat week.|Yep. That's about right.}
 	{I try to hide my disappointment.|One more time from the top.}
@@ -299,17 +299,27 @@ Here we go again.
 	Oh, man. I did not wake up expecting to be a tour guide today. C'est la vie.
 }
 I whip out my planner and jot down a reminder to myself, {a habit my old therapist encouraged me to follow.|as well as fill in some things from the previous week.} # 0 & InProgress
-"So... welcome to Sunflower House. You probably already know all of this, but..."
-"It's a Halfway House for young adults with mental issues. Like me. And, I assume, you."
-"It's supposed to be `halfway` between needing serious care and being able to capably live with your condition in the real world."
+"{So... welcome to, um... Sunflower House. You, uh, probably already know all of this, but...|Welcome to Sunflower House. You probably know most of this, but...}"
+{week!=1:
+	I walk Timothy through the explanation of the house again and it's time for the tour.
+	->END
+}
+Oh, man, I suck at explaining things.
+"It's a halfway house for young adults with, uh, mental issues."
+"It's supposed to be `halfway` between the hospital and the real world."
 "You can technically leave any time, but usually a therapist will recommend a date for you."
-"Sunflower House is a bit weird compared to a lot of other places, from what I hear."
-"For example, people tend to stay here for a lot longer and are more self-directed."
+"Mine's this Friday, for instance."
+Timothy seems slighly surprised at that. # Timothy = Surprised
+"Sunflower House is a bit weird compared to a lot of other places, from what I hear." # Timothy = Calm
+"For example, people tend to stay here for a lot longer and are more, uh, `self-directed` to quote the pamphlet."
 The skeptical part of me thinks this is so the administrators can save money on oversight, but I don't mention that to the new guy.
+Whatever the reason, it's allowed me to avoid being dragged out of my comfort zone too often.
+My comfort zone basically just being my room.
 I go over and grab my watch off the desk beside my bed. Max was right, it's noon on the dot.  # Time * Show
 "This is my room. Although, I guess it'll be <i>our</i> room for the time being."
 "You can come here if you want to just get away from it all and de-<color=color_wellbeing_penalty>stress</color>."   # Stress * Show
 "Also, obviously, you can just knock out here if you're too <color=color_wellbeing_penalty>fatigued</color> to do anything else. Or just whenever, really."   # Fatigue * Show
+I certainly do.
 "Max'll get mad if you spend too much time loafing around, though, since we're supposed to be `active agents of self-recovery` or whatever."
 "Oh, and one more thing. I kinda lost my room key a while ago, so if you lock the door I don't really have a way in unless Max is around."
 [Timothy] "Oh, sure. <jitter>W-wait,</jitter> couldn't you just ask Max for a new key?"   # Timothy = Surprised
@@ -317,14 +327,15 @@ I go over and grab my watch off the desk beside my bed. Max was right, it's noon
 "There's three copies of every room key. One for each roommate and one for the floor R.A. in case of emergencies."
 "I lost mine, Max can't give theirs away, and since you were coming Max wouldn't give me yours."
 "To be honest, it hasn't been a big deal since I've been by myself for a while."
-[Timothy] "Oh."   # Timothy = Sad
+[Timothy] "Oh." # Timothy = Sad
 [{player_name}] "So, uh... I don't know what brought you here and you don't have to tell me or anything, but I learned my lesson after my last roommate so I wanna let you in on my situation a bit."
 [Timothy] "Oh, okay. @@<size=50%>Last roommate?<size=100%>"   # Timothy = Surprised
 [{player_name}] "I was in Blackwell for a few years before coming here."
 [Timothy] "Me, too."   # Timothy = Happy
 [{player_name}] "It's a pretty common story around here, really. We all know what it's like. At least, better than anyone out there."
 "Anyway, I struggled a lot with depression and lost time. I still do sometimes."   # Timothy = Calm
-Maybe more than sometimes, but he doesn't need to know that.
+I used to be really uncomfortable explaining my depression to people.
+Six years of rotating doctors and sympathizers gave me a lot of practice.
 [Timothy] "Oh, man. Depression sucks. I've never heard of `lost time`, though."   # Timothy = Sad
 "You mean you lose track of time? Doesn't everybody do that?"   # Timothy = Surprised
 [{player_name}] "No, it's more like..."
@@ -343,7 +354,7 @@ I am really starting to get hungry, so my first move should be to show Timothy t
 ===Day1Alone===
 {SetValue("Tutorial", false)}
 [{player_name}] "They probably just fell into the couch cushions in the commons."
-[Keyless>Max] "Oh, don't be silly {player_name}, I-"
+[Keyless>Max] "Oh, don't be silly {player_name}, I-" #Skip
 "Actually, that's entirely plausible. Don't move, I'll be right back!"
 Max turns and rushes out of the room before either of us get a chance to speak.   #Keyless = Exit   # SFX : play_sfx_human_footsteps_approaching
 [Timothy] "What was that-"   #Skip

@@ -122,7 +122,7 @@ namespace HalfwayHome
       string fontOverride = RegexParser.Presets.ComposeBinaryOperation("override", "index", "~");
       parser.AddPattern("FontOverride", fontOverride, RegexParser.Target.Tag, RegexParser.Scope.Group, OnFontOverride);
       // achivements
-      string Achievement = RegexParser.Presets.ComposeBinaryOperation("Achievement", "Tag", "*");
+      string Achievement = RegexParser.Presets.ComposeBinaryOperation("Achievement", "Tag", "$");
       parser.AddPattern("Achievment", Achievement, RegexParser.Target.Tag, RegexParser.Scope.Group, UnlockAchievement);
     }
 

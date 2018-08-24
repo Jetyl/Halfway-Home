@@ -55,7 +55,7 @@ Max shuffles around, seeming both surprised that I mentioned Timothy and wishing
 "So, uh, Max? What, uh... what day is it?" // Added this instead of the calendar thing
 [Max] "Uh... your move-out day? You okay, {player_name}?"
 Disbelief overcomes me. Is it... finally over?
-It must be!
+It must be! # Time * Show
 //I look over at my calendar to see the date. Disbelief washes over me. the loop. its... (Never mentioned a calendar before right now. Also a calendar wouldn't tell Sam anything unless they had been marking it.)
 "{player_name}?"
 [{player_name}] "Huh? yeah?"
