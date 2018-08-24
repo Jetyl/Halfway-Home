@@ -34,10 +34,17 @@ EXTERNAL SetValue(name, values)
 // Stopping all music... # Play : Stop_All
 // END TEST
 
+# Load @ story_big_happy_family
+
 -> Start
 
 === Start ===
-Max asked me to meet them to talk about {something|my experience at the House}. # Play : Stop_All
+{
+	-GetValue("ReadyToDye"):
+		Max asked me to meet them to talk about {something|my experience at the House}.
+	-else:
+		Max asked me to meet them to talk about {something|my experience at the House}. # Play : Stop_All
+}
 Plus, after skipping breakfast I feel like getting some grub.
 Max is sitting at a table in the middle of the room.
 I fill up my plate up and sit down to join them. #fatigue -= 50
@@ -136,7 +143,7 @@ I excuse myself first, and head off to my next location... #All=Exit
 === SadStart ===
 ~tried_grace = false
 ~tried_expression = false
-I spot Timothy sitting at one of the tables alone. # Load @ story_big_happy_family
+I spot Timothy sitting at one of the tables alone.
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
 [Timothy] "Oh.<delay=0.5> Hi."
