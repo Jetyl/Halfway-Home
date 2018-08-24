@@ -12,11 +12,13 @@ public class SocialStatManager : MonoBehaviour
     public Personality.Social Stat;
     public float PrevProgress;
     public float CurProgress;
-    public SocialStatTierUpEvent(Personality.Social stat, float prevProgress, float curProgress)
+    public bool IsTierUp;
+    public SocialStatTierUpEvent(Personality.Social stat, float prevProgress, float curProgress, bool isTierUp)
     {
       Stat = stat;
       PrevProgress = prevProgress;
       CurProgress = curProgress;
+      IsTierUp = isTierUp;
     }
   };
   public Personality.Social SocialStat;
@@ -66,7 +68,7 @@ public class SocialStatManager : MonoBehaviour
     int totalTier = basicTier + specialTier;
     int realTier = Game.current.Self.GetModifiedSocialStat(SocialStat);
 
-    if (totalTier > PreviousTier) Celebrate();
+    if (PreviousProgress < barStat/*totalTier > PreviousTier*/) Celebrate(totalTier>PreviousTier);
     PreviousProgress = barStat;
     PreviousTier = totalTier;
 
@@ -155,9 +157,9 @@ public class SocialStatManager : MonoBehaviour
     UpdateDisplay();
   }
 
-  void Celebrate()
+  void Celebrate(bool tierUp)
   {
-    Scene.Dispatch(new SocialStatTierUpEvent(SocialStat, PreviousProgress, Game.current.Self.GetSocialProgress(SocialStat)));
+    Scene.Dispatch(new SocialStatTierUpEvent(SocialStat, PreviousProgress, Game.current.Self.GetSocialProgress(SocialStat), tierUp));
   }
 
     public void BarState(bool Opened)

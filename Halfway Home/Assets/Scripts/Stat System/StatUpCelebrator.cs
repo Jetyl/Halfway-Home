@@ -18,12 +18,15 @@ public class StatUpCelebrator : MonoBehaviour
   public Animator SpecialStar2;
   [Space(10)]
   public float InterpTime;
-  public float OnScreenDuration;
+  public float OnScreenDurationLong;
+  public float OnScreenDurationShort;
   [Space(10)]
   public Color AwarenessStarColor;
   public Color GraceStarColor;
   public Color ExpressionStarColor;
   private Color curColor;
+  [Space(10)]
+  public CelebrationFrequency Frequency = CelebrationFrequency.All;
 
   // Use this for initialization
   void Start ()
@@ -31,17 +34,14 @@ public class StatUpCelebrator : MonoBehaviour
     ProgressBar.maxValue = Game.current.Self.SocialThreshold * 3;
     Scene.Connect<SocialStatManager.SocialStatTierUpEvent>(OnSocialStatTierUpEvent);
 	}
-	
-	// Update is called once per frame
-	void Update ()
-  {
-		
-	}
 
   void OnSocialStatTierUpEvent(SocialStatManager.SocialStatTierUpEvent e)
   {
+    if (Frequency == CelebrationFrequency.TierUpOnly && !e.IsTierUp) return;
+    else if (Frequency == CelebrationFrequency.FirstAndTierUp && !e.IsTierUp && e.PrevProgress > 0) return;
     ProgressBar.value = e.PrevProgress;
     var IsSpecialUp = ProgressBar.value == e.CurProgress;
+    var IsTierUp = e.IsTierUp;
     StatText.text = ToTitleCase($"{e.Stat} Up!");
     var curTier = Game.current.Self.GetBasicSocialStat(e.Stat);
     var specTier = Game.current.Self.GetBonusSocialStat(e.Stat);
@@ -89,7 +89,7 @@ public class StatUpCelebrator : MonoBehaviour
     SpecialStar2.gameObject.GetComponent<Image>().color = curColor;
     GetComponent<UIFader>().Show();
 
-    var animStar = Star1;
+    Animator animStar = null;
     if (IsSpecialUp)
     {
       animStar = specTier == 1 ? SpecialStar1 : SpecialStar2;
@@ -101,14 +101,15 @@ public class StatUpCelebrator : MonoBehaviour
         animStar = Star3;
       }
       else if (Game.current.Self.GetBasicSocialStat(e.Stat) == 2) animStar = Star2;
+      else if (Game.current.Self.GetBasicSocialStat(e.Stat) == 1) animStar = Star1;
     }
 
     var celebrationSeq = Actions.Sequence(this);
     if(IsSpecialUp) Actions.Call(celebrationSeq, () => SpecialBackground.SetBool("Revealed", true));
-    if(IsSpecialUp) Actions.Delay(celebrationSeq, 0.5f);
-    Actions.Property(celebrationSeq, () => ProgressBar.value, e.CurProgress, Mathf.Min(InterpTime, OnScreenDuration), Ease.QuadOut);
-    Actions.Call(celebrationSeq, ()=>animStar.SetBool("Achieved", true));
-    Actions.Delay(celebrationSeq, OnScreenDuration - InterpTime - 0.5f);
+    if(IsSpecialUp) Actions.Delay(celebrationSeq, 0.2f);
+    Actions.Property(celebrationSeq, () => ProgressBar.value, e.CurProgress, Mathf.Min(InterpTime, IsTierUp ? OnScreenDurationLong:OnScreenDurationShort), Ease.QuadOut);
+    if(IsTierUp) Actions.Call(celebrationSeq, ()=>animStar.SetBool("Achieved", true));
+    Actions.Delay(celebrationSeq, (IsTierUp ? OnScreenDurationLong : OnScreenDurationShort) - InterpTime - 0.2f);
     Actions.Call(celebrationSeq, ()=>GetComponent<UIFader>().Hide());
     Actions.Call(celebrationSeq, ResetStars);
     if(IsSpecialUp) Actions.Call(celebrationSeq, () => SpecialBackground.SetBool("Revealed", false));
@@ -138,4 +139,11 @@ public class StatUpCelebrator : MonoBehaviour
     string firstChar = stringToConvert[0].ToString();
     return (stringToConvert.Length > 0 ? firstChar.ToUpper() + stringToConvert.Substring(1) : stringToConvert);
   }
+
+  public enum CelebrationFrequency
+  {
+    FirstAndTierUp,
+    TierUpOnly,
+    All
+  };
 }
