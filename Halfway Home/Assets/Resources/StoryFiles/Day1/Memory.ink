@@ -85,9 +85,9 @@ The room is smaller than my room at Blackwell was, but much cozier. I feel almos
 "I'm supposed to give you the spiel on Sunflower House, but I gotta make it quick. I've been a bit behind on my more, uh... janitorial duties."
 "I wear a lotta hats around here, in case you can't tell. Anyway..."
 They pull out a small bit of paper from their pocket and begin reading aloud.
-"Welcome to our community. Here at Sunflower House we believe in creating the optimal environment for residents to grow."
-"We favor a hands-off approach coupled with longer residency periods to minimize pressure and maximize recovery."
-"We will never tell you what to do or when to do it, but instead offer a wealth of options to you for the duration of your stay, however long it may be."
+"<i>Welcome to our community. Here at Sunflower House we believe in creating the optimal environment for residents to grow.</i>"
+"<i>We favor a hands-off approach coupled with longer residency periods to minimize pressure and maximize recovery.</i>"
+"<i>We will never tell you what to do or when to do it, but instead offer a wealth of options to you for the duration of your stay, however long it may be.</i>"
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"

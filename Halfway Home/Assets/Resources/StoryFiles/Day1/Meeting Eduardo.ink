@@ -231,6 +231,6 @@ Eduardo being all over Isaac seems to do nothing to Isaac's usual pokerface.
 [Eduardo] "And I <flow><i>wuv</i>,</flow> you!" # Needy = blush
 <i>Yikes</i> that's cheesy.
 It seems that line finally breaks down Isaac's pokerface like it was nothing.
-Relationships are weird. #Needy = Exit
+{Relationships are weird.|Relationships are still weird.} #Needy = Exit
 <color=color_descriptor><i>Seeing such an open display of affection has <color=color_expression>increased <b>Expression</b> faintly<color=color_descriptor>.</i></color> # Expression+
 ->->

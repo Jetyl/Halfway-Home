@@ -46,7 +46,6 @@ public class TimeCheckControl : MonoBehaviour
     {
 
         CurrentNode.CallAction();
-        print("an action occured now");
 
         if (CallNext())
             NextNode(CurrentNode.Destination);

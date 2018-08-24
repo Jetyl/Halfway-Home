@@ -395,7 +395,7 @@ MonoBehaviour:
     CloseTag: Close
     ActiveTag: 
     Details:
-    - Tag: ArmL
+    - Tag: ArmsL
       Graphic: {fileID: 1583487887783244}
 --- !u!114 &114583439413742934
 MonoBehaviour:

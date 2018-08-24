@@ -52,6 +52,7 @@ public class DescriptionDisplay : MonoBehaviour
 
     bool CanSkip = false;
 
+
     // Use this for initialization
     void Start ()
     {
@@ -63,7 +64,6 @@ public class DescriptionDisplay : MonoBehaviour
 
         Space.Connect<DescriptionEvent>(Events.Description, UpdateDescription);
         Space.Connect<DefaultEvent>(Events.FinishedAutoType, OnFinishedTyping);
-        Space.Connect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.Connect<DefaultEvent>(Events.Pause, OnPause);
         Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.Connect<DefaultEvent>(Events.SkipTyping, OnSkip);
@@ -77,10 +77,10 @@ public class DescriptionDisplay : MonoBehaviour
         Space.Connect<DefaultEvent>(Events.CloseHistory, OnNonStop);
         Space.Connect<DefaultEvent>(Events.OpenUI, OnNonStop);
         Space.Connect<DefaultEvent>(Events.CloseUI, OnStop);
-        Space.Connect<DefaultEvent>(Events.TimeChange, OnStop);
-        Space.Connect<DefaultEvent>(Events.ClockFinished, OnNonStop);
         Space.Connect<DefaultEvent>(Events.CheatsOpen, OnStop);
         Space.Connect<DefaultEvent>(Events.CheatsClosed, OnNonStop);
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnStop);
+        Space.Connect<DefaultEvent>(Events.ClockFinished, OnNonStop);
 
     }
 	
@@ -209,35 +209,6 @@ public class DescriptionDisplay : MonoBehaviour
         isFinished = false;
     }
 
-    void CloseDisplay (DefaultEvent eventdata)
-    {
-        print("off");
-        //Space.DispatchEvent(Events.CloseUI, new UIEvent(this));
-        anime.SetBool("IsUp", false);
-        Active = false;
-        Description.Clear();
-        StartCoroutine(WaitTilClosed());
-    }
-    
-    IEnumerator WaitTilClosed()
-    {
-
-        yield return new WaitForSeconds(0.9f);
-
-        Space.DispatchEvent(Events.DescriptionClosed);
-
-    }
-
-    IEnumerator WaitTilOpened()
-    {
-        Description.Clear();
-        
-        yield return new WaitForSeconds(1.5f);
-        
-        Active = true;
-        Description.gameObject.DispatchEvent(Events.AutoType, new AutoTypeEvent(Line));
-        isFinished = false;
-    }
 
     void OnFinishedTyping(DefaultEvent eventdata)
     {
@@ -298,7 +269,6 @@ public class DescriptionDisplay : MonoBehaviour
 
         Space.DisConnect<DescriptionEvent>(Events.Description, UpdateDescription);
         Space.DisConnect<DefaultEvent>(Events.FinishedAutoType, OnFinishedTyping);
-        Space.DisConnect<DefaultEvent>(Events.CloseDescription, CloseDisplay);
         Space.DisConnect<DefaultEvent>(Events.Pause, OnPause);
         Space.DisConnect<DefaultEvent>(Events.UnPause, OnUnPause);
         Space.DisConnect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
