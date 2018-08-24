@@ -27,7 +27,7 @@ public class GoalManager : MonoBehaviour
   {
     Objectives = Game.current.Progress.GetObjectives();
 
-        print(Objectives.Count);
+        //print(Objectives.Count);
 
     foreach(Transform child in GoalParent.transform)
     {
@@ -36,7 +36,7 @@ public class GoalManager : MonoBehaviour
 
     foreach (Task objective in Objectives)
     {
-            print(objective.GetState());
+            //print(objective.GetState());
 
       // If the task is unstarted or an incomplete hidden objective, return
       if (objective.GetState() == Task.TaskState.Unstarted || (objective.GetState() == Task.TaskState.InProgress && objective.Hidden))
@@ -68,7 +68,7 @@ public class GoalManager : MonoBehaviour
           goalText.color = Color.red;
         }
         // For every subgoal pertaining to that objective
-        foreach (Task subgoal in objective.SubTasks)
+        foreach (SubTask subgoal in objective.SubTasks)
         {
           // If the subgoal is unstarted or an incomplete hidden objective, return
           if (subgoal.GetState() == Task.TaskState.Unstarted || (subgoal.GetState() == Task.TaskState.InProgress && objective.Hidden))

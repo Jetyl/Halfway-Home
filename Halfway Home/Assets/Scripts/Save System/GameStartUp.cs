@@ -63,7 +63,7 @@ public class GameStartUp : MonoBehaviour
                 SaveLoad.Delete();
             }
         }
-        print(Game.current);
+        //print(Game.current);
         if (Game.current == null) //for new games
         {
             ReaderReference.Clear();

@@ -32,7 +32,6 @@ public class Game
     private bool DrainEnergy;
 
     public ProgressSystem Progress;
-    public GallerySystem Memory;
     public Personality Self;
 
     //character name, day of week, the location that hour
@@ -102,7 +101,6 @@ public class Game
         CurrentRoom = Room.YourRoom;
         Progress = new ProgressSystem();
         Self = new Personality();
-        Memory = new GallerySystem();
 
         //Progress.SetValue("MasterVolume", 1.0f);
         //Progress.SetValue("MusicVolume", 1.0f);
@@ -155,7 +153,6 @@ public class Game
 
         Progress = new ProgressSystem(copy_.Progress);
         Self = new Personality(copy_.Self);
-        Memory = new GallerySystem (copy_.Memory);
 
         Schedule = new List<CharacterSchedule>();
         SceneList = new Dictionary<string, TimeStamp>();
