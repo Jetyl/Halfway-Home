@@ -65,27 +65,27 @@ Whether that be another week at Sunflower House... or my first week leaving it b
 {
 	-GetValue("Saved Timothy"):
 		The sound of the door creaking open pulls me from my thoughts.
-		Timothy walks in and plops down on his bed. # Timothy = Happy, far, stage_right
-		[Timothy] "Hey, {player_name}. Wow, what a day, huh?"
+		Timothy walks in and plops down on his bed. # Dyed = Happy, far, stage_right
+		[Dyed>Timothy] "Hey, {player_name}. Wow, what a day, huh?"
 		[{player_name}] "Yeah."
-		[Timothy] "I can't believe you're leaving. I-I'm gonna miss you, you know." # Timothy = Sad
-		[{player_name}] "That's nice of you to say. I'll miss you, too, man." # Timothy = Calm
+		[Dyed>Timothy] "I can't believe you're leaving. I-I'm gonna miss you, you know." # Dyed = Sad
+		[{player_name}] "That's nice of you to say. I'll miss you, too, man." # Dyed = Calm
 		Or I will when I actually do leave this place.
 		I look at my empty suitcase. It gets harder and harder to convince myself to bother packing it.
-		[Timothy] "Oh! Y-you're not packed yet! Can... can I help?" # Timothy = Surprised
-		[{player_name}] "Sure. I don't have that much, though." # Timothy = Calm
+		[Dyed>Timothy] "Oh! Y-you're not packed yet! Can... can I help?" # Dyed = Surprised
+		[{player_name}] "Sure. I don't have that much, though." # Dyed = Calm
 		I point out a few things to Timothy and start rummaging through my dresser.
 		Divided between the two of us, the already simple task is completed in mere minutes.
-		[Timothy] "Wow, that's it?" # Timothy = Surprised
+		[Dyed>Timothy] "Wow, that's it?" # Dyed = Surprised
 		[{player_name}] "Jeez, you don't have to say it like that."
-		[Timothy] "<jitter>Oh no! I-I didn't mean... I'm sorry!</jitter>" # Timothy = Afraid
+		[Dyed>Timothy] "<jitter>Oh no! I-I didn't mean... I'm sorry!</jitter>" # Dyed = Afraid
 		[{player_name}] "No apology needed. You're right... it really isn't a lot."
-		"I guess I just never cared about getting new stuff." # Timothy = Calm
-		[Timothy] "Well, on the bright side: less to pack!" # Timothy = Happy
+		"I guess I just never cared about getting new stuff." # Dyed = Calm
+		[Dyed>Timothy] "Well, on the bright side: less to pack!" # Dyed = Happy
 		Timothy yawns.
-		"Sorry, {player_name}. I'm really feeling tired. I meant to be asleep by now." # Timothy = Sad
-		[{player_name}] "I should be in bed, too. You can have the bathroom first." # Timothy = Happy
-		Timothy nods and slips into the bathroom. The two of us conduct our nightly routine in silence. # Timothy = Exit
+		"Sorry, {player_name}. I'm really feeling tired. I meant to be asleep by now." # Dyed = Sad
+		[{player_name}] "I should be in bed, too. You can have the bathroom first." # Dyed = Happy
+		Timothy nods and slips into the bathroom. The two of us conduct our nightly routine in silence. # Dyed = Exit
 		I lay myself down onto my mattress and look over at Timothy, who is already fast asleep.
 		Even if I have to do this all again, at least I got to see him happy.
 	-else:
@@ -98,10 +98,10 @@ Whether that be another week at Sunflower House... or my first week leaving it b
 		It's probably futile, but I think I'm long overdue for a little optimism.
 		When I've finished packing, I ready myself for bed and plop down onto my mattress.
 }
-As I drift off, I reflect on the choices that led me to this moment.
+As I drift off, I reflect on the choices that led me to this moment. # Background / dream, eyeclose
 I could have done so many things differently...
 I slip into a deep and dreamless slumber.
-I sleep more calmly than I've slept in a long, long time.
+I sleep more calmly than I've slept in a long, long time. #set_time%6,8
 ->END
 
 ===SecondarySuccess===

@@ -36,7 +36,7 @@ EXTERNAL SetValue(name, values)
 -> Start
 
 === Start ===
-I am woken up by an all too familiar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen
+I am woken up by an all too familiar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen # fatigue => 0
 I let out a resigned sigh as I get out of bed to answer the door.
 But when I open the door, Max is alone. #Max = Happy
 [Max] "Hella yella, my {player_name} fella."
@@ -93,11 +93,11 @@ Only to immediately return. #Dyed = Surprised
 Before I have time to respond, he's already gone again. #Dyed = exit
 [{player_name}] "What was that about?"
 [Max] "Not a clue."
-"But, you probably should remember to go say by to him before ya head off."
+"But, you probably should remember to go say bye to him before ya head off."
 ->->
 
 ===Ready===
-[Max] "Anyways, you ready to leave? Your {GetStringValue("Guardian")} will be here to pick you up soon.
+[Max] "Anyways, you ready to leave? Your {GetStringValue("Guardian")} will be here to pick you up soon."
 I think for a minute, looking around the room I've called my home for the past... I don't know how long. #All = exit
 [{player_name}] "Yeah. I'm think I am."
 I follow Max down the hall with my stuff. We stop in the commons to wait. #Background / commons
@@ -108,16 +108,16 @@ I look around the commons. The people I've come to know as friends are chatting 
 ===TrissaEnd===
 [Trissa] "He-ey!"
 Unsurprisingly, Trissa is the first to approach, bursting with energy. # Trissa = Happy, Close
-"It's the {player_gender=="M":man of the hour|{player_gender=="F":woman of the hour| big cheese}}!
+"It's the {player_gender=="M":man of the hour|{player_gender=="F":woman of the hour| big cheese}}!"
 I try to stop myself from blushing, to no avail.
 [{player_name}] "Oh, stop."
-"Aww, I got ya!"
+[Trissa] "Aww, I got ya!"
 She gives my shoulder a playful punch.
 "Look at you! All packed and everything! It's so exciting!"
 "How come you don't look that excited?" # Trissa = Surprised
 "Too busy feelin' sorry for the rest of us, huh?" # Trissa = Angry
 I'm about to reply, but stop myself. She's messing with me. Now's my chance. # grace ^ good
-[{player_name}] "Them? Nah. Just you, Miss `I wear my sunglasses indoors`. # expression ^ good
+[{player_name}] "Them? Nah. Just you, Miss `I wear my sunglasses indoors`." # expression ^ good
 I give her a smile and a wink for good measure.
 [Trissa] "What kinda-" # Skip
 "Oh, you're good. Guess I can't fool you any more, huh, {player_name}?" # Trissa = Happy
@@ -142,7 +142,7 @@ I guess it must seem that way to everyone else. That's what happens when you hav
 "It's been real, {player_name}, but I can see Charlotte waiting in the wings to say goodbye."
 "May love find you as surely as the river finds the sea."
 "My momma used to say that before she passed."
-"What your step out there!" # Trissa = Exit
+"Whatch your step out there!" # Trissa = Exit
 ->CharlotteEnd
 
 ===CharlotteEnd===
@@ -257,7 +257,7 @@ She turns to open a small bag resting beside her and withdraws a solitary book.
 ->EdAndIsaac
 
 ===EdAndIsaac===
-I turn to look over the commons. Eduardo and Isaac are standing at opposite ends of the room for some reason.
+I turn to look over the commons. Eduardo and Isaac are standing at opposite ends of the room for some reason. # Charlotte = Exit
 Guess I'll have to talk to one before the other. Let's start with... #Skip
 +[Eduardo]
 	->EduardoEnd
@@ -306,12 +306,12 @@ Eduardo seems a little petulant.
 [{player_name}] "I know what?"
 [Eduardo] "You were right."
 "Isaac and I had a rather long, and mostly miserable talk about our relationship."
-"There was s'me crying, you know. But I did what you said, and I listened, and let Isaac speak, and..."
+"There was some crying, you know. But I did what you said, and I listened, and let Isaac speak, and..."
 "I think we'll be able to make this work." #Eduardo = calm
 [{player_name}] "I'm glad to hear that."
 {
 	-TalkI==true:
-		Just then we both notice Isaac coming over towards us. #Eduardo = suprised #Isaac = sad
+		Just then we both notice Isaac coming over towards us. #Eduardo = surprised #Isaac = sad
 		[Isaac] "Hey."
 		[Eduardo] "Hey." #Eduardo = sad
 		->InE
@@ -339,21 +339,21 @@ I walk over to Isaac, who is leaning up at the wall, pretending to not be starin
 }
 
 =StoneWall
-[{player_name}] "hey."
-[Isaac] "hrm."
+[{player_name}] "Hey."
+[Isaac] "Hrm."
 [{player_name}] "How's it going?"
-[Isaac] "hrm."
-he shrugs.
+[Isaac] "Hrm."
+He shrugs.
 ...<delay=2>Well this is going about as well as expected.
 [{player_name}] "Well I'm heading off today."
-[Isaac] "hrm. Good Luck."
-[{player_name}] "oh, uh, thanks."
-I sort of just walk away after that, given Isaac is not in the mood to talk I suppose. #Isaac = exit
+[Isaac] "Hrm. Good Luck."
+[{player_name}] "Oh, uh, thanks."
+I sort of just walk away after that, given Isaac is not in the mood to talk. #Isaac = exit
 {TalkE:->EduardoEnd|OutsideWorld}
 
 =Outcome
-[{player_name}] "hey."
-[Isaac] "Hrm? oh, {player_name}. hey."
+[{player_name}] "Hey."
+[Isaac] "Hrm? Oh, {player_name}. Hey."
 "I did it. Kept my promise."
 "Talked to Eduardo. Before you left."
 [{player_name}] "Oh? Good, and how'd it go?"
@@ -363,52 +363,52 @@ I sort of just walk away after that, given Isaac is not in the mood to talk I su
 "Did all I could."
 "He just can't... listen."
 "S'how things go. Sometimes."
-[{player_name}] "Well it still sucks man. If you ever want to talk about it, or just get something off your chest. Just hit me up."
+[{player_name}] "Well it still sucks, man. If you ever want to talk about it or just get something off your chest, just hit me up."
 [Isaac] "..."
 "Thanks. Will do."
 We fist bump each other.
-[{player_name}] "Well, I'd better get going, my car is going to be here any minutes, and I still have some goodbyes to give."
+[{player_name}] "Well, I'd better get going. My car is going to be here any minute and I still have some goodbyes to give."
 [Isaac] "Yeah."
 "Later." #Isaac = exit
 {TalkE:->EduardoEnd|OutsideWorld}
 
 =Thanks
 [{player_name}] "Hey."
-[Isaac] "Hrm? oh, {player_name}. hey."
+[Isaac] "Hrm? Oh, {player_name}. Hey."
 "I did it. Kept my promise."
 "Talked to Eduardo. Before you left."
 [{player_name}] "Oh? Good, and how'd it go?"
 [Isaac] "Good. Actually."
 "Eduardo listened. We worked some stuff out."
-"s'not perfect. We'll survive though."
+"S'not perfect. We'll survive though."
 [{player_name}] "That's good to hear."
-[Isaac] "He mentioned how you had talked to him before had about this stuff. knock some sense into him."
+[Isaac] "He mentioned how you had talked to him before had about this stuff. Knocked some sense into him."
 "Thanks. For that."
-[{player_name}] "No problem man. I was happy to help."
+[{player_name}] "No problem, man. I was happy to help."
 {
 	-TalkE:
-		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = suprised
-		[Eduardo] "hey."
-		[Isaac] "hey." #Isaac = sad
+		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = surprised
+		[Eduardo] "Hey."
+		[Isaac] "Hey." #Isaac = sad
 		->InE
 	-else:
 		We fist bump each other.
-		[{player_name}] "Well, I'd better get going, my car is going to be here any minute." // and I still have some goodbyes to give (Not any more)
+		[{player_name}] "Well, I'd better get going. My car is going to be here any minute." // and I still have some goodbyes to give (Not any more)
 		[Isaac] "Yeah."
 		"Later." #Isaac = exit
 		->OutsideWorld
 }
 
 =Psychic
-[{player_name}] "hey."
-[Isaac] "hrm." #Isaac = suprised
+[{player_name}] "Hey."
+[Isaac] "Hrm." #Isaac = surprised
 Isaac looks at me like I'm some sort of alien.
 [{player_name}] "Whoa, you okay?"
-[Isaac] "hrm. Yeah. Just."
+[Isaac] "Hrm. Yeah. Just."
 "How did you know?"
-[{player_name}] "what?"
+[{player_name}] "What?"
 [Isaac] "How did you know. So much. About me?"
-[{player_name}] "oh! uh..."
+[{player_name}] "Oh! Uh..."
 {
 	-TalkE:
 		Eduardo must have brought me up when they talked about their relationship.
@@ -425,14 +425,14 @@ Well that one was at least true. I don't know what to say here.
 Oh, thank goodness, he's dropping it.
 {
 	-TalkE==true:
-		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = suprised
-		[Eduardo] "hey."
-		[Isaac] "hey." #Isaac = sad
+		Just then we both notice Eduardo coming over towards us. #Eduardo = sad #Isaac = surprised
+		[Eduardo] "Hey."
+		[Isaac] "Hey." #Isaac = sad
 		->InE
 	-else:
 		"Bye, I guess."
 		[{player_name}] "Oh yeah, see you around Isaac."
-		[Isaac] "hrm." #Isaac = exit
+		[Isaac] "Hrm." #Isaac = exit
 		I suppose Isaac is not in the mood to be friendly with someone who know way more about him than he is comfortable with.
 		->OutsideWorld
 }
@@ -442,9 +442,9 @@ Oh, thank goodness, he's dropping it.
 [Eduardo] "..."
 [Isaac] "..."
 Man, this is awkward.
-The two kept just giving each other brief glances before their eyes lock, and they both bashful look away.
+The two kept just giving each other brief glances before their eyes lock, and they both bashfully look away.
 [{player_name}] "Are you two going to be okay?"
-[Eduardo] "Y-Yeah! Of course we are!" #Eduardo = suprised
+[Eduardo] "Y-Yeah! Of course we are!" #Eduardo = surprised
 "Uh, right, Isaac?" #Eduardo = sad
 [Isaac] "Y-Yeah."
 {
@@ -463,14 +463,14 @@ The two kept just giving each other brief glances before their eyes lock, and th
 "N-no. You're fine." #Needy = Smile
 "We, uh, talked about stuff."
 "Boundaries. wants. stuff like that."
-[Eduardo] "a whole lot of TMI for you." #Needy = Exit 
-[Isaac] "uh, yeah. Private stuff."#Eduardo = sad #Isaac = Calm
+[Eduardo] "A whole lot of TMI for you." #Needy = Exit 
+[Isaac] "Uh, yeah. Private stuff."#Eduardo = sad #Isaac = Calm
 {
 	-GetValue("Isaac's Secret Revealed"):
 		[Eduardo] "Speaking of private stuff" #Eduardo = calm
 		[Isaac] "Oh no..."
 		[Eduardo] "You really should get the 'deets' on Isaac's storytelling chops."
-		"That stuff is 200% pure sweetness. I love it."
+		"That stuff is two hundred percent pure sweetness. I love it."
 		[Isaac] "{player_name}, why did you have to tell him about my stories?"
 		Whoops.
 		[{player_name}] "Sorry Isaac. It just sort of came up."
@@ -483,8 +483,8 @@ The two kept just giving each other brief glances before their eyes lock, and th
 [Isaac] "Thanks. {player_name}. For helping. You didn't need to do that." #Eduardo = calm #Isaac = calm
 [{player_name}] "No problem."
 "You two play nice now."
-[Eduardo]"You know it!"
-[Isaac]"hrm."
+[Eduardo] "You know it!"
+[Isaac] "Hrm."
 ->OtherOne
 
 =MindReader
@@ -513,19 +513,19 @@ It wasn't really a lie, I just didn't get Isaac to talk to me <i>this</i> week, 
 
 =OtherOne
 The two walk their separate ways. I guess they're trying to give each other some space. #All = exit
-Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
+Eduardo plops himself back on the couch and Isaac goes to lean on the wall.
 {
 	-TalkE:
-		I decide I should go talk with Eduardo a bit, and say my goodbyes to him.
-		->EduardoEnd.Patches
+		I decide I should go talk with Eduardo a bit and say my goodbyes to him.
+		->EduardoEnd
 	-else:
-		I decide I should go talk with Isaac a bit, and say my goodbyes to him.
+		I decide I should go talk with Isaac a bit and say my goodbyes to him.
 		->IsaacEnd
 }
 
 ===OutsideWorld===
-[{player_name}] "Okay Max, I'm ready." #Max = calm
-[Max] "Well I'm glad you're ready, but ya still gotta wait for your car."
+[{player_name}] "Okay, Max. I'm ready." #Max = calm
+[Max] "Well, I'm glad you're ready, but ya still gotta wait for your car."
 /* It is established in "Ready" that Max already knows this
 "Who is picking you up again?"
 [{player_name}] "Oh, just my {GetStringValue("Guardian")}."
@@ -540,7 +540,7 @@ Eduardo plops himself back on the couch, and Isaac goes to lean on the wall.
 	[{player_name}] "I'm not entirely sure."
 -[Max] "Well, {player_name}, it was a pleasure lookin' after you."
 Max extends their hand. I grab their hand and give them a confident handshake.
-[{player_name}] "Thanks for the-" 
+[{player_name}] "Thanks for the-"  # Skip
 And, right on cue, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
 {
 	-GetValue("Saved Timothy"): -> TimothyGoodbye -> TheEnd -> END
@@ -552,12 +552,12 @@ And, right on cue, I see the car roll up to the halfway house. #Background / Hou
 =TimothyGoodbye
 I pick up all of my bags to head out- #Skip
 [Dyed>Timothy] "Wait!"
-Timothy Runs up behind me, waving a piece of paper in his hands. #dyed = Surprised 
+Timothy runs up behind me, waving a piece of paper in his hands. #Dyed = Surprised 
 [{player_name}] "Oh, hey Timothy. Where'd did you run off to?"
-[Dyed>Timothy] "I n-needed to f-finish something." #dyed = afraid
-"H-here!" #dyed = happy
+[Dyed>Timothy] "I n-needed to f-finish something." #Dyed = afraid
+"H-here!" #Dyed = happy
 Timothy holds out the piece of paper.
-"I'm n-not a very good artist, but I w-wanted to make you something, so..." #dyed =afraid
+"I'm n-not a very good artist, but I w-wanted to make you something, so..." #Dyed =afraid
 ... #all = exit #Background / TimothysDrawing, crossfade
 Its not anything amazing, artistically speaking, but that doesn't matter. I can't help but grin from ear to ear. #Acheivment * ACH_DRAW
 [{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
@@ -565,7 +565,7 @@ Its not anything amazing, artistically speaking, but that doesn't matter. I can'
 Before I can say anymore, Timothy leaps forward, giving me a bear hug. #Dyed = Close
 "Oh, s-sorry!" #Dyed = afraid, center
 [{player_name}] "Haha, it's okay man."
-A hold out a hand.
+I hold out my hand.
 "It was nice getting to know you, Timothy Miyuri."
 He reaches out and grabs my hand.
 [Dyed>Timothy] "Thanks for being my friend, {player_name}."
@@ -576,9 +576,18 @@ I pick up my bags again, and head out to the car. #all = exit
 ->->
 
 =TheEnd
-[{GetStringValue("Guardian")}] "Hey!"
+~temp speaker = GetStringValue("Guardian")
+{
+	- speaker == "parents":
+		~speaker = "Dad"
+	- speaker == "brother":
+		~speaker = "Bro"
+	- speaker == "sister":
+		~speaker = "Sis"
+}
+[{speaker}] "Hey!"
 [{player_name}] "Hey."
-[{GetStringValue("Guardian")}] "Here, let me help you with those."
+[{speaker}] "Here, let me help you with those."
 My {GetStringValue("Guardian")} {GetStringValue("Guardian")=="sister":helps|{GetStringValue("Guardian")=="brother":helps|help}} me fit my bags into the trunk.
 "So, how was it? This whole `halfway house` experience?"
 I think about that question as I get into the back seat of the car. 
