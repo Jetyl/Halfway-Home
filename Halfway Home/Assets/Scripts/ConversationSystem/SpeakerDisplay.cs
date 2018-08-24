@@ -44,7 +44,6 @@ public class SpeakerDisplay : MonoBehaviour
             Color col = new Color(r, g, b, a);
 
             string Names = (string)element["Name"];
-
             Speakers.Add(Names, col);
         }
 
@@ -91,8 +90,8 @@ public class SpeakerDisplay : MonoBehaviour
     {
         if (Speaker == Game.current.PlayerName)
             return PlayerColor;
-
-        if (Characters.Contains(Speaker))
+        
+        if (Speakers.ContainsKey(Speaker))
         {
             return Speakers[Speaker];
         }
