@@ -53,7 +53,7 @@ I stagger into the room with a yawn.
 // CUT: huh?
 "<size=60%>{player_name}."
 "<size=80%>Are you awake?"
-In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main   #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main #fatigue => 0 #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"
@@ -96,8 +96,8 @@ I'm not sure why Timothy thought I'd be super knowledgeable about hair products.
 My only relevant experience was tie-dying a shirt in elementary school.
 [Timothy]"<jitter>Oh, no. I screwed up, didn't I?</jitter>" # Timothy = Afraid
 [{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but I do know someone who does." # Timothy = Calm
-I lead Timothy over to Eduardo's door.
-I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. #Background / commons # SFX : play_sfx_human_knock
+I lead Timothy over to Eduardo's door. #Background / hallway
+I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. # SFX : play_sfx_human_knock
 [Eduardo] "Uugh. I'm coming! I'm coming!" #Timothy = Afraid
 Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
 "{player_name}, do you know what time it is?!"
@@ -181,21 +181,21 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 {
 -Isaac==1:
 	[Isaac] "Hrm?"
-	[Timothy] "W-we're looking for Eduardo's hair dye. Do you know where it is?" #Timothy = Calm, stage_left
+	[Timothy] "W-we're looking for {foundBox:a way to prove ownership of Eduardo's hair dye|Eduardo's hair dye}. Do you know where {foundBox:we might find something like that|it is}?" #Timothy = Calm, stage_left
 	[Isaac] "Hrm..."
 	"Maybe."
 	"Was there. When he bought it."
-	[{player_name}] "So, do you know where it is now?"
+	[{player_name}] "So, {foundBox:any ideas|do you know where it is now}?"
 	[Isaac] "Hrm..." #Isaac = Afraid
 	"...Garden." #Isaac = Calm
-	[{player_name}] "The garden? Why would it be out there?"
+	[{player_name}] "The garden? Why would {foundBox:something|it} be out there?"
 	[Isaac] "Was a nice day. Eduardo felt like it."
 	[Timothy] "Well that s-sounds in character."
 	[Isaac] "Hrm."
 	[{player_name}] "Well Isaac, thanks for the info. See ya around!"
 -Isaac == 2:
 	[Isaac] "Hrm?"
-	[{player_name}] "Do you know where exactly in the gardens they might be?"
+	[{player_name}] "Do you know where exactly in the gardens {foundBox:it|they} might be?"
 	[Isaac] "No."
 	[Timothy] "Not even a slight idea?" #Timothy = happy, stage_left
 	[Isaac] "No."
@@ -260,7 +260,7 @@ We regroup at the front of the room. # All = Exit #Skip
 {When we step out into the garden, Timothy eagerly runs ahead. There's no one else here but us.|Timothy seems happy to come back to the garden, perhaps especially because it's still empty.} # Background / Garden, blackwipe #Skip
 ->GChoice
 =GChoice
-+[Search {Search:again.|the room.}] ->Search->GChoice
++[Search {Search:again.|the area.}] ->Search->GChoice
 +[Go to another room.]
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
@@ -305,7 +305,7 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 	[{player_name}] "Hey, Max."
 	[Max] "{player_name}?!" # Max = Surprised, stage_right
 	"I gotta say, it's refreshing seein' you up and about this early!" # Max = Calm
-	I swear my own mother never gave me this much trouble about oversleeping.
+	I swear my own {GetStringValue("Guardian")} never gave me this much trouble about oversleeping.
 	[{player_name}] "You can thank Timothy for that, really."
 	[Max] "Will do! Thanks, Timothy!" # Max = Happy
 	[Timothy] "Heh. It's nothing... I-I just wanted to dye my hair..." # Timothy = Happy, close, stage_left
@@ -440,7 +440,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	"I would wager said closet is currently home to many of Eduardo's possessions, including the object of your search."
 	[{player_name}] "So you're saying we should go to the cafe?"
 	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our lovable resident assistant for the key."
-	"And I just saw them heading to the cafe mere minutes ago."
+	"Conveniently, I just saw them heading to the cafe mere minutes ago."
 	[Timothy] "Wow, thanks, Charlotte!" # Timothy = Happy
 	[Charlotte] "I am always happy to help."
 	"Happy hunting, you two."
@@ -508,25 +508,25 @@ Dying someones hair is actually a fairly time-consuming process and it's a few h
 [{player_name}] "Awesome."
 "Though you might want to finish washing the dye out before you claim success. It's still wet and coming off in your hands." #Dyed / YSad
 "It looks like you murdered a smurf."
-[Timothy] "Oh! Okay."
+[Dyed>Timothy] "Oh! Okay."
 I leave Timothy to finish cleaning himself up and wait on my bed. #Background / YourRoom, crossfade, NoDefaults
-I don't have to wait long. #Timothy / Happy //It doesn't take long for him to come out good as new.
+I don't have to wait long. #Dyed = Happy //It doesn't take long for him to come out good as new.
 "H-h-how do I look?"
 [{player_name}] "Good! How do you feel?"
-[Timothy] "I feel... really giddy."
+[Dyed>Timothy] "I feel... really giddy."
 "I think... I like it!"
 [{player_name}] "That's good."
-[Timothy] "Th-Thank you. {player_name}. Thank you soooooo much!"
+[Dyed>Timothy] "Th-Thank you. {player_name}. Thank you soooooo much!"
 "Y-you know, I was really scared coming here after Blackwell, but now... I'm really glad I did."
 "I-I know we've only known each other a few days... and you're leaving soon, b-but."
 I guess it really has been only a few days for him. I feel like I've known him for weeks at this point.
 "I-I really do think of you as a friend. I-I hope you do too."
 [{player_name}] "Of course, Timothy."
-Timothy gives me a hug. # Timothy = Close
-The moment is interrupted by a low growl from Timothy's stomach. # Timothy = Center
-[Timothy] "I uh, guess I'm hungry. W-want to go grab something to eat?"
+Timothy gives me a hug. # Dyed = Close
+The moment is interrupted by a low growl from Timothy's stomach. # Dyed = Center
+[Dyed>Timothy] "I uh, guess I'm hungry. W-want to go grab something to eat?"
 [{player_name}] "In a bit. See you down there."
-[Timothy] "Okay. See ya."
-Timothy practically skips out of the room. He's got more spring in his step than I've seen from him all week. #Timothy = Exit //REVISED from "Timothy runs off, having more of a kick in his step than I've seen from him all week.""
+[Dyed>Timothy] "Okay. See ya."
+Timothy practically skips out of the room. He's got more spring in his step than I've seen from him all week. #Dyed = Exit //REVISED from "Timothy runs off, having more of a kick in his step than I've seen from him all week.""
 I think he's going to be alright here. 
 ->END

@@ -174,7 +174,7 @@ Like, I'm sure Timothy's parents love him and all, but...
 All a letter like this is going to do is feed into Timothy's anxiety even more!
 Ugh, parents sometimes.
 It kinda makes me think how lucky I am not to have my own family breathing down my neck.
-My family gave me nothing but support and time while I spent those years in Blackwell. @It's the only thing that made it bearable.
+My {GetStringValue("Guardian")} gave me nothing but support and time while I spent those years in Blackwell. @It's the only thing that made it bearable.
 I had time to breathe. Time to grow. I could be alone and safe where I was.
 Alone...
 A strange sense of doubt washes over me.
@@ -198,6 +198,7 @@ I wasn't ready to leave at all. I didn't even know what it <i>meant</i> to be re
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 	~SetValue("EarnedWoundStar", true)
+	~awareness = 5
 }
 I see that now. And I owe it all to the scared, vulnerable human being currently fighting back tears in front of me.
 [{player_name}] "I see what you mean about this letter..."

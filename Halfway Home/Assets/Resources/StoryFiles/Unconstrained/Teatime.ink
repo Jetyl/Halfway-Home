@@ -216,8 +216,10 @@ I've never thought about before, but I guess it must be lonely for her sometimes
 	{
 		- AmIFeeling("good") == true:
 			-> Truth.DoingFine
-		-else:
-			-> Lied.DoingFine
+		- AmIFeeling("mixed") == true:
+			-> Lied.InTheMiddle
+		- else:
+			-> Lied.DoingPoorly
 	}
 +[Poorly]
 	I sigh.
@@ -225,16 +227,20 @@ I've never thought about before, but I guess it must be lonely for her sometimes
 	{
 		- AmIFeeling("poor") == true:
 			-> Truth.DoingPoorly
+		- AmIFeeling("mixed") == true:
+			-> Lied.InTheMiddle
 		-else:
-			-> Lied.DoingPoorly
+			-> Lied.DoingFine
 	}
 +[It's a Mixed Bag]
 	[{player_name}] "Kinda in the middle, honestly. Some good, some bad."
 	{
 		- AmIFeeling("mixed") == true:
 			-> Truth.InTheMiddle
-		-else:
-			-> Lied.InTheMiddle
+		- AmIFeeling("poor") == true:
+			-> Lied.DoingPoorly
+		- else:
+			-> Lied.DoingFine
 	}
 
 === Lied ===
@@ -409,11 +415,11 @@ With that, I exit Charlotte's room out into the hallway. # Background / HallwayD
 === function AmIFeeling(claim) ===
 {
 	// all stats at least yellow OR at least one red
-	- (fatigue > 40 && stress > 40 && depression > 40) || (fatigue > 70 || stress > 70 || depression > 70):
+	- (fatigue > 49 && stress > 49 && depression > 49) || (fatigue > 74 || stress > 74 || depression > 74):
 		// player is feeling poor, evaluate the truth against their claim
 		~ return claim == "poor"
 	// at least one stat yellow
-	- fatigue > 40 || stress > 40 || depression > 40:
+	- fatigue > 49 || stress > 49 || depression > 49:
 		// player is feeling mixed, evaluate the truth against their claim
 		~ return claim == "mixed"
 	- else:

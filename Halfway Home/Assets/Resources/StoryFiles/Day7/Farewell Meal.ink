@@ -27,7 +27,7 @@ EXTERNAL GetValue(value)
 
 === Start ===
 {
-	-GetValue("SavedTimothy"):
+	-GetValue("Saved Timothy"):
 		->GoodMeal
 	-else:
 		->BadMeal
@@ -50,7 +50,7 @@ Trissa is chatting up the other two ruclusive first-floor residents at the cente
 		Eduardo and Isaac are surprisingly not sitting nearby each other, but on near opposite ends of the room.
 }
 Timothy is sitting eagerly by the side of the center table, just one seat over from where he was earlier this week.
-[Max] "We've got your throne all ready, sire." # Max = Happy
+[Max] "We've got your throne all ready, your Majesty." # Max = Happy
 [Dyed>Timothy] "H-hi {player_name}!" #Dyed = happy
 Timothy has been very giddy all day today. Its nice.
 [{player_name}] "Hi Timothy."
@@ -121,7 +121,7 @@ Trissa is chatting up Jesse and John at the center table.
 	-else:
 		Eduardo and Isaac are surprisingly not sitting nearby each other, but on near opposite ends of the room.
 }
-[Max] "We've got your throne all ready, your majesty." # Max = Happy
+[Max] "We've got your throne all ready, your Majesty." # Max = Happy
 They're doing a good job of disguising it, but you can tell Max is only pretending to be happy.
 I take my seat at the center table, remembering how, less than a week ago, Timothy had done the same.
 [Max] "I'll grab you some food!" #Max = Exit
@@ -149,7 +149,7 @@ Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 
 === EduardoUpdate ===
 {
-	-GetValue("SavedTimothy"):
+	-GetValue("Saved Timothy"):
 	{
 		-GetValue("Convinced Eduardo"):
 			->UnitGood
@@ -235,8 +235,8 @@ Eduardo is the first to come up. #Eduardo = Sad
 "Oh yeah, and uh, Thanks?" #Eduardo =afraid #Skip
 +[Thanks for what?]
 	[{player_name}] "Thanks for what?"
-	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, Don't make me say it out loud." #Eduardo = Angry
-	"I am just done with today, alright? complete emotional exhaust, you know?"
+	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, don't make me say it out loud." #Eduardo = Angry
+	"I am just done with today, alright? Complete emotional exhaust, you know?"
 	"Timothy's dye job is nice, by the way."
 	"I, uh, kind of blew up at him the other day." # Eduardo = Sad
 	"I was so stuck up in my own feeling, I didn't think how it'd affect 'em, and well..."
@@ -253,7 +253,7 @@ Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaste
 
 === CharlotteUpdate ===
 {
-	-GetValue("SavedTimothy"):
+	-GetValue("Saved Timothy"):
 	{
 		-GetValue("CompletedTeatime"):
 			->LeavingHappy
@@ -367,7 +367,7 @@ I watch Charlotte stride gracefully toward the serving line as Max and Timothy e
 ->->
 
 =LeavingHappy
-Next to approach is Charlotte
+Next to approach is Charlotte.
 [Charlotte] "Congratulations on completing your tenure at the Sunflower House, {player_name}." # Charlotte = Calm
 [{player_name}] "Well, thank you Charlotte."
 [Charlotte] "I have put a great deal of thought into what you said earlier." #Skip
@@ -389,7 +389,7 @@ Charlotte bows out of the conversation, before heading to her seat. Max and Timo
 ->->
 
 =LeavingSad
-Next to approach is Charlotte
+Next to approach is Charlotte.
 [Charlotte] "How are you finding your last day? Pleasant, I hope!" # Charlotte = Happy #Skip
 +[Yeah.]
 	[{player_name}] "It's fine, I guess."

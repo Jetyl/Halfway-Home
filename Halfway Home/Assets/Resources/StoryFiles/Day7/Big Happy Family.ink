@@ -91,9 +91,9 @@ Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss
 In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm 
 It's... odd.<delay=0.5>@ Almost like we're a big happy family.
 The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #Skip #All = Exit #Dyed = Calm, Stage_left, right
-+[Call Timothy over <Expression>]
++[Call Timothy over <(Expression)>]
 	[{player_name}] "Hey, Timothy! C'mon over!" #expression+
-+[Wait, and see what Timothy does <grace>]
++[Wait, and see what Timothy does <(grace)>]
 	I watch Timothy, as he seems to debate with himself to approach us. #grace+
 -Timothy hesitates for a second, before approaching the group. #Dyed = Stage_center
 [Dyed>Timothy] "H-Hi Everyone!" #Dyed = happy
@@ -105,7 +105,7 @@ Eduardo is the first to comment.
 [Trissa] "Oh yeah! That color really suits you." #Trissa = happy
 Isaac just give a thumbs up. #Isaac = happy
 [Charlotte] "I must say, your immediate presence seems much bolder, and more relaxed than I've seen you." #Charlotte=happy
-Timothy's smile grows with every complement he gets. He looks to Max, the only one who hasn't said anything. #Charlotte=Exit #Trissa=Exit #Isaac=Exit #Eduardo=Exit #Max=Calm
+Timothy's smile grows with every compliment he gets. He looks to Max, the only one who hasn't said anything. #Charlotte=Exit #Trissa=Exit #Isaac=Exit #Eduardo=Exit #Max=Calm
 [Dyed>Timothy] "M-Max. W-what do you think?" #Dyed=afraid
 [Max] "What do I think?" #Max = Angry
 "I think you look happier than I've ever seen you! and that's the best thing I could see." #Max=happy
@@ -113,9 +113,9 @@ Max jostles Timothy's new blue hair. #Dyed=happy
 [Max] "How did the dye job go?"
 [Dyed>Timothy] "G-good! {player_name} helped me."
 "I-I probably w-wouldn't have been able to, i-i-if {player_gender=="M":he|{player_gender=="F":she|they}} hadn't h-helped me."
-[Max] "really now?"
-"Well, {player_name}, You've got my thanks, as well as Timothy's, no doubt."
-Max gives a hearty laugh, before quickly turning their mop on me like it was a sword.
+[Max] "Is that so?"
+"Well, {player_name}, you've got my thanks... as well as Timothy's, no doubt."
+Max gives a hearty laugh before quickly turning their mop on me like it was a sword.
 "You didn't make a mess of your bathroom on your last day, now did you?" #Max = Angry #Skip
 +[No]
 	[{player_name}] "Uh, no?"
@@ -123,13 +123,13 @@ Max gives a hearty laugh, before quickly turning their mop on me like it was a s
 +[Maybe]
 	[{player_name}] "Uh... Maybe?"
 	[Max] "..."
-	"Well, it’s your last day, plus I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
+	"Well, it’s your last day. Plus, I can't be mad you made Timothy that happy, so I'll let it slide." #Max=happy
 -It's times like now I really begin to question if Max is the first floor's RA, or janitor.
-Timothy sits with us, and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
-Well, really, its mostly Eduardo and Trissa talking, with everyone else interjecting periodically, but still.
+Timothy sits with us and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
+Well, really, it's mostly Eduardo and Trissa talking with everyone else interjecting periodically, but still.
 I have a good time. #stress -=25 #depression -=25
-Time, however, moves ever onward, and the conversation dies down. #time%1
-I excuse myself first, and head off to my next location... #All=Exit
+Time, however, moves ever onward and the conversation dies down. #time%1
+I excuse myself and head off to my next location... #All=Exit
 ~SetValue("Saved Timothy", true)
 ->END
 
