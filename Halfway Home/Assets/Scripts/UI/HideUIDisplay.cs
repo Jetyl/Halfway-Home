@@ -54,9 +54,11 @@ public class HideUIDisplay : MonoBehaviour
     void TurnUIOn()
     {
         UIOn = true;
+
+        activeUIElements.RemoveAll(item => item == null);
+
         foreach (var obj in activeUIElements)
         {
-            activeUIElements.RemoveAll(item => item == null);
             obj.enabled = true;
             if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = true;
         }

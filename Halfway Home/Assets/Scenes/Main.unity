@@ -8603,6 +8603,16 @@ Prefab:
       propertyPath: ClosedTimeContainer.Array.data[2].ToolTipInfo
       value: I've spent enought time alone in my room.
       objectReference: {fileID: 0}
+    - target: {fileID: 114600255838841864, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[0].ToolTipInfo
+      value: I'll show Timothy the Library after we've eaten.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114168465777606572, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[0].ToolTipInfo
+      value: I'll show Timothy the Art Room after we've eaten.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
   m_IsPrefabParent: 0

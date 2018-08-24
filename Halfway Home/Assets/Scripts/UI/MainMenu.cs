@@ -55,9 +55,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            FlowerA.SetState(GetStateLevel(Personality.Social.Awareness));
-            FlowerG.SetState(GetStateLevel(Personality.Social.Grace));
-            FlowerE.SetState(GetStateLevel(Personality.Social.Expression));
+            UpdateFlowers();
         }
 
 
@@ -87,6 +85,14 @@ public class MainMenu : MonoBehaviour
         AkSoundEngine.SetState("Pause", "Unpaused");
         AkSoundEngine.SetState("Game_State", "Main_Menu");
     }
+
+    public void UpdateFlowers()
+    {
+        FlowerA.SetState(GetStateLevel(Personality.Social.Awareness));
+        FlowerG.SetState(GetStateLevel(Personality.Social.Grace));
+        FlowerE.SetState(GetStateLevel(Personality.Social.Expression));
+    }
+
 
     public void NewGame()
     {

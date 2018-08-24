@@ -163,7 +163,7 @@ Timothy starts shaking, looking away from me in embarrassment, before giving me 
 [Timothy] "<jitter>I-I th-think y-you're v-val-valid.</jitter>"
 "<jitter>A-and I-I'm s-sorry if I sc-screw up, and pl-please correct me if I do.</jitter>"
 [{player_name}] "Uh..."
-"<jitter><size=120%>S-SORRY!</size></jitter>"   #Timothy = Afraid
+[Timothy] "<jitter><size=120%>S-SORRY!</size></jitter>"   #Timothy = Afraid
 I hold back a slight chuckle.
 [{player_name}] "Thanks, I guess?"
 It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.
