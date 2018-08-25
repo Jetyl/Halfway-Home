@@ -8613,6 +8613,11 @@ Prefab:
       propertyPath: ClosedTimeContainer.Array.data[0].ToolTipInfo
       value: I'll show Timothy the Art Room after we've eaten.
       objectReference: {fileID: 0}
+    - target: {fileID: 114107503453581618, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[5].starttime
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
   m_IsPrefabParent: 0
@@ -14988,10 +14993,12 @@ MonoBehaviour:
   SpecialStar1: {fileID: 1130612847}
   SpecialStar2: {fileID: 365909121}
   InterpTime: 1
-  OnScreenDuration: 5
+  OnScreenDurationLong: 0
+  OnScreenDurationShort: 0
   AwarenessStarColor: {r: 0.30882353, g: 0.7711966, b: 1, a: 1}
   GraceStarColor: {r: 1, g: 0.97241366, b: 0, a: 1}
   ExpressionStarColor: {r: 0.99264705, g: 0.2116674, b: 0.87415344, a: 1}
+  Frequency: 2
 --- !u!1 &523849215
 GameObject:
   m_ObjectHideFlags: 0
@@ -53514,17 +53521,17 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -53574,7 +53581,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}

@@ -11,9 +11,6 @@ using UnityEngine;
 
 public class DisableEnableDisplay : MonoBehaviour
 {
-
-    public float FadeTime = 0.2f;
-
     bool ToMap = false;
 
     // Use this for initialization
@@ -21,7 +18,8 @@ public class DisableEnableDisplay : MonoBehaviour
     {
         Space.Connect<DefaultEvent>(Events.ReturnToMap, Disable);
         Space.Connect<DefaultEvent>(Events.Description, Enable);
-        Space.Connect<DefaultEvent>(Events.TimeChange, Disable);
+        Space.Connect<DefaultEvent>(Events.TimeChange, CloseDisplay);
+        Space.Connect<DefaultEvent>(Events.ClockFinished, OpenDisplay);
     }
 	
 	// Update is called once per frame
@@ -46,7 +44,8 @@ public class DisableEnableDisplay : MonoBehaviour
 
     void CloseDisplay(DefaultEvent eventdata)
     {
-        StartCoroutine(WaitTilClosed());
+        if (gameObject.activeInHierarchy)
+            StartCoroutine(WaitTilClosed());
     }
     void OpenDisplay(DefaultEvent eventdata)
     {
@@ -54,8 +53,9 @@ public class DisableEnableDisplay : MonoBehaviour
         {
             ToMap = false;
             gameObject.SetActive(true);
+            StartCoroutine(WaitTilOpened());
         }
-        //StartCoroutine(WaitTilOpened());
+        
     }
 
     IEnumerator WaitTilClosed()
@@ -69,6 +69,7 @@ public class DisableEnableDisplay : MonoBehaviour
     IEnumerator WaitTilOpened()
     {
         yield return new WaitForSeconds(Time.deltaTime);
+        
 
     }
 

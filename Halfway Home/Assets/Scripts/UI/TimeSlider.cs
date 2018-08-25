@@ -76,7 +76,36 @@ namespace HalfwayHome
 
     public void AssignText(Room value)
     {
-      Txt.text = "Go to " + value + "?";
+            string room = "";
+            switch(value)
+            {
+                case Room.ArtRoom:
+                    room = "the Art Room";
+                    break;
+                case Room.CharlottesRoom:
+                    room = "Charlotte's Room";
+                    break;
+                case Room.Commons:
+                    room = "the Commons Area";
+                    break;
+                case Room.Garden:
+                    room = "the Garden";
+                    break;
+                case Room.Kitchen:
+                    room = "the Cafe";
+                    break;
+                case Room.Library:
+                    room = "the Library";
+                    break;
+                case Room.Store:
+                    room = "the Store";
+                    break;
+                case Room.YourRoom:
+                    room = "Your Room";
+                    break;
+            }
+
+            Txt.text = "Go to " + room + "?";
 
     }
 
