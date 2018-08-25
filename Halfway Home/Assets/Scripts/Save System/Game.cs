@@ -365,7 +365,7 @@ public class Game
 
     public void SetTimeBlock(int Amount, bool DrainFatigue)
     {
-        Debug.Log(Amount);
+        //Debug.Log(Amount);
         CurrentTimeBlock = Amount;
         DrainEnergy = DrainFatigue;
     }

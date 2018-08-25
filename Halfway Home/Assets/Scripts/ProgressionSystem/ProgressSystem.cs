@@ -454,6 +454,7 @@ public class ProgressSystem
             //reset the daily grind
             if (beat.BeatName.ToLower() == "sleepy")
             {
+                MonoBehaviour.print("sleeping");
                 beat.ResetBeat();
                 break;
             }
