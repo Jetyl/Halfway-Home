@@ -86,7 +86,7 @@ When we reach the court I practice dribbling the ball around a little. {It's bee
 {Actually, it's been a long time since I played any sport at all.|I haven't really been the most physical person for the last six years.}
 The concrete half-court has a few weeds growing out of the cracks, but is otherwise in good condition considering it never gets used.
 [{player_name}] "You seemed kinda hesitant before. You sure you want to do this?"
-{awareness>1:
+{awareness<2:
 	I'm not feeling particularly enthusiastic about it myself, but I try to push past that. On the surface, at least.
 -else:
 	I feel like I'm asking this question for myself more than for him. Why do I always have to give myself an out? # awareness ^ good

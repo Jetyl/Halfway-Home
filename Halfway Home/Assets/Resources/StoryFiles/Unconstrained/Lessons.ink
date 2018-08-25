@@ -273,7 +273,7 @@ Charlotte sighs and composes herself. # Charlotte = Calm, stage_Center
 }
 
 === Farewell ===
-[{player_name}] "Thanks for taking the time to show me all this stuff, Charlotte."
+[{player_name}] "Thanks for taking the time to show me all this stuff."
 {-depression>35:[Voices] "You should have told her not to waste her time in the first place."}
 [Charlotte] "It was my pleasure, {player_name}. I hope this information serves you well in the trials to come." # Charlotte = Happy
 {

@@ -106,6 +106,7 @@ I sleep more calmly than I've slept in a long, long time. #set_time%6,8
 
 ===SecondarySuccess===
 ~SetValue("RRRFreakout",true)
+~SetValue("HasSavedTimothy", true)
 I feel {a sense of satisfaction|nervous} as I go about my nightly routine.
 Timothy's sound asleep in the other bed, sporting a wicked new hair color.
 I did it. I helped him...

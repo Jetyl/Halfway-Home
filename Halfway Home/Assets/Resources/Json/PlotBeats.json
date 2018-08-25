@@ -451,6 +451,10 @@
    {
     "Name" : "EarnedLessonsStar",
     "Type" : 1
+   },
+   {
+    "Name" : "HasSavedTimothy",
+    "Type" : 1
    }
   ]
  },
