@@ -175,7 +175,7 @@ Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [{player_name}] "Again?"
 [Keyless>Max] "Ah! I'm not that forgetful!" #Keyless=Sad
 [{player_name}] "N-no, but, you lost them last week too, remember? They were stuck in the couch cushions in the commons."
-[Keyless>Max] "I don't recall losing my keys last week, but... Couch cushions? Hmm..." #Keyless=Calm
+[Keyless>Max] "I don't recall losing my keys last week, but... couch cushions? Hmm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
 And with that Max quickly runs off, leaving me and Timothy alone
 [{player_name}] "Timothy, are you getting really weird 'deja vu' today, too?"

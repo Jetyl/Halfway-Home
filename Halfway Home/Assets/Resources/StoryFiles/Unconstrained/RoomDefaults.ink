@@ -17,6 +17,7 @@ VAR depression = 0
 VAR week = 1
 VAR current_room = "unset"
 VAR currentHour = 0
+VAR timesReflected = 0
 
 EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
@@ -58,21 +59,29 @@ In need of a break, I stumble into my room. #Skip // It would be great to have c
 +[Relax<(fatigue<75)>]
 I'm not ready to sleep. I just need a moment to myself to... #Skip
 	++[Read]
+		{week>1:->Reflection->}
 		I take out <>
 		{GetStringValue("BookGenre")!="":
 			the book Charlotte gave me.
-			I {start reading and it's actually pretty good so far|continue reading where I left off|think I'm getting close to the end now|finally finish it. She wasn't kidding. It was one of the better {GetStringValue("BookGenre")} works I've read. Not that I'm an expert|Then I remember that I already finished it and start another book instead}.
+			I {start reading and it's actually pretty good so far|continue reading where I left off|think I'm getting close to the end now|finally finish it. She wasn't kidding. It was one of the better {GetStringValue("BookGenre")} works I've read. Not that I'm an expert|then remember that I already finished it and start another book instead}.
 		-else:
 			a book from the library. I spend a while reading it, but eventually lose interest.
 			I guess I'll try a new one next time I feel like reading.
 		} 
 	++[Zone Out]
-		I lie down on my bed and stare up at the ceiling, thinking about nothing in particular.
-		And nothing in particular is just what my brain needed.
+		I lie down on my bed and stare up at the ceiling, thinking about <>
+		{week>1:
+			how crazy everything has been.
+			->Reflection->
+		-else:
+			nothing in particular.
+			And nothing in particular is just what my brain needed.
+		}
 	++[Listen to Music]
 		I retrive the small pair of earphones I keep in my dresser drawer and plug them into my phone.
 		I don't actually have service on this thing any more, but it's still got a bunch of songs on it.
 		I put it on shuffle and lean back on my bed.
+		{week>1:->Reflection->}
 	--<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>relieved a moderate amount of <b>Stress</b>. {SetTimeBlock(1)} # Stress -= 20
 	The solitude helps take the edge off, but being alone makes it more difficult to shut out my negative thoughts.
 	<>@<color=color_descriptor>Solitude <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # depression += 5
@@ -122,6 +131,12 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 // Reduce depression, increase stress
 // Ground yourself in the cozy heart of the House.
 {
+	- currentHour > 21: ->Commons.Night
+	- currentHour < 7: -> Commons.Night
+	-else: ->Commons.Day
+}
+=Day
+{
 	- expression < 2:
 		In a rare moment of extroversion, I feel like spending some time around people. I head to the Commons.
 	- else:
@@ -149,12 +164,6 @@ I'm not ready to sleep. I just need a moment to myself to... #Skip
 				I'm pretty sure {GetStringValue("Guardian")=="sister":she|he} was talking about car maintenance, but I feel like it applies to socializing, too.
 		}
 }
-{
-	- currentHour > 21: ->Commons.Night
-	- currentHour < 7: -> Commons.Night
-	-else: ->Commons.Day
-}
-=Day
 The room is {~surprisingly empty, with only a few people reading by the window|filled with the low murmur of conversation punctuated by bursts of laughter}.
 {
 	- expression > 2:
@@ -166,20 +175,18 @@ The room is {~surprisingly empty, with only a few people reading by the window|f
 -> END
 
 =Night
+Knowing that most residents will have abandoned the commons at this hour, I feel a lot more comfortable heading there.
 {shuffle:
 	- When I arrive, the room is completely empty. I should have figured as much given the time.
-	I spend the hour sitting by the fireplace, contemplating the choices that led me to sitting alone in the commons in the middle of the night.
-	<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
-	-> END
+		I spend the hour sitting by the fireplace, contemplating the choices that led me to sitting alone in the commons in the middle of the night.
+		{week>1:->Reflection->}
+		<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
+		-> END
 	- I wander in expecting no one to be around, but there are actually a few other sleepless residents here {~playing a board game|watching a movie|reclining by the fireplace|playing a video game on the couch}.
-	{
-		-expression > 2:
-		I ask if I can join in and they welcome me.
-		-else:
-		I'm too shy to ask if I can join in, so I simply take a seat nearby and thumb through a magazine, enjoying the shared space.
-	}
-	<color=color_descriptor><i>Social interaction <color=color_wellbeing_relief>lowered <b>Depression</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Stress</b> slightly.</i></color> # Stress += 10 # depression -= 25
-	-> END
+		I don't bother them and they don't bother me. Just the way I like it.
+		{week>1:->Reflection->}
+		<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
+		-> END
 }
 
 === FrontDesk ===
@@ -217,7 +224,7 @@ There's a {~basket full of apples|plate of cookies|a few stacks of crackers next
 	-else: -> Garden.Day
 }
 =Day
-I decide that some time alone would be good for me, but rather than shutting myself in my room on such a nice day I head outside.
+I decide that some time alone would be good for me{week==1:, but rather than shutting myself in my room on such a nice day I head outside.|{week==2:, especially since I still barely understand what's happening to me.| I've got keep myself sane through all this.}}
 The sweet smell of the garden envelops me as I step out into the crisp spring air.
 {shuffle:
 	- I spend a while meandering along the small gravel path. It's a short path and I end up looping it several times.
@@ -225,10 +232,14 @@ The sweet smell of the garden envelops me as I step out into the crisp spring ai
 	- I lay down in a patch of grass and stare up at the shifting clouds. I've seen residents picnic in this spot on occasion.
 }
 My solitude gives me plenty of time to reflect.
-{shuffle:
+{week>1:
+	->Reflection->
+-else:
+	{shuffle:
 	- I wonder what my life will look like years from now.
 	- I think about the friends I used to have on the outside and where their lives may have taken them.
 	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
+	}
 }
 <color=color_descriptor><i>Time alone in the sun <color=color_wellbeing_penalty>increased <b>Fatigue</b> and <b>Depression</b> slightly<color=color_descriptor>.</color> # Fatigue += 10 # Depression += 10
 {
@@ -248,10 +259,14 @@ I step out into the cool garden, lit by moonlight and fireflies.
 	- I lay down in a patch of grass and stare up at the churning stars. I try to remember the constellations my grandmother taught me long ago.
 }
 My solitude gives me plenty of time to reflect.
-{shuffle:
+{week>1:
+	->Reflection->
+-else:
+	{shuffle:
 	- I wonder what my life will look like years from now.
 	- I think about the friends I used to have on the outside and where their lives may have taken them.
 	- I think about all the people I've met here at the House. Am I really more ready to leave than they are?
+	}
 }
 <color=color_descriptor><i>Time alone under the stars <color=color_wellbeing_penalty>increased <b>Depression</b> slightly<color=color_descriptor>.</color> # Depression += 10
 {
@@ -273,6 +288,7 @@ My solitude gives me plenty of time to reflect.
 I peruse the shelves until a title catches my eye. 
 I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
+{week>1:->Reflection->}
 {currentHour > 18 || currentHour < 7:
 	<color=color_descriptor><i>Reading at this late hour has taken even more out of me than normal, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> significantly<color=color_descriptor>.</color> # Fatigue += 20
 -else:
@@ -302,6 +318,7 @@ The Art Room is <>
 }
 I get a {~set of brushes, paint, and a canvas|lump of air-dry clay and some water|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
 Time to make something!
+{week>1:->Reflection->}
 After about an hour, I finish. My digits are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 {
@@ -400,6 +417,73 @@ I am distracted on the return trip and get turned around.
 I hurry and find my way back, but it takes a lot out of me.
 <color=color_wellbeing_penalty><i><b>Fatigue</b> increases significantly</i></color>. # Fatigue += 20
 -> END
+
+=== Reflection ===
+~timesReflected+=1
+{
+	-timesReflected==1:
+		->First
+	-timesReflected==2:
+		->Second
+	-timesReflected==3:
+		->Third
+	-else:
+		->Repeated
+}
+=First
+I can't keep my mind from racing.
+What is happening to me?
+It's just like my nightmares! Could it be that I'm dreaming?
+No. Just think through this logically, {player_name}. I can figure this out.
+When I'm dreaming, I always go back to my first day. So that's one strike against the dream theory.
+Also I don't hear <i>them</i> out loud, which I always do in my nightmares. Strike two.
+And the nightmare always starts out normal. Everything makes sense while none of <i>this</i> does...
+That's strike three. But this isn't baseball, it's my life!
+And I still don't have any idea what's going on!
+Get ahold of yourself. Okay. Okay.
+I'll just keep pretending everything is fine until I can figure this out.
+<i>That</i> I know how to do, at least.
+I'll get back to what I was doing for now.
+->->
+
+=Second
+My mind drifts back to my current situation.
+If it's not a dream, then this must all be really happening.
+I guess there's no harm in treating it like it's real, right?
+If I'm wrong, I'll just wake up.
+This reminds me of an old movie I saw once.
+Am I some kind of time traveller now?
+Did I do something to cause this?
+I don't recall making friends with any eccentric scientists or stepping on a radioactive clock or anything...
+I can't get hung up on this. I've got to keep moving until things start making sense.
+->->
+
+=Third
+Without a social distraction, a flood of questions assault my brain.
+Will this `time loop` happen again?
+If it does, when will it stop?
+Oh, god, what if it never stops?!
+Is there something I have to do?
+Hmm... I've got to think!
+Could it be Timothy's anxiety attack?
+In my dream... that's what <i>they</i> said.
+That I wasn't there for him... is that what's this about?
+I grunt in frustration.
+I just don't know.
+But... maybe I can use this to my advantage?
+It is kinda cool to know things that other people don't for a change.
+If this keeps happening, I have all the time in the world now...
+I'm sure I'll figure this out eventually...
+In the mean time, I think my best bet is to help Timothy as much as I can.
+It's the only lead I have.
+I don't think I'm really capable of helping him, but I guess with enough time and practice...
+I'm getting ahead of myself. One step at a time, {player_name}.
+->->
+
+=Repeated
+My mind no longer races at the thought of the time loop I'm in.
+{GetValue("HasSavedTimothy")==true:Saving Timothy wasn't the answer, but that doesn't matter to me any more. I know I'll find my way out eventually. This won't be forever.|I've got to focus on helping Timothy.}
+->->
 
 === Warning ===
 {
