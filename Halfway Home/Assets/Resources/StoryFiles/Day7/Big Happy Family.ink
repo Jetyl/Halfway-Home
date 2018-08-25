@@ -183,9 +183,9 @@ Timothy stays quiet, but Eduardo doesn't seem to notice. #Eduardo=Exit # music_t
 -[Timothy] "..." #Breakdown / Open
 Timothy doesn't respond. I turn to face him. # play : play_music_tension_intro_03
 //In fact, looking at Timothy, I notice a handful of things off.  (Do-nothing sentence)
-He doesn't seem to be looking at anything in particular and he's visibly shaking. # play : play_music_tension
+He doesn't seem to be looking at anything in particular and he's visibly shaking.
 [{player_name}] "Man, are you okay?"
-Timothy looks vaguely in my direction and outstretches his hand. #Breakdown / Next
+Timothy looks vaguely in my direction and outstretches his hand. #Breakdown / Next # play : play_music_tension
 His hand clasps onto my arm with the shaky, ironclad grip of desperation. I feel his racing heartbeat through his palm.
 His lips move as if trying to speak, but no words escape them.
 With his free hand he clutches onto his shirt.

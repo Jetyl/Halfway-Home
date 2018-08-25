@@ -357,7 +357,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}"/>
-							<Value>0</Value>
+							<Value>5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}"/>
@@ -405,7 +405,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
+						<CurrentStateRef Name="Other" ID="{2FD43BB0-0596-477F-B4DE-D62FE9E61EBD}"/>
+						<CurrentStateRef Name="Unpaused" ID="{FF773DA1-7DCA-4875-A742-F928CE085354}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
