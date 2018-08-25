@@ -763,7 +763,7 @@ public class Task
 
         var resetState = TaskState.Unstarted;
 
-        if (!RemoveWeekly)
+        if (!RemoveWeekly && State != TaskState.Unstarted)
             resetState = TaskState.InProgress;
 
         foreach(var sub in SubTasks)
