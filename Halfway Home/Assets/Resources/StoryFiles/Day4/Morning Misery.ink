@@ -81,7 +81,7 @@ He's got a bowl of cereal in his hand, eating on one of the tables meant for art
 		[{player_name}] "Thursday."
 		[Eduardo] "Okay then yeah, it was yesterday. Or, I guess it started Tuesday night?"
 		"Time is weird, okay." #Eduardo = Angry
-		[{player_name}] "sure..."
+		[{player_name}] "Sure..."
 		{
 			-week == 1:
 				Still, spending the entire night hanging out with someone sounds nice. Wish I had known about that. I might have stopped by for a while.

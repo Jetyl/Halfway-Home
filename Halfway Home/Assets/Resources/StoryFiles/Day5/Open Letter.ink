@@ -102,7 +102,7 @@ He looked a little pale there. I wonder if {firsttime:he's okay|this is the caus
 Should I follow him? #Skip
 +[Follow Timothy] -> ClosedWound
 +[Let Him Be] 
-	{firsttime:Just as I'm about to follow, doubt overwhelms me. }I decide Timothy is better off with some alone time{firsttime: after all}.
+	{firsttime:Just as I'm about to follow, doubt overwhelms me. }I decide Timothy is better off with some alone time{firsttime:  after all}.
     ->MaxMail->IgnorantBliss
 
 /* Old week-based choice

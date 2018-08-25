@@ -143,7 +143,7 @@ I excuse myself and head off to my next location... #All=Exit
 === SadStart ===
 ~tried_grace = false
 ~tried_expression = false
-I spot Timothy sitting at one of the tables alone.
+I spot Timothy sitting at one of the tables alone. #Timothy = Sad
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
 [Timothy] "Oh.<delay=0.5> Hi."

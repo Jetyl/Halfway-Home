@@ -392,11 +392,11 @@ public class ProgressSystem
         Space.DispatchEvent(Events.Progress);
     }
 
-    public void UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)
+    public bool UpdateTask(int Number, Task.TaskState newState, int SubTask = -1)
     {
       
         if (Objectives.Count <= Number)
-            return;
+            return false;
 
         //Debug.Log("Task #" + Number + " (subtask:" + SubTask + ") is in state: " + newState);
 
@@ -414,7 +414,7 @@ public class ProgressSystem
             if(Objectives[Number].GetState() == Task.TaskState.Unstarted && newState != Task.TaskState.InProgress)
             {
                 //you cannot succeed a task you didn't know existed. //this is kind of a janky quick fix, but whatev
-                return;
+                return false;
             }
 
             if (newState != Task.TaskState.Unstarted && Objectives[Number].GetState() == Task.TaskState.Unstarted)
@@ -426,9 +426,9 @@ public class ProgressSystem
 
             Objectives[Number].SetState(newState);
         }
-            
 
 
+        return true;
         //send any system updating events here
 
     }
@@ -763,7 +763,7 @@ public class Task
 
         var resetState = TaskState.Unstarted;
 
-        if (!RemoveWeekly)
+        if (!RemoveWeekly && State != TaskState.Unstarted)
             resetState = TaskState.InProgress;
 
         foreach(var sub in SubTasks)

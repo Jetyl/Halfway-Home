@@ -108,7 +108,7 @@ As things wind down, I make my way back out into the House. #All = Exit
 I'm called to the kitchen for my farewell meal. # Play : play_music_unfinished_business
 I walk in seeing everyone chatting and having a good time.
 Acting like everything is okay.
-Trissa is chatting up Jesse and John at the center table.
+Trissa is chatting up the other two ruclusive first-floor residents at the center table. {I|Still} can't remember their names...
 {
 	-GetValue("CompletedTeatime"):
 		I see Charlotte, over in her usual chair, relaxing of all things.
