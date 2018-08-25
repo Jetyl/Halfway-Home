@@ -19,6 +19,7 @@ VAR current_room = "unset"
 
 VAR tried_expression = false
 VAR tried_grace = false
+VAR breakdown_scenes_elapsed = 0
 
 
 EXTERNAL GetValue(value)
@@ -143,6 +144,7 @@ I excuse myself first, and head off to my next location... #All=Exit
 === SadStart ===
 ~tried_grace = false
 ~tried_expression = false
+~breakdown_scenes_elapsed = 0
 I spot Timothy sitting at one of the tables alone.
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
@@ -203,9 +205,15 @@ I... #Skip
 
 ===ACallForHelp===
 ~tried_expression = true
+~breakdown_scenes_elapsed = (breakdown_scenes_elapsed + 1)
 {
 	-expression <= 2:
-		"M-Max!" # music_tension_state ! 2 #Expression ^ poor 
+		{ breakdown_scenes_elapsed:
+		- 1:		"M-Max!" #Expression ^ poor # music_tension_state ! 2
+		- 2:		"M-Max!" #Expression ^ poor # music_tension_state ! 3
+		- 3:		"M-Max!" #Expression ^ poor # music_tension_state ! 4
+		- else:	"M-Max!" #Expression ^ poor
+		}
 		My voice fails to break over the chatter.
 		I need to speak up more, but...
 		I... I can't.
@@ -213,7 +221,12 @@ I... #Skip
 		I'm going to need to move over there, and grab them.
 		->ForcefulAssistence
 	-else:
-		I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid
+		{ breakdown_scenes_elapsed:
+		- 1:		I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid # music_tension_state ! 2
+		- 2:		I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid # music_tension_state ! 3
+		- 3:		I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid # music_tension_state ! 4
+		- else:	I summon up as much confidence as I can muster. I'm able to break the spell long enough to shout. # Background / Kitchen # Timothy = afraid
+		}
 		"MAX!" # play : Stop_All #Expression ^ good
 		[Max] "Eh? what?" #Max=Calm
 		[{player_name}] "It's Timothy!"
@@ -235,7 +248,13 @@ I... #Skip
 
 
 ===ForcefulAssistence===
-I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
+~breakdown_scenes_elapsed = (breakdown_scenes_elapsed + 1)
+{ breakdown_scenes_elapsed:
+- 1:		I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 2
+- 2:		I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 3
+- 3:		I begin to move over to get Max, but I'm pulled back by Timothy's grip. # music_tension_state ! 4
+- else:	I begin to move over to get Max, but I'm pulled back by Timothy's grip.
+}
 His grip tightens as his eyes begin to water. @I can't leave Timothy here.
 I... #Skip
 +{tried_expression == false}[Shout to get Max's attention<(expression)>]->ACallForHelp
@@ -244,13 +263,19 @@ I... #Skip
 
 
 ===BreakPoint===
-I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 4
+~breakdown_scenes_elapsed = (breakdown_scenes_elapsed + 1)
+{ breakdown_scenes_elapsed:
+- 1:		I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 2
+- 2:		I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 3
+- 3:		I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 4
+- else:	I... I don't know what to do. @I... I can't <i>do</i> anything! # music_tension_state ! 5
+}
 I try to get up, and get Max. @@To get away from all of this.
 I pull my arm, to try and free it from Timothy's Vice-like grip to no avail.
 He doesn't seem to want to let go.
 To free myself, I pry my fingers underneath his palm, and peel his fingers off me.
 His arms are noticeably shaking now.
-I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Background / Kitchen
+I free my hand, and jump up out of my seat, leaving Timothy where he sat. #Background / Kitchen, NoDefaults
 [{player_name}] "Max! Max!" #Max=Calm #Charlotte=Happy, Stage_right, right 
 [Max] "Yo! {player_name}, what's up?"
 [{player_name}] "It's Timothy. He-He's acting weird... and not responding. I-I think something wrong!"
@@ -260,10 +285,16 @@ Max darts past me to where Timothy is sitting at a speed quite frightening for s
 
 ===HowDoIComfort===
 ~tried_grace = true
+~breakdown_scenes_elapsed = (breakdown_scenes_elapsed + 1)
 I choose to stay beside Timothy and attempt to help him through this.
 {
 	-grace <= 2:
-		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." # music_tension_state ! 3 #grace ^ poor
+		{ breakdown_scenes_elapsed:
+		- 1:		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." #grace ^ poor # music_tension_state ! 2
+		- 2:		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." #grace ^ poor # music_tension_state ! 3
+		- 3:		"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." #grace ^ poor # music_tension_state ! 4
+		- else:	"Um, uh... It... it’s Okay. Calm down Timothy. Relax. It's going to be okay. Uh..." #grace ^ poor
+		}
 		Timothy doesn't respond to my words and inhales sharply.
 		I... I don't know what I'm doing.
 		I'm not going to be capable of helping Timothy.
@@ -293,7 +324,7 @@ I choose to stay beside Timothy and attempt to help him through this.
 }
 
 ===MoodKiller===
-My attention draws back to crowd of people around me. # play : Stop_All #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy, Stage_center
+My attention draws back to the crowd of people around me. # play : Stop_All #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy, Stage_center
 [Charlotte] "It was a rather humorous endeavor. Hm?" #Charlotte=Calm
 "Why'd everyone get so quiet?"
 [Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-" #skip
@@ -309,10 +340,10 @@ Isaac drags Eduardo out of the cafe in a huff.
 	"I messed up. I messed everything up."
 +[Timothy broke.]
 	"Timothy broke."
--I slump forward out of my chain and stagger towards the door.
+-I slump forward out of my chair and stagger towards the door.
 "I messed up..."
 [Charlotte] "Sorry, what do you mean by that?"
-I walk away from cafe. #Charlotte=Exit
+I walk away from the cafe. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family."
 I'm so stupid. #depression += 25
 ->END

@@ -405,7 +405,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Player" ID="{83065F06-15A1-40F4-8EAD-F7C2D09CC459}"/>
+						<CurrentStateRef Name="Monologue" ID="{9F29B7CE-FBF2-4C2D-8A73-18085D14965D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
