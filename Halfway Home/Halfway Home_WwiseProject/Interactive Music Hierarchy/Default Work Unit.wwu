@@ -4141,7 +4141,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="Tempo" Type="Real64" Value="81"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -5723,7 +5723,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 										<Property Name="Tempo" Type="Real64" Value="81"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
