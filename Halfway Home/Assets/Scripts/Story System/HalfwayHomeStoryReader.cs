@@ -584,6 +584,8 @@ namespace HalfwayHome
 
         public void NextWeek()
         {
+            Game.current.Slept();
+            Game.current.Progress.ResetDay();
             Game.current.Progress.SetValue<int>("week", Game.current.Progress.GetIntValue("week") + 1);
             Game.current.Progress.ResetWeekly();
         }

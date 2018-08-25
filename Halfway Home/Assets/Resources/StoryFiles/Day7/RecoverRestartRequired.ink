@@ -129,7 +129,7 @@ I did it. I helped him...
 	That I still have more to learn.
 	Whatever the case, I'll deal with it when it comes. For now, I'm too tired to worry.
 }
-I wrap myself up in the blankets and fall gently to sleep.
+I wrap myself up in the blankets and fall gently to sleep. 
 ->TheDream
 
 
@@ -181,7 +181,8 @@ I can finally leave this place.
 ->->
 
 === TheDream ===
-This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : play_ambience_birds # Time * Hide
+~CallSleep()
+This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : play_ambience_birds # Time * Hide 
 `A Garden for the Mind` according to the brochure {the doctors gave me.|.}
 Pretty cheesy, but they said I don't really stand much chance in the real world. {Maybe they're right|At least in here there are fewer people for me to disappoint|But this was my choice, not theirs}.
 The car behind me pulls away{.|. I wonder if I'll ever see home again.|. They'll  be back someday.} # SFX : play_sfx_object_car_away
