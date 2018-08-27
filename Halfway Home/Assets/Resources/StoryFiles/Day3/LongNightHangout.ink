@@ -499,8 +499,13 @@ I wonder if Max is up already. Probably.
 		"Eduardo doesn't usually get to bounce off someone this much."
 		[{player_name}] "He bounces off you pretty well."
 		[Isaac] "..." #Hangout / Hrm_Up
+		"I... sort of... just listen."
+		"Hrm."
 		"Thanks." #Hangout / Smile_Down
 		Isaac smiles. I don't think I get to see this softer side of him very often. #2 & Success
+		And being the lister all the time, especially to someone as bombasitic as Eduardo, is probably exhausting.
+		I should probably find some time to chat with Isaac by himself. #4 &InProgress
+		Still though...
 		~SetValue("LongNightHangoutComplete", true)
 }
 These two are really sappy together. It's kind of sweet, in its own way.
