@@ -73,7 +73,7 @@ That damn letter is the root of so much pain.
 -> Unlocked.Enter
 
 = Enter
-I slide the key into the lock and the door swings open. #Acheivment * ACH_KEY
+I slide the key into the lock and the door swings open. #Acheivment $ ACH_KEY
 I step inside, gently nudging the door closed behind me. # Wound / Open, Down, Blackwipe
 -> ClosedWound
 
@@ -155,7 +155,7 @@ Timothy stretches and clambers off the bed. # Background / YourRoom, NoDefaults
 -else:
 	//(You have {GetIntValue("TimothyPoints")} Timothy Points)
 	"I'm fine. You don't need to worry about me." # Timothy = Calm
-	I probably haven't spent enough time with Timothy this week for him to feel like he can open up to me...
+	I probably haven't spent enough time with Timothy this week for him to feel like he can open up to me... #10&InProgress
 	->Tangents
 }
 

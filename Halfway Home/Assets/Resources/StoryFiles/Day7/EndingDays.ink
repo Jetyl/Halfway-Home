@@ -559,7 +559,7 @@ Timothy runs up behind me, waving a piece of paper in his hands. #Dyed = Surpris
 Timothy holds out the piece of paper.
 "I'm n-not a very good artist, but I w-wanted to make you something, so..." #Dyed =afraid
 ... #all = exit #Background / TimothysDrawing, crossfade
-Its not anything amazing, artistically speaking, but that doesn't matter. I can't help but grin from ear to ear. #Acheivment * ACH_DRAW
+Its not anything amazing, artistically speaking, but that doesn't matter. I can't help but grin from ear to ear. #Acheivment $ ACH_DRAW
 [{player_name}] "Thanks Timothy, I love it!" #Background / HouseFront #Dyed = afraid
 [Dyed>Timothy] "R-Really?" #Dyed = Happy
 Before I can say anymore, Timothy leaps forward, giving me a bear hug. #Dyed = Close
@@ -598,5 +598,5 @@ I think about that question as I get into the back seat of the car.
 		I look back out at the Sunflower House as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
 }
 "It wasn't exactly what I expected, but... I think it was pretty good." // Could we give the player a choice here?
-"Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0 #Acheivment * ACH_END
+"Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0 #Acheivment $ ACH_END
 ->->
