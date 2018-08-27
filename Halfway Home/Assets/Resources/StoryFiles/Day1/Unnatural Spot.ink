@@ -86,6 +86,9 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 		[{player_name}] "Oh! That's what that is. I thought you might be a wizard or something."
 		Timothy chuckles. //#Timothy=Happy
 		Now that he mentions it, yeah, I can see the Hangman set up. It seems to be looking for a 4 letter word.
+	- week == 2:
+		Its the exact same hangman game that he was scrawling in the dirt last week, another of today's multitude of deja vu's.
+		I wonder if it has the same answer too...
 	- else:
 		[{player_name}] "Hangman?"
 		[Timothy] "Hm? Oh. Yeah..."
@@ -239,8 +242,15 @@ Okay, some common consonants are... #Skip
 [{player_name}] "It's `hope`."
 [Timothy] "What?! No Way!" #Timothy = Surprised
 "How'd you guess is so quickly?" #Timothy=Sad
-[{player_name}] "Lucky guess?"
-You know, that and weird time travel shenanigans.
+{
+	-week == 2:
+		Crap, it was the same! Yet another deja vu to the pile I suppose.
+}
+[{player_name}] "Uh, lucky guess?"
+{
+	-week > 2:
+		You know, that and weird time travel shenanigans.
+}
 [Timothy] "..."
 Timothy looks a little sad that I immediately got the answer.
 But eventually he shrugs and smiles. #Timothy = Happy
@@ -266,8 +276,17 @@ But eventually he shrugs and smiles. #Timothy = Happy
 [Timothy] "Oh, nothing... it's just..."
 "Hangman is a good game..." 
 "It teaches you that just by saying a few wrong things, you can end someone’s life..." #Timothy = Sad
-Wow. That was surprisingly dark joke from this guy.
-Should... Should I question him about that? #Skip
+{
+	-week == 1:
+		Wow. That was surprisingly dark joke from this guy.
+		Should... Should I question him about that? #Skip
+	-week == 2:
+		Wow. And the exact same dark joke from Timothy. This must be a record of coincedences, or...
+		A-anyways, should I bother questioning Timothy on that joke? #Skip
+	-else"
+		And somehow, even after looping time, such a dark joke from Timothy continues to throw me off.
+		I guess I could question him on that, but should I? #Skip
+}
 +[Question Timothy <(expression > 2)>]
 	[{player_name}] "You okay, Timothy?" # expression ^ good
 	[Timothy] "Huh? Yeah. Why wouldn't I be?" #Timothy = Surprised

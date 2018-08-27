@@ -28,14 +28,24 @@ EXTERNAL GetValue(value)
 {
 	- GetValue("Tutorial") == true:
 		-> MeetWithTimothy
+	- week == 2:
+		->MeetWeek2
 	- else:
 		-> MeetAlone
 
 }
 
+===MeetWeek2===
+I stumble into the art room, dumbfounded as to how my day has gone so far. 
+All the art peices seem to have devolved in progression from where they were just last time I was here.
+I see (though more hear), that I am not alone in the room. #Eduardo = happy #Isaac = Calm
+Eduardo and Isaac are in here, like usual, which is honestly not that weird, all things considered.
+But, Isaac is painting something that I swear I saw him work on last week...
+->SoloIntroductions
+
 ===MeetAlone===
-I check around the art room, and spy Eduardo and Isaac hanging out in their little corner.
-Isaac is working on a painting and Eduardo is chatting up a storm.
+I check around the art room, and spy Eduardo and Isaac hanging out in their little corner, as usual.
+Isaac is working on the same painting and Eduardo is chatting up a storm.
 Neither of them have noticed me enter the room.
 I suppose I could go over and hang out with them for a while, or I could just go into my own little corner and work on a drawing.
 I... #Skip
@@ -52,8 +62,8 @@ I decide to go over there, and see how they are doing.
 [Eduardo] "I'm telling you, it was hilarious." #Eduardo = Happy
 [Isaac] "Hrm." #Isaac = Calm
 [{player_name}] "Hey guys. what's up" #Eduardo = Calm
-[Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, not much. we're just chilling here."
-"How bout you? how's it hangin'?"
+[Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, not much. We're just chilling here."
+"How bout you? How's it hangin'?"
 {
 	-week == 2:
 		Oh you know, fine. Just having the freakiest case of 'deja vu' in my life! nothing major.
