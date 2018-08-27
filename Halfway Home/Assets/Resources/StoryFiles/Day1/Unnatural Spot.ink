@@ -255,7 +255,7 @@ But eventually he shrugs and smiles. #Timothy = Happy
 
 === YouWin ===
 [Timothy] "Yep!" #Hangman / P
-"It's Hope." #Acheivment * ACH_HANGMAN
+"It's Hope." #Acheivment $ ACH_HANGMAN
 ~SetValue("SolvedHangman", true)
 ->GameOver
 

@@ -21,6 +21,8 @@ public class SaveDataDisplay : MonoBehaviour
     public TextMeshProUGUI RealDate;
     public TextMeshProUGUI GameTime;
     public TextMeshProUGUI RealTime;
+    public TextMeshProUGUI GameWeek;
+    public Image LoopIcon;
     [Header("Stats")]
     public Graphic[] AStars;
     public Graphic[] GStars;
@@ -88,6 +90,12 @@ public class SaveDataDisplay : MonoBehaviour
 
             RealTime.text = GetTime(gameData.SaveStamp.Hour, gameData.SaveStamp.Minute);
 
+            if(gameData.Progress.GetIntValue("week") > 1)
+            {
+                LoopIcon.enabled = true;
+                GameWeek.text = "" + (gameData.Progress.GetIntValue("week") - 1);
+            }
+
             //JESSE, REPLACE 0 VALUES WITH SAVE DATA //done
             var awarenessTier = gameData.Self.GetTrueSocialStat(Personality.Social.Awareness);
             var graceTier = gameData.Self.GetTrueSocialStat(Personality.Social.Grace);
@@ -133,6 +141,10 @@ public class SaveDataDisplay : MonoBehaviour
             GameTime.text = "???";
 
             RealTime.text = "-:-";
+
+            GameWeek.text = "";
+
+            LoopIcon.enabled = false;
 
             if (IsLoad)
             {

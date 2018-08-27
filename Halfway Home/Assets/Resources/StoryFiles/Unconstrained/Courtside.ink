@@ -632,7 +632,7 @@ I sit alone for a while, replaying the conversation in my mind.
 === Ignored ===
 =TimWon
 [Timothy] "I... I actually did it!" # Basketball / HeadHappy # Play : Stop_All
-[{player_name}] "You actually did. I told you you could do it." #Acheivment * ACH_LOSE
+[{player_name}] "You actually did. I told you you could do it." #Acheivment $ ACH_LOSE
 {-depression>40: [Voices] "This was never going to go any other way. Anyone could beat a worm like you."}
 [Timothy] "I f-feel exhausted. I gotta go get some water and maybe lie down." {SetIntValue("TimothyPoints", GetIntValue("TimothyPoints") + 2)} // +2 TP
 ->Ignored.Conclusion
@@ -650,6 +650,10 @@ I sit alone for a while, replaying the conversation in my mind.
 Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the building. # Basketball / Exit
 I had fun, but Timothy seemed kinda disappointed that we kept playing. Maybe I should have stopped the game when he asked...
 {Nothing can be done about it now.|If all this happens again, maybe I should try that.} I should get going as well.
+{
+	-GetIntValue("TimothyPoints")>5:
+		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+}
 -> END
 
 === Break ===
@@ -687,5 +691,9 @@ Timothy rises, smiles, and strides off at a relaxed pace. # All = Exit
 I think Timothy will feel more comfortable here after our conversation.
 I rest for a few more minutes, thinking about what Timothy said about me being `laid back.` {I've never thought of that as a strength before.|It's funny how subjective these things are. I always got criticized for not being passionate enough.}
 <color=color_descriptor><i>Spending time with Timothy has <color=color_awareness>improved <b>Awareness</b> considerably<color=color_descriptor>!</i></color> # Awareness++
+{
+	-GetIntValue("TimothyPoints")>5:
+		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+}
 I'd better get going, too.
 -> END

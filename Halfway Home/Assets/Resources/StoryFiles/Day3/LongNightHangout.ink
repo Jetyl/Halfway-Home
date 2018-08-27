@@ -528,7 +528,7 @@ I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @who
 ===MorningMax===
 {
 	-HoursSpent == 6:
-	The sun begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1 #Achievement *ACH_LONG_NIGHT
+	The sun begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1 #Achievement $ ACH_LONG_NIGHT
 	-else:
 	The sun begins to rise again, which is the first sign we stayed up way too late. #background / commons, crossfade, NoDefaults #time%1
 }

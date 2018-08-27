@@ -216,7 +216,10 @@ public class Personality
 
         SocialValues[stat] += addition;
         BasicSocialStars[stat] = SocialValues[stat] / SocialThreshold;
-        
+
+
+        CheckAcheivments(stat);
+
     }
 
     public void AddBonusSocialStar(Social stat)
@@ -226,6 +229,8 @@ public class Personality
             return;
 
         BonusSocialStars[stat] += 1;
+
+        CheckAcheivments(stat);
         
     }
 
@@ -318,5 +323,50 @@ public class Personality
 
         }
     }
+
+
+    public void CheckAcheivments(Social statup)
+    {
+        if(BasicSocialStars[statup] > 0)
+            Game.current.UnlockAchievement("ACH_STAR");
+
+        if(BasicSocialStars[statup] == MaxSocialStars)
+        {
+            switch (statup)
+            {
+                case Social.Awareness:
+                    Game.current.UnlockAchievement("ACH_AWARENESS");
+                    break;
+                case Social.Grace:
+                    Game.current.UnlockAchievement("ACH_GRACE");
+                    break;
+                case Social.Expression:
+                    Game.current.UnlockAchievement("ACH_EXPRESSION");
+                    break;
+            }
+        }
+
+        if(BonusSocialStars[statup] == MaxBonusStars)
+        {
+            switch (statup)
+            {
+                case Social.Awareness:
+                    Game.current.UnlockAchievement("ACH_TIMOTHY");
+                    break;
+                case Social.Grace:
+                    Game.current.UnlockAchievement("ACH_CHARLOTTE");
+                    break;
+                case Social.Expression:
+                    Game.current.UnlockAchievement("ACH_EDUARDO");
+                    break;
+            }
+        }
+
+        
+        
+
+
+    }
+
 
 }
