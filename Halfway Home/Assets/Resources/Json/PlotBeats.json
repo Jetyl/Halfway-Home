@@ -455,6 +455,10 @@
    {
     "Name" : "HasSavedTimothy",
     "Type" : 1
+   },
+   {
+    "Name" : "ReflectOnBreakdown",
+    "Type" : 1
    }
   ]
  },
