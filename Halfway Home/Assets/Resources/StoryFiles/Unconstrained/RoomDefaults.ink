@@ -18,6 +18,7 @@ VAR week = 1
 VAR current_room = "unset"
 VAR currentHour = 0
 VAR timesReflected = 0
+VAR BreakdownReflections = 0
 
 EXTERNAL GetStringValue(name)
 EXTERNAL SetValue(name, values)
@@ -59,7 +60,7 @@ In need of a break, I stumble into my room. #Skip // It would be great to have c
 +[Relax<(fatigue<75)>]
 I'm not ready to sleep. I just need a moment to myself to... #Skip
 	++[Read]
-		{week>1:->Reflection->}
+		{GetValue("ReflectOnBreakdown")==true:->PostBreakdown->|{week>1:->Reflection->}}
 		I take out <>
 		{GetStringValue("BookGenre")!="":
 			the book Charlotte gave me.
@@ -179,12 +180,12 @@ Knowing that most residents will have abandoned the commons at this hour, I feel
 {shuffle:
 	- When I arrive, the room is completely empty. I should have figured as much given the time.
 		I spend the hour sitting by the fireplace, contemplating the choices that led me to sitting alone in the commons in the middle of the night.
-		{week>1:->Reflection->}
+		{GetValue("ReflectOnBreakdown")==true:->PostBreakdown->|{week>1:->Reflection->}}
 		<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
 		-> END
 	- I wander in expecting no one to be around, but there are actually a few other sleepless residents here {~playing a board game|watching a movie|reclining by the fireplace|playing a video game on the couch}.
 		I don't bother them and they don't bother me. Just the way I like it.
-		{week>1:->Reflection->}
+		{GetValue("ReflectOnBreakdown")==true:->PostBreakdown->|{week>1:->Reflection->}}
 		<color=color_descriptor><i>Relaxation <color=color_wellbeing_relief>lowered <b>Stress</b> significantly<color=color_descriptor>, but also <color=color_wellbeing_penalty>increased <b>Depression</b> slightly.</i></color> # Depression += 10 # Stress -= 25
 		-> END
 }
@@ -232,7 +233,10 @@ The sweet smell of the garden envelops me as I step out into the crisp spring ai
 	- I lay down in a patch of grass and stare up at the shifting clouds. I've seen residents picnic in this spot on occasion.
 }
 My solitude gives me plenty of time to reflect.
-{week>1:
+{
+-GetValue("ReflectOnBreakdown")==true:
+	->PostBreakdown->
+-week>1:
 	->Reflection->
 -else:
 	{shuffle:
@@ -259,7 +263,10 @@ I step out into the cool garden, lit by moonlight and fireflies.
 	- I lay down in a patch of grass and stare up at the churning stars. I try to remember the constellations my grandmother taught me long ago.
 }
 My solitude gives me plenty of time to reflect.
-{week>1:
+{
+-GetValue("ReflectOnBreakdown")==true:
+	->PostBreakdown->
+-week>1:
 	->Reflection->
 -else:
 	{shuffle:
@@ -288,7 +295,7 @@ My solitude gives me plenty of time to reflect.
 I peruse the shelves until a title catches my eye. 
 I pull out {~a thin|a small|a heavy|an old| a brand new| an ornate| a worn} book {~on {~archeology| world cultures| astronomy| botany| mythology}| about {~ the adventures of a wandering knight| a fearsome band of pirates| an ancient empire of dragons| the life of a loving pet| a fishing boat lost at sea| a boy who loses his mom to cancer}}.
 The book is {~beautifully written and I learn a lot just from the prose.| rather dry, but well constructed and informative.| poorly written, but I learn a few things from its failures.}
-{week>1:->Reflection->}
+{GetValue("ReflectOnBreakdown")==true:->PostBreakdown->|{week>1:->Reflection->}}
 {currentHour > 18 || currentHour < 7:
 	<color=color_descriptor><i>Reading at this late hour has taken even more out of me than normal, <color=color_wellbeing_penalty>increasing <b>Fatigue<b> significantly<color=color_descriptor>.</color> # Fatigue += 20
 -else:
@@ -318,7 +325,7 @@ The Art Room is <>
 }
 I get a {~set of brushes, paint, and a canvas|lump of air-dry clay and some water|sewing kit and some cloth|stack of colored paper and one of those Origami 'How-To' books} from the supply.
 Time to make something!
-{week>1:->Reflection->}
+{GetValue("ReflectOnBreakdown")==true:->PostBreakdown->|{week>1:->Reflection->}}
 After about an hour, I finish. My digits are starting to ache, but something about channeling intention into physical form makes me feel more capable.
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 {
@@ -483,6 +490,38 @@ I'm getting ahead of myself. One step at a time, {player_name}.
 =Repeated
 My mind no longer races at the thought of the time loop I'm in.
 {GetValue("HasSavedTimothy")==true:Saving Timothy wasn't the answer, but that doesn't matter to me any more. I know I'll find my way out eventually. This won't be forever.|I've got to focus on helping Timothy.}
+->->
+
+=== PostBreakdown ===
+I try distract myself from what just happened, but I can't keep myself from replaying the event in my mind.
+~BreakdownReflections+=1
+~SetValue("ReflectOnBreakdown", false)
+{BreakdownReflections==1:
+	->First
+-else:
+	->Repeated
+}
+=First
+I close my eyes and I can still see his panicked expression. # Background / Dream, EyeClose
+I can feel his grip tight on my arm.
+I can hear his short, heaving breaths.
+{
+	- current_room == "Garden":
+		Was there nothing I could have done? # Background / Garden, EyeOpen
+	- current_room == "Library":
+		Was there nothing I could have done? # Background / Library, EyeOpen
+	- current_room == "ArtRoom":
+		Was there nothing I could have done? # Background / ArtRoom, EyeOpen
+}
+I've heard about panick attacks, but this is the first one I've actually witnessed.
+It really came out of nowhere... Did I miss something that caused this?
+More importantly, is Timothy going to be okay?
+->->
+
+=Repeated
+It happened again. Timothy's panick attack.
+There has to be something I can do to help!
+I feel so powerless... but I can't give up!
 ->->
 
 === Warning ===
