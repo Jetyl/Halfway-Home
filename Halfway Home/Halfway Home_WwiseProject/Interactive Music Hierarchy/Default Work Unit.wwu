@@ -4209,7 +4209,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="237542"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="92.2917719539255"/>
 															</PropertyList>
 															<AudioSourceRef Name="tension_stem_01" ID="{21BC3B39-E349-4FB5-B3AF-A03879459E6D}"/>
 														</MusicClip>
@@ -4926,7 +4926,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																<Property Name="BeginTrimOffset" Type="Real64" Value="2962.96296296296"/>
 																<Property Name="EndTrimOffset" Type="Real64" Value="237542"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="228.368057236657"/>
 															</PropertyList>
 															<AudioSourceRef Name="tension_stem_01" ID="{4B932C09-F760-484F-99CE-D3BDB0BB9943}"/>
 															<PropertyCurveList>

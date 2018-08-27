@@ -155,12 +155,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -207,7 +207,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -256,12 +256,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -284,6 +284,9 @@
 										<Bus Name="Tension Stem 05 Bus" ID="{C1C6CECC-B8DB-45A4-915F-0ED9FA66DC71}">
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{2564EA1F-4315-4058-B6AB-0961EAD75DAF}" ShortID="1014156378">
 															<ReferenceList>
@@ -310,12 +313,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -358,12 +361,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>2.99999999999997</YPos>
+																		<YPos>-0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -406,12 +409,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>3</XPos>
-																		<YPos>6</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>6</YPos>
+																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
