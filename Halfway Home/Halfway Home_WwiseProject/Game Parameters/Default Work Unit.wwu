@@ -8,8 +8,8 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="5"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="1"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="0.5"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="0.5"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}">

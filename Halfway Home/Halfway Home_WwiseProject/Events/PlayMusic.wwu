@@ -112,6 +112,7 @@
 								<Action Name="" ID="{4E4494F7-218A-41BD-A47E-A007F5252B45}" ShortID="189255550">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.8"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -122,11 +123,12 @@
 								<Action Name="" ID="{357B2845-96D9-4230-8373-C875BB80D266}" ShortID="688915872">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.8"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="music_tension_intro" ID="{0F5484E3-4C5A-46EB-925F-2454532EE416}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+											<ObjectRef Name="music_tension" ID="{82B6C941-67EB-4D64-9877-075D027971A8}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
