@@ -95,6 +95,11 @@ public class SaveDataDisplay : MonoBehaviour
                 LoopIcon.enabled = true;
                 GameWeek.text = "" + (gameData.Progress.GetIntValue("week") - 1);
             }
+            else
+            {
+                LoopIcon.enabled = false;
+                GameWeek.text = "";
+            }
 
             //JESSE, REPLACE 0 VALUES WITH SAVE DATA //done
             var awarenessTier = gameData.Self.GetTrueSocialStat(Personality.Social.Awareness);
