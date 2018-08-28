@@ -34,8 +34,8 @@ EXTERNAL SetIntValue(name, values)
 
 === Start ===
 When I step into the garden, I notice that Timothy is here absentmindedly playing with the grass.
-{I was looking to be alone, but I can't help noticing he looks especially bored.|This must be... what was it, basketball?}
-{I'm deliberating whether or not to approach him when he looks up.|The memories of before are hazy, as if recalling a dream.}
+{I was looking to be alone, but I can't help noticing he looks especially bored.|This must be... what was it, basketball? I am still very much confused by all of this.|Right, basketball.}
+{I'm deliberating whether or not to approach him when he looks up.|The memories of before are hazy, as if recalling a dream.|I think I'm getting better at this.}
 [Timothy] "Oh! Hey, uh, roomie." # Timothy = Surprised
 {Guess I'm committed to it now.|Timothy must have snuck up on me while I had my head in the clouds.} # Timothy = Calm
 [{player_name}] "What are you up to?"
@@ -366,9 +366,9 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 -else:
 	He recovers the ball and passes it to me. My turn. #Skip
 }
-+[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=0AC41C>Good<color=color_descriptor>, Timothy's Odds: <color=EDAF00>Fair<color=color_descriptor>)</color>]
++[Easy Shot<size=50%> <color=color_descriptor>(My Odds: <color=0AC41C>{Ballin==1:Good|Great}<color=color_descriptor>, Timothy's Odds: <color=EDAF00>Fair<color=color_descriptor>)</color>]
 	I walk up close to the basket. #Skip
-	++[Normal Throw<size=60%><color=color_descriptor> (85%)</color>]
+	++[Normal Throw<size=60%><color=color_descriptor> ({Ballin==1:85|100}%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
 			-It's a perfect shot!
@@ -383,10 +383,16 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 				->GameTime.TimothyTestEasy
 			-Success!
 				->GameTime.TimothyTestEasy
-			-Despite making it as easy as possible for myself, I still missed.
-				->GameTime.TimothyTurn
+			-
+				{Ballin==1:
+					Despite making it as easy as possible for myself, I still missed.
+					->GameTime.TimothyTurn
+				-else:
+					Success!
+					->GameTime.TimothyTestEasy
+				}
 		}
-	++[Call Shot<size=60%><color=color_descriptor> (71%)</color>]
+	++[Call Shot<size=60%><color=color_descriptor> ({Ballin==1:71|{Ballin==2:85|100}}%)</color>]
 		I can probably manage something fancy from this distance.
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -400,17 +406,29 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 				->GameTime.TimothyTestMedium
 			-Success!
 				->GameTime.TimothyTestMedium
-			-I made it in, but not the way I called!
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice. # Basketball / ArmBall
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
+			-
+				{Ballin<=2:
+					I made it in, but not the way I called!
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					Success!
+					->GameTime.TimothyTestMedium
+				}
+			-
+				{Ballin==1:
+					A complete miss. I must really be out of practice.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					Success!
+					->GameTime.TimothyTestMedium
+				}
 		}
 	++[Back]-> PlayerTurn
-+[Normal Shot<size=50%><color=color_descriptor> (My Odds: <color=EDAF00>Fair<color=color_descriptor>, Timothy's Odds: <color=FF6900>Poor<color=color_descriptor>)</color>]
++[Normal Shot<size=50%><color=color_descriptor> (My Odds: {Ballin==1:<color=EDAF00>Fair|<color=0AC41C>Good}<color=color_descriptor>, Timothy's Odds: <color=FF6900>Poor<color=color_descriptor>)</color>]
 	I get a good distance from the basket. #Skip
-	++[Normal Throw<size=60%><color=color_descriptor> (57%)</color>]
+	++[Normal Throw<size=60%><color=color_descriptor> ({Ballin==1:57|{Ballin==2:71|85}}%)</color>]
 		I decide not to try anything fancy.
 		{shuffle:
 			-It's a perfect shot!
@@ -424,14 +442,26 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
 				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
-			-The angle was too far to the {&left|right}.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
+			-
+				{Ballin<=2:
+					The angle was too far to the {&left|right}.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! That was a close one, I almost had the wrong angle there.|Success!}
+					->GameTime.TimothyTestHard
+				}
+			-
+				{Ballin==1:
+					A complete miss. I must really be out of practice.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! Nearly missed, but it still counts.|Success!}
+					->GameTime.TimothyTestHard
+				}
 		}
-	++[Call Shot<size=60%><color=color_descriptor> (43%)</color>]
+	++[Call Shot<size=60%><color=color_descriptor> ({Ballin==1:43|{Ballin==2:57|71}}%)</color>]
 		I may be getting overconfident, but I'll try something tricky.
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -447,17 +477,29 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
 				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
-			-The angle was too far to the {&left|right}.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
+			-
+				{Ballin<=2:
+					The angle was too far to the {&left|right}.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! That was a close one, I almost had the wrong angle there.|Success!}
+					->GameTime.TimothyTestHarder
+				}
+			-
+				{Ballin==1:
+					A complete miss. I must really be out of practice.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! I feel like I might be doing better than last time.|Success!}
+					->GameTime.TimothyTestHarder
+				}
 		}
 	++[Back]-> PlayerTurn
-+[Distant Shot<size=50%><color=color_descriptor> (My Odds: <color=FF6900>Poor<color=color_descriptor>, Timothy's Odds: <color=E51900>Dismal<color=color_descriptor>)</color>]
++[Distant Shot<size=50%><color=color_descriptor> (My Odds: {Ballin==1:<color=FF6900>Poor|<color=EDAF00>Fair}<color=color_descriptor>, Timothy's Odds: <color=E51900>Dismal<color=color_descriptor>)</color>]
 	I step back to the edge of the concrete. #Skip
-	++[Normal Throw<size=60%><color=color_descriptor> (29%)</color>]
+	++[Normal Throw<size=60%><color=color_descriptor> ({Ballin==1:29|{Ballin==2:43|57}}%)</color>]
 		It's probably best if I don't try anything fancy from this distance.
 		{shuffle:
 			-It's a perfect shot!
@@ -473,14 +515,26 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
 				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
-			-The angle was too far to the {&left|right}.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
+			-
+				{Ballin<=2:
+					The angle was too far to the {&left|right}.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! That was a close one, I almost had the wrong angle there.|Success!}
+					->GameTime.TimothyTestHopeless
+				}
+			-
+				{Ballin==1:
+					A complete miss. I must really be out of practice.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! I didn't think that would actually make it.|Success!}
+					->GameTime.TimothyTestHopeless
+				}
 		}
-	++[Call Shot<size=60%><color=color_descriptor> (14%)</color>]
+	++[Call Shot<size=60%><color=color_descriptor> ({Ballin==1:14|{Ballin==2:29|43}}%)</color>]
 		I'm already taking a hard shot, why not double down?
 		As I throw the ball, I call out {~`swish!`|`backboard!`|`no rim!`|`no backboard!`}
 		{shuffle:
@@ -498,12 +552,24 @@ He shakes it off and looks incredibly nervous as he heads to the back of the cou
 			-The trajectory was right, but I threw too hard and it bounced off the backboard.
 				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
 				->GameTime.TimothyTurn
-			-The angle was too far to the {&left|right}.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
-			-A complete miss. I must really be out of practice.
-				Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
-				->GameTime.TimothyTurn
+			-
+				{Ballin<=2:
+					The angle was too far to the {&left|right}.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! Huh. Am I actually okay at this now?|Success!}
+					->GameTime.TimothyJawDrop
+				}
+			-
+				{Ballin==1:
+					A complete miss. I must really be out of practice.
+					Timothy recovers the ball and prepares for his turn. # Basketball / ArmBall
+					->GameTime.TimothyTurn
+				-else:
+					{Success! I've definitely gotten better since last time.|Success!}
+					->GameTime.TimothyJawDrop
+				}
 		}
 	++[Back]-> PlayerTurn
 
