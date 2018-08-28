@@ -8,12 +8,13 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
     
   Dictionary<string, StagePosition> Actors;
   private bool IsSkipping = false;
+    private StagePosition CurrentPos;
 
 	// Use this for initialization
 	void Start ()
     {
         Actors = new Dictionary<string, StagePosition>();
-
+        CurrentPos = StagePosition.Same;
         Space.Connect<DescriptionEvent>(Events.Description, OnNewLine);
         
         Space.Connect<CastDirectionEvent>(Events.CharacterCall, CharacterChanges);
@@ -26,7 +27,7 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
 
   void OnNewLine(DescriptionEvent eventdata)
     {
-
+        print(eventdata.Speaker);
 
         if (eventdata.Speaker == "")
         {
@@ -36,27 +37,40 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         if (Actors.ContainsKey(eventdata.TrueSpeaker.ToLower()))
         {
             StagePosition pos = Actors[eventdata.TrueSpeaker.ToLower()];
-            //print(pos);
+            print(eventdata.TrueSpeaker.ToLower() + " " + pos);
             GetComponent<Animator>().SetBool("Skipping", IsSkipping);
+
+            //if (pos == CurrentPos)
+              //  return;
+
+            //pos = CurrentPos;
+
             switch(pos)
             {
               case StagePosition.Left:
                 GetComponent<Animator>().SetInteger("Position", 0);
                 break;
               case StagePosition.Center:
+                    print("here!");
                 GetComponent<Animator>().SetInteger("Position", 1);
                 break;
               case StagePosition.Right:
                 GetComponent<Animator>().SetInteger("Position", 2);
                 break;
               default:
+                    print("whut");
                 GetComponent<Animator>().SetInteger("Position", 0);
                 break;
             }
         }
         else
         {
-            GetComponent<Animator>().SetInteger("Position", 0);
+            print(eventdata.Speaker);
+            if(CurrentPos != 0)
+            {
+                CurrentPos = 0;
+                GetComponent<Animator>().SetInteger("Position", 0);
+            }
         }
     }
 
@@ -68,10 +82,18 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
             CharacterExit(eventdata);
             return;
         }
-        
-        if (!Actors.ContainsKey(eventdata.character.ToLower()))
-            Actors.Add(eventdata.character.ToLower(), eventdata.Direction);
 
+
+        print(eventdata.character.ToLower() + " " + eventdata.Direction);
+
+        if (!Actors.ContainsKey(eventdata.character.ToLower()))
+        {
+            if (eventdata.Direction != StagePosition.Same)
+                Actors.Add(eventdata.character.ToLower(), eventdata.Direction);
+            else
+                Actors.Add(eventdata.character.ToLower(), StagePosition.Center);
+        }
+            
         if (eventdata.Direction != StagePosition.Same)
           Actors[eventdata.character.ToLower()] = eventdata.Direction;
 

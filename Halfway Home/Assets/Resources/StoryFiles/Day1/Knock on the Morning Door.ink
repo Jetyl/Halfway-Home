@@ -368,7 +368,7 @@ Moments later, Max bursts in through the door, jangling their Keys in celebratio
 "Let's head off."
 "See you at the welcome dinner, {player_name}!"   #Max=Exit   #Timothy=Exit   # SFX : play_sfx_human_footsteps_approaching
 [{player_name}] "See ya!"
-I quickly scribble some of my notes from last week into my journal.
+I quickly scribble some of my notes from last week into my journal. #Time % 1
 Looks like I managed to steal some alone time.
 Better make use of it...
 ->END

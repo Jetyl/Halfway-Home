@@ -51,8 +51,8 @@ public class IdentityDisplay : MonoBehaviour
 
     public void SetIdentity()
     {
-        Game.current.PlayerName = namePicked;
-        Game.current.Progress.SetValue<string>("PlayerName", Game.current.PlayerName);
+        Game.current.PlayerName = namePicked + "_Player";
+        Game.current.Progress.SetValue<string>("PlayerName",namePicked);
 
         ChoiceBox.SetActive(false);
         ConfirmBox.SetActive(false);
