@@ -4287,7 +4287,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8760,12 +8760,12 @@ Prefab:
     - target: {fileID: 114470210447381086, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114470210447381086, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114608128412042198, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8975,17 +8975,17 @@ Prefab:
     - target: {fileID: 224277055598408082, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -65.36868
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224277055598408082, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -45.628387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114470210447381086, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_fontSize
-      value: 64.9
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 114608128412042198, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -9572,6 +9572,11 @@ Prefab:
         type: 2}
       propertyPath: ClosedTimeContainer.Array.data[5].ProgressKey
       value: ReflectOnBreakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470210447381086, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
@@ -23896,6 +23901,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c334235f16a02f94eace9053857e865a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &834615053 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1323353903332114, guid: e9f83229598c5cd4e8c70b758a59ae13,
+    type: 2}
+  m_PrefabInternal: {fileID: 314830559}
+--- !u!114 &834615054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834615053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eae943cedc607f478200f8dc21d5a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreAlphaBelow: 0.1
 --- !u!1 &835045231
 GameObject:
   m_ObjectHideFlags: 0
@@ -41679,7 +41701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 902.8795}
+  m_AnchoredPosition: {x: 0, y: 902.87964}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -49683,10 +49705,10 @@ MonoBehaviour:
   Screenshot: {fileID: 504326071}
   PlayerName: {fileID: 538415981}
   RealDate: {fileID: 1733773064}
-  GameTime: {fileID: 0}
-  RealTime: {fileID: 0}
-  GameWeek: {fileID: 0}
-  LoopIcon: {fileID: 0}
+  GameTime: {fileID: 1734543012}
+  RealTime: {fileID: 125306606}
+  GameWeek: {fileID: 2090665490}
+  LoopIcon: {fileID: 1135574883}
   AStars:
   - {fileID: 2147336335}
   - {fileID: 341650634}
@@ -49705,9 +49727,9 @@ MonoBehaviour:
   - {fileID: 1923938325}
   - {fileID: 2090369784}
   - {fileID: 1680007305}
-  FSlider: {fileID: 0}
-  SSlider: {fileID: 0}
-  DSlider: {fileID: 0}
+  FSlider: {fileID: 780369142}
+  SSlider: {fileID: 1469528630}
+  DSlider: {fileID: 1061717479}
   Icon: {fileID: 1365046758}
   EmptyAlpha: 0.6
   FilledStar: {r: 1, g: 0.94509804, b: 0.19215687, a: 1}
@@ -55761,12 +55783,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55806,7 +55828,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugAwareness
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55816,12 +55838,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[0].BoolValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55866,7 +55888,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugExpression
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55926,7 +55948,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugWeek
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114602336194486026, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -59859,7 +59881,7 @@ GameObject:
   - component: {fileID: 2090665491}
   - component: {fileID: 2090665490}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: WeekText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
