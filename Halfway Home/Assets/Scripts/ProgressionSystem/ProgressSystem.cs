@@ -96,10 +96,10 @@ public class ProgressSystem
 
     public void UpdateProgress(string _key, ProgressPoint change)
     {
-
+        
         if (!ProgressBook.ContainsKey(_key))
             return;
-
+        
         switch (ProgressBook[_key].TypeID)
         {
             case PointTypes.Flag:

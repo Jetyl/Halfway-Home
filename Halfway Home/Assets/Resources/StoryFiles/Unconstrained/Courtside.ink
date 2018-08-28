@@ -717,8 +717,9 @@ Timothy turns and leaves, leaving the ball to slowly roll toward the edge of the
 I had fun, but Timothy seemed kinda disappointed that we kept playing. Maybe I should have stopped the game when he asked...
 {Nothing can be done about it now.|If all this happens again, maybe I should try that.} I should get going as well.
 {
-	-GetIntValue("TimothyPoints")>5:
+	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+			~SetValue("Want to Hangout with Timothy", true)
 }
 -> END
 
@@ -758,8 +759,9 @@ I think Timothy will feel more comfortable here after our conversation.
 I rest for a few more minutes, thinking about what Timothy said about me being `laid back.` {I've never thought of that as a strength before.|It's funny how subjective these things are. I always got criticized for not being passionate enough.}
 <color=color_descriptor><i>Spending time with Timothy has <color=color_awareness>improved <b>Awareness</b> considerably<color=color_descriptor>!</i></color> # Awareness++
 {
-	-GetIntValue("TimothyPoints")>5:
+	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+			~SetValue("Want to Hangout with Timothy", true)
 }
 I'd better get going, too.
 -> END

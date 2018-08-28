@@ -214,19 +214,19 @@
    },
    {
     "Name" : "Manuel Garden Tooltip",
-    "Type" : 0
+    "Type" : 4
    },
    {
     "Name" : "Manuel Store Tooltip",
-    "Type" : 0
+    "Type" : 4
    },
    {
     "Name" : "Manuel Bedroom Tooltip",
-    "Type" : 0
+    "Type" : 4
    },
    {
     "Name" : "Manuel Commons Tooltip",
-    "Type" : 0
+    "Type" : 4
    }
   ]
  },
@@ -458,6 +458,10 @@
    },
    {
     "Name" : "ReflectOnBreakdown",
+    "Type" : 1
+   },
+   {
+    "Name" : "Want to Hangout with Timothy",
     "Type" : 1
    }
   ]
