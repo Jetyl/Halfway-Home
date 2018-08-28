@@ -293,9 +293,9 @@ public static class TextParser
 
         var relive = new Regex(Regex.Escape("'"));
         text = relive.Replace(text, "‘", 1);
-        
-        
 
+
+        text = text.Replace("_Player", "");
         
         //color stuff
         text = text.Replace("color_wellbeing_relief", "1FD118");
