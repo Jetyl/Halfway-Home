@@ -82,6 +82,6 @@ He looks kind of sad. I should... #Skip
 	{
 		-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 			I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
-			~SetValue("Want to Hangout with Timothy", true)
+			~SetValue("Want to Hangout with Timothy", false)
 	}
 ->END

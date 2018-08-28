@@ -168,6 +168,7 @@ I think I understand myself better, too.
 {
 	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+		~SetValue("Want to Hangout with Timothy", false)
 }
 I make my way out of the garden feeling somehow wiser. # Timothy = Exit // +1 TP 
 -> END
@@ -184,7 +185,7 @@ Maybe I should get a hobby... It would at least give me something to do to occup
 {
 	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
-		~SetValue("Want to Hangout with Timothy", true)
+		~SetValue("Want to Hangout with Timothy", false)
 }
 I make my way out of the garden feeling like I have more to learn from Timothy.
 -> END

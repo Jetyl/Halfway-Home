@@ -73,9 +73,7 @@ public class ProgressPoint
     {
         ProgressName = (string)data["Name"];
         TypeID = (PointTypes)(int)data["Type"];
-
-        MonoBehaviour.print(ProgressName + " " + TypeID);
-
+        
         switch (TypeID)
         {
             case PointTypes.Flag:

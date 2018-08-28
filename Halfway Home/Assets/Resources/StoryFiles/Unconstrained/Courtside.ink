@@ -719,7 +719,7 @@ I had fun, but Timothy seemed kinda disappointed that we kept playing. Maybe I s
 {
 	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
-			~SetValue("Want to Hangout with Timothy", true)
+			~SetValue("Want to Hangout with Timothy", false)
 }
 -> END
 
@@ -761,7 +761,7 @@ I rest for a few more minutes, thinking about what Timothy said about me being `
 {
 	-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 		I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
-			~SetValue("Want to Hangout with Timothy", true)
+			~SetValue("Want to Hangout with Timothy", false)
 }
 I'd better get going, too.
 -> END
