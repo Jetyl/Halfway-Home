@@ -29,6 +29,7 @@ public class SkipControl : MonoBehaviour
         Space.Connect<DescriptionEvent>(Events.Description, UpdateDescription);
         Space.Connect<DefaultEvent>(Events.StopSkipTyping, OnStopSkipTyping);
         Space.Connect<DefaultEvent>(Events.ReturnToMap, OnMapEvent);
+        Space.Connect<DefaultEvent>(Events.TimeChange, OnClock);
         Space.Connect<DefaultEvent>(Events.ConversationChoice, OnChoiceEvent);
         Space.Connect<DefaultEvent>(Events.Debug, OnDebug);
 
@@ -111,6 +112,12 @@ public class SkipControl : MonoBehaviour
     void OnChoiceEvent(DefaultEvent eventdata)
     {
         //stop skipping when a choice appears
+        CanSkip = false;
+        Space.DispatchEvent(Events.StopSkipTyping);
+    }
+
+    void OnClock(DefaultEvent eventdata)
+    {
         CanSkip = false;
         Space.DispatchEvent(Events.StopSkipTyping);
     }
