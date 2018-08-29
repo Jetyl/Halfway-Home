@@ -71,12 +71,13 @@ public class SpeakerDisplay : MonoBehaviour
         if (eventdata.Speaker == "")
         {
             txt.text = "";
-            Box.SetActive(false);
+            Box.GetComponent<UIFader>().Hide(0.2f);
+            Box.tag = "NotHideable";
             return;
         }
 
-        Box.SetActive(true);
-        
+        Box.GetComponent<UIFader>().Show(0.2f);
+        Box.tag = "Untagged";
 
         txt.color = GetColor(eventdata.TrueSpeaker);
         

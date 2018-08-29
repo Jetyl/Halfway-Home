@@ -261,7 +261,7 @@ public class CharacterDisplay : MonoBehaviour
 
         FacingDirection = pos;
 
-        print(Character.Character + ", " + FacingDirection);
+        //print(Character.Character + ", " + FacingDirection);
 
         if (FlipOnLeft)
         {

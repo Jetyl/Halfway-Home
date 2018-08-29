@@ -135,7 +135,7 @@ public class CastDisplay : MonoBehaviour
                 Roll.ChangePose(eventdata.Pose, Skip);
 
                 if(eventdata.Distance!=StageDistance.Same)Roll.ChangeDistance(eventdata.Distance, Skip);
-                Roll.ChangeFacing(eventdata.FacingDirection);
+                Roll.ChangeFacing(eventdata.Facing);
 
                 if (eventdata.Direction != StagePosition.Same && eventdata.Direction != Roll.Direction)
                 {
@@ -167,23 +167,23 @@ public class CastDisplay : MonoBehaviour
                     Debug.LogError("character: " + eventdata.character + "is missing at rollcall. See StageDisplay");
                 else
                 {
-                    if (eventdata.FacingDirection == StagePosition.Same)
+                    if (eventdata.Facing == StagePosition.Same)
                     {
                         switch(eventdata.Direction)
                         {
                             case StagePosition.Left:
-                                eventdata.FacingDirection = StagePosition.Right;
+                                eventdata.Facing = StagePosition.Right;
                                 break;
                             case StagePosition.Right:
-                                eventdata.FacingDirection = StagePosition.Left;
+                                eventdata.Facing = StagePosition.Left;
                                 break;
                             default:
-                                eventdata.FacingDirection = StagePosition.Center;
+                                eventdata.Facing = StagePosition.Center;
                                 break;
                         }
                     }
                         
-                    directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.FacingDirection, Skip);
+                    directions.EnterStage(eventdata.Pose, eventdata.Distance, eventdata.Facing, Skip);
                     Actors.Add(directions);
 
                     if (eventdata.Direction == StagePosition.Same)
@@ -354,7 +354,7 @@ public class CastDirectionEvent : DefaultEvent
     public string Pose;
     public Vector3 Position;
     public StagePosition Direction = StagePosition.Same;
-    public StagePosition FacingDirection = StagePosition.Same;
+    public StagePosition Facing = StagePosition.Same;
     public StageDistance Distance = StageDistance.Same;
     public bool Exiting;
 
@@ -365,7 +365,7 @@ public class CastDirectionEvent : DefaultEvent
         Pose = pose;
         Direction = Pos;
         Distance = Dis;
-        FacingDirection = face;
+        Facing = face;
     }
     
     public CastDirectionEvent(string person, string calls)
@@ -386,10 +386,10 @@ public class CastDirectionEvent : DefaultEvent
                     Exiting = true;
                     break;
                 case "left":
-                    FacingDirection = StagePosition.Left;
+                    Facing = StagePosition.Left;
                     break;
                 case "right":
-                    FacingDirection = StagePosition.Right;
+                    Facing = StagePosition.Right;
                     break;
                 case "close":
                     Distance = StageDistance.Close;
