@@ -27,8 +27,6 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
 
   void OnNewLine(DescriptionEvent eventdata)
     {
-        print(eventdata.Speaker);
-
         if (eventdata.Speaker == "")
         {
             return;
@@ -37,13 +35,7 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
         if (Actors.ContainsKey(eventdata.TrueSpeaker.ToLower()))
         {
             StagePosition pos = Actors[eventdata.TrueSpeaker.ToLower()];
-            print(eventdata.TrueSpeaker.ToLower() + " " + pos);
             GetComponent<Animator>().SetBool("Skipping", IsSkipping);
-
-            //if (pos == CurrentPos)
-              //  return;
-
-            //pos = CurrentPos;
 
             switch(pos)
             {
@@ -51,22 +43,19 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
                 GetComponent<Animator>().SetInteger("Position", 0);
                 break;
               case StagePosition.Center:
-                    print("here!");
                 GetComponent<Animator>().SetInteger("Position", 1);
                 break;
               case StagePosition.Right:
                 GetComponent<Animator>().SetInteger("Position", 2);
                 break;
               default:
-                    print("whut");
                 GetComponent<Animator>().SetInteger("Position", 0);
                 break;
             }
         }
         else
         {
-            print(eventdata.Speaker);
-            if(CurrentPos != 0)
+            if(CurrentPos != StagePosition.Left)
             {
                 CurrentPos = 0;
                 GetComponent<Animator>().SetInteger("Position", 0);
@@ -77,15 +66,14 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
 
     void CharacterChanges(CastDirectionEvent eventdata)
     {
+        // If the actor is exiting
         if (eventdata.Exiting)
         {
             CharacterExit(eventdata);
             return;
         }
 
-
-        print(eventdata.character.ToLower() + " " + eventdata.Direction);
-
+        // If the Actor is not present on the stage
         if (!Actors.ContainsKey(eventdata.character.ToLower()))
         {
             if (eventdata.Direction != StagePosition.Same)
@@ -93,7 +81,8 @@ public class MoveSpeakerBoxDisplay : MonoBehaviour
             else
                 Actors.Add(eventdata.character.ToLower(), StagePosition.Center);
         }
-            
+        
+        // If the actor is set to a new direction
         if (eventdata.Direction != StagePosition.Same)
           Actors[eventdata.character.ToLower()] = eventdata.Direction;
 

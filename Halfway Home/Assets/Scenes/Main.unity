@@ -1419,6 +1419,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62907559}
+--- !u!1 &63203420 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1938197008440296, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
+    type: 2}
+  m_PrefabInternal: {fileID: 2065489910}
+--- !u!114 &63203424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63203420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3573d1e3a783845a2864b537e9dc20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartFaded: 1
 --- !u!1 &63510800
 GameObject:
   m_ObjectHideFlags: 0
@@ -9577,6 +9594,11 @@ Prefab:
         type: 2}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114600255838841864, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: ClosedTimeContainer.Array.data[2].ProgressLocked
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
@@ -58925,7 +58947,16 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.7607843
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1938197008440296, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097070415668230, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114275635123253902, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d8bee1554b9bc4548bfe9ebffdfa5c84, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &2065489911 stripped
