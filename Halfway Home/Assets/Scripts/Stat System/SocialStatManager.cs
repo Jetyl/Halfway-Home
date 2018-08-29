@@ -68,7 +68,7 @@ public class SocialStatManager : MonoBehaviour
     int totalTier = basicTier + specialTier;
     int realTier = Game.current.Self.GetModifiedSocialStat(SocialStat);
 
-    if (PreviousProgress < barStat/*totalTier > PreviousTier*/) Celebrate(totalTier>PreviousTier);
+    if (PreviousProgress < barStat || totalTier > PreviousTier) Celebrate(totalTier>PreviousTier);
     PreviousProgress = barStat;
     PreviousTier = totalTier;
 
