@@ -330,7 +330,7 @@ I'm just lucky enough to be leaving here after just over one year. I don't want 
 Look at these two, planning their future and stuff. I can't look past the next week.
 {
 	-week >= 2:
-	though, these two aren't literally trapped in time like I am, so maybe I should give myself a pass.
+	Though, these two aren't literally trapped in time like I am, so maybe I should give myself a pass.
 	[Voices] "Excuses, Excuses."
 	{
 		-depression < 50:

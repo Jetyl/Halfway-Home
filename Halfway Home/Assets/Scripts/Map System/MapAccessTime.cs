@@ -111,7 +111,7 @@ namespace HalfwayHome
             {
                 ClosedReason = Game.current.Progress.GetStringValue(DynamicTooltip);
                 self.interactable = false;
-                //print(ManualAccess + " is true");
+                print(ManualAccess + " is true");
             }
             if (LimitedDailyAccess && HoldsScene() == false)
             {

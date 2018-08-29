@@ -101,7 +101,7 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         //turn on unlock icon
         if (LockingActive)
             LockSprite.sprite = UnlockedImage;
-        
+        print(type + " " + high_low);
         //Stratus.Scene.Dispatch<TextTooltipBehavior.TooltipLineEvent>(new TextTooltipBehavior.TooltipLineEvent(type, high_low));
         GetComponent<TooltipElement>().TooltipKey = type;
         GetComponent<TooltipElement>().TooltipType = high_low;
@@ -256,12 +256,27 @@ public class ChoiceButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             if (Enum.GetName(typeof(Personality.Social), (Personality.Social)i).ToLower() == key.ToLower())
             {
-                if (comp)
+                
+                if (lessthan)
                 {
-                    return "good, nocolor";
+                    if (comp)
+                    {
+                        return "poor, nocolor";
+                    }
+                    else
+                        return "good, nocolor";
+
                 }
                 else
-                    return "poor, nocolor";
+                {
+                    if (comp)
+                    {
+                        return "good, nocolor";
+                    }
+                    else
+                        return "poor, nocolor";
+                }
+
             }
 
         }

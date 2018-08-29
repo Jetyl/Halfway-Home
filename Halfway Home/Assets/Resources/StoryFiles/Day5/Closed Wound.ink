@@ -156,6 +156,7 @@ Timothy stretches and clambers off the bed. # Background / YourRoom, NoDefaults
 	//(You have {GetIntValue("TimothyPoints")} Timothy Points)
 	"I'm fine. You don't need to worry about me." # Timothy = Calm
 	I probably haven't spent enough time with Timothy this week for him to feel like he can open up to me... #10&InProgress
+	~SetValue("Want to Hangout with Timothy", true)
 	->Tangents
 }
 

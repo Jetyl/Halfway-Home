@@ -40,6 +40,7 @@ public class ProgressPoint
 
     public ProgressPoint(string eventName, PointTypes type)
     {
+        MonoBehaviour.print(eventName + " " + type);
         ProgressName = eventName;
         TypeID = type;
         StringValue = "";
@@ -72,8 +73,7 @@ public class ProgressPoint
     {
         ProgressName = (string)data["Name"];
         TypeID = (PointTypes)(int)data["Type"];
-
-
+        
         switch (TypeID)
         {
             case PointTypes.Flag:

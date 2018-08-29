@@ -109,11 +109,11 @@ Still nothing.
 	[{player_name}] "..."
 	[Isaac] "Hm."
 	->PoorGrip
-+[Whether I am or not, I’m still leaving <(expression>2)>]
++[Whether I am or not, I’m still leaving <(expression>1)>]
 	[{player_name}] "Whether I am or not, I’m still leaving." #expression ^ good
 	[Isaac] "Hm... @That's true. Hm..."
 	->OpenAnswer
-+[No, not really <(awareness>2)>]
++[No, not really <(awareness>1)>]
 	[{player_name}] "No, not really." #awareness ^ good
 	[Isaac] "Are you scared? To leave?"
 	[{player_name}] "...Yeah."

@@ -80,7 +80,8 @@ He looks kind of sad. I should... #Skip
 	<color=color_descriptor><i>The meal <color=color_wellbeing_relief>lowered <b>Fatigue</b> moderately</i></color> #fatigue -=40  #all = exit
 	<color=color_descriptor><i>The chat with Timothy also improved <color=color_awareness><b>Awareness</b>, <color=color_grace><b>Grace</b>, <color=color_descriptor>and <color=color_expression><b>Expression</b> faintly.</i></color> #expression+ #grace+ #awareness+	
 	{
-		-GetIntValue("TimothyPoints")>5:
+		-GetIntValue("TimothyPoints")>5 && GetValue("Want to Hangout with Timothy"):
 			I think I've hung out enough with Timothy that he should open up to me on Thursday... #10 &Success
+			~SetValue("Want to Hangout with Timothy", false)
 	}
 ->END
