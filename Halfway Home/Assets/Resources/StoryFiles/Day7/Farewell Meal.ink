@@ -20,7 +20,7 @@ VAR current_room = "unset"
 
 EXTERNAL PlayMusic(trackName)
 EXTERNAL GetValue(value)
-
+EXTERNAL SetValue(name, value)
 # Load @ story_farewell_meal   # Ambience : play_ambience_crowd
 
 -> Start
@@ -274,6 +274,7 @@ Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaste
 Next to approach is Charlotte, who seems to have taken a break from her duties.
 {
 - GetValue("MissedTea")==true:
+	~SetValue("MissedTea", false)
 	[Charlotte] "Greetings, {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
 	<Speed=200%>Oh god, I forgot to meet her for tea!
@@ -287,6 +288,7 @@ Next to approach is Charlotte, who seems to have taken a break from her duties.
 	"I would extend a new invitation, only... it seems you wouldn't be around to take advantage of it." # Charlotte = Happy
 	"Speaking of which..."
 -GetValue("MissedLesson")==true:
+	~SetValue("MissedLesson", false)
 	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
 	<Speed=200%>Oh god, I forgot to meet her in the library!
@@ -318,6 +320,7 @@ I watch Charlotte stride gracefully toward the serving line as Max emerges with 
 Next to approach is Charlotte, who seems to have taken a break from her duties.
 {
 - GetValue("MissedTea")==true:
+	~SetValue("MissedTea", false)
 	[Charlotte] "Greetings, {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
 	<Speed=200%>Oh god, I forgot to meet her for tea!
@@ -331,6 +334,7 @@ Next to approach is Charlotte, who seems to have taken a break from her duties.
 	"I would extend a new invitation, only... it seems you wouldn't be around to take advantage of it." # Charlotte = Happy
 	"Speaking of which..."
 -GetValue("MissedLesson")==true:
+	~SetValue("MissedLesson", false)
 	[Charlotte] "Ah. {player_name}." # Charlotte = Angry, left
 	Uh oh. She looks pissed. What did I- # Skip
 	<Speed=200%>Oh god, I forgot to meet her in the library!

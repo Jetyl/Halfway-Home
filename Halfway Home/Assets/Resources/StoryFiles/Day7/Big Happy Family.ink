@@ -96,8 +96,12 @@ Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss
 [Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
 [Eduardo] "Oh don't you start, too!" #Eduardo = Angry
 [Charlotte] "Really now. If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
-In an instant, the table I was sitting at was surrounded by the people I know, laughing. #Eduardo = Calm 
-It's... odd.<delay=0.5>@ Almost like we're a big happy family.
+{GetValue("MissedTea")==true||GetValue("MissedLesson")==true:
+	Charlotte shoots me an angry look before turning back to the group. # Charlotte = Angry
+	What could she be mad about? # Charlotte = Happy
+}
+This strange feeling... seeing everyone laughing together, knowing how differently this could have played out... #Eduardo = Calm 
+It's... nice.<delay=0.5>@ Like we're finally a big happy family.
 The only thing missing is Timothy, who walks back in with his food, surprised by the sudden flood of people. #Skip #All = Exit #Dyed = Calm, Stage_left, right
 +[Call Timothy over <(Expression)>]
 	[{player_name}] "Hey, Timothy! C'mon over!" #expression+
@@ -164,6 +168,10 @@ I sit myself down with my meal. # Play : Stop_All
 [Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
 [Eduardo] "Oh don't you start, too!" #Eduardo = Angry
 [Charlotte] "If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
+{GetValue("MissedTea")==true||GetValue("MissedLesson")==true:
+	Charlotte shoots me an angry look before turning back to the group. # Charlotte = Angry
+	What could she be mad about? # Charlotte = Happy
+}
 Eduardo throws his arms in the air in surrender. A smile cracks Isaac's stoney facade. # Isaac = Happy
 //continue this line of merriment
 Trissa and Max start laughing. {I can't help but chuckle a bit, too.|I can't laugh at a time like this.}
