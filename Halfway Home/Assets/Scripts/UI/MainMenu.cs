@@ -13,7 +13,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public int MainLevel = 1;
+    public string MainLevel = "Main";
 
     public GameObject Buttons;
     public Button ContinueButton;
