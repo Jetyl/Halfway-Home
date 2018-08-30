@@ -11,7 +11,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Makeshift Monocle
+  companyName: DigiPen Makeshift Monocle
   productName: Halfway Home
   defaultCursor: {fileID: 2800000, guid: 60bbcfc73eee5544db00bd95fa5135b4, type: 3}
   cursorHotspot: {x: 0, y: 0}
@@ -39,12 +39,12 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
-    duration: 2
   - logo: {fileID: 21300000, guid: 08ad0a104c59c2e47a25d4a9cb6fef5e, type: 3}
     duration: 2.5
   - logo: {fileID: 21300000, guid: e8915c3581f1442408d7e7d52879b538, type: 3}
     duration: 2.5
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
