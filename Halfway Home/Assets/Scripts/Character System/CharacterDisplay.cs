@@ -323,6 +323,7 @@ public class CharacterDisplay : MonoBehaviour
         if (Skip)
         {
             visual.color = awhite;
+            BackSprite.color = awhite;
             Destroy(gameObject, 0.5f);
             return;
         }

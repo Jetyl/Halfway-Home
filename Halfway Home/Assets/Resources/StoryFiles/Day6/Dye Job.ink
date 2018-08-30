@@ -28,6 +28,7 @@ EXTERNAL GetIntValue(value)
 EXTERNAL SetTimeBlock(int)
 EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
+EXTERNAL GetStringValue(name)
 EXTERNAL CallSleep()
 
 -> Start
@@ -168,11 +169,14 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 +[Talk to {Isaac:Isaac again.|Isaac.}] ->Isaac->ARChoice
 +[Search {Search:again.|the room.}] ->Search->ARChoice
 +[Go to another room.]
+	Okay, we should head to the... #Skip
 	++[Commons] ->Commons
 	++{unlockedGarden}[Garden] ->Garden
 	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
-	++[Nevermind]-> ARChoice
+	++[Nevermind]
+		Or, no. We should... #Skip
+		-> ARChoice
 
 =Isaac
 //Isaac mentions having been with Eduardo when he bought them and that they decided to do the dying outside in the Garden since it was a nice day.
@@ -228,11 +232,14 @@ We {step into the cozy heart of Sunflower House.|return to the common room.} # B
 +[Talk to {Trissa:Trissa again.|Trissa.}] ->Trissa->CoChoice
 +[Search {Search:again.|the room.}] ->Search->CoChoice
 +[Go to another room.]
+	Okay, we should head to the... #Skip
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
 	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
-	++[Nevermind]-> CoChoice
+	++[Nevermind]
+		Or, no. We should... #Skip
+		-> CoChoice
 
 =Trissa
 [Trissa] "{Oh yeah! I am the <i>Master</i>! You better think twice next time you start talkin' a big game!|Oh, y'all are back, huh?}" # Trissa = Happy, stage_left
@@ -262,11 +269,14 @@ We regroup at the front of the room. # All = Exit #Skip
 =GChoice
 +[Search {Search:again.|the area.}] ->Search->GChoice
 +[Go to another room.]
+	Okay, we should head to the... #Skip
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
 	++{unlockedCafe}[Cafe] ->Cafe
 	++{unlockedLibrary}[Library] ->Library
-	++[Nevermind]-> GChoice
+	++[Nevermind]
+		Or, no. We should... #Skip
+		-> GChoice
 
 =Search
 {Timothy sets about searching the back of the garden while I take the front|The two of us do a second sweep of the area}.
@@ -294,11 +304,14 @@ Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh frui
 +[Talk to {Max:Max again.|Max.}] ->Max
 +[Search {Search:again.|the room.}] ->Search->CaChoice
 +[Go to another room.]
+	Okay, we should head to the... #Skip
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
 	++{unlockedLibrary}[Library] ->Library
-	++[Nevermind]-> CaChoice
+	++[Nevermind]
+		Or, no. We should... #Skip
+		-> CaChoice
 
 =Max
 {Max==1:
@@ -407,11 +420,14 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 +[Talk to {Charlotte:Charlotte again.|Charlotte.}] ->Charlotte->LChoice
 +[Search {Search:again.|the room.}] ->Search->LChoice
 +[Go to another room.]
+	Okay, we should head to the... #Skip
 	++[Commons] ->Commons
 	++[Art Room] ->ArtRoom
 	++{unlockedGarden}[Garden] ->Garden
 	++{unlockedCafe}[Cafe] ->Cafe
-	++[Nevermind]-> LChoice
+	++[Nevermind]
+		Or, no. We should... #Skip
+		-> LChoice
 
 =Charlotte
 {Charlotte==1:
