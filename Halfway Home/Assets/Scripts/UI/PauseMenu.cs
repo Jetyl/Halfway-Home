@@ -86,7 +86,7 @@ public class PauseMenu : MonoBehaviour
             Game.current = data;
             ReaderReference.Clear();
             //ReaderReference.LoadSave();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Main");
         }
 
         

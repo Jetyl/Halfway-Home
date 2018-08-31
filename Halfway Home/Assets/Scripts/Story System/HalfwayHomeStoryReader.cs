@@ -538,7 +538,7 @@ namespace HalfwayHome
 
         public int GetTrueSocial(string ValueName)
         {
-            return Game.current.Self.GetTrueSocialStat((Personality.Social)Enum.Parse(typeof(Personality.Social), ValueName));
+            return Game.current.Self.GetBasicSocialStat((Personality.Social)Enum.Parse(typeof(Personality.Social), ValueName));
 
         }
 
