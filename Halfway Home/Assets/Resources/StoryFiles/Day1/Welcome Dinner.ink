@@ -182,17 +182,17 @@ Max sits back down near Timothy, and the usual chatter of the room resumes.   #M
 ->TalkingToTimothy
 
 ===GeneralTalk===
-[Max] "I wanna again, apologies for the whole roommate debacle."
+[Max] "I wanna apologize again for the whole roommate debacle."
 [Max] "I know you don't want another thing on your plate for this week."
 You have no idea.
-[Max] "Also, thanks with the save with the keys."
+[Max] "Also, thanks for the save with the keys."
 [{player_name}] "No prob."
 [Max] "How'd you even know they were there?" #Skip
 +[Lucky Guess]
 	[{player_name}] "Lucky guess."
 	[Max]"Well that's some fine luck ya got." 
 +[I saw it in a dream]
-	[{player_name}] "I was having one of those 'deja vu' things? you know, where you feel you saw all this before in a dream."
+	[{player_name}] "I was having one of those 'deja vu' things. You know, where you feel you saw all this before in a dream."
 	[Max] "Well, that was some real accurate dreaming you got there."
 -->TalkingToTimothy
 

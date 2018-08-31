@@ -6365,9 +6365,12 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="music_unfinished_business" ID="{56E0DF1A-0126-47E4-8C3A-219492EF6D02}" ShortID="568536866">
 							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="78"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6434,7 +6437,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 										<MusicCue Name="Exit Cue" ID="{7CA98ECF-1E7A-46E9-AB03-AADB6CB5A7BF}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="109969.6875"/>
+												<Property Name="TimeMs" Type="Real64" Value="109230.769230769"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -6944,7 +6947,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								</MusicSegment>
 								<MusicSegment Name="music_artroom_loop" ID="{1B586866-0DD9-46C1-96DC-5D490D4ED2F4}" ShortID="1030241070">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="16000.0000000001"/>
+										<Property Name="EndPosition" Type="Real64" Value="16077.9404625907"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6984,9 +6987,9 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 														<MusicClip Name="music_artroom" ID="{5BFFF196-BF13-4EE9-9367-137F24CE4B92}">
 															<PropertyList>
 																<Property Name="BeginTrimOffset" Type="Real64" Value="30000"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="46000.0000000001"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="46076.1528373019"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="67.1700202256652"/>
 																<Property Name="PlayAt" Type="Real64" Value="-30000"/>
 															</PropertyList>
 															<AudioSourceRef Name="music_artroom" ID="{525BF54E-84C0-4B78-87DC-C03AE1530FA3}"/>
@@ -7003,7 +7006,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>46</XPos>
+																				<XPos>46.07615</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -7022,7 +7025,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>46</XPos>
+																				<XPos>46.07615</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -7041,7 +7044,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>46</XPos>
+																				<XPos>46.07615</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>

@@ -15,7 +15,6 @@ MonoBehaviour:
   - {fileID: 102900000, guid: b99aac2ff6c5c9845b4fea9440a2a09c, type: 3}
   - {fileID: 102900000, guid: 23a8ece9d7cf2b7419a715d56c9135ac, type: 3}
   - {fileID: 102900000, guid: a1ca1b9f50bee884686480adada702e9, type: 3}
-  - {fileID: 102900000, guid: 63fd426c69a2d9e4c8085010690e1c34, type: 3}
   tagColors:
     enabled: 1
     coloredTags:
@@ -30,8 +29,4 @@ MonoBehaviour:
     - Tag: Player
       Color: {r: 1, g: 1, b: 1, a: 0}
     - Tag: GameController
-      Color: {r: 1, g: 1, b: 1, a: 0}
-    - Tag: SubGoalParent
-      Color: {r: 1, g: 1, b: 1, a: 0}
-    - Tag: NotHideable
       Color: {r: 1, g: 1, b: 1, a: 0}

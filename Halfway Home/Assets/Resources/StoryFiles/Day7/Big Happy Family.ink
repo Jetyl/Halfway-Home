@@ -155,17 +155,17 @@ I sit myself down with my meal. # Play : Stop_All
 [Timothy] "Oh.<delay=0.5> Hi."
 {He seems to be in a quiet mood today.|He's quiet again. Am I too late to help him?}
 {I silently eat with him for a while until I hear a loud voice approach.|I search for something to say to break the silence. Anything. But before I find the words, a loud voice approaches.} #Timothy = Exit
-[Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_approaching
+[Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_soft
 [{player_name}] "Eh. Fine, I guess..." #Skip
 + [How about you?]
 	"How about you?"
 + [Where've you two been?]
 	"Where've you two been?"
 -[Eduardo] "Oh, we kinda... just got up."
-[Max] "Again? You two really need to sort out your sleep schedules!" #Max = Calm #Eduardo = Surprised, right
+[Max] "Again? You two really need to sort out your sleep schedules!" #Max = Calm #Eduardo = Surprised, right # sfx : play_sfx_human_footsteps_soft
 //Max seems to have also joined in, likely having overheard Eduardo's hard-to-miss voice. (Seems unnecessary. We are already showing this.)
 [Eduardo] "Hey! We were busy, alright?"
-[Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right
+[Trissa] "Doing what, making out?" #Trissa = Calm #Isaac = Stage_left, right #Charlotte = Calm #Max= Stage_right # sfx : play_sfx_human_footsteps_soft
 [Eduardo] "Oh don't you start, too!" #Eduardo = Angry
 [Charlotte] "If either of you require assistance in making a schedule, you have only to ask." # Charlotte = Happy
 {GetValue("MissedTea")==true||GetValue("MissedLesson")==true:
@@ -352,7 +352,7 @@ Isaac drags Eduardo out of the cafe in a huff.
 "I messed up..."
 [Charlotte] "Sorry, what do you mean by that?"
 I walk away from the cafe. #Charlotte=Exit
-[Voices] "It was stupid to think of this unstable place as a family."
+[Voices] "It was stupid to think of this unstable place as a family." # ambience_vol | -10
 ~SetValue("ReflectOnBreakdown", true)
-I'm so stupid. #depression += 25
+I'm so stupid. #depression += 25 # ambience_vol | 0
 ->END

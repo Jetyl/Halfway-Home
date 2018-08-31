@@ -297,13 +297,13 @@ public class AudioManager : MonoBehaviour
         return;
       case "MLayer":
         AkSoundEngine.PostEvent(e[0], MusicPlayer.gameObject);
-        Game.current.CurrentTrack = e[0];
-        Trace.Script($"Loading music {Game.current.CurrentTrack}");
+        //Game.current.CurrentTrack = e[0];
+        Trace.Script($"Layering music {Game.current.CurrentTrack}");
         return;
       case "ALayer":
         AkSoundEngine.PostEvent(e[0], AmbiencePlayer.gameObject);
-        Game.current.CurrentAmbience = e[0];
-        Trace.Script($"Loading ambience {Game.current.CurrentAmbience}");
+        //Game.current.CurrentAmbience = e[0];
+        Trace.Script($"Layering ambience {Game.current.CurrentAmbience}");
         return;
       default:
         Trace.Script($"Error loading {e[0]}");

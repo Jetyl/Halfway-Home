@@ -13,9 +13,14 @@
 			<ShortName>story_recover_restart_required</ShortName>
 			<Path>story_recover_restart_required.bnk</Path>
 			<IncludedEvents>
+				<Event Id="188792618" Name="play_sfx_bed_creak" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_bed_creak"/>
 				<Event Id="2124921401" Name="play_sfx_human_ghostwhisper" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_ghostwhisper"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="58705680" Language="SFX">
+					<ShortName>263137__tmacroberts__creaking.wav</ShortName>
+					<Path>SFX\263137__tmacroberts__creaking_E381B43F.wem</Path>
+				</File>
 				<File Id="318063250" Language="SFX">
 					<ShortName>ghostwhisper2.wav</ShortName>
 					<Path>SFX\ghostwhisper2_00FA84C2.wem</Path>

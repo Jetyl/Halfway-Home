@@ -147,7 +147,7 @@ I'm leaving tomorrow and I don't know what to do.
 I don't want to leave. I've been here too long. I don't know what I'll do when I'm gone.
 But I don't want to stay here, in this vacant room. I don't want to waste away.
 I don't want to leave. @I don't want to stay.
-As I drift off to sleep, all I can think about is how badly I want this pain to go away. #Background / Dream, eyeclose
+As I drift off to sleep, all I can think about is how badly I want this pain to go away. # Play : Stop_All #Background / Dream, eyeclose
 ->->
 
 ===SecondRRR===
@@ -162,7 +162,7 @@ Maybe I'm just losing the last of my marbles. There's only one way to be sure.
 My memory is hazy, but I swear I remember everything until tonight as if it has happened twice.
 So... it all comes down to tonight.
 Will I wake up tomorrow and leave this place? Or will I wake to Timothy's first day.
-These thoughts eat away at my mind. I toss and turn for a while before sleep finally comes.
+These thoughts eat away at my mind. I toss and turn for a while before sleep finally comes. # Play : Stop_All
 ->->
 
 ===RepeatRRR===
@@ -178,7 +178,7 @@ I slide under the covers, take a deep breath, and exhale.
 This week keeps on repeating. I don't understand why or how, but I've been given a chance to fix this.
 To fix everything.
 {SecondarySuccess==0:Timothy has to be the key. If I can just help him...|Not just to help Timothy, but to help myself. And when I do...}
-I can finally leave this place.
+I can finally leave this place. # Play : Stop_All
 ->->
 
 === TheDream ===
@@ -187,7 +187,7 @@ This is it. Sunflower House. # Background / HouseFront, EyeOpen # Ambience : pla
 `A Garden for the Mind` according to the brochure {the doctors gave me.|.}
 Pretty cheesy, but they said I don't really stand much chance in the real world. {Maybe they're right|At least in here there are fewer people for me to disappoint|But this was my choice, not theirs}.
 The car behind me pulls away{.|. I wonder if I'll ever see home again.|. They'll  be back someday.} # SFX : play_sfx_object_car_away
-I feel something gnawing at the back of my mind{, but I ignore it|. I know this feeling}. I walk up to the building and heave open the large oak doors. # Background / Commons, Blackwipe # Ambience : play_ambience_fireplace
+I feel something gnawing at the back of my mind{, but I ignore it|. I know this feeling}. I walk up to the building and heave open the large oak doors. # Background / Commons, Blackwipe, NoDefaults # Ambience : play_ambience_fireplace # SFX : play_sfx_door_creak
 The gnawing intensifies as I step inside. It's like an {itch in my brain|anchor weighing down my soul|old friend now}.
 Max rounds the corner, all smiles. {Wait, Max? How do I know that name?|I don't question how I know their name. I just do.} # Max = Happy
 [Max?] "Hi! Welcome to Sunflower House! Are you the new resident I'm supposed to be expecting? {player_name}, right?"
@@ -198,19 +198,19 @@ I clutch my head {to try and contain the writhing within|in a vain attempt to du
 [Max] "Since your room's here on the first floor, I'll be... your... R.A.
 <> Hey, are you feeling alright?" # Max = Afraid
 I nod. I'd rather not make a scene. # Max = Sad
-[Max] "Why I don't I go ahead and show you to your room?"
+[Max] "Why don't I go ahead and show you to your room?"
 As Max leads me down the hallway and opens the door to my new room, I feel an overwhelming sense of {'deja vu'|existential terror|nostalgia}.
-[Max] "Your quarters, your Majesty. Uh, maybe you should lie down or something." # Background / YourRoom, Blackwipe # Ambience : Stop_All
+[Max] "Your quarters, your Majesty. Uh, maybe you should lie down or something." # Background / YourRoom, Blackwipe, NoDefaults
 [{player_name}] "No, I'll be fine."
 [Max] "Okay, then. I've gotta get back to cleaning the cafeteria, so just come and find me whenever you're ready." # Max = Calm
 "Welcome {to Sunflower House|to eternity|back}!"
 Max departs, leaving me alone in my new room. {Why doesn't it feel like the first time I've been in here?|Somehow I've been here before.|I won't be alone for long.} # Max = Exit
 I look over at the other bed and {a shiver crawls up my spine|a wave of despair washes over me|smile}. {Inexplicable dread overcomes me|Something is missing|It won't be long now}.
 {Wait. I clutch my pounding head|I feel week. I lean against the wall|I have another chance}.
-{I know whose bed this is.|How could I have forgotten?|To make thing right.}
+{I know whose bed this is.|How could I have forgotten?|To make things right.}
 Timothy Miyuri. # Timothy = Calm # Stress => 100
 This... isn't real. # Timothy = Exit
-The gnawing in my mind transforms into {the shock of epiphany|guilt|determination} as color drains from the world. # Depression => 100
+The gnawing in my mind transforms into {the shock of epiphany|guilt|determination} as color drains from the world. # Depression => 100 # Ambience : Stop_All
 The room falls away into darkness and I am whisked back to Blackwell. # Background / Dream, Crossfade # Play : play_music_creepy_atmo
 I can feel the whispers before I hear them. I'm not running this time.
 {->Accusation1|->Accusation2|->Accusation3}

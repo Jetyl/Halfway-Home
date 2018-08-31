@@ -147,6 +147,7 @@
 				<SoundBank Name="story_recover_restart_required" ID="{C3B9F27D-16DF-4509-94A5-A09C0B43B62B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_sfx_human_ghostwhisper" ID="{B794F947-F070-4131-95F2-34839929104C}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_bed_creak" ID="{79AFBEAF-E089-4B9F-BB69-B792B61FB160}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

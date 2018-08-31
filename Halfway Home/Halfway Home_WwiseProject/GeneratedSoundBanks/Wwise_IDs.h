@@ -70,6 +70,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_BED_CREAK = 188792618U;
         static const AkUniqueID PLAY_SFX_DOOR_CREAK = 3759803571U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
+        static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_SOFT = 1787579972U;
         static const AkUniqueID PLAY_SFX_HUMAN_GHOSTWHISPER = 2124921401U;
         static const AkUniqueID PLAY_SFX_HUMAN_KNOCK = 2319499992U;
         static const AkUniqueID PLAY_SFX_HUMAN_NOTEBOOK = 1091239431U;

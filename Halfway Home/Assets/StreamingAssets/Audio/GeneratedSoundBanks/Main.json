@@ -40,6 +40,16 @@
       "ObjectPath": "\\Events\\PlaySFX\\sfx_ambient\\play_sfx_ambient_heartbeat"
      },
      {
+      "Id": "2653434280",
+      "Name": "play_sfx_human_footsteps_approaching",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_footsteps_approaching"
+     },
+     {
+      "Id": "1787579972",
+      "Name": "play_sfx_human_footsteps_soft",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_footsteps_soft"
+     },
+     {
       "Id": "1091239431",
       "Name": "play_sfx_human_notebook",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_notebook"
@@ -80,6 +90,12 @@
       "Path": "SFX\\skip_sound_178D0C9C.wem"
      },
      {
+      "Id": "541639029",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder1.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder1_00FA84C2.wem"
+     },
+     {
       "Id": "605418621",
       "Language": "SFX",
       "ShortName": "BlipBurstingS GFX018902.wav",
@@ -90,6 +106,12 @@
       "Language": "SFX",
       "ShortName": "pencil_scribble.wav",
       "Path": "SFX\\pencil_scribble_00FA84C2.wem"
+     },
+     {
+      "Id": "865371990",
+      "Language": "SFX",
+      "ShortName": "sfx_footsteps_placeholder2.wav",
+      "Path": "SFX\\sfx_footsteps_placeholder2_00FA84C2.wem"
      },
      {
       "Id": "873914021",

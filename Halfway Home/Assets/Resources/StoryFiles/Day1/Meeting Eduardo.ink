@@ -37,8 +37,8 @@ EXTERNAL GetValue(value)
 
 ===MeetWeek2===
 I stumble into the art room, dumbfounded as to how my day has gone so far. 
-All the art peices seem to have devolved in progression from where they were just last time I was here.
-I see (though more hear), that I am not alone in the room. #Eduardo = happy #Isaac = Calm
+All the art pieces seem to have devolved in progression from where they were just last time I was here.
+I see, or rather hear, that I am not alone in the room. #Eduardo = happy #Isaac = Calm # SFX : play_sfx_human_footsteps_approaching
 Eduardo and Isaac are in here, like usual, which is honestly not that weird, all things considered.
 But, Isaac is painting something that I swear I saw him work on last week...
 ->SoloIntroductions
@@ -57,38 +57,38 @@ I decide to go over there, and see how they are doing.
 [Voices] "You'll be wasting their time."
 {
 	-depression < 85:
-	No, I'm not!
+	No, I won't!
 }
 [Eduardo] "I'm telling you, it was hilarious." #Eduardo = Happy
 [Isaac] "Hrm." #Isaac = Calm
-[{player_name}] "Hey guys. what's up" #Eduardo = Calm
+[{player_name}] "Hey guys. What's up?" #Eduardo = Calm
 [Eduardo] "Oh, hey {player_gender == "F": dudette| dude}, not much. We're just chilling here."
-"How bout you? How's it hangin'?"
+"How 'bout you? How's it hangin'?"
 {
 	-week == 2:
-		Oh you know, fine. Just having the freakiest case of 'deja vu' in my life! nothing major.
+		Oh you know, fine. Just having the freakiest case of 'deja vu' in my life! Nothing major.
 		Actually, should I even bother explaining my situation to them? #Skip
 	-else:
-		oh you know, stuck in a time loop for who knows what reason! nothing major.
+		Oh you know, stuck in a time loop for who knows what reason! Nothing major.
 		Actually, should I try to explain things to them? #Skip
 }
 +[Yes <(Expression)>]
-	I decided to try and explain the surreal circumstances of my situation to the two of them.
+	I decide to try and explain the surreal circumstances of my situation to the two of them.
 	{
-		-expression > 5:
-			The two of them are shocked into silence as I recount things I shouldn't know in just vivid detail. #Isaac = Surprised #Eduardo = Surprised #expression ^ good
+		-expression > 4:
+			The two of them are shocked into silence as I recount things I shouldn't know in vivid detail. #Isaac = Surprised #Eduardo = Surprised #expression ^ good
 			[Eduardo] "Geez, {player_gender == "F": girl| man}..."
 			Yes! I seem to have gotten through to them.
 			"Like, I don't know what to say."
-			Good! I don't know what's happening
-			"Isaac? how bout you?"
-			[Isaac] "hrm. <delay=2> have you brought up these feeling to your doctor yet?"
+			Good! I don't know what's happening...
+			"Isaac? How 'bout you?"
+			[Isaac] "Hrm. <delay=2> Have you brought up these feelings to your doctor yet?"
 			Wait what?
-			[Eduardo] "Uh, yeah. I don't think were qualified helping you with those kinda feelings."
+			[Eduardo] "Uh, yeah. I don't think we're qualified helping you with those kinda feelings."
 			Wait, no, what?
-			"I don't even think Max can handle that kind of stuff. That really does sound like stuff for your doctor"
-			[Isaac] "and medication."
-			[Eduardo] "Oh! yeah, that! that to."
+			"I don't even think Max can handle that kind of stuff. That really does sound like stuff for your doctor."
+			[Isaac] "And medication."
+			[Eduardo] "Oh! Yeah, that! That too."
 			NO!
 			Both of them seem to believe I'm not lying, but they just think I'm crazy now!
 			I mean, yeah, given where we are that makes sense, but I'm not crazy!
@@ -97,13 +97,13 @@ I decide to go over there, and see how they are doing.
 			Eduardo begins having a giggle fit as I finish my tale. #Eduardo = Happy #expression ^ poor
 			[{player_name}] "What's so funny?"
 			[Eduardo] "That story man! It's hilarious!"
-			No! No its not!
-			"Oh man, thats some grade A material? right Isaac?"
+			No! No it's not!
+			"Oh man, that's some grade A material! Right, Isaac?"
 			[Isaac] "Hrm. Eh. Seven, maybe eight out of ten. @Nothing special."
-			[Eduardo] "Aw man" #Eduardo = Surprised
+			[Eduardo] "Aw man..." #Eduardo = Surprised
 	}
 +[No]
-	I decided it isn't worth it. and pretend like everything is normal.
+	I decide it isn't worth it, and pretend that everything is normal.
 	[{player_name}] "Oh, fine."
 	[Eduardo] "That's good."
 - [Eduardo] "Well, anyways. I was just telling Isaac this <i>hilarious</i> story where-" #Eduardo = Calm
@@ -114,7 +114,7 @@ I decide to go over there, and see how they are doing.
 {
 	-grace >= 1:
 		Isaac looks like he wants to say something, but is either embarrassed or afraid to. Maybe because I'm here? #grace ^ good
-		Eduardo either doesn't notice this or is more focused on that lack of a verbal answer and begins poking Isaac slightly.
+		Eduardo either doesn't notice this or is more focused on the lack of a verbal answer and begins poking Isaac slightly.
 }
 [Eduardo] "Isaac, you know if I'm annoying you or something, you can tell me. Right?"
 "Hey, Isaac. Isaac. Isaac?"
@@ -139,7 +139,7 @@ I ignore the two of them, and work on my own little drawing.
 	[Voices] "They wouldn't want to spend time with you anyways."
 }
 I pull out some of the spare paper the room has stocked, and begin sketching whatever comes to mind.
-<color=color_expression><i>Your Expression has improved, slightly!</i></color> #expression+ # All = Exit
+<color=color_expression><i>Your Expression has improved slightly!</i></color> #expression+ # All = Exit
 ->END
 
 ===MeetWithTimothy===
@@ -230,7 +230,7 @@ And Eduardo goes right back to Isaac, which is my cue to get going.
 === Needy ===
 Eduardo glomps onto Isaac, rubbing his face in Isaac's peach fuzz hair.   # Play : play_music_eduardo_love   # ambience_vol | -4   # Needy = Bored, stage_right   #Eduardo = invisible, stage_right   #Isaac = invisible, stage_right
 Isaac looks off to another part of the room. 
-The two are rather well known for the PDA around the home. One of them more so than the other.
+The two are rather well known for their PDA around the home. One of them more so than the other.
 [Isaac] "Used to be worse."
 Isaac responds as if he can read my mind.
 "Eduardo used to have no respect for <i>anyone's</i> boundaries."
@@ -238,7 +238,7 @@ Isaac responds as if he can read my mind.
 [Eduardo] "What can I say? I'm needy."
 [Isaac] "Hrm."
 Eduardo being all over Isaac seems to do nothing to Isaac's usual pokerface.
-[Eduardo] "And I <flow><i>wuv</i>,</flow> you!" # Needy = blush
+[Eduardo] "And I <flow><i>wuv</i></flow> you!" # Needy = blush
 <i>Yikes</i> that's cheesy.
 It seems that line finally breaks down Isaac's pokerface like it was nothing.
 {Relationships are weird.|Relationships are still weird.} #Needy = Exit

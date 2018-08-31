@@ -20,12 +20,23 @@
     "Path": "story_recover_restart_required.bnk",
     "IncludedEvents": [
      {
+      "Id": "188792618",
+      "Name": "play_sfx_bed_creak",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_bed_creak"
+     },
+     {
       "Id": "2124921401",
       "Name": "play_sfx_human_ghostwhisper",
       "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_ghostwhisper"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "58705680",
+      "Language": "SFX",
+      "ShortName": "263137__tmacroberts__creaking.wav",
+      "Path": "SFX\\263137__tmacroberts__creaking_E381B43F.wem"
+     },
      {
       "Id": "318063250",
       "Language": "SFX",

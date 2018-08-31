@@ -22,7 +22,7 @@ VAR possessive = ""
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
-# music_vol | -6
+# Load @ story_knock_on_the_morning_door # music_vol | -6
 
 -> Start
 
@@ -53,7 +53,7 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   #Background / YourRoom, eyeopen   # SFX : play_sfx_human_knock
 		What do they want?
 	- week == 2:
-		I wake with a start. # Stress => 10  # Depression => 25  # Fatigue => 15 # Background / YourRoom, EyeOpen # Time * Hide #Acheivement $ ACH_WEEK
+		I wake with a start. # Stress => 10  # Depression => 25 # Fatigue => 15 # Background / YourRoom, EyeOpen, NoDefaults # Time * Hide #Acheivement $ ACH_WEEK # Play : Play_music_placeholder_main_fadein 
 		I spend a few confused moments unsure of my reality before I grasp that I'm awake now.
 		It was that same dream again, but this time I knew I was dreaming. That's never happened before.
 		The events of the week prior feel so far away... lost to the vivid horror of the nightmare. I can barely remember any of it.
@@ -62,14 +62,14 @@ EXTERNAL SetValue(name, values)
 		A cheerful knock drags me out of my dreary haze.   # SFX : play_sfx_human_knock
 		Must be Max, to take me away from this limbo.
 	- GetValue("RRRFreakout"):
-		I wake slowly, only dimly aware of the reality around me as I return to consciousness. # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
+		I wake slowly, only dimly aware of the reality around me as I return to consciousness. # Play : Play_music_placeholder_main_fadein # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
 		That dream again... I can't quite remember...
 		I stretch and turn over to face Timothy's bed. {My heart sinks to the floor.|I sigh lightly.}
 		He's gone. {Why is he gone?!|It wasn't enough.}
 		There's a knock on the door. # SFX : play_sfx_human_knock
 		{-> Freakout|->NotSurprised}
 	-else:
-		I blearily open my eyes. # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
+		I blearily open my eyes. # Play : Play_music_placeholder_main_fadein # Depression => 25  # Fatigue => 15 # Stress => 10 # Background / YourRoom, EyeOpen
 		I'm not holding out any hope that things are back to normal.
 		There's a knock on the door. # SFX : play_sfx_human_knock
 }
@@ -177,7 +177,7 @@ Suddenly confused, they begin patting themselves down. Confusion turns to panic.
 [{player_name}] "N-no, but, you lost them last week too, remember? They were stuck in the couch cushions in the commons."
 [Keyless>Max] "I don't recall losing my keys last week, but... couch cushions? Hmm..." #Keyless=Calm
 "One sec. I'mma be right back." #Keyless=Exit
-And with that Max quickly runs off, leaving me and Timothy alone
+And with that Max quickly runs off, leaving me and Timothy alone.
 [{player_name}] "Timothy, are you getting really weird 'deja vu' today, too?"
 Timothy is just kind of quietly staring at the corner where his bed is.
 "Yo, Timothy, can you hear me?"
@@ -214,7 +214,7 @@ I take a deep breath, shaking off some of the existential dread still washing ov
 -> END
 
 ===Repeat===
-I open the door to Max's beaming face. A scared Timothy hides behind them.   #Keyless = Calm   #Timothy = Afraid # Time * Show
+I open the door to Max's beaming face. A scared Timothy hides behind them. # Play : play_music_happy   #Keyless = Calm   #Timothy = Afraid # Time * Show
 {GetValue("RRRFreakout")==true:
 	{I was wrong. Looks like I'm in for another repeat week.|Yep. That's about right.}
 	{I try to hide my disappointment.|One more time from the top.}

@@ -239,9 +239,9 @@ Okay, some common consonants are... #Skip
 
 
 ===AlreadyKnow===
-[{player_name}] "It's `hope`."
-[Timothy] "What?! No Way!" #Timothy = Surprised
-"How'd you guess is so quickly?" #Timothy=Sad
+[{player_name}] "It's `hope.`"
+[Timothy] "What?! No way!" #Timothy = Surprised
+"How'd you guess it so quickly?" #Timothy=Sad
 {
 	-week == 2:
 		Crap, it was the same! Yet another deja vu to the pile I suppose.

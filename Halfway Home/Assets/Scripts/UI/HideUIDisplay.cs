@@ -5,40 +5,34 @@ using UnityEngine.UI;
 
 public class HideUIDisplay : MonoBehaviour
 {
-    bool UIOn = true;
-    private bool OnMap;
-    private bool Paused;
-    public GameObject[] IgnoredObjects;
-    public string IgnoredTag;
+  bool UIOn = true;
+  private bool OnMap;
+  public GameObject[] IgnoredObjects;
+  public string IgnoredTag;
 
-    private List<Graphic> activeUIElements = new List<Graphic>();
+  private List<Graphic> activeUIElements = new List<Graphic>();
 
-    // Use this for initialization
-    void Start()
+	// Use this for initialization
+	void Start ()
     {
-        Space.Connect<DefaultEvent>(Events.ReturnToMap, OnReturnToMap);
-        Space.Connect<DefaultEvent>(Events.MapTransitionOutCompleted, OnMapTransition);
-
-        Space.Connect<DefaultEvent>(Events.Pause, OnPause);
-        Space.Connect<DefaultEvent>(Events.UnPause, OnUnPause);
-
-        OnMap = false;
-        Paused = false;
-    }
-
-    // Update is called once per frame
-    void Update()
+      Space.Connect<DefaultEvent>(Events.ReturnToMap, OnReturnToMap);
+      Space.Connect<DefaultEvent>(Events.MapTransitionOutCompleted, OnMapTransition);
+      OnMap = false;
+	  }
+	
+	// Update is called once per frame
+	void Update ()
     {
 
-        if (Input.GetMouseButtonDown(1) == true && !OnMap && !Paused)
+        if (Input.GetMouseButtonDown(1) == true && !OnMap)
         {
             if (UIOn)
                 TurnUIOff();
             else
-                TurnUIOn();
+                TurnUIOn(); 
         }
 
-        if (!UIOn)
+        if(!UIOn)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Next"))
             {
@@ -49,25 +43,13 @@ public class HideUIDisplay : MonoBehaviour
 
     void OnReturnToMap(DefaultEvent e)
     {
-        OnMap = true;
+      OnMap = true;
     }
-
+    
     void OnMapTransition(DefaultEvent e)
     {
-        OnMap = false;
+      OnMap = false;
     }
-
-
-    void OnPause(DefaultEvent e)
-    {
-        Paused = true;
-    }
-
-    void OnUnPause(DefaultEvent e)
-    {
-        Paused = false;
-    }
-
 
     void TurnUIOn()
     {
@@ -78,7 +60,7 @@ public class HideUIDisplay : MonoBehaviour
         foreach (var obj in activeUIElements)
         {
             obj.enabled = true;
-            if (obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = true;
+            if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = true;
         }
         Space.DispatchEvent(Events.OpenUI);
     }
@@ -89,17 +71,17 @@ public class HideUIDisplay : MonoBehaviour
         UIOn = false;
         foreach (var obj in gImages)
         {
-            bool ignore = false;
-            foreach (GameObject g in IgnoredObjects)
-            {
-                if (g == obj.gameObject) ignore = true;
-            }
-            if (obj.gameObject.activeSelf && obj.enabled && !ignore && !(obj.tag == IgnoredTag))
-            {
-                obj.enabled = false;
-                if (obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = false;
-                activeUIElements.Add(obj);
-            }
+          bool ignore = false;
+          foreach (GameObject g in IgnoredObjects)
+          {
+            if(g == obj.gameObject) ignore = true;
+          }
+          if (obj.gameObject.activeSelf && obj.enabled && !ignore && !(obj.tag == IgnoredTag))
+          {
+            obj.enabled = false;
+            if(obj.GetComponent<Button>() != null) obj.GetComponent<Button>().enabled = false;
+            activeUIElements.Add(obj);
+          }
         }
         Space.DispatchEvent(Events.CloseUI);
     }

@@ -32,8 +32,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1363018217
-    m_lastTimePart2: -1999238589
+    m_lastTimePsrt1: 132162411
+    m_lastTimePart2: -1999237372
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -806,8 +806,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: -1363008210
-    m_lastTimePart2: -1999238589
+    m_lastTimePsrt1: -1174813208
+    m_lastTimePart2: -1999237449
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -928,6 +928,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1641533016
       Guid: 8ce9bb6b7092b34383ca23591e2b26fc
+      maxAttenuation: 0
+    - Name: play_sfx_human_footsteps_soft
+      Path: PlaySFX\sfx_human\play_sfx_human_footsteps_soft
+      PathAndIcons:
+      - ElementName: PlaySFX
+        ObjectType: 12
+      - ElementName: sfx_human
+        ObjectType: 4
+      - ElementName: play_sfx_human_footsteps_soft
+        ObjectType: 3
+      ID: 1787579972
+      Guid: a257094f1667a34e9da6d26a9b7f27ea
       maxAttenuation: 0
     - Name: play_sfx_human_ghostwhisper
       Path: PlaySFX\sfx_human\play_sfx_human_ghostwhisper
@@ -1115,8 +1127,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1303741273
-    m_lastTimePart2: -1999242863
+    m_lastTimePsrt1: -1405918693
+    m_lastTimePart2: -1999238581
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -1215,8 +1227,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1359114672
-    m_lastTimePart2: -1999238589
+    m_lastTimePsrt1: -1174652972
+    m_lastTimePart2: -1999237449
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1317,8 +1329,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1359104662
-    m_lastTimePart2: -1999238589
+    m_lastTimePsrt1: 498833809
+    m_lastTimePart2: -1999237366
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1477,8 +1489,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -1303855346
-    m_lastTimePart2: -1999242863
+    m_lastTimePsrt1: -276328654
+    m_lastTimePart2: -1999238583
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf

@@ -86,7 +86,7 @@ public class PauseMenu : MonoBehaviour
             Game.current = data;
             ReaderReference.Clear();
             //ReaderReference.LoadSave();
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene(1);
         }
 
         
@@ -184,7 +184,8 @@ public class PauseMenu : MonoBehaviour
         //var seq = Actions.Sequence(this);
         //Actions.Delay(seq, 0.25f);
         //Actions.Call(seq, () => Application.Quit());
-        
+
+
         if (!Application.isEditor)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
@@ -209,7 +210,7 @@ public class PauseMenu : MonoBehaviour
         
         GameObject.Find("AudioManager").GetComponent<SoundbankManager>().UnloadAllBanks();
         
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 
 }

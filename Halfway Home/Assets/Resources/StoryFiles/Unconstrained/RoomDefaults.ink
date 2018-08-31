@@ -330,7 +330,7 @@ After about an hour, I finish. My digits are starting to ache, but something abo
 <color=color_descriptor><i>Creative exertion <color=color_wellbeing_penalty>increased <b>Fatigue</b> slightly<color=color_descriptor>.</color> # Fatigue += 10
 {
 	- GetTrueSocial("Expression") > 2:
-		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor></color>! # expression ^ good, nocolor
+		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor></color> and relieved Depression. # expression ^ good, nocolor
 		<color=color_descriptor>Competency with <color=color_expression><b>Expression</b><color=color_descriptor> has resulted in this activity <color=color_wellbeing_relief>relieving <b>Depression</b><color=color_descriptor>!</color> # Depression -= 25 # expression ^ good, nocolor
 	- GetTrueSocial("Expression") > 1:
 		<color=color_descriptor>Experience with <color=color_expression><b>Expression</b><color=color_descriptor> has removed the Stress from this activity<color=color_descriptor>!</color> # expression ^ good, nocolor
