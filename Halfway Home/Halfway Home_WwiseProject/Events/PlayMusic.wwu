@@ -644,6 +644,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="play_ambience_birds_long_fade" ID="{D2416F0A-D361-41F2-8289-1EE2C9CB78B8}">
+							<ChildrenList>
+								<Action Name="" ID="{EBA0505F-F65D-4EB5-8531-DEF490192F73}" ShortID="188477720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience_birds" ID="{52085645-1F03-4C42-A5C7-93897E7C86F0}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="music_cafejazz" ID="{1FEB3445-B71A-413B-9BD9-25172DD1922B}" ShortID="149184749">
@@ -1241,7 +1256,7 @@
 						<Action Name="" ID="{E8B04C25-8671-4991-BA0D-B4969DD53CC6}" ShortID="381533590">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

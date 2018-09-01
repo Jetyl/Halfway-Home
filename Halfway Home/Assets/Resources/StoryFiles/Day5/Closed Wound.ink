@@ -31,7 +31,7 @@ EXTERNAL GetIntValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(int)
 
-# Load @ story_closed_wound   # Play : play_music_emotional_piano
+# Load @ story_closed_wound   # Ambience : play_ambience_stormy
 
 -> Start
 
@@ -73,8 +73,8 @@ That damn letter is the root of so much pain.
 -> Unlocked.Enter
 
 = Enter
-I slide the key into the lock and the door swings open. #Acheivment $ ACH_KEY
-I step inside, gently nudging the door closed behind me. # Wound / Open, Down, Blackwipe
+I slide the key into the lock and the door swings open. # SFX : play_sfx_creepy_door #Acheivment $ ACH_KEY
+I step inside, gently nudging the door closed behind me. # SFX : play_sfx_human_footsteps_soft # Wound / Open, Down, Blackwipe
 -> ClosedWound
 
 ===ClosedWound===
@@ -205,7 +205,7 @@ I see that now. And I owe it all to the scared, vulnerable human being currently
 [{player_name}] "I see what you mean about this letter..."
 "Seems like your parents expect a lot out of you..."
 Timothy wrings his hands nervously. # Timothy = Afraid
-I need to find some way to fix this: To help Timothy relax... To repay him. # Timothy = Calm
+I need to find some way to fix this: To help Timothy relax... To repay him. # Timothy = Calm # Ambience : Stop_All
 I rack my brain looking for an answer.
 {awareness==5:->Healing|->NotYet}
 
@@ -259,7 +259,7 @@ In the silence that follows, I search for a way to help repair the damage of the
 {awareness==5:->Healing|->NotYet}
 
 =Healing
-I understand what I have to do. I need to show him that he's not alone. # awareness ^ good
+I understand what I have to do. I need to show him that he's not alone. # awareness ^ good # Play : play_music_emotional_piano # Ambience : play_ambience_birds_long_fade # ambience_vol ! -6
 The only way I'm truly getting through to Timothy is by opening up to him myself. # awareness ^ good
 I know because I'm the same way. # awareness ^ good
 [{player_name}] "You remember when I was first showing you around and I told you that stuff about my depression?"
@@ -318,7 +318,7 @@ Timothy stands silently, kneading his shirt with his hands. After a long pause, 
 [Timothy] "Then we have to keep hanging out!" # Timothy = Happy
 "We'll hang out so hard they won't be able to get a word in!" # Timothy = Angry
 Timothy holds his fists up like he's ready for a good old fisticuffs. //basic, maybe reword later
-Be both let out a laugh. #Timothy = happy //basic, maybe reword later
+We both let out a laugh. #Timothy = happy //basic, maybe reword later
 Timothy yawns heavily. //basic, maybe reword later
 "But... not tonight." # Timothy = Sad
 "S-sorry, but I need to settle my nerves a bit. And I'm really tired." # Timothy = Calm

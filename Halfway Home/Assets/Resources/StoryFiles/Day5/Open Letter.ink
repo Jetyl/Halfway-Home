@@ -315,13 +315,13 @@ Charlotte sighs, her eyes wandering off somewhere before returning directly to m
 
 === ClosedWound ===
 ->MaxMail->
-With Max gone, I can finally go find Timothy. I'm certain I saw him heading in the direction of our room.   # Play : Stop_All   # Ambience : play_ambience_stormy
+With Max gone, I can finally go find Timothy. I'm certain I saw him heading in the direction of our room.   # Play : Stop_All
 {
 	-GetValue("RoomKey") == true:
 		~SetValue("FollowTimothy", true)
 		-> END
 	-else:
-		I arrive at my door and take a deep breath. I feel oddly nervous. # Background / HallwayDay, Blackwipe
+		I arrive at my door and take a deep breath. I feel oddly nervous. # Background / HallwayDay, Blackwipe, NoDefaults # Ambience : Stop_All
 		Having calmed my nerves a bit, I reach for the knob and...
 		{firstfollow:It's locked?|Oh, right. It's locked. And I still don't have a key.}
 		{firstfollow:Timothy actually locked me out?|How was I expecting this to go?}

@@ -2678,7 +2678,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6491,7 +6491,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 							<ChildrenList>
 								<MusicSegment Name="music_farewell" ID="{475903AE-B44E-47C2-B62D-585B160C3B43}" ShortID="748202281">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="100591.708333333"/>
+										<Property Name="EndPosition" Type="Real64" Value="94723.7376731863"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6528,9 +6528,9 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 														<MusicClip Name="You and I" ID="{8555F2E6-2220-4A3A-ADBB-79B29473351D}">
 															<PropertyList>
 																<Property Name="BeginTrimOffset" Type="Real64" Value="2.27373675443232E-13"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="100591.708333333"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="94723.7376731863"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="4596.57701711492"/>
 																<Property Name="PlayAt" Type="Real64" Value="-2.27373675443232E-13"/>
 															</PropertyList>
 															<AudioSourceRef Name="You and I" ID="{A19467D1-E7A1-4D70-B111-144BEAB3E7F4}"/>
@@ -6547,7 +6547,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>100.591708333333</XPos>
+																				<XPos>94.72374</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -6566,7 +6566,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>100.591708333333</XPos>
+																				<XPos>94.72374</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -6585,7 +6585,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>100.591708333333</XPos>
+																				<XPos>94.72374</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -6604,7 +6604,7 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 										<MusicCue Name="Exit Cue" ID="{CD70D0BD-072F-492F-BE9A-E2203BF793AA}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="100591.708333333"/>
+												<Property Name="TimeMs" Type="Real64" Value="92000"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>

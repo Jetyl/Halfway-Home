@@ -14,11 +14,21 @@
 			<Path>story_ending_days.bnk</Path>
 			<IncludedEvents>
 				<Event Id="4092317258" Name="play_music_farewell" ObjectPath="\Events\PlayMusic\music_farewell\play_music_farewell"/>
+				<Event Id="1824880844" Name="play_sfx_car_horn" ObjectPath="\Events\Default Work Unit\play_sfx_car_horn"/>
+				<Event Id="1700209709" Name="play_sfx_object_car_away" ObjectPath="\Events\PlaySFX\sfx_object\play_sfx_object_car_away"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="417659351" Language="SFX">
+					<ShortName>431396__mariadrrs__car-horn.wav</ShortName>
+					<Path>SFX\431396__mariadrrs__car-horn_C0B8E4C6.wem</Path>
+				</File>
 				<File Id="457042621" Language="SFX">
 					<ShortName>You and I.wav</ShortName>
 					<Path>SFX\You and I_A51F8DD7.wem</Path>
+				</File>
+				<File Id="541036875" Language="SFX">
+					<ShortName>sfx_object_car_away1.wav</ShortName>
+					<Path>SFX\sfx_object_car_away1_00FA84C2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

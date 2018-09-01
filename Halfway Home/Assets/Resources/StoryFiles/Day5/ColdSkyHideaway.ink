@@ -32,7 +32,7 @@ EXTERNAL SetTimeBlock(time)
 -> Start
 
 === Start ===
-I step out into the gardens. its rather cold out tonight. # Ambience : play_ambience_fireplace # ambience_lpf ! 0
+I step out into the gardens. its rather cold out tonight.
 There isn't a single star in sky tonight.
 { 
 	
@@ -304,7 +304,7 @@ Oh, well.
 "Thanks."
 "And... thanks again. For, uh, letting me ramble."
 [{player_name}] "No problem, Isaac."
-I help him up off the ground. #background / garden #Isaac = calm
+I help him up off the ground. #background / garden, NoDefaults #Isaac = calm
 [Isaac] "Oh, and, um..."
 "I am gonna talk to Eduardo about... all this sometime soon."
 "Before you leave. That's my deadline."
@@ -330,7 +330,7 @@ As I keep talking, rambling really, I notice Isaac has once again gone unrespons
 "..."
 "Sure."
 [{player_name}] "Um, okay."
-I keep talking to Isaac for a while longer, but despite what he said I don't feel like anything I'm saying is helpful. #background / garden, crossfade #Isaac = sad
+I keep talking to Isaac for a while longer, but despite what he said I don't feel like anything I'm saying is helpful. #background / garden, crossfade, NoDefaults #Isaac = sad
 After a while, Isaac asks to leave, and we part ways. The biting cold of the night breeze nips at my face. #Isaac = exit
 I guess I screwed that up. I feel like I did, anyways.
 Maybe I should've let Isaac talk more...

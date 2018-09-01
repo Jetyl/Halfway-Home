@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID LPFOFF_MUSIC_MAINMENU = 3897416341U;
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
+        static const AkUniqueID PLAY_AMBIENCE_BIRDS_LONG_FADE = 2370408065U;
         static const AkUniqueID PLAY_AMBIENCE_CROWD = 2781780852U;
         static const AkUniqueID PLAY_AMBIENCE_CROWD_WHISPERING = 54526557U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
@@ -68,6 +69,8 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_UNFINISHED_BUSINESS = 3483334370U;
         static const AkUniqueID PLAY_SFX_AMBIENT_HEARTBEAT = 197627707U;
         static const AkUniqueID PLAY_SFX_BED_CREAK = 188792618U;
+        static const AkUniqueID PLAY_SFX_CAR_HORN = 1824880844U;
+        static const AkUniqueID PLAY_SFX_CREEPY_DOOR = 4285799733U;
         static const AkUniqueID PLAY_SFX_DOOR_CREAK = 3759803571U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_SOFT = 1787579972U;

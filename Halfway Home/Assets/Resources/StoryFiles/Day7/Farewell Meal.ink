@@ -224,7 +224,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 	I give Eduardo a nice firm handshake, and he perks up, just a little. #Eduardo = Calm
 -[{player_name}] "Hey, you going to be okay?"
 [Eduardo] "Eh. prolly." #Eduardo = Sad
-"I don't feel to hot now though. Was up, now I'm down, and all that."
+"I don't feel too hot now though. Was up, now I'm down, and all that."
 Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
 ->->
 
@@ -247,7 +247,7 @@ Eduardo is the first to come up. #Eduardo = Sad
 	I give Eduardo a nice firm handshake, and he perks up, just a little. #Eduardo = Calm
 -[{player_name}] "Hey, you going to be okay?"
 [Eduardo] "Eh. prolly." #Eduardo = Sad
-"I don't feel to hot now though. Was up, now I'm down, and all that."
+"I don't feel too hot now though. Was up, now I'm down, and all that."
 Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
 ->->
 

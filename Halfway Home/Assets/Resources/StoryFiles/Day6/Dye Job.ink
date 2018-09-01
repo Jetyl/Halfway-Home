@@ -30,6 +30,8 @@ EXTERNAL SetValue(name, values)
 EXTERNAL SetIntValue(name, string)
 EXTERNAL CallSleep()
 
+# Load @ story_dye_job
+
 -> Start
 
 === Start ===
@@ -53,7 +55,7 @@ I stagger into the room with a yawn.
 // CUT: huh?
 "<size=60%>{player_name}."
 "<size=80%>Are you awake?"
-In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main #fatigue => 0 #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main # music_vol | -6 #fatigue => 0 #Background / YourRoom, eyeopen, NoDefaults // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"
@@ -67,7 +69,7 @@ Unexpected is good.
 [Timothy] "Th-Thank You!" #Timothy = Happy
 "I'll meet you in the common area when you're ready."
 Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = Exit
-It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe #Timothy = Calm // I feel like this line can be improved, but I'm not sure how yet
+It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe, NoDefaults #Timothy = Calm // I feel like this line can be improved, but I'm not sure how yet
 ->InTheCommons
 
 ===InTheCommons===

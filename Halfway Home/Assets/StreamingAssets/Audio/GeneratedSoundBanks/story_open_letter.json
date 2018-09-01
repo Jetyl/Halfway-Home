@@ -25,11 +25,6 @@
       "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
      },
      {
-      "Id": "3646524025",
-      "Name": "play_ambience_stormy",
-      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_stormy"
-     },
-     {
       "Id": "1020080944",
       "Name": "play_music_happy",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
@@ -44,12 +39,6 @@
      }
     ],
     "IncludedMemoryFiles": [
-     {
-      "Id": "710471171",
-      "Language": "SFX",
-      "ShortName": "ambience_stormy\\ambience_stormy.wav",
-      "Path": "SFX\\ambience_stormy\\ambience_stormy_178D0C9C.wem"
-     },
      {
       "Id": "1039116749",
       "Language": "SFX",

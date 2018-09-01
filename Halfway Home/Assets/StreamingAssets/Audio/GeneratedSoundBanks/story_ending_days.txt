@@ -1,6 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1700209709	play_sfx_object_car_away			\PlaySFX\sfx_object\play_sfx_object_car_away	
+	1824880844	play_sfx_car_horn			\Default Work Unit\play_sfx_car_horn	
 	4092317258	play_music_farewell			\PlayMusic\music_farewell\play_music_farewell	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	417659351	CarHorn	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\431396__mariadrrs__car-horn_C0B8E4C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\CarHorn		30628
 	457042621	You and I	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\You and I_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_farewell\music_farewell\You and I		1363890
+	541036875	sfx_object_car_away1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_object_car_away1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_object_car_away1		262000
 

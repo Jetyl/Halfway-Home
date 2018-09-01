@@ -18,6 +18,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_sfx_creepy_door" ID="{0E374399-E8F1-4B71-9E99-3E3D5B000E10}">
+					<ChildrenList>
+						<Action Name="" ID="{281CE6E8-EF04-4183-94EE-90E7C5AB3A2D}" ShortID="745262590">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CreepyDoor" ID="{E627B0E1-F98D-40F9-AF77-633994D889FF}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_sfx_car_horn" ID="{27046333-56D4-40D5-963D-65B1BD6606E7}">
+					<ChildrenList>
+						<Action Name="" ID="{5C455A1E-C7B6-4381-B91C-590040DF9F34}" ShortID="325885451">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CarHorn" ID="{4FE0881B-C0C5-4AC3-80E8-BB73E00A60BA}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

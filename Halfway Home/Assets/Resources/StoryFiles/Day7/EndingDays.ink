@@ -31,12 +31,12 @@ EXTERNAL GetIntValue(value)
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
 
-# Load @ story_ending_days   # Play : play_music_farewell
+# Load @ story_ending_days   # Play : play_music_farewell # Ambience : Stop_All
 
 -> Start
 
 === Start ===
-I am woken up by an all too familiar knock. # SFX : play_sfx_human_knock #Background / YourRoom, eyeopen # fatigue => 0
+I am woken up by an all too familiar knock. # SFX : play_sfx_human_knock #Background / YourRoom, NoDefaults eyeopen # fatigue => 0
 I let out a resigned sigh as I get out of bed to answer the door.
 But when I open the door, Max is alone. #Max = Happy
 [Max] "Hella yella, my {player_name} fella."
@@ -99,8 +99,8 @@ Before I have time to respond, he's already gone again. #Dyed = exit
 ===Ready===
 [Max] "Anyways, you ready to leave? Your {GetStringValue("Guardian")} will be here to pick you up soon."
 I think for a minute, looking around the room I've called my home for the past... I don't know how long. #All = exit
-[{player_name}] "Yeah. I'm think I am."
-I follow Max down the hall with my stuff. We stop in the commons to wait. #Background / commons
+[{player_name}] "Yeah. I think I am."
+I follow Max down the hall with my stuff. We stop in the commons to wait. #Background / commons, NoDefaults
 [Max] "Well, you got a couple o' minutes... Some of the other residents came out to say their goodbyes."
 I look around the commons. The people I've come to know as friends are chatting amicably as the day begins.
 ->TrissaEnd
@@ -142,7 +142,7 @@ I guess it must seem that way to everyone else. That's what happens when you hav
 "It's been real, {player_name}, but I can see Charlotte waiting in the wings to say goodbye."
 "May love find you as surely as the river finds the sea."
 "My momma used to say that before she passed."
-"Whatch your step out there!" # Trissa = Exit
+"Watch your step out there!" # Trissa = Exit
 ->CharlotteEnd
 
 ===CharlotteEnd===
@@ -299,8 +299,8 @@ I leave Eduardo to sulk on the couch. #Eduardo = exit
 =Patches
 [{player_name}] "Hey man, how you doing?"
 [Eduardo] "Hrm? Oh. Fine."
-"Kinda Bummed out, to be honest."
-[{player_name}] "Oh? why?"
+"Kinda bummed out, to be honest."
+[{player_name}] "Oh? Why?"
 [Eduardo] "Eh, well, I'm kinda coming down from the mania I've been riding most of the week, and... you know..."
 Eduardo seems a little petulant.
 [{player_name}] "I know what?"
@@ -433,7 +433,7 @@ Oh, thank goodness, he's dropping it.
 		"Bye, I guess."
 		[{player_name}] "Oh yeah, see you around Isaac."
 		[Isaac] "Hrm." #Isaac = exit
-		I suppose Isaac is not in the mood to be friendly with someone who know way more about him than he is comfortable with.
+		I suppose Isaac is not in the mood to be friendly with someone who knows way more about him than he is comfortable with.
 		->OutsideWorld
 }
 
@@ -541,7 +541,7 @@ Eduardo plops himself back on the couch and Isaac goes to lean on the wall.
 -[Max] "Well, {player_name}, it was a pleasure lookin' after you."
 Max extends their hand. I grab their hand and give them a confident handshake.
 [{player_name}] "Thanks for the-"  # Skip
-And, right on cue, I see the car roll up to the halfway house. #Background / HouseFront #All = exit
+And, right on cue, I see the car roll up to the halfway house. #SFX : play_sfx_object_car_away #Background / HouseFront #All = exit
 {
 	-GetValue("Saved Timothy"): -> TimothyGoodbye -> TheEnd -> END
 	-else: 
@@ -569,7 +569,7 @@ I hold out my hand.
 "It was nice getting to know you, Timothy Miyuri."
 He reaches out and grabs my hand.
 [Dyed>Timothy] "Thanks for being my friend, {player_name}."
-My {GetStringValue("Guardian")} {GetStringValue("Guardian")=="sister":honks|{GetStringValue("Guardian")=="brother":honks|honk}} the horn of their car, getting my attention.
+My {GetStringValue("Guardian")} {GetStringValue("Guardian")=="sister":honks|{GetStringValue("Guardian")=="brother":honks|honk}} the horn of their car, getting my attention. # SFX : play_sfx_car_horn
 [{player_name}] "I'm coming, I'm coming!" #dyed = Surprised
 "Well, Timothy, I better get going. Thanks for everything."
 I pick up my bags again, and head out to the car. #all = exit
@@ -597,6 +597,6 @@ I think about that question as I get into the back seat of the car.
 	-else: 
 		I look back out at the Sunflower House as we begin to drive off. #Isaac = calm, stage_left #Eduardo = calm, stage_left #Max = calm #Charlotte = calm, stage_right #Trissa = calm, stage_right
 }
-"It wasn't exactly what I expected, but... I think it was pretty good." // Could we give the player a choice here?
-"Yeah, it was definitely good." #All = Exit #Background / TheEnd # Play : play_music_farewell # music_vol ! 0 #Acheivment $ ACH_END
+"It wasn't exactly what I expected, but... I think it was pretty good." # Play : Stop_All # Ambience : Stop_All // Could we give the player a choice here?
+"Yeah, it was definitely good." # Play : Stop_All # Ambience : Stop_All  #All = Exit #Background / TheEnd #Acheivment $ ACH_END
 ->->

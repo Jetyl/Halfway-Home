@@ -123,7 +123,7 @@ I suppose I could go another hour, but should I? #Skip
 "Ain't no perfect pill for my skull I s'pose." // Why does Eduardo say "ain't" so much? He's from brazil, not the Old West.
 "Not that I don't mind being up so much. Not while I got ol' Isaac here, a'course." #Eye_I, E_Happy
 [Isaac] "Not always out here. @Naturally." #Hangout / hrm_Up
-"Usually spend the nights he can't sleep in our bedroom. Or painting"
+"Usually spend the nights he can't sleep in our bedroom. Or painting."
 [{player_name}] "You actually get anything done this late?"
 [Isaac] "Hrm. Better than doing nothing."
 [Eduardo] "Yeah, this boy here is super focused when he wants to be!" #Hangout / Eye_U
@@ -145,7 +145,7 @@ I can see that.
 "It's caused me problems out there in the real world."
 "In the real world, the closeness of a relationship is defined by whoever's got the higher boundaries."
 "Like, you wanna be friends with someone, but they don't, well, then you ain't friends."
-"And that’s just the basic stuff. relationship stuff gets even crazier." #Skip
+"And that’s just the basic stuff. Relationship stuff gets even crazier." #Skip
 +[Didn't have many friends growing up?]
 	[{player_name}] "Eduardo, how many friends did you have growing up?"
 	[Eduardo] "None worth mentioning. None I'm still friends with, y'know?"
@@ -154,15 +154,15 @@ I can see that.
 +[Didn't have past relationships before now?]
 	[{player_name}] "Eduardo, if you don't mind me asking, how many relationships have you had before you two were a thing?"
 	[Eduardo] "Of course I don’t mind. I’ve had lots of relationships before my wubable Isaac."
-	"And I ruined every one of em."
+	"And I ruined every one of 'em."
 	"Usually 'cause I couldn't get enough."
 	"I was just a dumb kid who wanted attention."
 -[Eduardo] "I dunno man, just sometimes it feels like I <i><b>need</i><b> all this attention no one is willing to give me." #Hangout / hrm_down
-"And yeah, when I'd get super manic I think they <i>are</i> willing, when really, they’re not."
-"And when I fall off that high, and get all bummed out, I just think that, aw man, I've been such a jerk. and that's why no one cares."
+"And yeah, when I'd get super manic I'd think they <i>are</i> willing, when really, they’re not."
+"And when I fall off that high, and get all bummed out, I just think that, 'Aw man, I've been such a jerk. and that's why no one cares.'"
 "But not anymore. Ain't that right Isaac?" #Hangout / Leg_Down, Hand_Down, E_Grin, Eye_I
 [Isaac] "Hrm." #Hangout / Smile_Down
-Isaac does say much, but he plays with Eduardo's hair.
+Isaac doesn't say much, but he plays with Eduardo's hair.
 That seems to satiate Eduardo, who grows oddly quiet, as the two of them just look in each other's eyes.
 I let out a fake cough to break the silence.
 [Eduardo] "Oh, {player_name}, you're still here?" #Hangout / E_Sad, Eye_U, hrm_Up
@@ -184,14 +184,14 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 "Hey, {player_name}, you ever played a Visual Novel before?" #Hangout / Eye_U, E_Happy #Skip
 +[Yes]
 	[{player_name}] "Yeah, I have."
-	[Eduardo] "Did ya like any of them."
+	[Eduardo] "Did ya like any of them?"
 	I don't know why, but that feels like a loaded question.
 	I give a non-committing shrug.
 +[No]
 	[{player_name}] "No. I haven't."
 	[Eduardo] "Well ya should try one some time. I think you'd like the medium."
--"Now me personally, I got the whole love-hate thing going on with em." #Hangout / E_Sad, Eye_U
-"I like the idea of em, you know. But there are all these annoying tropes I hate about visual novels and anime."
+-"Now me personally, I got the whole love-hate thing going on with 'em." #Hangout / E_Sad, Eye_U
+"I like the idea of 'em, you know. But there are all these annoying tropes I hate about visual novels and anime."
 "Like, you know what trope really bugs the crap outta me in anime lately?" #Hangout / Eye_I
 [Isaac] "Hrm?"
 [Eduardo] "You got all these modern-day stories, with all these fake off-brand references to real world things, instead of just straight up saying, `Hey yo! This is a thing.`" #Skip
@@ -199,7 +199,7 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 	[{player_name}] "I don't quite think I follow."
 +[That's the only problem you have?]
 	[{player_name}] "Really? That's your only problem with anime?"
-	[Eduardo] "What? No, but this is the one I feel like ranting about at 2AM"
+	[Eduardo] "What? No, but this is the one I feel like ranting about at 2 AM."
 	[{player_name}] "Fair."
 -[Eduardo] "Like, it just really destroys the immersion, for one."
 "Second, it makes real world conversation like, near impossible."
@@ -215,13 +215,13 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 "No suits gonna get mad if ya talk about a girl falling down no rabbit hole."
 "But they'll get all up in arms if you reference a work past 1937 or something."
 [Isaac] "Copyright protects artists."
-[Eduardo] "Nah fam, Copyright is <i>s'posed</i> to protect artists. That don't mean it does."
+[Eduardo] "Nah fam, copyright is <i>s'posed</i> to protect artists. That don't mean it does."
 "Like seriously, did you know up until a few years ago the Happy Birthday song was still under copyright?"
 "Not to mention most corporations rip the creative rights from the actual artist at its inception."
 "Like I get it, artists should have some control over their work, and stopping theft and stuff, but like."
 "Art ain't this rigid clearly defined thing. Art <i>is</i> referential. Art influences other art."
 "Like, take uh..."
-"The visual novel we're reading, for instance. You know, the one I don't remember name of."
+"The visual novel we're reading, for instance. You know, the one I don't remember the name of."
 "The whole thing exists because it was inspired by an art post on a forum depicting a bunch of disabled girls for a romance game parody."
 "And then the work itself was so influential that it inspired a handful of other works, too."
 "Like, I know a lot of tiny internet visual novels all following in its footsteps, but about mental issues rather than physical disabilities."
@@ -239,7 +239,7 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 [Eduardo] "Well, <i>I'm</i> human. I don't know about Isaac, though." #Hangout / E_Grin, Eye_I, Hand_Up
 [Isaac] "Hrm." #Hangout / hrm_down
 Isaac slugs Eduardo in the stomach.
-[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}" #Hangout / Eye_U, E_Sad
+[Eduardo] "Ha! No, but seriously, you might need to be a bit more specific, {player_name}." #Hangout / Eye_U, E_Sad
 [{player_name}] "I was asking about your orientation."
 [Eduardo] "Well, currently I'm laying horizontally."
 "hehehe @<flow>huehuehuehue</flow>"#Hangout / E_Grin
@@ -277,8 +277,8 @@ Crap, I didn't expect him to turn this on me. I... #Skip
 +[Avoid Answering]
 	"Oh, you know. I, uh..."
 	"I'd rather not answer that."
-	[Eduardo] "Aww, no fair. we told you!"
-	[Isaac] "no means no, Eduardo."
+	[Eduardo] "Aww, no fair. We told you!"
+	[Isaac] "No means no, Eduardo."
 	[Eduardo] "Ugh, fiiiiiiine."
 	"<size=50%>you guys are no fun..."
 -[Isaac] "Attraction is weird."
@@ -287,7 +287,7 @@ Crap, I didn't expect him to turn this on me. I... #Skip
 "But... @When you have it, you don't want it gone."
 "You <i>should</i>. It's smart. @But people aren't smart."
 [Eduardo] "<delay=1>...Poke!" #Hangout / Leg_Up //have Eduardo poke Isaac
-Eduardo pokes Isaac in the cheek, getting Isaac's attention from the middle distance.
+Eduardo pokes Isaac in the cheek.
 [Isaac] "What?"
 [Eduardo] "<flow>I love you</flow>" //some cheesy line
 [Isaac] "<speed=50%>...<speed=100%>"
@@ -342,8 +342,8 @@ Look at these two, planning their future and stuff. I can't look past the next w
 	[{player_name}] "Of course. You guys are my friends."
 	[Eduardo] "Aww! Thanks!"
 +[Not in the slightest]
-	[{player_name}] "Eh, not really. I’m just spending hours with you guys in the middle of the night."
-	I be completely honest. probably not the polite answer, but whatever. #expression+
+	[{player_name}] "Eh, not really. I’m just hanging out 'cause I got nothing better to do."
+	I'm completely honest with them. Probably not the polite answer, but whatever. #expression+
 	[Eduardo] "Oh! I'm so hurt."
 	[Isaac] "No, you're not."
 	[Eduardo] "Eh yeah."
@@ -359,7 +359,7 @@ Look at these two, planning their future and stuff. I can't look past the next w
 -[Eduardo] "I know I'll miss ya." #Hangout / E_Grin
 [Isaac] "Same." #Hangout/ smile_up
 "Actually. {player_name}. Can I ask you something personal?" #Hangout/Eye_U, hrm_Up
-[{player_name}] "Uh, Sure." 
+[{player_name}] "Uh, sure." 
 [Isaac] "Why'd you come here? To Sunflower House. I mean."
 Uh... #Skip
 +[Avoid answering the question]
@@ -370,7 +370,7 @@ Uh... #Skip
 	Isaac lightly thwacks Eduardo's head.
 	[Isaac] "Eduardo. Stop." #Hangout/ hrm_down
 	[Eduardo] "Okay, okay. @Jeez, I was just poking fun."
-	Isaac seems to ignore Eduardo light jab, seemingly lost in thought.
+	Isaac seems to ignore Eduardo's light jab, seemingly lost in thought.
 +[Act philosophical to avoid answering]
 	[{player_name}] "Why does anyone come here?"
 	"The Sunflower House is a collection of lost souls, bruised and battered by the outside world."
@@ -397,7 +397,7 @@ Uh... #Skip
 	"As is, this place is basically my home."
 	"Hehe, how sad is that?" #expression ^ good
 	I cease my word vomit and let the awkward silence fill the room.
-	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`s. @Just nothing.
+	Neither of them say anything to respond. @No empty platitudes. No `I'm sorry`. @Just nothing.
 	It kind of feels good, to get that off my chest. #expression++
 	It takes a minute before either of them respond. It's Isaac, surprisingly, who responds to my sob story.
 -[Isaac] "Hrm. @Life is simply unfair... @Sometimes, I s'pose." #Hangout / hrm_Up, E_Frown
@@ -483,7 +483,7 @@ I wonder if Max is up already. Probably.
 [Eduardo] "<size=50%>I'd like that a lot...<size=100%>"
 {
 	-HoursSpent >= 3:
-		Eduardo yawns aggressively
+		Eduardo yawns aggressively.
 		"Isaac... Tell me a story." #Hangout / E_Sad
 		[Isaac] "No." 
 		[Eduardo] "<flow>Isaaaaaaac!</flow>"
@@ -503,7 +503,7 @@ I wonder if Max is up already. Probably.
 		"Hrm."
 		"Thanks." #Hangout / Smile_Down
 		Isaac smiles. I don't think I get to see this softer side of him very often. #2 & Success
-		And being the lister all the time, especially to someone as bombasitic as Eduardo, is probably exhausting.
+		And being the listener all the time, especially to someone as bombastic as Eduardo, is probably exhausting.
 		I should probably find some time to chat with Isaac by himself. #4 &InProgress
 		Still though...
 		~SetValue("LongNightHangoutComplete", true)
@@ -512,22 +512,22 @@ These two are really sappy together. It's kind of sweet, in its own way.
 ->MorningMax
 
 ===LeaveEarly===
-I decide now is a good time to head off from this conversation. #background / commons, crossfade
-I wave off to the other two as I leave. they seem to be set to keep talking for hours. 
+I decide now is a good time to head off from this conversation. #background / commons, crossfade, NoDefaults
+I wave off to the other two as I leave. They seem to be set on talking for hours. 
 I'm almost jealous of Eduardo. So free to express himself, and to do what he wants.
-I could do to be a little more like that. @only a little. #expression++
+I could do to be a little more like that. @Only a little. #expression++
 ->END
 
 ===TooTired===
 I yawn, as my eyes make another attempt at forcing themselves closed. My attention is shot, which means it’s probably a good time to call it a night.
 I decide to leave the two to their chatting, and head to bed. #background / commons, crossfade, NoDefaults
 I'm almost jealous of Eduardo. So free to express himself, and to do what he wants.
-I could do to be a little more like that. @only a little. #expression++
-I face-plant into by bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
+I could do to be a little more like that. @Only a little. #expression++
+I face-plant into my bed, not even bothering with my nightly rituals. #background / YourRoom, wipe
 It doesn't take long for me to lose consciousness. #background / dream, eyeclose
 ... {CallSleep()} #sleep %12
 ... #fatigue => 0
-I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @whoops. #background/YourRoom, eyeopen
+I awake to a decent sleep... @Unfortunately, it would seem like I slept in. @Whoops. #background/YourRoom, eyeopen, NoDefaults # Play : Play_music_placeholder_main   # music_vol | -6
 ->END
 
 ===MorningMax===
@@ -569,6 +569,6 @@ With a yawn, I get up and leave as well.
 		[Voices] "You’re so stupid."
 		I'm so stupid. 
 	-else:
-		Despite what Max thinks, I... actually feel very good about the how I spent my time. #expression++
+		Despite what Max thinks, I... actually feel very good about how I spent my time. #expression++
 }
 ->END

@@ -143,7 +143,7 @@ I pull out some of the spare paper the room has stocked, and begin sketching wha
 ->END
 
 ===MeetWithTimothy===
-As I show Timothy around all the art supplies, a rowdy duo walk in.
+As I show Timothy around all the art supplies, a rowdy duo walk in. # SFX : play_sfx_human_footsteps_approaching
 [Eduardo >The Loud One] "I'm telling you, it was hilarious." #Eduardo = Happy, right
 [Isaac >The Quiet One] "Hrm." #Isaac = Calm
 [Timothy] "Uh, who are they?" # Timothy = Calm, stage_left, right

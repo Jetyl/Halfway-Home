@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: -1363078277
-    m_lastTimePart2: -1999238589
+    m_lastTimePsrt1: 617896036
+    m_lastTimePart2: -1999237150
     List:
     - Name: play_music_game_day
       Path: Default Work Unit\play_music_game_day
@@ -29,11 +29,21 @@ MonoBehaviour:
       ID: -1348071733
       Guid: 87747dc07509f94c94bb60398efc2c21
       maxAttenuation: 0
+    - Name: play_sfx_creepy_door
+      Path: Default Work Unit\play_sfx_creepy_door
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_sfx_creepy_door
+        ObjectType: 3
+      ID: -9167563
+      Guid: 9943370ef1e8714b9e993e3d5b000e10
+      maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: 132162411
-    m_lastTimePart2: -1999237372
+    m_lastTimePsrt1: -1408567516
+    m_lastTimePart2: -1999237148
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -130,6 +140,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 285561943
       Guid: 5a6653fbe297ad4e8fecb9dbf2a2c1fa
+      maxAttenuation: 0
+    - Name: play_ambience_birds_long_fade
+      Path: PlayMusic\intro_ambiences\play_ambience_birds_long_fade
+      PathAndIcons:
+      - ElementName: PlayMusic
+        ObjectType: 12
+      - ElementName: intro_ambiences
+        ObjectType: 4
+      - ElementName: play_ambience_birds_long_fade
+        ObjectType: 3
+      ID: -1924559231
+      Guid: 0a6f41d261d3f24182891ee2c9cb78b8
       maxAttenuation: 0
     - Name: play_ambience_crowd
       Path: PlayMusic\ambiences\play_ambience_crowd
@@ -1329,8 +1351,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: 498833809
-    m_lastTimePart2: -1999237366
+    m_lastTimePsrt1: -1277256595
+    m_lastTimePart2: -1999237148
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room

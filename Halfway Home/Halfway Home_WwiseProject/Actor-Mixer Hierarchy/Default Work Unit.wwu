@@ -1822,6 +1822,63 @@
 										<ActiveSource Name="263137__tmacroberts__creaking" ID="{91419E08-46BE-4ADE-B97D-91D1BD6E5225}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="CreepyDoor" ID="{E627B0E1-F98D-40F9-AF77-633994D889FF}" ShortID="419911815">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_creepy_door" ID="{C79D79B4-C968-4572-9961-F7F22D1E8257}" ShortID="417264606">
+											<Language>SFX</Language>
+											<AudioFile>sfx_creepy_door.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_creepy_door" ID="{C79D79B4-C968-4572-9961-F7F22D1E8257}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CarHorn" ID="{4FE0881B-C0C5-4AC3-80E8-BB73E00A60BA}" ShortID="613337008">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="431396__mariadrrs__car-horn" ID="{4E3D094C-62C1-448B-90CC-E1D04C59104A}" ShortID="417659351">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20717799279928"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.169992199219922"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.30150277527753"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>431396__mariadrrs__car-horn.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="431396__mariadrrs__car-horn" ID="{4E3D094C-62C1-448B-90CC-E1D04C59104A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>

@@ -78,7 +78,6 @@
 				</SoundBank>
 				<SoundBank Name="story_open_letter" ID="{3A80C469-1D83-45AA-BE36-60084BC6F4F8}">
 					<ObjectInclusionList>
-						<ObjectRef Name="play_ambience_stormy" ID="{4838B455-16A8-4372-90F0-D48074469BC9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_ambience_crowd" ID="{4148875D-9FEA-4F14-B51F-AF31E1AC3C93}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
@@ -87,6 +86,9 @@
 				</SoundBank>
 				<SoundBank Name="story_closed_wound" ID="{8FF161CC-D232-4A05-B5F4-A3F3337720A9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_birds_long_fade" ID="{D2416F0A-D361-41F2-8289-1EE2C9CB78B8}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_stormy" ID="{4838B455-16A8-4372-90F0-D48074469BC9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_creepy_door" ID="{0E374399-E8F1-4B71-9E99-3E3D5B000E10}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_emotional_piano" ID="{E65F84EE-7E5E-4B96-AFFC-0F02D975ED58}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -101,7 +103,9 @@
 				</SoundBank>
 				<SoundBank Name="story_ending_days" ID="{7C969C46-867D-4F32-86AD-CE131CE97357}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_car_horn" ID="{27046333-56D4-40D5-963D-65B1BD6606E7}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_farewell" ID="{CAEEF854-4D73-47CC-B6D6-0BF31E1FE2D9}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_object_car_away" ID="{807DBB37-4594-4B87-BD30-929A0124D776}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

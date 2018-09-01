@@ -46,8 +46,8 @@ It also tends to <color=color_wellbeing_penalty><i>fatigue</i></color> me more t
 I look over at Timothy, who's staring at the ground. #Skip
 +[Want to try making something?]
 	"But yeah, you wanna try something out?"
-+[Want to check out the art pieces]
-	"But yeah, You wanna see what art pieces have been made?"
++[Want to check out the art pieces?]
+	"But yeah, you wanna see what art pieces have been made?"
 -[Timothy] "N-Not right now."
 "Th-thanks though..."   #Timothy = Exit   #0.3 & Success
 -> END

@@ -619,14 +619,36 @@
       "Id": "4092317258",
       "Name": "play_music_farewell",
       "ObjectPath": "\\Events\\PlayMusic\\music_farewell\\play_music_farewell"
+     },
+     {
+      "Id": "1824880844",
+      "Name": "play_sfx_car_horn",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_sfx_car_horn"
+     },
+     {
+      "Id": "1700209709",
+      "Name": "play_sfx_object_car_away",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_object\\play_sfx_object_car_away"
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "417659351",
+      "Language": "SFX",
+      "ShortName": "431396__mariadrrs__car-horn.wav",
+      "Path": "SFX\\431396__mariadrrs__car-horn_C0B8E4C6.wem"
+     },
      {
       "Id": "457042621",
       "Language": "SFX",
       "ShortName": "You and I.wav",
       "Path": "SFX\\You and I_A51F8DD7.wem"
+     },
+     {
+      "Id": "541036875",
+      "Language": "SFX",
+      "ShortName": "sfx_object_car_away1.wav",
+      "Path": "SFX\\sfx_object_car_away1_00FA84C2.wem"
      }
     ]
    },
@@ -660,9 +682,29 @@
     "Path": "story_closed_wound.bnk",
     "IncludedEvents": [
      {
+      "Id": "2370408065",
+      "Name": "play_ambience_birds_long_fade",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds_long_fade"
+     },
+     {
+      "Id": "3646524025",
+      "Name": "play_ambience_stormy",
+      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_stormy"
+     },
+     {
       "Id": "2723803496",
       "Name": "play_music_emotional_piano",
       "ObjectPath": "\\Events\\PlayMusic\\play_music_emotional_piano"
+     },
+     {
+      "Id": "4285799733",
+      "Name": "play_sfx_creepy_door",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_sfx_creepy_door"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800"
      }
     ],
     "IncludedMemoryFiles": [
@@ -671,6 +713,18 @@
       "Language": "SFX",
       "ShortName": "music_emotional_piano.wav",
       "Path": "SFX\\music_emotional_piano_A51F8DD7.wem"
+     },
+     {
+      "Id": "417264606",
+      "Language": "SFX",
+      "ShortName": "sfx_creepy_door.wav",
+      "Path": "SFX\\sfx_creepy_door_00FA84C2.wem"
+     },
+     {
+      "Id": "710471171",
+      "Language": "SFX",
+      "ShortName": "ambience_stormy\\ambience_stormy.wav",
+      "Path": "SFX\\ambience_stormy\\ambience_stormy_178D0C9C.wem"
      }
     ]
    },
@@ -991,11 +1045,6 @@
       "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_crowd"
      },
      {
-      "Id": "3646524025",
-      "Name": "play_ambience_stormy",
-      "ObjectPath": "\\Events\\PlayMusic\\ambiences\\play_ambience_stormy"
-     },
-     {
       "Id": "1020080944",
       "Name": "play_music_happy",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
@@ -1007,12 +1056,6 @@
      }
     ],
     "IncludedMemoryFiles": [
-     {
-      "Id": "710471171",
-      "Language": "SFX",
-      "ShortName": "ambience_stormy\\ambience_stormy.wav",
-      "Path": "SFX\\ambience_stormy\\ambience_stormy_178D0C9C.wem"
-     },
      {
       "Id": "1039116749",
       "Language": "SFX",

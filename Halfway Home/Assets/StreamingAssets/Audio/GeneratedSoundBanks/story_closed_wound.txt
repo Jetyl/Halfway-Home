@@ -1,6 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
+	2370408065	play_ambience_birds_long_fade			\PlayMusic\intro_ambiences\play_ambience_birds_long_fade	
 	2723803496	play_music_emotional_piano			\PlayMusic\play_music_emotional_piano	
+	3646524025	play_ambience_stormy			\PlayMusic\ambiences\play_ambience_stormy	
+	4285799733	play_sfx_creepy_door			\Default Work Unit\play_sfx_creepy_door	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	220669927	music_emotional_piano	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_emotional_piano_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_emotional_piano\music_emotional_piano\music_emotional_piano		1399544
+	417264606	CreepyDoor	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_creepy_door_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\CreepyDoor		72208
+	710471171	ambience_stormy	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ambience_stormy\ambience_stormy_178D0C9C.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_stormy\ambience_stormy\ambience_stormy		4104144
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
 
