@@ -32,8 +32,9 @@ EXTERNAL GetStringValue(value)
 [{player_name}]"The garden is a great place to meditate, among other things."
 "I think there's a gardening club or something that meets out here sometimes."
 "I don't know. I've never actually gone to it."
+{I never go to anything.|Funny. I have all the time in the world and I still don't really care to go to gardening club. Different kinds of people, I guess.}
 [Timothy] "...It's so pretty here." #Timothy = Happy, stage_left, right
-[{player_name}] "Yeah, I suppose it is." #0.2 & Success
+[{player_name}] "{Yeah, I suppose it is.|It really is.}" #0.2 & Success
 {
 	-week == 1:
 		->WeekOne
@@ -56,7 +57,7 @@ Oh crap, did I lose him already?
 -> END
 
 === Repeat ===
-It is rather calming, just being out here.
+Just being out here amidst all this green is calming.
 [{player_name}] "I think you'll really like the garden." #Timothy = Exit
 I kind of mumble that, knowing Timothy isn't really listening to me anymore.
 In fact, he's probably already run off.
@@ -64,6 +65,6 @@ I'll give him some time to enjoy himself before I track him down.
 I relax my shoulders and zone out in the cool garden breeze. @<color=A5C5E3FF>(Stress reduced!)</color> #Stress -= 20
 ...
 ...
-...Okay, that's probably long enough. Any longer here and I'll completely zone out and forget what I'm supposed to be doing.
+...That's probably long enough. Any longer here and I'll completely zone out and forget what I'm supposed to be doing.
 "Okay Timothy, let's see where you went."
 -> END

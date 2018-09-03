@@ -29,13 +29,13 @@ EXTERNAL SetValue(name, values)
 -> CommonsFunction
 
 === CommonsFunction ===
-[{player_name}] "This is the Commons!"   #Timothy = Calm
-"You probably already came through here to get to our room."
+[{player_name}] "{We call this room the, uh, Commons.|This is the Commons.}"   #Timothy = Calm
+{Oh, jeez, I am the worst tour guide.|No need to overthink it, {player_name}, you've done this before.}
+"{You probably already came through here to get to our room.|As I'm sure you saw, it's pretty much just a big living room.}"
 [Timothy] "Yeah..."
-[{player_name}] "Anyway, this is sort of a big hub area."
 "The front desk is nearby, so if you need anything there or are expecting any packages, that's where you go."
-"The Commons is also obviously a big social area."
-Which is why I tend to avoid it...
+[{player_name}] "{It's, uh, sort of a... social hub, I guess.|It's a big social area, obviously.}"
+{Which is why I tend to avoid it...|Which is why I should be spending more time here.}
 [Timothy] "It's pretty empty right now..."
 Huh. Yeah, it is. That's rare.
 The only other person in sight is...   #Keyless = Calm
@@ -64,7 +64,7 @@ He seems to be preoccupied watching Max.   #Timothy = Calm
 	[{player_name}] "Their keys."  #Timothy= Surprised
 +[I'm sure they will]
 	[{player_name}] "I'm sure they'll find them." #Timothy= Surprised
--"<speed=50%>Anyways,"
+-"<speed=50%>Anyways," #Skip
 "If I'm having a bad day, I sometimes come here. Social interaction helps with my uh... <color=color_wellbeing_relief><i>depression</i></color>, but it can be kinda <color=color_wellbeing_penalty><i>stressful</i></color>."   #Timothy=Exit
 "I dunno exactly what your needs are, but the Commons are a good place to go if you want to be around people."
 "Ya got that, Timothy?"
@@ -74,10 +74,10 @@ Timothy has frozen where I had last looked and is shaking slightly.
 [Timothy] "Oh! Uh I-I..."
 "<jitter>S-s-sorry, I-I-I just...</jitter>"
 [{player_name}] "Sorry? What for?"
-The poor guy looks like a kid caught stealing cookies from the cookie jar.
+The poor guy looks like a kid caught with his hand in the cookie jar.
 [Timothy] "<jitter>I-I'm sorry I-I-</jitter>"
 "<jitter>I-I'm sorry I insulted Max and mis-gendered th-them!</jitter>"
-Oh! <delay=0.5>That's what this is about?
+Oh! <delay=0.5>That's what this is about.
 [{player_name}] "Uh, dude, it's okay."
 [Timothy] "Huh?" #Timothy = Surprised
 "<jitter>Y</jitter>-you mean you're <jitter>n</jitter>-not mad at me?"   #Timothy = Afraid
@@ -89,20 +89,20 @@ But Max is the most chill person I know. They've tolerated <i><b>much</i></b> wo
 {
 	-player_gender == "N":
 		As for me? I'm usually too apathetic to care about slight mishaps like that.
-		Again, assuming they're not being a jerk about it.
+		I prefer to avoid confronting people, even if they're being a jerk.
 }
 [Timothy] "<jitter>O-okay...</jitter>"
 {
 	-week == 1:
-		Man, I am going to have to walk on egg shells around this kid, aren't I? #stress += 5
+		I'm going to have to walk on egg shells around this kid, aren't I? #stress += 5
 	-else:
-		Man, if he's having a freak-out over this, it's no wonder he breaks down by the end of the week. #stress +=5
+		If he's having a freak-out over this, it's no wonder he breaks down by the end of the week. #stress +=5
 }
 I give Timothy a minute to collect himself before continuing the tour.
 [{player_name}] "You okay now?"
 He nods.   #Timothy = Calm
 [Timothy] "Y-yeah. I-I'm okay."
-[{player_name}] "Cool. then lets keep going."
+[{player_name}] "Cool. Let's keep going."
 {
 	-player_gender == "N":
 		->NonBinaryBonus->Awkward
@@ -165,8 +165,8 @@ Timothy starts shaking, looking away from me in embarrassment, before giving me 
 [{player_name}] "Uh..."
 [Timothy] "<jitter><size=120%>S-SORRY!</size></jitter>"   #Timothy = Afraid
 I hold back a slight chuckle.
-[{player_name}] "Thanks, I guess?"
+[{player_name}] "Thanks, I guess."
 It's reaching peak awkwardness now, but it's kinda sweet and I appreciate the gesture, as unnecessary as it is.
-It does relax me a little, so that's nice. @<color=color_wellbeing_relief><i>Stress decreased slightly!</i></color> # Stress -= 10
+It does relax me a little, though. @<color=color_wellbeing_relief><i>Stress decreased slightly!</i></color> # Stress -= 10
 [Timothy] "I'm sorry..."   #Timothy = Calm
 ->->

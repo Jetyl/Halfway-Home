@@ -28,12 +28,14 @@ EXTERNAL GetStringValue(value)
 
 === LibraryFunction ===
 [{player_name}] "And here's the library." #Timothy = Calm, close, stage_left
-"They have a whole stock of fiction and non-fiction stuff here, for all your literary needs."
+"{I don't really, um, use it that often, but I think they've got all kinds of books here.|They have a whole stock of fiction and non-fiction stuff here, for all your literary needs.}"
 "There's also a book club that meets a few times a week."
+Yet another club I never attend.
 [Timothy] "It's... um... a little claustrophobic in here."
-[{player_name}] "Yeah... they fit a 'lotta books into a small space."
-"They have book recommendations, if you find the selection overwhelming."
+[{player_name}] "Yeah... they fit a lotta books into a small space."
+"They have book recommendations, if you find it a bit overwhelming."
 "I know I did."
+{Because I still do.|I feel more comfortable here now, though.}
 "I find that reading can give me a better perspective on things, which helps me to act with a bit more <color=color_grace>grace</color>." # Grace * Show
 "But I'm not a fast reader, so it kinda <color=color_wellbeing_penalty>stresses</color> me out. Reading at night also makes me extra <color=color_wellbeing_penalty>fatigued</color>."
 {
@@ -45,11 +47,11 @@ EXTERNAL GetStringValue(value)
 
 
 === WeekOne ===
-"I haven't really spent much time in here, but I probably should..." #Skip
+"I haven't really, uh, spent much time in here, but I probably should..." #Skip
 +[Browse the selection]
-	"Do you want to browse the selection?"
+	"Do you want to, uh, browse the selection?"
 +[Check the recommendations out]
-	"How about we check out the recommended books?"
+	"How about we... check out the recommended books?"
 -[Timothy] "Maybe l-later."
 "Th-thanks though..." #Timothy = Exit #0.4 & Success
 -> END
