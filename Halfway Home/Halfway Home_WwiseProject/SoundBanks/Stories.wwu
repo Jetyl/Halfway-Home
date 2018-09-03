@@ -156,6 +156,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="story_cold_sky_hideaway" ID="{A2FB901F-B88B-4916-A6EC-C7B7E5DF36CF}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_ambience_crickets_night" ID="{2D4D4F35-0A29-4FE9-BA35-245E51148DB5}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

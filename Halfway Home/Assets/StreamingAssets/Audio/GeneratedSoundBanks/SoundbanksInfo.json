@@ -636,7 +636,7 @@
       "Id": "417659351",
       "Language": "SFX",
       "ShortName": "431396__mariadrrs__car-horn.wav",
-      "Path": "SFX\\431396__mariadrrs__car-horn_C0B8E4C6.wem"
+      "Path": "SFX\\431396__mariadrrs__car-horn_33EC2F46.wem"
      },
      {
       "Id": "457042621",
@@ -770,6 +770,28 @@
       "ShortName": "ambience_birds_day.wav",
       "Path": "SFX\\ambience_birds_day_178D0C9C.wem"
      },
+     {
+      "Id": "905731817",
+      "Language": "SFX",
+      "ShortName": "ambience_crickets_night.wav",
+      "Path": "SFX\\ambience_crickets_night_178D0C9C.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2982646672",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_cold_sky_hideaway",
+    "ShortName": "story_cold_sky_hideaway",
+    "Path": "story_cold_sky_hideaway.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "889098130",
+      "Name": "play_ambience_crickets_night",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_ambience_crickets_night"
+     }
+    ],
+    "IncludedMemoryFiles": [
      {
       "Id": "905731817",
       "Language": "SFX",

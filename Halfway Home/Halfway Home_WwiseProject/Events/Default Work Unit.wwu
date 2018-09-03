@@ -46,6 +46,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_ambience_crickets_night" ID="{2D4D4F35-0A29-4FE9-BA35-245E51148DB5}">
+					<ChildrenList>
+						<Action Name="" ID="{45CCA965-F4FB-4D46-BCE6-45209B340071}" ShortID="34271083">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_crickets_night" ID="{A35342E0-0D82-4842-80F5-57C7662F4AEA}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

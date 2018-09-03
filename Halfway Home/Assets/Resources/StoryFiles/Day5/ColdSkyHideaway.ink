@@ -27,12 +27,12 @@ EXTERNAL GetValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(time)
 
-# Play : Stop_All
+# Load @ story_cold_sky_hideaway # Play : Stop_All # Ambience : play_ambience_crickets_night
 
 -> Start
 
 === Start ===
-I step out into the gardens. its rather cold out tonight.
+I step out into the gardens. It's rather cold out tonight.
 There isn't a single star in sky tonight.
 { 
 	

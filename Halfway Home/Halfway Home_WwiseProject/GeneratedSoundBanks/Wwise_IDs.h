@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID MUSIC_LOOP_TEST = 4181321930U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS = 285561943U;
         static const AkUniqueID PLAY_AMBIENCE_BIRDS_LONG_FADE = 2370408065U;
+        static const AkUniqueID PLAY_AMBIENCE_CRICKETS_NIGHT = 889098130U;
         static const AkUniqueID PLAY_AMBIENCE_CROWD = 2781780852U;
         static const AkUniqueID PLAY_AMBIENCE_CROWD_WHISPERING = 54526557U;
         static const AkUniqueID PLAY_AMBIENCE_FIREPLACE = 2929977910U;
@@ -166,6 +167,7 @@ namespace AK
         static const AkUniqueID STORY_BIG_HAPPY_FAMILY = 4068719739U;
         static const AkUniqueID STORY_CHARLOTTE = 2790364613U;
         static const AkUniqueID STORY_CLOSED_WOUND = 2826146263U;
+        static const AkUniqueID STORY_COLD_SKY_HIDEAWAY = 2982646672U;
         static const AkUniqueID STORY_COURTSIDE = 817531469U;
         static const AkUniqueID STORY_DYE_JOB = 1127752803U;
         static const AkUniqueID STORY_ENDING_DAYS = 2369017504U;

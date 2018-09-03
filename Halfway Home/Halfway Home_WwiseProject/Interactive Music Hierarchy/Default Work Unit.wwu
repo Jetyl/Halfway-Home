@@ -1101,6 +1101,11 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 								<MusicSegment Name="ambience_crickets_night" ID="{90928C5C-606E-4F4B-A8B4-4F6EB7F91A6C}" ShortID="816946514">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="12000"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2637,6 +2642,108 @@ x = 24 / (80 / (60 * 4)) = 72 seconds</Comment>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="ambience_stormy" ID="{7ABDA616-A605-44D1-955C-A9A41BED5C0D}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="ambience_crickets_night" ID="{A35342E0-0D82-4842-80F5-57C7662F4AEA}" ShortID="623109040">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="ambience_crickets_night" ID="{82CABD7A-4498-4AF6-89A5-B6255E3F25A8}" ShortID="934590222">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="12000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84803C70-BD23-4240-A802-2302A6DAD0A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="ambience_crickets_night" ID="{513CAF95-B69B-4F21-A484-02A0BF169304}" ShortID="1020408062">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8011013C-2F47-48AE-8EE4-65D01964509C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ambience_crickets_night" ID="{A0C88E1C-28BD-4B52-AC9A-B3CC7F7967E0}" ShortID="314048728">
+													<Language>SFX</Language>
+													<AudioFile>ambience_crickets_night.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="905731817"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{79E5E6A3-B217-45E9-A334-9950D3444D1B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F46ABDF6-D161-4EF8-B0F6-A79DBD5699A2}">
+													<ClipList>
+														<MusicClip Name="ambience_crickets_night" ID="{BB29FD30-F277-4BE9-9E9E-7015015CC848}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="ambience_crickets_night" ID="{A0C88E1C-28BD-4B52-AC9A-B3CC7F7967E0}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{D8556567-ABFD-452D-B6F9-24085758F1D4}"/>
+										<MusicCue Name="Exit Cue" ID="{E32E054F-7434-410F-8C7E-865B6C382A48}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="12000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{261450FC-D576-41C7-ACFF-FCDECC6B25C9}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{CF26F0D3-A7AC-448E-9321-4D8D97D228BB}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{D2EFC4B5-52D0-4358-98C7-FC90B8C03748}" ShortID="406735992">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{8B7BF182-3642-4AFD-B955-234A551C36BC}" ShortID="1022414547">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="ambience_crickets_night" ID="{82CABD7A-4498-4AF6-89A5-B6255E3F25A8}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
