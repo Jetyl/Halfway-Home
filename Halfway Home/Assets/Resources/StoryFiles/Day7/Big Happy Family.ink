@@ -24,6 +24,8 @@ VAR breakdown_scenes_elapsed = 0
 
 EXTERNAL GetValue(value)
 EXTERNAL SetValue(name, values)
+EXTERNAL GetIntValue(name)
+EXTERNAL SetIntValue(name, value)
 
 // TESTING LOAD BANKS FUNCTION
 // Loading MusicTension Bank... # Load @ MusicTension
@@ -333,16 +335,17 @@ I choose to stay beside Timothy and attempt to help him through this.
 
 ===MoodKiller===
 My attention draws back to the crowd of people around me. # play : Stop_All #Trissa=Surprised #Eduardo=Surprised #Isaac=Surprised #Charlotte=Happy, Stage_center
-[Charlotte] "It was a rather humorous endeavor. Hm?" #Charlotte=Calm
-"Why'd everyone get so quiet?"
-[Eduardo] "Daaaaaaaaaang man. Timothy just lost his sh-" #skip
+[Charlotte] "Yes, that <i>was</i> rather amusing-" #Skip #Charlotte=Calm
+"Hm? Why has everyone fallen so silent?"
+[Eduardo] "Daaang, man. Timothy just lost his sh-" #skip
 Isaac jabs his boyfriend in the gut. #Isaac=Angry
 [Isaac] "We're going. Gotta talk." #Isaac=Exit #Eduardo=Exit
 Isaac drags Eduardo out of the cafe in a huff.
 [Trissa] "Man, that sucks." #Trissa=Sad
 "I'm out. See you at dinner." #Trissa=Exit
-[Charlotte] "But, what... what just happened?"
-"{player_name}, tell me... what just happened?" #Charlotte = left
+[Charlotte] "Oh, dear, I seem to have missed something." # Charlotte = Surprised
+"I let my guard down for one moment and look what comes of it!" # Charlotte = Angry
+"{player_name}, please. Tell me what just happened." #Charlotte = left, Calm
 [{player_name}] "..." #Skip
 +[I messed up.]
 	"I messed up. I messed everything up."
@@ -350,8 +353,18 @@ Isaac drags Eduardo out of the cafe in a huff.
 	"Timothy broke."
 -I slump forward out of my chair and stagger towards the door.
 "I messed up..."
-[Charlotte] "Sorry, what do you mean by that?"
-I walk away from the cafe. #Charlotte=Exit
+Charlotte scrutinized my face for a moment.
+[Charlotte] "I must confess I am still a bit confused... but I can see plainly how pained you are."
+"Not to mention the other residents..."
+{GetIntValue("ReadyForTea")==1:
+	"In light of this, I think it best we cancel tea for today." # 9 & Failed
+	"I would offer to reshedule, but you'll be off to greener pastures ere long."
+	~SetIntValue("ReadyForTea",0)
+	"Perhaps you will consider returning to visit... ah, but this is a poor time to have that conversation."
+	Charlotte sighs.
+	"I will see you this evening, then."
+}
+I nod silently to Charlotte, turn, and walk out of the cafe. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family." # ambience_vol | -10
 ~SetValue("ReflectOnBreakdown", true)
 I'm so stupid. #depression += 25 # ambience_vol | 0

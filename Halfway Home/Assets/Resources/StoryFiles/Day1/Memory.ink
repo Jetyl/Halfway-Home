@@ -91,13 +91,22 @@ They pull out a small bit of paper from their pocket and begin reading aloud.
 "There's some legal stuff, blah blah blah. I think you've got it."
 "Anyhoo, I've got to finish mopping the cafe."
 "I'll leave you to unpack and get settled. Why don't you come and find me when you're done?"
-I don't have much to unpack and the room is already furnished, so it doesn't take long.   # Max = Exit   # Ambience : Stop_All
+I don't have much to unpack and the room is already furnished, but I take my time. It's more comforable for me to be alone. # Max = Exit   # Ambience : Stop_All
+Now that I'm finished I guess I should head to the cafe. I think I saw it off to the right when I walked in.
 -> Cafe
 
 === Cafe ===
-I head to the cafe, where Max said they would be. It's not hard to find.   # Background / Kitchen, Blackwipe # ambience_vol ! -2.3
-Max is here, mopping lethargically.   # Max = Calm
-[Max] "Yo. Good to see you again. How was your first week?"
+As expected, it's not hard to find.  # Background / Kitchen, Blackwipe # ambience_vol ! -2.3
+Max is here, mopping lethargically. I hope they aren't mad at how long I took...  # Max = Calm
+[Max] "Yo. Good to see you again."
+[{player_name}] "Good to see you, too...?"
+It can't have been more than twenty minutes since I last saw them. Max must be a bit of a goofball.
+[Max] "Are you feeling settled in yet?"
+I thought this was supposed to a be a `no rush` environment. What's with this attitude?
+[{player_name}] "Um... not really yet. Should I be?"
+[Max] "Oh, no pressure, {player_name}. Everyone has their own pace!" # Max = Happy
+"It's only been one week since you got here, after all."
+"Plenty of other residents need more time, too, I just wanted to check in."
 What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf | 60   # ambience_vol | 5.6   # ambience_lpf | 31
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit   # ALayer : play_ambience_crowd_whispering
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience : Stop_All
@@ -116,22 +125,31 @@ Max is reading by the fireplace. I wander over and join them.   #Skip # Max = Ca
 *[Ask what's going on]
 	[{player_name}] "Why is it night all of a sudden? And why did you disappear on me in the cafe?"
 	[Max] "Disappear? Cafe? Are you feeling alright?"   # Max = Surprised
-	[Max] "Did you take somebody else's meds by mistake today or something?"
+	"Did you take somebody else's meds by mistake today or something?"
 	[{player_name}] "Haha, very funny. You can knock it off now."
-	[Max] "I get it, ya know. I was a resident here once. Folks usually hit a rough patch at the six-month mark. I certainly did."   # Max = Sad // MORE OBVIOUS
-	[Max] "It'll pass. And until it does, I'm here for you."   # Max = Happy
-
+	[Max] "I get it, ya know. I was a resident here once, too." # Max = Sad
+	"Folks usually hit a rough patch at the six-month mark. I certainly did."
+	"Some people get homesick. Others feel like they aren't improving. It can be a rough time."
+	"It'll pass. And until it does, I'm here for you."   # Max = Happy
 *[Sit quietly]
 	I don't really understand what's happening to me, but I figure it's best to simply go with it.
 	Max looks up from their book and smiles.   # Max = Happy
-	[Max] "You seem to be adjusting well."
-	[Max] "Usually folks hit a rough patch at the six-month mark. I certainly did."   # Max = Sad
-	[Max] "But you seem unfazed. You've got resolve, my friend."   # Max = Happy
-
--Max keeps talking, but I'm no longer listening.
+	[Max] "You seem to be adjusting well!"
+	"Usually folks hit a rough patch at the six-month mark. I certainly did, back when I was a resident."   # Max = Sad
+	"Some people get homesick. Others feel like they aren't improving. It can be a rough time."
+	"But you seem unfazed. You've got resolve, my friend."   # Max = Happy
+-[{player_name}] "Uh, thanks, that's nice of you to say-" # Skip
+Wait, did they say something about the `six-month` mark?
+I must have misheard them.
+[{player_name}] "S-sorry, did you say six months?"
+[Max] "Yeah, silly, did you not notice what day it was? Your six-month anniversary is today!"
+"<speed=150%>I guess it makes sense you might have forgotten since you're always cooped up in your room." #Skip
+"<speed=150%>You really should try to make more of an effort, you know..." #Skip
+"<speed=150%>My roommate way back when had the same problem... I remember it like it was yesterday...<speed=100%%>" #Skip
+Max keeps talking, but I'm no longer listening.
 No. No, no, no. Six months?! I haven't... this can't be happening!
-My limbs grow numb and a ghostlike sense of disembodiment sweeps over me. // What does Sam think about this?
-My body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe, NoDefaults # Max = Exit   
+My limbs grow numb. I'm a ghost in my own body, a powerless observer.
+I watch as my body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe, NoDefaults # Max = Exit   
 All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # text_vol ! -200
 Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade, NoDefaults # Play : play_music_creepy_atmo
 A chorus of whispers rises out of the darkness.
