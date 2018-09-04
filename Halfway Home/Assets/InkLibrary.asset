@@ -88,6 +88,9 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: 27424af8d3bb8fd4b8e9652f6b00e94c, type: 3}
     jsonAsset: {fileID: 4900000, guid: 822b6926ecbad284990485b02f3c47c5, type: 3}
   - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 46572de32b0683b4397ca4b3db8ae06d, type: 3}
+    jsonAsset: {fileID: 4900000, guid: 63fbfee57c0008843ac9ccddad535bdc, type: 3}
+  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: a618069e4f0fd4549a202ea023a117ef, type: 3}
     jsonAsset: {fileID: 4900000, guid: 14f7b3e80ca2d79469ae2621f29c5323, type: 3}
   - compileAutomatically: 0
