@@ -99,7 +99,7 @@ I'm not sure why Timothy thought I'd be super knowledgeable about hair products.
 My only relevant experience was tie-dying a shirt in elementary school.
 [Timothy]"<jitter>Oh, no. I screwed up, didn't I?</jitter>" # Timothy = Afraid
 [{player_name}] "Oh, no, you're fine. I may not know much about this stuff, but I do know someone who does." # Timothy = Calm
-I lead Timothy over to Eduardo's door. #Background / hallway
+I lead Timothy over to Eduardo's door. #Background / HallwayDay, blackwipe
 I knock loudly, then pause to listen. I'm about to knock again when I finally hear the tell-tale shuffling of someone moving to answer. # SFX : play_sfx_human_knock
 [Eduardo] "Uugh. I'm coming! I'm coming!" #Timothy = Afraid
 Eduardo looks more disheveled than usual. #Eduardo = Angry, stage_left
@@ -472,12 +472,7 @@ Timothy and I leave Charlotte to her business and regroup at the front of the li
 ->->
 
 =Search
-{Search==50: // dank easter egg
-	[Charlotte] "Stop touching my books reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" # Charlotte = Angry
-	.# All = Exit #Skip
--else:
-	Timothy and I {begin checking behind books, beside shelves, and under the furniture|scour the room another time, but nothing turns up}.
-}
+Timothy and I {begin checking behind books, beside shelves, and under the furniture|scour the room another time, but nothing turns up}.
 {Search==1:
 	{Charlotte==0:
 		[Charlotte] "Please be careful, you two." # Charlotte = Afraid, far
