@@ -1,6 +1,6 @@
 ﻿/******************************************************************************/
 /*
-@file   RoomDefaults.ink
+@file   PostBreadkdown.ink
 @author John Myres
 @par    email: john.myres@digipen.edu
 All content © 2018 DigiPen (USA) Corporation, all rights reserved.
@@ -21,6 +21,8 @@ VAR currentHour = 0
 -> Start
 
 === Start ===
+I head to the {current_room=="Garden":garden|{current_room=="Library":library|art room}} to be alone.
+I keep my head down and {current_room=="Garden":walk the spiral paths|{current_room=="Library":begin looking over the volumes|start mindlessly molding some clay}} in an attempt to stay busy.
 I try distract myself from what just happened, but I can't keep myself from replaying the event in my mind.
 {Start==1:
 	->First
