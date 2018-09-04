@@ -128,6 +128,8 @@
 				</SoundBank>
 				<SoundBank Name="story_dye_job" ID="{A55581F1-1FF2-4959-84EE-AD3D4D96B476}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_music_artroom_no_intro" ID="{36B4BFD9-C15C-424F-903A-A6F8E09624E5}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_human_knock" ID="{80E1C409-0CA8-43F9-9E01-0EEF78CE1BBE}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_happy" ID="{C18AC748-E711-4FC8-BE23-09D0AFEB3655}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

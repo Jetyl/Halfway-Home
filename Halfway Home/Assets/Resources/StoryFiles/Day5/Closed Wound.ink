@@ -31,7 +31,7 @@ EXTERNAL GetIntValue(value)
 EXTERNAL SetValue(ValueName, newValue)
 EXTERNAL SetTimeBlock(int)
 
-# Load @ story_closed_wound   # Ambience : play_ambience_stormy
+# Load @ story_closed_wound   # Ambience : play_ambience_stormy   # Play : Stop_All
 
 -> Start
 

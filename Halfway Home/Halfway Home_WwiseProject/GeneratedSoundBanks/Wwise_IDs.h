@@ -40,6 +40,7 @@ namespace AK
         static const AkUniqueID PLAY_MENUUNPAUSE = 3101734072U;
         static const AkUniqueID PLAY_MUSIC_ARTROOM = 1810713724U;
         static const AkUniqueID PLAY_MUSIC_ARTROOM_MORNING = 444439289U;
+        static const AkUniqueID PLAY_MUSIC_ARTROOM_NO_INTRO = 2903575965U;
         static const AkUniqueID PLAY_MUSIC_CAFEJAZZ = 240662438U;
         static const AkUniqueID PLAY_MUSIC_CHARLOTTE_2 = 3914743577U;
         static const AkUniqueID PLAY_MUSIC_CHARLOTTE_ELEGANT = 2039547829U;
@@ -61,6 +62,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN = 1259498987U;
         static const AkUniqueID PLAY_MUSIC_PLACEHOLDER_MAIN_FADEIN = 3941181009U;
         static const AkUniqueID PLAY_MUSIC_SAD = 3637707742U;
+        static const AkUniqueID PLAY_MUSIC_STORE = 4068032989U;
         static const AkUniqueID PLAY_MUSIC_STORMY_RELATIONSHIP = 3620952831U;
         static const AkUniqueID PLAY_MUSIC_TENSION = 1712470628U;
         static const AkUniqueID PLAY_MUSIC_TENSION_INTRO_01 = 1402380571U;
@@ -161,6 +163,7 @@ namespace AK
         static const AkUniqueID ROOM_GARDEN = 1993474908U;
         static const AkUniqueID ROOM_KITCHEN = 265238677U;
         static const AkUniqueID ROOM_LIBRARY = 3564131344U;
+        static const AkUniqueID ROOM_STORE = 2623393530U;
         static const AkUniqueID ROOM_YOURROOM = 474505651U;
         static const AkUniqueID STORY_ALONE_IN_A_DEAD_MANS_ROOM = 609072037U;
         static const AkUniqueID STORY_AUTHORITYS_APPROVAL = 3786498133U;

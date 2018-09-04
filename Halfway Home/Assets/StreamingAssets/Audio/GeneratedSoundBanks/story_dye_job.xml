@@ -13,7 +13,9 @@
 			<ShortName>story_dye_job</ShortName>
 			<Path>story_dye_job.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2903575965" Name="play_music_artroom_no_intro" ObjectPath="\Events\Default Work Unit\play_music_artroom_no_intro"/>
 				<Event Id="1020080944" Name="play_music_happy" ObjectPath="\Events\PlayMusic\music_happy\play_music_happy"/>
+				<Event Id="2319499992" Name="play_sfx_human_knock" ObjectPath="\Events\PlaySFX\sfx_human\play_sfx_human_knock"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
 				<File Id="178330536" Language="SFX">
@@ -21,6 +23,16 @@
 					<Path>SFX\Music1loop_A51F8DD7.wem</Path>
 				</File>
 			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="30239752" Language="SFX">
+					<ShortName>music_artroom.wav</ShortName>
+					<Path>SFX\music_artroom_A51F8DD7.wem</Path>
+				</File>
+				<File Id="339768715" Language="SFX">
+					<ShortName>sfx_human_knock.wav</ShortName>
+					<Path>SFX\sfx_human_knock_0F51AE3B.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

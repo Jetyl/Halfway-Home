@@ -61,6 +61,36 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_music_artroom_no_intro" ID="{36B4BFD9-C15C-424F-903A-A6F8E09624E5}">
+					<ChildrenList>
+						<Action Name="" ID="{469C9C3C-AACF-42E3-9133-1C8FF66DD547}" ShortID="463753993">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_artroom_no_intro" ID="{F0795D5F-5EA2-43BF-B34F-444BDECF53E6}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_music_store" ID="{FEF8F07A-B2EC-4F72-AA18-CF5367F8C99C}">
+					<ChildrenList>
+						<Action Name="" ID="{6AB44DAD-7665-476F-8060-D4B964F65104}" ShortID="27061031">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="3.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_store" ID="{78B81B03-701B-450C-BC99-000BCE20DB0E}" WorkUnitID="{5362DB76-21A0-4F93-9AEE-28FF867D93B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
