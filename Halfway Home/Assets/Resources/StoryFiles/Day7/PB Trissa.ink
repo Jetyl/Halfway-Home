@@ -32,4 +32,8 @@ EXTERNAL GetHour()
 
 === Start ===
 PB Trissa scene test.
+Trissa has been here the whole time, sitting by the Koi pond.
+Sam notices this after reflecting and can choose to approach her.
+If he doesn't she calls him over anyway.
+She talks about her SPD, a little bit about her life before.
 ->END
