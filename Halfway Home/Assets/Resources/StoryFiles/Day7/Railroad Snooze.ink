@@ -53,7 +53,7 @@ In what feels like the blink of an eye, my room is lit with morning sunlight. #B
 [{player_name}] "Oh, uh... morning, I guess."
 I give a large yawn as I stretch out of bed.
 [Max] "Sleep well? Ya look tired."
-[{player_name}] "Actually... yeah. I think I slept really well." #fatigue => 0
+[{player_name}] "Actually... yeah. I think I slept really well." #fatigue => 0 #depression -= 75
 Not that I wouldn't like to go <i>back</i> to sleep, mind you. 
 Still, I feel very refreshed.
 [Max] "That's great!" #Max=Happy

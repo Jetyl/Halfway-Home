@@ -41,7 +41,7 @@ In fact, it looks like he's been crying recently.
 "Sorry. I've never been one to hide how I feel." #Eduardo = sad
 [{player_name}] "I'm actually surprised how much Timothy's panic attack is affecting you?"
 He laughes at that comment. #Eduardo = happy
-[Eduardo] "Yeah, sure. That's it. Cuz I'm just <flow>sooo</flow> empathetic." #Eduardo = sad
+[Eduardo] "Yeah, sure. That's it. Cuz I'm just <flow>soooo</flow> empathetic." #Eduardo = sad
 He laughes some more, but even I can tell its fake.
 "Sorry, {player_name}, you shouldn't have to deal with two people's broken minds in one day."
 "Beside, I, uh, came in here, becuase I thought it was empty. I just want to be left alone right now."

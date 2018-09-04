@@ -141,7 +141,7 @@ Max gives a hearty laugh before quickly turning their mop on me like it was a sw
 -It's times like now I really begin to question if Max is the first floor's RA, or janitor.
 Timothy sits with us and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
 Well, really, it's mostly Eduardo and Trissa talking with everyone else interjecting periodically, but still.
-I have a good time. #stress -=25 #depression -=25
+I have a good time. #stress -=25 #depression => 0
 Time, however, moves ever onward and the conversation dies down. #time%1
 I excuse myself and head off to my next location... #All=Exit
 ~SetValue("Saved Timothy", true)
@@ -154,7 +154,7 @@ I excuse myself and head off to my next location... #All=Exit
 I spot Timothy sitting at one of the tables alone. #Timothy = Sad
 [{player_name}] "Sup."
 I sit myself down with my meal. # Play : Stop_All
-[Timothy] "Oh.<delay=0.5> Hi."
+[Timothy] "Oh.<delay=0.5> Hi."  
 {He seems to be in a quiet mood today.|He's quiet again. Am I too late to help him?}
 {I silently eat with him for a while until I hear a loud voice approach.|I search for something to say to break the silence. Anything. But before I find the words, a loud voice approaches.} #Timothy = Exit
 [Eduardo] "Hey! {player_name}! How's it going?" #Eduardo = Calm #Isaac = Calm # sfx : play_sfx_human_footsteps_soft
@@ -367,5 +367,6 @@ Charlotte scrutinized my face for a moment.
 I nod silently to Charlotte, turn, and walk out of the cafe. #Charlotte=Exit
 [Voices] "It was stupid to think of this unstable place as a family." # ambience_vol | -10
 ~SetValue("ReflectOnBreakdown", true)
-I'm so stupid. #depression += 25 # ambience_vol | 0
+~SetValue("Depression Time Dilation", true)
+I'm so stupid. #depression => 100 # ambience_vol | 0
 ->END
