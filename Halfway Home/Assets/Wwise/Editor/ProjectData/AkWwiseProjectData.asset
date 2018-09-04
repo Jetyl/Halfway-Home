@@ -16,9 +16,29 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 617896036
-    m_lastTimePart2: -1999237150
+    m_lastTimePsrt1: 1219001416
+    m_lastTimePart2: -1999236532
     List:
+    - Name: play_ambience_crickets_night
+      Path: Default Work Unit\play_ambience_crickets_night
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_ambience_crickets_night
+        ObjectType: 3
+      ID: 889098130
+      Guid: 354f4d2d290ae94fba35245e51148db5
+      maxAttenuation: 0
+    - Name: play_music_artroom_no_intro
+      Path: Default Work Unit\play_music_artroom_no_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_music_artroom_no_intro
+        ObjectType: 3
+      ID: -1391391331
+      Guid: d9bfb4365cc14f42903aa6f8e09624e5
+      maxAttenuation: 0
     - Name: play_music_game_day
       Path: Default Work Unit\play_music_game_day
       PathAndIcons:
@@ -28,6 +48,26 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1348071733
       Guid: 87747dc07509f94c94bb60398efc2c21
+      maxAttenuation: 0
+    - Name: play_music_store
+      Path: Default Work Unit\play_music_store
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_music_store
+        ObjectType: 3
+      ID: -226934307
+      Guid: 7af0f8feecb2724faa18cf5367f8c99c
+      maxAttenuation: 0
+    - Name: play_sfx_car_horn
+      Path: Default Work Unit\play_sfx_car_horn
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_sfx_car_horn
+        ObjectType: 3
+      ID: 1824880844
+      Guid: 33630427d456d540963d65b1bd6606e7
       maxAttenuation: 0
     - Name: play_sfx_creepy_door
       Path: Default Work Unit\play_sfx_creepy_door
@@ -42,8 +82,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -1408567516
-    m_lastTimePart2: -1999237148
+    m_lastTimePsrt1: -272877676
+    m_lastTimePart2: -1999236816
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -828,8 +868,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: -1174813208
-    m_lastTimePart2: -1999237449
+    m_lastTimePsrt1: -272827643
+    m_lastTimePart2: -1999236816
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -1149,8 +1189,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8011013C-2F47-48AE-8EE4-65D01964509C}'
-    m_lastTimePsrt1: -1405918693
-    m_lastTimePart2: -1999238581
+    m_lastTimePsrt1: -524707641
+    m_lastTimePart2: -1999236816
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -1249,8 +1289,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -1174652972
-    m_lastTimePart2: -1999237449
+    m_lastTimePsrt1: -272046927
+    m_lastTimePart2: -1999236816
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1291,8 +1331,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: -1262417829
-    m_lastTimePart2: -1999242863
+    m_lastTimePsrt1: -1892083870
+    m_lastTimePart2: -1999236532
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -1339,6 +1379,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -730835952
       Guid: 3eae5e635aae164eb48d1d3b10083825
+    - Name: room_Store
+      Path: Rooms\room_Store
+      PathAndIcons:
+      - ElementName: Rooms
+        ObjectType: 12
+      - ElementName: room_Store
+        ObjectType: 7
+      ID: -1671573766
+      Guid: 547370673eda484bb37bfbf7277d6ef7
     - Name: room_YourRoom
       Path: Rooms\room_YourRoom
       PathAndIcons:
@@ -1351,8 +1400,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -1277256595
-    m_lastTimePart2: -1999237148
+    m_lastTimePsrt1: -660578040
+    m_lastTimePart2: -1999236557
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1399,6 +1448,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1468821033
       Guid: cc61f18f32d2054ab5f4a3f3337720a9
+    - Name: story_cold_sky_hideaway
+      Path: Stories\story_cold_sky_hideaway
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_cold_sky_hideaway
+        ObjectType: 7
+      ID: -1312320624
+      Guid: 1f90fba28bb81649a6ecc7b7e5df36cf
     - Name: story_courtside
       Path: Stories\story_courtside
       PathAndIcons:
@@ -1511,8 +1569,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{97E54518-1B72-4813-96CB-8C08A386CD29}'
-    m_lastTimePsrt1: -276328654
-    m_lastTimePart2: -1999238583
+    m_lastTimePsrt1: -524827745
+    m_lastTimePart2: -1999236816
     List:
     - Name: ambience_lpf
       Path: Default Work Unit\ambience_lpf

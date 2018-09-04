@@ -31,6 +31,8 @@ EXTERNAL SetIntValue(name, string)
 EXTERNAL GetStringValue(name)
 EXTERNAL CallSleep()
 
+# Load @ story_dye_job
+
 -> Start
 
 === Start ===
@@ -54,7 +56,7 @@ I stagger into the room with a yawn.
 // CUT: huh?
 "<size=60%>{player_name}."
 "<size=80%>Are you awake?"
-In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main #fatigue => 0 #Background / YourRoom, eyeopen // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main # music_vol | -6 #fatigue => 0 #Background / YourRoom, eyeopen, NoDefaults // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"
@@ -68,11 +70,11 @@ Unexpected is good.
 [Timothy] "Th-Thank You!" #Timothy = Happy
 "I'll meet you in the common area when you're ready."
 Timothy slips out of the room with an innocent smile, leaving me to perform my morning ritual. #Timothy = Exit
-It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe #Timothy = Calm // I feel like this line can be improved, but I'm not sure how yet
+It doesn't take me long and I catch up with him in no time. #Background / commons, blackwipe, NoDefaults #Timothy = Calm # Play : play_music_happy # music_vol | -3 // I feel like this line can be improved, but I'm not sure how yet
 ->InTheCommons
 
 ===InTheCommons===
-[{player_name}] "Okay, I'm ready."   # Play : play_music_happy
+[{player_name}] "Okay, I'm ready."
 [Timothy] "Thanks again, {player_name}."
 [{player_name}] "It's no big deal."
 "{So, where is the stuff? Are we going to do this in our bathroom or the public restroom?|Do you <i>have</i> any hair dye, man?}" #Timothy = Surprised
@@ -163,7 +165,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 	-> Commons
 
 === ArtRoom ===
-{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.} # Background / ArtRoom, blackwipe #Skip
+{We arrive at the art room. Isaac is here sculpting something out of clay. He's so focused he doesn't seem to have noticed our arrival at all.|We're back at the art room. Isaac's still here sculpting.} # Background / ArtRoom, blackwipe, NoDefaults #Skip # Play : play_music_artroom_no_intro # Ambience : play_ambience_fireplace_far_birds_day # music_vol | 0
 ->ARChoice
 =ARChoice
 +[Talk to {Isaac:Isaac again.|Isaac.}] ->Isaac->ARChoice
@@ -217,7 +219,7 @@ Eduardo vanishes into the darkness behind him, yawning as the door clicks. # Edu
 
 =Search
 Timothy and I {begin picking the room apart.|look everything over one more time.} # Timothy = Surprised, far
-We Look through all of the stored art projects, from paintings to sculptures. {No Hair dye materials, but a lot of neat little half finished sculptures.| Still nothing we were looking for, but we did find a few more neat little statuettes.}
+We look through all of the stored art projects, from paintings to sculptures. {No hair dye materials, but a lot of neat little half finished sculptures.| Still nothing we were looking for, but we did find a few more neat little statuettes.}
 [Timothy] "{I don't think its here...|I sh-should spend more time here l-later.}"
 [{player_name}] "{Yeah, I'm not seeing it here. Guess we should try elsewhere.|Yeah, that could be fun. But, we should keep going for now.}"
 We regroup at the front of the room. # All = Exit
@@ -225,7 +227,7 @@ We regroup at the front of the room. # All = Exit
 
 
 === Commons ===
-We {step into the cozy heart of Sunflower House.|return to the common room.} # Background / Commons, blackwipe
+We {step into the cozy heart of Sunflower House.|return to the common room.} # Background / Commons, blackwipe # music_vol | 0
 {It looks like Trissa has just finished soundly whooping a second-floor resident at the ping-pong table.|Trissa is still cooling off by the ping-pong table.} #Skip
 ->CoChoice
 =CoChoice
@@ -297,7 +299,7 @@ We regroup at the front of the room. # All = Exit #Skip
 ->->
 
 === Cafe ===
-Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet|again}. # Background / Kitchen, blackwipe
+Timothy and I {file into|return to} the cafeteria. The sweet aroma of fresh fruit and frying meat fills my nostrils{, reminding my stomach that I haven't eaten breakfast yet| again}. # Background / Kitchen, blackwipe
 {A few|The} second-floor residents are {quietly|still} eating in the back. {Max is leaning up against a wall, munching on a bagel.|Having finished their bagel, Max is lethargically mopping under the counters.} #Skip
 ->CaChoice
 =CaChoice
@@ -361,7 +363,7 @@ I know you want to use the hair dye, but unless you can provide some kind of pro
 
 =Repeat
 [Max] "{haveReceipt:I'm sorry to have put you through all this.|Again, I wish I could help.}"
-{haveReceipt:Just give me a moment to get it down for you.|Best of luck to you!} # Max = Calm
+"{haveReceipt:Just give me a moment to get it down for you.|Best of luck to you!}" # Max = Calm
 [{player_name}] "Thanks, Max."
 {haveReceipt:->GotIt|->NoDice}
 
@@ -452,7 +454,7 @@ Timothy and I shuffle {|back }into the library. Charlotte is {tending to her rec
 	Timothy perks up. # Timothy = Surprised
 	"Eduardo has a long-standing habit of leaving his things strewn about the House."
 	"I do not understand how Max has the patience to keep picking up after him, but I must applaud their patience."
-	"Most such items are returned to Eduardo, but on occasion, when the man is unavailable or the items' owner inscrutable, Max locks them up in the storage closet in the cafeteria that acts as Sunflower House's `Lost and Found`"
+	"Most such items are returned to Eduardo, but on occasion, when the man is unavailable or the items' owner inscrutable, Max locks them up in the storage closet in the cafeteria that acts as Sunflower House's `Lost and Found`."
 	"I would wager said closet is currently home to many of Eduardo's possessions, including the object of your search."
 	[{player_name}] "So you're saying we should go to the cafe?"
 	[Charlotte] "I am indeed. However, the closet is kept locked, so you will need to entreat our lovable resident assistant for the key."
@@ -470,7 +472,12 @@ Timothy and I leave Charlotte to her business and regroup at the front of the li
 ->->
 
 =Search
-Timothy and I {begin checking behind books, beside shelves, and under the furniture|scour the room another time, but nothing turns up}.
+{Search==50: // dank easter egg
+	[Charlotte] "Stop touching my books reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" # Charlotte = Angry
+	.# All = Exit #Skip
+-else:
+	Timothy and I {begin checking behind books, beside shelves, and under the furniture|scour the room another time, but nothing turns up}.
+}
 {Search==1:
 	{Charlotte==0:
 		[Charlotte] "Please be careful, you two." # Charlotte = Afraid, far
@@ -484,7 +491,7 @@ Timothy and I {begin checking behind books, beside shelves, and under the furnit
 ->->
 
 ===TimeToDye===
-With the supplies in hand, I lead Timothy back to our bathroom to get started. #Background / YourRoom, blackwipe #Timothy = Happy
+With the supplies in hand, I lead Timothy back to our bathroom to get started. #Background / YourRoom, blackwipe, NoDefaults #Timothy = Happy # Play : play_music_happy # music_vol | -3
 [{player_name}] "We've got a bunch of crazy color options here. Man, Eduardo really likes neon bright colors."
 "So, Timothy, what color would you like?"
 [Timothy] "Blue! P-please!"

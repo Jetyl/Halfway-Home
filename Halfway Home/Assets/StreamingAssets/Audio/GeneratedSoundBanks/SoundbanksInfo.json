@@ -339,14 +339,38 @@
     "Path": "story_dye_job.bnk",
     "IncludedEvents": [
      {
+      "Id": "2903575965",
+      "Name": "play_music_artroom_no_intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_artroom_no_intro"
+     },
+     {
       "Id": "1020080944",
       "Name": "play_music_happy",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "2319499992",
+      "Name": "play_sfx_human_knock",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_knock"
      }
     ],
     "ReferencedStreamedFiles": [
      {
       "Id": "178330536"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "30239752",
+      "Language": "SFX",
+      "ShortName": "music_artroom.wav",
+      "Path": "SFX\\music_artroom_A51F8DD7.wem"
+     },
+     {
+      "Id": "339768715",
+      "Language": "SFX",
+      "ShortName": "sfx_human_knock.wav",
+      "Path": "SFX\\sfx_human_knock_0F51AE3B.wem"
      }
     ]
    },
@@ -649,6 +673,38 @@
       "Language": "SFX",
       "ShortName": "sfx_object_car_away1.wav",
       "Path": "SFX\\sfx_object_car_away1_00FA84C2.wem"
+     }
+    ]
+   },
+   {
+    "Id": "2623393530",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_Store",
+    "ShortName": "room_Store",
+    "Path": "room_Store.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "4068032989",
+      "Name": "play_music_store",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_store"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "447526213",
+      "Language": "SFX",
+      "ShortName": "music_store.wav",
+      "Path": "SFX\\music_store_A51F8DD7.wem"
      }
     ]
    },

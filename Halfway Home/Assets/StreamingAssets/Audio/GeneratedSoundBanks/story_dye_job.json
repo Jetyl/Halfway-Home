@@ -20,9 +20,19 @@
     "Path": "story_dye_job.bnk",
     "IncludedEvents": [
      {
+      "Id": "2903575965",
+      "Name": "play_music_artroom_no_intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_artroom_no_intro"
+     },
+     {
       "Id": "1020080944",
       "Name": "play_music_happy",
       "ObjectPath": "\\Events\\PlayMusic\\music_happy\\play_music_happy"
+     },
+     {
+      "Id": "2319499992",
+      "Name": "play_sfx_human_knock",
+      "ObjectPath": "\\Events\\PlaySFX\\sfx_human\\play_sfx_human_knock"
      }
     ],
     "ReferencedStreamedFiles": [
@@ -31,6 +41,20 @@
       "Language": "SFX",
       "ShortName": "Music1loop.wav",
       "Path": "SFX\\Music1loop_A51F8DD7.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "30239752",
+      "Language": "SFX",
+      "ShortName": "music_artroom.wav",
+      "Path": "SFX\\music_artroom_A51F8DD7.wem"
+     },
+     {
+      "Id": "339768715",
+      "Language": "SFX",
+      "ShortName": "sfx_human_knock.wav",
+      "Path": "SFX\\sfx_human_knock_0F51AE3B.wem"
      }
     ]
    }

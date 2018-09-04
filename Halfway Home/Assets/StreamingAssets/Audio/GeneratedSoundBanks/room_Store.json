@@ -1,0 +1,52 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "11",
+  "SoundbankVersion": "125",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Assets\\StreamingAssets\\Audio\\GeneratedSoundBanks\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Lemninas\\Desktop\\Halfway Home\\Halfway-Home\\Halfway Home\\Halfway Home_WwiseProject\\GeneratedSoundBanks\\Windows\\"
+  },
+  "SoundBanks": [
+   {
+    "Id": "2623393530",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Rooms\\room_Store",
+    "ShortName": "room_Store",
+    "Path": "room_Store.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "4068032989",
+      "Name": "play_music_store",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_music_store"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800",
+      "Language": "SFX",
+      "ShortName": "loop_hpf_10k_BirdsAmbience 6102_54.wav",
+      "Path": "SFX\\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "447526213",
+      "Language": "SFX",
+      "ShortName": "music_store.wav",
+      "Path": "SFX\\music_store_A51F8DD7.wem"
+     }
+    ]
+   }
+  ]
+ }
+}
