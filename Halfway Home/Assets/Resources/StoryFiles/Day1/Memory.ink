@@ -110,8 +110,8 @@ I thought this was supposed to a be a `no rush` environment. What's with this at
 What? They're joking, right? I just got here... There's no way I lost a whole week.   # music_lpf | 60   # ambience_vol | 5.6   # ambience_lpf | 31
 I can hear the other residents whispering again. I look over my shoulder, but there's no one there.   # Max = Exit   # ALayer : play_ambience_crowd_whispering
 Shadows begin to flit across the tiled floor. The voices fall silent as I turn back to Max.   # Play : Stop_All   # Ambience : Stop_All
-But they're gone...
-A chill runs down my spine. What's going on?   # Play : Stop_All_Fast
+But they're gone... # Play : Stop_All   # Ambience : Stop_All
+A chill runs down my spine. What's going on?   # Play : Stop_All_Fast # Ambience : Stop_All_Fast
 
 // Stop_All_Fast: Hard stop music if player is clicking fast
 // Reset RTPCs
@@ -151,7 +151,7 @@ No. No, no, no. Six months?! I haven't... this can't be happening!
 My limbs grow numb. I'm a ghost in my own body, a powerless observer.
 I watch as my body rises from my seat and stumbles toward my bedroom.   # Background / HallwayNight, Blackwipe, NoDefaults # Max = Exit   
 All sound seems to fall away as my hand pulls open the door.   # Ambience : Stop_All   # text_vol ! -200
-Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade, NoDefaults # Play : play_music_creepy_atmo
+Where my room should be there's nothing but the cold void, as if my door opened into some space beyond the stars.   #Background / Dream, Crossfade, NoDefaults # Play : play_music_creepy_atmo # ambience_vol | 6
 A chorus of whispers rises out of the darkness.
 [Voices] "Pitiful. Powerless. Pointless."   # SFX : play_sfx_human_ghostwhisper
 My heart sinks to the floor. Overwhelming dread overcomes me.   # ambience_lpf ! 0
@@ -164,7 +164,7 @@ Behind me, the friendly hallways of Sunflower House have dissolved into the sick
 I sprint headlong down the sterile hallway. I can feel the darkness closing in behind me.   # SFX : play_sfx_human_footsteps_approaching
 <speed=40>It wants to trap me. I can't let that happen. I have to get out!
 The hallway seems to shift in front of me, impeding my escape.
-I dive into a corridor that extends into darkness to my left.   # SFX : play_sfx_human_footsteps_approaching
+I dive into a corridor that extends into darkness to my left.   # SFX : play_sfx_human_footsteps_approaching 
 The corridor seems to go on forever. I don't know how much longer I can keep this up.
 [Voices] "This is pointless."   # SFX : play_sfx_human_ghostwhisper
 In the distance, I notice something new: a faint electric glow.
@@ -185,7 +185,7 @@ On instinct, I rush into the... #Skip
 I rush to the sink. The handle turns noiselessly. A cold jet of water streams soundlessly into the basin.
 I look up at the mirror. My heart freezes over.
 A formless shadow gazes into me from the reflective surface.   # Ambience : stop_ambience_all
-[Voices] "This is who you are."   # Play : Stop_All   # SFX : play_sfx_human_ghostwhisper   # Load @ story_knock_on_the_morning_door
+[Voices] "This is who you are."   # Play : Stop_All   # SFX : play_sfx_human_ghostwhisper   # Load @ story_knock_on_the_morning_door # ambience_vol ! 0
 -> Wake
 
 === Wake ===
