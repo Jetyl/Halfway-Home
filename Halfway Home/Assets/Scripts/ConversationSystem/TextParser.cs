@@ -291,8 +291,13 @@ public static class TextParser
 
         text = text.Replace("`", "\"");
 
-        var relive = new Regex(Regex.Escape("'"));
-        text = relive.Replace(text, "‘", 1);
+
+        var replace = new Regex(Regex.Escape("*"));
+        text = replace.Replace(text, "‘", 1);
+
+        text = text.Replace("*", "'");
+        //var relive = new Regex(Regex.Escape("'"));
+        //text = relive.Replace(text, "‘", 1);
 
 
         text = text.Replace("_Player", "");

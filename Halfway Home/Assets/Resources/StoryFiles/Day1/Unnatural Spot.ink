@@ -119,29 +119,29 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 	Let's see, vowels I haven't guessed yet... #Skip
 }
 +{Guess_A == false}[A] 
-	[{player_name}] "How about 'A'?"
+	[{player_name}] "How about *A*?"
 	~Guess_A = true
 	~ VowelGuess += 1
 	->Wrong
 +{Guess_E == false}[E] 
-	[{player_name}] "How about 'E'?"
+	[{player_name}] "How about *E*?"
 	~Guess_E = true
 	~ VowelGuess += 1
-	[Timothy] "There is an 'E'" #Hangman / E
+	[Timothy] "There is an *E*" #Hangman / E
 	-> Correct 
 +{Guess_I == false}[I] 
-	[{player_name}] "How about 'I'?"
+	[{player_name}] "How about *I*?"
 	~Guess_I = true
 	~ VowelGuess += 1
 	-> Wrong
 +{Guess_O == false}[O]
-	[{player_name}] "How about 'O'?"
+	[{player_name}] "How about *O*?"
 	~Guess_O = true
 	~ VowelGuess += 1
-	[Timothy] "There is an 'O'" #Hangman / O
+	[Timothy] "There is an *O*" #Hangman / O
 	-> Correct
 +{Guess_U == false}[U]
-	[{player_name}] "How about 'U'?"
+	[{player_name}] "How about *U*?"
 	~Guess_U = true
 	~ VowelGuess += 1
 	-> Wrong
@@ -152,30 +152,30 @@ I get closer and see that he's writing something in the dirt. #Hangman / Open
 === Constant ===
 Okay, some common consonants are... #Skip
 +{Guess_S == false}[S]
-	[{player_name}] "How about 'S'?"
+	[{player_name}] "How about *S*?"
 	~Guess_S = true
 	~ ConstantGuess += 1
 	-> Wrong
 +{Guess_T == false}[T]
-	[{player_name}] "How about 'T'?"
+	[{player_name}] "How about *T*?"
 	~Guess_T = true
 	~ ConstantGuess += 1
 	-> Wrong
 +{Guess_R == false}[R]
-	[{player_name}] "How about 'R'?"
+	[{player_name}] "How about *R*?"
 	~Guess_R = true
 	~ ConstantGuess += 1
 	-> Wrong
 +{Guess_N == false}[N]
-	[{player_name}] "How about 'N'?"
+	[{player_name}] "How about *N*?"
 	~Guess_N = true
 	~ ConstantGuess += 1
 	-> Wrong
 +{Guess_H == false}[H]
-	[{player_name}] "How about 'H'?"
+	[{player_name}] "How about *H*?"
 	~Guess_H = true
 	~ ConstantGuess += 1
-	[Timothy] "There is an 'H'." #Hangman / H
+	[Timothy] "There is an *H*." #Hangman / H
 	-> Correct 
 +[Back]
 	[{player_name}] "Hm..." #Skip
