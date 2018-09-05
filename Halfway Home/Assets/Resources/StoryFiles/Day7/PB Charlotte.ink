@@ -30,7 +30,7 @@ VAR currentHour = 0
 [Charlotte] "I apologize for disturbing you, but I couldn't help but notice your morose expression from my seat at the window." # Charlotte = Sad
 "I thought perhaps you might be in need of some... `cheering up`." # Charlotte = Happy
 Can't hide anything from Charlotte. Not that I was trying.
-Do I really want company right now? # Charlotte = Calm
+Do I really want company right now? # Charlotte = Calm # Skip
 +[Accept]
 	[{player_name}] "Sure. Why not?"
 	[Charlotte] "Wonderful." # Charlotte = Happy
