@@ -30,20 +30,26 @@ EXTERNAL GetHour()
 
 === Start ===
 I am pulled out of head by the sound of empty tins falling over behind me.
-[unknown>Eduardo] "Shit!"
-I look over, and see, Eduardo, looking worse for wear. #Eduardo = sad
-In fact, it looks like he's been crying recently.
-[{player_name}] "hey, Eduardo. You okay."
-[Eduardo] "hrm? Oh, {player_name}, I didn't see you there."
+[Unknown>Eduardo] "Shit!"
+I look over and see Eduardo, looking worse for wear. #Eduardo = sad
+His eye's are red, and his usual confidance in his step is just gone.
+[{player_name}] "Hey, Eduardo. You okay."
+[Eduardo] "Huh? Oh, {player_name}, I didn't see you there."
 "Uh, yeah, I'm fine."
 [{player_name}] "You don't look fine."
 [Eduardo] "No shit sherlock. You don't say." #Eduardo = angry
 "Sorry. I've never been one to hide how I feel." #Eduardo = sad
-[{player_name}] "I'm actually surprised how much Timothy's panic attack is affecting you?"
-He laughes at that comment. #Eduardo = happy
-[Eduardo] "Yeah, sure. That's it. Cuz I'm just <flow>soooo</flow> empathetic." #Eduardo = sad
-He laughes some more, but even I can tell its fake.
-"Sorry, {player_name}, you shouldn't have to deal with two people's broken minds in one day."
++[Confess surpise at Eduardo's empathy]
+	[{player_name}] "I'm actually surprised how much Timothy's panic attack is affecting you."
+	He laughes at that comment. #Eduardo = happy
+	[Eduardo] "Yeah, sure. That's it. Cuz I'm just <flow>soooo</flow> empathetic." #Eduardo = sad
+	He laughes some more, but even I can tell its fake.
++[Ask if he wants to talk about it]
+	[{player_name}] "Do you, uh, want to talk about it."
+	I ask, almost out of a habit, if he is doing well, despite my own wreck of emotions.
+	[Eduardo] "hehe, yeah, talk about myself. that's just all I ever do ain't it." #Eduardo = happy
+	Eduardo forces a smile, but quickly loses any energy for that too. #Eduardo = sad
+-"Sorry, {player_name}, you shouldn't have to deal with two people's broken minds in one day."
 "Beside, I, uh, came in here, becuase I thought it was empty. I just want to be left alone right now."
 "So, uh, see ya at dinner, or whatever." #Eduardo = exit
 [{player_name}] "Um, okay."
