@@ -20,10 +20,10 @@ MonoBehaviour:
     PointSize: 42
     Scale: 1
     CharacterCount: 212
-    LineHeight: 63
+    LineHeight: 50
     Baseline: 0
     Ascender: 31.5
-    CapHeight: 27.4375
+    CapHeight: 30.19
     Descender: -10.5
     CenterLine: 0
     SuperscriptOffset: 31.5
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   normalSpacingOffset: 0
   boldStyle: 0.75
   boldSpacing: 7
-  italicStyle: 35
+  italicStyle: 20
   tabSize: 10
 --- !u!21 &21777333972631856
 Material:

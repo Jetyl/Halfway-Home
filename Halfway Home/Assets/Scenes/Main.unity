@@ -4304,7 +4304,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8654,6 +8654,36 @@ Prefab:
       propertyPath: Rooms.Array.data[6].DisplayImages.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224000288944906738, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -8897,7 +8927,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 285.42072
+      value: 285.45642
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8907,7 +8937,7 @@ Prefab:
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 470.84143
+      value: 470.91287
       objectReference: {fileID: 0}
     - target: {fileID: 224588004090125410, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -8927,7 +8957,7 @@ Prefab:
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 540.84143
+      value: 540.91284
       objectReference: {fileID: 0}
     - target: {fileID: 224083948633695630, guid: e9f83229598c5cd4e8c70b758a59ae13,
         type: 2}
@@ -9599,6 +9629,82 @@ Prefab:
         type: 2}
       propertyPath: ClosedTimeContainer.Array.data[2].ProgressLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].Conditions.Array.data[0].Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].Conditions.Array.data[0].Condition.ProgressName
+      value: ReflectOnBreakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].Conditions.Array.data[0].Condition.TypeID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].Conditions.Array.data[0].Condition.BoolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[5].Conditions.Array.data[1].DescriptorText
+      value: Get some fresh air and contemplate what a bad roommate I am.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].Conditions.Array.data[0].Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].Conditions.Array.data[0].Condition.ProgressName
+      value: ReflectOnBreakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].Conditions.Array.data[0].Condition.TypeID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].Conditions.Array.data[0].Condition.BoolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[6].Conditions.Array.data[1].DescriptorText
+      value: Read something, I guess. Anything to take my mind off Timothy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].Conditions.Array.data[0].Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].Conditions.Array.data[0].Condition.ProgressName
+      value: ReflectOnBreakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].Conditions.Array.data[0].Condition.TypeID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].Conditions.Array.data[0].Condition.BoolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114010591847967052, guid: e9f83229598c5cd4e8c70b758a59ae13,
+        type: 2}
+      propertyPath: Descriptors.Array.data[7].Conditions.Array.data[1].DescriptorText
+      value: Channel my failure and depression into something constructive. Like a
+        real artist, I guess.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f83229598c5cd4e8c70b758a59ae13, type: 2}
@@ -41723,7 +41829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.12897}
+  m_AnchoredPosition: {x: 0, y: 903.01666}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -55795,7 +55901,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4039426199608004, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
       propertyPath: m_LocalPosition.x
@@ -55857,7 +55963,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 16
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55882,7 +55988,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].BoolValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55892,7 +55998,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugAwareness
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55907,7 +56013,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -55952,7 +56058,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugExpression
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -56012,7 +56118,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugWeek
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114602336194486026, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -58822,7 +58928,7 @@ Prefab:
     - target: {fileID: 224556410473340822, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1197.0859
+      value: 1197.2405
       objectReference: {fileID: 0}
     - target: {fileID: 224556410473340822, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}
