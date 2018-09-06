@@ -160,7 +160,7 @@ public class MainMenu : MonoBehaviour
         AkBankManager.UnloadBank("MainMenu");
         AkBankManager.UnloadBank("Master");
         
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Chibi_Credits");
 
     }
 
