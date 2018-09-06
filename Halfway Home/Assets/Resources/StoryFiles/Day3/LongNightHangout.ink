@@ -121,6 +121,30 @@ I suppose I could go another hour, but should I? #Skip
 	"A'course they're not perfect, or I wouldn't be in this crazy joint!"
 - [Eduardo] "Really, the restlessness has been the most persistent element for me." #Hangout / E_Sad
 "Ain't no perfect pill for my skull I s'pose." // Why does Eduardo say "ain't" so much? He's from brazil, not the Old West.
+{
+	-Midnight == 1:
+		->Accent
+	-else:
+		+[Question Eduardo's accent again]
+			->Accent
+		+[Let him keep talking]
+			->Mesmerizing
+}
+
+=Accent
+[{player_name}] "`ain't`? Eduardo, didn't you say you were from brzail originally?" #Hangout / Eye_U
+[Eduardo] "Que? I mean, yeah, parnder, I don't recon what the big ole hootin-anie yall talkin' about?" #Hangout / E_Frown
+...@What. #Hangout / E_Grin
+[Isaac] "Eduardo learned english from old westerns. Bad ones." #Hangout / hrm_Up
+Eduardo bursts out into uncontrollable manic laughter. #Hangout/ E_Happy, Eye_shut, Hand_Down, Leg_Down
+[Eduardo] "<flow>huehuehuehue</flow>, ah. Your reaction, {player_name}, it was priceless." #Hangout/ Eye_U
+"But yeah, I learned to do a white voice from old spagetti westerns as a kiddo." #Hangout / Hand_Up
+[{player_name}] "well, you're uh, very fluent at it."
+[Eduardo] "Obrigado... parnder."
+And Eduardo returns to his manic laughter once more .#Hangout/ E_Happy, Eye_shut, Hand_Down
+->TimePassing
+
+=Mesmerizing
 "Not that I don't mind being up so much. Not while I got ol' Isaac here, a'course." #Eye_I, E_Happy
 [Isaac] "Not always out here. @Naturally." #Hangout / hrm_Up
 "Usually spend the nights he can't sleep in our bedroom. Or painting."
