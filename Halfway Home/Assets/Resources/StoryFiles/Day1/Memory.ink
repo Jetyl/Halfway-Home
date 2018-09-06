@@ -72,11 +72,18 @@ I don't have to wait long before someone notices my entrance. A tall redhead rou
 	->Start.NameEntry
 =Introductions
 [Max>Janitor?] "{player_name}! That was it!"
-Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
-[Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite."   # Max = Calm
+{player_name == "Max_Player" || player_name == "max_Player":
+	Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
+	[Max>Janitor?] "Jeez, hard to believe I forgot my own name!"
+	[Max]"My name's Max, too! Pronouns are They/Them."
+	"Don't worry if you mess it up, I don't bite."
+-else:
+	Some other residents are starting to gather in the hallway. I guess I'm the news of the day.
+	[Max>Janitor?] "Rad. Name's Max, pronouns are They/Them. Don't worry if you mess it up, I don't bite."   # Max = Calm
+}
 The other residents begin to whisper to each other.
 [Max] "Since your room's here on the first floor, I'll be your R.A.! That means that if you need anything non-medical, I'm the one to talk to."
-[Max] "It also means I get to show you to your room! Follow me!"   # Max = Happy
+"It also means I get to show you to your room! Follow me!"   # Max = Happy
 ->Unpack
 
 === Unpack ===
