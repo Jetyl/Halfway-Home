@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 public class EndToCredits : MonoBehaviour
 {
-    public int CreditScene = 2;
+    public string CreditScene = "Chibi_Credits";
     public GameObject FadeScreeen;
 
     // Use this for initialization

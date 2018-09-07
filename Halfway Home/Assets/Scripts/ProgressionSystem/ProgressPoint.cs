@@ -40,7 +40,7 @@ public class ProgressPoint
 
     public ProgressPoint(string eventName, PointTypes type)
     {
-        MonoBehaviour.print(eventName + " " + type);
+        //MonoBehaviour.print(eventName + " " + type);
         ProgressName = eventName;
         TypeID = type;
         StringValue = "";

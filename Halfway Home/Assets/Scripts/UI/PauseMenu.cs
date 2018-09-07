@@ -210,7 +210,7 @@ public class PauseMenu : MonoBehaviour
         
         GameObject.Find("AudioManager").GetComponent<SoundbankManager>().UnloadAllBanks();
         
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 
 }

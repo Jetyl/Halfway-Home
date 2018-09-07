@@ -515,7 +515,7 @@ public class ConvMultiProgress : ConvNode
 **/
 public class ConvMap : ConvNode
 {
-    string Title;
+    public string Title;
     TimeStamp time;
     public Room RoomLocation;
     public List<ProgressPoint> Locks;

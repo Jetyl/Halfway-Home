@@ -182,16 +182,7 @@ namespace HalfwayHome
             }
 
             //if gets here, no scene was there. send a default sorta dealie
-            int multiplier = 1;
-
-            if(AllowTimeDilation && eventdata.DrainEnergy)
-            {
-                foreach (var multiple in TimeDilation)
-                {
-                    if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression))
-                        multiplier = multiple.Multiplier;
-                }
-            }
+            int multiplier = TimeDilationMultiple(eventdata.DrainEnergy);
             
             //Game.current.Progress.SetValue("CurrentRoom", eventdata.Destination.ToString());
             Game.current.CurrentRoom = eventdata.Destination;
@@ -208,7 +199,20 @@ namespace HalfwayHome
 
         }
 
-        
+        public int TimeDilationMultiple(bool DrainEnergy)
+        {
+            int multiplier = 1;
+            if (AllowTimeDilation && DrainEnergy)
+            {
+                foreach (var multiple in TimeDilation)
+                {
+                    if (multiple.DepressionValue <= Game.current.Self.GetWellbingStat(Personality.Wellbeing.Depression))
+                        multiplier = multiple.Multiplier;
+                }
+            }
+
+            return multiplier;
+        }
 
   }
 
