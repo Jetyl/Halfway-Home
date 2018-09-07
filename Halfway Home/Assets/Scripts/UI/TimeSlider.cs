@@ -79,6 +79,9 @@ namespace HalfwayHome
 
             foreach (ConvMap scene in scenes) //for every current scene availbe
             {
+                if (scene.Characters.Count == 0)
+                    continue;
+
                 if (scene.WatchedScene())
                     SceneTitles.Add(scene.RoomLocation, scene.Title);
                 else
@@ -139,6 +142,10 @@ namespace HalfwayHome
                     ShowTime = "???";
                 else
                     ShowTime = Estimate;
+            }
+            else if (value == Room.YourRoom)
+            {
+                ShowTime = "1-8 Hours";
             }
             else
             {

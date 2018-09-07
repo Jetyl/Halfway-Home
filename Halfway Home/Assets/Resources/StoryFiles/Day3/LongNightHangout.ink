@@ -65,6 +65,10 @@ I take a seat on the couch and get comfortable.
 }
 -It's rather fun, but I get a bit more tired. #depression -= 10
 ~HoursSpent = HoursSpent + 1
+{
+	-GetSelfStat("fatigue") > 80:
+	I yawn heavily. Man, I should be getting to bed soon, before I completely crash or something...
+}
 I suppose I could go another hour, but should I? #Skip
 +[Stay another hour <(fatigue<91)>]
 	->NextHour
