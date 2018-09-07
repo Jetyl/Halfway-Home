@@ -59,8 +59,10 @@ public class TimeSliderEditor : Editor
         SerializedProperty TimeDescription = serializedObject.FindProperty("TimeDescription");
         SerializedProperty DepressionEffectorColor = serializedObject.FindProperty("DepressionEffectorColor");
         SerializedProperty SceneText = serializedObject.FindProperty("SceneText");
-        SerializedProperty SceneDescription = serializedObject.FindProperty("SceneDescription");
+        SerializedProperty UnknownSceneDescription = serializedObject.FindProperty("UnknownSceneDescription");
+        SerializedProperty VisitedSceneDescription = serializedObject.FindProperty("VisitedSceneDescription");
         SerializedProperty UnknownSceneTag = serializedObject.FindProperty("UnknownSceneTag");
+        SerializedProperty VisitedSceneTag = serializedObject.FindProperty("VisitedSceneTag");
         SerializedProperty UnknownSceneColor = serializedObject.FindProperty("UnknownSceneColor");
         SerializedProperty VisitedSceneColor = serializedObject.FindProperty("VisitedSceneColor");
         SerializedProperty RoomStrings = serializedObject.FindProperty("RoomStrings");
@@ -99,9 +101,11 @@ public class TimeSliderEditor : Editor
         EditorGUILayout.Space();
 
         EditorGUILayout.PropertyField(SceneText, new GUIContent("Scene Text"), true);
-        EditorGUILayout.PropertyField(SceneDescription, new GUIContent("Scene Description"), true);
+        EditorGUILayout.PropertyField(UnknownSceneDescription, new GUIContent("Unknown Scene Description"), true);
         EditorGUILayout.PropertyField(UnknownSceneTag, new GUIContent("Unknown Scene Tag"), true);
         EditorGUILayout.PropertyField(UnknownSceneColor, new GUIContent("Unknown Scene Color"), true);
+        EditorGUILayout.PropertyField(VisitedSceneDescription, new GUIContent("Vitisted Scene Description"), true);
+        EditorGUILayout.PropertyField(VisitedSceneTag, new GUIContent("Visted Scene Tag"), true);
         EditorGUILayout.PropertyField(VisitedSceneColor, new GUIContent("Visited Scene Color"), true);
 
 
