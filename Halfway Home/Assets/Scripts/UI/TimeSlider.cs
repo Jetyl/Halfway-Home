@@ -47,6 +47,7 @@ namespace HalfwayHome
         [SerializeField]
         public List<RoomStrings> RoomStrings;
         Dictionary<Room, string> SceneTitles;
+        Dictionary<Room, string> TimeEstimates;
 
         bool DrainEnergy;
 
@@ -72,6 +73,7 @@ namespace HalfwayHome
         void TurnMapOn(DefaultEvent Eventdata)
         {
             SceneTitles = new Dictionary<Room, string>();
+            TimeEstimates = new Dictionary<Room, string>();
 
             var scenes = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
 
@@ -82,6 +84,7 @@ namespace HalfwayHome
                 else
                     SceneTitles.Add(scene.RoomLocation, UnknownSceneTag);
 
+                TimeEstimates.Add(scene.RoomLocation, scene.TimeEstimate);
             }
 
         }
@@ -128,20 +131,32 @@ namespace HalfwayHome
 
             RoomText.text = RoomDesciption;
             RoomText.text = RoomText.text.Replace("{room}", room);
+
+            string Estimate = "";
+            if(TimeEstimates.TryGetValue(value, out Estimate) && Estimate != "")
+            {
+                if (SceneTitles[value] == UnknownSceneTag)
+                    ShowTime = "???";
+                else
+                    ShowTime = Estimate;
+            }
+            else
+            {
+                int multiple = DepressionDialator.TimeDilationMultiple(DrainEnergy);
+
+                ShowTime = "";
+                string Hours = " Hours";
+
+                if (multiple > 1)
+                    ShowTime += "<#" + ColorUtility.ToHtmlStringRGBA(DepressionEffectorColor) + ">";
+
+                if (Time * multiple == 1)
+                    Hours = " Hour";
+
+                ShowTime += (Time * multiple) + Hours;
+
+            }
             
-            int multiple = DepressionDialator.TimeDilationMultiple(DrainEnergy);
-
-            ShowTime = "";
-            string Hours = " Hours";
-
-            if (multiple > 1)
-                ShowTime += "<#" + ColorUtility.ToHtmlStringRGBA(DepressionEffectorColor) + ">";
-
-            if (Time * multiple == 1)
-                Hours = " Hour";
-
-            ShowTime += (Time * multiple) + Hours;
-
             TimeText.text = TimeDescription;
             TimeText.text = TimeText.text.Replace("{time}", ShowTime);
 

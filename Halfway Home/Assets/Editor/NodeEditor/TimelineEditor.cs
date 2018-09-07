@@ -708,6 +708,8 @@ public class TimelineEditor : BaseNodeEditor
 
                     Jwriter.WritePropertyName("Tag");
                     Jwriter.Write(((MapNode)node).Tag);
+                    Jwriter.WritePropertyName("Estimate");
+                    Jwriter.Write(((MapNode)node).TimeEstimate);
 
                     Jwriter.WritePropertyName("Day");
                     Jwriter.Write(((MapNode)node).Day);
