@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Stratus;
 
 public class TagToggler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TagToggler : MonoBehaviour
     public string Tag;
     public bool HideOwnChildren;
     public string ProgressTag = "";
+    public float ScaleInOutDuration = 0.5f;
     private List<Graphic> ActiveGraphics = new List<Graphic>();
     private bool HasGraphic;
 
@@ -34,18 +36,29 @@ public class TagToggler : MonoBehaviour
 
     void OnTutorialDisplayChange(TutorialDisplayChange e)
     {
-        if (e.Tag == Tag.ToLower() || (e.Tag == "all" && HideOwnChildren))
+        if (e.Tag == Tag.ToLower())
         {
             if (e.Hide)
             {
-                Hide();
+                Shrink();
             }
             else
             {
-                Show();
+                Grow();
             }
 
             UpdateProgress(e.Hide);
+        }
+        else if(e.Tag == "all" && HideOwnChildren)
+        { 
+            if (e.Hide)
+            {
+                Hide(); // Hide all only used at the beginning, no transition desired
+            }
+            else
+            {
+                Grow();
+            }
         }
         else if (e.Tag == "all" && HasGraphic)
         {
@@ -103,6 +116,24 @@ public class TagToggler : MonoBehaviour
             if (obj.HasGraphic) obj.ShowSelf();
         }
         
+    }
+    
+    public void Grow()
+    {
+      gameObject.GetComponent<RectTransform>().localScale = Vector3.zero;
+      var growSeq = Actions.Sequence(this);
+      Actions.Call(growSeq, Show);
+      Actions.Property(growSeq, () => gameObject.GetComponent<RectTransform>().localScale, new Vector3(1.2f, 1.2f, 1.0f), ScaleInOutDuration*4/5, Ease.QuadOut);
+      Actions.Property(growSeq, () => gameObject.GetComponent<RectTransform>().localScale, Vector3.one, ScaleInOutDuration*1/5, Ease.QuadIn);
+    }
+
+    public void Shrink()
+    {
+      gameObject.GetComponent<RectTransform>().localScale = Vector3.one;
+      var growSeq = Actions.Sequence(this);
+      Actions.Property(growSeq, () => gameObject.GetComponent<RectTransform>().localScale, new Vector3(1.2f, 1.2f, 1.0f), ScaleInOutDuration/5, Ease.QuadOut);
+      Actions.Property(growSeq, () => gameObject.GetComponent<RectTransform>().localScale, Vector3.zero, ScaleInOutDuration*4/5, Ease.QuadIn);
+      Actions.Call(growSeq, Hide);
     }
 
     public void ShowSelf()
