@@ -168,87 +168,94 @@ Today has really tired me out. I end up leaving the cafeteria early. #All = Exit
 
 =BrokeUpBad
 Eduardo is the first to come up. #Eduardo = Sad
-[Eduardo] "Hey, {player_name}. It was great hangin'."
-"With your chill, I'm sure you'll do great out there."
+[Eduardo] "Ei, {player_name}. It was great hangin'."
+"With your cool, I'm sure you'll do wonders out there."
 <speed=10%>...<speed=100%>
-Eduardo just sort of shuffles around, not sure what else to say. #Skip
+Eduardo shuffles in place, seemingly not sure what else to say. #Skip
 +[Ask if he's okay.]
 	[{player_name}] "You seem pretty down, man..."
-	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
-	"I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more." # Eduardo = Angry
+	[Eduardo] "Sim, {player_gender=="F":amiga|amigo}, but it's normal. I'm just at the bottom today."
+	Oh, right, his bipolar disorder must be driving his mood down.
+	"Usually I've got Isaac to help around this time, but..."
+	"I messed up, {player_name}. Reckon I said some dang fool things... I don't know event know where we stand any more." # Eduardo = Angry
 	"And ole' Timmy, I..."
 	"I kind of blew up at him the other day." # Eduardo = Sad
-	"I can't really do anythin' right."
-	"But this isn't your problem, eh? You've got the whole world waiting for you. Come back and visit, okay?" 
+	"Seems I can't do anythin' right."
+	"But this ain't your problem, eh? You've got the whole world waiting for ya. Come back and visit, okay?" 
 +[Let him be.]
-	I decide he's probably just in his depressive state and needs some time to himself.
--Eduardo shrugs, then turns to leave. The week didn't seem to go well for him... # Eduardo = Exit 
+	I decide he's probably just in his depressive state and needs some time to himself
+-[Eduardo] "Tem cuidado, {player_gender=="F":amiga|amigo}."
+Eduardo shrugs, then turns to leave. The week didn't seem to go well for him... # Eduardo = Exit 
 ->->
 
 =BrokeUpGood
 Eduardo is the first to come up. #Eduardo = Sad
-[Eduardo] "Hey, {player_name}. It was great hangin'."
-"With your chill, I'm sure you'll do great out there."
+[Eduardo] "Ei, {player_name}. It was great hangin'."
+"With your cool, I'm sure you'll do wonders out there."
 <speed=10%>...<speed=100%>
-Eduardo just sort of shuffles around, not sure what else to say. #Skip
+Eduardo shuffles in place, seemingly not sure what else to say. #Skip
 +[Ask if he's okay.]
 	[{player_name}] "You seem pretty down, man..."
-	[Eduardo] "{player_name}, amigo. Just at the bottom today. Usually I've got Isaac to help around this time, but..."
-	"I messed up, {player_name}. I said some things I really shouldn't have and now I don't know where we even stand any more." # Eduardo = Angry
-	"I'm glad I could help Timothy out with the dye job, I guess..."
-	"I kind of blew up at him the other day." # Eduardo = Sad
-	"I can't really do anythin' right."
-	"Glad he didn't take what I said to heart or nothing."
-	"<size=50%>Man. I really am a screw up.<size=100%>"
-	"But this isn't your problem, eh? You've got the whole world waiting for you. Come back and visit, okay?" 
+	[Eduardo] "Sim, {player_gender=="F":amiga|amigo}, but it's normal. I'm just at the bottom today."
+	Oh, right, his bipolar disorder must be driving his mood down.
+	"Usually I've got Isaac to help around this time, but..."
+	"I messed up, {player_name}. Reckon I said some dang fool things... I don't know event know where we stand any more." # Eduardo = Angry
+	"I'm glad I could help Timmy out with the dye job, at least..."
+	"I kind of blew up at him the other day..." # Eduardo = Sad
+	"Glad he didn't take what I said to heart or nothin'."
+	"<size=50%>Merda. I really am a screw up.<size=100%>"
+	"But this ain't your problem, eh? You've got the whole world waiting for ya. Come back and visit, okay?" 
 +[Let him be.]
 	I decide he's probably just in his depressive state and needs some time to himself.
--Eduardo shrugs, then turns to leave. The week didn't seem to go well for him... # Eduardo = Exit 
+-[Eduardo] "Tem cuidado, {player_gender=="F":amiga|amigo}."
+Eduardo shrugs, then turns to leave. The week didn't seem to go well for him... # Eduardo = Exit 
 ->->
 
 =UnitBad
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
-"With your chill, I'm sure you'll do great out there."
-"Oh yeah, and uh, Thanks?" #Eduardo =afraid #Skip
+"With your cool, I'm sure you'll do wonders out there."
+"Oh yeah, and uh, thanks?" #Eduardo =afraid #Skip
 +[Thanks for what?]
 	[{player_name}] "Thanks for what?"
-	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, Don't make me say it out loud." #Eduardo = Angry
-	"I am just done with today, alright? complete emotional exhaust, you know?"
+	[Eduardo] "{player_gender=="M":Amigo|{player_gender=="F":Amiga|{player_name}}}, don't make me say it out loud." #Eduardo = Angry
+	"I am just <i>done</i> with today, alright? Complete emotional exhaust, ya know?"
 	"And what with Timothy going all..."
-	"You know, I kind of blew up at him the other day." # Eduardo = Sad
-	"I was so stuck up in my own feeling, I didn't think how it'd affect 'em, and well..."
-	"Well whatever. This ain't your problem." #Eduardo = Calm
+	"You know, I kind of blew up at him the other day..." # Eduardo = Sad
+	"I was so stuck in my own feelings, I didn't think how it'd affect 'im, and well..."
+	"Well, whatever. This ain't your problem." #Eduardo = Calm
 +[No problem.]
-	[{player_name}] "No problem man."
-	I give Eduardo a nice firm handshake, and he perks up, just a little. #Eduardo = Calm
+	[{player_name}] "No problem, man."
+	I give Eduardo a nice firm handshake. He perks up, just a little. #Eduardo = Calm
 -[{player_name}] "Hey, you going to be okay?"
-[Eduardo] "Eh. prolly." #Eduardo = Sad
-"I don't feel too hot now though. Was up, now I'm down, and all that."
-Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
+[Eduardo] "Eh. Reckon so." #Eduardo = Sad
+"I don't feel too hot at present, but it'll pass. Was up, now I'm down. Round and round she goes and all that."
+"Anyways, take care, pardner!"
+Eduardo shrugs, then turns to leave. It sounds like this week was a roller-coaster for him. Hopefully it'll all turn out okay. # Eduardo = Exit 
 ->->
 
 =UnitGood
 Eduardo is the first to come up. #Eduardo = Sad
 [Eduardo] "Hey, {player_name}. It was great hangin'."
-"With your chill, I'm sure you'll do great out there."
-"Oh yeah, and uh, Thanks?" #Eduardo =afraid #Skip
+"With your cool, I'm sure you'll do wonders out there."
+"Oh yeah, and uh, thanks?" #Eduardo =afraid #Skip
 +[Thanks for what?]
 	[{player_name}] "Thanks for what?"
-	[Eduardo] "{player_gender=="M":Man|{player_gender=="F":Girl|{player_name}}}, don't make me say it out loud." #Eduardo = Angry
-	"I am just done with today, alright? Complete emotional exhaust, you know?"
-	"Timothy's dye job is nice, by the way."
-	"I, uh, kind of blew up at him the other day." # Eduardo = Sad
-	"I was so stuck up in my own feeling, I didn't think how it'd affect 'em, and well..."
-	"I'm glad he didn't take what I said to heart." #Eduardo = Calm
-	"<size=50%>I should prolly apologize to him or whatever too. ugh...<size=100%>."
+	[Eduardo] "{player_gender=="M":Amigo|{player_gender=="F":Amiga|{player_name}}}, don't make me say it out loud." #Eduardo = Angry
+	"I am just <i>done</i> with today, alright? Complete emotional exhaust, ya know?"
+	"Timothy's hair looks might fine, by the way."
+	"I, uh, kind of blew up at him the other day..." # Eduardo = Sad
+	"I was so stuck up in my own feelings, I didn't think how it'd affect 'im, and well..."
+	"I'm just glad he didn't take what I said to heart." #Eduardo = Calm
+	"<size=50%>Reckon I should apologize to him... Ugh...<size=100%>."
 +[No problem.]
 	[{player_name}] "No problem man."
-	I give Eduardo a nice firm handshake, and he perks up, just a little. #Eduardo = Calm
+	I give Eduardo a nice firm handshake. He perks up, just a little. #Eduardo = Calm
 -[{player_name}] "Hey, you going to be okay?"
-[Eduardo] "Eh. prolly." #Eduardo = Sad
-"I don't feel too hot now though. Was up, now I'm down, and all that."
-Eduardo shrugs, then turns to leave. The week sounds like it was a roller-coaster for him. Hopefully it'll all end up good. # Eduardo = Exit 
+[Eduardo] "Eh. Reckon so." #Eduardo = Sad
+"I don't feel too hot at present, but it'll pass. Was up, now I'm down. Round and round she goes and all that."
+"Anyways, take care, pardner!"
+Eduardo shrugs, then turns to leave. It sounds like this week was a roller-coaster for him. Hopefully it'll all turn out okay. # Eduardo = Exit 
 ->->
 
 === CharlotteUpdate ===

@@ -103,7 +103,7 @@ I suppose I could go another hour, but should I? #Skip
 [Isaac] "Yes. Always." #hangout / hrm_Up
 [Eduardo] "Isaaaac!" #hangout / E_Sad, Eye_I, Hand_Down
 [Isaac] "Always when he's manic like this. To be exact." #Hangout / hrm_down
-[Eduardo] "<size=50%>That's not that much better ya know...<size=100%>"
+[Eduardo] "<size=50%>That's not that much better, ya know...<size=100%>"
 "I feel fine. Great, even!" #hangout / E_Happy, Eye_U, Leg_Up, Hand_Up
 [Isaac] "Hrm."
 [Eduardo] "Oh don't `hrm` me! Blame the chemicals in my head!" #hangout / E_Frown, Eye_U #Skip
@@ -120,7 +120,7 @@ I suppose I could go another hour, but should I? #Skip
 	"Need my crazy pills to keep me stable."
 	"A'course they're not perfect, or I wouldn't be in this crazy joint!"
 - [Eduardo] "Really, the restlessness has been the most persistent element for me." #Hangout / E_Sad
-"Ain't no perfect pill for my skull I s'pose." // Why does Eduardo say "ain't" so much? He's from brazil, not the Old West.
+"Ain't no perfect pill for my skull I s'pose."
 {
 	-Midnight == 1:
 		->Accent
@@ -132,16 +132,17 @@ I suppose I could go another hour, but should I? #Skip
 }
 
 =Accent
-[{player_name}] "`ain't`? Eduardo, didn't you say you were from brzail originally?" #Hangout / Eye_U
-[Eduardo] "Que? I mean, yeah, parnder, I don't recon what the big ole hootin-anie yall talkin' about?" #Hangout / E_Frown
+[{player_name}] "`Ain't`? `S'pose`? Eduardo, didn't you say you were from Brazil originally?" #Hangout / Eye_U
+"Your accent is... not what I expected."
+[Eduardo] "Que? I mean- yeah, pardner, what's the fuss? You sayin' you don't take a shine to my kind of talk?" #Hangout / E_Frown
 ...@What. #Hangout / E_Grin
 [Isaac] "Eduardo learned english from old westerns. Bad ones." #Hangout / hrm_Up
-Eduardo bursts out into uncontrollable manic laughter. #Hangout/ E_Happy, Eye_shut, Hand_Down, Leg_Down
-[Eduardo] "<flow>huehuehuehue</flow>, ah. Your reaction, {player_name}, it was priceless." #Hangout/ Eye_U
-"But yeah, I learned to do a white voice from old spagetti westerns as a kiddo." #Hangout / Hand_Up
-[{player_name}] "well, you're uh, very fluent at it."
-[Eduardo] "Obrigado... parnder."
-And Eduardo returns to his manic laughter once more .#Hangout/ E_Happy, Eye_shut, Hand_Down
+Eduardo bursts into uncontrollable manic laughter. #Hangout/ E_Happy, Eye_shut, Hand_Down, Leg_Down
+[Eduardo] "<flow>Huehuehuehue</flow>, ah. Your reaction, {player_name}, it was priceless." #Hangout/ Eye_U
+"It's true, I picked up a lot from old spaghetti westerns as a kiddo." #Hangout / Hand_Up
+[{player_name}] "Well, you're, uh... very fluent at it."
+[Eduardo] "{player_gender=="F":Obrigada|Obrigado}... pardner."
+Eduardo gives me a wink and returns to manic laughter .#Hangout/ E_Happy, Eye_shut, Hand_Down
 ->TimePassing
 
 =Mesmerizing
@@ -150,8 +151,8 @@ And Eduardo returns to his manic laughter once more .#Hangout/ E_Happy, Eye_shut
 "Usually spend the nights he can't sleep in our bedroom. Or painting."
 [{player_name}] "You actually get anything done this late?"
 [Isaac] "Hrm. Better than doing nothing."
-[Eduardo] "Yeah, this boy here is super focused when he wants to be!" #Hangout / Eye_U
-"It’s mesmerizing." #Hangout / Leg_Down, Eye_I
+[Eduardo] "Yeah, this boy here is real focused when he wants to be!" #Hangout / Eye_U
+"It’s mesmerizin'." #Hangout / Leg_Down, Eye_I
 ->TimePassing
 
 ===OneAM===
