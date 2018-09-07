@@ -49,9 +49,9 @@ EXTERNAL CallSleep()
 === SunnyMorning ===
 It's a rather sunny morning, and I decide to head into the art room to grab some spare papers to doodle on.
 ~Conviction = 3
-I'm rather surprised to see Eduardo is here by his lonesome this early in the day. #Eduardo = Calm
-He's got a bowl of cereal in his hand, eating on one of the tables meant for art.
-[Eduardo] "<flow>Heyo {player_name}</flow>, how's it going!"
+I'm rather surprised to see Eduardo here alone this early in the day. #Eduardo = Calm
+He's got a bowl of cereal in his hand, eating at one of the tables meant for art.
+[Eduardo] "<flow>Olá, {player_name}</flow>, how's it going!"
 [{player_name}] "Eh, it's going." #Skip
 +[How about you?]
 	"How about you?"
@@ -65,7 +65,7 @@ He's got a bowl of cereal in his hand, eating on one of the tables meant for art
 +[Where's Isaac?]
 	"Where's Isaac?"
 	[Eduardo] "Sleeping, probably." #Eduardo = Angry
--[{player_name}] "I am rather surprised to see you here though. I didn't take you for a morning person." #Eduardo = surprised
+-[{player_name}] "I'm kinda surprised to see you here, though. I didn't take you for a morning person." #Eduardo = surprised
 [Eduardo] "Hey, I take offense to that!" #Eduardo = Angry
 [{player_name}] "Do you? Do you really?"
 [Eduardo] "Haha, no." #Eduardo = Happy
@@ -77,10 +77,10 @@ He's got a bowl of cereal in his hand, eating on one of the tables meant for art
 		 "It's weird, {player_gender == "F": girl| man}. So weird."
 	-else:
 		"Me and Isaac stayed up all night the other day, so it kinda threw everything off."
-		"Crap, was it even yesterday, or two days ago? What day is it, anyways?" #Eduardo = surprised
+		"Darn, was it yesterday or two days ago? What day is it, anyways?" #Eduardo = surprised
 		[{player_name}] "Thursday."
-		[Eduardo] "Okay then yeah, it was yesterday. Or, I guess it started Tuesday night?"
-		"Time is weird, okay." #Eduardo = Angry
+		[Eduardo] "Okay, then yeah, it was yesterday. Or, I s'pose it started Tuesday night?"
+		"Time's strange, alright?" #Eduardo = Angry
 		[{player_name}] "Sure..."
 		{
 			-week == 1:
@@ -93,57 +93,57 @@ He's got a bowl of cereal in his hand, eating on one of the tables meant for art
 				Actually, wait, I can! If...
 				If time loops again I could go see them then. I'll have to make a note of that for later. #3 & InProgress
 			-week >2 :
-				Still, good to know that's where Eduardo and Isaac were late Tuesday night/Wednesday morning. 
+				Still, good to know that's where Eduardo and Isaac were late Tuesday night through Wednesday morning. 
 				I'll have to keep a note of that for next week. #3 & InProgress //add objective here
 		}
 
 }
-[Eduardo] "Anyways, I kinda just felt like coming in here this morning. Not sure why, really. To admire the view of the garden, maybe?" #Eduardo = Angry
+[Eduardo] "Anyways, reckon I just felt like comin' in here this morning. Not sure why, really. To admire the view of the garden, maybe?" #Eduardo = Angry
 "Or maybe this place just reminds me of <flow>Isaac.</flow>" #Eduardo = Calm
 [{player_name}] "Uh-huh."
 [Eduardo]"I really do love him, you know." #Misery / Open, relaxed, dreamy //show CG here.
 "Isaac just completes me."
 [{player_name}] "Sure."
-Oh great. Eduardo appears to be going into a gushing fit over his boyfriend.
-I'm going to need to say something, and quick, before he just goes on for hours, gushing.
+Oh, great. Eduardo's about to start gushing, I can tell.
+I'm going to need to say something, and quick, before he starts up.
 [Eduardo] "I want to be around him all the time, and he wants to be around me all the time."
-"Its just so... <flow>Perfect,</flow> you know." #Skip
+"Its just so... <flow>perfect,</flow> you know." #Skip
 +[Say nothing]
-	Yeah, I can't think of anything to say thats going to stop him.
+	Unfortunately, I can't think of anything to say to stop him.
 	->Gushing
 +[Disagree <(expression)>]
 	->Pulling
 +[Book it out of the room]
-	[{player_name}] "<speed=200%>Yeah, thats great Eduardo, gotta-go-bye!"
-	[Eduardo] "wait, wha-" #Skip
+	[{player_name}] "<speed=200%>Yeah, that's great Eduardo, gotta-go-bye!"
+	[Eduardo] "Wait, wha-" #Skip
 	I book it out of the art room. I make it to the commons before I am out of breath. #Background / commons, NoDefaults # All = Exit # Play : Stop_All
 	Wow, I am really out of shape.
 	[Voices] "Just another reason why you are worthless." # ambience_vol | -10
 	{
 		-depression < 50:
-		No, no. I just, haven't been exercising, thats all... thats all... # ambience_vol | 0
+		No, no. I just, haven't been exercising, that's all... that's all... # ambience_vol | 0
 	}
-	I plop myself on the couch, and watch some TV to take my mind off things. # ambience_vol | 0
+	I plop myself on the couch and watch some TV to take my mind off things. # ambience_vol | 0
 	->END
 
 ===Gushing===
-I just sort of sit there listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom, NoDefaults #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
-His excessive passion is very inspiring and <color=color_expression>your expression increases considerably</color>, but it <color=color_wellbeing_penalty>significantly tires you out</color>. #expression++ #fatigue += 20
+I sit listening to Eduardo gush and gush about his relationship with Isaac. #Background / Artroom, NoDefaults #Eduardo = Calm   # Play : play_music_eduardo_love_no_intro
+His excessive passion is very inspiring and <color=color_expression> expression increases considerably</color>, but it <color=color_wellbeing_penalty>significantly tires me out</color>. #expression++ #fatigue += 20
 When I check the clock, I realize three hours have passed. #time % 3
 Luckily, Isaac eventually walks in to save me from the gushing. #Isaac = Calm, stage_left, right
 [Isaac] "Oh. What are you two doing?"
 [{player_name}] "Oh, nothing. Eduardo's just been talking my ear off about how much he loves you."
-[Isaac] "What." #Isaac = afraid
+[Isaac] "What?" #Isaac = afraid
 [Eduardo] "<flow><i>I WUUUUUVVV YOU!<i></flow>" #Eduardo = invisible, left, stage_left #Isaac = invisible # Needy = blush
 [Isaac] "Hrm."
-I use this as the perfect opportunity to leave.
-I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrassed Isaac. # All = Exit
+I take this heaven-sent opportunity to excuse myself.
+I slip away without saying goodbye as Eduardo continues to gushe at a stunned and embarrassed Isaac. # All = Exit
 ->END
 
 ===Pulling===
 {
 	-expression < 3:
-		[{player_name}] "I, um, I guess you can see it that way. but, uh, I doubt its literally perfect you know." #expression ^ poor
+		[{player_name}] "I, um, I guess you can see it that way. But, uh, I doubt it's <i>literally</i> perfect you know." #expression ^ poor
 		[Eduardo] "That's a funny joke. Anyways, where was I?"
 		[{player_name}] "B-but..."
 		Eduardo isn't listening. He seems far too wrapped up in his passion. I guess I was not <color=color_expression><i>expressive</i></color> enough to get through to him.
@@ -161,19 +161,19 @@ I slip away without saying goodbye, as Eduardo gushes at a stunned and embarrass
 I need to think... How to best explain myself? #Skip
 +[Hunch]
 	[{player_name}] "It's just a hunch I have."
-	[Eduardo] "Yeah, well, keep your hunches to yerself from now on. okay?"
+	[Eduardo] "Yeah, well, keep your hunches to yerself from now on, okay?"
 	->Disbelif
-+[Its obvious]
-	[{player_name}] "I mean, its kind of obvious, isn't it?"
-	[Eduardo] "No. No it's not."
++[It's obvious]
+	[{player_name}] "I mean... it's kind of obvious, isn't it?"
+	[Eduardo] "No. No, it ain't."
 	->Disbelif
 +{GetValue("Know Isaac's Troubles")}[Isaac told me]
 	->Contention
 
 
 ===Disbelif===
-[Eduardo] "whatever {player_gender == "F": girl| man}." #Background / Artroom, NoDefaults #Eduardo = Angry
-"I gotta get going. Got stuff to do, and a <i>perfect</i> boyfriend to hang out with."
+[Eduardo] "Whatever, {player_gender == "F":girl|man}." #Background / Artroom, NoDefaults #Eduardo = Angry
+"I better hit the trail. Got stuff to do and a <i>perfect</i> boyfriend to hang out with."
 "Later." #Eduardo = Exit
 Well, I guess I messed that one up.
 I should probably have some actual evidence before I try to convince Eduardo that there is any problem in his life.
@@ -183,12 +183,12 @@ Isaac might be able to tell me more about their relationship, if I can find a ti
 ===Contention===
 [{player_name}] "Isaac told me." #expression ^ good   # Play : play_music_stormy_relationship   # Ambience : play_ambience_stormy
 [Eduardo] "..." #Misery / Shocked //shocked expression
-"Bull! Isaac wouldn't tell you nothing he wouldn't tell me!" #Misery / Angry //angry expression
+"Bull! Isaac wouldn't tell you nothin'g' he wouldn't tell me!" #Misery / Angry //angry expression
 Well, Eduardo is technically correct. Isaac hasn't told me anything yet, but...
 [{player_name}] "It's true. According to Isaac, he doesn't see your guy's relationship as rosy as you do."
 {
 	-grace < 4:
-	"He probably hasn't mentioned it, given you never let him have an word in edgewise." #grace ^ poor
+	"He probably hasn't mentioned it, given you never let him get a word in edgewise." #grace ^ poor
 	-else:
 	"He's been concerned about bringing it up because you go around telling everyone how perfect you two are together." #grace ^ good
 	~Conviction -= 1
@@ -221,8 +221,8 @@ After wallowing for a while internally, I decide to head off to some other part 
 ->END
 
 ===Suffocated===
-[{player_name}] "He said he found you to be suffocating some times. That you're just always around him." #expression ^ good
-[Eduardo] "Wha! That, That can't be true?!" #Misery / Tense, Unsure //shocked unsure expression
+[{player_name}] "He said he found you to be suffocating sometimes. That you're just always around him." #expression ^ good
+[Eduardo] "Wha-! That-! That can't be true!" #Misery / Tense, Unsure //shocked unsure expression
 ~Conviction -= 1
 Eduardo looks shocked. <>
 {grace>2:
@@ -236,14 +236,14 @@ Eduardo looks shocked. <>
 "But fine, I'll tell ya!" #Misery / relaxed, smug //oddly cheery and almost smug
 Eduardo's mood seems to have completely shifted. There's a passion in his eyes that's almost scary.
 [{player_name}] "What's gotten into you?"
-[Eduardo] "Well now I gotta prove our perfect love, against these vile rumors you seem caught up in!" //smug explanatory
-"So sit tight my misguided friend, as I tell you a story of how Isaac and I got together!" #Misery / dreamy //cheery
+[Eduardo] "Well now I gotta prove our perfect love against these vile rumors!" //smug explanatory
+"So sit tight, my misguided friend, as I spin the yarn of how Isaac and I got together!" #Misery / dreamy //cheery
 "It was not long ago, actually. We had our six month anniversary last week, to be exact."
 "I had changed rooms, as I was having problems with my roommate at the time."
-"And the new roomie I got was of course, Isaac."
+"And the new roomie I got was, of course, Isaac."
 "Isaac had actually been here..."
 Eduardo stops just as he is about to get into the details. #Misery / smug
-[Eduardo] "Okay {player_gender == "F": miss| mista} love guru. If you know so much about Isaac, and our relationship, then how long has he been at Sunflower House?"
+[Eduardo] "Okay, {player_gender == "F":miss|mista} love guru. If you know so much about Isaac, and our relationship, then how long has he been at Sunflower House?"
 Crap, do I know that?
 [{player_name}] "He's been here..." #Skip
 +[1 year, 6 months]
@@ -279,7 +279,7 @@ Crap, do I know that?
 "But I don't think he had a choice."
 "You know those social predicaments where you <i>can</i> say no, but not really?"
 [{player_name}] "Yeah, I can understand that."
-After six years of Blackwell and a year of Sunflower House I can barely remember any other kind of life, really.
+After five years of Blackwell and a year of Sunflower House I can barely remember any other kind of life, really.
 [Eduardo] "Yeah, I bet you can."
 "Anyways, one of Isaac's big issues is with social stuff."
 "He's got no drive for it, y'know?"
@@ -288,42 +288,42 @@ After six years of Blackwell and a year of Sunflower House I can barely remember
 [{player_name}] "But Isaac's not feeling too great right now, is he?"
 [Eduardo] "Eh?" #Misery / Tense, unsure
 [{player_name}] "Being here... and being with you... it's bringing up a severe underlying issue Isaac has."
-Namely that he feels... #Skip
+Namely, that he feels... #Skip
 +[Tired]
 	"I'm sure Isaac feels tired of it all."
-	[Eduardo] "eh, not really."
+	[Eduardo] "Eh, not really."
 	"I think you might be speaking more from your experience than Isaac's."
 	Crap! Am I?
 	Regardless, Eduardo doesn't seem to be convinced about that.
 	"Trust me, {player_name}. I know people can be exhausted by my presence, but Isaac- Isaac is different."
 +[Broken]
 	"He's feeling suffocated despite all the love and affection that he wanted."
-	"And that contradiction, makes him feel broken."
+	"And that contradiction makes him feel broken."
 	[Eduardo] "He feels broken..." #Misery / sad
 	~Conviction -=1
-	Eduardo looks a little deflated. Has Isaac specifically mentioned these `broken` feelings to him before?
+	Eduardo looks a little deflated. Has Isaac mentioned these `broken` feelings to him before?
 	"Yeah, Isaac's been pressured to be a lot of things he ain't."
-	"But I never pressure him into anything he doesn't want."
+	"But I never pressure him into anything he doesn't want!"
 	"<size=50%>D-do I?</size>" #Misery / Mumble
-	"N-No! No I don't. 'Cause me and Isaac are perfect together!" #Misery / unsure
+	"N-No! No, I don't. 'Cause me and Isaac are perfect together!" #Misery / unsure
 	->Perfect
 +[Bored]
 	"He's bored out of his mind."
-	[Eduardo] "pffft! yeah right."
+	[Eduardo] "Pffft! yeah right."
 	"See, <b>you</b> might not know this, but Isaac is rarely if ever truly bored."
-	"You could lock him up in a padded cell, and he'd find a way to keep himself going internally."
+	"You could lock him up in a padded cell and he'd find a way to keep himself going."
 	"So, Isaac can't be bored by this place."
 	Jeez really?
-	Regardless, Eduardo believes that, and I don't seem to be convincing him otherwise.
-	"Besides, how can Isaac be bored, when he's got me!"
--"Me and Isaac, are like two puzzle pieces that fit perfectly together." #Misery / relaxed, smug
+	Regardless of whether or not it's true, Eduardo believes it and I don't seem to be convincing him otherwise.
+	"Besides, how can Isaac be bored when he's got me?"
+-"Me and Isaac, we're like two puzzle pieces that fit perfectly together." #Misery / relaxed, smug
 ->Perfect
 
 ===Perfect===
 [{player_name}] "Dude. You are both in a halfway house for society's mental rejects. I doubt `perfection` is the adjective you wanna use."
 [Eduardo] "But that's what makes us so perfect for each other!" #Misery / relaxed, dreamy
-"We counter each others flaws, making us each better."
-[{player_name}] "So, what you're saying is you're codependent?"
+"We counter each others' flaws, makin' us each better."
+[{player_name}] "So, what you're saying is you're co-dependent?"
 [Eduardo] "What? No! This is greater than that!" #Misery / aggressive, annoyed
 "This is love!"
 "And that's why our relationship is perfect!"
@@ -346,11 +346,11 @@ Something about Isaac that even Isaac hasn't told him... #Skip
 	[{player_name}] "Not that you'd know that, given he specifically told me he hadn't mentioned it to you."
 	[Eduardo] "Y-yeah, well..." #Misery / aggressive, Angry
 +[Don't tell him about Isaac's internal stories]
-	"Dude, this isn't a quiz to see who knows your boyfriend better"
+	[{player_name}]"Dude, this isn't a quiz to see who knows your boyfriend better."
 	~SetValue("Revealed Isaac's Secret Before", false)
 	~Conviction -= 1
 	Even if that's what you've been treating it as.
-	"I'm trying to tell you that Isaac is hurting.
+	"I'm trying to tell you that Isaac is hurting."
 	"You need to stop being an idiot and listen to him before either of you do something you'll regret!"
 	[Eduardo] "..." #Misery / Tense, unsure
 	"..." #Misery /= sad
@@ -389,11 +389,11 @@ Maybe I should go check up on him again...
 [Eduardo] "Yeah, that... That sounds like him."
 I seem to have finally gotten through to Eduardo... in some capacity, at least. #6 & Success
 "Okay, you might have a point. Maybe."
-"But even if you are right—and I'm not saying you are—why didn't you let Isaac tell me?"
+"But even if you are right, and I ain't sayin'g' you are, why didn't you let Isaac tell me?"
 [{player_name}] "Would you have listened?"
 [Eduardo] "Of course I wo-" #Skip
 "..."
-"Yeah. You're right. I probably wouldn't."
+"Merda. Yeah. You're right. I probably wouldn't."
 Eduardo gets up and begins to pat himself down. #Background / Artroom #Eduardo = sad
 [{player_name}] "You okay?"
 [Eduardo] "Huh? Sí. Yes."
