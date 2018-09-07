@@ -34,8 +34,10 @@ namespace HalfwayHome
 
         public TextMeshProUGUI SceneText;
         [Tooltip("replaces {visited_state} with the accurate time spent.")]
-        public string SceneDescription = "A <u>{visited_state}</u> scene is available.";
+        public string UnknownSceneDescription = "An <u>{visited_state}</u> scene is available.";
+        public string VisitedSceneDescription = "A <u>{visited_state}</u> scene is available.";
         public string UnknownSceneTag = "Unknown";
+        public string VisitedSceneTag = "Visited";
         public Color UnknownSceneColor;
         public Color VisitedSceneColor;
 
@@ -45,6 +47,7 @@ namespace HalfwayHome
         [SerializeField]
         public List<RoomStrings> RoomStrings;
         Dictionary<Room, string> SceneTitles;
+        Dictionary<Room, string> TimeEstimates;
 
         bool DrainEnergy;
 
@@ -70,6 +73,7 @@ namespace HalfwayHome
         void TurnMapOn(DefaultEvent Eventdata)
         {
             SceneTitles = new Dictionary<Room, string>();
+            TimeEstimates = new Dictionary<Room, string>();
 
             var scenes = TimelineSystem.Current.GetOptionsAvalible(Game.current.Day, Game.current.Hour);
 
@@ -80,6 +84,7 @@ namespace HalfwayHome
                 else
                     SceneTitles.Add(scene.RoomLocation, UnknownSceneTag);
 
+                TimeEstimates.Add(scene.RoomLocation, scene.TimeEstimate);
             }
 
         }
@@ -126,20 +131,32 @@ namespace HalfwayHome
 
             RoomText.text = RoomDesciption;
             RoomText.text = RoomText.text.Replace("{room}", room);
+
+            string Estimate = "";
+            if(TimeEstimates.TryGetValue(value, out Estimate) && Estimate != "")
+            {
+                if (SceneTitles[value] == UnknownSceneTag)
+                    ShowTime = "???";
+                else
+                    ShowTime = Estimate;
+            }
+            else
+            {
+                int multiple = DepressionDialator.TimeDilationMultiple(DrainEnergy);
+
+                ShowTime = "";
+                string Hours = " Hours";
+
+                if (multiple > 1)
+                    ShowTime += "<#" + ColorUtility.ToHtmlStringRGBA(DepressionEffectorColor) + ">";
+
+                if (Time * multiple == 1)
+                    Hours = " Hour";
+
+                ShowTime += (Time * multiple) + Hours;
+
+            }
             
-            int multiple = DepressionDialator.TimeDilationMultiple(DrainEnergy);
-
-            ShowTime = "";
-            string Hours = " Hours";
-
-            if (multiple > 1)
-                ShowTime += "<#" + ColorUtility.ToHtmlStringRGBA(DepressionEffectorColor) + ">";
-
-            if (Time * multiple == 1)
-                Hours = " Hour";
-
-            ShowTime += (Time * multiple) + Hours;
-
             TimeText.text = TimeDescription;
             TimeText.text = TimeText.text.Replace("{time}", ShowTime);
 
@@ -147,19 +164,21 @@ namespace HalfwayHome
             if(SceneTitles.TryGetValue(value, out why))
             {
                 SceneText.gameObject.SetActive(true);
-                SceneText.text = SceneDescription;
 
                 if(why == UnknownSceneTag)
                 {
+
+                    SceneText.text = UnknownSceneDescription;
                     var add = "<#" + ColorUtility.ToHtmlStringRGBA(UnknownSceneColor) + ">";
 
                     why = add + why + "</color>";
                 }
                 else
                 {
+                    SceneText.text = VisitedSceneDescription;
                     var add = "<#" + ColorUtility.ToHtmlStringRGBA(VisitedSceneColor) + ">";
 
-                    why = add + why + "</color>";
+                    why = add + VisitedSceneTag + "</color>";
                 }
 
                 SceneText.text = SceneText.text.Replace("{visited_state}", why);

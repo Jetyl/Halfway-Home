@@ -516,6 +516,7 @@ public class ConvMultiProgress : ConvNode
 public class ConvMap : ConvNode
 {
     public string Title;
+    public string TimeEstimate;
     TimeStamp time;
     public Room RoomLocation;
     public List<ProgressPoint> Locks;
@@ -525,6 +526,7 @@ public class ConvMap : ConvNode
     {
         ID = (int)start["ID"];
         Title = (string)start["Tag"];
+        TimeEstimate = (string)start["Estimate"];
         Destination = (int)start["NextID"];
         time = new TimeStamp((int)start["Day"], (int)start["Hour"], (int)start["Length"], false);
         RoomLocation = (Room)(int)start["Room"];
