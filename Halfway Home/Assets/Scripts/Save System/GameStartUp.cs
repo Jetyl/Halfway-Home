@@ -45,7 +45,7 @@ public class GameStartUp : MonoBehaviour
     // Use this for initialization
     void Awake ()
     {
-
+        if(DebugMode && !Debug.isDebugBuild) DebugMode = false;
         if (DebugMode)
         {
             //SaveLoad.Delete();

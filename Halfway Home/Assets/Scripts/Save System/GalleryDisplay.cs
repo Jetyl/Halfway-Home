@@ -25,7 +25,7 @@ public class GalleryDisplay : MonoBehaviour
 	void Awake ()
     {
         FullScreen.gameObject.SetActive(false);
-        
+        if(DebugMode && !Debug.isDebugBuild) DebugMode = false;
 
         if(DebugMode)
         {
