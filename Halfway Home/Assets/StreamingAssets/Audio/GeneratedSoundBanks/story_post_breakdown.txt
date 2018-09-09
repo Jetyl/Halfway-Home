@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	285561943	play_ambience_birds			\PlayMusic\intro_ambiences\play_ambience_birds	
+	2693693295	play_sfx_tin_cans			\Default Work Unit\play_sfx_tin_cans	
+	2942685983	play_sfx_foliage			\Default Work Unit\play_sfx_foliage	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	787501141	sfx_tin_cans	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_tin_cans_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_tin_cans		21772
+	1049193222	sfx_foliage	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\sfx_foliage_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_foliage		79840
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
+

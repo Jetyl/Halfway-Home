@@ -165,6 +165,15 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="story_post_breakdown" ID="{26DD69D1-C548-44FF-9D97-F0DB04B8679D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_tin_cans" ID="{BB9FDE41-04B1-4C6E-81E8-2E6AB582CF5A}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_sfx_foliage" ID="{46E180D3-8BDF-4DF7-80CE-304D22F70D6D}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

@@ -21,7 +21,7 @@ VAR currentHour = 0
 -> Start
 
 === Start ===
-I am pulled out of my head by the sound of empty tins falling over behind me.
+I am pulled out of my head by the sound of empty tins falling over behind me. # Play : Stop_All # SFX : play_sfx_tin_cans
 [Unknown>Eduardo] "Merda!"
 I look over to see Eduardo, looking worse for wear. #Eduardo = sad
 His eyes are red, the usual confidance in his step gone.

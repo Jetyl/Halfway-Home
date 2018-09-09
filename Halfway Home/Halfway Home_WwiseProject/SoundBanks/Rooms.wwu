@@ -60,6 +60,7 @@
 				</SoundBank>
 				<SoundBank Name="room_Store" ID="{67707354-DA3E-4B48-B37B-FBF7277D6EF7}">
 					<ObjectInclusionList>
+						<ObjectRef Name="play_sfx_store_bell" ID="{FE8EFE9A-8BC9-4965-841B-48BE494A2EE6}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_ambience_birds" ID="{FB53665A-97E2-4EAD-8FEC-B9DBF2A2C1FA}" WorkUnitID="{189A3494-DC30-440A-8CE9-966B7626D7B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_music_store" ID="{FEF8F07A-B2EC-4F72-AA18-CF5367F8C99C}" WorkUnitID="{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

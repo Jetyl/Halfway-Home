@@ -21,7 +21,7 @@ VAR currentHour = 0
 -> Start
 
 === Start ===
-[Charlotte] "Are you alright?" # Charlotte = Sad, close
+[Charlotte] "Are you alright?" # Charlotte = Sad, close # Play : Stop_All # SFX : play_sfx_human_footsteps_soft
 [{player_name}] "{Ahh! Don't sneak up on people like that!|Hey, Charlotte.}"
 {I guess it makes sense she'd be here. I wasn't really paying attention to my surroundings.|Can't surprise me this time.}
 {Start==1:

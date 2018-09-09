@@ -633,6 +633,49 @@
     ]
    },
    {
+    "Id": "2248810909",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Stories\\story_post_breakdown",
+    "ShortName": "story_post_breakdown",
+    "Path": "story_post_breakdown.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "285561943",
+      "Name": "play_ambience_birds",
+      "ObjectPath": "\\Events\\PlayMusic\\intro_ambiences\\play_ambience_birds"
+     },
+     {
+      "Id": "2942685983",
+      "Name": "play_sfx_foliage",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_sfx_foliage"
+     },
+     {
+      "Id": "2693693295",
+      "Name": "play_sfx_tin_cans",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_sfx_tin_cans"
+     }
+    ],
+    "ReferencedStreamedFiles": [
+     {
+      "Id": "461729800"
+     }
+    ],
+    "IncludedMemoryFiles": [
+     {
+      "Id": "787501141",
+      "Language": "SFX",
+      "ShortName": "sfx_tin_cans.wav",
+      "Path": "SFX\\sfx_tin_cans_00FA84C2.wem"
+     },
+     {
+      "Id": "1049193222",
+      "Language": "SFX",
+      "ShortName": "sfx_foliage.wav",
+      "Path": "SFX\\sfx_foliage_00FA84C2.wem"
+     }
+    ]
+   },
+   {
     "Id": "2369017504",
     "Language": "SFX",
     "ObjectPath": "\\SoundBanks\\Stories\\story_ending_days",
@@ -692,6 +735,11 @@
       "Id": "4068032989",
       "Name": "play_music_store",
       "ObjectPath": "\\Events\\Default Work Unit\\play_music_store"
+     },
+     {
+      "Id": "81198871",
+      "Name": "play_sfx_store_bell",
+      "ObjectPath": "\\Events\\Default Work Unit\\play_sfx_store_bell"
      }
     ],
     "ReferencedStreamedFiles": [
@@ -700,6 +748,12 @@
      }
     ],
     "IncludedMemoryFiles": [
+     {
+      "Id": "297912880",
+      "Language": "SFX",
+      "ShortName": "323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05.wav",
+      "Path": "SFX\\323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05_00FA84C2.wem"
+     },
      {
       "Id": "447526213",
       "Language": "SFX",
