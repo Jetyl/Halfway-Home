@@ -8,14 +8,14 @@
 		<ExternalSourcesOutputRoot>C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="2623393530" Language="SFX">
-			<ObjectPath>\SoundBanks\Rooms\room_Store</ObjectPath>
-			<ShortName>room_Store</ShortName>
-			<Path>room_Store.bnk</Path>
+		<SoundBank Id="2248810909" Language="SFX">
+			<ObjectPath>\SoundBanks\Stories\story_post_breakdown</ObjectPath>
+			<ShortName>story_post_breakdown</ShortName>
+			<Path>story_post_breakdown.bnk</Path>
 			<IncludedEvents>
 				<Event Id="285561943" Name="play_ambience_birds" ObjectPath="\Events\PlayMusic\intro_ambiences\play_ambience_birds"/>
-				<Event Id="4068032989" Name="play_music_store" ObjectPath="\Events\Default Work Unit\play_music_store"/>
-				<Event Id="81198871" Name="play_sfx_store_bell" ObjectPath="\Events\Default Work Unit\play_sfx_store_bell"/>
+				<Event Id="2942685983" Name="play_sfx_foliage" ObjectPath="\Events\Default Work Unit\play_sfx_foliage"/>
+				<Event Id="2693693295" Name="play_sfx_tin_cans" ObjectPath="\Events\Default Work Unit\play_sfx_tin_cans"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
 				<File Id="461729800" Language="SFX">
@@ -24,13 +24,13 @@
 				</File>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="297912880" Language="SFX">
-					<ShortName>323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05.wav</ShortName>
-					<Path>SFX\323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05_00FA84C2.wem</Path>
+				<File Id="787501141" Language="SFX">
+					<ShortName>sfx_tin_cans.wav</ShortName>
+					<Path>SFX\sfx_tin_cans_00FA84C2.wem</Path>
 				</File>
-				<File Id="447526213" Language="SFX">
-					<ShortName>music_store.wav</ShortName>
-					<Path>SFX\music_store_A51F8DD7.wem</Path>
+				<File Id="1049193222" Language="SFX">
+					<ShortName>sfx_foliage.wav</ShortName>
+					<Path>SFX\sfx_foliage_00FA84C2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

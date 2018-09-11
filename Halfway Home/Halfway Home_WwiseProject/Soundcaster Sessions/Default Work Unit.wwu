@@ -71,6 +71,78 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
+				<SoundcasterSession Name="sfx" ID="{69789866-C672-4193-93D4-7A89866AAF1C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="sfx_tin_cans" ID="{051BB2A6-E102-4DF1-991F-EE49BA113BE3}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="play_sfx_human_footsteps_soft" ID="{4F0957A2-6716-4EA3-9DA6-D26A9B7F27EA}" WorkUnitID="{27633E19-4858-4606-983F-7C034C7283A6}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_foliage" ID="{77861D21-704B-4844-BBC2-DD320A7F967F}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_store_bell" ID="{109A2BC5-3803-401A-AF5A-E5160CAED2A3}" WorkUnitID="{A6808F58-A181-48FD-A4C1-28ECC26E2668}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="music_tension_state" ID="{588DE85E-02A3-43C5-9E3E-CB8B4BA872E6}"/>
+							<Value>5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ambience_vol" ID="{5AB96593-F824-4642-9F95-9882BE219AD9}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Ambience_Slider" ID="{01E4F479-01A7-46DC-A633-235DDF2DF76C}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_lpf" ID="{FDD6679E-832E-47D8-A29F-AD594C11D246}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_vol" ID="{98FB89A4-4949-48EE-871F-CE47AF26AE47}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Slider" ID="{2B0F0B29-B6EB-491C-9CCB-E466D41D28A7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="text_vol" ID="{09DFFC59-F8BA-4A37-AAA7-BD4576B4BDD3}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Slider" ID="{1026E09B-8E04-4AFE-A34A-C0A88C50BEA7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Effects_Slider" ID="{B22BD24F-4A26-4BF1-914C-7F40BD24D5D9}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Slider" ID="{E9A63E79-C4E4-4C48-9091-428A37D6D4DF}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ambience_lpf" ID="{0AF2C003-51DB-4CDC-B958-BD875CF0749C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Mouse_Hover" ID="{D5F502CF-D29A-4F9E-8D94-7837A548A654}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

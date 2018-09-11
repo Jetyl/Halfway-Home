@@ -18,10 +18,12 @@ VAR week = 1
 VAR current_room = "unset"
 VAR currentHour = 0
 
+# Load @ story_post_breakdown
+
 -> Start
 
 === Start ===
-As I drift through the foliage I hear a faint `plop` off to my left.
+As I drift through the foliage I hear a faint `plop` off to my left. # Play : Stop_All # Ambience : play_ambience_birds # SFX : play_sfx_foliage
 I turn to look for the source of the sound and find Trissa crouched by the pond.
 She drops a small stone into the water and appears intensely focused on the outcome.
 I don't think she's noticed me yet. Should I get her attention? #Skip

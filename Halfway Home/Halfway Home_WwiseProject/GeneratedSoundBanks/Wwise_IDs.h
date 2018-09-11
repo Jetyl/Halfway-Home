@@ -75,6 +75,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_CAR_HORN = 1824880844U;
         static const AkUniqueID PLAY_SFX_CREEPY_DOOR = 4285799733U;
         static const AkUniqueID PLAY_SFX_DOOR_CREAK = 3759803571U;
+        static const AkUniqueID PLAY_SFX_FOLIAGE = 2942685983U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_APPROACHING = 2653434280U;
         static const AkUniqueID PLAY_SFX_HUMAN_FOOTSTEPS_SOFT = 1787579972U;
         static const AkUniqueID PLAY_SFX_HUMAN_GHOSTWHISPER = 2124921401U;
@@ -88,6 +89,8 @@ namespace AK
         static const AkUniqueID PLAY_SFX_MENU_SKIP = 1366361591U;
         static const AkUniqueID PLAY_SFX_MENU_SLIDER_SCROLL = 3989971247U;
         static const AkUniqueID PLAY_SFX_OBJECT_CAR_AWAY = 1700209709U;
+        static const AkUniqueID PLAY_SFX_STORE_BELL = 81198871U;
+        static const AkUniqueID PLAY_SFX_TIN_CANS = 2693693295U;
         static const AkUniqueID PLAY_TEXTSCROLL = 319656260U;
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_ALL_FAST = 3032100830U;
@@ -181,6 +184,7 @@ namespace AK
         static const AkUniqueID STORY_MEMORY = 1576038406U;
         static const AkUniqueID STORY_MORNING_MISERY = 4020804685U;
         static const AkUniqueID STORY_OPEN_LETTER = 3653532294U;
+        static const AkUniqueID STORY_POST_BREAKDOWN = 2248810909U;
         static const AkUniqueID STORY_RECOVER_RESTART_REQUIRED = 3861464175U;
         static const AkUniqueID STORY_WELCOME_DINNER = 2139259380U;
     } // namespace BANKS

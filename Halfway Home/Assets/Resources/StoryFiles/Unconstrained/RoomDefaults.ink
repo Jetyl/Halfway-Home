@@ -339,7 +339,7 @@ After about an hour, I finish. My digits are starting to ache, but something abo
 === Store ===
 // All Stats Chance to Increase
 // Take a fleeting trip into the Real World.
-I think it's best if I get some time outside of the House for a bit. # Load @ room_Store # Play : play_music_store # Ambience : play_ambience_birds # ambience_vol | -6
+I think it's best if I get some time outside of the House for a bit. # Load @ room_Store # Play : play_music_store # Ambience : play_ambience_birds # ambience_vol | -6 # SFX : play_sfx_store_bell
 The store isn't far and there's only a few blocks of mostly vacant streets on the way, but it's a rare sojourn into the real world.
 The idea is slightly off-putting, but I figure it'll be good for me.
 The unpredictability of it is kind of exciting. I feel like anything could happen.
