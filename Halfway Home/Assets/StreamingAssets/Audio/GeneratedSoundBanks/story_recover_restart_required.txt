@@ -3,7 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2124921401	play_sfx_human_ghostwhisper			\PlaySFX\sfx_human\play_sfx_human_ghostwhisper	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	58705680	BedCreak	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\263137__tmacroberts__creaking_E381B43F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		68896
-	318063250	ghostwhisper2	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
-	488681583	ghostwhisper1	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
+	58705680	BedCreak	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\263137__tmacroberts__creaking_E381B43F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\BedCreak		68896
+	318063250	ghostwhisper2	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper2_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper2		94680
+	488681583	ghostwhisper1	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\ghostwhisper1_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Human SFX\sfx_human_ghostwhisper\ghostwhisper1		111816
 
