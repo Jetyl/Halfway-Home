@@ -4,9 +4,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	4068032989	play_music_store			\Default Work Unit\play_music_store	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	297912880	sfx_store_bell	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_store_bell		165376
-	447526213	music_store	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_store_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_store\music_store_intro\music_store		1162430
+	297912880	sfx_store_bell	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\323125__geraldfiebig__bicycle-bell-from-bikekitchen-augsburg-05_00FA84C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Object SFX\sfx_store_bell		165376
+	447526213	music_store	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_store_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_store\music_store_intro\music_store		1162430
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
+	461729800	loop_hpf_10k_BirdsAmbience 6102_54	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\loop_hpf_10k_BirdsAmbience 6102_54_178D0C9C.wem	461729800.wem	\Interactive Music Hierarchy\Default Work Unit\Ambience\ambience_birds\ambience_birds\loop_hpf_10k_BirdsAmbience 6102_54	
 

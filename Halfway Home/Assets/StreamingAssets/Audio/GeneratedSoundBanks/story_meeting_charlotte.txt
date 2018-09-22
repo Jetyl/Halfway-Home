@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	2039547829	play_music_charlotte_elegant			\PlayMusic\play_music_charlotte_elegant	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	527438760	music_charlotte_elegant	C:\Users\Lemninas\Desktop\Halfway Home\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_charlotte_elegant_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_charlotte_elegant\music_charlotte_elegant\music_charlotte_elegant		309436
+	527438760	music_charlotte_elegant	C:\Users\Jalor\Halfway-Home\Halfway Home\Halfway Home_WwiseProject\.cache\Windows\SFX\music_charlotte_elegant_A51F8DD7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\music_charlotte_elegant\music_charlotte_elegant\music_charlotte_elegant		309436
 

@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{02E06F7F-3980-49BB-8694-D16CD1F2BBCA}'
-    m_lastTimePsrt1: 519500840
-    m_lastTimePart2: -1999236531
+    m_lastTimePsrt1: -1850630559
+    m_lastTimePart2: -1999235018
     List:
     - Name: play_ambience_crickets_night
       Path: Default Work Unit\play_ambience_crickets_night
@@ -79,11 +79,41 @@ MonoBehaviour:
       ID: -9167563
       Guid: 9943370ef1e8714b9e993e3d5b000e10
       maxAttenuation: 0
+    - Name: play_sfx_foliage
+      Path: Default Work Unit\play_sfx_foliage
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_sfx_foliage
+        ObjectType: 3
+      ID: -1352281313
+      Guid: d380e146df8bf74d80ce304d22f70d6d
+      maxAttenuation: 0
+    - Name: play_sfx_store_bell
+      Path: Default Work Unit\play_sfx_store_bell
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_sfx_store_bell
+        ObjectType: 3
+      ID: 81198871
+      Guid: 9afe8efec98b6549841b48be494a2ee6
+      maxAttenuation: 0
+    - Name: play_sfx_tin_cans
+      Path: Default Work Unit\play_sfx_tin_cans
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_sfx_tin_cans
+        ObjectType: 3
+      ID: -1601274001
+      Guid: 41de9fbbb1046e4c81e82e6ab582cf5a
+      maxAttenuation: 0
   - PhysicalPath: Events\PlayMusic.wwu
     ParentPhysicalPath: 
     Guid: '{189A3494-DC30-440A-8CE9-966B7626D7B3}'
-    m_lastTimePsrt1: -272877676
-    m_lastTimePart2: -1999236816
+    m_lastTimePsrt1: -83242458
+    m_lastTimePart2: -1999236005
     List:
     - Name: Heartattack
       Path: PlayMusic\stop\Heartattack
@@ -868,8 +898,8 @@ MonoBehaviour:
   - PhysicalPath: Events\PlaySFX.wwu
     ParentPhysicalPath: 
     Guid: '{27633E19-4858-4606-983F-7C034C7283A6}'
-    m_lastTimePsrt1: -272827643
-    m_lastTimePart2: -1999236816
+    m_lastTimePsrt1: -83202572
+    m_lastTimePart2: -1999236005
     List:
     - Name: play_menuclick
       Path: PlaySFX\sfx_menu\play_menuclick
@@ -1289,8 +1319,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{70A012F0-97A2-4F35-9D9A-DF769355068D}'
-    m_lastTimePsrt1: -272046927
-    m_lastTimePart2: -1999236816
+    m_lastTimePsrt1: -82993138
+    m_lastTimePart2: -1999236005
     List:
     - Name: Credits
       Path: Default Work Unit\Credits
@@ -1331,8 +1361,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Rooms.wwu
     ParentPhysicalPath: 
     Guid: '{C5376C1C-070E-4828-BD28-4340CF8C148F}'
-    m_lastTimePsrt1: -1892083870
-    m_lastTimePart2: -1999236532
+    m_lastTimePsrt1: -1850391199
+    m_lastTimePart2: -1999235018
     List:
     - Name: room_ArtRoom
       Path: Rooms\room_ArtRoom
@@ -1400,8 +1430,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Stories.wwu
     ParentPhysicalPath: 
     Guid: '{CD21D86D-9681-4D08-9F5B-802B5E02FA8F}'
-    m_lastTimePsrt1: -660578040
-    m_lastTimePart2: -1999236557
+    m_lastTimePsrt1: -1850391199
+    m_lastTimePart2: -1999235018
     List:
     - Name: story_alone_in_a_dead_mans_room
       Path: Stories\story_alone_in_a_dead_mans_room
@@ -1547,6 +1577,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -641435002
       Guid: 69c4803a831daa45be3660084bc6f4f8
+    - Name: story_post_breakdown
+      Path: Stories\story_post_breakdown
+      PathAndIcons:
+      - ElementName: Stories
+        ObjectType: 12
+      - ElementName: story_post_breakdown
+        ObjectType: 7
+      ID: -2046156387
+      Guid: d169dd2648c5ff449d97f0db04b8679d
     - Name: story_recover_restart_required
       Path: Stories\story_recover_restart_required
       PathAndIcons:
