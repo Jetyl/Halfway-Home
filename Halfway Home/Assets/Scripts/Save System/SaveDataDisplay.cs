@@ -81,8 +81,8 @@ public class SaveDataDisplay : MonoBehaviour
                 Screenshot.sprite = Sprite.Create(test, new Rect(0, 0, test.width, test.height), new Vector2(0,0));
                 
             }
-
-            PlayerName.text = gameData.PlayerName;
+                        
+            PlayerName.text = gameData.PlayerName.Replace("_Player", "");
 
             RealDate.text = "" + gameData.SaveStamp.Month + "/" + gameData.SaveStamp.Day + "/" + gameData.SaveStamp.Year;
 

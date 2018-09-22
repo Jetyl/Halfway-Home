@@ -481,13 +481,18 @@ public class Game
 
     public bool UnlockAchievement(string Achievment_ID)
     {
-        //bool Got;
-        //Steamworks.SteamUserStats.GetAchievement(Achievment_ID, out Got);
-        //(!Got)
-        //{
-            //Steamworks.SteamUserStats.SetAchievement(Achievment_ID);
-            //return Steamworks.SteamUserStats.StoreStats();
-        //}
+        MonoBehaviour.print("Acheivment Got: " + Achievment_ID);
+        if(GameLoad.IsSteamEnabled())
+        {
+            bool Got;
+            Steamworks.SteamUserStats.GetAchievement(Achievment_ID, out Got);
+            if(!Got)
+            {
+            Steamworks.SteamUserStats.SetAchievement(Achievment_ID);
+            return Steamworks.SteamUserStats.StoreStats();
+            }
+        }
+        
         return false;
     }
     

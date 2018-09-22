@@ -7,6 +7,8 @@ public class GameLoad : MonoBehaviour
 {
     private static GameLoad _instance;
 
+    public bool SteamEnabled = true;
+
     // Use this for initialization
     void Awake ()
     {
@@ -54,6 +56,11 @@ public class GameLoad : MonoBehaviour
             if (recent < SaveLoad.GetSave(i).SaveStamp)
                 Game.current = SaveLoad.GetSave(i);
         }
+    }
+
+    public static bool IsSteamEnabled()
+    {
+        return _instance.SteamEnabled;
     }
 
 }
