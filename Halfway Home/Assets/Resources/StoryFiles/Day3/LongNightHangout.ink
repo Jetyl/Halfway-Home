@@ -225,9 +225,9 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 [Isaac] "Hrm?"
 [Eduardo] "You got all these modern-day stories, with all these fake off-brand references to real world things, instead of just straight up saying, `Hey yo! This is a thing.`" #Skip
 +[I don't follow]
-	[{player_name}] "I don't quite think I follow."
+	[{player_name}] "I don't quite think I follow." #Hangout / Eye_U
 +[That's the only problem you have?]
-	[{player_name}] "Really? That's your only problem with anime?"
+	[{player_name}] "Really? That's your only problem with anime?" #Hangout / Eye_U
 	[Eduardo] "What? No, but this is the one I feel like ranting about at 2 AM."
 	[{player_name}] "Fair."
 -[Eduardo] "Like, it just really destroys the immersion, for one."
@@ -236,14 +236,14 @@ I deliberately don't remind him of the topic, and let him wander onto something 
 "Hell, half the things me and Isaac talk about is just whatever "weeb trash" is on currently."
 "And you just don't see that in fiction."
 [{player_name}] "That might be because people don't want to watch fiction complaining about other fiction."
-"Nah, I don't think so."
-"Like, you know what I think it is?"
+"Nah, I don't think so." #hangout / Eye_shut
+"Like, you know what I think it is?" #Hangout / Eye_U
 "You know how everyone will talk about or reference, or allude to <i>Alice in Wonderland</i>, right?"
 [{player_name}] "Because it's good?"
 [Eduardo]"'Cause that work ain't under copyright."
 "No suits gonna get mad if ya talk about a girl falling down no rabbit hole."
 "But they'll get all up in arms if you reference a work past 1937 or something."
-[Isaac] "Copyright protects artists."
+[Isaac] "Copyright protects artists." #Hangout / Eye_I
 [Eduardo] "Nah fam, copyright is <i>s'posed</i> to protect artists. That don't mean it does."
 "Like seriously, did you know up until a few years ago the Happy Birthday song was still under copyright?"
 "Not to mention most corporations rip the creative rights from the actual artist at its inception."

@@ -71,6 +71,8 @@ public class Scale : MonoBehaviour
             yield return null;
         }
 
+        MoveAnimation(tangle, 1);
+
         OnScaleFinished();
     }
 
@@ -93,6 +95,7 @@ public class Scale : MonoBehaviour
             yield return null;
         }
 
+        MoveAnimation(pos, 1);
         OnScaleFinished();
     }
 

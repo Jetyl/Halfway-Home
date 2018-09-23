@@ -157,14 +157,14 @@ The impromptu social hour seems to die down, as the remaining first-floor reside
 ===TrissaTalk===
 I walk over towards Trissa, who is leaning by the fireplace, with her nose in that book of hers. #Charlotte = exit #Eduardo = exit #Isaac = exit
 [{player_name}] "Um, Trissa, if you don't mind me asking, what was with the letter you tossed in the fireplace?"
-[Trissa] "oh, just some garbage that needed express removal. nothing you ned to worry about."
+[Trissa] "Oh, just some garbage that needed express removal. Nothing you ned to worry about."
 {
 	-grace < 3:
-		[{player_name}] "well, yeah but, who was it from?" #grace ^ poor
+		[{player_name}] "Well, yeah but, who was it from?" #grace ^ poor
 		[Trissa] "..." #Trissa = angry
 	-else:
 		[{player_name}] "Family Issues?" #grace ^ good
-		[Trissa] "hm... Sort of."
+		[Trissa] "Hm... Sort of."
 		[Trissa] "You see, the entirety of my family, save my little bother Spencer, died recently."
 		[{player_name}] "Oh. uh, I'm sorry for your loss."
 		[Trissa] "Oh, don't be."
@@ -177,7 +177,7 @@ I walk over towards Trissa, who is leaning by the fireplace, with her nose in th
 I don't really like talking about my past either, so its only fair  @<color=color_descriptor><i>(<color=color_awareness>increased <b>Awareness</b> faintly<color=color_descriptor>)</color> #Awareness+
 [Trissa] "Thanks for coming over and chattin' though." #Trissa = calm
 [{player_name}] "No problem."
-[Trissa] "see you around {player_name}." #Trissa = exit
+[Trissa] "See you around {player_name}." #Trissa = exit
 ->SocialHourOver
 
 ===EduardoTalk===
@@ -192,9 +192,9 @@ I walk over to Eduardo, who is rapidly tearing through his pile of letters. #Cha
 	-else:
 	[{player_name}] "You know, maybe they wouldn't be old if you actually got them when they got here." #expression ^ good
 	"You know, check the front desk from time to time?"
-	[Eduardo] "hey, I do check the front desk all the time."
+	[Eduardo] "Hey, I do check the front desk all the time."
 	"I just... <delay=0.5>didn't want to pick them up."
-	"Look, the sucky part of familia is  you can't approach it at your own pace, its gotta be at their pace."
+	"Look, the sucky part of familia is you can't approach it at your own pace, its gotta be at their pace."
 	"Or at least, my family's like that. I dunno."
 }
 [Eduardo] "There, that's all of them."
@@ -212,17 +212,17 @@ When he's done reading he neatly folds the letter into his jacket pocket and sta
 ===IsaacTalk===
 I walk over to Isaac, neatly sorting his stack of letters. #Charlotte = exit #Trissa = exit #Eduardo = exit
 He looks as though he is going to open one, but then just places it back down in the stack.
-[{player_name}] "not sure which one to open first?"
-[Isaac] "hm. Something. Like that."
+[{player_name}] "Not sure which one to open first?"
+[Isaac] "Hm. Something. Like that."
 "There all from my parents."
-"Haven't talked them for months. not since..."
+"Haven't talked them for months. Not since..."
 Isaac mumbles off, looking off to the side. I follow his line of sight, to Eduardo, who is practically shredding through his letters. #Eduardo = happy, stage_right, small
 {
 	-grace < 3:
 		[{player_name}] "Well, um..." #grace ^ poor #Eduardo = exit
 		I really don't know where Isaac was going his line of thinking. although, really, thats true for like half the time I'm around him.
 	-else:
-		[{player_name}] "Have you told them? about him?" #grace ^ good
+		[{player_name}] "Have you told them? About him?" #grace ^ good
 		[Isaac] "Nope." #Eduardo = exit
 		[Isaac] "Scared. I think."
 		[{player_name}] "Afraid they won't approve?"
@@ -233,7 +233,7 @@ Isaac mumbles off, looking off to the side. I follow his line of sight, to Eduar
 }
 [Isaac] "I'm goin' to get some fresh air."
 [{player_name}] "Uh, see ya?" #Isaac = exit
-That was kind of abrupt. wonder what his deal was?
+That was kind of abrupt. Wonder what his deal was?
 ....
 He left his letters here too.
 ->SocialHourOver

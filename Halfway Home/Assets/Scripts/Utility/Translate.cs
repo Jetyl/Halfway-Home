@@ -73,6 +73,7 @@ public class Translate : MonoBehaviour
             yield return null;
         }
 
+        MoveAnimation(tangle, 1);
         OnTranslateFinished();
     }
 
@@ -95,6 +96,7 @@ public class Translate : MonoBehaviour
             yield return null;
         }
 
+        MoveAnimation(pos, 1);
         OnTranslateFinished();
     }
 

@@ -40,7 +40,7 @@ I hop into the shower real quick. By the time I come out Timothy is already curl
 I plant myself in my own bed, and squirm under the sheets.
 I am <i>beat</i>.
 I sit there, wavering between consciousness and unconsciousness, when I hear a voice.
-[Timothy] "Hey,<delay=2> {player_name}?"
+[Timothy] "Hey,<delay=0.75> {player_name}?"
 [{player_name}] "Yeah?"
 {
 	-GetValue("Tutorial") == true:
