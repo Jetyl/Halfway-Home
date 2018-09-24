@@ -11,6 +11,8 @@ public class SteamScript : MonoBehaviour
         {
             string name = SteamFriends.GetPersonaName();
             Debug.Log(name);
+            Debug.Log(SteamAppList.GetAppName((AppId_t)950250, out name, 100));
+            Debug.Log(name);
         }
     }
 }
