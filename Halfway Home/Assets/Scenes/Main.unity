@@ -5140,7 +5140,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975221858}
   m_HandleRect: {fileID: 975221857}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -47363,7 +47363,7 @@ MonoBehaviour:
     endTime: 18
     ProgressLocked: 0
     ProgressKey: Tutorial
-    ToolTipInfo: I can't miss my own Farewell Dinner.
+    ToolTipInfo: I can't miss my own dinner.
   - Day: 5
     starttime: 12
     endTime: 17
@@ -47372,7 +47372,7 @@ MonoBehaviour:
     ToolTipInfo: I've spent enought time alone in my room.
   - Day: 5
     starttime: 12
-    endTime: 17
+    endTime: 16
     ProgressLocked: 0
     ProgressKey: Tutorial
     ToolTipInfo: I don't want to run into Timothy right now...
@@ -48942,6 +48942,34 @@ MonoBehaviour:
         SocCompare: 0
         WellCompare: 0
       DescriptorText: It's been a long day. Time to get some sleep.
+    - Conditions:
+      - Type: 1
+        Condition:
+          ProgressName: Day
+          TypeID: 2
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 2
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
+      - Type: 1
+        Condition:
+          ProgressName: Tutorial
+          TypeID: 1
+          BoolValue: 1
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          compare: 0
+        Social: 0
+        Wellbeing: 0
+        SocCompare: 0
+        WellCompare: 0
+      DescriptorText: I should get some rest before tomorrow.
   - name: Commons
     Room: 2
     DefaultCondition:
@@ -52677,7 +52705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 903.01666}
+  m_AnchoredPosition: {x: 0, y: 903.0137}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1467285927
@@ -70109,7 +70137,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4039426199608004, guid: da58951615f3dea4e99f6768a7fe1743, type: 2}
       propertyPath: m_LocalPosition.x
@@ -70166,12 +70194,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugDay
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugHour
-      value: 13
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70186,12 +70214,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].ProgressName
-      value: ReflectOnBreakdown
+      value: TimothyPoints
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].TypeID
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70206,7 +70234,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugAwareness
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70221,22 +70249,22 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugGrace
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].compare
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[1].IntValue
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].ProgressName
-      value: Depression Time Dilation
+      value: RoomKey
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70251,12 +70279,12 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].IntValue
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugValues.Array.data[2].compare
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70266,7 +70294,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugExpression
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -70326,7 +70354,7 @@ Prefab:
     - target: {fileID: 114314275975373366, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
       propertyPath: DebugWeek
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114602336194486026, guid: da58951615f3dea4e99f6768a7fe1743,
         type: 2}
@@ -73775,7 +73803,7 @@ Prefab:
     - target: {fileID: 224556410473340822, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1197.2405
+      value: 1196.9607
       objectReference: {fileID: 0}
     - target: {fileID: 224556410473340822, guid: d8bee1554b9bc4548bfe9ebffdfa5c84,
         type: 2}

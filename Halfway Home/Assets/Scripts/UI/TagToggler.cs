@@ -101,10 +101,12 @@ public class TagToggler : MonoBehaviour
                 ActiveGraphics.Add(obj);
             }
         }
+        gameObject.SetActive(false);
     }
 
     public void Show()
     {
+        gameObject.SetActive(true);
         foreach (var obj in ActiveGraphics)
         {
             ActiveGraphics.RemoveAll(item => item == null);

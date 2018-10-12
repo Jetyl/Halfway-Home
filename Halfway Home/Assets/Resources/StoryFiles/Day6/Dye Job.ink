@@ -53,10 +53,9 @@ I stagger into the room with a yawn.
 	[Timothy>???] "<size=40%>...{player_name}."
 	~CallSleep()
 }
-// CUT: huh?
 "<size=60%>{player_name}."
 "<size=80%>Are you awake?"
-In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main # music_vol | -6 #fatigue => 0 #Background / YourRoom, eyeopen, NoDefaults // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
+In what felt like a blink of an eye, night has vanished. Morning sunlight spills into the room. # Play : Play_music_placeholder_main # music_vol | -6 #fatigue => 0 #depression -= 75 #Background / YourRoom, eyeopen, NoDefaults // FORMERLY: my room is lit with morning sunlight. #Background / YourRoom, eyeopen
 I look around and see Timothy by the side of my bed. #Timothy = Calm, close
 [Timothy] "Oh! <jitter>Uh, sorry if I woke you up.</jitter>"
 [{player_name}] "No problem, dude. What'd you need?"

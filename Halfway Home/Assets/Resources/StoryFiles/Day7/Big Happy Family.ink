@@ -142,9 +142,11 @@ Max gives a hearty laugh before quickly turning their mop on me like it was a sw
 Timothy sits with us and we have a lively group conversion.  #Isaac = Calm, Stage_left, right #Eduardo = Calm, Stage_left, right  #Charlotte = Calm, Stage_right, left #Trissa = Calm, Stage_right, left
 Well, really, it's mostly Eduardo and Trissa talking with everyone else interjecting periodically, but still.
 I have a good time. #stress -=25 #depression => 0
+~SetValue("Saved Timothy", true)
+~SetValue("Saved Timothy", true)
 Time, however, moves ever onward and the conversation dies down. #time%1
 I excuse myself and head off to my next location... #All=Exit
-~SetValue("Saved Timothy", true)
+
 ->END
 
 === SadStart ===

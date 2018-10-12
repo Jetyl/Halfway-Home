@@ -199,7 +199,7 @@ I wasn't ready to leave at all. I didn't even know what it <i>meant</i> to be re
 {GetValue("EarnedWoundStar")==false:
 	<color=color_descriptor><i>This revelation has <color=color_awareness>increased <b>Awareness</b> immensely<color=color_descriptor>.</color></i> # Awareness+++
 	~SetValue("EarnedWoundStar", true)
-	~awareness = 5
+	~awareness += 1
 }
 I see that now. And I owe it all to the scared, vulnerable human being currently fighting back tears in front of me.
 [{player_name}] "I see what you mean about this letter..."
