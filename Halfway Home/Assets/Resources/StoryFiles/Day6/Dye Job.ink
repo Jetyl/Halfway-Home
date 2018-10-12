@@ -377,6 +377,11 @@ Max walks over to the supply closet and retrieves the box. They bring it back to
 [Max] "Have fun! Just try not to make <i>too</i> much of a mess, okay?" # Max = Happy
 "I'm already behind on cleaning as it is!" # Max = Afraid
 [Timothy] "O-okay! Bye, Max." # Timothy = Happy
+[Max] "Oh, wait! {player_name}! Before I forget!"
+"Can you meet me in the cafe at noon? There's some formal stuff I want to talk to you about."
+Right, the exit survey. I wonder if I'll ever actual take that thing.
+[{player_name}] "Sure thing, Max. See you then."
+[Max] "Great! Have fun, guys!"
 I wave to Max as we exit the cafe. # Max = Exit
 ->TimeToDye
 
